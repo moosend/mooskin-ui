@@ -2,10 +2,13 @@
   "name": "mooskin",
   "version": "0.0.2",
   "description": "A collection of React components for Moosend UI",
-  "main": "./dist/index.js",
-  "types": "./dist/types/index.d.ts",
+  "main": "lib/index.js",
+  "types": "./lib/types/index.d.ts",
   "scripts": {
-    "prePublish": "webpack"
+    "prepublish": "webpack --config webpack.config.prod.js -p",
+    "playground": "npm run prepublish && webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
+    "test": "jest",
+    "lint": "tslint -c tslint.json ./src/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -18,13 +21,17 @@
   },
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "@types/enzyme": "^2.8.0",
     "@types/jest": "^19.2.3",
+    "@types/prop-types": "^15.5.1",
     "@types/react": "^15.0.24",
     "@types/react-dom": "^15.5.0",
+    "autoprefixer": "^7.1.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.4.0",
@@ -32,11 +39,66 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.1",
+    "cssnano": "^3.10.0",
+    "cssnext": "^1.8.4",
+    "enzyme": "^2.8.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.3",
+    "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.5",
-    "source-map-loader": "^0.2.1",
+    "react-addons-test-utils": "^15.5.1",
+    "react-test-renderer": "^15.5.4",
     "style-loader": "^0.17.0",
+    "ts-jest": "^20.0.4",
     "ts-loader": "^2.0.3",
+    "tslint": "^5.2.0",
+    "tslint-react": "^3.0.0",
     "typescript": "^2.3.2",
-    "webpack": "^2.5.1"
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "jest": {
+    "modulePaths": [
+      "/shared/vendor/modules"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "moduleNameMapper": {
+      "^react(.*)$": "<rootDir>/vendor/react-master$1",
+      "^config$": "<rootDir>/configs/app-config.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "unmockedModulePathPatterns": [
+      "react",
+      "react-dom",
+      "react-addons-test-utils",
+      "fbjs",
+      "enzyme",
+      "cheerio",
+      "htmlparser2",
+      "underscore",
+      "lodash",
+      "domhandler",
+      "object.assign",
+      "define-properties",
+      "function-bind",
+      "object-keys"
+    ]
   }
 }

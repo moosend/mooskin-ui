@@ -1,4 +1,16 @@
 
 .button {
-    background-color: cyan;
+    background: #5ccdde;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 45px;
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    border:none;
+}
+
+.button:hover {
+    background: #4cb3c4;
 }
