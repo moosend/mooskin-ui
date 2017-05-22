@@ -4,7 +4,9 @@
     // override tslint-react rules here
     "jsx-use-translation-function": false,
     "jsx-boolean-value":[true, "never"],
-    "one-line": [true, "check-catch", "check-finally", "check-else"]
+    "one-line": [true, "check-catch", "check-finally", "check-else"],
+    "no-debugger": false,
+    "no-console": [false]
     //"member-access": false
   }
 }

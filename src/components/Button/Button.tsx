@@ -4,9 +4,10 @@ import React from "react";
 import ButtonStyles from "./Button.css";
 
 export interface IProps {
-    label: string;
+    text: string;
     disabled?: boolean;
     inverseStyle?: boolean;
+    onClick: (e?: React.MouseEvent<HTMLInputElement>) => void;
 }
 
 class Button extends React.Component<IProps, {}> {
@@ -15,11 +16,13 @@ class Button extends React.Component<IProps, {}> {
      * @param {boolean} disabled
      * @param {boolean} inverseStyle
      * @param {string} label
+     * @param {Function} onClick
      */
     public static propTypes = {
         disabled: PropTypes.bool,
         inverseStyle: PropTypes.bool,
-        label: PropTypes.string.isRequired,
+        onClick: PropTypes.func.isRequired,
+        text: PropTypes.string.isRequired,
     };
 
     public render(){
@@ -29,18 +32,23 @@ class Button extends React.Component<IProps, {}> {
 
         return (
             <button
+                onClick={this.onClick}
                 disabled={this.props.disabled}
                 className={`button-component ${ButtonStyles.button}`}
                 style={{...invertedStyles, ...disabledStyles}}
             >
-                {this.props.label}
+                {this.props.text}
             </button>
         );
     }
 
+    private onClick = (e: React.MouseEvent<HTMLInputElement>) => {
+        this.props.onClick(e);
+    }
+
     private getInverseStyles(){
         return {
-            backgroundColor:  "#ffffff",
+            backgroundColor: "#ffffff",
             border: "1px solid #5ccdde",
             color: "#5ccdde",
         };
@@ -48,7 +56,7 @@ class Button extends React.Component<IProps, {}> {
 
     private getDisabledStyles(){
         return {
-            cursor:  "not-allowed",
+            cursor: "not-allowed",
         };
     }
 }

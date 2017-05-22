@@ -6,6 +6,7 @@
     "module": "es6",
     "target": "es6",
     "jsx": "react",
+    "sourceMap": true,
     "removeComments": true,
     "experimentalDecorators": true,
     "declaration": true,

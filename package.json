@@ -6,8 +6,9 @@
   "types": "./lib/types/index.d.ts",
   "scripts": {
     "prepublish": "webpack --config webpack.config.prod.js -p",
-    "playground": "webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
-    "test": "jest"
+    "playground": "npm run prepublish && webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
+    "test": "jest",
+    "lint": "tslint -c tslint.json ./src/**/*.ts"
   },
   "repository": {
     "type": "git",
