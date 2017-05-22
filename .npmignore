@@ -11,3 +11,5 @@ spec
 node_modules
 __mocks__
 dist
+.DS_Store
+start-development.bat

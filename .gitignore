@@ -6,3 +6,5 @@ npm-debug.log/
 docs/
 lib/
 dist/
+.DS_Store
+start-development.bat
