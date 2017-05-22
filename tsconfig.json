@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
+    "outDir": "./lib/",
     "noImplicitAny": true,
     "strictNullChecks": true,
     "module": "es6",
@@ -9,7 +9,7 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "declaration": true,
-    "declarationDir": "dist/types",
+    "declarationDir": "lib/types",
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
     "pretty": true

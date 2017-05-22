@@ -1,0 +1,10 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    // override tslint-react rules here
+    "jsx-use-translation-function": false,
+    "jsx-boolean-value":[true, "never"],
+    "one-line": [true, "check-catch", "check-finally", "check-else"]
+    //"member-access": false
+  }
+}

@@ -1,0 +1,11 @@
+.*rc
+.*.yml
+webpack.config.*
+tsconfig.json
+postcssconfig.config.json
+index.html
+src
+docs
+spec
+node_modules
+__mocks__
