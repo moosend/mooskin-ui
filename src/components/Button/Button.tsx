@@ -1,29 +1,23 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as PropTypes from 'prop-types';
+import * as React from 'react';
 
-import ButtonStyles from "./Button.css";
+import ButtonStyles from './Button.css';
 
 export interface IProps {
+    /** text provided for the button */
     text: string;
+
+    /** provide to make the button disabled */
     disabled?: boolean;
+
+    /** provide to inverse the button's styles */
     inverseStyle?: boolean;
+
+    /** callback that is called when the button is clicked */
     onClick: (e?: React.MouseEvent<HTMLInputElement>) => void;
 }
 
 class Button extends React.Component<IProps, {}> {
-
-    /**
-     * @param {boolean} disabled
-     * @param {boolean} inverseStyle
-     * @param {string} label
-     * @param {Function} onClick
-     */
-    public static propTypes = {
-        disabled: PropTypes.bool,
-        inverseStyle: PropTypes.bool,
-        onClick: PropTypes.func.isRequired,
-        text: PropTypes.string.isRequired,
-    };
 
     public render(){
 
@@ -48,15 +42,15 @@ class Button extends React.Component<IProps, {}> {
 
     private getInverseStyles(){
         return {
-            backgroundColor: "#ffffff",
-            border: "1px solid #5ccdde",
-            color: "#5ccdde",
+            backgroundColor: '#ffffff',
+            border: '1px solid #5ccdde',
+            color: '#5ccdde',
         };
     }
 
     private getDisabledStyles(){
         return {
-            cursor: "not-allowed",
+            cursor: 'not-allowed',
         };
     }
 }

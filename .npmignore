@@ -2,6 +2,7 @@
 .*.yml
 webpack.config.*
 tsconfig.json
+tslint.json
 postcssconfig.config.json
 index.html
 src
@@ -9,3 +10,4 @@ docs
 spec
 node_modules
 __mocks__
+dist
