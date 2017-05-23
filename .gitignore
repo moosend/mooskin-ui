@@ -3,5 +3,7 @@ node_modules/
 .idea/
 coverage/
 npm-debug.log/
-dist/
+docs/
 lib/
+dist/
+.DS_Store

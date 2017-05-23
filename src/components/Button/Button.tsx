@@ -1,63 +1,51 @@
-import PropTypes from "prop-types";
-import React from "react";
+import * as React from 'react';
 
-import ButtonStyles from "./Button.css";
+import styles from './Button.css';
 
 export interface IProps {
-    text: string;
+    /** provide to make the button disabled */
     disabled?: boolean;
+
+    /** provide to inverse the button's styles */
     inverseStyle?: boolean;
+
+    /** override button styles */
+    style?: {[key: string]: string};
+
+    /** callback that is called when the button is clicked */
     onClick: (e?: React.MouseEvent<HTMLInputElement>) => void;
+
+    /** React children must be a string, basically you need to put a string between the JSX tags */
+    children: string;
 }
 
 class Button extends React.Component<IProps, {}> {
 
-    /**
-     * @param {boolean} disabled
-     * @param {boolean} inverseStyle
-     * @param {string} label
-     * @param {Function} onClick
-     */
-    public static propTypes = {
-        disabled: PropTypes.bool,
-        inverseStyle: PropTypes.bool,
-        onClick: PropTypes.func.isRequired,
-        text: PropTypes.string.isRequired,
+    public static defaultProps = {
+        style: {}
     };
 
     public render(){
 
-        const invertedStyles = this.props.inverseStyle ? this.getInverseStyles() : {};
-        const disabledStyles = this.props.disabled ? this.getDisabledStyles() : {};
+        const {style, inverseStyle, disabled, children} = this.props;
+
+        const buttonStyles = inverseStyle ? styles.inverseButton : styles.normalButton;
+        const disabledStyles = disabled ? styles.disabledButton : '';
 
         return (
             <button
                 onClick={this.onClick}
-                disabled={this.props.disabled}
-                className={`button-component ${ButtonStyles.button}`}
-                style={{...invertedStyles, ...disabledStyles}}
+                disabled={disabled}
+                className={`button-component ${styles.button} ${buttonStyles} ${disabledStyles}`}
+                style={style}
             >
-                {this.props.text}
+                {children}
             </button>
         );
     }
 
     private onClick = (e: React.MouseEvent<HTMLInputElement>) => {
-        this.props.onClick(e);
-    }
-
-    private getInverseStyles(){
-        return {
-            backgroundColor: "#ffffff",
-            border: "1px solid #5ccdde",
-            color: "#5ccdde",
-        };
-    }
-
-    private getDisabledStyles(){
-        return {
-            cursor: "not-allowed",
-        };
+        !this.props.disabled && this.props.onClick(e);
     }
 }
 

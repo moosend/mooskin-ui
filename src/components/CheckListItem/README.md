@@ -1,0 +1,1 @@
+Same as in Snapshot page in campaign wizard

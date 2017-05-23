@@ -1,9 +1,11 @@
 language: node_js
 sudo: false,
-node_js: 
-  - "stable"
-
+node_js:
+- stable
 script:
-  - npm run lint
-  - npm run prepublish
-  - npm test
+- npm run lint
+- npm run prepublish
+- npm test
+notifications:
+  slack:
+    secure: esI54KRgxOXGMaj2XkL0hqzxbyPDvAjameywVBkFUFFxDJt3NnxtB4vkmA0iv5Qv+J9jqZ9UaVGnJhhsDJLYQXzkgLfONGiGE4JK/t55N8rGZDUB/3GRz0VMJBeAVYQai817IPoiSKAL88QDKYTuxtmfIrw1f36L6Dps6lWSowc2veYGrHRuTPPw7UtzZzGl29jx4Oahlh1JykC9TnyjbpRNRGsj11ru2k9J0cTEaIbD8Nu/26wBK/7+GJpY7lQ2JbD2ntJFBy965kz5ZXTbAwyBvHh4PLuy6SXNWcJd++ziYixmER+i/AK0lx8qEes+IbrYOeCnG88yWiNc5IZTqKuy9kW+U+N7RnFFy4l+mGaeNNOH9YZSot/ntLQJ6n2sEC4KhidkYPpZsU1tJZftX50LXQ9g0X2Kdsz7hQnqnyTG2OapTvxLBh/rTgLrPtvAzN2YZw6E/3qcEuxwVVkQJOkx2jiGL8TyOjNkXJ6YH2HTBM7E+8yaTRUy18q54MEOS0Mrm2/bPBpP25+V+gnOj+3CoCL+1iU/4FGfnXhxRfb9pUM+fiupLVi/8aW2k7YzVoai9CjAhSW72OxXvpyO1JFRCbi2tMi0oxfCIcSLToZGqpMdXGo/J5joT6SaAUjejM6VoKAzzSSnVUynep4CHwFKfPUV9ZertxhBa8n06mw=

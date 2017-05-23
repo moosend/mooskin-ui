@@ -1,16 +1,36 @@
-
+ 
 .button {
-    background: #5ccdde;
     border-radius: 10px;
     font-size: 14px;
-    color: #fff;
     padding: 10px 45px;
     cursor: pointer;
     display: inline-block;
     outline: 0;
-    border:none;
+    margin: 3px;
+    transition: all 400ms ease;
 }
 
-.button:hover {
-    background: #4cb3c4;
+.normalButton{
+    background-color: #5ccdde;
+    border: 1px solid transparent;
+    color: #ffffff;
+}
+
+.inverseButton{
+    background-color: #ffffff;
+    border: 1px solid #5ccdde;
+    color: #5ccdde;
+}
+
+.disabledButton{
+    cursor:not-allowed;
+}
+
+.normalButton:hover:enabled {
+    background-color: #4cb3c4;
+}
+
+.inverseButton:hover:enabled {
+   border-color: #4cb3c4;
+   color: #4cb3c4;
 }
