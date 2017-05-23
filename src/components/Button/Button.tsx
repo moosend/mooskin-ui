@@ -14,9 +14,6 @@ export interface IProps {
 
     /** callback that is called when the button is clicked */
     onClick: (e?: React.MouseEvent<HTMLInputElement>) => void;
-
-    /** React children must be a string, basically you need to put a string between the JSX tags */
-    children: string;
 }
 
 class Button extends React.Component<IProps, {}> {

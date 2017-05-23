@@ -8,7 +8,6 @@ index.html
 src
 docs
 spec
-node_modules
 __mocks__
 dist
 .DS_Store
