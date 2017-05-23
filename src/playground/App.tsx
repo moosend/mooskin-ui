@@ -13,8 +13,13 @@ export default (props: any) => {
 
     return (
         <div>
-            <Button text="Button1" onClick={onClick}/>
-            <Button text="Button2"  onClick={onClick} disabled inverseStyle/>
+            <fieldset style={{display: 'inline-block'}}>
+                <legend>Button Element</legend>
+                <Button onClick={onClick}>Button</Button>
+                <Button onClick={onClick} disabled>Button</Button>
+                <Button onClick={onClick} inverseStyle>Button</Button>
+                <Button onClick={onClick} inverseStyle disabled>Button</Button>
+            </fieldset>
         </div>
     );
 };

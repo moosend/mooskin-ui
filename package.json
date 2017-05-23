@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
   "dependencies": {
-    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
