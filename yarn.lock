@@ -2086,7 +2086,7 @@ escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
 
-escape-string-regexp@^1.0.2:
+escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.3:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
@@ -2203,6 +2203,10 @@ express@^4.13.3:
     type-is "~1.6.15"
     utils-merge "1.0.0"
     vary "~1.1.1"
+
+extend@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/extend/-/extend-2.0.1.tgz#1ee8010689e7395ff9448241c98652bc759a8260"
 
 extend@~3.0.0:
   version "3.0.1"
@@ -4329,6 +4333,14 @@ postcss-convert-values@^2.3.4:
   dependencies:
     postcss "^5.0.11"
     postcss-value-parser "^3.1.2"
+
+postcss-css-variables@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/postcss-css-variables/-/postcss-css-variables-0.7.0.tgz#4aa58eeb3c859a6f0909013ab17beca5665287fd"
+  dependencies:
+    escape-string-regexp "^1.0.3"
+    extend "^2.0.1"
+    postcss "^5.0.5"
 
 postcss-custom-media@^4.0.0:
   version "4.1.0"

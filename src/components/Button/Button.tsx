@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Button.css';
 
-export interface IProps {
+export interface IButtonProps {
     /** provide to make the button disabled */
     disabled?: boolean;
 
@@ -16,7 +16,7 @@ export interface IProps {
     onClick: (e?: React.MouseEvent<HTMLInputElement>) => void;
 }
 
-class Button extends React.Component<IProps, {}> {
+class Button extends React.Component<IButtonProps, {}> {
 
     public static defaultProps = {
         style: {}
