@@ -57,6 +57,7 @@
     "typedoc": "^0.7.1",
     "typedoc-webpack-plugin": "^1.1.4",
     "typescript": "^2.3.2",
+    "url-loader": "^0.5.8",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },
