@@ -11,7 +11,7 @@ export interface IProps {
     required?: boolean;
 
     /** override input type */
-    type: string;
+    type?: string;
 
     /** override input name */
     name?: string;
@@ -23,26 +23,26 @@ export interface IProps {
     placeholder?: string;
 
     /** override input size */
-    size?: number;
+    size?: string;
 
     /** override input minlength */
-    minlength?: number;
+    minlength?: string;
 
     /** override input maxlength */
-    maxlength?: number;
+    maxlength?: string;
 
     /** override input styles */
     style?: {[key: string]: string};
 
     /** callback that is called when the input changes */
-    onChange: (e?: React.KeyboardEvent<HTMLInputElement>) => void;
+    //onChange: (e?: React.KeyboardEvent<HTMLInputElement>) => void;
 
 }
 
-class Input extends React.Component<IProps, {}> {
+class Input extends React.Component<IProps, void> {
 
     public static defaultProps = {
-        style: {},
+        style: {}
     };
 
     public render(){
@@ -50,7 +50,9 @@ class Input extends React.Component<IProps, {}> {
         const {disabled, required, type, name, value, placeholder, size, minlength, maxlength, style} = this.props;
 
         const disabledStyles = disabled ? styles.disabledInput : '';
-        const hasType = type ? type : '';
+        const hasSize = size ? parseInt(size) : 0; 
+        const hasMin = minlength ? parseInt(minlength) : 0; 
+        const hasMax = maxlength ? parseInt(maxlength) : 0; 
 
         return (
             <input
@@ -58,20 +60,20 @@ class Input extends React.Component<IProps, {}> {
                 name={name}
                 value={value}
                 placeholder={placeholder}
-                size={size}
-                minLength={minlength}
-                maxLength={maxlength}
+                size={hasSize}
+                minLength={hasMin}
+                maxLength={hasMax}
                 required={required}
                 disabled={disabled}
-                className={`input-component ${styles.input} ${disabledStyles}`}
                 style={style}
+                className={`input-component ${styles.input} ${disabledStyles}`}
             />
         );
     }
 
-    private onChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        !this.props.disabled && this.props.onChange(e);
-    }
+    // private onChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    //     !this.props.disabled && this.props.onChange(e);
+    // }
 
 }
 

@@ -22,10 +22,10 @@ export default (props: any) => {
             </fieldset>
             <fieldset style={{display: 'inline-block'}}>
                 <legend>Input Element</legend>
-                <Input>Input</Input>
-                <Input disabled value="disabled">Input</Input>
-                <Input placeholder="With placeholder">Input</Input>
-                <Input size="79" value="with changed size attribute">Input</Input>
+                <Input type="text"/>
+                <Input disabled value="disabled"/>
+                <Input placeholder="With placeholder"></Input>
+                <Input size="79" value="with changed size attribute"></Input>
             </fieldset>
         </div>
     );
