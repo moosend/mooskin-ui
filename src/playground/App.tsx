@@ -11,6 +11,10 @@ export default (props: any) => {
         console.log(e.target);
     };
 
+    const onChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        console.log(e.target);
+    };
+
     return (
         <div>
             <fieldset style={{display: 'inline-block'}}>
@@ -22,10 +26,10 @@ export default (props: any) => {
             </fieldset>
             <fieldset style={{display: 'inline-block'}}>
                 <legend>Input Element</legend>
-                <Input type="text"/>
-                <Input disabled value="disabled"/>
-                <Input placeholder="With placeholder"></Input>
-                <Input size="79" value="with changed size attribute"></Input>
+                <Input onChange={onChange} type="text" maxlength="5" placeholder="max length 5"/>
+                <Input onChange={onChange} disabled value="disabled"/>
+                <Input onChange={onChange} placeholder="With placeholder"></Input>
+                <Input onChange={onChange} size="79" value="with changed size attribute"></Input>
             </fieldset>
         </div>
     );

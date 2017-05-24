@@ -35,7 +35,7 @@ export interface IProps {
     style?: {[key: string]: string};
 
     /** callback that is called when the input changes */
-    //onChange: (e?: React.KeyboardEvent<HTMLInputElement>) => void;
+    onChange: (e?: React.KeyboardEvent<HTMLInputElement>) => void;
 
 }
 
@@ -50,9 +50,21 @@ class Input extends React.Component<IProps, void> {
         const {disabled, required, type, name, value, placeholder, size, minlength, maxlength, style} = this.props;
 
         const disabledStyles = disabled ? styles.disabledInput : '';
-        const hasSize = size ? parseInt(size) : 0; 
-        const hasMin = minlength ? parseInt(minlength) : 0; 
-        const hasMax = maxlength ? parseInt(maxlength) : 0; 
+        let hasSize;
+        let hasMin;
+        let hasMax;
+
+        if(size){
+            hasSize = parseInt(size);
+        }
+
+        if(minlength){
+            hasMin = parseInt(minlength);
+        }
+
+        if(maxlength){
+            hasMax = parseInt(maxlength);
+        }
 
         return (
             <input
@@ -71,9 +83,9 @@ class Input extends React.Component<IProps, void> {
         );
     }
 
-    // private onChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    //     !this.props.disabled && this.props.onChange(e);
-    // }
+    private onChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        !this.props.disabled && this.props.onChange(e);
+    }
 
 }
 
