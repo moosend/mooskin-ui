@@ -26,6 +26,9 @@ export interface ISelectProps {
 
     /** override button styles */
     style?: {[key: string]: string};
+
+    /** children here can only be Option elements */
+    children?: Array<React.ReactElement<IOptionProps>>;
 }
 
 export interface ISelectState {
@@ -35,8 +38,13 @@ export interface ISelectState {
 
 export interface IOptionProps {
     onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+
+    /** value for this option */
     value: string;
+
+     /** if it selected or not */
     selected?: boolean;
+    children?: string;
 }
 
 class Select extends React.Component<ISelectProps, ISelectState>{
@@ -51,25 +59,28 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     public render(){
 
+        let selected: string = this.props.placeholder || 'Select an option';
+        const displayList = this.state.list ? 'block' : 'none';
+
+        // map through the Option children in order to assign them the onClick cb, and determine the selected Option
         const options = React.Children.map(this.props.children, (child) => {
             if (React.isValidElement<IOptionProps>(child)){
 
+                if (this.state.selected === child.props.value && child.props.children) { // determine selected label
+                    selected = child.props.children;
+                }
+
+                // determine selected option by passing a selected boolean
                 const extraProps: Partial<IOptionProps> = {
                     onClick: this.onClick(child.props.value),
                     selected: this.state.selected === child.props.value
                 };
 
-                console.log(this.props.selected, child.props.value);
-
-                return React.cloneElement(child, extraProps);
+                return React.cloneElement(child, extraProps); // return a copy with the new merged props
             }else{
                 throw new Error('<Select> element only accepts <Option> elements as children');
             }
         });
-
-        const displayList = this.state.list ? 'block' : 'none';
-
-        const selected = this.resolveSelected();
 
         return (
             <div>
@@ -105,18 +116,6 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     private onBlur = () => {
         this.setState({list: false});
-    }
-
-    private resolveSelected(){
-        let selected = this.props.placeholder || 'Select an option';
-        React.Children.forEach(this.props.children, (child) => {
-            const element = child as React.ReactElement<any>;
-            if (element.props.value === this.state.selected){
-                selected = element.props.children;
-            }
-        });
-
-        return selected;
     }
 }
 
