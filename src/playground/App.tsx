@@ -3,7 +3,7 @@ import '../../lib/style.css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import {Button} from '../index';
+import {Button, Input} from '../index';
 
 export default (props: any) => {
 
@@ -19,6 +19,13 @@ export default (props: any) => {
                 <Button onClick={onClick} disabled>Button</Button>
                 <Button onClick={onClick} inverseStyle>Button</Button>
                 <Button onClick={onClick} inverseStyle disabled>Button</Button>
+            </fieldset>
+            <fieldset style={{display: 'inline-block'}}>
+                <legend>Input Element</legend>
+                <Input>Input</Input>
+                <Input disabled value="disabled">Input</Input>
+                <Input placeholder="With placeholder">Input</Input>
+                <Input size="79" value="with changed size attribute">Input</Input>
             </fieldset>
         </div>
     );
