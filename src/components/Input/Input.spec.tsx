@@ -3,9 +3,9 @@ import Input from './Input';
 
 import { mount, render, shallow } from 'enzyme';
 
-describe('Button', () => {
+describe('Input', () => {
 
-    test('renders properly into dom with color and label', () => {
+    test('renders properly into dom', () => {
         const func = jest.fn();
 
         const component = shallow(<Input>text</Input>);
