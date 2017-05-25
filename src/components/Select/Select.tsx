@@ -27,9 +27,6 @@ export interface ISelectProps {
     /** className for the main element */
     className?: string;
 
-    /** provide to make the select disabled */
-    disabled?: boolean;
-
     /** override button styles */
     style?: {[key: string]: string};
 
@@ -107,7 +104,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     private  onClick = (option: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            this.props.onChange && this.props.onChange(e, {value: option, type: this.props.dataLabel});
+            this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
             this.setState((prevState, props) => ({list: false, selected: option}));
         };
     }

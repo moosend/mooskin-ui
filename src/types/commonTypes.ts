@@ -1,5 +1,5 @@
 
 export interface IInputCallbackData {
-    type: string;
+    dataLabel: string;
     value: any;
 }
