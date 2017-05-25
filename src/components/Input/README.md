@@ -62,6 +62,7 @@ or just give it a custom style
 * `required` - input field is required
 * `className` - css class
 * `style` - input field style
+* `onChange` - callback to be triggered on input change
 
 Allthough these attributes are supported, all of them are optional.
 
