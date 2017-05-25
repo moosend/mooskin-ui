@@ -3,7 +3,8 @@ import '../../lib/style.css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import {Button, Input} from '../index';
+import {Button} from '../index';
+import {Input} from '../index';
 
 export default (props: any) => {
 
