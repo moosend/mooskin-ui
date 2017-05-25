@@ -1,0 +1,35 @@
+.input{
+    padding: 15px;
+    font-family: Arial,sans-serif;
+    border: 0;
+    color: #333333;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #efefef;
+    display: table-cell;
+    margin: 3px;
+}
+
+.disabledInput{
+    cursor:not-allowed;
+}
+
+.input::-webkit-input-placeholder {
+color: #834E2E !important;
+}
+ 
+.input:-moz-placeholder { /* Firefox 18- */
+color: #834E2E !important;  
+}
+ 
+.input::-moz-placeholder {  /* Firefox 19+ */
+color: #834E2E !important;  
+}
+ 
+.input:-ms-input-placeholder {  
+color: #834E2E !important;  
+}
+
+.input:focus {
+    outline: none;
+}
