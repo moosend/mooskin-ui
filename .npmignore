@@ -1,6 +1,7 @@
 .*rc
 .*.yml
 webpack.config.*
+coverage
 tsconfig.json
 tslint.json
 postcssconfig.config.json

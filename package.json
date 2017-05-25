@@ -7,7 +7,7 @@
   "scripts": {
     "prepublish": "npm run lint && webpack --config webpack.config.prod.js -p",
     "playground": "npm run prepublish && webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
-    "test": "jest",
+    "test": "jest --coverage --no-cache",
     "lint": "tslint -c tslint.json ./src/**/*.ts"
   },
   "repository": {
@@ -50,6 +50,7 @@
     "postcss-loader": "^2.0.5",
     "react-addons-test-utils": "^15.5.1",
     "react-test-renderer": "^15.5.4",
+    "source-map-loader": "^0.2.1",
     "style-loader": "^0.17.0",
     "ts-jest": "^20.0.4",
     "ts-loader": "^2.0.3",
@@ -63,6 +64,12 @@
     "webpack-dev-server": "^2.4.5"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "**/src/components/**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "mapCoverage": true,
     "modulePaths": [
       "/shared/vendor/modules"
     ],

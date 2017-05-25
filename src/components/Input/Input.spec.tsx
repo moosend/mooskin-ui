@@ -5,14 +5,6 @@ import { shallow } from 'enzyme';
 
 describe('Input', () => {
 
-    test('renders properly into dom and has the proper disabled class', () => {
-        const func = jest.fn();
-
-        const component = shallow(<Input onChange={func} disabled/>);
-
-        expect(component.find('input').hasClass('disabledInput')).toBe(true);
-    });
-
     test('renders properly into dom and has Placeholder prop', () => {
         const func = jest.fn();
 
