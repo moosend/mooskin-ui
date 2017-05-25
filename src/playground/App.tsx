@@ -1,10 +1,10 @@
 import '../../lib/style.css';
 
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
-import {Button} from '../index';
-import {Input} from '../index';
+import {IInputCallbackData} from '../types/commonTypes';
+
+import {Button, Input, Option, Select} from '../index';
 
 export default (props: any) => {
 
@@ -12,8 +12,8 @@ export default (props: any) => {
         console.log(e.target);
     };
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e.target.value);
+    const onChange = (e: React.MouseEvent<HTMLSelectElement>, data: IInputCallbackData) => {
+        console.log(e.target);
     };
 
     return (
@@ -32,6 +32,21 @@ export default (props: any) => {
                 <Input onChange={onChange} disabled value="disabled"/>
                 <Input onChange={onChange} placeholder="With placeholder" id="3rd"></Input>
                 <Input onChange={onChange} size="79" value="with changed size attribute" className=".input-field"></Input>
+            </fieldset>
+            <br/><br/>
+            <fieldset style={{display: 'inline-block', width: 400}}>
+                <legend>Select Element</legend>
+                <Select onChange={onChange} dataLabel="plan" label="Some label" selected="option3">
+                    <Option value="option1">Option1</Option>
+                    <Option value="option2">Option2</Option>
+                    <Option value="option3">Option3</Option>
+                    <Option value="option4">Option4</Option>
+                    <Option value="option5">Option5</Option>
+                </Select>
+                <br/>
+                <Select onChange={onChange} selected="option" dataLabel="plan" >
+                    <Option value="option1">Option1</Option>
+                </Select>
             </fieldset>
         </div>
     );
