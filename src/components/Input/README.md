@@ -63,6 +63,8 @@ or just give it a custom style
 * `className` - css class
 * `style` - input field style
 
+Allthough these attributes are supported, all of them are optional.
+
 #### For more
 
 ___

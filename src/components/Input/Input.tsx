@@ -41,7 +41,7 @@ export interface IProps {
     className?: string;
 
     /** callback that is called when the input changes */
-    onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (e?: React.ChangeEvent<HTMLInputElement>) => void;
 
 }
 
@@ -93,7 +93,7 @@ class Input extends React.Component<IProps, void> {
     }
 
     private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        !this.props.disabled && this.props.onChange(e);
+        !this.props.disabled && this.props.onChange && this.props.onChange(e);
     }
 
 }
