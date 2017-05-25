@@ -2,7 +2,6 @@
 
 .selectContainer{
     position: relative;
-    z-index: 1;
 }
 
 .overlay{
@@ -12,6 +11,7 @@
     left: 0;
     right: 0;
     background: transparent;
+    z-index:9;
 }
 
 .innerDiv{
@@ -20,8 +20,7 @@
     color: var(--inputColor);
     vertical-align: middle;
     padding: 15px;
-    flex-grow:1;
-    
+    flex-grow:1;    
 }
 
 .selectIcon{
