@@ -11,8 +11,8 @@ export default (props: any) => {
         console.log(e.target);
     };
 
-    const onChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        console.log(e.keyCode);
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        console.log(e.target.value);
     };
 
     return (
@@ -24,6 +24,7 @@ export default (props: any) => {
                 <Button onClick={onClick} inverseStyle>Button</Button>
                 <Button onClick={onClick} inverseStyle disabled>Button</Button>
             </fieldset>
+            <br/><br/>
             <fieldset style={{display: 'inline-block'}}>
                 <legend>Input Element</legend>
                 <Input onChange={onChange} type="text" maxlength="5" placeholder="max length 5"/>

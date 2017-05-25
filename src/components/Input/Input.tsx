@@ -35,7 +35,7 @@ export interface IProps {
     style?: {[key: string]: string};
 
     /** callback that is called when the input changes */
-    onChange: (e?: React.KeyboardEvent<HTMLInputElement>) => void;
+    onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
 
 }
 
@@ -68,7 +68,7 @@ class Input extends React.Component<IProps, void> {
 
         return (
             <input
-                onKeyDown={this.onChange}
+                onChange={this.onChange}
                 type={type}
                 name={name}
                 value={value}
@@ -84,7 +84,7 @@ class Input extends React.Component<IProps, void> {
         );
     }
 
-    private onChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         !this.props.disabled && this.props.onChange(e);
     }
 
