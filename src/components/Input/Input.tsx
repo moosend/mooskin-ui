@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import styles from './Input.css';
 
+import {IInputCallbackData} from '../../types/commonTypes';
+
 export interface IProps {
 
     /** override input id */
@@ -40,37 +42,54 @@ export interface IProps {
     /** override input class */
     className?: string;
 
+    /** what data is being used, helps whn extracting user input, you know on what field changes are made */
+    dataLabel?: string;
+
     /** callback that is called when the input changes */
-    onChange?: (e?: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 
 }
 
 class Input extends React.Component<IProps, void> {
 
     public static defaultProps = {
-        style: {},
-        className: ''
+        className: '',
+        style: {}
     };
 
     public render(){
 
-        const {id, disabled, required, type, name, value, placeholder, size, minlength, maxlength, style, className} = this.props;
+        const {
+            id,
+            disabled,
+            required,
+            type,
+            name,
+            value,
+            placeholder,
+            size,
+            minlength,
+            maxlength,
+            style,
+            className
+        } = this.props;
 
         const disabledInput = disabled ? styles.disabledInput : '';
+
         let hasSize;
         let hasMin;
         let hasMax;
 
-        if(size){
-            hasSize = parseInt(size);
+        if (size){
+            hasSize = parseInt(size, 10);
         }
 
-        if(minlength){
-            hasMin = parseInt(minlength);
+        if (minlength){
+            hasMin = parseInt(minlength, 10);
         }
 
-        if(maxlength){
-            hasMax = parseInt(maxlength);
+        if (maxlength){
+            hasMax = parseInt(maxlength, 10);
         }
 
         return (
@@ -93,7 +112,9 @@ class Input extends React.Component<IProps, void> {
     }
 
     private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        !this.props.disabled && this.props.onChange && this.props.onChange(e);
+        !this.props.disabled &&
+        this.props.onChange &&
+        this.props.onChange(e, {value: this.props.value, dataLabel: this.props.dataLabel});
     }
 
 }

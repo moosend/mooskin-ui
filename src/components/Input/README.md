@@ -61,6 +61,7 @@ or just give it a custom style
 * `disabled` - input field should be disabled
 * `required` - input field is required
 * `className` - css class
+* `dataLabel` - label what kind of data 
 * `style` - input field style
 * `onChange` - callback to be triggered on input change
 

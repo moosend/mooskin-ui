@@ -59,7 +59,7 @@ Custom style, className or id can be given just like any other component in this
 ## Supported attributes for Select
 
 * `id` - id of the element
-* `dataLabel` -(required) label what kind of data 
+* `dataLabel` - label what kind of data 
 * `onChange` - callback that is fired when you click on one of the options
 * `selected` - selected value, has to correspond to one of the Option values
 * `value` - text value of input
@@ -71,7 +71,7 @@ Custom style, className or id can be given just like any other component in this
 
 * `value` - value for the option
 
-Attributes with (required) are required, the rest are optional.
+Allthough these attributes are supported, all of them are optional.
 
 #### For more
 

@@ -10,7 +10,7 @@ export interface ISelectProps {
     onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
-    dataLabel: string;
+    dataLabel?: string;
 
     /** to specify which value is selected, has to be one of the option values */
     selected?: string;
