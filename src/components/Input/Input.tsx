@@ -4,6 +4,9 @@ import styles from './Input.css';
 
 export interface IProps {
 
+    /** override input id */
+    id?: string;
+
     /** provide to make the input field disabled */
     disabled?: boolean;
 
@@ -34,6 +37,9 @@ export interface IProps {
     /** override input styles */
     style?: {[key: string]: string};
 
+    /** override input class */
+    className?: string;
+
     /** callback that is called when the input changes */
     onChange: (e?: React.ChangeEvent<HTMLInputElement>) => void;
 
@@ -42,12 +48,13 @@ export interface IProps {
 class Input extends React.Component<IProps, void> {
 
     public static defaultProps = {
-        style: {}
+        style: {},
+        className: ''
     };
 
     public render(){
 
-        const {disabled, required, type, name, value, placeholder, size, minlength, maxlength, style} = this.props;
+        const {id, disabled, required, type, name, value, placeholder, size, minlength, maxlength, style, className} = this.props;
 
         const disabledInput = disabled ? styles.disabledInput : '';
         let hasSize;
@@ -69,6 +76,7 @@ class Input extends React.Component<IProps, void> {
         return (
             <input
                 onChange={this.onChange}
+                id={id}
                 type={type}
                 name={name}
                 value={value}
@@ -79,7 +87,7 @@ class Input extends React.Component<IProps, void> {
                 required={required}
                 disabled={disabled}
                 style={style}
-                className={`input-component ${styles.input} ${disabledInput}`}
+                className={`input-component ${styles.input} ${disabledInput} ${className}`}
             />
         );
     }

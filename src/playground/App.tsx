@@ -29,8 +29,8 @@ export default (props: any) => {
                 <legend>Input Element</legend>
                 <Input onChange={onChange} type="text" maxlength="5" placeholder="max length 5"/>
                 <Input onChange={onChange} disabled value="disabled"/>
-                <Input onChange={onChange} placeholder="With placeholder"></Input>
-                <Input onChange={onChange} size="79" value="with changed size attribute"></Input>
+                <Input onChange={onChange} placeholder="With placeholder" id="3rd"></Input>
+                <Input onChange={onChange} size="79" value="with changed size attribute" className=".input-field"></Input>
             </fieldset>
         </div>
     );

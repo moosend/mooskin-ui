@@ -37,6 +37,22 @@ describe('Input', () => {
         expect(component.find('input').prop('value')).toEqual('random');
     });
 
+    test('renders an input with id', () => {
+        const func = jest.fn();
+
+        const component = shallow(<Input onChange={func} id="1234"></Input>);
+
+        expect(component.find('input').prop('id')).toEqual('1234');
+    });
+
+    test('renders an input with custom css class', () => {
+        const func = jest.fn();
+
+        const component = shallow(<Input onChange={func} className="input-group"></Input>);
+
+        expect(component.find('input').hasClass('input-group')).toBe(true);
+    });
+
     test('onChange prop callback is called when a key is pressed', () => {
         const func = jest.fn();
 

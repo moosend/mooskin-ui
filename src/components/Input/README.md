@@ -50,6 +50,7 @@ or just give it a custom style
 
 ## Supported attributes
 
+* `id` - id of the element
 * `type` - type of the input (eg. text)
 * `name` - name of the input
 * `value` - text value of input
@@ -59,6 +60,7 @@ or just give it a custom style
 * `maxlength` - max number of characters allowed
 * `disabled` - input field should be disabled
 * `required` - input field is required
+* `className` - css class
 * `style` - input field style
 
 #### For more
