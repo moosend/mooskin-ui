@@ -42,7 +42,7 @@ describe('Input', () => {
 
         const component = shallow(<Input onChange={func}></Input>);
 
-        component.find('input').simulate('keyDown', {keyCode: 40});
+        component.find('input').simulate('change', { target: { value: 'text' }});
         expect(func).toHaveBeenCalled();
     });
 
