@@ -1,10 +1,11 @@
 .*rc
 .*.yml
 webpack.config.*
-coverage
+coverage/
+node_modules/
 tsconfig.json
 tslint.json
-postcssconfig.config.json
+postcss.config.json
 index.html
 src
 docs
