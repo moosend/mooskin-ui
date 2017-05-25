@@ -56,7 +56,7 @@ or just give it a custom style
 * `placeholder` - backtext description of input
 * `size` - size of the input field
 * `minlength` - min number of characters allowed
-* `maxlength` - min number of characters allowed
+* `maxlength` - max number of characters allowed
 * `disabled` - input field should be disabled
 * `required` - input field is required
 * `style` - input field style
