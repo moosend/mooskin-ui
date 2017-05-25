@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Button from './Button';
 
-import { mount, render, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Button', () => {
 
@@ -11,7 +11,7 @@ describe('Button', () => {
         const component = shallow(<Button onClick={func}>asd</Button>);
 
         expect(component.find('button').text()).toBe('asd');
-        expect(component.find('[disabled=true]').length).toBe(0);
+        expect(component.find('button').prop('disabled')).not.toBe(true);
     });
 
     test('renders a disabled button if disabled prop is passed', () => {
