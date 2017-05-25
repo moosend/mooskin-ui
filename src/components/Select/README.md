@@ -1,6 +1,6 @@
 # MooSkin UI - Select Component
 
-The MooSkin Select component works similar to the normal HTML <Select/> element, but with pre-defined styling and attributes.
+The MooSkin Select component works similar to the normal HTML `<Select/>` element, but with pre-defined styling and attributes.
 
 ___
 
@@ -21,11 +21,12 @@ And then you can simply start using it by typing
     <Option value="option3">Option3</Option>
     <Option value="option4">Option4</Option>
 </Select>
+
 ```
 
 For easy use, the components are named similar to normal HTML components but with a capital first letter.
 
-Like the <select/> element it will accept given attributes and render differently based on the given attributes
+Like the `<select/>` element it will accept given attributes and render differently based on the given attributes
 
 ### Examples
 

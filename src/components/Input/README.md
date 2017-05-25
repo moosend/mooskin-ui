@@ -1,6 +1,6 @@
 # MooSkin UI - Input Component
 
-The MooSkin Input Component works similar to the normal HTML <input/> element, but with pre-defined styling and attributes.
+The MooSkin Input Component works similar to the normal HTML `<input/>` element, but with pre-defined styling and attributes.
 
 ___
 
@@ -20,7 +20,7 @@ And then you can simply start using it by typing
 
 For easy use, the components are named similar to normal HTML components but with a capital first letter.
 
-Like the <input/> element it will accept given attributes and render differently based on the given attributes
+Like the `<input/>` element it will accept given attributes and render differently based on the given attributes
 
 ### Examples
 
