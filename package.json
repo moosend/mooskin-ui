@@ -5,9 +5,9 @@
   "main": "lib/index.js",
   "types": "./lib/types/index.d.ts",
   "scripts": {
-    "prepublish": "webpack --config webpack.config.prod.js -p",
+    "prepublish": "npm run lint && webpack --config webpack.config.prod.js -p",
     "playground": "npm run prepublish && webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
-    "test": "jest",
+    "test": "jest --coverage --no-cache",
     "lint": "tslint -c tslint.json ./src/**/*.ts"
   },
   "repository": {
@@ -45,10 +45,12 @@
     "html-webpack-plugin": "^2.28.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.3",
+    "postcss-css-variables": "^0.7.0",
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.5",
     "react-addons-test-utils": "^15.5.1",
     "react-test-renderer": "^15.5.4",
+    "source-map-loader": "^0.2.1",
     "style-loader": "^0.17.0",
     "ts-jest": "^20.0.4",
     "ts-loader": "^2.0.3",
@@ -57,10 +59,17 @@
     "typedoc": "^0.7.1",
     "typedoc-webpack-plugin": "^1.1.4",
     "typescript": "^2.3.2",
+    "url-loader": "^0.5.8",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "**/src/components/**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ],
+    "mapCoverage": true,
     "modulePaths": [
       "/shared/vendor/modules"
     ],

@@ -12,7 +12,7 @@
     "declaration": true,
     "declarationDir": "lib/types",
     "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
-    "pretty": true
+    "pretty": true,
+    "noUnusedLocals": true
   }
 }

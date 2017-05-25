@@ -1,4 +1,5 @@
 var webpack = require('webpack'),
+  path = require('path'),
   ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var distFolder = 'lib';
@@ -32,6 +33,32 @@ module.exports = {
           },
           'postcss-loader'
         ])
+      },
+      {
+          test: /\.woff$|\.woff2$/,
+          loader: "url-loader",
+          options: {
+              limit: 10000,
+              name: '[path][name].[ext]',
+              mimetype: 'application/font-woff'
+          }
+      },
+      {
+          test: /\.ttf$|\.eot$|\.svg$/,
+          loader: "url-loader",
+          options: {
+              limit: 10000,
+              name: '[path][name].[ext]'
+          }
+      },
+      {
+          test: /\.(png|jpg|gif)$/,
+          loader: 'url-loader',
+          options: {
+              limit: 10000,
+              name: '[path][name].[ext]',
+              mimetype: 'image/png'
+          }
       }
     ]
   },
@@ -39,7 +66,11 @@ module.exports = {
     extractCSS
   ],
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".tsx", ".ts", ".js"],
+    modules: [
+        path.resolve('./'),
+        'node_modules'
+    ]
   },
   // devtool: 'inline-source-map',
  
