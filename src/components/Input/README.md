@@ -7,7 +7,7 @@ The MooSkin Input Component works similar to the normal HTML <input/> element, b
 MooSkin Ui must be installed on your project
 
 ```
-npm install mooskin
+npm install --save mooskin
 ```
 
 ### Usage
@@ -28,7 +28,7 @@ For easy use the component is named similar to normal HTML components but with a
 
 Like the <input/> element it will accept given attributes and render differently based on the given attributes
 
-## Examples
+### Examples
 
 Passing the placeholder attribute
 
@@ -67,6 +67,6 @@ or just give it a custom style
 * required
 * style
 
-# For more
+#### For more
 
 [MooSkin-UI](https://github.com/moosend/mooskin-ui)
