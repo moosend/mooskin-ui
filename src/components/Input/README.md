@@ -2,13 +2,7 @@
 
 The MooSkin Input Component works similar to the normal HTML <input/> element, but with pre-defined styling and attributes.
 
-### Prerequisites
-
-MooSkin Ui must be installed on your project
-
-```
-npm install --save mooskin
-```
+___
 
 ### Usage
 
@@ -21,10 +15,10 @@ Import {Input} from 'mooskin';
 And then you can simply start using it by typing
 
 ```
-<Input></Input>
+<Input whatever />
 ```
 
-For easy use the component is named similar to normal HTML components but with a capital first letter.
+For easy use, the components are named similar to normal HTML components but with a capital first letter.
 
 Like the <input/> element it will accept given attributes and render differently based on the given attributes
 
@@ -56,17 +50,19 @@ or just give it a custom style
 
 ## Supported attributes
 
-* type
-* name
-* value
-* placeholder
-* size
-* minlength
-* maxlength
-* disabled
-* required
-* style
+* `type` - type of the input (eg. text)
+* `name` - name of the input
+* `value` - text value of input
+* `placeholder` - backtext description of input
+* `size` - size of the input field
+* `minlength` - min number of characters allowed
+* `maxlength` - min number of characters allowed
+* `disabled` - input field should be disabled
+* `required` - input field is required
+* `style` - input field style
 
 #### For more
+
+___
 
 [MooSkin-UI](https://github.com/moosend/mooskin-ui)
