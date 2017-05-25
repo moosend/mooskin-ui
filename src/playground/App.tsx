@@ -12,7 +12,7 @@ export default (props: any) => {
     };
 
     const onChange = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        console.log(e.target);
+        console.log(e.keyCode);
     };
 
     return (

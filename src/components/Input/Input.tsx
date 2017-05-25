@@ -49,7 +49,7 @@ class Input extends React.Component<IProps, void> {
 
         const {disabled, required, type, name, value, placeholder, size, minlength, maxlength, style} = this.props;
 
-        const disabledStyles = disabled ? styles.disabledInput : '';
+        const disabledInput = disabled ? styles.disabledInput : '';
         let hasSize;
         let hasMin;
         let hasMax;
@@ -68,6 +68,7 @@ class Input extends React.Component<IProps, void> {
 
         return (
             <input
+                onKeyDown={this.onChange}
                 type={type}
                 name={name}
                 value={value}
@@ -78,7 +79,7 @@ class Input extends React.Component<IProps, void> {
                 required={required}
                 disabled={disabled}
                 style={style}
-                className={`input-component ${styles.input} ${disabledStyles}`}
+                className={`input-component ${styles.input} ${disabledInput}`}
             />
         );
     }
