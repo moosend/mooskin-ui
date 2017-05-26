@@ -35,7 +35,7 @@ export default (props: any) => {
                 <Input onChange={onChange} type="text" maxlength="5" placeholder="max length 5"/>
                 <Input onChange={onChange} disabled value="disabled"/>
                 <Input onChange={onChange} placeholder="With placeholder" id="3rd"/>
-                <Input onChange={onChange} size="79" value="with changed size attribute" className=".input-field"/>
+                <Input onChange={onChange} value="with changed size attribute" className=".input-field"/>
             </fieldset>
             <br/><br/>
             <fieldset style={{display: 'inline-block', width: 400}}>
