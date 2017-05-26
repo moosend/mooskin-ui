@@ -15,7 +15,7 @@ Import {Input} from 'mooskin';
 And then you can simply start using it by typing
 
 ```
-<Input whatever />
+<Input />
 ```
 
 For easy use, the components are named similar to normal HTML components but with a capital first letter.
@@ -55,7 +55,6 @@ or just give it a custom style
 * `name` - name of the input
 * `value` - text value of input
 * `placeholder` - backtext description of input
-* `size` - size of the input field
 * `minlength` - min number of characters allowed
 * `maxlength` - max number of characters allowed
 * `disabled` - input field should be disabled
