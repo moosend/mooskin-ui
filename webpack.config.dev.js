@@ -23,17 +23,18 @@ config.plugins.push(
     })
 )
 
-config.module.rules.push({
+config.module.rules.push(
+    {
         enforce: 'pre',
         test: /\.js$/,
         loader: "source-map-loader"
-})
-
-config.modules.rules.push({
+    },
+    {
         enforce: 'pre',
         test: /\.tsx?$/,
         use: "source-map-loader"
-});
+    }
+);
 
 
 module.exports = config;

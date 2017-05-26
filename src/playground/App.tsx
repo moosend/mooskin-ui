@@ -46,6 +46,8 @@ export default (props: any) => {
                     <Option value="option3">Option3</Option>
                     <Option value="option4">Option4</Option>
                     <Option value="option5">Option5</Option>
+                    <Option value="option5">Option5</Option>
+
                 </Select>
                 <br/>
                 <Select onChange={onClick} selected="option" dataLabel="plan" >
