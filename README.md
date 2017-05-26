@@ -79,7 +79,7 @@ interface IState {
   //some state types
 }
 
-class App extends Component<IProps, IState> (
+class App extends React.Component<IProps, IState> (
   render(){
     return (
       <div>
