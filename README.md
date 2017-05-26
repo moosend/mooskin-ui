@@ -1,4 +1,4 @@
-# MooSkin-UI (WIP)
+# MooSkin (WIP)
 
 
 [![Build Status](https://travis-ci.org/moosend/mooskin-ui.svg?branch=master)](https://travis-ci.org/moosend/mooskin-ui)
@@ -10,7 +10,7 @@ ___
 
 ### Prequisites
 
-Since it is a React Component Library, we recommend that you get to know [React](https://facebook.github.io/react/) before using MooSkin-UI.
+Since it is a React Component Library, we recommend that you get to know [React](https://facebook.github.io/react/) before using MooSkin.  [Webpack](https://webpack.github.io/) is recommended as well, but any build tool that can handle importing css will work too.
 
 ### Installation
 
@@ -22,7 +22,7 @@ npm install mooskin --save
 
 ### Usage
 
-Apart from [React](https://facebook.github.io/react/) itself, MooSkin-UI uses [PostCSS](https://github.com/postcss/postcss) so that needs to be imported aswell.
+Apart from [React](https://facebook.github.io/react/) itself, you need to be able to import the CSS file for the library by using a loader or some plugin for your build tool of choice(css-loader if you re using webpack, which is recommended).
 
 ```
 import React from 'react';
@@ -36,7 +36,7 @@ and then you can simply import the desired component and start using it
 import {Button} from 'mooskin';
 
 const App = () => (
-  <Button />
+  <Button>Click me!</Button>
 );
 
 ReactDOM.render(
@@ -60,9 +60,9 @@ import {Select} from 'mooskin';
 And then you can simply start using it by typing
 
 ```
-<Select whatever >
-    <Option whatever>Select me!</Option>
-    <Option whatever>No, Select me!</Option>
+<Select dataLabel="countries" onChange={callback}>
+    <Option whatever>England</Option>
+    <Option whatever>Germany</Option>
 </Select>
 ```
 
