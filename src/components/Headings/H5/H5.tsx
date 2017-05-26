@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './H5.css';
 
-import {IHeadingProps} from '../../../types/commonTypes';
+import {IHeadingProps} from '../props';
 
 class H5 extends React.Component<IHeadingProps, void> {
 
