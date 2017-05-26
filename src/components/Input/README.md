@@ -1,6 +1,6 @@
 # MooSkin UI - Input Component
 
-The MooSkin Input Component works similar to the normal HTML <input/> element, but with pre-defined styling and attributes.
+The MooSkin Input Component works similar to the normal HTML `<input/>` element, but with pre-defined styling and attributes.
 
 ___
 
@@ -15,12 +15,12 @@ Import {Input} from 'mooskin';
 And then you can simply start using it by typing
 
 ```
-<Input whatever />
+<Input />
 ```
 
 For easy use, the components are named similar to normal HTML components but with a capital first letter.
 
-Like the <input/> element it will accept given attributes and render differently based on the given attributes
+Like the `<input/>` element it will accept given attributes and render differently based on the given attributes
 
 ### Examples
 
@@ -55,7 +55,6 @@ or just give it a custom style
 * `name` - name of the input
 * `value` - text value of input
 * `placeholder` - backtext description of input
-* `size` - size of the input field
 * `minlength` - min number of characters allowed
 * `maxlength` - max number of characters allowed
 * `disabled` - input field should be disabled

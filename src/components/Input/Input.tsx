@@ -27,9 +27,6 @@ export interface IProps {
     /** override input placeholder */
     placeholder?: string;
 
-    /** override input size */
-    size?: string;
-
     /** override input minlength */
     minlength?: string;
 
@@ -67,7 +64,6 @@ class Input extends React.Component<IProps, void> {
             name,
             value,
             placeholder,
-            size,
             minlength,
             maxlength,
             style,
@@ -76,13 +72,8 @@ class Input extends React.Component<IProps, void> {
 
         const disabledInput = disabled ? styles.disabledInput : '';
 
-        let hasSize;
         let hasMin;
         let hasMax;
-
-        if (size){
-            hasSize = parseInt(size, 10);
-        }
 
         if (minlength){
             hasMin = parseInt(minlength, 10);
@@ -100,7 +91,6 @@ class Input extends React.Component<IProps, void> {
                 name={name}
                 value={value}
                 placeholder={placeholder}
-                size={hasSize}
                 minLength={hasMin}
                 maxLength={hasMax}
                 required={required}
