@@ -5,11 +5,13 @@ import { shallow } from 'enzyme';
 
 describe('H2', () => {
 
-    test('renders properly into dom with text', () => {
+    test('renders properly into dom with text, id and class', () => {
 
-        const component = shallow(<H2>Mooo!</H2>);
+        const component = shallow(<H2 id="Campaigns" className="headers">Mooo!</H2>);
 
         expect(component.find('h2').text()).toBe('Mooo!');
+        expect(component.find('h2').prop('id')).toEqual('Campaigns');
+        expect(component.find('h2').hasClass('headers')).toBe(true);
     });
 
 });

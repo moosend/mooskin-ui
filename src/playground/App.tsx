@@ -55,9 +55,9 @@ export default (props: any) => {
             <br/><br/>
             <fieldset style={{display: 'inline-block'}}>
                 <legend>Headers</legend>
-                <H1>Your Campaigns</H1>
+                <H1 id="5">Your Campaigns</H1>
                 <H2>Moooo!</H2>
-                <H3>Moooo!</H3>
+                <H3 style={{color: 'blue'}}>Moooo!</H3>
                 <H4>Moooo!</H4>
                 <H5>Moooo!</H5>
                 <H6>Moooo!</H6>
