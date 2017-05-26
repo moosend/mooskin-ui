@@ -1,4 +1,4 @@
-# mooskin-ui (WIP)
+# MooSkin-UI (WIP)
 
 
 [![Build Status](https://travis-ci.org/moosend/mooskin-ui.svg?branch=master)](https://travis-ci.org/moosend/mooskin-ui)
@@ -78,7 +78,7 @@ import {Input} from 'mooskin'
 
 MooSkin-UI came to life because of the love for [React](https://facebook.github.io/react/), and if you share the same love, we'd greatly appreciate any contribution you make.
 
-###
+### License
 
 This project is licensed under the terms of the [MIT License](https://github.com/moosend/mooskin-ui/blob/master/LICENSE)
 
