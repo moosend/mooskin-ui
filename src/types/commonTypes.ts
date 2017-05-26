@@ -4,7 +4,7 @@ export interface IInputCallbackData {
     value: any;
 }
 
-export interface IHeaderProps {
+export interface IHeadingProps {
 
     /** override h1 id */
     id?: string;

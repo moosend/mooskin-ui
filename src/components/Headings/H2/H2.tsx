@@ -2,9 +2,9 @@ import * as React from 'react';
 
 import styles from './H2.css';
 
-import {IHeaderProps} from '../../../types/commonTypes';
+import {IHeadingProps} from '../../../types/commonTypes';
 
-class H2 extends React.Component<IHeaderProps, void> {
+class H2 extends React.Component<IHeadingProps, void> {
 
     public static defaultProps = {
         className: '',
