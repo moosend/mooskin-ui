@@ -29,7 +29,7 @@ config.module.rules.push({
         loader: "source-map-loader"
 })
 
-config.modules.rules.push({
+config.module.rules.push({
         enforce: 'pre',
         test: /\.tsx?$/,
         use: "source-map-loader"

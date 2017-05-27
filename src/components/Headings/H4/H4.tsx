@@ -15,7 +15,7 @@ class H4 extends React.Component<IHeadingProps, void> {
 
         const {id, className, style, children} = this.props;
 
-        const classes = `button-component ${styles.h4} ${className}`;
+        const classes = `h4-component ${styles.h4} ${className}`;
 
         return (
             <h4
