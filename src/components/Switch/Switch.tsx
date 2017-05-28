@@ -4,6 +4,15 @@ import styles from './Switch.css';
 
 export interface ISwitchProps {
 
+    /** override switch id */
+    id?: string;
+
+    /** provide to make the switch disabled */
+    disabled?: boolean;
+
+    /** provide to make the switch required */
+    required?: boolean;
+
     /** switch type */
     type?: string;
 
@@ -28,15 +37,22 @@ class Switch extends React.Component<ISwitchProps, void> {
 
     public render(){
 
-        const {style, className, type} = this.props;
+        const {id, style, className, type, disabled, required} = this.props;
 
-        const labelClass = `switch-component ${styles.switch}`;
+        const disabledSwitch = disabled ? styles.disabledSwitch : '';
+
+        const labelClass = `switch-component ${styles.switch} ${disabledSwitch}`;
         const switchClasses = `switch-component ${styles.slider} ${styles.round} ${className}`;
 
         return (
-            <label className={labelClass}>
+            <label
+                id={id}
+                className={labelClass}
+            >
                 <input
                     onChange={this.onChange}
+                    disabled={disabled}
+                    required={required}
                     type={type}
                 />
                 <div
@@ -48,7 +64,7 @@ class Switch extends React.Component<ISwitchProps, void> {
     }
 
     private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        // !this.props.disabled &&
+        !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange(e);
         console.log(e.target.checked);

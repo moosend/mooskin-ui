@@ -59,7 +59,8 @@ export default (props: any) => {
             <br/><br/>
             <fieldset style={{display: 'inline-block'}}>
                 <legend>Switches</legend>
-                <Switch onChange={onChangeSwitch}/>
+                <Switch onChange={onChangeSwitch} />
+                <Switch onChange={onChangeSwitch} disabled/>
             </fieldset>
             <br/><br/>
             <fieldset style={{display: 'inline-block'}}>

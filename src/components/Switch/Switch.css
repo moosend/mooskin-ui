@@ -4,6 +4,12 @@
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.disabledSwitch {
+    cursor: not-allowed;
 }
 
 /* Hide default HTML checkbox */
@@ -12,7 +18,6 @@
 /* The slider */
 .slider {
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
   right: 0;
