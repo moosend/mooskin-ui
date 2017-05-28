@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {IInputCallbackData} from '../../types/commonTypes';
+import {IInputCallbackData} from '../_utils/types/commonTypes';
 
 import styles from './Select.css';
 

@@ -10,6 +10,6 @@ config.plugins.push(
       exclude: '**/*.spec.*',
       experimentalDecorators: true,
       excludeExternals: true
-  }, './src'))
+  }, './components'))
 
 module.exports = config;

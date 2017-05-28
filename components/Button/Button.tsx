@@ -25,7 +25,7 @@ export interface IButtonProps {
     children?: string;
 }
 
-class Button extends React.Component<IButtonProps, {}> {
+export default class Button extends React.Component<IButtonProps, {}> {
 
     public static defaultProps = {
         className: '',
@@ -58,5 +58,3 @@ class Button extends React.Component<IButtonProps, {}> {
         !this.props.disabled && this.props.onClick && this.props.onClick(e);
     }
 }
-
-export default Button;

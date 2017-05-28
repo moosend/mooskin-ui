@@ -10,7 +10,7 @@ config.devServer = {
     historyApiFallback: true
 }
 
-config.entry = './src/playground/playground.tsx';
+config.entry = './components/_utils/playground/playground.tsx';
 
 config.output = {
     filename: './'+distFolder+'/playground.js'

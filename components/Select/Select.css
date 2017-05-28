@@ -1,4 +1,4 @@
-@import '../../globals/variables.css';
+@import '../_utils/globals/variables.css';
 
 .selectContainer{
     position: relative;

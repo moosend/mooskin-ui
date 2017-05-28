@@ -10,7 +10,7 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "declaration": true,
-    "declarationDir": "lib/types",
+    "declarationDir": "lib",
     "noFallthroughCasesInSwitch": true,
     "pretty": true,
     "noUnusedLocals": true

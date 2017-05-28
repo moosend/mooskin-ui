@@ -1,15 +1,42 @@
+var fs = require('fs');
+var gracefulFs = require('graceful-fs');
+
+gracefulFs.gracefulify(fs);
+
 var webpack = require('webpack'),
   path = require('path'),
+  glob = require("glob"),
+  CopyWebpackPlugin = require('copy-webpack-plugin'),
   ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var distFolder = 'lib';
 
-var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/style.css", allChunks: true});
+var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/[name]/style.css", allChunks: true});
+
+var entries = glob.sync("./components/**/index.ts", {ignore: ['**/*.spec.{tsx,ts}']}).map(function(entry){
+  var obj = {};
+  var key = entry.split('/');
+  key = key[key.length-2];
+
+  obj[key] = entry;
+
+  return obj;
+}).reduce(function(acc, curr){
+
+  for(var i in curr){
+    acc[i] = curr[i];
+  }
+
+  return acc;
+}, {});
+
+entries['index'] = './components/index/index.ts'
+
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: entries,
   output: {
-    filename: './'+distFolder+'/index.js',
+    filename: './'+distFolder+'/[name]/index.js',
     library: 'mooskin',
     libraryTarget: 'umd',
     umdNamedDefine: true
@@ -72,6 +99,10 @@ module.exports = {
         'node_modules'
     ]
   },
+  externals: [
+    'react',
+    'react-dom'
+  ]
   // devtool: 'inline-source-map',
  
 };

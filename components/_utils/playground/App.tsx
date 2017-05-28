@@ -1,10 +1,8 @@
-import '../../lib/style.css';
-
 import * as React from 'react';
 
 import {IInputCallbackData} from '../types/commonTypes';
 
-import {Button, H1, H2, H3, H4, H5, H6, Input, Option, Select} from '../index';
+import {Button, H1, H2, H3, H4, H5, H6, Input, Option, Select} from '../../index/index';
 
 export default (props: any) => {
 
