@@ -12,5 +12,13 @@
     "noFallthroughCasesInSwitch": true,
     "pretty": true,
     "noUnusedLocals": true
-  }
+  },
+  "include": [
+    "components"
+  ],
+  "exclude": [
+      "node_modules",
+      "components/**/*.spec.tsx",
+      "components/**/*.spec.ts"
+  ]
 }

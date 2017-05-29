@@ -68,8 +68,11 @@
     "collectCoverageFrom": [
       "**/components/**/*.{ts,tsx}",
       "!**/node_modules/**",
+      "!./lib/**",
       "!**/vendor/**",
-      "!**/components/_utils/**"
+      "!**/components/_utils/**",
+      "!**/components/custom.d.ts"
+
     ],
     "mapCoverage": true,
     "modulePaths": [
