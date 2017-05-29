@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import {arrayHasDupes} from '../_utils/helper';
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
 import styles from './Select.css';
@@ -64,6 +65,10 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     }
 
     public render(){
+
+        if (!this.validateChildren()){
+            throw new Error('Can not have two options with same values!');
+        }
 
         const displayList = this.state.list ? 'block' : 'none';
         const zIndex = this.state.list ? 10 : 0;
@@ -148,6 +153,14 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 'Select an option';
     }
 
+    private validateChildren(){
+        const values = React.Children.toArray(this.props.children)
+            .map((child: React.ReactElement<IOptionProps>) => {
+                return child.props.value;
+        });
+
+        return !arrayHasDupes(values);
+    }
 }
 
 export const Option: React.StatelessComponent<IOptionProps> = (props) => {

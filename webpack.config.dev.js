@@ -40,9 +40,15 @@ config.module.rules.push(
     {
         test: /\.css$/,
         loader: extractCSS.extract([
-            {
-                loader: 'css-loader'
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              localIdentName: '[local]___[hash:base64:5]',
+              modules: true
             }
+          },
+          'postcss-loader'
         ])
     }
 );
