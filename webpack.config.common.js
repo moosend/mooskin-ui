@@ -13,7 +13,7 @@ var distFolder = 'lib';
 
 var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/[name]/style.css", allChunks: true});
 
-var entries = glob.sync("./components/**/index.ts", {ignore: ['**/*.spec.{tsx,ts}']}).map(function(entry){
+var entries = glob.sync("./components/*/index.ts", {ignore: ['**/*.spec.{tsx,ts}']}).map(function(entry){
   var obj = {};
   var key = entry.split('/');
   key = key[key.length-2];
@@ -47,7 +47,8 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'ts-loader']
-      }, {
+      }, 
+      {
         test: /\.css$/,
         loader: extractCSS.extract([
           {
