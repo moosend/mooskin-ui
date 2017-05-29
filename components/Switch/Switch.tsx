@@ -41,11 +41,12 @@ class Switch extends React.Component<ISwitchProps, void> {
 
         const disabledSwitch = disabled ? styles.disabledSwitch : '';
 
-        const labelClass = `switch-component ${styles.switch} ${disabledSwitch}`;
-        const switchClasses = `switch-component ${styles.slider} ${styles.round} ${className}`;
+        const labelClass = `switch-component ${styles.switch} ${disabledSwitch}  ${className}`;
+        const switchClasses = `switch-component ${styles.slider} ${styles.round}`;
 
         return (
             <label
+                style={style}
                 id={id}
                 className={labelClass}
             >
@@ -56,9 +57,9 @@ class Switch extends React.Component<ISwitchProps, void> {
                     type={type}
                 />
                 <span
-                    style={style}
                     className={switchClasses}
                 />
+                <span className={`switch-component ${styles.text}`}/>
             </label>
         );
     }

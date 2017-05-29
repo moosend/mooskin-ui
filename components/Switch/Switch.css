@@ -16,8 +16,13 @@
   border-radius: 36px;
 }
 
-.disabledSwitch , .disabledSwitch > .slider {
+.disabledSwitch , .disabledSwitch > .slider, .disabledSwitch > .text:after {
   cursor: not-allowed;
+  background-color: var(--disabled);
+  content: 'INCOMPLETE';
+}
+
+.disabledSwitch > .slider:before{
   background-color: var(--disabled);
 }
 
@@ -64,4 +69,44 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.text {
+  color: white;
+}
+
+.text:after {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  font-family: sans-serif;
+  font-size: 11px;
+  content: "INACTIVE";
+  transition: opacity 0.3s ease-in-out;
+}
+
+.text:before {
+  position: absolute;
+  top: 9px;
+  left: 17px;
+  font-family: sans-serif;
+  font-size: 11px;
+  content: "ACTIVE";
+  transition: opacity 0.3s ease-in-out;
+}
+
+input + .slider + .text:after {
+  opacity: 1;
+}
+input + .slider + .text:before {
+  opacity: 0;
+}
+
+
+input:checked + .slider + .text:after {
+  opacity: 0;
+}
+
+input:checked + .slider + .text:before {
+  opacity: 1;
 }
