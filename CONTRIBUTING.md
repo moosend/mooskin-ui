@@ -44,7 +44,7 @@ src
 
 ```
 
-In the `.tsx` file there is the actual Component implementation. The `.css` file is all about styling related to that specific Component. And in the `.spec.tsx` file belong all tests related to that Component.
+In the `.tsx` file there is the actual Component implementation. The `.css` file is all about styling related to that specific Component. And in the `.spec.tsx` file belong all tests related to that Component. Each Component must have a README.md file, a short how-to for the Component.
 
 
 ####Coding style
