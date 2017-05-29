@@ -66,9 +66,10 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/src/components/**/*.{ts,tsx}",
+      "**/components/**/*.{ts,tsx}",
       "!**/node_modules/**",
-      "!**/vendor/**"
+      "!**/vendor/**",
+      "!**/components/_utils/**"
     ],
     "mapCoverage": true,
     "modulePaths": [
