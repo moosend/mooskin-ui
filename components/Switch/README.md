@@ -52,11 +52,11 @@ or just give it a custom style
 
 * `id` - id of the element
 * `type` - default being 'checkbox'
-* `disabled` - input field should be disabled
-* `required` - input field is required
+* `disabled` - element should be disabled
+* `required` - element is required
 * `className` - css class
-* `style` - input field style
-* `onChange` - callback to be triggered on input change
+* `style` - custom style
+* `onChange` - callback to be triggered on click
 
 Allthough these attributes are supported, all of them are optional.
 
