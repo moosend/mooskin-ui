@@ -69,6 +69,7 @@
       "**/components/**/*.{ts,tsx}",
       "!**/node_modules/**",
       "!./lib/**",
+      "!./dist/**",
       "!**/vendor/**",
       "!**/components/_utils/**",
       "!**/components/custom.d.ts"
