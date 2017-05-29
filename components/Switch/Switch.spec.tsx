@@ -9,7 +9,7 @@ describe('Switch', () => {
 
         const component = shallow(<Switch id="5" className="mySwitch" required/>);
 
-        expect(component.find('div').hasClass('mySwitch')).toBe(true);
+        expect(component.find('label').hasClass('mySwitch')).toBe(true);
         expect(component.find('label').prop('id')).toEqual('5');
         expect(component.find('input').prop('required')).toBeTruthy;
     });
