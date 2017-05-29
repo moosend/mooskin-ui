@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../types/commonTypes';
 
-import {Button, H1, H2, H3, H4, H5, H6, Input, Option, Select} from '../../index/index';
+import {Button, H1, H2, H3, H4, H5, H6, Input, Option, Select, Switch} from '../../index/index';
 
 export default (props: any) => {
 
@@ -15,6 +15,10 @@ export default (props: any) => {
     };
 
     const onChange = (e: React.ChangeEvent<HTMLElement>, data: IInputCallbackData) => {
+        console.log(e.target);
+    };
+
+    const onChangeSwitch = (e: React.ChangeEvent<HTMLElement>) => {
         console.log(e.target);
     };
 
@@ -44,7 +48,6 @@ export default (props: any) => {
                     <Option value="option3">Option3</Option>
                     <Option value="option4">Option4</Option>
                     <Option value="option5">Option5</Option>
-
                 </Select>
                 <br/>
                 <Select onChange={onClick} selected="option" dataLabel="plan" >
@@ -53,7 +56,13 @@ export default (props: any) => {
             </fieldset>
             <br/><br/>
             <fieldset style={{display: 'inline-block'}}>
-                <legend>Headers</legend>
+                <legend>Switch</legend>
+                <Switch onChange={onChangeSwitch} />
+                <Switch onChange={onChangeSwitch} disabled/>
+            </fieldset>
+            <br/><br/>
+            <fieldset style={{display: 'inline-block'}}>
+                <legend>Headings</legend>
                 <H1 id="5">Your Campaigns</H1>
                 <H2>Moooo!</H2>
                 <H3 style={{color: 'blue'}}>Moooo!</H3>
