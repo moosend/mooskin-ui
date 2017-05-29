@@ -1,11 +1,19 @@
+:root {
+    --gray: #ccc;
+    --green: #8ce196;
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 40px;
+  height: 20px;
   margin: 2px;
+  padding: 2px;
   cursor: pointer;
+  border-radius: 34px;
+  background-color: var(--gray);
 }
 
 .disabledSwitch {
@@ -18,11 +26,11 @@
 /* The slider */
 .slider {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
+  display: inline-block;
+  width: 36px;
+  height: 16px;
+  padding: 2px;
+  background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -30,27 +38,29 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
+  height: 12px;
+  width: 16px;
+  background-color: var(--gray);
   -webkit-transition: .4s;
   transition: .4s;
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+.switch input:checked {
+  background-color: var(--green);
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  background-color: var(--green);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--green);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
 }
 
 /* Rounded sliders */
@@ -59,5 +69,5 @@ input:checked + .slider:before {
 }
 
 .slider.round:before {
-  border-radius: 50%;
+  border-radius: 45%;
 }

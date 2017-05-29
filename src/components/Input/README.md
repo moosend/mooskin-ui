@@ -66,8 +66,9 @@ or just give it a custom style
 
 Allthough these attributes are supported, all of them are optional.
 
-#### For more
-
 ___
+
+
+#### For more
 
 [MooSkin-UI](https://github.com/moosend/mooskin-ui)
