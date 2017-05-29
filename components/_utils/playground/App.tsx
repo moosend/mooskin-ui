@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../types/commonTypes';
 
-import {Button, H1, H2, H3, H4, H5, H6, Input, Option, Select} from '../../index/index';
+import {Button, H1, H2, H3, H4, H5, H6, Input, Option, Select} from '../../../lib/index/index';
 
 export default (props: any) => {
 

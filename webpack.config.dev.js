@@ -1,8 +1,10 @@
 
 var config = require('./webpack.config.common');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var  ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var distFolder = 'dist';
+var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/style.css", allChunks: true});
 
 
 config.devServer = {
@@ -17,11 +19,12 @@ config.output = {
 },
 
 config.plugins.push(
+    extractCSS,
     new HtmlWebpackPlugin({
         inject: false,
         template: './index.html'
     })
-)
+);
 
 config.module.rules.push(
     {
@@ -33,6 +36,14 @@ config.module.rules.push(
         enforce: 'pre',
         test: /\.tsx?$/,
         use: "source-map-loader"
+    },
+    {
+        test: /\.css$/,
+        loader: extractCSS.extract([
+            {
+                loader: 'css-loader'
+            }
+        ])
     }
 );
 

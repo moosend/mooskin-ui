@@ -6,12 +6,10 @@ gracefulFs.gracefulify(fs);
 var webpack = require('webpack'),
   path = require('path'),
   glob = require("glob"),
-  CopyWebpackPlugin = require('copy-webpack-plugin'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin');
+  CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var distFolder = 'lib';
 
-var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/[name]/style.css", allChunks: true});
 
 var entries = glob.sync("./components/*/index.ts", {ignore: ['**/*.spec.tsx', '**/*.spec.ts']}).map(function(entry){ //gets the module paths in components containing index.ts and assigns them to an object
   var obj = {};
@@ -49,20 +47,6 @@ module.exports = {
         use: ['babel-loader', 'ts-loader']
       }, 
       {
-        test: /\.css$/,
-        loader: extractCSS.extract([
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              localIdentName: '[local]___[hash:base64:5]',
-              modules: true
-            }
-          },
-          'postcss-loader'
-        ])
-      },
-      {
           test: /\.woff$|\.woff2$/,
           loader: "url-loader",
           options: {
@@ -90,20 +74,14 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    extractCSS
-  ],
+  plugins:[],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
     modules: [
         path.resolve('./'),
         'node_modules'
     ]
-  },
-  externals: [
-    'react',
-    'react-dom'
-  ]
+  }
   // devtool: 'inline-source-map',
  
 };
