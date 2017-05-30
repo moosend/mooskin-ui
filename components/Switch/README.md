@@ -39,7 +39,7 @@ or making it disabled, in this case the proper disabled class will be loaded (ex
 or pass it a function for event handling
 
 ```
-<Switch onChange={yourFunc} />
+<Switch onClick={yourFunc} />
 ```
 
 or just give it a custom style
@@ -51,12 +51,11 @@ or just give it a custom style
 ## Supported attributes
 
 * `id` - id of the element
-* `type` - default being 'checkbox'
 * `disabled` - element should be disabled
-* `required` - element is required
+* `running` - element is required
 * `className` - css class
 * `style` - custom style
-* `onChange` - callback to be triggered on click
+* `onClick` - callback to be triggered on click
 
 Allthough these attributes are supported, all of them are optional.
 

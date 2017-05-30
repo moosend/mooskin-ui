@@ -10,7 +10,7 @@ export interface ISwitchProps {
     /** provide to make the switch disabled */
     disabled?: boolean;
 
-    /** provide to make the switch required */
+    /** wether the switch is running or not */
     running?: boolean;
 
     /** switch class */
