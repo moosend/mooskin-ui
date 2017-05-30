@@ -14,20 +14,8 @@
     cursor:not-allowed;
 }
 
-.input::-webkit-input-placeholder {
-color: #bebebe;
-}
- 
-.input:-moz-placeholder { /* Firefox 18- */
-color: #bebebe;  
-}
- 
-.input::-moz-placeholder {  /* Firefox 19+ */
-color: #bebebe;  
-}
- 
-.input:-ms-input-placeholder {  
-color: #bebebe;  
+.input::placeholder {
+    color: #bebebe;
 }
 
 .input:focus {

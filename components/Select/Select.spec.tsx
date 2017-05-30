@@ -66,26 +66,8 @@ describe('Select', () => {
 
         expect(component.find('.options-container').prop('style')).toEqual({display: 'none'});
 
-        component.find('.label-container').simulate('mouseDown', {button: 0});
+        component.find('.label-container').simulate('click', {button: 0});
 
         expect(component.find('.options-container').prop('style')).toEqual({display: 'block'});
     });
-
-    test('does not open the list when clicked with othe mouse buttons', () => {
-        const func = jest.fn();
-
-        const component = shallow(
-            <Select onChange={func} selected="option1" dataLabel="plan">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-            </Select>
-        );
-
-        expect(component.find('.options-container').prop('style')).toEqual({display: 'none'});
-
-        component.find('.label-container').simulate('mouseDown', {button: 2});
-
-        expect(component.find('.options-container').prop('style')).toEqual({display: 'none'});
-    });
-
 });

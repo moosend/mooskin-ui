@@ -4,16 +4,6 @@
     position: relative;
 }
 
-.overlay{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: transparent;
-    z-index:9;
-}
-
 .innerDiv{
     height: 100%;
     font-size:16px;
@@ -22,6 +12,18 @@
     padding: 15px;
     flex-grow:1;    
 }
+
+
+.innerInput{
+    composes: innerDiv;
+    background: transparent;
+    border: none;   
+}
+
+.innerInput::placeholder {
+    color: #bebebe;
+}
+ 
 
 .selectIcon{
     min-width: 50px;

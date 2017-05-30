@@ -28,6 +28,12 @@ export interface ISelectProps {
     /** className for the main element */
     className?: string;
 
+    /** placeholder shown when no results exist */
+    noResultsText?: string;
+
+    /** loading indicator */
+    isLoading?: boolean;
+
     /** override button styles */
     style?: {[key: string]: string};
 
@@ -38,6 +44,7 @@ export interface ISelectProps {
 export interface ISelectState {
     list: boolean;
     selected?: string;
+    filter: string;
 }
 
 export interface IOptionProps {
@@ -53,15 +60,22 @@ export interface IOptionProps {
 class Select extends React.Component<ISelectProps, ISelectState>{
 
     public static defaultProps = {
-        className: ''
+        className: '',
+        filter: ''
     };
 
     constructor(props: ISelectProps){
         super(props);
         this.state = {
+            filter: '',
             list: false,
-            selected: this.props.selected
+            selected: this.props.selected,
         };
+    }
+
+    public componentDidUpdate(){
+        // this.state.list && this.input.focus();
+        console.log(this.state.list);
     }
 
     public render(){
@@ -78,25 +92,34 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const selected = this.getSelectedChildLabel();
 
         return (
-            <div>
-                <div
-                    id={this.props.id}
-                    className={`select-component ${styles.overlay} ${this.props.className}`}
-                    style={{display: displayList}}
-                    onClick={this.onBlur}
-                />
+            <div className={`select-component ${this.props.className}`}>
                 <label className={styles.label}>
                     {this.props.label}
                 </label>
                 <div className={styles.selectContainer} style={{zIndex}}>
-                    <div className={`label-container ${styles.labelContainer}`} onMouseDown={this.onToggleList}>
-                        <div className={styles.innerDiv}> {selected}</div>
-                        <div className={styles.selectIcon}/>
+                    <div className={styles.labelContainer} >
+                        <input
+                            type="text"
+                            className={styles.innerInput}
+                            style={{display: this.state.list ? 'block' : 'none'}}
+                            value={this.state.filter}
+                            placeholder="Type to filter options"
+                            onChange={this.onChangeFilter}
+                            onBlur={this.onCloseList}
+                            ref={(input) => (input && this.state.list && input.focus())}
+                        />
+                        <div
+                            onClick={this.onOpenList}
+                            className={`label-container ${styles.innerDiv}`}
+                            style={{display: this.state.list ? 'none' : 'block' }}
+                        >
+                            {selected}
+                        </div>
+                        <div className={styles.selectIcon} onClick={this.onToggleList}/>
                     </div>
                     <div
                         className={`options-container ${styles.optionsContainer}`}
                         style={{display: displayList}}
-                        onBlur={this.onBlur}
                     >
                         <ul>
                             {options}
@@ -107,7 +130,11 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         );
     }
 
-    private  onClick = (option: string) => {
+    private onChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({filter: e.target.value});
+    }
+
+    private onClick = (option: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
             this.setState((prevState, props) => ({list: false, selected: option}));
@@ -115,25 +142,45 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     }
 
     private onToggleList = (e: React.MouseEvent<HTMLElement>) => {
-        e.button === 0 && this.setState((prevState, props) => ({list: !prevState.list}));
+        this.state.list ? this.onCloseList() : this.onOpenList();
     }
 
-    private onBlur = () => {
-        this.setState((prevState, props) => ({list: false}));
+    private onOpenList = () => {
+        this.setState({list: true});
+    }
+
+    private onCloseList = () => {
+        this.setState({list: false});
     }
 
     private assignCbToChildren(){
 
         // map through the Option children in order to assign them the onClick cb
         return React.Children.map(this.props.children, (child) => {
-            if (React.isValidElement<IOptionProps>(child)){
+            if (child && React.isValidElement<IOptionProps>(child)){
 
                 // determine selected option by passing a selected boolean
                 const extraProps: Partial<IOptionProps> = {
                     onClick: this.onClick(child.props.value)
                 };
+
                 const selectedClass = this.state.selected === child.props.value ? styles.selectedOption : '';
-                return <div className={selectedClass}>{React.cloneElement(child, extraProps)}</div>;
+
+                // hide options when filtering
+                const visible = child.props.children &&
+                    this.state.filter &&
+                    child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
+                    ? 'block'
+                    : 'none';
+
+                return (
+                    <div
+                        className={selectedClass}
+                        style={{display: visible}}
+                    >
+                        {React.cloneElement(child, extraProps)}
+                    </div>
+                );
             }else{
                 throw new Error('<Select> element only accepts <Option> elements as children');
             }
