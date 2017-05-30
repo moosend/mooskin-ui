@@ -4,14 +4,6 @@
   --disabled: #C5C5C5;
 }
 
-.on {
-  background-color: blue;
-}
-
-.off {
-  background-color: red;
-}
-
 .switch {
   position: relative;
   content: '';
@@ -19,114 +11,57 @@
   width: 90px;
   height: 30px;
   margin: 2px;
+  padding: 5px 0px 0px 4px;
   cursor: pointer;
   border-radius: 36px;
+  transition: .4s;
+}
+
+.onSwitch{
+  background-color: var(--active);
+}
+
+.offSwitch{
+  background-color: var(--inactive);
 }
 
 .switch input {display:none;}
 
-.disabledSwitch {
-  background-color: gray;
-}
-
 .slider {
-  position: absolute;
-  height: 20px;
-  width: 70px;
-  padding: 5px 0px 0px 4px;
-  background-color: var(--inactive);
-  transition: .4s;
-}
-
-/*.disabledSwitch , .disabledSwitch > .slider, .disabledSwitch > .text:after {
-  cursor: not-allowed;
-  background-color: var(--disabled);
-  content: 'INCOMPLETE';
-}
-
-.disabledSwitch > .slider:before{
-  background-color: var(--disabled);
-}
-
-
-
-.slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 5px 0px 0px 4px;
-  background-color: var(--inactive);
-  transition: .4s;
-}
-
-.slider:before {
   position: absolute;
   content: "";
   height: 20px;
   width: 20px;
   background-color: white;
   transition: .4s;
+  border-radius: 50%;
+
 }
 
-input:checked + .slider {
-  background-color: var(--active);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--active);
-}
-
-input:checked + .slider:before {
+.onSlider .slider {
   transform: translateX(62px);
 }
 
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
 .text {
+  cursor: pointer;
+  position: absolute;
   color: white;
+  font-family: sans-serif;
+  font-size: 11px;
+  transition: .5s;
 }
 
-.text:after {
-  position: absolute;
+.offText{
   top: 9px;
   right: 10px;
-  font-family: sans-serif;
-  font-size: 11px;
-  content: "INACTIVE";
-  transition: opacity 0.3s ease-in-out;
 }
 
-.text:before {
-  position: absolute;
+.onText{
   top: 9px;
   left: 17px;
-  font-family: sans-serif;
-  font-size: 11px;
-  content: "ACTIVE";
-  transition: opacity 0.3s ease-in-out;
 }
 
-input + .slider + .text:after {
-  opacity: 1;
+.disabledSwitch , .disabledSwitch > .slider, .disabledSwitch > .text {
+  cursor: not-allowed;
+  background-color: var(--disabled);
 }
-input + .slider + .text:before {
-  opacity: 0;
-}
-
-
-input:checked + .slider + .text:after {
-  opacity: 0;
-}
-
-input:checked + .slider + .text:before {
-  opacity: 1;
-}
-*/

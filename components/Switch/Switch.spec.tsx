@@ -11,23 +11,22 @@ describe('Switch', () => {
 
         expect(component.find('div').hasClass('mySwitch')).toBe(true);
         expect(component.find('div').prop('id')).toEqual('5');
-        expect(component.find('input').prop('disabled')).toBeTruthy;
+        expect(component.find('div').prop('disabled')).toBeTruthy;
     });
 
-    test('renders a Switch with disabled prop and default type', () => {
+    test('renders an active Switch when a related task is already running', () => {
 
-        const component = shallow(<Switch required checked/>);
+        const component = shallow(<Switch running/>);
 
-        expect(component.find('label').prop('checked')).toBeTruthy;
-        expect(component.find('input').prop('required')).toBeTruthy;
+        expect(component.find('label').text()).toEqual('ACTIVE');
     });
 
-    test('onChange prop callback is called when the Switch is clicked', () => {
+    test('onClick prop callback is called when the Switch is clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(<Switch onChange={func}/>);
+        const component = shallow(<Switch onClick={func}/>);
 
-        component.find('input').simulate('change', { target: { checked: true }});
+        component.find('div').simulate('click');
         expect(func).toHaveBeenCalled();
     });
 

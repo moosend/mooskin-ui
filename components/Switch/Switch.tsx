@@ -11,10 +11,7 @@ export interface ISwitchProps {
     disabled?: boolean;
 
     /** provide to make the switch required */
-    required?: boolean;
-
-    /** wether the Switch is on or off  */
-    checked?: boolean;
+    running?: boolean;
 
     /** switch class */
     className?: string;
@@ -23,67 +20,56 @@ export interface ISwitchProps {
     style?: {[key: string]: string};
 
     /** callback that is called when the switch changes */
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 
 }
 
-export interface ISwitchState {
-    checked: boolean;
-}
-
-class Switch extends React.Component<ISwitchProps, ISwitchState> {
+class Switch extends React.Component<ISwitchProps, {}> {
 
     public static defaultProps = {
         className: '',
         style: {}
     };
 
-    constructor(props: ISwitchProps){
-        super(props);
-        this.state = {
-            checked: this.props.checked || false
-        };
-    }
-
     public render(){
 
-        const {id, style, className, disabled, required} = this.props;
+        const {id, style, className, disabled} = this.props;
 
-        const checkedClasses = this.state.checked ? styles.on : styles.off;
+        const toggleClasses = this.props.running ? `${styles.onSwitch} ${styles.onSlider}` : styles.offSwitch;
 
-        // const disabledSwitch = disabled ? styles.disabledSwitch : '';
+        const disabledSwitch = disabled ? styles.disabledSwitch : '';
 
-        // const switchClasses = `switch-component ${styles.switch} ${disabledSwitch}  ${className}`;
-        // const switchClasses = `switch-component ${styles.slider} ${styles.round}`;
+        const textClass = this.props.running ? styles.onText : styles.offText;
+
+        let text;
+
+        if (this.props.disabled){
+            text = 'INCOMPLETE';
+        } else if (!this.props.disabled && this.props.running) {
+            text = 'ACTIVE';
+        } else {
+            text = 'INACTIVE';
+        }
 
         return (
 
             <div
                 id={id}
                 style={style}
-                className={`${checkedClasses} ${className}`}
+                onClick={this.onClick}
+                className={`switch-component ${toggleClasses} ${disabledSwitch} ${styles.switch} ${className}`}
             >
-                <input
-                    checked={this.state.checked}
-                    onChange={this.onChange}
-                    disabled={disabled}
-                    required={required}
-                    type={'checkbox'}
-                />
-                <label>
-                    <span />
-                    <span />
-                </label>
+                <span className={`switch-component ${styles.slider}`}/>
+                <label className={`switch-component ${styles.text} ${textClass}`}>{text}</label>
             </div>
 
         );
     }
 
-    private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        // this.setState({checked: e.target.checked});
-        !this.props.disabled && this.setState((prevState, props) => ({checked: !prevState.checked}));
-        this.props.onChange && this.props.onChange(e);
-        console.log(e.target.checked);
+    private onClick = (e: React.MouseEvent<HTMLElement>) => {
+        !this.props.disabled &&
+        this.props.onClick &&
+        this.props.onClick(e);
     }
 }
 
