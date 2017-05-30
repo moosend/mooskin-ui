@@ -14,19 +14,26 @@ export interface IHorizontalRangeBarProps{
 
     /** height of the loader, 20px by default */
     height?: number|string;
+
+    /** id for the main element */
+    id?: string;
+
+    /** className for the main element */
+    className?: string;
 }
 
 export default class HorizontalRangeBar extends React.Component<IHorizontalRangeBarProps, void>{
 
     public static defaultProps: Partial<IHorizontalRangeBarProps> = {
         background: '#53cadc',
+        className: '',
         height: 28,
-        range: [0, 100]
+        range: [0, 100],
     };
 
     public render(){
 
-        const {range, progress} = this.props;
+        const {className, range, progress, id} = this.props;
         let currentPercentage;
 
         if (range && progress > range[1]){
@@ -43,7 +50,7 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         };
 
         return (
-            <div className={`loader-component ${styles.loaderContainer}`}>
+            <div className={`loader-component ${styles.loaderContainer} ${className}`} id={id}>
                 <div
                     className={`loader-bar ${styles.loader}`}
                     style={style}
