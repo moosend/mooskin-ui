@@ -18,7 +18,7 @@ export default (props: any) => {
         console.log(e.target);
     };
 
-    const onChangeSwitch = (e: React.ChangeEvent<HTMLElement>) => {
+    const onSwitchChange = (e: React.ChangeEvent<HTMLElement>) => {
         console.log(e.target);
     };
 
@@ -57,8 +57,9 @@ export default (props: any) => {
             <br/><br/>
             <fieldset style={{display: 'inline-block'}}>
                 <legend>Switch</legend>
-                <Switch onChange={onChangeSwitch} />
-                <Switch onChange={onChangeSwitch} disabled/>
+                <Switch onChange={onSwitchChange}/>
+                <Switch checked />
+                <Switch disabled/>
             </fieldset>
             <br/><br/>
             <fieldset style={{display: 'inline-block'}}>

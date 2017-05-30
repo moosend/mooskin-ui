@@ -4,10 +4,17 @@
   --disabled: #C5C5C5;
 }
 
+.on {
+  background-color: blue;
+}
+
+.off {
+  background-color: red;
+}
 
 .switch {
   position: relative;
-  content: 'hi';
+  content: '';
   display: inline-block;
   width: 90px;
   height: 30px;
@@ -16,7 +23,22 @@
   border-radius: 36px;
 }
 
-.disabledSwitch , .disabledSwitch > .slider, .disabledSwitch > .text:after {
+.switch input {display:none;}
+
+.disabledSwitch {
+  background-color: gray;
+}
+
+.slider {
+  position: absolute;
+  height: 20px;
+  width: 70px;
+  padding: 5px 0px 0px 4px;
+  background-color: var(--inactive);
+  transition: .4s;
+}
+
+/*.disabledSwitch , .disabledSwitch > .slider, .disabledSwitch > .text:after {
   cursor: not-allowed;
   background-color: var(--disabled);
   content: 'INCOMPLETE';
@@ -26,10 +48,8 @@
   background-color: var(--disabled);
 }
 
-/* Hide default HTML checkbox */
-.switch input {display:none;}
 
-/* The slider */
+
 .slider {
   position: absolute;
   top: 0;
@@ -62,7 +82,6 @@ input:checked + .slider:before {
   transform: translateX(62px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -110,3 +129,4 @@ input:checked + .slider + .text:after {
 input:checked + .slider + .text:before {
   opacity: 1;
 }
+*/

@@ -13,8 +13,8 @@ export interface ISwitchProps {
     /** provide to make the switch required */
     required?: boolean;
 
-    /** switch type */
-    type?: string;
+    /** wether the Switch is on or off  */
+    checked?: boolean;
 
     /** switch class */
     className?: string;
@@ -27,47 +27,62 @@ export interface ISwitchProps {
 
 }
 
-class Switch extends React.Component<ISwitchProps, void> {
+export interface ISwitchState {
+    checked: boolean;
+}
+
+class Switch extends React.Component<ISwitchProps, ISwitchState> {
 
     public static defaultProps = {
         className: '',
-        style: {},
-        type: 'checkbox'
+        style: {}
     };
+
+    constructor(props: ISwitchProps){
+        super(props);
+        this.state = {
+            checked: this.props.checked || false
+        };
+    }
 
     public render(){
 
-        const {id, style, className, type, disabled, required} = this.props;
+        const {id, style, className, disabled, required} = this.props;
 
-        const disabledSwitch = disabled ? styles.disabledSwitch : '';
+        const checkedClasses = this.state.checked ? styles.on : styles.off;
 
-        const labelClass = `switch-component ${styles.switch} ${disabledSwitch}  ${className}`;
-        const switchClasses = `switch-component ${styles.slider} ${styles.round}`;
+        // const disabledSwitch = disabled ? styles.disabledSwitch : '';
+
+        // const switchClasses = `switch-component ${styles.switch} ${disabledSwitch}  ${className}`;
+        // const switchClasses = `switch-component ${styles.slider} ${styles.round}`;
 
         return (
-            <label
-                style={style}
+
+            <div
                 id={id}
-                className={labelClass}
+                style={style}
+                className={`${checkedClasses} ${className}`}
             >
                 <input
+                    checked={this.state.checked}
                     onChange={this.onChange}
                     disabled={disabled}
                     required={required}
-                    type={type}
+                    type={'checkbox'}
                 />
-                <span
-                    className={switchClasses}
-                />
-                <span className={`switch-component ${styles.text}`}/>
-            </label>
+                <label>
+                    <span />
+                    <span />
+                </label>
+            </div>
+
         );
     }
 
     private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        !this.props.disabled &&
-        this.props.onChange &&
-        this.props.onChange(e);
+        // this.setState({checked: e.target.checked});
+        !this.props.disabled && this.setState((prevState, props) => ({checked: !prevState.checked}));
+        this.props.onChange && this.props.onChange(e);
         console.log(e.target.checked);
     }
 }
