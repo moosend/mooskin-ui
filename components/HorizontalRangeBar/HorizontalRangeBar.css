@@ -1,0 +1,11 @@
+.loader{
+    transition: width 400ms ease;
+}
+
+.loaderContainer{
+    width: 100%;
+}
+
+.label{
+    padding:5px;
+}

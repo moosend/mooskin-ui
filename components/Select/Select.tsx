@@ -73,11 +73,6 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         };
     }
 
-    public componentDidUpdate(){
-        // this.state.list && this.input.focus();
-        console.log(this.state.list);
-    }
-
     public render(){
 
         if (!this.validateChildren()){
@@ -157,7 +152,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
         // map through the Option children in order to assign them the onClick cb
         return React.Children.map(this.props.children, (child) => {
-            if (child && React.isValidElement<IOptionProps>(child)){
+            if (React.isValidElement<IOptionProps>(child)){
 
                 // determine selected option by passing a selected boolean
                 const extraProps: Partial<IOptionProps> = {
