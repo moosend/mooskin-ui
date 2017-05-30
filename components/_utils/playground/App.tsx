@@ -62,7 +62,7 @@ export default class App extends React.Component<any, any> {
                 <br/><br/>
                 <fieldset style={{display: 'inline-block', width: 400}}>
                     <legend>Loader</legend>
-                    <HorizontalRangeBar progress={60}/><br/>
+                    <HorizontalRangeBar progress={this.state.progress}/><br/>
                     <HorizontalRangeBar progress={this.state.progress} range={[0, 1000]} background={'green'}/><br/>
                     <HorizontalRangeBar progress={this.state.progress} range={[0, 500]} background={'red'}/><br/>
                     <HorizontalRangeBar progress={this.state.progress} range={[0, 50]} background={'blue'}/><br/>
