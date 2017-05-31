@@ -6,43 +6,40 @@ import { shallow } from 'enzyme';
 describe('Input', () => {
 
     test('renders properly into dom and has Placeholder prop', () => {
-        const func = jest.fn();
 
-        const component = shallow(<Input onChange={func} placeholder="username"/>);
+        const component = shallow(<Input placeholder="username"/>);
 
         expect(component.find('input').prop('placeholder')).toContain('username');
     });
 
-    test('renders an input with a "required" prop', () => {
-        const func = jest.fn();
-
-        const component = shallow(<Input  onChange={func} required/>);
+    test('renders an input with a "required" prop and minlength', () => {
+        const component = shallow(<Input minlength="5" required/>);
 
         expect(component.find('input').prop('required')).toEqual(true);
+        expect(component.find('input').prop('minLength')).toEqual(5);
     });
 
-    test('renders an input with a passed value', () => {
-        const func = jest.fn();
-
-        const component = shallow(<Input  onChange={func} value="random"/>);
+    test('renders an input with a passed value and maxlength', () => {
+        const component = shallow(<Input value="random" maxlength="50"/>);
 
         expect(component.find('input').prop('value')).toEqual('random');
+        expect(component.find('input').prop('maxLength')).toEqual(50);
     });
 
-    test('renders an input with id', () => {
+    test('renders an input with id and type', () => {
         const func = jest.fn();
 
-        const component = shallow(<Input onChange={func} id="1234"/>);
+        const component = shallow(<Input type="text" id="1234"/>);
 
         expect(component.find('input').prop('id')).toEqual('1234');
+        expect(component.find('input').prop('type')).toEqual('text');
     });
 
-    test('renders an input with custom css class', () => {
-        const func = jest.fn();
-
-        const component = shallow(<Input onChange={func} className="input-group"/>);
+    test('renders an input with custom css class and style', () => {
+        const component = shallow(<Input style={{color: 'blue'}} className="input-group"/>);
 
         expect(component.find('input').hasClass('input-group')).toBe(true);
+        expect(component.find('input').prop('style')).toEqual({color: 'blue'});
     });
 
     test('onChange prop callback is called when a key is pressed', () => {
