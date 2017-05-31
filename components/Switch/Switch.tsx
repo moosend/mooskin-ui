@@ -41,10 +41,10 @@ export interface ISwitchProps {
 class Switch extends React.Component<ISwitchProps, {}> {
 
     public static defaultProps = {
-        on: 'ACTIVE',
-        off: 'INACTIVE',
-        deactivated: 'INCOMPLETE',
         className: '',
+        deactivated: 'INCOMPLETE',
+        off: 'INACTIVE',
+        on: 'ACTIVE',
         style: {},
     };
 
@@ -90,8 +90,6 @@ class Switch extends React.Component<ISwitchProps, {}> {
             return this.props.off;
         }
     }
-
-
 }
 
 export default Switch;

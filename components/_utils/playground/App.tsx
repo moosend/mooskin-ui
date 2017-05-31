@@ -4,9 +4,9 @@ import {IInputCallbackData} from '../types/commonTypes';
 
 import {Button, H1, H2, H3, H4, H5, H6, HorizontalRangeBar, Input, Option, Select, Switch} from '../../index/index';
 
-
 export interface IAppState{
     automations: IAutomations[];
+    progress: number;
 }
 
 export interface IAutomations{
@@ -15,31 +15,31 @@ export interface IAutomations{
     running: boolean;
 }
 
-export default class App extends React.Component<any, any> {
+export default class App extends React.Component<any, IAppState> {
 
     private horizontalRangeInterval: any;
 
     constructor(){
         super();
         this.state = {
-            progress: 0,
             automations: [
                 {
-                    title: 'do this',
                     complete: true,
-                    running: false
+                    running: false,
+                    title: 'do this'
                 },
                 {
-                    title: 'do that',
                     complete: true,
-                    running: true
+                    running: true,
+                    title: 'do that'
                 },
                 {
-                    title: 'do nothing',
                     complete: false,
-                    running: false
+                    running: false,
+                    title: 'do nothing'
                 },
-            ]
+            ],
+            progress: 0
         };
     }
 
@@ -48,7 +48,7 @@ export default class App extends React.Component<any, any> {
             return (
                 <Switch
                     key={i}
-                    onClick={(e) => this.switchAuto(i, e, {value: automation.running && automation.complete, dataLabel: automation.title})}
+                    onClick={this.switchAuto(i)}
                     running={automation.running}
                     disabled={!automation.complete}
                     dataLabel={automation.title}
@@ -135,15 +135,16 @@ export default class App extends React.Component<any, any> {
         console.log(e.target);
     }
 
-    private switchAuto = (i: number, e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        const automations = this.state.automations;
-        automations[i].running = !this.state.automations[i].running;
+    private switchAuto = (i: number) => {
+        return (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
+            const automations = this.state.automations;
+            automations[i].running = !this.state.automations[i].running;
 
-        // update state
-        this.setState({
-            automations,
-        });
+            // update state
+            this.setState({automations});
+        };
     }
+
     private onClickStartInterval = (e: React.MouseEvent<HTMLInputElement>) => {
         this.horizontalRangeInterval = setInterval(() => {
            this.setState({progress: this.state.progress + 5});
@@ -156,4 +157,3 @@ export default class App extends React.Component<any, any> {
         console.log(e.target);
     }
 }
-
