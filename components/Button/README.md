@@ -11,6 +11,10 @@ To start using the Button Component first you have to Import it
 ```
 Import {Button} from 'mooskin';
 ```
+or
+```
+import Button from 'mooskin/lib/Button';
+```
 
 And then you can simply start using it by typing
 

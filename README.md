@@ -27,11 +27,21 @@ npm install mooskin --save
 Apart from [React](https://facebook.github.io/react/) itself, you need to be able to import the CSS file for the library by using a loader or some plugin for your build tool of choice(css-loader if you re using webpack, which is recommended).
 
 ```
-import 'mooskin/lib/style.css'
+import 'mooskin/lib/index/style.css'
+``` 
+and then you can simply import the desired component and start using it
+```
+import {Input} from 'mooskin';
+```
+Modular import is also supported for both css and js(components) files
+
+```
+import 'mooskin/lib/Button/style.css';
+import 'mooskin/lib/Button';
+// import {Button} from 'mooskin'; // this works as well
 ```
 
-and then you can simply import the desired component and start using it
-
+###Example
 ```
 import 'mooskin/lib/style.css'
 
