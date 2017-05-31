@@ -14,6 +14,7 @@ export interface IAppState{
 }
 
 export interface IAutomations{
+    title: string;
     complete: boolean;
     running: boolean;
 }
@@ -26,14 +27,17 @@ class App extends React.Component<{}, IAppState> {
         this.state = {
             automations: [
                 {
+                    title: 'do this',
                     complete: true,
                     running: false
                 },
                 {
+                    title: 'do that',
                     complete: true,
                     running: true
                 },
                 {
+                    title: 'do nothing',
                     complete: false,
                     running: false
                 },
@@ -47,9 +51,10 @@ class App extends React.Component<{}, IAppState> {
                                     return (
                                                 <Switch
                                                     key={i}
-                                                    onClick={this.switchAuto.bind(this, i)}
+                                                    onClick={(e) => this.switchAuto(i, e, {value: automation.running && automation.complete, dataLabel: automation.title})}
                                                     running={automation.running}
                                                     disabled={!automation.complete}
+                                                    dataLabel={automation.title}
                                                     on={'On'}
                                                     off={'Off'}
                                                     deactivated={'Not Working'}
