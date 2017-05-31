@@ -49,12 +49,12 @@ export default class App extends React.Component<any, IAppState> {
                 <Switch
                     key={i}
                     onClick={this.switchAuto(i)}
-                    running={automation.running}
+                    on={automation.running}
                     disabled={!automation.complete}
                     dataLabel={automation.title}
-                    on={'On'}
-                    off={'Off'}
-                    deactivated={'Not Working'}
+                    onLabel={'On'}
+                    offLabel={'Off'}
+                    disabledLabel={'Not Working'}
                 />
             );
         });

@@ -52,10 +52,10 @@ or just give it a custom style
 
 * `id` - id of the element
 * `disabled` - element should be disabled
-* `on` - element label when on
-* `off` - element label when off
-* `deactivated` - element label when disabled
-* `running` - element is required
+* `onLabel` - element label when on
+* `offLabel` - element label when off
+* `disabledLabel` - element label when disabled
+* `on` - element is required
 * `className` - css class
 * `style` - custom style
 * `dataLabel` - label what kind of data 

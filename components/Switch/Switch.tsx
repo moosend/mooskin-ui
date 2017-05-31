@@ -10,19 +10,19 @@ export interface ISwitchProps {
     id?: string;
 
     /** override switch active label */
-    on?: string;
+    onLabel?: string;
 
     /** override switch inactive label */
-    off?: string;
+    offLabel?: string;
 
     /** override switch disabled label */
-    deactivated?: string;
+    disabledLabel?: string;
 
     /** provide to make the switch disabled */
     disabled?: boolean;
 
-    /** wether the switch is running or not */
-    running?: boolean;
+    /** wether the switch is on or off */
+    on?: boolean;
 
     /** switch class */
     className?: string;
@@ -42,9 +42,9 @@ class Switch extends React.Component<ISwitchProps, {}> {
 
     public static defaultProps = {
         className: '',
-        deactivated: 'INCOMPLETE',
-        off: 'INACTIVE',
-        on: 'ACTIVE',
+        disabledLabel: 'INCOMPLETE',
+        offLabel: 'INACTIVE',
+        onLabel: 'ACTIVE',
         style: {},
     };
 
@@ -52,11 +52,11 @@ class Switch extends React.Component<ISwitchProps, {}> {
 
         const {id, style, className, disabled} = this.props;
 
-        const toggleClasses = this.props.running ? `${styles.onSwitch} ${styles.onSlider}` : styles.offSwitch;
+        const toggleClasses = this.props.on ? `${styles.onSwitch} ${styles.onSlider}` : styles.offSwitch;
 
         const disabledSwitch = disabled ? styles.disabledSwitch : '';
 
-        const textClass = this.props.running ? styles.onText : styles.offText;
+        const textClass = this.props.on ? styles.onText : styles.offText;
 
         const text = this.switchLabel();
 
@@ -78,16 +78,16 @@ class Switch extends React.Component<ISwitchProps, {}> {
     private onClick = (e: React.MouseEvent<HTMLElement>, data?: IInputCallbackData) => {
         !this.props.disabled &&
         this.props.onClick &&
-        this.props.onClick(e, {value: this.props.running && !this.props.disabled, dataLabel: this.props.dataLabel});
+        this.props.onClick(e, {value: this.props.on && !this.props.disabled, dataLabel: this.props.dataLabel});
     }
 
     private switchLabel = () => {
         if (this.props.disabled){
-            return this.props.deactivated;
-        } else if (!this.props.disabled && this.props.running) {
-            return this.props.on;
+            return this.props.disabledLabel;
+        } else if (!this.props.disabled && this.props.on) {
+            return this.props.onLabel;
         } else {
-            return this.props.off;
+            return this.props.offLabel;
         }
     }
 }

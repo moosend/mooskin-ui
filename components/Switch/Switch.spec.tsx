@@ -16,7 +16,7 @@ describe('Switch', () => {
 
     test('renders an active Switch when a related task is already running', () => {
 
-        const component = shallow(<Switch running/>);
+        const component = shallow(<Switch on/>);
 
         expect(component.find('label').text()).toEqual('ACTIVE');
     });
