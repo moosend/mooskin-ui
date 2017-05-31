@@ -2,12 +2,8 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../types/commonTypes';
 
-import {Button, H1, H2, H3, H4, H5, H6, Input, Option, Select, Switch} from '../../index/index';
+import {Button, H1, H2, H3, H4, H5, H6, HorizontalRangeBar, Input, Option, Select, Switch} from '../../index/index';
 
-// export interface IAppProps{
-//     automation1: boolean;
-//     automation2: boolean;
-// }
 
 export interface IAppState{
     automations: IAutomations[];
@@ -19,12 +15,14 @@ export interface IAutomations{
     running: boolean;
 }
 
-class App extends React.Component<{}, IAppState> {
+export default class App extends React.Component<any, any> {
+
+    private horizontalRangeInterval: any;
 
     constructor(){
         super();
-
         this.state = {
+            progress: 0,
             automations: [
                 {
                     title: 'do this',
@@ -46,21 +44,20 @@ class App extends React.Component<{}, IAppState> {
     }
 
     public render(){
-
         const listAutomations = this.state.automations.map((automation, i) => {
-                                    return (
-                                                <Switch
-                                                    key={i}
-                                                    onClick={(e) => this.switchAuto(i, e, {value: automation.running && automation.complete, dataLabel: automation.title})}
-                                                    running={automation.running}
-                                                    disabled={!automation.complete}
-                                                    dataLabel={automation.title}
-                                                    on={'On'}
-                                                    off={'Off'}
-                                                    deactivated={'Not Working'}
-                                                />
-                                            );
-                                });
+            return (
+                <Switch
+                    key={i}
+                    onClick={(e) => this.switchAuto(i, e, {value: automation.running && automation.complete, dataLabel: automation.title})}
+                    running={automation.running}
+                    disabled={!automation.complete}
+                    dataLabel={automation.title}
+                    on={'On'}
+                    off={'Off'}
+                    deactivated={'Not Working'}
+                />
+            );
+        });
 
         return (
             <div>
@@ -111,6 +108,17 @@ class App extends React.Component<{}, IAppState> {
                     <H5>Moooo!</H5>
                     <H6>Moooo!</H6>
                 </fieldset>
+                <br/><br/>
+                <fieldset style={{display: 'inline-block', width: 400}}>
+                    <legend>Loader</legend>
+                    <HorizontalRangeBar progress={this.state.progress}/><br/>
+                    <HorizontalRangeBar progress={this.state.progress} range={[0, 1000]} background={'green'}/><br/>
+                    <HorizontalRangeBar progress={this.state.progress} range={[0, 500]} background={'red'}/><br/>
+                    <HorizontalRangeBar progress={this.state.progress} range={[0, 50]} background={'blue'}/><br/>
+
+                    <Button onClick={this.onClickStartInterval}>Start Race</Button>
+                    <Button onClick={this.onClickStopInterval}>Stop Race</Button>
+                </fieldset>
             </div>
         );
     }
@@ -136,6 +144,16 @@ class App extends React.Component<{}, IAppState> {
             automations,
         });
     }
+    private onClickStartInterval = (e: React.MouseEvent<HTMLInputElement>) => {
+        this.horizontalRangeInterval = setInterval(() => {
+           this.setState({progress: this.state.progress + 5});
+        }, 100);
+        console.log(e.target);
+    }
+
+    private onClickStopInterval = (e: React.MouseEvent<HTMLInputElement>) => {
+        clearInterval(this.horizontalRangeInterval);
+        console.log(e.target);
+    }
 }
 
-export default App;
