@@ -50,6 +50,9 @@ class App extends React.Component<{}, IAppState> {
                                                     onClick={this.switchAuto.bind(this, i)}
                                                     running={automation.running}
                                                     disabled={!automation.complete}
+                                                    on={'On'}
+                                                    off={'Off'}
+                                                    deactivated={'Not Working'}
                                                 />
                                             );
                                 });
@@ -119,7 +122,7 @@ class App extends React.Component<{}, IAppState> {
         console.log(e.target);
     }
 
-    private switchAuto = (i: number, e: React.MouseEvent<HTMLElement>) => {
+    private switchAuto = (i: number, e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
         const automations = this.state.automations;
         automations[i].running = !this.state.automations[i].running;
 

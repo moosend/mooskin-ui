@@ -52,9 +52,13 @@ or just give it a custom style
 
 * `id` - id of the element
 * `disabled` - element should be disabled
+* `on` - element label when on
+* `off` - element label when off
+* `deactivated` - element label when disabled
 * `running` - element is required
 * `className` - css class
 * `style` - custom style
+* `dataLabel` - label what kind of data 
 * `onClick` - callback to be triggered on click
 
 Allthough these attributes are supported, all of them are optional.

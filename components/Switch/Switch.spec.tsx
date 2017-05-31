@@ -21,6 +21,15 @@ describe('Switch', () => {
         expect(component.find('label').text()).toEqual('ACTIVE');
     });
 
+    test('onClick is not called when a disabled Switch is clicked', () => {
+        const func = jest.fn();
+
+        const component = shallow(<Switch onClick={func} disabled/>);
+
+        component.find('div').simulate('click');
+        expect(func).not.toHaveBeenCalled();
+    });
+
     test('onClick prop callback is called when the Switch is clicked', () => {
         const func = jest.fn();
 
