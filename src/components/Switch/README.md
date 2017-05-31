@@ -1,1 +1,0 @@
-Like in new automations table

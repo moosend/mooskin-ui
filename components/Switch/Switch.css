@@ -1,0 +1,75 @@
+:root {
+  --inactive: #E6E6E6;
+  --active: #5CCDDE;
+  --disabled: #C5C5C5;
+}
+
+.switch {
+  position: relative;
+  content: '';
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 36px;
+  transition: .4s;
+}
+
+.onSwitch{
+  background-color: var(--active);
+}
+
+.offSwitch{
+  background-color: var(--inactive);
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 4px;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+
+}
+
+.onSlider .slider {
+  transform: translateX(62px);
+}
+
+.text {
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  font-family: sans-serif;
+  font-size: 11px;
+  transition: .5s;
+  text-align: center;
+}
+
+.offText{
+  top: 9px;
+  right: 10px;
+}
+
+.onText{
+  top: 9px;
+  left: 10px;
+}
+
+.disabledSwitch , .disabledSwitch > .slider, .disabledSwitch > .text {
+  cursor: not-allowed;
+  background-color: var(--disabled);
+  text-align: center
+}
+
+.disabledSwitch > .text {
+  left: 3px;
+  right: 3px;
+}

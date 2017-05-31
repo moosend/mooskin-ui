@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./lib/",
+    "outDir": "lib",
     "noImplicitAny": true,
     "strictNullChecks": true,
     "module": "es6",
@@ -10,9 +10,17 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "declaration": true,
-    "declarationDir": "lib/types",
+    "declarationDir": "lib",
     "noFallthroughCasesInSwitch": true,
     "pretty": true,
     "noUnusedLocals": true
-  }
+  },
+  "include": [
+    "components"
+  ],
+  "exclude": [
+      "node_modules",
+      "components/**/*.spec.tsx",
+      "components/**/*.spec.ts"
+  ]
 }

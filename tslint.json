@@ -9,8 +9,8 @@
     "no-console": [false],
     "quotemark": [true, "single", "avoid-escape", "jsx-double"],
     "trailing-comma": [false],
-    "no-unused-expression": false
-
+    "no-unused-expression": false,
+    "jsx-no-lambda": false
     //"member-access": false
   }
 }

@@ -1,15 +1,40 @@
+var fs = require('fs');
+var gracefulFs = require('graceful-fs');
+
+gracefulFs.gracefulify(fs);
+
 var webpack = require('webpack'),
   path = require('path'),
-  ExtractTextPlugin = require('extract-text-webpack-plugin');
+  glob = require("glob"),
+  CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var distFolder = 'lib';
 
-var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/style.css", allChunks: true});
+
+var entries = glob.sync("./components/*/index.ts", {ignore: ['**/*.spec.tsx', '**/*.spec.ts']}).map(function(entry){ //gets the module paths in components containing index.ts and assigns them to an object
+  var obj = {};
+  var key = entry.split('/');
+  key = key[key.length-2];
+
+  obj[key] = entry;
+
+  return obj;
+}).reduce(function(acc, curr){
+
+  for(var i in curr){
+    acc[i] = curr[i];
+  }
+
+  return acc;
+}, {});
+
+entries['index'] = './components/index/index.ts'
+
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: entries,
   output: {
-    filename: './'+distFolder+'/index.js',
+    filename: './'+distFolder+'/[name]/index.js',
     library: 'mooskin',
     libraryTarget: 'umd',
     umdNamedDefine: true
@@ -20,20 +45,7 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'ts-loader']
-      }, {
-        test: /\.css$/,
-        loader: extractCSS.extract([
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              localIdentName: '[local]___[hash:base64:5]',
-              modules: true
-            }
-          },
-          'postcss-loader'
-        ])
-      },
+      }, 
       {
           test: /\.woff$|\.woff2$/,
           loader: "url-loader",
@@ -62,16 +74,14 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    extractCSS
-  ],
+  plugins:[],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
     modules: [
         path.resolve('./'),
         'node_modules'
     ]
-  },
+  }
   // devtool: 'inline-source-map',
  
 };
