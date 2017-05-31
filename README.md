@@ -41,7 +41,7 @@ import 'mooskin/lib/Button';
 // import {Button} from 'mooskin'; // this works as well
 ```
 
-###Example
+### Example
 ```
 import 'mooskin/lib/style.css'
 
