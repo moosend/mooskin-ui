@@ -35,7 +35,7 @@ export interface ISelectProps {
     isLoading?: boolean;
 
     /** override button styles */
-    style?: {[key: string]: string};
+    style?: {[key: string]: string|number};
 
     /** children here can only be Option elements */
     children?: Array<React.ReactElement<IOptionProps>> | React.ReactElement<IOptionProps>;
@@ -91,6 +91,11 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 <label className={styles.label}>
                     {this.props.label}
                 </label>
+                <div
+                    onClick={this.onCloseList}
+                    className={styles.overlay}
+                    style={{display: !this.state.list && 'none'}}
+                />
                 <div className={styles.selectContainer} style={{zIndex}}>
                     <div className={styles.labelContainer} >
                         <input
@@ -100,7 +105,6 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             value={this.state.filter}
                             placeholder="Type to filter options"
                             onChange={this.onChangeFilter}
-                            onBlur={this.onCloseList}
                             ref={(input) => (input && this.state.list && input.focus())}
                         />
                         <div
@@ -132,7 +136,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     private onClick = (option: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
-            this.setState((prevState, props) => ({list: false, selected: option}));
+            this.setState({list: false, selected: option, filter: ''});
         };
     }
 
@@ -145,7 +149,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     }
 
     private onCloseList = () => {
-        this.setState({list: false});
+        this.setState({list: false, filter: ''});
     }
 
     private assignCbToChildren(){
@@ -163,7 +167,6 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
                 // hide options when filtering
                 const visible = child.props.children &&
-                    this.state.filter &&
                     child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
                     ? 'block'
                     : 'none';

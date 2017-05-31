@@ -31,7 +31,7 @@ export interface ISwitchProps {
     dataLabel?: string;
 
     /** override switch styles */
-    style?: {[key: string]: string};
+    style?: {[key: string]: string|number};
 
     /** callback that is called when the switch changes */
     onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;

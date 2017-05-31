@@ -1,5 +1,5 @@
 .loader{
-    transition: width 400ms ease;
+    transition: width 400ms linear;
 }
 
 .loaderContainer{
