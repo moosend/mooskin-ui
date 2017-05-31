@@ -1,1 +1,3 @@
-export * from './HorizontalRangeBar';
+import HorizontalRangeBar from './HorizontalRangeBar';
+export default HorizontalRangeBar;
+

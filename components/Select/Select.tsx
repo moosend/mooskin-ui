@@ -80,7 +80,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         }
 
         const displayList = this.state.list ? 'block' : 'none';
-        const zIndex = this.state.list ? 10 : 0;
+        const zIndex = this.state.list ? 6 : 0;
 
         const options = this.assignCbToChildren();
 
