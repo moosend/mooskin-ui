@@ -2,20 +2,63 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../types/commonTypes';
 
-import {Button, H1, H2, H3, H4, H5, H6, HorizontalRangeBar, Input, Option, Select} from '../../index/index';
+import {Button, H1, H2, H3, H4, H5, H6, HorizontalRangeBar, Input, Option, Select, Switch} from '../../index/index';
 
-export default class App extends React.Component<any, any> {
+export interface IAppState{
+    automations: IAutomations[];
+    progress: number;
+}
+
+export interface IAutomations{
+    title: string;
+    complete: boolean;
+    running: boolean;
+}
+
+export default class App extends React.Component<any, IAppState> {
 
     private horizontalRangeInterval: any;
 
     constructor(){
         super();
         this.state = {
+            automations: [
+                {
+                    complete: true,
+                    running: false,
+                    title: 'do this'
+                },
+                {
+                    complete: true,
+                    running: true,
+                    title: 'do that'
+                },
+                {
+                    complete: false,
+                    running: false,
+                    title: 'do nothing'
+                },
+            ],
             progress: 0
         };
     }
 
     public render(){
+        const listAutomations = this.state.automations.map((automation, i) => {
+            return (
+                <Switch
+                    key={i}
+                    onClick={this.switchAuto(i)}
+                    on={automation.running}
+                    disabled={!automation.complete}
+                    dataLabel={automation.title}
+                    onLabel={'On'}
+                    offLabel={'Off'}
+                    disabledLabel={'Not Working'}
+                />
+            );
+        });
+
         return (
             <div>
                 <fieldset style={{display: 'inline-block'}}>
@@ -42,7 +85,6 @@ export default class App extends React.Component<any, any> {
                         <Option value="option3">Option3</Option>
                         <Option value="option4">Option4</Option>
                         <Option value="option5">Option5</Option>
-
                     </Select>
                     <br/>
                     <Select onChange={this.onClick} selected="option" dataLabel="plan" >
@@ -51,7 +93,14 @@ export default class App extends React.Component<any, any> {
                 </fieldset>
                 <br/><br/>
                 <fieldset style={{display: 'inline-block'}}>
-                    <legend>Headers</legend>
+                    <legend>Switch</legend>
+                    <div>
+                        {listAutomations}
+                    </div>
+                </fieldset>
+                <br/><br/>
+                <fieldset style={{display: 'inline-block'}}>
+                    <legend>Headings</legend>
                     <H1 id="5">Your Campaigns</H1>
                     <H2>Moooo!</H2>
                     <H3 style={{color: 'blue'}}>Moooo!</H3>
@@ -78,6 +127,24 @@ export default class App extends React.Component<any, any> {
         console.log(e.target);
     }
 
+    private onChangeClick = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
+        console.log(e.target);
+    }
+
+    private onChange = (e: React.ChangeEvent<HTMLElement>, data: IInputCallbackData) => {
+        console.log(e.target);
+    }
+
+    private switchAuto = (i: number) => {
+        return (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
+            const automations = this.state.automations;
+            automations[i].running = !this.state.automations[i].running;
+
+            // update state
+            this.setState({automations});
+        };
+    }
+
     private onClickStartInterval = (e: React.MouseEvent<HTMLInputElement>) => {
         this.horizontalRangeInterval = setInterval(() => {
            this.setState({progress: this.state.progress + 5});
@@ -87,14 +154,6 @@ export default class App extends React.Component<any, any> {
 
     private onClickStopInterval = (e: React.MouseEvent<HTMLInputElement>) => {
         clearInterval(this.horizontalRangeInterval);
-        console.log(e.target);
-    }
-
-    private onChangeClick = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        console.log(e.target);
-    }
-
-    private onChange = (e: React.ChangeEvent<HTMLElement>, data: IInputCallbackData) => {
         console.log(e.target);
     }
 }
