@@ -6,6 +6,7 @@ import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
 import Select from './examples/Select.example';
 import Switch from './examples/Switch.example';
+import TopNotification from './examples/TopNotification.example';
 
 export default (props: any) => {
     return(
@@ -21,6 +22,8 @@ export default (props: any) => {
             <HorizontalRangeBar />
             <br/><br/>
             <Headings />
+            <br/><br/>
+            <TopNotification/>
         </div>
     );
 };

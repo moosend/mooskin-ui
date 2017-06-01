@@ -44,8 +44,8 @@ module.exports = {
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        use: ['babel-loader', 'ts-loader']
-      }, 
+        use: [ 'babel-loader', 'ts-loader']
+      },
       {
           test: /\.woff$|\.woff2$/,
           loader: "url-loader",
