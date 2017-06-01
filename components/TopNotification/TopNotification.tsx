@@ -63,13 +63,13 @@ export default class TopNotification extends React.Component<ITopNotificationPro
         const typeClass = this.resolveTypeClass();
 
         return (
-            <div className={`${styles.container} ${typeClass}`} style={{height}}>
+            <div className={`top-notification-component ${styles.container} ${typeClass}`} style={{height}}>
                 <div className={styles.message}>
                     <div className={styles.iconDiv}/>
                     <span>{text}</span>
                 </div>
                 {this.renderButtons()}
-                <div className={styles.close}>
+                <div className={`close-notification ${styles.close}`}>
                     <div onClick={this.onClickCancel}/>
                 </div>
             </div>

@@ -20,7 +20,7 @@
   ],
   "exclude": [
       "node_modules",
-      "components/**/*.spec.tsx",
-      "components/**/*.spec.ts"
+      "components/**/*.spec.ts",
+      "components/**/*.spec.tsx"
   ]
 }
