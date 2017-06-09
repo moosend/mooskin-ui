@@ -5,6 +5,7 @@ import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
 import Select from './examples/Select.example';
+import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
 import TopNotification from './examples/TopNotification.example';
 
@@ -23,7 +24,9 @@ export default (props: any) => {
             <br/><br/>
             <Headings />
             <br/><br/>
-            <TopNotification/>
+            <TopNotification />
+            <br/><br/>
+            <SmallIconButton />
         </div>
     );
 };

@@ -1,6 +1,6 @@
 # MooSkin UI - Button Component
 
-The MooSkin Input Component works similar to the normal HTML `<button/>` element, but with pre-defined styling and attributes.
+The MooSkin Button Component works similar to the normal HTML `<button/>` element, but with pre-defined styling and attributes.
 
 ___
 
@@ -50,10 +50,10 @@ or just give it a custom style
 ## Supported attributes
 
 * `id` - id of the element
-* `disabled` - input field should be disabled
+* `disabled` - button should be disabled
 * `className` - css class
 * `inverseStyle` - a style variaton of the button 
-* `style` - input field style
+* `style` - button style
 * `onClick` - callback to be triggered on button click
 
 Allthough these attributes are supported, all of them are optional.
