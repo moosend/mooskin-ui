@@ -9,12 +9,14 @@
     transition: all 400ms ease;
 }
 
-.disabledButton{
+.disabledButton.normalButton{
     cursor:not-allowed;
+    background-color: #87dfed;
 }
 
-.disabledButton{
+.disabledButton.inverseButton{
     cursor:not-allowed;
+    color: #ccc;
 }
 
 .normalButton{

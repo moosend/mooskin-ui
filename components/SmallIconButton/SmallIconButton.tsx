@@ -43,7 +43,6 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
         const disabledStyles = disabled ? styles.disabledButton : '';
 
         const iconStyle = this.props.icon ? this.getIcon() : '';
-        console.log(styles[iconStyle]);
         const classes = `button-icon-component
                          ${styles.button}
                          ${buttonStyles}
