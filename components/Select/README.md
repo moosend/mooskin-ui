@@ -63,10 +63,10 @@ Custom style, className or id can be given just like any other component in this
 * `dataLabel` - label what kind of data 
 * `onChange` - callback that is fired when you click on one of the options
 * `selected` - selected value, has to correspond to one of the Option values
-* `value` - text value of input
-* `placeholder` - backtext description of input
+* `value` - text value of the element
+* `placeholder` - backtext description of the element
 * `className` - css class
-* `style` - input field style
+* `style` - element style
 
 ## Supported attributes for Option
 

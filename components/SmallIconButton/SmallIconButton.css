@@ -363,3 +363,8 @@
     content: '\e836';
     position: relative;
 }
+
+.daterange::before {
+    content: '\e916';
+    position: relative;
+}

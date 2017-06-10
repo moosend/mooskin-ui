@@ -29,10 +29,10 @@ Like the `<button/>` element it will accept given attributes and render differen
 ### Examples
 
 
-Making it disabled with a value, in this case the proper disabled class will be loaded (ex. disabling cursor)
+Making it disabled, in this case the proper disabled class will be loaded (ex. disabling cursor)
 
 ```
-<Button value="This one is disabled" disabled >button1</Button>
+<Button disabled >button1</Button>
 ```
 
 or pass it a function for event handling

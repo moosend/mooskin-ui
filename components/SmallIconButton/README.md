@@ -29,10 +29,10 @@ Like the `<button/>` element it will accept given attributes and render differen
 ### Examples
 
 
-Making it disabled with a value, in this case the proper disabled class will be loaded (ex. disabling cursor)
+Making it disabled, in this case the proper disabled class will be loaded (ex. disabling cursor)
 
 ```
-<SmallIconButton value="This one is disabled" disabled />
+<SmallIconButton disabled />
 ```
 
 or pass it a function for event handling
@@ -89,6 +89,7 @@ Allthough these attributes are supported, all of them are optional.
 * `alarm add`
 * `alarm off`
 * `alarm on`
+* `date range`
 * `done`
 * `favorite`
 * `home`
