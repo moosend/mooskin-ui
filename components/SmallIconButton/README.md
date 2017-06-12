@@ -53,10 +53,10 @@ but the most important one is to give it an icon
 <SmallIconButton icon={'search'} />
 ```
 
-give it an inverse style where only the icon is visible
+give it a transparent style where only the icon is visible
 
 ```
-<SmallIconButton inverseStyle />
+<SmallIconButton transparent />
 ```
 
 ## Supported attributes
@@ -65,7 +65,7 @@ give it an inverse style where only the icon is visible
 * `icon` - icon for the button
 * `disabled` - button should be disabled
 * `className` - css class
-* `inverseStyle` - a style variaton of the button 
+* `transparent` - a style variaton of the button 
 * `style` - button style
 * `onClick` - callback to be triggered on button click
 
@@ -73,70 +73,7 @@ Allthough these attributes are supported, all of them are optional.
 
 ## Supported icons (so far)
 
-* `search`
-* `add`
-* `add box`
-* `add circle`
-* `add outline`
-* `remove`
-* `remove circle`
-* `remove outline`
-* `close`
-* `star`
-* `account`
-* `build`
-* `alarm`
-* `alarm add`
-* `alarm off`
-* `alarm on`
-* `date range`
-* `done`
-* `favorite`
-* `home`
-* `power`
-* `settings`
-* `verified`
-* `visibility`
-* `visibility off`
-* `alert`
-* `loop`
-* `play`
-* `pause`
-* `stop`
-* `contacts`
-* `email`
-* `mail outline`
-* `forum`
-* `message`
-* `create`
-* `block`
-* `send`
-* `download`
-* `upload`
-* `down`
-* `up`
-* `left`
-* `right`
-* `edit`
-* `dropdown`
-* `dropup`
-* `check`
-* `refresh`
-* `sync`
-* `group`
-* `group add`
-* `person`
-* `person add`
-* `notifications`
-* `notifications active`
-* `notifications none`
-* `notifications off`
-* `notifications paused`
-* `check box`
-* `indeterminate check box`
-* `check box off`
-* `radio checked`
-* `radio unchecked`
+All [Google Font icons](https://material.io/icons/) are supported.
 
 #### For more
 

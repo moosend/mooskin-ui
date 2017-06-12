@@ -7,7 +7,7 @@ export interface ISmallIconButtonProps {
     disabled?: boolean;
 
     /** provide to inverse the button's styles */
-    inverseStyle?: boolean;
+    transparent?: boolean;
 
     /** button icon */
     icon?: string;
@@ -37,18 +37,18 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
 
     public render(){
 
-        const {style, inverseStyle, disabled, children, className, id} = this.props;
+        const {style, transparent, disabled, children, className, id, icon} = this.props;
 
-        const buttonStyles = inverseStyle ? styles.inverseButton : styles.normalButton;
+        const buttonStyles = transparent ? styles.transparent : styles.normalButton;
         const disabledStyles = disabled ? styles.disabledButton : '';
+        const iconStyle = icon ? `material-icons ${styles.icon}` : '';
+        const iconFont = this.getIcon(icon);
 
-        const iconStyle = this.props.icon ? this.getIcon() : '';
         const classes = `button-icon-component
                          ${styles.button}
                          ${buttonStyles}
                          ${disabledStyles}
-                         ${className}
-                         ${iconStyle}`;
+                         ${className}`;
 
         return (
             <button
@@ -58,6 +58,7 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
                 className={classes}
                 style={style}
             >
+                <i className={iconStyle} >{iconFont}</i>
                 {children}
             </button>
         );
@@ -67,8 +68,7 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
         !this.props.disabled && this.props.onClick && this.props.onClick(e);
     }
 
-    private getIcon = () => {
-        const iconClass = this.props.icon ? this.props.icon.replace(/\s/g, '') : '';
-        return styles[iconClass];
+    private getIcon = (icon?: string) => {
+        return this.props.icon ? this.props.icon.replace(/\s/g, '_') : '';
     }
 }
