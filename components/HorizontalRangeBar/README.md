@@ -39,7 +39,7 @@ it must have an optional range determining between what numbers must the progres
 * `range` - a tuple for the range
 * `background` - background color
 
-Allthough these attributes are supported, all of them are optional.
+Allthough these attributes are supported, only 'progress' is required.
 
 #### For more
 
