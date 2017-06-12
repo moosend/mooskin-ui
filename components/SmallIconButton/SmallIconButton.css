@@ -370,3 +370,13 @@
     content: '\e916';
     position: relative;
 }
+
+.import::before {
+    content: '\e0c3';
+    position: relative;
+}
+
+.copy::before {
+    content: '\e14d';
+    position: relative;
+}

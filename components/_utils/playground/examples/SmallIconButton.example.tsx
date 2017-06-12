@@ -50,6 +50,8 @@ export default (props: any) => {
             <SmallIconButton onClick={onClick} icon={'notifications'}/>
             <SmallIconButton onClick={onClick} icon={'check box'} inverseStyle/>
             <SmallIconButton onClick={onClick} icon={'check box off'} inverseStyle/>
+            <SmallIconButton onClick={onClick} icon={'copy'} inverseStyle/>
+            <SmallIconButton onClick={onClick} icon={'import'}/>
         </fieldset>
     );
 };
