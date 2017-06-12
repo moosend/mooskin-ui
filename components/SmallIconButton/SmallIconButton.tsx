@@ -23,9 +23,6 @@ export interface ISmallIconButtonProps {
 
     /** callback that is called when the button is clicked */
     onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
-
-    /** children can only be a string */
-    children?: HTMLElement;
 }
 
 export default class SmallIconButton extends React.Component<ISmallIconButtonProps, {}> {
@@ -37,7 +34,7 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
 
     public render(){
 
-        const {style, transparent, disabled, children, className, id, icon} = this.props;
+        const {style, transparent, disabled, className, id, icon} = this.props;
 
         const buttonStyles = transparent ? styles.transparent : styles.normalButton;
         const disabledStyles = disabled ? styles.disabledButton : '';
@@ -59,7 +56,6 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
                 style={style}
             >
                 <i className={iconStyle} >{iconFont}</i>
-                {children}
             </button>
         );
     }

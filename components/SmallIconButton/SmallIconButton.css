@@ -31,7 +31,7 @@
 }
 
 .transparent{
-    background-color: #ffffff;
+    background-color: hsla(0, 100%, 50%, 0);;
     color: #bbb;
     font-size: 23px;
     border: 0;
