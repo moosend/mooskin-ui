@@ -8,10 +8,11 @@ describe('SmallIconButton', () => {
     test('renders properly into dom with custom style & callback is called when clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(<SmallIconButton onClick={func} style={{color: 'grey'}}/>);
+        const component = shallow(<SmallIconButton onClick={func} style={{color: 'grey'}} icon="face"/>);
 
         expect(component.find('button').prop('disabled')).not.toBe(true);
         expect(component.find('button').prop('style')).toEqual({color: 'grey'});
+        expect(component.find('i').text()).toBe('face');
         component.find('button').simulate('click');
         expect(func).toHaveBeenCalled();
     });
