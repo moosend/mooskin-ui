@@ -8,7 +8,6 @@ tslint.json
 postcss.config.json
 index.html
 src
-docs
 spec
 __mocks__
 dist
