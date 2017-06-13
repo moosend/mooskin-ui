@@ -5,6 +5,9 @@ import {Pie} from 'react-chartjs-2';
 
 export interface IPieChartProps {
 
+    /** chart id */
+    id?: string;
+
     /** chart title */
     title?: string;
 
@@ -69,16 +72,19 @@ export interface IPieChartProps {
     // width?: number;
 }
 
-class PieChart extends React.Component<IPieChartProps, {}>{
+class Chart extends React.Component<IPieChartProps, {}>{
 
     public static defaultProps = {
         backgroundColors: [
-            '#FF6384',
-            '#36A2EB',
-            '#FFCE56'
+            '#5CCDDF',
+            '#F48770',
+            '#F2C14A',
+            '#3d0559',
+            '#c1ff48'
         ],
         className: '',
         legendPos: 'bottom',
+        spacing: 0,
         style: {},
         titlePos: 'top'
     };
@@ -86,6 +92,7 @@ class PieChart extends React.Component<IPieChartProps, {}>{
     public render(){
 
         const {
+            id,
             doughnut,
             title,
             titlePos,
@@ -149,7 +156,7 @@ class PieChart extends React.Component<IPieChartProps, {}>{
         };
 
         return(
-            <div>
+            <div id={id}>
                 <Pie
                     data={data}
                     width={size}
@@ -161,4 +168,4 @@ class PieChart extends React.Component<IPieChartProps, {}>{
     }
 }
 
-export default PieChart;
+export default Chart;

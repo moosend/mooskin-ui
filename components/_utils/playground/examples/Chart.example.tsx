@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {PieChart} from '../../../index/index';
+import {Chart} from '../../../index/index';
 
 export interface IChartState{
     users: IUsers[];
@@ -56,7 +56,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
         return(
         <fieldset style={{display: 'inline-block'}}>
             <legend>Pie Chart</legend>
-            <PieChart
+            <Chart
                 title={'Subscribers'}
                 titleSize={20}
                 data={listSubscribers}
@@ -65,9 +65,8 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                 legendColor="red"
                 legendStyle="italic"
                 legendSize={14}
-                spacing={0}
             />
-            <PieChart
+            <Chart
                 doughnut
                 title={'Spam Emails Sent'}
                 titlePos="bottom"
@@ -80,6 +79,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                 legendSize={14}
                 legendPos="top"
                 backgroundColors={backgroundColors}
+                spacing={3}
             />
         </fieldset>
     );

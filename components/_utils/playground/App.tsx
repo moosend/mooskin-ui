@@ -1,10 +1,10 @@
 import * as React from 'react';
 
 import Button from './examples/Button.example';
+import Chart from './examples/Chart.example';
 import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
-import PieChart from './examples/PieChart.example';
 import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
@@ -29,7 +29,7 @@ export default (props: any) => {
             <br/><br/>
             <SmallIconButton />
             <br/><br/>
-            <PieChart />
+            <Chart />
         </div>
     );
 };
