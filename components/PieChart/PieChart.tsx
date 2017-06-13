@@ -78,7 +78,9 @@ class PieChart extends React.Component<IPieChartProps, {}>{
             '#FFCE56'
         ],
         className: '',
-        style: {}
+        legendPos: 'bottom',
+        style: {},
+        titlePos: 'top'
     };
 
     public render(){
@@ -105,7 +107,7 @@ class PieChart extends React.Component<IPieChartProps, {}>{
         } = this.props;
 
         const chart = doughnut ? typeof doughnut === 'number' ? doughnut : 45 : 0;
-        const position = legendPos || 'bottom';
+        const position = legendPos;
 
         const chartTitle = {
             display: title ? true : false,
@@ -113,7 +115,7 @@ class PieChart extends React.Component<IPieChartProps, {}>{
             fontFamily: titleFont,
             fontSize: titleSize,
             fontStyle: titleStyle,
-            position: titlePos || 'top',
+            position: titlePos,
             text: title
         };
 
@@ -153,7 +155,6 @@ class PieChart extends React.Component<IPieChartProps, {}>{
                     width={size}
                     height={size}
                     options={options}
-                    legend={{position: 'bottom'}}
                 />
             </div>
         );
