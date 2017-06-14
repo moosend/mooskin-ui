@@ -9,7 +9,7 @@ export interface IChartState{
 
 export interface IUsers{
     label: string;
-    value: number;
+    value: number|string;
     background: string;
 }
 
@@ -32,7 +32,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                 {
                     background: '#F48770',
                     label: 'Gent',
-                    value: 120
+                    value: '120'
                 },
                 {
                     background: '#F2C14A',
@@ -62,18 +62,18 @@ export default class ChartExample extends React.Component<{}, IChartState>{
         // const backgroundColors = ['#3d0559', '#ed6a42', '#9cdf40'];
 
         return(
-        <fieldset style={{display: 'inline-block'}}>
-            <legend>Pie Chart</legend>
-            <Pie data={this.state.users} title="Subscribers"/>
-            <Doughnut
-                data={this.state.users}
-                title="Doughnut.. yummy"
-                titlePos="bottom"
-                legendPos="left"
-                legendStyle="italic"
-                boxWidth={20}
-            />
-        </fieldset>
-    );
+            <fieldset style={{display: 'inline-block'}}>
+                <legend>Pie Chart</legend>
+                <Pie data={this.state.users} title="Subscribers"/>
+                <Doughnut
+                    data={this.state.users}
+                    title="Doughnut.. yummy"
+                    titlePos="bottom"
+                    legendPos="left"
+                    legendStyle="italic"
+                    boxWidth={20}
+                />
+            </fieldset>
+        );
     }
 }
