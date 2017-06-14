@@ -3,76 +3,9 @@ import {Pie} from 'react-chartjs-2';
 
 // import styles from './PieChart.css';
 
-export interface IPieChartProps {
+import {IChartData, IChartProps} from '../props';
 
-    /** chart id */
-    id?: string;
-
-    /** chart title */
-    title?: string;
-
-    /** chart title position */
-    titlePos?: string;
-
-    /** chart title size */
-    titleSize?: number;
-
-    /** chart title style */
-    titleStyle?: string;
-
-    /** chart title color */
-    titleColor?: string;
-
-    /** chart title font */
-    titleFont?: string;
-
-    /** legend display */
-    noLegend?: boolean;
-
-    /** legend position */
-    legendPos?: string;
-
-    /** legend box width */
-    boxWidth?: number;
-
-    /** legend font style */
-    legendStyle?: string;
-
-    /** legend font family */
-    legendFont?: string;
-
-    /** legend font size */
-    legendSize?: number;
-
-    /** legend color style */
-    legendColor?: string;
-
-    /** doughnut or pie */
-    doughnut?: boolean | number;
-
-    /** space between elements in the chart */
-    spacing?: number;
-
-    /** chart size */
-    size?: number;
-
-    /** chart data values */
-    data: string[] | number[] | {};
-
-    /** chart label values */
-    labels: string[] | {};
-
-    /** chart background Colors */
-    backgroundColors?: string[] | {};
-
-    // /** chart height */
-    // height?: number;
-
-    // /** chart width */
-    // width?: number;
-}
-
-class Chart extends React.Component<IPieChartProps, {}>{
+class PieChart extends React.Component<IChartProps, {}>{
 
     public static defaultProps = {
         backgroundColors: [
@@ -93,7 +26,6 @@ class Chart extends React.Component<IPieChartProps, {}>{
 
         const {
             id,
-            doughnut,
             title,
             titlePos,
             titleColor,
@@ -108,12 +40,12 @@ class Chart extends React.Component<IPieChartProps, {}>{
             boxWidth,
             spacing,
             size,
-            backgroundColors
             // height,
             // width
         } = this.props;
 
-        const chart = doughnut ? typeof doughnut === 'number' ? doughnut : 45 : 0;
+        const chartData = this.getData(this.props.data);
+
         const position = legendPos;
 
         const chartTitle = {
@@ -141,18 +73,17 @@ class Chart extends React.Component<IPieChartProps, {}>{
         };
 
         const options = {
-            cutoutPercentage: chart,
             legend,
             title: chartTitle
         };
 
         const data = {
             datasets: [{
-                backgroundColor: backgroundColors ,
+                backgroundColor: chartData[2],
                 borderWidth: spacing,
-                data: this.props.data,
+                data: chartData[1]
             }],
-            labels: this.props.labels
+            labels: chartData[0]
         };
 
         return(
@@ -166,6 +97,45 @@ class Chart extends React.Component<IPieChartProps, {}>{
             </div>
         );
     }
+
+    private getData = (data: IChartData[]) => {
+        const labels: string[] = [];
+        const values: number[] = [];
+        const backgroundColors: string[] = [];
+
+        console.log(data);
+
+        data.map((chartData) => {
+
+            for (const key in chartData) {
+
+                if (!chartData.hasOwnProperty(key)) {
+                    continue;
+                }
+
+                const value = parseFloat(chartData[key].toString());
+
+                if (typeof key === 'string' && key === 'label'){
+                    labels.push(key);
+                }
+
+                if (!isNaN(value)){
+                    values.push(value);
+                }
+
+                if (typeof key === 'string' && key === 'backgroundColor'){
+                    backgroundColors.push(chartData[key].toString());
+                }
+
+                console.log(key);
+            }
+
+        });
+        
+        console.log(labels, values, backgroundColors);
+        return [labels, values, backgroundColors];
+    }
+
 }
 
-export default Chart;
+export default PieChart;

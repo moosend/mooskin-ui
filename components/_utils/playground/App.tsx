@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Button from './examples/Button.example';
-import Chart from './examples/Chart.example';
+import Charts from './examples/Charts.example';
 import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
@@ -29,7 +29,7 @@ export default (props: any) => {
             <br/><br/>
             <SmallIconButton />
             <br/><br/>
-            <Chart />
+            <Charts />
         </div>
     );
 };

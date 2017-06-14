@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Chart} from '../../../index/index';
+import {Doughnut} from '../../../index/index';
 
 export interface IChartState{
     users: IUsers[];
@@ -56,7 +56,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
         return(
         <fieldset style={{display: 'inline-block'}}>
             <legend>Pie Chart</legend>
-            <Chart
+            <Doughnut
                 title={'Subscribers'}
                 titleSize={20}
                 data={listSubscribers}
@@ -66,8 +66,8 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                 legendStyle="italic"
                 legendSize={14}
             />
-            <Chart
-                doughnut
+            <Doughnut
+                doughnutWidth={70}
                 title={'Spam Emails Sent'}
                 titlePos="bottom"
                 titleSize={20}

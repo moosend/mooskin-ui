@@ -8,4 +8,5 @@ export {H1, H2, H3, H4, H5, H6} from '../Headings/index';
 export {default as HorizontalRangeBar} from '../HorizontalRangeBar';
 export {default as TopNotification} from '../TopNotification';
 export {default as SmallIconButton} from '../SmallIconButton';
-export {Chart} from '../Charts/index';
+export {Pie} from '../Charts/index';
+export {Doughnut} from '../Charts/index';
