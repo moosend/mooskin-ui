@@ -8,9 +8,9 @@ export interface IChartState{
 }
 
 export interface IUsers{
-    name: string;
-    subscribers: number;
-    spams: number;
+    label: string;
+    value: number;
+    background: string;
 }
 
 export default class ChartExample extends React.Component<{}, IChartState>{
@@ -25,19 +25,19 @@ export default class ChartExample extends React.Component<{}, IChartState>{
             },
             users: [
                 {
-                    name: 'Doni',
-                    spams: 5,
-                    subscribers: 70
+                    background: '#5CCDDF',
+                    label: 'Doni',
+                    value: 70,
                 },
                 {
-                    name: 'Gent',
-                    spams: 30,
-                    subscribers: 120
+                    background: '#F48770',
+                    label: 'Gent',
+                    value: 120
                 },
                 {
-                    name: 'Shkumbin',
-                    spams: 0,
-                    subscribers: 65
+                    background: '#F2C14A',
+                    label: 'Shkumbin',
+                    value: 65
                 }
             ]
         };
@@ -64,14 +64,14 @@ export default class ChartExample extends React.Component<{}, IChartState>{
         return(
         <fieldset style={{display: 'inline-block'}}>
             <legend>Pie Chart</legend>
-            <Pie
-                title={'Subscribers'}
-                titleSize={20}
+            <Pie data={this.state.users} title="Subscribers"/>
+            <Doughnut
                 data={this.state.users}
-                size={300}
-                legendColor="red"
+                title="Doughnut.. yummy"
+                titlePos="bottom"
+                legendPos="left"
                 legendStyle="italic"
-                legendSize={14}
+                boxWidth={20}
             />
         </fieldset>
     );

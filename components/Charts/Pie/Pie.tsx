@@ -8,13 +8,6 @@ import {IChartData, IChartProps} from '../props';
 class PieChart extends React.Component<IChartProps, {}>{
 
     public static defaultProps = {
-        backgroundColors: [
-            '#5CCDDF',
-            '#F48770',
-            '#F2C14A',
-            '#3d0559',
-            '#c1ff48'
-        ],
         className: '',
         legendPos: 'bottom',
         spacing: 0,
@@ -79,11 +72,11 @@ class PieChart extends React.Component<IChartProps, {}>{
 
         const data = {
             datasets: [{
-                backgroundColor: chartData[2],
+                backgroundColor: chartData.backgroundColors,
                 borderWidth: spacing,
-                data: chartData[1]
+                data: chartData.values
             }],
-            labels: chartData[0]
+            labels: chartData.labels
         };
 
         return(
@@ -105,35 +98,44 @@ class PieChart extends React.Component<IChartProps, {}>{
 
         console.log(data);
 
-        data.map((chartData) => {
+        data.forEach((chartData) => {
 
-            for (const key in chartData) {
+            console.log(chartData);
 
-                if (!chartData.hasOwnProperty(key)) {
-                    continue;
-                }
+            const value = parseFloat(chartData.value.toString());
+            const background = chartData.background.toString();
 
-                const value = parseFloat(chartData[key].toString());
+            labels.push(chartData.label);
+            values.push(value);
+            backgroundColors.push(background);
 
-                if (typeof key === 'string' && key === 'label'){
-                    labels.push(key);
-                }
+            // for (const key in chartData) {
 
-                if (!isNaN(value)){
-                    values.push(value);
-                }
+            //     if (!chartData.hasOwnProperty(key)) {
+            //         continue;
+            //     }
 
-                if (typeof key === 'string' && key === 'backgroundColor'){
-                    backgroundColors.push(chartData[key].toString());
-                }
+            //     const value = parseFloat(chartData[key].toString());
 
-                console.log(key);
-            }
+            //     if (typeof key === 'string' && key === 'label'){
+            //         labels.push(key);
+            //     }
+
+            //     if (!isNaN(value)){
+            //         values.push(value);
+            //     }
+
+            //     if (typeof key === 'string' && key === 'backgroundColor'){
+            //         backgroundColors.push(chartData[key].toString());
+            //     }
+
+            //     console.log(key);
+            // }
 
         });
-        
-        console.log(labels, values, backgroundColors);
-        return [labels, values, backgroundColors];
+
+        console.log({labels, values, backgroundColors});
+        return {labels, values, backgroundColors};
     }
 
 }

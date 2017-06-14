@@ -3,27 +3,20 @@ import {Pie} from 'react-chartjs-2';
 
 // import styles from './PieChart.css';
 
-import {IChartProps} from '../props';
+import {IChartData, IChartProps} from '../props';
 
 export interface IDoughnutProps extends IChartProps {
 
     /** doughnut width */
-    doughnutWidth?: number;
+    doughnutSpace?: number;
 
 }
 
 class Doughnut extends React.Component<IDoughnutProps, {}>{
 
     public static defaultProps = {
-        backgroundColors: [
-            '#5CCDDF',
-            '#F48770',
-            '#F2C14A',
-            '#3d0559',
-            '#c1ff48'
-        ],
         className: '',
-        doughnutWidth: 45,
+        doughnutSpace: 50,
         legendPos: 'bottom',
         spacing: 0,
         style: {},
@@ -34,13 +27,13 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
 
         const {
             id,
-            doughnutWidth,
             title,
             titlePos,
             titleColor,
             titleFont,
             titleSize,
             titleStyle,
+            doughnutSpace,
             legendPos,
             legendColor,
             legendSize,
@@ -49,10 +42,11 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
             boxWidth,
             spacing,
             size,
-            backgroundColors
             // height,
             // width
         } = this.props;
+
+        const chartData = this.getData(this.props.data);
 
         const position = legendPos;
 
@@ -81,18 +75,18 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
         };
 
         const options = {
-            cutoutPercentage: doughnutWidth,
+            cutoutPercentage: doughnutSpace,
             legend,
             title: chartTitle
         };
 
         const data = {
             datasets: [{
-                backgroundColor: backgroundColors ,
+                backgroundColor: chartData.backgroundColors,
                 borderWidth: spacing,
-                data: this.props.data,
+                data: chartData.values
             }],
-            labels: this.props.labels
+            labels: chartData.labels
         };
 
         return(
@@ -105,6 +99,25 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
                 />
             </div>
         );
+    }
+
+    private getData = (data: IChartData[]) => {
+        const labels: string[] = [];
+        const values: number[] = [];
+        const backgroundColors: string[] = [];
+
+        data.forEach((chartData) => {
+
+            const value = parseFloat(chartData.value.toString());
+            const background = chartData.background.toString();
+
+            labels.push(chartData.label);
+            values.push(value);
+            backgroundColors.push(background);
+
+        });
+
+        return {labels, values, backgroundColors};
     }
 }
 

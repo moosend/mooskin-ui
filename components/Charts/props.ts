@@ -51,9 +51,6 @@ export interface IChartProps {
     /** chart data values */
     data: IChartData[];
 
-    /** chart background Colors */
-    backgroundColors?: string[] | {[key: string]: string|number};
-
     // /** chart height */
     // height?: number;
 

@@ -8,10 +8,25 @@ describe('Chart', () => {
 
     test('renders properly into dom', () => {
 
-        const data = [10, 20, 30];
-        const labels = ['Gold', 'Exp', 'Assists'];
+        const users = [
+            {
+                background: '#5CCDDF',
+                label: 'Doni',
+                value: 70,
+            },
+            {
+                background: '#F48770',
+                label: 'Gent',
+                value: 120
+            },
+            {
+                background: '#F2C14A',
+                label: 'Shkumbin',
+                value: 65
+            }
+        ];
 
-        const component = shallow(<PieChart data={data} labels={labels} />);
+        const component = shallow(<PieChart data={users} />);
 
         expect(component.find('Pie').prop('data')).toBeDefined;
     });
