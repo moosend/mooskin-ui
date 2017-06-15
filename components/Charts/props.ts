@@ -43,7 +43,7 @@ export interface IChartProps {
     legendColor?: string;
 
     /** space between elements in the chart */
-    spacing?: number;
+    borderWidth?: number;
 
     /** chart size */
     size?: number;
@@ -51,11 +51,49 @@ export interface IChartProps {
     /** chart data values */
     data: IChartData[];
 
+    /** maintains aspect ratio */
+    maintainAspectRatio?: boolean;
+
     // /** chart height */
     // height?: number;
 
     // /** chart width */
     // width?: number;
+}
+
+export interface IDoughnutProps extends IChartProps {
+
+    /** doughnut width */
+    doughnutSpace?: number;
+
+}
+
+export interface IBarProps extends IChartProps{
+
+    /** chart label */
+    label?: string;
+
+    /** toggles X gridlines */
+    gridLinesX?: boolean;
+
+    /** toggles Y gridlines */
+    gridLinesY?: boolean;
+
+    /** chart height */
+    height?: number;
+
+    /** chart width */
+    width?: number;
+
+    /** min chart Y value */
+    minValue?: number;
+
+    /** border color */
+    borderColor?: string;
+
+    /** bar width in relation with category width */
+    barPercentage?: number;
+
 }
 
 export interface IChartData {

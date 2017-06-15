@@ -10,3 +10,4 @@ export {default as TopNotification} from '../TopNotification';
 export {default as SmallIconButton} from '../SmallIconButton';
 export {Pie} from '../Charts/index';
 export {Doughnut} from '../Charts/index';
+export {Bar} from '../Charts/index';

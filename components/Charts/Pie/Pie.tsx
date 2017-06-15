@@ -3,14 +3,16 @@ import {Pie} from 'react-chartjs-2';
 
 // import styles from './PieChart.css';
 
-import {IChartData, IChartProps} from '../props';
+import {getData, getLabels, getTitle} from '../common';
+import {IChartProps} from '../props';
 
 class PieChart extends React.Component<IChartProps, {}>{
 
     public static defaultProps = {
+        borderWidth: 0,
+        boxWidth: 30,
         className: '',
         legendPos: 'bottom',
-        spacing: 0,
         style: {},
         titlePos: 'top'
     };
@@ -31,33 +33,20 @@ class PieChart extends React.Component<IChartProps, {}>{
             legendStyle,
             legendFont,
             boxWidth,
-            spacing,
+            borderWidth,
             size,
+            maintainAspectRatio
             // height,
             // width
         } = this.props;
 
-        const chartData = this.getData(this.props.data);
-
         const position = legendPos;
 
-        const chartTitle = {
-            display: title ? true : false,
-            fontColor: titleColor,
-            fontFamily: titleFont,
-            fontSize: titleSize,
-            fontStyle: titleStyle,
-            position: titlePos,
-            text: title
-        };
+        const chartData = getData(this.props.data);
 
-        const labels = {
-            boxWidth: boxWidth || 30,
-            fontColor: legendColor,
-            fontFamily: legendFont,
-            fontSize: legendSize,
-            fontStyle: legendStyle
-        };
+        const chartTitle = getTitle(title, titleColor, titleFont, titleSize, titleStyle, titlePos);
+
+        const labels = getLabels(boxWidth, legendColor, legendFont, legendSize, legendStyle);
 
         const legend = {
             display: !this.props.noLegend,
@@ -67,13 +56,14 @@ class PieChart extends React.Component<IChartProps, {}>{
 
         const options = {
             legend,
+            maintainAspectRatio,
             title: chartTitle
         };
 
         const data = {
             datasets: [{
                 backgroundColor: chartData.backgroundColors,
-                borderWidth: spacing,
+                borderWidth,
                 data: chartData.values
             }],
             labels: chartData.labels
@@ -90,54 +80,6 @@ class PieChart extends React.Component<IChartProps, {}>{
             </div>
         );
     }
-
-    private getData = (data: IChartData[]) => {
-        const labels: string[] = [];
-        const values: number[] = [];
-        const backgroundColors: string[] = [];
-
-        console.log(data);
-
-        data.forEach((chartData) => {
-
-            console.log(chartData);
-
-            const value = parseFloat(chartData.value.toString());
-            const background = chartData.background.toString();
-
-            labels.push(chartData.label);
-            values.push(value);
-            backgroundColors.push(background);
-
-            // for (const key in chartData) {
-
-            //     if (!chartData.hasOwnProperty(key)) {
-            //         continue;
-            //     }
-
-            //     const value = parseFloat(chartData[key].toString());
-
-            //     if (typeof key === 'string' && key === 'label'){
-            //         labels.push(key);
-            //     }
-
-            //     if (!isNaN(value)){
-            //         values.push(value);
-            //     }
-
-            //     if (typeof key === 'string' && key === 'backgroundColor'){
-            //         backgroundColors.push(chartData[key].toString());
-            //     }
-
-            //     console.log(key);
-            // }
-
-        });
-
-        console.log({labels, values, backgroundColors});
-        return {labels, values, backgroundColors};
-    }
-
 }
 
 export default PieChart;

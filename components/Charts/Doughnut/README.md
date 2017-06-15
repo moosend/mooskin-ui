@@ -1,4 +1,4 @@
-# MooSkin UI - Chart Component
+# MooSkin UI - Doughnut Chart Component
 
 The MooSkin Doughnut Chart Component is a simple round chart, typical doughnut looking, with pre-defined styling and attributes.
 
@@ -46,7 +46,7 @@ const data = [
 <Doughnut data={data} />
 ```
 
-give it custom doughnut spacing
+You can also give it custom doughnut spacing
 
 ```
 <Doughnut data={...} doughnutSpace={30} />    // default is 50, more space means a thinner doughnut
@@ -61,14 +61,14 @@ give it a title and set its position
 or customize chart legend
 
 ```
-<PDoughnutie data={...} legendColor="cyan" legendSize={15} legendPos="right" />
+<Doughnut data={...} legendColor="cyan" legendSize={15} legendPos="right" />
 <Doughnut data={...} noLegend />    // this will render the chart only without legend
 ```
 
-or give it a custom size and spacing between data
+or give it a custom size and border width between data
 
 ```
-<Doughnut data={...} size={300} spacing={3} />    // default spacing is 0
+<Doughnut data={...} size={300} borderWidth={3} />    // default borderWidth is 0
 ```
 
 
@@ -90,8 +90,9 @@ or give it a custom size and spacing between data
 * `legendSize` - Chart legend font size
 * `legendColor` - Chart legend font color
 * `noLegend` - hide chart legend
-* `spacing` - border width
+* `borderWidth` - border width
 * `size` - Chart size
+* `maintainAspectRatio` - maintains aspect ratio
 
 Only `data` is required, other attributes are optional and mostly for styling.
 
