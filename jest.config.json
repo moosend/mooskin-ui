@@ -1,31 +1,54 @@
 {
-    "collectCoverageFrom": [
-      "**/components/**/*.{ts,tsx}",
-      "!**/node_modules/**",
-      "!./lib/**",
-      "!./dist/**",
-      "!**/vendor/**",
-      "!**/components/_utils/**",
-      "!**/components/custom.d.ts"
-    ],
-    "snapshotSerializers": ["<rootDir>/node_modules/jest-serializer-enzyme"],
-    "mapCoverage": true,
-    "moduleDirectories": [
-      "node_modules",
-      "src"
-    ],
-    "moduleNameMapper": {
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "identity-obj-proxy"
-    },
-    "transform": {
-      "^.+\\.(ts|tsx)$": "typescript-babel-jest"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
-  }
+  "bail": true,
+  "globals": {
+        "__TS_CONFIG__": "tsconfig.json"
+  },
+  "collectCoverageFrom": [
+    "**/components/**/*.{ts,tsx}",
+    "!**/node_modules/**",
+    "!./lib/**",
+    "!./dist/**",
+    "!**/vendor/**",
+    "!**/components/_utils/**",
+    "!**/components/custom.d.ts"
+  ],
+  "snapshotSerializers": ["<rootDir>/node_modules/jest-serializer-enzyme"],
+  "mapCoverage": true,
+  "moduleDirectories": [
+    "node_modules",
+    "src"
+  ],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+    "\\.(css|less)$": "identity-obj-proxy"
+  },
+  "transform": {
+    "^.+\\.(ts|tsx)$": "typescript-babel-jest"
+  },
+  "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  "moduleFileExtensions": [
+    "ts",
+    "tsx",
+    "js",
+    "json"
+  ],
+  "transformIgnorePatterns":[
+    "<rootDir>/node_modules"
+  ],
+  "unmockedModulePathPatterns": [
+    "react",
+    "react-dom",
+    "react-addons-test-utils",
+    "fbjs",
+    "enzyme",
+    "cheerio",
+    "htmlparser2",
+    "underscore",
+    "lodash",
+    "domhandler",
+    "object.assign",
+    "define-properties",
+    "function-bind",
+    "object-keys"
+  ]
+}

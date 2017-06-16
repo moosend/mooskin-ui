@@ -7,8 +7,9 @@
   "scripts": {
     "prepublish": "npm run lint && webpack --config webpack.config.prod.js -p",
     "playground": "npm run prepublish && webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
-    "test": "jest --coverage --no-cache --silent --config=jest.config.json",
-    "test:u": "jest -u --coverage --no-cache --silent --config=jest.config.json",
+    "test": "jest --no-cache --silent --config=jest.config.json",
+    "test:u": "jest -u --no-cache --silent --config=jest.config.json",
+    "test:cov": "jest --coverage --no-cache --silent --config=jest.config.json",
     "lint": "tslint -c tslint.json ./components/**/*.{ts,tsx}"
   },
   "repository": {
