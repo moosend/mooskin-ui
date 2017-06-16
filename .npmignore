@@ -7,8 +7,8 @@ tsconfig.json
 tslint.json
 postcss.config.json
 index.html
-src
 docs
+src
 spec
 __mocks__
 dist

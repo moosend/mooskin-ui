@@ -31,7 +31,6 @@ describe('SmallIconButton', () => {
     test('class is added when icon attribute is given', () => {
 
         const component = shallow(<SmallIconButton icon={'add'} />);
-        expect(component.find('button').prop('className')).toContain('undefined');
-        // component.instance().getIcon().toHaveBeenCalled();
+        expect(component.find('i').prop('className')).toContain('icon');
     });
 });
