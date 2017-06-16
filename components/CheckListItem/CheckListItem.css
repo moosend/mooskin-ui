@@ -1,4 +1,4 @@
-@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 .checkitem {
     background: #f7f7f7;
@@ -14,16 +14,17 @@
     display: inline-block;
     vertical-align: middle;
     border-left: 1px solid #eaeaea;
-    padding-top: 2px;
+    padding: 5px 0 2px 0;
     padding-left: 15px;
     margin-left: 15px;
-    height: 20px;
+    height: 25px;
 }
 
 .iconStyle {
-    color: #aaa;
-    width: 22px;
-    padding-top: 3px;
+    color: #dddddd;
+    vertical-align: middle;
+    font-size: 30px;
+    font-weight: 800;
 }
 
 .button {
@@ -31,7 +32,7 @@
     height: 40px;
     display: block;
     position: absolute;
-    top: 9px;
+    top: 12px;
     right: 12px;
     border-radius: 8px;
 }
