@@ -1,0 +1,37 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.checkitem {
+    background: #f7f7f7;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.content {
+    color: #aaa;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 1px solid #eaeaea;
+    padding-top: 2px;
+    padding-left: 15px;
+    margin-left: 15px;
+    height: 20px;
+}
+
+.iconStyle {
+    color: #aaa;
+    width: 22px;
+    padding-top: 3px;
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    border-radius: 8px;
+}
