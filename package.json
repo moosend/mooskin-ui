@@ -69,5 +69,57 @@
     "url-loader": "^0.5.8",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/components/**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!./lib/**",
+      "!./dist/**",
+      "!**/vendor/**",
+      "!**/components/_utils/**",
+      "!**/components/custom.d.ts"
+    ],
+    "mapCoverage": true,
+    "modulePaths": [
+      "/shared/vendor/modules"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "moduleNameMapper": {
+      "^react(.*)$": "<rootDir>/vendor/react-master$1",
+      "^config$": "<rootDir>/configs/app-config.js",
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
+    },
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "unmockedModulePathPatterns": [
+      "react",
+      "react-dom",
+      "react-addons-test-utils",
+      "fbjs",
+      "enzyme",
+      "cheerio",
+      "htmlparser2",
+      "underscore",
+      "lodash",
+      "domhandler",
+      "object.assign",
+      "define-properties",
+      "function-bind",
+      "object-keys"
+    ]
   }
 }
