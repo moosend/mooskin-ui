@@ -78,7 +78,7 @@ describe('Radio', () => {
 
         const component = shallow(
             <RadioGroup onChange={func}>
-                <Radio value="radio1" disabled/>
+                <Radio value="radio1" disabled />
             </RadioGroup>
         );
 

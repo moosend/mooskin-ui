@@ -43,7 +43,7 @@ export interface IRadioProps {
     /** radio matches the selected prop from parent component */
     selected?: string;
 
-    /** value for this option */
+    /** value for this radio */
     value: string;
 
     /** radio label */
@@ -120,6 +120,10 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
     const disabledStyles = props.disabled ? styles.disabledRadio : '';
     const checked = props.selected === props.value ? true : false;
 
+    const onRadioClick = (e: React.MouseEvent<HTMLElement>) => {
+        !props.disabled && props.onClick && props.onClick(e);
+    };
+
     return (
         <div
             htmlFor={props.id}
@@ -130,7 +134,7 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
                 name="radio"
                 type="radio"
                 value={props.value}
-                onClick={props.onClick}
+                onClick={onRadioClick}
                 disabled={props.disabled}
                 defaultChecked={checked}
             />

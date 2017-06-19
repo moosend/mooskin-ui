@@ -34,17 +34,13 @@
     border-radius:50%;
 }
 
-.radio input[type='radio']:before {
+.radio input[type='radio']:checked:before {
+    background:#5ccdde;
     content:'';
     display:block;
     width: 10px;
     height: 10px;
     border-radius:50%;    
-}
-
-.radio input[type='radio']:checked:before {
-    background:#5ccdde;
-    
 }
 
 .disabledRadio input[type='radio']:disabled {
