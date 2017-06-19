@@ -1,0 +1,54 @@
+ @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+ 
+.button {
+    font-family: 'Material Icons';
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    transition: all 400ms ease;
+    vertical-align: middle;
+}
+
+.disabledButton.normalButton{
+    cursor:not-allowed;
+    background-color: #87dfed;
+}
+
+.disabledButton.transparent{
+    cursor:not-allowed;
+    color: #ccc;
+}
+
+.normalButton{
+    background-color: #5ccdde;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    color: #ffffff;
+    margin: 2px;
+    height: 28px;
+    width: 28px;
+    padding: 3px 2px;
+}
+
+.transparent{
+    background-color: hsla(0, 100%, 50%, 0);;
+    color: #bbb;
+    font-size: 23px;
+    border: 0;
+    width: 23px;
+    height: 23px;
+    padding: 0px;
+    margin: 3px;
+}
+
+.normalButton:hover:enabled {
+    background-color: #4cb3c4;
+}
+
+.transparent:hover:enabled {
+   color: #5ccdde;
+}
+
+.icon {
+    font-size: 21px;
+}

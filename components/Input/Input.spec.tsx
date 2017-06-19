@@ -27,7 +27,6 @@ describe('Input', () => {
     });
 
     test('renders an input with id and type', () => {
-        const func = jest.fn();
 
         const component = shallow(<Input type="text" id="1234"/>);
 

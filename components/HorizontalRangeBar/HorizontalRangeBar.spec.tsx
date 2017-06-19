@@ -19,9 +19,16 @@ describe('HorizontalRangeBar', () => {
     });
 
     test('just the number should exceed the range of the bar', () => {
+        (global as any).console = {error: jest.fn()};
         const component = shallow(<HorizontalRangeBar progress={20} range={[0, 10]}/>);
 
+        const bar = component.find('.loader-bar');
+
         expect(component.find('.loader-component').text()).toBe('20');
-        expect(component.find('.loader-bar').prop('style').width).toBe('100%');
+
+        expect(bar.prop('style')).toBeDefined();
+        expect(bar.prop('style').width).toBe('100%');
+        expect(console.error).toHaveBeenCalled();
+
     });
 });

@@ -34,7 +34,7 @@ export interface IProps {
     maxlength?: string;
 
     /** override input styles */
-    style?: {[key: string]: string};
+    style?: {[key: string]: string|number};
 
     /** override input class */
     className?: string;

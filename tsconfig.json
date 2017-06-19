@@ -10,6 +10,7 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "declaration": true,
+    "moduleResolution": "node",
     "declarationDir": "lib",
     "noFallthroughCasesInSwitch": true,
     "pretty": true,
@@ -20,7 +21,7 @@
   ],
   "exclude": [
       "node_modules",
-      "components/**/*.spec.tsx",
-      "components/**/*.spec.ts"
+      "components/**/*.spec.ts",
+      "components/**/*.spec.tsx"
   ]
 }

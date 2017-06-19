@@ -1,13 +1,15 @@
 {
   "name": "mooskin",
-  "version": "0.0.7",
+  "version": "0.0.5",
   "description": "A collection of React components for Moosend UI",
   "main": "lib/index/index.js",
   "types": "lib/index/index.d.ts",
   "scripts": {
     "prepublish": "npm run lint && webpack --config webpack.config.prod.js -p",
     "playground": "npm run prepublish && webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
-    "test": "jest --coverage --no-cache",
+    "test": "jest --no-cache --silent --config=jest.config.json",
+    "test:u": "jest -u --no-cache --silent --config=jest.config.json",
+    "test:cov": "jest --coverage --no-cache --silent --config=jest.config.json",
     "lint": "tslint -c tslint.json ./components/**/*.{ts,tsx}"
   },
   "repository": {
@@ -22,7 +24,9 @@
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
   "dependencies": {
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "chart.js": "^2.6.0",
+    "react-chartjs-2": "^2.1.0"
   },
   "devDependencies": {
     "@types/enzyme": "^2.8.0",
@@ -33,6 +37,7 @@
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
     "babel-preset-env": "^1.4.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
@@ -43,10 +48,13 @@
     "cssnext": "^1.8.4",
     "enzyme": "^2.8.2",
     "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.28.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.3",
+    "jest-serializer-enzyme": "^1.0.0",
     "postcss-css-variables": "^0.7.0",
+    "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.5",
     "react-addons-test-utils": "^15.5.1",
@@ -57,63 +65,10 @@
     "ts-loader": "^2.0.3",
     "tslint": "^5.2.0",
     "tslint-react": "^3.0.0",
-    "typedoc": "^0.7.1",
-    "typedoc-webpack-plugin": "^1.1.4",
     "typescript": "^2.3.2",
+    "typescript-babel-jest": "^1.0.4",
     "url-loader": "^0.5.8",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/components/**/*.{ts,tsx}",
-      "!**/node_modules/**",
-      "!./lib/**",
-      "!./dist/**",
-      "!**/vendor/**",
-      "!**/components/_utils/**",
-      "!**/components/custom.d.ts"
-    ],
-    "mapCoverage": true,
-    "modulePaths": [
-      "/shared/vendor/modules"
-    ],
-    "moduleDirectories": [
-      "node_modules",
-      "bower_components",
-      "shared"
-    ],
-    "moduleNameMapper": {
-      "^react(.*)$": "<rootDir>/vendor/react-master$1",
-      "^config$": "<rootDir>/configs/app-config.js",
-      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "identity-obj-proxy"
-    },
-    "transform": {
-      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ],
-    "unmockedModulePathPatterns": [
-      "react",
-      "react-dom",
-      "react-addons-test-utils",
-      "fbjs",
-      "enzyme",
-      "cheerio",
-      "htmlparser2",
-      "underscore",
-      "lodash",
-      "domhandler",
-      "object.assign",
-      "define-properties",
-      "function-bind",
-      "object-keys"
-    ]
   }
 }

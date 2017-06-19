@@ -1,5 +1,4 @@
 var config = require('./webpack.config.common'),
-  TypedocWebpackPlugin = require('typedoc-webpack-plugin'),
   ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
@@ -25,16 +24,8 @@ config.module.rules.push(
 );
 
 config.plugins.push(
-    extractCSS,
-    new TypedocWebpackPlugin({
-      out: './docs',
-      jsx: 'react',
-      module: 'es6',
-      target: 'es6',
-      exclude: '**/*.spec.*',
-      experimentalDecorators: true,
-      excludeExternals: true
-  }, './components'))
+    extractCSS
+);
 
 config.externals = [
   'react',
