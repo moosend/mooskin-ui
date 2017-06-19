@@ -1,8 +1,5 @@
 {
   "bail": true,
-  "globals": {
-        "__TS_CONFIG__": "tsconfig.json"
-  },
   "collectCoverageFrom": [
     "**/components/**/*.{ts,tsx}",
     "!**/node_modules/**",
