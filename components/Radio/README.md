@@ -61,6 +61,7 @@ Custom style, className or id can be given just like any other component in this
 * `selected` - selected value, has to correspond to one of the Radio values
 * `className` - css class
 * `style` - element style
+* `title` - optional title for the radio group
 
 ## Supported attributes for Option
 

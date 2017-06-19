@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {H2} from '../index';
 import styles from './Radio.css';
 
 export interface IRadioGroupProps {
@@ -10,6 +11,9 @@ export interface IRadioGroupProps {
 
     /** group id attribute */
     id?: string;
+
+    /** group title attribute */
+    title?: string;
 
     /** to specify which Radio is selected */
     selected?: string;
@@ -67,7 +71,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
     public render(){
 
-        const {id, className, style} = this.props;
+        const {id, className, style, title} = this.props;
 
         const radios = this.assignRadios();
 
@@ -77,6 +81,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
                 className={className}
                 style={style}
             >
+                <H2 style={{marginLeft: '10px'}}>{title}</H2>
                 {radios}
             </div>
         );
