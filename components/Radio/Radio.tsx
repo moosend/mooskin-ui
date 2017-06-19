@@ -14,10 +14,10 @@ export interface IRadioGroupProps {
     /** to specify which Radio is selected */
     selected?: string;
 
-    /** button class */
+    /** RadioGroup class */
     className?: string;
 
-    /** override button styles */
+    /** override RadioGroup styles */
     style?: {[key: string]: string};
 
     /** childrens must be a Radio Component */
@@ -67,13 +67,15 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
     public render(){
 
+        const {id, className, style} = this.props;
+
         const radios = this.assignRadios();
 
         return (
             <div
-                id={this.props.id}
-                className={this.props.className}
-                style={this.props.style}
+                id={id}
+                className={className}
+                style={style}
             >
                 {radios}
             </div>

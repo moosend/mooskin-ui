@@ -19,12 +19,12 @@
 }
 
 .radio label {
-    font-size: 0.875em;
+    font-size: 1em;
     margin-left: 10px;
 }
 
 .radio input[type='radio'] {
-    vertical-align: middle;
+    vertical-align: sub;
     appearance:none;
     cursor: pointer;
     width:22px;
