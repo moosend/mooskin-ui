@@ -6,6 +6,7 @@ import CheckListItem from './examples/CheckListItem.example';
 import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
+import Radio from './examples/Radio.example';
 import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
@@ -29,6 +30,8 @@ export default (props: any) => {
             <TopNotification />
             <br/><br/>
             <SmallIconButton />
+            <br/><br/>
+            <Radio />
             <br/><br/>
             <CheckListItem />
             <br/><br/>

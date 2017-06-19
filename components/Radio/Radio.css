@@ -1,0 +1,52 @@
+.radio {
+    margin-bottom: 20px;
+    background: #f2f2f2;
+    padding: 14px 15px 16px 15px;
+    border-radius: 8px;
+    color: #7b7b7b;
+    transition: 0.3s;
+}
+
+.disabledRadio, .disabledRadio label, .disabledRadio.radio:hover {
+    cursor: not-allowed;
+    background: #f9f9f9;
+    color: #b2b2b2;
+}
+
+.radio:hover {
+    background: #5ccdde;
+    color: #fff;
+}
+
+.radio label {
+    font-size: 0.875em;
+    margin-left: 10px;
+}
+
+.radio input[type='radio'] {
+    vertical-align: middle;
+    appearance:none;
+    cursor: pointer;
+    width:22px;
+    height:22px;
+    padding: 6px;
+    background: #fff;
+    border-radius:50%;
+}
+
+.radio input[type='radio']:before {
+    content:'';
+    display:block;
+    width: 10px;
+    height: 10px;
+    border-radius:50%;    
+}
+
+.radio input[type='radio']:checked:before {
+    background:#5ccdde;
+    
+}
+
+.disabledRadio input[type='radio']:disabled {
+    cursor: not-allowed;
+}
