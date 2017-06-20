@@ -83,8 +83,8 @@ describe('Radio', () => {
         );
 
         expect(component.find(Radio).prop('disabled')).toBeTruthy;
-        // expect(component.find(Radio).simulate('click'));
+        expect(component.find(Radio).dive().find('input').simulate('click'));
 
-        // expect(func).not.toHaveBeenCalled();
+        expect(func).not.toHaveBeenCalled();
     });
 });
