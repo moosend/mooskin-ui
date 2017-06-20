@@ -60,6 +60,8 @@ Custom style, className or id can be given just like any other component in this
 * `onChange` - callback that is fired when you click on one of the radios
 * `selected` - selected value, has to correspond to one of the Radio values
 * `className` - css class
+* `vertical` - vertical styled radios (default is horizontal)
+* `spacing` - space between radios
 * `style` - element style
 * `title` - optional title for the radio group
 

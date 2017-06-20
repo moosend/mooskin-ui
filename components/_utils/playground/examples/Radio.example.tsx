@@ -11,12 +11,31 @@ export default (props: any) => {
     };
 
     return(
-        <fieldset style={{display: 'inline-block', width: '400px'}}>
+        <fieldset style={{display: 'inline-block', width: '500px'}}>
             <legend>Radio Element</legend>
-                <RadioGroup onChange={onChange} selected={'Do this'} title="Optional group title">
-                    <Radio id={'with id'} value={'Do this'}/>
-                    <Radio value={'do that'} label="This one has a label"/>
-                    <Radio value={'do nothing'} label="This one is disabled" disabled/>
+                <RadioGroup
+                    onChange={onChange}
+                    selected={'Radio2'}
+                    title="Horizontal radios"
+                    spacing={10}
+                    dataLabel="horizontal"
+                >
+                    <Radio value={'Radio1'}/>
+                    <Radio value={'Radio2'} label="This one has a label"/>
+                    <Radio value={'Radio3'} label="This one is disabled" disabled/>
+                </RadioGroup>
+                <br/>
+                <RadioGroup
+                    onChange={onChange}
+                    selected={'Radio4'}
+                    title="Vertical radios"
+                    spacing={10}
+                    dataLabel="vertical"
+                    vertical
+                >
+                    <Radio value={'Radio4'}/>
+                    <Radio value={'Radio5'} label="This one has a label"/>
+                    <Radio value={'Radio6'} label="This one is disabled" disabled/>
                 </RadioGroup>
         </fieldset>
     );
