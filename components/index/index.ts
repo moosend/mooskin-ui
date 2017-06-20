@@ -9,6 +9,7 @@ export {default as HorizontalRangeBar} from '../HorizontalRangeBar';
 export {default as TopNotification} from '../TopNotification';
 export {default as SmallIconButton} from '../SmallIconButton';
 export {default as CheckListItem} from '../CheckListItem';
+export {default as RadioGroup, Radio} from '../Radio/Radio';
 export {Pie} from '../Charts/index';
 export {Doughnut} from '../Charts/index';
 export {Bar} from '../Charts/index';
