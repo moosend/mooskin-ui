@@ -45,7 +45,7 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
 
         return (
             <div
-                className={className}
+                className={`checkitem-component ${className}`}
                 style={style}
             >
                 <H2 style={{marginLeft: '5px'}}>{title}</H2>

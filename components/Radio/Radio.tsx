@@ -78,7 +78,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         return (
             <div
                 id={id}
-                className={className}
+                className={`radiogroup-component ${className}`}
                 style={style}
             >
                 <H2 style={{marginLeft: '10px'}}>{title}</H2>
