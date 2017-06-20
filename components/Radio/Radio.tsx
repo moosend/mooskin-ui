@@ -82,6 +82,14 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         style: {},
     };
 
+    private name: string;
+
+    constructor(props: IRadioGroupProps){
+        super(props);
+
+        this.name = this.generateName();
+    }
+
     public render(){
 
         const {id, className, style, title} = this.props;
@@ -107,11 +115,10 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
     }
 
     private assignRadios = () => {
-        const name = this.generateName();
         return React.Children.map(this.props.children, (child) => {
             if (React.isValidElement<IRadioProps>(child)){
                 const extraProps: Partial<IRadioProps> = {
-                    name,
+                    name: this.name,
                     onClick: this.onClick(child.props.value),
                     selected: this.props.selected,
                     spacing: this.props.spacing,
@@ -129,7 +136,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
     }
 
     private generateName = () => {
-        return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
+        return (new Date()).getTime().toString();
     }
 
 }
