@@ -7,6 +7,11 @@ import {ILineProps} from '../props';
 class BarChart extends React.Component<ILineProps, {}>{
 
     public static defaultProps = {
+        backgroundColor: [
+            'rgba(92,205,223,0.4)',
+            'rgba(244,135,112,0.4)',
+            'rgba(242,193,74,0.4)',
+        ],
         borderWidth: 2,
         boxWidth: 0,
         fill: false,
@@ -91,68 +96,35 @@ class BarChart extends React.Component<ILineProps, {}>{
             title: chartTitle
         };
 
-        const data = {
-            datasets: [
-                {
-                    backgroundColor,
-                    borderColor,
-                    borderDash,
-                    borderWidth,
-                    data: chartData.values,
-                    fill,
-                    label,
-                    lineTension,
-                    pointHoverRadius: pointRadius ? pointRadius + 2 : 5,
-                    pointRadius,
-                    pointStyle,
-                    showLine: !noLine,
-                    steppedLine
-                }
-            ],
-            labels: chartData.labels
-        };
+        const finalData = chartData.map((data: any, i: any) => {
+            return {
+                backgroundColor: backgroundColor ? backgroundColor[i] : `rgba(92,205,223,0.4)`,
+                borderColor: borderColor ?
+                    borderColor :
+                    backgroundColor ?
+                    backgroundColor[i].replace(',0', ',1') :
+                    `rgba(92,205,223,0.4)`,
+                borderDash,
+                borderWidth,
+                data: data.values,
+                fill,
+                label,
+                lineTension,
+                pointHoverRadius: pointRadius,
+                pointRadius,
+                pointStyle,
+                showLine: !noLine,
+                steppedLine
+            };
 
-        // const mock = {
-        //     datasets: [
-        //         {
-        //             backgroundColor: 'rgba(75,192,192,0.4)',
-        //             borderColor: 'rgba(75,192,192,1)',
-        //             borderDash: [],
-        //             data: [65, 59, 80, 81, 56, 55, 40],
-        //             fill: false,
-        //             label: 'My First dataset',
-        //             lineTension: 0.1,
-        //             pointBackgroundColor: '#fff',
-        //             pointBorderColor: 'rgba(75,192,192,1)',
-        //             pointBorderWidth: 1,
-        //             pointHitRadius: 10,
-        //             pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-        //             pointHoverBorderColor: 'rgba(220,220,220,1)',
-        //             pointHoverBorderWidth: 2,
-        //             pointHoverRadius: 5,
-        //             pointRadius: 1
-        //         },
-        //         {
-        //             backgroundColor: 'rgba(75,192,192,0.4)',
-        //             borderColor: 'rgba(75,192,192,1)',
-        //             borderDash: [],
-        //             data: [35, 49, 20, 61, 96, 55, 80],
-        //             fill: false,
-        //             label: 'My First dataset',
-        //             lineTension: 0.1,
-        //             pointBackgroundColor: '#fff',
-        //             pointBorderColor: 'rgba(75,192,192,1)',
-        //             pointBorderWidth: 1,
-        //             pointHitRadius: 10,
-        //             pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-        //             pointHoverBorderColor: 'rgba(220,220,220,1)',
-        //             pointHoverBorderWidth: 2,
-        //             pointHoverRadius: 5,
-        //             pointRadius: 1
-        //         }
-        //     ],
-        //     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July']
-        // };
+        });
+
+        console.log(finalData);
+
+        const data = {
+            datasets: finalData,
+            labels: chartData[0].labels
+        };
 
         return(
             <div id={id}>

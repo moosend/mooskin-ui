@@ -112,7 +112,7 @@ export interface IBarProps extends IGridProps{
 export interface ILineProps extends IGridProps{
 
     /** The line and fill color (line can we overriden by borderColor) */
-    backgroundColor?: string;
+    backgroundColor?: string | string[];
 
     /** Length and spacing of dashes */
     borderDash?: number[];
@@ -136,7 +136,7 @@ export interface ILineProps extends IGridProps{
     fill?: boolean;
 
     /** chart data values */
-    data: ILineData[];
+    data: any[];
 
     /** The fill color for points. */
     // pointBackgroundColor: string;
@@ -149,7 +149,11 @@ export interface IChartData {
     background: string;
 }
 
-export interface ILineData {
-    label: string;
-    value: number | string;
-}
+// export interface ILineArray {
+//     data: {[key: string]: ILineData};
+// }
+
+// export interface ILineData {
+//     label: string;
+//     value: number | string;
+// }

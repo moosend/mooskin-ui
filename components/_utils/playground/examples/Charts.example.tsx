@@ -5,7 +5,7 @@ import {Bar, Doughnut, Line, Pie} from '../../../index/index';
 export interface IChartState{
     users: IData[];
     barData: IData[];
-    lineData: ILineData[];
+    lineData: any[];
 }
 
 export interface IData{
@@ -14,14 +14,14 @@ export interface IData{
     background: string;
 }
 
-export interface ILineData{
-    label: string;
-    value: number|string;
-}
+// export interface ILineData{
+//     label: string;
+//     value: number|string;
+// }
 
 export default class ChartExample extends React.Component<{}, IChartState>{
 
-    private lineColor = 'rgba(255,99,132,0.4)';
+    // private lineColor = 'rgba(255,99,132,0.4)';
 
     constructor(){
         super();
@@ -45,50 +45,98 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                 }
             ],
             lineData: [
-                {
-                    label: 'January',
-                    value: 70,
-                },
-                {
-                    label: 'February',
-                    value: '11'
-                },
-                {
-                    label: 'March',
-                    value: 65
-                },
-                {
-                    label: 'April',
-                    value: 24
-                },
-                {
-                    label: 'June',
-                    value: 54
-                },
-                {
-                    label: 'July',
-                    value: 97
-                },
-                {
-                    label: 'August',
-                    value: 19
-                },
-                {
-                    label: 'September',
-                    value: 42
-                },
-                {
-                    label: 'October',
-                    value: 79
-                },
-                {
-                    label: 'November',
-                    value: 49
-                },
-                {
-                    label: 'December',
-                    value: 36
-                }
+                [
+                    {
+                        label: 'January',
+                        value: 70,
+                    },
+                    {
+                        label: 'February',
+                        value: '11'
+                    },
+                    {
+                        label: 'March',
+                        value: 65
+                    },
+                    {
+                        label: 'April',
+                        value: 24
+                    },
+                    {
+                        label: 'June',
+                        value: 54
+                    },
+                    {
+                        label: 'July',
+                        value: 97
+                    },
+                    {
+                        label: 'August',
+                        value: 19
+                    },
+                    {
+                        label: 'September',
+                        value: 42
+                    },
+                    {
+                        label: 'October',
+                        value: 79
+                    },
+                    {
+                        label: 'November',
+                        value: 49
+                    },
+                    {
+                        label: 'December',
+                        value: 36
+                    }
+                ],
+                [
+                    {
+                        label: 'January',
+                        value: 33,
+                    },
+                    {
+                        label: 'February',
+                        value: '11'
+                    },
+                    {
+                        label: 'March',
+                        value: 51
+                    },
+                    {
+                        label: 'April',
+                        value: 70
+                    },
+                    {
+                        label: 'June',
+                        value: 37
+                    },
+                    {
+                        label: 'July',
+                        value: 41
+                    },
+                    {
+                        label: 'August',
+                        value: 73
+                    },
+                    {
+                        label: 'September',
+                        value: 42
+                    },
+                    {
+                        label: 'October',
+                        value: 45
+                    },
+                    {
+                        label: 'November',
+                        value: 99
+                    },
+                    {
+                        label: 'December',
+                        value: 55
+                    }
+                ]
             ],
             users: [
                 {
@@ -129,7 +177,6 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                 />
                 <hr/>
                 <Line
-                    backgroundColor={this.lineColor}
                     data={this.state.lineData}
                     title={'Line Chart'}
                     height={300}
@@ -138,10 +185,8 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     label={'Emails sent per month'}
                     gridLinesY
                     gridLinesX
-                    borderColor={'rgba(255,99,132,1)'}
                 />
                 <Line
-                    backgroundColor={this.lineColor}
                     fill
                     data={this.state.lineData}
                     title={'Line Chart'}
@@ -150,14 +195,12 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     maintainAspectRatio
                     label={'Emails sent per month'}
                     gridLinesY
-                    borderColor={'rgba(255,99,132,1)'}
                     borderWidth={1}
                     lineTension={0}
                     pointRadius={5}
                     pointStyle="rect"
                 />
                 <Line
-                    backgroundColor={this.lineColor}
                     noLine
                     data={this.state.lineData}
                     title={'Line Chart'}
@@ -167,20 +210,17 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     label={'Emails sent per month'}
                     gridLinesY
                     gridLinesX
-                    borderColor={'rgba(255,99,132,1)'}
                     lineTension={0}
                     pointRadius={10}
                     pointStyle="star"
                 />
                 <Line
-                    backgroundColor={this.lineColor}
                     data={this.state.lineData}
                     title={'Line Chart'}
                     height={300}
                     width={600}
                     maintainAspectRatio
                     label={'Emails sent per month'}
-                    borderColor={'rgba(255,99,132,1)'}
                     borderWidth={1}
                     steppedLine
                 />
