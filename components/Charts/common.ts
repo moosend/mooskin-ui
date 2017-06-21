@@ -1,4 +1,4 @@
-import {IChartData} from './props';
+import {IChartData, ILineData} from './props';
 
 export const getData = (data: IChartData[]) => {
     const labels: string[] = [];
@@ -40,6 +40,22 @@ export const getData = (data: IChartData[]) => {
 
     //     console.log(key);
     // }
+};
+
+export const getLineData = (data: ILineData[]) => {
+    const labels: string[] = [];
+    const values: number[] = [];
+
+    data.forEach((chartData) => {
+
+        const value = parseFloat(chartData.value.toString());
+
+        labels.push(chartData.label);
+        values.push(value);
+
+    });
+
+    return {labels, values};
 };
 
 // export const {

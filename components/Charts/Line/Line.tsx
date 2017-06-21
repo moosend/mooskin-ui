@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Line} from 'react-chartjs-2';
 
-import {getData, getLabels, getTitle} from '../common';
+import {getLabels, getLineData, getTitle} from '../common';
 import {ILineProps} from '../props';
 
 class BarChart extends React.Component<ILineProps, {}>{
@@ -56,7 +56,7 @@ class BarChart extends React.Component<ILineProps, {}>{
 
         const position = legendPos;
 
-        const chartData = getData(this.props.data);
+        const chartData = getLineData(this.props.data);
 
         const chartTitle = getTitle(title, titleColor, titleFont, titleSize, titleStyle, titlePos);
 

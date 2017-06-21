@@ -48,9 +48,6 @@ export interface IChartProps {
     /** chart size */
     size?: number;
 
-    /** chart data values */
-    data: IChartData[];
-
     /** maintains aspect ratio */
     maintainAspectRatio?: boolean;
 
@@ -61,10 +58,20 @@ export interface IChartProps {
     // width?: number;
 }
 
+export interface IPieProps extends IChartProps {
+
+    /** chart data values */
+    data: IChartData[];
+
+}
+
 export interface IDoughnutProps extends IChartProps {
 
     /** doughnut width */
     doughnutSpace?: number;
+
+    /** chart data values */
+    data: IChartData[];
 
 }
 
@@ -97,6 +104,9 @@ export interface IBarProps extends IGridProps{
     /** bar width in relation with category width */
     barPercentage?: number;
 
+    /** chart data values */
+    data: IChartData[];
+
 }
 
 export interface ILineProps extends IGridProps{
@@ -125,6 +135,9 @@ export interface ILineProps extends IGridProps{
     /** Fill the area under the line */
     fill?: boolean;
 
+    /** chart data values */
+    data: ILineData[];
+
     /** The fill color for points. */
     // pointBackgroundColor: string;
 
@@ -134,4 +147,9 @@ export interface IChartData {
     label: string;
     value: number | string;
     background: string;
+}
+
+export interface ILineData {
+    label: string;
+    value: number | string;
 }

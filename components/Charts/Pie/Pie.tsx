@@ -4,9 +4,9 @@ import {Pie} from 'react-chartjs-2';
 // import styles from './PieChart.css';
 
 import {getData, getLabels, getTitle} from '../common';
-import {IChartProps} from '../props';
+import {IPieProps} from '../props';
 
-class PieChart extends React.Component<IChartProps, {}>{
+class PieChart extends React.Component<IPieProps, {}>{
 
     public static defaultProps = {
         borderWidth: 0,
