@@ -68,7 +68,7 @@ export interface IDoughnutProps extends IChartProps {
 
 }
 
-export interface IBarProps extends IChartProps{
+export interface IGridProps extends IChartProps{
 
     /** chart label */
     label?: string;
@@ -90,9 +90,43 @@ export interface IBarProps extends IChartProps{
 
     /** border color */
     borderColor?: string;
+}
+
+export interface IBarProps extends IGridProps{
 
     /** bar width in relation with category width */
     barPercentage?: number;
+
+}
+
+export interface ILineProps extends IGridProps{
+
+    /** The line and fill color (line can we overriden by borderColor) */
+    backgroundColor?: string;
+
+    /** Length and spacing of dashes */
+    borderDash?: number[];
+
+    /** Bezier curve tension of the line */
+    lineTension?: number;
+
+    /** The radius of the point shape */
+    pointRadius?: number;
+
+    /** Style of the point */
+    pointStyle?: string;
+
+    /** Line visibility (showLine) */
+    noLine?: boolean;
+
+    /** If the line is shown as a stepped line */
+    steppedLine?: boolean;
+
+    /** Fill the area under the line */
+    fill?: boolean;
+
+    /** The fill color for points. */
+    // pointBackgroundColor: string;
 
 }
 

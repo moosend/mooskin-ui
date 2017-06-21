@@ -1,22 +1,31 @@
 import * as React from 'react';
 
-import {Bar, Doughnut, Pie} from '../../../index/index';
+import {Bar, Doughnut, Line, Pie} from '../../../index/index';
 
 export interface IChartState{
-    users: IUsers[];
-    barData: IUsers[];
+    users: IData[];
+    barData: IData[];
+    lineData: ILineData[];
 }
 
-export interface IUsers{
+export interface IData{
     label: string;
     value: number|string;
     background: string;
 }
 
+export interface ILineData{
+    label: string;
+    value: number|string;
+}
+
 export default class ChartExample extends React.Component<{}, IChartState>{
+
+    private lineColor = 'rgba(255,99,132,0.4)';
 
     constructor(){
         super();
+
         this.state = {
             barData: [
                 {
@@ -33,6 +42,52 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     background: 'rgba(255,99,132,0.2)',
                     label: 'Shkumbin',
                     value: 65
+                }
+            ],
+            lineData: [
+                {
+                    label: 'January',
+                    value: 70,
+                },
+                {
+                    label: 'February',
+                    value: '11'
+                },
+                {
+                    label: 'March',
+                    value: 65
+                },
+                {
+                    label: 'April',
+                    value: 24
+                },
+                {
+                    label: 'June',
+                    value: 54
+                },
+                {
+                    label: 'July',
+                    value: 97
+                },
+                {
+                    label: 'August',
+                    value: 19
+                },
+                {
+                    label: 'September',
+                    value: 42
+                },
+                {
+                    label: 'October',
+                    value: 79
+                },
+                {
+                    label: 'November',
+                    value: 49
+                },
+                {
+                    label: 'December',
+                    value: 36
                 }
             ],
             users: [
@@ -71,6 +126,63 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     boxWidth={20}
                     borderWidth={3}
                     size={200}
+                />
+                <hr/>
+                <Line
+                    backgroundColor={this.lineColor}
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    label={'Emails sent per month'}
+                    gridLinesY
+                    gridLinesX
+                    borderColor={'rgba(255,99,132,1)'}
+                />
+                <Line
+                    backgroundColor={this.lineColor}
+                    fill
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    label={'Emails sent per month'}
+                    gridLinesY
+                    borderColor={'rgba(255,99,132,1)'}
+                    borderWidth={1}
+                    lineTension={0}
+                    pointRadius={5}
+                    pointStyle="rect"
+                />
+                <Line
+                    backgroundColor={this.lineColor}
+                    noLine
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    label={'Emails sent per month'}
+                    gridLinesY
+                    gridLinesX
+                    borderColor={'rgba(255,99,132,1)'}
+                    lineTension={0}
+                    pointRadius={10}
+                    pointStyle="star"
+                />
+                <Line
+                    backgroundColor={this.lineColor}
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    label={'Emails sent per month'}
+                    borderColor={'rgba(255,99,132,1)'}
+                    borderWidth={1}
+                    steppedLine
                 />
                 <hr/>
                 <Bar
