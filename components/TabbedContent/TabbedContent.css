@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Convergence');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.container {
+    width: 100%;
+}
+
+.heading {
+    width:100%;
+    height:95px;
+    border-bottom:10px solid #efefef;
+    display:flex;
+    flex-direction: row;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+.header {
+    display: inline-block;
+    flex-grow:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 400ms ease;
+    border-radius: 5px;
+}
+
+.header span{
+    color: #575757;
+    font-family: Convergence,sans-serif;
+    font-size: 18px;
+}
+
+.tab{
+  display: block;
+}
+
+
+.activeHeader {
+    background: #efefef;
+}
+
+.inactiveHeader {
+    background: #fff;
+}
+
+.inactiveHeader:hover {
+    background: rgba(245, 245, 245, 0.5);
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
