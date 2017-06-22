@@ -49,6 +49,9 @@ const data = [
         ]
     }
 ]
+
+
+<Line data={data} />
 ```
 or with multiple pairs of data
 ```
@@ -88,45 +91,7 @@ const data = [
         ]
     }
 ]
-```
 
-```
-const data = [
-    {
-        dataLabel: 'Emails per month',
-        dataset: [
-            {
-                label: 'January',
-                value: 70,
-            },
-            {
-                label: 'February',
-                value: '11'
-            },
-            {
-                label: 'March',
-                value: 65
-            }
-        ]
-    },
-    {
-        dataLabel: 'Opens per month',
-        dataset: [
-            {
-                label: 'January',
-                value: 33,
-            },
-            {
-                label: 'February',
-                value: '11'
-            },
-            {
-                label: 'March',
-                value: 48
-            }
-        ]
-    }
-];
 
 <Line data={data} />
 ```
