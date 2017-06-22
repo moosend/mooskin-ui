@@ -138,7 +138,7 @@ export const Tab: React.StatelessComponent<ITabProps> = (props) => {
     return <div className={`tab-content ${styles.tab} ${displayClass}`} style={props.style}>{props.children}</div>;
 };
 
-interface IHeaderProps {
+export interface IHeaderProps {
     title: string;
     active: boolean;
     materialIcon?: string;
@@ -146,7 +146,7 @@ interface IHeaderProps {
     onClick: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-const Header: React.StatelessComponent<IHeaderProps> = (props) => {
+export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const {active, materialIcon, iconClass} = props;
     const activeTab = active ? styles.activeHeader : styles.inactiveHeader;

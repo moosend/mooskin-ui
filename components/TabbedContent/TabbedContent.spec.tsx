@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TabbedContent, {Tab} from './TabbedContent';
+import TabbedContent, {Header, Tab} from './TabbedContent';
 
 import { mount, render, shallow } from 'enzyme';
 
@@ -7,7 +7,7 @@ describe('TabbedContent', () => {
 
     test('renders TabbedContent properly according to snapshot', () => {
 
-        const component = render(
+        const component = shallow(
             <TabbedContent id="5" className="mySwitch" style={{color: 'black'}}>
                 <Tab title="title1" iconClass="iconclass">asdasd1</Tab>
                 <Tab title="title2" materialIcon="home" active>asdasd2</Tab>
@@ -15,8 +15,32 @@ describe('TabbedContent', () => {
             </TabbedContent>
         );
 
-        expect(component.find('.tabbed-content-component').length).toBe(1);
-        expect(component.find('.tab-content').first().text()).toBe('asdasd1');
+        expect(component.find('Header').length).toBe(3);
+        expect(component.find('Tab').length).toBe(3);
+
+        expect(component.find('Tab').first().prop('children')).toBe('asdasd1');
+
+        expect(component).toMatchSnapshot();
+    });
+
+    test('renders Tab properly according to snapshot', () => {
+        const component = shallow(
+        <Tab title="title1" iconClass="iconclass" materialIcon="home" style={{color: 'blue'}} active>asdasd1</Tab>
+        );
+
+        expect(component).toMatchSnapshot();
+    });
+
+    test('renders Header properly according to snapshot', () => {
+        const component = shallow(
+            <Header
+                title="title1"
+                iconClass="iconclass"
+                materialIcon="home"
+                onClick={() => null}
+                active
+            />
+        );
 
         expect(component).toMatchSnapshot();
     });
