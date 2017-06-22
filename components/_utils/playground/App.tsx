@@ -10,6 +10,7 @@ import Radio from './examples/Radio.example';
 import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
+import TabbedContent from './examples/TabbedContent.example';
 import TopNotification from './examples/TopNotification.example';
 
 export default (props: any) => {
@@ -36,6 +37,8 @@ export default (props: any) => {
             <CheckListItem />
             <br/><br/>
             <Charts />
+            <br/><br/>
+            <TabbedContent />
         </div>
     );
 };

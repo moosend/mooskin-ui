@@ -64,6 +64,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         filter: ''
     };
 
+    public static Option: React.StatelessComponent<IOptionProps>;
+
     constructor(props: ISelectProps){
         super(props);
         this.state = {
