@@ -23,6 +23,17 @@ And then you can simply start using it by typing
 
 ```
 
+another way of doing this is by importing `RadioGroup` only and doing a simple workaround
+```
+Import {RadioGroup} from 'mooskin';
+
+<RadioGroup onChange={cb} dataLabel="asd">
+    <RadioGroup.Radio id={'radio1'} value="radio1" label="This is a radio"/>
+    <RadioGroup.Radio id={'radio2'} value="radio2" label="Another radio"/>
+    <RadioGroup.Radio id={'radio3'} value="radio3" label="More radio"/>
+</RadioGroup>
+```
+
 Like the normal HTML elements, it will accept given attributes and render differently based on the given attributes
 
 ### Examples

@@ -24,6 +24,18 @@ And then you can simply start using it by typing
 
 ```
 
+another way of doing this is by importing `Select` only and doing a simple workaround
+```
+Import {Select} from 'mooskin';
+
+<Select onChange={cb} dataLabel="asd">
+    <Select.Option value="option1">Option1</Option>
+    <Select.Option value="option2">Option2</Option>
+    <Select.Option value="option3">Option3</Option>
+    <Select.Option value="option4">Option4</Option>
+</Select>
+```
+
 For easy use, the components are named similar to normal HTML components but with a capital first letter.
 
 Like the `<select/>` element it will accept given attributes and render differently based on the given attributes
