@@ -28,8 +28,6 @@ export interface ITabProps {
     /** if active */
     active?: boolean;
 
-    icon?: string;
-
     /** icon name, for material icons only */
     materialIcon?: string;
 
@@ -161,4 +159,5 @@ const Header: React.StatelessComponent<IHeaderProps> = (props) => {
         </div>
     );
 };
+
 export default TabbedContent;

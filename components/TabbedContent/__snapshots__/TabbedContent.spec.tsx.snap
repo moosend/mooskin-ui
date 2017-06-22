@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] = `
+<div
+  class="tabbed-content-component container"
+>
+  <div
+    class="heading"
+  >
+    <div
+      class="tab-header header inactiveHeader"
+    >
+      <i
+        class="header-icon iconclass"
+      />
+      <span>
+        title1
+      </span>
+    </div>
+    <div
+      class="tab-header header activeHeader"
+    >
+      <i
+        class="header-icon material-icons"
+      >
+        home
+      </i>
+      <span>
+        title2
+      </span>
+    </div>
+    <div
+      class="tab-header header inactiveHeader"
+    >
+      <span>
+        title3
+      </span>
+    </div>
+  </div>
+  <div
+    class="body"
+  >
+    <div
+      class="tab-content tab invisible"
+    >
+      asdasd1
+    </div>
+    <div
+      class="tab-content tab visible"
+    >
+      asdasd2
+    </div>
+    <div
+      class="tab-content tab invisible"
+    >
+      asdasd3
+    </div>
+  </div>
+</div>
+`;
