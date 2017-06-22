@@ -5,7 +5,7 @@ import {getLabels, getLineData, getTitle} from '../common';
 import {ILineProps} from '../props';
 import {ISortedData} from '../types';
 
-class BarChart extends React.Component<ILineProps, {}>{
+class LineChart extends React.Component<ILineProps, {}>{
 
     public static defaultProps = {
         backgroundColor: [
@@ -138,4 +138,4 @@ class BarChart extends React.Component<ILineProps, {}>{
     }
 }
 
-export default BarChart;
+export default LineChart;
