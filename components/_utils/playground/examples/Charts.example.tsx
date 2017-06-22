@@ -177,7 +177,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
 
         return(
             <fieldset style={{display: 'inline-block'}}>
-                <legend>Pie Chart</legend>
+                <legend>Charts</legend>
                 <Pie data={this.state.users} title="Subscribers" size={250}/>
                 <hr/>
                 <Doughnut

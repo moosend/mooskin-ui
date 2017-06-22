@@ -2,38 +2,26 @@
 
 exports[`Radio renders correctly 1`] = `
 <div
-  className="radiogroup-component myClass"
+  class="radiogroup-component myClass"
   id="radio1"
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
+  style="color:blue;"
 >
   <h2
-    className="h2-component h2 "
-    id={undefined}
-    style={Object {}}
+    class="h2-component h2 "
   >
     Select a plan
   </h2>
   <div>
     <div
-      className="radio-component radio disabledRadio myClass"
-      htmlFor="radio1"
-      style={
-        Object {
-          "color": "blue",
-          "marginBottom": "10px",
-        }
-      }
+      class="radio-component radio disabledRadio myClass"
+      for="radio1"
+      style="margin-bottom:10px;color:blue;"
     >
       <label>
         <input
-          defaultChecked={true}
-          disabled={true}
-          name="1498123283824"
-          onClick={[Function]}
+          checked=""
+          disabled=""
+          name="1482363367071"
           type="radio"
           value="radio1"
         />
@@ -45,21 +33,14 @@ exports[`Radio renders correctly 1`] = `
   </div>
   <div>
     <div
-      className="radio-component radio disabledRadio myClass"
-      htmlFor="radio2"
-      style={
-        Object {
-          "color": "blue",
-          "marginBottom": "10px",
-        }
-      }
+      class="radio-component radio disabledRadio myClass"
+      for="radio2"
+      style="margin-bottom:10px;color:blue;"
     >
       <label>
         <input
-          defaultChecked={false}
-          disabled={true}
-          name="1498123283824"
-          onClick={[Function]}
+          disabled=""
+          name="1482363367071"
           type="radio"
           value="radio2"
         />

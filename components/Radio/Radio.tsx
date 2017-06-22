@@ -136,7 +136,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
     }
 
     private generateName = () => {
-        return (new Date()).getTime().toString();
+        return Date.now().toString();
     }
 
 }

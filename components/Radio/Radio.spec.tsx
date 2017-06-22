@@ -2,15 +2,16 @@ import * as React from 'react';
 import renderer from 'react-test-renderer';
 import RadioGroup, {Radio} from './Radio';
 
-import {shallow} from 'enzyme';
+import {render, shallow} from 'enzyme';
 
 describe('Radio', () => {
 
     it('renders correctly', () => {
         const func = jest.fn();
         const func2 = jest.fn();
+        Date.now = jest.fn(() => 1482363367071);
 
-        const tree = renderer.create(
+        const tree = render(
             <RadioGroup
                 onChange={func}
                 selected="radio1"
@@ -31,7 +32,6 @@ describe('Radio', () => {
                     label="This is radio 1"
                     vertical
                     id={'radio1'}
-                    name="radioName"
                 />
                 <Radio
                     value="radio2"
@@ -42,11 +42,12 @@ describe('Radio', () => {
                     label="This is radio 2"
                     vertical
                     id={'radio2'}
-                    name="radioName"
                 />
             </RadioGroup>
-        ).toJSON();
+        );
+
         expect(tree).toMatchSnapshot();
+        expect(Date.now).toHaveBeenCalled();
     });
 
     test('renders properly with 1 child', () => {
