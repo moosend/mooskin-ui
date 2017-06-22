@@ -3,6 +3,7 @@ import {Line} from 'react-chartjs-2';
 
 import {getLabels, getLineData, getTitle} from '../common';
 import {ILineProps} from '../props';
+import {ISortedData} from '../types';
 
 class BarChart extends React.Component<ILineProps, {}>{
 
@@ -11,6 +12,7 @@ class BarChart extends React.Component<ILineProps, {}>{
             'rgba(92,205,223,0.4)',
             'rgba(244,135,112,0.4)',
             'rgba(242,193,74,0.4)',
+            'rgba(239,239,239,0.4)'
         ],
         borderWidth: 2,
         boxWidth: 15,
@@ -94,7 +96,7 @@ class BarChart extends React.Component<ILineProps, {}>{
             title: chartTitle
         };
 
-        const finalData = chartData.map((data: any, i: number) => {
+        const finalData = chartData.map((data: ISortedData, i: number) => {
 
             return {
                 backgroundColor: backgroundColor ? backgroundColor[i] : `rgba(92,205,223,0.4)`,

@@ -1,9 +1,34 @@
 import * as React from 'react';
+import renderer from 'react-test-renderer';
 import Select, {Option} from './Select';
 
 import {shallow} from 'enzyme';
 
 describe('Select', () => {
+
+    it('renders correctly', () => {
+        const func = jest.fn();
+        const func2 = jest.fn();
+
+        const tree = renderer.create(
+            <Select
+                onChange={func}
+                selected="option1"
+                dataLabel="plan"
+                id="select1"
+                label="Select something"
+                placeholder="placeholder"
+                className="myClass"
+                style={{color: 'blue'}}
+                noResultsText="no results found"
+                isLoading
+            >
+                <Option value="option1" onClick={func2}>Option1</Option>
+                <Option value="option2" onClick={func2}>Option2</Option>
+            </Select>
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 
     test('renders properly with 1 child', () => {
         const func = jest.fn();

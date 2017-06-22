@@ -1,3 +1,5 @@
+import {IChartData, ILineData} from './types';
+
 export interface IChartProps {
 
     /** chart id */
@@ -136,24 +138,9 @@ export interface ILineProps extends IGridProps{
     fill?: boolean;
 
     /** chart data values */
-    data: any[];
+    data: ILineData[];
 
     /** The fill color for points. */
     // pointBackgroundColor: string;
 
 }
-
-export interface IChartData {
-    label: string;
-    value: number | string;
-    background: string;
-}
-
-// export interface ILineArray {
-//     data: {[key: string]: ILineData};
-// }
-
-// export interface ILineData {
-//     label: string;
-//     value: number | string;
-// }

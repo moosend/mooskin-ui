@@ -1,9 +1,53 @@
 import * as React from 'react';
+import renderer from 'react-test-renderer';
 import RadioGroup, {Radio} from './Radio';
 
 import {shallow} from 'enzyme';
 
 describe('Radio', () => {
+
+    it('renders correctly', () => {
+        const func = jest.fn();
+        const func2 = jest.fn();
+
+        const tree = renderer.create(
+            <RadioGroup
+                onChange={func}
+                selected="radio1"
+                dataLabel="plan"
+                id="radio1"
+                className="myClass"
+                style={{color: 'blue'}}
+                spacing={10}
+                title={'Select a plan'}
+                vertical
+            >
+                <Radio
+                    value="radio1"
+                    onClick={func2}
+                    className="myClass"
+                    style={{color: 'blue'}}
+                    disabled
+                    label="This is radio 1"
+                    vertical
+                    id={'radio1'}
+                    name="radioName"
+                />
+                <Radio
+                    value="radio2"
+                    onClick={func2}
+                    className="myClass"
+                    style={{color: 'blue'}}
+                    disabled
+                    label="This is radio 2"
+                    vertical
+                    id={'radio2'}
+                    name="radioName"
+                />
+            </RadioGroup>
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 
     test('renders properly with 1 child', () => {
 

@@ -7,7 +7,6 @@ import { shallow } from 'enzyme';
 describe('H3', () => {
 
     it('renders correctly', () => {
-        const func = jest.fn();
 
         const tree = renderer.create(
             <H3

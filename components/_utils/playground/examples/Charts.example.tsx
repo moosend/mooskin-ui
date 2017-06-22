@@ -5,7 +5,7 @@ import {Bar, Doughnut, Line, Pie} from '../../../index/index';
 export interface IChartState{
     users: IData[];
     barData: IData[];
-    lineData: any[];
+    lineData: ILineData[];
 }
 
 export interface IData{
@@ -14,10 +14,19 @@ export interface IData{
     background: string;
 }
 
-// export interface ILineData{
-//     label: string;
-//     value: number|string;
-// }
+export interface ILineDataArray {
+    lineData: ILineData[];
+}
+
+export interface ILineData {
+    dataLabel: string;
+    dataset: ILineDataSet[];
+}
+
+export interface ILineDataSet {
+    label: string;
+    value: number | string;
+}
 
 export default class ChartExample extends React.Component<{}, IChartState>{
 

@@ -1,4 +1,4 @@
-import {IChartData} from './props';
+import {IChartData, ILineData, ISortedData} from './types';
 
 export const getData = (data: IChartData[]) => {
     const labels: string[] = [];
@@ -20,9 +20,9 @@ export const getData = (data: IChartData[]) => {
 
 };
 
-export const getLineData = (data: any[]) => {
+export const getLineData = (data: ILineData[]) => {
 
-    const finishedData: any = [];
+    const finishedData: ISortedData[] = [];
 
     data.forEach((arrayData) => {
         const label: string = arrayData.dataLabel;
