@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import {IInputCallbackData} from '../../types/commonTypes';
+import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {Switch} from '../../../index/index';
+import {Switch} from '../../components/index/index';
 
 export interface ISwitchState{
     automations: IAutomations[];

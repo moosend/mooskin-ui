@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {CheckListItem} from '../../../index/index';
+import {CheckListItem} from '../../components/index/index';
 
 export interface IState {
     processes: IProcess[];

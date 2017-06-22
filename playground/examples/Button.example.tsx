@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Button} from '../../../index/index';
+import {Button} from '../../components/index/index';
 
 export default (props: any) => {
 

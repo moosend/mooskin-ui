@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Button, TopNotification} from '../../../index/index';
+import {Button, TopNotification} from '../../components/index/index';
 
 export interface ITopNotificationState{
     visible1: boolean;

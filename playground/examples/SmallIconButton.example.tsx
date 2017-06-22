@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {SmallIconButton} from '../../../index/index';
+import {SmallIconButton} from '../../components/index/index';
 
 export default (props: any) => {
 

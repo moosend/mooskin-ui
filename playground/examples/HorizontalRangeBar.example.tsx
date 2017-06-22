@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Button, HorizontalRangeBar} from '../../../index/index';
+import {Button, HorizontalRangeBar} from '../../components/index/index';
 
 export interface IHRBState{
     progress: number;

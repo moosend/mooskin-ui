@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import {IInputCallbackData} from '../../types/commonTypes';
+import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {Option, Select} from '../../../index/index';
+import {Option, Select} from '../../components/index/index';
 
 export default (props: any) => {
 

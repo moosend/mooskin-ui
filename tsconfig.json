@@ -17,7 +17,8 @@
     "noUnusedLocals": true
   },
   "include": [
-    "components"
+    "components",
+    "playground"
   ],
   "exclude": [
       "node_modules",

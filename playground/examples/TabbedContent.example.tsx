@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {TabbedContent} from '../../../index/index';
+import {TabbedContent} from '../../components/index/index';
 
 export default (props: any) => {
 

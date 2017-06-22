@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import {IInputCallbackData} from '../../types/commonTypes';
+import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {Input} from '../../../index/index';
+import {Input} from '../../components/index/index';
 
 export default (props: any) => {
 

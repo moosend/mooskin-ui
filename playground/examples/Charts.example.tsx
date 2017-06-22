@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Bar, Doughnut, Line, Pie} from '../../../index/index';
+import {Bar, Doughnut, Line, Pie} from '../../components/index/index';
 
 export interface IChartState{
     users: IData[];
