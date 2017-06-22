@@ -10,7 +10,5 @@ export {default as TopNotification} from '../TopNotification';
 export {default as SmallIconButton} from '../SmallIconButton';
 export {default as CheckListItem} from '../CheckListItem';
 export {default as RadioGroup, Radio} from '../Radio/Radio';
-export {Pie} from '../Charts';
-export {Doughnut} from '../Charts';
-export {Bar} from '../Charts';
-export {Line} from '../Charts';
+
+export {Bar, Doughnut, Pie, Line} from '../Charts/index';
