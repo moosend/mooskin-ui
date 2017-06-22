@@ -13,11 +13,10 @@ class BarChart extends React.Component<ILineProps, {}>{
             'rgba(242,193,74,0.4)',
         ],
         borderWidth: 2,
-        boxWidth: 0,
+        boxWidth: 15,
         fill: false,
         legendPos: 'top',
         legendStyle: 'italic',
-        noLegend: true,
         titlePos: 'top',
         titleSize: 15,
         titleStyle: 'bold'
@@ -44,7 +43,6 @@ class BarChart extends React.Component<ILineProps, {}>{
             maintainAspectRatio,
             gridLinesY,
             gridLinesX,
-            label,
             size,
             minValue,
             borderWidth,
@@ -84,7 +82,7 @@ class BarChart extends React.Component<ILineProps, {}>{
         };
 
         const legend = {
-            display: label ? this.props.noLegend : !this.props.noLegend,
+            display: this.props.noLegend ? false : true,
             labels,
             position
         };
@@ -96,7 +94,8 @@ class BarChart extends React.Component<ILineProps, {}>{
             title: chartTitle
         };
 
-        const finalData = chartData.map((data: any, i: any) => {
+        const finalData = chartData.map((data: any, i: number) => {
+
             return {
                 backgroundColor: backgroundColor ? backgroundColor[i] : `rgba(92,205,223,0.4)`,
                 borderColor: borderColor ?
@@ -108,7 +107,7 @@ class BarChart extends React.Component<ILineProps, {}>{
                 borderWidth,
                 data: data.values,
                 fill,
-                label,
+                label: data.label,
                 lineTension,
                 pointHoverRadius: pointRadius,
                 pointRadius,
@@ -118,8 +117,6 @@ class BarChart extends React.Component<ILineProps, {}>{
             };
 
         });
-
-        console.log(finalData);
 
         const data = {
             datasets: finalData,

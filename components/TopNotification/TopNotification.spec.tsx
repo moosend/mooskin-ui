@@ -5,12 +5,32 @@ import * as React from 'react';
 
 import { mount, shallow } from 'enzyme';
 
+import renderer from 'react-test-renderer';
 import Button from '../Button/Button';
 import TopNotification from './TopNotification';
 
 import styles from './TopNotification.css';
 
 describe('TopNotification', () => {
+
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = renderer.create(
+            <TopNotification
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'notification1'}
+                okButton
+                okButtonLabel="click ok"
+                onClickOk={func}
+                visible
+                type="success"
+                text="notification for you"
+            />
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 
     test('renders properly into dom with text and no buttons by default', () => {
 

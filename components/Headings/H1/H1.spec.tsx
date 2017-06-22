@@ -1,9 +1,25 @@
 import * as React from 'react';
+import renderer from 'react-test-renderer';
 import H1 from './H1';
 
 import { shallow } from 'enzyme';
 
 describe('H1', () => {
+
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = renderer.create(
+            <H1
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'heading1'}
+            >
+                Mooskin
+            </H1>
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 
     test('renders properly into dom with text, id and class', () => {
 

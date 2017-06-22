@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopNotification renders correctly 1`] = `
+<div
+  className="top-notification-component container successNotification"
+  style={
+    Object {
+      "height": 80,
+    }
+  }
+>
+  <div
+    className="message"
+  >
+    <div
+      className="iconDiv"
+    />
+    <span>
+      notification for you
+    </span>
+  </div>
+  <div
+    className="button"
+  >
+    <button
+      className="button-component button normalButton  "
+      disabled={undefined}
+      id={undefined}
+      onClick={[Function]}
+      style={Object {}}
+    >
+      click ok
+    </button>
+  </div>
+  <div
+    className="close-notification close"
+  >
+    <div
+      onClick={[Function]}
+    />
+  </div>
+</div>
+`;

@@ -18,151 +18,31 @@ export const getData = (data: IChartData[]) => {
 
     return {labels, values, backgroundColors};
 
-    // for (const key in chartData) {
-
-    //     if (!chartData.hasOwnProperty(key)) {
-    //         continue;
-    //     }
-
-    //     const value = parseFloat(chartData[key].toString());
-
-    //     if (typeof key === 'string' && key === 'label'){
-    //         labels.push(key);
-    //     }
-
-    //     if (!isNaN(value)){
-    //         values.push(value);
-    //     }
-
-    //     if (typeof key === 'string' && key === 'backgroundColor'){
-    //         backgroundColors.push(chartData[key].toString());
-    //     }
-
-    //     console.log(key);
-    // }
 };
 
 export const getLineData = (data: any[]) => {
 
     const finishedData: any = [];
 
-    // if (Array.isArray(data)){
     data.forEach((arrayData) => {
+        const label: string = arrayData.dataLabel;
         const labels: string[] = [];
         const values: number[] = [];
 
-        arrayData.forEach((chartData: any) => {
+        arrayData.dataset.forEach((chartData: any) => {
             const value = parseFloat(chartData.value.toString());
 
             labels.push(chartData.label);
             values.push(value);
         });
 
-        finishedData.push({labels, values});
+        finishedData.push({label, labels, values});
 
     });
-    // } else {
-    //     const labels: string[] = [];
-    //     const values: number[] = [];
-
-    //     data.forEach((chartData: any) => {
-    //         const value = parseFloat(chartData.value.toString());
-
-    //         labels.push(chartData.label);
-    //         values.push(value);
-    //     });
-
-    //     finishedData.push({labels, values});
-    // }
-
-    console.log(finishedData);
 
     return finishedData;
 
 };
-
-// export const getFinalData = (
-//             chartData: any,
-//             borderColor: string,
-//             borderDash: number[],
-//             borderWidth: number,
-//             fill: boolean,
-//             label: string,
-//             lineTension: number,
-//             pointRadius: number,
-//             pointStyle: string,
-//             noLine: boolean,
-//             steppedLine: boolean,
-//             backgroundColor?: string | string[],
-//         ) => {
-//             if (Array.isArray(chartData)){
-//                 chartData.map((data: any, i: any) => {
-//                     return {
-//                         backgroundColor: backgroundColor ? backgroundColor[i] : `rgba(92,205,223,0.4)`,
-//                         borderColor: borderColor ?
-//                             borderColor :
-//                             backgroundColor ?
-//                             backgroundColor[i].replace(',0.', ',1') :
-//                             `rgba(92,205,223,0.4)`,
-//                         borderDash,
-//                         borderWidth,
-//                         data: data.values,
-//                         fill,
-//                         label,
-//                         lineTension,
-//                         pointHoverRadius: pointRadius,
-//                         pointRadius,
-//                         pointStyle,
-//                         showLine: !noLine,
-//                         steppedLine
-//                     };
-
-//                 });
-//             }else {
-//                 return {
-//                         backgroundColor: backgroundColor ? backgroundColor : `rgba(92,205,223,0.4)`,
-//                         borderColor: borderColor ?
-//                             borderColor :
-//                             backgroundColor ?
-//                             backgroundColor :
-//                             `rgba(92,205,223,0.4)`,
-//                         borderDash,
-//                         borderWidth,
-//                         data: chartData.values,
-//                         fill,
-//                         label,
-//                         lineTension,
-//                         pointHoverRadius: pointRadius,
-//                         pointRadius,
-//                         pointStyle,
-//                         showLine: !noLine,
-//                         steppedLine
-//                     };
-//             }
-//     }
-
-// export const {
-//     id,
-//     title,
-//     titlePos,
-//     titleColor,
-//     titleFont,
-//     titleSize,
-//     titleStyle,
-//     doughnutSpace,
-//     legendPos,
-//     legendColor,
-//     legendSize,
-//     legendStyle,
-//     legendFont,
-//     boxWidth,
-//     spacing,
-//     size,
-//     // height,
-//     // width
-// } = this.props;
-
-// export const position = legendPos;
 
 export const getTitle = (
         title?: string,
@@ -210,32 +90,3 @@ export const getLegend = (
         position
     };
 };
-
-// export const options = {
-//     cutoutPercentage: doughnutSpace,
-//     legend,
-//     title: chartTitle
-// };
-
-// export const getDataOptions = (
-//         chartData?: object,
-//         borderWidth?: number,
-//     ) => {
-//     return {
-//         datasets: [{
-//             backgroundColor: chartData.backgroundColors,
-//             borderWidth,
-//             data: chartData.values
-//         }],
-//         labels: chartData.labels
-//     };
-// };
-
-// export const data = {
-//     datasets: [{
-//         backgroundColor: chartData.backgroundColors,
-//         borderWidth: spacing,
-//         data: chartData.values
-//     }],
-//     labels: chartData.labels
-// };

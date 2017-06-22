@@ -1,9 +1,28 @@
 import * as React from 'react';
+import renderer from 'react-test-renderer';
 import Button from './Button';
 
 import { shallow } from 'enzyme';
 
 describe('Button', () => {
+
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = renderer.create(
+            <Button
+                onClick={func}
+                disabled
+                className="myClass"
+                style={{color: 'blue'}}
+                inverseStyle
+                id={'button1'}
+            >
+                Mooskin
+            </Button>
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 
     test('renders properly into dom with color and label', () => {
         const func = jest.fn();

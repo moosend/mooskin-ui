@@ -1,9 +1,29 @@
 import * as React from 'react';
+import renderer from 'react-test-renderer';
 import Switch from './Switch';
 
 import { shallow } from 'enzyme';
 
 describe('Switch', () => {
+
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = renderer.create(
+            <Switch
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'switch1'}
+                disabled
+                disabledLabel="this is disabled"
+                offLabel="off"
+                onLabel="on"
+                on
+                onClick={func}
+            />
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 
     test('renders a disabled Switch with custom css class and id', () => {
 

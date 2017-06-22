@@ -1,9 +1,27 @@
 import * as React from 'react';
+import renderer from 'react-test-renderer';
 import SmallIconButton from './SmallIconButton';
 
 import { shallow } from 'enzyme';
 
 describe('SmallIconButton', () => {
+
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = renderer.create(
+            <SmallIconButton
+                onClick={func}
+                disabled
+                className="myClass"
+                style={{color: 'blue'}}
+                transparent
+                id={'button1'}
+                icon="check"
+            />
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 
     test('renders properly into dom with custom style & callback is called when clicked', () => {
         const func = jest.fn();

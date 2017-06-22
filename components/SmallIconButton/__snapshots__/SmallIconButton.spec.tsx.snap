@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmallIconButton renders correctly 1`] = `
+<button
+  className="button-icon-component
+                         button
+                         transparent
+                         disabledButton
+                         myClass"
+  disabled={true}
+  id="button1"
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <i
+    className="material-icons icon"
+  >
+    check
+  </i>
+</button>
+`;

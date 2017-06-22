@@ -1,4 +1,5 @@
 import * as React from 'react';
+import renderer from 'react-test-renderer';
 import {H2} from '../Headings';
 import SmallIconButton from '../SmallIconButton';
 import CheckListItem from './CheckListItem';
@@ -6,6 +7,23 @@ import CheckListItem from './CheckListItem';
 import { shallow } from 'enzyme';
 
 describe('CheckListItem', () => {
+
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = renderer.create(
+            <CheckListItem
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'check1'}
+                onClick={func}
+                status
+                text="check item text"
+                title="check item title"
+            />
+        ).toJSON();
+        expect(tree).toMatchSnapshot();
+    });
 
     test('renders into dom with title text and status', () => {
 

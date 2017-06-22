@@ -45,98 +45,104 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                 }
             ],
             lineData: [
-                [
-                    {
-                        label: 'January',
-                        value: 70,
-                    },
-                    {
-                        label: 'February',
-                        value: '11'
-                    },
-                    {
-                        label: 'March',
-                        value: 65
-                    },
-                    {
-                        label: 'April',
-                        value: 24
-                    },
-                    {
-                        label: 'June',
-                        value: 54
-                    },
-                    {
-                        label: 'July',
-                        value: 97
-                    },
-                    {
-                        label: 'August',
-                        value: 19
-                    },
-                    {
-                        label: 'September',
-                        value: 42
-                    },
-                    {
-                        label: 'October',
-                        value: 79
-                    },
-                    {
-                        label: 'November',
-                        value: 49
-                    },
-                    {
-                        label: 'December',
-                        value: 36
-                    }
-                ],
-                [
-                    {
-                        label: 'January',
-                        value: 33,
-                    },
-                    {
-                        label: 'February',
-                        value: '11'
-                    },
-                    {
-                        label: 'March',
-                        value: 51
-                    },
-                    {
-                        label: 'April',
-                        value: 70
-                    },
-                    {
-                        label: 'June',
-                        value: 37
-                    },
-                    {
-                        label: 'July',
-                        value: 41
-                    },
-                    {
-                        label: 'August',
-                        value: 73
-                    },
-                    {
-                        label: 'September',
-                        value: 42
-                    },
-                    {
-                        label: 'October',
-                        value: 45
-                    },
-                    {
-                        label: 'November',
-                        value: 99
-                    },
-                    {
-                        label: 'December',
-                        value: 55
-                    }
-                ]
+                {
+                    dataLabel: 'Emails per month',
+                    dataset: [
+                        {
+                            label: 'January',
+                            value: 70,
+                        },
+                        {
+                            label: 'February',
+                            value: '11'
+                        },
+                        {
+                            label: 'March',
+                            value: 65
+                        },
+                        {
+                            label: 'April',
+                            value: 24
+                        },
+                        {
+                            label: 'June',
+                            value: 54
+                        },
+                        {
+                            label: 'July',
+                            value: 97
+                        },
+                        {
+                            label: 'August',
+                            value: 19
+                        },
+                        {
+                            label: 'September',
+                            value: 42
+                        },
+                        {
+                            label: 'October',
+                            value: 79
+                        },
+                        {
+                            label: 'November',
+                            value: 49
+                        },
+                        {
+                            label: 'December',
+                            value: 36
+                        }
+                    ]
+                },
+                {
+                    dataLabel: 'Opens per month',
+                    dataset: [
+                        {
+                            label: 'January',
+                            value: 33,
+                        },
+                        {
+                            label: 'February',
+                            value: '11'
+                        },
+                        {
+                            label: 'March',
+                            value: 48
+                        },
+                        {
+                            label: 'April',
+                            value: 74
+                        },
+                        {
+                            label: 'June',
+                            value: 60
+                        },
+                        {
+                            label: 'July',
+                            value: 28
+                        },
+                        {
+                            label: 'August',
+                            value: 52
+                        },
+                        {
+                            label: 'September',
+                            value: 66
+                        },
+                        {
+                            label: 'October',
+                            value: 31
+                        },
+                        {
+                            label: 'November',
+                            value: 44
+                        },
+                        {
+                            label: 'December',
+                            value: 63
+                        }
+                    ]
+                }
             ],
             users: [
                 {
@@ -182,7 +188,6 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     height={300}
                     width={600}
                     maintainAspectRatio
-                    label={'Emails sent per month'}
                     gridLinesY
                     gridLinesX
                 />
@@ -193,7 +198,6 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     height={300}
                     width={600}
                     maintainAspectRatio
-                    label={'Emails sent per month'}
                     gridLinesY
                     borderWidth={1}
                     lineTension={0}
@@ -207,12 +211,12 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     height={300}
                     width={600}
                     maintainAspectRatio
-                    label={'Emails sent per month'}
                     gridLinesY
                     gridLinesX
                     lineTension={0}
                     pointRadius={10}
                     pointStyle="star"
+                    noLegend
                 />
                 <Line
                     data={this.state.lineData}
@@ -220,7 +224,6 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     height={300}
                     width={600}
                     maintainAspectRatio
-                    label={'Emails sent per month'}
                     borderWidth={1}
                     steppedLine
                 />

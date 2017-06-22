@@ -77,9 +77,6 @@ export interface IDoughnutProps extends IChartProps {
 
 export interface IGridProps extends IChartProps{
 
-    /** chart label */
-    label?: string;
-
     /** toggles X gridlines */
     gridLinesX?: boolean;
 
@@ -100,6 +97,9 @@ export interface IGridProps extends IChartProps{
 }
 
 export interface IBarProps extends IGridProps{
+
+    /** chart label */
+    label?: string;
 
     /** bar width in relation with category width */
     barPercentage?: number;
