@@ -82,6 +82,8 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         style: {},
     };
 
+    public static Radio: React.StatelessComponent<IRadioProps>;
+
     private name: string;
 
     constructor(props: IRadioGroupProps){
