@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select renders Option correctly 1`] = `
+<li
+  onClick={[Function]}
+>
+  Option1
+</li>
+`;
+
+exports[`Select renders Select correctly 1`] = `
+<div
+  className="select-component myClass"
+>
+  <label
+    className="label"
+  >
+    Select something
+  </label>
+  <div
+    className="overlay"
+    onClick={[Function]}
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+  <div
+    className="selectContainer"
+    style={
+      Object {
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="labelContainer"
+    >
+      <input
+        className="innerInput"
+        onChange={[Function]}
+        placeholder="Type to filter options"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+        type="text"
+        value=""
+      />
+      <div
+        className="label-container innerDiv"
+        onClick={[Function]}
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+      >
+        placeholder
+      </div>
+      <div
+        className="selectIcon"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="options-container optionsContainer"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <ul />
+    </div>
+  </div>
+</div>
+`;

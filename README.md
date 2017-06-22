@@ -142,6 +142,16 @@ import {Input} from 'mooskin'
 
 <Input placeholder="Your Name" />
 ```
+
+## Playground (try out)
+
+To try the Library components first hand yourself, clone the [Mooskin](https://github.com/moosend/mooskin-ui) repository first. Then install dependencies with
+
+```
+npm install
+```
+
+After installation run `start-development.bat` on the Mooskin root folder, wait for build to complete then go to `http://localhost:8080/`. Have fun playing with the components.
  
 ### Contribute
 

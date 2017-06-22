@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HorizontalRangeBar renders correctly 1`] = `
+<div
+  className="loader-component loaderContainer myClass"
+  id="Range bar"
+>
+  <div
+    className="loader-bar loader"
+    style={
+      Object {
+        "background": "#53cadc",
+        "height": 5,
+        "width": "20%",
+      }
+    }
+  >
+    <div
+      className="loader-text label"
+    >
+      20
+    </div>
+  </div>
+</div>
+`;

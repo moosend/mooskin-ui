@@ -7,6 +7,23 @@ import { shallow } from 'enzyme';
 
 describe('CheckListItem', () => {
 
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = shallow(
+            <CheckListItem
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'check1'}
+                onClick={func}
+                status
+                text="check item text"
+                title="check item title"
+            />
+        );
+        expect(tree).toMatchSnapshot();
+    });
+
     test('renders into dom with title text and status', () => {
 
         const component = shallow(<CheckListItem title="One Ring" text="Toss the One Ring into Mt. Doom" />);

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H5 renders correctly 1`] = `
+<h5
+  className="h5-component h5 myClass"
+  id="heading5"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  Mooskin
+</h5>
+`;

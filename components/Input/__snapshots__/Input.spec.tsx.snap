@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<input
+  className="input-component input disabledInput myClass"
+  disabled={true}
+  id="input1"
+  maxLength={50}
+  minLength={10}
+  name="input name"
+  onChange={[Function]}
+  placeholder="input placeholder"
+  required={true}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+  type="text"
+  value="input value"
+/>
+`;

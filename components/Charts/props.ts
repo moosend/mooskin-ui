@@ -1,3 +1,5 @@
+import {IChartData, ILineData} from './types';
+
 export interface IChartProps {
 
     /** chart id */
@@ -48,9 +50,6 @@ export interface IChartProps {
     /** chart size */
     size?: number;
 
-    /** chart data values */
-    data: IChartData[];
-
     /** maintains aspect ratio */
     maintainAspectRatio?: boolean;
 
@@ -61,17 +60,24 @@ export interface IChartProps {
     // width?: number;
 }
 
+export interface IPieProps extends IChartProps {
+
+    /** chart data values */
+    data: IChartData[];
+
+}
+
 export interface IDoughnutProps extends IChartProps {
 
     /** doughnut width */
     doughnutSpace?: number;
 
+    /** chart data values */
+    data: IChartData[];
+
 }
 
-export interface IBarProps extends IChartProps{
-
-    /** chart label */
-    label?: string;
+export interface IGridProps extends IChartProps{
 
     /** toggles X gridlines */
     gridLinesX?: boolean;
@@ -90,14 +96,51 @@ export interface IBarProps extends IChartProps{
 
     /** border color */
     borderColor?: string;
+}
+
+export interface IBarProps extends IGridProps{
+
+    /** chart label */
+    label?: string;
 
     /** bar width in relation with category width */
     barPercentage?: number;
 
+    /** chart data values */
+    data: IChartData[];
+
 }
 
-export interface IChartData {
-    label: string;
-    value: number | string;
-    background: string;
+export interface ILineProps extends IGridProps{
+
+    /** The line and fill color (line can we overriden by borderColor) */
+    backgroundColor?: string | string[];
+
+    /** Length and spacing of dashes */
+    borderDash?: number[];
+
+    /** Bezier curve tension of the line */
+    lineTension?: number;
+
+    /** The radius of the point shape */
+    pointRadius?: number;
+
+    /** Style of the point */
+    pointStyle?: string;
+
+    /** Line visibility (showLine) */
+    noLine?: boolean;
+
+    /** If the line is shown as a stepped line */
+    steppedLine?: boolean;
+
+    /** Fill the area under the line */
+    fill?: boolean;
+
+    /** chart data values */
+    data: ILineData[];
+
+    /** The fill color for points. */
+    // pointBackgroundColor: string;
+
 }

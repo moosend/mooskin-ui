@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckListItem renders correctly 1`] = `
+<div
+  className="checkitem-component myClass"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <H2
+    className=""
+    style={
+      Object {
+        "marginLeft": "5px",
+      }
+    }
+  >
+    check item title
+  </H2>
+  <div
+    className="checkitem"
+    id="check1"
+  >
+    <i
+      className="material-icons iconStyle"
+    >
+      check
+    </i>
+    <div
+      className="content"
+    >
+      <span>
+        check item text
+      </span>
+      <SmallIconButton
+        className="button"
+        icon="create"
+        onClick={[Function]}
+        style={Object {}}
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,22 +1,40 @@
 import * as React from 'react';
 
-import {Bar, Doughnut, Pie} from '../../../index/index';
+import {Bar, Doughnut, Line, Pie} from '../../../index/index';
 
 export interface IChartState{
-    users: IUsers[];
-    barData: IUsers[];
+    users: IData[];
+    barData: IData[];
+    lineData: ILineData[];
 }
 
-export interface IUsers{
+export interface IData{
     label: string;
     value: number|string;
     background: string;
 }
 
+export interface ILineDataArray {
+    lineData: ILineData[];
+}
+
+export interface ILineData {
+    dataLabel: string;
+    dataset: ILineDataSet[];
+}
+
+export interface ILineDataSet {
+    label: string;
+    value: number | string;
+}
+
 export default class ChartExample extends React.Component<{}, IChartState>{
+
+    // private lineColor = 'rgba(255,99,132,0.4)';
 
     constructor(){
         super();
+
         this.state = {
             barData: [
                 {
@@ -33,6 +51,106 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     background: 'rgba(255,99,132,0.2)',
                     label: 'Shkumbin',
                     value: 65
+                }
+            ],
+            lineData: [
+                {
+                    dataLabel: 'Emails per month',
+                    dataset: [
+                        {
+                            label: 'January',
+                            value: 70,
+                        },
+                        {
+                            label: 'February',
+                            value: '11'
+                        },
+                        {
+                            label: 'March',
+                            value: 65
+                        },
+                        {
+                            label: 'April',
+                            value: 24
+                        },
+                        {
+                            label: 'June',
+                            value: 54
+                        },
+                        {
+                            label: 'July',
+                            value: 97
+                        },
+                        {
+                            label: 'August',
+                            value: 19
+                        },
+                        {
+                            label: 'September',
+                            value: 42
+                        },
+                        {
+                            label: 'October',
+                            value: 79
+                        },
+                        {
+                            label: 'November',
+                            value: 49
+                        },
+                        {
+                            label: 'December',
+                            value: 36
+                        }
+                    ]
+                },
+                {
+                    dataLabel: 'Opens per month',
+                    dataset: [
+                        {
+                            label: 'January',
+                            value: 33,
+                        },
+                        {
+                            label: 'February',
+                            value: '11'
+                        },
+                        {
+                            label: 'March',
+                            value: 48
+                        },
+                        {
+                            label: 'April',
+                            value: 74
+                        },
+                        {
+                            label: 'June',
+                            value: 60
+                        },
+                        {
+                            label: 'July',
+                            value: 28
+                        },
+                        {
+                            label: 'August',
+                            value: 52
+                        },
+                        {
+                            label: 'September',
+                            value: 66
+                        },
+                        {
+                            label: 'October',
+                            value: 31
+                        },
+                        {
+                            label: 'November',
+                            value: 44
+                        },
+                        {
+                            label: 'December',
+                            value: 63
+                        }
+                    ]
                 }
             ],
             users: [
@@ -59,7 +177,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
 
         return(
             <fieldset style={{display: 'inline-block'}}>
-                <legend>Pie Chart</legend>
+                <legend>Charts</legend>
                 <Pie data={this.state.users} title="Subscribers" size={250}/>
                 <hr/>
                 <Doughnut
@@ -71,6 +189,52 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     boxWidth={20}
                     borderWidth={3}
                     size={200}
+                />
+                <hr/>
+                <Line
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    gridLinesY
+                    gridLinesX
+                />
+                <Line
+                    fill
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    gridLinesY
+                    borderWidth={1}
+                    lineTension={0}
+                    pointRadius={5}
+                    pointStyle="rect"
+                />
+                <Line
+                    noLine
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    gridLinesY
+                    gridLinesX
+                    lineTension={0}
+                    pointRadius={10}
+                    pointStyle="star"
+                    noLegend
+                />
+                <Line
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    borderWidth={1}
+                    steppedLine
                 />
                 <hr/>
                 <Bar

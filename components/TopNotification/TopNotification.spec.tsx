@@ -12,6 +12,25 @@ import styles from './TopNotification.css';
 
 describe('TopNotification', () => {
 
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = shallow(
+            <TopNotification
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'notification1'}
+                okButton
+                okButtonLabel="click ok"
+                onClickOk={func}
+                visible
+                type="success"
+                text="notification for you"
+            />
+        );
+        expect(tree).toMatchSnapshot();
+    });
+
     test('renders properly into dom with text and no buttons by default', () => {
 
         const component = shallow(<TopNotification text="Hello"/>);

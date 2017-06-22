@@ -11,6 +11,6 @@ export {default as SmallIconButton} from '../SmallIconButton';
 export {default as CheckListItem} from '../CheckListItem';
 export {default as RadioGroup, Radio} from '../Radio/Radio';
 
-export {Bar, Doughnut, Pie} from '../Charts/index';
+export {Bar, Doughnut, Pie, Line} from '../Charts/index';
 
 export {default as TabbedContent, Tab} from '../TabbedContent/index';

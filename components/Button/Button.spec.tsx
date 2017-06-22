@@ -5,6 +5,24 @@ import { shallow } from 'enzyme';
 
 describe('Button', () => {
 
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = shallow(
+            <Button
+                onClick={func}
+                disabled
+                className="myClass"
+                style={{color: 'blue'}}
+                inverseStyle
+                id={'button1'}
+            >
+                Mooskin
+            </Button>
+        );
+        expect(tree).toMatchSnapshot();
+    });
+
     test('renders properly into dom with color and label', () => {
         const func = jest.fn();
 

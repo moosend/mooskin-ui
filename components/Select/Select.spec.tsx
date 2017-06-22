@@ -5,6 +5,35 @@ import {shallow} from 'enzyme';
 
 describe('Select', () => {
 
+    it('renders Select correctly', () => {
+        const func = jest.fn();
+
+        const tree = shallow(
+            <Select
+                onChange={func}
+                selected="option1"
+                dataLabel="plan"
+                id="select1"
+                label="Select something"
+                placeholder="placeholder"
+                className="myClass"
+                style={{color: 'blue'}}
+                noResultsText="no results found"
+                isLoading
+            />
+        );
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('renders Option correctly', () => {
+        const func = jest.fn();
+
+        const tree = shallow(
+            <Option value="option1" onClick={func}>Option1</Option>
+        );
+        expect(tree).toMatchSnapshot();
+    });
+
     test('renders properly with 1 child', () => {
         const func = jest.fn();
 

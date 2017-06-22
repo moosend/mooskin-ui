@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`H3 renders correctly 1`] = `
+<h3
+  className="h3-component h3 myClass"
+  id="heading3"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  Mooskin
+</h3>
+`;
