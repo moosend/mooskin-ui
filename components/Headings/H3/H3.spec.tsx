@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import H3 from './H3';
 
 import { shallow } from 'enzyme';
@@ -8,7 +7,7 @@ describe('H3', () => {
 
     it('renders correctly', () => {
 
-        const tree = renderer.create(
+        const tree = shallow(
             <H3
                 className="myClass"
                 style={{color: 'blue'}}
@@ -16,7 +15,7 @@ describe('H3', () => {
             >
                 Mooskin
             </H3>
-        ).toJSON();
+        );
         expect(tree).toMatchSnapshot();
     });
 

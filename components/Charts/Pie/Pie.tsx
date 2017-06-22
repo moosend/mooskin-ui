@@ -12,7 +12,8 @@ class PieChart extends React.Component<IPieProps, {}>{
         borderWidth: 0,
         boxWidth: 30,
         legendPos: 'bottom',
-        titlePos: 'top'
+        titlePos: 'top',
+        titleStyle: 'bold'
     };
 
     public render(){

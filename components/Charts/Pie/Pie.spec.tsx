@@ -24,6 +24,25 @@ describe('Chart', () => {
         }
     ];
 
+    it('renders correctly', () => {
+
+        const tree = shallow(
+            <PieChart
+                id="pie"
+                data={users}
+                size={200}
+                title={'Title'}
+                noLegend
+                maintainAspectRatio
+                titleSize={20}
+                legendStyle="italic"
+                legendSize={10}
+            />
+        );
+
+        expect(tree).toMatchSnapshot();
+    });
+
     test('renders properly into dom with data and props', () => {
 
         const component = shallow(<PieChart data={users} title="Subscribers" noLegend/>);

@@ -5,7 +5,6 @@ import * as React from 'react';
 
 import { mount, shallow } from 'enzyme';
 
-import renderer from 'react-test-renderer';
 import Button from '../Button/Button';
 import TopNotification from './TopNotification';
 
@@ -16,7 +15,7 @@ describe('TopNotification', () => {
     it('renders correctly', () => {
         const func = jest.fn();
 
-        const tree = renderer.create(
+        const tree = shallow(
             <TopNotification
                 className="myClass"
                 style={{color: 'blue'}}
@@ -28,7 +27,7 @@ describe('TopNotification', () => {
                 type="success"
                 text="notification for you"
             />
-        ).toJSON();
+        );
         expect(tree).toMatchSnapshot();
     });
 

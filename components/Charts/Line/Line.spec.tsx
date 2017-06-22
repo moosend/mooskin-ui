@@ -7,41 +7,67 @@ import { shallow } from 'enzyme';
 describe('Line Chart', () => {
 
     const data = [
+        {
+            dataLabel: 'Emails per month',
+            dataset: [
                 {
-                    dataLabel: 'Emails per month',
-                    dataset: [
-                        {
-                            label: 'January',
-                            value: 70,
-                        },
-                        {
-                            label: 'February',
-                            value: '11'
-                        },
-                        {
-                            label: 'March',
-                            value: 65
-                        }
-                    ]
+                    label: 'January',
+                    value: 70,
                 },
                 {
-                    dataLabel: 'Opens per month',
-                    dataset: [
-                        {
-                            label: 'January',
-                            value: 33,
-                        },
-                        {
-                            label: 'February',
-                            value: '11'
-                        },
-                        {
-                            label: 'March',
-                            value: 48
-                        }
-                    ]
+                    label: 'February',
+                    value: '11'
+                },
+                {
+                    label: 'March',
+                    value: 65
                 }
-            ];
+            ]
+        },
+        {
+            dataLabel: 'Opens per month',
+            dataset: [
+                {
+                    label: 'January',
+                    value: 33,
+                },
+                {
+                    label: 'February',
+                    value: '11'
+                },
+                {
+                    label: 'March',
+                    value: 48
+                }
+            ]
+        }
+    ];
+
+    it('renders correctly', () => {
+
+        const tree = shallow(
+            <LineChart
+                id="line"
+                data={data}
+                height={200}
+                width={400}
+                gridLinesX
+                gridLinesY
+                title={'Title'}
+                steppedLine
+                noLegend
+                noLine
+                fill
+                maintainAspectRatio
+                pointRadius={5}
+                pointStyle="cross"
+                minValue={10}
+                lineTension={0.2}
+            />
+        );
+
+        expect(tree).toMatchSnapshot();
+    });
 
     test('renders properly into dom with data and props', () => {
 

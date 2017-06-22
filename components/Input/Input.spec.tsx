@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import Input from './Input';
 
 import { shallow } from 'enzyme';
@@ -9,7 +8,7 @@ describe('Input', () => {
     it('renders correctly', () => {
         const func = jest.fn();
 
-        const tree = renderer.create(
+        const tree = shallow(
             <Input
                 onChange={func}
                 disabled
@@ -24,7 +23,7 @@ describe('Input', () => {
                 type="text"
                 required
             />
-        ).toJSON();
+        );
         expect(tree).toMatchSnapshot();
     });
 

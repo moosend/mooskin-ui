@@ -9,9 +9,8 @@ exports[`CheckListItem renders correctly 1`] = `
     }
   }
 >
-  <h2
-    className="h2-component h2 "
-    id={undefined}
+  <H2
+    className=""
     style={
       Object {
         "marginLeft": "5px",
@@ -19,7 +18,7 @@ exports[`CheckListItem renders correctly 1`] = `
     }
   >
     check item title
-  </h2>
+  </H2>
   <div
     className="checkitem"
     id="check1"
@@ -35,23 +34,12 @@ exports[`CheckListItem renders correctly 1`] = `
       <span>
         check item text
       </span>
-      <button
-        className="button-icon-component
-                               button
-                               normalButton
-                               
-                               button"
-        disabled={undefined}
-        id={undefined}
+      <SmallIconButton
+        className="button"
+        icon="create"
         onClick={[Function]}
         style={Object {}}
-      >
-        <i
-          className="material-icons icon"
-        >
-          create
-        </i>
-      </button>
+      />
     </div>
   </div>
 </div>

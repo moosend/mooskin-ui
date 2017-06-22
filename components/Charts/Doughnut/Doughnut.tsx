@@ -13,7 +13,8 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
         boxWidth: 30,
         doughnutSpace: 50,
         legendPos: 'bottom',
-        titlePos: 'top'
+        titlePos: 'top',
+        titleStyle: 'bold'
     };
 
     public render(){

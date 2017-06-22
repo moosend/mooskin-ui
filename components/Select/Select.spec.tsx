@@ -1,16 +1,14 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import Select, {Option} from './Select';
 
 import {shallow} from 'enzyme';
 
 describe('Select', () => {
 
-    it('renders correctly', () => {
+    it('renders Select correctly', () => {
         const func = jest.fn();
-        const func2 = jest.fn();
 
-        const tree = renderer.create(
+        const tree = shallow(
             <Select
                 onChange={func}
                 selected="option1"
@@ -22,11 +20,17 @@ describe('Select', () => {
                 style={{color: 'blue'}}
                 noResultsText="no results found"
                 isLoading
-            >
-                <Option value="option1" onClick={func2}>Option1</Option>
-                <Option value="option2" onClick={func2}>Option2</Option>
-            </Select>
-        ).toJSON();
+            />
+        );
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('renders Option correctly', () => {
+        const func = jest.fn();
+
+        const tree = shallow(
+            <Option value="option1" onClick={func}>Option1</Option>
+        );
         expect(tree).toMatchSnapshot();
     });
 

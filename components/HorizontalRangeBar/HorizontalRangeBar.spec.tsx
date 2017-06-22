@@ -5,6 +5,20 @@ import { shallow } from 'enzyme';
 
 describe('HorizontalRangeBar', () => {
 
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = shallow(
+            <HorizontalRangeBar
+                progress={20}
+                className="myClass"
+                height={5}
+                id="Range bar"
+            />
+        );
+        expect(tree).toMatchSnapshot();
+    });
+
     test('renders properly into dom progress number', () => {
         const component = shallow(<HorizontalRangeBar progress={20}/>);
 

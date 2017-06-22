@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bar Chart renders correctly 1`] = `
+<div
+  id="bar"
+>
+  <Bar
+    data={
+      Object {
+        "datasets": Array [
+          Object {
+            "backgroundColor": Array [
+              "#5CCDDF",
+              "#F48770",
+              "#F2C14A",
+            ],
+            "borderColor": undefined,
+            "borderWidth": 0,
+            "data": Array [
+              70,
+              120,
+              65,
+            ],
+            "label": "Just a label",
+          },
+        ],
+        "labels": Array [
+          "Doni",
+          "Gent",
+          "Shkumbin",
+        ],
+      }
+    }
+    height={200}
+    options={
+      Object {
+        "legend": Object {
+          "display": true,
+          "labels": Object {
+            "boxWidth": 0,
+            "fontColor": undefined,
+            "fontFamily": undefined,
+            "fontSize": undefined,
+            "fontStyle": "italic",
+          },
+          "position": "top",
+        },
+        "maintainAspectRatio": true,
+        "scales": Object {
+          "xAxes": Array [
+            Object {
+              "barPercentage": 0.6,
+              "gridLines": Object {
+                "display": true,
+              },
+            },
+          ],
+          "yAxes": Array [
+            Object {
+              "gridLines": Object {
+                "display": true,
+              },
+              "ticks": Object {
+                "min": 0,
+              },
+            },
+          ],
+        },
+        "title": Object {
+          "display": true,
+          "fontColor": undefined,
+          "fontFamily": undefined,
+          "fontSize": 15,
+          "fontStyle": "bold",
+          "position": "bottom",
+          "text": "Title",
+        },
+      }
+    }
+    width={400}
+  />
+</div>
+`;

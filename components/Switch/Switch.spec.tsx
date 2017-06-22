@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import Switch from './Switch';
 
 import { shallow } from 'enzyme';
@@ -9,7 +8,7 @@ describe('Switch', () => {
     it('renders correctly', () => {
         const func = jest.fn();
 
-        const tree = renderer.create(
+        const tree = shallow(
             <Switch
                 className="myClass"
                 style={{color: 'blue'}}
@@ -21,7 +20,7 @@ describe('Switch', () => {
                 on
                 onClick={func}
             />
-        ).toJSON();
+        );
         expect(tree).toMatchSnapshot();
     });
 

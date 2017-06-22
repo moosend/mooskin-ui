@@ -22,15 +22,13 @@ exports[`TopNotification renders correctly 1`] = `
   <div
     className="button"
   >
-    <button
-      className="button-component button normalButton  "
-      disabled={undefined}
-      id={undefined}
+    <Button
+      className=""
       onClick={[Function]}
       style={Object {}}
     >
       click ok
-    </button>
+    </Button>
   </div>
   <div
     className="close-notification close"

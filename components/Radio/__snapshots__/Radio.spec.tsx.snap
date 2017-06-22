@@ -1,54 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Radio renders correctly 1`] = `
+exports[`Radio renders Radio correctly 1`] = `
 <div
-  class="radiogroup-component myClass"
-  id="radio1"
-  style="color:blue;"
+  className="radio-component radio disabledRadio myClass"
+  htmlFor="radio1"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
 >
-  <h2
-    class="h2-component h2 "
+  <label>
+    <input
+      defaultChecked={false}
+      disabled={true}
+      onClick={[Function]}
+      type="radio"
+      value="radio1"
+    />
+    <span>
+      This is radio 1
+    </span>
+  </label>
+</div>
+`;
+
+exports[`Radio renders RadioGroup correctly 1`] = `
+<div
+  className="radiogroup-component myClass"
+  id="radio1"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <H2
+    className=""
+    style={Object {}}
   >
     Select a plan
-  </h2>
-  <div>
-    <div
-      class="radio-component radio disabledRadio myClass"
-      for="radio1"
-      style="margin-bottom:10px;color:blue;"
-    >
-      <label>
-        <input
-          checked=""
-          disabled=""
-          name="1482363367071"
-          type="radio"
-          value="radio1"
-        />
-        <span>
-          This is radio 1
-        </span>
-      </label>
-    </div>
-  </div>
-  <div>
-    <div
-      class="radio-component radio disabledRadio myClass"
-      for="radio2"
-      style="margin-bottom:10px;color:blue;"
-    >
-      <label>
-        <input
-          disabled=""
-          name="1482363367071"
-          type="radio"
-          value="radio2"
-        />
-        <span>
-          This is radio 2
-        </span>
-      </label>
-    </div>
-  </div>
+  </H2>
 </div>
 `;

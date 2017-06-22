@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import Button from './Button';
 
 import { shallow } from 'enzyme';
@@ -9,7 +8,7 @@ describe('Button', () => {
     it('renders correctly', () => {
         const func = jest.fn();
 
-        const tree = renderer.create(
+        const tree = shallow(
             <Button
                 onClick={func}
                 disabled
@@ -20,7 +19,7 @@ describe('Button', () => {
             >
                 Mooskin
             </Button>
-        ).toJSON();
+        );
         expect(tree).toMatchSnapshot();
     });
 

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import SmallIconButton from './SmallIconButton';
 
 import { shallow } from 'enzyme';
@@ -9,7 +8,7 @@ describe('SmallIconButton', () => {
     it('renders correctly', () => {
         const func = jest.fn();
 
-        const tree = renderer.create(
+        const tree = shallow(
             <SmallIconButton
                 onClick={func}
                 disabled
@@ -19,7 +18,7 @@ describe('SmallIconButton', () => {
                 id={'button1'}
                 icon="check"
             />
-        ).toJSON();
+        );
         expect(tree).toMatchSnapshot();
     });
 

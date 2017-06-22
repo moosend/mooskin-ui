@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select renders correctly 1`] = `
+exports[`Select renders Option correctly 1`] = `
+<li
+  onClick={[Function]}
+>
+  Option1
+</li>
+`;
+
+exports[`Select renders Select correctly 1`] = `
 <div
   className="select-component myClass"
 >
@@ -50,7 +58,7 @@ exports[`Select renders correctly 1`] = `
           }
         }
       >
-        Option1
+        placeholder
       </div>
       <div
         className="selectIcon"
@@ -65,36 +73,7 @@ exports[`Select renders correctly 1`] = `
         }
       }
     >
-      <ul>
-        <div
-          className="selectedOption"
-          style={
-            Object {
-              "display": "block",
-            }
-          }
-        >
-          <li
-            onClick={[Function]}
-          >
-            Option1
-          </li>
-        </div>
-        <div
-          className=""
-          style={
-            Object {
-              "display": "block",
-            }
-          }
-        >
-          <li
-            onClick={[Function]}
-          >
-            Option2
-          </li>
-        </div>
-      </ul>
+      <ul />
     </div>
   </div>
 </div>

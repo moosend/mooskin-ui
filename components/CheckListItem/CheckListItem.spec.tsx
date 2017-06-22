@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import {H2} from '../Headings';
 import SmallIconButton from '../SmallIconButton';
 import CheckListItem from './CheckListItem';
@@ -11,7 +10,7 @@ describe('CheckListItem', () => {
     it('renders correctly', () => {
         const func = jest.fn();
 
-        const tree = renderer.create(
+        const tree = shallow(
             <CheckListItem
                 className="myClass"
                 style={{color: 'blue'}}
@@ -21,7 +20,7 @@ describe('CheckListItem', () => {
                 text="check item text"
                 title="check item title"
             />
-        ).toJSON();
+        );
         expect(tree).toMatchSnapshot();
     });
 
