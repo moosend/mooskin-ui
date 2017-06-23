@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/moosend/mooskin-ui.svg?branch=master)](https://travis-ci.org/moosend/mooskin-ui)
 
 
-A collection of React components with pre-defined styles for Moosend UI.
+A collection of React components with pre-defined styles for Moosend UI. At the moment very much a work in prgress.
 
 ___
 

@@ -11,6 +11,7 @@ docs
 src
 spec
 __mocks__
+playground-dist
 dist
 .DS_Store
 start-development.bat
