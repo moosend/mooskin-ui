@@ -17,11 +17,12 @@
     "noUnusedLocals": true
   },
   "include": [
-    "components",
-    "playground"
+    "components"
   ],
   "exclude": [
       "node_modules",
+      "lib",
+      "playground-dist",
       "components/**/*.spec.ts",
       "components/**/*.spec.tsx"
   ]
