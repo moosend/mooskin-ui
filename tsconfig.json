@@ -14,7 +14,8 @@
     "declarationDir": "lib",
     "noFallthroughCasesInSwitch": true,
     "pretty": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "components"

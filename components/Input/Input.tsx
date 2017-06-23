@@ -47,7 +47,7 @@ export interface IProps {
 
 }
 
-class Input extends React.Component<IProps, void> {
+class Input extends React.Component<IProps, {}> {
 
     public static defaultProps = {
         className: '',
