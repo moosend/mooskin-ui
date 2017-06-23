@@ -6,6 +6,7 @@
   "types": "lib/index/index.d.ts",
   "scripts": {
     "prepublish": "npm run lint && webpack --config webpack.config.prod.js -p",
+    "build:playground": "webpack --config webpack.config.dev.js -p",
     "playground": "npm run prepublish && webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
     "test": "jest --no-cache --silent --config=jest.config.json",
     "test:u": "jest -u --no-cache --silent --config=jest.config.json",
