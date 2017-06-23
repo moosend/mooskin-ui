@@ -123,14 +123,14 @@ As you may have noticed, for easy use, the components are named similar to norma
 Lets say we want to use the Select Component. First we have to import it
 
 ```
-import {Select} from 'mooskin';
+import {Select, Option} from 'mooskin';
 ```
 
 And then you can simply start using it by typing
 
 ```
 <Select dataLabel="countries" onChange={callback}>
-    <Option whatever>England</Option>
+    <Option whatever>England</Option> 				//<Select.Option whatever>England</Option> //this works too
     <Option whatever>Germany</Option>
 </Select>
 ```
