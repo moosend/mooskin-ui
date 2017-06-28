@@ -1,0 +1,103 @@
+.container {
+    width: 100%;  
+}
+
+.containerVertical {
+    display:flex;
+    flex-direction: row;
+}
+
+.radio {
+    width: 100%;
+    border-radius: 8px;
+    color: #7b7b7b;
+    transition: 0.3s;
+    background: #f2f2f2;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.radio:hover {
+    background-color: #5ccdde;
+    color: #fff;
+}
+
+.radio input[type='radio'] {
+    vertical-align: middle;
+    appearance:none;
+    cursor: pointer;
+    width:22px;
+    height:22px;
+    padding: 6px;
+    background: #fff;
+    border-radius:50%;
+    margin:0 auto
+    
+}
+
+.radio label {
+    cursor: pointer;
+    padding: 15px;
+    height: 100%;
+    display: block; 
+    border-radius: 8px;
+}
+
+.radio input[type='radio']:checked:before {
+    background:#5ccdde;
+    content:'';
+    display:block;
+    width: 10px;
+    height: 10px;
+    border-radius:50%; 
+}
+
+.headerVertical {
+    flex-direction: column;
+    width: 60%
+}
+
+.headerVertical > .radio + .radio{
+    margin-top: 10px;
+}
+
+.headerHorizontal {
+    display:flex;
+    flex-direction: row;
+}
+
+.headerHorizontal > .radio{
+    margin-bottom: 10px;
+}
+
+.headerHorizontal > .radio + .radio{
+    margin-left: 10px;
+}
+
+.container > .content {
+    margin: 0px;
+    height: 100%;
+}
+
+.content {
+    margin-left: 10px;
+    padding: 10px;
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    color: #7b7b7b;
+    background: #f2f2f2;
+}
+
+.radio span {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
