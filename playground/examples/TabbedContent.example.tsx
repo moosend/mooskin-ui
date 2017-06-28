@@ -16,7 +16,7 @@ export default (props: any) => {
     return (
         <fieldset style={{display: 'inline-block', width: 1000}}>
             <legend>TabbedContent Element</legend>
-            <TabbedContent style={{width: '800px'}}>
+            <TabbedContent>
                 <TabbedContent.Tab title="Title 1" active>
                     <div style={{...style, backgroundColor: '#5CCDDF'}}>
                         Content 1
