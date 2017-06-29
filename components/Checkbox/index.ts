@@ -1,4 +1,4 @@
-import CheckBoxGroup, {CheckBox} from './CheckBox';
+import CheckBoxGroup, {CheckBox} from './Checkbox';
 
 CheckBoxGroup.CheckBox = CheckBox;
 
