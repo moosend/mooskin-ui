@@ -67,7 +67,7 @@ an alternative view style can be toggled by passing the `horizontal` attribute t
 ```
 Import {Content, RadioTabs} from 'mooskin';
 
-<RadioTabs `horizontal`>
+<RadioTabs horizontal>
     <Content title="Title 1" iconClass="fa fa-icon">
         <div style={{...style, backgroundColor: '#5CCDDF'}}>
             Content 1
