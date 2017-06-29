@@ -47,12 +47,24 @@ export interface IProps {
 
 }
 
-class Input extends React.Component<IProps, {}> {
+export interface IInputState{
+    value: string;
+}
+
+class Input extends React.Component<IProps, IInputState> {
 
     public static defaultProps = {
         className: '',
         style: {}
     };
+
+    constructor(props: IProps){
+        super(props);
+
+        this.state = {
+            value: this.props.value ? this.props.value : ''
+        };
+    }
 
     public render(){
 
@@ -62,7 +74,6 @@ class Input extends React.Component<IProps, {}> {
             required,
             type,
             name,
-            value,
             placeholder,
             minlength,
             maxlength,
@@ -78,7 +89,7 @@ class Input extends React.Component<IProps, {}> {
                 id={id}
                 type={type}
                 name={name}
-                value={value}
+                value={this.state.value}
                 placeholder={placeholder}
                 minLength={minlength}
                 maxLength={maxlength}
@@ -91,6 +102,7 @@ class Input extends React.Component<IProps, {}> {
     }
 
     private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        this.setState({value: e.target.value});
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange(e, {value: this.props.value, dataLabel: this.props.dataLabel});
