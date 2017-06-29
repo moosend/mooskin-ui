@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import Button from './examples/Button.example';
 import Charts from './examples/Charts.example';
+import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
 import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
@@ -33,6 +34,8 @@ export default (props: any) => {
             <SmallIconButton />
             <br/><br/>
             <Radio />
+            <br/><br/>
+            <CheckBox />
             <br/><br/>
             <CheckListItem />
             <br/><br/>

@@ -71,11 +71,7 @@ export interface IRadioProps {
     label?: string;
 }
 
-export interface IRadioState {
-    selected?: string;
-}
-
-export default class RadioGroup extends React.Component<IRadioGroupProps, IRadioState> {
+export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
 
     public static defaultProps = {
         className: '',
@@ -96,6 +92,8 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
         const {id, className, style, title} = this.props;
 
+        const align = this.props.vertical ? '' : styles.vertical;
+
         const radios = this.assignRadios();
 
         return (
@@ -105,7 +103,9 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
                 style={{...style}}
             >
                 <H2>{title}</H2>
-                {radios}
+                <div className={align}>
+                    {radios}
+                </div>
             </div>
         );
     }
@@ -152,7 +152,6 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
                     {marginBottom: `${props.spacing}px`} :
                     {marginRight: `${props.spacing}px`} : {};
     const classes = `radio-component ${styles.radio} ${disabledStyles} ${props.className}`;
-    const align = props.vertical ? {} : {float: 'left'};
 
     const onRadioClick = (e: React.MouseEvent<HTMLElement>) => {
         !props.disabled && props.onClick && props.onClick(e);
@@ -162,7 +161,7 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
         <div
             htmlFor={props.id}
             className={classes}
-            style={{...spacing, ...align, ...props.style}}
+            style={{...spacing, ...props.style}}
         >
             <label>
                 <input

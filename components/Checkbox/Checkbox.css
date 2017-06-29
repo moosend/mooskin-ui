@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+.checkbox {
+    border-radius: 8px;
+    color: #7b7b7b;
+    transition: all 0.3s;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkboxgroup-component > .checkbox + .checkbox{
+    margin-top: 10px;
+}
+
+.checkbox span {
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 5px;
+}
+
+.checkbox input[type='checkbox'] {
+    vertical-align: middle;
+    appearance:none;
+    cursor: pointer;
+}
+
+.checkbox input[type='checkbox']::before {
+    content: '\e835';
+    color: #dfdfdf;
+}
+
+.checkbox input[type='checkbox']:checked::before {
+    content: '\e834';
+    color: #5ccdde;
+}
+
+.disabledCheckbox, .disabledCheckbox label span, .disabledCheckbox label, .disabledCheckbox.checkbox:hover {
+    cursor: not-allowed;
+    color: #b2b2b2;
+}
+
+.disabledCheckbox input[type='checkbox']:disabled::before {
+    cursor: not-allowed;
+    color: #eaeaea;
+}
+
+.checkbox i{
+    display: block;
+    color: #b3b3b3;
+    font-size: .78571428571rem;
+    margin-left: 7px;
+}
+
+.disabledCheckbox i{
+    cursor: default;
+}

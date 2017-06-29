@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Radio renders Radio correctly 1`] = `
+exports[`CheckBox renders CheckBox correctly 1`] = `
 <div
-  className="radio-component radio disabledRadio myClass"
-  htmlFor="radio1"
+  className="checkbox-component checkbox disabledCheckbox myClass"
+  htmlFor="checkbox1"
   style={
     Object {
       "color": "blue",
@@ -12,23 +12,26 @@ exports[`Radio renders Radio correctly 1`] = `
 >
   <label>
     <input
+      className="material-icons"
       defaultChecked={false}
       disabled={true}
       onClick={[Function]}
-      type="radio"
-      value="radio1"
+      type="checkbox"
+      value="CheckBox1"
     />
     <span>
-      This is radio 1
+      This is CheckBox 1
     </span>
+    <br />
+    <i />
   </label>
 </div>
 `;
 
-exports[`Radio renders RadioGroup correctly 1`] = `
+exports[`CheckBox renders CheckboxGroup correctly 1`] = `
 <div
-  className="radiogroup-component myClass"
-  id="radio1"
+  className="checkboxgroup-component myClass"
+  id="checkbox1"
   style={
     Object {
       "color": "blue",
@@ -42,7 +45,7 @@ exports[`Radio renders RadioGroup correctly 1`] = `
     Select a plan
   </H2>
   <div
-    className=""
+    className="horizontal"
   />
 </div>
 `;
