@@ -28,7 +28,7 @@ export default (props: any) => {
                 dataLabel="horizontal"
             >
                 <CheckBox value={'Checkbox1'}/>
-                <CheckBox value={'Checkbox2'} label="This one has a label"/>
+                <CheckBox value={'Checkbox2'} label="This one has a label" description="Feels lonely to be unchecked"/>
                 <CheckBox value={'Checkbox3'} label="This one is disabled" disabled description="It's disabled"/>
             </CheckboxGroup>
             <CheckboxGroup
@@ -40,7 +40,7 @@ export default (props: any) => {
                 horizontal
             >
                 <CheckBox value={'Checkbox1'}/>
-                <CheckBox value={'Checkbox2'} label="This one has a label" description="Feels lonely to be unchecked"/>
+                <CheckBox value={'Checkbox2'} label="This one has a label" />
                 <CheckBox value={'Checkbox3'} label="This one is disabled" disabled description="It's disabled"/>
             </CheckboxGroup>
         </fieldset>
