@@ -86,7 +86,7 @@
     display: block;
     border-radius: 8px;
     color: #7b7b7b;
-    background: #f2f2f2;
+    border: 1px solid #f2f2f2;
 }
 
 .radio span {
