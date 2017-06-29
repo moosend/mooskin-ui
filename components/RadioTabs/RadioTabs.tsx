@@ -68,7 +68,7 @@ class RadioTabs extends React.Component<IRadioTabsProps, IRadioTabsState> {
 
         return (
             <div className={`radio-tabs-component ${containerStyles}`}>
-                <div className={headerStyles} style={this.props.style}>
+                <div className={headerStyles}>
                     {headers}
                 </div>
                 <div className={styles.content}>
