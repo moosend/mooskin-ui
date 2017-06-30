@@ -15,7 +15,7 @@ exports[`RadioTabs renders Content properly according to snapshot 1`] = `
 
 exports[`RadioTabs renders Header properly according to snapshot 1`] = `
 <div
-  className="radio-header radio activeHeader"
+  className="radio-header radio activeHeader checkedRadio"
   onClick={[Function]}
 >
   <label>
