@@ -11,14 +11,13 @@
     width: 100%;
     border-radius: 8px;
     color: #7b7b7b;
-    transition: 0.3s;
     background: #f2f2f2;
     border-radius: 8px;
     transition: 0.3s;
 }
 
 .radio:hover {
-    background-color: #5ccdde;
+    background-color: #95dee9;
     color: #fff;
 }
 
@@ -41,6 +40,15 @@
     height: 100%;
     display: block; 
     border-radius: 8px;
+}
+
+.checkedRadio {
+    background: #5ccdde;
+    color: #fff;
+}
+
+.checkedRadio:hover {
+    background: #5ccdde;
 }
 
 .radio input[type='radio']:checked:before {

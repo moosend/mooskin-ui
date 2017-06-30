@@ -159,9 +159,10 @@ export interface IHeaderProps {
 export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const activeRadio = props.active ? styles.activeHeader : styles.inactiveHeader;
+    const checkedRadio = !props.active ? '' : styles.checkedRadio;
 
     return (
-        <div className={`radio-header ${styles.radio} ${activeRadio}`} onClick={props.onClick}>
+        <div className={`radio-header ${styles.radio} ${activeRadio} ${checkedRadio}`} onClick={props.onClick}>
             <label>
                 <input
                     type="radio"
