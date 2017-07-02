@@ -5,6 +5,25 @@ import { shallow } from 'enzyme';
 
 describe('Switch', () => {
 
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = shallow(
+            <Switch
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'switch1'}
+                disabled
+                disabledLabel="this is disabled"
+                offLabel="off"
+                onLabel="on"
+                on
+                onClick={func}
+            />
+        );
+        expect(tree).toMatchSnapshot();
+    });
+
     test('renders a disabled Switch with custom css class and id', () => {
 
         const component = shallow(<Switch id="5" className="mySwitch" disabled/>);

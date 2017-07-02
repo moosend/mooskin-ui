@@ -4,7 +4,7 @@ import styles from './H5.css';
 
 import {IHeadingProps} from '../props';
 
-class H5 extends React.Component<IHeadingProps, void> {
+class H5 extends React.Component<IHeadingProps, {}> {
 
     public static defaultProps = {
         className: '',

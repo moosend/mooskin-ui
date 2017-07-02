@@ -1,8 +1,7 @@
 var config = require('./webpack.config.common'),
   ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-
-var distFolder = 'dist';
+var distFolder = 'lib';
 var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/[name]/style.css", allChunks: true});
 
 

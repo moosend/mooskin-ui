@@ -22,7 +22,7 @@ export interface IHorizontalRangeBarProps{
     className?: string;
 }
 
-export default class HorizontalRangeBar extends React.Component<IHorizontalRangeBarProps, void>{
+export default class HorizontalRangeBar extends React.Component<IHorizontalRangeBarProps, {}>{
 
     public static defaultProps: Partial<IHorizontalRangeBarProps> = {
         background: '#53cadc',

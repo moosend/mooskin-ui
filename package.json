@@ -6,7 +6,8 @@
   "types": "lib/index/index.d.ts",
   "scripts": {
     "prepublish": "npm run lint && webpack --config webpack.config.prod.js -p",
-    "playground": "npm run prepublish && webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
+    "build:playground": "webpack --config webpack.config.dev.js -p",
+    "playground": "webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
     "test": "jest --no-cache --silent --config=jest.config.json",
     "test:u": "jest -u --no-cache --silent --config=jest.config.json",
     "test:cov": "jest --coverage --no-cache --silent --config=jest.config.json",
@@ -23,17 +24,17 @@
   },
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
   "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
     "chart.js": "^2.6.0",
-    "react-chartjs-2": "^2.1.0"
+    "react": "^15.5.4",
+    "react-chartjs-2": "^2.1.0",
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "@types/enzyme": "^2.8.0",
     "@types/jest": "^19.2.3",
     "@types/prop-types": "^15.5.1",
-    "@types/react": "^15.0.24",
-    "@types/react-dom": "^15.5.0",
+    "@types/react": "^15.0.31",
+    "@types/react-dom": "^15.5.1",
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -45,7 +46,6 @@
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.1",
     "cssnano": "^3.10.0",
-    "cssnext": "^1.8.4",
     "enzyme": "^2.8.2",
     "extract-text-webpack-plugin": "^2.1.0",
     "file-loader": "^0.11.2",

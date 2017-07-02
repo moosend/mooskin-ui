@@ -43,7 +43,7 @@ export interface ITopNotificationProps {
     visible?: boolean;
 }
 
-export default class TopNotification extends React.Component<ITopNotificationProps, void>{
+export default class TopNotification extends React.Component<ITopNotificationProps, {}>{
 
     public static defaultProps: Partial<ITopNotificationProps> = {
         cancelButton: false,

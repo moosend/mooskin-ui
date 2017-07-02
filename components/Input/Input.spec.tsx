@@ -5,6 +5,28 @@ import { shallow } from 'enzyme';
 
 describe('Input', () => {
 
+    it('renders correctly', () => {
+        const func = jest.fn();
+
+        const tree = shallow(
+            <Input
+                onChange={func}
+                disabled
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'input1'}
+                value="input value"
+                placeholder="input placeholder"
+                maxlength={50}
+                minlength={10}
+                name="input name"
+                type="text"
+                required
+            />
+        );
+        expect(tree).toMatchSnapshot();
+    });
+
     test('renders properly into dom and has Placeholder prop', () => {
 
         const component = shallow(<Input placeholder="username"/>);
@@ -13,14 +35,14 @@ describe('Input', () => {
     });
 
     test('renders an input with a "required" prop and minlength', () => {
-        const component = shallow(<Input minlength="5" required/>);
+        const component = shallow(<Input minlength={5} required/>);
 
         expect(component.find('input').prop('required')).toEqual(true);
         expect(component.find('input').prop('minLength')).toEqual(5);
     });
 
     test('renders an input with a passed value and maxlength', () => {
-        const component = shallow(<Input value="random" maxlength="50"/>);
+        const component = shallow(<Input value="random" maxlength={50}/>);
 
         expect(component.find('input').prop('value')).toEqual('random');
         expect(component.find('input').prop('maxLength')).toEqual(50);

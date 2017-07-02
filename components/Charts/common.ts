@@ -1,4 +1,4 @@
-import {IChartData} from './props';
+import {IChartData, ILineData, ISortedData} from './types';
 
 export const getData = (data: IChartData[]) => {
     const labels: string[] = [];
@@ -18,52 +18,31 @@ export const getData = (data: IChartData[]) => {
 
     return {labels, values, backgroundColors};
 
-    // for (const key in chartData) {
-
-    //     if (!chartData.hasOwnProperty(key)) {
-    //         continue;
-    //     }
-
-    //     const value = parseFloat(chartData[key].toString());
-
-    //     if (typeof key === 'string' && key === 'label'){
-    //         labels.push(key);
-    //     }
-
-    //     if (!isNaN(value)){
-    //         values.push(value);
-    //     }
-
-    //     if (typeof key === 'string' && key === 'backgroundColor'){
-    //         backgroundColors.push(chartData[key].toString());
-    //     }
-
-    //     console.log(key);
-    // }
 };
 
-// export const {
-//     id,
-//     title,
-//     titlePos,
-//     titleColor,
-//     titleFont,
-//     titleSize,
-//     titleStyle,
-//     doughnutSpace,
-//     legendPos,
-//     legendColor,
-//     legendSize,
-//     legendStyle,
-//     legendFont,
-//     boxWidth,
-//     spacing,
-//     size,
-//     // height,
-//     // width
-// } = this.props;
+export const getLineData = (data: ILineData[]) => {
 
-// export const position = legendPos;
+    const finishedData: ISortedData[] = [];
+
+    data.forEach((arrayData) => {
+        const label: string = arrayData.dataLabel;
+        const labels: string[] = [];
+        const values: number[] = [];
+
+        arrayData.dataset.forEach((chartData: any) => {
+            const value = parseFloat(chartData.value.toString());
+
+            labels.push(chartData.label);
+            values.push(value);
+        });
+
+        finishedData.push({label, labels, values});
+
+    });
+
+    return finishedData;
+
+};
 
 export const getTitle = (
         title?: string,
@@ -111,32 +90,3 @@ export const getLegend = (
         position
     };
 };
-
-// export const options = {
-//     cutoutPercentage: doughnutSpace,
-//     legend,
-//     title: chartTitle
-// };
-
-// export const getDataOptions = (
-//         chartData?: object,
-//         borderWidth?: number,
-//     ) => {
-//     return {
-//         datasets: [{
-//             backgroundColor: chartData.backgroundColors,
-//             borderWidth,
-//             data: chartData.values
-//         }],
-//         labels: chartData.labels
-//     };
-// };
-
-// export const data = {
-//     datasets: [{
-//         backgroundColor: chartData.backgroundColors,
-//         borderWidth: spacing,
-//         data: chartData.values
-//     }],
-//     labels: chartData.labels
-// };

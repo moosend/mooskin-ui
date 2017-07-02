@@ -24,6 +24,26 @@ describe('Bar Chart', () => {
         }
     ];
 
+    it('renders correctly', () => {
+
+        const tree = shallow(
+            <BarChart
+                id="bar"
+                data={users}
+                height={200}
+                width={400}
+                gridLinesX
+                gridLinesY
+                title={'Title'}
+                noLegend
+                maintainAspectRatio
+                label="Just a label"
+            />
+        );
+
+        expect(tree).toMatchSnapshot();
+    });
+
     test('renders properly into dom with data and props', () => {
 
         const component = shallow(<BarChart data={users} label="subscribers" gridLinesX gridLinesY/>);

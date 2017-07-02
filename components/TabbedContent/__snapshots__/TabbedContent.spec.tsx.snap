@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabbedContent renders Header properly according to snapshot 1`] = `
+<div
+  className="tab-header header activeHeader"
+  onClick={[Function]}
+>
+  <i
+    className="header-icon material-icons"
+  >
+    home
+  </i>
+  <i
+    className="header-icon iconclass"
+  />
+  <span>
+    title1
+  </span>
+</div>
+`;
+
+exports[`TabbedContent renders Tab properly according to snapshot 1`] = `
+<div
+  className="tab-content tab visible"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  asdasd1
+</div>
+`;
+
+exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] = `
+<div
+  className="tabbed-content-component container"
+>
+  <div
+    className="heading"
+  >
+    <Header
+      active={false}
+      iconClass="iconclass"
+      onClick={[Function]}
+      title="title1"
+    />
+    <Header
+      active={true}
+      materialIcon="home"
+      onClick={[Function]}
+      title="title2"
+    />
+    <Header
+      active={false}
+      onClick={[Function]}
+      title="title3"
+    />
+  </div>
+  <div
+    className="body"
+  >
+    <Tab
+      active={false}
+      iconClass="iconclass"
+      title="title1"
+    >
+      asdasd1
+    </Tab>
+    <Tab
+      active={true}
+      materialIcon="home"
+      title="title2"
+    >
+      asdasd2
+    </Tab>
+    <Tab
+      active={false}
+      className="classname"
+      title="title3"
+    >
+      asdasd3
+    </Tab>
+  </div>
+</div>
+`;

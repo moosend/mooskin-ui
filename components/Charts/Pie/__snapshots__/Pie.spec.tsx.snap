@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart renders correctly 1`] = `
+<div
+  id="pie"
+>
+  <Pie
+    data={
+      Object {
+        "datasets": Array [
+          Object {
+            "backgroundColor": Array [
+              "#5CCDDF",
+              "#F48770",
+              "#F2C14A",
+            ],
+            "borderWidth": 0,
+            "data": Array [
+              70,
+              120,
+              65,
+            ],
+          },
+        ],
+        "labels": Array [
+          "Doni",
+          "Gent",
+          "Shkumbin",
+        ],
+      }
+    }
+    height={200}
+    options={
+      Object {
+        "legend": Object {
+          "display": false,
+          "labels": Object {
+            "boxWidth": 30,
+            "fontColor": undefined,
+            "fontFamily": undefined,
+            "fontSize": 10,
+            "fontStyle": "italic",
+          },
+          "position": "bottom",
+        },
+        "maintainAspectRatio": true,
+        "title": Object {
+          "display": true,
+          "fontColor": undefined,
+          "fontFamily": undefined,
+          "fontSize": 20,
+          "fontStyle": "bold",
+          "position": "top",
+          "text": "Title",
+        },
+      }
+    }
+    width={200}
+  />
+</div>
+`;

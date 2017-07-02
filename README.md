@@ -4,12 +4,12 @@
 [![Build Status](https://travis-ci.org/moosend/mooskin-ui.svg?branch=master)](https://travis-ci.org/moosend/mooskin-ui)
 
 
-A collection of React components with pre-defined styles for Moosend UI.
+A collection of React components with pre-defined styles for Moosend UI, at the moment very much a work in progress.
 
 ___
 
  
-### Prequisites
+### Prerequisites
 
 Since it is a React Component Library, we recommend that you get to know [React](https://facebook.github.io/react/) before using MooSkin.  [Webpack](https://webpack.github.io/) is recommended as well, but any build tool that can handle importing css will work too.
 
@@ -123,14 +123,14 @@ As you may have noticed, for easy use, the components are named similar to norma
 Lets say we want to use the Select Component. First we have to import it
 
 ```
-import {Select} from 'mooskin';
+import {Select, Option} from 'mooskin';
 ```
 
 And then you can simply start using it by typing
 
 ```
 <Select dataLabel="countries" onChange={callback}>
-    <Option whatever>England</Option>
+    <Option whatever>England</Option> 				//<Select.Option whatever>England</Option> //this works too
     <Option whatever>Germany</Option>
 </Select>
 ```
@@ -142,6 +142,16 @@ import {Input} from 'mooskin'
 
 <Input placeholder="Your Name" />
 ```
+
+## Playground (try out)
+
+To try the Library components first hand yourself, clone the [Mooskin](https://github.com/moosend/mooskin-ui) repository first. Then install dependencies with
+
+```
+npm install
+```
+
+After installation run `start-development.bat` on the Mooskin root folder, wait for build to complete then go to `http://localhost:8080/`. Have fun playing with the components.
  
 ### Contribute
 

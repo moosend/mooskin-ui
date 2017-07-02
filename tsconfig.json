@@ -14,13 +14,16 @@
     "declarationDir": "lib",
     "noFallthroughCasesInSwitch": true,
     "pretty": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "components"
   ],
   "exclude": [
       "node_modules",
+      "lib",
+      "playground-dist",
       "components/**/*.spec.ts",
       "components/**/*.spec.tsx"
   ]

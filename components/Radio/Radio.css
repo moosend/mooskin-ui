@@ -1,0 +1,60 @@
+.radio {
+    border-radius: 8px;
+    color: #7b7b7b;
+    transition: 0.3s;
+    margin-bottom: 10px;
+}
+
+.disabledRadio, .disabledRadio label span, .disabledRadio label, .disabledRadio.radio:hover {
+    cursor: not-allowed;
+    color: #b2b2b2;
+}
+
+/*.radio:hover {
+    background: #5ccdde;
+    color: #fff;
+}*/
+
+.radio span {
+    cursor: pointer;
+    font-size: 1em;
+    margin-left: 10px;
+}
+
+.radio input[type='radio'] {
+    vertical-align: middle;
+    appearance:none;
+    cursor: pointer;
+    width:22px;
+    height:22px;
+    padding: 5px;
+    background: #fff;
+    border-radius:50%;
+    border:1px solid #5ccdde;
+    border-radius:50%;
+    margin:0 auto
+    
+}
+
+.radio input[type='radio']:hover {
+    box-shadow:0 0 3px 0px #5ccdde inset;
+}
+
+.radio input[type='radio']:checked:before {
+    background:#5ccdde;
+    content:'';
+    display:block;
+    width: 10px;
+    height: 10px;
+    border-radius:50%; 
+}
+
+.radio input[type='radio']:checked{
+    box-shadow:0 1px 2px 0px #5ccdde inset; 
+}
+
+.disabledRadio input[type='radio']:disabled {
+    cursor: not-allowed;
+    border: 1px solid #b2b2b2;
+    box-shadow:0 0 3px 0px #b2b2b2 inset;
+}
