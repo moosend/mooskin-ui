@@ -22,7 +22,7 @@ config.plugins.push(
     extractCSS,
     new HtmlWebpackPlugin({
         inject: false,
-        template: './index.html'
+        template: './playground/index.html'
     })
 );
 
