@@ -4,12 +4,12 @@
 [![Build Status](https://travis-ci.org/moosend/mooskin-ui.svg?branch=master)](https://travis-ci.org/moosend/mooskin-ui)
 
 
-A collection of React components with pre-defined styles for Moosend UI. At the moment very much a work in prgress.
+A collection of React components with pre-defined styles for Moosend UI, at the moment very much a work in progress.
 
 ___
 
  
-### Prequisites
+### Prerequisites
 
 Since it is a React Component Library, we recommend that you get to know [React](https://facebook.github.io/react/) before using MooSkin.  [Webpack](https://webpack.github.io/) is recommended as well, but any build tool that can handle importing css will work too.
 
