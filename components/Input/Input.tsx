@@ -33,6 +33,15 @@ export interface IProps {
     /** override input maxlength */
     maxlength?: number;
 
+    /** input label */
+    label?: string;
+
+    /** input description (small italic bottom) */
+    description?: string;
+
+    /** spacing between label and input */
+    spacing?: number;
+
     /** override input styles */
     style?: {[key: string]: string|number};
 
@@ -78,26 +87,39 @@ class Input extends React.Component<IProps, IInputState> {
             minlength,
             maxlength,
             style,
-            className
+            className,
+            label,
+            description,
         } = this.props;
 
         const disabledInput = disabled ? styles.disabledInput : '';
+        const spacing = label ?
+                        !this.props.spacing ?
+                        {marginLeft: '20px'} :
+                        {marginLeft: `${this.props.spacing}px`} :
+                        {};
 
         return (
-            <input
-                onChange={this.onChange}
-                id={id}
-                type={type}
-                name={name}
-                value={this.state.value}
-                placeholder={placeholder}
-                minLength={minlength}
-                maxLength={maxlength}
-                required={required}
-                disabled={disabled}
-                style={style}
-                className={`input-component ${styles.input} ${disabledInput} ${className}`}
-            />
+            <div className={`input-component ${className}`} style={style}>
+                <label className={styles.inputLabel}>
+                    {label}
+                    <input
+                        onChange={this.onChange}
+                        id={id}
+                        type={type}
+                        name={name}
+                        value={this.state.value}
+                        placeholder={placeholder}
+                        minLength={minlength}
+                        maxLength={maxlength}
+                        required={required}
+                        disabled={disabled}
+                        className={`input ${styles.input} ${disabledInput}`}
+                        style={spacing}
+                    />
+                    <i>{description}</i>
+                </label>
+            </div>
         );
     }
 

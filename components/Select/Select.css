@@ -110,3 +110,10 @@
     font-size: 16px;
     margin-bottom: 10px;
 }
+
+.selectContainer i{
+    display: block;
+    color: #b3b3b3;
+    font-size: .78571428571rem;
+    margin: 1px 0px 0px 3px;
+}

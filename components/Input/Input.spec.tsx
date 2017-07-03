@@ -21,6 +21,9 @@ describe('Input', () => {
                 minlength={10}
                 name="input name"
                 type="text"
+                description="just some input"
+                label="with a label ofc"
+                spacing={30}
                 required
             />
         );
@@ -59,8 +62,8 @@ describe('Input', () => {
     test('renders an input with custom css class and style', () => {
         const component = shallow(<Input style={{color: 'blue'}} className="input-group"/>);
 
-        expect(component.find('input').hasClass('input-group')).toBe(true);
-        expect(component.find('input').prop('style')).toEqual({color: 'blue'});
+        expect(component.find('div').hasClass('input-group')).toBe(true);
+        expect(component.find('div').prop('style')).toEqual({color: 'blue'});
     });
 
     test('onChange prop callback is called when a key is pressed', () => {

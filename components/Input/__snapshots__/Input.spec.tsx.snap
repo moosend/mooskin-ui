@@ -1,22 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input renders correctly 1`] = `
-<input
-  className="input-component input disabledInput myClass"
-  disabled={true}
-  id="input1"
-  maxLength={50}
-  minLength={10}
-  name="input name"
-  onChange={[Function]}
-  placeholder="input placeholder"
-  required={true}
+<div
+  className="input-component myClass"
   style={
     Object {
       "color": "blue",
     }
   }
-  type="text"
-  value="input value"
-/>
+>
+  <label
+    className="inputLabel"
+  >
+    with a label ofc
+    <input
+      className="input input disabledInput"
+      disabled={true}
+      id="input1"
+      maxLength={50}
+      minLength={10}
+      name="input name"
+      onChange={[Function]}
+      placeholder="input placeholder"
+      required={true}
+      style={
+        Object {
+          "marginLeft": "30px",
+        }
+      }
+      type="text"
+      value="input value"
+    />
+    <i>
+      just some input
+    </i>
+  </label>
+</div>
 `;

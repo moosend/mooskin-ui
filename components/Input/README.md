@@ -59,6 +59,8 @@ or just give it a custom style
 * `maxlength` - max number of characters allowed
 * `disabled` - input field should be disabled
 * `required` - input field is required
+* `description` - input description (small italic bottom)
+* `spacing` - spacing between label and input
 * `className` - css class
 * `dataLabel` - label what kind of data 
 * `style` - input field style
