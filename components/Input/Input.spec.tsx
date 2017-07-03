@@ -63,7 +63,7 @@ describe('Input', () => {
         const component = shallow(<Input style={{color: 'blue'}} className="input-group"/>);
 
         expect(component.find('div').hasClass('input-group')).toBe(true);
-        expect(component.find('div').prop('style')).toEqual({color: 'blue'});
+        expect(component.find('input').prop('style')).toEqual({color: 'blue'});
     });
 
     test('onChange prop callback is called when a key is pressed', () => {

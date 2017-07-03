@@ -98,9 +98,10 @@ class Input extends React.Component<IProps, IInputState> {
                         {marginLeft: '20px'} :
                         {marginLeft: `${this.props.spacing}px`} :
                         {};
+        const inputStyle = {...spacing, ...style};
 
         return (
-            <div className={`input-component ${className}`} style={style}>
+            <div className={`input-component ${className}`}>
                 <label className={styles.inputLabel}>
                     {label}
                     <input
@@ -115,7 +116,7 @@ class Input extends React.Component<IProps, IInputState> {
                         required={required}
                         disabled={disabled}
                         className={`input ${styles.input} ${disabledInput}`}
-                        style={spacing}
+                        style={inputStyle}
                     />
                     <i>{description}</i>
                 </label>

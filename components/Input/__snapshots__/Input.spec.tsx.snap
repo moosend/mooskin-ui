@@ -3,11 +3,6 @@
 exports[`Input renders correctly 1`] = `
 <div
   className="input-component myClass"
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
 >
   <label
     className="inputLabel"
@@ -25,6 +20,7 @@ exports[`Input renders correctly 1`] = `
       required={true}
       style={
         Object {
+          "color": "blue",
           "marginLeft": "30px",
         }
       }
