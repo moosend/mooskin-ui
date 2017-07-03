@@ -10,7 +10,7 @@ ___
 
 ### Demo
 
-** [Component Playground...](https://mooskin.herokuapp.com/) **
+**[Component Playground...](https://mooskin.herokuapp.com/)**
 
 ### Prerequisites
 
