@@ -7,6 +7,7 @@ describe('Input', () => {
 
     it('renders correctly', () => {
         const func = jest.fn();
+        Date.now = jest.fn(() => 1482363367071);
 
         const tree = shallow(
             <Input
