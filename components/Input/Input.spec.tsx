@@ -24,6 +24,8 @@ describe('Input', () => {
                 description="just some input"
                 label="with a label ofc"
                 spacing={30}
+                autofocus
+                autocomplete
                 required
             />
         );
@@ -62,7 +64,7 @@ describe('Input', () => {
     test('renders an input with custom css class and style', () => {
         const component = shallow(<Input style={{color: 'blue'}} className="input-group"/>);
 
-        expect(component.find('div').hasClass('input-group')).toBe(true);
+        expect(component.find('.inputContainer').hasClass('input-group')).toBe(true);
         expect(component.find('input').prop('style')).toEqual({color: 'blue'});
     });
 

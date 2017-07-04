@@ -42,6 +42,12 @@ export interface IProps {
     /** spacing between label and input */
     spacing?: number;
 
+    /** toggle autocomplete specified input */
+    autocomplete?: boolean;
+
+    /** autofocus specified input */
+    autofocus?: boolean;
+
     /** override input styles */
     style?: {[key: string]: string|number};
 
@@ -67,8 +73,12 @@ class Input extends React.Component<IProps, IInputState> {
         style: {}
     };
 
+    private id: string;
+
     constructor(props: IProps){
         super(props);
+
+        this.id = this.props.id || this.generateId();
 
         this.state = {
             value: this.props.value ? this.props.value : ''
@@ -78,7 +88,6 @@ class Input extends React.Component<IProps, IInputState> {
     public render(){
 
         const {
-            id,
             disabled,
             required,
             type,
@@ -89,24 +98,27 @@ class Input extends React.Component<IProps, IInputState> {
             style,
             className,
             label,
+            autofocus,
             description,
         } = this.props;
 
         const disabledInput = disabled ? styles.disabledInput : '';
         const spacing = label ?
                         !this.props.spacing ?
-                        {marginLeft: '20px'} :
-                        {marginLeft: `${this.props.spacing}px`} :
-                        {};
-        const inputStyle = {...spacing, ...style};
+                        {marginRight: '20px'} :
+                        {marginRight: `${this.props.spacing}px`} :
+                        {display: 'none'};
+        const autocomplete = !this.props.autocomplete ? 'off' : 'on';
 
         return (
-            <div className={`input-component ${className}`}>
-                <label className={styles.inputLabel}>
+            <div className={`input-component ${className} ${styles.inputContainer}`}>
+                <label className={styles.inputLabel} style={spacing} htmlFor={this.id}>
                     {label}
+                </label>
+                <div>
                     <input
                         onChange={this.onChange}
-                        id={id}
+                        id={this.id}
                         type={type}
                         name={name}
                         value={this.state.value}
@@ -116,10 +128,12 @@ class Input extends React.Component<IProps, IInputState> {
                         required={required}
                         disabled={disabled}
                         className={`input ${styles.input} ${disabledInput}`}
-                        style={inputStyle}
+                        style={style}
+                        autoFocus={autofocus}
+                        autoComplete={autocomplete}
                     />
                     <i>{description}</i>
-                </label>
+                </div>
             </div>
         );
     }
@@ -131,6 +145,9 @@ class Input extends React.Component<IProps, IInputState> {
         this.props.onChange(e, {value: this.props.value, dataLabel: this.props.dataLabel});
     }
 
+    private generateId = () => {
+        return Date.now().toString();
+    }
 }
 
 export default Input;
