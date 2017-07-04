@@ -11,6 +11,7 @@ import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
+import TextArea from './examples/TextArea.example';
 import TopNotification from './examples/TopNotification.example';
 
 export default (props: any) => {
@@ -19,6 +20,8 @@ export default (props: any) => {
             <Button />
             <br/><br/>
             <Input />
+            <br/><br/>
+            <TextArea />
             <br/><br/>
             <Select />
             <br/><br/>
