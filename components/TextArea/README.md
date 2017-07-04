@@ -61,6 +61,7 @@ or just give it a custom style
 * `required` - textarea field is required
 * `description` - textarea description (small italic bottom)
 * `spacing` - spacing between label and textarea
+* `readonly` - make textarea readonly
 * `className` - css class
 * `dataLabel` - label what kind of data 
 * `style` - textarea field style

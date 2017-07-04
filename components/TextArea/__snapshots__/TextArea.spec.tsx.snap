@@ -2,17 +2,20 @@
 
 exports[`TextArea renders correctly 1`] = `
 <div
-  className="textarea-component myClass"
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
+  className="textarea-component myClass areaContainer"
 >
   <label
     className="textareaLabel"
+    htmlFor="textarea"
+    style={
+      Object {
+        "marginRight": "30px",
+      }
+    }
   >
     with a label ofc
+  </label>
+  <div>
     <textarea
       className="textarea textarea disabledTextArea"
       cols={40}
@@ -28,7 +31,6 @@ exports[`TextArea renders correctly 1`] = `
       style={
         Object {
           "color": "blue",
-          "marginLeft": "30px",
         }
       }
       value="textarea value"
@@ -36,6 +38,6 @@ exports[`TextArea renders correctly 1`] = `
     <i>
       just some textarea
     </i>
-  </label>
+  </div>
 </div>
 `;

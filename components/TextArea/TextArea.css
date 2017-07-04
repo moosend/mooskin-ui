@@ -1,5 +1,9 @@
+.areaContainer{
+    display: inline-flex;
+}
+
 .textarea{
-    padding: 15px;
+    padding: 7px;
     font-family: Arial,sans-serif;
     border: 0;
     color: #9e9e9e;
@@ -29,13 +33,13 @@
     color: #6b6b6b;
     font-size: 13px;
     font-size: .92857142857rem;
-    vertical-align: top;
+    padding-top: 7px;
     cursor: pointer;
 }
 
-.textareaLabel i{
+.areaContainer i{
     display: block;
     color: #b3b3b3;
     font-size: .78571428571rem;
-    margin-left: 7px;
+    margin-left: 3px;
 }

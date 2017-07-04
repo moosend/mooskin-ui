@@ -7,6 +7,7 @@ describe('TextArea', () => {
 
     it('renders correctly', () => {
         const func = jest.fn();
+        Date.now = jest.fn(() => 1482363367071);
 
         const tree = shallow(
             <TextArea
@@ -64,7 +65,7 @@ describe('TextArea', () => {
     test('renders an textarea with custom css class and style', () => {
         const component = shallow(<TextArea style={{color: 'blue'}} className="textarea-group"/>);
 
-        expect(component.find('div').hasClass('textarea-group')).toBe(true);
+        expect(component.find('.areaContainer').hasClass('textarea-group')).toBe(true);
         expect(component.find('textarea').prop('style')).toEqual({color: 'blue'});
     });
 
