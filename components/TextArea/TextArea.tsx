@@ -45,6 +45,9 @@ export interface ITextAreaProps {
     /** spacing between label and textarea */
     spacing?: number;
 
+    /** toggle readonly textarea */
+    readonly?: boolean;
+
     /** override textarea styles */
     style?: {[key: string]: string|number};
 
@@ -70,8 +73,12 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
         style: {}
     };
 
+    private id: string;
+
     constructor(props: ITextAreaProps){
         super(props);
+
+        this.id = this.props.id || this.generateId();
 
         this.state = {
             value: this.props.value ? this.props.value : ''
@@ -81,7 +88,6 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
     public render(){
 
         const {
-            id,
             disabled,
             required,
             name,
@@ -93,24 +99,26 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
             label,
             cols,
             rows,
+            readonly,
             description,
         } = this.props;
 
         const disabledtextarea = disabled ? styles.disabledTextArea : '';
         const spacing = label ?
                         !this.props.spacing ?
-                        {marginLeft: '5px'} :
-                        {marginLeft: `${this.props.spacing}px`} :
-                        {};
-        const textareaStyle = {...spacing, ...style};
+                        {marginRight: '5px'} :
+                        {marginRight: `${this.props.spacing}px`} :
+                        {display: 'none'};
 
         return (
-            <div className={`textarea-component ${className}`} style={style}>
-                <label className={styles.textareaLabel}>
+            <div className={`textarea-component ${className} ${styles.areaContainer}`}>
+                <label className={styles.textareaLabel} style={spacing} htmlFor={this.id}>
                     {label}
+                </label>
+                <div>
                     <textarea
+                        id={this.id}
                         onChange={this.onChange}
-                        id={id}
                         name={name}
                         value={this.state.value}
                         placeholder={placeholder}
@@ -120,11 +128,12 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
                         maxLength={maxlength}
                         required={required}
                         disabled={disabled}
+                        readOnly={readonly}
                         className={`textarea ${styles.textarea} ${disabledtextarea}`}
-                        style={textareaStyle}
+                        style={style}
                     />
                     <i>{description}</i>
-                </label>
+                </div>
             </div>
         );
     }
@@ -134,6 +143,10 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange(e, {value: this.props.value, dataLabel: this.props.dataLabel});
+    }
+
+    private generateId = () => {
+        return Date.now().toString();
     }
 
 }
