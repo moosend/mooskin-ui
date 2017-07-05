@@ -17,7 +17,7 @@
 
 .checkbox span {
     cursor: pointer;
-    font-size: 1em;
+    font-size: 0.875rem;
     margin-left: 5px;
 }
 
@@ -25,6 +25,7 @@
     vertical-align: middle;
     appearance:none;
     cursor: pointer;
+    font-size: 1.3125rem;    
 }
 
 .checkbox input[type='checkbox']::before {
