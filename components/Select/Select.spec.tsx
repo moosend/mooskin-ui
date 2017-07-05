@@ -5,7 +5,7 @@ import {shallow} from 'enzyme';
 
 describe('Select', () => {
 
-    it('renders Select correctly', () => {
+    test('renders Select correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(
@@ -25,7 +25,7 @@ describe('Select', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders Option correctly', () => {
+    test('renders Option correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(

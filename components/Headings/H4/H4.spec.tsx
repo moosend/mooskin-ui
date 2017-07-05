@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 
 describe('H4', () => {
 
-    it('renders correctly', () => {
+    test('renders correctly', () => {
 
         const tree = shallow(
             <H4

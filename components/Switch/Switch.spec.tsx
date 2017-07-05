@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 
 describe('Switch', () => {
 
-    it('renders correctly', () => {
+    test('renders correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(
