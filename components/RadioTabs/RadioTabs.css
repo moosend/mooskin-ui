@@ -12,7 +12,6 @@
     border-radius: 8px;
     color: #7b7b7b;
     background: #f2f2f2;
-    border-radius: 8px;
     transition: 0.3s;
 }
 
@@ -40,6 +39,7 @@
     height: 100%;
     display: block; 
     border-radius: 8px;
+    font-size: 0.875rem;
 }
 
 .checkedRadio {
@@ -62,7 +62,7 @@
 
 .headerVertical {
     flex-direction: column;
-    width: 60%
+    width: 50%
 }
 
 .headerVertical > .radio + .radio{
@@ -95,6 +95,7 @@
     border-radius: 8px;
     color: #7b7b7b;
     border: 1px solid #f2f2f2;
+    font-size: 0.875rem;
 }
 
 .radio span {
