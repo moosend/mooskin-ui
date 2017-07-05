@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 
 describe('Input', () => {
 
-    it('renders correctly', () => {
+    test('renders correctly', () => {
         const func = jest.fn();
         Date.now = jest.fn(() => 1482363367071);
 

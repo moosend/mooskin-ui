@@ -6,7 +6,7 @@ import {shallow} from 'enzyme';
 
 describe('CheckBox', () => {
 
-    it('renders CheckboxGroup correctly', () => {
+    test('renders CheckboxGroup correctly', () => {
         const func = jest.fn();
 
         const checked = {
@@ -30,7 +30,7 @@ describe('CheckBox', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders CheckBox correctly', () => {
+    test('renders CheckBox correctly', () => {
         const func = jest.fn();
         Date.now = jest.fn(() => 1482363367071);
 

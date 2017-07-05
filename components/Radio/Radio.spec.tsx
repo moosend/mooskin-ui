@@ -6,7 +6,7 @@ import {shallow} from 'enzyme';
 
 describe('Radio', () => {
 
-    it('renders RadioGroup correctly', () => {
+    test('renders RadioGroup correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(
@@ -26,7 +26,7 @@ describe('Radio', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders Radio correctly', () => {
+    test('renders Radio correctly', () => {
         const func = jest.fn();
         Date.now = jest.fn(() => 1482363367071);
 
