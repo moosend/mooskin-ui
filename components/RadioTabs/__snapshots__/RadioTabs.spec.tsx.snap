@@ -57,7 +57,7 @@ exports[`RadioTabs renders RadioTabs properly according to snapshot 1`] = `
     />
   </div>
   <div
-    className="content"
+    className="contentHorizontal"
   >
     <Content
       active={false}

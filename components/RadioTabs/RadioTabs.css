@@ -5,7 +5,7 @@
 
 .containerVertical {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 5fr;
     grid-gap: 10px;
 }
 
@@ -22,11 +22,15 @@
 }
 
 .content {
-    padding: 10px;
-    border-radius: 8px;
+    padding-left: 10px;
     color: #7b7b7b;
-    border: 1px solid #f2f2f2;
     font-size: 0.875rem;
+    border-left: 1px solid #5ccdde;
+}
+
+.contentHorizontal{
+    padding-top: 10px;
+    border-top: 1px solid #5ccdde;
 }
 
 .radio span {
