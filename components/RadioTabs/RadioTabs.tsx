@@ -52,8 +52,12 @@ class RadioTabs extends React.Component<IRadioTabsProps, IRadioTabsState> {
 
     public static Content: React.StatelessComponent<IContentProps>;
 
+    private name: string;
+
     constructor(props: IRadioTabsProps){
         super(props);
+
+        this.name = this.generateName();
 
         this.state = {
             activeRadio: this.getActiveRadio()
@@ -80,7 +84,7 @@ class RadioTabs extends React.Component<IRadioTabsProps, IRadioTabsState> {
     }
 
     public onClickRadio = (radioIndex: number) => {
-        return (e: React.MouseEvent<HTMLElement>) => {
+        return (e: React.MouseEvent<HTMLDivElement>) => {
             this.setState({activeRadio: radioIndex});
         };
     }
@@ -99,7 +103,7 @@ class RadioTabs extends React.Component<IRadioTabsProps, IRadioTabsState> {
                         title={child.props.title}
                         active={this.state.activeRadio === index}
                         onClick={this.onClickRadio(index)}
-                        name={this.generateName()}
+                        name={this.name}
                     />
                 );
 
@@ -154,7 +158,7 @@ export interface IHeaderProps {
     title: string;
     active: boolean;
     name?: string;
-    onClick: (e: React.MouseEvent<HTMLElement>) => void;
+    onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
 export const Header: React.StatelessComponent<IHeaderProps> = (props) => {

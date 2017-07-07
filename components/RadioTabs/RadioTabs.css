@@ -37,6 +37,7 @@
     margin-left: 10px;
     cursor: pointer;
     vertical-align: middle;
+    user-select: none;
 }
 
 .radio {
@@ -70,7 +71,7 @@
     border-color: #95dee9;
 }
 
-.radio input[type='radio']:checked:before {
+.radio input[type='radio']:checked::after {
     background:#5ccdde;
     content:'';
     display:block;
