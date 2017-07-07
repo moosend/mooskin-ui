@@ -32,7 +32,7 @@ exports[`RadioTabs renders Header properly according to snapshot 1`] = `
 
 exports[`RadioTabs renders RadioTabs properly according to snapshot 1`] = `
 <div
-  className="radio-tabs-component container"
+  className="radio-tabs-component containerHorizontal"
 >
   <div
     className="headerHorizontal"

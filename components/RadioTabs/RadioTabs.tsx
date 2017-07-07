@@ -64,7 +64,7 @@ class RadioTabs extends React.Component<IRadioTabsProps, IRadioTabsState> {
 
         const {headers, bodies} = this.makeContent();
         const headerStyles = !this.props.horizontal ? styles.headerVertical : styles.headerHorizontal;
-        const containerStyles = !this.props.horizontal ? styles.containerVertical : styles.container;
+        const containerStyles = !this.props.horizontal ? styles.containerVertical : styles.containerHorizontal;
 
         return (
             <div className={`radio-tabs-component ${containerStyles}`}>
