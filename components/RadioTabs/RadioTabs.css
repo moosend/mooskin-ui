@@ -62,6 +62,10 @@
     border: 1px solid #5ccdde;
 }
 
+.radio:hover input[type='radio']{
+    border-color: #95dee9;
+}
+
 .radio input[type='radio']:checked:before {
     background:#5ccdde;
     content:'';
@@ -90,6 +94,11 @@
 
 .checkedRadio:hover {
     background: #5ccdde;
+    border-color: #5ccdde;
+}
+
+.checkedRadio:hover input[type='radio']{
+    border-color: #5ccdde;
 }
 
 .visible {
