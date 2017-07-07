@@ -153,6 +153,11 @@ Clone the [Mooskin](https://github.com/moosend/mooskin-ui) repository first. The
 ```
 npm install
 ```
+or
+
+```
+yarn install
+```
 
 After installation run `start-development.bat` on the Mooskin root folder, wait for build to complete then go to `http://localhost:8080/`. Have fun playing with the components.
 
