@@ -17,6 +17,7 @@ describe('RadioTabs', () => {
             </RadioTabs>
         );
 
+        expect(component.find('Header').first().hasClass('columnTemplateInf')).toBeTruthy;
         expect(component.find('Header').length).toBe(3);
         expect(component.find('Content').length).toBe(3);
 

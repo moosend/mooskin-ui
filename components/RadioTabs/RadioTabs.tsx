@@ -70,10 +70,11 @@ class RadioTabs extends React.Component<IRadioTabsProps, IRadioTabsState> {
         const containerStyles = !this.props.horizontal ? styles.containerVertical : styles.containerHorizontal;
         const headerStyles = !this.props.horizontal ? styles.headerVertical : styles.headerHorizontal;
         const contentStyles = !this.props.horizontal ? styles.content : styles.contentHorizontal;
+        const columnTemplate = !this.props.horizontal ? '' : this.columnTemplate(headers.length);
 
         return (
             <div className={`radio-tabs-component ${containerStyles}`}>
-                <div className={headerStyles}>
+                <div className={`${headerStyles} ${columnTemplate}`}>
                     {headers}
                 </div>
                 <div className={contentStyles}>
@@ -133,6 +134,21 @@ class RadioTabs extends React.Component<IRadioTabsProps, IRadioTabsState> {
         }
 
         return activeRadio;
+    }
+
+    private columnTemplate = (headers: number) => {
+        if (headers === 1) {
+            return styles.columnTemplateOne;
+        } else if (headers === 2){
+            return styles.columnTemplateTwo;
+        } else {
+            if (headers === 6 || headers % 2 === 1){
+                return styles.columnTemplateInf;
+            } else {
+                return styles.columnTemplateInfEven;
+            }
+        }
+
     }
 
     private generateName = () => {

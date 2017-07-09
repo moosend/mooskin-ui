@@ -35,7 +35,7 @@ exports[`RadioTabs renders RadioTabs properly according to snapshot 1`] = `
   className="radio-tabs-component containerHorizontal"
 >
   <div
-    className="headerHorizontal"
+    className="headerHorizontal columnTemplateInf"
   >
     <Header
       active={false}
