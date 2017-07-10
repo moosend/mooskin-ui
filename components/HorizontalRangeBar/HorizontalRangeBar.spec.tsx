@@ -1,3 +1,6 @@
+// tslint:disable-next-line:no-reference
+/// <reference path="../custom.d.ts"/>
+
 import * as React from 'react';
 import HorizontalRangeBar from './HorizontalRangeBar';
 
