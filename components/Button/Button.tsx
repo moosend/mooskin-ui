@@ -19,7 +19,7 @@ export interface IButtonProps {
     style?: {[key: string]: string};
 
     /** callback that is called when the button is clicked */
-    onClick?: (e?: React.MouseEvent<HTMLInputElement>) => void;
+    onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
 
     /** children can only be a string */
     children?: string;
@@ -54,7 +54,7 @@ export default class Button extends React.Component<IButtonProps, {}> {
         );
     }
 
-    private onClick = (e: React.MouseEvent<HTMLInputElement>) => {
+    private onClick = (e: React.MouseEvent<HTMLElement>) => {
         !this.props.disabled && this.props.onClick && this.props.onClick(e);
     }
 }
