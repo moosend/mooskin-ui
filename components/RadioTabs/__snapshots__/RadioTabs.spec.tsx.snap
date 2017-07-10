@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioTabs renders Content properly according to snapshot 1`] = `
+<div
+  className="radio-content visible"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  Some Content
+</div>
+`;
+
+exports[`RadioTabs renders Header properly according to snapshot 1`] = `
+<div
+  className="radio-header radio activeHeader checkedRadio"
+  onClick={[Function]}
+>
+  <label>
+    <input
+      defaultChecked={true}
+      type="radio"
+    />
+    <span>
+      title1
+    </span>
+  </label>
+</div>
+`;
+
+exports[`RadioTabs renders RadioTabs properly according to snapshot 1`] = `
+<div
+  className="radio-tabs-component containerHorizontal"
+>
+  <div
+    className="headerHorizontal columnTemplateInf"
+  >
+    <Header
+      active={false}
+      name="1482363367071"
+      onClick={[Function]}
+      title="title1"
+    />
+    <Header
+      active={true}
+      name="1482363367071"
+      onClick={[Function]}
+      title="title2"
+    />
+    <Header
+      active={false}
+      name="1482363367071"
+      onClick={[Function]}
+      title="title3"
+    />
+  </div>
+  <div
+    className="contentHorizontal"
+  >
+    <Content
+      active={false}
+      title="title1"
+    >
+      Content1
+    </Content>
+    <Content
+      active={true}
+      title="title2"
+    >
+      Content2
+    </Content>
+    <Content
+      active={false}
+      className="classname"
+      title="title3"
+    >
+      Content3
+    </Content>
+  </div>
+</div>
+`;
