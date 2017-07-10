@@ -8,7 +8,10 @@ A collection of React components with pre-defined styles for Moosend UI, at the 
 
 ___
 
- 
+### Demo
+
+**[Component Playground...](https://mooskin.herokuapp.com/)**
+
 ### Prerequisites
 
 Since it is a React Component Library, we recommend that you get to know [React](https://facebook.github.io/react/) before using MooSkin.  [Webpack](https://webpack.github.io/) is recommended as well, but any build tool that can handle importing css will work too.
@@ -143,15 +146,22 @@ import {Input} from 'mooskin'
 <Input placeholder="Your Name" />
 ```
 
-## Playground (try out)
+## Playground (development)
 
-To try the Library components first hand yourself, clone the [Mooskin](https://github.com/moosend/mooskin-ui) repository first. Then install dependencies with
+Clone the [Mooskin](https://github.com/moosend/mooskin-ui) repository first. Then install dependencies with
 
 ```
 npm install
 ```
+or
+
+```
+yarn install
+```
 
 After installation run `start-development.bat` on the Mooskin root folder, wait for build to complete then go to `http://localhost:8080/`. Have fun playing with the components.
+
+If you want to add a new component that is in development to the playground, create an example component in `/playground/examples/` which returns an instance of the component in development. Add the example to `/playground/App.tsx` and you're good to go.
  
 ### Contribute
 
