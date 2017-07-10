@@ -41,5 +41,8 @@ exports[`Radio renders RadioGroup correctly 1`] = `
   >
     Select a plan
   </H2>
+  <div
+    className=""
+  />
 </div>
 `;

@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckBox renders CheckBox correctly 1`] = `
+<div
+  className="checkbox-component checkbox disabledCheckbox myClass"
+  htmlFor="checkbox1"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <label>
+    <input
+      className="material-icons"
+      defaultChecked={true}
+      disabled={true}
+      onClick={[Function]}
+      type="checkbox"
+      value="CheckBox1"
+    />
+    <span>
+      This is CheckBox 1
+    </span>
+    <br />
+    <i />
+  </label>
+</div>
+`;
+
+exports[`CheckBox renders CheckboxGroup correctly 1`] = `
+<div
+  className="checkboxgroup-component myClass"
+  id="checkbox1"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <H2
+    className=""
+    style={Object {}}
+  >
+    Select a plan
+  </H2>
+  <div
+    className="horizontal"
+  />
+</div>
+`;

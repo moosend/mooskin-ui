@@ -61,7 +61,7 @@ const cb = (event, {dataLabel, value}) => {
 Custom style, className or id can be given just like any other component in this library 
 
 ```
-<Select style={yourStyle} id="id" className="className" >
+<RadioGroup style={yourStyle} id="id" className="className" >
 ```
 
 ## Supported attributes for RadioGroup
@@ -76,7 +76,7 @@ Custom style, className or id can be given just like any other component in this
 * `style` - element style
 * `title` - optional title for the radio group
 
-## Supported attributes for Option
+## Supported attributes for Radio
 
 * `id` - id of the element (important of you prefer to click on labels to select the value)
 * `value` - value for the option

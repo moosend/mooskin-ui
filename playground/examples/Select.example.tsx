@@ -25,7 +25,7 @@ export default (props: any) => {
                 <Option value="option5">Option5</Option>
             </Select>
             <br/>
-            <Select onChange={onClick} selected="option" dataLabel="plan" >
+            <Select onChange={onClick} selected="option" dataLabel="plan" description="Select description goes here">
                 <Option value="option1">Option1</Option>
             </Select>
         </fieldset>

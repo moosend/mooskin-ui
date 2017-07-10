@@ -34,6 +34,9 @@ export interface ISelectProps {
     /** loading indicator */
     isLoading?: boolean;
 
+    /** select description (small italic bottom) */
+    description?: string;
+
     /** override button styles */
     style?: {[key: string]: string|number};
 
@@ -126,6 +129,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             {options}
                         </ul>
                     </div>
+                    <i>{this.props.description}</i>
                 </div>
             </div>
         );
