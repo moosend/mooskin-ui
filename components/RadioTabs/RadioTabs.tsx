@@ -50,7 +50,7 @@ class RadioTabs extends React.Component<IRadioTabsProps, IRadioTabsState> {
         style: {}
     };
 
-    public static Content: React.StatelessComponent<IContentProps>;
+    public static RadioTabContent: React.StatelessComponent<IContentProps>;
 
     private name: string;
 
@@ -156,7 +156,7 @@ class RadioTabs extends React.Component<IRadioTabsProps, IRadioTabsState> {
     }
 }
 
-export const Content: React.StatelessComponent<IContentProps> = (props) => {
+export const RadioTabContent: React.StatelessComponent<IContentProps> = (props) => {
 
     const displayClass = !props.active ? styles.invisible : styles.visible;
 

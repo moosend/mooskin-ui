@@ -1,26 +1,26 @@
 import * as React from 'react';
-import Accordion, {Content, Header} from './Accordion';
+import Accordion, {AccordionContent, Header} from './RadioAccordion';
 
 import { mount, render, shallow } from 'enzyme';
 
-describe('Accordion', () => {
+describe('RadioAccordion', () => {
 
-    test('renders Accordion properly according to snapshot', () => {
+    test('renders RadioAccordion properly according to snapshot', () => {
 
         Date.now = jest.fn(() => 1482363367071);
 
         const component = shallow(
             <Accordion id="5" className="mySwitch" style={{color: 'black'}}>
-                <Content title="title1">Content1</Content>
-                <Content title="title2" active>Content2</Content>
-                <Content title="title3" className="classname">Content3</Content>
+                <AccordionContent title="title1">Content1</AccordionContent>
+                <AccordionContent title="title2" active>Content2</AccordionContent>
+                <AccordionContent title="title3" className="classname">Content3</AccordionContent>
             </Accordion>
         );
 
         expect(component.find('Header').length).toBe(3);
-        expect(component.find('Content').length).toBe(3);
+        expect(component.find(AccordionContent).length).toBe(3);
 
-        expect(component.find('Content').first().prop('children')).toBe('Content1');
+        expect(component.find(AccordionContent).first().prop('children')).toBe('Content1');
 
         expect(component).toMatchSnapshot();
     });
@@ -28,13 +28,13 @@ describe('Accordion', () => {
     test('renders Content properly according to snapshot', () => {
 
         const component = shallow(
-            <Content
+            <AccordionContent
                 title="title1"
                 style={{color: 'blue'}}
                 active
             >
                 Some Content
-            </Content>
+            </AccordionContent>
         );
 
         expect(component).toMatchSnapshot();
@@ -59,8 +59,8 @@ describe('Accordion', () => {
 
         const component = mount(
             <Accordion>
-                <Content title="title1">Content1</Content>
-                <Content title="title2" active>Content2</Content>
+                <AccordionContent title="title1">Content1</AccordionContent>
+                <AccordionContent title="title2" active>Content2</AccordionContent>
             </Accordion>
         );
 

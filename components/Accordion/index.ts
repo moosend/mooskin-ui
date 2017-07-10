@@ -1,6 +1,6 @@
-import Accordion, {Content} from './Accordion';
+import RadioAccordion, {AccordionContent} from './RadioAccordion';
 
-Accordion.Content = Content;
+RadioAccordion.AccordionContent = AccordionContent;
 
-export default Accordion;
-export {Content};
+export default RadioAccordion;
+export {AccordionContent};

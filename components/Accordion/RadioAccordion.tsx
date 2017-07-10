@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import styles from './Accordion.css';
+import styles from './RadioAccordion.css';
 
 export interface IAccordionProps {
 
@@ -44,7 +44,7 @@ export interface IAccordionState {
     active?: number;
 }
 
-export default class Accordion extends React.Component<IAccordionProps, IAccordionState>{
+export default class RadioAccordion extends React.Component<IAccordionProps, IAccordionState>{
 
     public static defaultProps = {
         active: 0,
@@ -52,7 +52,7 @@ export default class Accordion extends React.Component<IAccordionProps, IAccordi
         style: {}
     };
 
-    public static Content: React.StatelessComponent<IContentProps>;
+    public static AccordionContent: React.StatelessComponent<IContentProps>;
 
     private name: string;
 
@@ -130,7 +130,7 @@ export default class Accordion extends React.Component<IAccordionProps, IAccordi
     }
 }
 
-export const Content: React.StatelessComponent<IContentProps> = (props) => {
+export const AccordionContent: React.StatelessComponent<IContentProps> = (props) => {
 
     const displayClass = !props.active ? styles.invisible : styles.visible;
 
