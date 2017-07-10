@@ -3,7 +3,7 @@ var config = require('./webpack.config.common');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var  ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var distFolder = 'playground-dist';
+var distFolder = 'dist';
 var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/style.css", allChunks: true});
 
 
