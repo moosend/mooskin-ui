@@ -114,7 +114,7 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
         );
     }
 
-    private onClick = (value: string) => {
+    private onClick = (value: {checked: boolean, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onChange && this.props.onChange(e, {value, dataLabel: this.props.dataLabel});
         };
@@ -123,10 +123,13 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
     private assignCheckBoxes = () => {
         return React.Children.map(this.props.children, (child) => {
             if (React.isValidElement<ICheckBoxProps>(child)){
+                const checked = child.props.checked ? true : false;
                 const extraProps: Partial<ICheckBoxProps> = {
                     horizontal: this.props.horizontal,
                     name: this.name,
-                    onClick: this.onClick(child.props.value),
+                    onClick: child.props.onClick ?
+                            child.props.onClick :
+                            this.onClick({checked, label: child.props.value}),
                     spacing: this.props.spacing
                 };
                 return (
@@ -155,7 +158,7 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     {marginBottom: `${props.spacing}px`} : {};
     const classes = `checkbox-component ${styles.checkbox} ${disabledStyles} ${props.className}`;
 
-    const onCheckBoxClick = (value: boolean) => {
+    const onCheckBoxClick = (value: {checked: boolean, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             !props.disabled && props.onClick && props.onClick(e, {value, dataLabel: props.dataLabel});
         };
@@ -172,7 +175,7 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     name={props.name}
                     type="checkbox"
                     value={props.value}
-                    onClick={onCheckBoxClick(checked)}
+                    onClick={onCheckBoxClick({checked, label: props.value})}
                     disabled={props.disabled}
                     defaultChecked={checked}
                     className={'material-icons'}

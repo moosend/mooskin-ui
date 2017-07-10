@@ -10,6 +10,10 @@ export default (props: any) => {
         console.log(e.target);
     };
 
+    const onClick = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
+        console.log('Its own onclick event function');
+    };
+
     return (
         <fieldset style={{display: 'inline-block'}}>
             <legend>CheckBox Element</legend>
@@ -18,7 +22,7 @@ export default (props: any) => {
                 title="Vertical checkboxes"
                 dataLabel="horizontal"
             >
-                <CheckBox value={'Checkbox1'} checked/>
+                <CheckBox value={'Checkbox1'} checked onClick={onClick}/>
                 <CheckBox value={'Checkbox2'} label="This one has a label" description="Feels lonely to be unchecked"/>
                 <CheckBox value={'Checkbox3'} label="This is disabled" disabled description="It's disabled" checked/>
             </CheckboxGroup>

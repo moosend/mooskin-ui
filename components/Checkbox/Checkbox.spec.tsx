@@ -105,16 +105,17 @@ describe('CheckBox', () => {
 
     test('callback func is called when checkbox is clicked', () => {
         const func = jest.fn();
+        const func2 = jest.fn();
 
         const component = shallow(
             <CheckboxGroup onChange={func} >
-                <CheckBox value="checkbox1" />
+                <CheckBox value="checkbox1" onClick={func2}/>
             </CheckboxGroup>
         );
 
         expect(component.find(CheckBox).simulate('click'));
 
-        expect(func).toHaveBeenCalled();
+        expect(func2).toHaveBeenCalled();
     });
 
     test('callback func is not called when a disabled checkbox is clicked', () => {
