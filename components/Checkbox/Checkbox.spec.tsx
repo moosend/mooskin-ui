@@ -53,14 +53,14 @@ describe('CheckBox', () => {
 
         const component = shallow(
             <CheckboxGroup className="myClass" dataLabel="plan">
-                <CheckBox value="checkbox1" id={'main'} label="dem labels" checked/>
+                <CheckBox value="checkbox1" label="dem labels" checked/>
             </CheckboxGroup>
         );
 
         expect(component.find(CheckBox).length).toBe(1);
         expect(component.find(CheckBox).prop('value')).toEqual('checkbox1');
         expect(component.find(CheckBox).prop('label')).toEqual('dem labels');
-        expect(component.find(CheckBox).prop('id')).toEqual('main');
+        expect(component.find(CheckBox).prop('id')).toEqual('0');
         expect(component.find(CheckBox).prop('checked')).toBeTruthy;
         expect(component.find('.myClass')).toBeTruthy;
         // expect(component.find('.myClass').prop('dataLabel')).toEqual('plan');
