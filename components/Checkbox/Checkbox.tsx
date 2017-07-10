@@ -121,11 +121,12 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
     }
 
     private assignCheckBoxes = () => {
-        return React.Children.map(this.props.children, (child) => {
+        return React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement<ICheckBoxProps>(child)){
                 const checked = child.props.checked ? true : false;
                 const extraProps: Partial<ICheckBoxProps> = {
                     horizontal: this.props.horizontal,
+                    id: index.toString(),
                     name: this.name,
                     onClick: child.props.onClick ?
                             child.props.onClick :
@@ -133,7 +134,7 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
                     spacing: this.props.spacing
                 };
                 return (
-                    <div>
+                    <div key={index}>
                         {React.cloneElement(child, extraProps)}
                     </div>
                 );
