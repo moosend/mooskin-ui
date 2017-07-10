@@ -6,7 +6,8 @@
 
 .innerDiv{
     height: 100%;
-    font-size:16px;
+    /*font-size: 16px;*/
+    font-size: 1rem;
     color: var(--inputColor);
     vertical-align: middle;
     padding: 15px;
@@ -38,7 +39,8 @@
 .labelContainer{
     font-family: var(--inputFontFamily);
     color: var(--inputColor);
-    font-size: 14px;
+    /*font-size: 14px;*/
+    font-size: 0.875rem;
     border-radius: 8px;
     background: var(--inputBackground);
     min-width:120px;
@@ -107,6 +109,7 @@
 
 .label {
     color: #6b6b6b;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 1rem;
     margin-bottom: 10px;
 }

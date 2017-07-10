@@ -17,7 +17,8 @@
 
 .radio span {
     cursor: pointer;
-    font-size: 1em;
+    /*font-size: 14px;*/
+    font-size: 0.875rem;
     margin-left: 10px;
 }
 
