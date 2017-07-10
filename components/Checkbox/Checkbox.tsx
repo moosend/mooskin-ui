@@ -36,7 +36,10 @@ export interface ICheckBoxGroupProps {
 }
 
 export interface ICheckBoxProps {
-    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+    onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+
+    /** what data is being used, helps whn extracting user input, you know on what field changes are made */
+    dataLabel?: string;
 
     /** Checkbox id attribute */
     id?: string;
@@ -152,8 +155,10 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     {marginBottom: `${props.spacing}px`} : {};
     const classes = `checkbox-component ${styles.checkbox} ${disabledStyles} ${props.className}`;
 
-    const onCheckBoxClick = (e: React.MouseEvent<HTMLElement>) => {
-        !props.disabled && props.onClick && props.onClick(e);
+    const onCheckBoxClick = (value: boolean) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            !props.disabled && props.onClick && props.onClick(e, {value, dataLabel: props.dataLabel});
+        };
     };
 
     return (
@@ -167,7 +172,7 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     name={props.name}
                     type="checkbox"
                     value={props.value}
-                    onClick={onCheckBoxClick}
+                    onClick={onCheckBoxClick(checked)}
                     disabled={props.disabled}
                     defaultChecked={checked}
                     className={'material-icons'}
