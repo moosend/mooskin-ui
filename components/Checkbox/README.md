@@ -69,7 +69,6 @@ Custom style, className or id can be given just like any other component in this
 * `id` - id of the element
 * `dataLabel` - label what kind of data 
 * `onChange` - callback that is fired when you click on one of the checkboxes
-* `selected` - selected value, has to correspond to one of the checkbox values. this attribute accepts an obejct with a `values` property, which is an array of strings, since multiple checkboxes can be selected.
 * `className` - css class
 * `horizontal` - horizontal styled checkboxes (default is vertical)
 * `spacing` - space between checkboxes
@@ -80,6 +79,7 @@ Custom style, className or id can be given just like any other component in this
 
 * `id` - id of the element (important of you prefer to click on labels to select the value)
 * `value` - value for the option
+* `checked` - wether the checkbox is checked or not
 * `disabled` - renders a disabled checkbox
 * `value` - value of the checkbox, it will be a label aswell if no label prop has been passed.
 * `label` - label of this perticular checkbox

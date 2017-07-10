@@ -16,9 +16,6 @@ export interface ICheckBoxGroupProps {
     /** group title attribute */
     title?: string;
 
-    /** to specify which Checkbox is selected */
-    selected?: ISelectedProps;
-
     /** horizontal align Checkboxes */
     horizontal?: boolean;
 
@@ -48,7 +45,7 @@ export interface ICheckBoxProps {
     disabled?: boolean;
 
     /** Checkbox matches the selected prop from parent component */
-    selected?: ISelectedProps;
+    checked?: boolean;
 
     /** value for this Checkbox */
     value: string;
@@ -73,10 +70,6 @@ export interface ICheckBoxProps {
 
     /** Checkbox description */
     description?: string;
-}
-
-export interface ISelectedProps{
-    values: string[];
 }
 
 class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
@@ -131,7 +124,6 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
                     horizontal: this.props.horizontal,
                     name: this.name,
                     onClick: this.onClick(child.props.value),
-                    selected: this.props.selected,
                     spacing: this.props.spacing
                 };
                 return (
@@ -153,7 +145,7 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
 export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
 
     const disabledStyles = props.disabled ? styles.disabledCheckbox : '';
-    const checked = props.selected && props.selected.values.toString().includes(props.value) ? true : false;
+    const checked = props.checked ? true : false;
     const spacing = props.spacing ?
                     props.horizontal ?
                     {marginRight: `${props.spacing}px`} :

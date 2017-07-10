@@ -16,7 +16,6 @@ describe('CheckBox', () => {
         const tree = shallow(
             <CheckboxGroup
                 onChange={func}
-                selected={checked}
                 dataLabel="plan"
                 id="checkbox1"
                 className="myClass"
@@ -43,6 +42,7 @@ describe('CheckBox', () => {
                 disabled
                 label="This is CheckBox 1"
                 id={'checkbox1'}
+                checked
             />
         );
 
@@ -51,13 +51,9 @@ describe('CheckBox', () => {
 
     test('renders properly with 1 child', () => {
 
-        const checked = {
-            values: ['Checkbox1', 'Checkbox3']
-        };
-
         const component = shallow(
-            <CheckboxGroup selected={checked} className="myClass" dataLabel="plan">
-                <CheckBox value="checkbox1" id={'main'} label="dem labels" />
+            <CheckboxGroup className="myClass" dataLabel="plan">
+                <CheckBox value="checkbox1" id={'main'} label="dem labels" checked/>
             </CheckboxGroup>
         );
 
@@ -65,19 +61,15 @@ describe('CheckBox', () => {
         expect(component.find(CheckBox).prop('value')).toEqual('checkbox1');
         expect(component.find(CheckBox).prop('label')).toEqual('dem labels');
         expect(component.find(CheckBox).prop('id')).toEqual('main');
-        expect(component.find(CheckBox).prop('selected')).toEqual(checked);
+        expect(component.find(CheckBox).prop('checked')).toBeTruthy;
         expect(component.find('.myClass')).toBeTruthy;
         // expect(component.find('.myClass').prop('dataLabel')).toEqual('plan');
     });
 
     test('renders properly with multiple children', () => {
 
-        const checked = {
-            values: ['Checkbox1', 'Checkbox3']
-        };
-
         const component = shallow(
-            <CheckboxGroup selected={checked}>
+            <CheckboxGroup >
                 <CheckBox value="checkbox1" />
                 <CheckBox value="checkbox2" />
                 <CheckBox value="checkbox3" />
@@ -90,14 +82,10 @@ describe('CheckBox', () => {
     test('appends onClick callback to each checkbox', () => {
         const func = jest.fn();
 
-        const checked = {
-            values: ['Checkbox1', 'Checkbox3']
-        };
-
         const component = shallow(
-            <CheckboxGroup onChange={func} selected={checked} style={{color: 'blue'}}>
+            <CheckboxGroup onChange={func} style={{color: 'blue'}}>
                 <CheckBox value="checkbox1" />
-                <CheckBox value="checkbox2" />
+                <CheckBox value="checkbox2" checked/>
                 <CheckBox value="checkbox3" />
             </CheckboxGroup>
         );

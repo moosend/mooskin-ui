@@ -13,7 +13,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
   <label>
     <input
       className="material-icons"
-      defaultChecked={false}
+      defaultChecked={true}
       disabled={true}
       onClick={[Function]}
       type="checkbox"
