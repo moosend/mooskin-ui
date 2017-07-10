@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Accordion from './examples/Accordion.example';
 import Button from './examples/Button.example';
 import Charts from './examples/Charts.example';
 import CheckListItem from './examples/CheckListItem.example';
@@ -39,6 +40,8 @@ export default (props: any) => {
             <Charts />
             <br/><br/>
             <TabbedContent />
+            <br/><br/>
+            <Accordion />
         </div>
     );
 };

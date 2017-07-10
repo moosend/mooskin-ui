@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion renders Accordion properly according to snapshot 1`] = `
+<div
+  className="accordion-component container"
+>
+  <Header
+    active={false}
+    name="1482363367071"
+    onClick={[Function]}
+    title="title1"
+  >
+    <Content
+      active={false}
+      title="title1"
+    >
+      Content1
+    </Content>
+  </Header>
+  <Header
+    active={true}
+    name="1482363367071"
+    onClick={[Function]}
+    title="title2"
+  >
+    <Content
+      active={true}
+      title="title2"
+    >
+      Content2
+    </Content>
+  </Header>
+  <Header
+    active={false}
+    name="1482363367071"
+    onClick={[Function]}
+    title="title3"
+  >
+    <Content
+      active={false}
+      className="classname"
+      title="title3"
+    >
+      Content3
+    </Content>
+  </Header>
+</div>
+`;
+
+exports[`Accordion renders Content properly according to snapshot 1`] = `
+<div
+  className="accordion-content content visible"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  Some Content
+</div>
+`;
+
+exports[`Accordion renders Header properly according to snapshot 1`] = `
+<div
+  className="accordion-header container"
+>
+  <div
+    className="radio activeHeader checkedRadio"
+    onClick={[Function]}
+  >
+    <label>
+      <input
+        defaultChecked={true}
+        type="radio"
+      />
+      <span>
+        title1
+      </span>
+    </label>
+  </div>
+  <div />
+</div>
+`;
