@@ -1,5 +1,5 @@
 import * as React from 'react';
-import RadioTabs, {Content, Header} from './RadioTabs';
+import RadioTabs, {Header, RadioTabContent} from './RadioTabs';
 
 import { mount, render, shallow } from 'enzyme';
 
@@ -11,17 +11,17 @@ describe('RadioTabs', () => {
 
         const component = shallow(
             <RadioTabs id="5" className="mySwitch" style={{color: 'black'}} horizontal>
-                <Content title="title1">Content1</Content>
-                <Content title="title2" active>Content2</Content>
-                <Content title="title3" className="classname">Content3</Content>
+                <RadioTabContent title="title1">Content1</RadioTabContent>
+                <RadioTabContent title="title2" active>Content2</RadioTabContent>
+                <RadioTabContent title="title3" className="classname">Content3</RadioTabContent>
             </RadioTabs>
         );
 
         expect(component.find('Header').first().hasClass('columnTemplateInf')).toBeTruthy;
         expect(component.find('Header').length).toBe(3);
-        expect(component.find('Content').length).toBe(3);
+        expect(component.find(RadioTabContent).length).toBe(3);
 
-        expect(component.find('Content').first().prop('children')).toBe('Content1');
+        expect(component.find(RadioTabContent).first().prop('children')).toBe('Content1');
 
         expect(component).toMatchSnapshot();
     });
@@ -29,13 +29,13 @@ describe('RadioTabs', () => {
     test('renders Content properly according to snapshot', () => {
 
         const component = shallow(
-            <Content
+            <RadioTabContent
                 title="title1"
                 style={{color: 'blue'}}
                 active
             >
                 Some Content
-            </Content>
+            </RadioTabContent>
         );
 
         expect(component).toMatchSnapshot();
@@ -60,8 +60,8 @@ describe('RadioTabs', () => {
 
         const component = mount(
             <RadioTabs>
-                <Content title="title1">Content1</Content>
-                <Content title="title2" active>Content2</Content>
+                <RadioTabContent title="title1">Content1</RadioTabContent>
+                <RadioTabContent title="title2" active>Content2</RadioTabContent>
             </RadioTabs>
         );
 
