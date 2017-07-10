@@ -1,0 +1,64 @@
+.areaContainer{
+    display: inline-flex;
+}
+
+.textarea{
+    padding: 7px;
+    font-family: Arial,sans-serif;
+    border: 0;
+    color: #9e9e9e;
+    font-size: 16px;
+    border-radius: 8px;
+    background: #efefef;
+    display: table-cell;
+}
+
+.textarea::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+}
+
+.textarea::-webkit-scrollbar-button:start:decrement,
+.textarea::-webkit-scrollbar-button:end:increment  {
+    display: none;
+}
+
+.textarea::-webkit-scrollbar-track-piece  {
+    background-color: #eeeeee;
+}
+
+textarea::-webkit-scrollbar-thumb:vertical {
+    background: #d9d9d9;
+    border-radius: 16px;
+}
+
+.disabledTextArea{
+    cursor:not-allowed;
+    color: #bfbfbf;
+    background: #f6f6f6;
+    resize: none;
+}
+
+.textarea::placeholder {
+    color: #bebebe;
+}
+
+.textarea:focus {
+    outline: none;
+    color:#333333;
+}
+
+.textareaLabel {
+    color: #6b6b6b;
+    font-size: 13px;
+    font-size: .92857142857rem;
+    padding-top: 7px;
+    cursor: pointer;
+}
+
+.areaContainer i{
+    display: block;
+    color: #b3b3b3;
+    font-size: .78571428571rem;
+    margin-left: 3px;
+}

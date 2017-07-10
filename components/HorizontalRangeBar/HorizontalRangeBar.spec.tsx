@@ -1,3 +1,6 @@
+// tslint:disable-next-line:no-reference
+/// <reference path="../custom.d.ts"/>
+
 import * as React from 'react';
 import HorizontalRangeBar from './HorizontalRangeBar';
 
@@ -5,7 +8,7 @@ import { shallow } from 'enzyme';
 
 describe('HorizontalRangeBar', () => {
 
-    it('renders correctly', () => {
+    test('renders correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(

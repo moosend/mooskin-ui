@@ -1,17 +1,18 @@
 {
   "name": "mooskin",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A collection of React components for Moosend UI",
   "main": "lib/index/index.js",
   "types": "lib/index/index.d.ts",
   "scripts": {
     "prepublish": "npm run lint && webpack --config webpack.config.prod.js -p",
     "build:playground": "webpack --config webpack.config.dev.js -p",
-    "playground": "npm run prepublish && webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
+    "playground": "webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
     "test": "jest --no-cache --silent --config=jest.config.json",
     "test:u": "jest -u --no-cache --silent --config=jest.config.json",
     "test:cov": "jest --coverage --no-cache --silent --config=jest.config.json",
-    "lint": "tslint -c tslint.json ./components/**/*.{ts,tsx}"
+    "lint": "tslint -c tslint.json ./components/**/*.{ts,tsx}",
+    "heroku-postbuild": "webpack -p --config ./webpack.config.dev.js --progress"
   },
   "repository": {
     "type": "git",

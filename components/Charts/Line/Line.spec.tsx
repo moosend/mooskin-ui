@@ -43,7 +43,7 @@ describe('Line Chart', () => {
         }
     ];
 
-    it('renders correctly', () => {
+    test('renders correctly', () => {
 
         const tree = shallow(
             <LineChart

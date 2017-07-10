@@ -24,7 +24,7 @@ describe('Bar Chart', () => {
         }
     ];
 
-    it('renders correctly', () => {
+    test('renders correctly', () => {
 
         const tree = shallow(
             <BarChart

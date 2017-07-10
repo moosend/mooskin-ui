@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea renders correctly 1`] = `
+<div
+  className="textarea-component myClass areaContainer"
+>
+  <label
+    className="textareaLabel"
+    htmlFor="textarea"
+    style={
+      Object {
+        "marginRight": "30px",
+      }
+    }
+  >
+    with a label ofc
+  </label>
+  <div>
+    <textarea
+      className="textarea textarea disabledTextArea"
+      cols={40}
+      disabled={true}
+      id="textarea"
+      maxLength={50}
+      minLength={10}
+      name="textarea name"
+      onChange={[Function]}
+      placeholder="textarea placeholder"
+      required={true}
+      rows={10}
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
+      value="textarea value"
+    />
+    <i>
+      just some textarea
+    </i>
+  </div>
+</div>
+`;
