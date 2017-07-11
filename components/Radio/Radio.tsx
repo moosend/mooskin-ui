@@ -189,7 +189,7 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
 
     const onRadioClick = (data: {value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            !props.disabled && props.onClick && props.onClick(e, {value: data, dataLabel: this.props.dataLabel});
+            !props.disabled && props.onClick && props.onClick(e, {value: data, dataLabel: props.dataLabel});
         };
     };
 

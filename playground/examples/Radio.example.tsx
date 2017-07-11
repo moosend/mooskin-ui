@@ -10,6 +10,10 @@ export default (props: any) => {
         console.log(e.target);
     };
 
+    const onClick = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
+        console.log('Its own callback function');
+    };
+
     return(
         <fieldset style={{display: 'inline-block', width: '500px'}}>
             <legend>Radio Element</legend>
@@ -19,7 +23,7 @@ export default (props: any) => {
                     spacing={10}
                     dataLabel="horizontal"
                 >
-                    <Radio value={'Radio1'} />
+                    <Radio value={'Radio1'} onClick={onClick}/>
                     <Radio value={'Radio2'} label="This one has a label" selected/>
                     <Radio value={'Radio3'} label="This one is disabled" disabled/>
                 </RadioGroup>
