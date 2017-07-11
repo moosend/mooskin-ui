@@ -15,19 +15,17 @@ export default (props: any) => {
             <legend>Radio Element</legend>
                 <RadioGroup
                     onChange={onChange}
-                    selected={'Radio2'}
                     title="Horizontal radios"
                     spacing={10}
                     dataLabel="horizontal"
                 >
-                    <Radio value={'Radio1'}/>
-                    <Radio value={'Radio2'} label="This one has a label"/>
+                    <Radio value={'Radio1'} />
+                    <Radio value={'Radio2'} label="This one has a label" selected/>
                     <Radio value={'Radio3'} label="This one is disabled" disabled/>
                 </RadioGroup>
                 <br/>
                 <RadioGroup
                     onChange={onChange}
-                    selected={'Radio4'}
                     title="Vertical radios"
                     spacing={10}
                     dataLabel="vertical"

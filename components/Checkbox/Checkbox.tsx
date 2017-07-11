@@ -114,34 +114,49 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
         );
     }
 
-    private onClick = (value: {checked: boolean, value: string, label: string}) => {
+    private onClick = (data: {checked: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            this.props.onChange && this.props.onChange(e, {value, dataLabel: this.props.dataLabel});
+            this.props.onChange && this.props.onChange(e, {value: data, dataLabel: this.props.dataLabel});
         };
     }
 
     private assignCheckBoxes = () => {
-        return React.Children.map(this.props.children, (child, index) => {
+        const checkBoxes: Array<React.ReactElement<ICheckBoxProps>> = [];
+        React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement<ICheckBoxProps>(child)){
                 const checked = child.props.checked ? true : false;
                 const extraProps: Partial<ICheckBoxProps> = {
                     horizontal: this.props.horizontal,
-                    id: index.toString(),
                     name: this.name,
                     onClick: child.props.onClick ?
                             child.props.onClick :
                             this.onClick({checked, value: child.props.value, label: child.props.value}),
                     spacing: this.props.spacing
                 };
-                return (
-                    <div key={index}>
-                        {React.cloneElement(child, extraProps)}
-                    </div>
-                );
+
+                checkBoxes.push(React.cloneElement(
+                    <CheckBox
+                        key={index}
+                        value={child.props.value}
+                        checked={checked}
+                        className={child.props.className}
+                        dataLabel={child.props.dataLabel}
+                        disabled={child.props.disabled}
+                        description={child.props.description}
+                        horizontal={child.props.horizontal}
+                        style={child.props.style}
+                        id={child.props.id}
+                        label={child.props.label}
+                    />,
+                extraProps));
+
             }else{
                 throw new Error('<CheckBoxGroup> element only accepts <CheckBox> elements as children');
             }
         });
+
+        return checkBoxes;
+
     }
 
     private generateName = () => {
@@ -159,9 +174,9 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     {marginBottom: `${props.spacing}px`} : {};
     const classes = `checkbox-component ${styles.checkbox} ${disabledStyles} ${props.className}`;
 
-    const onCheckBoxClick = (value: {checked: boolean, value: string, label: string}) => {
+    const onCheckBoxClick = (data: {checked: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            !props.disabled && props.onClick && props.onClick(e, {value, dataLabel: props.dataLabel});
+            !props.disabled && props.onClick && props.onClick(e, {value: data, dataLabel: props.dataLabel});
         };
     };
 

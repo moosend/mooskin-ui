@@ -12,7 +12,7 @@ exports[`Radio renders Radio correctly 1`] = `
 >
   <label>
     <input
-      defaultChecked={false}
+      defaultChecked={true}
       disabled={true}
       onClick={[Function]}
       type="radio"
