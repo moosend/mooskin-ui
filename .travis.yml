@@ -11,4 +11,4 @@ notifications:
 deploy:
   provider: heroku
   app: mooskin
-  api_key: e0a0c3fd-729a-45d9-8d77-f6f07138d6ea
+  api_key: a6475ed8-44c3-499c-9fe5-f200d7375bda
