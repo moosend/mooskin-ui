@@ -114,7 +114,7 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
         );
     }
 
-    private onClick = (value: {checked: boolean, label: string}) => {
+    private onClick = (value: {checked: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onChange && this.props.onChange(e, {value, dataLabel: this.props.dataLabel});
         };
@@ -130,7 +130,7 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
                     name: this.name,
                     onClick: child.props.onClick ?
                             child.props.onClick :
-                            this.onClick({checked, label: child.props.value}),
+                            this.onClick({checked, value: child.props.value, label: child.props.value}),
                     spacing: this.props.spacing
                 };
                 return (
@@ -159,7 +159,7 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     {marginBottom: `${props.spacing}px`} : {};
     const classes = `checkbox-component ${styles.checkbox} ${disabledStyles} ${props.className}`;
 
-    const onCheckBoxClick = (value: {checked: boolean, label: string}) => {
+    const onCheckBoxClick = (value: {checked: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             !props.disabled && props.onClick && props.onClick(e, {value, dataLabel: props.dataLabel});
         };
@@ -176,7 +176,7 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     name={props.name}
                     type="checkbox"
                     value={props.value}
-                    onClick={onCheckBoxClick({checked, label: props.value})}
+                    onClick={onCheckBoxClick({checked, value: props.value, label: props.value})}
                     disabled={props.disabled}
                     defaultChecked={checked}
                     className={'material-icons'}

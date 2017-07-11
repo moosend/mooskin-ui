@@ -1,43 +1,35 @@
 .containerHorizontal {
-    display: grid;
-    grid-gap: 10px;
+    width: 100%;
 }
 
 .containerVertical {
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    grid-gap: 10px;
+    display:flex;
+    flex-direction: row;
 }
 
 .headerVertical {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 10px;    
+    flex-direction: column;
+    width: 40%   
+}
+
+.headerVertical > .radio + .radio{
+    margin-top: 10px;
 }
 
 .headerHorizontal {
-    display: grid;
-    grid-auto-columns: 1fr;
-    grid-gap: 10px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
 }
 
-.columnTemplateOne{
-    grid-template-areas: "a";
-}
-
-.columnTemplateTwo{
-    grid-template-areas: "a a";    
-}
-
-.columnTemplateInf{
-    grid-template-areas: "a a a";    
-}
-
-.columnTemplateInfEven{
-    grid-template-areas: "a a a a";    
+.headerHorizontal > .radio + .radio{
+    margin-left: 10px;
 }
 
 .content {
+    margin-left: 10px;
+    display: block;
+    width: 100%;
     padding-left: 10px;
     color: #7b7b7b;
     font-size: 0.875rem;
@@ -49,6 +41,11 @@
     border-top: 1px solid #5ccdde;
 }
 
+.container > .content {
+    margin: 0px;
+    height: 100%;
+}
+
 .radio span {
     margin-left: 10px;
     cursor: pointer;
@@ -57,6 +54,7 @@
 }
 
 .radio {
+    width: 100%;
     border-radius: 8px;
     color: #5ccdde;
     background: transparent;
@@ -97,15 +95,12 @@
 }
 
 .radio label {
-    display: inline-block;    
     cursor: pointer;
     padding: 12px;
     height: 100%;
     display: block; 
     border-radius: 8px;
     font-size: 0.875rem;
-    width: 100%;
-    height: 100%;
 }
 
 .checkedRadio {

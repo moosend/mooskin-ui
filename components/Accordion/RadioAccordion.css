@@ -1,7 +1,7 @@
 .container {
-    display: grid;
-    grid-column-template: 1fr;
-    grid-gap: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 100%
 }
 
 .radio span {
@@ -17,6 +17,10 @@
     background: transparent;
     transition: 0.3s;
     border: 1px solid #5ccdde;
+}
+
+.container + .container {
+    margin-top: 10px;
 }
 
 .radio:hover {
@@ -80,8 +84,6 @@
 .content {
     color: #7b7b7b;
     font-size: 0.875rem;
-    animation-name: fadeInFromNone;
-    animation-duration: 0.5s;
     padding: 10px;
 }
 
@@ -91,21 +93,4 @@
 
 .invisible {
     display: none;
-}
-
-@keyframes fadeInFromNone {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-        opacity: 0;
-    }
-
-    100% {
-        display: block;
-        opacity: 1;
-    }
 }
