@@ -15,4 +15,3 @@ playground-dist
 dist
 .DS_Store
 start-development.bat
-yarn.lock
