@@ -16,6 +16,7 @@ describe('Button', () => {
                 style={{color: 'blue'}}
                 inverseStyle
                 id={'button1'}
+                href={'www.moosend.com'}
             >
                 Mooskin
             </Button>

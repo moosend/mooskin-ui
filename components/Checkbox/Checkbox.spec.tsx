@@ -76,6 +76,7 @@ describe('CheckBox', () => {
             </CheckboxGroup>
         );
 
+        expect(component.find(CheckBox).last().prop('id')).toEqual('2');
         expect(component.find(CheckBox).length).toBe(3);
     });
 
