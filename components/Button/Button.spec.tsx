@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 
 describe('Button', () => {
 
-    it('renders correctly', () => {
+    test('renders correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(
@@ -16,6 +16,7 @@ describe('Button', () => {
                 style={{color: 'blue'}}
                 inverseStyle
                 id={'button1'}
+                href={'www.moosend.com'}
             >
                 Mooskin
             </Button>

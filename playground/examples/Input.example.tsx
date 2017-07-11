@@ -13,10 +13,21 @@ export default (props: any) => {
     return (
         <fieldset style={{display: 'inline-block'}}>
             <legend>Input Element</legend>
-            <Input onChange={onChange} type="text" maxlength={5} placeholder="max length 5"/>
-            <Input onChange={onChange} disabled value="disabled"/>
-            <Input onChange={onChange} placeholder="With placeholder" id="3rd"/>
-            <Input onChange={onChange} value="with changed size attribute" className=".input-field"/>
+            <Input onChange={onChange} type="text" maxlength={5} placeholder="max length 5" label="Some label:"/>
+            <br/>
+            <Input
+                onChange={onChange}
+                value="password"
+                type="password"
+                label="Password:"
+                spacing={28}
+                description="This has autofocus on page load"
+                autofocus
+            />
+            <br/>
+            <Input onChange={onChange} placeholder="placeholder" className=".input-field" autocomplete/>
+            <br/>
+            <Input onChange={onChange} disabled value="disabled" description="This input is disabled"/>
         </fieldset>
     );
 };

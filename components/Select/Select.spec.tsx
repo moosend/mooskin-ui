@@ -5,7 +5,7 @@ import {shallow} from 'enzyme';
 
 describe('Select', () => {
 
-    it('renders Select correctly', () => {
+    test('renders Select correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(
@@ -19,13 +19,14 @@ describe('Select', () => {
                 className="myClass"
                 style={{color: 'blue'}}
                 noResultsText="no results found"
+                description="with description"
                 isLoading
             />
         );
         expect(tree).toMatchSnapshot();
     });
 
-    it('renders Option correctly', () => {
+    test('renders Option correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(

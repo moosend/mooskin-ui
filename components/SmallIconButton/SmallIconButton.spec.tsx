@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 
 describe('SmallIconButton', () => {
 
-    it('renders correctly', () => {
+    test('renders correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(

@@ -78,6 +78,7 @@ Custom style, className or id can be given just like any other component in this
 * `value` - text value of the element
 * `placeholder` - backtext description of the element
 * `className` - css class
+* `description` - select description (small italic bottom)
 * `style` - element style
 
 ## Supported attributes for Option

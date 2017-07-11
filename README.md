@@ -8,7 +8,10 @@ A collection of React components with pre-defined styles for Moosend UI, at the 
 
 ___
 
- 
+### Demo
+
+**[Component Playground...](https://mooskin.herokuapp.com/)**
+
 ### Prerequisites
 
 Since it is a React Component Library, we recommend that you get to know [React](https://facebook.github.io/react/) before using MooSkin.  [Webpack](https://webpack.github.io/) is recommended as well, but any build tool that can handle importing css will work too.
@@ -143,15 +146,46 @@ import {Input} from 'mooskin'
 <Input placeholder="Your Name" />
 ```
 
-## Playground (try out)
+## List of Components
 
-To try the Library components first hand yourself, clone the [Mooskin](https://github.com/moosend/mooskin-ui) repository first. Then install dependencies with
+* [Button](https://github.com/moosend/mooskin-ui/tree/master/components/Button)
+* [Input](https://github.com/moosend/mooskin-ui/tree/master/components/Input)
+* [Radio](https://github.com/moosend/mooskin-ui/tree/master/components/Radio)
+* [CheckBox](https://github.com/moosend/mooskin-ui/tree/master/components/Checkbox)
+* [TextArea](https://github.com/moosend/mooskin-ui/tree/master/components/TextArea)
+* [Switch](https://github.com/moosend/mooskin-ui/tree/master/components/Switch)
+* [Select](https://github.com/moosend/mooskin-ui/tree/master/components/Select)
+* [Headings](https://github.com/moosend/mooskin-ui/tree/master/components/Headings)
+* [SmallIconButton](https://github.com/moosend/mooskin-ui/tree/master/components/SmallIconButton)
+* [TabbedContent](https://github.com/moosend/mooskin-ui/tree/master/components/TabbedContent)
+* [RadioTabs](https://github.com/moosend/mooskin-ui/tree/master/components/RadioTabs)
+* [RadioAccordion](https://github.com/moosend/mooskin-ui/tree/master/components/Accordion)
+* [CheckListItem](https://github.com/moosend/mooskin-ui/tree/master/components/CheckListItem)
+* [TopNotification](https://github.com/moosend/mooskin-ui/tree/master/components/TopNotification)
+* [HorizontalRangeBar](https://github.com/moosend/mooskin-ui/tree/master/components/HorizontalRangeBar)
+
+#### Charts
+* [Pie](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Pie)
+* [Doughnut](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Doughnut)
+* [Bar](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Bar)
+* [Line](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Line)
+
+## Playground (development)
+
+Clone the [Mooskin](https://github.com/moosend/mooskin-ui) repository first. Then install dependencies with
 
 ```
 npm install
 ```
+or
+
+```
+yarn install
+```
 
 After installation run `start-development.bat` on the Mooskin root folder, wait for build to complete then go to `http://localhost:8080/`. Have fun playing with the components.
+
+If you want to add a new component that is in development to the playground, create an example component in `/playground/examples/` which returns an instance of the component in development. Add the example to `/playground/App.tsx` and you're good to go.
  
 ### Contribute
 
