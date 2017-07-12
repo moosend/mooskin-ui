@@ -120,7 +120,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
     private assignRadios = () => {
         const radios: Array<React.ReactElement<IRadioProps>> = [];
         React.Children.map(this.props.children, (child, index) => {
-            if (React.isValidElement<IRadioProps>(child)){
+            if (React.isValidElement<IRadioProps & {key: number}>(child)){
                 const extraProps: Partial<IRadioProps> = {
                     name: this.name,
                     onClick: child.props.onClick ? child.props.onClick : this.onClick(
@@ -130,19 +130,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
                     vertical: this.props.vertical,
                 };
 
-                radios.push(React.cloneElement(
-                    <Radio
-                        key={index}
-                        dataLabel={child.props.dataLabel}
-                        className={child.props.className}
-                        disabled={child.props.disabled}
-                        id={child.props.id}
-                        label={child.props.label}
-                        style={child.props.style}
-                        value={child.props.value}
-                        selected={child.props.selected}
-                    />,
-                extraProps));
+                radios.push(React.cloneElement(child, extraProps));
 
             }else{
                 throw new Error('<RadioGroup> element only accepts <Radio> elements as children');

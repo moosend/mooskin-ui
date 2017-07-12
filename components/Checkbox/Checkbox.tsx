@@ -125,8 +125,9 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
         React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement<ICheckBoxProps>(child)){
                 const checked = child.props.checked ? true : false;
-                const extraProps: Partial<ICheckBoxProps> = {
+                const extraProps: Partial<ICheckBoxProps & {key: number}> = {
                     horizontal: this.props.horizontal,
+                    key: index,
                     name: this.name,
                     onClick: child.props.onClick ?
                             child.props.onClick :
@@ -134,21 +135,7 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
                     spacing: this.props.spacing
                 };
 
-                checkBoxes.push(React.cloneElement(
-                    <CheckBox
-                        key={index}
-                        value={child.props.value}
-                        checked={checked}
-                        className={child.props.className}
-                        dataLabel={child.props.dataLabel}
-                        disabled={child.props.disabled}
-                        description={child.props.description}
-                        horizontal={child.props.horizontal}
-                        style={child.props.style}
-                        id={child.props.id}
-                        label={child.props.label}
-                    />,
-                extraProps));
+                checkBoxes.push(React.cloneElement(child, extraProps));
 
             }else{
                 throw new Error('<CheckBoxGroup> element only accepts <CheckBox> elements as children');
