@@ -31,6 +31,9 @@ export interface ICheckBoxGroupProps {
     /** childrens must be a Checkbox Component */
     children?: Array<React.ReactElement<ICheckBoxProps>> | React.ReactElement<ICheckBoxProps>;
 
+    /** Callback to be passed to all checkboxes if no individual callbacks are specified */
+    onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+
     /** Callback that fires when Checkbox Group state changes */
     onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
@@ -75,7 +78,17 @@ export interface ICheckBoxProps {
     description?: string;
 }
 
-class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
+export interface ICheckBoxState{
+    data: ICheckBoxData[];
+}
+
+export interface ICheckBoxData{
+    checked?: boolean;
+    value?: string;
+    label?: string;
+}
+
+class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, ICheckBoxState>{
 
     public static defaultProps = {
         className: '',
@@ -90,11 +103,17 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
         super(props);
 
         this.name = this.generateName();
+
+        this.state = {
+            data: [{}]
+        };
     }
 
     public render() {
 
         const {id, className, style, title} = this.props;
+
+        const headingStyle = title ? {} : {display: 'none'};
 
         const align = this.props.horizontal ? styles.horizontal : '';
 
@@ -106,7 +125,7 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
                 className={`checkboxgroup-component ${className}`}
                 style={{...style}}
             >
-                <H2>{title}</H2>
+                <H2 style={headingStyle} >{title}</H2>
                 <div className={align}>
                     {checkBoxes}
                 </div>
@@ -114,10 +133,28 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, {}>{
         );
     }
 
+    public componentDidMount() {
+        this.setData();
+    }
+
     private onClick = (data: {checked: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            this.props.onChange && this.props.onChange(e, {value: data, dataLabel: this.props.dataLabel});
+            this.props.onClick && this.props.onClick(e, {value: data, dataLabel: this.props.dataLabel});
         };
+    }
+
+    private setData = () => {
+        const data: ICheckBoxData[] = [];
+        React.Children.map(this.props.children, (child) => {
+            if (React.isValidElement<ICheckBoxProps>(child)){
+                data.push({
+                    checked: child.props.checked,
+                    label: child.props.label,
+                    value: child.props.value
+                });
+            }
+        });
+        this.setState({data});
     }
 
     private assignCheckBoxes = () => {
