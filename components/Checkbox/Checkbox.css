@@ -33,7 +33,7 @@
     color: #dfdfdf;
 }
 
-.checkbox input[type='checkbox']:checked::before {
+.checkboxChecked input[type='checkbox']::before {
     content: '\e834';
     color: #5ccdde;
 }

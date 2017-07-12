@@ -115,7 +115,7 @@ describe('CheckBox', () => {
 
         expect(component.find(CheckBox).simulate('click'));
 
-        expect(func2).toHaveBeenCalled();
+        expect(func).toHaveBeenCalled();
     });
 
     test('callback func is not called when a disabled checkbox is clicked', () => {

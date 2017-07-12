@@ -2,7 +2,7 @@
 
 exports[`CheckBox renders CheckBox correctly 1`] = `
 <div
-  className="checkbox-component checkbox disabledCheckbox myClass"
+  className="checkbox-component checkbox disabledCheckbox myClass checkboxChecked"
   htmlFor="checkbox1"
   style={
     Object {
