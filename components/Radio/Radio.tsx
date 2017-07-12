@@ -120,8 +120,9 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
     private assignRadios = () => {
         const radios: Array<React.ReactElement<IRadioProps>> = [];
         React.Children.map(this.props.children, (child, index) => {
-            if (React.isValidElement<IRadioProps & {key: number}>(child)){
-                const extraProps: Partial<IRadioProps> = {
+            if (React.isValidElement<IRadioProps>(child)){
+                const extraProps: Partial<IRadioProps & {key: number}> = {
+                    key: index,
                     name: this.name,
                     onClick: child.props.onClick ? child.props.onClick : this.onClick(
                         {value: child.props.value, label: child.props.label ? child.props.label : child.props.value}
