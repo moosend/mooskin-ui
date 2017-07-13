@@ -22,7 +22,8 @@ config.plugins.push(
     extractCSS,
     new HtmlWebpackPlugin({
         inject: false,
-        template: './playground/index.html'
+        template: './playground/index.html',
+        favicon: 'favicon.png',
     })
 );
 
