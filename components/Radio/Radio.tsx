@@ -148,7 +148,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
 
     private checkSelected = (radios: Array<React.ReactElement<IRadioProps>>) => {
         let selected: number = 0;
-        radios.map((radio: React.ReactElement<IRadioProps>) => {
+        radios.forEach((radio: React.ReactElement<IRadioProps>) => {
             if (radio.props.selected){
                 selected = selected + 1;
             }

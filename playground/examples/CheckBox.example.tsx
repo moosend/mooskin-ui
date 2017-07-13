@@ -7,7 +7,7 @@ import {CheckBox, CheckboxGroup} from '../../components/index';
 export default (props: any) => {
 
     const onChange = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        console.log(e.target);
+        console.log(data.value);
     };
 
     return (
