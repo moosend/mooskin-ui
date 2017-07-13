@@ -78,7 +78,7 @@ class Switch extends React.Component<ISwitchProps, {}> {
     private onClick = (e: React.MouseEvent<HTMLElement>, data?: IInputCallbackData) => {
         !this.props.disabled &&
         this.props.onClick &&
-        this.props.onClick(e, {value: this.props.on && !this.props.disabled, dataLabel: this.props.dataLabel});
+        this.props.onClick(e, {value: !this.props.on && !this.props.disabled, dataLabel: this.props.dataLabel});
     }
 
     private switchLabel = () => {

@@ -40,7 +40,7 @@
     box-shadow:0 0 3px 0px #5ccdde inset;
 }
 
-.radio input[type='radio']:checked:before {
+.radioChecked input[type='radio']:before {
     background:#5ccdde;
     content:'';
     display:block;
@@ -49,7 +49,7 @@
     border-radius:50%; 
 }
 
-.radio input[type='radio']:checked{
+.radioChecked input[type='radio']{
     box-shadow:0 1px 2px 0px #5ccdde inset; 
 }
 

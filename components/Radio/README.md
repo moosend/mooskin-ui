@@ -69,7 +69,6 @@ Custom style, className or id can be given just like any other component in this
 * `id` - id of the element
 * `dataLabel` - label what kind of data 
 * `onChange` - callback that is fired when you click on one of the radios
-* `selected` - selected value, has to correspond to one of the Radio values
 * `className` - css class
 * `vertical` - vertical styled radios (default is horizontal)
 * `spacing` - space between radios
@@ -79,7 +78,7 @@ Custom style, className or id can be given just like any other component in this
 ## Supported attributes for Radio
 
 * `id` - id of the element (important of you prefer to click on labels to select the value)
-* `value` - value for the option
+* `selected` - wether the radio is selected
 * `disabled` - renders a disabled radio
 * `value` - value of the radio, it will be a label aswell if no label prop has been passed.
 * `label` - label of this perticular radio
