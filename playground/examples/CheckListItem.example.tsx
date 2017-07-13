@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
+
 import {CheckListItem} from '../../components/index/index';
 
 export interface IState {
@@ -56,11 +58,12 @@ export default class CheckItemExample extends React.Component<{}, IState>{
     }
 
     private checkIt = (i: number) => {
-        return (e: React.MouseEvent<HTMLInputElement>) => {
+        return (e: React.MouseEvent<HTMLInputElement>, data: IInputCallbackData) => {
             const processes = this.state.processes;
             processes[i].status = !this.state.processes[i].status;
 
             this.setState({processes});
+            console.log(data.value);
         };
     }
 

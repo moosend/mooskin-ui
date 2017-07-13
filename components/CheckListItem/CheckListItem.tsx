@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import {IInputCallbackData} from '../_utils/types/commonTypes';
+
 import {H2} from '../Headings/index';
 import SmallIconButton from '../SmallIconButton/SmallIconButton';
 import styles from './CheckListItem.css';
@@ -24,8 +26,11 @@ export interface ICheckListItemProps {
     /** override check list item styles */
     style?: {[key: string]: string};
 
+    /** what data is being used, you know on what field changes are made */
+    dataLabel?: string;
+
     /** callback that is called when the button is clicked */
-    onClick?: (e?: React.MouseEvent<HTMLInputElement>) => void;
+    onClick?: (e?: React.MouseEvent<HTMLInputElement>, data?: IInputCallbackData) => void;
 
 }
 
@@ -64,8 +69,8 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
         );
     }
 
-    private onClick = (e: React.MouseEvent<HTMLInputElement>) => {
-        this.props.onClick && this.props.onClick(e);
+    private onClick = (e: React.MouseEvent<HTMLInputElement>, data?: IInputCallbackData) => {
+        this.props.onClick && this.props.onClick(e, {value: !this.props.status, dataLabel: this.props.dataLabel});
     }
 
 }
