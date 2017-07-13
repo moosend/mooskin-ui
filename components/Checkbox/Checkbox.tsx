@@ -31,9 +31,6 @@ export interface ICheckBoxGroupProps {
     /** childrens must be a Checkbox Component */
     children?: Array<React.ReactElement<ICheckBoxProps>> | React.ReactElement<ICheckBoxProps>;
 
-    /** Callback to be passed to all checkboxes if no individual callbacks are specified */
-    onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
-
     /** Callback that fires when Checkbox Group state changes */
     onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }

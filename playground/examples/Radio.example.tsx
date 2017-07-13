@@ -7,11 +7,7 @@ import {Radio, RadioGroup} from '../../components/index/index';
 export default (props: any) => {
 
     const onChange = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        console.log(e.target);
-    };
-
-    const onClick = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        console.log('Its own callback function');
+        console.log(data.value);
     };
 
     return(
@@ -23,7 +19,7 @@ export default (props: any) => {
                     spacing={10}
                     dataLabel="horizontal"
                 >
-                    <Radio value={'Radio1'} onClick={onClick}/>
+                    <Radio value={'Radio1'}/>
                     <Radio value={'Radio2'} label="This one has a label" selected/>
                     <Radio value={'Radio3'} label="This one is disabled" disabled/>
                 </RadioGroup>
