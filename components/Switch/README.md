@@ -48,6 +48,23 @@ or just give it a custom style
 <Switch style={yourStyle} />
 ```
 
+### Callback
+
+The Switch Component Callback will always return the boolean value of the Switch on each click. This can be used with a function passed via the `onClick` prop. For example, if u want to fire a function if the Switch is turned on (oh yea), pass a function to the `onClick` prop.
+
+```
+const onSwitch = (e, data) => {     // data is the callback object, which consists of value and a dataLabel(not required)
+    if(data.value){                 // this can be either true or false depending on the Switch, so if the Switch is on or not
+        // do something on Switch on
+    }      
+};
+
+<Switch onClick={onSwitch} />
+```
+In this case the statement block will get fired if the Switch is turned on.
+
+This can be used in various situations and combinations, for an enhanced development experience.
+
 ## Supported attributes
 
 * `id` - id of the element
