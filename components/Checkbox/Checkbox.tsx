@@ -152,7 +152,7 @@ class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, ICheckBoxState>
         React.Children.map(this.props.children, (child) => {
             if (React.isValidElement<ICheckBoxProps>(child)){
                 data.push({
-                    checked: child.props.checked,
+                    checked: child.props.checked ? child.props.checked : false,
                     label: child.props.label,
                     value: child.props.value
                 });
@@ -252,7 +252,7 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     name={props.name}
                     type="checkbox"
                     value={props.value}
-                    onClick={onCheckBoxClick({checked, value: props.value, label})}
+                    onClick={onCheckBoxClick({checked: !checked, value: props.value, label})}
                     disabled={props.disabled}
                     defaultChecked={checked}
                     className={'material-icons'}

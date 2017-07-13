@@ -157,7 +157,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
             if (React.isValidElement<IRadioProps>(child)){
                 data.push({
                     label: child.props.label,
-                    selected: child.props.selected,
+                    selected: child.props.selected ? child.props.selected : false,
                     value: child.props.value
                 });
             }
