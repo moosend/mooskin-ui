@@ -153,8 +153,12 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
     private setData = () => {
         const data: IRadioData[] = [];
+        let selected = false;
         React.Children.map(this.props.children, (child) => {
             if (React.isValidElement<IRadioProps>(child)){
+                if (child.props.selected === true){
+                    selected = true;
+                }
                 data.push({
                     label: child.props.label,
                     selected: child.props.selected ? child.props.selected : false,
@@ -162,6 +166,9 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
                 });
             }
         });
+        if (selected === false && data.length > 0){
+            data[0].selected = true;
+        }
         return data;
     }
 
@@ -177,7 +184,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
                     label: data[index].label,
                     name: this.name,
                     onClick: /** child.props.onClick ? child.props.onClick : */
-                    this.onClick({selected, value: child.props.value, label}),
+                        this.onClick({selected, value: child.props.value, label}),
                     selected: data[index].selected,
                     spacing: this.props.spacing,
                     value: data[index].value,
