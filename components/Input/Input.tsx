@@ -40,7 +40,7 @@ export interface IProps {
     description?: string;
 
     /** spacing between label and input */
-    spacing?: number;
+    labelWidth?: number;
 
     /** toggle autocomplete specified input */
     autocomplete?: boolean;
@@ -104,9 +104,9 @@ class Input extends React.Component<IProps, IInputState> {
 
         const disabledInput = disabled ? styles.disabledInput : '';
         const spacing = label ?
-                        !this.props.spacing ?
-                        {marginRight: '20px'} :
-                        {marginRight: `${this.props.spacing}px`} :
+                        !this.props.labelWidth ?
+                        {} :
+                        {width: `${this.props.labelWidth}px`} :
                         {display: 'none'};
         const autocomplete = !this.props.autocomplete ? 'off' : 'on';
 
@@ -115,7 +115,7 @@ class Input extends React.Component<IProps, IInputState> {
                 <label className={styles.inputLabel} style={spacing} htmlFor={this.id}>
                     {label}
                 </label>
-                <div>
+                <div className={styles.inputDiv}>
                     <input
                         onChange={this.onChange}
                         id={this.id}

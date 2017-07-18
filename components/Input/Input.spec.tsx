@@ -24,7 +24,7 @@ describe('Input', () => {
                 type="text"
                 description="just some input"
                 label="with a label ofc"
-                spacing={30}
+                labelWidth={30}
                 autofocus
                 autocomplete
                 required

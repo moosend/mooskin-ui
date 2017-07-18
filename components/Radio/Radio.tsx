@@ -85,7 +85,8 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
     public static defaultProps = {
         className: '',
-        style: {},
+        spacing: 10,
+        style: {}
     };
 
     public static Radio: React.StatelessComponent<IRadioProps>;
@@ -107,6 +108,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         const {id, className, style, title} = this.props;
 
         const align = this.props.vertical ? '' : styles.vertical;
+        const header = title ? {} : {display: 'none'};
 
         return (
             <div
@@ -114,7 +116,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
                 className={`radiogroup-component ${className}`}
                 style={{...style}}
             >
-                <H2>{title}</H2>
+                <H2 style={header}>{title}</H2>
                 <div className={align}>
                     {this.assignRadios()}
                 </div>

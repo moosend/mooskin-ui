@@ -4,6 +4,7 @@ import Button from './examples/Button.example';
 import Charts from './examples/Charts.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
+import Form from './examples/Form.example';
 import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
@@ -51,6 +52,8 @@ export default (props: any) => {
             <RadioTabs />
             <br/><br/>
             <RadioAccordion />
+            <br/><br/>
+            <Form />
         </div>
     );
 };

@@ -13,6 +13,7 @@ exports[`CheckListItem renders correctly 1`] = `
     className=""
     style={
       Object {
+        "display": "",
         "marginLeft": "5px",
       }
     }

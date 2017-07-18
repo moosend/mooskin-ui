@@ -15,6 +15,9 @@ export interface IButtonProps {
     /** button href */
     href?: string;
 
+    /** button type */
+    type?: string;
+
     /** button class */
     className?: string;
 
@@ -33,11 +36,12 @@ export default class Button extends React.Component<IButtonProps, {}> {
     public static defaultProps = {
         className: '',
         style: {},
+        type: 'button'
     };
 
     public render(){
 
-        const {style, inverseStyle, disabled, children, className, id, href} = this.props;
+        const {style, inverseStyle, disabled, children, className, id, href, type} = this.props;
 
         const buttonStyles = inverseStyle ? styles.inverseButton : styles.normalButton;
         const disabledStyles = disabled ? styles.disabledButton : '';
@@ -48,6 +52,7 @@ export default class Button extends React.Component<IButtonProps, {}> {
             <button
                 id={id}
                 href={href}
+                type={type}
                 onClick={this.onClick}
                 disabled={disabled}
                 className={classes}
