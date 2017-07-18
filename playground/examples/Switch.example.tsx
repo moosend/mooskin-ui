@@ -73,6 +73,7 @@ export default class SwitchExample extends React.Component<{}, ISwitchState>{
 
             // update state
             this.setState({automations});
+            console.log(data.value);
         };
     }
 }

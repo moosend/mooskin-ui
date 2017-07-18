@@ -45,12 +45,12 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
     onClick={[Function]}
     title="title1"
   >
-    <AccordionContent
+    <RadioAccordionContent
       active={false}
       title="title1"
     >
       Content1
-    </AccordionContent>
+    </RadioAccordionContent>
   </Header>
   <Header
     active={true}
@@ -58,12 +58,12 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
     onClick={[Function]}
     title="title2"
   >
-    <AccordionContent
+    <RadioAccordionContent
       active={true}
       title="title2"
     >
       Content2
-    </AccordionContent>
+    </RadioAccordionContent>
   </Header>
   <Header
     active={false}
@@ -71,13 +71,13 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
     onClick={[Function]}
     title="title3"
   >
-    <AccordionContent
+    <RadioAccordionContent
       active={false}
       className="classname"
       title="title3"
     >
       Content3
-    </AccordionContent>
+    </RadioAccordionContent>
   </Header>
 </div>
 `;

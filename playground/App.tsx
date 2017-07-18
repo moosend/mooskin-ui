@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import Accordion from './examples/Accordion.example';
 import Button from './examples/Button.example';
 import Charts from './examples/Charts.example';
 import CheckBox from './examples/CheckBox.example';
@@ -9,6 +8,7 @@ import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
 import Radio from './examples/Radio.example';
+import RadioAccordion from './examples/RadioAccordion.example';
 import RadioTabs from './examples/RadioTabs.example';
 import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
@@ -50,7 +50,7 @@ export default (props: any) => {
             <br/><br/>
             <RadioTabs />
             <br/><br/>
-            <Accordion />  
+            <RadioAccordion />
         </div>
     );
 };

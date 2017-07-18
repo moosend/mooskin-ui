@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Accordion, {AccordionContent, Header} from './RadioAccordion';
+import Accordion, {Header, RadioAccordionContent} from './RadioAccordion';
 
 import { mount, render, shallow } from 'enzyme';
 
@@ -11,16 +11,16 @@ describe('RadioAccordion', () => {
 
         const component = shallow(
             <Accordion id="5" className="mySwitch" style={{color: 'black'}}>
-                <AccordionContent title="title1">Content1</AccordionContent>
-                <AccordionContent title="title2" active>Content2</AccordionContent>
-                <AccordionContent title="title3" className="classname">Content3</AccordionContent>
+                <RadioAccordionContent title="title1">Content1</RadioAccordionContent>
+                <RadioAccordionContent title="title2" active>Content2</RadioAccordionContent>
+                <RadioAccordionContent title="title3" className="classname">Content3</RadioAccordionContent>
             </Accordion>
         );
 
         expect(component.find('Header').length).toBe(3);
-        expect(component.find(AccordionContent).length).toBe(3);
+        expect(component.find(RadioAccordionContent).length).toBe(3);
 
-        expect(component.find(AccordionContent).first().prop('children')).toBe('Content1');
+        expect(component.find(RadioAccordionContent).first().prop('children')).toBe('Content1');
 
         expect(component).toMatchSnapshot();
     });
@@ -28,13 +28,13 @@ describe('RadioAccordion', () => {
     test('renders Content properly according to snapshot', () => {
 
         const component = shallow(
-            <AccordionContent
+            <RadioAccordionContent
                 title="title1"
                 style={{color: 'blue'}}
                 active
             >
                 Some Content
-            </AccordionContent>
+            </RadioAccordionContent>
         );
 
         expect(component).toMatchSnapshot();
@@ -59,8 +59,8 @@ describe('RadioAccordion', () => {
 
         const component = mount(
             <Accordion>
-                <AccordionContent title="title1">Content1</AccordionContent>
-                <AccordionContent title="title2" active>Content2</AccordionContent>
+                <RadioAccordionContent title="title1">Content1</RadioAccordionContent>
+                <RadioAccordionContent title="title2" active>Content2</RadioAccordionContent>
             </Accordion>
         );
 

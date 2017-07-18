@@ -142,7 +142,7 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
         this.setState({value: e.target.value});
         !this.props.disabled &&
         this.props.onChange &&
-        this.props.onChange(e, {value: this.props.value, dataLabel: this.props.dataLabel});
+        this.props.onChange(e, {value: this.state.value, dataLabel: this.props.dataLabel});
     }
 
     private generateId = () => {

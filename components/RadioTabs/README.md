@@ -9,75 +9,75 @@ ___
 To start using the RadioTabs Component first you have to Import its two main components
 
 ```
-Import {RadioTabs, Content} from 'mooskin';
+Import {RadioTabs, RadioTabContent} from 'mooskin';
 ```
 or
 ```
-import RadioTabs, {Content} from 'mooskin/lib/RadioTabs';
+import RadioTabs, {RadioTabContent} from 'mooskin/lib/RadioTabs';
 ```
 
 And then you can simply start using it by typing
 
 ```
 <RadioTabs>
-    <Content title="Title 1" active>
+    <RadioTabContent title="Title 1" active>
         <div style={{...style, backgroundColor: '#5CCDDF'}}>
             Content 1
         </div>
-    </Content>
-    <Content title="Title 2">
+    </RadioTabContent>
+    <RadioTabContent title="Title 2">
         <div style={{...style, backgroundColor: '#F48770'}}>
             Content 2
         </div>
-    </Content>
-    <Content title="Title 3">
+    </RadioTabContent>
+    <RadioTabContent title="Title 3">
         <div style={{...style, backgroundColor: '#F2C14A'}}>
             Content 3
         </div>
-    </Content>
+    </RadioTabContent>
 </RadioTabs>
 ```
 
 
-Individual <Content> components has a required 'title' prop which will be displayed in the radio header, the rest are optional. You can put whatever inside <Content> tags, it will be displayed as content for that particular tab.
+Individual <RadioTabContent> components has a required 'title' prop which will be displayed in the radio header, the rest are optional. You can put whatever inside <Content> tags, it will be displayed as content for that particular tab.
 
 ### Examples
 
-Can be used without importing the <Content> component with shorthand dot(.) notation.
+Can be used without importing the <RadioTabContent> component with shorthand dot(.) notation.
 
 ```
 Import {RadioTabs} from 'mooskin';
 
 <RadioTabs>
-    <RadioTabs.Content title="Title 1" iconClass="fa fa-icon">
+    <RadioTabs.RadioTabContent title="Title 1" iconClass="fa fa-icon">
         <div style={{...style, backgroundColor: '#5CCDDF'}}>
             Content 1
         </div>
-    </RadioTabs.Content>
-    <RadioTabs.Content title="Title 2" materialIcon="home">
+    </RadioTabs.RadioTabContent>
+    <RadioTabs.RadioTabContent title="Title 2" materialIcon="home">
         <div style={{...style, backgroundColor: '#F48770'}}>
             Content 2
         </div>
-    </RadioTabs.Content>
+    </RadioTabs.RadioTabContent>
 </RadioTabs>
 ```
 
 an alternative view style can be toggled by passing the `horizontal` attribute to the <RadioTabs> component
 
 ```
-Import {Content, RadioTabs} from 'mooskin';
+Import {RadioTabContent, RadioTabs} from 'mooskin';
 
 <RadioTabs horizontal>
-    <Content title="Title 1" iconClass="fa fa-icon">
+    <RadioTabContent title="Title 1" iconClass="fa fa-icon">
         <div style={{...style, backgroundColor: '#5CCDDF'}}>
             Content 1
         </div>
-    </Content>
-    <Content title="Title 2" materialIcon="home">
+    </RadioTabContent>
+    <RadioTabContent title="Title 2" materialIcon="home">
         <div style={{...style, backgroundColor: '#F48770'}}>
             Content 2
         </div>
-    </Content>
+    </RadioTabContent>
 </RadioTabs>
 ```
 
@@ -89,7 +89,7 @@ Import {Content, RadioTabs} from 'mooskin';
 * `horizontal` - horizontal style of view for the RadioTabs
 
 
-## Supported attributes for ```<Content/>```
+## Supported attributes for ```<RadioTabContent/>```
 
 * `title` - (required) sets the title for the radio tab
 * `active` - sets which radio tab is active, the first is active by default

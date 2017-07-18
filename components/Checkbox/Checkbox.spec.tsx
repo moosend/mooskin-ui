@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import CheckboxGroup, {CheckBox} from './Checkbox';
 
 import {shallow} from 'enzyme';
@@ -53,14 +52,14 @@ describe('CheckBox', () => {
 
         const component = shallow(
             <CheckboxGroup className="myClass" dataLabel="plan">
-                <CheckBox value="checkbox1" label="dem labels" checked/>
+                <CheckBox value="checkbox1" id="checky" label="dem labels" checked/>
             </CheckboxGroup>
         );
 
         expect(component.find(CheckBox).length).toBe(1);
         expect(component.find(CheckBox).prop('value')).toEqual('checkbox1');
         expect(component.find(CheckBox).prop('label')).toEqual('dem labels');
-        expect(component.find(CheckBox).prop('id')).toEqual('0');
+        expect(component.find(CheckBox).prop('id')).toEqual('checky');
         expect(component.find(CheckBox).prop('checked')).toBeTruthy;
         expect(component.find('.myClass')).toBeTruthy;
         // expect(component.find('.myClass').prop('dataLabel')).toEqual('plan');
@@ -76,7 +75,6 @@ describe('CheckBox', () => {
             </CheckboxGroup>
         );
 
-        expect(component.find(CheckBox).last().prop('id')).toEqual('2');
         expect(component.find(CheckBox).length).toBe(3);
     });
 
@@ -116,7 +114,7 @@ describe('CheckBox', () => {
 
         expect(component.find(CheckBox).simulate('click'));
 
-        expect(func2).toHaveBeenCalled();
+        expect(func).toHaveBeenCalled();
     });
 
     test('callback func is not called when a disabled checkbox is clicked', () => {
