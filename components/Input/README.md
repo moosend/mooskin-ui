@@ -48,6 +48,21 @@ or just give it a custom style
 <Input style={yourStyle} />
 ```
 
+### Callback
+
+The Input Component Callback will always return the value of the Input on each change. This can be used with a function passed via the `onChange` prop. For example, if u want to console log the callback value, pass a function to the `onChange` prop.
+
+```
+const logValue = (e, data) => {     // data is the callback object, which consists of value and a dataLabel(not required)
+    console.log(data.value);
+};
+
+<Input onChange={logValue} />
+```
+In this case on each input change, the value will be console logged.
+
+This can be used in various situations and combinations, for an enhanced development experience.
+
 ## Supported attributes
 
 * `id` - id of the element

@@ -43,7 +43,8 @@ export default class CheckBoxClass extends React.Component<{}, ICheckBoxState> {
                     <CheckBox value={'Checkbox2'} label="This one has a label" checked/>
                     <CheckBox value={'Checkbox3'} label="This one is disabled" disabled description="It's disabled"/>
                 </CheckboxGroup>
-                <CheckBox value="doni" onClick={this.onClick} checked={this.state.checked}/>
+                <br/>
+                <CheckBox value="doni" label="Lone Checkbox" onClick={this.onClick} checked={this.state.checked}/>
             </fieldset>
         );
 
