@@ -138,6 +138,7 @@ And then you can simply start using it by typing
 </Select>
 ```
 
+
 The components are built to support attributes like normal HTML elements. For example, an Input component with a placeholder:
 
 ```
