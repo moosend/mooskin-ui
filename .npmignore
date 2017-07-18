@@ -1,5 +1,6 @@
 .*rc
 .*.yml
+.*.log
 webpack.config.*
 coverage/
 node_modules/

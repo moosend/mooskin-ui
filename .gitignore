@@ -3,8 +3,10 @@ node_modules/
 .idea/
 coverage/
 npm-debug.log
+yarn-error.log
 docs/
 lib/
 dist/
 playground-dist/
 .DS_Store
+
