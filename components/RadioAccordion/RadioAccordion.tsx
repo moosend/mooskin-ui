@@ -52,7 +52,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         style: {}
     };
 
-    public static AccordionContent: React.StatelessComponent<IContentProps>;
+    public static RadioAccordionContent: React.StatelessComponent<IContentProps>;
 
     private name: string;
 
@@ -108,7 +108,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
                 );
 
             }else{
-                throw new Error('<Accordion> element only accepts Content elements as children');
+                throw new Error('<RadioAccordion> element only accepts RadioAccordionContent elements as children');
             }
         });
 
@@ -130,7 +130,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
     }
 }
 
-export const AccordionContent: React.StatelessComponent<IContentProps> = (props) => {
+export const RadioAccordionContent: React.StatelessComponent<IContentProps> = (props) => {
 
     const displayClass = !props.active ? styles.invisible : styles.visible;
 

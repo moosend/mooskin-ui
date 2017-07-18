@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
-import {H2} from '../index';
+import {H2} from '../Headings';
 import styles from './Radio.css';
 
 export interface IRadioGroupProps {

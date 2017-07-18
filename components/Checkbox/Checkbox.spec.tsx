@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import CheckboxGroup, {CheckBox} from './Checkbox';
 
 import {shallow} from 'enzyme';

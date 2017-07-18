@@ -3,7 +3,7 @@ import * as React from 'react';
 import styles from './Checkbox.css';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
-import {H2} from '../index';
+import {H2} from '../Headings';
 
 export interface ICheckBoxGroupProps {
 
@@ -85,7 +85,7 @@ export interface ICheckBoxData{
     label?: string;
 }
 
-class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, ICheckBoxState>{
+export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, ICheckBoxState>{
 
     public static defaultProps = {
         className: '',
@@ -264,5 +264,3 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
         </div>
     );
 };
-
-export default CheckBoxGroup;
