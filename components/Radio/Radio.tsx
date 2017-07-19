@@ -175,7 +175,6 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
     }
 
     private assignRadios = () => {
-        console.log('assign called');
         const {data} = this.state;
         const radios: Array<React.ReactElement<IRadioProps>> = [];
         React.Children.map(this.props.children, (child, index) => {

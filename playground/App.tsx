@@ -21,29 +21,33 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <div>
+            <div style={{display: 'flex'}}>
+                
+            </div>
             <Button />
             <br/><br/>
-            <Input />
+            <div style={{display: 'flex'}}>
+                <Input />
+                <TextArea />
+            </div>
             <br/><br/>
-            <TextArea />
+            <div style={{display: 'flex'}}>
+                <Select />
+                <TopNotification />
+                <Switch />
+            </div>
             <br/><br/>
-            <Select />
+            <div style={{display: 'flex'}}>
+                <Radio />
+                <CheckBox />
+            </div>
             <br/><br/>
-            <Switch />
-            <br/><br/>
-            <HorizontalRangeBar />
-            <br/><br/>
-            <Headings />
-            <br/><br/>
-            <TopNotification />
-            <br/><br/>
+            <div style={{display: 'flex'}}>
+                <HorizontalRangeBar />
+                <Headings />
+                <CheckListItem />
+            </div>
             <SmallIconButton />
-            <br/><br/>
-            <Radio />
-            <br/><br/>
-            <CheckBox />
-            <br/><br/>
-            <CheckListItem />
             <br/><br/>
             <Charts />
             <br/><br/>

@@ -32,8 +32,6 @@ export default class Forms extends React.Component<any, any>{
 
     public render() {
 
-        console.log(this.state);
-
         return(
             <fieldset style={{display: 'inline-block', width: '1000px'}}>
                 <legend>Forms Element</legend>
@@ -138,11 +136,11 @@ export default class Forms extends React.Component<any, any>{
     }
 
     private setValue = (e: React.ChangeEvent<HTMLElement>, data: IInputCallbackData) => {
-        this.setState({[data.dataLabel]: data.value});
+        data.dataLabel && this.setState({[data.dataLabel]: data.value});
     }
 
     private getValue = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        this.setState({[data.dataLabel]: data.value});
+        data.dataLabel && this.setState({[data.dataLabel]: data.value});
     }
 
 }
