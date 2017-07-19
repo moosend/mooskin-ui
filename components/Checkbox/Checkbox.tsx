@@ -243,7 +243,7 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
 
     return (
         <div
-            htmlFor={props.id}
+            // htmlFor={props.id}
             className={classes}
             style={{...spacing, ...props.style}}
         >

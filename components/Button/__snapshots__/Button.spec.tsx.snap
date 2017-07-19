@@ -4,7 +4,6 @@ exports[`Button renders correctly 1`] = `
 <button
   className="button-component button inverseButton disabledButton myClass"
   disabled={true}
-  href="www.moosend.com"
   id="button1"
   onClick={[Function]}
   style={
@@ -13,6 +12,10 @@ exports[`Button renders correctly 1`] = `
     }
   }
 >
-  Mooskin
+  <a
+    href="www.moosend.com"
+  >
+    Mooskin
+  </a>
 </button>
 `;

@@ -47,13 +47,12 @@ export default class Button extends React.Component<IButtonProps, {}> {
         return (
             <button
                 id={id}
-                href={href}
                 onClick={this.onClick}
                 disabled={disabled}
                 className={classes}
                 style={style}
             >
-                {children}
+                <a href={href}>{children}</a>
             </button>
         );
     }

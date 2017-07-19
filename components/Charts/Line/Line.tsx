@@ -119,8 +119,7 @@ class LineChart extends React.Component<ILineProps, {}>{
             };
 
         });
-
-        const data = {
+        const lineData = {
             datasets: finalData,
             labels: chartData[0].labels
         };
@@ -128,7 +127,7 @@ class LineChart extends React.Component<ILineProps, {}>{
         return(
             <div id={id}>
                 <Line
-                    data={data}
+                    data={lineData}
                     width={width || size}
                     height={height || size}
                     options={options}

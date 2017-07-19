@@ -246,7 +246,7 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
 
     return (
         <div
-            htmlFor={props.id}
+            // htmlFor={props.id}
             className={classes}
             style={{...spacing, ...props.style}}
         >
