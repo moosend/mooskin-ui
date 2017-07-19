@@ -3,7 +3,7 @@ import * as React from 'react';
 import styles from './Form.css';
 
 import Button, {IButtonProps} from '../Button/Button';
-import Input from '../Input/Input';
+import {CheckBox, CheckboxGroup, Input, Radio, RadioGroup, Switch, TextArea} from '../index/';
 
 export interface IFormProps{
 
@@ -64,7 +64,8 @@ export default class Form extends React.Component<IFormProps, {}>{
                     action={action}
                     name={name}
                 >
-                    {form}
+                     {form}
+                    {/* {this.props.children} */}
                 </form>
             </div>
         );
@@ -119,9 +120,20 @@ export default class Form extends React.Component<IFormProps, {}>{
         if (Array.isArray(formChildren)){
             formChildren.map((element: any) => {
                 if (element.type === Input){
-                    // this.collectEssence(element);
+                    console.log(element.props.dataLabel + ': ' + element.props.value);
+                } else if (element.type === TextArea){
+                    console.log(element.props.dataLabel + ': ' + element.props.value);
+                } else if (element.type === Switch){
+                    console.log(element.props.dataLabel + ': ' + element.props.on);
+                } else if (element.type === RadioGroup){
+                    console.log(element.props.children);
+                    // this.collectEssence(element.props.children);
+                } else if (element.type === CheckboxGroup){
+                    console.log(element.props.children);
+                    // this.collectEssence(element.props.children);
                 } else {
                     this.collectEssence(element);
+                    // throw new Error('Elements used within the form are not supported');
                 }
             });
         }

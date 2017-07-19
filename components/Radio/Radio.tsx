@@ -139,7 +139,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
                 if (radio.value === dataArray.value){
                     data[index] = {
                         label: dataArray.label,
-                        selected: !dataArray.selected,
+                        selected: !radio.selected === true ? true : !dataArray.selected,
                         value: dataArray.value
                     };
                 } else {
@@ -175,6 +175,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
     }
 
     private assignRadios = () => {
+        console.log('assign called');
         const {data} = this.state;
         const radios: Array<React.ReactElement<IRadioProps>> = [];
         React.Children.map(this.props.children, (child, index) => {
@@ -233,7 +234,7 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
     const disabledStyles = props.disabled ? styles.disabledRadio : '';
     const label = props.label ? props.label : props.value;
     const checkedStyles = !props.selected ? '' : styles.radioChecked;
-    const selected = props.selected ? true : false;
+    const selected = props.selected ? props.selected : false;
     const spacing = props.spacing ?
                     props.vertical ?
                     {marginBottom: `${props.spacing}px`} :

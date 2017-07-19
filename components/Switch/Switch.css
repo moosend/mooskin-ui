@@ -4,6 +4,16 @@
   --disabled: #C5C5C5;
 }
 
+.label {
+  display: inline-block;
+  color: #6b6b6b;
+  /* font-size: 13px; */
+  font-size: .92857142857rem;
+  cursor: pointer;
+  width: 111px;
+  vertical-align: 13px;
+}
+
 .switch {
   position: relative;
   content: '';
@@ -51,6 +61,7 @@
   font-size: 11px;
   transition: .5s;
   text-align: center;
+  user-select: none;
 }
 
 .offText{

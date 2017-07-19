@@ -17,6 +17,7 @@ describe('Switch', () => {
                 disabledLabel="this is disabled"
                 offLabel="off"
                 onLabel="on"
+                labelWidth={70}
                 on
                 onClick={func}
             />
@@ -28,9 +29,9 @@ describe('Switch', () => {
 
         const component = shallow(<Switch id="5" className="mySwitch" disabled/>);
 
-        expect(component.find('div').hasClass('mySwitch')).toBe(true);
-        expect(component.find('div').prop('id')).toEqual('5');
-        expect(component.find('div').prop('disabled')).toBeTruthy;
+        expect(component.find('div').last().hasClass('mySwitch')).toBe(true);
+        expect(component.find('div').last().prop('id')).toEqual('5');
+        expect(component.find('div').last().prop('disabled')).toBeTruthy;
     });
 
     test('renders an active Switch when a related task is already running', () => {
@@ -45,7 +46,7 @@ describe('Switch', () => {
 
         const component = shallow(<Switch onClick={func} disabled/>);
 
-        component.find('div').simulate('click');
+        component.find('div').last().simulate('click');
         expect(func).not.toHaveBeenCalled();
     });
 
@@ -54,7 +55,7 @@ describe('Switch', () => {
 
         const component = shallow(<Switch onClick={func}/>);
 
-        component.find('div').simulate('click');
+        component.find('div').last().simulate('click');
         expect(func).toHaveBeenCalled();
     });
 

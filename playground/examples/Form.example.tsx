@@ -11,7 +11,9 @@ import {
     H2,
     Input,
     Radio,
-    RadioGroup
+    RadioGroup,
+    Switch,
+    TextArea
 } from '../../components/index/index';
 
 export default class Forms extends React.Component<any, any>{
@@ -19,7 +21,13 @@ export default class Forms extends React.Component<any, any>{
     constructor(props: any){
         super(props);
 
-        this.state = { };
+        this.state = {
+            contact: [{}, {checked: true}, {}, {checked: true}, {}],
+            firstname: 'Doni',
+            lastname: 'Behrami',
+            position: [{selected: false}, {selected: true}],
+            training: true
+        };
     }
 
     public render() {
@@ -60,20 +68,67 @@ export default class Forms extends React.Component<any, any>{
                     <Form style={{border: '2px solid black'}}>
                         <FormGroup horizontal>
                             <FormGroup style={{border: '2px solid blue'}}>
-                            <Input label="Firstname:" onChange={this.setValue} dataLabel="firstname"/>
-                            <Input label="Lastname:" onChange={this.setValue} dataLabel="lastname"/>
-                            <Input label="Country:" onChange={this.setValue} dataLabel="country"/>
-                            <Input label="City:" onChange={this.setValue} dataLabel="city"/>
-                            <Input label="Tel:" onChange={this.setValue} dataLabel="tel"/>
-                            <Input label="Email:" onChange={this.setValue} dataLabel="email"/>
+                            <Input
+                                label="Firstname:"
+                                onChange={this.setValue}
+                                dataLabel="firstname"
+                                value={this.state.firstname}
+                            />
+                            <Input
+                                label="Lastname:"
+                                onChange={this.setValue}
+                                dataLabel="lastname"
+                                value={this.state.lastname}
+                            />
+                            <Input
+                                label="Country:"
+                                onChange={this.setValue}
+                                dataLabel="country"
+                                value={this.state.country}
+                            />
+                            <Input
+                                label="Email:"
+                                type="email"
+                                onChange={this.setValue}
+                                dataLabel="email"
+                                value={this.state.email}
+                            />
+                            <RadioGroup title="Position: " dataLabel="position" onChange={this.getValue}>
+                                <Radio
+                                    value="fontend"
+                                    label="Frontend Developer"
+                                    selected={this.state.position[0].selected}
+                                />
+                                <Radio
+                                    value="backend"
+                                    label="Backend Developer"
+                                    selected={this.state.position[1].selected}
+                                />
+                            </RadioGroup>
                         </FormGroup>
                         <FormGroup style={{border: '2px solid blue'}}>
-                            <Input label="Firstname:"/>
-                            <Input label="Lastname:"/>
-                            <Input label="Country:"/>
-                            <Input label="Firstname:"/>
-                            <Input label="Lastname:"/>
-                            <Input label="Country:"/>
+                            <Switch
+                                label="Training:"
+                                onLabel="Done"
+                                offLabel="Ongoing"
+                                on={this.state.training}
+                                onClick={this.getValue}
+                                dataLabel="training"
+                            />
+                            <TextArea
+                                rows={11}
+                                label="Cover Letter:"
+                                onChange={this.setValue}
+                                dataLabel="coverletter"
+                                value={this.state.coverletter}
+                            />
+                            <CheckboxGroup onChange={this.getValue} title="Contact: " dataLabel="contact" horizontal>
+                                <CheckBox value="email" label="Email" checked={this.state.contact[0].checked}/>
+                                <CheckBox value="tel" label="Telephone" checked={this.state.contact[1].checked}/>
+                                <CheckBox value="skype" label="Skype" checked={this.state.contact[2].checked}/>
+                                <CheckBox value="raven" label="Raven" checked={this.state.contact[3].checked}/>
+                                <CheckBox value="palantir" label="Palantír" checked={this.state.contact[4].checked}/>
+                            </CheckboxGroup>
                         </FormGroup>
                         </FormGroup>
                         <Button>Submit</Button>

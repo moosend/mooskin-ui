@@ -36,9 +36,8 @@
 
 .inputLabel {
     color: #6b6b6b;
-    font-size: 13px;
+    /* font-size: 13px; */
     font-size: .92857142857rem;
-    margin-left: 1px;
     cursor: pointer;
     padding-top: 15px;
     width: 150px;
