@@ -54,7 +54,6 @@ export default class Form extends React.Component<IFormProps, {}>{
 
         const {method, enctype, name, action, style, className} = this.props;
         const form = this.assignPropsToChildren();
-        console.log(form);
 
         return(
             <div style={style} className={`form-component ${styles.container}`}>
@@ -73,7 +72,7 @@ export default class Form extends React.Component<IFormProps, {}>{
 
     private onSubmit = () => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            console.log('button clicked');
+            console.log('Button clicked');
             const formChildren = this.getChildren();
             this.collectEssence(formChildren);
         };
@@ -81,14 +80,14 @@ export default class Form extends React.Component<IFormProps, {}>{
 
     private assignPropsToChildren = () => {
         const formElements: any = [];
+        const buttonProps: Partial<IButtonProps> = {
+            onClick: this.onSubmit()
+        };
         React.Children.map(this.props.children, (child, index) => {
+            const keyProp: Partial<any & {key: number}> = {
+                key: index,
+            };
             if (React.isValidElement(child)){
-                const keyProp: Partial<any & {key: number}> = {
-                    key: index,
-                };
-                const buttonProps: Partial<IButtonProps> = {
-                    onClick: this.onSubmit()
-                };
                 if (child.type === Button){
                     formElements.push(
                         React.cloneElement(child, {...keyProp, ...buttonProps})
@@ -120,7 +119,6 @@ export default class Form extends React.Component<IFormProps, {}>{
         if (Array.isArray(formChildren)){
             formChildren.map((element: any) => {
                 if (element.type === Input){
-                    console.log(element.props.value);
                     // this.collectEssence(element);
                 } else {
                     this.collectEssence(element);
@@ -128,7 +126,6 @@ export default class Form extends React.Component<IFormProps, {}>{
             });
         }
         if (formChildren.type === FormGroup){
-            console.log('Single FormGroup Detected');
             this.collectEssence(formChildren.props.children);
         }
     }

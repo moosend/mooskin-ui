@@ -32,13 +32,13 @@ export default class Forms extends React.Component<any, any>{
                     <H2>Vertical Forms/FormGroups</H2>
                     <Form style={{border: '2px solid black'}} >
                         <FormGroup style={{border: '2px solid blue'}}>
-                            <Input label="Your firstname:"/>
-                            <Input label="Your lastname:"/>
-                            <Input label="Country:"/>
+                            <Input label="Your firstname:" dataLabel="firstname"/>
+                            <Input label="Your lastname:" dataLabel="lastname"/>
+                            <Input label="Country:" dataLabel="country"/>
                         </FormGroup>
                         <FormGroup style={{border: '2px solid red'}} horizontal>
                             <FormGroup style={{width: '130%', border: '2px solid cyan'}}>
-                                <RadioGroup title="Some Radios">
+                                <RadioGroup title="Some Radios" dataLabel="radios" onChange={this.getValue}>
                                     <Radio value="Radio 1"/>
                                     <Radio value="Radio 2"/>
                                     <Radio value="Radio 3"/>
@@ -47,7 +47,7 @@ export default class Forms extends React.Component<any, any>{
                                 </RadioGroup>
                             </FormGroup>
                             <FormGroup style={{border: '2px solid green'}}>
-                                <CheckboxGroup>
+                                <CheckboxGroup onChange={this.getValue} dataLabel="checkboxes">
                                     <CheckBox value="Checkbox 1" />
                                     <CheckBox value="Checkbox 2" />
                                     <CheckBox value="Checkbox 3" />
@@ -83,6 +83,10 @@ export default class Forms extends React.Component<any, any>{
     }
 
     private setValue = (e: React.ChangeEvent<HTMLElement>, data: IInputCallbackData) => {
+        this.setState({[data.dataLabel]: data.value});
+    }
+
+    private getValue = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
         this.setState({[data.dataLabel]: data.value});
     }
 
