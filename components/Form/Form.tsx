@@ -3,7 +3,7 @@ import * as React from 'react';
 import styles from './Form.css';
 
 import Button, {IButtonProps} from '../Button/Button';
-import {CheckBox, CheckboxGroup, Input, Radio, RadioGroup, Switch, TextArea} from '../index/';
+import {CheckboxGroup, Input, RadioGroup, Switch, TextArea} from '../index/';
 
 export interface IFormProps{
 

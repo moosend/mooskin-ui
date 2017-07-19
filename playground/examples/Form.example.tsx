@@ -138,11 +138,11 @@ export default class Forms extends React.Component<any, any>{
     }
 
     private setValue = (e: React.ChangeEvent<HTMLElement>, data: IInputCallbackData) => {
-        this.setState({[data.dataLabel]: data.value});
+        data.dataLabel && this.setState({[data.dataLabel]: data.value});
     }
 
     private getValue = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        this.setState({[data.dataLabel]: data.value});
+        data.dataLabel && this.setState({[data.dataLabel]: data.value});
     }
 
 }
