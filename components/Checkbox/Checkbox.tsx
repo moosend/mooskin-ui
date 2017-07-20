@@ -80,7 +80,7 @@ export interface ICheckBoxState{
 }
 
 export interface ICheckBoxData{
-    checked?: boolean;
+    checked?: boolean | undefined;
     value?: string;
     label?: string;
 }

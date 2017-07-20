@@ -76,7 +76,7 @@ export interface IRadioState{
 }
 
 export interface IRadioData{
-    selected?: boolean;
+    selected?: boolean | undefined;
     value?: string;
     label?: string;
 }
