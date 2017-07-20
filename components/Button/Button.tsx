@@ -57,7 +57,7 @@ export default class Button extends React.Component<IButtonProps, {}> {
                 className={classes}
                 style={style}
             >
-                <a href={href}>{children}</a>
+                <a href={href} className={styles.anchor}>{children}</a>
             </button>
         );
     }

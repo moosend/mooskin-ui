@@ -230,6 +230,10 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
 export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
 
+    const generateId = () => {
+        return Math.random().toString(36).substr(2, 10);
+    };
+
     const disabledStyles = props.disabled ? styles.disabledRadio : '';
     const label = props.label ? props.label : props.value;
     const checkedStyles = !props.selected ? '' : styles.radioChecked;
@@ -239,6 +243,8 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
                     {marginBottom: `${props.spacing}px`} :
                     {marginRight: `${props.spacing}px`} : {};
     const classes = `radio-component ${styles.radio} ${disabledStyles} ${props.className} ${checkedStyles}`;
+
+    const genId = generateId();
 
     const onRadioClick = (data: {selected: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
@@ -252,15 +258,16 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
             className={classes}
             style={{...spacing, ...props.style}}
         >
-            <label>
-                <input
-                    name={props.name}
-                    type="radio"
-                    value={props.value}
-                    onClick={onRadioClick({selected, value: props.value, label})}
-                    disabled={props.disabled}
-                    defaultChecked={selected}
-                />
+            <input
+                id={genId}
+                name={props.name}
+                type="radio"
+                value={props.value}
+                onClick={onRadioClick({selected, value: props.value, label})}
+                disabled={props.disabled}
+                defaultChecked={selected}
+            />
+            <label htmlFor={genId}>
                 <span>{label}</span>
             </label>
         </div>

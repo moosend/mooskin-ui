@@ -138,7 +138,7 @@ class Input extends React.Component<IProps, {}> {
     }
 
     private generateId = () => {
-        return Date.now().toString();
+        return Math.random().toString(36).substr(2, 10);
     }
 }
 

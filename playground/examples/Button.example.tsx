@@ -11,7 +11,7 @@ export default (props: any) => {
     return(
         <fieldset style={{display: 'inline-block'}}>
             <legend>Button Element</legend>
-            <Button onClick={onClick}>Button</Button>
+            <Button onClick={onClick} href="https://www.moosend.com">Button</Button>
             <Button onClick={onClick} disabled>Button</Button>
             <Button onClick={onClick} inverseStyle>Button</Button>
             <Button onClick={onClick} inverseStyle disabled>Button</Button>

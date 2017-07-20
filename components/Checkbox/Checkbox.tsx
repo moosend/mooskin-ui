@@ -225,6 +225,10 @@ export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, 
 
 export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
 
+    const generateId = () => {
+        return Math.random().toString(36).substr(2, 10);
+    };
+
     const disabledStyles = props.disabled ? styles.disabledCheckbox : '';
     const label = props.label ? props.label : props.value;
     const checked = props.checked ? true : false;
@@ -234,6 +238,8 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     {marginRight: `${props.spacing}px`} :
                     {marginBottom: `${props.spacing}px`} : {};
     const classes = `checkbox-component ${styles.checkbox} ${disabledStyles} ${props.className} ${checkedStyles}`;
+
+    const genId = generateId();
 
     const onCheckBoxClick = (data: {checked: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
@@ -247,20 +253,21 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
             className={classes}
             style={{...spacing, ...props.style}}
         >
-            <label>
-                <input
-                    name={props.name}
-                    type="checkbox"
-                    value={props.value}
-                    onClick={onCheckBoxClick({checked: !checked, value: props.value, label})}
-                    disabled={props.disabled}
-                    defaultChecked={checked}
-                    className={'material-icons'}
-                />
+            <input
+                id={genId}
+                name={props.name}
+                type="checkbox"
+                value={props.value}
+                onClick={onCheckBoxClick({checked: !checked, value: props.value, label})}
+                disabled={props.disabled}
+                defaultChecked={checked}
+                className={'material-icons'}
+            />
+            <label htmlFor={genId}>
                 <span>{label}</span>
-                <br/>
-                <i>{props.description}</i>
             </label>
+            <br/>
+            <i>{props.description}</i>
         </div>
     );
 };

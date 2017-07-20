@@ -8,6 +8,7 @@ describe('RadioAccordion', () => {
     test('renders RadioAccordion properly according to snapshot', () => {
 
         Date.now = jest.fn(() => 1482363367071);
+        Math.random = jest.fn(() => 222333444555);
 
         const component = shallow(
             <Accordion id="5" className="mySwitch" style={{color: 'black'}}>
@@ -26,6 +27,8 @@ describe('RadioAccordion', () => {
     });
 
     test('renders Content properly according to snapshot', () => {
+
+        Math.random = jest.fn(() => 222333444555);
 
         const component = shallow(
             <RadioAccordionContent
