@@ -11,6 +11,7 @@
     "trailing-comma": [false],
     "no-unused-expression": false,
     "jsx-no-lambda": false
+    // "no-shadowed-variable": false
     //"member-access": false
   }
 }

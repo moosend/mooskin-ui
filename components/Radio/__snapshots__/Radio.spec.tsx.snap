@@ -3,7 +3,6 @@
 exports[`Radio renders Radio correctly 1`] = `
 <div
   className="radio-component radio disabledRadio myClass radioChecked"
-  htmlFor="radio1"
   style={
     Object {
       "color": "blue",
