@@ -29,6 +29,10 @@ config.plugins.push(
 
 config.module.rules.push(
     {
+        test: /\.txt$/,
+        loader: "raw-loader"
+    },
+    {
         enforce: 'pre',
         test: /\.js$/,
         loader: "source-map-loader"

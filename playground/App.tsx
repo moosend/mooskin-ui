@@ -1,3 +1,6 @@
+// tslint:disable-next-line:no-reference
+/// <reference path="../components/custom.d.ts"/>
+
 import * as React from 'react';
 
 import Button from './examples/Button.example';

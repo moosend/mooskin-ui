@@ -1,20 +1,14 @@
 import * as React from 'react';
 
 import {Button} from '../../components/index/index';
+import ButtonExampleCode from './component-strings/Button.example.txt';
 
-export default (props: any) => {
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
-    const onClick = (e: React.MouseEvent<HTMLInputElement>) => {
-        console.log(e.target);
-    };
-
-    return(
-        <fieldset style={{display: 'inline-block'}}>
-            <legend>Button Element</legend>
-            <Button onClick={onClick}>Button</Button>
-            <Button onClick={onClick} disabled>Button</Button>
-            <Button onClick={onClick} inverseStyle>Button</Button>
-            <Button onClick={onClick} inverseStyle disabled>Button</Button>
-        </fieldset>
-    );
-};
+export default class ButtonExample extends React.Component<any, any> {
+    public render(){
+        return(
+            <ReactLiveEditor scope={{React, Button}} code={ButtonExampleCode} title="Button Example"/>
+        );
+    }
+}
