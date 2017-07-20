@@ -28,7 +28,8 @@
     "chart.js": "^2.6.0",
     "react": "^15.5.4",
     "react-chartjs-2": "^2.1.0",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-live": "^1.7.0"
   },
   "devDependencies": {
     "@types/enzyme": "^2.8.0",
@@ -59,9 +60,6 @@
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.5",
     "raw-loader": "^0.5.1",
-    "react-addons-test-utils": "^15.5.1",
-    "react-live": "^1.7.0",
-    "react-test-renderer": "^15.5.4",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.17.0",
     "ts-jest": "^20.0.4",
