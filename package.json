@@ -61,6 +61,7 @@
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.5",
     "raw-loader": "^0.5.1",
+    "react-test-renderer": "^15.6.1",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.17.0",
     "ts-jest": "^20.0.4",
