@@ -140,13 +140,13 @@ export default class Form extends React.Component<IFormProps, {}>{
                 } else if (element.type === Select && element.props.selected !== undefined){
                     data[element.props.dataLabel] = element.props.selected;
                 } else if (element.type === RadioGroup){
-                    const radios: Array<React.ReactElement<IRadioData>> = [];
+                    const radios: IRadioData[] = [];
                     element.props.children.map((radio: React.ReactElement<IRadioProps>) => {
                         radios.push(radio.props);
                     });
                     data[element.props.dataLabel] = radios;
                 } else if (element.type === CheckboxGroup){
-                    const checkboxes: Array<React.ReactElement<ICheckBoxData>> = [];
+                    const checkboxes: ICheckBoxData[] = [];
                     element.props.children.map((checkbox: React.ReactElement<ICheckBoxProps>) => {
                         checkboxes.push(checkbox.props);
                     });

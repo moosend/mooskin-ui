@@ -40,7 +40,7 @@ export default class Forms extends React.Component<any, any>{
         return(
             <fieldset style={{display: 'inline-block', width: '1000px'}}>
                 <legend>Forms Element</legend>
-                    <H2>Horizontal Forms/FormGroups</H2>
+                    <H2>Forms/FormGroups</H2>
                     <Form style={{border: '2px solid black'}} onSubmit={this.onSubmit}>
                         <FormGroup horizontal>
                             <FormGroup style={{border: '2px solid blue'}}>
@@ -130,7 +130,7 @@ export default class Forms extends React.Component<any, any>{
                         <Button>Submit</Button>
                         <Button type="reset" onClick={this.reset}>Reset</Button>
                     </Form>
-                    <H2>Vertical Forms/FormGroups</H2>
+                    <H2>Forms/FormGroups</H2>
                     <Form style={{border: '2px solid black'}} >
                         <FormGroup style={{border: '2px solid blue'}}>
                             <Input label="Your firstname:" dataLabel="firstname"/>
@@ -162,7 +162,18 @@ export default class Forms extends React.Component<any, any>{
     }
 
     private reset = () => {
-        this.setState({firstname: '', lastname: '', training: false});
+        this.setState({
+            contact: [{checked: false}, {checked: false}, {checked: false}, {checked: false}, {checked: false}],
+            country: '',
+            coverletter: '',
+            email: '',
+            firstname: '',
+            lastname: '',
+            position: [{selected: true}, {selected: false}],
+            salary: '',
+            start: '',
+            training: false,
+        });
     }
 
     private onSubmit = (e: React.FormEvent<HTMLElement>, data: IInputCallbackData) => {
