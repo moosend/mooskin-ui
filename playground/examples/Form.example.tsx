@@ -127,7 +127,7 @@ export default class Forms extends React.Component<any, any>{
                                 <Option value="3-6m">3-6 months</Option>
                             </Select>
                         </FormGroup>
-                        <Button>Submit</Button>
+                        <Button type="submit">Submit</Button>
                         <Button type="reset" onClick={this.reset}>Reset</Button>
                     </Form>
                     <H2>Forms/FormGroups</H2>

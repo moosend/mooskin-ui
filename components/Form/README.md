@@ -145,7 +145,7 @@ In this case, on every click to the <CheckBox> Component, the state property of 
 
 ### onSubmit & Buttons
 
-The `onSubmit` prop of the <Form>, is a function passed to the <Form> that will be called after a <Button> on the <Form> is clicked. Keep in mind that the <Button> Component has a default type of `button`, so if you want to submit a form the submit-way, you have to change the <Button> type. 
+The `onSubmit` prop of the <Form>, is a function passed to the <Form> that will be called after a <Button> on the <Form> is clicked. Keep in mind that the <Button> Component has a default type of `button`, so if you want to pass the onSubmit prop to buttons inside the form, pass the prop type `submit` to the <Button> (<Button type="submit">). 
 
 ```
 <Button type="submit">

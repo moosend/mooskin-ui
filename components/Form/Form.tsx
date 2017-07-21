@@ -80,6 +80,7 @@ export default class Form extends React.Component<IFormProps, {}>{
 
     private onSubmit = (children: any) => {
         return (e: React.MouseEvent<HTMLElement>) => {
+            e.preventDefault();
             const data = this.getEssence(children);
             this.props.onSubmit && this.props.onSubmit(e, {value: data, dataLabel: this.props.dataLabel});
         };
@@ -95,7 +96,7 @@ export default class Form extends React.Component<IFormProps, {}>{
                 key: index,
             };
             if (React.isValidElement<IButtonProps>(child)){
-                if (child.type === Button && child.props.type === 'button'){
+                if (child.type === Button && child.props.type === 'submit'){
                     formElements.push(
                         React.cloneElement(child, {...keyProp, ...buttonProps})
                     );

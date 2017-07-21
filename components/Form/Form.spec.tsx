@@ -85,11 +85,11 @@ describe('Form', () => {
                     <Input />
                     <Input />
                 </FormGroup>
-                <Button />
+                <Button type="submit"/>
             </Form>
         );
 
-        component.find(Button).simulate('click');
+        component.find(Button).simulate('click', { preventDefault: () => undefined });
         expect(func).toHaveBeenCalled();
     });
 
