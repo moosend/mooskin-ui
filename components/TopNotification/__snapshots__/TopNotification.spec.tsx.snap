@@ -26,6 +26,7 @@ exports[`TopNotification renders correctly 1`] = `
       className=""
       onClick={[Function]}
       style={Object {}}
+      type="button"
     >
       click ok
     </Button>

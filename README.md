@@ -189,7 +189,7 @@ If you want to add a new component that is in development to the playground, cre
  
 ### Contribute
 
-MooSkin-UI came to life because of the love for [React](https://facebook.github.io/react/), and if you share the same love, we'd greatly appreciate any contribution you make.
+MooSkin-UI came to life because of the love for [React](https://facebook.github.io/react/), and if you share the same love, we'd greatly appreciate any [contribution](https://github.com/moosend/mooskin-ui/blob/master/CONTRIBUTING.md) you make.
 
  
 ### License

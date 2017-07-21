@@ -17,6 +17,7 @@ describe('Button', () => {
                 inverseStyle
                 id={'button1'}
                 href={'www.moosend.com'}
+                type={'submit'}
             >
                 Mooskin
             </Button>

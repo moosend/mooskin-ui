@@ -15,10 +15,13 @@
     margin-top: 10px;
 }
 
+.horizontal > .checkbox + .checkbox{
+    margin-left: 10px;
+}
+
 .checkbox span {
     cursor: pointer;
     font-size: 0.875rem;
-    margin-left: 5px;
 }
 
 .checkbox input[type='checkbox'] {

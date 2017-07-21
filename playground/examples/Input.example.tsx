@@ -19,7 +19,6 @@ export default (props: any) => {
                 value="password"
                 type="password"
                 label="Password:"
-                spacing={28}
                 description="This has autofocus on page load"
                 autofocus
             />

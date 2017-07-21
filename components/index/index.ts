@@ -18,3 +18,5 @@ export {Bar, Doughnut, Pie, Line} from '../Charts';
 
 export {default as TabbedContent, Tab} from '../TabbedContent';
 export {default as RadioAccordion, RadioAccordionContent} from '../RadioAccordion';
+
+export {default as Form, FormGroup} from '../Form';

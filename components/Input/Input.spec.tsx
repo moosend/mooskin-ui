@@ -8,6 +8,7 @@ describe('Input', () => {
     test('renders correctly', () => {
         const func = jest.fn();
         Date.now = jest.fn(() => 1482363367071);
+        Math.random = jest.fn(() => 222333444555);
 
         const tree = shallow(
             <Input
@@ -24,7 +25,7 @@ describe('Input', () => {
                 type="text"
                 description="just some input"
                 label="with a label ofc"
-                spacing={30}
+                labelWidth={30}
                 autofocus
                 autocomplete
                 required
