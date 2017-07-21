@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Button} from '../../components/index/index';
+import {Button} from '../../components/index/';
 import ButtonExampleCode from './component-strings/Button.example.txt';
 
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
