@@ -2,6 +2,10 @@
     display: inline-flex;
 }
 
+.textAreaDiv{
+    width: 100%;
+}
+
 .textarea{
     padding: 7px;
     font-family: Arial,sans-serif;
@@ -11,6 +15,7 @@
     border-radius: 8px;
     background: #efefef;
     display: table-cell;
+    width: 100%;
 }
 
 .textarea::-webkit-scrollbar {
@@ -54,6 +59,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
     font-size: .92857142857rem;
     padding-top: 7px;
     cursor: pointer;
+    width: 155px;
 }
 
 .areaContainer i{

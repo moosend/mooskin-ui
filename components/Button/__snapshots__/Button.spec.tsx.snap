@@ -11,8 +11,10 @@ exports[`Button renders correctly 1`] = `
       "color": "blue",
     }
   }
+  type="submit"
 >
   <a
+    className="anchor"
     href="www.moosend.com"
   >
     Mooskin

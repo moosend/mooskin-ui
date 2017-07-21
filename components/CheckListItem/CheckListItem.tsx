@@ -47,13 +47,14 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
         const {status, id, text, title, className, style} = this.props;
         const {checkitem, iconStyle, content, button} = styles;
         const icon = status ? 'check' : 'close';
+        const showTitle = title ? '' : 'none';
 
         return (
             <div
                 className={`checkitem-component ${className}`}
                 style={style}
             >
-                <H2 style={{marginLeft: '5px'}}>{title}</H2>
+                <H2 style={{marginLeft: '5px', display: showTitle}}>{title}</H2>
                 <div className={checkitem} id={id}>
                     <i className={`material-icons ${iconStyle}`} >{icon}</i>
                     <div className={content}>

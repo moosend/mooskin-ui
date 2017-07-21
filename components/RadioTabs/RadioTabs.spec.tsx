@@ -8,6 +8,7 @@ describe('RadioTabs', () => {
     test('renders RadioTabs properly according to snapshot', () => {
 
         Date.now = jest.fn(() => 1482363367071);
+        Math.random = jest.fn(() => 222333444555);
 
         const component = shallow(
             <RadioTabs id="5" className="mySwitch" style={{color: 'black'}} horizontal>
@@ -27,6 +28,8 @@ describe('RadioTabs', () => {
     });
 
     test('renders Content properly according to snapshot', () => {
+
+        Math.random = jest.fn(() => 222333444555);
 
         const component = shallow(
             <RadioTabContent
