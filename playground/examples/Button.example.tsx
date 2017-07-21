@@ -8,7 +8,7 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class ButtonExample extends React.Component<any, any> {
     public render(){
         return(
-            <div style={{width: 400}}>
+            <div style={{display: 'inline-block'}}>
                 <ReactLiveEditor scope={{React, Button}} code={ButtonExampleCode} title="Button Example"/>
             </div>
         );
