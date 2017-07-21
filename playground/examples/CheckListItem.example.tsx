@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {CheckListItem} from '../../components/index/index';
+import {CheckListItem, Fieldset} from '../../components/index/index';
 
 export interface IState {
     processes: IProcess[];
@@ -50,10 +50,9 @@ export default class CheckItemExample extends React.Component<{}, IState>{
         });
 
         return(
-            <fieldset style={{display: 'inline-block', width: '600px'}}>
-                <legend>Check List Item</legend>
+            <Fieldset legend="Check List Item" style={{display: 'inline-block', width: '600px'}}>
                 {listChecks}
-            </fieldset>
+            </Fieldset>
         );
     }
 

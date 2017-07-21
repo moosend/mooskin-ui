@@ -1,13 +1,12 @@
 import * as React from 'react';
 
 import {RadioTabContent, RadioTabs} from '../../components/index/index';
-import {Button, H2, Input} from '../../components/index/index';
+import {Button, Fieldset, H2, Input} from '../../components/index/index';
 
 export default (props: any) => {
 
     return (
-        <fieldset style={{display: 'inline-block', width: 800}}>
-            <legend>RadioTabs Element</legend>
+        <Fieldset legend="Radio Tabs Element" style={{display: 'inline-block', width: '800px'}}>
             <H2>Vertical view</H2>
             <RadioTabs>
                 <RadioTabContent title="Click here!">Nice Content eh?</RadioTabContent>
@@ -57,6 +56,6 @@ export default (props: any) => {
                     </div>
                 </RadioTabContent>
             </RadioTabs>
-        </fieldset>
+        </Fieldset>
     );
 };

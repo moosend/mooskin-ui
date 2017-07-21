@@ -1,10 +1,11 @@
 import * as React from 'react';
 
+import Fieldset from '../../../components/Fieldset';
 import styles from './ReactLiveEditor.css';
 
 import {
   LiveEditor,
-  LiveError,
+//   LiveError,
   LivePreview,
   LiveProvider
 } from 'react-live';
@@ -33,8 +34,7 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         return(
             <div>
                 <div className={styles.overlay} style={{display: displayEditor}} onClick={this.onToggle}/>
-                <fieldset className={styles.fieldset}  style={{zIndex}}>
-                    <legend>{this.props.title} - <span onClick={this.onToggle}>{`<Edit Code>`}</span></legend>
+                <Fieldset style={{zIndex}} legend={this.props.title}>
                     <LiveProvider code={this.props.code} scope={this.props.scope}>
                         <div className={styles.editor} style={{display: displayEditor}}>
                             <div onClick={this.onToggle} className={styles.closeBtn}>X</div>
@@ -43,7 +43,7 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
                         {/* <LiveError /> */}
                         <LivePreview />
                     </LiveProvider>
-                </fieldset>
+                </Fieldset>
             </div>
         );
     }

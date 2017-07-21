@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {SmallIconButton} from '../../components/index/index';
+import {Fieldset, SmallIconButton} from '../../components/index/index';
 
 export default (props: any) => {
 
@@ -9,8 +9,7 @@ export default (props: any) => {
     };
 
     return(
-        <fieldset style={{display: 'inline-block'}}>
-            <legend>Small Icon Button Element</legend>
+        <Fieldset legend="Small Icon Button" style={{display: 'inline-block'}}>
             <SmallIconButton onClick={onClick} icon={'notifications'}/>
             <SmallIconButton onClick={onClick} icon={'close'} disabled />
             <SmallIconButton onClick={onClick} icon={'add'} transparent />
@@ -52,6 +51,6 @@ export default (props: any) => {
             <SmallIconButton onClick={onClick} icon={'check box outline blank'} transparent/>
             <SmallIconButton onClick={onClick} icon={'content copy'} transparent/>
             <SmallIconButton onClick={onClick} icon={'import export'}/>
-        </fieldset>
+        </Fieldset>
     );
 };

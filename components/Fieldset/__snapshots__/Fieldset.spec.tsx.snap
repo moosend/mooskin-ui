@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fieldset renders correctly 1`] = `
+<fieldset
+  className="fieldset-component fieldset myClass"
+  id="button1"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <legend
+    className="legend"
+    style={Object {}}
+  >
+    Moosend
+  </legend>
+  Mooskin
+</fieldset>
+`;

@@ -1,5 +1,5 @@
 // tslint:disable-next-line:no-reference
-/// <reference path="../components/custom.d.ts"/>
+/// <reference path="./custom.d.ts"/>
 
 import * as React from 'react';
 

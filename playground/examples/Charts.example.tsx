@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Bar, Doughnut, Line, Pie} from '../../components/index/index';
+import {Bar, Doughnut, Fieldset, Line, Pie} from '../../components/index/index';
 
 export interface IChartState{
     users: IData[];
@@ -155,7 +155,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
             ],
             users: [
                 {
-                    background: '#5CCDDF',
+                    background: '#5CCDDE',
                     label: 'Doni',
                     value: 70,
                 },
@@ -176,99 +176,91 @@ export default class ChartExample extends React.Component<{}, IChartState>{
     public render() {
 
         return(
-            <fieldset style={{display: 'inline-block'}}>
-                <legend>Charts</legend>
-                <div style={{display: 'flex', width: '1000px', flex: '1 1 auto'}}>
-                    <div style={{marginLeft: '130px'}}>
-                        <Pie data={this.state.users} title="Subscribers" size={250}/>
-                    </div>
-                    <div style={{marginLeft: '130px', borderLeft: '1px solid black'}}>
-                        <Doughnut
-                            data={this.state.users}
-                            title="Doughnut.. yummy"
-                            titlePos="bottom"
-                            legendPos="left"
-                            legendStyle="italic"
-                            boxWidth={20}
-                            borderWidth={3}
-                            size={300}
-                        />
-                    </div>
-                </div>
-                <div style={{display: 'flex'}}>
-                    <Line
-                        data={this.state.lineData}
-                        title={'Line Chart'}
-                        height={250}
-                        width={500}
-                        maintainAspectRatio
-                        gridLinesY
-                        gridLinesX
-                    />
-                    <Line
-                        fill
-                        data={this.state.lineData}
-                        title={'Line Chart'}
-                        height={250}
-                        width={500}
-                        maintainAspectRatio
-                        gridLinesY
-                        borderWidth={1}
-                        lineTension={0}
-                        pointRadius={5}
-                        pointStyle="rect"
-                    />
-                </div>
-                <div style={{display: 'flex'}}>
-                    <Line
-                        noLine
-                        data={this.state.lineData}
-                        title={'Line Chart'}
-                        height={250}
-                        width={500}
-                        maintainAspectRatio
-                        gridLinesY
-                        gridLinesX
-                        lineTension={0}
-                        pointRadius={10}
-                        pointStyle="star"
-                        noLegend
-                    />
-                    <Line
-                        data={this.state.lineData}
-                        title={'Line Chart'}
-                        height={250}
-                        width={500}
-                        maintainAspectRatio
-                        borderWidth={1}
-                        steppedLine
-                    />
-                </div>
-                <div style={{display: 'flex'}}>
-                    <Bar
-                        data={this.state.barData}
-                        title={'Chart Title'}
-                        height={250}
-                        width={500}
-                        label={'Number of subscribers'}
-                        minValue={40}
-                        gridLinesY
-                        gridLinesX
-                        borderColor={'rgba(255,99,132,1)'}
-                        borderWidth={1}
-                        barPercentage={0.5}
-                    />
-                    <Bar
-                        data={this.state.users}
-                        title={'Chart title'}
-                        height={250}
-                        width={500}
-                        label={'Number of subscribers'}
-                        minValue={20}
-                        barPercentage={0.8}
-                    />
-                </div>
-            </fieldset>
+            <Fieldset legend="Charts" style={{display: 'inline-block'}}>
+                <Pie data={this.state.users} title="Subscribers" size={250}/>
+                <hr/>
+                <Doughnut
+                    data={this.state.users}
+                    title="Doughnut.. yummy"
+                    titlePos="bottom"
+                    legendPos="left"
+                    legendStyle="italic"
+                    boxWidth={20}
+                    borderWidth={3}
+                    size={200}
+                />
+                <hr/>
+                <Line
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    gridLinesY
+                    gridLinesX
+                />
+                <Line
+                    fill
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    gridLinesY
+                    borderWidth={1}
+                    lineTension={0}
+                    pointRadius={5}
+                    pointStyle="rect"
+                />
+                <Line
+                    noLine
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    gridLinesY
+                    gridLinesX
+                    lineTension={0}
+                    pointRadius={10}
+                    pointStyle="star"
+                    noLegend
+                />
+                <Line
+                    data={this.state.lineData}
+                    title={'Line Chart'}
+                    height={300}
+                    width={600}
+                    maintainAspectRatio
+                    borderWidth={1}
+                    steppedLine
+                />
+                <hr/>
+                <Bar
+                    data={this.state.barData}
+                    title={'Chart Title'}
+                    height={200}
+                    width={400}
+                    maintainAspectRatio
+                    label={'Number of subscribers'}
+                    minValue={40}
+                    gridLinesY
+                    gridLinesX
+                    borderColor={'rgba(255,99,132,1)'}
+                    borderWidth={1}
+                    barPercentage={0.5}
+                />
+                <Bar
+                    data={this.state.users}
+                    title={'Chart title'}
+                    height={200}
+                    width={400}
+                    maintainAspectRatio
+                    label={'Number of subscribers'}
+                    minValue={20}
+                    barPercentage={0.8}
+                />
+            </Fieldset>
         );
     }
 }

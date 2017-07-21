@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {TextArea} from '../../components/index/index';
+import {Fieldset, TextArea} from '../../components/index/index';
 
 export default (props: any) => {
 
@@ -11,11 +11,10 @@ export default (props: any) => {
     };
 
     return (
-        <fieldset style={{display: 'inline-block'}}>
-            <legend>TextArea Element</legend>
+        <Fieldset legend="TextArea Element" style={{display: 'inline-block'}}>
             <TextArea onChange={onChange} value="with value and custom rows/cols" label="Label:" rows={7} cols={35}/>
             <hr/>
             <TextArea onChange={onChange} disabled value="disabled" description="This text area is disabled"/>
-        </fieldset>
+        </Fieldset>
     );
 };
