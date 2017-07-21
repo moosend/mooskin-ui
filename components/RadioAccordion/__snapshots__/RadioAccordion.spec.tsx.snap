@@ -21,11 +21,14 @@ exports[`RadioAccordion renders Header properly according to snapshot 1`] = `
     className="radio activeHeader checkedRadio"
     onClick={[Function]}
   >
-    <label>
-      <input
-        defaultChecked={true}
-        type="radio"
-      />
+    <input
+      defaultChecked={true}
+      id="4zlbrf"
+      type="radio"
+    />
+    <label
+      htmlFor="4zlbrf"
+    >
       <span>
         title1
       </span>

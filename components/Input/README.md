@@ -75,7 +75,7 @@ This can be used in various situations and combinations, for an enhanced develop
 * `disabled` - input field should be disabled
 * `required` - input field is required
 * `description` - input description (small italic bottom)
-* `spacing` - spacing between label and input
+* `labelWidth` - label width (default 150 px)
 * `autofocus` - autofocus specified input on page load
 * `autocomplete` - toggle autocomplete
 * `className` - css class

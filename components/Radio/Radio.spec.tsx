@@ -28,6 +28,7 @@ describe('Radio', () => {
     test('renders Radio correctly', () => {
         const func = jest.fn();
         Date.now = jest.fn(() => 1482363367071);
+        Math.random = jest.fn(() => 222333444555);
 
         const tree = shallow(
             <Radio
@@ -128,5 +129,22 @@ describe('Radio', () => {
         expect(component.find(Radio).dive().find('input').simulate('click'));
 
         expect(func).not.toHaveBeenCalled();
+    });
+
+    test('Selected is assigned to the first radio if none is has selected prop', () => {
+        const func = jest.fn();
+
+        const component = shallow(
+            <RadioGroup onChange={func}>
+                <Radio value="radio1" />
+                <Radio value="radio2" />
+            </RadioGroup>
+        );
+
+        expect(component.find(Radio).first().prop('selected')).toBeTruthy;
+
+        expect(component.find(Radio).first().dive().find('input').simulate('click'));
+
+        expect(component.find(Radio).first().prop('selected')).toBeTruthy;
     });
 });
