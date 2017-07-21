@@ -19,7 +19,7 @@ export default class HorizontalRangeBarExample extends React.Component<{}, IHRBS
 
     public render() {
         return (
-            <Fieldset legend="Loader" style={{display: 'inline-block', width: '400'}}>
+            <Fieldset legend="Loader" style={{display: 'inline-block', width: '400px'}}>
                 <HorizontalRangeBar progress={this.state.progress}/><br/>
                 <HorizontalRangeBar progress={this.state.progress} range={[0, 1000]} background={'green'}/><br/>
                 <HorizontalRangeBar progress={this.state.progress} range={[0, 500]} background={'red'}/><br/>
