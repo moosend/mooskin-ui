@@ -47,7 +47,6 @@ or just give it a custom style
 ## Supported attributes
 
 * `id` - id of the element
-* `name` - name of the Fieldset
 * `legend` - top fieldset text
 * `className` - css class
 * `style` - Fieldset style

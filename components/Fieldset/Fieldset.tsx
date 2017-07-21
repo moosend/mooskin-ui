@@ -7,9 +7,6 @@ export interface IFieldsetProps{
     /** fieldset id */
     id?: string;
 
-    /** fieldset name */
-    name?: string;
-
     /** Fieldset legend */
     legend?: string;
 
@@ -32,7 +29,6 @@ export default class Fieldset extends React.Component<IFieldsetProps, {}>{
         return (
             <fieldset
                 id={this.props.id}
-                name={this.props.name}
                 className={`fieldset-component ${styles.fieldset} ${this.props.className}`}
                 style={this.props.style}
             >
