@@ -1,12 +1,11 @@
 import * as React from 'react';
 
-import {Button, H2, Input, RadioAccordion, RadioAccordionContent} from '../../components/index/index';
+import {Button, Fieldset, H2, Input, RadioAccordion, RadioAccordionContent} from '../../components/index/index';
 
 export default (props: any) => {
 
     return(
-        <fieldset style={{display: 'inline-block', width: '800px'}}>
-            <legend>Accordion Element</legend>
+        <Fieldset legend="Accordion Element" style={{display: 'inline-block', width: '800px'}}>
             <RadioAccordion>
                 <RadioAccordionContent title="Click here!">Nice Content eh?</RadioAccordionContent>
                 <RadioAccordionContent title="I'm a radio too" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
@@ -30,6 +29,6 @@ export default (props: any) => {
                     <Button>Ah..Tabs...</Button>
                 </RadioAccordionContent>
             </RadioAccordion>
-        </fieldset>
+        </Fieldset>
     );
 };

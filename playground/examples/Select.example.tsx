@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {Option, Select} from '../../components/index/index';
+import {Fieldset, Option, Select} from '../../components/index/index';
 
 export default (props: any) => {
 
@@ -15,8 +15,7 @@ export default (props: any) => {
     };
 
     return (
-        <fieldset style={{display: 'inline-block', width: 400}}>
-            <legend>Select Element</legend>
+        <Fieldset legend="Select Element" style={{display: 'inline-block', width: '400px'}}>
             <Select onChange={onChangeClick} dataLabel="plan" label="Some label" selected="option3">
                 <Option value="option1">Option1</Option>
                 <Option value="option2">Option2</Option>
@@ -28,6 +27,6 @@ export default (props: any) => {
             <Select onChange={onClick} selected="option" dataLabel="plan" description="Select description goes here">
                 <Option value="option1">Option1</Option>
             </Select>
-        </fieldset>
+        </Fieldset>
     );
 };

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {CheckBox, CheckboxGroup} from '../../components/index';
+import {CheckBox, CheckboxGroup, Fieldset} from '../../components/index';
 
 export interface ICheckBoxState{
     checked: boolean;
@@ -21,8 +21,7 @@ export default class CheckBoxClass extends React.Component<{}, ICheckBoxState> {
     public render() {
 
         return (
-            <fieldset style={{display: 'inline-block'}}>
-                <legend>CheckBox Element</legend>
+            <Fieldset legend="CheckBox Element" style={{display: 'inline-block'}}>
                 <CheckboxGroup
                     onChange={this.onChange}
                     title="Vertical checkboxes"
@@ -45,7 +44,7 @@ export default class CheckBoxClass extends React.Component<{}, ICheckBoxState> {
                 </CheckboxGroup>
                 <br/>
                 <CheckBox value="doni" label="Lone Checkbox" onClick={this.onClick} checked={this.state.checked}/>
-            </fieldset>
+            </Fieldset>
         );
 
     }

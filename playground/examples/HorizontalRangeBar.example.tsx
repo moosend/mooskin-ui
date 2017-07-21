@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Button, HorizontalRangeBar} from '../../components/index/index';
+import {Button, Fieldset, HorizontalRangeBar} from '../../components/index/index';
 
 export interface IHRBState{
     progress: number;
@@ -19,8 +19,7 @@ export default class HorizontalRangeBarExample extends React.Component<{}, IHRBS
 
     public render() {
         return (
-            <fieldset style={{display: 'inline-block', width: 400}}>
-                <legend>Loader</legend>
+            <Fieldset legend="Loader" style={{display: 'inline-block', width: '400'}}>
                 <HorizontalRangeBar progress={this.state.progress}/><br/>
                 <HorizontalRangeBar progress={this.state.progress} range={[0, 1000]} background={'green'}/><br/>
                 <HorizontalRangeBar progress={this.state.progress} range={[0, 500]} background={'red'}/><br/>
@@ -28,7 +27,7 @@ export default class HorizontalRangeBarExample extends React.Component<{}, IHRBS
 
                 <Button onClick={this.onClickStartInterval}>Start Race</Button>
                 <Button onClick={this.onClickStopInterval}>Stop Race</Button>
-            </fieldset>
+            </Fieldset>
         );
     }
 

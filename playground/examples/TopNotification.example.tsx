@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Button, TopNotification} from '../../components/index/index';
+import {Button, Fieldset, TopNotification} from '../../components/index/index';
 
 export interface ITopNotificationState{
     visible1: boolean;
@@ -24,8 +24,7 @@ export default class TopNotificationExample extends React.Component<{}, ITopNoti
 
     public render(){
         return(
-            <fieldset style={{display: 'inline-block'}}>
-                <legend>TopNotification Element</legend>
+            <Fieldset legend="Top Notification Element" style={{display: 'inline-block'}}>
                 <TopNotification text="You have successfully saved your campaign!" visible={this.state.visible1}/>
                 <Button onClick={this.onClickShow('visible1')}>Show Notification 1</Button>
                 <Button onClick={this.onClickHide('visible1')} inverseStyle>Hide Notification 1</Button>
@@ -53,7 +52,7 @@ export default class TopNotificationExample extends React.Component<{}, ITopNoti
                 />
                 <Button onClick={this.onClickShow('visible4')}>Show Notification 4</Button>
                 <Button onClick={this.onClickHide('visible4')} inverseStyle>Hide Notification 4</Button>
-            </fieldset>
+            </Fieldset>
         );
     }
 

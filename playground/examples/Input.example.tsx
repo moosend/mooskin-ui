@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {Input} from '../../components/index/index';
+import {Fieldset, Input} from '../../components/index/index';
 
 export default (props: any) => {
 
@@ -11,8 +11,7 @@ export default (props: any) => {
     };
 
     return (
-        <fieldset style={{display: 'inline-block'}}>
-            <legend>Input Element</legend>
+        <Fieldset legend="Input Element" style={{display: 'inline-block'}}>
             <Input onChange={onChange} type="text" maxlength={5} placeholder="max length 5" label="Some label:"/>
             <br/>
             <Input
@@ -28,6 +27,6 @@ export default (props: any) => {
             <Input onChange={onChange} placeholder="placeholder" className=".input-field" autocomplete/>
             <br/>
             <Input onChange={onChange} disabled value="disabled" description="This input is disabled"/>
-        </fieldset>
+        </Fieldset>
     );
 };

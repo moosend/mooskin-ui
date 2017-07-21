@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Bar, Doughnut, Line, Pie} from '../../components/index/index';
+import {Bar, Doughnut, Fieldset, Line, Pie} from '../../components/index/index';
 
 export interface IChartState{
     users: IData[];
@@ -155,7 +155,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
             ],
             users: [
                 {
-                    background: '#5CCDDF',
+                    background: '#5CCDDE',
                     label: 'Doni',
                     value: 70,
                 },
@@ -176,8 +176,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
     public render() {
 
         return(
-            <fieldset style={{display: 'inline-block'}}>
-                <legend>Charts</legend>
+            <Fieldset legend="Charts" style={{display: 'inline-block'}}>
                 <Pie data={this.state.users} title="Subscribers" size={250}/>
                 <hr/>
                 <Doughnut
@@ -261,7 +260,7 @@ export default class ChartExample extends React.Component<{}, IChartState>{
                     minValue={20}
                     barPercentage={0.8}
                 />
-            </fieldset>
+            </Fieldset>
         );
     }
 }

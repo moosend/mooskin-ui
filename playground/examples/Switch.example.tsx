@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {Switch} from '../../components/index/index';
+import {Fieldset, Switch} from '../../components/index/index';
 
 export interface ISwitchState{
     automations: IAutomations[];
@@ -57,12 +57,11 @@ export default class SwitchExample extends React.Component<{}, ISwitchState>{
         });
 
         return(
-            <fieldset style={{display: 'inline-block'}}>
-                <legend>Switch</legend>
+            <Fieldset legend="Switch Element" style={{display: 'inline-block'}}>
                 <div>
                     {listAutomations}
                 </div>
-            </fieldset>
+            </Fieldset>
         );
     }
 
