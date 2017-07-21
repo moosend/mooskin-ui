@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {TabbedContent} from '../../components/index/index';
+import {Fieldset, TabbedContent} from '../../components/index/index';
 
 export default (props: any) => {
 
@@ -14,8 +14,7 @@ export default (props: any) => {
     };
 
     return (
-        <fieldset style={{display: 'inline-block', width: 1000}}>
-            <legend>TabbedContent Element</legend>
+        <Fieldset legend="TabbedContent Element" style={{display: 'inline-block', width: '1000px'}}>
             <TabbedContent>
                 <TabbedContent.Tab title="Title 1" active>
                     <div style={{...style, backgroundColor: '#5CCDDF'}}>
@@ -33,6 +32,6 @@ export default (props: any) => {
                     </div>
                 </TabbedContent.Tab>
             </TabbedContent>
-        </fieldset>
+        </Fieldset>
     );
 };

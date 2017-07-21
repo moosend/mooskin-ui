@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {Radio, RadioGroup} from '../../components/index/index';
+import {Fieldset, Radio, RadioGroup} from '../../components/index/index';
 
 export default (props: any) => {
 
@@ -11,8 +11,7 @@ export default (props: any) => {
     };
 
     return(
-        <fieldset style={{display: 'inline-block', width: '500px'}}>
-            <legend>Radio Element</legend>
+        <Fieldset legend="Radio Element" style={{display: 'inline-block', width: '500px'}}>
                 <RadioGroup
                     onChange={onChange}
                     title="Horizontal radios"
@@ -35,6 +34,6 @@ export default (props: any) => {
                     <Radio value={'Radio5'} label="This one has a label"/>
                     <Radio value={'Radio6'} label="This one is disabled" disabled/>
                 </RadioGroup>
-        </fieldset>
+        </Fieldset>
     );
 };
