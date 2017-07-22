@@ -1,0 +1,41 @@
+class RadioExample extends React.Component {
+
+    constructor(){
+        super();
+
+        this.onChange = this.onChange.bind(this);
+    }
+
+    render() {
+        return(
+            <div>
+                    <RadioGroup
+                        onChange={this.onChange}
+                        title="Horizontal radios"
+                        spacing={10}
+                        dataLabel="horizontal"
+                    >
+                        <Radio value={'Radio1'}/>
+                        <Radio value={'Radio2'} label="This one has a label" selected/>
+                        <Radio value={'Radio3'} label="This one is disabled" disabled/>
+                    </RadioGroup>
+                    <br/>
+                    <RadioGroup
+                        onChange={this.onChange}
+                        title="Vertical radios"
+                        spacing={10}
+                        dataLabel="vertical"
+                        vertical
+                    >
+                        <Radio value={'Radio4'}/>
+                        <Radio value={'Radio5'} label="This one has a label"/>
+                        <Radio value={'Radio6'} label="This one is disabled" disabled/>
+                    </RadioGroup>
+            </div>
+        );
+    }
+
+    onChange(e, data) {
+        console.log(data.value);
+    }
+}

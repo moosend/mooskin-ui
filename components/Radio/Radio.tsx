@@ -25,7 +25,7 @@ export interface IRadioGroupProps {
     className?: string;
 
     /** override RadioGroup styles */
-    style?: {[key: string]: string};
+    style?: React.CSSProperties;
 
     /** childrens must be a Radio Component */
     children?: Array<React.ReactElement<IRadioProps>> | React.ReactElement<IRadioProps>;
@@ -65,7 +65,7 @@ export interface IRadioProps {
     name?: string;
 
     /** override Radio styles */
-    style?: {[key: string]: string};
+    style?: React.CSSProperties;
 
     /** radio label */
     label?: string;

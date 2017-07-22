@@ -49,7 +49,7 @@ export interface IProps {
     autofocus?: boolean;
 
     /** override input styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** override input class */
     className?: string;

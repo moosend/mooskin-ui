@@ -1,39 +1,20 @@
 import * as React from 'react';
 
-import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
+import {Radio, RadioGroup} from '../../components/index/';
+import RadioExampleCode from './component-strings/Radio.example.txt';
 
-import {Fieldset, Radio, RadioGroup} from '../../components/index/index';
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
-export default (props: any) => {
-
-    const onChange = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        console.log(data.value);
-    };
-
-    return(
-        <Fieldset legend="Radio Element" style={{display: 'inline-block', width: '500px'}}>
-                <RadioGroup
-                    onChange={onChange}
-                    title="Horizontal radios"
-                    spacing={10}
-                    dataLabel="horizontal"
-                >
-                    <Radio value={'Radio1'}/>
-                    <Radio value={'Radio2'} label="This one has a label" selected/>
-                    <Radio value={'Radio3'} label="This one is disabled" disabled/>
-                </RadioGroup>
-                <br/>
-                <RadioGroup
-                    onChange={onChange}
-                    title="Vertical radios"
-                    spacing={10}
-                    dataLabel="vertical"
-                    vertical
-                >
-                    <Radio value={'Radio4'}/>
-                    <Radio value={'Radio5'} label="This one has a label"/>
-                    <Radio value={'Radio6'} label="This one is disabled" disabled/>
-                </RadioGroup>
-        </Fieldset>
-    );
-};
+export default class RadioExample extends React.Component<any, any> {
+    public render(){
+        return(
+            <div style={{display: 'inline-block'}}>
+                <ReactLiveEditor
+                    scope={{React, RadioGroup, Radio}}
+                    code={RadioExampleCode}
+                    title="Radio Example"
+                />
+            </div>
+        );
+    }
+}

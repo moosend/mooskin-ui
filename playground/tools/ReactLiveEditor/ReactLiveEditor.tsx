@@ -39,13 +39,15 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
                     <legend>
                         {this.props.title}
                         <span style={{color: '#e6e6e6', fontWeight: 800}}> - </span>
-                        <SmallIconButton
-                            icon="mode edit"
-                            transparent
-                            style={{margin: '0px 0px 5px'}}
-                            onClick={this.onToggle}
-                        />
-                        <span style={{color: '#bbb'}}>Edit</span>
+                        <span className={styles.edit} onClick={this.onToggle}>
+                            <SmallIconButton
+                                className={styles.edit}
+                                icon="mode edit"
+                                transparent
+                                style={{margin: '0px 0px 5px'}}
+                            />
+                            Edit Code
+                        </span>
                     </legend>
                     <LiveProvider code={this.props.code} scope={this.props.scope}>
                         <div className={styles.editor} style={{display: displayEditor}}>

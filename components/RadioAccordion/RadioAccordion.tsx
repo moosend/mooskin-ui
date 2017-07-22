@@ -11,7 +11,7 @@ export interface IAccordionProps {
     className?: string;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** children here can only be Tab elements */
     children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>;
@@ -29,7 +29,7 @@ export interface IContentProps {
     active?: boolean;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
 }
 

@@ -26,7 +26,7 @@ export interface ICheckBoxGroupProps {
     className?: string;
 
     /** override CheckboxGroup styles */
-    style?: {[key: string]: string};
+    style?: React.CSSProperties;
 
     /** childrens must be a Checkbox Component */
     children?: Array<React.ReactElement<ICheckBoxProps>> | React.ReactElement<ICheckBoxProps>;
@@ -66,7 +66,7 @@ export interface ICheckBoxProps {
     name?: string;
 
     /** override Checkbox styles */
-    style?: {[key: string]: string};
+    style?: React.CSSProperties;
 
     /** Checkbox label */
     label?: string;

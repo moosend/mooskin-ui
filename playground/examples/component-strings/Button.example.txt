@@ -7,7 +7,7 @@ class ButtonExample extends React.Component {
 
     render(){
         return(
-            <div>
+            <div style={{display: 'inline-block'}}>
                 <Button onClick={this.onClick}>Button</Button>
                 <Button onClick={this.onClick} disabled>Button</Button>
                 <Button onClick={this.onClick} inverseStyle>Button</Button>

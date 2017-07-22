@@ -37,3 +37,13 @@
     text-align: center;
     cursor: pointer;
 }
+
+.edit{
+    transition: all 400ms ease;
+    color: #F48770;
+}
+
+.edit:hover{
+    cursor: pointer;
+    color: #5ccdde;
+}

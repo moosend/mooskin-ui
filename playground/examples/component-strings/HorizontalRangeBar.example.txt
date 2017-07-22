@@ -1,0 +1,42 @@
+class HorizontalRangeBarExample extends React.Component {
+
+    constructor(){
+        super();
+
+        this.onClickStartInterval = this.onClickStartInterval.bind(this);
+        this.onClickStopInterval = this.onClickStartInterval.bind(this);
+
+        this.horizontalRangeInterval;
+
+        this.state = {
+            progress: 0
+        };
+
+    }
+
+    render(){
+        return (
+            <div>
+                <HorizontalRangeBar progress={this.state.progress}/><br/>
+                <HorizontalRangeBar progress={this.state.progress} range={[0, 1000]} background={'green'}/><br/>
+                <HorizontalRangeBar progress={this.state.progress} range={[0, 500]} background={'red'}/><br/>
+                <HorizontalRangeBar progress={this.state.progress} range={[0, 50]} background={'blue'}/><br/>
+
+                <Button onClick={this.onClickStartInterval}>Start Race</Button>
+                <Button onClick={this.onClickStopInterval}>Stop Race</Button>
+            </div>
+        );
+    }
+
+    onClickStartInterval(e) {
+        this.horizontalRangeInterval = setInterval(function(){
+           this.setState({progress: this.state.progress + 5});
+        }, 100);
+        console.log(e.target);
+    }
+
+    onClickStopInterval(e) {
+        clearInterval(this.horizontalRangeInterval);
+        console.log(e.target);
+    }
+}

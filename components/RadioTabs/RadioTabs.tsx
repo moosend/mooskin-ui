@@ -13,7 +13,7 @@ export interface IRadioTabsProps {
     className?: string;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** horizontal RadioTabs view */
     horizontal?: boolean;
@@ -34,7 +34,7 @@ export interface IContentProps {
     active?: boolean;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
 }
 

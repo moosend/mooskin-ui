@@ -21,7 +21,7 @@ export interface IFormProps{
     className?: string;
 
     /** Form styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** callback data on submit */
     onSubmit?: (e: React.FormEvent<HTMLElement>, data: IInputCallbackData) => void;
@@ -49,7 +49,7 @@ export interface IFormGroupProps{
     className?: string;
 
     /** Form styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** wether the content should be aligned horizontaly */
     horizontal?: boolean;
