@@ -40,7 +40,7 @@ Modular usageis also possible for both css and js(components) files, if you just
 
 ```
 import 'mooskin/lib/Button/style.css';
-import 'mooskin/lib/Button';
+import Button from 'mooskin/lib/Button';
 // import {Button} from 'mooskin';  //this works as well
 ```
 

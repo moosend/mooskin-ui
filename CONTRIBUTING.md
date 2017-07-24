@@ -90,9 +90,10 @@ Please create a new branch from an up to date `develop` branch on your fork. (No
 
 1. Fork the Mooskin repository on Github
 2. Clone your fork to your local machine `git clone git@github.com:<yourname>/mooskin-ui.git`
-3. Create a branch `git checkout -b my-topic-branch`
-4. Make your changes, lint, then push to github with `git push origin my-topic-branch`.
-5. Visit github and make your pull request.
+3. Create an upstream remote and sync your local copy before you branch. `git remote add upstream git@github.com:moosend/mooskin-ui.git`
+4. Create a branch `git checkout -b my-topic-branch`
+5. Make your changes, lint, then push to github with `git push origin my-topic-branch`.
+6. Visit github and make your pull request.
 
 ### Coding style
 
