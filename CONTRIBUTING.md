@@ -28,18 +28,43 @@ Components
     └── README.md
 ```
 
-There's also the playground, which is used to demonstrate components. It uses the following structure
+There's also the playground, which is used to demonstrate components, and a newly added feature to the Playground which is the Live Editor for library components. It uses the following structure
 
 ```
 Playground
 ├── examples
-|   ├── Button.example.tsx                 // A component return an instance of the Button component
+|   ├── component-strings                  // a folder of .txt files representing the component to be used within the Live Editor
+|   |    └── Button.example.txt
+|   ├── Button.example.tsx                 // A component return an instance of the ReactLiveEditor using one of the component strings
 |   ├── Input.example.tsx
 |   └── Radio.example.tsx
 ├── App.tsx                                // Import the example in the App and you're good to go
 ├── index.html
 └── playground.tsx
 ```
+
+Let's take the Button component for example. If we want to display the component to the Playground using the ReactLiveEditor, first create a .txt file inside the `component-strings` folder. In this file, create the react class that you want to display in ES2015, pls do not use imports or exports here as it is just a txt file that our Live Editor component needs to render the component, the dependencies that you would otherwise import you need to provide to the ReactLiveEdior via the 'scope' property (for example {React, Button} in this case). Also you can look at how the other components have their examples. We're done here. Then create a `Button.example.tsx` file inside the examples folder. In this file we must import the desired component, the .txt file from `component-strings` relevant to that component and the `ReactLiveEditor` component. All we have to do is return a `ReactLiveEditor` element from our render method and pass it the required props. For example:
+
+```
+import * as React from 'react';
+
+import {Button} from '../../components/index/';
+import ButtonExampleCode from './component-strings/Button.example.txt';
+
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
+
+export default class ButtonExample extends React.Component<any, any> {
+    public render(){
+        return(
+            <div style={{display: 'inline-block'}}>
+                <ReactLiveEditor scope={{React, Button}} code={ButtonExampleCode} title="Button Example"/>
+            </div>
+        );
+    }
+}
+```
+
+the component should now appear on the Playground, with an `Edit Code` above it.
 
 ### Issues
 

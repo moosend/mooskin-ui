@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Table.css';
 
-export interface ITableProps {
+export interface ITableProps extends React.TableHTMLAttributes<HTMLTableElement>{
 
     /** override Table id */
     id?: string;
@@ -26,7 +26,7 @@ export default class Table extends React.Component<ITableProps, {}> {
 
         return (
             <div>
-                <table className={`${styles.table} ${this.props.className}`} style={this.props.style}>
+                <table {...this.props} className={`${styles.table} ${this.props.className}`}>
                     {this.props.children}
                 </table>
             </div>
