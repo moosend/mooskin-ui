@@ -11,7 +11,7 @@ export interface IAccordionProps {
     className?: string;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** children here can only be Tab elements */
     children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>;
@@ -29,7 +29,7 @@ export interface IContentProps {
     active?: boolean;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
 }
 
@@ -146,18 +146,24 @@ export const RadioAccordionContent: React.StatelessComponent<IContentProps> = (p
 
 export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
+    const generateId = () => {
+        return Math.random().toString(36).substr(2, 10);
+    };
+
     const activeRadio = props.active ? styles.activeHeader : styles.inactiveHeader;
     const checkedRadio = !props.active ? '' : styles.checkedRadio;
+    const genId = generateId();
 
     return (
         <div className={`accordion-header ${styles.container}`}>
             <div className={`${styles.radio} ${activeRadio} ${checkedRadio}`} onClick={props.onClick}>
-                <label>
-                    <input
-                        type="radio"
-                        name={props.name}
-                        defaultChecked={props.active}
-                    />
+                <input
+                    id={genId}
+                    type="radio"
+                    name={props.name}
+                    defaultChecked={props.active}
+                />
+                <label htmlFor={genId}>
                     <span>{props.title}</span>
                 </label>
             </div>

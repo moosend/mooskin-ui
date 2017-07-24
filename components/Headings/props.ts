@@ -7,7 +7,7 @@ export interface IHeadingProps {
     className?: string;
 
     /** override h1 styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** children can only be a string */
     children?: string;

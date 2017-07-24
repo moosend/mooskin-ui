@@ -1,0 +1,51 @@
+.fieldset{
+    position:relative;
+    display: inline-block;
+}
+
+.fieldset legend span{
+    cursor: pointer;
+    color: #5ccdde;
+    font-weight: bold;
+}
+
+.editor{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index:21;
+    overflow: auto;
+    background: #1D1F21;
+}
+
+.overlay{
+    position: fixed;
+    /* z-index:20; */
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.closeBtn{
+    top: 10px;
+    right:10px;
+    width:18px;
+    height:18px;
+    font-weight: bold;
+    position:absolute;
+    background: #efefef;
+    text-align: center;
+    cursor: pointer;
+}
+
+.edit{
+    transition: all 400ms ease;
+    color: #F48770;
+}
+
+.edit:hover{
+    cursor: pointer;
+    color: #5ccdde;
+}

@@ -11,7 +11,7 @@ export interface ITabbedContentProps {
     className?: string;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** children here can only be Tab elements */
     children?: Array<React.ReactElement<ITabProps>> | React.ReactElement<ITabProps>;
@@ -35,7 +35,7 @@ export interface ITabProps {
     iconClass?: string;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
 }
 

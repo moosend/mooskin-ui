@@ -154,9 +154,11 @@ import {Input} from 'mooskin'
 * [Radio](https://github.com/moosend/mooskin-ui/tree/master/components/Radio)
 * [CheckBox](https://github.com/moosend/mooskin-ui/tree/master/components/Checkbox)
 * [TextArea](https://github.com/moosend/mooskin-ui/tree/master/components/TextArea)
+* [Form](https://github.com/moosend/mooskin-ui/tree/master/components/Form)
 * [Switch](https://github.com/moosend/mooskin-ui/tree/master/components/Switch)
 * [Select](https://github.com/moosend/mooskin-ui/tree/master/components/Select)
 * [Headings](https://github.com/moosend/mooskin-ui/tree/master/components/Headings)
+* [Fieldset](https://github.com/moosend/mooskin-ui/tree/master/components/Fieldset)
 * [SmallIconButton](https://github.com/moosend/mooskin-ui/tree/master/components/SmallIconButton)
 * [TabbedContent](https://github.com/moosend/mooskin-ui/tree/master/components/TabbedContent)
 * [RadioTabs](https://github.com/moosend/mooskin-ui/tree/master/components/RadioTabs)
@@ -190,7 +192,7 @@ If you want to add a new component that is in development to the playground, cre
  
 ### Contribute
 
-MooSkin-UI came to life because of the love for [React](https://facebook.github.io/react/), and if you share the same love, we'd greatly appreciate any contribution you make.
+MooSkin-UI came to life because of the love for [React](https://facebook.github.io/react/), and if you share the same love, we'd greatly appreciate any [contribution](https://github.com/moosend/mooskin-ui/blob/master/CONTRIBUTING.md) you make.
 
  
 ### License

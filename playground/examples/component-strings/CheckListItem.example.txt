@@ -1,0 +1,53 @@
+class CheckListItemExample extends React.Component {
+
+    constructor(){
+        super();
+
+        this.checkIt = this.checkIt.bind(this);
+
+        this.state = {
+            processes: [
+                {
+                    content: 'Just don\'\t do it',
+                    name: 'Nukes launched',
+                    status: false
+                },
+                {
+                    content: 'Win three games in Heroes of the Storm',
+                    name: 'HotS Challenge',
+                    status: true
+                }
+            ]
+        };
+    }
+
+    render(){
+        const listChecks = this.state.processes.map((process, i) => {
+            return (
+                <CheckListItem
+                    key={i}
+                    onClick={this.checkIt(i)}
+                    status={process.status}
+                    title={process.name}
+                    text={process.content}
+                />
+            );
+        });
+
+        return(
+            <div style={{display: 'inline-block'}}>
+                {listChecks}
+            </div>
+        );
+    }
+
+    checkIt(i) {
+        return (e, data) => {
+            const processes = this.state.processes;
+            processes[i].status = !this.state.processes[i].status;
+
+            this.setState({processes});
+            console.log(data.value);
+        };
+    }
+}

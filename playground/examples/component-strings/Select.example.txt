@@ -1,0 +1,36 @@
+class SelectExample extends React.Component {
+
+    constructor(){
+        super();
+
+        this.onChange = this.onChange.bind(this);
+        this.onClick = this.onClick.bind(this);
+
+    }
+
+    render(){
+        return (
+        <div style={{display: 'inline-block', width: '400px'}}>
+            <Select onChange={this.onChange} dataLabel="plan" label="Some label" selected="option3">
+                <Option value="option1">Option1</Option>
+                <Option value="option2">Option2</Option>
+                <Option value="option3">Option3</Option>
+                <Option value="option4">Option4</Option>
+                <Option value="option5">Option5</Option>
+            </Select>
+            <br/>
+            <Select onChange={this.onClick} selected="option" dataLabel="plan" description="Select description goes here">
+                <Option value="option1">Option1</Option>
+            </Select>
+        </div>
+    );
+    }
+
+    onChange(e, data) {
+        console.log(e.target);
+    }
+
+    onClick(e) {
+        console.log(e.target);
+    };
+}

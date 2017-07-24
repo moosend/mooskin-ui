@@ -3,6 +3,10 @@
     margin: 3px;
 }
 
+.inputDiv{
+    width: 100%;
+}
+
 .input{
     padding: 15px;
     font-family: Arial,sans-serif;
@@ -12,6 +16,7 @@
     font-size: 1rem;
     border-radius: 8px;
     background: #efefef;
+    width: 100%;
 }
 
 .disabledInput{
@@ -31,11 +36,11 @@
 
 .inputLabel {
     color: #6b6b6b;
-    font-size: 13px;
+    /* font-size: 13px; */
     font-size: .92857142857rem;
-    margin-left: 1px;
     cursor: pointer;
     padding-top: 15px;
+    width: 150px;
 }
 
 .inputContainer i{

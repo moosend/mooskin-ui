@@ -13,7 +13,7 @@ export interface IRadioTabsProps {
     className?: string;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** horizontal RadioTabs view */
     horizontal?: boolean;
@@ -34,7 +34,7 @@ export interface IContentProps {
     active?: boolean;
 
     /** override styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
 }
 
@@ -163,19 +163,25 @@ export interface IHeaderProps {
 
 export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
+    const generateId = () => {
+        return Math.random().toString(36).substr(2, 10);
+    };
+
     const activeRadio = props.active ? styles.activeHeader : styles.inactiveHeader;
     const checkedRadio = !props.active ? '' : styles.checkedRadio;
+    const genId = generateId();
 
     return (
         <div className={`radio-header ${styles.radio} ${activeRadio} ${checkedRadio}`} onClick={props.onClick}>
-            <label>
-                <input
-                    type="radio"
-                    name={props.name}
-                    // onClick={onRadioClick}
-                    // disabled={props.disabled}
-                    defaultChecked={props.active}
-                />
+            <input
+                id={genId}
+                type="radio"
+                name={props.name}
+                // onClick={onRadioClick}
+                // disabled={props.disabled}
+                defaultChecked={props.active}
+            />
+            <label htmlFor={genId}>
                 <span>{props.title}</span>
             </label>
             {props.children}

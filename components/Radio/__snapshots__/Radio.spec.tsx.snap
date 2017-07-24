@@ -3,21 +3,23 @@
 exports[`Radio renders Radio correctly 1`] = `
 <div
   className="radio-component radio disabledRadio myClass radioChecked"
-  htmlFor="radio1"
   style={
     Object {
       "color": "blue",
     }
   }
 >
-  <label>
-    <input
-      defaultChecked={true}
-      disabled={true}
-      onClick={[Function]}
-      type="radio"
-      value="radio1"
-    />
+  <input
+    defaultChecked={true}
+    disabled={true}
+    id="4zlbrf"
+    onClick={[Function]}
+    type="radio"
+    value="radio1"
+  />
+  <label
+    htmlFor="4zlbrf"
+  >
     <span>
       This is radio 1
     </span>

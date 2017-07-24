@@ -24,6 +24,12 @@ export interface ISwitchProps {
     /** wether the switch is on or off */
     on?: boolean;
 
+    /** switch label */
+    label?: string;
+
+    /** switch label width */
+    labelWidth?: number;
+
     /** switch class */
     className?: string;
 
@@ -31,7 +37,7 @@ export interface ISwitchProps {
     dataLabel?: string;
 
     /** override switch styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** callback that is called when the switch changes */
     onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
@@ -50,7 +56,7 @@ class Switch extends React.Component<ISwitchProps, {}> {
 
     public render(){
 
-        const {id, style, className, disabled} = this.props;
+        const {id, style, className, disabled, label} = this.props;
 
         const toggleClasses = this.props.on ? `${styles.onSwitch} ${styles.onSlider}` : styles.offSwitch;
 
@@ -58,18 +64,27 @@ class Switch extends React.Component<ISwitchProps, {}> {
 
         const textClass = this.props.on ? styles.onText : styles.offText;
 
+        const spacing = label ?
+                        !this.props.labelWidth ?
+                        {} :
+                        {width: `${this.props.labelWidth}px`} :
+                        {display: 'none'};
+
         const text = this.switchLabel();
 
         return (
 
-            <div
-                id={id}
-                style={style}
-                onClick={this.onClick}
-                className={`switch-component ${toggleClasses} ${disabledSwitch} ${styles.switch} ${className}`}
-            >
-                <span className={`switch-component ${styles.slider}`}/>
-                <label className={`switch-component ${styles.text} ${textClass}`}>{text}</label>
+            <div>
+                <span className={styles.label} style={spacing}>{label}</span>
+                <div
+                    id={id}
+                    style={style}
+                    onClick={this.onClick}
+                    className={`switch-component ${toggleClasses} ${disabledSwitch} ${styles.switch} ${className}`}
+                >
+                    <span className={`switch-component ${styles.slider}`}/>
+                    <label className={`switch-component ${styles.text} ${textClass}`}>{text}</label>
+                </div>
             </div>
 
         );

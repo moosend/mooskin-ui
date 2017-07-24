@@ -9,13 +9,15 @@ exports[`Input renders correctly 1`] = `
     htmlFor="input1"
     style={
       Object {
-        "marginRight": "30px",
+        "width": "30px",
       }
     }
   >
     with a label ofc
   </label>
-  <div>
+  <div
+    className="inputDiv"
+  >
     <input
       autoComplete="on"
       autoFocus={true}

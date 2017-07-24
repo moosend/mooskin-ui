@@ -1,23 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Switch renders correctly 1`] = `
-<div
-  className="switch-component onSwitch onSlider disabledSwitch switch myClass"
-  id="switch1"
-  onClick={[Function]}
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
->
+<div>
   <span
-    className="switch-component slider"
+    className="label"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
   />
-  <label
-    className="switch-component text onText"
+  <div
+    className="switch-component onSwitch onSlider disabledSwitch switch myClass"
+    id="switch1"
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
   >
-    this is disabled
-  </label>
+    <span
+      className="switch-component slider"
+    />
+    <label
+      className="switch-component text onText"
+    >
+      this is disabled
+    </label>
+  </div>
 </div>
 `;

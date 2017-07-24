@@ -1,38 +1,21 @@
 import * as React from 'react';
 
-import {TabbedContent} from '../../components/index/index';
+import {TabbedContent} from '../../components/index/';
+import TabbedContentExampleCode from './component-strings/TabbedContent.example.txt';
 
-export default (props: any) => {
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
-    const style = {
-        display: 'inline-block',
-        fontSize: 24,
-        height: 500,
-        paddingTop: 200,
-        textAlign: 'center',
-        width: '100%',
-    };
+export default class TabbedContentExample extends React.Component<any, any> {
+    public render(){
 
-    return (
-        <fieldset style={{display: 'inline-block', width: 1000}}>
-            <legend>TabbedContent Element</legend>
-            <TabbedContent>
-                <TabbedContent.Tab title="Title 1" active>
-                    <div style={{...style, backgroundColor: '#5CCDDF'}}>
-                        Content 1
-                    </div>
-                </TabbedContent.Tab>
-                <TabbedContent.Tab title="Title 2">
-                    <div style={{...style, backgroundColor: '#F48770'}}>
-                        Content 2
-                    </div>
-                </TabbedContent.Tab>
-                <TabbedContent.Tab title="Title 3">
-                    <div style={{...style, backgroundColor: '#F2C14A'}}>
-                        Content 3
-                    </div>
-                </TabbedContent.Tab>
-            </TabbedContent>
-        </fieldset>
-    );
-};
+        return(
+            <div style={{display: 'inline-block'}}>
+                <ReactLiveEditor
+                    scope={{React, TabbedContent}}
+                    code={TabbedContentExampleCode}
+                    title="TabbedContent Example"
+                />
+            </div>
+        );
+    }
+}

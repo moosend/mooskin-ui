@@ -3,28 +3,30 @@
 exports[`CheckBox renders CheckBox correctly 1`] = `
 <div
   className="checkbox-component checkbox disabledCheckbox myClass checkboxChecked"
-  htmlFor="checkbox1"
   style={
     Object {
       "color": "blue",
     }
   }
 >
-  <label>
-    <input
-      className="material-icons"
-      defaultChecked={true}
-      disabled={true}
-      onClick={[Function]}
-      type="checkbox"
-      value="CheckBox1"
-    />
+  <input
+    className="material-icons"
+    defaultChecked={true}
+    disabled={true}
+    id="4zlbrf"
+    onClick={[Function]}
+    type="checkbox"
+    value="CheckBox1"
+  />
+  <label
+    htmlFor="4zlbrf"
+  >
     <span>
       This is CheckBox 1
     </span>
-    <br />
-    <i />
   </label>
+  <br />
+  <i />
 </div>
 `;
 

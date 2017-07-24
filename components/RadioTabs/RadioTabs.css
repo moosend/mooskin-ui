@@ -60,6 +60,8 @@
     background: transparent;
     transition: 0.3s;
     border: 1px solid #5ccdde;
+    padding: 0px 12px;
+    cursor: pointer;
 }
 
 .radio:hover {
@@ -96,11 +98,11 @@
 
 .radio label {
     cursor: pointer;
-    padding: 12px;
     height: 100%;
-    display: block; 
-    border-radius: 8px;
+    display: inline-block; 
     font-size: 0.875rem;
+    width: 89%;
+    padding: 12px 0px;
 }
 
 .checkedRadio {

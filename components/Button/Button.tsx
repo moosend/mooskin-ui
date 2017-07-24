@@ -15,11 +15,14 @@ export interface IButtonProps {
     /** button href */
     href?: string;
 
+    /** button type */
+    type?: string;
+
     /** button class */
     className?: string;
 
     /** override button styles */
-    style?: {[key: string]: string};
+    style?: React.CSSProperties;
 
     /** callback that is called when the button is clicked */
     onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
@@ -33,11 +36,12 @@ export default class Button extends React.Component<IButtonProps, {}> {
     public static defaultProps = {
         className: '',
         style: {},
+        type: 'button'
     };
 
     public render(){
 
-        const {style, inverseStyle, disabled, children, className, id, href} = this.props;
+        const {style, inverseStyle, disabled, children, className, id, href, type} = this.props;
 
         const buttonStyles = inverseStyle ? styles.inverseButton : styles.normalButton;
         const disabledStyles = disabled ? styles.disabledButton : '';
@@ -47,13 +51,13 @@ export default class Button extends React.Component<IButtonProps, {}> {
         return (
             <button
                 id={id}
-                href={href}
+                type={type}
                 onClick={this.onClick}
                 disabled={disabled}
                 className={classes}
                 style={style}
             >
-                {children}
+                <a href={href} className={styles.anchor}>{children}</a>
             </button>
         );
     }

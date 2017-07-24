@@ -1,9 +1,13 @@
+// tslint:disable-next-line:no-reference
+/// <reference path="../components/custom.d.ts"/>
+
 import * as React from 'react';
 
 import Button from './examples/Button.example';
 import Charts from './examples/Charts.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
+import Form from './examples/Form.example';
 import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
@@ -14,35 +18,39 @@ import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
+import Table from './examples/Table.example';
 import TextArea from './examples/TextArea.example';
 import TopNotification from './examples/TopNotification.example';
 
 export default (props: any) => {
     return(
         <div>
-            <Button />
+            <div style={{display: 'flex', alignContent: 'stretch'}}>
+                <Button />
+                <Switch />
+            </div>
             <br/><br/>
-            <Input />
+            <div style={{display: 'flex'}}>
+                <Input />
+                <TextArea />
+            </div>
             <br/><br/>
-            <TextArea />
+            <div style={{display: 'flex'}}>
+                <Select />
+                <TopNotification />
+            </div>
             <br/><br/>
-            <Select />
+            <div style={{display: 'flex'}}>
+                <Radio />
+                <CheckBox />
+            </div>
             <br/><br/>
-            <Switch />
-            <br/><br/>
-            <HorizontalRangeBar />
-            <br/><br/>
-            <Headings />
-            <br/><br/>
-            <TopNotification />
-            <br/><br/>
+            <div style={{display: 'flex'}}>
+                <HorizontalRangeBar />
+                <Headings />
+                <CheckListItem />
+            </div>
             <SmallIconButton />
-            <br/><br/>
-            <Radio />
-            <br/><br/>
-            <CheckBox />
-            <br/><br/>
-            <CheckListItem />
             <br/><br/>
             <Charts />
             <br/><br/>
@@ -51,6 +59,10 @@ export default (props: any) => {
             <RadioTabs />
             <br/><br/>
             <RadioAccordion />
+            <br/><br/>
+            <Form />
+            <br/><br/>
+            <Table />
         </div>
     );
 };

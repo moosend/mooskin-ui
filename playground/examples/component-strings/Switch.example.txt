@@ -1,0 +1,47 @@
+class SwitchExample extends React.Component {
+
+    constructor(){
+        super();
+
+        this.toggleSwitch = this.toggleSwitch.bind(this);
+
+        this.state = {
+            switchOne: false,
+            switchTwo: true
+        };
+    }
+
+    render(){
+
+        return(
+            <div style={{display: 'flex'}}>
+                <Switch
+                    on={this.state.switchOne}
+                    onClick={this.toggleSwitch}
+                    onLabel={'On'}
+                    offLabel={'Off'}
+                    disabledLabel={'Not Working'}
+                    dataLabel="switchOne"
+                />
+                <Switch
+                    on={this.state.switchTwo}
+                    onClick={this.toggleSwitch}
+                    onLabel={'On'}
+                    offLabel={'Off'}
+                    disabledLabel={'Not Working'}
+                    dataLabel="switchTwo"
+                />
+                <Switch
+                    disabled
+                    disabledLabel={'Inactive'}
+                    dataLabel="switchThree"
+                />
+            </div>
+        );
+    }
+
+    toggleSwitch(e, data) {
+        console.log(data);
+        this.setState({[data.dataLabel]: !this.state[data.dataLabel]});
+    }
+}

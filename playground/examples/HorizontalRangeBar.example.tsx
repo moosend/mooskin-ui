@@ -1,46 +1,20 @@
 import * as React from 'react';
 
-import {Button, HorizontalRangeBar} from '../../components/index/index';
+import {Button, HorizontalRangeBar} from '../../components/index/';
+import HorizontalExampleCode from './component-strings/HorizontalRangeBar.example.txt';
 
-export interface IHRBState{
-    progress: number;
-}
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
-export default class HorizontalRangeBarExample extends React.Component<{}, IHRBState>{
-
-    private horizontalRangeInterval: any;
-
-    constructor(){
-        super();
-        this.state = {
-            progress: 0
-        };
-    }
-
-    public render() {
-        return (
-            <fieldset style={{display: 'inline-block', width: 400}}>
-                <legend>Loader</legend>
-                <HorizontalRangeBar progress={this.state.progress}/><br/>
-                <HorizontalRangeBar progress={this.state.progress} range={[0, 1000]} background={'green'}/><br/>
-                <HorizontalRangeBar progress={this.state.progress} range={[0, 500]} background={'red'}/><br/>
-                <HorizontalRangeBar progress={this.state.progress} range={[0, 50]} background={'blue'}/><br/>
-
-                <Button onClick={this.onClickStartInterval}>Start Race</Button>
-                <Button onClick={this.onClickStopInterval}>Stop Race</Button>
-            </fieldset>
+export default class HorizontalRangeBarExample extends React.Component<any, any> {
+    public render(){
+        return(
+            <div style={{display: 'inline-block'}}>
+                <ReactLiveEditor
+                    scope={{React, HorizontalRangeBar, Button}}
+                    code={HorizontalExampleCode}
+                    title="HorizontalRangeBar Example"
+                />
+            </div>
         );
-    }
-
-    private onClickStartInterval = (e: React.MouseEvent<HTMLInputElement>) => {
-        this.horizontalRangeInterval = setInterval(() => {
-           this.setState({progress: this.state.progress + 5});
-        }, 100);
-        console.log(e.target);
-    }
-
-    private onClickStopInterval = (e: React.MouseEvent<HTMLInputElement>) => {
-        clearInterval(this.horizontalRangeInterval);
-        console.log(e.target);
     }
 }

@@ -2,6 +2,7 @@
 
 exports[`Chart renders correctly 1`] = `
 <div
+  className="chart"
   id="doughnut"
 >
   <Pie

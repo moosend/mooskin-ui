@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {Bar} from 'react-chartjs-2';
 
+import styles from './Bar.css';
+
 import {getData, getLabels, getTitle} from '../common';
 import {IBarProps} from '../props';
 
@@ -100,7 +102,7 @@ class BarChart extends React.Component<IBarProps, {}>{
         };
 
         return(
-            <div id={id}>
+            <div id={id} className={styles.chart}>
                 <Bar
                     data={data}
                     width={width || size}
