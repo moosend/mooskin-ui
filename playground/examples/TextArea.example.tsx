@@ -1,20 +1,16 @@
 import * as React from 'react';
 
-import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
+import {TextArea} from '../../components/index/';
+import TextAreaExampleCode from './component-strings/TextArea.example.txt';
 
-import {Fieldset, TextArea} from '../../components/index/index';
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
-export default (props: any) => {
-
-    const onChange = (e: React.ChangeEvent<HTMLElement>, data: IInputCallbackData) => {
-        console.log(e.target);
-    };
-
-    return (
-        <Fieldset legend="TextArea Element" style={{display: 'inline-block'}}>
-            <TextArea onChange={onChange} value="with value and custom rows/cols" label="Label:" rows={7} cols={35}/>
-            <hr/>
-            <TextArea onChange={onChange} disabled value="disabled" description="This text area is disabled"/>
-        </Fieldset>
-    );
-};
+export default class TextAreaExample extends React.Component<any, any> {
+    public render(){
+        return(
+            <div style={{display: 'inline-block'}}>
+                <ReactLiveEditor scope={{React, TextArea}} code={TextAreaExampleCode} title="TextArea Example"/>
+            </div>
+        );
+    }
+}

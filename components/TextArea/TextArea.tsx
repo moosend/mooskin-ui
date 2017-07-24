@@ -49,7 +49,7 @@ export interface ITextAreaProps {
     readonly?: boolean;
 
     /** override textarea styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** override textarea class */
     className?: string;

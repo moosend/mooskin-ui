@@ -1,6 +1,8 @@
 import * as React from 'react';
 import {Line} from 'react-chartjs-2';
 
+import styles from './Line.css';
+
 import {getLabels, getLineData, getTitle} from '../common';
 import {ILineProps} from '../props';
 import {ISortedData} from '../types';
@@ -125,7 +127,7 @@ class LineChart extends React.Component<ILineProps, {}>{
         };
 
         return(
-            <div id={id}>
+            <div id={id} className={styles.chart}>
                 <Line
                     data={lineData}
                     width={width || size}

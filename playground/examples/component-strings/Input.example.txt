@@ -1,0 +1,32 @@
+class InputExample extends React.Component {
+
+    constructor(){
+        super();
+        this.onChange = this.onChange.bind(this);
+    }
+
+    render(){
+        return(
+            <div>
+                <Input onChange={this.onChange} type="text" maxlength={5} placeholder="max length 5" label="Some label:"/>
+                <br/>
+                <Input
+                    onChange={this.onChange}
+                    value="password"
+                    type="password"
+                    label="Password:"
+                    description="This has autofocus on page load"
+                    autofocus
+                />
+                <br/>
+                <Input onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>
+                <br/>
+                <Input onChange={this.onChange} disabled value="disabled" description="This input is disabled"/>
+            </div>
+        );
+    }
+
+    onChange(e, data) {
+        console.log(e.target);
+    }
+}

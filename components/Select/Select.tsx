@@ -38,7 +38,7 @@ export interface ISelectProps {
     description?: string;
 
     /** override button styles */
-    style?: {[key: string]: string|number};
+    style?: React.CSSProperties;
 
     /** children here can only be Option elements */
     children?: Array<React.ReactElement<IOptionProps>> | React.ReactElement<IOptionProps>;

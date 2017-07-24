@@ -1,3 +1,6 @@
+// tslint:disable-next-line:no-reference
+/// <reference path="../components/custom.d.ts"/>
+
 import * as React from 'react';
 
 import Button from './examples/Button.example';
@@ -22,7 +25,10 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <div>
-            <Button />
+            <div style={{display: 'flex', alignContent: 'stretch'}}>
+                <Button />
+                <Switch />
+            </div>
             <br/><br/>
             <div style={{display: 'flex'}}>
                 <Input />
@@ -32,7 +38,6 @@ export default (props: any) => {
             <div style={{display: 'flex'}}>
                 <Select />
                 <TopNotification />
-                <Switch />
             </div>
             <br/><br/>
             <div style={{display: 'flex'}}>

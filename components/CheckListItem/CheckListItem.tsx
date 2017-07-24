@@ -24,7 +24,7 @@ export interface ICheckListItemProps {
     className?: string;
 
     /** override check list item styles */
-    style?: {[key: string]: string};
+    style?: React.CSSProperties;
 
     /** what data is being used, you know on what field changes are made */
     dataLabel?: string;

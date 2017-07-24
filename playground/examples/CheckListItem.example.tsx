@@ -1,69 +1,16 @@
 import * as React from 'react';
 
-import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
+import {CheckListItem} from '../../components/index/';
+import CheckExampleCode from './component-strings/CheckListItem.example.txt';
 
-import {CheckListItem, Fieldset} from '../../components/index/index';
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
-export interface IState {
-    processes: IProcess[];
-}
-
-export interface IProcess{
-    name: string;
-    content: string;
-    status: boolean;
-}
-
-export default class CheckItemExample extends React.Component<{}, IState>{
-
-    constructor(){
-        super();
-
-        this.state = {
-            processes: [
-                {
-                    content: 'Just don\'\t do it',
-                    name: 'Nukes launched',
-                    status: false
-                },
-                {
-                    content: 'Win three games in Heroes of the Storm',
-                    name: 'HotS Challenge',
-                    status: true
-                }
-            ]
-        };
-    }
-
+export default class CheckListItemExample extends React.Component<any, any> {
     public render(){
-
-        const listChecks = this.state.processes.map((process, i) => {
-            return (
-                <CheckListItem
-                    key={i}
-                    onClick={this.checkIt(i)}
-                    status={process.status}
-                    title={process.name}
-                    text={process.content}
-                />
-            );
-        });
-
         return(
-            <Fieldset legend="Check List Item" style={{display: 'inline-block', width: '600px'}}>
-                {listChecks}
-            </Fieldset>
+            <div style={{display: 'inline-block'}}>
+                <ReactLiveEditor scope={{React, CheckListItem}} code={CheckExampleCode} title="CheckListItem Example"/>
+            </div>
         );
     }
-
-    private checkIt = (i: number) => {
-        return (e: React.MouseEvent<HTMLInputElement>, data: IInputCallbackData) => {
-            const processes = this.state.processes;
-            processes[i].status = !this.state.processes[i].status;
-
-            this.setState({processes});
-            console.log(data.value);
-        };
-    }
-
 }

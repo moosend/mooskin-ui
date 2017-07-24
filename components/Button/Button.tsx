@@ -22,7 +22,7 @@ export interface IButtonProps {
     className?: string;
 
     /** override button styles */
-    style?: {[key: string]: string};
+    style?: React.CSSProperties;
 
     /** callback that is called when the button is clicked */
     onClick?: (e?: React.MouseEvent<HTMLElement>) => void;

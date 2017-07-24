@@ -1,0 +1,22 @@
+class ButtonExample extends React.Component {
+
+    constructor(){
+        super();
+        this.onClick = this.onClick.bind(this);
+    }
+
+    render(){
+        return(
+            <div style={{display: 'inline-block'}}>
+                <Button onClick={this.onClick}>Button</Button>
+                <Button onClick={this.onClick} disabled>Button</Button>
+                <Button onClick={this.onClick} inverseStyle>Button</Button>
+                <Button onClick={this.onClick} inverseStyle disabled>Button</Button>
+            </div>
+        );
+    }
+
+    onClick(e) {
+        console.log(e.target);
+    }
+}

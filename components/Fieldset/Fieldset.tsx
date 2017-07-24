@@ -14,7 +14,7 @@ export interface IFieldsetProps{
     className?: string;
 
     /** override Fieldset styles */
-    style?: {[key: string]: string};
+    style?: React.CSSProperties;
 
     /** Fieldset children */
     children?: any;
