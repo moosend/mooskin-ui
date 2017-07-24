@@ -4,7 +4,7 @@ class HorizontalRangeBarExample extends React.Component {
         super();
 
         this.onClickStartInterval = this.onClickStartInterval.bind(this);
-        this.onClickStopInterval = this.onClickStartInterval.bind(this);
+        this.onClickStopInterval = this.onClickStopInterval.bind(this);
 
         this.horizontalRangeInterval;
 
@@ -29,7 +29,7 @@ class HorizontalRangeBarExample extends React.Component {
     }
 
     onClickStartInterval(e) {
-        this.horizontalRangeInterval = setInterval(function(){
+        this.horizontalRangeInterval = setInterval(() => {
            this.setState({progress: this.state.progress + 5});
         }, 100);
         console.log(e.target);
