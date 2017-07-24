@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Pie} from 'react-chartjs-2';
 
-// import styles from './PieChart.css';
+import styles from './Pie.css';
 
 import {getData, getLabels, getTitle} from '../common';
 import {IPieProps} from '../props';
@@ -69,7 +69,7 @@ class PieChart extends React.Component<IPieProps, {}>{
         };
 
         return(
-            <div id={id}>
+            <div id={id} className={styles.chart}>
                 <Pie
                     data={data}
                     width={size}

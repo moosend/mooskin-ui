@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {Pie} from 'react-chartjs-2';
 
-// import styles from './PieChart.css';
+import styles from './Doughnut.css';
 
 import {getData, getLabels, getTitle} from '../common';
 import {IDoughnutProps} from '../props';
@@ -72,7 +72,7 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
         };
 
         return(
-            <div id={id}>
+            <div id={id} className={styles.chart}>
                 <Pie
                     data={data}
                     width={size}

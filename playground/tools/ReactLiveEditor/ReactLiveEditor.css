@@ -15,11 +15,12 @@
     bottom: 0;
     top: 0;
     z-index:21;
+    overflow: auto;
 }
 
 .overlay{
     position: fixed;
-    // z-index:20;
+    /* z-index:20; */
     right: 0;
     left: 0;
     top: 0;

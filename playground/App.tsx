@@ -24,7 +24,10 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <div>
-            <Button />
+            <div style={{display: 'flex', alignContent: 'stretch'}}>
+                <Button />
+                <Switch />
+            </div>
             <br/><br/>
             <div style={{display: 'flex'}}>
                 <Input />
@@ -34,7 +37,6 @@ export default (props: any) => {
             <div style={{display: 'flex'}}>
                 <Select />
                 <TopNotification />
-                <Switch />
             </div>
             <br/><br/>
             <div style={{display: 'flex'}}>
