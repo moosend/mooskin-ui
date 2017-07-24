@@ -14,6 +14,7 @@ import Input from './examples/Input.example';
 import Radio from './examples/Radio.example';
 import RadioAccordion from './examples/RadioAccordion.example';
 import RadioTabs from './examples/RadioTabs.example';
+import Row from './examples/Row.example';
 import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
@@ -24,6 +25,7 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <div>
+            <Row />
             <div style={{display: 'flex', alignContent: 'stretch'}}>
                 <Button />
                 <Switch />

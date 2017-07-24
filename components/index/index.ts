@@ -15,6 +15,7 @@ export {default as RadioGroup, Radio} from '../Radio';
 export {default as CheckboxGroup, CheckBox} from '../Checkbox';
 export {default as RadioTabs, RadioTabContent} from '../RadioTabs';
 export {Bar, Doughnut, Pie, Line} from '../Charts';
+export {default as Row, Col} from '../Row';
 
 export {default as TabbedContent, Tab} from '../TabbedContent';
 export {default as RadioAccordion, RadioAccordionContent} from '../RadioAccordion';

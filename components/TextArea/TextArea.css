@@ -1,5 +1,5 @@
 .areaContainer{
-    display: inline-flex;
+    display: flex;
 }
 
 .textAreaDiv{
