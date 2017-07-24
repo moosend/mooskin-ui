@@ -1,48 +1,21 @@
 import * as React from 'react';
 
-import {Fieldset} from '../../components/index/index';
 import {Table} from '../../components/index/index';
 
-export default (props: any) => {
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
+import TableExampleCode from './component-strings/Table.example.txt';
 
-    return(
-        <Fieldset legend="Table Element" style={{display: 'inline-block'}}>
-            <Table>
-                <thead>
-                    <tr>
-                        <th>th 1</th>
-                        <th>th 2</th>
-                        <th>th 3</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>td 1</td>
-                        <td>td 2</td>
-                        <td>td 3</td>
-                    </tr>
-                    <tr>
-                        <td>td 1</td>
-                        <td>td 2</td>
-                        <td>td 3</td>
-                    </tr>
-                    <tr>
-                        <td>td 1</td>
-                        <td>td 2</td>
-                        <td>td 3</td>
-                    </tr>
-                    <tr>
-                        <td>td 1</td>
-                        <td>td 2</td>
-                        <td>td 3</td>
-                    </tr>
-                    <tr>
-                        <td>td 1</td>
-                        <td>td 2</td>
-                        <td>td 3</td>
-                    </tr>
-                </tbody>
-            </Table>
-        </Fieldset>
-    );
-};
+export default class TableExample extends React.Component<any, any> {
+
+    public render(){
+        return(
+            <div style={{display: 'inline-block'}}>
+                <ReactLiveEditor
+                    scope={{React, Table}}
+                    code={TableExampleCode}
+                    title="Table Example"
+                />
+            </div>
+        );
+    }
+}

@@ -3,60 +3,45 @@ class SwitchExample extends React.Component {
     constructor(){
         super();
 
-        this.switchAuto = this.switchAuto.bind(this);
+        this.toggleSwitch = this.toggleSwitch.bind(this);
 
         this.state = {
-            automations: [
-                {
-                    complete: true,
-                    running: false,
-                    title: 'do this'
-                },
-                {
-                    complete: true,
-                    running: true,
-                    title: 'do that'
-                },
-                {
-                    complete: false,
-                    running: false,
-                    title: 'do nothing'
-                }
-            ]
+            switchOne: false,
+            switchTwo: true
         };
     }
 
     render(){
-        const listAutomations = this.state.automations.map((automation, i) => {
-            return (
-                <Switch
-                    key={i}
-                    onClick={this.switchAuto(i)}
-                    on={automation.running}
-                    disabled={!automation.complete}
-                    dataLabel={automation.title}
-                    onLabel={'On'}
-                    offLabel={'Off'}
-                    disabledLabel={'Not Working'}
-                />
-            );
-        });
 
         return(
             <div style={{display: 'flex'}}>
-                {listAutomations}
+                <Switch
+                    on={this.state.switchOne}
+                    onClick={this.toggleSwitch}
+                    onLabel={'On'}
+                    offLabel={'Off'}
+                    disabledLabel={'Not Working'}
+                    dataLabel="switchOne"
+                />
+                <Switch
+                    on={this.state.switchTwo}
+                    onClick={this.toggleSwitch}
+                    onLabel={'On'}
+                    offLabel={'Off'}
+                    disabledLabel={'Not Working'}
+                    dataLabel="switchTwo"
+                />
+                <Switch
+                    disabled
+                    disabledLabel={'Inactive'}
+                    dataLabel="switchThree"
+                />
             </div>
         );
     }
 
-    switchAuto(i) {
-        return (e, data) => {
-            const automations = this.state.automations;
-            automations[i].running = !this.state.automations[i].running;
-
-            // update state
-            this.setState({automations});
-            console.log(data.value);
-        };
+    toggleSwitch(e, data) {
+        console.log(data);
+        this.setState({[data.dataLabel]: !this.state[data.dataLabel]});
     }
 }
