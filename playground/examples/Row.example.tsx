@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Col, Input, Row} from '../../components/index/';
+import {Col, Row} from '../../components/index/';
 
 export default class RowExample extends React.Component{
 
@@ -8,54 +8,109 @@ export default class RowExample extends React.Component{
         return(
             <div>
                 <Row>
-                    <Col>
-                        <Input />
+                    <Col col={12}>
+                        Col 12
                     </Col>
-                    <Col>
-                        <Input />
+                </Row>
+                <Row>
+                    <Col col={3}>
+                        Col 3
                     </Col>
-                    <Col>
-                        <Input />
+                    <Col col={3}>
+                        Col 3
                     </Col>
-                    <Col>
-                        <Input />
+                    <Col col={6}>
+                        Col 6
+                    </Col>
+                </Row>
+                <Row>
+                    <Col col={6}>
+                        Col 6
+                    </Col>
+                    <Col col={6}>
+                        Col 6
+                    </Col>
+                </Row>
+                <Row>
+                    <Col col={4}>
+                        Col 4
+                    </Col>
+                    <Col col={4}>
+                        Col 4
+                    </Col>
+                    <Col col={4}>
+                        Col 4
+                    </Col>
+                </Row>
+                <Row>
+                    <Col col={8}>
+                        Col 8
+                    </Col>
+                    <Col col={4}>
+                        Col 4
+                    </Col>
+                </Row>
+                <Row>
+                    <Col col={2}>
+                        Col 2
+                    </Col>
+                    <Col col={1}>
+                        Col 1
+                    </Col>
+                    <Col col={1}>
+                        Col 1
+                    </Col>
+                    <Col col={2}>
+                        Col 2
+                    </Col>
+                    <Col col={2}>
+                        Col 2
+                    </Col>
+                    <Col col={1}>
+                        Col 1
+                    </Col>
+                    <Col col={1}>
+                        Col 1
+                    </Col>
+                    <Col col={2}>
+                        Col 2
                     </Col>
                 </Row>
                 <Row>
                     <Col>
                         <Row>
                             <Col>
-                                hello
+                                col
                             </Col>
                             <Col>
-                                hello
+                                col
                             </Col>
                             <Col>
-                                hello
+                                col
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                hello
+                                col
                             </Col>
                             <Col>
-                                hello
+                                col
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                hello
+                                col
                             </Col>
                         </Row>
                     </Col>
                     <Col>
-                        hello
+                        col
                     </Col>
                     <Col>
-                        hello
+                        col
                     </Col>
                     <Col>
-                        hello
+                        col
                     </Col>
                 </Row>
             </div>
