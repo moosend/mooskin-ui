@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Col, Grid, Row} from '../../components/index/';
+import {Button, Col, Grid, Input, Row} from '../../components/index/';
 
 export default class RowExample extends React.Component{
 
@@ -86,6 +86,14 @@ export default class RowExample extends React.Component{
                         </Col>
                         <Col>
                             Col
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={10} md={2} sm={6} xs={12}>
+                            <Input />
+                        </Col>
+                        <Col lg={2} md={10} sm={6} xs={12}>
+                            <Button>Push it!</Button>
                         </Col>
                     </Row>
                 </Grid>
