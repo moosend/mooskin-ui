@@ -100,8 +100,18 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
     const smClass = getClass(small, 'small') || '';
     const xsClass = getClass(xSmall, 'xSmall') || '';
 
+    const defaultClass = lgClass === '' && mdClass === '' && smClass === '' && xsClass === '' ? styles.col : '';
+
+    // getDefault = () => {
+    //     if (lgClass === '' && mdClass === '' && smClass === '' && xsClass === ''){
+    //         return styles.col;
+    //     } else{
+    //         return '';
+    //     }
+    // }
+
     return(
-        <div className={`col-component ${lgClass} ${mdClass} ${smClass} ${xsClass}`}>
+        <div className={`col-component ${lgClass} ${mdClass} ${smClass} ${xsClass} ${defaultClass}`}>
             {props.children}
         </div>
     );

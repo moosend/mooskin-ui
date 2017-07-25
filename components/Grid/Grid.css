@@ -3,13 +3,6 @@
     margin: 0 auto;
 }
 
-.row:before, 
-.row:after {
-    content: "";
-    display: table ;
-    clear: both;
-}
-
 .grid::after, .row::after{
     clear: both;
 }
@@ -17,7 +10,7 @@
 [class*='col-']{
     min-height: 1px;
     width: 100%;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
     border: 2px solid #5ccdde;
 }
@@ -113,29 +106,31 @@
     .col-sm-12 {flex: 12 100%}
 }
 
-.col-xs-1 {flex: 1 8.33333333%}
+@media screen and (min-width: 1px) and (max-width: 768px){
+   .col-xs-1 {flex: 1 8.33333333%}
 
-.col-xs-2 {flex: 2 16.66666667%}
+    .col-xs-2 {flex: 2 16.66666667%}
 
-.col-xs-3 {flex: 3 25%}
+    .col-xs-3 {flex: 3 25%}
 
-.col-xs-4 {flex: 4 33.33333333%}
+    .col-xs-4 {flex: 4 33.33333333%}
 
-.col-xs-5 {flex: 5 41.66666667%}
+    .col-xs-5 {flex: 5 41.66666667%}
 
-.col-xs-6 {flex: 6 50%}
+    .col-xs-6 {flex: 6 50%}
 
-.col-xs-7 {flex: 7 58.33333333%}
+    .col-xs-7 {flex: 7 58.33333333%}
 
-.col-xs-8 {flex: 8 66.66666667%}
+    .col-xs-8 {flex: 8 66.66666667%}
 
-.col-xs-9 {flex: 9 75%}
+    .col-xs-9 {flex: 9 75%}
 
-.col-xs-10 {flex: 10 83.33333333%}
+    .col-xs-10 {flex: 10 83.33333333%}
 
-.col-xs-11 {flex: 11 91.66666667%}
+    .col-xs-11 {flex: 11 91.66666667%}
 
-.col-xs-12 {flex: 12 100%}  
+    .col-xs-12 {flex: 12 100%}  
+}
 
 /* @media screen and (min-width: 992px){
 

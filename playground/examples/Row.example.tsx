@@ -10,107 +10,81 @@ export default class RowExample extends React.Component{
                 <Grid>
                     <Row>
                         <Col lg={12}>
-                            Col 12
+                            Col lg-12
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg={3} md={4} sm ={6}>
-                            Col 3
+                        <Col lg={3} md={4} sm={6} xs={1}>
+                            Col lg-3 md-4 sm-6 xs-1
                         </Col>
-                        <Col lg={3} md={4} sm ={3}>
-                            Col 3
+                        <Col lg={3} md={4} sm={3} xs={1}>
+                            Col lg-3 md-4 sm-3 xs-1
                         </Col>
-                        <Col lg={6} md={4} sm ={3}>
-                            Col 6
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={6}>
-                            Col 6
-                        </Col>
-                        <Col lg={6}>
-                            Col 6
+                        <Col lg={6} md={4} sm={3} xs={12}>
+                            Col lg-6 md-4 sm-3 xs-12
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg={4}>
-                            Col 4
+                        <Col lg={6} md={12} sm={8} xs={4}>
+                            Col lg-6 md-12 sm-8 xs-4
                         </Col>
-                        <Col lg={4}>
-                            Col 4
-                        </Col>
-                        <Col lg={4}>
-                            Col 4
+                        <Col lg={6} md={12} sm={4} xs={8}>
+                            Col lg-6 md-12 sm-4 xs-8
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg={8}>
-                            Col 8
+                        <Col lg={4} md={10} sm={1} xs={1}>
+                            Col lg-4 md-10 sm-1 xs-1
                         </Col>
-                        <Col lg={4}>
-                            Col 4
+                        <Col lg={4} md={1} sm={10} xs={1}>
+                            Col lg-4 md-1 sm-10 xs-1
                         </Col>
-                    </Row>
-                    <Row>
-                        <Col lg={2}>
-                            Col 2
-                        </Col>
-                        <Col lg={1}>
-                            Col 1
-                        </Col>
-                        <Col lg={1}>
-                            Col 1
-                        </Col>
-                        <Col lg={2}>
-                            Col 2
-                        </Col>
-                        <Col lg={2}>
-                            Col 2
-                        </Col>
-                        <Col lg={1}>
-                            Col 1
-                        </Col>
-                        <Col lg={1}>
-                            Col 1
-                        </Col>
-                        <Col lg={2}>
-                            Col 2
+                        <Col lg={4} md={1} sm={1} xs={10}>
+                            Col lg-4 md-1 sm-1 xs-10
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg={3}>
+                        <Col lg={8} md={4} sm={6} xs={12}>
+                            Col lg-8 md-4 sm-6 xs-12
+                        </Col>
+                        <Col lg={4} md={8} sm={6} xs={12}>
+                            Col lg-4 md-8 sm-6 xs-12
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
                             <Row>
-                                <Col lg={4}>
+                                <Col>
                                     Col
                                 </Col>
-                                <Col lg={4}>
+                                <Col>
                                     Col
                                 </Col>
-                                <Col lg={4}>
+                                <Col>
                                     Col
                                 </Col>
                             </Row>
                             <Row>
-                                <Col lg={6}>
+                                <Col>
                                     Col
                                 </Col>
-                                <Col lg={6}>
+                                <Col>
                                     Col
                                 </Col>
                             </Row>
                             <Row>
-                                <Col lg={12}>
+                                <Col>
                                     Col
                                 </Col>
                             </Row>
                         </Col>
-                        <Col lg={3}>
+                        <Col>
                             Col
                         </Col>
-                        <Col lg={3}>
+                        <Col>
                             Col
                         </Col>
-                        <Col lg={3}>
+                        <Col>
                             Col
                         </Col>
                     </Row>
