@@ -12,12 +12,13 @@
 }
 
 .radio {
+    display: flex;
     border-radius: 8px;
     color: #5ccdde;
     background: transparent;
     transition: 0.3s;
     border: 1px solid #5ccdde;
-    padding: 0px 12px;
+    padding: 12px;
     cursor: pointer;
 }
 
@@ -59,11 +60,9 @@
 
 .radio label {
     cursor: pointer;
-    height: 100%;
-    display: inline-block; 
     font-size: 0.875rem;
-    width: 90%;
-    padding: 12px 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .checkedRadio {

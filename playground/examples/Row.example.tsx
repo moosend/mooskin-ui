@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Button, Col, Grid, Input, Row} from '../../components/index/';
+import {Button, Col, Grid, H2, Input, RadioTabContent, RadioTabs, Row} from '../../components/index/';
 
 export default class RowExample extends React.Component{
 
@@ -94,6 +94,64 @@ export default class RowExample extends React.Component{
                         </Col>
                         <Col lg={2} md={6} sm={12} xs={'hidden'}>
                             <Button>Push it!</Button>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col lg={6} md={6} sm={12} xs={12}>
+                            <RadioTabs horizontal>
+                                <RadioTabContent title="Click here!" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
+                                    <div style={{height: '100px'}}>
+                                        Nice Content eh?
+                                    </div>
+                                </RadioTabContent>
+                                <RadioTabContent title="I'm a radio too" style={{fontWeight: 700}}>
+                                    <div style={{height: '100px'}}>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                        when an unknown printer took a galley of type and
+                                        scrambled it to make a type specimen book.
+                                        It has survived not only five centuries,
+                                        but also the leap into electronic typesetting,
+                                        remaining essentially unchanged.
+                                    </div>
+                                </RadioTabContent>
+                                <RadioTabContent title="Let's try a heading">
+                                    <div style={{height: '100px'}}>
+                                        <H2 style={{margin: '0px 0px 10px 0px'}}>
+                                            H2 heading incoming!
+                                        </H2>
+                                        ...and some text of course!
+                                    </div>
+                                </RadioTabContent>
+                            </RadioTabs>
+                        </Col>
+                        <Col lg={6} md={6} sm={12} xs={'hidden'}>
+                            <RadioTabs>
+                                <RadioTabContent title="Click here!" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
+                                    <div style={{height: '100px'}}>
+                                        Nice Content eh?
+                                    </div>
+                                </RadioTabContent>
+                                <RadioTabContent title="I'm a radio too" style={{fontWeight: 700}}>
+                                    <div style={{height: '100px'}}>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                        when an unknown printer took a galley of type and
+                                        scrambled it to make a type specimen book.
+                                        It has survived not only five centuries,
+                                        but also the leap into electronic typesetting,
+                                        remaining essentially unchanged.
+                                    </div>
+                                </RadioTabContent>
+                                <RadioTabContent title="Let's try a heading">
+                                    <div style={{height: '100px'}}>
+                                        <H2 style={{margin: '0px 0px 10px 0px'}}>
+                                            H2 heading incoming!
+                                        </H2>
+                                        ...and some text of course!
+                                    </div>
+                                </RadioTabContent>
+                            </RadioTabs>
                         </Col>
                     </Row>
                 </Grid>
