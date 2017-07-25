@@ -89,10 +89,10 @@ export default class RowExample extends React.Component{
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg={10} md={2} sm={6} xs={12}>
+                        <Col lg={10} md={6} sm={12} xs={12}>
                             <Input />
                         </Col>
-                        <Col lg={2} md={10} sm={6} xs={12}>
+                        <Col lg={2} md={6} sm={12} xs={'hidden'}>
                             <Button>Push it!</Button>
                         </Col>
                     </Row>

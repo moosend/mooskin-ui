@@ -34,13 +34,13 @@ export interface IColProps{
     /** custom styles for Col */
     style?: React.CSSProperties;
 
-    lg?: number;
+    lg?: number | string;
 
-    md?: number;
+    md?: number | string;
 
-    sm?: number;
+    sm?: number | string;
 
-    xs?: number;
+    xs?: number | string;
 
     children?: any;
 
@@ -76,7 +76,15 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
     const small = props.sm ? props.sm : 0;
     const xSmall = props.xs ? props.xs : 0;
 
-    const getClass = (column: number, name: string) => {
+    const choosePath = (column: number | string, name: string) => {
+        if (typeof column === 'string'){
+            return getHiddenClass(column, name);
+        } else {
+            return getClass(column, name);
+        }
+    };
+
+    const getClass = (column: number | string, name: string) => {
         let newCol = '';
         for (let i = 1 ; i <= column; i++){
             if (column === i && name === 'large'){
@@ -95,10 +103,22 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
         }
     };
 
-    const lgClass = getClass(large, 'large') || '';
-    const mdClass = getClass(medium, 'medium') || '';
-    const smClass = getClass(small, 'small') || '';
-    const xsClass = getClass(xSmall, 'xSmall') || '';
+    const getHiddenClass = (column: string, name: string) => {
+        if (column === 'hidden' && name === 'large'){
+            return styles['hidden-lg'];
+        } else if (column === 'hidden' && name === 'medium'){
+            return styles['hidden-md'];
+        } else if (column === 'hidden' && name === 'small'){
+            return styles['hidden-sm'];
+        } else if (column === 'hidden' && name === 'xSmall'){
+            return styles['hidden-xs'];
+        }
+    };
+
+    const lgClass = choosePath(large, 'large') || '';
+    const mdClass = choosePath(medium, 'medium') || '';
+    const smClass = choosePath(small, 'small') || '';
+    const xsClass = choosePath(xSmall, 'xSmall') || '';
 
     const defaultClass = lgClass === '' && mdClass === '' && smClass === '' && xsClass === '' ? styles.col : '';
 
