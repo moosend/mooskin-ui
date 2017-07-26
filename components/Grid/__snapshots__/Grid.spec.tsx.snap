@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid renders Col correctly 1`] = `
+<div
+  className="col-component col-lg-8 col-md-6 col-sm-4 hidden-xs  myClass"
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
+/>
+`;
+
+exports[`Grid renders Grid correctly 1`] = `
+<div
+  className="grid-component grid myClass"
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
+/>
+`;
+
+exports[`Grid renders Grid with Row & Col correctly 1`] = `
+<div
+  class="grid-component grid myClass"
+  style="width:50px;"
+>
+  <div
+    class="row-component row myClass"
+    style="width:50px;"
+  >
+    <div
+      class="col-component col-lg-8 col-md-6 col-sm-4 hidden-xs  myClass"
+      style="width:50px;"
+    >
+      Col
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Grid renders Row correctly 1`] = `
+<div
+  className="row-component row myClass"
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
+/>
+`;
