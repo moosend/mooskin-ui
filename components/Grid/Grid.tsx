@@ -53,7 +53,10 @@ export default class Grid extends React.Component<IGridProps, {}>{
 
     public render(){
         return(
-            <div className={`grid-component ${styles.grid}`}>
+            <div
+                className={`grid-component ${styles.grid} ${this.props.className}`}
+                style={this.props.style}
+            >
                 {this.props.children}
             </div>
         );
@@ -63,7 +66,10 @@ export default class Grid extends React.Component<IGridProps, {}>{
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
     return(
-        <div className={`row-component ${styles.row}`}>
+        <div
+            className={`row-component ${styles.row} ${props.className}`}
+            style={props.style}
+        >
             {props.children}
         </div>
     );
@@ -121,7 +127,7 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
     const xsClass = choosePath(xSmall, 'xSmall') || '';
 
     const defaultClass = lgClass === '' && mdClass === '' && smClass === '' && xsClass === '' ? styles.col : '';
-
+    const classes = `${lgClass} ${mdClass} ${smClass} ${xsClass} ${defaultClass} ${props.className}`;
     // getDefault = () => {
     //     if (lgClass === '' && mdClass === '' && smClass === '' && xsClass === ''){
     //         return styles.col;
@@ -131,7 +137,10 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
     // }
 
     return(
-        <div className={`col-component ${lgClass} ${mdClass} ${smClass} ${xsClass} ${defaultClass}`}>
+        <div
+            className={`col-component ${classes}`}
+            style={props.style}
+        >
             {props.children}
         </div>
     );

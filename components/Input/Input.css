@@ -49,3 +49,8 @@
     font-size: .78571428571rem;
     margin-left: 3px;
 }
+
+@media (max-width: 768px){
+    .inputContainer{display: flex; flex-direction: column}
+    .inputLabel{padding-top: 0px; margin-left: 3px}
+}

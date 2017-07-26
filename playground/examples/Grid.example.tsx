@@ -7,84 +7,84 @@ export default class RowExample extends React.Component{
     public render(){
         return(
             <div>
-                <Grid>
-                    <Row>
-                        <Col lg={12}>
+                <Grid style={{textAlign: 'center'}}>
+                    <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                        <Col lg={12} md={8} sm={4} xs={1} style={{border: '3px solid #5ccdde'}}>
                             Col lg-12
                         </Col>
                     </Row>
-                    <Row>
-                        <Col lg={3} md={4} sm={6} xs={1}>
+                    <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                        <Col lg={3} md={4} sm={6} xs={1} style={{border: '3px solid #5ccdde'}}>
                             Col lg-3 md-4 sm-6 xs-1
                         </Col>
-                        <Col lg={3} md={4} sm={3} xs={1}>
+                        <Col lg={3} md={4} sm={3} xs={1} style={{border: '3px solid #5ccdde'}}>
                             Col lg-3 md-4 sm-3 xs-1
                         </Col>
-                        <Col lg={6} md={4} sm={3} xs={12}>
+                        <Col lg={6} md={4} sm={3} xs={12} style={{border: '3px solid #5ccdde'}}>
                             Col lg-6 md-4 sm-3 xs-12
                         </Col>
                     </Row>
-                    <Row>
-                        <Col lg={6} md={12} sm={8} xs={4}>
+                    <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                        <Col lg={6} md={12} sm={8} xs={4} style={{border: '3px solid #5ccdde'}}>
                             Col lg-6 md-12 sm-8 xs-4
                         </Col>
-                        <Col lg={6} md={12} sm={4} xs={8}>
+                        <Col lg={6} md={12} sm={4} xs={8} style={{border: '3px solid #5ccdde'}}>
                             Col lg-6 md-12 sm-4 xs-8
                         </Col>
                     </Row>
-                    <Row>
-                        <Col lg={4} md={10} sm={1} xs={1}>
+                    <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                        <Col lg={4} md={10} sm={1} xs={1} style={{border: '3px solid #5ccdde'}}>
                             Col lg-4 md-10 sm-1 xs-1
                         </Col>
-                        <Col lg={4} md={1} sm={10} xs={1}>
+                        <Col lg={4} md={1} sm={10} xs={1} style={{border: '3px solid #5ccdde'}}>
                             Col lg-4 md-1 sm-10 xs-1
                         </Col>
-                        <Col lg={4} md={1} sm={1} xs={10}>
+                        <Col lg={4} md={1} sm={1} xs={10} style={{border: '3px solid #5ccdde'}}>
                             Col lg-4 md-1 sm-1 xs-10
                         </Col>
                     </Row>
-                    <Row>
-                        <Col lg={8} md={4} sm={6} xs={12}>
+                    <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                        <Col lg={8} md={4} sm={6} xs={12} style={{border: '3px solid #5ccdde'}}>
                             Col lg-8 md-4 sm-6 xs-12
                         </Col>
-                        <Col lg={4} md={8} sm={6} xs={12}>
+                        <Col lg={4} md={8} sm={6} xs={12} style={{border: '3px solid #5ccdde'}}>
                             Col lg-4 md-8 sm-6 xs-12
                         </Col>
                     </Row>
-                    <Row>
+                    <Row style={{padding: 10, border: '3px solid #F48770'}}>
                         <Col>
-                            <Row>
-                                <Col>
+                            <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                                <Col style={{border: '3px solid #5ccdde'}}>
                                     Col
                                 </Col>
-                                <Col>
+                                <Col style={{border: '3px solid #5ccdde'}}>
                                     Col
                                 </Col>
-                                <Col>
-                                    Col
-                                </Col>
-                            </Row>
-                            <Row>
-                                <Col>
-                                    Col
-                                </Col>
-                                <Col>
+                                <Col style={{border: '3px solid #5ccdde'}}>
                                     Col
                                 </Col>
                             </Row>
-                            <Row>
-                                <Col>
+                            <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                                <Col style={{border: '3px solid #5ccdde'}}>
+                                    Col
+                                </Col>
+                                <Col style={{border: '3px solid #5ccdde'}}>
+                                    Col
+                                </Col>
+                            </Row>
+                            <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                                <Col style={{border: '3px solid #5ccdde'}}>
                                     Col
                                 </Col>
                             </Row>
                         </Col>
-                        <Col>
+                        <Col style={{border: '3px solid #5ccdde'}}>
                             Col
                         </Col>
-                        <Col>
+                        <Col style={{border: '3px solid #5ccdde'}}>
                             Col
                         </Col>
-                        <Col>
+                        <Col style={{border: '3px solid #5ccdde'}}>
                             Col
                         </Col>
                     </Row>
@@ -125,7 +125,7 @@ export default class RowExample extends React.Component{
                                 </RadioTabContent>
                             </RadioTabs>
                         </Col>
-                        <Col lg={6} md={6} sm={12} xs={'hidden'}>
+                        <Col lg={6} md={6} sm={12} xs={12}>
                             <RadioTabs>
                                 <RadioTabContent title="Click here!" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
                                     <div style={{height: '100px'}}>

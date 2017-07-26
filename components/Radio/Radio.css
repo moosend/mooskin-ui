@@ -57,3 +57,8 @@
     border: 1px solid #b2b2b2;
     box-shadow:0 0 3px 0px #b2b2b2 inset;
 }
+
+@media (max-width: 768px){
+    .vertical{flex-direction: column}
+    .radio{margin-bottom: 10px}
+}

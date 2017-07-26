@@ -61,3 +61,8 @@
 .disabledCheckbox i{
     cursor: default;
 }
+
+@media (max-width: 768px){
+    .horizontal{flex-direction: column}
+    .horizontal > .checkbox + .checkbox{margin-left: 0px}
+}

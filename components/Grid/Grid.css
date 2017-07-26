@@ -8,11 +8,7 @@
 }
 
 [class*='col-']{
-    min-height: 1px;
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-    border: 2px solid #5ccdde;
+    padding: 5px;
 }
 
 .row{
@@ -23,8 +19,8 @@
 .col {
     flex: 1;
 }
- 
- @media screen and (min-width: 1200px){
+
+@media screen and (min-width: 1200px){
 
     .col-lg-1 {flex: 1 8.33333333%}
 
@@ -113,7 +109,7 @@
 }
 
 @media (max-width: 768px){
-   .col-xs-1 {flex: 1 8.33333333%}
+    .col-xs-1 {flex: 1 8.33333333%}
 
     .col-xs-2 {flex: 2 16.66666667%}
 

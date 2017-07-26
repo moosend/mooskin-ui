@@ -13,6 +13,7 @@
 
 .radio {
     display: flex;
+    align-items: center;
     border-radius: 8px;
     color: #5ccdde;
     background: transparent;
@@ -33,7 +34,6 @@
 }
 
 .radio input[type='radio'] {
-    vertical-align: middle;
     appearance: none;
     margin: 0 auto;
     cursor: pointer;

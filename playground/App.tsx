@@ -8,13 +8,13 @@ import Charts from './examples/Charts.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
 import Form from './examples/Form.example';
+import Grid from './examples/Grid.example';
 import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
 import Radio from './examples/Radio.example';
 import RadioAccordion from './examples/RadioAccordion.example';
 import RadioTabs from './examples/RadioTabs.example';
-import Row from './examples/Row.example';
 import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
@@ -25,7 +25,7 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <div>
-            <Row />
+            <Grid />
             <div style={{display: 'flex', alignContent: 'stretch'}}>
                 <Button />
                 <Switch />

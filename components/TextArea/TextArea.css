@@ -68,3 +68,8 @@ textarea::-webkit-scrollbar-thumb:vertical {
     font-size: .78571428571rem;
     margin-left: 3px;
 }
+
+@media (max-width: 768px){
+    .areaContainer{display: flex; flex-direction: column}
+    .textareaLabel{padding-top: 0px; margin-left: 3px}
+}
