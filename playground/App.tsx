@@ -19,6 +19,7 @@ import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
+import Table from './examples/Table.example';
 import TextArea from './examples/TextArea.example';
 import TopNotification from './examples/TopNotification.example';
 
@@ -61,6 +62,8 @@ export default (props: any) => {
             <RadioAccordion />
             <br/><br/>
             <Form />
+            <br/><br/>
+            <Table />
             <br/><br/>
             <Grid />
         </div>

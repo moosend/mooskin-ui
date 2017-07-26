@@ -21,3 +21,5 @@ export {default as TabbedContent, Tab} from '../TabbedContent';
 export {default as RadioAccordion, RadioAccordionContent} from '../RadioAccordion';
 
 export {default as Form, FormGroup} from '../Form';
+
+export {default as Table} from '../Table';

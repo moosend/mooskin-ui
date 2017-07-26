@@ -40,13 +40,13 @@ Modular usageis also possible for both css and js(components) files, if you just
 
 ```
 import 'mooskin/lib/Button/style.css';
-import 'mooskin/lib/Button';
+import Button from 'mooskin/lib/Button';
 // import {Button} from 'mooskin';  //this works as well
 ```
 
 ### Example
 ```
-import 'mooskin/lib/style.css'
+import 'mooskin/lib/index/style.css'
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
@@ -77,7 +77,7 @@ Please refer to each component's documentation page to see how they should be im
 Mooskin itself is written in Typescript, so it has type definitions out of the box, no need to install any. Just import stuff as usual. Static types should greatly help with potential bugs and autocompletion. Here is an example below.
 
 ```
-import 'mooskin/lib/style.css'
+import 'mooskin/lib/index/style.css'
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
@@ -149,6 +149,7 @@ import {Input} from 'mooskin'
 ## List of Components
 
 * [Button](https://github.com/moosend/mooskin-ui/tree/master/components/Button)
+* [Table](https://github.com/moosend/mooskin-ui/tree/master/components/Table)
 * [Input](https://github.com/moosend/mooskin-ui/tree/master/components/Input)
 * [Radio](https://github.com/moosend/mooskin-ui/tree/master/components/Radio)
 * [CheckBox](https://github.com/moosend/mooskin-ui/tree/master/components/Checkbox)
