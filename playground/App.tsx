@@ -25,7 +25,6 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <div>
-            <Grid />
             <div style={{display: 'flex', alignContent: 'stretch'}}>
                 <Button />
                 <Switch />
@@ -62,6 +61,8 @@ export default (props: any) => {
             <RadioAccordion />
             <br/><br/>
             <Form />
+            <br/><br/>
+            <Grid />
         </div>
     );
 };
