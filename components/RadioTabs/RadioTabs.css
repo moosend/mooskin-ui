@@ -47,13 +47,6 @@
     height: 100%;
 }
 
-.radio span {
-    margin-left: 10px;
-    cursor: pointer;
-    vertical-align: middle;
-    user-select: none;
-}
-
 .radio {
     display: flex;
     align-items: center;
@@ -99,11 +92,18 @@
 }
 
 .radio label {
+    display: inline-block;
     cursor: pointer;
     font-size: 0.875rem;
     width: 100%;
     height: 100%;
+}
+
+.radio span {
+    margin-left: 10px;
+    cursor: pointer;
     vertical-align: middle;
+    user-select: none;
 }
 
 .checkedRadio {

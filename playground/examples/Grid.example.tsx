@@ -100,12 +100,12 @@ export default class RowExample extends React.Component{
                         <Col lg={6} md={6} sm={12} xs={12}>
                             <RadioTabs horizontal>
                                 <RadioTabContent title="Click here!" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
-                                    <div style={{height: '100px'}}>
+                                    <div>
                                         Nice Content eh?
                                     </div>
                                 </RadioTabContent>
                                 <RadioTabContent title="I'm a radio too" style={{fontWeight: 700}}>
-                                    <div style={{height: '100px'}}>
+                                    <div>
                                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                                         when an unknown printer took a galley of type and
@@ -116,7 +116,7 @@ export default class RowExample extends React.Component{
                                     </div>
                                 </RadioTabContent>
                                 <RadioTabContent title="Let's try a heading">
-                                    <div style={{height: '100px'}}>
+                                    <div>
                                         <H2 style={{margin: '0px 0px 10px 0px'}}>
                                             H2 heading incoming!
                                         </H2>
@@ -128,7 +128,7 @@ export default class RowExample extends React.Component{
                         <Col lg={6} md={6} sm={12} xs={12}>
                             <RadioTabs>
                                 <RadioTabContent title="Click here!" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
-                                    <div style={{height: '100px'}}>
+                                    <div>
                                         Nice Content eh?
                                     </div>
                                 </RadioTabContent>
@@ -144,7 +144,7 @@ export default class RowExample extends React.Component{
                                     </div>
                                 </RadioTabContent>
                                 <RadioTabContent title="Let's try a heading">
-                                    <div style={{height: '100px'}}>
+                                    <div>
                                         <H2 style={{margin: '0px 0px 10px 0px'}}>
                                             H2 heading incoming!
                                         </H2>
