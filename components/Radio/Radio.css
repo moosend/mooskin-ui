@@ -1,6 +1,9 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
 .radio {
     border-radius: 8px;
-    color: #7b7b7b;
+    color: var(--checkRadioGrey);
     transition: 0.3s;
 }
 
@@ -11,7 +14,7 @@
 
 .disabledRadio, .disabledRadio label span, .disabledRadio label, .disabledRadio.radio:hover {
     cursor: not-allowed;
-    color: #b2b2b2;
+    color: var(--disCheckRadio);
 }
 
 .radio span {
@@ -30,17 +33,17 @@
     padding: 5px;
     background: #fff;
     border-radius:50%;
-    border:1px solid #5ccdde;
+    border:1px solid var(--moosendBlue);
     border-radius:50%;
     margin:0 auto
 }
 
 .radio input[type='radio']:hover {
-    box-shadow:0 0 3px 0px #5ccdde inset;
+    box-shadow:0 0 3px 0px var(--moosendBlue) inset;
 }
 
 .radioChecked input[type='radio']:before {
-    background:#5ccdde;
+    background:var(--moosendBlue);
     content:'';
     display:block;
     width: 10px;
@@ -49,16 +52,16 @@
 }
 
 .radioChecked input[type='radio']{
-    box-shadow:0 1px 2px 0px #5ccdde inset; 
+    box-shadow:0 1px 2px 0px var(--moosendBlue) inset; 
 }
 
 .disabledRadio input[type='radio']:disabled {
     cursor: not-allowed;
-    border: 1px solid #b2b2b2;
-    box-shadow:0 0 3px 0px #b2b2b2 inset;
+    border: 1px solid var(--disCheckRadio);
+    box-shadow:0 0 3px 0px var(--disCheckRadio) inset;
 }
 
-@media (max-width: 768px){
+@media (--xSmall){
     .vertical{flex-direction: column}
     .radio{margin-bottom: 10px}
 }

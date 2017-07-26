@@ -1,3 +1,5 @@
+@import '../_utils/globals/screens.css';
+
 .grid {
     width : 100%;
     margin: 0 auto;
@@ -20,7 +22,7 @@
     flex: 1;
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (--large){
 
     .col-lg-1 {flex: 1 8.33333333%}
 
@@ -49,7 +51,7 @@
     .hidden-lg {display: none}
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px){
+@media screen and (--medium){
 
     .col-md-1 {flex: 1 8.33333333%}
 
@@ -79,7 +81,7 @@
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 991px){
+@media screen and (--small){
 
     .col-sm-1 {flex: 1 8.33333333%}
 
@@ -108,7 +110,7 @@
     .hidden-sm {display: none}
 }
 
-@media (max-width: 768px){
+@media (--xSmall){
     .col-xs-1 {flex: 1 8.33333333%}
 
     .col-xs-2 {flex: 2 16.66666667%}

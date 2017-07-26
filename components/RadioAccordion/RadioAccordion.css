@@ -1,3 +1,5 @@
+@import '../_utils/globals/variables.css';
+
 .container {
     display: flex;
     flex-direction: column;
@@ -15,10 +17,10 @@
     display: flex;
     align-items: center;
     border-radius: 8px;
-    color: #5ccdde;
+    color: var(--moosendBlue);
     background: transparent;
     transition: 0.3s;
-    border: 1px solid #5ccdde;
+    border: 1px solid var(--moosendBlue);
     padding: 12px;
     cursor: pointer;
 }
@@ -28,9 +30,9 @@
 }
 
 .radio:hover {
-    background-color: #95dee9;
+    background-color: var(--radioHover);
     color: #fff;
-    border-color: #95dee9;
+    border-color: var(--radioHover);
 }
 
 .radio input[type='radio'] {
@@ -42,15 +44,15 @@
     padding: 0.3425rem;
     background: #fff;
     border-radius:50%;
-    border: 1px solid #5ccdde;
+    border: 1px solid var(--moosendBlue);
 }
 
 .radio:hover input[type='radio']{
-    border-color: #95dee9;
+    border-color: var(--radioHover);
 }
 
 .radio input[type='radio']:checked::after {
-    background:#5ccdde;
+    background:var(--moosendBlue);
     content:'';
     display:block;
     width: 0.375rem;
@@ -66,17 +68,17 @@
 }
 
 .checkedRadio {
-    background: #5ccdde;
+    background: var(--moosendBlue);
     color: #fff;
 }
 
 .checkedRadio:hover {
-    background: #5ccdde;
-    border-color: #5ccdde;
+    background: var(--moosendBlue);
+    border-color: var(--moosendBlue);
 }
 
 .checkedRadio:hover input[type='radio']{
-    border-color: #5ccdde;
+    border-color: var(--moosendBlue);
 }
 
 .content {

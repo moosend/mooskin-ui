@@ -1,3 +1,6 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
 .areaContainer{
     display: flex;
 }
@@ -45,7 +48,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 
 .textarea::placeholder {
-    color: #bebebe;
+    color: var(--inputPlaceholder);
 }
 
 .textarea:focus {
@@ -54,7 +57,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 
 .textareaLabel {
-    color: #6b6b6b;
+    color: var(--inputLabel);
     font-size: 13px;
     font-size: .92857142857rem;
     padding-top: 7px;
@@ -69,7 +72,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
     margin-left: 3px;
 }
 
-@media (max-width: 768px){
+@media (--xSmall){
     .areaContainer{display: flex; flex-direction: column}
     .textareaLabel{padding-top: 0px; margin-left: 3px}
 }

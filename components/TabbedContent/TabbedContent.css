@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '../_utils/globals/variables.css';
 
 .container {
     width: 100%;
@@ -41,7 +42,7 @@
 
 
 .activeHeader {
-    background: #efefef;
+    background: var(--inputBackground);
 }
 
 .inactiveHeader {

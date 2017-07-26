@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
 
 .checkbox {
     border-radius: 8px;
-    color: #7b7b7b;
+    color: var(--checkRadioGrey);
     transition: all 0.3s;
 }
 
@@ -38,12 +40,12 @@
 
 .checkboxChecked input[type='checkbox']::before {
     content: '\e834';
-    color: #5ccdde;
+    color: var(--moosendBlue);
 }
 
 .disabledCheckbox, .disabledCheckbox label span, .disabledCheckbox label, .disabledCheckbox.checkbox:hover {
     cursor: not-allowed;
-    color: #b2b2b2;
+    color: var(--disCheckRadio);
 }
 
 .disabledCheckbox input[type='checkbox']:disabled::before {
@@ -53,7 +55,7 @@
 
 .checkbox i{
     display: block;
-    color: #b3b3b3;
+    color: var(--iDescription);
     font-size: .78571428571rem;
     margin-left: 7px;
 }
@@ -62,7 +64,7 @@
     cursor: default;
 }
 
-@media (max-width: 768px){
+@media (--xSmall){
     .horizontal{flex-direction: column}
     .horizontal > .checkbox + .checkbox{margin-left: 0px}
 }

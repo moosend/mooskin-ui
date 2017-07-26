@@ -125,7 +125,7 @@ export default class RowExample extends React.Component{
                                 </RadioTabContent>
                             </RadioTabs>
                         </Col>
-                        <Col lg={6} md={6} sm={12} xs={12}>
+                        <Col lg={6} md={6} sm={12} xs={'hidden'}>
                             <RadioTabs>
                                 <RadioTabContent title="Click here!" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
                                     <div>
