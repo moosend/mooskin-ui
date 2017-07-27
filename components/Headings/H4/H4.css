@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence');
+@import '../../_utils/globals/variables.css';
 
 .h4 {
     font-family: 'Convergence', sans-serif;
     /*font-size: 15px;*/
     font-size: 0.9375rem;
     font-weight: 400;
-    color: #3a4257;
+    color: var(--heading);
 }

@@ -2,4 +2,13 @@
     --inputBackground: #efefef;
     --inputColor: #bebebe;
     --inputFontFamily: Arial,sans-serif;
+    --moosendBlue: #5ccdde;
+    --radioHover: #95dee9;
+    --buttonHover: #4cb3c4;
+    --checkRadioGrey: #7b7b7b;
+    --disCheckRadio: #b2b2b2;
+    --iDescription: #b3b3b3;
+    --heading: #3a4257;
+    --inputLabel: #6b6b6b;
+    --inputPlaceholder: #bebebe;
 }

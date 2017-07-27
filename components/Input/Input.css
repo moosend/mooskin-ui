@@ -1,5 +1,8 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
 .inputContainer{
-    display: inline-flex;
+    display: flex;
     margin: 3px;
 }
 
@@ -26,7 +29,7 @@
 }
 
 .input::placeholder {
-    color: #bebebe;
+    color: var(--inputPlaceholder);
 }
 
 .input:focus {
@@ -45,7 +48,12 @@
 
 .inputContainer i{
     display: block;
-    color: #b3b3b3;
+    color: var(--iDescription);
     font-size: .78571428571rem;
     margin-left: 3px;
+}
+
+@media (--xSmall){
+    .inputContainer{display: flex; flex-direction: column}
+    .inputLabel{padding-top: 0px; margin-left: 3px}
 }

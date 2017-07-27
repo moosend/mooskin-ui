@@ -1,4 +1,5 @@
  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+ @import '../_utils/globals/variables.css';
  
 .button {
     font-family: 'Material Icons';
@@ -20,7 +21,7 @@
 }
 
 .normalButton{
-    background-color: #5ccdde;
+    background-color: var(--moosendBlue);
     border-radius: 50%;
     border: 1px solid transparent;
     color: #ffffff;
@@ -46,7 +47,7 @@
 }
 
 .transparent:hover:enabled {
-   color: #5ccdde;
+   color: var(--moosendBlue);
 }
 
 .icon {

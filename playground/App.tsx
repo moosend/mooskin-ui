@@ -8,6 +8,7 @@ import Charts from './examples/Charts.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
 import Form from './examples/Form.example';
+import Grid from './examples/Grid.example';
 import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
@@ -63,6 +64,8 @@ export default (props: any) => {
             <Form />
             <br/><br/>
             <Table />
+            <br/><br/>
+            <Grid />
         </div>
     );
 };
