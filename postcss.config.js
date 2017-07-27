@@ -3,10 +3,10 @@ module.exports = {
     'postcss-import': {root: './'}, //enables imports in css files
     'postcss-url':{},
     'postcss-cssnext': {},
-    'postcss-browser-reporter':{},
-    'postcss-custom-media': {},
+    // 'postcss-custom-media': {},
     'cssnano': {zindex: false},
+    'postcss-browser-reporter':{},
     'postcss-reporter':{},
-    'postcss-css-variables': {} //to enable use of variables for css files
+    // 'postcss-css-variables': {} //to enable use of variables for css files
   }
 }
