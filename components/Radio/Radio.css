@@ -14,7 +14,7 @@
 
 .disabledRadio, .disabledRadio label span, .disabledRadio label, .disabledRadio.radio:hover {
     cursor: not-allowed;
-    color: var(--disCheckRadio);
+    color: var(--disabledCheckRadio);
 }
 
 .radio span {
@@ -57,8 +57,8 @@
 
 .disabledRadio input[type='radio']:disabled {
     cursor: not-allowed;
-    border: 1px solid var(--disCheckRadio);
-    box-shadow:0 0 3px 0px var(--disCheckRadio) inset;
+    border: 1px solid var(--disabledCheckRadio);
+    box-shadow:0 0 3px 0px var(--disabledCheckRadio) inset;
 }
 
 @media (--xSmall){

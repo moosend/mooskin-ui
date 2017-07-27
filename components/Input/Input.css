@@ -48,7 +48,7 @@
 
 .inputContainer i{
     display: block;
-    color: var(--iDescription);
+    color: var(--italicDescription);
     font-size: .78571428571rem;
     margin-left: 3px;
 }

@@ -192,6 +192,8 @@ G
 </Grid>
 ```
 
+<div class="playground-doc">
+
 ## Supported `Grid` attributes
 
 * `className` - add additional classes to the Grid container
@@ -210,6 +212,8 @@ G
 * `md` - `Col` behaviour inside `Row` on medium screens
 * `sm` - `Col` behaviour inside `Row` on small screens
 * `xs` - `Col` behaviour inside `Row` on extra small screens
+
+</div>
 
 Allthough these attributes are supported, all of them are optional.
 
