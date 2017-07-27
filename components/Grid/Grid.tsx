@@ -48,8 +48,8 @@ export interface IColProps{
 
 export default class Grid extends React.Component<IGridProps, {}>{
 
-    public static Col: React.StatelessComponent<{}>;
-    public static Row: React.StatelessComponent<{}>;
+    public static Col: React.StatelessComponent<IColProps>;
+    public static Row: React.StatelessComponent<IRowProps>;
 
     public render(){
         return(
@@ -77,10 +77,10 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
 export const Col: React.StatelessComponent<IColProps> = (props) => {
 
-    const large = props.lg ? props.lg : 0;
-    const medium = props.md ? props.md : 0;
-    const small = props.sm ? props.sm : 0;
-    const xSmall = props.xs ? props.xs : 0;
+    const large = props.lg || 0;
+    const medium = props.md || 0;
+    const small = props.sm || 0;
+    const xSmall = props.xs || 0;
 
     const choosePath = (column: number | string, name: string) => {
         if (typeof column === 'string'){
