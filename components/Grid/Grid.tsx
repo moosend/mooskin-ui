@@ -121,13 +121,20 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
         }
     };
 
-    const lgClass = choosePath(large, 'large') || '';
-    const mdClass = choosePath(medium, 'medium') || '';
-    const smClass = choosePath(small, 'small') || '';
-    const xsClass = choosePath(xSmall, 'xSmall') || '';
+    const assembleAvengers = () => {
+        if (props.lg || props.md || props.sm || props.xs){
+            const lgClass = choosePath(large, 'large') || styles['col-lg-12'];
+            const mdClass = choosePath(medium, 'medium') || styles['col-md-12'];
+            const smClass = choosePath(small, 'small') || styles['col-sm-12'];
+            const xsClass = choosePath(xSmall, 'xSmall') || styles['col-xs-12'];
+            return `${lgClass} ${mdClass} ${smClass} ${xsClass} ${props.className}`;
+        } else{
+            const defaultClass = !props.lg && !props.md && !props.sm && !props.xs ? styles.col : '';
+            return `${defaultClass} ${props.className}`;
+        }
+    };
 
-    const defaultClass = lgClass === '' && mdClass === '' && smClass === '' && xsClass === '' ? styles.col : '';
-    const classes = `${lgClass} ${mdClass} ${smClass} ${xsClass} ${defaultClass} ${props.className}`;
+    const classes = assembleAvengers();
     // getDefault = () => {
     //     if (lgClass === '' && mdClass === '' && smClass === '' && xsClass === ''){
     //         return styles.col;
