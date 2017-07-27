@@ -93,7 +93,7 @@ This can be used in various situations and combinations, for an enhanced develop
 
 <div class="playground-doc">
 
-## Supported attributes for Select {playground-docs}
+## Supported attributes for Select 
 
 * `id` - id of the element
 * `dataLabel` - label what kind of data 
@@ -105,7 +105,7 @@ This can be used in various situations and combinations, for an enhanced develop
 * `description` - select description (small italic bottom)
 * `style` - element style
 
-## Supported attributes for Option {playground-docs}
+## Supported attributes for Option 
 
 * `value` - value for the option
 

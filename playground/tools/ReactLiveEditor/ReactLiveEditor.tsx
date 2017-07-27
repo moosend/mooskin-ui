@@ -17,7 +17,7 @@ export interface IReactLiveEditorProps{
     code: string;
     scope: {[key: string]: any};
     title: string;
-    doc?: string;
+    doc: string;
 }
 
 export interface IReactLiveEditorState{
@@ -82,15 +82,17 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
                          <LiveError />
                         <LivePreview />
                     </LiveProvider>
-                    <div
-                        style={{display: displayDocs}}
-                        className={styles.propDocs}
-                        dangerouslySetInnerHTML={{__html: this.state.docHtml}}
-                    />
-                    <div className={styles.showProps} onClick={this.onToggleDocs}>
-                        {displayDocsLabel} Possible Props
+                    <div style={{display: this.props.doc && 'block' || 'none'}}>
+                        <div
+                            style={{display: displayDocs}}
+                            className={styles.propDocs}
+                            dangerouslySetInnerHTML={{__html: this.state.docHtml}}
+                        />
+                        <div className={styles.showProps} onClick={this.onToggleDocs}>
+                            {displayDocsLabel} Possible Props
+                        </div>
+                        <div style={{clear: 'both'}}/>
                     </div>
-                    <div style={{clear: 'both'}}/>
                 </Fieldset>
             </div>
         );

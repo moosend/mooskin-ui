@@ -13,6 +13,7 @@ export default class ChartsExample extends React.Component<any, any> {
                     scope={{React, Bar, Doughnut, Line, Pie}}
                     code={ChartsExampleCode}
                     title="Charts Example"
+                    doc=""
                 />
             </div>
         );

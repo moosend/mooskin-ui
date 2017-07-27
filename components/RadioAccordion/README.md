@@ -83,14 +83,14 @@ Import {RadioAccordionContent, RadioAccordion} from 'mooskin';
 
 <div class="playground-doc">
 
-## Supported attributes for ```<RadioAccordion/>``` {playground-docs}
+## Supported attributes for RadioAccordion 
 
 * `id` - id of the element
 * `className` - css class
 * `style` - extra styles for the main container
 
 
-## Supported attributes for ```<RadioAccordionContent/>``` {playground-docs}
+## Supported attributes for RadioAccordionContent 
 
 * `title` - (required) sets the title for the radio tab
 * `active` - sets which radio tab is active, the first is active by default
