@@ -80,20 +80,24 @@ Import {TabbedContent} from 'mooskin';
 </TabbedContent>
 ```
 
-## Supported attributes for ```<TabbedContent/>```
+<div class="playground-doc">
+
+## Supported attributes for TabbedContent
 
 * `id` - id of the element
 * `className` - css class
 * `style` - extra styles for the main container
 
 
-## Supported attributes for ```<Tab/>```
+## Supported attributes for Tab 
 
 * `title` - (required) sets the title for the tab
 * `active` - sets which tab is active, the first is active by default
 * `style` -  extra styles 
 * `iconClass` - a class that will be added before the title to act as an icon, for example a font awesome class
 * `materialIcon` - name of the material icon to be added before the title (material icons are provided out of the box)
+
+</div>
 
 Allthough these attributes are supported, most of them are optional.
 

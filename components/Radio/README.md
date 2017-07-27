@@ -116,6 +116,8 @@ const logValue = (e, data) => {       // data is the callback object, which cons
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
+<div class="playground-doc">
+
 ## Supported attributes for RadioGroup
 
 * `id` - id of the element
@@ -135,6 +137,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `onClick` - callback for individual radio, use this only with a lonely radio, otherwise it will get overriden by RadioGroup callback
 * `value` - value of the radio, it will be a label aswell if no label prop has been passed.
 * `label` - label of this perticular radio
+
+</div>
 
 Allthough these attributes are supported, only value is required.
 

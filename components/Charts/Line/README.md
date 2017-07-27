@@ -119,8 +119,9 @@ custom height and width and fill the area below the line
 <Line data={...} height={300} width={400} fill />
 ```
 
+<div class="playground-doc">
 
-## Supported attributes
+## Supported attributes  {playground-docs}
 
 * `data` - accepts an array of objects
 * `id` - id of the element
@@ -156,6 +157,8 @@ custom height and width and fill the area below the line
 
 
 Only `data` is required, other attributes are optional and mostly for styling.
+
+</div>
 
 ___
 

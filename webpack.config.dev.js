@@ -29,7 +29,7 @@ config.plugins.push(
 
 config.module.rules.push(
     {
-        test: /\.txt$/,
+        test: /\.txt$|\.md$/,
         loader: "raw-loader"
     },
     {

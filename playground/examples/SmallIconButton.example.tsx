@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Readme from '../../components/SmallIconButton/README.md';
+
 import {SmallIconButton} from '../../components/index/';
 import SmallIconButtonExampleCode from './component-strings/SmallIconButton.example.txt';
 
@@ -13,6 +15,7 @@ export default class SmallIconButtonExample extends React.Component<any, any> {
                     scope={{React, SmallIconButton}}
                     code={SmallIconButtonExampleCode}
                     title="SmallIconButton Example"
+                    doc={Readme}
                 />
             </div>
         );

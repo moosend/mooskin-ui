@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Readme from '../../components/Radio/README.md';
+
 import {Radio, RadioGroup} from '../../components/index/';
 import RadioExampleCode from './component-strings/Radio.example.txt';
 
@@ -13,6 +15,7 @@ export default class RadioExample extends React.Component<any, any> {
                     scope={{React, RadioGroup, Radio}}
                     code={RadioExampleCode}
                     title="Radio Example"
+                    doc={Readme}
                 />
             </div>
         );

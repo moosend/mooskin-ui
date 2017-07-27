@@ -91,7 +91,9 @@ In this case the statement block will get fired if the desired option is selecte
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
-## Supported attributes for Select
+<div class="playground-doc">
+
+## Supported attributes for Select {playground-docs}
 
 * `id` - id of the element
 * `dataLabel` - label what kind of data 
@@ -103,9 +105,11 @@ This can be used in various situations and combinations, for an enhanced develop
 * `description` - select description (small italic bottom)
 * `style` - element style
 
-## Supported attributes for Option
+## Supported attributes for Option {playground-docs}
 
 * `value` - value for the option
+
+</div>
 
 Allthough these attributes are supported, all of them are optional.
 

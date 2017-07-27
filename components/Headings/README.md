@@ -36,12 +36,15 @@ or give it a custom `style`
 <H2 style={yourStyle}>My Style</H2>
 ```
 
+<div class="playground-doc">
+
 ## Supported attributes
 
 * `id` - id of the element
 * `style` - heading style
 * `className` - name of the extra class
 
+</div>
 
 Allthough these attributes are supported, all of them are optional.
 

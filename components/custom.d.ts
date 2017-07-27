@@ -28,4 +28,9 @@ declare module '*.txt' {
   export default content;
 }
 
+declare module '*.md' {
+  const content: any;
+  export default content;
+}
+
 declare var global: any;

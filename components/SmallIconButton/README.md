@@ -59,7 +59,9 @@ give it a transparent style where only the icon is visible
 <SmallIconButton transparent />
 ```
 
-## Supported attributes
+<div class="playground-doc">
+
+## Supported attributes 
 
 * `id` - id of the element
 * `icon` - icon for the button
@@ -74,6 +76,8 @@ Allthough these attributes are supported, all of them are optional.
 ## Supported icons (so far)
 
 All [Google Font icons](https://material.io/icons/) are supported.
+
+</div>
 
 #### For more
 

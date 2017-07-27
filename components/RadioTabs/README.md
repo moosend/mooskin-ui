@@ -81,7 +81,9 @@ Import {RadioTabContent, RadioTabs} from 'mooskin';
 </RadioTabs>
 ```
 
-## Supported attributes for ```<RadioTabs/>```
+<div class="playground-doc">
+
+## Supported attributes for RadioTabs
 
 * `id` - id of the element
 * `className` - css class
@@ -89,11 +91,13 @@ Import {RadioTabContent, RadioTabs} from 'mooskin';
 * `horizontal` - horizontal style of view for the RadioTabs
 
 
-## Supported attributes for ```<RadioTabContent/>```
+## Supported attributes for RadioTabContent
 
 * `title` - (required) sets the title for the radio tab
 * `active` - sets which radio tab is active, the first is active by default
 * `style` -  extra styles 
+
+</div>
 
 Allthough these attributes are supported, most of them are optional.
 

@@ -48,10 +48,6 @@
   version "19.2.4"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-19.2.4.tgz#543651712535962b7dc615e18e4a381fc2687442"
 
-"@types/prop-types@^15.5.1":
-  version "15.5.1"
-  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.5.1.tgz#1ecf52621299e65b855374337fb11fd2d1066fc1"
-
 "@types/react-dom@^15.5.1":
   version "15.5.1"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-15.5.1.tgz#f3c3e14c682785923c7d64583537df319442dec1"
@@ -61,6 +57,10 @@
 "@types/react@*", "@types/react@^15.0.31":
   version "15.0.38"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.38.tgz#6afea31a9fe66304af474106ba372ddaba449995"
+
+"@types/showdown@^1.4.32":
+  version "1.4.32"
+  resolved "https://registry.yarnpkg.com/@types/showdown/-/showdown-1.4.32.tgz#bb0b32dbafee23ae9575df30b227e4fc2f0cd45b"
 
 abab@^1.0.3:
   version "1.0.3"
@@ -5414,6 +5414,12 @@ sha.js@^2.4.0, sha.js@^2.4.8:
 shellwords@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.0.tgz#66afd47b6a12932d9071cbfd98a52e785cd0ba14"
+
+showdown@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/showdown/-/showdown-1.7.1.tgz#4cbc7b2b333bbd3d679d581c59fc8f27d88db0b1"
+  dependencies:
+    yargs "^8.0.1"
 
 signal-exit@^3.0.0:
   version "3.0.2"

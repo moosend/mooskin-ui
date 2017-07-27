@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Readme from '../../components/RadioTabs/README.md';
+
 import {Button, H2, Input, RadioTabContent, RadioTabs} from '../../components/index/';
 import RadioTabsExampleCode from './component-strings/RadioTabs.example.txt';
 
@@ -12,7 +14,12 @@ export default class RadioTabsExample extends React.Component<any, any> {
 
         return(
             <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor scope={components} code={RadioTabsExampleCode} title="RadioTabs Example"/>
+                <ReactLiveEditor
+                    scope={components}
+                    code={RadioTabsExampleCode}
+                    title="RadioTabs Example"
+                    doc={Readme}
+                />
             </div>
         );
     }

@@ -69,8 +69,9 @@ custom height and width
 <Bar data={...} height={300} width={400} />
 ```
 
+<div class="playground-doc">
 
-## Supported attributes
+## Supported attributes 
 
 * `data` - accepts an array of objects
 * `id` - id of the element
@@ -99,6 +100,8 @@ custom height and width
 * `maintainAspectRatio` - maintains aspect ratio
 
 Only `data` is required, other attributes are optional and mostly for styling.
+
+</div>
 
 ___
 
