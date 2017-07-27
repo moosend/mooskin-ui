@@ -125,7 +125,23 @@ G
 
 So we told the `Col`'s that on extra small screens they must take 12 Columns, and that's what they did. The first one took all the space and pushed the second one below, practically they're still in the same `Row` though. If we passed 8 to the first `Col` `xs` prop and 4 to the second. In small screens, they would appear in the same row, the first one taking 8 Columns and the second one taking 4.
 
-One more thing is, that if we dont pass any props to the `Col`'s, they will take the same amount of space in the `Row`. Let's have a look.
+Another scenario is if not all props are passed for all screen sizes, then it will automatically assign a class for 12 columns to the `Col`, because, you know, mobile first. For example:
+
+```
+<Grid>
+    <Row>
+        <Col lg={6}>
+            Col lg-6
+        </Col>
+        <Col lg={6}}>
+            Col lg-6
+        </Col>
+    </Row>
+</Grid>
+```
+in this case the rendered column will have all other classes automatically assigned as if it were like this: `<Col lg={6} md={12} sm={12} xs={12} />`.
+
+One more thing is, that if we dont pass any props at all to the `Col`'s, they will take the same amount of space in the `Row`. Let's have a look.
 
 ```
 <Grid>

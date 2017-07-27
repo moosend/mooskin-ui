@@ -13,6 +13,14 @@ class GridExample extends React.Component{
                         </Col>
                     </Row>
                     <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                        <Col md={6} style={{border: '3px solid #5ccdde'}}>
+                            Col md-6
+                        </Col>
+                        <Col md={6} style={{border: '3px solid #5ccdde'}}>
+                            Col md-6
+                        </Col>
+                    </Row>
+                    <Row style={{padding: 10, border: '3px solid #F48770'}}>
                         <Col lg={3} md={4} sm={6} xs={1} style={{border: '3px solid #5ccdde'}}>
                             Col lg-3 md-4 sm-6 xs-1
                         </Col>

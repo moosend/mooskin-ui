@@ -114,9 +114,9 @@ describe('Grid', () => {
 
         expect(component.find(Grid).children.length).toBe(1);
         expect(component.find(Row).length).toBe(1);
-        expect(component.find(Col).hasClass('col-md-12')).toBeTruthy;
-        expect(component.find(Col).hasClass('col-sm-12')).toBeTruthy;
-        expect(component.find(Col).hasClass('col-xs-12')).toBeTruthy;
+        expect(component.find(Col).hasClass('medium-12')).toBeTruthy;
+        expect(component.find(Col).hasClass('small-12')).toBeTruthy;
+        expect(component.find(Col).hasClass('xSmall-12')).toBeTruthy;
     });
 
 });
