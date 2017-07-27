@@ -116,6 +116,8 @@ const logValue = (e, data) => {       // data is the callback object, which cons
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
+<div class="playground-doc">
+
 ## Supported attributes for CheckBoxGroup
 
 * `id` - id of the element
@@ -127,7 +129,7 @@ This can be used in various situations and combinations, for an enhanced develop
 * `style` - element style
 * `title` - optional title for the checkboxes group
 
-## Supported attributes for CheckBox
+## Supported attributes for CheckBox 
 
 * `id` - id of the element (important of you prefer to click on labels to select the value)
 * `value` - value for the option
@@ -136,6 +138,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `onClick` - callback for individual checkbox, use this only with a lonely checkbox, otherwise it will get overriden by CheckBoxGroup callback
 * `value` - value of the checkbox, it will be a label aswell if no label prop has been passed. CheckBoxes within a group cannot have the same value.
 * `label` - label of this perticular checkbox
+
+</div>
 
 Allthough these attributes are supported, only `value` is required.
 

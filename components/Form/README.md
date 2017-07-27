@@ -1,6 +1,6 @@
 # MooSkin UI - Form Component
 
-The MooSkin Form Component works similar to the normal HTML `<form/>` element, but with pre-defined styling and attributes.
+The MooSkin Form Component works similar to the normal HTML `<form></form>` element, but with pre-defined styling and attributes.
 
 ### Usage
 
@@ -212,17 +212,21 @@ So if we fill up the fields, let's say we type on the `<Input>` a string of `Don
 ```
 now you're free to play around with the data, make aSync requests, whatever.
 
-## Supported <Form> attributes
+<div class="playground-doc">
+
+## Supported attributes for Form 
 
 * `className` - add additional classes to the Form
 * `style` - or additional styles
 * `onSubmit` - a function which will handle the data within the form
 
-## Supported <FormGroup> attributes
+## Supported attributes for FormGroup
 
 * `horizontal` - elements within FormGroup will align horizontally
 * `className` - add additional classes to the FormGroup
 * `style` - or additional styles
+
+</div>
 
 Allthough these attributes are supported, all of them are optional.
 

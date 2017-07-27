@@ -50,14 +50,17 @@ For easy use, the components are named similar to normal HTML components but wit
 
 Like the `<table/>` element it will accept given attributes and render differently based on the given attributes
 
+<div class="playground-doc">
 
-## Supported attributes
+## Supported attributes 
 
 * `id` - id of the element
 * `className` - css class
 * `style` - table styles
 
 Allthough these attributes are supported, all of them are optional. normal `<table>` props can be used as well(like border, cellpadding etc.). They will just be passed to the underlying `<table>`. 
+
+</div>
 
 #### For more
 

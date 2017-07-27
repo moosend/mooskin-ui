@@ -60,7 +60,9 @@ In this case the statement block will get fired if the CheckListItem is checked(
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
-## Supported attributes
+<div class="playground-doc">
+
+## Supported attributes 
 
 * `id` - id of the element
 * `className` - css class
@@ -69,6 +71,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `text` - Check list item text
 * `style` - button style
 * `onClick` - callback to be triggered on button click
+
+</div>
 
 Allthough these attributes are supported, all of them are optional.
 

@@ -1,6 +1,6 @@
 # MooSkin UI - TextArea Component
 
-The MooSkin TextArea Component works similar to the normal HTML `<textarea/>` element, but with pre-defined styling and attributes.
+The MooSkin TextArea Component works similar to the normal HTML `<textarea></textarea>` element, but with pre-defined styling and attributes.
 
 ___
 
@@ -20,7 +20,7 @@ And then you can simply start using it by typing
 
 For easy use, the components are named similar to normal HTML components but with a capital first letter.
 
-Like the `<textarea/>` element it will accept given attributes and render differently based on the given attributes
+Like the ```<textarea/>``` element it will accept given attributes and render differently based on the given attributes
 
 ### Examples
 
@@ -63,6 +63,8 @@ In this case on each TextArea change, the value will be console logged.
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
+<div class="playground-doc">
+
 ## Supported attributes
 
 * `id` - id of the element
@@ -81,6 +83,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `dataLabel` - label what kind of data 
 * `style` - textarea field style
 * `onChange` - callback to be triggered on textarea change
+
+</div>
 
 Allthough these attributes are supported, all of them are optional.
 

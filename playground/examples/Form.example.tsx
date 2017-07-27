@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Readme from '../../components/Form/README.md';
+
 import {
     Button,
     CheckBox,
@@ -46,6 +48,7 @@ export default class FormExample extends React.Component<any, any> {
                     scope={components}
                     code={FormExampleCode}
                     title="Form Example"
+                    doc={Readme}
                 />
             </div>
         );

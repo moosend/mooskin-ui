@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Readme from '../../components/TopNotification/README.md';
+
 import {Button, TopNotification} from '../../components/index/';
 import TopNotificationExampleCode from './component-strings/TopNotification.example.txt';
 
@@ -13,6 +15,7 @@ export default class TopNotificationExample extends React.Component<any, any> {
                     scope={{React, Button, TopNotification}}
                     code={TopNotificationExampleCode}
                     title="TopNotification Example"
+                    doc={Readme}
                 />
             </div>
         );

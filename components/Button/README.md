@@ -47,6 +47,8 @@ or just give it a custom style
 <Button style={yourStyle} >button1</Button>
 ```
 
+<div class="playground-doc">
+
 ## Supported attributes
 
 * `id` - id of the element
@@ -56,7 +58,10 @@ or just give it a custom style
 * `style` - button style
 * `onClick` - callback to be triggered on button click
 
+</div>
+
 Allthough these attributes are supported, all of them are optional.
+
 
 #### For more
 

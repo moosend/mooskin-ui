@@ -65,7 +65,9 @@ In this case the statement block will get fired if the Switch is turned on.
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
-## Supported attributes
+<div class="playground-doc">
+
+## Supported attributes 
 
 * `id` - id of the element
 * `disabled` - element should be disabled
@@ -77,6 +79,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `style` - custom style
 * `dataLabel` - label what kind of data 
 * `onClick` - callback to be triggered on click
+
+</div>
 
 Allthough these attributes are supported, all of them are optional.
 

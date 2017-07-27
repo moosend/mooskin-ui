@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Readme from '../../components/Headings/README.md';
+
 import {H1, H2, H3, H4, H5, H6} from '../../components/index/';
 import HeadingsExampleCode from './component-strings/Headings.example.txt';
 
@@ -13,6 +15,7 @@ export default class HeadingsExample extends React.Component<any, any> {
                     scope={{React, H1, H2, H3, H4, H5, H6}}
                     code={HeadingsExampleCode}
                     title="Headings Example"
+                    doc={Readme}
                 />
             </div>
         );

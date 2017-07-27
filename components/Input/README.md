@@ -63,7 +63,9 @@ In this case on each input change, the value will be console logged.
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
-## Supported attributes
+<div class="playground-doc">
+
+## Supported attributes 
 
 * `id` - id of the element
 * `type` - type of the input (eg. text)
@@ -82,6 +84,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `dataLabel` - label what kind of data 
 * `style` - input field style
 * `onChange` - callback to be triggered on input change
+
+</div>
 
 Allthough these attributes are supported, all of them are optional.
 

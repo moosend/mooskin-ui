@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import showdown from 'showdown';
+
 import Fieldset from '../../../components/Fieldset';
 import {SmallIconButton} from '../../../components/index';
 import styles from './ReactLiveEditor.css';
@@ -15,21 +17,44 @@ export interface IReactLiveEditorProps{
     code: string;
     scope: {[key: string]: any};
     title: string;
+    doc: string;
 }
 
 export interface IReactLiveEditorState{
     displayEditor: boolean;
+    displayDocs: boolean;
+    docHtml: string;
 }
 
 export default class ReactLiveEditor extends React.Component<IReactLiveEditorProps, IReactLiveEditorState> {
 
-    public state = {
-        displayEditor: false
-    };
+    public state: IReactLiveEditorState;
+    public domParser: DOMParser;
+    public converter: showdown.Converter;
+
+    constructor(props: IReactLiveEditorProps){
+        super(props);
+
+        // showdown.setFlavor('github');
+        showdown.setOption('customizedHeaderId', 'true');
+
+        this.converter = new showdown.Converter();
+        this.domParser = new DOMParser();
+
+        const docHtml = this.getDocs(this.props.doc || '');
+
+        this.state = {
+            displayDocs: false,
+            displayEditor: false,
+            docHtml
+        };
+    }
 
     public render(){
 
         const displayEditor = this.state.displayEditor ? 'block' : 'none';
+        const displayDocs = this.state.displayDocs ? 'block' : 'none';
+        const displayDocsLabel = this.state.displayDocs ? 'Hide' : 'Show';
         const zIndex = this.state.displayEditor ? 22 : 'auto';
 
         return(
@@ -57,6 +82,17 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
                          <LiveError />
                         <LivePreview />
                     </LiveProvider>
+                    <div style={{display: this.props.doc && 'block' || 'none'}}>
+                        <div
+                            style={{display: displayDocs}}
+                            className={styles.propDocs}
+                            dangerouslySetInnerHTML={{__html: this.state.docHtml}}
+                        />
+                        <div className={styles.showProps} onClick={this.onToggleDocs}>
+                            {displayDocsLabel} Possible Props
+                        </div>
+                        <div style={{clear: 'both'}}/>
+                    </div>
                 </Fieldset>
             </div>
         );
@@ -64,5 +100,25 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
 
     public onToggle = () => {
         this.setState({displayEditor: !this.state.displayEditor});
+    }
+
+    public onToggleDocs = () => {
+        this.setState({displayDocs: !this.state.displayDocs});
+    }
+
+    // method to extract only the docs we need from the readme
+    private getDocs = (wholeDocs: string) => {
+
+        const html = this.domParser.parseFromString(this.converter.makeHtml(wholeDocs), 'text/html');
+
+        const docsSection = html.querySelector('.playground-doc');
+
+        const doc = docsSection && this.converter.makeHtml(docsSection.innerHTML || '');
+
+        if (!doc){
+            console.warn(`No proper docs, or doc structure found for this example '${this.props.title}'`);
+        }
+
+        return doc || '';
     }
 }
