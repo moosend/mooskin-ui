@@ -94,16 +94,16 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
         let newCol = '';
         for (let i = 1 ; i <= column; i++){
             if (column === i && name === 'large'){
-                newCol = 'col-lg-' + i;
+                newCol = 'large-' + i;
                 return styles[newCol];
             } else if (column === i && name === 'medium'){
-                newCol = 'col-md-' + i;
+                newCol = 'medium-' + i;
                 return styles[newCol];
             } else if (column === i && name === 'small'){
-                newCol = 'col-sm-' + i;
+                newCol = 'small-' + i;
                 return styles[newCol];
             } else if (column === i && name === 'xSmall'){
-                newCol = 'col-xs-' + i;
+                newCol = 'xSmall-' + i;
                 return styles[newCol];
             }
         }
@@ -121,13 +121,20 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
         }
     };
 
-    const lgClass = choosePath(large, 'large') || '';
-    const mdClass = choosePath(medium, 'medium') || '';
-    const smClass = choosePath(small, 'small') || '';
-    const xsClass = choosePath(xSmall, 'xSmall') || '';
+    const assembleAvengers = () => {
+        if (props.lg || props.md || props.sm || props.xs){
+            const lgClass = choosePath(large, 'large') || styles['large-12'];
+            const mdClass = choosePath(medium, 'medium') || styles['medium-12'];
+            const smClass = choosePath(small, 'small') || styles['small-12'];
+            const xsClass = choosePath(xSmall, 'xSmall') || styles['xSmall-12'];
+            return `${lgClass} ${mdClass} ${smClass} ${xsClass} ${props.className}`;
+        } else{
+            const defaultClass = !props.lg && !props.md && !props.sm && !props.xs ? styles.col : '';
+            return `${defaultClass} ${props.className}`;
+        }
+    };
 
-    const defaultClass = lgClass === '' && mdClass === '' && smClass === '' && xsClass === '' ? styles.col : '';
-    const classes = `${lgClass} ${mdClass} ${smClass} ${xsClass} ${defaultClass} ${props.className}`;
+    const classes = assembleAvengers();
     // getDefault = () => {
     //     if (lgClass === '' && mdClass === '' && smClass === '' && xsClass === ''){
     //         return styles.col;

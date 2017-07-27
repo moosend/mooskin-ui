@@ -68,6 +68,7 @@ describe('Grid', () => {
         expect(component.find(Grid).children.length).toBe(1);
         expect(component.find(Row).length).toBe(1);
         expect(component.find(Col).first().children.length).toBe(1);
+        expect(component.find(Col).first().hasClass('hidden-xs')).toBeTruthy;
         expect(component.find(Col).first().prop('md')).toEqual(6);
         expect(component.find(Col).first().prop('xs')).toEqual('hidden');
         expect(component.hasClass('myClass')).toBeTruthy;
@@ -95,7 +96,27 @@ describe('Grid', () => {
         expect(component.find(Grid).children.length).toBe(1);
         expect(component.find(Row).length).toBe(1);
         expect(component.find(Col).length).toBe(2);
+        expect(component.find(Col).first().hasClass('col')).toBeTruthy;
         expect(component.find(Input).length).toBe(6);
+    });
+
+    test('classes are automatically assigned if no prop for the relevant screen size has NOT been passed', () => {
+
+        const component = shallow(
+            <Grid className="myClass">
+                <Row className="myClass" >
+                    <Col lg={12}>
+                        Col
+                    </Col>
+                </Row>
+            </Grid>
+        );
+
+        expect(component.find(Grid).children.length).toBe(1);
+        expect(component.find(Row).length).toBe(1);
+        expect(component.find(Col).hasClass('medium-12')).toBeTruthy;
+        expect(component.find(Col).hasClass('small-12')).toBeTruthy;
+        expect(component.find(Col).hasClass('xSmall-12')).toBeTruthy;
     });
 
 });
