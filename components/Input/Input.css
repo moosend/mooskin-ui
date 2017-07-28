@@ -46,7 +46,7 @@
     width: 150px;
 }
 
-.inputContainer i{
+.inputContainer .description{
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;

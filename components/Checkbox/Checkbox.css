@@ -53,7 +53,7 @@
     color: #eaeaea;
 }
 
-.checkbox i{
+.checkbox .description{
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;

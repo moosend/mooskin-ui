@@ -267,7 +267,7 @@ export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 <span>{label}</span>
             </label>
             <br/>
-            <i>{props.description}</i>
+            <i className={styles.description}>{props.description}</i>
         </div>
     );
 };

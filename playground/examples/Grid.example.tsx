@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Readme from '../../components/Grid/README.md';
 
-import {Col, Grid, Row} from '../../components/index';
+import {Button, Col, Grid, H2, Input, RadioTabContent, RadioTabs, Row} from '../../components/index';
 
 import GridExampleCode from './component-strings/Grid.example.txt';
 
@@ -13,7 +13,7 @@ export default class GridExample extends React.Component<any, any> {
         return(
             <div>
                 <ReactLiveEditor
-                    scope={{React, Col, Grid, Row}}
+                    scope={{React, Col, Grid, Row, Button, Input, RadioTabContent, RadioTabs, H2}}
                     code={GridExampleCode}
                     title="Grid Example"
                     doc={Readme}
