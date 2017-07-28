@@ -110,11 +110,8 @@ export default class File extends React.Component<IFileProps, IFileState>{
 
     private fileNames = (files: FileList) => {
         const fileNames = [];
-        // for (let i = 0 ; i < files.length ; i++){
-        //     fileNames.push(files[i].name);
-        // }
-        for (const file of files){
-            fileNames.push(file.name);
+        for (let i = 0 ; i < files.length ; i++){
+            fileNames.push(files[i].name);
         }
         const fileStrings = fileNames.join(', ');
         return fileStrings;

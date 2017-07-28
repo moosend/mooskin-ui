@@ -47,6 +47,7 @@ exports[`Bar Chart renders correctly 1`] = `
           "position": "top",
         },
         "maintainAspectRatio": true,
+        "responsive": true,
         "scales": Object {
           "xAxes": Array [
             Object {
