@@ -11,14 +11,12 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class GridExample extends React.Component<any, any> {
     public render(){
         return(
-            <div>
-                <ReactLiveEditor
-                    scope={{React, Col, Grid, Row}}
-                    code={GridExampleCode}
-                    title="Grid Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, Col, Grid, Row}}
+                code={GridExampleCode}
+                title="Grid Example"
+                doc={Readme}
+            />
         );
     }
 }

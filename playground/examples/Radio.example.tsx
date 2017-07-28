@@ -10,14 +10,12 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class RadioExample extends React.Component<any, any> {
     public render(){
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, RadioGroup, Radio}}
-                    code={RadioExampleCode}
-                    title="Radio Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, RadioGroup, Radio}}
+                code={RadioExampleCode}
+                title="Radio Example"
+                doc={Readme}
+            />
         );
     }
 }

@@ -13,14 +13,12 @@ export default class RadioAccordionExample extends React.Component<any, any> {
         const components = {React, Button, H2, Input, RadioAccordion, RadioAccordionContent};
 
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={components}
-                    code={RadioAccordionExampleCode}
-                    title="RadioAccordion Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={components}
+                code={RadioAccordionExampleCode}
+                title="RadioAccordion Example"
+                doc={Readme}
+            />
         );
     }
 }

@@ -88,14 +88,16 @@
 .radio input[type='radio']:checked::after {
     background: var(--moosendBlue);
     content:'';
-    display:block;
+    display: block;
     width: 0.375rem;
     height: 0.375rem;
     border-radius:50%; 
 }
 
 .radio label {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     cursor: pointer;
     font-size: 0.875rem;
     width: 100%;

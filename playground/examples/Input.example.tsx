@@ -10,14 +10,12 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class InputExample extends React.Component<any, any> {
     public render(){
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, Input}}
-                    code={InputExampleCode}
-                    title="Input Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, Input}}
+                code={InputExampleCode}
+                title="Input Example"
+                doc={Readme}
+            />
         );
     }
 }

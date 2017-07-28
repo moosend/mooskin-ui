@@ -10,14 +10,12 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class HorizontalRangeBarExample extends React.Component<any, any> {
     public render(){
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, HorizontalRangeBar, Button}}
-                    code={HorizontalExampleCode}
-                    title="HorizontalRangeBar Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, HorizontalRangeBar, Button}}
+                code={HorizontalExampleCode}
+                title="HorizontalRangeBar Example"
+                doc={Readme}
+            />
         );
     }
 }

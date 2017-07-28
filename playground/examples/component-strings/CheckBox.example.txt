@@ -13,7 +13,7 @@ class CheckBoxExample extends React.Component {
 
     render() {
         return (
-            <div style={{display: 'inline-block'}}>
+            <div>
                 <CheckboxGroup
                     onChange={this.onChange}
                     title="Vertical checkboxes"

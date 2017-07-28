@@ -10,14 +10,12 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class HeadingsExample extends React.Component<any, any> {
     public render(){
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, H1, H2, H3, H4, H5, H6}}
-                    code={HeadingsExampleCode}
-                    title="Headings Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, H1, H2, H3, H4, H5, H6}}
+                code={HeadingsExampleCode}
+                title="Headings Example"
+                doc={Readme}
+            />
         );
     }
 }

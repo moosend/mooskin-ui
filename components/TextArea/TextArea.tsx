@@ -125,7 +125,7 @@ class TextArea extends React.Component<ITextAreaProps, {}> {
                         className={`textarea ${styles.textarea} ${disabledtextarea}`}
                         style={style}
                     />
-                    <i>{description}</i>
+                    <i className={styles.description}>{description}</i>
                 </div>
             </div>
         );

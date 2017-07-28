@@ -65,7 +65,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
     width: 155px;
 }
 
-.areaContainer i{
+.areaContainer .description{
     display: block;
     color: #b3b3b3;
     font-size: .78571428571rem;

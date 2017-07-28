@@ -61,6 +61,9 @@
 }
 
 .radio label {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     cursor: pointer;
     font-size: 0.875rem;
     width: 100%;

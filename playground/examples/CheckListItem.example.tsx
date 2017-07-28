@@ -10,14 +10,12 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class CheckListItemExample extends React.Component<any, any> {
     public render(){
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, CheckListItem}}
-                    code={CheckExampleCode}
-                    title="CheckListItem Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, CheckListItem}}
+                code={CheckExampleCode}
+                title="CheckListItem Example"
+                doc={Readme}
+            />
         );
     }
 }

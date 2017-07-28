@@ -46,6 +46,7 @@ exports[`Chart renders correctly 1`] = `
           "position": "bottom",
         },
         "maintainAspectRatio": true,
+        "responsive": true,
         "title": Object {
           "display": true,
           "fontColor": undefined,

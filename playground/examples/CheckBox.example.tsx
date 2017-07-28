@@ -10,14 +10,12 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class CheckBoxExample extends React.Component<any, any> {
     public render(){
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, CheckboxGroup, CheckBox}}
-                    code={CheckBoxExampleCode}
-                    title="CheckBox Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, CheckboxGroup, CheckBox}}
+                code={CheckBoxExampleCode}
+                title="CheckBox Example"
+                doc={Readme}
+            />
         );
     }
 }

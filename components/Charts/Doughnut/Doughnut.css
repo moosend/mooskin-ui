@@ -1,3 +1,4 @@
 .chart{
+    display: flex;
     user-select: none;
 }

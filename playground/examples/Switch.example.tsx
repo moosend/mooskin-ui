@@ -10,14 +10,12 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class SwitchExample extends React.Component<any, any> {
     public render(){
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, Switch}}
-                    code={CheckExampleCode}
-                    title="Switch Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, Switch}}
+                code={CheckExampleCode}
+                title="Switch Example"
+                doc={Readme}
+            />
         );
     }
 }

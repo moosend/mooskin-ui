@@ -11,14 +11,12 @@ export default class TableExample extends React.Component<any, any> {
 
     public render(){
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, Table}}
-                    code={TableExampleCode}
-                    title="Table Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, Table}}
+                code={TableExampleCode}
+                title="Table Example"
+                doc={Readme}
+            />
         );
     }
 }

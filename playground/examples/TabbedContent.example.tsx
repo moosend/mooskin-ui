@@ -11,14 +11,12 @@ export default class TabbedContentExample extends React.Component<any, any> {
     public render(){
 
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, TabbedContent}}
-                    code={TabbedContentExampleCode}
-                    title="TabbedContent Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, TabbedContent}}
+                code={TabbedContentExampleCode}
+                title="TabbedContent Example"
+                doc={Readme}
+            />
         );
     }
 }

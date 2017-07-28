@@ -26,7 +26,9 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
     </span>
   </label>
   <br />
-  <i />
+  <i
+    className="description"
+  />
 </div>
 `;
 

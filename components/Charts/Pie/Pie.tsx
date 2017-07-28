@@ -56,6 +56,7 @@ class PieChart extends React.Component<IPieProps, {}>{
         const options = {
             legend,
             maintainAspectRatio,
+            responsive: true,
             title: chartTitle
         };
 
