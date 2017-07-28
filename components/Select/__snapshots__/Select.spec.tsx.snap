@@ -75,7 +75,9 @@ exports[`Select renders Select correctly 1`] = `
     >
       <ul />
     </div>
-    <i>
+    <i
+      className="description"
+    >
       with description
     </i>
   </div>

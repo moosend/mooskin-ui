@@ -6,14 +6,17 @@ import {IInputCallbackData} from '../_utils/types/commonTypes';
 
 export interface IFileProps{
 
+    /** file upload id */
+    id?: string;
+
     /** wether the file upload field is required or not */
     required?: boolean;
 
+    /** multiple file uploads */
+    multiple?: boolean;
+
     /** what kind of file type does the file upload accept */
     accept?: string;
-
-    /** file upload description (lower italic) */
-    description?: string;
 
     /** file upload label */
     label?: string;
@@ -68,7 +71,8 @@ export default class File extends React.Component<IFileProps, IFileState>{
 
         return (
             <div
-                className={`file-upload-component ${styles.fileContainer}`}
+                id={this.props.id}
+                className={`file-upload-component ${styles.fileContainer} ${disabledFile}`}
                 style={this.props.style}
             >
                 <label style={labelStyles} className={styles.label}>{this.props.label}</label>
@@ -80,16 +84,36 @@ export default class File extends React.Component<IFileProps, IFileState>{
                     disabled={this.props.disabled}
                     onChange={this.onChange}
                     type="file"
-                    className={`${styles.input} ${disabledFile}`}
+                    className={styles.input}
+                    multiple={this.props.multiple}
                 />
             </div>
         );
     }
 
     private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const filename = (e.target.value).replace(/\\/g, '').replace('C:fakepath', '');
-        !this.props.disabled && this.setState({value: filename});
-        !this.props.disabled && this.props.onChange &&
-        this.props.onChange(e, {value: this.state.value, dataLabel: this.props.dataLabel});
+        if (e.target.files && e.target.files.length > 1){
+            const files = e.target.files;
+            const fileNames = this.fileNames(files);
+            !this.props.disabled && this.setState({value: fileNames});
+            !this.props.disabled && this.props.onChange &&
+            this.props.onChange(e, {value: files, dataLabel: this.props.dataLabel});
+        } else{
+            const file = e.target.files && e.target.files[0];
+            if (file){
+                !this.props.disabled && this.setState({value: file.name});
+                !this.props.disabled && this.props.onChange &&
+                this.props.onChange(e, {value: file, dataLabel: this.props.dataLabel});
+            }
+        }
+    }
+
+    private fileNames = (files: FileList) => {
+        const fileNames = [];
+        for (const file of files){
+            fileNames.push(file.name);
+        }
+        const fileStrings = fileNames.join(', ');
+        return fileStrings;
     }
 }

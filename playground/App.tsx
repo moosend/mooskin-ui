@@ -3,13 +3,15 @@
 
 import * as React from 'react';
 
+import {Col, Grid, Row} from '../components/index';
+
 import Button from './examples/Button.example';
 import Charts from './examples/Charts.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
 import File from './examples/File.example';
 import Form from './examples/Form.example';
-import Grid from './examples/Grid.example';
+import GridExample from './examples/Grid.example';
 import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
@@ -26,8 +28,12 @@ import TopNotification from './examples/TopNotification.example';
 
 export default (props: any) => {
     return(
-        <div>
-            <File />
+        <Grid>
+            <Row>
+                <Col>
+                    <File />
+                </Col>
+            </Row>
             <div style={{display: 'flex', alignContent: 'stretch'}}>
                 <Button />
                 <Switch />
@@ -67,7 +73,7 @@ export default (props: any) => {
             <br/><br/>
             <Table />
             <br/><br/>
-            <Grid />
-        </div>
+            <GridExample />
+        </Grid>
     );
 };

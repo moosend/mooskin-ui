@@ -62,6 +62,20 @@
     font-size: .92857142857rem;
 }
 
+.disabledFile > .name{
+    cursor: not-allowed;
+    color: #bfbfbf;
+    background: #f6f6f6;
+}
+
+.disabledFile > .button{
+    background: var(--radioHover);
+}
+
+.disabledFile > .input{
+    cursor: not-allowed;
+}
+
 @media (--xSmall){
     .fileContainer{display: flex; flex-direction: column}
     .label{margin-left: 3px; max-height: 20px;}

@@ -1,6 +1,5 @@
 .fieldset{
     position:relative;
-    display: inline-block;
 }
 
 .fieldset legend span{

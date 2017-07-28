@@ -1,16 +1,23 @@
 import * as React from 'react';
 
-import {File} from '../../components/index';
+import Readme from '../../components/File/README.md';
 
-export default class FileExample extends React.Component{
+import {File} from '../../components/index/';
+import FileExampleCode from './component-strings/File.example.txt';
+
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
+
+export default class FileExample extends React.Component<any, any> {
     public render(){
         return(
-            <fieldset>
-                <legend>File Upload</legend>
-                <File accept=".png"/>
-                <File label="File Upload: " placeholder="Please select a File" buttonLabel="Select File!" />
-                <File disabled />
-            </fieldset>
+            <div>
+                <ReactLiveEditor
+                    scope={{React, File}}
+                    code={FileExampleCode}
+                    title="File Example"
+                    doc={Readme}
+                />
+            </div>
         );
     }
 }
