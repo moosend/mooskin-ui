@@ -2,7 +2,7 @@ class TableExample extends React.Component{
 
     render(){
         return(
-            <div style={{display: 'inline-block', width: '1800px'}}>
+            <div>
                 <Table>
                     <thead>
                         <tr>

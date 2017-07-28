@@ -23,7 +23,7 @@ class FormExample extends React.Component {
     render() {
 
         return(
-            <div style={{display: 'inline-block', width: '1000px'}}>
+            <div>
                 <H2>Forms/FormGroups</H2>
                 <Form style={{border: '2px solid black'}} onSubmit={this.onSubmit}>
                     <FormGroup horizontal>

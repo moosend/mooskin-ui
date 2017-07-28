@@ -84,6 +84,7 @@ class BarChart extends React.Component<IBarProps, {}>{
         const options = {
             legend,
             maintainAspectRatio,
+            responsive: true,
             scales,
             title: chartTitle
         };

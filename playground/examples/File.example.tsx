@@ -10,14 +10,12 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 export default class FileExample extends React.Component<any, any> {
     public render(){
         return(
-            <div>
-                <ReactLiveEditor
-                    scope={{React, File}}
-                    code={FileExampleCode}
-                    title="File Example"
-                    doc={Readme}
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, File}}
+                code={FileExampleCode}
+                title="File Example"
+                doc={Readme}
+            />
         );
     }
 }

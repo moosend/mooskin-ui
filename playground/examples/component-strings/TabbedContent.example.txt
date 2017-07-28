@@ -12,7 +12,7 @@ class TabbedContentExample extends React.Component {
         };
 
         return (
-            <div style={{display: 'inline-block', width: '1000px'}}>
+            <div>
                 <TabbedContent>
                     <TabbedContent.Tab title="Title 1" active>
                         <div style={{...style, backgroundColor: '#5CCDDF'}}>

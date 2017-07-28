@@ -8,7 +8,6 @@ class FileExample extends React.Component {
     render(){
         return(
             <div>
-                <File onChange={this.onChange} accept=".png"/>
                 <File
                     onChange={this.onChange}
                     label="File Upload: "
@@ -16,6 +15,7 @@ class FileExample extends React.Component {
                     buttonLabel="Select File!"
                     multiple
                 />
+                <File onChange={this.onChange} accept=".png"/>
                 <File disabled />
             </div>
         );

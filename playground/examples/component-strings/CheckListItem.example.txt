@@ -35,7 +35,7 @@ class CheckListItemExample extends React.Component {
         });
 
         return(
-            <div style={{display: 'inline-block'}}>
+            <div>
                 {listChecks}
             </div>
         );
