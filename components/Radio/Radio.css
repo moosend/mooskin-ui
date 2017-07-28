@@ -65,3 +65,8 @@
     .vertical{flex-direction: column}
     .radio{margin-bottom: 10px}
 }
+
+@media (--small){
+    .vertical{flex-direction: column}
+    .radio{margin-bottom: 10px}
+}

@@ -80,3 +80,8 @@
     .fileContainer{display: flex; flex-direction: column}
     .label{margin-left: 3px; max-height: 20px;}
 }
+
+@media (--small){
+    .fileContainer{display: flex; flex-direction: column}
+    .label{margin-left: 3px; max-height: 20px;}
+}
