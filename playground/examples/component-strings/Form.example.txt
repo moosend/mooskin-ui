@@ -122,7 +122,7 @@ class FormExample extends React.Component {
                         <Input label="Country:" dataLabel="country"/>
                     </FormGroup>
                     <FormGroup style={{border: '2px solid red'}} horizontal>
-                        <FormGroup style={{width: '130%', border: '2px solid cyan'}}>
+                        <FormGroup style={{ border: '2px solid cyan'}}>
                             <RadioGroup title="Some Radios" dataLabel="radios" onChange={this.getValue}>
                                 <Radio value="Radio 1"/>
                                 <Radio value="Radio 2"/>
