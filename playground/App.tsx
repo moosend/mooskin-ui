@@ -7,7 +7,6 @@ import {Col, Grid, Row} from '../components/index';
 
 import Bar from './examples/Bar.example';
 import Button from './examples/Button.example';
-import Charts from './examples/Charts.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
 import Doughnut from './examples/Doughnut.example';
