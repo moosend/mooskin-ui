@@ -62,11 +62,53 @@
 }
 
 @media (--xSmall){
-    .vertical{flex-direction: column}
-    .radio{margin-bottom: 10px}
+    .vertical{
+        flex-direction: column;
+    }
+
+    .radio{
+        margin-bottom: 10px;
+    }
+
+    .radio span{
+        font-size: 4vw;
+    }
+
+    .radio input[type='radio'] {
+        height: 70px;
+        width: 70px;
+        padding: 19px;
+    }
+
+    .radioChecked input[type='radio']:before{
+        height: 30px;
+        width: 30px;
+    }
+
 }
 
 @media (--small){
-    .vertical{flex-direction: column}
-    .radio{margin-bottom: 10px}
+    .vertical{
+        flex-direction: column
+    }
+
+    .radio{
+        margin-bottom: 10px
+    }
+
+    .radio span{
+        font-size: 4vw;
+    }
+
+    .radio input[type='radio'] {
+        height: 70px;
+        width: 70px;
+        padding: 19px;
+    }
+
+    .radioChecked input[type='radio']:before{
+        height: 30px;
+        width: 30px;
+    }
+    
 }

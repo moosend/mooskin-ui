@@ -63,12 +63,16 @@
         flex-basis: 10px;
         padding-top: 0px;
         margin-left: 3px;
-        font-size: 2vh;
+        font-size: 4vw;
     }
 
     .input{
-        font-size: 2vh;
+        font-size: 4vw;
         padding: 30px;
+    }
+
+    .inputContainer .description{
+        font-size: 3.4vw;
     }
 }
 
@@ -82,15 +86,16 @@
         flex-basis: 45px;
         padding-top: 0px;
         margin-left: 3px;
-        font-size: 2vh;
+        font-size: 4vw;
     }
 
     .input{
-        font-size: 2vh;
+        font-size: 4vw;
         padding: 30px;
     }
 
     .inputContainer .description{
-        font-size: 1.8vh;
+        font-size: 3.4vw;
     }
+    
 }

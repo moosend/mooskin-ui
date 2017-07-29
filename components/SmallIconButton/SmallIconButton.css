@@ -1,5 +1,6 @@
- @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
- @import '../_utils/globals/variables.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
  
 .button {
     font-family: 'Material Icons';
@@ -52,4 +53,20 @@
 
 .icon {
     font-size: 21px;
+}
+
+@media (--small){
+    .normalButton{
+        height: 60px;
+        width: 60px;
+    }
+
+    .icon {
+        font-size: 45px;
+    }
+
+    .transparent{
+        width: 60px;
+        height: 60px;
+    }
 }

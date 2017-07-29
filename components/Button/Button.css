@@ -1,4 +1,5 @@
- @import '../_utils/globals/variables.css';
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
 
 .button {
     border-radius: 10px;
@@ -54,4 +55,20 @@
 .inverseButton:hover:enabled {
    border-color: var(--buttonHover);
    color: var(--buttonHover);
+}
+
+@media (--small){
+    .button{
+        font-size: 3.5vw;
+        border-radius: 17px;
+        padding: 8px 38px;
+    }
+}
+
+@media (--xSmall){
+    .button{
+        font-size: 3.5vw;
+        border-radius: 17px;
+        padding: 8px 38px;
+    }
 }

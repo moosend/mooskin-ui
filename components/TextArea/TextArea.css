@@ -62,7 +62,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
     font-size: .92857142857rem;
     padding-top: 7px;
     cursor: pointer;
-    width: 155px;
+    flex-basis: 150px;
 }
 
 .areaContainer .description{
@@ -73,11 +73,47 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 
 @media (--xSmall){
-    .areaContainer{display: flex; flex-direction: column}
-    .textareaLabel{padding-top: 0px; margin-left: 3px}
+    .areaContainer{
+        display: flex;
+        flex-direction: column
+    }
+    
+    .textareaLabel{
+        flex-basis: 10px;
+        padding-top: 0px;
+        margin-left: 3px;
+        font-size: 4vw;
+    }
+
+    .textarea{
+        font-size: 4vw;
+        padding: 30px;
+    }
+
+    .areaContainer .description{
+        font-size: 3.4vw;
+    }
 }
 
 @media (--small){
-    .areaContainer{display: flex; flex-direction: column}
-    .textareaLabel{padding-top: 0px; margin-left: 3px}
+    .areaContainer{
+        display: flex;
+        flex-direction: column
+    }
+    
+    .textareaLabel{
+        flex-basis: 45px;
+        padding-top: 0px;
+        margin-left: 3px;
+        font-size: 4vw;
+    }
+
+    .textarea{
+        font-size: 4vw;
+        padding: 30px;
+    }
+
+    .areaContainer .description{
+        font-size: 3.4vw;
+    }
 }

@@ -65,11 +65,46 @@
 }
 
 @media (--xSmall){
-    .horizontal{flex-direction: column}
-    .horizontal > .checkbox + .checkbox{margin-left: 0px}
+    .horizontal{
+        flex-direction: column
+    }
+
+    .horizontal > .checkbox + .checkbox{
+        margin-left: 0px
+    }
+    
+    .checkbox span {
+        font-size: 4vw;
+    }
+
+    .checkbox .description{
+        font-size: 3.4vw;
+    }
+
+    .checkbox input[type='checkbox']::before {
+        font-size: 7vw;
+    }
 }
 
 @media (--small){
-    .horizontal{flex-direction: column}
-    .horizontal > .checkbox + .checkbox{margin-left: 0px}
+    .horizontal{
+        flex-direction: column
+    }
+
+    .horizontal > .checkbox + .checkbox{
+        margin-left: 0px
+    }
+
+    .checkbox span {
+        font-size: 4vw;
+    }
+
+    .checkbox .description{
+        font-size: 3.4vw;
+    }
+
+    .checkbox input[type='checkbox']::before {
+        font-size: 7vw;
+    }
+    
 }

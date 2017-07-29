@@ -74,7 +74,7 @@ class Switch extends React.Component<ISwitchProps, {}> {
 
         return (
 
-            <div>
+            <div className={styles.switchContainer}>
                 <span className={styles.label} style={spacing}>{label}</span>
                 <div
                     id={id}

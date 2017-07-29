@@ -1,17 +1,24 @@
 @import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
 
 :root {
   --inactive: #E6E6E6;
   --disabled: #C5C5C5;
 }
 
+.switchContainer{
+  display: flex;
+}
+
 .label {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #6b6b6b;
   /* font-size: 13px; */
   font-size: .92857142857rem;
   cursor: pointer;
-  width: 111px;
+  flex-basis: 120px;
   vertical-align: 13px;
 }
 
@@ -84,4 +91,72 @@
 .disabledSwitch > .text {
   left: 3px;
   right: 3px;
+}
+
+@media (--small){
+  .switch{
+    width: 210px;
+    height: 70px;
+  }
+
+  .onText{
+    top: 17px;
+    left: 13px;
+    font-size: 3vw;
+  }
+
+  .offText{
+    top: 17px;
+    right: 13px;
+    font-size: 3vw;
+  }
+
+  .slider{
+    top: 12px;
+    left: 10px;
+    height: 45px;
+    width: 45px;
+  }
+
+  .onSlider .slider {
+    transform: translateX(145px);
+  }
+  
+  .label{
+    font-size: 4vw;
+  }
+}
+
+@media (--xSmall){
+  .switch{
+    width: 210px;
+    height: 70px;
+  }
+
+  .onText{
+    top: 17px;
+    left: 13px;
+    font-size: 3vw;
+  }
+
+  .offText{
+    top: 17px;
+    right: 13px;
+    font-size: 3vw;
+  }
+
+  .slider{
+    top: 12px;
+    left: 10px;
+    height: 45px;
+    width: 45px;
+  }
+
+  .onSlider .slider {
+    transform: translateX(145px);
+  }
+
+  .label{
+    font-size: 4vw;
+  }
 }
