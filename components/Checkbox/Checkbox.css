@@ -3,6 +3,7 @@
 @import '../_utils/globals/screens.css';
 
 .checkbox {
+    display: flex;
     border-radius: 8px;
     color: var(--checkRadioGrey);
     transition: all 0.3s;
@@ -22,12 +23,17 @@
 }
 
 .checkbox span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     cursor: pointer;
     font-size: 0.875rem;
 }
 
 .checkbox input[type='checkbox'] {
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     appearance:none;
     cursor: pointer;
     font-size: 1.3125rem;    
@@ -74,15 +80,15 @@
     }
     
     .checkbox span {
-        font-size: 4vw;
+        font-size: 3.3vw;
     }
 
     .checkbox .description{
-        font-size: 3.4vw;
+        font-size: 3vw;
     }
 
     .checkbox input[type='checkbox']::before {
-        font-size: 7vw;
+        font-size: 4vw;
     }
 }
 
@@ -96,15 +102,15 @@
     }
 
     .checkbox span {
-        font-size: 4vw;
+        font-size: 3.3vw;
     }
 
     .checkbox .description{
-        font-size: 3.4vw;
+        font-size: 3vw;
     }
 
     .checkbox input[type='checkbox']::before {
-        font-size: 7vw;
+        font-size: 4vw;
     }
     
 }

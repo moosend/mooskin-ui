@@ -70,3 +70,19 @@
         height: 60px;
     }
 }
+
+@media (--xSmall){
+    .normalButton{
+        height: 60px;
+        width: 60px;
+    }
+
+    .icon {
+        font-size: 45px;
+    }
+
+    .transparent{
+        width: 60px;
+        height: 60px;
+    }
+}
