@@ -129,6 +129,7 @@
 
     .innerDiv{
         font-size: 4vw;
+        padding: 2.3vw;
     }
 
     .label{
@@ -137,28 +138,28 @@
 
     .labelContainer{
         font-size: 3.7vw;
-        height: 100px;
-        padding: 15px;
+        height: 9vw;
     }
 
     .optionsContainer{
-        top: 95px;
+        top: 8.8vw;
         font-size: 3.7vw;
-        padding: 15px;
+        padding: 1vw;
     }
 
     .selectIcon{
-        width: 110px;
+        width: 70px;
     }
 }
 
 @media (--xSmall){
     .selectContainer .description{
-        font-size: 3.4vw;
+        font-size: 3vw;
     }
 
     .innerDiv{
         font-size: 4vw;
+        padding: 2.3vw;
     }
 
     .label{
@@ -167,17 +168,16 @@
 
     .labelContainer{
         font-size: 3.7vw;
-        height: 100px;
-        padding: 15px;
+        height: 9vw;
     }
 
     .optionsContainer{
-        top: 95px;
+        top: 8.8vw;
         font-size: 3.7vw;
-        padding: 15px;
+        padding: 1vw;
     }
 
     .selectIcon{
-        width: 110px;
+        width: 40px;
     }
 }

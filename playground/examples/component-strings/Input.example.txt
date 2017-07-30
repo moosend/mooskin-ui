@@ -16,7 +16,6 @@ class InputExample extends React.Component {
                     type="password"
                     label="Password:"
                     description="This has autofocus on page load"
-                    autofocus
                 />
                 <br/>
                 <Input onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>

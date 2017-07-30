@@ -19,9 +19,7 @@
 }
 
 .radio span {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    vertical-align: sub;
     cursor: pointer;
     /*font-size: 14px;*/
     font-size: 0.875rem;
@@ -29,9 +27,7 @@
 }
 
 .radio input[type='radio'] {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    vertical-align: middle;
     appearance:none;
     cursor: pointer;
     width:22px;
@@ -80,14 +76,14 @@
     }
 
     .radio input[type='radio'] {
-        height: 40px;
-        width: 40px;
-        padding: 11px;
+        height: 3vw;
+        width: 3vw;
+        padding: 0.9vw;
     }
 
     .radioChecked input[type='radio']:before{
-        height: 15px;
-        width: 15px;
+        height: 1vw;
+        width: 1vw;
     }
 
 }
@@ -106,14 +102,14 @@
     }
 
     .radio input[type='radio'] {
-        height: 40px;
-        width: 40px;
-        padding: 11px;
+        height: 3vw;
+        width: 3vw;
+        padding: 0.9vw;
     }
 
     .radioChecked input[type='radio']:before{
-        height: 15px;
-        width: 15px;
+        height: 1vw;
+        width: 1vw;
     }
     
 }

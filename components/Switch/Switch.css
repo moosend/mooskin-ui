@@ -95,31 +95,31 @@
 
 @media (--small){
   .switch{
-    width: 210px;
-    height: 70px;
+    width: 21vw;
+    height: 7vw;
   }
 
   .onText{
-    top: 17px;
-    left: 13px;
+    top: 1.8vw;
+    left: 1.7vw;
     font-size: 3vw;
   }
 
   .offText{
-    top: 17px;
-    right: 13px;
+    top: 1.8vw;
+    right: 1.7vw;
     font-size: 3vw;
   }
 
   .slider{
-    top: 12px;
-    left: 10px;
-    height: 45px;
-    width: 45px;
+    top: 1.2vw;
+    left: 1.2vw;
+    height: 4.7vw;
+    width: 4.7vw;
   }
 
   .onSlider .slider {
-    transform: translateX(145px);
+    transform: translateX(14vw);
   }
   
   .label{
@@ -129,31 +129,31 @@
 
 @media (--xSmall){
   .switch{
-    width: 210px;
-    height: 70px;
+    width: 21vw;
+    height: 7vw;
   }
 
   .onText{
-    top: 17px;
-    left: 13px;
+    top: 1.8vw;
+    left: 1.7vw;
     font-size: 3vw;
   }
 
   .offText{
-    top: 17px;
-    right: 13px;
+    top: 1.8vw;
+    right: 1.7vw;
     font-size: 3vw;
   }
 
   .slider{
-    top: 12px;
-    left: 10px;
-    height: 45px;
-    width: 45px;
+    top: 1.2vw;
+    left: 1.2vw;
+    height: 4.7vw;
+    width: 4.7vw;
   }
 
   .onSlider .slider {
-    transform: translateX(145px);
+    transform: translateX(14vw);
   }
 
   .label{
