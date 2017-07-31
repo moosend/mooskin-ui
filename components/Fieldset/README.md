@@ -44,12 +44,16 @@ or just give it a custom style
 <Fieldset style={yourStyle} />
 ```
 
-## Supported attributes
+<div class="playground-doc">
+
+## Supported attributes 
 
 * `id` - id of the element
 * `legend` - top fieldset text
 * `className` - css class
 * `style` - Fieldset style
+
+</div>
 
 Allthough these attributes are supported, all of them are optional.
 

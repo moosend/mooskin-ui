@@ -10,7 +10,8 @@
     "quotemark": [true, "single", "avoid-escape", "jsx-double"],
     "trailing-comma": [false],
     "no-unused-expression": false,
-    "jsx-no-lambda": false
+    "jsx-no-lambda": false,
+    "prefer-for-of": false
     // "no-shadowed-variable": false
     //"member-access": false
   }

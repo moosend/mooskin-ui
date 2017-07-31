@@ -71,8 +71,10 @@ or give it a custom size and border width between data
 <Doughnut data={...} size={300} borderWidth={3} />    // default borderWidth is 0
 ```
 
+<div class="playground-doc">
 
-## Supported attributes
+
+## Supported attributes  {playground-docs}
 
 * `data` - accepts an array of objects
 * `doughnutSpace` - adjust doughnut width
@@ -95,6 +97,8 @@ or give it a custom size and border width between data
 * `maintainAspectRatio` - maintains aspect ratio
 
 Only `data` is required, other attributes are optional and mostly for styling.
+
+</div>
 
 ___
 

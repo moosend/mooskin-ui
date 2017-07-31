@@ -31,13 +31,17 @@ it must have an optional range determining between what numbers must the progres
 <HorizontalRangeBar progress={24} range={[0, 1000]}/>
 ```
 
-## Supported attributes
+<div class="playground-doc">
+
+## Supported attributes 
 
 * `id` - id of the element
 * `className` - css class
 * `progress` - current progress where of the bar
 * `range` - a tuple for the range
 * `background` - background color
+
+</div>
 
 Allthough these attributes are supported, only 'progress' is required.
 

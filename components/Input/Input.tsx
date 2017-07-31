@@ -125,7 +125,7 @@ class Input extends React.Component<IProps, {}> {
                         autoFocus={autofocus}
                         autoComplete={autocomplete}
                     />
-                    <i>{description}</i>
+                    <i className={styles.description}>{description}</i>
                 </div>
             </div>
         );

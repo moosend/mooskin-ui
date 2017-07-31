@@ -3,11 +3,13 @@
   "collectCoverageFrom": [
     "**/components/**/*.{ts,tsx}",
     "!**/node_modules/**",
-    "!./lib/**",
-    "!./dist/**",
+    "!**/lib/**",
+    "!**/dist/**",
     "!**/vendor/**",
     "!**/components/_utils/**",
+    "!**/playground/**",
     "!**/components/custom.d.ts"
+    
   ],
   "snapshotSerializers": ["<rootDir>/node_modules/jest-serializer-enzyme"],
   "mapCoverage": true,
@@ -16,7 +18,7 @@
     "src"
   ],
   "moduleNameMapper": {
-    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|txt|md)$": "<rootDir>/__mocks__/fileMock.js",
     "\\.(css|less)$": "identity-obj-proxy"
   },
   "transform": {

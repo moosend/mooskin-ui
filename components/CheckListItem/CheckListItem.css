@@ -1,26 +1,36 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '../_utils/globals/screens.css';
 
 .checkitem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #f7f7f7;
     border-radius: 5px;
-    padding: 20px;
     position: relative;
     margin-top: 5px;
+    padding: 10px;
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex: 1;
     color: #aaa;
     font-size: 1rem;
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
     border-left: 1px solid #eaeaea;
-    padding: 5px 0 2px 0;
     padding-left: 15px;
     margin-left: 15px;
     height: 25px;
 }
 
 .iconStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     color: #dddddd;
     vertical-align: middle;
     /*font-size: 30px;*/
@@ -31,9 +41,51 @@
 .button {
     width: 40px;
     height: 40px;
-    display: block;
-    position: absolute;
-    top: 12px;
-    right: 12px;
     border-radius: 8px;
+}
+
+@media (--small){
+    .checkitem{
+        padding: 2.5vw;
+    }
+
+    .content{
+        font-size: 3.3vw
+    }
+
+    .iconStyle{
+        font-size: 5vw;
+    }
+
+    .button{
+        height: 5vw;
+        width: 5vw;
+    }
+
+    .button i{
+        font-size: 3vw;
+    }
+}
+
+@media (--xSmall){
+    .checkitem{
+        padding: 2.5vw;
+    }
+
+    .content{
+        font-size: 3.3vw
+    }
+
+    .iconStyle{
+        font-size: 5vw;
+    }
+
+    .button{
+        height: 5vw;
+        width: 5vw;
+    }
+
+    .button i{
+        font-size: 3vw;
+    }
 }

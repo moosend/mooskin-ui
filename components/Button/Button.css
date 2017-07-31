@@ -1,4 +1,6 @@
- 
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
 .button {
     border-radius: 10px;
     /*font-size: 14px;*/
@@ -9,7 +11,7 @@
     display: inline-block;
     outline: 0;
     margin: 3px;
-    transition: all 400ms ease;
+    transition: background-color 400ms ease;
 }
 
 .anchor{
@@ -23,19 +25,19 @@
     height:100%;
     cursor: pointer;
     outline: 0;
-    transition: all 400ms ease;
+    transition: background-color 400ms ease;
 }
 
 .normalButton{
-    background-color: #5ccdde;
+    background-color: var(--moosendBlue);
     border: 1px solid transparent;
     color: #ffffff;
 }
 
 .inverseButton{
     background-color: #ffffff;
-    border: 1px solid #5ccdde;
-    color: #5ccdde;
+    border: 1px solid var(--moosendBlue);
+    color: var(--moosendBlue);
 }
 
 .disabledButton{
@@ -47,10 +49,26 @@
 }
 
 .normalButton:hover:enabled {
-    background-color: #4cb3c4;
+    background-color: var(--buttonHover);
 }
 
 .inverseButton:hover:enabled {
-   border-color: #4cb3c4;
-   color: #4cb3c4;
+   border-color: var(--buttonHover);
+   color: var(--buttonHover);
+}
+
+@media (--small){
+    .button{
+        font-size: 3.5vw;
+        border-radius: 14px;
+        padding: 1vw 5vw;
+    }
+}
+
+@media (--xSmall){
+    .button{
+        font-size: 3.5vw;
+        border-radius: 13px;
+        padding: 1vw 5vw;
+    }
 }

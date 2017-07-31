@@ -1,4 +1,5 @@
 @import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
 
 .selectContainer{
     position: relative;
@@ -114,9 +115,69 @@
     margin-bottom: 10px;
 }
 
-.selectContainer i{
+.selectContainer .description{
     display: block;
     color: #b3b3b3;
     font-size: .78571428571rem;
     margin: 1px 0px 0px 3px;
+}
+
+@media (--small){
+    .selectContainer .description{
+        font-size: 3.4vw;
+    }
+
+    .innerDiv{
+        font-size: 4vw;
+        padding: 2.3vw;
+    }
+
+    .label{
+        font-size: 4vw;
+    }
+
+    .labelContainer{
+        font-size: 3.7vw;
+        height: 9vw;
+    }
+
+    .optionsContainer{
+        top: 8.8vw;
+        font-size: 3.7vw;
+        padding: 1vw;
+    }
+
+    .selectIcon{
+        width: 70px;
+    }
+}
+
+@media (--xSmall){
+    .selectContainer .description{
+        font-size: 3vw;
+    }
+
+    .innerDiv{
+        font-size: 4vw;
+        padding: 2.3vw;
+    }
+
+    .label{
+        font-size: 4vw;
+    }
+
+    .labelContainer{
+        font-size: 3.7vw;
+        height: 9vw;
+    }
+
+    .optionsContainer{
+        top: 8.8vw;
+        font-size: 3.7vw;
+        padding: 1vw;
+    }
+
+    .selectIcon{
+        width: 40px;
+    }
 }

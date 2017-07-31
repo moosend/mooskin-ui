@@ -10,7 +10,7 @@ class SelectExample extends React.Component {
 
     render(){
         return (
-        <div style={{display: 'inline-block', width: '400px'}}>
+        <div>
             <Select onChange={this.onChange} dataLabel="plan" label="Some label" selected="option3">
                 <Option value="option1">Option1</Option>
                 <Option value="option2">Option2</Option>

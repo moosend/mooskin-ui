@@ -94,6 +94,7 @@ class LineChart extends React.Component<ILineProps, {}>{
         const options = {
             legend,
             maintainAspectRatio,
+            responsive: true,
             scales,
             title: chartTitle
         };

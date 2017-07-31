@@ -1,16 +1,24 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
 :root {
   --inactive: #E6E6E6;
-  --active: #5CCDDE;
   --disabled: #C5C5C5;
 }
 
+.switchContainer{
+  display: flex;
+}
+
 .label {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #6b6b6b;
   /* font-size: 13px; */
   font-size: .92857142857rem;
   cursor: pointer;
-  width: 111px;
+  flex-basis: 120px;
   vertical-align: 13px;
 }
 
@@ -23,11 +31,11 @@
   margin: 2px;
   cursor: pointer;
   border-radius: 36px;
-  transition: .4s;
+  transition: background-color .4s;
 }
 
 .onSwitch{
-  background-color: var(--active);
+  background-color: var(--moosendBlue);
 }
 
 .offSwitch{
@@ -44,13 +52,13 @@
   height: 20px;
   width: 20px;
   background-color: white;
-  transition: .4s;
+  transition: transform .4s;
   border-radius: 50%;
 
 }
 
 .onSlider .slider {
-  transform: translateX(62px);
+  transform: translate(62px);
 }
 
 .text {
@@ -59,7 +67,6 @@
   color: white;
   font-family: sans-serif;
   font-size: 11px;
-  transition: .5s;
   text-align: center;
   user-select: none;
 }
@@ -83,4 +90,72 @@
 .disabledSwitch > .text {
   left: 3px;
   right: 3px;
+}
+
+@media (--small){
+  .switch{
+    width: 21vw;
+    height: 7vw;
+  }
+
+  .onText{
+    top: 1.9vw;
+    left: 1.7vw;
+    font-size: 3vw;
+  }
+
+  .offText{
+    top: 1.9vw;
+    right: 1.7vw;
+    font-size: 3vw;
+  }
+
+  .slider{
+    top: 1.2vw;
+    left: 1.2vw;
+    height: 4.7vw;
+    width: 4.7vw;
+  }
+
+  .onSlider .slider {
+    transform: translateX(14vw);
+  }
+  
+  .label{
+    font-size: 4vw;
+  }
+}
+
+@media (--xSmall){
+  .switch{
+    width: 21vw;
+    height: 7vw;
+  }
+
+  .onText{
+    top: 1.9vw;
+    left: 1.7vw;
+    font-size: 3vw;
+  }
+
+  .offText{
+    top: 1.9vw;
+    right: 1.7vw;
+    font-size: 3vw;
+  }
+
+  .slider{
+    top: 1.2vw;
+    left: 1.2vw;
+    height: 4.7vw;
+    width: 4.7vw;
+  }
+
+  .onSlider .slider {
+    transform: translateX(14vw);
+  }
+
+  .label{
+    font-size: 4vw;
+  }
 }

@@ -7,7 +7,7 @@ class TextAreaExample extends React.Component {
 
     render(){
         return (
-            <div style={{display: 'inline-block'}}>
+            <div>
                 <TextArea onChange={this.onChange} value="with value and custom rows/cols" label="Label:" rows={7} cols={35}/>
                 <hr/>
                 <TextArea onChange={this.onChange} disabled value="disabled" description="This text area is disabled"/>

@@ -33,7 +33,9 @@ exports[`TextArea renders correctly 1`] = `
       }
       value="textarea value"
     />
-    <i>
+    <i
+      className="description"
+    >
       just some textarea
     </i>
   </div>

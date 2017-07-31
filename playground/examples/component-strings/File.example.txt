@@ -1,0 +1,28 @@
+class FileExample extends React.Component {
+
+    constructor(){
+        super();
+        this.onChange = this.onChange.bind(this);
+    }
+
+    render(){
+        return(
+            <div>
+                <File
+                    onChange={this.onChange}
+                    label="File Upload: "
+                    placeholder="Please select a File"
+                    buttonLabel="Select File!"
+                    multiple
+                    style={{marginBottom: 15}}
+                />
+                <File onChange={this.onChange} accept=".png" style={{marginBottom: 15}}/>
+                <File disabled />
+            </div>
+        );
+    }
+
+    onChange(e, data) {
+        console.log(data.value);
+    }
+}

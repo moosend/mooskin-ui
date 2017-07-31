@@ -129,7 +129,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             {options}
                         </ul>
                     </div>
-                    <i>{this.props.description}</i>
+                    <i className={styles.description}>{this.props.description}</i>
                 </div>
             </div>
         );

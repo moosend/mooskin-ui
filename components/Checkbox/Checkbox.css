@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
 
 .checkbox {
     border-radius: 8px;
-    color: #7b7b7b;
+    color: var(--checkRadioGrey);
     transition: all 0.3s;
 }
 
@@ -20,6 +22,7 @@
 }
 
 .checkbox span {
+    vertical-align: middle;
     cursor: pointer;
     font-size: 0.875rem;
 }
@@ -38,12 +41,12 @@
 
 .checkboxChecked input[type='checkbox']::before {
     content: '\e834';
-    color: #5ccdde;
+    color: var(--moosendBlue);
 }
 
 .disabledCheckbox, .disabledCheckbox label span, .disabledCheckbox label, .disabledCheckbox.checkbox:hover {
     cursor: not-allowed;
-    color: #b2b2b2;
+    color: var(--disabledCheckRadio);
 }
 
 .disabledCheckbox input[type='checkbox']:disabled::before {
@@ -51,13 +54,59 @@
     color: #eaeaea;
 }
 
-.checkbox i{
+.checkbox .description{
+    flex: 12;
     display: block;
-    color: #b3b3b3;
+    color: var(--italicDescription);
     font-size: .78571428571rem;
     margin-left: 7px;
 }
 
 .disabledCheckbox i{
     cursor: default;
+}
+
+@media (--xSmall){
+    .horizontal{
+        flex-direction: column
+    }
+
+    .horizontal > .checkbox + .checkbox{
+        margin-left: 0px
+    }
+    
+    .checkbox span {
+        font-size: 3.3vw;
+    }
+
+    .checkbox .description{
+        font-size: 3vw;
+    }
+
+    .checkbox input[type='checkbox']::before {
+        font-size: 4vw;
+    }
+}
+
+@media (--small){
+    .horizontal{
+        flex-direction: column
+    }
+
+    .horizontal > .checkbox + .checkbox{
+        margin-left: 0px
+    }
+
+    .checkbox span {
+        font-size: 3.3vw;
+    }
+
+    .checkbox .description{
+        font-size: 3vw;
+    }
+
+    .checkbox input[type='checkbox']::before {
+        font-size: 4vw;
+    }
+    
 }

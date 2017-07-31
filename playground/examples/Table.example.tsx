@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Readme from '../../components/Table/README.md';
+
 import {Table} from '../../components/index/index';
 
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
@@ -9,13 +11,12 @@ export default class TableExample extends React.Component<any, any> {
 
     public render(){
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={{React, Table}}
-                    code={TableExampleCode}
-                    title="Table Example"
-                />
-            </div>
+            <ReactLiveEditor
+                scope={{React, Table}}
+                code={TableExampleCode}
+                title="Table Example"
+                doc={Readme}
+            />
         );
     }
 }

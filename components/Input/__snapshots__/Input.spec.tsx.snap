@@ -38,7 +38,9 @@ exports[`Input renders correctly 1`] = `
       type="text"
       value="input value"
     />
-    <i>
+    <i
+      className="description"
+    >
       just some input
     </i>
   </div>

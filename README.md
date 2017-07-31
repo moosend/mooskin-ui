@@ -149,6 +149,7 @@ import {Input} from 'mooskin'
 ## List of Components
 
 * [Button](https://github.com/moosend/mooskin-ui/tree/master/components/Button)
+* [Table](https://github.com/moosend/mooskin-ui/tree/master/components/Table)
 * [Input](https://github.com/moosend/mooskin-ui/tree/master/components/Input)
 * [Radio](https://github.com/moosend/mooskin-ui/tree/master/components/Radio)
 * [CheckBox](https://github.com/moosend/mooskin-ui/tree/master/components/Checkbox)
@@ -165,6 +166,7 @@ import {Input} from 'mooskin'
 * [CheckListItem](https://github.com/moosend/mooskin-ui/tree/master/components/CheckListItem)
 * [TopNotification](https://github.com/moosend/mooskin-ui/tree/master/components/TopNotification)
 * [HorizontalRangeBar](https://github.com/moosend/mooskin-ui/tree/master/components/HorizontalRangeBar)
+* [Grid](https://github.com/moosend/mooskin-ui/tree/master/components/Grid)
 
 #### Charts
 * [Pie](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Pie)

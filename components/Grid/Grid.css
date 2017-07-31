@@ -1,0 +1,139 @@
+@import '../_utils/globals/screens.css';
+
+.grid {
+    width : 100%;
+    margin: 0 auto;
+}
+
+.grid::after, .row::after{
+    clear: both;
+}
+
+[class*='col-']{
+    padding: 5px;
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.col {
+    flex: 1;
+}
+
+@media screen and (--large){
+
+    .large-1 {flex: 1 8.33333333%}
+
+    .large-2 {flex: 2 16.66666667%}
+
+    .large-3 {flex: 3 25%}
+
+    .large-4 {flex: 4 33.33333333%}
+
+    .large-5 {flex: 5 41.66666667%}
+
+    .large-6 {flex: 6 50%}
+
+    .large-7 {flex: 7 58.33333333%}
+
+    .large-8 {flex: 8 66.66666667%}
+
+    .large-9 {flex: 9 75%}
+
+    .large-10 {flex: 10 83.33333333%}
+
+    .large-11 {flex: 11 91.66666667%}
+
+    .large-12 {flex: 12 100%}
+
+    .hidden-lg {display: none}
+}
+
+@media screen and (--medium){
+
+    .medium-1 {flex: 1 8.33333333%}
+
+    .medium-2 {flex: 2 16.66666667%}
+
+    .medium-3 {flex: 3 25%}
+
+    .medium-4 {flex: 4 33.33333333%}
+
+    .medium-5 {flex: 5 41.66666667%}
+
+    .medium-6 {flex: 6 50%}
+
+    .medium-7 {flex: 7 58.33333333%}
+
+    .medium-8 {flex: 8 66.66666667%}
+
+    .medium-9 {flex: 9 75%}
+
+    .medium-10 {flex: 10 83.33333333%}
+
+    .medium-11 {flex: 11 91.66666667%}
+
+    .medium-12 {flex: 12 100%}
+
+    .hidden-md {display: none}
+}
+
+
+@media screen and (--small){
+
+    .small-1 {flex: 1 8.33333333%}
+
+    .small-2 {flex: 2 16.66666667%}
+
+    .small-3 {flex: 3 25%}
+
+    .small-4 {flex: 4 33.33333333%}
+
+    .small-5 {flex: 5 41.66666667%}
+
+    .small-6 {flex: 6 50%}
+
+    .small-7 {flex: 7 58.33333333%}
+
+    .small-8 {flex: 8 66.66666667%}
+
+    .small-9 {flex: 9 75%}
+
+    .small-10 {flex: 10 83.33333333%}
+
+    .small-11 {flex: 11 91.66666667%}
+
+    .small-12 {flex: 12 100%}
+
+    .hidden-sm {display: none}
+}
+
+@media (--xSmall){
+    .xSmall-1 {flex: 1 8.33333333%}
+
+    .xSmall-2 {flex: 2 16.66666667%}
+
+    .xSmall-3 {flex: 3 25%}
+
+    .xSmall-4 {flex: 4 33.33333333%}
+
+    .xSmall-5 {flex: 5 41.66666667%}
+
+    .xSmall-6 {flex: 6 50%}
+
+    .xSmall-7 {flex: 7 58.33333333%}
+
+    .xSmall-8 {flex: 8 66.66666667%}
+
+    .xSmall-9 {flex: 9 75%}
+
+    .xSmall-10 {flex: 10 83.33333333%}
+
+    .xSmall-11 {flex: 11 91.66666667%}
+
+    .xSmall-12 {flex: 12 100%}  
+
+    .hidden-xs {display: none}
+}

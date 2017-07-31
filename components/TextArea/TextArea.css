@@ -1,5 +1,8 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
 .areaContainer{
-    display: inline-flex;
+    display: flex;
 }
 
 .textAreaDiv{
@@ -45,7 +48,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 
 .textarea::placeholder {
-    color: #bebebe;
+    color: var(--inputPlaceholder);
 }
 
 .textarea:focus {
@@ -54,17 +57,63 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 
 .textareaLabel {
-    color: #6b6b6b;
+    color: var(--inputLabel);
     font-size: 13px;
     font-size: .92857142857rem;
     padding-top: 7px;
     cursor: pointer;
-    width: 155px;
+    flex-basis: 150px;
 }
 
-.areaContainer i{
+.areaContainer .description{
     display: block;
     color: #b3b3b3;
     font-size: .78571428571rem;
     margin-left: 3px;
+}
+
+@media (--xSmall){
+    .areaContainer{
+        display: flex;
+        flex-direction: column
+    }
+    
+    .textareaLabel{
+        flex-basis: 10px;
+        padding-top: 0px;
+        margin-left: 3px;
+        font-size: 4vw;
+    }
+
+    .textarea{
+        font-size: 2.5vw;
+        padding: 2.5vw;
+    }
+
+    .areaContainer .description{
+        font-size: 3.4vw;
+    }
+}
+
+@media (--small){
+    .areaContainer{
+        display: flex;
+        flex-direction: column
+    }
+    
+    .textareaLabel{
+        flex-basis: 45px;
+        padding-top: 0px;
+        margin-left: 3px;
+        font-size: 4vw;
+    }
+
+    .textarea{
+        font-size: 2.5vw;
+        padding: 2.5vw;
+    }
+
+    .areaContainer .description{
+        font-size: 3.4vw;
+    }
 }

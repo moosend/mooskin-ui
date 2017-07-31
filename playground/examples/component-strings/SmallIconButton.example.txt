@@ -7,7 +7,7 @@ class SmallIconButtonExample extends React.Component {
 
     render(){
         return(
-            <div style={{display: 'inline-block'}}>
+            <div>
                 <SmallIconButton onClick={this.onClick} icon={'close'} disabled />
                 <SmallIconButton onClick={this.onClick} icon={'notifications'}/>
                 <SmallIconButton onClick={this.onClick} icon={'add'} transparent />

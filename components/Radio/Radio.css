@@ -1,6 +1,10 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
 .radio {
+    display: flex;
     border-radius: 8px;
-    color: #7b7b7b;
+    color: var(--checkRadioGrey);
     transition: 0.3s;
 }
 
@@ -11,10 +15,11 @@
 
 .disabledRadio, .disabledRadio label span, .disabledRadio label, .disabledRadio.radio:hover {
     cursor: not-allowed;
-    color: #b2b2b2;
+    color: var(--disabledCheckRadio);
 }
 
 .radio span {
+    vertical-align: sub;
     cursor: pointer;
     /*font-size: 14px;*/
     font-size: 0.875rem;
@@ -30,17 +35,16 @@
     padding: 5px;
     background: #fff;
     border-radius:50%;
-    border:1px solid #5ccdde;
+    border:1px solid var(--moosendBlue);
     border-radius:50%;
-    margin:0 auto
 }
 
 .radio input[type='radio']:hover {
-    box-shadow:0 0 3px 0px #5ccdde inset;
+    box-shadow:0 0 3px 0px var(--moosendBlue) inset;
 }
 
 .radioChecked input[type='radio']:before {
-    background:#5ccdde;
+    background:var(--moosendBlue);
     content:'';
     display:block;
     width: 10px;
@@ -49,11 +53,64 @@
 }
 
 .radioChecked input[type='radio']{
-    box-shadow:0 1px 2px 0px #5ccdde inset; 
+    box-shadow:0 1px 2px 0px var(--moosendBlue) inset; 
 }
 
 .disabledRadio input[type='radio']:disabled {
     cursor: not-allowed;
-    border: 1px solid #b2b2b2;
-    box-shadow:0 0 3px 0px #b2b2b2 inset;
+    border: 1px solid var(--disabledCheckRadio);
+    box-shadow:0 0 3px 0px var(--disabledCheckRadio) inset;
+}
+
+@media (--xSmall){
+    .vertical{
+        flex-direction: column;
+    }
+
+    .radio{
+        margin-bottom: 10px;
+    }
+
+    .radio span{
+        vertical-align: middle;        
+        font-size: 3.3vw;
+    }
+
+    .radio input[type='radio'] {
+        height: 3vw;
+        width: 3vw;
+        padding: 0.9vw;
+    }
+
+    .radioChecked input[type='radio']:before{
+        height: 1vw;
+        width: 1vw;
+    }
+
+}
+
+@media (--small){
+    .vertical{
+        flex-direction: column
+    }
+
+    .radio{
+        margin-bottom: 10px
+    }
+
+    .radio span{
+        font-size: 3.3vw;
+    }
+
+    .radio input[type='radio'] {
+        height: 3vw;
+        width: 3vw;
+        padding: 0.9vw;
+    }
+
+    .radioChecked input[type='radio']:before{
+        height: 1vw;
+        width: 1vw;
+    }
+    
 }

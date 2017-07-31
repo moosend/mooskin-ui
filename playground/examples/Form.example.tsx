@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import Readme from '../../components/Form/README.md';
+
 import {
     Button,
     CheckBox,
@@ -41,13 +43,12 @@ export default class FormExample extends React.Component<any, any> {
         };
 
         return(
-            <div style={{display: 'inline-block'}}>
-                <ReactLiveEditor
-                    scope={components}
-                    code={FormExampleCode}
-                    title="Form Example"
-                />
-            </div>
+            <ReactLiveEditor
+                scope={components}
+                code={FormExampleCode}
+                title="Form Example"
+                doc={Readme}
+            />
         );
     }
 }

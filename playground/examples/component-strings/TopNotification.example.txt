@@ -16,7 +16,7 @@ class TopNotificationExample extends React.Component {
 
     render(){
         return(
-            <div style={{display: 'inline-block'}}>
+            <div>
                 <TopNotification text="You have successfully saved your campaign!" visible={this.state.visible1}/>
                 <Button onClick={this.onClickShow('visible1')}>Show Notification 1</Button>
                 <Button onClick={this.onClickHide('visible1')} inverseStyle>Hide Notification 1</Button>

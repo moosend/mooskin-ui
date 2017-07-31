@@ -59,6 +59,7 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
             cutoutPercentage: doughnutSpace,
             legend,
             maintainAspectRatio,
+            responsive: true,
             title: chartTitle
         };
 
