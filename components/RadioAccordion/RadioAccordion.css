@@ -20,7 +20,7 @@
     border-radius: 8px;
     color: var(--moosendBlue);
     background: transparent;
-    transition: 0.3s;
+    transition: background-color 0.3s;
     border: 1px solid var(--moosendBlue);
     padding: 12px;
     cursor: pointer;
@@ -109,14 +109,14 @@
     }
 
     .radio input[type='radio']{
-        height: 3vw;
-        width: 3vw;
-        padding: 0.9vw;
+        height: 4vw;
+        width: 4vw;
+        padding: 1vw;
     }
 
     .radio input[type='radio']:checked::after{
-        height: 1vw;
-        width: 1vw;
+        height: 1.7vw;
+        width: 1.7vw;
     }
 
     .content{
@@ -135,14 +135,14 @@
     }
 
     .radio input[type='radio']{
-        height: 3vw;
-        width: 3vw;
-        padding: 0.9vw;
+        height: 4vw;
+        width: 4vw;
+        padding: 1vw;
     }
 
     .radio input[type='radio']:checked::after{
-        height: 1vw;
-        width: 1vw;
+        height: 1.7vw;
+        width: 1.7vw;
     }
 
     .content{

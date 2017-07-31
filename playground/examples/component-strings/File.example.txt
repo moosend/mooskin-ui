@@ -14,8 +14,9 @@ class FileExample extends React.Component {
                     placeholder="Please select a File"
                     buttonLabel="Select File!"
                     multiple
+                    style={{marginBottom: 15}}
                 />
-                <File onChange={this.onChange} accept=".png"/>
+                <File onChange={this.onChange} accept=".png" style={{marginBottom: 15}}/>
                 <File disabled />
             </div>
         );

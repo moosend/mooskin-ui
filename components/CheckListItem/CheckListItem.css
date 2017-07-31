@@ -46,7 +46,7 @@
 
 @media (--small){
     .checkitem{
-        padding: 2vw;
+        padding: 2.5vw;
     }
 
     .content{
@@ -54,12 +54,12 @@
     }
 
     .iconStyle{
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .button{
-        height: 4vw;
-        width: 4vw;
+        height: 5vw;
+        width: 5vw;
     }
 
     .button i{
@@ -69,7 +69,7 @@
 
 @media (--xSmall){
     .checkitem{
-        padding: 2vw;
+        padding: 2.5vw;
     }
 
     .content{
@@ -77,12 +77,12 @@
     }
 
     .iconStyle{
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     .button{
-        height: 4vw;
-        width: 4vw;
+        height: 5vw;
+        width: 5vw;
     }
 
     .button i{

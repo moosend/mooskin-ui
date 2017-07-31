@@ -31,7 +31,7 @@
   margin: 2px;
   cursor: pointer;
   border-radius: 36px;
-  transition: .4s;
+  transition: background-color .4s;
 }
 
 .onSwitch{
@@ -52,13 +52,13 @@
   height: 20px;
   width: 20px;
   background-color: white;
-  transition: .4s;
+  transition: transform .4s;
   border-radius: 50%;
 
 }
 
 .onSlider .slider {
-  transform: translateX(62px);
+  transform: translate(62px);
 }
 
 .text {
@@ -67,7 +67,6 @@
   color: white;
   font-family: sans-serif;
   font-size: 11px;
-  transition: .5s;
   text-align: center;
   user-select: none;
 }
@@ -100,13 +99,13 @@
   }
 
   .onText{
-    top: 1.8vw;
+    top: 1.9vw;
     left: 1.7vw;
     font-size: 3vw;
   }
 
   .offText{
-    top: 1.8vw;
+    top: 1.9vw;
     right: 1.7vw;
     font-size: 3vw;
   }
@@ -134,13 +133,13 @@
   }
 
   .onText{
-    top: 1.8vw;
+    top: 1.9vw;
     left: 1.7vw;
     font-size: 3vw;
   }
 
   .offText{
-    top: 1.8vw;
+    top: 1.9vw;
     right: 1.7vw;
     font-size: 3vw;
   }

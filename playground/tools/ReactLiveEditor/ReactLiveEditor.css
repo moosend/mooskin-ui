@@ -40,7 +40,7 @@
 }
 
 .edit{
-    transition: all 400ms ease;
+    transition: background-color 400ms ease;
     color: #F48770;
 }
 
