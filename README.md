@@ -36,7 +36,7 @@ and then you can simply import the desired component and start using it
 ```
 import {Input} from 'mooskin';
 ```
-Modular usageis also possible for both css and js(components) files, if you just want to use a few components, you should not have to import the whole CSS file, but instead have just what you need.
+Modular usage is also possible for both css and js(components) files, if you just want to use a few components, you should not have to import the whole CSS file, but instead have just what you need.
 
 ```
 import 'mooskin/lib/Button/style.css';
