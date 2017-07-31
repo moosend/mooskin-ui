@@ -78,10 +78,37 @@
 
 @media (--xSmall){
     .fileContainer{display: flex; flex-direction: column}
-    .label{margin-left: 3px; max-height: 20px;}
+    .label{
+        margin-left: 3px;
+        max-height: 30px;
+        font-size: 4vw;
+    }
+
+    .name{
+        font-size: 4vw;
+        padding: 2vw;
+    }
+
+    .button{
+        font-size: 3.3vw;
+    }
+
 }
 
 @media (--small){
     .fileContainer{display: flex; flex-direction: column}
-    .label{margin-left: 3px; max-height: 20px;}
+    .label{
+        margin-left: 3px;
+        max-height: 40px;
+        font-size: 4vw;
+    }
+
+    .name{
+        font-size: 4vw;
+        padding: 2vw;
+    }
+
+    .button{
+        font-size: 3.3vw;
+    }
 }

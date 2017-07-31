@@ -57,32 +57,34 @@
 
 @media (--small){
     .normalButton{
-        height: 60px;
-        width: 60px;
+        height: 6vw;
+        width: 6vw;
+        padding: 0px;
     }
 
     .icon {
-        font-size: 45px;
+        font-size: 4.5vw;
     }
 
     .transparent{
-        width: 60px;
-        height: 60px;
+        width: 6vw;
+        height: 6vw;
     }
 }
 
 @media (--xSmall){
     .normalButton{
-        height: 60px;
-        width: 60px;
+        height: 6vw;
+        width: 6vw;
+        padding: 0px;
     }
 
     .icon {
-        font-size: 45px;
+        font-size: 4.5vw;
     }
 
     .transparent{
-        width: 60px;
-        height: 60px;
+        width: 6vw;
+        height: 6vw;
     }
 }

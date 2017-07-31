@@ -87,7 +87,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
 
     .textarea{
         font-size: 4vw;
-        padding: 30px;
+        padding: 2.5vw;
     }
 
     .areaContainer .description{
@@ -110,7 +110,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
 
     .textarea{
         font-size: 4vw;
-        padding: 30px;
+        padding: 2.5vw;
     }
 
     .areaContainer .description{

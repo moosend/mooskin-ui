@@ -58,13 +58,13 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
                 <div className={checkitem} id={id}>
                     <i className={`material-icons ${iconStyle}`} >{icon}</i>
                     <div className={content}>
-                        <span>{text}</span>
-                        <SmallIconButton
-                            className={button}
-                            icon="create"
-                            onClick={this.onClick}
-                        />
+                            <span>{text}</span>
                     </div>
+                    <SmallIconButton
+                        className={button}
+                        icon="create"
+                        onClick={this.onClick}
+                    />
                 </div>
             </div>
         );

@@ -35,13 +35,13 @@ exports[`CheckListItem renders correctly 1`] = `
       <span>
         check item text
       </span>
-      <SmallIconButton
-        className="button"
-        icon="create"
-        onClick={[Function]}
-        style={Object {}}
-      />
     </div>
+    <SmallIconButton
+      className="button"
+      icon="create"
+      onClick={[Function]}
+      style={Object {}}
+    />
   </div>
 </div>
 `;

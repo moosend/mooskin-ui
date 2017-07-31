@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
 
 .container {
     width: 100%;
@@ -37,7 +38,7 @@
 }
 
 .tab{
-  display: block;
+    display: block;
 }
 
 
@@ -59,4 +60,28 @@
 
 .invisible {
     display: none;
+}
+
+@media (--small){
+
+    .heading{
+        height: 10vw;
+    }
+
+    .heading span{
+        font-size: 4vw;
+    }
+
+}
+
+@media (--xSmall){
+
+    .heading{
+        height: 10vw;
+    }
+
+    .heading span{
+        font-size: 4vw;
+    }
+
 }

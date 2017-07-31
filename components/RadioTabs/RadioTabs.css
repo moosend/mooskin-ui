@@ -145,6 +145,29 @@
         padding-left: 0px;
         padding-top: 10px;
         margin-top: 10px;
+        font-size: 3.3vw;
+    }
+    .contentHorizontal{
+        font-size: 3.3vw;
+    }
+
+    .radio label{
+        font-size: 4vw;
+    }
+
+    .radio{
+        padding: 2vw;
+    }
+
+    .radio input[type='radio']{
+        height: 3vw;
+        width: 3vw;
+        padding: 0.9vw;
+    }
+
+    .radio input[type='radio']:checked::after{
+        height: 1vw;
+        width: 1vw;
     }
 }
 
@@ -160,5 +183,28 @@
         padding-left: 0px;
         padding-top: 10px;
         margin-top: 10px;
+        font-size: 3.3vw;
+    }
+    .contentHorizontal{
+        font-size: 3.3vw;
+    }
+
+    .radio label{
+        font-size: 4vw;
+    }
+
+    .radio{
+        padding: 2vw;
+    }
+
+    .radio input[type='radio']{
+        height: 3vw;
+        width: 3vw;
+        padding: 0.9vw;
+    }
+
+    .radio input[type='radio']:checked::after{
+        height: 1vw;
+        width: 1vw;
     }
 }
