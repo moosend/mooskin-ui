@@ -189,7 +189,7 @@ yarn install
 
 After installation run `start-development.bat` on the Mooskin root folder, wait for build to complete then go to `http://localhost:8080/`. Have fun playing with the components.
 
-If you want to add a new component that is in development to the playground, create an example component in `/playground/examples/` which returns an instance of the component in development. Add the example to `/playground/App.tsx` and you're good to go.
+If you want to add a new component that is in development to the playground, create an example component in `/playground/examples/` which returns a component in development. Add the example to `/playground/App.tsx` and you're good to go.
  
 ### Contribute
 
