@@ -68,3 +68,8 @@
     .horizontal{flex-direction: column}
     .horizontal > .checkbox + .checkbox{margin-left: 0px}
 }
+
+@media (--small){
+    .horizontal{flex-direction: column}
+    .horizontal > .checkbox + .checkbox{margin-left: 0px}
+}

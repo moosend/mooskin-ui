@@ -57,3 +57,8 @@
     .inputContainer{display: flex; flex-direction: column}
     .inputLabel{padding-top: 0px; margin-left: 3px}
 }
+
+@media (--small){
+    .inputContainer{display: flex; flex-direction: column}
+    .inputLabel{padding-top: 0px; margin-left: 3px}
+}

@@ -76,3 +76,8 @@ textarea::-webkit-scrollbar-thumb:vertical {
     .areaContainer{display: flex; flex-direction: column}
     .textareaLabel{padding-top: 0px; margin-left: 3px}
 }
+
+@media (--small){
+    .areaContainer{display: flex; flex-direction: column}
+    .textareaLabel{padding-top: 0px; margin-left: 3px}
+}

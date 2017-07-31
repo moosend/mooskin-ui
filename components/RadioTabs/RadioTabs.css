@@ -147,3 +147,18 @@
         margin-top: 10px;
     }
 }
+
+@media (--small){
+    .headerHorizontal{flex-direction: column}
+    .headerHorizontal > .radio + .radio{margin: 10px 0 0 0}
+
+    .containerVertical{flex-direction: column}
+    .content{
+        border-left: none;
+        border-top: 1px solid var(--moosendBlue);
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-top: 10px;
+        margin-top: 10px;
+    }
+}
