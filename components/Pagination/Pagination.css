@@ -16,3 +16,7 @@
 .activeButton {
     background: red;
 }
+
+.disabledButton {
+  pointer-events: none;
+}
