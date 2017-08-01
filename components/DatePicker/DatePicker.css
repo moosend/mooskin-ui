@@ -88,6 +88,26 @@
     background: #5ccdde;
 }
 
+:global(.m-time .time){
+    background: #5ccdde;
+}
+
+:global(.m-time .separater){
+    color: #5ccdde;
+}
+
+:global(.u-slider-time .value){
+    background: #5ccdde;
+}
+
+:global(.u-slider-time .handle:after){
+    border: 3px solid #5ccdde;
+}
+
+:global(.m-time .time-text){
+    color: #5ccdde;
+}
+
 @media (--xSmall){
     .datePicker{
         flex-direction: column;
@@ -220,6 +240,42 @@
 
     :global(.m-input-moment .btn-save){
         font-size: 4vw;
+    }
+
+    :global(.m-time .time){
+        height: 25vw;
+        width: 25vw;
+        font-size: 20vw;
+        line-height: normal;
+    }
+
+    :global(.m-time .separater){
+        color: #5ccdde;
+        font-size: 15vw;
+        width: 10vw;
+    }
+
+    :global(.u-slider-time .handle:after){
+        border: 3px solid #5ccdde;
+        height: 5vw;
+        width: 5vw;
+        top: -1.8vw;
+        left: -3vw;
+    }
+
+    :global(.m-time .time-text){
+        font-size: 4vw;
+        color: #5ccdde;
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+    }
+
+    :global(.u-slider-time){
+        height: 2vw;
+    }
+
+    :global(.m-time .sliders){
+        padding: 0px 20px;
     }
 
     .cover{
