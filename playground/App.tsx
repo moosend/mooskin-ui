@@ -9,6 +9,7 @@ import Bar from './examples/Bar.example';
 import Button from './examples/Button.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
+import DatePicker from './examples/DatePicker.example';
 import Doughnut from './examples/Doughnut.example';
 import File from './examples/File.example';
 import Form from './examples/Form.example';
@@ -32,6 +33,11 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <Grid>
+            <Row>
+                <Col>
+                    <DatePicker />
+                </Col>
+            </Row>
             <Row>
                 <Col lg={4} md={12}>
                     <Select />
