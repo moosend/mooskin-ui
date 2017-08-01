@@ -17,7 +17,7 @@ describe('DatePicker', () => {
                 className="myClass"
                 style={{color: 'blue'}}
                 id={'input1'}
-                date={moment()}
+                date={moment(Date.now())}
                 label="with a label ofc"
                 required
             />
@@ -28,9 +28,9 @@ describe('DatePicker', () => {
     test('renders properly into dom with props', () => {
         Date.now = jest.fn(() => 1482363367071);
 
-        const component = shallow(<DatePicker date={moment()} required/>);
+        const component = shallow(<DatePicker date={moment(Date.now())} required/>);
 
-        expect(component.find('InputMoment').prop('moment')).toEqual(moment());
+        expect(component.find('InputMoment').prop('moment')).toEqual(moment(Date.now()));
         expect(component.find('input').prop('required')).toBeTruthy;
     });
 
