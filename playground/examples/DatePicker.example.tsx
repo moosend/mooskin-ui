@@ -1,26 +1,23 @@
 import * as React from 'react';
 
+import Readme from '../../components/DatePicker/README.md';
+
 import moment from 'moment';
 
-import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
-
 import {DatePicker} from '../../components/index/';
+import DatePickerExampleCode from './component-strings/DatePicker.example.txt';
 
-export default class CheckListItemExample extends React.Component<any, any> {
+import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
+
+export default class DatePickerExample extends React.Component<any, any> {
     public render(){
         return(
-            <div>
-                <DatePicker onChange={this.onChange} label={'Select Date:'} dataLabel={'date'}/>
-                <br/><br/>
-                <DatePicker date={moment().add(45, 'days')} format={'D / M / Y'} onChange={this.onChange}/>
-                <br/><br/>
-                <DatePicker disabled/>
-            </div>
+            <ReactLiveEditor
+                scope={{React, DatePicker, moment}}
+                code={DatePickerExampleCode}
+                title="DatePicker Example"
+                doc={Readme}
+            />
         );
-    }
-
-    private onChange = (data: IInputCallbackData) => {
-        console.log(data.value._d);
-        console.log(data.dataLabel);
     }
 }
