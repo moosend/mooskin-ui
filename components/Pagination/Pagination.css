@@ -1,22 +1,61 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
+
 .pagination{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.paginationInner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid var(--moosendBlue);
+    border-radius: 3px;
 }
 
 .paginationButton{
-    width: 30px;
-    height:30px;
-    border: 1px solid black;
+    width: 40px;
+    height:40px;
+    border-left: 1px solid var(--moosendBlue);
     justify-content: center;
     display: flex;
     align-items: center;
     cursor: pointer;
+    color: var(--heading);
+}
+
+.paginationButton:first-child{
+    border-left: none;
+}
+
+.paginationButton:hover{
+    background: var(--moosendBlue);
 }
 
 .activeButton {
-    background: red;
+    background: var(--moosendBlue);
+    color: #fff;
 }
 
 .disabledButton {
   pointer-events: none;
+}
+
+
+@media (--small){
+    .paginationButton{
+        font-size: 4vw;
+        padding: 4vw;
+    }
+    
+}
+
+@media (--xSmall){
+    .paginationButton{
+        font-size: 9vw;
+        padding: 4vw;
+    }
 }

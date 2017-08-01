@@ -16,7 +16,6 @@ class PaginationExample extends React.Component {
                     onClick={this.onClick} 
                     items={20} 
                     currentItem={this.state.currentItem} 
-                    maxButtons={5}
                     firstBtn
                     lastBtn
                     prevBtn

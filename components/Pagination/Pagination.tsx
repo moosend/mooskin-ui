@@ -56,7 +56,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
         currentItem: 1,
         firstBtn: false,
         lastBtn: false,
-        maxButtons: 7,
+        maxButtons: 5,
         nextBtn: false,
         prevBtn: false,
     };
@@ -70,7 +70,9 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                 className={`${styles.pagination} ${className}`}
                 style={style}
             >
-                {this.renderAllButtons()}
+                <div className={styles.paginationInner}>
+                    {this.renderAllButtons()}
+                </div>
             </div>
         );
     }
@@ -87,7 +89,6 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
         // render back and prev buttons as well as ellipsis as needed
         return currentItem && [
             firstBtn &&
-            !this.isFirstItem() &&
             (
                 <PaginationButton
                     key={'asd1'}
@@ -98,7 +99,6 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                 />
             ),
             prevBtn &&
-            !this.isFirstItem() &&
             (
                 <PaginationButton
                     key={'asd2'}
@@ -132,7 +132,6 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                 />
             ),
             nextBtn &&
-            !this.isLastItem() &&
             (
                 <PaginationButton
                     key={'asd3'}
@@ -143,7 +142,6 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                 />
             ),
             lastBtn &&
-            !this.isLastItem() &&
             (
                 <PaginationButton
                     key={'asd4'}
@@ -223,14 +221,6 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
         const {currentItem, items} = this.props;
         const rightButtonCount = this.getLeftRightButtonCounts()[1];
         return currentItem && currentItem + rightButtonCount < items;
-    }
-
-    private isFirstItem(){
-        return this.props.currentItem === 1;
-    }
-
-    private isLastItem(){
-        return this.props.currentItem === this.props.items;
     }
 }
 
