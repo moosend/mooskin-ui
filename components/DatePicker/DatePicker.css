@@ -51,6 +51,7 @@
 
 :global(.m-input-moment){
     background-color: #ffffff;
+    user-select: none;
 }
 
 :global(.m-input-moment .options button.is-active){
@@ -105,6 +106,10 @@
 }
 
 :global(.m-time .time-text){
+    color: #5ccdde;
+}
+
+:global(.m-calendar .current-day){
     color: #5ccdde;
 }
 
@@ -234,10 +239,6 @@
         font-size: 4vw;
     }
 
-    :global(.m-calendar .current-day){
-        color: #5ccdde;
-    }
-
     :global(.m-input-moment .btn-save){
         font-size: 4vw;
     }
@@ -265,7 +266,6 @@
 
     :global(.m-time .time-text){
         font-size: 4vw;
-        color: #5ccdde;
         margin-top: 1vw;
         margin-bottom: 2vw;
     }
