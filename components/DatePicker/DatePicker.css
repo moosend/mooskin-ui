@@ -1,5 +1,8 @@
+@import '../_utils/globals/screens.css';
+
 .datePicker{
     display: flex;
+    margin: 3px;
 }
 
 .wrapper{
@@ -34,7 +37,7 @@
 .calendar{
     position: absolute;
     z-index: 99;
-} 
+}
 
 .cover{
     position: fixed;
@@ -43,4 +46,38 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
+}
+
+@media (--xSmall){
+    .datePicker{
+        flex-direction: column;
+    }
+
+    .label{
+        font-size: 4vw;
+        flex-basis: 4vw;
+        margin-left: 3px;
+    }
+
+    .dateInput{
+        font-size: 4vw;
+        padding: 3.5vw;
+    }
+}
+
+@media (--small){
+    .datePicker{
+        flex-direction: column;
+    }
+
+    .label{
+        font-size: 4vw;
+        flex-basis: 4vw;
+        margin-left: 3px;
+    }
+
+    .dateInput{
+        font-size: 4vw;
+        padding: 3.5vw;
+    }
 }

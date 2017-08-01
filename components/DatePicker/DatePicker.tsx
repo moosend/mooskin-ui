@@ -11,6 +11,9 @@ import {IInputCallbackData} from '../_utils/types/commonTypes';
 
 export interface IDateProps{
 
+    /** component id */
+    id?: string;
+
     /** date passed will be the selected date */
     date?: any;
 
@@ -69,6 +72,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
         return(
             <div
+                id={this.props.id}
                 className={`datepicker-component ${this.props.className} ${styles.datePicker}`}
                 style={this.props.style}
             >
