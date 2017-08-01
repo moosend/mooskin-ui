@@ -49,6 +49,10 @@
     left: 0px;
 }
 
+:global(.m-input-moment){
+    background-color: #ffffff;
+}
+
 @media (--xSmall){
     .datePicker{
         flex-direction: column;
@@ -63,6 +67,15 @@
     .dateInput{
         font-size: 4vw;
         padding: 3.5vw;
+    }
+
+    :global(.m-input-moment){
+        width: 80vw;
+    }
+    
+    .cover{
+        background: black;
+        opacity: 0.5;
     }
 }
 
@@ -80,5 +93,14 @@
     .dateInput{
         font-size: 4vw;
         padding: 3.5vw;
+    }
+
+    :global(.m-input-moment){
+        width: 90vw;
+    }
+
+    .cover{
+        background: black;
+        opacity: 0.5;
     }
 }
