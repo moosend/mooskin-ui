@@ -34,11 +34,6 @@ export default (props: any) => {
     return(
         <Grid>
             <Row>
-                <Col>
-                    <DatePicker />
-                </Col>
-            </Row>
-            <Row>
                 <Col lg={4} md={12}>
                     <Select />
                 </Col>

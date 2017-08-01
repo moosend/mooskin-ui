@@ -1,4 +1,5 @@
 @import '../_utils/globals/screens.css';
+@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 
 .datePicker{
     display: flex;
