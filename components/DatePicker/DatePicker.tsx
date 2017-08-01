@@ -5,6 +5,7 @@ import 'input-moment/dist/input-moment.css';
 import styles from './DatePicker.css';
 
 import InputMoment from 'input-moment';
+import pickerStyles from 'input-moment/dist/input-moment.css';
 import moment from 'moment';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
@@ -65,6 +66,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
     public render(){
+
+        console.log(pickerStyles);
 
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
         const labelStyles = !this.props.label ? {display: 'none'} : {};
