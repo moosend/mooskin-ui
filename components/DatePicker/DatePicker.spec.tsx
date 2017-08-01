@@ -8,7 +8,7 @@ describe('DatePicker', () => {
 
     test('renders correctly', () => {
         const func = jest.fn();
-        Date.now = jest.fn(() => 1482363367071);
+        Date.now = jest.fn(() => 1482263367071);
 
         const tree = shallow(
             <DatePicker
