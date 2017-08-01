@@ -1,0 +1,19 @@
+class PaginationExample extends React.Component {
+
+    constructor(){
+        super();
+        this.onClick = this.onClick.bind(this);
+    }
+
+    render(){
+        return(
+            <div>
+                <Pagination onClick={this.onClick} items={20} currentItem={4}/>
+            </div>
+        );
+    }
+
+    onClick(item) {
+        console.log(item);
+    }
+}

@@ -1,0 +1,18 @@
+.pagination{
+    display: flex;
+    flex-direction: row;
+}
+
+.paginationButton{
+    width: 30px;
+    height:30px;
+    border: 1px solid black;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.activeButton {
+    background: red;
+}
