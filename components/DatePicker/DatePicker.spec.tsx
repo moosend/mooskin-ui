@@ -8,7 +8,7 @@ describe('DatePicker', () => {
 
     test('renders correctly', () => {
         const func = jest.fn();
-        Date.now = jest.fn(() => 1482363367071);
+        Date.now = jest.fn(() => new Date(Date.UTC(2017, 0, 1)).valueOf());
 
         const tree = shallow(
             <DatePicker
@@ -17,7 +17,7 @@ describe('DatePicker', () => {
                 className="myClass"
                 style={{color: 'blue'}}
                 id={'input1'}
-                date={moment(Date.now())}
+                date={moment()}
                 label="with a label ofc"
                 required
             />
@@ -26,11 +26,11 @@ describe('DatePicker', () => {
     });
 
     test('renders properly into dom with props', () => {
-        Date.now = jest.fn(() => 1482363367071);
+        Date.now = jest.fn(() => new Date(Date.UTC(2017, 0, 1)).valueOf());
 
-        const component = shallow(<DatePicker date={moment(Date.now())} required/>);
+        const component = shallow(<DatePicker date={moment()} required/>);
 
-        expect(component.find('InputMoment').prop('moment')).toEqual(moment(Date.now()));
+        expect(component.find('InputMoment').prop('moment')).toEqual(moment());
         expect(component.find('input').prop('required')).toBeTruthy;
     });
 
