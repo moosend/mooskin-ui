@@ -44,7 +44,7 @@
     border-radius: 8px;
 }
 
-@media (--small){
+@media (--deviceSmall){
     .checkitem{
         padding: 2.5vw;
     }
@@ -67,7 +67,7 @@
     }
 }
 
-@media (--xSmall){
+@media (--deviceXsmall){
     .checkitem{
         padding: 2.5vw;
     }

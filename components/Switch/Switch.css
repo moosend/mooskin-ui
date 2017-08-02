@@ -92,7 +92,7 @@
   right: 3px;
 }
 
-@media (--small){
+@media (--deviceSmall){
   .switch{
     width: 21vw;
     height: 7vw;
@@ -126,7 +126,7 @@
   }
 }
 
-@media (--xSmall){
+@media (--deviceXsmall){
   .switch{
     width: 21vw;
     height: 7vw;

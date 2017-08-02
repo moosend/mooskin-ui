@@ -63,6 +63,20 @@
         flex-basis: 10px;
         padding-top: 0px;
         margin-left: 3px;
+    }
+
+}
+
+@media (--deviceXsmall){
+    .inputContainer{
+        display: flex;
+        flex-direction: column
+    }
+    
+    .inputLabel{
+        flex-basis: 10px;
+        padding-top: 0px;
+        margin-left: 3px;
         font-size: 4vw;
     }
 
@@ -76,7 +90,7 @@
     }
 }
 
-@media (--small){
+@media (--deviceSmall){
     .inputContainer{
         display: flex;
         flex-direction: column

@@ -75,6 +75,17 @@
         margin-left: 0px
     }
     
+}
+
+@media (--deviceXsmall){
+    .horizontal{
+        flex-direction: column
+    }
+
+    .horizontal > .checkbox + .checkbox{
+        margin-left: 0px
+    }
+    
     .checkbox span {
         font-size: 3.3vw;
     }
@@ -88,7 +99,7 @@
     }
 }
 
-@media (--small){
+@media (--deviceSmall){
     .horizontal{
         flex-direction: column
     }

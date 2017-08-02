@@ -44,12 +44,28 @@ config.module.rules.push(
     },
     {
         test: /\.css$/,
+        exclude: /node_modules/,
         loader: extractCSS.extract([
           {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
               localIdentName: '[local]___[hash:base64:5]',
+              modules: true
+            }
+          },
+          'postcss-loader'
+        ])
+    },
+    {
+        test: /\.css$/,
+        include: /node_modules/,
+        loader: extractCSS.extract([
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              localIdentName: '[local]',
               modules: true
             }
           },

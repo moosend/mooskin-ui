@@ -9,6 +9,7 @@ import Bar from './examples/Bar.example';
 import Button from './examples/Button.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
+import DatePicker from './examples/DatePicker.example';
 import Doughnut from './examples/Doughnut.example';
 import File from './examples/File.example';
 import Form from './examples/Form.example';
@@ -74,11 +75,16 @@ export default (props: any) => {
                 </Col>
             </Row>
             <Row>
-                <Col lg={9} md={8}>
-                    <TabbedContent />
+                <Col lg={4} md={6}>
+                    <DatePicker />
                 </Col>
-                <Col lg={3} md={4}>
+                <Col lg={8} md={6}>
                     <RadioAccordion />
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <TabbedContent />
                 </Col>
             </Row>
             <Row>
