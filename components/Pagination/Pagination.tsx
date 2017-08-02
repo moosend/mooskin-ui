@@ -35,11 +35,12 @@ export interface IPaginationProps {
     onClick: (item: number) => void;
 }
 
-interface IPaginationButtonProps {
+export interface IPaginationButtonProps {
     active: boolean;
     disabled?: boolean;
     label: string; // could be an icon
     item: number;
+    className?: string;
     onClick: (item: number) => (e: React.MouseEvent<HTMLElement>) => void;
 }
 
@@ -96,6 +97,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={'<<'}
                     item={1}
                     onClick={this.onClick}
+                    className="pagination-first-btn"
                 />
             ),
             prevBtn &&
@@ -106,6 +108,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={'<'}
                     item={currentItem && currentItem - 1 || 1}
                     onClick={this.onClick}
+                    className="pagination-prev-btn"
                 />
             ),
             this.needsLeftEllipsis() &&
@@ -117,6 +120,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     item={currentItem}
                     onClick={(this.onClick)}
                     disabled
+                    className="pagination-ellipsis"
                 />
             ),
             this.renderNormalButtons(),
@@ -129,6 +133,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     item={currentItem}
                     onClick={(this.onClick)}
                     disabled
+                    className="pagination-ellipsis"
                 />
             ),
             nextBtn &&
@@ -139,6 +144,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={'>'}
                     item={currentItem && currentItem + 1 || items}
                     onClick={this.onClick}
+                    className="pagination-next-btn"
                 />
             ),
             lastBtn &&
@@ -149,6 +155,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={'>>'}
                     item={items}
                     onClick={this.onClick}
+                    className="pagination-last-btn"
                 />
             ),
         ];
@@ -171,6 +178,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={item.toString()}
                     item={item}
                     onClick={this.onClick}
+                    className="pagination-normal-btn"
                 />
             );
         });
@@ -224,14 +232,14 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
     }
 }
 
-const PaginationButton: React.StatelessComponent<IPaginationButtonProps> = (props) => {
+export const PaginationButton: React.StatelessComponent<IPaginationButtonProps> = (props) => {
 
     const activeClass = props.active ? styles.activeButton : '';
     const disabledClass = props.disabled ? styles.disabledButton : '';
 
     return (
         <div
-            className={`${styles.paginationButton} ${activeClass} ${disabledClass}`}
+            className={`${styles.paginationButton} ${activeClass} ${disabledClass} ${props.className || ''}`}
             onClick={props.onClick(props.item)}
         >
             {props.label}
