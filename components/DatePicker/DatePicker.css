@@ -69,7 +69,7 @@
     margin: 0px;
 }
 
-:global(div.m-calendar td:hover){
+:global(.m-calendar tbody td:hover){
     background: #5ccdde;
     border: none;
 }
@@ -81,10 +81,6 @@
 
 :global(.m-calendar thead td){
     color: #5ccdde;
-}
-
-:global(.m-calendar thead td:hover){
-    color: #ffffff;
 }
 
 :global(.m-calendar .toolbar .current-date){
@@ -159,7 +155,7 @@
     }
 
     :global(div.m-calendar td){
-         height: 7vw;
+        height: 7vw;
         font-size: 3vw; 
     }
     
@@ -264,7 +260,7 @@
     }
 
     :global(div.m-calendar td){
-         height: 7vw;
+        height: 7vw;
         font-size: 3vw; 
     }
     
