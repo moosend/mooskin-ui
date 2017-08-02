@@ -1,3 +1,5 @@
+@import '../_utils/globals/screens.css';
+
 .container{
     z-index: 9;
     position: fixed;
@@ -76,5 +78,46 @@
     background-image: url('assets/images/icons/notifications/icon-error.png');
 }
 
+@media (--deviceXsmall){
 
+    .message{
+        font-size: 4vw;
+    }
 
+    .close{
+        height: 7vw;
+        width: 7vw;
+    }
+
+    .close > div{
+        height: 4vw;
+        width: 4vw;
+    }
+
+    .iconDiv{
+        height: 4vw;
+        width: 4vw;
+    }
+}
+
+@media (--deviceSmall){
+    
+    .message{
+        font-size: 4vw;
+    }
+
+    .close{
+        height: 7vw;
+        width: 7vw;
+    }
+
+    .close > div{
+        height: 4vw;
+        width: 4vw;
+    }
+
+    .iconDiv{
+        height: 4vw;
+        width: 4vw;
+    }
+}

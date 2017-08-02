@@ -10,13 +10,13 @@
     color: var(--heading);
 }
 
-@media (--small){
+@media (--deviceSmall){
     .h1 {
         font-size: 5.5vw;
     }
 }
 
-@media (--xSmall){
+@media (--deviceXsmall){
     .h1 {
         font-size: 5.5vw;
     }

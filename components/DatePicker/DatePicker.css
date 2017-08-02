@@ -1,0 +1,325 @@
+@import '../_utils/globals/screens.css';
+@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+.datePicker{
+    display: flex;
+    margin: 3px;
+}
+
+.wrapper{
+    width: 100%;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 150px;
+}
+
+.dateInput{
+    padding: 15px;
+    font-family: Arial,sans-serif;
+    border: 0;
+    color: #9e9e9e;
+    /* font-size: 16px; */
+    font-size: 1rem; 
+    border-radius: 8px;
+    background: #efefef;
+    width: 100%;
+    cursor: pointer;
+}
+
+.disabled{
+    cursor: not-allowed;
+    color: #bfbfbf;
+    background: #f6f6f6;
+}
+ 
+.calendar{
+    position: absolute;
+    z-index: 99;
+}
+
+.cover{
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+:global(.m-input-moment){
+    background-color: #ffffff;
+    user-select: none;
+    height: 355px;
+}
+
+:global(.m-input-moment .tabs){
+    margin: 0;
+}
+
+:global(.m-input-moment .options button.is-active){
+    background: #5ccdde;
+}
+
+:global(.m-input-moment .options button){
+    border: 1px solid #5ccdde;
+    color: #5ccdde;
+    margin: 0px;
+}
+
+:global(.m-calendar tbody td:hover){
+    background: #5ccdde;
+    border: none;
+}
+
+:global(.m-calendar .toolbar button){
+    border: 1px solid #5ccdde;
+    background: #5ccdde;
+}
+
+:global(.m-calendar thead td){
+    color: #5ccdde;
+}
+
+:global(.m-calendar .toolbar .current-date){
+    color: #5ccdde;
+}
+
+:global(.m-input-moment .btn-save){
+    display: none;
+}
+
+:global(.m-time .time){
+    background: #5ccdde;
+}
+
+:global(.m-time .separater){
+    color: #5ccdde;
+}
+
+:global(.u-slider-time .value){
+    background: #5ccdde;
+}
+
+:global(.u-slider-time .handle:after){
+    border: 3px solid #5ccdde;
+}
+
+:global(.m-time .time-text){
+    color: #5ccdde;
+}
+
+:global(.m-calendar .current-day){
+    color: #5ccdde;
+}
+
+@media (--deviceXsmall){
+    .datePicker{
+        flex-direction: column;
+    }
+
+    .label{
+        font-size: 4vw;
+        flex-basis: 4vw;
+        margin-left: 3px;
+    }
+
+    .dateInput{
+        font-size: 4vw;
+        padding: 3.5vw;
+    }
+
+    :global(.m-input-moment){
+        width: 90vw;
+        height: 70vw;
+    }
+
+    :global(.options){
+        display: flex;
+        height: 10vw;
+    }
+
+    :global(.tabs){
+        height: 60vw;
+    }
+
+    :global(.im-btn){
+        height: 8vw;
+        font-size: 3vw;                
+    }
+
+    :global(.toolbar){
+        height: 5vw;
+    }
+
+    :global(div.m-calendar td){
+        height: 7vw;
+        font-size: 3vw; 
+    }
+    
+    :global(.current-date){
+        font-size: 4vw;
+    }
+
+    :global(.m-calendar .toolbar button){
+        height: 5vw;
+        width: 5vw;
+        font-size: 3vw;
+    }
+
+    :global(.m-input-moment .options button){
+        font-size: 4vw;
+    }
+
+    :global(.m-calendar .current-day){
+        color: #5ccdde;
+    }
+
+    :global(.m-input-moment .btn-save){
+        font-size: 4vw;
+    }
+
+    :global(.m-time .time){
+        height: 25vw;
+        width: 25vw;
+        font-size: 20vw;
+        line-height: normal;
+    }
+
+    :global(.m-time .separater){
+        color: #5ccdde;
+        font-size: 15vw;
+        width: 10vw;
+    }
+
+    :global(.u-slider-time .handle:after){
+        border: 3px solid #5ccdde;
+        height: 5vw;
+        width: 5vw;
+        top: -1.8vw;
+        left: -3vw;
+    }
+
+    :global(.m-time .time-text){
+        font-size: 4vw;
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+    }
+
+    :global(.u-slider-time){
+        height: 2vw;
+    }
+
+    :global(.m-time .sliders){
+        padding: 0px 20px;
+    }
+
+    .cover{
+        background: black;
+        opacity: 0.5;
+    }
+}
+
+@media (--deviceSmall){
+    .datePicker{
+        flex-direction: column;
+    }
+
+    .label{
+        font-size: 4vw;
+        flex-basis: 4vw;
+        margin-left: 3px;
+    }
+
+    .dateInput{
+        font-size: 4vw;
+        padding: 3.5vw;
+    }
+
+    :global(.m-input-moment){
+        width: 90vw;
+    }
+
+    :global(.options){
+        height: 10vw;
+    }
+
+    :global(.tabs){
+        height: 60vw;
+    }
+
+    :global(.im-btn){
+        height: 8vw;
+        font-size: 3vw;                
+    }
+
+    :global(.toolbar){
+        height: 5vw;
+    }
+
+    :global(div.m-calendar td){
+        height: 7vw;
+        font-size: 3vw; 
+    }
+    
+    :global(.current-date){
+        font-size: 4vw;
+    }
+
+    :global(.m-calendar .toolbar button){
+        height: 5vw;
+        width: 5vw;
+        font-size: 3vw;
+    }
+
+    :global(.m-input-moment .options button){
+        font-size: 4vw;
+    }
+
+    :global(.m-input-moment .btn-save){
+        font-size: 4vw;
+    }
+
+    :global(.m-time .time){
+        height: 25vw;
+        width: 25vw;
+        font-size: 20vw;
+        line-height: normal;
+    }
+
+    :global(.m-time .separater){
+        color: #5ccdde;
+        font-size: 15vw;
+        width: 10vw;
+    }
+
+    :global(.u-slider-time .handle:after){
+        border: 3px solid #5ccdde;
+        height: 5vw;
+        width: 5vw;
+        top: -1.8vw;
+        left: -3vw;
+    }
+
+    :global(.m-time .time-text){
+        font-size: 4vw;
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+    }
+
+    :global(.u-slider-time){
+        height: 2vw;
+    }
+
+    :global(.m-time .sliders){
+        padding: 0px 20px;
+    }
+
+    .cover{
+        background: black;
+        opacity: 0.5;
+    }
+}

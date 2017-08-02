@@ -1,3 +1,5 @@
+@import '../_utils/globals/screens.css';
+
 .table{
     width: 100%;
     border-collapse: collapse;
@@ -23,4 +25,26 @@
     font-size: 1rem;
     border-bottom: 1px solid #eaeaea;
     color:#6b6b6b;
+}
+
+@media (--deviceXsmall){
+
+    .table thead tr th{
+        font-size: 2vw;
+    }
+
+    .table tbody tr td{
+        font-size: 2vw;
+    }
+}
+
+@media (--deviceSmall){
+    
+    .table thead tr th{
+        font-size: 2vw;
+    }
+
+    .table tbody tr td{
+        font-size: 2vw;
+    }
 }

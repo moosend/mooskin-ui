@@ -82,6 +82,19 @@ textarea::-webkit-scrollbar-thumb:vertical {
         flex-basis: 10px;
         padding-top: 0px;
         margin-left: 3px;
+    }
+}
+
+@media (--deviceXsmall){
+    .areaContainer{
+        display: flex;
+        flex-direction: column
+    }
+    
+    .textareaLabel{
+        flex-basis: 10px;
+        padding-top: 0px;
+        margin-left: 3px;
         font-size: 4vw;
     }
 
@@ -95,7 +108,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
     }
 }
 
-@media (--small){
+@media (--deviceSmall){
     .areaContainer{
         display: flex;
         flex-direction: column

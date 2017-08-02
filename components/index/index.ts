@@ -25,3 +25,4 @@ export {default as Form, FormGroup} from '../Form';
 
 export {default as Table} from '../Table';
 export {default as Pagination} from '../Pagination';
+export {default as DatePicker} from '../DatePicker';

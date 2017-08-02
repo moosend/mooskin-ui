@@ -80,6 +80,19 @@
     .fileContainer{display: flex; flex-direction: column}
     .label{
         margin-left: 3px;
+        flex-basis: 20px;
+    }
+
+    .name{
+        margin-bottom: 5px
+    }
+
+}
+
+@media (--deviceXsmall){
+    .fileContainer{display: flex; flex-direction: column}
+    .label{
+        margin-left: 3px;
         max-height: 30px;
         font-size: 4vw;
     }
@@ -96,7 +109,7 @@
 
 }
 
-@media (--small){
+@media (--deviceSmall){
     .fileContainer{display: flex; flex-direction: column}
     .label{
         margin-left: 3px;
@@ -114,3 +127,4 @@
         font-size: 3.3vw;
     }
 }
+
