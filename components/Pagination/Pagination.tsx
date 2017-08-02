@@ -7,6 +7,9 @@ export interface IPaginationProps {
     /** custom classes for Pagination */
     className?: string;
 
+    /** custom id for Pagination */
+    id?: string;
+
     /** custom styles for Pagination top element */
     style?: React.CSSProperties;
 
@@ -64,12 +67,13 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
 
     public render() {
 
-        const {className, style} = this.props;
+        const {className, style, id} = this.props;
 
         return (
             <div
                 className={`${styles.pagination} ${className}`}
                 style={style}
+                id={id}
             >
                 <div className={styles.paginationInner}>
                     {this.renderAllButtons()}

@@ -24,16 +24,20 @@
     cursor: pointer;
     color: var(--heading);
     border-radius: 3px; 
+    user-select: none;
 }
 
 .paginationButton:hover{
-    background: var(--moosendBlue);
-    color: #fff;
+    background: #eee;
 }
 
 .activeButton {
     background: var(--moosendBlue);
     color: #fff;
+}
+
+.activeButton:hover{
+    background: var(--moosendBlue);
 }
 
 .disabledButton {
