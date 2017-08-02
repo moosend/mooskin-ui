@@ -27,6 +27,7 @@
     border-radius: 8px;
     background: #efefef;
     width: 100%;
+    cursor: pointer;
 }
 
 .disabled{
@@ -54,6 +55,10 @@
     user-select: none;
 }
 
+:global(.m-input-moment .tabs){
+    margin: 0;
+}
+
 :global(.m-input-moment .options button.is-active){
     background: #5ccdde;
 }
@@ -61,6 +66,7 @@
 :global(.m-input-moment .options button){
     border: 1px solid #5ccdde;
     color: #5ccdde;
+    margin: 0px;
 }
 
 :global(div.m-calendar td:hover){
@@ -86,7 +92,7 @@
 }
 
 :global(.m-input-moment .btn-save){
-    background: #5ccdde;
+    display: none;
 }
 
 :global(.m-time .time){
@@ -130,10 +136,12 @@
     }
 
     :global(.m-input-moment){
-        width: 80vw;
+        width: 90vw;
+        height: 70vw;
     }
 
     :global(.options){
+        display: flex;
         height: 10vw;
     }
 
@@ -175,6 +183,41 @@
 
     :global(.m-input-moment .btn-save){
         font-size: 4vw;
+    }
+
+    :global(.m-time .time){
+        height: 25vw;
+        width: 25vw;
+        font-size: 20vw;
+        line-height: normal;
+    }
+
+    :global(.m-time .separater){
+        color: #5ccdde;
+        font-size: 15vw;
+        width: 10vw;
+    }
+
+    :global(.u-slider-time .handle:after){
+        border: 3px solid #5ccdde;
+        height: 5vw;
+        width: 5vw;
+        top: -1.8vw;
+        left: -3vw;
+    }
+
+    :global(.m-time .time-text){
+        font-size: 4vw;
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+    }
+
+    :global(.u-slider-time){
+        height: 2vw;
+    }
+
+    :global(.m-time .sliders){
+        padding: 0px 20px;
     }
 
     .cover{
