@@ -62,7 +62,7 @@
     display: none;
 }
 
-@media (--small){
+@media (--deviceSmall){
 
     .heading{
         height: 10vw;
@@ -74,7 +74,7 @@
 
 }
 
-@media (--xSmall){
+@media (--deviceXsmall){
 
     .heading{
         height: 10vw;

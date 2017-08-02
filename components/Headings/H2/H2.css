@@ -10,13 +10,13 @@
     color: var(--heading);
 }
 
-@media (--small){
+@media (--deviceSmall){
     .h2 {
         font-size: 4vw;
     }
 }
 
-@media (--xSmall){
+@media (--deviceXsmall){
     .h2 {
         font-size: 4vw;
     }

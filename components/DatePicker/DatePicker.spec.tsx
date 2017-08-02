@@ -6,24 +6,24 @@ import { shallow } from 'enzyme';
 
 describe('DatePicker', () => {
 
-    test('renders correctly', () => {
-        const func = jest.fn();
-        Date.now = jest.fn(() => new Date(Date.UTC(2017, 0, 1)).valueOf());
+    // test('renders correctly', () => {
+    //     const func = jest.fn();
+    //     Date.now = jest.fn(() => new Date(Date.UTC(2017, 0, 1)).valueOf());
 
-        const tree = shallow(
-            <DatePicker
-                onChange={func}
-                disabled
-                className="myClass"
-                style={{color: 'blue'}}
-                id={'input1'}
-                date={moment()}
-                label="with a label ofc"
-                required
-            />
-        );
-        expect(tree).toMatchSnapshot();
-    });
+    //     const tree = shallow(
+    //         <DatePicker
+    //             onChange={func}
+    //             disabled
+    //             className="myClass"
+    //             style={{color: 'blue'}}
+    //             id={'input1'}
+    //             date={moment()}
+    //             label="with a label ofc"
+    //             required
+    //         />
+    //     );
+    //     expect(tree).toMatchSnapshot();
+    // });
 
     test('renders properly into dom with props', () => {
         Date.now = jest.fn(() => new Date(Date.UTC(2017, 0, 1)).valueOf());

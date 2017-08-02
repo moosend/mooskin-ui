@@ -73,6 +73,21 @@
 
     .radio span{
         vertical-align: middle;        
+    }
+
+}
+
+@media (--deviceXsmall){
+    .vertical{
+        flex-direction: column;
+    }
+
+    .radio{
+        margin-bottom: 10px;
+    }
+
+    .radio span{
+        vertical-align: middle;        
         font-size: 3.3vw;
     }
 
@@ -89,7 +104,7 @@
 
 }
 
-@media (--small){
+@media (--deviceSmall){
     .vertical{
         flex-direction: column
     }

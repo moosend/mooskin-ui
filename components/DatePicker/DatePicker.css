@@ -113,7 +113,7 @@
     color: #5ccdde;
 }
 
-@media (--xSmall){
+@media (--deviceXsmall){
     .datePicker{
         flex-direction: column;
     }
@@ -183,7 +183,7 @@
     }
 }
 
-@media (--small){
+@media (--deviceSmall){
     .datePicker{
         flex-direction: column;
     }

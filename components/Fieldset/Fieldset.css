@@ -17,13 +17,13 @@
     margin-left: 5px;
 }
 
-@media (--small){
+@media (--deviceSmall){
     .fieldset legend{
         font-size: 4vw;
     }
 }
 
-@media (--xSmall){
+@media (--deviceXsmall){
     .fieldset legend{
         font-size: 4vw;
     }
