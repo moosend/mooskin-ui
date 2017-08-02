@@ -18,6 +18,7 @@ import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
 import Line from './examples/Line.example';
+import Pagination from './examples/Pagination.example';
 import Pie from './examples/Pie.example';
 import Radio from './examples/Radio.example';
 import RadioAccordion from './examples/RadioAccordion.example';
@@ -33,6 +34,11 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <Grid>
+            <Row>
+                <Col lg={12} md={12}>
+                    <Pagination />
+                </Col>
+            </Row>
             <Row>
                 <Col lg={4} md={12}>
                     <Select />

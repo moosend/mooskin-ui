@@ -15,7 +15,8 @@
     "noFallthroughCasesInSwitch": true,
     "pretty": true,
     "noUnusedLocals": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "lib":["dom", "es6", "es7" , "dom.iterable", "scripthost"]
   },
   "include": [
     "components",
