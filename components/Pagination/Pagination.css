@@ -12,27 +12,23 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border: 1px solid var(--moosendBlue);
     border-radius: 3px;
 }
 
 .paginationButton{
     width: 40px;
     height:40px;
-    border-left: 1px solid var(--moosendBlue);
     justify-content: center;
     display: flex;
     align-items: center;
     cursor: pointer;
     color: var(--heading);
-}
-
-.paginationButton:first-child{
-    border-left: none;
+    border-radius: 3px; 
 }
 
 .paginationButton:hover{
     background: var(--moosendBlue);
+    color: #fff;
 }
 
 .activeButton {
