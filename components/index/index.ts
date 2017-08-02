@@ -25,3 +25,4 @@ export {default as Form, FormGroup} from '../Form';
 
 export {default as Table} from '../Table';
 export {default as DatePicker} from '../DatePicker';
+export {default as SideBar, Item} from '../SideBar';

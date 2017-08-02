@@ -1,0 +1,41 @@
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 90px ; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 9; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #2D2D2D;
+    overflow: none; 
+    transition: 0.5s;
+}
+
+.itemContainer{
+    cursor: pointer;
+    text-align: center;
+    user-select: none;
+    color: #fff;
+}
+
+.activeItem{
+    color: #5ccdde;
+}
+
+.icon{
+    font-size: 50px;
+    padding: 15px 15px 0 15px;
+    width: 100%;
+    -webkit-user-drag: none;
+}
+
+.itemLabel{
+    font-size: 12px;
+}
+
+/* .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+} */
