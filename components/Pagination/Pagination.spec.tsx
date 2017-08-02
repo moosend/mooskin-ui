@@ -12,7 +12,6 @@ describe('Pagination', () => {
             <Pagination items={10} onClick={() => 'asd'}/>
         );
 
-        // expect(tree).toMatchSnapshot();
-        expect(tree).toBeTruthy();
+        expect(tree).toMatchSnapshot();
     });
 });
