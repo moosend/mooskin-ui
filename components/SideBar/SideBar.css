@@ -28,6 +28,15 @@
     -webkit-user-drag: none;
 }
 
+.button{
+    width: 60px;
+    height: 60px;
+}
+
+.button i{
+    font-size: 50px;
+}
+
 .itemLabel{
     font-size: 12px;
 }

@@ -2,7 +2,12 @@ import * as React from 'react';
 
 import styles from './SideBar.css';
 
+import {SmallIconButton} from '../index';
+
 export interface ISideBarProps{
+
+    /** wether the sidebar should be toggable by a button */
+    button?: boolean;
 
     /** sidebar class */
     className?: string;
@@ -44,6 +49,7 @@ export interface ISideBarItemProps{
 
 export interface ISideBarState {
     activeItem?: number;
+    display?: boolean;
 }
 
 export default class SideBar extends React.Component<ISideBarProps, ISideBarState>{
@@ -60,18 +66,34 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         super(props);
 
         this.state = {
-            activeItem: this.getActiveItem()
+            activeItem: this.getActiveItem(),
+            display: false
         };
     }
 
     public render(){
 
-        return(
+        const barDisplay = this.props.button ? this.state.display : true;
+
+        const button = !this.props.button ? '' : (
+            <div>
+                <SmallIconButton icon="view headline" onClick={this.onClickButton()} className={styles.button} />
+            </div>
+        );
+
+        const sideBar = (
             <div
-                className={`sidebar-component ${styles.sidebar} ${this.props.className}`}
-                style={this.props.style}
+                className={`${styles.sidebar} ${this.props.className}`}
+                style={{display: barDisplay ? 'block' : 'none', ...this.props.style}}
             >
                 {this.getItems()}
+            </div>
+        );
+
+        return(
+            <div className={`sidebar-component`}>
+                {button}
+                {sideBar}
             </div>
         );
 
@@ -100,6 +122,12 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         });
 
         return items;
+    }
+
+    private onClickButton = () => {
+        return (e: React.MouseEvent<HTMLDivElement>) => {
+            this.setState({display: !this.state.display});
+        };
     }
 
     private onClickItem = (itemIndex: number) => {
