@@ -53,6 +53,7 @@
 :global(.m-input-moment){
     background-color: #ffffff;
     user-select: none;
+    height: 355px;
 }
 
 :global(.m-input-moment .tabs){
