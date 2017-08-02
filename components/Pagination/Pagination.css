@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: var(--heading);
+    color: var(--inputFontColor);
     border-radius: 3px; 
     user-select: none;
 }
