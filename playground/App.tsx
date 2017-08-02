@@ -33,7 +33,7 @@ import TopNotification from './examples/TopNotification.example';
 
 export default (props: any) => {
     return(
-        <Grid style={{marginLeft: 90}}>
+        <Grid>
             <Row>
                 <Col>
                     <SideBar />

@@ -49,7 +49,7 @@ export interface ISideBarItemProps{
 
 export interface ISideBarState {
     activeItem?: number;
-    display?: boolean;
+    width: number;
 }
 
 export default class SideBar extends React.Component<ISideBarProps, ISideBarState>{
@@ -67,13 +67,13 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
         this.state = {
             activeItem: this.getActiveItem(),
-            display: false
+            width: this.props.button ? 0 : 90
         };
     }
 
     public render(){
 
-        const barDisplay = this.props.button ? this.state.display : true;
+        const cover = this.state.width > 0 ? (<div className={styles.cover} onClick={this.toggle}/>) : '';
 
         const button = !this.props.button ? '' : (
             <div>
@@ -84,9 +84,10 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         const sideBar = (
             <div
                 className={`${styles.sidebar} ${this.props.className}`}
-                style={{display: barDisplay ? 'block' : 'none', ...this.props.style}}
+                style={{width: this.state.width, ...this.props.style}}
             >
                 {this.getItems()}
+                {cover}
             </div>
         );
 
@@ -126,7 +127,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     private onClickButton = () => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
-            this.setState({display: !this.state.display});
+            this.setState({width: 90});
         };
     }
 
@@ -147,6 +148,10 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         }
 
         return activeItem;
+    }
+
+    private toggle = () => {
+        this.setState({width: 0});
     }
 }
 

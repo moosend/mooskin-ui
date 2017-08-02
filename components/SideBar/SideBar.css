@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     background-color: #2D2D2D;
-    overflow: none; 
+    overflow-x: hidden;
     transition: 0.5s;
 }
 
@@ -15,6 +15,7 @@
     text-align: center;
     user-select: none;
     color: #fff;
+    display: block;
 }
 
 .activeItem{
@@ -39,6 +40,15 @@
 
 .itemLabel{
     font-size: 12px;
+}
+
+.cover{
+    position: fixed;
+    z-index: -1;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
 }
 
 /* .closebtn {
