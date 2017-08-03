@@ -120,6 +120,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                         key={index}
                         image={child.props.image}
                         label={child.props.label}
+                        href={child.props.href}
                         active={this.state.activeItem === index}
                         onClick={this.onClickItem(index, child)}
                         onMouseEnter={child.props.onMouseEnter}
@@ -150,17 +151,14 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         };
     }
 
-    private getActiveItem(): number {
-        let activeItem = 0;
+    private getActiveItem() {
         const childrenArray = React.Children.toArray(this.props.children);
 
         for (const [index, value] of childrenArray.entries()){
             if (React.isValidElement<ISideBarItemProps>(value) && value.props.active){
-                activeItem = index;
+                return index;
             }
         }
-
-        return activeItem;
     }
 
     private getCover = () => {
@@ -202,7 +200,7 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
         >
             <a href={props.href} className={styles.anchor}>
                 <img src={props.image} className={styles.image} />
-                <span className={styles.itemLabel}>{props.label}</span>
+                <span>{props.label}</span>
             </a>
             <div>
                 {props.children}

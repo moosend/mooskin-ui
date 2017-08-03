@@ -10,12 +10,14 @@
     background-color: #2D2D2D;
     overflow-x: hidden;
     transition: 0.5s;
+    color: #fff; 
+    white-space: nowrap;
+    font-size: 12px;
 }
 
 .itemContainer{
     padding-top: 15px; 
     user-select: none;
-    color: #fff; 
 }
 
 .anchor{
@@ -24,6 +26,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;    
 }
 
 .itemContainer:hover{
@@ -37,11 +40,6 @@
 .image{
     width: 80px;
     -webkit-user-drag: none;
-}
-
-.itemLabel{
-    white-space: nowrap;
-    font-size: 12px;
 }
 
 .button{
@@ -61,11 +59,3 @@
     bottom: 0px;
     left: 0px;
 }
-
-/* .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-} */

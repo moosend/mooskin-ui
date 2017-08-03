@@ -25,7 +25,6 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
             <SideBar width={this.state.sidebar1} button >
                 <Item
                     image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
-                    href="https://www.google.com"
                     label="Automations"
                     onClick={this.onItemClick}
                 />
@@ -42,11 +41,13 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
                     label="SideBar 2"
                     onMouseEnter={this.sidebarTwoOn}
                     onMouseLeave={this.sidebarTwoOff}
+                    href="automations/list"
                 >
-                    <SideBar width={this.state.sidebar2} style={{marginLeft: this.state.sidebar1}} >
+                    <SideBar
+                        width={this.state.sidebar2}
+                        style={{marginLeft: this.state.sidebar1, background: '#efefef', color: '#000', fontSize: 25}}
+                    >
                         <Item
-                            image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
-                            href="https://www.google.com"
                             label="SideBar 3"
                             onMouseEnter={this.sidebarThreeOn}
                             onMouseLeave={this.sidebarThreeOff}
@@ -58,7 +59,7 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
                                 <Item
                                     image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
                                     href="https://www.google.com"
-                                    label="SideBar 3"
+                                    label="Automations"
                                 />
                                 <Item
                                     image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
@@ -71,11 +72,9 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
                             </SideBar>
                         </Item>
                         <Item
-                            image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
                             label="Mailing List"
                         />
                         <Item
-                            image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
                             label="Campaigns"
                         />
                     </SideBar>
@@ -88,21 +87,21 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
         console.log('First Item Clicked');
     }
 
-    private sidebarTwoOn = (e: React.MouseEvent<HTMLDivElement>) => {
+    private sidebarTwoOn = () => {
         // console.log(name);
         this.setState({sidebar2: 200});
     }
 
-    private sidebarTwoOff = (e: React.MouseEvent<HTMLDivElement>) => {
+    private sidebarTwoOff = () => {
         this.setState({sidebar2: 0});
     }
 
-    private sidebarThreeOn = (e: React.MouseEvent<HTMLDivElement>) => {
+    private sidebarThreeOn = () => {
         // console.log(name);
         this.setState({sidebar3: 90});
     }
 
-    private sidebarThreeOff = (e: React.MouseEvent<HTMLDivElement>) => {
+    private sidebarThreeOff = () => {
         this.setState({sidebar3: 0});
     }
 }
