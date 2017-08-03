@@ -31,6 +31,7 @@
 }
 
 .itemContainer{
+    z-index: 5;
     padding-top: 25px; 
     user-select: none;
 }
@@ -91,7 +92,7 @@
         font-size: 8vw;
     }
 
-    /* .sidebar{
+    .sidebar{
         font-size: 4vw;
     }
 
@@ -99,9 +100,14 @@
         padding-top: 3vw;
     }
 
+    .sidebarOn{
+        width: 50%;
+    }
+
     .sidebar img{
         display: none;
-    } */
+    }
+
 }
 
 @media (--deviceXsmall){
@@ -118,7 +124,7 @@
         font-size: 8vw;
     }
 
-     .sidebar{
+    .sidebar{
         font-size: 4vw;
     }
 
@@ -132,5 +138,5 @@
 
     .sidebar img{
         display: none;
-    } 
+    }
 }
