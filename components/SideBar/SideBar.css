@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     height: 100%; /* 100% Full-height */
-    width: 90px ; /* 0 width - change this with JavaScript */
+    width: 0px;
     position: fixed; /* Stay in place */
     z-index: 9; /* Stay on top */
     top: 0;
@@ -14,7 +14,20 @@
     overflow-x: hidden;
     transition: 0.5s;
     color: #fff; 
+    font-size: 12px;
     white-space: nowrap;
+}
+
+.sidebarOn{
+    width: 100px;
+}
+
+.sidebarOff{
+    width: 0px;
+}
+
+.sidebar.sidebarOff{
+    font-size: 0;
 }
 
 .itemContainer{
@@ -29,7 +42,7 @@
     align-items: center;
     cursor: pointer;
     text-decoration: none;  
-    color: #fff;
+    color: inherit;
 }
 
 .activeItem{
@@ -40,20 +53,9 @@
     color: var(--moosendBlue);
 }
 
-.anchor:visited{
-    color: #fff;
-}
-
-.anchor:visited:hover{
-    color: var(--moosendBlue);
-}
-
-.anchor:visited.activeItem{
-    color: var(--moosendBlue);
-}
-
 .image{
     width: 80px;
+    margin-bottom: 10px;
     -webkit-user-drag: none;
 }
 
@@ -64,14 +66,6 @@
 
 .button i{
     font-size: 50px;
-}
-
-.withImg{
-    font-size: 12px;    
-}
-
-.noImg{
-    font-size: 30px;
 }
 
 .cover{
@@ -85,10 +79,6 @@
 
 @media (--deviceSmall){
     
-    .sidebar .withImg{
-        display: none;
-    }
-
     .button{
         position: fixed;
         bottom: 2vw;
@@ -116,10 +106,6 @@
 
 @media (--deviceXsmall){
 
-    .sidebar .withImg{
-        display: none;
-    }
-
     .button{
         position: fixed;
         bottom: 2vw;
@@ -132,7 +118,7 @@
         font-size: 8vw;
     }
 
-    /* .sidebar{
+     .sidebar{
         font-size: 4vw;
     }
 
@@ -140,7 +126,11 @@
         padding-top: 3vw;
     }
 
+    .sidebarOn{
+        width: 50%;
+    }
+
     .sidebar img{
         display: none;
-    } */
+    } 
 }

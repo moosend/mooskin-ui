@@ -3,9 +3,9 @@ import * as React from 'react';
 import SideBar, {Item} from '../../components/SideBar';
 
 export interface ISideBarState{
-    sidebar1: number;
-    sidebar2: number;
-    sidebar3: number;
+    sidebar1: boolean;
+    sidebar2: boolean;
+    sidebar3: boolean;
 }
 
 export default class SideBarExample extends React.Component<{}, ISideBarState>{
@@ -14,19 +14,18 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
         super(props);
 
         this.state = {
-            sidebar1: 90,
-            sidebar2: 0.1,
-            sidebar3: 0.1
+            sidebar1: false,
+            sidebar2: false,
+            sidebar3: false
         };
     }
 
     public render(){
         return(
-            <SideBar width={this.state.sidebar1} button >
+            <SideBar display={this.state.sidebar1} onClick={this.onButtonClick} button >
                 <Item
                     image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
                     label="Automations"
-                    onClick={this.onItemClick}
                     href="automations"
                 />
                 <Item
@@ -37,21 +36,21 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
                 <Item
                     image="https://www.easyprogramming.net/logo/js.png"
                     label="SideBar 2"
-                    onMouseEnter={this.sidebarTwoOn}
-                    onMouseLeave={this.sidebarTwoOff}
+                    onMouseEnter={this.sidebarTwo}
+                    onMouseLeave={this.sidebarTwo}
                 >
                     <SideBar
-                        width={this.state.sidebar2}
-                        style={{marginLeft: this.state.sidebar1, background: '#efefef', color: '#000'}}
+                        display={this.state.sidebar2}
+                        style={{marginLeft: 100, background: '#efefef', color: '#000'}}
                     >
                         <Item
                             label="SideBar 3"
-                            onMouseEnter={this.sidebarThreeOn}
-                            onMouseLeave={this.sidebarThreeOff}
+                            onMouseEnter={this.sidebarThree}
+                            onMouseLeave={this.sidebarThree}
                         >
                             <SideBar
-                                width={this.state.sidebar3}
-                                style={{marginLeft: this.state.sidebar2 + this.state.sidebar1}}
+                                display={this.state.sidebar3}
+                                style={{marginLeft: 200}}
                             >
                                 <Item
                                     image="https://www.easyprogramming.net/logo/js.png"
@@ -61,6 +60,7 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
                                 <Item
                                     image="http://hguochen.com/static/img/tech/css3.png"
                                     label="Mailing List"
+                                    href="mailing/list"
                                 />
                                 <Item
                                     image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
@@ -80,25 +80,20 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
         );
     }
 
-    private onItemClick = () => {
-        console.log('First Item Clicked');
+    private onButtonClick = () => {
+        this.setState({sidebar1: true});
     }
 
-    private sidebarTwoOn = () => {
+    private sidebarTwo = () => {
         // console.log(name);
-        this.setState({sidebar2: 200});
+        this.setState({sidebar2: !this.state.sidebar2});
     }
 
-    private sidebarTwoOff = () => {
-        this.setState({sidebar2: 0});
-    }
-
-    private sidebarThreeOn = () => {
+    private sidebarThree = () => {
         // console.log(name);
-        this.setState({sidebar3: 90});
+        this.setState({sidebar3: !this.state.sidebar3});
     }
 
-    private sidebarThreeOff = () => {
-        this.setState({sidebar3: 0});
-    }
 }
+
+
