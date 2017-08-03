@@ -9,6 +9,12 @@ export interface ISideBarProps{
     /** wether the sidebar should be toggable by a button */
     button?: boolean;
 
+    /** sidebar width */
+    width?: number;
+
+    /** a secondary sidebar coming from a sidebar item */
+    secondary?: boolean;
+
     /** sidebar class */
     className?: string;
 
@@ -43,7 +49,7 @@ export interface ISideBarItemProps{
     onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
     /** item children */
-    children?: React.ReactElement<ISideBarItemProps>;
+    children?: React.ReactElement<ISideBarProps>;
 
 }
 
@@ -56,7 +62,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     public static defaultProps = {
         className: '',
-        style: {}
+        style: {},
     };
 
     public static Item: React.StatelessComponent<ISideBarItemProps>;
@@ -67,24 +73,21 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
         this.state = {
             activeItem: this.getActiveItem(),
-            width: this.props.button ? 0 : 90
+            width: this.props.button || this.props.secondary ? 0 : this.props.width ? this.props.width : 90
         };
     }
 
     public render(){
 
-        const cover = this.state.width > 0 ? (<div className={styles.cover} onClick={this.toggle}/>) : '';
+        const cover = this.getCover();
 
-        const button = !this.props.button ? '' : (
-            <div>
-                <SmallIconButton icon="view headline" onClick={this.onClickButton()} className={styles.button} />
-            </div>
-        );
+        const button = this.getButton();
 
         const sideBar = (
             <div
                 className={`${styles.sidebar} ${this.props.className}`}
                 style={{width: this.state.width, ...this.props.style}}
+                onMouseLeave={this.toggle}
             >
                 {this.getItems()}
                 {cover}
@@ -106,7 +109,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
         React.Children.forEach(this.props.children, (child, index) => {
             if (React.isValidElement<ISideBarItemProps>(child)){
-
                 items.push(
                     <Item
                         key={index}
@@ -114,7 +116,9 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                         label={child.props.label}
                         active={this.state.activeItem === index}
                         onClick={this.onClickItem(index)}
-                    />
+                    >
+                        {child.props.children}
+                    </Item>
                 );
 
             }else{
@@ -125,9 +129,20 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         return items;
     }
 
+    // private getChildren = (secondary: any) => {
+    //     const extraProps: Partial<ISideBarProps & {key: number}> = {
+    //         width: this.props.width ? this.props.width * 3 : 200
+    //     };
+    //     return(React.cloneElement(secondary, extraProps));
+    // }
+
+    // private onItemHover = () => {
+    //     this.setState({width: })
+    // }
+
     private onClickButton = () => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
-            this.setState({width: 90});
+            this.setState({width: this.props.width ? this.props.width : 90});
         };
     }
 
@@ -150,6 +165,26 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         return activeItem;
     }
 
+    private getCover = () => {
+        if (this.props.button && this.state.width > 0){
+            return (<div className={styles.cover} onClick={this.toggle}/>);
+        } else {
+            return '';
+        }
+    }
+
+    private getButton = () => {
+        if (this.props.button){
+            return (
+                <div>
+                    <SmallIconButton icon="view headline" onClick={this.onClickButton()} className={styles.button} />
+                </div>
+            );
+        } else {
+            return '';
+        }
+    }
+
     private toggle = () => {
         this.setState({width: 0});
     }
@@ -170,7 +205,7 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
             className={`item-component ${activeItem} ${styles.itemContainer} ${props.className}`}
             style={props.style}
         >
-            <a href={props.href}>
+            <a onClick={this.itsOver} href={props.href} className={styles.anchor}>
                 <img src={props.image} className={styles.image} />
                 <span className={styles.itemLabel}>{props.label}</span>
             </a>

@@ -42,9 +42,6 @@ export interface ISwitchProps {
     /** callback that is called when the switch changes */
     onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 
-    /** callback that is called when the switch changes */
-    onTouch?: (e: React.TouchEvent<HTMLElement>, data: IInputCallbackData) => void;
-
 }
 
 class Switch extends React.Component<ISwitchProps, {}> {
@@ -83,7 +80,6 @@ class Switch extends React.Component<ISwitchProps, {}> {
                     id={id}
                     style={style}
                     onClick={this.onClick}
-                    onTouchStart={this.onTouch}
                     className={`switch-component ${toggleClasses} ${disabledSwitch} ${styles.switch} ${className}`}
                 >
                     <span className={`switch-component ${styles.slider}`}/>
@@ -98,12 +94,6 @@ class Switch extends React.Component<ISwitchProps, {}> {
         !this.props.disabled &&
         this.props.onClick &&
         this.props.onClick(e, {value: !this.props.on && !this.props.disabled, dataLabel: this.props.dataLabel});
-    }
-
-    private onTouch = (e: React.TouchEvent<HTMLElement>, data?: IInputCallbackData) => {
-        !this.props.disabled &&
-        this.props.onTouch &&
-        this.props.onTouch(e, {value: !this.props.on && !this.props.disabled, dataLabel: this.props.dataLabel});
     }
 
     private switchLabel = () => {
