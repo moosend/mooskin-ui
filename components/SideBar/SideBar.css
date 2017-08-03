@@ -26,22 +26,26 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    text-decoration: none;    
+    text-decoration: none;  
+}
+
+.activeItem{
+    color: #5ccdde;
+}
+
+.anchor:hover{
+    color: #5ccdde;
 }
 
 .anchor:visited{
     color: #fff;
 }
 
-.anchor:visited, .activeItem{
-    color: #5ccdde;
-}
-
 .anchor:visited:hover{
     color: #5ccdde;
 }
 
-.activeItem{
+.anchor:visited.activeItem{
     color: #5ccdde;
 }
 
