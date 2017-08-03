@@ -195,10 +195,10 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
             onClick={props.onClick}
             onMouseEnter={props.onMouseEnter}
             onMouseLeave={props.onMouseLeave}
-            className={`item-component ${activeItem} ${styles.itemContainer} ${props.className}`}
+            className={`item-component ${styles.itemContainer} ${props.className}`}
             style={props.style}
         >
-            <a href={props.href} className={styles.anchor}>
+            <a href={props.href} className={`${styles.anchor} ${activeItem}`}>
                 <img src={props.image} className={styles.image} />
                 <span>{props.label}</span>
             </a>

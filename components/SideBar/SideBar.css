@@ -29,7 +29,15 @@
     text-decoration: none;    
 }
 
-.itemContainer:hover{
+.anchor:visited{
+    color: #fff;
+}
+
+.anchor:visited, .activeItem{
+    color: #5ccdde;
+}
+
+.anchor:visited:hover{
     color: #5ccdde;
 }
 
