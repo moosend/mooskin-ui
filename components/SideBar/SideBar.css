@@ -1,3 +1,6 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -12,11 +15,10 @@
     transition: 0.5s;
     color: #fff; 
     white-space: nowrap;
-    font-size: 12px;
 }
 
 .itemContainer{
-    padding-top: 15px; 
+    padding-top: 25px; 
     user-select: none;
 }
 
@@ -30,11 +32,11 @@
 }
 
 .activeItem{
-    color: #5ccdde;
+    color: var(--moosendBlue);
 }
 
 .anchor:hover{
-    color: #5ccdde;
+    color: var(--moosendBlue);
 }
 
 .anchor:visited{
@@ -42,11 +44,11 @@
 }
 
 .anchor:visited:hover{
-    color: #5ccdde;
+    color: var(--moosendBlue);
 }
 
 .anchor:visited.activeItem{
-    color: #5ccdde;
+    color: var(--moosendBlue);
 }
 
 .image{
@@ -63,6 +65,14 @@
     font-size: 50px;
 }
 
+.withImg{
+    font-size: 12px;    
+}
+
+.noImg{
+    font-size: 30px;
+}
+
 .cover{
     position: fixed;
     z-index: -1;
@@ -70,4 +80,42 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
+}
+
+@media (--deviceSmall){
+    
+    .sidebar .withImg{
+        display: none;
+    }
+
+    /* .sidebar{
+        font-size: 4vw;
+    }
+
+    .itemContainer{
+        padding-top: 3vw;
+    }
+
+    .sidebar img{
+        display: none;
+    } */
+}
+
+@media (--deviceXsmall){
+
+    .sidebar .withImg{
+        display: none;
+    }
+
+    /* .sidebar{
+        font-size: 4vw;
+    }
+
+    .itemContainer{
+        padding-top: 3vw;
+    }
+
+    .sidebar img{
+        display: none;
+    } */
 }

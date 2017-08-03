@@ -189,6 +189,9 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
 
     const activeItem = props.active ? styles.activeItem : '';
+    const label = props.image ?
+        (<span className={styles.withImg}>{props.label}</span>) :
+        (<span className={styles.noImg}>{props.label}</span>);
 
     return(
         <div
@@ -200,7 +203,7 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
         >
             <a href={props.href} className={`${styles.anchor} ${activeItem}`}>
                 <img src={props.image} className={styles.image} />
-                <span>{props.label}</span>
+                <span>{label}</span>
             </a>
             <div>
                 {props.children}

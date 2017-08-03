@@ -27,21 +27,17 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
                     image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
                     label="Automations"
                     onClick={this.onItemClick}
+                    href="automations/list"
                 />
                 <Item
-                    image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
+                    image="http://hguochen.com/static/img/tech/css3.png"
                     label="Mailing List"
                 />
                 <Item
-                    image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
-                    label="Campaigns"
-                />
-                <Item
-                    image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
+                    image="https://www.easyprogramming.net/logo/js.png"
                     label="SideBar 2"
                     onMouseEnter={this.sidebarTwoOn}
                     onMouseLeave={this.sidebarTwoOff}
-                    href="automations/list"
                 >
                     <SideBar
                         width={this.state.sidebar2}
@@ -57,12 +53,12 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
                                 style={{marginLeft: this.state.sidebar2 + this.state.sidebar1}}
                             >
                                 <Item
-                                    image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
+                                    image="https://www.easyprogramming.net/logo/js.png"
                                     href="https://www.google.com"
                                     label="Automations"
                                 />
                                 <Item
-                                    image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
+                                    image="http://hguochen.com/static/img/tech/css3.png"
                                     label="Mailing List"
                                 />
                                 <Item
