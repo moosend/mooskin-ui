@@ -27,11 +27,12 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
                     image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
                     label="Automations"
                     onClick={this.onItemClick}
-                    href="automations/list"
+                    href="automations"
                 />
                 <Item
                     image="http://hguochen.com/static/img/tech/css3.png"
                     label="Mailing List"
+                    href="mailing/list"
                 />
                 <Item
                     image="https://www.easyprogramming.net/logo/js.png"
@@ -41,7 +42,7 @@ export default class SideBarExample extends React.Component<{}, ISideBarState>{
                 >
                     <SideBar
                         width={this.state.sidebar2}
-                        style={{marginLeft: this.state.sidebar1, background: '#efefef', color: '#000', fontSize: 25}}
+                        style={{marginLeft: this.state.sidebar1, background: '#efefef', color: '#000'}}
                     >
                         <Item
                             label="SideBar 3"
