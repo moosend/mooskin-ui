@@ -46,7 +46,7 @@ export default class BreadcrumbsGroup extends React.Component<IBreadcrumbsGroupP
 
         return (
             <div className={`${styles.breadcrumbsGroup} ${className}`}>
-                <div className={styles.breadCrumbsContainer}>{this.props.children}</div>
+                <div className={styles.breadcrumbsContainer}>{this.props.children}</div>
                 <div>{this.renderBodies()}</div>
             </div>
         );
@@ -70,7 +70,9 @@ export const Breadcrumb: React.StatelessComponent<IBreadcrumbProps> = (props) =>
     const active = props.active ? styles.activeBreadcrumb : '';
 
     return (
-        <div className={`${styles.breadcrumb} ${props.className} ${active}`}>{props.title}</div>
+        <div className={`${styles.breadcrumb} ${props.className} ${active}`}>
+            <a href="javascript:void(0)">{props.title}</a>
+        </div>
     );
 };
 
@@ -79,7 +81,7 @@ export const BreadcrumbBody: React.StatelessComponent<IBreadcrumbBodyProps> = (p
     const display = props.active ? 'block' : 'none';
 
     return (
-        <div style={{display}}>
+        <div className={styles.breadcrumbBody} style={{display}}>
             {props.content}
         </div>
     );

@@ -9,14 +9,14 @@ class BreadcrumbsExample extends React.Component {
         return(
             <div>
                 <BreadcrumbsGroup>
-                    <Breadcrumb title="breadcrumb 1" active>
-                        content 1
+                    <Breadcrumb title="Breadcrumb 1" active>
+                        Content 1
                     </Breadcrumb>
-                    <Breadcrumb title="breadcrumb 2">
-                        content 2
+                    <Breadcrumb title="Breadcrumb 2">
+                        Content 2
                     </Breadcrumb>
-                    <Breadcrumb title="breadcrumb 3">
-                        content 3
+                    <Breadcrumb title="Breadcrumb 3">
+                        Content 3
                     </Breadcrumb>
                 </BreadcrumbsGroup>
             </div>
