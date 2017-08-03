@@ -31,7 +31,6 @@
 }
 
 .itemContainer{
-    z-index: 5;
     padding-top: 25px; 
     user-select: none;
 }
