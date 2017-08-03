@@ -1,0 +1,29 @@
+class BreadcrumbsExample extends React.Component {
+
+    constructor(){
+        super();
+        this.onClick = this.onClick.bind(this);
+    }
+
+    render(){
+        return(
+            <div>
+                <BreadcrumbsGroup>
+                    <Breadcrumb title="breadcrumb 1" active>
+                        content 1
+                    </Breadcrumb>
+                    <Breadcrumb title="breadcrumb 2">
+                        content 2
+                    </Breadcrumb>
+                    <Breadcrumb title="breadcrumb 3">
+                        content 3
+                    </Breadcrumb>
+                </BreadcrumbsGroup>
+            </div>
+        );
+    }
+
+    onClick(e) {
+        console.log(e.target);
+    }
+}

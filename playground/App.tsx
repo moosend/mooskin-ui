@@ -6,6 +6,7 @@ import * as React from 'react';
 import {Col, Grid, Row} from '../components/index';
 
 import Bar from './examples/Bar.example';
+import Breadcrumbs from './examples/Breadcrumbs.example';
 import Button from './examples/Button.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
@@ -35,6 +36,9 @@ export default (props: any) => {
     return(
         <Grid>
             <Row>
+                <Col lg={12} md={12}>
+                    <Breadcrumbs />
+                </Col>
                 <Col lg={12} md={12}>
                     <Pagination />
                 </Col>

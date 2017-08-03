@@ -1,0 +1,20 @@
+.breadcrumbsGroup {
+    width: 100%;
+}
+
+.breadCrumbsContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.breadCrumb{
+
+}
+
+.activeBreadcrumb{
+
+}
+
+.breadCrumbContainer{
+
+}
