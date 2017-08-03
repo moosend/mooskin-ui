@@ -165,7 +165,7 @@
 
     :global(div.m-calendar td){
         height: 13vw;
-        font-size: 3vw; 
+        font-size: 4.5vw; 
     }
     
     :global(.current-date){
@@ -282,7 +282,7 @@
 
     :global(div.m-calendar td){
         height: 13vw;
-        font-size: 3vw; 
+        font-size: 4.5vw; 
     }
     
     :global(.current-date){
