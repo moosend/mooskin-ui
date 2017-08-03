@@ -10,10 +10,7 @@ export interface ISideBarProps{
     button?: boolean;
 
     /** sidebar width */
-    width?: number;
-
-    /** a secondary sidebar coming from a sidebar item */
-    secondary?: boolean;
+    width: number;
 
     /** sidebar class */
     className?: string;
@@ -48,6 +45,12 @@ export interface ISideBarItemProps{
     /** callback function when item is clicked */
     onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
+    /** callback function when mouse enters the Item, mainly used to toggle secondary sidebars */
+    onMouseEnter?: (e: React.MouseEvent<HTMLDivElement>) => void;
+
+    /** callback function when mouse leaves the item, mainly used to toggle secondary sidebars */
+    onMouseLeave?: (e: React.MouseEvent<HTMLDivElement>) => void;
+
     /** item children */
     children?: React.ReactElement<ISideBarProps>;
 
@@ -73,8 +76,12 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
         this.state = {
             activeItem: this.getActiveItem(),
-            width: this.props.button || this.props.secondary ? 0 : this.props.width ? this.props.width : 90
+            width: this.props.button ? 0 : this.props.width
         };
+    }
+
+    public componentWillReceiveProps(nextProps: ISideBarProps) {
+        this.setState({ width: nextProps.width });
     }
 
     public render(){
@@ -87,7 +94,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
             <div
                 className={`${styles.sidebar} ${this.props.className}`}
                 style={{width: this.state.width, ...this.props.style}}
-                onMouseLeave={this.toggle}
             >
                 {this.getItems()}
                 {cover}
@@ -115,7 +121,9 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                         image={child.props.image}
                         label={child.props.label}
                         active={this.state.activeItem === index}
-                        onClick={this.onClickItem(index)}
+                        onClick={this.onClickItem(index, child)}
+                        onMouseEnter={child.props.onMouseEnter}
+                        onMouseLeave={child.props.onMouseLeave}
                     >
                         {child.props.children}
                     </Item>
@@ -129,25 +137,15 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         return items;
     }
 
-    // private getChildren = (secondary: any) => {
-    //     const extraProps: Partial<ISideBarProps & {key: number}> = {
-    //         width: this.props.width ? this.props.width * 3 : 200
-    //     };
-    //     return(React.cloneElement(secondary, extraProps));
-    // }
-
-    // private onItemHover = () => {
-    //     this.setState({width: })
-    // }
-
     private onClickButton = () => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
-            this.setState({width: this.props.width ? this.props.width : 90});
+            this.setState({width: this.props.width});
         };
     }
 
-    private onClickItem = (itemIndex: number) => {
+    private onClickItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
+            item.props.onClick && item.props.onClick(e);
             this.setState({activeItem: itemIndex});
         };
     }
@@ -192,20 +190,17 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
 export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
 
-    const itsOver = () => {
-        console.log('its above');
-    };
-
     const activeItem = props.active ? styles.activeItem : '';
 
     return(
         <div
             onClick={props.onClick}
-            onMouseEnter={itsOver}
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
             className={`item-component ${activeItem} ${styles.itemContainer} ${props.className}`}
             style={props.style}
         >
-            <a onClick={this.itsOver} href={props.href} className={styles.anchor}>
+            <a href={props.href} className={styles.anchor}>
                 <img src={props.image} className={styles.image} />
                 <span className={styles.itemLabel}>{props.label}</span>
             </a>
