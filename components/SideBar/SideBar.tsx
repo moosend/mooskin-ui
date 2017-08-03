@@ -27,8 +27,8 @@ export interface ISideBarItemProps{
     /** item label */
     label?: string;
 
-    /** item icon */
-    icon?: string;
+    /** item image */
+    image?: string;
 
     /** if active */
     active?: boolean;
@@ -110,7 +110,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                 items.push(
                     <Item
                         key={index}
-                        icon={child.props.icon}
+                        image={child.props.image}
                         label={child.props.label}
                         active={this.state.activeItem === index}
                         onClick={this.onClickItem(index)}
@@ -157,16 +157,11 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
 export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
 
-    const getIcon = (icon?: string) => {
-        return props.icon ? props.icon.replace(/\s/g, '_') : '';
-    };
-
     const itsOver = () => {
         console.log('its above');
     };
 
     const activeItem = props.active ? styles.activeItem : '';
-    const iconFont = getIcon(props.icon);
 
     return(
         <div
@@ -176,7 +171,7 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
             style={props.style}
         >
             <a href={props.href}>
-                <i className={`material-icons ${styles.icon}`} >{iconFont}</i>
+                <img src={props.image} className={styles.image} />
                 <span className={styles.itemLabel}>{props.label}</span>
             </a>
             <div>

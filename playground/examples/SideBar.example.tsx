@@ -6,9 +6,9 @@ export default class SideBarExample extends React.Component{
     public render(){
         return(
             <SideBar button>
-                <Item icon="face" label="Item 1" />
-                <Item icon="face" label="Item 2" />
-                <Item icon="face" label="Item 3" />
+                <Item image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png" label="Item 1" />
+                <Item image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png" label="Item 2" />
+                <Item image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png" label="Item 3" />
             </SideBar>
         );
     }

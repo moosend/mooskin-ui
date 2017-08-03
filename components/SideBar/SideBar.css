@@ -22,11 +22,14 @@
     color: #5ccdde;
 }
 
-.icon{
-    font-size: 50px;
+.image{
+    width: 80px;
     padding: 15px 15px 0 15px;
-    width: 100%;
     -webkit-user-drag: none;
+}
+
+.itemLabel{
+    font-size: 12px;
 }
 
 .button{
@@ -36,10 +39,6 @@
 
 .button i{
     font-size: 50px;
-}
-
-.itemLabel{
-    font-size: 12px;
 }
 
 .cover{
