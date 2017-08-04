@@ -39,7 +39,7 @@ And then you can simply start using it by typing
 ```
 
 
-Individual Tab components have a required 'title' prop which will be displayed in the tab header, the rest are optional. You can puut whatever inside Tab tags, it will be displayed as content for that particular tab.
+Individual Tab components have a required 'title' prop which will be displayed in the tab header, the rest are optional. You can put whatever inside Tab tags, it will be displayed as content for that particular tab.
 
 ### Examples
 
