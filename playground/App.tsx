@@ -42,7 +42,7 @@ export default (props: any) => {
                 </Col>
             </Row>
             <Row>
-                <Col lg={12} md={12}>
+                <Col lg={12} md={12} />
                 <Col lg={6} md={12}>
                     <Breadcrumbs />
                 </Col>

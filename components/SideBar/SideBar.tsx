@@ -241,12 +241,12 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         };
     }
 
-    private onClickSecondaryItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
-        return (e: React.MouseEvent<HTMLDivElement>) => {
-            item.props.onClick && item.props.onClick(e);
-            this.setState({activeItem: itemIndex});
-        };
-    }
+    // private onClickSecondaryItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
+    //     return (e: React.MouseEvent<HTMLDivElement>) => {
+    //         item.props.onClick && item.props.onClick(e);
+    //         this.setState({activeItem: itemIndex});
+    //     };
+    // }
 
     private getActiveItem() {
         let activeItem = 0;
