@@ -26,4 +26,5 @@ export {default as Form, FormGroup} from '../Form';
 export {default as Table} from '../Table';
 export {default as Pagination} from '../Pagination';
 export {default as DatePicker} from '../DatePicker';
-export {default as SideBar, Item, Secondary} from '../SideBar';
+export {default as SideBar, Item} from '../SideBar';
+export {default as BreadcrumbsGroup, Breadcrumb} from '../Breadcrumbs';
