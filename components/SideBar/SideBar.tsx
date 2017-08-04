@@ -101,7 +101,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                 style={this.props.style}
             >
                 {this.getItems()}
-                {cover}
             </div>
         );
 
@@ -109,6 +108,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
             <div className={`sidebar-component`}>
                 {button}
                 {sideBar}
+                {cover}
             </div>
         );
 
