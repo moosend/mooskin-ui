@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs renders correctly 1`] = `
+<div
+  className="breadcrumbsGroup "
+>
+  <div
+    className="breadcrumbsContainer"
+  >
+    <Breadcrumb
+      active={true}
+      id="1"
+      title="Breadcrumb 1"
+    >
+      Content 1
+    </Breadcrumb>
+    <Breadcrumb
+      id="2"
+      title="Breadcrumb 2"
+    >
+      Content 2
+    </Breadcrumb>
+    <Breadcrumb
+      id="3"
+      title="Breadcrumb 3"
+    >
+      Content 3
+    </Breadcrumb>
+  </div>
+  <div>
+    <BreadcrumbBody
+      active={true}
+      content="Content 1"
+    />
+    <BreadcrumbBody
+      content="Content 2"
+    />
+    <BreadcrumbBody
+      content="Content 3"
+    />
+  </div>
+</div>
+`;
