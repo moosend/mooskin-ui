@@ -10,15 +10,27 @@
     z-index: 9; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #2D2D2D;
-    transition: 0.3s;
+    background: #2D2D2D;
+    transition: 0.5s;
     color: #fff; 
     font-size: 12px;
     white-space: nowrap;
 }
 
+.secondary{
+    z-index: -1;
+    left: 90px;
+    background: #efefef;
+    color: #636363;
+    font-size: 16px;
+}
+
+.secondaryOn{
+    width: 185px;
+}
+
 .sidebarOn{
-    width: 100px;
+    width: 90px;
     overflow-x: visible;    
 }
 
@@ -73,13 +85,15 @@
 
 .arrow{
     display: none;
-    z-index: 10;
+    z-index: 1;
     position: absolute;
-    left: 85px;
-    width: 25px;
-    height: 25px;
-    background: inherit;
-    transform: rotate(45deg)
+    width: 0; 
+    height: 0;
+    left: 90px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    
+    border-left: 15px solid #2D2D2D;
 }
 
 .itemContainer:hover > .arrow{

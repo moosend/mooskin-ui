@@ -9,14 +9,8 @@ export interface ISideBarProps{
     /** wether the sidebar should be toggable by a button */
     button?: boolean;
 
-    /** sidebar on/off */
-    display: boolean;
-
     /** sidebar class */
     className?: string;
-
-    /** callback function when sidebar Button is clicked */
-    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
     /** override sidebar styles */
     style?: React.CSSProperties;
@@ -45,23 +39,40 @@ export interface ISideBarItemProps{
     /** override sidebar styles */
     style?: React.CSSProperties;
 
-    /** callback function when item is clicked */
-    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
-
-    /** callback function when mouse enters the Item, mainly used to toggle secondary sidebars */
+    /** callback function when mouse enters the Item, mainly used to toggle secondary sidebar */
     onMouseEnter?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
-    /** callback function when mouse leaves the item, mainly used to toggle secondary sidebars */
+    /** callback function when mouse leaves the item, mainly used to toggle secondary sidebar */
     onMouseLeave?: (e: React.MouseEvent<HTMLDivElement>) => void;
+
+    /** callback function when item is clicked */
+    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
     /** item children */
     children?: React.ReactElement<ISideBarProps>;
 
 }
 
+export interface ISecondaryProps{
+
+    /** wether the sidebar should be displayed or not */
+    display?: boolean;
+
+    /** sidebar class */
+    className?: string;
+
+    /** override sidebar styles */
+    style?: React.CSSProperties;
+
+    /** sidebar children */
+    children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>;
+}
+
 export interface ISideBarState {
     activeItem?: number;
     display: boolean;
+    secondaryDisplay?: boolean;
+    // secondaryActive?: number;
 }
 
 export default class SideBar extends React.Component<ISideBarProps, ISideBarState>{
@@ -72,6 +83,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     };
 
     public static Item: React.StatelessComponent<ISideBarItemProps>;
+    public static Secondary: React.StatelessComponent<ISecondaryProps>;
 
     constructor(props: ISideBarProps){
 
@@ -79,17 +91,19 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
         this.state = {
             activeItem: this.getActiveItem(),
-            display: false
+            display: false,
+            // secondaryActive: this.getActiveSecondary(),
+            secondaryDisplay: false
         };
     }
 
     public componentWillMount(){
-        this.setState({display: this.props.display});
+        this.setState({display: this.getInitialState()});
     }
 
-    public componentWillReceiveProps(nextProps: ISideBarProps) {
-        this.setState({ display: nextProps.display});
-    }
+    // public componentWillReceiveProps(nextProps: ISideBarProps) {
+    //     this.setState({ display: nextProps.display});
+    // }
 
     public render(){
 
@@ -118,28 +132,53 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     }
 
+    private getInitialState = () => {
+        return this.props.button ? false : true;
+    }
+
     private getItems(){
 
         const items: Array<React.ReactElement<ISideBarItemProps>> = [];
 
         React.Children.forEach(this.props.children, (child, index) => {
+
             if (React.isValidElement<ISideBarItemProps>(child)){
-                items.push(
-                    <Item
-                        key={index}
-                        image={child.props.image}
-                        label={child.props.label}
-                        href={child.props.href}
-                        active={this.state.activeItem === index}
-                        onClick={this.onClickItem(index, child)}
-                        onMouseEnter={child.props.onMouseEnter}
-                        onMouseLeave={child.props.onMouseLeave}
-                        style={child.props.style}
-                        className={child.props.className}
-                    >
-                        {child.props.children}
-                    </Item>
-                );
+
+                const secondary = child.props.children ? this.getSecondary(child.props.children) : '';
+
+                if (child.props.children){
+                    items.push(
+                        <Item
+                            key={index}
+                            image={child.props.image}
+                            label={child.props.label}
+                            href={child.props.href}
+                            active={this.state.activeItem === index}
+                            onClick={this.onClickItem(index, child)}
+                            onMouseEnter={this.toggleSecondary}
+                            onMouseLeave={this.toggleSecondary}
+                            style={child.props.style}
+                            className={child.props.className}
+                        >
+                            {secondary || child.props.children}
+                        </Item>
+                    );
+                } else {
+                    items.push(
+                        <Item
+                            key={index}
+                            image={child.props.image}
+                            label={child.props.label}
+                            href={child.props.href}
+                            active={this.state.activeItem === index}
+                            onClick={this.onClickItem(index, child)}
+                            style={child.props.style}
+                            className={child.props.className}
+                        >
+                            {secondary || child.props.children}
+                        </Item>
+                    );
+                }
 
             }else{
                 throw new Error('<SideBar> only accepts <Item> elements as children');
@@ -149,9 +188,49 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         return items;
     }
 
+    private getSecondary = (secondary: React.ReactElement<ISideBarProps>) => {
+        if (React.isValidElement<ISideBarProps>(secondary)){
+            return (
+                <Secondary
+                    className={secondary.props.className}
+                    style={secondary.props.style}
+                    display={this.state.secondaryDisplay}
+                >
+                    {secondary.props.children}
+                    {/* {secondary.props.children && this.getSecondaryItems(secondary.props.children)} */}
+                </Secondary>
+            );
+        }
+    }
+
+    // private getSecondaryItems = (items: ISideBarItemProps[]) => {
+
+    //     const secondaryItems: any[] = [];
+
+    //     items.forEach((item: ISideBarItemProps, index: number) => {
+    //         if (React.isValidElement<ISideBarItemProps>(item)){
+    //             secondaryItems.push(
+    //                 <Item
+    //                     key={index}
+    //                     image={item.image}
+    //                     label={item.label}
+    //                     href={item.href}
+    //                     style={item.style}
+    //                     className={item.className}
+    //                 >
+    //                     {item.children}
+    //                 </Item>
+    //             );
+    //         }
+    //     });
+
+    //     return secondaryItems;
+
+    // }
+
     private onClickButton = () => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
-            this.props.onClick && this.props.onClick(e);
+            this.setState({display: true});
         };
     }
 
@@ -162,14 +241,24 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         };
     }
 
+    private onClickSecondaryItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
+        return (e: React.MouseEvent<HTMLDivElement>) => {
+            item.props.onClick && item.props.onClick(e);
+            this.setState({activeItem: itemIndex});
+        };
+    }
+
     private getActiveItem() {
+        let activeItem = 0;
         const childrenArray = React.Children.toArray(this.props.children);
 
         for (const [index, value] of childrenArray.entries()){
             if (React.isValidElement<ISideBarItemProps>(value) && value.props.active){
-                return index;
+                activeItem = index;
             }
         }
+
+        return activeItem;
     }
 
     private getCover = () => {
@@ -195,12 +284,17 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     private toggle = () => {
         this.setState({display: false});
     }
+
+    private toggleSecondary = () => {
+        this.setState({secondaryDisplay: !this.state.secondaryDisplay});
+    }
 }
 
 export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
 
     const activeItem = props.active ? styles.activeItem : '';
-    const arrow = props.image ? styles.arrowImg : styles.arrowNoImg;
+    const arrow = props.children ? styles.arrow : '';
+    const arrowStyle = props.image ? styles.arrowImg : styles.arrowNoImg;
 
     return(
         <div
@@ -210,7 +304,7 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
             className={`item-component ${styles.itemContainer} ${props.className}`}
             style={props.style}
         >
-            <div className={`${styles.arrow} ${arrow}`} />
+            <div className={`${arrow} ${arrowStyle}`} />
             <a
                 href={props.href}
                 className={`${styles.anchor} ${activeItem}`}
@@ -221,6 +315,20 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
             <div>
                 {props.children}
             </div>
+        </div>
+    );
+};
+
+export const Secondary: React.StatelessComponent<ISecondaryProps> = (props) => {
+
+    const display = props.display ? styles.secondaryOn : styles.sidebarOff;
+
+    return(
+        <div
+            className={`item-component ${styles.sidebar} ${styles.secondary} ${display} ${props.className}`}
+            style={props.style}
+        >
+            {props.children}
         </div>
     );
 };
