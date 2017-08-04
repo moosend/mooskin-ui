@@ -14,6 +14,9 @@ export interface IBreadcrumbProps{
     /** Breadcrumb class */
     className?: string;
 
+    /** id of the breadcrumb */
+    id: string;
+
     /** Breadcrumb title */
     title: string;
 
@@ -22,6 +25,9 @@ export interface IBreadcrumbProps{
 
     /** children here can be any elements */
     children?: any;
+
+    /** callback when clicking on a breadcrumb */
+    onClick?: (id: string) => void;
 }
 
 export interface IBreadcrumbBodyProps{
@@ -69,8 +75,12 @@ export const Breadcrumb: React.StatelessComponent<IBreadcrumbProps> = (props) =>
 
     const active = props.active ? styles.activeBreadcrumb : '';
 
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
+        props.onClick && props.onClick(props.id);
+    };
+
     return (
-        <div className={`${styles.breadcrumb} ${props.className} ${active}`}>
+        <div id={props.id} className={`${styles.breadcrumb} ${props.className} ${active}`} onClick={onClick}>
             <a href="javascript:void(0)">{props.title}</a>
         </div>
     );

@@ -9,16 +9,19 @@ exports[`Breadcrumbs renders correctly 1`] = `
   >
     <Breadcrumb
       active={true}
+      id="1"
       title="Breadcrumb 1"
     >
       Content 1
     </Breadcrumb>
     <Breadcrumb
+      id="2"
       title="Breadcrumb 2"
     >
       Content 2
     </Breadcrumb>
     <Breadcrumb
+      id="3"
       title="Breadcrumb 3"
     >
       Content 3

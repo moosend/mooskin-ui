@@ -168,6 +168,7 @@ import {Input} from 'mooskin'
 * [HorizontalRangeBar](https://github.com/moosend/mooskin-ui/tree/master/components/HorizontalRangeBar)
 * [Grid](https://github.com/moosend/mooskin-ui/tree/master/components/Grid)
 * [Pagination](https://github.com/moosend/mooskin-ui/tree/master/components/Pagination)
+* [Breadcrumbs](https://github.com/moosend/mooskin-ui/tree/master/components/Breadcrumbs)
 
 #### Charts
 * [Pie](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Pie)

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Readme from '../../components/Breadcrumbs/README.md';
 
-import {Breadcrumb, BreadcrumbsGroup} from '../../components/index/';
+import {Breadcrumb, BreadcrumbsGroup, Button} from '../../components/index/';
 
 import BreadcrumbsCode from './component-strings/Breadcrumbs.example.txt';
 
@@ -12,7 +12,7 @@ export default class BreadcrumbsExample extends React.Component<any, any> {
     public render(){
         return(
             <ReactLiveEditor
-                scope={{React, BreadcrumbsGroup, Breadcrumb}}
+                scope={{React, BreadcrumbsGroup, Breadcrumb, Button}}
                 code={BreadcrumbsCode}
                 title="Breadcrumbs Example"
                 doc={Readme}

@@ -2,28 +2,53 @@ class BreadcrumbsExample extends React.Component {
 
     constructor(){
         super();
-        this.onClick = this.onClick.bind(this);
+        this.onClickPrev = this.onClickPrev.bind(this);
+        this.onClickNext = this.onClickNext.bind(this);
+        this.state = {
+            activeStep: 1
+        }
     }
 
     render(){
+
+        const style = {
+            padding: '20px',
+            width: '100%',
+            height: '100px'
+        };
+
         return(
             <div>
                 <BreadcrumbsGroup>
-                    <Breadcrumb title="Breadcrumb 1" active>
-                        Content 1
+                    <Breadcrumb id="1" title="Breadcrumb 1" active={this.state.activeStep === 1}>
+                        <div style={style}>Some Content 1</div>
                     </Breadcrumb>
-                    <Breadcrumb title="Breadcrumb 2">
-                        Content 2
+                    <Breadcrumb id="2" title="Breadcrumb 2" active={this.state.activeStep === 2} onClick={this.onClick}>
+                        <div style={style}>Some Content 2</div>
                     </Breadcrumb>
-                    <Breadcrumb title="Breadcrumb 3">
-                        Content 3
+                    <Breadcrumb id="3" title="Breadcrumb 3" active={this.state.activeStep === 3}>
+                        <div style={style}>Some Content 3</div>
                     </Breadcrumb>
                 </BreadcrumbsGroup>
+                <Button onClick={this.onClickPrev} inverseStyle>Prev</Button>
+                <Button onClick={this.onClickNext}>Next</Button>
             </div>
         );
     }
 
-    onClick(e) {
-        console.log(e.target);
+    onClick(id) {
+        console.log(id);
+    }
+
+    onClickPrev(e) {
+        if(this.state.activeStep > 1){
+            this.setState({activeStep: this.state.activeStep - 1});
+        }
+    }
+
+    onClickNext(e) {
+        if(this.state.activeStep < 3){
+            this.setState({activeStep: this.state.activeStep + 1});
+        }
     }
 }
