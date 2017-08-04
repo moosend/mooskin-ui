@@ -1,4 +1,5 @@
 @import '../_utils/globals/screens.css';
+@import '../_utils/globals/variables.css';
 @import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 
 .datePicker{
@@ -21,7 +22,7 @@
     padding: 15px;
     font-family: Arial,sans-serif;
     border: 0;
-    color: #9e9e9e;
+    color: var(--inputFontColor);
     /* font-size: 16px; */
     font-size: 1rem; 
     border-radius: 8px;
