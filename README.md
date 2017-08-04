@@ -1,8 +1,5 @@
 <p align="center">
-  <a href="https://v4-alpha.getbootstrap.com">
     <img src="https://cdn.stat-track.com/20170803-2017-0803-2017-080320170803/ca5ad9249d284435955b75e1a22aa15cmooskinLogo.png" width="100" />
-  </a>
-
   <h3 align="center">MooSkin (WIP)</h3>
 
 <p align="center">
