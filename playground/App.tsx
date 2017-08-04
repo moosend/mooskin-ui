@@ -26,6 +26,7 @@ import Select from './examples/Select.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
+import TabbedTable from './examples/TabbedTable.example';
 import Table from './examples/Table.example';
 import TextArea from './examples/TextArea.example';
 import TopNotification from './examples/TopNotification.example';
@@ -33,6 +34,11 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <Grid>
+            <Row>
+                <Col>
+                    <TabbedTable />
+                </Col>
+            </Row>
             <Row>
                 <Col lg={4} md={12}>
                     <Select />
