@@ -11,8 +11,7 @@
     top: 0;
     left: 0;
     background-color: #2D2D2D;
-    overflow-x: hidden;
-    transition: 0.5s;
+    transition: 0.3s;
     color: #fff; 
     font-size: 12px;
     white-space: nowrap;
@@ -20,10 +19,12 @@
 
 .sidebarOn{
     width: 100px;
+    overflow-x: visible;    
 }
 
 .sidebarOff{
     width: 0px;
+    overflow-x: hidden;
 }
 
 .sidebar.sidebarOff{
@@ -31,8 +32,10 @@
 }
 
 .itemContainer{
+    position: relative;
     padding-top: 25px; 
     user-select: none;
+    background: inherit;
 }
 
 .anchor{
@@ -54,7 +57,7 @@
 }
 
 .image{
-    width: 80px;
+    width: 70px;
     margin-bottom: 10px;
     -webkit-user-drag: none;
 }
@@ -66,6 +69,29 @@
 
 .button i{
     font-size: 50px;
+}
+
+.arrow{
+    display: none;
+    z-index: 10;
+    position: absolute;
+    left: 85px;
+    width: 25px;
+    height: 25px;
+    background: inherit;
+    transform: rotate(45deg)
+}
+
+.itemContainer:hover > .arrow{
+    display: block;
+}
+
+.arrowNoImg{
+    top: 28px;
+}
+
+.arrowImg{
+    top: 55px;
 }
 
 .cover{
@@ -107,6 +133,10 @@
         display: none;
     }
 
+    .itemContainer:hover > .arrow{
+        display: none;
+    }
+
 }
 
 @media (--deviceXsmall){
@@ -136,6 +166,10 @@
     }
 
     .sidebar img{
+        display: none;
+    }
+
+    .itemContainer:hover > .arrow{
         display: none;
     }
 }

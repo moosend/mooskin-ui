@@ -12,6 +12,9 @@ exports[`SideBar renders Item correctly 1`] = `
     }
   }
 >
+  <div
+    className="arrow arrowImg"
+  />
   <a
     className="anchor activeItem"
     href="www.moosend.com"
@@ -41,12 +44,16 @@ exports[`SideBar renders SideBar correctly 1`] = `
     />
   </div>
   <div
-    className="sidebar myClass sidebarOff"
+    className="sidebar myClass sidebarOn"
     style={
       Object {
         "color": "blue",
       }
     }
+  />
+  <div
+    className="cover"
+    onClick={[Function]}
   />
 </div>
 `;
@@ -64,7 +71,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
     />
   </div>
   <div
-    className="sidebar myClass sidebarOff"
+    className="sidebar myClass sidebarOn"
     style={
       Object {
         "color": "blue",
@@ -73,21 +80,33 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
   >
     <Item
       active={true}
+      className="myClass"
       href="www.moosend.com"
       image="imagePath"
       label="Item"
       onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
     />
     <Item
       active={false}
+      className="myClass"
       href="www.moosend.com"
       image="imagePath"
       label="Item"
       onClick={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
     >
       <SideBar
         className=""
@@ -112,6 +131,10 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
       </SideBar>
     </Item>
   </div>
+  <div
+    className="cover"
+    onClick={[Function]}
+  />
 </div>
 `;
 
@@ -155,7 +178,7 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
       </SmallIconButton>
     </div>
     <div
-      className="sidebar myClass sidebarOff"
+      className="sidebar myClass sidebarOn"
       style={
         Object {
           "color": "blue",
@@ -164,19 +187,33 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
     >
       <Item
         active={true}
+        className="myClass"
         href="www.moosend.com"
         image="imagePath"
         label="Item"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
       >
         <div
-          className="item-component itemContainer undefined"
+          className="item-component itemContainer myClass"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
         >
+          <div
+            className="arrow arrowImg"
+          />
           <a
             className="anchor activeItem"
             href="www.moosend.com"
@@ -194,19 +231,33 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
       </Item>
       <Item
         active={false}
+        className="myClass"
         href="www.moosend.com"
         image="imagePath"
         label="Item"
         onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
       >
         <div
-          className="item-component itemContainer undefined"
+          className="item-component itemContainer myClass"
           onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
         >
+          <div
+            className="arrow arrowImg"
+          />
           <a
             className="anchor "
             href="www.moosend.com"
@@ -223,6 +274,10 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         </div>
       </Item>
     </div>
+    <div
+      className="cover"
+      onClick={[Function]}
+    />
   </div>
 </SideBar>
 `;

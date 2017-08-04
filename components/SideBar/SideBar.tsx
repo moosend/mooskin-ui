@@ -83,6 +83,10 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         };
     }
 
+    public componentWillMount(){
+        this.setState({display: this.props.display});
+    }
+
     public componentWillReceiveProps(nextProps: ISideBarProps) {
         this.setState({ display: nextProps.display});
     }
@@ -130,6 +134,8 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                         onClick={this.onClickItem(index, child)}
                         onMouseEnter={child.props.onMouseEnter}
                         onMouseLeave={child.props.onMouseLeave}
+                        style={child.props.style}
+                        className={child.props.className}
                     >
                         {child.props.children}
                     </Item>
@@ -194,6 +200,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
 
     const activeItem = props.active ? styles.activeItem : '';
+    const arrow = props.image ? styles.arrowImg : styles.arrowNoImg;
 
     return(
         <div
@@ -203,6 +210,7 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
             className={`item-component ${styles.itemContainer} ${props.className}`}
             style={props.style}
         >
+            <div className={`${styles.arrow} ${arrow}`} />
             <a
                 href={props.href}
                 className={`${styles.anchor} ${activeItem}`}
