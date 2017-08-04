@@ -26,9 +26,9 @@ class FormExample extends React.Component {
         return(
             <div>
                 <H2>Forms/FormGroups</H2>
-                <Form style={{border: '2px solid black'}} onSubmit={this.onSubmit}>
+                <Form onSubmit={this.onSubmit}>
                     <FormGroup horizontal>
-                        <FormGroup style={{border: '2px solid blue'}}>
+                        <FormGroup >
                             <Input
                                 label="Firstname:"
                                 onChange={this.setValue}
@@ -67,7 +67,7 @@ class FormExample extends React.Component {
                                 />
                             </RadioGroup>
                         </FormGroup>
-                        <FormGroup style={{border: '2px solid blue'}}>
+                        <FormGroup >
                             <Switch
                                 label="Training:"
                                 onLabel="Done"
@@ -92,7 +92,7 @@ class FormExample extends React.Component {
                             </CheckboxGroup>
                         </FormGroup>
                     </FormGroup>
-                    <FormGroup style={{border: '2px solid red'}}>
+                    <FormGroup >
                         <Input
                             label="Desired Salary:"
                             onChange={this.setValue}
@@ -116,15 +116,16 @@ class FormExample extends React.Component {
                     <Button type="submit">Submit</Button>
                     <Button onClick={this.reset}>Reset</Button>
                 </Form>
+                <hr/>
                 <H2>Forms/FormGroups</H2>
-                <Form style={{border: '2px solid black'}} >
-                    <FormGroup style={{border: '2px solid blue'}}>
+                <Form >
+                    <FormGroup>
                         <Input label="Your firstname:" dataLabel="firstname"/>
                         <Input label="Your lastname:" dataLabel="lastname"/>
                         <Input label="Country:" dataLabel="country"/>
                     </FormGroup>
-                    <FormGroup style={{border: '2px solid red'}} horizontal>
-                        <FormGroup style={{ border: '2px solid cyan'}}>
+                    <FormGroup>
+                        <FormGroup>
                             <RadioGroup title="Some Radios" dataLabel="radios" onChange={this.getValue}>
                                 <Radio value="Radio 1"/>
                                 <Radio value="Radio 2"/>
@@ -133,7 +134,7 @@ class FormExample extends React.Component {
                                 <Radio value="Radio 5"/>
                             </RadioGroup>
                         </FormGroup>
-                        <FormGroup style={{border: '2px solid green'}}>
+                        <FormGroup>
                             <CheckboxGroup onChange={this.getValue} dataLabel="checkboxes">
                                 <CheckBox value="Checkbox 1" />
                                 <CheckBox value="Checkbox 2" />
