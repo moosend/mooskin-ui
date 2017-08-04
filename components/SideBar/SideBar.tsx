@@ -31,7 +31,7 @@ export interface ISideBarItemProps{
     href?: string;
 
     /** item label */
-    label?: string;
+    label: string;
 
     /** item image */
     image?: string;
