@@ -10,10 +10,8 @@ describe('SideBar', () => {
 
         const tree = shallow(
             <SideBar
-                onClick={func}
                 className="myClass"
                 style={{color: 'blue'}}
-                display
                 button
             />
         );
@@ -44,10 +42,8 @@ describe('SideBar', () => {
 
         const tree = mount(
             <SideBar
-                onClick={func}
                 className="myClass"
                 style={{color: 'blue'}}
-                display
                 button
             >
                 <Item
@@ -82,10 +78,8 @@ describe('SideBar', () => {
 
         const tree = shallow(
             <SideBar
-                onClick={func}
                 className="myClass"
                 style={{color: 'blue'}}
-                display
                 button
             >
                 <Item
@@ -110,7 +104,7 @@ describe('SideBar', () => {
                     onMouseEnter={func}
                     onMouseLeave={func}
                 >
-                    <SideBar display>
+                    <SideBar>
                         <Item
                             onClick={func}
                             className="myClass"
@@ -129,45 +123,12 @@ describe('SideBar', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    test('onClick callback function is called when sidebar button is clicked', () => {
-
-        const func = jest.fn();
-
-        const component = shallow(
-            <SideBar display button onClick={func} />
-        );
-
-        component.find(SmallIconButton).simulate('click');
-        expect(func).toHaveBeenCalled();
-    });
-
-    test('onMouseEnter callback function is called when mouse enters Item', () => {
-
-        const func = jest.fn();
-        const func2 = jest.fn();
-
-        const component = shallow(
-            <SideBar display>
-                <Item onMouseEnter={func} onMouseLeave={func2}/>
-            </SideBar>
-        );
-
-        expect(component.find(SmallIconButton)).toBeFalsy;
-
-        component.find(Item).simulate('mouseenter');
-        expect(func).toHaveBeenCalled();
-
-        component.find(Item).simulate('mouseleave');
-        expect(func2).toHaveBeenCalled();
-    });
-
     test('SideBar prop tests', () => {
 
         const component = shallow(
             <SideBar
                 className="myClass"
                 style={{color: 'blue'}}
-                display
                 button
             >
                 <Item

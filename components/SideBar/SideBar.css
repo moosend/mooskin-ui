@@ -18,7 +18,6 @@
 }
 
 .secondary{
-    z-index: -1;
     left: 90px;
     background: #efefef;
     color: #636363;
@@ -135,6 +134,15 @@
         font-size: 4vw;
     }
 
+    .secondary{
+        font-size: 4vw;
+        left: 20%;
+    }
+
+    .secondaryOn{
+        width: 40%;
+    }
+
     .itemContainer{
         padding-top: 3vw;
     }
@@ -169,6 +177,15 @@
 
     .sidebar{
         font-size: 4vw;
+    }
+
+    .secondary{
+        font-size: 4vw;
+        left: 20%;
+    }
+
+    .secondaryOn{
+        width: 40%;
     }
 
     .itemContainer{
