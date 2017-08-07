@@ -22,6 +22,7 @@ exports[`RadioAccordion renders Header properly according to snapshot 1`] = `
     onClick={[Function]}
   >
     <input
+      checked={true}
       defaultChecked={true}
       id="4zlbrf"
       type="radio"
