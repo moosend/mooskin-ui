@@ -21,6 +21,7 @@ exports[`RadioTabs renders Header properly according to snapshot 1`] = `
   <input
     checked={true}
     id="4zlbrf"
+    readOnly={true}
     type="radio"
   />
   <label
