@@ -25,4 +25,4 @@ export {default as Form, FormGroup} from '../Form';
 
 export {default as Table} from '../Table';
 export {default as DatePicker} from '../DatePicker';
-export {default as TabbedTable} from '../TabbedTable';
+export {default as TabbedTable, TabTable} from '../TabbedTable';

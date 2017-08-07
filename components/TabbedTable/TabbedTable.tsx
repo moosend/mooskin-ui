@@ -2,6 +2,9 @@ import * as React from 'react';
 
 import styles from './TabbedTable.css';
 
+// import {Table} from '../index';
+// import ITableProps from '../Table';
+
 export interface ITabbedTableProps {
 
     /** override id */
@@ -14,29 +17,43 @@ export interface ITabbedTableProps {
     style?: React.CSSProperties;
 
     /** children here can only be Tab elements */
-    children?: Array<React.ReactElement<ITabProps>> | React.ReactElement<ITabProps>;
+    children?: Array<React.ReactElement<ITabTableProps>> | React.ReactElement<ITabTableProps>;
 }
 
-export interface ITabProps {
+export interface ITabTableProps{
 
-    /** container class */
-    className?: string;
+    /** override Table id */
+    id?: string;
 
     /** title */
     title: string;
 
-    /** if active */
-    active?: boolean;
+    /** further information to be displayed on the header */
+    info?: string;
 
-    /** icon name, for material icons only */
-    materialIcon?: string;
+    /** wether the title should be an href, and where it should lead */
+    href?: string;
 
-    /** class name representing an icon font, for example a font awesome class */
-    iconClass?: string;
+    /** value displayed on the tab header */
+    headerValue?: number;
 
-    /** override styles */
+    /** Table class */
+    className?: string;
+
+    /** override Table styles */
     style?: React.CSSProperties;
 
+    /** wether this table is active or not */
+    active?: boolean;
+}
+
+export interface IHeaderProps {
+    value?: number;
+    info?: string;
+    href?: string;
+    title: string;
+    active: boolean;
+    onClick: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface ITabbedTableState {
@@ -46,12 +63,11 @@ export interface ITabbedTableState {
 export default class TabbedTable extends React.Component<ITabbedTableProps, ITabbedTableState>{
 
     public static defaultProps = {
-        activeTab: 0,
         className: '',
         style: {}
     };
 
-    // public static Table: React.StatelessComponent<ITabProps>;
+    public static TabTable: React.StatelessComponent<ITabbedTableProps>;
 
     constructor(props: any){
         super(props);
@@ -63,15 +79,15 @@ export default class TabbedTable extends React.Component<ITabbedTableProps, ITab
 
     public render(){
 
-        const {headers, table} = this.makeContent();
+        const {headers, tables} = this.makeContent();
 
         return(
-            <div className={`tabbed-table-component`}>
+            <div className={`tabbed-table-component ${styles.container}`}>
                 <div className={styles.heading}>
                     {headers}
                 </div>
                 <div className={styles.tables}>
-                    {table}
+                    {tables}
                 </div>
             </div>
         );
@@ -80,35 +96,42 @@ export default class TabbedTable extends React.Component<ITabbedTableProps, ITab
     private makeContent(){
 
         const headers: Array<React.ReactElement<IHeaderProps>> = [];
-        const bodies: Array<React.ReactElement<ITabProps>> = [];
+        const tables: Array<React.ReactElement<ITabTableProps>> = [];
 
         React.Children.forEach(this.props.children, (child, index) => {
-            if (React.isValidElement<ITabProps>(child)){
+            if (React.isValidElement<ITabTableProps>(child)){
 
                 headers.push(
                     <Header
                         key={index}
+                        href={child.props.href}
+                        value={child.props.headerValue}
                         title={child.props.title}
-                        active={this.state.activeTab === index}
-                        iconClass={child.props.iconClass}
-                        materialIcon={child.props.materialIcon}
+                        info={child.props.info}
+                        active={this.state.activeTable === index}
                         onClick={this.onClickHeader(index)}
                     />
                 );
 
-                const extraProps: Partial<ITabProps & {key: number}> = {
-                    active: this.state.activeTab === index,
+                const extraProps: Partial<ITabTableProps & {key: number}> = {
+                    active: this.state.activeTable === index,
                     key: index
                 };
 
-                bodies.push(React.cloneElement(child, extraProps));
+                tables.push(React.cloneElement(child, extraProps));
 
             }else{
-                throw new Error('<TabbedContent> element only accepts Tab elements as children');
+                throw new Error('<TabbedTable> element only accepts <TabTable> elements as children');
             }
         });
 
-        return {headers, bodies};
+        return {headers, tables};
+    }
+
+    private onClickHeader = (tabIndex: number) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            this.setState({activeTable: tabIndex});
+        };
     }
 
     private getActiveTable(): number {
@@ -116,7 +139,7 @@ export default class TabbedTable extends React.Component<ITabbedTableProps, ITab
         const childrenArray = React.Children.toArray(this.props.children);
 
         for (const [index, value] of childrenArray.entries()){
-            if (React.isValidElement<ITabProps>(value) && value.props.active){
+            if (React.isValidElement<ITabTableProps>(value) && value.props.active){
                 activeTable = index;
             }
         }
@@ -124,3 +147,31 @@ export default class TabbedTable extends React.Component<ITabbedTableProps, ITab
         return activeTable;
     }
 }
+
+export const TabTable: React.StatelessComponent<ITabTableProps> = (props) => {
+
+    const displayClass = !props.active ? styles.invisible : styles.visible;
+
+    return (
+            <div>
+                <table {...this.props} className={`${styles.table} ${props.className} ${displayClass}`}>
+                    {props.children}
+                </table>
+            </div>
+        );
+};
+
+export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
+
+    const activeTab = props.active ? styles.activeHeader : styles.inactiveHeader;
+
+    return (
+        <div className={`tab-header ${styles.header} ${activeTab}`} onClick={props.onClick}>
+            <a href={props.href} className={styles.anchor}>
+                <span className={styles.tabletitle}>{props.title}</span>
+                <span className={styles.value}>{props.value}</span>
+                <span className={styles.info}>{props.info}</span>
+            </a>
+        </div>
+    );
+};
