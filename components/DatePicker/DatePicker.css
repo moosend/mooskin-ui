@@ -143,18 +143,25 @@
         padding: 3.5vw;
     }
 
+    .calendar{
+        position: fixed;
+        top: 15%;
+        left: 5%;
+        z-index: 99;
+    }
+
     :global(.m-input-moment){
         width: 90vw;
-        height: 70vw;
+        height: 118vw;
     }
 
     :global(.options){
         display: flex;
-        height: 10vw;
+        height: 12vw;
     }
 
     :global(.tabs){
-        height: 60vw;
+        height: 100vw;
     }
 
     :global(.im-btn){
@@ -162,27 +169,30 @@
         font-size: 3vw;                
     }
 
-    :global(.toolbar){
-        height: 5vw;
+    :global(.m-calendar .toolbar){
+        height: 10vw;
+        line-height: 10vw;
     }
 
     :global(div.m-calendar td){
-        height: 7vw;
-        font-size: 3vw; 
+        height: 13vw;
+        font-size: 4.5vw; 
     }
     
     :global(.current-date){
-        font-size: 4vw;
+        font-size: 7vw;
+        padding-top: 2vw;
     }
 
     :global(.m-calendar .toolbar button){
-        height: 5vw;
-        width: 5vw;
-        font-size: 3vw;
+        height: 10vw;
+        width: 10vw;
+        font-size: 6vw;
     }
 
     :global(.m-input-moment .options button){
-        font-size: 4vw;
+        height: 11vw;
+        font-size: 5vw;
     }
 
     :global(.m-calendar .current-day){
@@ -250,16 +260,25 @@
         padding: 3.5vw;
     }
 
+    .calendar{
+        position: fixed;
+        top: 15%;
+        left: 5%;
+        z-index: 99;
+    }
+
     :global(.m-input-moment){
         width: 90vw;
+        height: 118vw;
     }
 
     :global(.options){
-        height: 10vw;
+        display: flex;
+        height: 12vw;
     }
 
     :global(.tabs){
-        height: 60vw;
+        height: 100vw;
     }
 
     :global(.im-btn){
@@ -267,27 +286,34 @@
         font-size: 3vw;                
     }
 
-    :global(.toolbar){
-        height: 5vw;
+    :global(.m-calendar .toolbar){
+        height: 10vw;
+        line-height: 10vw;
     }
 
     :global(div.m-calendar td){
-        height: 7vw;
-        font-size: 3vw; 
+        height: 13vw;
+        font-size: 4.5vw; 
     }
     
     :global(.current-date){
-        font-size: 4vw;
+        font-size: 7vw;
+        padding-top: 2vw;
     }
 
     :global(.m-calendar .toolbar button){
-        height: 5vw;
-        width: 5vw;
-        font-size: 3vw;
+        height: 10vw;
+        width: 10vw;
+        font-size: 6vw;
     }
 
     :global(.m-input-moment .options button){
-        font-size: 4vw;
+        height: 11vw;
+        font-size: 5vw;
+    }
+
+    :global(.m-calendar .current-day){
+        color: #5ccdde;
     }
 
     :global(.m-input-moment .btn-save){
