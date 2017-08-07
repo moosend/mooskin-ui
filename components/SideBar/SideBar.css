@@ -18,6 +18,7 @@
 }
 
 .secondary{
+    z-index: -1;
     left: 90px;
     background: #efefef;
     color: #636363;
