@@ -117,6 +117,16 @@
     color: #5ccdde;
 }
 
+@media (--xSmall){
+    .datePicker{
+        flex-direction: column;
+    }
+
+    .label{
+        flex-basis: 15px;
+    }
+}
+
 @media (--deviceXsmall){
     .datePicker{
         flex-direction: column;
