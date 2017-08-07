@@ -162,7 +162,6 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
                     type="radio"
                     name={props.name}
                     checked={props.active}
-                    defaultChecked={props.active}
                 />
                 <label htmlFor={genId}>
                     <span>{props.title}</span>
