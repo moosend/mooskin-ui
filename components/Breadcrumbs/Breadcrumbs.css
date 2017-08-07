@@ -46,8 +46,41 @@
     background: none;
 }
 
-
-
 .breadcrumbBody{
     padding: 10px;
+}
+
+
+@media (--deviceSmall){
+    .breadcrumbsContainer{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: #fff;
+    }
+}
+
+@media (--deviceXsmall){
+    .breadcrumbsContainer{
+        display: flex;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: #fff;
+    }
+
+    .breadcrumb{
+        width: 100%;
+    }
+
+    .breadcrumb > a{
+        font-size: 3vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
 }

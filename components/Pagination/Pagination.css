@@ -45,17 +45,17 @@
 }
 
 
-@media (--small){
+@media (--deviceSmall){
     .paginationButton{
-        font-size: 4vw;
+        font-size: 3vw;
         padding: 4vw;
     }
     
 }
 
-@media (--xSmall){
+@media (--deviceXsmall){
     .paginationButton{
-        font-size: 9vw;
+        font-size: 3vw;
         padding: 4vw;
     }
 }

@@ -19,8 +19,9 @@ exports[`RadioTabs renders Header properly according to snapshot 1`] = `
   onClick={[Function]}
 >
   <input
-    defaultChecked={true}
+    checked={true}
     id="4zlbrf"
+    readOnly={true}
     type="radio"
   />
   <label

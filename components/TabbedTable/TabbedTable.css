@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Convergence');
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
+.container {
+    width: 100%;
+}
+
+.heading {
+    width:100%;
+    height:95px;
+    border-bottom:10px solid #efefef;
+    display:flex;
+    flex-direction: row;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.header {
+    flex-grow:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 400ms ease;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.header:hover > .title{
+    color: var(--moosendBlue);
+}
+
+.title{
+    color: #6b6b6b;
+    font-weight: 600;
+    font-size: .92857142857rem;
+    /*font-size: 18px;*/
+}
+
+.image{
+    width: 40px;
+}
+
+.value{
+    font-size: 1rem;
+    font-weight: 800;
+    color: #636363;
+}
+
+.info{
+    font-size: .78571428571rem;
+    color: #aaa;
+}
+
+.activeHeader {
+    background: var(--inputBackground);
+}
+
+.inactiveHeader {
+    background: #fff;
+}
+
+.inactiveHeader:hover {
+    background: rgba(245, 245, 245, 0.5);
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #eaeaea;
+}
+
+.table thead tr th{
+    background-color: #efefef;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: #aaaaaa;
+    font-size: .8rem;
+    border-bottom: 1px solid #d4d4d4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.table tbody tr td{
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1rem;
+    border-bottom: 1px solid #eaeaea;
+    color:#6b6b6b;
+}
+
+.visible {
+    display: table;
+}
+
+.invisible {
+    display: none;
+}
+
+@media (--deviceSmall){
+    .table thead tr th{
+        font-size: 2.5vw;
+    }
+
+    .table tbody tr td{
+        font-size: 2.5vw;
+    }
+}
+
+@media (--deviceXsmall){
+    .table thead tr th{
+        font-size: 2.5vw;
+    }
+
+    .table tbody tr td{
+        font-size: 2.5vw;
+    }
+}

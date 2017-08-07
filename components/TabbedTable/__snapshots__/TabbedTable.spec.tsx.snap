@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabbedTable renders correctly 1`] = `
+<div
+  className="tabbed-table-component container"
+>
+  <div
+    className="heading"
+  >
+    <Header
+      active={true}
+      info="some info"
+      onClick={[Function]}
+      title="Table title"
+    />
+    <Header
+      active={false}
+      info="some info"
+      onClick={[Function]}
+      title="Table title 2"
+    />
+  </div>
+  <div
+    className="tables"
+  >
+    <TabTable
+      active={true}
+      info="some info"
+      title="Table title"
+    >
+      <thead>
+        <tr>
+          <th>
+            th 1
+          </th>
+          <th>
+            th 2
+          </th>
+          <th>
+            th 3
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            td 1
+          </td>
+          <td>
+            td 2
+          </td>
+          <td>
+            td 3
+          </td>
+        </tr>
+        <tr>
+          <td>
+            td 1
+          </td>
+          <td>
+            td 2
+          </td>
+          <td>
+            td 3
+          </td>
+        </tr>
+      </tbody>
+    </TabTable>
+    <TabTable
+      active={false}
+      info="some info"
+      title="Table title 2"
+    >
+      <thead>
+        <tr>
+          <th>
+            th 1
+          </th>
+          <th>
+            th 2
+          </th>
+          <th>
+            th 3
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            td 1
+          </td>
+          <td>
+            td 2
+          </td>
+          <td>
+            td 3
+          </td>
+        </tr>
+        <tr>
+          <td>
+            td 1
+          </td>
+          <td>
+            td 2
+          </td>
+          <td>
+            td 3
+          </td>
+        </tr>
+      </tbody>
+    </TabTable>
+  </div>
+</div>
+`;

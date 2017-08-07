@@ -69,24 +69,24 @@ describe('RadioTabs', () => {
         );
 
         expect(component.state('activeRadio')).toBe(1);
-        expect(component.find('.radio-header').first().find('input').prop('defaultChecked')).toBeFalsy();
-        expect(component.find('.radio-header').last().find('input').prop('defaultChecked')).toBeTruthy();
+        expect(component.find('.radio-header').first().find('input').prop('checked')).toBeFalsy();
+        expect(component.find('.radio-header').last().find('input').prop('checked')).toBeTruthy();
         expect(component.find('.radio-content').first().hasClass('invisible')).toBeTruthy();
         expect(component.find('.radio-content').last().hasClass('visible')).toBeTruthy();
 
         component.find('.radio-header').first().simulate('click');
 
         expect(component.state('activeRadio')).toBe(0);
-        expect(component.find('.radio-header').first().find('input').prop('defaultChecked')).toBeTruthy();
-        expect(component.find('.radio-header').last().find('input').prop('defaultChecked')).toBeFalsy();
+        expect(component.find('.radio-header').first().find('input').prop('checked')).toBeTruthy();
+        expect(component.find('.radio-header').last().find('input').prop('checked')).toBeFalsy();
         expect(component.find('.radio-content').first().hasClass('visible')).toBeTruthy();
         expect(component.find('.radio-content').last().hasClass('invisible')).toBeTruthy();
 
         component.find('.radio-header').last().simulate('click');
 
         expect(component.state('activeRadio')).toBe(1);
-        expect(component.find('.radio-header').first().find('input').prop('defaultChecked')).toBeFalsy();
-        expect(component.find('.radio-header').last().find('input').prop('defaultChecked')).toBeTruthy();
+        expect(component.find('.radio-header').first().find('input').prop('checked')).toBeFalsy();
+        expect(component.find('.radio-header').last().find('input').prop('checked')).toBeTruthy();
         expect(component.find('.radio-content').first().hasClass('invisible')).toBeTruthy();
         expect(component.find('.radio-content').last().hasClass('visible')).toBeTruthy();
 
