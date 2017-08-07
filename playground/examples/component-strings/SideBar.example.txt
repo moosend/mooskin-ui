@@ -1,0 +1,41 @@
+class SideBarExample extends React.Component {
+
+    render(){
+        return(
+            <SideBar button >
+                <Item
+                    image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
+                    label="Automations"
+                    href="automations"
+                />
+                <Item
+                    image="http://hguochen.com/static/img/tech/css3.png"
+                    label="Mailing List"
+                    href="mailing/list"
+                />
+                <Item
+                    image="https://www.easyprogramming.net/logo/js.png"
+                    label="SideBar 2"
+                >
+                    <Secondary>
+                        <Item
+                            image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
+                            label="Automations"
+                            href="automations"
+                        />
+                        <Item
+                            image="http://hguochen.com/static/img/tech/css3.png"
+                            label="Mailing List"
+                            href="mailing/list"
+                        />
+                        <Item
+                            image="https://www.easyprogramming.net/logo/js.png"
+                            label="SideBar 2"
+                        />
+                    </Secondary>
+                </Item>
+            </SideBar>
+        );
+    }
+
+}

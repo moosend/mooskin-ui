@@ -25,6 +25,7 @@ import Radio from './examples/Radio.example';
 import RadioAccordion from './examples/RadioAccordion.example';
 import RadioTabs from './examples/RadioTabs.example';
 import Select from './examples/Select.example';
+import SideBar from './examples/SideBar.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
@@ -36,6 +37,12 @@ export default (props: any) => {
     return(
         <Grid>
             <Row>
+                <Col>
+                    <SideBar />
+                </Col>
+            </Row>
+            <Row>
+                <Col lg={12} md={12} />
                 <Col lg={6} md={12}>
                     <Breadcrumbs />
                 </Col>

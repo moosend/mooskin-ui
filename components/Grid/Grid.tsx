@@ -4,6 +4,9 @@ import styles from './Grid.css';
 
 export interface IGridProps{
 
+    /** id of the Grid container */
+    id?: string;
+
     /** custom classes for Grid */
     className?: string;
 
@@ -16,6 +19,9 @@ export interface IGridProps{
 
 export interface IRowProps{
 
+    /** id of the Row container */
+    id?: string;
+
     /** custom classes for Row */
     className?: string;
 
@@ -27,6 +33,9 @@ export interface IRowProps{
 }
 
 export interface IColProps{
+
+    /** id of the Col container */
+    id?: string;
 
     /** custom classes for Col */
     className?: string;
@@ -54,6 +63,7 @@ export default class Grid extends React.Component<IGridProps, {}>{
     public render(){
         return(
             <div
+                id={this.props.id}
                 className={`grid-component ${styles.grid} ${this.props.className}`}
                 style={this.props.style}
             >
@@ -67,6 +77,7 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
     return(
         <div
+            id={props.id}
             className={`row-component ${styles.row} ${props.className}`}
             style={props.style}
         >
@@ -135,16 +146,10 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
     };
 
     const classes = assembleAvengers();
-    // getDefault = () => {
-    //     if (lgClass === '' && mdClass === '' && smClass === '' && xsClass === ''){
-    //         return styles.col;
-    //     } else{
-    //         return '';
-    //     }
-    // }
 
     return(
         <div
+            id={props.id}
             className={`col-component ${classes}`}
             style={props.style}
         >
