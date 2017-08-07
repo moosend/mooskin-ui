@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence');
 @import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
 
 .container {
     width: 100%;
@@ -94,4 +95,24 @@
 
 .invisible {
     display: none;
+}
+
+@media (--deviceSmall){
+    .table thead tr th{
+        font-size: 2.5vw;
+    }
+
+    .table tbody tr td{
+        font-size: 2.5vw;
+    }
+}
+
+@media (--deviceXsmall){
+    .table thead tr th{
+        font-size: 2.5vw;
+    }
+
+    .table tbody tr td{
+        font-size: 2.5vw;
+    }
 }
