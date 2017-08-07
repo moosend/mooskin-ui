@@ -138,6 +138,7 @@
     .secondary{
         font-size: 4vw;
         left: 20%;
+        z-index: 11;
     }
 
     .secondaryOn{
@@ -183,6 +184,7 @@
     .secondary{
         font-size: 4vw;
         left: 20%;
+        z-index: 11;
     }
 
     .secondaryOn{
