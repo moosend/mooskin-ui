@@ -179,7 +179,7 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
                 name={props.name}
                 // onClick={onRadioClick}
                 // disabled={props.disabled}
-                defaultChecked={props.active}
+                checked={props.active}
             />
             <label htmlFor={genId}>
                 <span>{props.title}</span>
