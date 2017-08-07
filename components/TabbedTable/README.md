@@ -98,8 +98,6 @@ Import {TabbedTable} from 'mooskin';
 * `value` - an optional numerical value displayed on the header
 * `info` - another optional information displayed on the header
 * `style` -  extra styles 
-* `iconClass` - a class that will be added before the title to act as an icon, for example a font awesome class
-* `materialIcon` - name of the material icon to be added before the title (material icons are provided out of the box)
 
 </div>
 
