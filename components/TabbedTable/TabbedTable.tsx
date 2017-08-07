@@ -153,7 +153,7 @@ export const TabTable: React.StatelessComponent<ITabTableProps> = (props) => {
     const displayClass = !props.active ? styles.invisible : styles.visible;
 
     return (
-            <div>
+            <div className={`tab-table-component`}>
                 <table {...this.props} className={`${styles.table} ${props.className} ${displayClass}`}>
                     {props.children}
                 </table>
