@@ -13,7 +13,7 @@ Import {SideBar} from 'mooskin';
 And then you can simply start using it by typing
 
 ```
-<SideBar display>
+<SideBar>
     ...Whatever...
 </SideBar>
 ```
@@ -28,99 +28,49 @@ Import {Item, SideBar} from 'mooskin';
 </SideBar>
 ```
 
-The SideBar `display` prop is the most important one. It can be linked to a state with which the sidebar can be toggled by changing that state value. 
-
-For the SideBar to be displayed, the display prop must be passed, which is a boolean value.
-```
-<SideBar display />
-```
-this is a static SideBar, or
-```
-this.state = {
-    sidebar: false
-}
-
-<SideBar display={this.state.display}>
-```
-
-In this case the SideBar is hidden and wont be displayed until the state changes. For easier toggling, the `button` prop can be passed, which "spawns" a button on the exact location in the DOM where the SideBar tag is located. The sidebar `onClick` prop accepts a function which will be called when the SideBar button is clicked.
-
-```
-this.state = {
-    sidebar: false
-}
-
-<SideBar display={this.state.display} onClick={this.onButtonClick} button>
-
-private onButtonClick = () => {
-    this.setState({sidebar: true});
-}
-```
+A SideBar can be toggleable or static, this is decided by passing the `button` prop, which "spawns" a button on the exact location in the DOM where the SideBar tag is located.
 This way the SideBar will be displayed if the button is clicked. The SideBar can be hidden by clicking anywhere on the page, but the SideBar.
 
-Time to fill the SideBar with Items.
-
 ```
+Import {Item, SideBar} from 'mooskin';
+
 <SideBar>
-    <Item image="imagePath" label="Item Label"/>
+    <Item />
 </SideBar>
 ```
 
+Time to fill the SideBar with Items.
+
 ### Multiple SideBar usage
 
-Items can accept other SideBar's as children. Secondary SideBars can be toggled using the SideBar display prop and toggle it by using the `onClick`, `onMouseEnter` and `onMouseLeave` props of the Item. For the secondary SideBars to appear correctly a margin must be passed by the `style` prop so it doesnt overshadow the parent SideBar. For example:
+Secondary SideBar is also available to be assigned to SideBar Items. For example:
 
 ```
-this.state = {
-    secondarySidebar: false
-}
+Import {Item, SideBar, Secondary} from 'mooskin';
 
 <SideBar
-    display
-    onClick={this.onButtonClick}
 >
     <Item
         label="Automation"
         onClick={this.toggleSecondary}
     >
-        <SideBar display={this.state.secondarySideBar} style={{marginLeft: 100}}>
+        <Secondary>
             <Item />
         </SideBar>
     </Item>
 </SideBar>
 
-private toggleSecondary = () => {
-    this.setState({secondarySidebar: !this.state.secondarySidebar});
-}
 ```
 
-As you can see the main SideBar is a static one, doesnt have a button, isn't linked to a state. On the other hand the secondary SideBar is linked to a state and its currently hidden. We passed an onClick function to the parent Item of the secondary Sidebar, so when the Item is clicked, the secondary SideBar will appear. Also notice the margin that we passed to the second SideBar, so it appears next the the primary SideBar.
-
-Another smoother experience is by using the `onMouseEnter` and `onMouseLeave` props. Lets take the same example as above, but in this case we dont pass the `onClick` function to the Item.
-
-```
-
-<Item
-    label="Automation"
-    onMouseEnter={this.toggleSecondary}
-    onMouseLeave={this.toggleSecondary}
->
-
-private toggleSecondary = () => {
-    this.setState({secondarySidebar: !this.state.secondarySidebar});
-}
-```
-Now the secondary SideBar appears when the Item is hovered, this way an href can be used on the Item or pass it an onClick function to do something else.
+As you can see the main SideBar is a static one, doesnt have a button. When an Item is hovered that has the `Secondary` child the second SideBar will appear with its children.
 
 <div class="playground-doc">
 
 ## Supported attributes for SideBar 
 
-* `display` - mandatory, for the sidebar to be displayed. Or linked to a state to toggle SideBar
 * `button` - Displays a button on the location of the SideBar in the DOM
 * `className` - custom classes
 * `style` - or additional styles
-* `onClick` - a function which will be called when the SideBar Button is clicked
 
 ## Supported attributes for Item
 
@@ -128,14 +78,17 @@ Now the secondary SideBar appears when the Item is hovered, this way an href can
 * `label` - label below the Item
 * `image` - image covering the main body of the Item
 * `onClick` - function that is called when the Item is clicked
-* `onMouseEnter` - function call when mouse enters the Item
-* `onMouseLeave` - function call when mouse leaves the Item
 * `className` - add additional classes to the SideBar
+* `style` - or additional styles
+
+## Supported attributes for Secondary
+
+* `className` - custom classes
 * `style` - or additional styles
 
 </div>
 
-Allthough these attributes are supported, only `display` for SideBar and `label` for Item are mandatory.
+Allthough these attributes are supported, only `label` of te Item is mandatory.
 
 ___
 
