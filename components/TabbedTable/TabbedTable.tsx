@@ -34,6 +34,9 @@ export interface ITabTableProps{
     /** value displayed on the tab header */
     headerValue?: number;
 
+    /** image displayed within the tab header */
+    image?: string;
+
     /** Table class */
     className?: string;
 
@@ -51,6 +54,7 @@ export interface IHeaderProps {
     value?: number;
     info?: string;
     href?: string;
+    image?: string;
     title: string;
     active: boolean;
     onClick: (e: React.MouseEvent<HTMLElement>) => void;
@@ -107,6 +111,7 @@ export default class TabbedTable extends React.Component<ITabbedTableProps, ITab
                         value={child.props.headerValue}
                         title={child.props.title}
                         info={child.props.info}
+                        image={child.props.image}
                         active={this.state.activeTable === index}
                         onClick={this.onClickHeader(index, child)}
                     />
@@ -168,6 +173,7 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
     return (
         <div className={`tab-header ${styles.header} ${styles.anchor} ${activeTab}`} onClick={props.onClick}>
             <span className={styles.title}>{props.title}</span>
+            <img src={props.image} className={styles.image}/>
             <span className={styles.value}>{props.value}</span>
             <span className={styles.info}>{props.info}</span>
         </div>

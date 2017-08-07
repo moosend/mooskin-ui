@@ -39,6 +39,10 @@
     /*font-size: 18px;*/
 }
 
+.image{
+    width: 40px;
+}
+
 .value{
     font-size: 1rem;
     font-weight: 800;

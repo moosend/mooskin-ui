@@ -97,6 +97,7 @@ Import {TabbedTable} from 'mooskin';
 * `active` - sets which TabTable is active, the first is active by default
 * `value` - an optional numerical value displayed on the header
 * `info` - another optional information displayed on the header
+* `image` - image displayed within the header
 * `style` -  extra styles 
 
 </div>
