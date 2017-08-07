@@ -16,9 +16,9 @@
 }
 
 .header {
-    display: inline-block;
     flex-grow:1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -27,21 +27,11 @@
     border-top-right-radius: 5px;
 }
 
-.anchor{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-}
-
-a:hover > .tabletitle{
+.header:hover > .title{
     color: var(--moosendBlue);
 }
 
-.tabletitle{
+.title{
     color: #6b6b6b;
     font-weight: 600;
     font-size: .92857142857rem;

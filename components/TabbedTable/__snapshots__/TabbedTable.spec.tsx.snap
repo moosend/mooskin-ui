@@ -9,14 +9,12 @@ exports[`TabbedTable renders correctly 1`] = `
   >
     <Header
       active={true}
-      href="/reports"
       info="some info"
       onClick={[Function]}
       title="Table title"
     />
     <Header
       active={false}
-      href="/maillist"
       info="some info"
       onClick={[Function]}
       title="Table title 2"
@@ -27,7 +25,6 @@ exports[`TabbedTable renders correctly 1`] = `
   >
     <TabTable
       active={true}
-      href="/reports"
       info="some info"
       title="Table title"
     >
@@ -71,7 +68,6 @@ exports[`TabbedTable renders correctly 1`] = `
     </TabTable>
     <TabTable
       active={false}
-      href="/maillist"
       info="some info"
       title="Table title 2"
     >

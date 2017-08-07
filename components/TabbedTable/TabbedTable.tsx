@@ -31,9 +31,6 @@ export interface ITabTableProps{
     /** further information to be displayed on the header */
     info?: string;
 
-    /** wether the title should be an href, and where it should lead */
-    href?: string;
-
     /** value displayed on the tab header */
     headerValue?: number;
 
@@ -45,6 +42,9 @@ export interface ITabTableProps{
 
     /** wether this table is active or not */
     active?: boolean;
+
+    /** onClick callback function when a tab header is clicked */
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface IHeaderProps {
@@ -104,12 +104,11 @@ export default class TabbedTable extends React.Component<ITabbedTableProps, ITab
                 headers.push(
                     <Header
                         key={index}
-                        href={child.props.href}
                         value={child.props.headerValue}
                         title={child.props.title}
                         info={child.props.info}
                         active={this.state.activeTable === index}
-                        onClick={this.onClickHeader(index)}
+                        onClick={this.onClickHeader(index, child)}
                     />
                 );
 
@@ -128,9 +127,10 @@ export default class TabbedTable extends React.Component<ITabbedTableProps, ITab
         return {headers, tables};
     }
 
-    private onClickHeader = (tabIndex: number) => {
+    private onClickHeader = (tabIndex: number, table: React.ReactElement<ITabTableProps>) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({activeTable: tabIndex});
+            table.props.onClick && table.props.onClick(e);
         };
     }
 
@@ -166,12 +166,10 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
     const activeTab = props.active ? styles.activeHeader : styles.inactiveHeader;
 
     return (
-        <div className={`tab-header ${styles.header} ${activeTab}`} onClick={props.onClick}>
-            <a href={props.href} className={styles.anchor}>
-                <span className={styles.tabletitle}>{props.title}</span>
-                <span className={styles.value}>{props.value}</span>
-                <span className={styles.info}>{props.info}</span>
-            </a>
+        <div className={`tab-header ${styles.header} ${styles.anchor} ${activeTab}`} onClick={props.onClick}>
+            <span className={styles.title}>{props.title}</span>
+            <span className={styles.value}>{props.value}</span>
+            <span className={styles.info}>{props.info}</span>
         </div>
     );
 };
