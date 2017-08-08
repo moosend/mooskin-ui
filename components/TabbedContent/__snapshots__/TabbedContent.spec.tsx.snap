@@ -5,17 +5,19 @@ exports[`TabbedContent renders Header properly according to snapshot 1`] = `
   className="tab-header header activeHeader"
   onClick={[Function]}
 >
-  <i
-    className="header-icon material-icons"
-  >
-    home
-  </i>
-  <i
-    className="header-icon iconclass"
+  <input
+    checked={true}
+    id="4zlbrf"
+    readOnly={true}
+    type="radio"
   />
-  <span>
-    title1
-  </span>
+  <label
+    htmlFor="4zlbrf"
+  >
+    <span>
+      title1
+    </span>
+  </label>
 </div>
 `;
 
@@ -34,10 +36,10 @@ exports[`TabbedContent renders Tab properly according to snapshot 1`] = `
 
 exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] = `
 <div
-  className="tabbed-content-component container"
+  className="tabbed-content-component container containerH"
 >
   <div
-    className="heading"
+    className="heading headingH"
   >
     <Header
       active={false}
@@ -58,7 +60,63 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
     />
   </div>
   <div
-    className="body"
+    className="content contentH"
+  >
+    <Tab
+      active={false}
+      iconClass="iconclass"
+      title="title1"
+    >
+      asdasd1
+    </Tab>
+    <Tab
+      active={true}
+      materialIcon="home"
+      title="title2"
+    >
+      asdasd2
+    </Tab>
+    <Tab
+      active={false}
+      className="classname"
+      title="title3"
+    >
+      asdasd3
+    </Tab>
+  </div>
+</div>
+`;
+
+exports[`TabbedContent renders TabbedContent vertically with radio styles 1`] = `
+<div
+  className="tabbed-content-component container containerV"
+>
+  <div
+    className="heading headingV"
+  >
+    <Header
+      active={false}
+      iconClass="iconclass"
+      onClick={[Function]}
+      radio={true}
+      title="title1"
+    />
+    <Header
+      active={true}
+      materialIcon="home"
+      onClick={[Function]}
+      radio={true}
+      title="title2"
+    />
+    <Header
+      active={false}
+      onClick={[Function]}
+      radio={true}
+      title="title3"
+    />
+  </div>
+  <div
+    className="content contentV"
   >
     <Tab
       active={false}

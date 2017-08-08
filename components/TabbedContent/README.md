@@ -86,6 +86,8 @@ Import {TabbedContent} from 'mooskin';
 
 * `id` - id of the element
 * `className` - css class
+* `vertical` - tab headers will be aligned vertically, content on the right
+* `radio` - alternative styles with radios for tabbed content.
 * `style` - extra styles for the main container
 
 

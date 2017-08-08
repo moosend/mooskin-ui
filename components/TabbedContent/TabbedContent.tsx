@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import styles from './TabbedContent.css';
+import radio from './TabbedRadio.css';
 
 export interface ITabbedContentProps {
 
@@ -9,6 +10,12 @@ export interface ITabbedContentProps {
 
     /** container class */
     className?: string;
+
+    /** radio styled tabbed content */
+    radio?: boolean;
+
+    /** vertical tabbedContent view */
+    vertical?: boolean;
 
     /** override styles */
     style?: React.CSSProperties;
@@ -48,7 +55,7 @@ class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentS
     public static defaultProps = {
         activeTab: 0,
         className: '',
-        style: {}
+        style: {},
     };
 
     public static Tab: React.StatelessComponent<ITabProps>;
@@ -63,14 +70,19 @@ class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentS
 
     public render(){
 
+        const style = this.props.radio ? radio : styles;
+
         const {headers, bodies} = this.makeContent();
+        const containerStyles = !this.props.vertical ? style.containerH : style.containerV;
+        const headingStyles = !this.props.vertical ? style.headingH : style.headingV;
+        const contentStyles = !this.props.vertical ? style.contentH : style.contentV;
 
         return (
-            <div className={`tabbed-content-component ${styles.container}`}>
-                <div className={styles.heading}>
+            <div className={`tabbed-content-component ${style.container} ${containerStyles}`}>
+                <div className={`${style.heading} ${headingStyles}`}>
                     {headers}
                 </div>
-                <div className={styles.body}>
+                <div className={`${style.content} ${contentStyles}`}>
                     {bodies}
                 </div>
             </div>
@@ -98,6 +110,7 @@ class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentS
                         active={this.state.activeTab === index}
                         iconClass={child.props.iconClass}
                         materialIcon={child.props.materialIcon}
+                        radio={this.props.radio}
                         onClick={this.onClickHeader(index)}
                     />
                 );
@@ -142,20 +155,44 @@ export interface IHeaderProps {
     title: string;
     active: boolean;
     materialIcon?: string;
+    radio?: boolean;
     iconClass?: string;
     onClick: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
+    const style = props.radio ? radio : styles;
     const {active, materialIcon, iconClass} = props;
-    const activeTab = active ? styles.activeHeader : styles.inactiveHeader;
+    const activeTab = active ? style.activeHeader : style.inactiveHeader;
+
+    const generateId = () => {
+        return Math.random().toString(36).substr(2, 10);
+    };
+
+    const input = props.radio ? (
+        <input
+            id={generateId()}
+            type="radio"
+            checked={props.active}
+            readOnly
+        />
+    ) : '';
+
+    const label = !props.radio ?
+        (<span>{props.title}</span>) :
+        (
+            <label htmlFor={generateId()}>
+                <span>{props.title}</span>
+            </label>
+        );
 
     return (
-        <div className={`tab-header ${styles.header} ${activeTab}`} onClick={props.onClick}>
-            {materialIcon && <i className="header-icon material-icons">{materialIcon}</i>}
-            {iconClass && <i className={`header-icon ${iconClass}`}/>}
-            <span>{props.title}</span>
+        <div className={`tab-header ${style.header} ${activeTab}`} onClick={props.onClick}>
+            {input}
+            {materialIcon && !props.radio && <i className="header-icon material-icons">{materialIcon}</i>}
+            {iconClass && !props.radio && <i className={`header-icon ${iconClass}`}/>}
+            {label}
         </div>
     );
 };

@@ -23,13 +23,11 @@ import Pagination from './examples/Pagination.example';
 import Pie from './examples/Pie.example';
 import Radio from './examples/Radio.example';
 import RadioAccordion from './examples/RadioAccordion.example';
-import RadioTabs from './examples/RadioTabs.example';
 import Select from './examples/Select.example';
 import SideBar from './examples/SideBar.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
-import TabbedTable from './examples/TabbedTable.example';
 import Table from './examples/Table.example';
 import TextArea from './examples/TextArea.example';
 import TopNotification from './examples/TopNotification.example';
@@ -37,11 +35,6 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <Grid>
-            <Row>
-                <Col>
-                    <TabbedTable />
-                </Col>
-            </Row>
             <Row>
                 <Col>
                     <SideBar />
@@ -108,11 +101,6 @@ export default (props: any) => {
             <Row>
                 <Col>
                     <TabbedContent />
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <RadioTabs />
                 </Col>
             </Row>
             <Row>

@@ -12,25 +12,52 @@ class TabbedContentExample extends React.Component {
         };
 
         return (
-            <div>
-                <TabbedContent>
-                    <TabbedContent.Tab title="Title 1" active>
-                        <div style={{...style, backgroundColor: '#5CCDDF'}}>
-                            Content 1
-                        </div>
-                    </TabbedContent.Tab>
-                    <TabbedContent.Tab title="Title 2">
-                        <div style={{...style, backgroundColor: '#F48770'}}>
-                            Content 2
-                        </div>
-                    </TabbedContent.Tab>
-                    <TabbedContent.Tab title="Title 3">
-                        <div style={{...style, backgroundColor: '#F2C14A'}}>
-                            Content 3
-                        </div>
-                    </TabbedContent.Tab>
-                </TabbedContent>
-            </div>
+            <Grid>
+                <Row>
+                    <Col lg={6}>
+                        <H2>Normal Tabs</H2>
+                        <TabbedContent>
+                            <TabbedContent.Tab title="Title 1" active>
+                                <div style={{...style, backgroundColor: '#5CCDDF'}}>
+                                    Content 1
+                                </div>
+                            </TabbedContent.Tab>
+                            <TabbedContent.Tab title="Title 2">
+                                <div style={{...style, backgroundColor: '#F48770'}}>
+                                    Content 2
+                                </div>
+                            </TabbedContent.Tab>
+                            <TabbedContent.Tab title="Title 3">
+                                <div style={{...style, backgroundColor: '#F2C14A'}}>
+                                    Content 3
+                                </div>
+                            </TabbedContent.Tab>
+                        </TabbedContent>
+                    </Col>
+                    <Col lg={6}>
+                        <H2>Radio Tabs</H2>
+                        <TabbedContent vertical radio>
+                            <Tab title="Click here!">Nice Content eh?</Tab>
+                            <Tab title="I'm a radio too" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            </Tab>
+                            <Tab title="Let's try a heading">
+                                <H2 style={{margin: '0px 0px 10px 0px'}}>
+                                    H2 heading incoming!
+                                </H2>
+                                ...and some text of course!
+                            </Tab>
+                            <Tab title="Mix of elements">
+                                <H2 style={{margin: '0px 0px 10px 10px'}}>
+                                    H2 heading incoming!
+                                </H2>
+                                <Input placeholder="Yoohoo tabs!"/>
+                                <Button>Ah..Tabs...</Button>
+                            </Tab>
+                        </TabbedContent>
+                    </Col>
+                </Row>
+            </Grid>
         );
     }
 }

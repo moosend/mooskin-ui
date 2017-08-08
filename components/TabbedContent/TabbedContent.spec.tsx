@@ -23,6 +23,24 @@ describe('TabbedContent', () => {
         expect(component).toMatchSnapshot();
     });
 
+    test('renders TabbedContent vertically with radio styles', () => {
+
+        Math.random = jest.fn(() => 222333444555);
+
+        const component = shallow(
+            <TabbedContent vertical radio id="5" className="mySwitch" style={{color: 'black'}}>
+                <Tab title="title1" iconClass="iconclass">asdasd1</Tab>
+                <Tab title="title2" materialIcon="home" active>asdasd2</Tab>
+                <Tab title="title3" className="classname">asdasd3</Tab>
+            </TabbedContent>
+        );
+
+        expect(component.prop('radio')).toBeTruthy;
+        expect(component.prop('vertical')).toBeTruthy;
+
+        expect(component).toMatchSnapshot();
+    });
+
     test('renders Tab properly according to snapshot', () => {
         const component = shallow(
         <Tab title="title1" iconClass="iconclass" materialIcon="home" style={{color: 'blue'}} active>asdasd1</Tab>
@@ -38,6 +56,7 @@ describe('TabbedContent', () => {
                 iconClass="iconclass"
                 materialIcon="home"
                 onClick={() => null}
+                radio
                 active
             />
         );
@@ -56,6 +75,8 @@ describe('TabbedContent', () => {
 
         expect(component.find('.tab-header i.iconclass').length).toBe(1);
         expect(component.find('.tab-header i.material-icons').text()).toBe('home');
+        expect(component.find('input')).toBeFalsy;
+        expect(component.find('label')).toBeFalsy;
 
     });
 
@@ -70,6 +91,25 @@ describe('TabbedContent', () => {
 
         expect(component.find('.tab-header i.iconclass').length).toBe(0);
         expect(component.find('.tab-header i.material-icons').length).toBe(0);
+
+    });
+
+    test('renders input and label when radio prop is passed', () => {
+
+        Math.random = jest.fn(() => 222333444555);
+
+        const component = shallow(
+            <TabbedContent radio>
+                <Tab title="title1" iconClass="iconclass">asdasd1</Tab>
+                <Tab title="title2" materialIcon="home" active>asdasd2</Tab>
+                <Tab title="title3" className="classname">asdasd3</Tab>
+            </TabbedContent>
+        );
+
+        expect(component.find('.header-icon')).toBeFalsy;
+        expect(component.find('.material-icons')).toBeFalsy;
+        expect(component.find('input')).toBeTruthy;
+        expect(component.find('label')).toBeTruthy;
 
     });
 
