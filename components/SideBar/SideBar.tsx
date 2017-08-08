@@ -249,16 +249,14 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     // }
 
     private getActiveItem() {
-        let activeItem = 0;
         const childrenArray = React.Children.toArray(this.props.children);
 
         for (const [index, value] of childrenArray.entries()){
             if (React.isValidElement<ISideBarItemProps>(value) && value.props.active){
-                activeItem = index;
+                return index;
             }
         }
 
-        return activeItem;
     }
 
     private getCover = () => {

@@ -36,97 +36,96 @@ export default (props: any) => {
     return(
         <Grid>
             <Row>
-                <Col>
+                <Col id="sidebar">
                     <SideBar />
+                </Col>
+                <Col id="breadcrumbs">
+                    <Breadcrumbs />
                 </Col>
             </Row>
             <Row>
-                <Col lg={12} md={12} />
-                <Col lg={6} md={12}>
-                    <Breadcrumbs />
+                <Col lg={6} md={6} id="switch">
+                    <Switch />
                 </Col>
-                <Col lg={6} md={12}>
+                <Col lg={6} md={6} id="pagination">
                     <Pagination />
                 </Col>
             </Row>
             <Row>
-                <Col lg={4} md={12}>
-                    <Select />
+                <Col lg={6} md={12} id="smalliconbutton">
+                    <SmallIconButton />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={6} md={6} id="button">
                     <Button />
-                </Col>
-                <Col lg={4} md={6}>
-                    <Switch />
                 </Col>
             </Row>
             <Row>
-                <Col lg={6} md={6}>
+                <Col lg={6} md={6} id="input">
                     <Input />
                 </Col>
-                <Col lg={6} md={6}>
+                <Col lg={6} md={6} id="textarea">
                     <TextArea />
                 </Col>
             </Row>
             <Row>
-                <Col lg={4} md={12}>
+                <Col lg={4} md={12} id="topnotification">
                     <TopNotification />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="radio">
                     <Radio />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="checkbox">
                     <CheckBox />
                 </Col>
             </Row>
             <Row>
-                <Col lg={4} md={12}>
-                    <SmallIconButton />
+                <Col lg={4} md={12} id="select">
+                    <Select />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="rangebar">
                     <HorizontalRangeBar />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="headings">
                     <Headings />
                 </Col>
             </Row>
             <Row>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="datepicker">
                     <DatePicker />
                 </Col>
-                <Col lg={8} md={6}>
+                <Col lg={8} md={6} id="radioaccordion">
                     <RadioAccordion />
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <TabbedContent />
+                <Col id="tabbedcontent">
+                    <TabbedContent/>
                 </Col>
             </Row>
             <Row>
-                <Col>
+                <Col id="form">
                     <Form />
                 </Col>
             </Row>
             <Row>
-                <Col xs="hidden">
+                <Col xs="hidden" id="table">
                     <Table />
                 </Col>
             </Row>
             <Row>
-                <Col lg={6} md={6}>
+                <Col lg={6} md={6} id="checklistitem">
                     <CheckListItem />
                 </Col>
-                <Col lg={6} md={6}>
+                <Col lg={6} md={6} id="file">
                     <File />
                 </Col>
             </Row>
             <Row>
                 <Col>
-                    <GridExample />
+                    <GridExample id="grid"/>
                 </Col>
             </Row>
-            <Row>
+            <Row id="charts">
                 <Pie />
                 <Doughnut />
             </Row>

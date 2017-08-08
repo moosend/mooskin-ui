@@ -5,32 +5,110 @@ class SideBarExample extends React.Component {
             <SideBar button >
                 <Item
                     image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
-                    label="Automations"
-                    href="automations"
+                    label="React"
+                    href="https://facebook.github.io/react/"
                 />
                 <Item
-                    image="http://hguochen.com/static/img/tech/css3.png"
-                    label="Mailing List"
-                    href="mailing/list"
+                    image="https://www.codementor.io/assets/page_img/learn-javascript.png"
+                    label="JavaScript"
+                    href="https://www.javascript.com/"
                 />
                 <Item
-                    image="https://www.easyprogramming.net/logo/js.png"
-                    label="SideBar 2"
+                    image="https://camo.githubusercontent.com/00dfbc4648e8bf8f7903c85b8c6e2eaf8afd1320/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
+                    label="Components"
                 >
                     <Secondary>
                         <Item
-                            image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
-                            label="Automations"
-                            href="automations"
+                            label="SideBar"
+                            href="#sidebar"
                         />
                         <Item
-                            image="http://hguochen.com/static/img/tech/css3.png"
-                            label="Mailing List"
-                            href="mailing/list"
+                            label="Breadcrumbs"
+                            href="#breadcrumbs"
                         />
                         <Item
-                            image="https://www.easyprogramming.net/logo/js.png"
-                            label="SideBar 2"
+                            label="Switch"
+                            href="#switch"
+                        />
+                        <Item
+                            label="Pagination"
+                            href="#pagination"
+                        />
+                        <Item
+                            label="SmallIconButton"
+                            href="#smalliconbutton"
+                        />
+                        <Item
+                            label="Button"
+                            href="#button"
+                        />
+                        <Item
+                            label="Input"
+                            href="#input"
+                        />
+                        <Item
+                            label="TextArea"
+                            href="#textarea"
+                        />
+                        <Item
+                            label="TopNotification"
+                            href="#topnotification"
+                        />
+                        <Item
+                            label="Radio"
+                            href="#radio"
+                        />
+                        <Item
+                            label="CheckBox"
+                            href="#checkbox"
+                        />
+                        <Item
+                            label="Select"
+                            href="#select"
+                        />
+                        <Item
+                            label="HorizontalRangeBar"
+                            href="#rangebar"
+                        />
+                        <Item
+                            label="Headings"
+                            href="#headings"
+                        />
+                        <Item
+                            label="DatePicker"
+                            href="#datepicker"
+                        />
+                        <Item
+                            label="RadioAccordion"
+                            href="#radioaccordion"
+                        />
+                        <Item
+                            label="TabbedContent"
+                            href="#tabbedcontent"
+                        />
+                        <Item
+                            label="Form"
+                            href="#form"
+                        />
+                        <Item
+                            label="Table"
+                            href="#table"
+                        />
+                        <Item
+                            label="CheckListItem"
+                            href="#checklistitem"
+                        />
+                        <Item
+                            label="File"
+                            href="#file"
+                        />
+                        <Item
+                            label="Grid System"
+                            href="#grid"
+                        />
+                        <Item
+                            label="Charts"
+                            href="#charts"
                         />
                     </Secondary>
                 </Item>

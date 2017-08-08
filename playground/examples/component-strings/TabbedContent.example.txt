@@ -20,7 +20,7 @@ class TabbedContentExample extends React.Component {
         return (
             <Grid>
                 <Row>
-                    <Col lg={6}>
+                    <Col lg={12}>
                         <H2>Normal Tabs</H2>
                         <TabbedContent>
                             <TabbedContent.Tab title="Title 1" active onClick={this.onHeaderClick}>
@@ -40,7 +40,7 @@ class TabbedContentExample extends React.Component {
                             </TabbedContent.Tab>
                         </TabbedContent>
                     </Col>
-                    <Col lg={6}>
+                    <Col lg={12}>
                         <H2>Radio Tabs</H2>
                         <TabbedContent vertical radio>
                             <Tab title="Click here!">Nice Content eh?</Tab>
@@ -62,9 +62,7 @@ class TabbedContentExample extends React.Component {
                             </Tab>
                         </TabbedContent>
                     </Col>
-                </Row>
-                <Row>
-                    <Col>
+                    <Col lg={12}>
                         <H2>Content with Tables</H2>
                         <TabbedContent align>
                             <Tab title="Table 1" image="https://camo.githubusercontent.com/00dfbc4648e8bf8f7903c85b8c6e2eaf8afd1320/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67">
