@@ -169,6 +169,14 @@
     .contentV {
         font-size: 3vw;
     }
+    
+    .headerAlign span.title{
+        font-size: 3vw;
+    }
+
+    span.info{
+        font-size: 2vw;
+    }
 
 }
 
@@ -184,6 +192,18 @@
 
     .contentV {
         font-size: 3vw;
+    }
+
+    .contentV {
+        font-size: 3vw;
+    }
+
+    .headerAlign span.title{
+        font-size: 3vw;
+    }
+
+    span.info{
+        font-size: 2vw;
     }
 
 }
