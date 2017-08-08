@@ -88,16 +88,19 @@ Import {TabbedContent} from 'mooskin';
 * `className` - css class
 * `vertical` - tab headers will be aligned vertically, content on the right
 * `radio` - alternative styles with radios for tabbed content.
+* `align` - align tab headers to the left like small cards (without radio)
 * `style` - extra styles for the main container
-
 
 ## Supported attributes for Tab 
 
 * `title` - (required) sets the title for the tab
+* `image` - small image to appear on the header (no radio)
+* `headerValue` - numerical value to appear on the tab header (no radio)
+* `headerInfo` - additional information to  be displayed on the header (no radio)
 * `active` - sets which tab is active, the first is active by default
 * `style` -  extra styles 
-* `iconClass` - a class that will be added before the title to act as an icon, for example a font awesome class
-* `materialIcon` - name of the material icon to be added before the title (material icons are provided out of the box)
+* `iconClass` - a class that will be added before the title to act as an icon, for example a font awesome class (no radio)
+* `materialIcon` - name of the material icon to be added before the title (no radio, material icons are provided out of the box)
 
 </div>
 

@@ -17,6 +17,9 @@ export interface ITabbedContentProps {
     /** vertical tabbedContent view */
     vertical?: boolean;
 
+    /** align headers to the left */
+    align?: boolean;
+
     /** override styles */
     style?: React.CSSProperties;
 
@@ -32,8 +35,17 @@ export interface ITabProps {
     /** title */
     title: string;
 
+    /** image to be displayed in this header */
+    image?: string;
+
     /** if active */
     active?: boolean;
+
+    /** numerical value appearing in the header */
+    headerValue?: number;
+
+    /** additional information to be displayed on the header */
+    headerInfo?: string;
 
     /** icon name, for material icons only */
     materialIcon?: string;
@@ -43,6 +55,9 @@ export interface ITabProps {
 
     /** override styles */
     style?: React.CSSProperties;
+
+    /** callback function when a header is clicked */
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 
 }
 
@@ -89,9 +104,10 @@ class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentS
         );
     }
 
-    public onClickHeader = (tabIndex: number) => {
+    public onClickHeader = (tabIndex: number, header: React.ReactElement<ITabProps>) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({activeTab: tabIndex});
+            header.props.onClick && header.props.onClick(e);
         };
     }
 
@@ -105,13 +121,17 @@ class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentS
 
                 headers.push(
                     <Header
-                        key={index}
-                        title={child.props.title}
-                        active={this.state.activeTab === index}
-                        iconClass={child.props.iconClass}
-                        materialIcon={child.props.materialIcon}
-                        radio={this.props.radio}
-                        onClick={this.onClickHeader(index)}
+                        key = {index}
+                        title = {child.props.title}
+                        active = {this.state.activeTab === index}
+                        iconClass = {child.props.iconClass}
+                        materialIcon = {child.props.materialIcon}
+                        value = {child.props.headerValue}
+                        info = {child.props.headerInfo}
+                        align = {this.props.align}
+                        radio = {this.props.radio}
+                        image = {child.props.image}
+                        onClick = {this.onClickHeader(index, child)}
                     />
                 );
 
@@ -155,6 +175,10 @@ export interface IHeaderProps {
     title: string;
     active: boolean;
     materialIcon?: string;
+    image?: string;
+    align?: boolean;
+    info?: string;
+    value?: number;
     radio?: boolean;
     iconClass?: string;
     onClick: (e: React.MouseEvent<HTMLElement>) => void;
@@ -163,8 +187,9 @@ export interface IHeaderProps {
 export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const style = props.radio ? radio : styles;
-    const {active, materialIcon, iconClass} = props;
+    const {active, materialIcon, iconClass, image, info, value} = props;
     const activeTab = active ? style.activeHeader : style.inactiveHeader;
+    const align = !props.align ? '' : style.headerAlign;
 
     const generateId = () => {
         return Math.random().toString(36).substr(2, 10);
@@ -180,7 +205,7 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
     ) : '';
 
     const label = !props.radio ?
-        (<span>{props.title}</span>) :
+        (<span className={style.title}>{props.title}</span>) :
         (
             <label htmlFor={generateId()}>
                 <span>{props.title}</span>
@@ -188,11 +213,14 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
         );
 
     return (
-        <div className={`tab-header ${style.header} ${activeTab}`} onClick={props.onClick}>
+        <div className={`tab-header ${style.header} ${activeTab} ${align}`} onClick={props.onClick}>
             {input}
             {materialIcon && !props.radio && <i className="header-icon material-icons">{materialIcon}</i>}
             {iconClass && !props.radio && <i className={`header-icon ${iconClass}`}/>}
             {label}
+            {image && !props.radio && <img src={image} className={style.image}/>}
+            {value && !props.radio && <span className={style.value}>{value}</span>}
+            {info && !props.radio && <span className={style.info}>{info}</span>}
         </div>
     );
 };

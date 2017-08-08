@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Readme from '../../components/TabbedContent/README.md';
 
-import {Button, Col, Grid, H2, Input, Row, Tab, TabbedContent} from '../../components/index/';
+import {Button, Col, Grid, H2, Input, Row, Tab, TabbedContent, Table} from '../../components/index/';
 import TabbedContentExampleCode from './component-strings/TabbedContent.example.txt';
 
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
@@ -12,7 +12,7 @@ export default class TabbedContentExample extends React.Component<any, any> {
 
         return(
             <ReactLiveEditor
-                scope={{React, TabbedContent, Tab, Col, Grid, Row, Button, H2, Input}}
+                scope={{React, TabbedContent, Tab, Col, Grid, Row, Button, H2, Input, Table}}
                 code={TabbedContentExampleCode}
                 title="TabbedContent Example"
                 doc={Readme}

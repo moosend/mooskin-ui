@@ -145,4 +145,37 @@ describe('TabbedContent', () => {
         expect(component.find('.tab-content').last().hasClass('visible')).toBeTruthy();
 
     });
+
+    test('renders an aligned heading with headers & image, headerInfo and headerValue props', () => {
+
+        const component = mount(
+            <TabbedContent align>
+                <Tab image="imageSrc" title="title1">asdasd1</Tab>
+                <Tab headerInfo="blla" headerValue={1} title="title2">asdasd2</Tab>
+            </TabbedContent>
+        );
+
+        expect(component.find('.tab-header').first().hasClass('headerAlign')).toBeTruthy;
+        expect(component.find('Header').first().prop('image')).toEqual('imageSrc');
+        expect(component.find('Header').last().prop('info')).toEqual('blla');
+        expect(component.find('Header').last().prop('value')).toEqual(1);
+
+    });
+
+    test('some props should not render when Radio prop is passed', () => {
+
+        const component = mount(
+            <TabbedContent radio>
+                <Tab materialIcon="face" iconClass="myClass" image="imageSrc" title="title1">asdasd1</Tab>
+                <Tab headerInfo="blla" headerValue={1} title="title2">asdasd2</Tab>
+            </TabbedContent>
+        );
+
+        expect(component.find('.tab-header').first().hasClass('headerAlign')).toBeFalsy;
+        expect(component.find('.material-icons')).toBeFalsy;
+        expect(component.find('.header-icon')).toBeFalsy;
+        expect(component.find('.title')).toBeFalsy;
+        expect(component.find('.info')).toBeFalsy;
+        expect(component.find('.image')).toBeFalsy;
+    });
 });

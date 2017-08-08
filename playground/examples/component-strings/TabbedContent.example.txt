@@ -1,5 +1,11 @@
 class TabbedContentExample extends React.Component {
 
+    constructor(){
+        super();
+
+        this.onHeaderClick = this.onHeaderClick.bind(this);
+    }
+
     render(){
 
         const style = {
@@ -17,7 +23,7 @@ class TabbedContentExample extends React.Component {
                     <Col lg={6}>
                         <H2>Normal Tabs</H2>
                         <TabbedContent>
-                            <TabbedContent.Tab title="Title 1" active>
+                            <TabbedContent.Tab title="Title 1" active onClick={this.onHeaderClick}>
                                 <div style={{...style, backgroundColor: '#5CCDDF'}}>
                                     Content 1
                                 </div>
@@ -57,7 +63,136 @@ class TabbedContentExample extends React.Component {
                         </TabbedContent>
                     </Col>
                 </Row>
+                <Row>
+                    <Col>
+                        <H2>Content with Tables</H2>
+                        <TabbedContent align>
+                            <Tab title="Table 1" image="https://camo.githubusercontent.com/00dfbc4648e8bf8f7903c85b8c6e2eaf8afd1320/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67">
+                                <Table>
+                                    <thead>
+                                        <tr>
+                                            <th>Date & Time</th>
+                                            <th>Campaign Name</th>
+                                            <th>Mailing List / Segment</th>
+                                            <th>Status</th>
+                                            <th>Open %</th>
+                                            <th>Click %</th>
+                                            <th>Subscribers</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                            <td>td 6</td>
+                                            <td>td 7</td>
+                                            <td>td 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                            <td>td 6</td>
+                                            <td>td 7</td>
+                                            <td>td 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                            <td>td 6</td>
+                                            <td>td 7</td>
+                                            <td>td 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                            <td>td 6</td>
+                                            <td>td 7</td>
+                                            <td>td 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                            <td>td 6</td>
+                                            <td>td 7</td>
+                                            <td>td 8</td>
+                                        </tr>
+                                    </tbody>
+                                </Table>
+                            </Tab>
+                            <Tab title="Table 2" headerValue={2} headerInfo="Some info">
+                                <Table>
+                                    <thead>
+                                        <tr>
+                                            <th>Date & Time</th>
+                                            <th>Campaign Name</th>
+                                            <th>Mailing List / Segment</th>
+                                            <th>Status</th>
+                                            <th>Open %</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>td 1</td>
+                                            <td>td 2</td>
+                                            <td>td 3</td>
+                                            <td>td 4</td>
+                                            <td>td 5</td>
+                                        </tr>
+                                    </tbody>
+                                </Table>
+                            </Tab>
+                        </TabbedContent>
+                    </Col>
+                </Row>
             </Grid>
         );
+    }
+
+    onHeaderClick(){
+        console.log('Header Clicked!');
     }
 }

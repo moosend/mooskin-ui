@@ -2,7 +2,7 @@
 
 exports[`TabbedContent renders Header properly according to snapshot 1`] = `
 <div
-  className="tab-header header activeHeader"
+  className="tab-header header activeHeader "
   onClick={[Function]}
 >
   <input

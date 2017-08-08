@@ -3,6 +3,9 @@
 .table{
     width: 100%;
     border-collapse: collapse;
+}
+
+.table tbody{
     border: 1px solid #eaeaea;
 }
 
