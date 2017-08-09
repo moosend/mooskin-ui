@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TabbedContent, {Header, Tab} from './TabbedContent';
+import TabbedContent, {Content, Header, Tab} from './TabbedContent';
 
 import { mount, render, shallow } from 'enzyme';
 
@@ -7,18 +7,27 @@ describe('TabbedContent', () => {
 
     test('renders TabbedContent properly according to snapshot', () => {
 
-        const component = shallow(
-            <TabbedContent id="5" className="mySwitch" style={{color: 'black'}}>
-                <Tab title="title1" iconClass="iconclass">asdasd1</Tab>
-                <Tab title="title2" materialIcon="home" active>asdasd2</Tab>
-                <Tab title="title3" className="classname">asdasd3</Tab>
+        const component = mount(
+            <TabbedContent id="5" className="mySwitch" style={{color: 'black'}} type="normal" vertical align="right">
+                <Tab>
+                    <Header className="mySwitch" style={{color: 'black'}}>Moosend</Header>
+                    <Content>Table</Content>
+                </Tab>
+                <Tab active>
+                    <Header className="mySwitch" style={{color: 'black'}}>Home</Header>
+                    <Content>Some Content</Content>
+                </Tab>
+                <Tab>
+                    <Header className="mySwitch" style={{color: 'black'}}>About</Header>
+                    <Content>Blla blla</Content>
+                </Tab>
             </TabbedContent>
         );
 
         expect(component.find('Header').length).toBe(3);
-        expect(component.find('Tab').length).toBe(3);
+        expect(component.find('Content').length).toBe(3);
 
-        expect(component.find('Tab').first().prop('children')).toBe('asdasd1');
+        expect(component.find('Header').first().prop('children')).toBe('Moosend');
 
         expect(component).toMatchSnapshot();
     });
@@ -28,14 +37,23 @@ describe('TabbedContent', () => {
         Math.random = jest.fn(() => 222333444555);
 
         const component = shallow(
-            <TabbedContent vertical radio id="5" className="mySwitch" style={{color: 'black'}}>
-                <Tab title="title1" iconClass="iconclass">asdasd1</Tab>
-                <Tab title="title2" materialIcon="home" active>asdasd2</Tab>
-                <Tab title="title3" className="classname">asdasd3</Tab>
+            <TabbedContent vertical type="radio">
+                <Tab>
+                    <Header className="mySwitch" style={{color: 'black'}}>Moosend</Header>
+                    <Content>Table</Content>
+                </Tab>
+                <Tab active>
+                    <Header className="mySwitch" style={{color: 'black'}}>Home</Header>
+                    <Content>Some Content</Content>
+                </Tab>
+                <Tab>
+                    <Header className="mySwitch" style={{color: 'black'}}>About</Header>
+                    <Content>Blla blla</Content>
+                </Tab>
             </TabbedContent>
         );
 
-        expect(component.prop('radio')).toBeTruthy;
+        expect(component.prop('type')).toBeTruthy;
         expect(component.prop('vertical')).toBeTruthy;
 
         expect(component).toMatchSnapshot();
@@ -43,7 +61,7 @@ describe('TabbedContent', () => {
 
     test('renders Tab properly according to snapshot', () => {
         const component = shallow(
-        <Tab title="title1" iconClass="iconclass" materialIcon="home" style={{color: 'blue'}} active>asdasd1</Tab>
+            <Tab style={{color: 'blue'}} active/>
         );
 
         expect(component).toMatchSnapshot();
@@ -52,64 +70,34 @@ describe('TabbedContent', () => {
     test('renders Header properly according to snapshot', () => {
         const component = shallow(
             <Header
-                title="title1"
-                iconClass="iconclass"
-                materialIcon="home"
                 onClick={() => null}
-                radio
                 active
-            />
+            >
+                just some Header
+            </Header>
         );
 
         expect(component).toMatchSnapshot();
     });
 
-    test('renders TabbedContent properly with icon class and material icon', () => {
+    test('renders input and callback function is called when header is clicked', () => {
 
-        const component = mount(
-            <TabbedContent>
-                <Tab title="title1" iconClass="iconclass">asdasd1</Tab>
-                <Tab title="title2" materialIcon="home">asdasd2</Tab>
-            </TabbedContent>
-        );
-
-        expect(component.find('.tab-header i.iconclass').length).toBe(1);
-        expect(component.find('.tab-header i.material-icons').text()).toBe('home');
-        expect(component.find('input')).toBeFalsy;
-        expect(component.find('label')).toBeFalsy;
-
-    });
-
-    test('renders without any <i> elements when no iconClass or materialIcon is provided', () => {
-
-        const component = mount(
-            <TabbedContent>
-                <Tab title="title1">asdasd1</Tab>
-                <Tab title="title2">asdasd2</Tab>
-            </TabbedContent>
-        );
-
-        expect(component.find('.tab-header i.iconclass').length).toBe(0);
-        expect(component.find('.tab-header i.material-icons').length).toBe(0);
-
-    });
-
-    test('renders input and label when radio prop is passed', () => {
-
+        const func = jest.fn();
         Math.random = jest.fn(() => 222333444555);
 
         const component = shallow(
-            <TabbedContent radio>
-                <Tab title="title1" iconClass="iconclass">asdasd1</Tab>
-                <Tab title="title2" materialIcon="home" active>asdasd2</Tab>
-                <Tab title="title3" className="classname">asdasd3</Tab>
+            <TabbedContent type="radio">
+                <Tab>
+                    <Header onClick={func} className="mySwitch" style={{color: 'black'}}>Moosend</Header>
+                    <Content>Table</Content>
+                </Tab>
             </TabbedContent>
         );
 
-        expect(component.find('.header-icon')).toBeFalsy;
-        expect(component.find('.material-icons')).toBeFalsy;
+        component.find(Header).simulate('click');
+
         expect(component.find('input')).toBeTruthy;
-        expect(component.find('label')).toBeTruthy;
+        expect(func).toHaveBeenCalled();
 
     });
 
@@ -117,65 +105,71 @@ describe('TabbedContent', () => {
 
         const component = mount(
             <TabbedContent>
-                <Tab title="title1">asdasd1</Tab>
-                <Tab title="title2" active>asdasd2</Tab>
+                <Tab>
+                    <Header>Moosend</Header>
+                    <Content>Table</Content>
+                </Tab>
+                <Tab active>
+                    <Header>Home</Header>
+                    <Content>Some Content</Content>
+                </Tab>
             </TabbedContent>
         );
 
         expect(component.state('activeTab')).toBe(1);
-        expect(component.find('.tab-header').first().hasClass('inactiveHeader')).toBeTruthy();
-        expect(component.find('.tab-header').last().hasClass('activeHeader')).toBeTruthy();
-        expect(component.find('.tab-content').first().hasClass('invisible')).toBeTruthy();
-        expect(component.find('.tab-content').last().hasClass('visible')).toBeTruthy();
+        expect(component.find('Header').first().hasClass('inactiveHeader')).toBeTruthy();
+        expect(component.find('Header').last().hasClass('activeHeader')).toBeTruthy();
+        expect(component.find('Content').first().hasClass('invisible')).toBeTruthy();
+        expect(component.find('Content').last().hasClass('visible')).toBeTruthy();
 
-        component.find('.tab-header').first().simulate('click');
+        component.find('Header').first().simulate('click');
 
         expect(component.state('activeTab')).toBe(0);
-        expect(component.find('.tab-header').last().hasClass('inactiveHeader')).toBeTruthy();
-        expect(component.find('.tab-header').first().hasClass('activeHeader')).toBeTruthy();
-        expect(component.find('.tab-content').last().hasClass('invisible')).toBeTruthy();
-        expect(component.find('.tab-content').first().hasClass('visible')).toBeTruthy();
+        expect(component.find('Header').last().hasClass('inactiveHeader')).toBeTruthy();
+        expect(component.find('Header').first().hasClass('activeHeader')).toBeTruthy();
+        expect(component.find('Content').last().hasClass('invisible')).toBeTruthy();
+        expect(component.find('Content').first().hasClass('visible')).toBeTruthy();
 
-        component.find('.tab-header').last().simulate('click');
+        component.find('Header').last().simulate('click');
 
         expect(component.state('activeTab')).toBe(1);
-        expect(component.find('.tab-header').first().hasClass('inactiveHeader')).toBeTruthy();
-        expect(component.find('.tab-header').last().hasClass('activeHeader')).toBeTruthy();
-        expect(component.find('.tab-content').first().hasClass('invisible')).toBeTruthy();
-        expect(component.find('.tab-content').last().hasClass('visible')).toBeTruthy();
+        expect(component.find('Header').first().hasClass('inactiveHeader')).toBeTruthy();
+        expect(component.find('Header').last().hasClass('activeHeader')).toBeTruthy();
+        expect(component.find('Content').first().hasClass('invisible')).toBeTruthy();
+        expect(component.find('Content').last().hasClass('visible')).toBeTruthy();
 
     });
 
-    test('renders an aligned heading with headers & image, headerInfo and headerValue props', () => {
+    // test('renders an aligned heading with headers & image, headerInfo and headerValue props', () => {
 
-        const component = mount(
-            <TabbedContent align>
-                <Tab image="imageSrc" title="title1">asdasd1</Tab>
-                <Tab headerInfo="blla" headerValue={1} title="title2">asdasd2</Tab>
-            </TabbedContent>
-        );
+    //     const component = mount(
+    //         <TabbedContent align>
+    //             <Tab image="imageSrc" title="title1">asdasd1</Tab>
+    //             <Tab headerInfo="blla" headerValue={1} title="title2">asdasd2</Tab>
+    //         </TabbedContent>
+    //     );
 
-        expect(component.find('.tab-header').first().hasClass('headerAlign')).toBeTruthy;
-        expect(component.find('Header').first().prop('image')).toEqual('imageSrc');
-        expect(component.find('Header').last().prop('info')).toEqual('blla');
-        expect(component.find('Header').last().prop('value')).toEqual(1);
+    //     expect(component.find('.tab-header').first().hasClass('headerAlign')).toBeTruthy;
+    //     expect(component.find('Header').first().prop('image')).toEqual('imageSrc');
+    //     expect(component.find('Header').last().prop('info')).toEqual('blla');
+    //     expect(component.find('Header').last().prop('value')).toEqual(1);
 
-    });
+    // });
 
-    test('some props should not render when Radio prop is passed', () => {
+    // test('some props should not render when Radio prop is passed', () => {
 
-        const component = mount(
-            <TabbedContent radio>
-                <Tab materialIcon="face" iconClass="myClass" image="imageSrc" title="title1">asdasd1</Tab>
-                <Tab headerInfo="blla" headerValue={1} title="title2">asdasd2</Tab>
-            </TabbedContent>
-        );
+    //     const component = mount(
+    //         <TabbedContent radio>
+    //             <Tab materialIcon="face" iconClass="myClass" image="imageSrc" title="title1">asdasd1</Tab>
+    //             <Tab headerInfo="blla" headerValue={1} title="title2">asdasd2</Tab>
+    //         </TabbedContent>
+    //     );
 
-        expect(component.find('.tab-header').first().hasClass('headerAlign')).toBeFalsy;
-        expect(component.find('.material-icons')).toBeFalsy;
-        expect(component.find('.header-icon')).toBeFalsy;
-        expect(component.find('.title')).toBeFalsy;
-        expect(component.find('.info')).toBeFalsy;
-        expect(component.find('.image')).toBeFalsy;
-    });
+    //     expect(component.find('.tab-header').first().hasClass('headerAlign')).toBeFalsy;
+    //     expect(component.find('.material-icons')).toBeFalsy;
+    //     expect(component.find('.header-icon')).toBeFalsy;
+    //     expect(component.find('.title')).toBeFalsy;
+    //     expect(component.find('.info')).toBeFalsy;
+    //     expect(component.find('.image')).toBeFalsy;
+    // });
 });

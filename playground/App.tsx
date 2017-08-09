@@ -121,8 +121,8 @@ export default (props: any) => {
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <GridExample id="grid"/>
+                <Col id="grid">
+                    <GridExample/>
                 </Col>
             </Row>
             <Row id="charts">

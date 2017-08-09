@@ -5,86 +5,151 @@ exports[`TabbedContent renders Header properly according to snapshot 1`] = `
   className="tab-header header activeHeader "
   onClick={[Function]}
 >
-  <input
-    checked={true}
-    id="4zlbrf"
-    readOnly={true}
-    type="radio"
-  />
-  <label
-    htmlFor="4zlbrf"
-  >
-    <span>
-      title1
-    </span>
-  </label>
+  just some Header
 </div>
 `;
 
 exports[`TabbedContent renders Tab properly according to snapshot 1`] = `
 <div
-  className="tab-content tab visible"
+  className="tab-component undefined"
   style={
     Object {
       "color": "blue",
     }
   }
->
-  asdasd1
-</div>
+/>
 `;
 
 exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] = `
-<div
-  className="tabbed-content-component container containerH"
+<TabbedContent
+  activeTab={0}
+  align="right"
+  className="mySwitch"
+  id="5"
+  style={
+    Object {
+      "color": "black",
+    }
+  }
+  type="normal"
+  vertical={true}
 >
   <div
-    className="heading headingH"
+    className="tabbed-content-component container containerV"
+    id="5"
   >
-    <Header
-      active={false}
-      iconClass="iconclass"
-      onClick={[Function]}
-      title="title1"
-    />
-    <Header
-      active={true}
-      materialIcon="home"
-      onClick={[Function]}
-      title="title2"
-    />
-    <Header
-      active={false}
-      onClick={[Function]}
-      title="title3"
-    />
+    <div
+      className="heading headingV headingVRight headingVAlign"
+    >
+      <Header
+        active={false}
+        align="right"
+        className="mySwitch"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+        type="normal"
+        vertical={true}
+      >
+        <div
+          className="tab-header header inactiveHeader headerAlign"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "black",
+            }
+          }
+        >
+          Moosend
+        </div>
+      </Header>
+      <Header
+        active={true}
+        align="right"
+        className="mySwitch"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+        type="normal"
+        vertical={true}
+      >
+        <div
+          className="tab-header header activeHeader headerAlign"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "black",
+            }
+          }
+        >
+          Home
+        </div>
+      </Header>
+      <Header
+        active={false}
+        align="right"
+        className="mySwitch"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "black",
+          }
+        }
+        type="normal"
+        vertical={true}
+      >
+        <div
+          className="tab-header header inactiveHeader headerAlign"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "black",
+            }
+          }
+        >
+          About
+        </div>
+      </Header>
+    </div>
+    <div
+      className="content contentV"
+    >
+      <Content
+        active={false}
+      >
+        <div
+          className="content-component invisible undefined"
+        >
+          Table
+        </div>
+      </Content>
+      <Content
+        active={true}
+      >
+        <div
+          className="content-component visible undefined"
+        >
+          Some Content
+        </div>
+      </Content>
+      <Content
+        active={false}
+      >
+        <div
+          className="content-component invisible undefined"
+        >
+          Blla blla
+        </div>
+      </Content>
+    </div>
   </div>
-  <div
-    className="content contentH"
-  >
-    <Tab
-      active={false}
-      iconClass="iconclass"
-      title="title1"
-    >
-      asdasd1
-    </Tab>
-    <Tab
-      active={true}
-      materialIcon="home"
-      title="title2"
-    >
-      asdasd2
-    </Tab>
-    <Tab
-      active={false}
-      className="classname"
-      title="title3"
-    >
-      asdasd3
-    </Tab>
-  </div>
-</div>
+</TabbedContent>
 `;
 
 exports[`TabbedContent renders TabbedContent vertically with radio styles 1`] = `
@@ -92,53 +157,69 @@ exports[`TabbedContent renders TabbedContent vertically with radio styles 1`] = 
   className="tabbed-content-component container containerV"
 >
   <div
-    className="heading headingV"
+    className="heading headingV headingCenter "
   >
     <Header
       active={false}
-      iconClass="iconclass"
+      className="mySwitch"
       onClick={[Function]}
-      radio={true}
-      title="title1"
-    />
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      type="radio"
+      vertical={true}
+    >
+      Moosend
+    </Header>
     <Header
       active={true}
-      materialIcon="home"
+      className="mySwitch"
       onClick={[Function]}
-      radio={true}
-      title="title2"
-    />
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      type="radio"
+      vertical={true}
+    >
+      Home
+    </Header>
     <Header
       active={false}
+      className="mySwitch"
       onClick={[Function]}
-      radio={true}
-      title="title3"
-    />
+      style={
+        Object {
+          "color": "black",
+        }
+      }
+      type="radio"
+      vertical={true}
+    >
+      About
+    </Header>
   </div>
   <div
     className="content contentV"
   >
-    <Tab
+    <Content
       active={false}
-      iconClass="iconclass"
-      title="title1"
     >
-      asdasd1
-    </Tab>
-    <Tab
+      Table
+    </Content>
+    <Content
       active={true}
-      materialIcon="home"
-      title="title2"
     >
-      asdasd2
-    </Tab>
-    <Tab
+      Some Content
+    </Content>
+    <Content
       active={false}
-      className="classname"
-      title="title3"
     >
-      asdasd3
-    </Tab>
+      Blla blla
+    </Content>
   </div>
 </div>
 `;

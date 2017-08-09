@@ -5,6 +5,9 @@ import radio from './TabbedRadio.css';
 
 export interface ITabbedContentProps {
 
+    /** id of the component */
+    id?: string;
+
     /** type of the tabbed content normal/radio/advanced */
     type?: string;
 
@@ -120,7 +123,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         const {headers, contents} = this.riteOfRakshir();
 
         return(
-            <div className={`tabbed-content-component ${style.container} ${containerStyles}`}>
+            <div id={this.props.id} className={`tabbed-content-component ${style.container} ${containerStyles}`}>
                 <div className={`${style.heading} ${headingStyles} ${align} ${verticalAlign}`}>
                     {headers}
                 </div>
