@@ -71,7 +71,7 @@
 
 .header input[type='radio'] {
     appearance: none;
-    margin: 0 auto;
+    margin-right: 10px;
     cursor: pointer;
     width: 1.188rem;
     height: 1.188rem;
@@ -104,12 +104,13 @@
     height: 100%;
 }
 
-.header span {
-    margin-left: 10px;
+/* .header span {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     cursor: pointer;
-    vertical-align: middle;
     user-select: none;
-}
+} */
 
 .activeHeader {
     background: var(--moosendBlue);
@@ -132,6 +133,7 @@
 .invisible {
     display: none;
 }
+
 @media (--xSmall){
 
     .headingV{

@@ -45,8 +45,7 @@
 }
 
 .header {
-    height: 115px;
-    width: 115px;
+    padding: 30px 0;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -57,33 +56,35 @@
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     border-bottom-left-radius: inherit;
-}
-
-.headerAlign{
-    flex-grow: 0;
-}
-
-.title{
     color: #575757;
     font-family: Convergence,sans-serif;
     font-size: 1.125rem;
-    /*font-size: 18px;*/
 }
 
-.info{
-    font-size: .78571428571rem;
-    color: #aaa;
-    margin-bottom: 5px;
-    background-color: #efefef;
+.headerAlign{
+    padding: 0;
+    flex-grow: 0;
+    width: 120px;
+    height: 120px;
 }
 
-.value{
-    color: #636363;
-    font-size: 1rem;
-    font-weight: 700;
+.headingHRight{
+    flex-direction: row-reverse;
 }
 
-.headerAlign span.title{
+.headingVRight{
+    flex-direction: column-reverse;
+}
+
+.headingCenter{
+    justify-content: center;
+}
+
+.headingVAlign{
+    flex: 0;
+} 
+
+/* .headerAlign span.title{
     color: #6b6b6b;
     font-family: sans-serif;
     font-size: .92857142857rem;
@@ -92,7 +93,7 @@
 
 .headerAlign:hover span.title{
     color: var(--moosendBlue);
-}
+} */
 
 .tab{
     display: block;
@@ -158,52 +159,32 @@
 
 @media (--deviceXsmall){
 
-    .heading span{
+    .heading{
         font-size: 3.5vw;
     }
 
-    .containerH {
+    .contentH {
         font-size: 3vw;
     }
 
     .contentV {
         font-size: 3vw;
-    }
-    
-    .headerAlign span.title{
-        font-size: 3vw;
-    }
-
-    span.info{
-        font-size: 2vw;
     }
 
 }
 
 @media (--deviceSmall){
 
-    .heading span{
+    .heading{
         font-size: 3.5vw;
     }
 
-    .containerH {
+    .contentH {
         font-size: 3vw;
     }
 
     .contentV {
         font-size: 3vw;
-    }
-
-    .contentV {
-        font-size: 3vw;
-    }
-
-    .headerAlign span.title{
-        font-size: 3vw;
-    }
-
-    span.info{
-        font-size: 2vw;
     }
 
 }
