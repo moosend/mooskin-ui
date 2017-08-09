@@ -9,7 +9,7 @@ export interface ITabbedContentProps {
     id?: string;
 
     /** type of the tabbed content normal/radio/advanced */
-    type?: string;
+    type?: 'normal' | 'radio';
 
     /** align headers left/center/right */
     alignHeaders?: string;
