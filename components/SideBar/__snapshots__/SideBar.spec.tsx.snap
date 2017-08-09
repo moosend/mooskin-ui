@@ -75,7 +75,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
     }
   >
     <Item
-      active={false}
+      active={true}
       className="myClass"
       href="www.moosend.com"
       image="imagePath"
@@ -88,7 +88,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
       }
     />
     <Item
-      active={true}
+      active={false}
       className="myClass"
       href="www.moosend.com"
       image="imagePath"
@@ -174,46 +174,6 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
       }
     >
       <Item
-        active={false}
-        className="myClass"
-        href="www.moosend.com"
-        image="imagePath"
-        label="Item"
-        onClick={[Function]}
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
-      >
-        <div
-          className="item-component itemContainer myClass"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "blue",
-            }
-          }
-        >
-          <div
-            className=" arrowImg"
-          />
-          <a
-            className="anchor "
-            href="www.moosend.com"
-          >
-            <img
-              className="image"
-              src="imagePath"
-            />
-            <span>
-              Item
-            </span>
-          </a>
-          <div />
-        </div>
-      </Item>
-      <Item
         active={true}
         className="myClass"
         href="www.moosend.com"
@@ -240,6 +200,46 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
           />
           <a
             className="anchor activeItem"
+            href="www.moosend.com"
+          >
+            <img
+              className="image"
+              src="imagePath"
+            />
+            <span>
+              Item
+            </span>
+          </a>
+          <div />
+        </div>
+      </Item>
+      <Item
+        active={false}
+        className="myClass"
+        href="www.moosend.com"
+        image="imagePath"
+        label="Item"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+      >
+        <div
+          className="item-component itemContainer myClass"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+        >
+          <div
+            className=" arrowImg"
+          />
+          <a
+            className="anchor "
             href="www.moosend.com"
           >
             <img

@@ -14,11 +14,10 @@ export {default as SmallIconButton} from '../SmallIconButton';
 export {default as CheckListItem} from '../CheckListItem';
 export {default as RadioGroup, Radio} from '../Radio';
 export {default as CheckboxGroup, CheckBox} from '../Checkbox';
-export {default as RadioTabs, RadioTabContent} from '../RadioTabs';
 export {Bar, Doughnut, Pie, Line} from '../Charts';
 export {default as Grid, Row, Col} from '../Grid';
 
-export {default as TabbedContent, Tab} from '../TabbedContent';
+export {default as TabbedContent, Content, Header, Tab} from '../TabbedContent';
 export {default as RadioAccordion, RadioAccordionContent} from '../RadioAccordion';
 
 export {default as Form, FormGroup} from '../Form';
@@ -26,6 +25,5 @@ export {default as Form, FormGroup} from '../Form';
 export {default as Table} from '../Table';
 export {default as Pagination} from '../Pagination';
 export {default as DatePicker} from '../DatePicker';
-export {default as TabbedTable, TabTable} from '../TabbedTable';
 export {default as SideBar, Item, Secondary} from '../SideBar';
 export {default as BreadcrumbsGroup, Breadcrumb} from '../Breadcrumbs';

@@ -27,6 +27,7 @@
 
 .secondaryOn{
     width: 185px;
+    overflow-y: auto;
 }
 
 .sidebarOn{
@@ -45,7 +46,7 @@
 
 .itemContainer{
     position: relative;
-    padding-top: 25px; 
+    padding: 10px; 
     user-select: none;
     background: inherit;
 }
@@ -69,7 +70,7 @@
 }
 
 .image{
-    width: 70px;
+    width: 60px;
     margin-bottom: 10px;
     -webkit-user-drag: none;
 }
@@ -105,7 +106,7 @@
 }
 
 .arrowImg{
-    top: 55px;
+    top: 33px;
 }
 
 .cover{
@@ -116,6 +117,26 @@
     bottom: 0px;
     left: 0px;
 }
+
+.sidebar::-webkit-scrollbar {
+    width: 7px;
+    height: 10px;
+}
+
+.sidebar::-webkit-scrollbar-button:start:decrement,
+.sidebar::-webkit-scrollbar-button:end:increment  {
+    display: none;
+}
+
+.sidebar::-webkit-scrollbar-track-piece  {
+    background-color: #eeeeee;
+}
+
+.sidebar::-webkit-scrollbar-thumb:vertical {
+    background: #d9d9d9;
+    border-radius: 16px;
+}
+
 
 @media (--deviceSmall){
     

@@ -23,13 +23,11 @@ import Pagination from './examples/Pagination.example';
 import Pie from './examples/Pie.example';
 import Radio from './examples/Radio.example';
 import RadioAccordion from './examples/RadioAccordion.example';
-import RadioTabs from './examples/RadioTabs.example';
 import Select from './examples/Select.example';
 import SideBar from './examples/SideBar.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
-import TabbedTable from './examples/TabbedTable.example';
 import Table from './examples/Table.example';
 import TextArea from './examples/TextArea.example';
 import TopNotification from './examples/TopNotification.example';
@@ -38,107 +36,96 @@ export default (props: any) => {
     return(
         <Grid>
             <Row>
-                <Col>
-                    <TabbedTable />
-                </Col>
-            </Row>
-            <Row>
-                <Col>
+                <Col id="sidebar">
                     <SideBar />
                 </Col>
-            </Row>
-            <Row>
-                <Col lg={12} md={12} />
-                <Col lg={6} md={12}>
+                <Col id="breadcrumbs">
                     <Breadcrumbs />
                 </Col>
-                <Col lg={6} md={12}>
+            </Row>
+            <Row>
+                <Col lg={6} md={6} id="switch">
+                    <Switch />
+                </Col>
+                <Col lg={6} md={6} id="pagination">
                     <Pagination />
                 </Col>
             </Row>
             <Row>
-                <Col lg={4} md={12}>
-                    <Select />
+                <Col lg={6} md={12} id="smalliconbutton">
+                    <SmallIconButton />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={6} md={6} id="button">
                     <Button />
-                </Col>
-                <Col lg={4} md={6}>
-                    <Switch />
                 </Col>
             </Row>
             <Row>
-                <Col lg={6} md={6}>
+                <Col lg={6} md={6} id="input">
                     <Input />
                 </Col>
-                <Col lg={6} md={6}>
+                <Col lg={6} md={6} id="textarea">
                     <TextArea />
                 </Col>
             </Row>
             <Row>
-                <Col lg={4} md={12}>
+                <Col lg={4} md={12} id="topnotification">
                     <TopNotification />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="radio">
                     <Radio />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="checkbox">
                     <CheckBox />
                 </Col>
             </Row>
             <Row>
-                <Col lg={4} md={12}>
-                    <SmallIconButton />
+                <Col lg={4} md={12} id="select">
+                    <Select />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="rangebar">
                     <HorizontalRangeBar />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="headings">
                     <Headings />
                 </Col>
             </Row>
             <Row>
-                <Col lg={4} md={6}>
+                <Col lg={4} md={6} id="datepicker">
                     <DatePicker />
                 </Col>
-                <Col lg={8} md={6}>
+                <Col lg={8} md={6} id="radioaccordion">
                     <RadioAccordion />
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <TabbedContent />
+                <Col id="tabbedcontent">
+                    <TabbedContent/>
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <RadioTabs />
-                </Col>
-            </Row>
-            <Row>
-                <Col>
+                <Col id="form">
                     <Form />
                 </Col>
             </Row>
             <Row>
-                <Col xs="hidden">
+                <Col xs="hidden" id="table">
                     <Table />
                 </Col>
             </Row>
             <Row>
-                <Col lg={6} md={6}>
+                <Col lg={6} md={6} id="checklistitem">
                     <CheckListItem />
                 </Col>
-                <Col lg={6} md={6}>
+                <Col lg={6} md={6} id="file">
                     <File />
                 </Col>
             </Row>
             <Row>
-                <Col>
-                    <GridExample />
+                <Col id="grid">
+                    <GridExample/>
                 </Col>
             </Row>
-            <Row>
+            <Row id="charts">
                 <Pie />
                 <Doughnut />
             </Row>
