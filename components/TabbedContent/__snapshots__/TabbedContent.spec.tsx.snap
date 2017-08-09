@@ -4,6 +4,11 @@ exports[`TabbedContent renders Header properly according to snapshot 1`] = `
 <div
   className="tab-header header activeHeader "
   onClick={[Function]}
+  style={
+    Object {
+      "width": undefined,
+    }
+  }
 >
   just some Header
 </div>
@@ -23,7 +28,7 @@ exports[`TabbedContent renders Tab properly according to snapshot 1`] = `
 exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] = `
 <TabbedContent
   activeTab={0}
-  align="right"
+  alignHeaders="right"
   className="mySwitch"
   id="5"
   style={
@@ -39,10 +44,11 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
     id="5"
   >
     <div
-      className="heading headingV headingCenter "
+      className="heading headingV headingVRight headingVAlign"
     >
       <Header
         active={false}
+        align="right"
         className="mySwitch"
         onClick={[Function]}
         style={
@@ -54,11 +60,12 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
         vertical={true}
       >
         <div
-          className="tab-header header inactiveHeader "
+          className="tab-header header inactiveHeader headerAlign"
           onClick={[Function]}
           style={
             Object {
               "color": "black",
+              "width": undefined,
             }
           }
         >
@@ -67,6 +74,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
       </Header>
       <Header
         active={true}
+        align="right"
         className="mySwitch"
         onClick={[Function]}
         style={
@@ -78,11 +86,12 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
         vertical={true}
       >
         <div
-          className="tab-header header activeHeader "
+          className="tab-header header activeHeader headerAlign"
           onClick={[Function]}
           style={
             Object {
               "color": "black",
+              "width": undefined,
             }
           }
         >
@@ -91,6 +100,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
       </Header>
       <Header
         active={false}
+        align="right"
         className="mySwitch"
         onClick={[Function]}
         style={
@@ -102,11 +112,12 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
         vertical={true}
       >
         <div
-          className="tab-header header inactiveHeader "
+          className="tab-header header inactiveHeader headerAlign"
           onClick={[Function]}
           style={
             Object {
               "color": "black",
+              "width": undefined,
             }
           }
         >

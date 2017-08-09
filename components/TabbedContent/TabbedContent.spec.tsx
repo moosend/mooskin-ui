@@ -8,7 +8,14 @@ describe('TabbedContent', () => {
     test('renders TabbedContent properly according to snapshot', () => {
 
         const component = mount(
-            <TabbedContent id="5" className="mySwitch" style={{color: 'black'}} type="normal" vertical align="right">
+            <TabbedContent
+                id="5"
+                className="mySwitch"
+                style={{color: 'black'}}
+                type="normal"
+                vertical
+                alignHeaders="right"
+            >
                 <Tab>
                     <Header className="mySwitch" style={{color: 'black'}}>Moosend</Header>
                     <Content>Table</Content>

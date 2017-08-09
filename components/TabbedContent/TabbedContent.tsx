@@ -24,7 +24,7 @@ export interface ITabbedContentProps {
     style?: React.CSSProperties;
 
     /** children here can only be Tab elements */
-    children?: React.ReactElement<ITabProps>;
+    children?: React.ReactElement<ITabProps> | Array<React.ReactElement<ITabProps>>;
 }
 
 export interface ITabProps {
@@ -39,7 +39,7 @@ export interface ITabProps {
     style?: React.CSSProperties;
 
     /** children here can only be Tab elements */
-    children?: React.ReactElement<IHeaderProps> & React.ReactElement<IContentProps>;
+    children?: Array<React.ReactElement<IHeaderProps> | React.ReactElement<IContentProps>>;
 }
 
 export interface IHeaderProps {
@@ -55,6 +55,9 @@ export interface IHeaderProps {
 
     /** wether the headers should be aligned vertically (inherited from parent) */
     vertical?: boolean;
+
+    /** define header width, mostly used with alignHeaders */
+    width?: number;
 
     /** container class */
     className?: string;
@@ -162,7 +165,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
             key: index,
             onClick: this.onClickHeader(index, children[0]),
             type: this.props.type,
-            vertical: this.props.vertical
+            vertical: this.props.vertical,
         };
 
         const contentProps: Partial<IContentProps & {key: number}> = {
@@ -266,7 +269,7 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
     return(
         <div
             className={`tab-header ${style.header} ${activeTab} ${align}`}
-            style={props.style}
+            style={{width: props.width, ...props.style}}
             onClick={props.onClick}
         >
             {input}
