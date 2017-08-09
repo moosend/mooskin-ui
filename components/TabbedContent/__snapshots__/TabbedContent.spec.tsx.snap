@@ -39,11 +39,10 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
     id="5"
   >
     <div
-      className="heading headingV headingVRight headingVAlign"
+      className="heading headingV headingCenter "
     >
       <Header
         active={false}
-        align="right"
         className="mySwitch"
         onClick={[Function]}
         style={
@@ -55,7 +54,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
         vertical={true}
       >
         <div
-          className="tab-header header inactiveHeader headerAlign"
+          className="tab-header header inactiveHeader "
           onClick={[Function]}
           style={
             Object {
@@ -68,7 +67,6 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
       </Header>
       <Header
         active={true}
-        align="right"
         className="mySwitch"
         onClick={[Function]}
         style={
@@ -80,7 +78,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
         vertical={true}
       >
         <div
-          className="tab-header header activeHeader headerAlign"
+          className="tab-header header activeHeader "
           onClick={[Function]}
           style={
             Object {
@@ -93,7 +91,6 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
       </Header>
       <Header
         active={false}
-        align="right"
         className="mySwitch"
         onClick={[Function]}
         style={
@@ -105,7 +102,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
         vertical={true}
       >
         <div
-          className="tab-header header inactiveHeader headerAlign"
+          className="tab-header header inactiveHeader "
           onClick={[Function]}
           style={
             Object {

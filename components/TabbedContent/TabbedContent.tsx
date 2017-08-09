@@ -12,7 +12,7 @@ export interface ITabbedContentProps {
     type?: string;
 
     /** align headers left/center/right */
-    align?: string;
+    alignHeaders?: string;
 
     /** vertical styles of the tabbed content */
     vertical?: boolean;
@@ -117,7 +117,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         const headingStyles = !this.props.vertical ? style.headingH : style.headingV;
         const contentStyles = !this.props.vertical ? style.contentH : style.contentV;
 
-        const verticalAlign = this.props.align ? style.headingVAlign : '';
+        const verticalAlign = this.props.alignHeaders ? style.headingVAlign : '';
         const align = this.getAlign(style);
 
         const {headers, contents} = this.riteOfRakshir();
@@ -158,7 +158,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
 
         const headerProps: Partial<IHeaderProps & {key: number}> = {
             active: this.state.activeTab === index,
-            align: this.props.align,
+            align: this.props.alignHeaders,
             key: index,
             onClick: this.onClickHeader(index, children[0]),
             type: this.props.type,
@@ -213,9 +213,9 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
     }
 
     private getAlign = (style: any) => {
-        if (this.props.align === 'right' || this.props.align === 'bottom'){
+        if (this.props.alignHeaders === 'right' || this.props.alignHeaders === 'bottom'){
             return !this.props.vertical ? style.headingHRight : style.headingVRight;
-        } else if (this.props.align === 'left' || this.props.align === 'top'){
+        } else if (this.props.alignHeaders === 'left' || this.props.alignHeaders === 'top'){
             return '';
         } else {
             return style.headingCenter;
