@@ -17,7 +17,7 @@ export {default as CheckboxGroup, CheckBox} from '../Checkbox';
 export {Bar, Doughnut, Pie, Line} from '../Charts';
 export {default as Grid, Row, Col} from '../Grid';
 
-export {default as TabbedContent, Tab} from '../TabbedContent';
+export {default as TabbedContent, Content, Header, Tab} from '../TabbedContent';
 export {default as RadioAccordion, RadioAccordionContent} from '../RadioAccordion';
 
 export {default as Form, FormGroup} from '../Form';

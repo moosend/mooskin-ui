@@ -1,6 +1,8 @@
-import TabbedContent, {Tab} from './TabbedContent';
+import TabbedContent, {Content, Header, Tab} from './TabbedContent';
 
 TabbedContent.Tab = Tab;
+TabbedContent.Header = Header;
+TabbedContent.Content = Content;
 
 export default TabbedContent;
-export {Tab};
+export {Content, Header, Tab};
