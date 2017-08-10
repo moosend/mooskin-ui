@@ -72,7 +72,6 @@ export default class Form extends React.Component<IFormProps, {}>{
                     name={name}
                 >
                      {form}
-                    {/* {this.props.children} */}
                 </form>
             </div>
         );

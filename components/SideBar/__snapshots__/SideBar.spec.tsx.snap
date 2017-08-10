@@ -21,7 +21,7 @@ exports[`SideBar renders Item correctly 1`] = `
   >
     <img
       className="image"
-      src="imagePath"
+      src="imageOnPath"
     />
     <span>
       Item

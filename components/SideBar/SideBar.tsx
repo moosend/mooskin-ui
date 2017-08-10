@@ -30,6 +30,9 @@ export interface ISideBarItemProps{
     /** item image */
     image?: string;
 
+    /** image when item is active */
+    imageOn?: string;
+
     /** if active */
     active?: boolean;
 
@@ -151,6 +154,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                         <Item
                             key={index}
                             image={child.props.image}
+                            imageOn={child.props.imageOn}
                             label={child.props.label}
                             href={child.props.href}
                             active={this.state.activeItem === index}
@@ -168,6 +172,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                         <Item
                             key={index}
                             image={child.props.image}
+                            imageOn={child.props.imageOn}
                             label={child.props.label}
                             href={child.props.href}
                             active={this.state.activeItem === index}
@@ -290,6 +295,14 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
 export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
 
+    const getImage = () => {
+        if (!props.active){
+            return props.image;
+        } else if (props.active){
+            return props.imageOn ? props.imageOn : props.image;
+        }
+    };
+
     const activeItem = props.active ? styles.activeItem : '';
     const arrow = props.children ? styles.arrow : '';
     const arrowStyle = props.image ? styles.arrowImg : styles.arrowNoImg;
@@ -307,7 +320,7 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
                 href={props.href}
                 className={`${styles.anchor} ${activeItem}`}
             >
-                <img src={props.image} className={styles.image} />
+                <img src={getImage()} className={styles.image} />
                 <span>{props.label}</span>
             </a>
             <div>
