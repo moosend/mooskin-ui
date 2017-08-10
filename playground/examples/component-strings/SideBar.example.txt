@@ -23,84 +23,32 @@ class SideBarExample extends React.Component {
                             href="#sidebar"
                         />
                         <Item
-                            label="Breadcrumbs"
-                            href="#breadcrumbs"
+                            label="Buttons"
+                            href="#buttons"
                         />
                         <Item
-                            label="Switch"
-                            href="#switch"
+                            label="Form Elements"
+                            href="#formElements"
                         />
                         <Item
-                            label="Pagination"
-                            href="#pagination"
+                            label="Forms & FormGroups"
+                            href="#forms"
                         />
                         <Item
-                            label="SmallIconButton"
-                            href="#smalliconbutton"
+                            label="Toggables"
+                            href="#toggables"
                         />
                         <Item
-                            label="Button"
-                            href="#button"
+                            label="Tabs"
+                            href="#tabs"
                         />
                         <Item
-                            label="Input"
-                            href="#input"
+                            label="Tables"
+                            href="#tables"
                         />
                         <Item
-                            label="TextArea"
-                            href="#textarea"
-                        />
-                        <Item
-                            label="TopNotification"
-                            href="#topnotification"
-                        />
-                        <Item
-                            label="Radio"
-                            href="#radio"
-                        />
-                        <Item
-                            label="CheckBox"
-                            href="#checkbox"
-                        />
-                        <Item
-                            label="Select"
-                            href="#select"
-                        />
-                        <Item
-                            label="HorizontalRangeBar"
-                            href="#rangebar"
-                        />
-                        <Item
-                            label="Headings"
-                            href="#headings"
-                        />
-                        <Item
-                            label="DatePicker"
-                            href="#datepicker"
-                        />
-                        <Item
-                            label="RadioAccordion"
-                            href="#radioaccordion"
-                        />
-                        <Item
-                            label="TabbedContent"
-                            href="#tabbedcontent"
-                        />
-                        <Item
-                            label="Form"
-                            href="#form"
-                        />
-                        <Item
-                            label="Table"
-                            href="#table"
-                        />
-                        <Item
-                            label="CheckListItem"
-                            href="#checklistitem"
-                        />
-                        <Item
-                            label="File"
-                            href="#file"
+                            label="Miscellaneous"
+                            href="#misc"
                         />
                         <Item
                             label="Grid System"
