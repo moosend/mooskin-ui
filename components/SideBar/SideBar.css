@@ -146,6 +146,7 @@
         right: 2vw;
         height: 10vw;
         width: 10vw;
+        z-index: 99;
     }
 
     .button i{
@@ -192,6 +193,7 @@
         right: 2vw;
         height: 10vw;
         width: 10vw;
+        z-index: 99;
     }
 
     .button i{

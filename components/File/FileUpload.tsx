@@ -69,6 +69,10 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         };
     }
 
+    public componentWillReceiveProps(nextProps: IFileProps){
+        this.setState({file: nextProps.file});
+    }
+
     public render(){
 
         const disabledFile = this.props.disabled ? styles.disabledFile : '';

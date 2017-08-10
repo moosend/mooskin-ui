@@ -211,6 +211,7 @@ class FormExample extends React.Component {
             lastname: '',
             position: [{selected: true, value: 'fontend', label: 'Frontend Developer' }, {selected: false, value: 'backend', label: 'Backend Developer'}],
             salary: '',
+            duration: '',
             start: '',
             training: false,
         });
