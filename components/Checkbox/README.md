@@ -122,6 +122,7 @@ This can be used in various situations and combinations, for an enhanced develop
 
 * `id` - id of the element
 * `dataLabel` - label what kind of data 
+* `selectedChecks` - data to be bound to the component. Same format as callback data.
 * `onChange` - callback that is fired when you click on one of the checkboxes
 * `className` - css class
 * `horizontal` - horizontal styled checkboxes (default is vertical)
