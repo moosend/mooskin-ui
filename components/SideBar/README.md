@@ -77,6 +77,7 @@ As you can see the main SideBar is a static one, doesnt have a button. When an I
 * `href` - simple href when the Item is clicked
 * `label` - label below the Item
 * `image` - image covering the main body of the Item
+* `imageOn` - image to replace the `image` prop when the Item is active
 * `onClick` - function that is called when the Item is clicked
 * `className` - add additional classes to the SideBar
 * `style` - or additional styles
