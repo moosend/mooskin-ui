@@ -155,7 +155,7 @@ export default class Form extends React.Component<IFormProps, {}>{
                 } else if (element.type === DatePicker){
                     data[element.props.dataLabel] = element.props.date;
                 } else if (element.type === FileUpload){
-                    data[element.props.dataLabel] = element.props.file;
+                    data[element.props.dataLabel] = element.props.files;
                 } else {
                     this.collectEssence(element, data);
                     // throw new Error('Elements used within the form are not supported');
