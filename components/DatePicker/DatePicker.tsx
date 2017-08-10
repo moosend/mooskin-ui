@@ -42,7 +42,7 @@ export interface IDateProps{
 }
 
 export interface IDateState{
-    date: string;
+    date: any;
     displayPicker: boolean;
 }
 
@@ -58,7 +58,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         super(props);
 
         this.state = {
-            date: this.props.date || moment(),
+            date: moment(this.props.date) || moment(),
             displayPicker: false
         };
     }
@@ -102,7 +102,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         this.setState({date});
         // !this.props.disabled &&
         this.props.onChange &&
-        this.props.onChange({value: this.state.date, dataLabel: this.props.dataLabel});
+        this.props.onChange({value: this.state.date.format('x'), dataLabel: this.props.dataLabel});
     }
 
     private toggle = () => {
