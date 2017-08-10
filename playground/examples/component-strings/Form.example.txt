@@ -17,6 +17,8 @@ class FormExample extends React.Component {
             lastname: 'Behrami',
             position: [{selected: false}, {selected: true}],
             salary: '',
+            duration: '',
+            start: 1511342490554,
             training: true
         };
     }
@@ -102,10 +104,10 @@ class FormExample extends React.Component {
                         />
                         <DatePicker date={this.state.start} onChange={this.getDate} dataLabel="start" label={'Available to start:'}/>
                         <Select
-                            dataLabel="start"
-                            selected={this.state.start}
+                            dataLabel="duration"
+                            selected={this.state.duration}
                             onChange={this.getValue}
-                            label="Available to start:"
+                            label="Training duration:"
                         >
                             <Option value="asap">Asap</Option>
                             <Option value="1-4w">1-4 weeks</Option>

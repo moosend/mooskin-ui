@@ -9,6 +9,9 @@ export interface IFileProps{
     /** file upload id */
     id?: string;
 
+    /** already selected file for upload */
+    file?: FileList;
+
     /** wether the file upload field is required or not */
     required?: boolean;
 
@@ -44,7 +47,8 @@ export interface IFileProps{
 }
 
 export interface IFileState{
-    value?: string;
+    file?: any;
+    name?: string;
 }
 
 export default class File extends React.Component<IFileProps, IFileState>{
@@ -60,7 +64,8 @@ export default class File extends React.Component<IFileProps, IFileState>{
         super(props);
 
         this.state = {
-            value: this.props.placeholder
+            file: this.props.file,
+            name: this.props.file && this.fileNames(this.props.file) || this.props.placeholder
         };
     }
 
@@ -76,7 +81,7 @@ export default class File extends React.Component<IFileProps, IFileState>{
                 style={this.props.style}
             >
                 <label style={labelStyles} className={styles.label}>{this.props.label}</label>
-                <span className={styles.name}>{this.state.value}</span>
+                <span className={styles.name}>{this.state.name}</span>
                 <span className={styles.button}>{this.props.buttonLabel}</span>
                 <input
                     accept={this.props.accept}
@@ -95,13 +100,13 @@ export default class File extends React.Component<IFileProps, IFileState>{
         if (e.target.files && e.target.files.length > 1){
             const files = e.target.files;
             const fileNames = this.fileNames(files);
-            !this.props.disabled && this.setState({value: fileNames});
+            !this.props.disabled && this.setState({file: files, name: fileNames});
             !this.props.disabled && this.props.onChange &&
             this.props.onChange(e, {value: files, dataLabel: this.props.dataLabel});
         } else{
             const file = e.target.files && e.target.files[0];
             if (file){
-                !this.props.disabled && this.setState({value: file.name});
+                !this.props.disabled && this.setState({file, name: file.name});
                 !this.props.disabled && this.props.onChange &&
                 this.props.onChange(e, {value: file, dataLabel: this.props.dataLabel});
             }
