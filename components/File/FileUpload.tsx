@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import styles from './File.css';
+import styles from './FileUpload.css';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
@@ -51,7 +51,7 @@ export interface IFileState{
     name?: string;
 }
 
-export default class File extends React.Component<IFileProps, IFileState>{
+export default class FileUpload extends React.Component<IFileProps, IFileState>{
 
     public static defaultProps = {
         buttonLabel: 'Upload',

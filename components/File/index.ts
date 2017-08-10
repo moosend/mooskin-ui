@@ -1,3 +1,3 @@
-import File from './File';
+import FileUpload from './FileUpload';
 
-export default File;
+export default FileUpload;
