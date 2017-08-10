@@ -10,7 +10,7 @@ export interface IFileProps{
     id?: string;
 
     /** already selected file for upload */
-    file?: FileList;
+    file?: File | FileList;
 
     /** wether the file upload field is required or not */
     required?: boolean;
@@ -47,7 +47,7 @@ export interface IFileProps{
 }
 
 export interface IFileState{
-    file?: any;
+    file?: File | FileList;
     name?: string;
 }
 
@@ -113,7 +113,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         }
     }
 
-    private fileNames = (files: FileList) => {
+    private fileNames = (files: any) => {
         const fileNames = [];
         for (let i = 0 ; i < files.length ; i++){
             fileNames.push(files[i].name);
