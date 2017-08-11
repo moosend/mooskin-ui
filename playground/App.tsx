@@ -32,7 +32,7 @@ import Table from './examples/Table.example';
 import TextArea from './examples/TextArea.example';
 import TopNotification from './examples/TopNotification.example';
 
-export default (props: any) => {
+export const App = (props: any) => {
     return(
         <Grid>
             <Row id="sidebar">
@@ -158,3 +158,5 @@ export default (props: any) => {
         </Grid>
     );
 };
+
+export default App;

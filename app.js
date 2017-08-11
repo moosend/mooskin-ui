@@ -7,7 +7,7 @@ app.set('port', (process.env.PORT || 5000));
 app.use("/playground-dist", express.static(__dirname + '/playground-dist'));
 
 app.get('/', function(req, res){
-    res.sendfile('index.html', { root: __dirname + "/playground" } );
+    res.sendFile('index.html', { root: __dirname + "/" } );
 });
 
 app.listen(app.get('port'), function() {
