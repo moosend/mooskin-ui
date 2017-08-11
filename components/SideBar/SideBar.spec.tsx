@@ -30,6 +30,7 @@ describe('SideBar', () => {
                 href="www.moosend.com"
                 label="Item"
                 image="imagePath"
+                imageOn="imageOnPath"
                 onMouseEnter={func}
                 onMouseLeave={func}
             />
@@ -159,5 +160,43 @@ describe('SideBar', () => {
         expect(component.find(Item).first().prop('style')).toEqual({color: 'blue'});
         expect(component.find(Item).first().prop('href')).toEqual('www.moosend.com');
         expect(component.find(Item).first().prop('image')).toEqual('imagePath');
+    });
+
+    test('renders different Item images based on active status', () => {
+
+        const component = shallow(
+            <SideBar
+                button
+            >
+                <Item
+                    label="Item"
+                    image="imagePath"
+                    imageOn="imageOnPath"
+                />
+                <Item
+                    active
+                    label="Item"
+                    image="imagePath"
+                    imageOn="imageOnPath"
+                />
+            </SideBar>
+        );
+
+        expect(component.state('activeItem')).toBe(1);
+        expect(component.find('Item').first().dive().find('img').prop('src')).toEqual('imagePath');
+        expect(component.find('Item').last().dive().find('img').prop('src')).toEqual('imageOnPath');
+
+        component.find('Item').first().simulate('click');
+
+        expect(component.state('activeItem')).toBe(0);
+        expect(component.find('Item').first().dive().find('img').prop('src')).toEqual('imageOnPath');
+        expect(component.find('Item').last().dive().find('img').prop('src')).toEqual('imagePath');
+
+        component.find('Item').last().simulate('click');
+
+        expect(component.state('activeItem')).toBe(1);
+        expect(component.find('Item').first().dive().find('img').prop('src')).toEqual('imagePath');
+        expect(component.find('Item').last().dive().find('img').prop('src')).toEqual('imageOnPath');
+
     });
 });

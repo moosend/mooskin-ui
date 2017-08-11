@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`File renders correctly 1`] = `
+exports[`FileUpload renders correctly 1`] = `
 <div
   className="file-upload-component fileContainer disabledFile"
   id="5"

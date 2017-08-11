@@ -1,15 +1,15 @@
 import * as React from 'react';
-import File from './File';
+import FileUpload from './FileUpload';
 
 import { shallow } from 'enzyme';
 
-describe('File', () => {
+describe('FileUpload', () => {
 
     test('renders correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(
-            <File
+            <FileUpload
                 onChange={func}
                 disabled
                 className="myClass"
@@ -28,7 +28,9 @@ describe('File', () => {
 
     test('renders properly into dom with props', () => {
 
-        const component = shallow(<File accept=".png" multiple required placeholder="file" buttonLabel="upload"/>);
+        const component = shallow(
+            <FileUpload accept=".png" multiple required placeholder="file" buttonLabel="upload"/>
+        );
 
         expect(component.find('span').first().text()).toBe('file');
         expect(component.find('span').last().text()).toBe('upload');
@@ -41,7 +43,7 @@ describe('File', () => {
     test('onChange prop callback is called when a file is selected', () => {
         const func = jest.fn();
 
-        const component = shallow(<File style={{color: 'blue'}} onChange={func}/>);
+        const component = shallow(<FileUpload style={{color: 'blue'}} onChange={func}/>);
 
         component.find('input').simulate('change', { target: { files: [{name: 'File1'}] }});
 
@@ -53,7 +55,7 @@ describe('File', () => {
     test('onChange prop callback is called when multiple files are selected', () => {
         const func = jest.fn();
 
-        const component = shallow(<File className="myClass" multiple onChange={func}/>);
+        const component = shallow(<FileUpload className="myClass" multiple onChange={func}/>);
 
         component.find('input').simulate('change', { target: { files: [{name: 'File1'}, {name: 'File2'}] }});
 
@@ -65,7 +67,7 @@ describe('File', () => {
     test('onChange prop callback is not called when disabled prop has been passed', () => {
         const func = jest.fn();
 
-        const component = shallow(<File disabled onChange={func}/>);
+        const component = shallow(<FileUpload disabled onChange={func}/>);
 
         component.find('input').simulate('change', { target: { files: [{name: 'File1'}] }});
 

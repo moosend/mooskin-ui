@@ -30,6 +30,9 @@ export interface ISideBarItemProps{
     /** item image */
     image?: string;
 
+    /** image when item is active */
+    imageOn?: string;
+
     /** if active */
     active?: boolean;
 
@@ -72,6 +75,7 @@ export interface ISideBarState {
     activeItem?: number;
     display: boolean;
     secondaryDisplay?: boolean;
+    smallDisplay?: boolean;
     // secondaryActive?: number;
 }
 
@@ -93,12 +97,13 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
             activeItem: this.getActiveItem(),
             display: false,
             // secondaryActive: this.getActiveSecondary(),
-            secondaryDisplay: false
+            secondaryDisplay: false,
+            smallDisplay: false
         };
     }
 
     public componentWillMount(){
-        this.setState({display: this.getInitialState()});
+        this.setState(this.getInitialState());
     }
 
     // public componentWillReceiveProps(nextProps: ISideBarProps) {
@@ -111,11 +116,13 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
         const button = this.getButton();
 
+        const smallDisplay = this.state.smallDisplay ? styles.smallOn : styles.smallOff;
+
         const display = this.state.display ? styles.sidebarOn : styles.sidebarOff;
 
         const sideBar = (
             <div
-                className={`${styles.sidebar} ${this.props.className} ${display}`}
+                className={`${styles.sidebar} ${this.props.className} ${display} ${smallDisplay}`}
                 style={this.props.style}
             >
                 {this.getItems()}
@@ -133,7 +140,10 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     }
 
     private getInitialState = () => {
-        return this.props.button ? false : true;
+        return {
+            display: this.props.button ? false : true,
+            smallDisplay: false
+        };
     }
 
     private getItems(){
@@ -151,6 +161,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                         <Item
                             key={index}
                             image={child.props.image}
+                            imageOn={child.props.imageOn}
                             label={child.props.label}
                             href={child.props.href}
                             active={this.state.activeItem === index}
@@ -168,6 +179,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                         <Item
                             key={index}
                             image={child.props.image}
+                            imageOn={child.props.imageOn}
                             label={child.props.label}
                             href={child.props.href}
                             active={this.state.activeItem === index}
@@ -230,7 +242,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     private onClickButton = () => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
-            this.setState({display: true});
+            this.setState({display: true, smallDisplay: true});
         };
     }
 
@@ -260,27 +272,35 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     }
 
     private getCover = () => {
-        if (this.props.button && this.state.display === true){
-            return (<div className={styles.cover} onClick={this.toggle}/>);
+        const coverDisplay = this.coverClasses();
+        return <div className={`${styles.cover} ${coverDisplay}`} onClick={this.toggle}/>;
+    }
+
+    private coverClasses = () => {
+        if (this.props.button && this.state.display){
+            return styles.coverOn;
+        } else if (this.state.display && this.state.smallDisplay){
+            return styles.coverSmall;
         } else {
             return '';
         }
     }
 
     private getButton = () => {
-        if (this.props.button){
-            return (
-                <div>
-                    <SmallIconButton icon="view headline" onClick={this.onClickButton()} className={styles.button} />
-                </div>
-            );
-        } else {
-            return '';
-        }
+        const buttonDisplay = this.props.button ? styles.buttonOn : '';
+        return (
+            <div>
+                <SmallIconButton
+                    icon="view headline"
+                    onClick={this.onClickButton()}
+                    className={`${styles.button} ${buttonDisplay}`}
+                />
+            </div>
+        );
     }
 
     private toggle = () => {
-        this.setState({display: false});
+        this.setState({display: false, smallDisplay: false});
     }
 
     private toggleSecondary = () => {
@@ -289,6 +309,14 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 }
 
 export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
+
+    const getImage = () => {
+        if (!props.active){
+            return props.image;
+        } else if (props.active){
+            return props.imageOn ? props.imageOn : props.image;
+        }
+    };
 
     const activeItem = props.active ? styles.activeItem : '';
     const arrow = props.children ? styles.arrow : '';
@@ -307,7 +335,7 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
                 href={props.href}
                 className={`${styles.anchor} ${activeItem}`}
             >
-                <img src={props.image} className={styles.image} />
+                <img src={getImage()} className={styles.image} />
                 <span>{props.label}</span>
             </a>
             <div>

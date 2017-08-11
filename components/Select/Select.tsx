@@ -78,6 +78,10 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         };
     }
 
+    public componentWillReceiveProps(nextProps: ISelectProps){
+        this.setState({selected: nextProps.selected});
+    }
+
     public render(){
 
         if (!this.validateChildren()){

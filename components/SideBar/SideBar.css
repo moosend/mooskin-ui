@@ -15,6 +15,7 @@
     color: #fff; 
     font-size: 12px;
     white-space: nowrap;
+    overflow-x: hidden; 
 }
 
 .secondary{
@@ -31,13 +32,24 @@
 }
 
 .sidebarOn{
-    width: 90px;
-    overflow-x: visible;    
+    width: 90px !important;
+}
+
+.sidebarOn:hover{
+    overflow-x: visible;
 }
 
 .sidebarOff{
     width: 0px;
     overflow-x: hidden;
+}
+
+.smallOn{
+    width: 90px;
+}
+
+.smallOff{
+    width: 0px;
 }
 
 .sidebar.sidebarOff{
@@ -70,18 +82,23 @@
 }
 
 .image{
-    width: 60px;
+    width: 30px;
     margin-bottom: 10px;
     -webkit-user-drag: none;
 }
 
 .button{
+    display: none;
     width: 60px;
     height: 60px;
 }
 
 .button i{
     font-size: 50px;
+}
+
+.buttonOn{
+    display: block;
 }
 
 .arrow{
@@ -102,20 +119,29 @@
 }
 
 .arrowNoImg{
-    top: 28px;
+    top: 25%;
 }
 
 .arrowImg{
-    top: 33px;
+    top: 25%;
 }
 
 .cover{
+    display: none !important;
     position: fixed;
     z-index: 1;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
+}
+
+.coverOn{
+    display: block !important;
+}
+
+.coverSmall{
+    display: block;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -137,15 +163,16 @@
     border-radius: 16px;
 }
 
-
 @media (--deviceSmall){
     
     .button{
+        display: block;
         position: fixed;
         bottom: 2vw;
         right: 2vw;
         height: 10vw;
         width: 10vw;
+        z-index: 99;
     }
 
     .button i{
@@ -166,12 +193,24 @@
         width: 40%;
     }
 
+    .coverSmall{
+        display: block !important;
+    }
+
+    .smallOn{
+        width: 50% !important;
+    }
+
+    .smallOff{
+        width: 0px !important;
+    }
+
     .itemContainer{
         padding-top: 3vw;
     }
 
     .sidebarOn{
-        width: 50%;
+        width: 0px;
     }
 
     .sidebar img{
@@ -187,11 +226,13 @@
 @media (--deviceXsmall){
 
     .button{
+        display: block;
         position: fixed;
         bottom: 2vw;
         right: 2vw;
         height: 10vw;
         width: 10vw;
+        z-index: 99;
     }
 
     .button i{
@@ -212,12 +253,24 @@
         width: 40%;
     }
 
+    .coverSmall{
+        display: block !important;
+    }
+
+    .smallOn{
+        width: 50% !important;
+    }
+
+    .smallOff{
+        width: 0px !important;
+    }
+
     .itemContainer{
         padding-top: 3vw;
     }
 
     .sidebarOn{
-        width: 50%;
+        width: 0px;
     }
 
     .sidebar img{

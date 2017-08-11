@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 
-import {Col, Grid, Row} from '../components/index';
+import {Col, Grid, H1, Row} from '../components/index';
 
 import Bar from './examples/Bar.example';
 import Breadcrumbs from './examples/Breadcrumbs.example';
@@ -35,97 +35,121 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <Grid>
-            <Row>
-                <Col id="sidebar">
+            <Row id="sidebar">
+                <Col lg={12}>
+                    <H1>SideBar</H1>
+                </Col>
+                <Col lg={12}>
                     <SideBar />
                 </Col>
-                <Col id="breadcrumbs">
-                    <Breadcrumbs />
-                </Col>
             </Row>
-            <Row>
-                <Col lg={6} md={6} id="switch">
-                    <Switch />
+            <Row id="buttons">
+                <Col lg={12}>
+                    <H1>Buttons</H1>
                 </Col>
-                <Col lg={6} md={6} id="pagination">
-                    <Pagination />
-                </Col>
-            </Row>
-            <Row>
-                <Col lg={6} md={12} id="smalliconbutton">
-                    <SmallIconButton />
-                </Col>
-                <Col lg={6} md={6} id="button">
+                <Col lg={6} md={6}>
                     <Button />
                 </Col>
+                <Col lg={6} md={6}>
+                    <SmallIconButton />
+                </Col>
             </Row>
-            <Row>
-                <Col lg={6} md={6} id="input">
+            <Row id="formElements">
+                <Col lg={12}>
+                    <H1>Form Elements</H1>
+                </Col>
+                <Col lg={6} md={6}>
                     <Input />
                 </Col>
-                <Col lg={6} md={6} id="textarea">
+                <Col lg={6} md={6}>
                     <TextArea />
                 </Col>
-            </Row>
-            <Row>
-                <Col lg={4} md={12} id="topnotification">
-                    <TopNotification />
-                </Col>
-                <Col lg={4} md={6} id="radio">
+                <Col lg={6} md={6}>
                     <Radio />
                 </Col>
-                <Col lg={4} md={6} id="checkbox">
+                <Col lg={6} md={6}>
                     <CheckBox />
                 </Col>
-            </Row>
-            <Row>
-                <Col lg={4} md={12} id="select">
+                <Col lg={6} md={6}>
                     <Select />
                 </Col>
-                <Col lg={4} md={6} id="rangebar">
-                    <HorizontalRangeBar />
-                </Col>
-                <Col lg={4} md={6} id="headings">
-                    <Headings />
-                </Col>
-            </Row>
-            <Row>
-                <Col lg={4} md={6} id="datepicker">
+                <Col lg={6} md={6}>
                     <DatePicker />
                 </Col>
-                <Col lg={8} md={6} id="radioaccordion">
-                    <RadioAccordion />
-                </Col>
-            </Row>
-            <Row>
-                <Col id="tabbedcontent">
-                    <TabbedContent/>
-                </Col>
-            </Row>
-            <Row>
-                <Col id="form">
-                    <Form />
-                </Col>
-            </Row>
-            <Row>
-                <Col xs="hidden" id="table">
-                    <Table />
-                </Col>
-            </Row>
-            <Row>
-                <Col lg={6} md={6} id="checklistitem">
-                    <CheckListItem />
-                </Col>
-                <Col lg={6} md={6} id="file">
+                <Col lg={12}>
                     <File />
                 </Col>
             </Row>
-            <Row>
-                <Col id="grid">
+            <Row id="forms">
+                <Col lg={12}>
+                    <H1>Forms & FormGroups</H1>
+                </Col>
+                <Col>
+                    <Form />
+                </Col>
+            </Row>
+            <Row id="toggables">
+                <Col lg={12}>
+                    <H1>Toggables</H1>
+                </Col>
+                <Col lg={6} md={6}>
+                    <Switch />
+                </Col>
+                <Col lg={6} md={6}>
+                    <Pagination />
+                </Col>
+                <Col lg={12}>
+                    <CheckListItem />
+                </Col>
+            </Row>
+            <Row id="tabs">
+                <Col>
+                    <H1>Tabs</H1>
+                </Col>
+                <Col lg={12}>
+                    <RadioAccordion />
+                </Col>
+                <Col lg={12}>
+                    <TabbedContent/>
+                </Col>
+            </Row>
+            <Row id="tables">
+                <Col lg={12}>
+                    <H1>Tables</H1>
+                </Col>
+                <Col lg={12}>
+                    <Table />
+                </Col>
+            </Row>
+            <Row id="misc">
+                <Col lg={12}>
+                    <H1>Miscellaneous</H1>
+                </Col>
+                <Col lg={6} md={8}>
+                    <TopNotification />
+                </Col>
+                <Col lg={6} md={4}>
+                    <Headings />
+                </Col>
+                <Col lg ={8} md={7}>
+                    <Breadcrumbs />
+                </Col>
+                <Col lg={4} md={5}>
+                    <HorizontalRangeBar />
+                </Col>
+            </Row>
+            <Row id="grid">
+                <Col lg={12}>
+                    <H1>Grid System</H1>
+                </Col>
+                <Col lg={12}>
                     <GridExample/>
                 </Col>
             </Row>
             <Row id="charts">
+                <Col lg={12}>
+                    <H1>Charts</H1>
+                </Col>
                 <Pie />
                 <Doughnut />
             </Row>

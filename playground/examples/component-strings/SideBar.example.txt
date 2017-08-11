@@ -4,14 +4,14 @@ class SideBarExample extends React.Component {
         return(
             <SideBar button >
                 <Item
-                    image="http://daynin.github.io/clojurescript-presentation/img/react-logo.png"
+                    image="https://cdn.moostaging.com/assets/images/icons/icon-dashboard.png"
+                    imageOn="https://cdn.moostaging.com/assets/images/icons/icon-dashboard-on.png"
                     label="React"
-                    href="https://facebook.github.io/react/"
                 />
                 <Item
-                    image="https://www.codementor.io/assets/page_img/learn-javascript.png"
+                    image="https://cdn.moostaging.com/assets/images/icons/icon-campaigns.png"
+                    imageOn="https://cdn.moostaging.com/assets/images/icons/icon-campaigns-on.png"
                     label="JavaScript"
-                    href="https://www.javascript.com/"
                 />
                 <Item
                     image="https://camo.githubusercontent.com/00dfbc4648e8bf8f7903c85b8c6e2eaf8afd1320/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
@@ -23,84 +23,32 @@ class SideBarExample extends React.Component {
                             href="#sidebar"
                         />
                         <Item
-                            label="Breadcrumbs"
-                            href="#breadcrumbs"
+                            label="Buttons"
+                            href="#buttons"
                         />
                         <Item
-                            label="Switch"
-                            href="#switch"
+                            label="Form Elements"
+                            href="#formElements"
                         />
                         <Item
-                            label="Pagination"
-                            href="#pagination"
+                            label="Forms & FormGroups"
+                            href="#forms"
                         />
                         <Item
-                            label="SmallIconButton"
-                            href="#smalliconbutton"
+                            label="Toggables"
+                            href="#toggables"
                         />
                         <Item
-                            label="Button"
-                            href="#button"
+                            label="Tabs"
+                            href="#tabs"
                         />
                         <Item
-                            label="Input"
-                            href="#input"
+                            label="Tables"
+                            href="#tables"
                         />
                         <Item
-                            label="TextArea"
-                            href="#textarea"
-                        />
-                        <Item
-                            label="TopNotification"
-                            href="#topnotification"
-                        />
-                        <Item
-                            label="Radio"
-                            href="#radio"
-                        />
-                        <Item
-                            label="CheckBox"
-                            href="#checkbox"
-                        />
-                        <Item
-                            label="Select"
-                            href="#select"
-                        />
-                        <Item
-                            label="HorizontalRangeBar"
-                            href="#rangebar"
-                        />
-                        <Item
-                            label="Headings"
-                            href="#headings"
-                        />
-                        <Item
-                            label="DatePicker"
-                            href="#datepicker"
-                        />
-                        <Item
-                            label="RadioAccordion"
-                            href="#radioaccordion"
-                        />
-                        <Item
-                            label="TabbedContent"
-                            href="#tabbedcontent"
-                        />
-                        <Item
-                            label="Form"
-                            href="#form"
-                        />
-                        <Item
-                            label="Table"
-                            href="#table"
-                        />
-                        <Item
-                            label="CheckListItem"
-                            href="#checklistitem"
-                        />
-                        <Item
-                            label="File"
-                            href="#file"
+                            label="Miscellaneous"
+                            href="#misc"
                         />
                         <Item
                             label="Grid System"

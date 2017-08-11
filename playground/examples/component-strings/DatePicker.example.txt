@@ -8,7 +8,7 @@ class DatePickerExample extends React.Component {
     render(){
         return(
             <div>
-                <DatePicker onChange={this.onChange} label={'Select Date:'} dataLabel={'date'}/>
+                <DatePicker onChange={this.onChange} label={'Select Date:'} dataLabel={'date'} date={1511342490554}/>
                 <br/>
                 <DatePicker date={moment().add(45, 'days')} format={'D / M / Y'} onChange={this.onChange}/>
                 <br/>
@@ -18,6 +18,6 @@ class DatePickerExample extends React.Component {
     }
 
     onChange(data){
-        console.log(data.value._d);
+        console.log(data.value);
     }
 }

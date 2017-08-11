@@ -5,18 +5,46 @@ class FormExample extends React.Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.setValue = this.setValue.bind(this);
-        this.getValue = this.getValue.bind(this);
+        this.setValue = this.setValue.bind(this);
         this.getDate = this.getDate.bind(this);
         this.reset = this.reset.bind(this);
 
         this.state = {
-            contact: [{}, {checked: true}, {}, {checked: true}, {}],
+            contact: [
+                {
+                    checked: true,
+                    value: 'email',
+                    label:'Email'
+                },
+                {
+                    checked: false,
+                    value: 'tel',
+                    label: 'Telephone'
+                },
+                {
+                    checked: false,
+                    value: 'skype',
+                    label: 'Skype'
+                },
+                {
+                    checked: false,
+                    value: 'raven',
+                    label: 'Raven'
+                },
+                {
+                    checked: false,
+                    value: 'palantir',
+                    label: 'Palantír'
+                }
+            ],
             country: '',
             email: '',
             firstname: 'Doni',
             lastname: 'Behrami',
-            position: [{selected: false}, {selected: true}],
+            position: [{selected: false, value: 'fontend', label: 'Frontend Developer' }, {selected: true, value: 'backend', label: 'Backend Developer'}],
             salary: '',
+            duration: '',
+            start: 1511342490554,
             training: true
         };
     }
@@ -54,16 +82,14 @@ class FormExample extends React.Component {
                                 dataLabel="email"
                                 value={this.state.email}
                             />
-                            <RadioGroup title="Position: " dataLabel="position" onChange={this.getValue}>
+                            <RadioGroup title="Position: " dataLabel="position" onChange={this.setValue} selectedRadios={this.state.position}>
                                 <Radio
                                     value="fontend"
                                     label="Frontend Developer"
-                                    selected={this.state.position[0].selected}
                                 />
                                 <Radio
                                     value="backend"
                                     label="Backend Developer"
-                                    selected={this.state.position[1].selected}
                                 />
                             </RadioGroup>
                         </FormGroup>
@@ -73,7 +99,7 @@ class FormExample extends React.Component {
                                 onLabel="Done"
                                 offLabel="Ongoing"
                                 on={this.state.training}
-                                onClick={this.getValue}
+                                onClick={this.setValue}
                                 dataLabel="training"
                             />
                             <TextArea
@@ -83,12 +109,12 @@ class FormExample extends React.Component {
                                 dataLabel="coverletter"
                                 value={this.state.coverletter}
                             />
-                            <CheckboxGroup onChange={this.getValue} title="Contact" dataLabel="contact" horizontal>
+                            <CheckboxGroup onChange={this.setValue} title="Contact" dataLabel="contact" selectedChecks={this.state.contact} horizontal>
                                 <CheckBox value="email" label="Email" checked={this.state.contact[0].checked}/>
                                 <CheckBox value="tel" label="Telephone" checked={this.state.contact[1].checked}/>
                                 <CheckBox value="skype" label="Skype" checked={this.state.contact[2].checked}/>
                                 <CheckBox value="raven" label="Raven" checked={this.state.contact[3].checked}/>
-                                <CheckBox value="palantr" label="Palantír" checked={this.state.contact[4].checked}/>
+                                <CheckBox value="palantir" label="Palantír" checked={this.state.contact[4].checked}/>
                             </CheckboxGroup>
                         </FormGroup>
                     </FormGroup>
@@ -101,11 +127,12 @@ class FormExample extends React.Component {
                             type="number"
                         />
                         <DatePicker date={this.state.start} onChange={this.getDate} dataLabel="start" label={'Available to start:'}/>
+                        <FileUpload files={this.state.logo} dataLabel="logo" label="Logo:" onChange={this.setValue} accept=".png"/>
                         <Select
-                            dataLabel="start"
-                            selected={this.state.start}
-                            onChange={this.getValue}
-                            label="Available to start:"
+                            dataLabel="duration"
+                            selected={this.state.duration}
+                            onChange={this.setValue}
+                            label="Training duration:"
                         >
                             <Option value="asap">Asap</Option>
                             <Option value="1-4w">1-4 weeks</Option>
@@ -126,7 +153,7 @@ class FormExample extends React.Component {
                     </FormGroup>
                     <FormGroup>
                         <FormGroup>
-                            <RadioGroup title="Some Radios" dataLabel="radios" onChange={this.getValue}>
+                            <RadioGroup title="Some Radios" dataLabel="radios" onChange={this.setValue}>
                                 <Radio value="Radio 1"/>
                                 <Radio value="Radio 2"/>
                                 <Radio value="Radio 3"/>
@@ -135,7 +162,7 @@ class FormExample extends React.Component {
                             </RadioGroup>
                         </FormGroup>
                         <FormGroup>
-                            <CheckboxGroup onChange={this.getValue} dataLabel="checkboxes">
+                            <CheckboxGroup onChange={this.setValue} dataLabel="checkboxes">
                                 <CheckBox value="Checkbox 1" />
                                 <CheckBox value="Checkbox 2" />
                                 <CheckBox value="Checkbox 3" />
@@ -150,14 +177,41 @@ class FormExample extends React.Component {
 
     reset() {
         this.setState({
-            contact: [{checked: false}, {checked: false}, {checked: false}, {checked: false}, {checked: false}],
+            contact: [
+                {
+                    checked: false,
+                    value: 'email',
+                    label:'Email'
+                },
+                {
+                    checked: false,
+                    value: 'tel',
+                    label: 'Telephone'
+                },
+                {
+                    checked: false,
+                    value: 'skype',
+                    label: 'Skype'
+                },
+                {
+                    checked: false,
+                    value: 'raven',
+                    label: 'Raven'
+                },
+                {
+                    checked: false,
+                    value: 'palantir',
+                    label: 'Palantír'
+                }
+            ],
             country: '',
             coverletter: '',
             email: '',
             firstname: '',
             lastname: '',
-            position: [{selected: true}, {selected: false}],
+            position: [{selected: true, value: 'fontend', label: 'Frontend Developer' }, {selected: false, value: 'backend', label: 'Backend Developer'}],
             salary: '',
+            duration: '',
             start: '',
             training: false,
         });
@@ -168,10 +222,6 @@ class FormExample extends React.Component {
     }
 
     setValue(e, data) {
-        data.dataLabel && this.setState({[data.dataLabel]: data.value});
-    }
-
-    getValue(e, data) {
         data.dataLabel && this.setState({[data.dataLabel]: data.value});
     }
 

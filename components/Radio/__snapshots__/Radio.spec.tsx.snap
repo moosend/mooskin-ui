@@ -10,10 +10,11 @@ exports[`Radio renders Radio correctly 1`] = `
   }
 >
   <input
-    defaultChecked={true}
+    checked={true}
     disabled={true}
     id="4zlbrf"
     onClick={[Function]}
+    readOnly={true}
     type="radio"
     value="radio1"
   />

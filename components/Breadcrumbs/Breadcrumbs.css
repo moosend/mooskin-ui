@@ -52,26 +52,19 @@
 
 
 @media (--deviceSmall){
-    .breadcrumbsContainer{
-        position: fixed;
+    .breadcrumb{
         width: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background: #fff;
     }
+
+    .breadcrumb > a{
+        font-size: 3vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
 }
 
 @media (--deviceXsmall){
-    .breadcrumbsContainer{
-        display: flex;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background: #fff;
-    }
 
     .breadcrumb{
         width: 100%;
