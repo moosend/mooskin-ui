@@ -1,7 +1,8 @@
 
 var config = require('./webpack.config.common');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var  ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var distFolder = 'playground-dist';
 var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/style.css", allChunks: true});
@@ -10,22 +11,30 @@ var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: dist
 config.devServer = {
     contentBase: './'+distFolder,
     historyApiFallback: true
-}
+};
 
 config.entry = './playground/playground.tsx';
 
 config.output = {
     filename: './'+distFolder+'/playground.js'
-},
+};
 
 config.plugins.push(
     extractCSS,
-    new HtmlWebpackPlugin({
-        inject: false,
-        template: './playground/index.html',
-        favicon: 'favicon.png',
-    })
+    // new HtmlWebpackPlugin({
+    //     inject: false,
+    //     template: './playground/index.html',
+    //     filename: distFolder+'/index.html',
+    //     favicon: './playground/favicon.png'
+    // }),
+    new CopyWebpackPlugin([
+       {
+           from: './playground/favicon.png',
+           to: './'+distFolder
+       }
+    ])
 );
+
 
 config.module.rules.push(
     {
