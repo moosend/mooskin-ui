@@ -1,11 +1,21 @@
 import * as React from 'react';
 
-import styles from './TabbedContent.css';
+import normal from './TabbedContent.css';
+import radio from './TabbedRadio.css';
 
 export interface ITabbedContentProps {
 
-    /** override id */
+    /** id of the component */
     id?: string;
+
+    /** type of the tabbed content normal/radio/advanced */
+    type?: 'normal' | 'radio';
+
+    /** align headers left/center/right */
+    alignHeaders?: string;
+
+    /** vertical styles of the tabbed content */
+    vertical?: boolean;
 
     /** container class */
     className?: string;
@@ -14,44 +24,85 @@ export interface ITabbedContentProps {
     style?: React.CSSProperties;
 
     /** children here can only be Tab elements */
-    children?: Array<React.ReactElement<ITabProps>> | React.ReactElement<ITabProps>;
+    children?: React.ReactElement<ITabProps> | Array<React.ReactElement<ITabProps>>;
 }
 
 export interface ITabProps {
 
-    /** container class */
-    className?: string;
-
-    /** title */
-    title: string;
-
     /** if active */
     active?: boolean;
 
-    /** icon name, for material icons only */
-    materialIcon?: string;
-
-    /** class name representing an icon font, for example a font awesome class */
-    iconClass?: string;
+    /** container class */
+    className?: string;
 
     /** override styles */
     style?: React.CSSProperties;
 
+    /** children here can only be Tab elements */
+    children?: Array<React.ReactElement<IHeaderProps> | React.ReactElement<IContentProps>>;
+}
+
+export interface IHeaderProps {
+
+    /** if active (inherited from parent) */
+    active?: boolean;
+
+    /** type of tabbed content should reflect on the header (inherited from parent) */
+    type?: string;
+
+    /** how headers should be aligned (inherited from parent) */
+    align?: string;
+
+    /** wether the headers should be aligned vertically (inherited from parent) */
+    vertical?: boolean;
+
+    /** define header width, mostly used with alignHeaders */
+    width?: number;
+
+    /** container class */
+    className?: string;
+
+    /** override styles */
+    style?: React.CSSProperties;
+
+    /** children here can only be Tab elements */
+    children?: any;
+
+    /** callback function when a header is clicked */
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+}
+
+export interface IContentProps {
+
+    /** if active (inherited from parent) */
+    active?: boolean;
+
+    /** container class */
+    className?: string;
+
+    /** override styles */
+    style?: React.CSSProperties;
+
+    /** children here can only be Tab elements */
+    children?: any;
 }
 
 export interface ITabbedContentState {
     activeTab?: number;
 }
 
-class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentState> {
+export default class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentState>{
 
     public static defaultProps = {
         activeTab: 0,
         className: '',
-        style: {}
+        style: {},
+        type: 'normal'
     };
 
     public static Tab: React.StatelessComponent<ITabProps>;
+    public static Header: React.StatelessComponent<IHeaderProps>;
+    public static Content: React.StatelessComponent<IContentProps>;
 
     constructor(props: ITabbedContentProps){
         super(props);
@@ -61,60 +112,78 @@ class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentS
         };
     }
 
-    public render(){
+    public render() {
 
-        const {headers, bodies} = this.makeContent();
+        const style = this.getClasses();
 
-        return (
-            <div className={`tabbed-content-component ${styles.container}`}>
-                <div className={styles.heading}>
+        const containerStyles = !this.props.vertical ? style.containerH : style.containerV;
+        const headingStyles = !this.props.vertical ? style.headingH : style.headingV;
+        const contentStyles = !this.props.vertical ? style.contentH : style.contentV;
+
+        const verticalAlign = this.props.alignHeaders ? style.headingVAlign : '';
+        const align = this.getAlign(style);
+
+        const {headers, contents} = this.riteOfRakshir();
+
+        return(
+            <div id={this.props.id} className={`tabbed-content-component ${style.container} ${containerStyles}`}>
+                <div className={`${style.heading} ${headingStyles} ${align} ${verticalAlign}`}>
                     {headers}
                 </div>
-                <div className={styles.body}>
-                    {bodies}
+                <div className={`${style.content} ${contentStyles}`}>
+                    {contents}
                 </div>
             </div>
         );
     }
 
-    public onClickHeader = (tabIndex: number) => {
-        return (e: React.MouseEvent<HTMLElement>) => {
-            this.setState({activeTab: tabIndex});
-        };
-    }
-
-    private makeContent(){
+    private riteOfRakshir = () => {
 
         const headers: Array<React.ReactElement<IHeaderProps>> = [];
-        const bodies: Array<React.ReactElement<ITabProps>> = [];
+        const contents: Array<React.ReactElement<ITabProps>> = [];
 
         React.Children.forEach(this.props.children, (child, index) => {
+
             if (React.isValidElement<ITabProps>(child)){
+                const {header, content} = this.assignPropsToChildren(child.props.children, index);
 
-                headers.push(
-                    <Header
-                        key={index}
-                        title={child.props.title}
-                        active={this.state.activeTab === index}
-                        iconClass={child.props.iconClass}
-                        materialIcon={child.props.materialIcon}
-                        onClick={this.onClickHeader(index)}
-                    />
-                );
+                headers.push(header);
 
-                const extraProps: Partial<ITabProps & {key: number}> = {
-                    active: this.state.activeTab === index,
-                    key: index
-                };
-
-                bodies.push(React.cloneElement(child, extraProps));
-
-            }else{
-                throw new Error('<TabbedContent> element only accepts Tab elements as children');
+                contents.push(content);
             }
+
         });
 
-        return {headers, bodies};
+        return {headers, contents};
+    }
+
+    private assignPropsToChildren = (children: any, index: number) => {
+
+        const headerProps: Partial<IHeaderProps & {key: number}> = {
+            active: this.state.activeTab === index,
+            align: this.props.alignHeaders,
+            key: index,
+            onClick: this.onClickHeader(index, children[0]),
+            type: this.props.type,
+            vertical: this.props.vertical,
+        };
+
+        const contentProps: Partial<IContentProps & {key: number}> = {
+            active: this.state.activeTab === index,
+            key: index
+        };
+
+        const header: any = React.cloneElement(children[0], headerProps);
+        const content: any = React.cloneElement(children[1], contentProps);
+
+        return {header, content};
+    }
+
+    private onClickHeader = (tabIndex: number, header: React.ReactElement<IHeaderProps>) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            this.setState({activeTab: tabIndex});
+            header.props.onClick && header.props.onClick(e);
+        };
     }
 
     private getActiveTab(): number {
@@ -129,35 +198,93 @@ class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentS
 
         return activeTab;
     }
+
+    private getClasses = () => {
+        switch (this.props.type) {
+            case 'normal':
+
+                return normal;
+
+            case 'radio':
+
+                return radio;
+
+            default:
+
+                return normal;
+        }
+    }
+
+    private getAlign = (style: any) => {
+        if (this.props.alignHeaders === 'right' || this.props.alignHeaders === 'bottom'){
+            return !this.props.vertical ? style.headingHRight : style.headingVRight;
+        } else if (this.props.alignHeaders === 'left' || this.props.alignHeaders === 'top'){
+            return '';
+        } else {
+            return style.headingCenter;
+        }
+    }
 }
 
 export const Tab: React.StatelessComponent<ITabProps> = (props) => {
-
-    const displayClass = !props.active ? styles.invisible : styles.visible;
-
-    return <div className={`tab-content ${styles.tab} ${displayClass}`} style={props.style}>{props.children}</div>;
-};
-
-export interface IHeaderProps {
-    title: string;
-    active: boolean;
-    materialIcon?: string;
-    iconClass?: string;
-    onClick: (e: React.MouseEvent<HTMLElement>) => void;
-}
-
-export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
-
-    const {active, materialIcon, iconClass} = props;
-    const activeTab = active ? styles.activeHeader : styles.inactiveHeader;
-
-    return (
-        <div className={`tab-header ${styles.header} ${activeTab}`} onClick={props.onClick}>
-            {materialIcon && <i className="header-icon material-icons">{materialIcon}</i>}
-            {iconClass && <i className={`header-icon ${iconClass}`}/>}
-            <span>{props.title}</span>
+    return(
+        <div className={`tab-component ${props.className}`} style={props.style}>
+            {props.children}
         </div>
     );
 };
 
-export default TabbedContent;
+export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
+
+    const getClasses = () => {
+        switch (props.type) {
+            case 'normal':
+
+                return normal;
+
+            case 'radio':
+
+                return radio;
+
+            default:
+
+                return normal;
+        }
+    };
+
+    const style = getClasses();
+
+    const activeTab = props.active ? style.activeHeader : style.inactiveHeader;
+
+    const input = props.type === 'radio' ? (
+        <input
+            type="radio"
+            checked={props.active}
+            readOnly
+        />
+    ) : '';
+
+    const align = props.align ? style.headerAlign : '';
+
+    return(
+        <div
+            className={`tab-header ${style.header} ${activeTab} ${align}`}
+            style={{width: props.width, ...props.style}}
+            onClick={props.onClick}
+        >
+            {input}
+            {props.children}
+        </div>
+    );
+};
+
+export const Content: React.StatelessComponent<IContentProps> = (props) => {
+
+    const displayClass = !props.active ? normal.invisible : normal.visible;
+
+    return(
+        <div className={`content-component ${displayClass} ${props.className}`} style={props.style}>
+            {props.children}
+        </div>
+    );
+};

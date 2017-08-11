@@ -1,0 +1,287 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* 100% Full-height */
+    width: 0px;
+    position: fixed; /* Stay in place */
+    z-index: 9; /* Stay on top */
+    top: 0;
+    left: 0;
+    background: #2D2D2D;
+    transition: 0.3s;
+    color: #fff; 
+    font-size: 12px;
+    white-space: nowrap;
+    overflow-x: hidden; 
+}
+
+.secondary{
+    z-index: -1;
+    left: 90px;
+    background: #efefef;
+    color: #636363;
+    font-size: 16px;
+}
+
+.secondaryOn{
+    width: 185px;
+    overflow-y: auto;
+}
+
+.sidebarOn{
+    width: 90px !important;
+}
+
+.sidebarOn:hover{
+    overflow-x: visible;
+}
+
+.sidebarOff{
+    width: 0px;
+    overflow-x: hidden;
+}
+
+.smallOn{
+    width: 90px;
+}
+
+.smallOff{
+    width: 0px;
+}
+
+.sidebar.sidebarOff{
+    font-size: 0;
+}
+
+.itemContainer{
+    position: relative;
+    padding: 10px; 
+    user-select: none;
+    background: inherit;
+}
+
+.anchor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;  
+    color: inherit;
+}
+
+.activeItem{
+    color: var(--moosendBlue);
+}
+
+.anchor:hover{
+    color: var(--moosendBlue);
+}
+
+.image{
+    width: 30px;
+    margin-bottom: 10px;
+    -webkit-user-drag: none;
+}
+
+.button{
+    display: none;
+    width: 60px;
+    height: 60px;
+}
+
+.button i{
+    font-size: 50px;
+}
+
+.buttonOn{
+    display: block;
+}
+
+.arrow{
+    display: none;
+    z-index: 1;
+    position: absolute;
+    width: 0; 
+    height: 0;
+    left: 90px;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    
+    border-left: 15px solid #2D2D2D;
+}
+
+.itemContainer:hover > .arrow{
+    display: block;
+}
+
+.arrowNoImg{
+    top: 25%;
+}
+
+.arrowImg{
+    top: 25%;
+}
+
+.cover{
+    display: none !important;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.coverOn{
+    display: block !important;
+}
+
+.coverSmall{
+    display: block;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 7px;
+    height: 10px;
+}
+
+.sidebar::-webkit-scrollbar-button:start:decrement,
+.sidebar::-webkit-scrollbar-button:end:increment  {
+    display: none;
+}
+
+.sidebar::-webkit-scrollbar-track-piece  {
+    background-color: #eeeeee;
+}
+
+.sidebar::-webkit-scrollbar-thumb:vertical {
+    background: #d9d9d9;
+    border-radius: 16px;
+}
+
+@media (--deviceSmall){
+    
+    .button{
+        display: block;
+        position: fixed;
+        bottom: 2vw;
+        right: 2vw;
+        height: 10vw;
+        width: 10vw;
+        z-index: 99;
+    }
+
+    .button i{
+        font-size: 8vw;
+    }
+
+    .sidebar{
+        font-size: 4vw;
+        padding-top:50px;
+
+    }
+
+    .secondary{
+        font-size: 4vw;
+        left: 10%;
+        z-index: 11;
+    }
+
+    .secondaryOn{
+        width: 50%;
+    }
+
+    .coverSmall{
+        display: block !important;
+    }
+
+    .smallOn{
+        width: 50% !important;
+    }
+
+    .smallOff{
+        width: 0px !important;
+    }
+
+    .itemContainer{
+        padding-top: 3vw;
+    }
+
+    .sidebarOn{
+        width: 0px;
+    }
+
+    .sidebar img{
+        display: none;
+    }
+
+    .itemContainer:hover > .arrow{
+        display: none;
+    }
+
+}
+
+@media (--deviceXsmall){
+
+    .button{
+        display: block;
+        position: fixed;
+        bottom: 2vw;
+        right: 2vw;
+        height: 10vw;
+        width: 10vw;
+        z-index: 99;
+    }
+
+    .button i{
+        font-size: 8vw;
+    }
+
+    .sidebar{
+        font-size: 4vw;
+        padding-top:50px;
+
+    }
+
+    .secondary{
+        font-size: 4vw;
+        left: 10%;
+        z-index: 11;
+    }
+
+    .secondaryOn{
+        width: 50%;
+    }
+
+    .coverSmall{
+        display: block !important;
+    }
+
+    .smallOn{
+        width: 50% !important;
+    }
+
+    .smallOff{
+        width: 0px !important;
+    }
+
+    .itemContainer{
+        padding-top: 3vw;
+    }
+
+    .sidebarOn{
+        width: 0px;
+    }
+
+    .sidebar img{
+        display: none;
+    }
+
+    .itemContainer:hover > .arrow{
+        display: none;
+    }
+}

@@ -55,7 +55,7 @@
     font-size: 21px;
 }
 
-@media (--small){
+@media (--deviceSmall){
     .normalButton{
         height: 6vw;
         width: 6vw;
@@ -72,7 +72,7 @@
     }
 }
 
-@media (--xSmall){
+@media (--deviceXsmall){
     .normalButton{
         height: 6vw;
         width: 6vw;

@@ -68,24 +68,24 @@ describe('RadioAccordion', () => {
         );
 
         expect(component.state('active')).toBe(1);
-        expect(component.find('.accordion-header').first().find('input').prop('defaultChecked')).toBeFalsy();
-        expect(component.find('.accordion-header').last().find('input').prop('defaultChecked')).toBeTruthy();
+        expect(component.find('.accordion-header').first().find('input').prop('checked')).toBeFalsy();
+        expect(component.find('.accordion-header').last().find('input').prop('checked')).toBeTruthy();
         expect(component.find('.accordion-content').first().hasClass('invisible')).toBeTruthy();
         expect(component.find('.accordion-content').last().hasClass('visible')).toBeTruthy();
 
         component.find('.radio').first().simulate('click');
 
         expect(component.state('active')).toBe(0);
-        expect(component.find('.accordion-header').first().find('input').prop('defaultChecked')).toBeTruthy();
-        expect(component.find('.accordion-header').last().find('input').prop('defaultChecked')).toBeFalsy();
+        expect(component.find('.accordion-header').first().find('input').prop('checked')).toBeTruthy();
+        expect(component.find('.accordion-header').last().find('input').prop('checked')).toBeFalsy();
         expect(component.find('.accordion-content').first().hasClass('visible')).toBeTruthy();
         expect(component.find('.accordion-content').last().hasClass('invisible')).toBeTruthy();
 
         component.find('.radio').last().simulate('click');
 
         expect(component.state('active')).toBe(1);
-        expect(component.find('.accordion-header').first().find('input').prop('defaultChecked')).toBeFalsy();
-        expect(component.find('.accordion-header').last().find('input').prop('defaultChecked')).toBeTruthy();
+        expect(component.find('.accordion-header').first().find('input').prop('checked')).toBeFalsy();
+        expect(component.find('.accordion-header').last().find('input').prop('checked')).toBeTruthy();
         expect(component.find('.accordion-content').first().hasClass('invisible')).toBeTruthy();
         expect(component.find('.accordion-content').last().hasClass('visible')).toBeTruthy();
 

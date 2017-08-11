@@ -25,6 +25,9 @@ export interface ICheckBoxGroupProps {
     /** CheckboxGroup class */
     className?: string;
 
+    /** reflects to the state of the checkboxGroup */
+    selectedChecks?: ICheckBoxData[];
+
     /** override CheckboxGroup styles */
     style?: React.CSSProperties;
 
@@ -102,8 +105,12 @@ export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, 
         this.name = this.generateName();
 
         this.state = {
-            data: this.setData()
+            data: this.props.selectedChecks || this.setData()
         };
+    }
+
+    public componentWillReceiveProps(nextProps: ICheckBoxGroupProps) {
+        this.setState({data: nextProps.selectedChecks ? nextProps.selectedChecks : this.state.data});
     }
 
     public render() {

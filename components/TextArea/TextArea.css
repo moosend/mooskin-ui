@@ -13,8 +13,8 @@
     padding: 7px;
     font-family: Arial,sans-serif;
     border: 0;
-    color: #9e9e9e;
-    font-size: 16px;
+    color: var(--inputFontColor);
+    font-size: 1rem;
     border-radius: 8px;
     background: #efefef;
     display: table-cell;
@@ -58,7 +58,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
 
 .textareaLabel {
     color: var(--inputLabel);
-    font-size: 13px;
+    /* font-size: 13px;*/
     font-size: .92857142857rem;
     padding-top: 7px;
     cursor: pointer;
@@ -82,6 +82,19 @@ textarea::-webkit-scrollbar-thumb:vertical {
         flex-basis: 10px;
         padding-top: 0px;
         margin-left: 3px;
+    }
+}
+
+@media (--deviceXsmall){
+    .areaContainer{
+        display: flex;
+        flex-direction: column
+    }
+    
+    .textareaLabel{
+        flex-basis: 10px;
+        padding-top: 0px;
+        margin-left: 3px;
         font-size: 4vw;
     }
 
@@ -95,7 +108,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
     }
 }
 
-@media (--small){
+@media (--deviceSmall){
     .areaContainer{
         display: flex;
         flex-direction: column

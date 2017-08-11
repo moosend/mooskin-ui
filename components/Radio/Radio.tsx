@@ -24,6 +24,9 @@ export interface IRadioGroupProps {
     /** RadioGroup class */
     className?: string;
 
+    /** reflects to radioGroup state */
+    selectedRadios?: IRadioData[];
+
     /** override RadioGroup styles */
     style?: React.CSSProperties;
 
@@ -99,8 +102,12 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         this.name = this.generateName();
 
         this.state = {
-            data: this.setData()
+            data: this.props.selectedRadios || this.setData()
         };
+    }
+
+    public componentWillReceiveProps(nextProps: IRadioGroupProps) {
+        this.setState({data: nextProps.selectedRadios ? nextProps.selectedRadios : this.state.data});
     }
 
     public render(){
@@ -265,7 +272,8 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
                 value={props.value}
                 onClick={onRadioClick({selected, value: props.value, label})}
                 disabled={props.disabled}
-                defaultChecked={selected}
+                checked={selected}
+                readOnly
             />
             <label htmlFor={genId}>
                 <span>{label}</span>

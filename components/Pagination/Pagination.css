@@ -1,0 +1,61 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
+
+.pagination{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.paginationInner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.paginationButton{
+    width: 40px;
+    height:40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--inputFontColor);
+    border-radius: 3px; 
+    user-select: none;
+}
+
+.paginationButton:hover{
+    background: #eee;
+}
+
+.activeButton {
+    background: var(--moosendBlue);
+    color: #fff;
+}
+
+.activeButton:hover{
+    background: var(--moosendBlue);
+}
+
+.disabledButton {
+  pointer-events: none;
+}
+
+
+@media (--deviceSmall){
+    .paginationButton{
+        font-size: 3vw;
+        padding: 4vw;
+    }
+    
+}
+
+@media (--deviceXsmall){
+    .paginationButton{
+        font-size: 3vw;
+        padding: 4vw;
+    }
+}

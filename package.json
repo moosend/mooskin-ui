@@ -27,6 +27,8 @@
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
   "dependencies": {
     "chart.js": "^2.6.0",
+    "input-moment": "^0.3.4",
+    "moment": "^2.18.1",
     "react": "^15.5.4",
     "react-chartjs-2": "^2.1.0",
     "react-dom": "^15.5.4",

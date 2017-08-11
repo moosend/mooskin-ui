@@ -1,0 +1,79 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
+.breadcrumbsGroup {
+    width: 100%;
+}
+
+.breadcrumbsContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.breadcrumb{
+    position: relative;
+    width: 200px;
+    text-align: center;
+}
+
+.breadcrumb > a{
+    display: block;
+    font-size: 13px;
+    text-decoration: none;
+    padding-top:15px;
+    padding-bottom: 15px;
+    color: #e0e0e0;
+    border-bottom: 1px solid #efefef;
+}
+
+.activeBreadcrumb a{
+    color: var(--moosendBlue);
+    border-bottom: 2px solid  var(--moosendBlue);
+}
+
+.breadcrumb > a:before{
+    position: absolute;
+    content: '';
+    background: url(../../assets/images/arrows/icon_arrow_phases.png) center no-repeat;
+    top: 18px;
+    left: 0;
+    width:6px;
+    height: 9px;
+    display: block;
+}
+
+.breadcrumb:first-child > a:before{
+    background: none;
+}
+
+.breadcrumbBody{
+    padding: 10px;
+}
+
+
+@media (--deviceSmall){
+    .breadcrumb{
+        width: 100%;
+    }
+
+    .breadcrumb > a{
+        font-size: 3vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
+}
+
+@media (--deviceXsmall){
+
+    .breadcrumb{
+        width: 100%;
+    }
+
+    .breadcrumb > a{
+        font-size: 3vw;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
+}

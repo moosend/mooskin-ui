@@ -3,12 +3,14 @@
 
 import * as React from 'react';
 
-import {Col, Grid, Row} from '../components/index';
+import {Col, Grid, H1, Row} from '../components/index';
 
 import Bar from './examples/Bar.example';
+import Breadcrumbs from './examples/Breadcrumbs.example';
 import Button from './examples/Button.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
+import DatePicker from './examples/DatePicker.example';
 import Doughnut from './examples/Doughnut.example';
 import File from './examples/File.example';
 import Form from './examples/Form.example';
@@ -17,11 +19,12 @@ import Headings from './examples/Headings.example';
 import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
 import Input from './examples/Input.example';
 import Line from './examples/Line.example';
+import Pagination from './examples/Pagination.example';
 import Pie from './examples/Pie.example';
 import Radio from './examples/Radio.example';
 import RadioAccordion from './examples/RadioAccordion.example';
-import RadioTabs from './examples/RadioTabs.example';
 import Select from './examples/Select.example';
+import SideBar from './examples/SideBar.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
@@ -32,84 +35,121 @@ import TopNotification from './examples/TopNotification.example';
 export default (props: any) => {
     return(
         <Grid>
-            <Row>
-                <Col lg={4} md={12}>
-                    <Select />
+            <Row id="sidebar">
+                <Col lg={12}>
+                    <H1>SideBar</H1>
                 </Col>
-                <Col lg={4} md={6}>
-                    <Button />
-                </Col>
-                <Col lg={4} md={6}>
-                    <Switch />
+                <Col lg={12}>
+                    <SideBar />
                 </Col>
             </Row>
-            <Row>
+            <Row id="buttons">
+                <Col lg={12}>
+                    <H1>Buttons</H1>
+                </Col>
+                <Col lg={6} md={6}>
+                    <Button />
+                </Col>
+                <Col lg={6} md={6}>
+                    <SmallIconButton />
+                </Col>
+            </Row>
+            <Row id="formElements">
+                <Col lg={12}>
+                    <H1>Form Elements</H1>
+                </Col>
                 <Col lg={6} md={6}>
                     <Input />
                 </Col>
                 <Col lg={6} md={6}>
                     <TextArea />
                 </Col>
-            </Row>
-            <Row>
-                <Col lg={4} md={12}>
-                    <TopNotification />
-                </Col>
-                <Col lg={4} md={6}>
+                <Col lg={6} md={6}>
                     <Radio />
                 </Col>
-                <Col lg={4} md={6}>
+                <Col lg={6} md={6}>
                     <CheckBox />
                 </Col>
-            </Row>
-            <Row>
-                <Col lg={4} md={12}>
-                    <SmallIconButton />
+                <Col lg={6} md={6}>
+                    <Select />
                 </Col>
-                <Col lg={4} md={6}>
-                    <HorizontalRangeBar />
+                <Col lg={6} md={6}>
+                    <DatePicker />
                 </Col>
-                <Col lg={4} md={6}>
-                    <Headings />
+                <Col lg={12}>
+                    <File />
                 </Col>
             </Row>
-            <Row>
-                <Col lg={9} md={8}>
-                    <TabbedContent />
+            <Row id="forms">
+                <Col lg={12}>
+                    <H1>Forms & FormGroups</H1>
                 </Col>
-                <Col lg={3} md={4}>
-                    <RadioAccordion />
-                </Col>
-            </Row>
-            <Row>
-                <Col>
-                    <RadioTabs />
-                </Col>
-            </Row>
-            <Row>
                 <Col>
                     <Form />
                 </Col>
             </Row>
-            <Row>
-                <Col xs="hidden">
+            <Row id="toggables">
+                <Col lg={12}>
+                    <H1>Toggables</H1>
+                </Col>
+                <Col lg={6} md={6}>
+                    <Switch />
+                </Col>
+                <Col lg={6} md={6}>
+                    <Pagination />
+                </Col>
+                <Col lg={12}>
+                    <CheckListItem />
+                </Col>
+            </Row>
+            <Row id="tabs">
+                <Col>
+                    <H1>Tabs</H1>
+                </Col>
+                <Col lg={12}>
+                    <RadioAccordion />
+                </Col>
+                <Col lg={12}>
+                    <TabbedContent/>
+                </Col>
+            </Row>
+            <Row id="tables">
+                <Col lg={12}>
+                    <H1>Tables</H1>
+                </Col>
+                <Col lg={12}>
                     <Table />
                 </Col>
             </Row>
-            <Row>
-                <Col lg={6} md={6}>
-                    <CheckListItem />
+            <Row id="misc">
+                <Col lg={12}>
+                    <H1>Miscellaneous</H1>
                 </Col>
-                <Col lg={6} md={6}>
-                    <File />
+                <Col lg={6} md={8}>
+                    <TopNotification />
+                </Col>
+                <Col lg={6} md={4}>
+                    <Headings />
+                </Col>
+                <Col lg ={8} md={7}>
+                    <Breadcrumbs />
+                </Col>
+                <Col lg={4} md={5}>
+                    <HorizontalRangeBar />
                 </Col>
             </Row>
-            <Row>
-                <Col>
-                    <GridExample />
+            <Row id="grid">
+                <Col lg={12}>
+                    <H1>Grid System</H1>
+                </Col>
+                <Col lg={12}>
+                    <GridExample/>
                 </Col>
             </Row>
-            <Row>
+            <Row id="charts">
+                <Col lg={12}>
+                    <H1>Charts</H1>
+                </Col>
                 <Pie />
                 <Doughnut />
             </Row>

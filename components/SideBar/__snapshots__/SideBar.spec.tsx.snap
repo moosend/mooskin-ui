@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar renders Item correctly 1`] = `
+<div
+  className="item-component itemContainer myClass"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <div
+    className=" arrowImg"
+  />
+  <a
+    className="anchor activeItem"
+    href="www.moosend.com"
+  >
+    <img
+      className="image"
+      src="imageOnPath"
+    />
+    <span>
+      Item
+    </span>
+  </a>
+  <div />
+</div>
+`;
+
+exports[`SideBar renders SideBar correctly 1`] = `
+<div
+  className="sidebar-component"
+>
+  <div>
+    <SmallIconButton
+      className="button buttonOn"
+      icon="view headline"
+      onClick={[Function]}
+      style={Object {}}
+    />
+  </div>
+  <div
+    className="sidebar myClass sidebarOff smallOff"
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+  />
+  <div
+    className="cover "
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] = `
+<div
+  className="sidebar-component"
+>
+  <div>
+    <SmallIconButton
+      className="button buttonOn"
+      icon="view headline"
+      onClick={[Function]}
+      style={Object {}}
+    />
+  </div>
+  <div
+    className="sidebar myClass sidebarOff smallOff"
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+  >
+    <Item
+      active={true}
+      className="myClass"
+      href="www.moosend.com"
+      image="imagePath"
+      label="Item"
+      onClick={[Function]}
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
+    />
+    <Item
+      active={false}
+      className="myClass"
+      href="www.moosend.com"
+      image="imagePath"
+      label="Item"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
+    >
+      <Secondary
+        className=""
+        display={false}
+        style={Object {}}
+      >
+        <Item
+          active={true}
+          className="myClass"
+          href="www.moosend.com"
+          image="imagePath"
+          label="Item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+        />
+      </Secondary>
+    </Item>
+  </div>
+  <div
+    className="cover "
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`SideBar renders SideBar with Items correctly 1`] = `
+<SideBar
+  button={true}
+  className="myClass"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <div
+    className="sidebar-component"
+  >
+    <div>
+      <SmallIconButton
+        className="button buttonOn"
+        icon="view headline"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        <button
+          className="button-icon-component
+                                 button
+                                 normalButton
+                                 
+                                 button buttonOn"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          <i
+            className="material-icons icon"
+          >
+            view_headline
+          </i>
+        </button>
+      </SmallIconButton>
+    </div>
+    <div
+      className="sidebar myClass sidebarOff smallOff"
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
+    >
+      <Item
+        active={true}
+        className="myClass"
+        href="www.moosend.com"
+        image="imagePath"
+        label="Item"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+      >
+        <div
+          className="item-component itemContainer myClass"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+        >
+          <div
+            className=" arrowImg"
+          />
+          <a
+            className="anchor activeItem"
+            href="www.moosend.com"
+          >
+            <img
+              className="image"
+              src="imagePath"
+            />
+            <span>
+              Item
+            </span>
+          </a>
+          <div />
+        </div>
+      </Item>
+      <Item
+        active={false}
+        className="myClass"
+        href="www.moosend.com"
+        image="imagePath"
+        label="Item"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+      >
+        <div
+          className="item-component itemContainer myClass"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+        >
+          <div
+            className=" arrowImg"
+          />
+          <a
+            className="anchor "
+            href="www.moosend.com"
+          >
+            <img
+              className="image"
+              src="imagePath"
+            />
+            <span>
+              Item
+            </span>
+          </a>
+          <div />
+        </div>
+      </Item>
+    </div>
+    <div
+      className="cover "
+      onClick={[Function]}
+    />
+  </div>
+</SideBar>
+`;

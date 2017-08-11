@@ -33,4 +33,9 @@ declare module '*.md' {
   export default content;
 }
 
+declare module 'input-moment' {
+  const content: any;
+  export default content;
+}
+
 declare var global: any;

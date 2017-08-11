@@ -31,7 +31,7 @@
     flex-direction: column;
     padding: 15px;
     font-family: Arial,sans-serif;
-    color: #9e9e9e;
+    color: var(--inputFontColor);
     /*font-size: 16px*/
     font-size: 1rem;
     border-radius: 8px;
@@ -80,6 +80,19 @@
     .fileContainer{display: flex; flex-direction: column}
     .label{
         margin-left: 3px;
+        flex-basis: 20px;
+    }
+
+    .name{
+        margin-bottom: 5px
+    }
+
+}
+
+@media (--deviceXsmall){
+    .fileContainer{display: flex; flex-direction: column}
+    .label{
+        margin-left: 3px;
         max-height: 30px;
         font-size: 4vw;
     }
@@ -96,7 +109,7 @@
 
 }
 
-@media (--small){
+@media (--deviceSmall){
     .fileContainer{display: flex; flex-direction: column}
     .label{
         margin-left: 3px;
@@ -114,3 +127,4 @@
         font-size: 3.3vw;
     }
 }
+

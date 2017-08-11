@@ -19,7 +19,22 @@ config.module.rules.push(
           },
           'postcss-loader'
         ])
-      }
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        loader: extractCSS.extract([
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 1,
+              localIdentName: '[local]',
+              modules: true
+            }
+          },
+          'postcss-loader'
+        ])
+    }
 );
 
 config.plugins.push(
