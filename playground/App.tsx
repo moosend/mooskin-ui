@@ -139,11 +139,17 @@ export default (props: any) => {
                 </Col>
             </Row>
             <Row id="grid">
-                <Col>
+                <Col lg={12}>
+                    <H1>Grid System</H1>
+                </Col>
+                <Col lg={12}>
                     <GridExample/>
                 </Col>
             </Row>
             <Row id="charts">
+                <Col lg={12}>
+                    <H1>Charts</H1>
+                </Col>
                 <Pie />
                 <Doughnut />
             </Row>
