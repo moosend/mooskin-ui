@@ -181,16 +181,18 @@
 
     .sidebar{
         font-size: 4vw;
+        padding-top:50px;
+
     }
 
     .secondary{
         font-size: 4vw;
-        left: 20%;
+        left: 10%;
         z-index: 11;
     }
 
     .secondaryOn{
-        width: 40%;
+        width: 50%;
     }
 
     .coverSmall{
@@ -241,16 +243,18 @@
 
     .sidebar{
         font-size: 4vw;
+        padding-top:50px;
+
     }
 
     .secondary{
         font-size: 4vw;
-        left: 20%;
+        left: 10%;
         z-index: 11;
     }
 
     .secondaryOn{
-        width: 40%;
+        width: 50%;
     }
 
     .coverSmall{
