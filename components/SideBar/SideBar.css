@@ -32,7 +32,7 @@
 }
 
 .sidebarOn{
-    width: 90px;
+    width: 90px !important;
 }
 
 .sidebarOn:hover{
@@ -42,6 +42,14 @@
 .sidebarOff{
     width: 0px;
     overflow-x: hidden;
+}
+
+.smallOn{
+    width: 90px;
+}
+
+.smallOff{
+    width: 0px;
 }
 
 .sidebar.sidebarOff{
@@ -80,12 +88,17 @@
 }
 
 .button{
+    display: none;
     width: 60px;
     height: 60px;
 }
 
 .button i{
     font-size: 50px;
+}
+
+.buttonOn{
+    display: block;
 }
 
 .arrow{
@@ -114,12 +127,21 @@
 }
 
 .cover{
+    display: none !important;
     position: fixed;
     z-index: 1;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
+}
+
+.coverOn{
+    display: block !important;
+}
+
+.coverSmall{
+    display: block;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -141,10 +163,10 @@
     border-radius: 16px;
 }
 
-
 @media (--deviceSmall){
     
     .button{
+        display: block;
         position: fixed;
         bottom: 2vw;
         right: 2vw;
@@ -171,12 +193,24 @@
         width: 40%;
     }
 
+    .coverSmall{
+        display: block !important;
+    }
+
+    .smallOn{
+        width: 50% !important;
+    }
+
+    .smallOff{
+        width: 0px !important;
+    }
+
     .itemContainer{
         padding-top: 3vw;
     }
 
     .sidebarOn{
-        width: 50%;
+        width: 0px;
     }
 
     .sidebar img{
@@ -192,6 +226,7 @@
 @media (--deviceXsmall){
 
     .button{
+        display: block;
         position: fixed;
         bottom: 2vw;
         right: 2vw;
@@ -218,12 +253,24 @@
         width: 40%;
     }
 
+    .coverSmall{
+        display: block !important;
+    }
+
+    .smallOn{
+        width: 50% !important;
+    }
+
+    .smallOff{
+        width: 0px !important;
+    }
+
     .itemContainer{
         padding-top: 3vw;
     }
 
     .sidebarOn{
-        width: 50%;
+        width: 0px;
     }
 
     .sidebar img{

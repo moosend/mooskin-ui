@@ -37,19 +37,23 @@ exports[`SideBar renders SideBar correctly 1`] = `
 >
   <div>
     <SmallIconButton
-      className="button"
+      className="button buttonOn"
       icon="view headline"
       onClick={[Function]}
       style={Object {}}
     />
   </div>
   <div
-    className="sidebar myClass sidebarOff"
+    className="sidebar myClass sidebarOff smallOff"
     style={
       Object {
         "color": "blue",
       }
     }
+  />
+  <div
+    className="cover "
+    onClick={[Function]}
   />
 </div>
 `;
@@ -60,14 +64,14 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
 >
   <div>
     <SmallIconButton
-      className="button"
+      className="button buttonOn"
       icon="view headline"
       onClick={[Function]}
       style={Object {}}
     />
   </div>
   <div
-    className="sidebar myClass sidebarOff"
+    className="sidebar myClass sidebarOff smallOff"
     style={
       Object {
         "color": "blue",
@@ -125,6 +129,10 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
       </Secondary>
     </Item>
   </div>
+  <div
+    className="cover "
+    onClick={[Function]}
+  />
 </div>
 `;
 
@@ -143,7 +151,7 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
   >
     <div>
       <SmallIconButton
-        className="button"
+        className="button buttonOn"
         icon="view headline"
         onClick={[Function]}
         style={Object {}}
@@ -153,7 +161,7 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
                                  button
                                  normalButton
                                  
-                                 button"
+                                 button buttonOn"
           onClick={[Function]}
           style={Object {}}
         >
@@ -166,7 +174,7 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
       </SmallIconButton>
     </div>
     <div
-      className="sidebar myClass sidebarOff"
+      className="sidebar myClass sidebarOff smallOff"
       style={
         Object {
           "color": "blue",
@@ -254,6 +262,10 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         </div>
       </Item>
     </div>
+    <div
+      className="cover "
+      onClick={[Function]}
+    />
   </div>
 </SideBar>
 `;
