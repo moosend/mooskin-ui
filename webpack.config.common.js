@@ -4,48 +4,12 @@ var gracefulFs = require('graceful-fs');
 gracefulFs.gracefulify(fs);
 
 var webpack = require('webpack'),
-  path = require('path'),
-  glob = require("glob"),
-  CopyWebpackPlugin = require('copy-webpack-plugin');
-
-var distFolder = 'lib';
-
-
-var entries = glob.sync("./components/*/index.ts", {ignore: ['**/*.spec.tsx', '**/*.spec.ts']}).map(function(entry){ //gets the module paths in components containing index.ts and assigns them to an object
-  var obj = {};
-  var key = entry.split('/');
-  key = key[key.length-2];
-
-  obj[key] = entry;
-
-  return obj;
-}).reduce(function(acc, curr){
-
-  for(var i in curr){
-    acc[i] = curr[i];
-  }
-
-  return acc;
-}, {});
-
-entries['index'] = './components/index/index.ts'
-
+    path = require("path");
 
 module.exports = {
-  entry: entries,
-  output: {
-    filename: './'+distFolder+'/[name]/index.js',
-    library: 'mooskin',
-    libraryTarget: 'umd',
-    umdNamedDefine: true
-  },
   module: {
     rules: [
-      {
-        test: /\.tsx?$/,
-        exclude: /node_modules/,
-        use: [ 'babel-loader', 'ts-loader']
-      },
+      
       {
           test: /\.woff$|\.woff2$/,
           loader: "url-loader",
@@ -75,7 +39,7 @@ module.exports = {
     ]
   },
   plugins:[
-    new webpack.optimize.ModuleConcatenationPlugin()
+    //new webpack.optimize.ModuleConcatenationPlugin()
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],

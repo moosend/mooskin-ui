@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Readme from '../../components/SideBar/README.md';
 
-import {Item, Secondary, SideBar} from '../../components/index/';
+import {Item, Secondary, SideBar} from '../../components/index';
 
 import SideBarExampleCode from './component-strings/SideBar.example.txt';
 
