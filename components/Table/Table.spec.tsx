@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Table from './Table';
+import Table, {TBody, TD, TH, THead, TR} from './Table';
 
 import { shallow } from 'enzyme';
 
@@ -10,27 +10,28 @@ describe('Table', () => {
 
         const tree = shallow(
             <Table>
-                <thead>
-                    <tr>
-                        <th>th 1</th>
-                        <th>th 2</th>
-                        <th>th 3</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>td 1</td>
-                        <td>td 2</td>
-                        <td>td 3</td>
-                    </tr>
-                    <tr>
-                        <td>td 1</td>
-                        <td>td 2</td>
-                        <td>td 3</td>
-                    </tr>
-                </tbody>
+                <THead>
+                    <TR>
+                        <TH>th 1</TH>
+                        <TH>th 2</TH>
+                        <TH>th 3</TH>
+                    </TR>
+                </THead>
+                <TBody>
+                    <TR>
+                        <TD>td 1</TD>
+                        <TD>td 2</TD>
+                        <TD>td 3</TD>
+                    </TR>
+                    <TR>
+                        <TD>td 1</TD>
+                        <TD>td 2</TD>
+                        <TD>td 3</TD>
+                    </TR>
+                </TBody>
             </Table>
         );
         expect(tree).toMatchSnapshot();
     });
+
 });

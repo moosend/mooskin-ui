@@ -2,74 +2,72 @@ class TableExample extends React.Component{
 
     render(){
         return(
-            <div>
-                <Table>
-                    <thead>
-                        <tr>
-                            <th>Date & Time</th>
-                            <th>Campaign Name</th>
-                            <th>Mailing List / Segment</th>
-                            <th>Status</th>
-                            <th>Open %</th>
-                            <th>Click %</th>
-                            <th>Subscribers</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>td 1</td>
-                            <td>td 2</td>
-                            <td>td 3</td>
-                            <td>td 4</td>
-                            <td>td 5</td>
-                            <td>td 6</td>
-                            <td>td 7</td>
-                            <td>td 8</td>
-                        </tr>
-                        <tr>
-                            <td>td 1</td>
-                            <td>td 2</td>
-                            <td>td 3</td>
-                            <td>td 4</td>
-                            <td>td 5</td>
-                            <td>td 6</td>
-                            <td>td 7</td>
-                            <td>td 8</td>
-                        </tr>
-                        <tr>
-                            <td>td 1</td>
-                            <td>td 2</td>
-                            <td>td 3</td>
-                            <td>td 4</td>
-                            <td>td 5</td>
-                            <td>td 6</td>
-                            <td>td 7</td>
-                            <td>td 8</td>
-                        </tr>
-                        <tr>
-                            <td>td 1</td>
-                            <td>td 2</td>
-                            <td>td 3</td>
-                            <td>td 4</td>
-                            <td>td 5</td>
-                            <td>td 6</td>
-                            <td>td 7</td>
-                            <td>td 8</td>
-                        </tr>
-                        <tr>
-                            <td>td 1</td>
-                            <td>td 2</td>
-                            <td>td 3</td>
-                            <td>td 4</td>
-                            <td>td 5</td>
-                            <td>td 6</td>
-                            <td>td 7</td>
-                            <td>td 8</td>
-                        </tr>
-                    </tbody>
-                </Table>
-            </div>
+            <Table>
+                <THead>
+                    <TR>
+                        <TH>Date & Time</TH>
+                        <TH>Campaign Name</TH>
+                        <TH>Mailing List / Segment</TH>
+                        <TH>Status</TH>
+                        <TH>Open %</TH>
+                        <TH>Click %</TH>
+                        <TH>Subscribers</TH>
+                        <TH>Actions</TH>
+                    </TR>
+                </THead>
+                <TBody>
+                    <TR>
+                        <TD>Row 1 start</TD>
+                        <TD>TD 2</TD>
+                        <TD>TD 3</TD>
+                        <TD>TD 4</TD>
+                        <TD>TD 5</TD>
+                        <TD>TD 6</TD>
+                        <TD>TD 7</TD>
+                        <TD>TD 8</TD>
+                    </TR>
+                    <TR>
+                        <TD>Row 2 start</TD>
+                        <TD>TD 2</TD>
+                        <TD>TD 3</TD>
+                        <TD>TD 4</TD>
+                        <TD>TD 5</TD>
+                        <TD>TD 6</TD>
+                        <TD>TD 7</TD>
+                        <TD>TD 8</TD>
+                    </TR>
+                    <TR>
+                        <TD>Row 3 start</TD>
+                        <TD>TD 2</TD>
+                        <TD>TD 3</TD>
+                        <TD>TD 4</TD>
+                        <TD>TD 5</TD>
+                        <TD>TD 6</TD>
+                        <TD>TD 7</TD>
+                        <TD>TD 8</TD>
+                    </TR>
+                    <TR>
+                        <TD>TD 1</TD>
+                        <TD>TD 2</TD>
+                        <TD>TD 3</TD>
+                        <TD>TD 4</TD>
+                        <TD>TD 5</TD>
+                        <TD>TD 6</TD>
+                        <TD>TD 7</TD>
+                        <TD>TD 8</TD>
+                    </TR>
+                    <TR>
+                        <TD>TD 1</TD>
+                        <TD>TD 2</TD>
+                        <TD>TD 3</TD>
+                        <TD>TD 4</TD>
+                        <TD>TD 5</TD>
+                        <TD>TD 6</TD>
+                        <TD>TD 7</TD>
+                        <TD>TD 8</TD>
+                    </TR>
+                </TBody>
+            </Table>
         );
     }
 }
