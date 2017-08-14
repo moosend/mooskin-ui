@@ -9,7 +9,7 @@ ___
 To start using the Table Component first you have to Import it
 
 ```
-Import {Table} from 'mooskin';
+Import {Table, TR, TH, TD, THead, TBody} from 'mooskin';
 ```
 or
 ```
