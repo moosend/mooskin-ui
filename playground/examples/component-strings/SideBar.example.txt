@@ -19,7 +19,7 @@ class SideBarExample extends React.Component {
                 >
                     <Secondary>
                         <Item
-                            label="SideBar"
+                            label="Sidebar"
                             href="#sidebar"
                         />
                         <Item
