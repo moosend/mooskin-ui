@@ -74,7 +74,9 @@ module.exports = {
       }
     ]
   },
-  plugins:[],
+  plugins:[
+    new webpack.optimize.ModuleConcatenationPlugin()
+  ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
     modules: [
