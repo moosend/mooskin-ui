@@ -52,10 +52,11 @@
     width: 0px;
 }
 
-// .sidebar.sidebarOff{
-//     font-size: 0;
-// }
-
+/*
+.sidebar.sidebarOff{
+    font-size: 0;
+}
+*/
 .itemContainer{
     position: relative;
     padding: 10px; 
