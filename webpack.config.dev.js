@@ -21,12 +21,12 @@ config.output = {
 
 config.plugins.push(
     extractCSS,
-    // new HtmlWebpackPlugin({
-    //     inject: false,
-    //     template: './playground/index.html',
-    //     filename: distFolder+'/index.html',
-    //     favicon: './playground/favicon.png'
-    // }),
+    new HtmlWebpackPlugin({
+        inject: false,
+        template: './playground/index.html',
+        filename: distFolder+'/index.html',
+        favicon: './playground/favicon.png'
+    }),
     new CopyWebpackPlugin([
        {
            from: './playground/favicon.png',
