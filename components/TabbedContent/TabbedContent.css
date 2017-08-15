@@ -171,6 +171,15 @@
         font-size: 3vw;
     }
 
+    .headerAlign{
+        flex-grow: 1;
+    }
+
+    .header{
+        flex: 1;
+        font-size: 4vw
+    }
+
 }
 
 @media (--deviceSmall){
@@ -185,6 +194,15 @@
 
     .contentV {
         font-size: 3vw;
+    }
+
+    .headerAlign{
+        flex-grow: 1;
+    }
+
+    .header{
+        flex: 1;
+        font-size: 4vw
     }
 
 }

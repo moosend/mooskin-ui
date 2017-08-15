@@ -9,7 +9,7 @@ ___
 To start using the Table Component first you have to Import it
 
 ```
-Import {Table} from 'mooskin';
+Import {Table, TR, TH, TD, THead, TBody} from 'mooskin';
 ```
 or
 ```
@@ -26,24 +26,23 @@ And then you can simply start using it by typing
 
 ```
 <Table attribute1="atr" attribute2="asd" >
-    <thead>
-        <tr>
-            <th>header 1</th>
-            <th>header 2</th>
-            <th>header 3</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>td 1</td>
-            <td>td 2</td>
-            <td>td 3</td>
-        </tr>
-    </tbody>
+    <THead>
+        <TR>
+            <TH>header 1</TH>
+            <TH>header 2</TH>
+            <TH>header 3</TH>
+        </TR>
+    </THead>
+    <TBody>
+        <TR>
+            <TD>td 1</TD>
+            <TD>td 2</TD>
+            <TD>td 3</TD>
+        </TR>
+    </TBody>
 </Table>
 ```
-As you can see only the first `<Table>` element is a composite component, as its children you just use the usual dom element components used fot tables. 
-
+As you can see only the first `<Table>` element is a composite component, as its children are just the usual dom element with capital letters.
 
 
 For easy use, the components are named similar to normal HTML components but with a capital first letter.

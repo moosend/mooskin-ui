@@ -6,43 +6,127 @@ exports[`Table renders correctly 1`] = `
     className="table "
     style={Object {}}
   >
-    <thead>
-      <tr>
-        <th>
+    <THead>
+      <TR>
+        <TH
+          onClick={[Function]}
+        >
           th 1
-        </th>
-        <th>
+        </TH>
+        <TH
+          onClick={[Function]}
+        >
           th 2
-        </th>
-        <th>
+        </TH>
+        <TH
+          onClick={[Function]}
+        >
           th 3
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          td 1
-        </td>
-        <td>
-          td 2
-        </td>
-        <td>
-          td 3
-        </td>
-      </tr>
-      <tr>
-        <td>
-          td 1
-        </td>
-        <td>
-          td 2
-        </td>
-        <td>
-          td 3
-        </td>
-      </tr>
-    </tbody>
+        </TH>
+      </TR>
+    </THead>
+    <TBody>
+      <TR>
+        <TD>
+          <div
+            className="tdContent"
+          >
+            <span
+              className="heading"
+            >
+              th 1
+            </span>
+            <span
+              className="content"
+            >
+              td 1
+            </span>
+          </div>
+        </TD>
+        <TD>
+          <div
+            className="tdContent"
+          >
+            <span
+              className="heading"
+            >
+              th 2
+            </span>
+            <span
+              className="content"
+            >
+              td 2
+            </span>
+          </div>
+        </TD>
+        <TD>
+          <div
+            className="tdContent"
+          >
+            <span
+              className="heading"
+            >
+              th 3
+            </span>
+            <span
+              className="content"
+            >
+              td 3
+            </span>
+          </div>
+        </TD>
+      </TR>
+      <TR>
+        <TD>
+          <div
+            className="tdContent"
+          >
+            <span
+              className="heading"
+            >
+              th 1
+            </span>
+            <span
+              className="content"
+            >
+              td 1
+            </span>
+          </div>
+        </TD>
+        <TD>
+          <div
+            className="tdContent"
+          >
+            <span
+              className="heading"
+            >
+              th 2
+            </span>
+            <span
+              className="content"
+            >
+              td 2
+            </span>
+          </div>
+        </TD>
+        <TD>
+          <div
+            className="tdContent"
+          >
+            <span
+              className="heading"
+            >
+              th 3
+            </span>
+            <span
+              className="content"
+            >
+              td 3
+            </span>
+          </div>
+        </TD>
+      </TR>
+    </TBody>
   </table>
 </div>
 `;
