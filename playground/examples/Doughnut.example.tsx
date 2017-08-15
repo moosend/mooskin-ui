@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import Readme from '../../components/Charts/Doughnut/README.md';
 
-import {Doughnut, Col, Grid, Row} from '../../components/index/';
+import {Col, Doughnut, Grid, Row} from '../../components/index/';
 import DoughnutExampleCode from './component-strings/Doughnut.example.txt';
 
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';

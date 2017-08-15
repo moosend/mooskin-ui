@@ -1,4 +1,4 @@
-class BreadcrumbsExample extends React.Component {
+class StepsExample extends React.Component {
 
     constructor(){
         super();
@@ -19,17 +19,17 @@ class BreadcrumbsExample extends React.Component {
 
         return(
             <div>
-                <BreadcrumbsGroup>
-                    <Breadcrumb id="1" title="Breadcrumb 1" active={this.state.activeStep === 1}>
+                <Steps>
+                    <Step id="1" title="Step 1" active={this.state.activeStep === 1}>
                         <div style={style}>Some Content 1</div>
-                    </Breadcrumb>
-                    <Breadcrumb id="2" title="Breadcrumb 2" active={this.state.activeStep === 2} onClick={this.onClick}>
+                    </Step>
+                    <Step id="2" title="Step 2" active={this.state.activeStep === 2} onClick={this.onClick}>
                         <div style={style}>Some Content 2</div>
-                    </Breadcrumb>
-                    <Breadcrumb id="3" title="Breadcrumb 3" active={this.state.activeStep === 3}>
+                    </Step>
+                    <Step id="3" title="Step 3" active={this.state.activeStep === 3}>
                         <div style={style}>Some Content 3</div>
-                    </Breadcrumb>
-                </BreadcrumbsGroup>
+                    </Step>
+                </Steps>
                 <Button onClick={this.onClickPrev} inverseStyle>Prev</Button>
                 <Button onClick={this.onClickNext}>Next</Button>
             </div>

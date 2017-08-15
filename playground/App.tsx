@@ -6,7 +6,6 @@ import * as React from 'react';
 import {Col, Grid, H1, Row} from '../components/index';
 
 import Bar from './examples/Bar.example';
-import Breadcrumbs from './examples/Breadcrumbs.example';
 import Button from './examples/Button.example';
 import CheckBox from './examples/CheckBox.example';
 import CheckListItem from './examples/CheckListItem.example';
@@ -26,6 +25,7 @@ import RadioAccordion from './examples/RadioAccordion.example';
 import Select from './examples/Select.example';
 import SideBar from './examples/SideBar.example';
 import SmallIconButton from './examples/SmallIconButton.example';
+import Steps from './examples/Steps.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
 import Table from './examples/Table.example';
@@ -132,7 +132,7 @@ export const App = (props: any) => {
                     <Headings />
                 </Col>
                 <Col lg ={8} md={7}>
-                    <Breadcrumbs />
+                    <Steps />
                 </Col>
                 <Col lg={4} md={5}>
                     <HorizontalRangeBar />

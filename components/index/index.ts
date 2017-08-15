@@ -26,4 +26,4 @@ export {default as Table} from '../Table';
 export {default as Pagination} from '../Pagination';
 export {default as DatePicker} from '../DatePicker';
 export {default as SideBar, Item, Secondary} from '../SideBar';
-export {default as BreadcrumbsGroup, Breadcrumb} from '../Breadcrumbs';
+export {default as Steps, Step} from '../Steps';
