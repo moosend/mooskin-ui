@@ -42,21 +42,25 @@ export interface ISideBarItemProps{
     /** override sidebar styles */
     style?: React.CSSProperties;
 
-    /** callback function when mouse enters the Item, mainly used to toggle secondary sidebar */
+    subMenuStyle?: React.CSSProperties;
+
+    subMenuClasses?: string;
+
+    /** callback function when mouse enters the Item, mainly used to toggle SubMenu */
     onMouseEnter?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
-    /** callback function when mouse leaves the item, mainly used to toggle secondary sidebar */
+    /** callback function when mouse leaves the item, mainly used to toggle SubMenu */
     onMouseLeave?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
     /** callback function when item is clicked */
     onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
     /** item children */
-    children?: React.ReactElement<ISideBarProps>;
+    children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>;
 
 }
 
-export interface ISecondaryProps{
+export interface ISubMenuProps{
 
     /** wether the sidebar should be displayed or not */
     display?: boolean;
@@ -74,7 +78,7 @@ export interface ISecondaryProps{
 export interface ISideBarState {
     activeItem?: number;
     display: boolean;
-    secondaryDisplay?: boolean;
+    subMenuDisplay?: boolean;
     smallDisplay?: boolean;
     // secondaryActive?: number;
 }
@@ -87,7 +91,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     };
 
     public static Item: React.StatelessComponent<ISideBarItemProps>;
-    public static Secondary: React.StatelessComponent<ISecondaryProps>;
+    public static SubMenu: React.StatelessComponent<ISubMenuProps>;
 
     constructor(props: ISideBarProps){
 
@@ -97,8 +101,8 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
             activeItem: this.getActiveItem(),
             display: false,
             // secondaryActive: this.getActiveSecondary(),
-            secondaryDisplay: false,
-            smallDisplay: false
+            smallDisplay: false,
+            subMenuDisplay: false
         };
     }
 
@@ -154,7 +158,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
             if (React.isValidElement<ISideBarItemProps>(child)){
 
-                const secondary = child.props.children ? this.getSecondary(child.props.children) : '';
+                const subMenu = child.props.children ? this.getSubMenu(child) : '';
 
                 if (child.props.children){
                     items.push(
@@ -166,12 +170,12 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                             href={child.props.href}
                             active={this.state.activeItem === index}
                             onClick={this.onClickItem(index, child)}
-                            onMouseEnter={this.toggleSecondary}
-                            onMouseLeave={this.toggleSecondary}
+                            onMouseEnter={this.toggleSubMenu}
+                            onMouseLeave={this.toggleSubMenu}
                             style={child.props.style}
                             className={child.props.className}
                         >
-                            {secondary || child.props.children}
+                            {subMenu || child.props.children}
                         </Item>
                     );
                 } else {
@@ -186,9 +190,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                             onClick={this.onClickItem(index, child)}
                             style={child.props.style}
                             className={child.props.className}
-                        >
-                            {secondary || child.props.children}
-                        </Item>
+                        />
                     );
                 }
 
@@ -200,17 +202,17 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         return items;
     }
 
-    private getSecondary = (secondary: React.ReactElement<ISideBarProps>) => {
-        if (React.isValidElement<ISideBarProps>(secondary)){
+    private getSubMenu = (item: React.ReactElement<ISideBarItemProps>) => {
+        if (React.isValidElement<ISideBarItemProps>(item)){
             return (
-                <Secondary
-                    className={secondary.props.className}
-                    style={secondary.props.style}
-                    display={this.state.secondaryDisplay}
+                <SubMenu
+                    className={item.props.subMenuClasses}
+                    style={item.props.subMenuStyle}
+                    display={this.state.subMenuDisplay}
                 >
-                    {secondary.props.children}
+                    {item.props.children}
                     {/* {secondary.props.children && this.getSecondaryItems(secondary.props.children)} */}
-                </Secondary>
+                </SubMenu>
             );
         }
     }
@@ -303,8 +305,8 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         this.setState({display: false, smallDisplay: false});
     }
 
-    private toggleSecondary = () => {
-        this.setState({secondaryDisplay: !this.state.secondaryDisplay});
+    private toggleSubMenu = () => {
+        this.setState({subMenuDisplay: !this.state.subMenuDisplay});
     }
 }
 
@@ -345,13 +347,13 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
     );
 };
 
-export const Secondary: React.StatelessComponent<ISecondaryProps> = (props) => {
+export const SubMenu: React.StatelessComponent<ISubMenuProps> = (props) => {
 
-    const display = props.display ? styles.secondaryOn : styles.sidebarOff;
+    const display = props.display ? styles.subMenuOn : styles.sidebarOff;
 
     return(
         <div
-            className={`item-component ${styles.sidebar} ${styles.secondary} ${display} ${props.className}`}
+            className={`item-component ${styles.sidebar} ${styles.subMenu} ${display} ${props.className}`}
             style={props.style}
         >
             {props.children}

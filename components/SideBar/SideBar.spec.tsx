@@ -105,19 +105,17 @@ describe('SideBar', () => {
                     onMouseEnter={func}
                     onMouseLeave={func}
                 >
-                    <SideBar>
-                        <Item
-                            onClick={func}
-                            className="myClass"
-                            style={{color: 'blue'}}
-                            active
-                            href="www.moosend.com"
-                            label="Item"
-                            image="imagePath"
-                            onMouseEnter={func}
-                            onMouseLeave={func}
-                        />
-                    </SideBar>
+                    <Item
+                        onClick={func}
+                        className="myClass"
+                        style={{color: 'blue'}}
+                        active
+                        href="www.moosend.com"
+                        label="Item"
+                        image="imagePath"
+                        onMouseEnter={func}
+                        onMouseLeave={func}
+                    />
                 </Item>
             </SideBar>
         );
