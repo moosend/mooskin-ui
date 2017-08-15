@@ -17,18 +17,10 @@ export interface ITableProps{
 
 }
 
-// export interface ITBodyProps {
+export interface IHeaderProps extends ITableProps {
 
-//     /** override TBody id */
-//     id?: string;
-
-//     /** TBody class */
-//     className?: string;
-
-//     /** override TBody styles */
-//     style?: React.CSSProperties;
-
-// }
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+}
 
 export default class Table extends React.Component<ITableProps, {}> {
 
@@ -38,7 +30,7 @@ export default class Table extends React.Component<ITableProps, {}> {
     };
 
     public static THead: React.StatelessComponent<ITableProps>;
-    public static TH: React.StatelessComponent<ITableProps>;
+    public static TH: React.StatelessComponent<IHeaderProps>;
     public static TBody: React.StatelessComponent<ITableProps>;
     public static TR: React.StatelessComponent<ITableProps>;
     public static TD: React.StatelessComponent<ITableProps>;
@@ -59,7 +51,7 @@ export default class Table extends React.Component<ITableProps, {}> {
 
     private getContent = () => {
 
-        let headers: string[] = [];
+        let headStrings: string[] = [];
         let newHeaders: React.ReactElement<ITableProps> = <TR/>;
         let newCells: Array<React.ReactElement<ITableProps>> = [];
         const newRows: Array<React.ReactElement<ITableProps>> = [];
@@ -72,9 +64,35 @@ export default class Table extends React.Component<ITableProps, {}> {
                 if (child.type === THead && child.props.children){
 
                     const row = this.getRowChildren(child.props.children);
-                    headers = this.collectData(row);
+                    headStrings = this.collectData(row);
 
-                    newHeaders = child;
+                    const headers = this.getRowChildren(row);
+
+                    const callbackHeaders = headers.map((header: React.ReactElement<IHeaderProps>, i: number) => {
+                        return (
+                            <TH
+                                key = {i}
+                                className = {header.props.className}
+                                style = {header.props.style}
+                                onClick = {this.onClickHeader(header)}
+                            >
+                                {header.props.children}
+                            </TH>
+                        );
+                    });
+
+                    newHeaders = (
+                        <THead
+                            className = {child.props.className}
+                            style = {child.props.style}
+                        >
+                            <TR>
+                                {callbackHeaders}
+                            </TR>
+                        </THead>
+                    );
+
+                    // newHeaders = child;
                 }
 
                 if (child.type === TBody){
@@ -90,7 +108,7 @@ export default class Table extends React.Component<ITableProps, {}> {
                                     style = {cell.props.style}
                                 >
                                     <div className = {styles.tdContent}>
-                                        <span className={styles.heading}>{headers[index]}</span>
+                                        <span className={styles.heading}>{headStrings[index]}</span>
                                         <span className={styles.content}>{cell.props.children}</span>
                                     </div>
                                 </TD>
@@ -147,6 +165,12 @@ export default class Table extends React.Component<ITableProps, {}> {
         return headers;
     }
 
+    private onClickHeader = (header: React.ReactElement<IHeaderProps>) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            header.props.onClick && header.props.onClick(e);
+        };
+    }
+
 }
 
 export const THead: React.StatelessComponent<ITableProps> = (props) => {
@@ -158,10 +182,10 @@ export const THead: React.StatelessComponent<ITableProps> = (props) => {
     );
 };
 
-export const TH: React.StatelessComponent<ITableProps> = (props) => {
+export const TH: React.StatelessComponent<IHeaderProps> = (props) => {
 
     return(
-        <th className={`TH-component ${styles.th}`} style={props.style}>
+        <th className={`TH-component ${styles.th}`} style={props.style} onClick={props.onClick}>
             {props.children}
         </th>
     );
