@@ -8,13 +8,19 @@ exports[`Table renders correctly 1`] = `
   >
     <THead>
       <TR>
-        <TH>
+        <TH
+          onClick={[Function]}
+        >
           th 1
         </TH>
-        <TH>
+        <TH
+          onClick={[Function]}
+        >
           th 2
         </TH>
-        <TH>
+        <TH
+          onClick={[Function]}
+        >
           th 3
         </TH>
       </TR>
