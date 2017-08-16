@@ -6,10 +6,12 @@
 
 .table{
     width: 100%;
+    border-collapse: collapse;
 }
 
-.tbody{
+.body{
     border: 1px solid #eaeaea;
+    
 }
 
 .header{
@@ -42,9 +44,13 @@
         display: none;
     }
 
+    .tableWrapper{
+        width: 95vw;
+        overflow-x: auto;        
+    }
+
     .table{
-        widows: 200vw;
-        overflow: auto;
+        width: 200vw;
     }
 
     .table thead tr th{

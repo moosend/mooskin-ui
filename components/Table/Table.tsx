@@ -80,7 +80,7 @@ export default class Table extends React.Component<ITableProps, {}> {
                             {this.props.children}
                         </tr>
                     </thead>
-                    <tbody className={styles.tbody}>
+                    <tbody className={styles.body}>
                         {rows}
                     </tbody>
                 </table>
@@ -94,7 +94,7 @@ export default class Table extends React.Component<ITableProps, {}> {
 
         const rows: Array<React.ReactElement<ITableProps>> = [];
 
-        this.props.data && this.props.data.map((obj: any, index: number) => {
+        this.props.data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
 
             for (const key in obj) {
@@ -103,13 +103,13 @@ export default class Table extends React.Component<ITableProps, {}> {
 
                     settings.forEach((setting: any, i: number) => {
 
-                        if (setting.text.toUpperCase() === key.toUpperCase()){
+                        if (setting.dataField.toUpperCase() === key.toUpperCase()){
 
                             const display = setting.hide ? styles.hide : '';
 
                             cols[i] = (
-                                <Col className={display} >
-                                    <span className={styles.heading}>{setting.text}</span>
+                                <Col className={display} key={i} >
+                                    <span className={styles.heading}>{setting.heading}</span>
                                     <span>{obj[key]}</span>
                                 </Col>
                             );
@@ -140,8 +140,9 @@ export default class Table extends React.Component<ITableProps, {}> {
             if (React.isValidElement<IHeaderProps>(child)){
                 settings.push(
                     {
-                        hide: child.props.hideSmall,
-                        text: child.props.children
+                        dataField: child.props.dataField,
+                        heading: child.props.children,
+                        hide: child.props.hideSmall
                     }
                 );
             }
