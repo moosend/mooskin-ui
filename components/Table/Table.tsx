@@ -210,7 +210,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
     private toggle = () => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({activeRow: -1});
-        }
+        };
     }
 
 }
