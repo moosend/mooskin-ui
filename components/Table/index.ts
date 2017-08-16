@@ -1,10 +1,6 @@
-import Table, {TBody, TD, TH, THead, TR} from './Table';
+import Table, {TableHeader} from './Table';
 
-Table.TBody = TBody;
-Table.THead = THead;
-Table.TR = TR;
-Table.TD = TD;
-Table.TH = TH;
+Table.TableHeader = TableHeader;
 
 export default Table;
-export {TBody, TD, TH, THead, TR};
+export {TableHeader};

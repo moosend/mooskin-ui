@@ -1,15 +1,18 @@
 @import '../_utils/globals/screens.css';
 
+.tableWrapper{
+    width: 100%;
+}
+
 .table{
     width: 100%;
-    border-collapse: collapse;
 }
 
 .tbody{
     border: 1px solid #eaeaea;
 }
 
-.th{
+.header{
     background-color: #efefef;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -20,7 +23,7 @@
     font-weight: normal;
 }
 
-.td{
+.col{
     text-align: center;
     vertical-align: middle;
     padding-top: 20px;
@@ -34,59 +37,21 @@
     display: none;
 }
 
-.th{
-    cursor: pointer;
-}
-
 @media (--deviceXsmall){
-    .thead{
+    .hide{
         display: none;
     }
 
-    .tr{
-        display: flex;
-        flex-direction: column;
-        border: 3px solid #eaeaea;
-        box-shadow: 10px 10px 30px #eaeaea;
+    .table{
+        widows: 200vw;
+        overflow: auto;
     }
 
-    .tr + .tr{
-        margin-top: 50px;
+    .table thead tr th{
+        font-size: 3.5vw;
     }
 
-    .heading{
-        display: block;
-        font-weight: 800;
-        flex: 1;
-        text-align: left;
-    }
-
-    .tdContent{
-        display: flex;
-        flex-direction: row;
-        font-size: 3vw;
-    }
-
-    .td{
-        border: none;
-        padding: 20px;
-    }
-
-    .td + .td {
-        border-top: 1px solid #eaeaea
-    }
-
-    /* .td:nth-child(even){
-        background: #eaeaea;
-    } */
-
-    .content{
-        flex: 1;
-        text-align: left;
-        font-size: 3vw;
-    }
-    
-    .tbody{
-        border: none;
+    .table tbody tr td{
+        font-size: 3.5vw;
     }
 }
