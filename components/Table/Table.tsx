@@ -54,9 +54,28 @@ export interface IRowProps{
     /** override Row styles */
     style?: React.CSSProperties;
 
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+
 }
 
-export default class Table extends React.Component<ITableProps, {}> {
+export interface IPopoverProps{
+
+    /** Popover class */
+    className?: string;
+
+    /** override Popover styles */
+    style?: React.CSSProperties;
+
+    /** wether the popover is active or not */
+    active?: boolean;
+
+}
+
+export interface ITableState {
+    activeRow: number;
+}
+
+export default class Table extends React.Component<ITableProps, ITableState> {
 
     public static defaultProps: Partial<ITableProps> = {
         className: '',
@@ -65,12 +84,22 @@ export default class Table extends React.Component<ITableProps, {}> {
 
     public static TableHeader: React.StatelessComponent<IHeaderProps>;
 
+    constructor(props: ITableProps){
+        super(props);
+
+        this.state = {
+            activeRow: -1
+        };
+    }
+
     public render(){
 
         const rows = this.getRows();
+        const cover = this.getCover();
 
         return (
             <div className={styles.tableWrapper}>
+                {cover}
                 <table
                     className={`table-component ${styles.table} ${this.props.className}`}
                     style={this.props.style}
@@ -107,12 +136,21 @@ export default class Table extends React.Component<ITableProps, {}> {
 
                             const display = setting.hide ? styles.hide : '';
 
-                            cols[i] = (
-                                <Col className={display} key={i} >
-                                    <span className={styles.heading}>{setting.heading}</span>
-                                    <span>{obj[key]}</span>
-                                </Col>
-                            );
+                            if (i === 0){
+                                cols[i] = (
+                                    <Col className={display} key={i} >
+                                        <span className={styles.heading}>{setting.heading}</span>
+                                        <span className={styles.content}>{obj[key]}</span>
+                                    </Col>
+                                );
+                            } else {
+                                cols[i] = (
+                                    <Col className={display} key={i} >
+                                        <span className={styles.heading}>{setting.heading}</span>
+                                        <span className={styles.content}>{obj[key]}</span>
+                                    </Col>
+                                );
+                            }
                         }
 
                     });
@@ -121,8 +159,11 @@ export default class Table extends React.Component<ITableProps, {}> {
             }
 
             rows.push(
-                <Row key={index}>
+                <Row key={index} style={{position: 'relative'}} onClick={this.showPopover(index)}>
                     {cols}
+                    <Popover active={this.state.activeRow === index}>
+                        {cols}
+                    </Popover>
                 </Row>
             );
 
@@ -152,6 +193,26 @@ export default class Table extends React.Component<ITableProps, {}> {
         return settings;
     }
 
+    private showPopover = (index: number) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            this.setState({activeRow: index});
+        };
+    }
+
+    private getCover = () => {
+        if (this.state.activeRow >= 0){
+            return (
+                <div className={styles.cover} onClick={this.toggle()}/>
+            );
+        }
+    }
+
+    private toggle = () => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            this.setState({activeRow: -1});
+        }
+    }
+
 }
 
 export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
@@ -172,7 +233,7 @@ export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
     return(
-        <tr className={`row ${styles.row} ${props.className}`} style={props.style}>
+        <tr onClick={props.onClick} className={`row ${styles.row} ${props.className}`} style={props.style}>
             {props.children}
         </tr>
     );
@@ -185,4 +246,20 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
             {props.children}
         </td>
     );
+};
+
+export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
+
+    const active = props.active ? {display: 'block'} : {display: 'none'};
+
+    return(
+        <td className={styles.popover} style={active}>
+            <table>
+                <tr>
+                    {props.children}
+                </tr>
+            </table>
+        </td>
+    );
+
 };

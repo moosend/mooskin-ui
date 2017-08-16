@@ -49,8 +49,8 @@ export default class TableExample extends React.Component<any, any>{
             <Table data={data}>
                 <TableHeader dataField="id" >ID</TableHeader>
                 <TableHeader dataField="name" >Name</TableHeader>
-                <TableHeader dataField="lastname" >Lastname</TableHeader>
-                <TableHeader dataField="actions" >Actions</TableHeader>
+                <TableHeader dataField="lastname" hideSmall >Lastname</TableHeader>
+                <TableHeader dataField="actions" hideSmall >Actions</TableHeader>
             </Table>
         );
     }
