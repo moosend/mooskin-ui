@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import {Button} from '../index/';
 import styles from './Table.css';
 
 export interface ITableProps{
@@ -56,7 +57,11 @@ export interface IRowProps{
 
 }
 
-export default class Table extends React.Component<ITableProps, {}> {
+export interface ITableState{
+    display?: boolean;
+}
+
+export default class Table extends React.Component<ITableProps, ITableState> {
 
     public static defaultProps: Partial<ITableProps> = {
         className: '',
@@ -65,17 +70,32 @@ export default class Table extends React.Component<ITableProps, {}> {
 
     public static TableHeader: React.StatelessComponent<IHeaderProps>;
 
+    constructor(props: ITableProps){
+        super(props);
+
+        this.state = {
+            display: false
+        };
+    }
+
     public render(){
 
         const rows = this.getRows();
 
+        const headerDisplay = this.state.display ? styles.headerRow : '';
+
+        const wrapperClasses = !this.state.display ? styles.overflowWrapper : '';
+
+        const tableClasses = !this.state.display ? styles.overflowTable : '' ;
+
         return (
-            <div className={styles.tableWrapper}>
+            <div className={`${styles.tableWrapper} ${wrapperClasses}`}>
+                <Button onClick={this.onButtonClick()}>Toggle (demonstration only)</Button>
                 <table
-                    className={`table-component ${styles.table} ${this.props.className}`}
+                    className={`table-component ${styles.table} ${tableClasses} ${this.props.className}`}
                     style={this.props.style}
                 >
-                    <thead>
+                    <thead className={headerDisplay}>
                         <tr>
                             {this.props.children}
                         </tr>
@@ -86,6 +106,12 @@ export default class Table extends React.Component<ITableProps, {}> {
                 </table>
             </div>
         );
+    }
+
+    private onButtonClick = () => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            this.setState({display: !this.state.display});
+        };
     }
 
     private getRows = () => {
@@ -107,10 +133,15 @@ export default class Table extends React.Component<ITableProps, {}> {
 
                             const display = setting.hide ? styles.hide : '';
 
+                            const heading = this.state.display ?
+                            <span className={styles.heading} >{setting.heading}</span> : '';
+
+                            const colCard = this.state.display ? styles.colCard : '';
+
                             cols[i] = (
-                                <Col className={display} key={i} >
-                                    <span className={styles.heading}>{setting.heading}</span>
-                                    <span>{obj[key]}</span>
+                                <Col className={`${display} ${colCard}`} key={i} >
+                                    {heading}
+                                    <span className={styles.content}>{obj[key]}</span>
                                 </Col>
                             );
                         }
@@ -120,8 +151,10 @@ export default class Table extends React.Component<ITableProps, {}> {
                 }
             }
 
+            const rowCard = this.state.display ? styles.rowCard : '';
+
             rows.push(
-                <Row key={index}>
+                <Row key={index} className={rowCard}>
                     {cols}
                 </Row>
             );

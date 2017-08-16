@@ -44,12 +44,12 @@
         display: none;
     }
 
-    .tableWrapper{
+    .overflowWrapper{
         width: 95vw;
         overflow-x: auto;        
     }
 
-    .table{
+    .overflowTable{
         width: 200vw;
     }
 
@@ -60,4 +60,101 @@
     .table tbody tr td{
         font-size: 3.5vw;
     }
+
+    .colCard{
+        display: flex;
+        flex-direction: row;
+        font-size: 3vw;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .rowCard{
+        display: flex;
+        flex-direction: column;
+        border: 3px solid #eaeaea;
+        box-shadow: 5px 5px 30px #eaeaea;
+    }
+
+    .rowCard + .rowCard{
+        margin-top: 30px;
+    }
+    
+    .headerRow{
+        display: none;
+    }
+
+    .heading{
+        display: block;
+        font-weight: 800;
+        flex: 1;
+        text-align: left;
+    }
+
+    .content{
+        flex: 1;
+        text-align: left;
+        font-size: 3vw;
+    }
+
+}
+
+@media (--deviceSmall){
+    .hide{
+        display: none;
+    }
+
+    .overflowWrapper{
+        width: 95vw;
+        overflow-x: auto;        
+    }
+
+    .overflowTable{
+        width: 200vw;
+    }
+
+    .table thead tr th{
+        font-size: 3.5vw;
+    }
+
+    .table tbody tr td{
+        font-size: 3.5vw;
+    }
+
+    .colCard{
+        display: flex;
+        flex-direction: row;
+        font-size: 3vw;
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .rowCard{
+        display: flex;
+        flex-direction: column;
+        border: 3px solid #eaeaea;
+        box-shadow: 5px 5px 30px #eaeaea;
+    }
+
+    .rowCard + .rowCard{
+        margin-top: 30px;
+    }
+    
+    .headerRow{
+        display: none;
+    }
+
+    .heading{
+        display: block;
+        font-weight: 800;
+        flex: 1;
+        text-align: left;
+    }
+
+    .content{
+        flex: 1;
+        text-align: left;
+        font-size: 3vw;
+    }
+
 }
