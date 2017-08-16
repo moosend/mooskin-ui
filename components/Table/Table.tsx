@@ -90,7 +90,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         return (
             <div className={`${styles.tableWrapper} ${wrapperClasses}`}>
-                <Button onClick={this.onButtonClick()}>Toggle (demonstration only)</Button>
+                <Button onClick={this.onButtonClick()} className={styles.button}>Toggle (demonstration only)</Button>
                 <table
                     className={`table-component ${styles.table} ${tableClasses} ${this.props.className}`}
                     style={this.props.style}
