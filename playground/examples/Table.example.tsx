@@ -33,7 +33,7 @@ export default class TableExample extends React.Component<any, any>{
                 mailingList: 'Mailing list for me',
                 open: '75 %',
                 status: 'Sent',
-                subscribers: '2947',
+                subscribers: 2947,
             },
             {
                 actions: <SmallIconButton transparent icon="check"/>,
@@ -43,7 +43,7 @@ export default class TableExample extends React.Component<any, any>{
                 mailingList: 'Mailing list for me',
                 open: '60 %',
                 status: 'Sent',
-                subscribers: '1628',
+                subscribers: 1628,
             },
             {
                 actions: <SmallIconButton transparent icon="edit"/>,
@@ -53,7 +53,7 @@ export default class TableExample extends React.Component<any, any>{
                 mailingList: 'Mailing list for me',
                 open: '93 %',
                 status: 'Draft',
-                subscribers: '4244',
+                subscribers: 4244,
             }
         ];
 

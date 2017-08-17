@@ -211,7 +211,21 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         const sortBy = this.state.sortBy;
 
         if (this.state.sortBy !== ''){
-            data.sort((a: any, b: any) => a[sortBy] - b[sortBy]);
+
+            data.sort((a: any, b: any) => {
+
+                console.log(a[sortBy]);
+                let comparison = 0;
+
+                if (a[sortBy] < b[sortBy]){
+                    comparison = -1;
+                } else if (a[sortBy] > b[sortBy]){
+                    comparison = 1;
+                }
+                return comparison;
+
+            });
+
             return data;
         } else {
             return data;
