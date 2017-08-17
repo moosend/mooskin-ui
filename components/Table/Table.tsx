@@ -78,6 +78,7 @@ export interface ITableState {
     activeRow: number;
     sortBy: string;
     asc: boolean;
+    data: object[];
 }
 
 export default class Table extends React.Component<ITableProps, ITableState> {
@@ -95,8 +96,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         this.state = {
             activeRow: -1,
             asc: true,
+            data: [],
             sortBy: ''
         };
+    }
+
+    public componentDidMount(){
+        this.setState({data: this.props.data});
     }
 
     public render(){
@@ -129,11 +135,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         const rows: Array<React.ReactElement<ITableProps>> = [];
 
-        const data = this.sortData(this.props.data);
+        // const data = this.sortData(this.props.data);
 
         const settings = this.getSettings();
 
-        data.map((obj: any, index: number) => {
+        this.state.data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
 
             for (const key in obj) {
@@ -208,87 +214,58 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return settings;
     }
 
-    private sortData = (data: object[]) => {
+    private sortData = (sortBy: string) => {
 
-        const sortBy = this.state.sortBy;
-
-        if (this.state.sortBy !== ''){
-
-            data.sort((a: any, b: any) => {
-
-                console.log(a[sortBy]);
-                let comparison = 0;
-
-                if (a[sortBy] < b[sortBy]){
-                    comparison = -1;
-                } else if (a[sortBy] > b[sortBy]){
-                    comparison = 1;
-                }
-                return comparison;
-
-            });
-
-            return data;
+        if (this.state.asc){
+            this.sortAsc(sortBy);
         } else {
-            return data;
+            this.sortDesc(sortBy);
         }
 
     }
 
-    // private sortAsc = (data: object[]) => {
+    private sortAsc = (sortBy: string) => {
 
-    //     const sortBy = this.state.sortBy;
+        const data = this.state.data;
 
-    //     if (this.state.sortBy !== ''){
+        data.sort((a: any, b: any) => {
 
-    //         data.sort((a: any, b: any) => {
+            console.log(a[sortBy]);
+            let comparison = 0;
 
-    //             console.log(a[sortBy]);
-    //             let comparison = 0;
+            if (a[sortBy] < b[sortBy]){
+                comparison = -1;
+            } else if (a[sortBy] > b[sortBy]){
+                comparison = 1;
+            }
+            return comparison;
 
-    //             if (a[sortBy] < b[sortBy]){
-    //                 comparison = -1;
-    //             } else if (a[sortBy] > b[sortBy]){
-    //                 comparison = 1;
-    //             }
-    //             return comparison;
+        });
 
-    //         });
+        this.setState({data, sortBy, asc: false});
 
-    //         this.setState({asc: !this.state.asc});
-    //         return data;
-    //     } else {
-    //         return data;
-    //     }
+    }
 
-    // }
+    private sortDesc = (sortBy: string) => {
 
-    // private sortDesc = (data: object[]) => {
+        const data = this.state.data;
 
-    //     const sortBy = this.state.sortBy;
+        data.sort((a: any, b: any) => {
 
-    //     if (this.state.sortBy !== ''){
+            console.log(a[sortBy]);
+            let comparison = 0;
 
-    //         data.sort((a: any, b: any) => {
+            if (a[sortBy] > b[sortBy]){
+                comparison = -1;
+            } else if (a[sortBy] < b[sortBy]){
+                comparison = 1;
+            }
+            return comparison;
 
-    //             console.log(a[sortBy]);
-    //             let comparison = 0;
+        });
 
-    //             if (a[sortBy] > b[sortBy]){
-    //                 comparison = -1;
-    //             } else if (a[sortBy] < b[sortBy]){
-    //                 comparison = 1;
-    //             }
-    //             return comparison;
-
-    //         });
-
-    //         this.setState({asc: !this.state.asc});
-    //         return data;
-    //     } else {
-    //         return data;
-    //     }
-    // }
+        this.setState({data, sortBy, asc: true});
+    }
 
     private getHeaders = () => {
 
@@ -306,7 +283,10 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                         hideSmall={child.props.hideSmall}
                         onClick={this.onClickHeader(child.props.dataField)}
                     >
-                        {child.props.children}
+                        <div>
+                            {child.props.children}
+                            <i className={`material-icons ${styles.arrow}`}>{this.getArrow(child.props.dataField)}</i>
+                        </div>
                     </TableHeader>
                 );
             }
@@ -324,10 +304,19 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return headers;
     }
 
+    private getArrow = (dataField: string) => {
+        if (this.state.sortBy === dataField && !this.state.asc){
+            return 'keyboard_arrow_up';
+        }
+        if (this.state.sortBy === dataField && this.state.asc){
+            return 'keyboard_arrow_down';
+        }
+    }
+
     private onClickHeader = (sortBy: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             console.log(sortBy);
-            this.setState({sortBy});
+            this.sortData(sortBy);
         };
     }
 

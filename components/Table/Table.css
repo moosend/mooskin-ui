@@ -35,6 +35,13 @@
     color:#6b6b6b;
 }
 
+.arrow{
+    width: 18px;
+    height: 18px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
 .heading {
     display: none;
 }
@@ -157,6 +164,11 @@
 
     .buttonHeader{
         text-indent: -9999px;
+    }
+
+    .arrow{
+        font-size: 4vw;
+        vertical-align: sub;
     }
 }
 
