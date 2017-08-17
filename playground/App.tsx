@@ -25,6 +25,7 @@ import RadioAccordion from './examples/RadioAccordion.example';
 import Select from './examples/Select.example';
 import SideBar from './examples/SideBar.example';
 import SmallIconButton from './examples/SmallIconButton.example';
+import StatsBox from './examples/StatsBox.example';
 import Steps from './examples/Steps.example';
 import Switch from './examples/Switch.example';
 import TabbedContent from './examples/TabbedContent.example';
@@ -131,11 +132,14 @@ export const App = (props: any) => {
                 <Col lg={6} md={4}>
                     <Headings />
                 </Col>
-                <Col lg ={8} md={7}>
+                <Col lg ={5} md={7}>
                     <Steps />
                 </Col>
                 <Col lg={4} md={5}>
                     <HorizontalRangeBar />
+                </Col>
+                <Col lg={3}>
+                    <StatsBox/>
                 </Col>
             </Row>
             <Row id="grid">

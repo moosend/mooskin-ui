@@ -1,0 +1,11 @@
+class StatsBoxExample extends React.Component {
+    render(){
+        return(
+            <StatsBox>
+                <StatsTitle>Unique Opens</StatsTitle>
+                <StatsNumber>100%</StatsNumber>
+                <StatsResult>5 total</StatsResult>
+            </StatsBox>
+        );
+    }
+}

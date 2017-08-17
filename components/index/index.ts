@@ -27,3 +27,5 @@ export {default as Pagination} from '../Pagination';
 export {default as DatePicker} from '../DatePicker';
 export {default as SideBar, Item, Secondary} from '../SideBar';
 export {default as Steps, Step} from '../Steps';
+
+export {default as StatsBox, StatsTitle, StatsNumber, StatsResult} from '../StatsBox';
