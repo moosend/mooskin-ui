@@ -56,6 +56,10 @@
     display: none;
 }
 
+.buttonCol{
+    display: none;
+}
+
 @media (--deviceXsmall){
     .hide{
         display: none;
@@ -83,6 +87,10 @@
         left: 2vw;
         display: inline-block;
         margin: -5px 5px;
+    }
+
+    .buttonCol{
+        display: block
     }
 
     .popover{
@@ -144,5 +152,9 @@
         z-index: 1;
         opacity: 1;
         transition: z-index 0.5s step-start, opacity 0.3s linear;
+    }
+
+    .popover .buttonCol{
+        display: none;
     }
 }

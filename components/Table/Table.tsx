@@ -99,7 +99,9 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
     public render(){
 
-        const rows = this.getRows();
+        const headers = this.getHeaders();
+        const settings = this.getSettings(headers);
+        const rows = this.getRows(settings);
         const cover = this.getCover();
 
         return (
@@ -111,7 +113,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 >
                     <thead>
                         <tr>
-                            {this.getHeaders()}
+                            {headers}
                         </tr>
                     </thead>
                     <tbody className={styles.body}>
@@ -122,13 +124,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         );
     }
 
-    private getRows = () => {
+    private getRows = (settings: object[]) => {
 
         const rows: Array<React.ReactElement<ITableProps>> = [];
 
-        const settings = this.getSettings();
-
         const data = this.sortData(this.props.data);
+
+        console.log(settings);
 
         data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
@@ -143,26 +145,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
                             const display = setting.hide ? styles.hide : '';
 
-                            if (i === 0){
-                                cols[i] = (
-                                    <Col className={display} key={i} >
-                                        <SmallIconButton
-                                            icon="list"
-                                            onClick={this.showPopover(index)}
-                                            className={styles.toggleButton}
-                                        />
-                                        <span className={styles.heading}>{setting.heading}</span>
-                                        <span className={styles.content}>{obj[key]}</span>
-                                    </Col>
-                                );
-                            } else {
-                                cols[i] = (
-                                    <Col className={display} key={i} >
-                                        <span className={styles.heading}>{setting.heading}</span>
-                                        <span className={styles.content}>{obj[key]}</span>
-                                    </Col>
-                                );
-                            }
+                            cols[i] = (
+                                <Col className={display} key={i + 1} >
+                                    <span className={styles.heading}>{setting.heading}</span>
+                                    <span className={styles.content}>{obj[key]}</span>
+                                </Col>
+                            );
+
                         }
 
                     });
@@ -170,8 +159,21 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 }
             }
 
+            const buttonCol = (
+                <Col key = {0} className={styles.buttonCol}>
+                    <SmallIconButton
+                        icon="list"
+                        className={styles.toggle}
+                        onClick={this.showPopover(index)}
+                        transparent
+                    />
+                </Col>
+            );
+
+            cols.splice(0, 0, buttonCol);
+
             rows.push(
-                <Row key={index} style={{position: 'relative'}}>
+                <Row key={index}>
                     {cols}
                     <Popover active={this.state.activeRow === index}>
                         {cols}
@@ -184,11 +186,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return rows;
     }
 
-    private getSettings = () => {
+    private getSettings = (headers: Array<React.ReactElement<IHeaderProps>>) => {
 
         const settings: object[] = [];
 
-        React.Children.forEach(this.props.children, (child, index) => {
+        headers.forEach((child, index) => {
 
             if (React.isValidElement<IHeaderProps>(child)){
                 settings.push(
@@ -217,7 +219,6 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         }
     }
 
-
     private getHeaders = () => {
 
         const headers: Array<React.ReactElement<IHeaderProps>> = [];
@@ -227,7 +228,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             if (React.isValidElement<IHeaderProps>(child)){
                 headers.push(
                     <TableHeader
-                        key={index}
+                        key={index + 1}
                         className={child.props.className}
                         style={child.props.style}
                         dataField={child.props.dataField}
@@ -240,6 +241,14 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             }
 
         });
+
+        const buttonHeader = (
+            <TableHeader dataField="button" key={0} className={styles.buttonCol}>
+                {'X'}
+            </TableHeader>
+        );
+
+        headers.splice(0, 0, buttonHeader);
 
         return headers;
     }
