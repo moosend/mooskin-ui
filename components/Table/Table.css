@@ -52,11 +52,11 @@
     left: 0px;
 }
 
-.toggleButton{
+.buttonCol{
     display: none;
 }
 
-.buttonCol{
+.buttonHeader{
     display: none;
 }
 
@@ -82,15 +82,12 @@
         font-size: 3.5vw;
     }
 
-    .toggleButton{
-        position: absolute;
-        left: 2vw;
-        display: inline-block;
-        margin: -5px 5px;
+    .buttonCol{
+        display: block;
     }
 
-    .buttonCol{
-        display: block
+    .buttonHeader{
+        display: block;
     }
 
     .popover{
@@ -156,5 +153,9 @@
 
     .popover .buttonCol{
         display: none;
+    }
+
+    .buttonHeader{
+        text-indent: -9999px;
     }
 }

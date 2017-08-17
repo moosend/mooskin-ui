@@ -100,8 +100,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
     public render(){
 
         const headers = this.getHeaders();
-        const settings = this.getSettings(headers);
-        const rows = this.getRows(settings);
+        const rows = this.getRows();
         const cover = this.getCover();
 
         return (
@@ -124,13 +123,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         );
     }
 
-    private getRows = (settings: object[]) => {
+    private getRows = () => {
 
         const rows: Array<React.ReactElement<ITableProps>> = [];
 
         const data = this.sortData(this.props.data);
 
-        console.log(settings);
+        const settings = this.getSettings();
 
         data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
@@ -186,11 +185,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return rows;
     }
 
-    private getSettings = (headers: Array<React.ReactElement<IHeaderProps>>) => {
+    private getSettings = () => {
 
         const settings: object[] = [];
 
-        headers.forEach((child, index) => {
+        React.Children.forEach(this.props.children, (child, index) => {
 
             if (React.isValidElement<IHeaderProps>(child)){
                 settings.push(
@@ -243,7 +242,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         });
 
         const buttonHeader = (
-            <TableHeader dataField="button" key={0} className={styles.buttonCol}>
+            <TableHeader dataField="button" key={0} className={styles.buttonHeader}>
                 {'X'}
             </TableHeader>
         );
