@@ -77,6 +77,7 @@ export interface IPopoverProps{
 export interface ITableState {
     activeRow: number;
     sortBy: string;
+    asc: boolean;
 }
 
 export default class Table extends React.Component<ITableProps, ITableState> {
@@ -93,6 +94,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         this.state = {
             activeRow: -1,
+            asc: true,
             sortBy: ''
         };
     }
@@ -230,7 +232,63 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         } else {
             return data;
         }
+
     }
+
+    // private sortAsc = (data: object[]) => {
+
+    //     const sortBy = this.state.sortBy;
+
+    //     if (this.state.sortBy !== ''){
+
+    //         data.sort((a: any, b: any) => {
+
+    //             console.log(a[sortBy]);
+    //             let comparison = 0;
+
+    //             if (a[sortBy] < b[sortBy]){
+    //                 comparison = -1;
+    //             } else if (a[sortBy] > b[sortBy]){
+    //                 comparison = 1;
+    //             }
+    //             return comparison;
+
+    //         });
+
+    //         this.setState({asc: !this.state.asc});
+    //         return data;
+    //     } else {
+    //         return data;
+    //     }
+
+    // }
+
+    // private sortDesc = (data: object[]) => {
+
+    //     const sortBy = this.state.sortBy;
+
+    //     if (this.state.sortBy !== ''){
+
+    //         data.sort((a: any, b: any) => {
+
+    //             console.log(a[sortBy]);
+    //             let comparison = 0;
+
+    //             if (a[sortBy] > b[sortBy]){
+    //                 comparison = -1;
+    //             } else if (a[sortBy] < b[sortBy]){
+    //                 comparison = 1;
+    //             }
+    //             return comparison;
+
+    //         });
+
+    //         this.setState({asc: !this.state.asc});
+    //         return data;
+    //     } else {
+    //         return data;
+    //     }
+    // }
 
     private getHeaders = () => {
 
