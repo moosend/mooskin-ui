@@ -285,7 +285,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                     >
                         <div>
                             {child.props.children}
-                            <i className={`material-icons ${styles.arrow}`}>{this.getArrow(child.props.dataField)}</i>
+                            {this.getArrow(child.props.dataField)}
                         </div>
                     </TableHeader>
                 );
@@ -306,10 +306,10 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
     private getArrow = (dataField: string) => {
         if (this.state.sortBy === dataField && !this.state.asc){
-            return 'keyboard_arrow_up';
+            return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_up</i>;
         }
         if (this.state.sortBy === dataField && this.state.asc){
-            return 'keyboard_arrow_down';
+            return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_down</i>;
         }
     }
 
