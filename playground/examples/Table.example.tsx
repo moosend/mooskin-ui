@@ -27,29 +27,45 @@ export default class TableExample extends React.Component<any, any>{
         const data = [
             {
                 actions: <SmallIconButton transparent icon="face"/>,
-                id: 3,
-                lastname: 'Behrami',
-                name: 'Doni'
+                campaign: 'NewsLetters for everybody',
+                click: '50 %',
+                delivered: '13-06-2017 10:59 AM',
+                mailingList: 'Mailing list for me',
+                open: '75 %',
+                status: 'Sent',
+                subscribers: '2947',
             },
             {
                 actions: <SmallIconButton transparent icon="check"/>,
-                id: 5,
-                lastname: 'Gashi',
-                name: 'Gent'
+                campaign: 'Another campaign',
+                click: '25 %',
+                delivered: '17-02-2017 10:51 AM',
+                mailingList: 'Mailing list for me',
+                open: '60 %',
+                status: 'Sent',
+                subscribers: '1628',
             },
             {
                 actions: <SmallIconButton transparent icon="edit"/>,
-                id: 1,
-                lastname: 'Maksuti',
-                name: 'Shkumbin'
+                campaign: 'Airship ready campaign',
+                click: '80 %',
+                delivered: '31-12-2016 04:39 PM',
+                mailingList: 'Mailing list for me',
+                open: '93 %',
+                status: 'Draft',
+                subscribers: '4244',
             }
         ];
 
         return(
             <Table data={data}>
-                <TableHeader dataField="id" >ID</TableHeader>
-                <TableHeader dataField="name" >Name</TableHeader>
-                <TableHeader dataField="lastname" hideSmall >Lastname</TableHeader>
+                <TableHeader dataField="delivered" >Delivered</TableHeader>
+                <TableHeader dataField="campaign" >Campaign</TableHeader>
+                <TableHeader dataField="mailingList" hideSmall >Mailing List / Segment</TableHeader>
+                <TableHeader dataField="status" hideSmall >Status</TableHeader>
+                <TableHeader dataField="open" hideSmall>Open %</TableHeader>
+                <TableHeader dataField="click" hideSmall>Click</TableHeader>
+                <TableHeader dataField="subscribers" hideSmall >Subscribers</TableHeader>
                 <TableHeader dataField="actions" hideSmall >Actions</TableHeader>
             </Table>
         );

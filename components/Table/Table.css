@@ -96,9 +96,6 @@
         background: #fff;
         box-shadow: 5px 5px 30px #eaeaea;
         z-index: 5;
-        transition: .5s;
-        transition-delay: background-color .5s;
-        max-height: 0px;
         overflow: hidden;
     }
 
@@ -138,12 +135,14 @@
     }
 
     .inactive{
-        max-height: 100%;
+        z-index: -1;
+        opacity: 0;
+        transition: z-index 0.5s step-end, opacity 0.3s linear;
     }
 
     .active{
-        box-shadow: none;
-        max-height: 0px;
-        border: none;
+        z-index: 1;
+        opacity: 1;
+        transition: z-index 0.5s step-start, opacity 0.3s linear;
     }
 }

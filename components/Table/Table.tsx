@@ -35,6 +35,8 @@ export interface IHeaderProps{
     dataField: string;
 
     children?: any;
+
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface IColProps{
@@ -74,6 +76,7 @@ export interface IPopoverProps{
 
 export interface ITableState {
     activeRow: number;
+    sortBy: string;
 }
 
 export default class Table extends React.Component<ITableProps, ITableState> {
@@ -89,7 +92,8 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         super(props);
 
         this.state = {
-            activeRow: -1
+            activeRow: -1,
+            sortBy: ''
         };
     }
 
@@ -107,7 +111,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 >
                     <thead>
                         <tr>
-                            {this.props.children}
+                            {this.getHeaders()}
                         </tr>
                     </thead>
                     <tbody className={styles.body}>
@@ -120,11 +124,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
     private getRows = () => {
 
-        const settings = this.getSettings();
-
         const rows: Array<React.ReactElement<ITableProps>> = [];
 
-        this.props.data.map((obj: any, index: number) => {
+        const settings = this.getSettings();
+
+        const data = this.sortData(this.props.data);
+
+        data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
 
             for (const key in obj) {
@@ -199,6 +205,52 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return settings;
     }
 
+    private sortData = (data: object[]) => {
+
+        const sortBy = this.state.sortBy;
+
+        if (this.state.sortBy !== ''){
+            data.sort((a: any, b: any) => a[sortBy] - b[sortBy]);
+            return data;
+        } else {
+            return data;
+        }
+    }
+
+
+    private getHeaders = () => {
+
+        const headers: Array<React.ReactElement<IHeaderProps>> = [];
+
+        React.Children.forEach(this.props.children, (child, index) => {
+
+            if (React.isValidElement<IHeaderProps>(child)){
+                headers.push(
+                    <TableHeader
+                        key={index}
+                        className={child.props.className}
+                        style={child.props.style}
+                        dataField={child.props.dataField}
+                        hideSmall={child.props.hideSmall}
+                        onClick={this.onClickHeader(child.props.dataField)}
+                    >
+                        {child.props.children}
+                    </TableHeader>
+                );
+            }
+
+        });
+
+        return headers;
+    }
+
+    private onClickHeader = (sortBy: string) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            console.log(sortBy);
+            this.setState({sortBy});
+        };
+    }
+
     private showPopover = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({activeRow: index});
@@ -229,6 +281,7 @@ export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
         <th
             style={props.style}
             className={`table-header ${props.className} ${styles.header} ${display}`}
+            onClick={props.onClick}
         >
             {props.children}
         </th>
@@ -256,7 +309,7 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
 
 export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
 
-    const active = props.active ? styles.inactive : styles.active;
+    const active = !props.active ? styles.inactive : styles.active;
 
     return(
         <td className={`${styles.popover} ${active}`} style={props.style}>
