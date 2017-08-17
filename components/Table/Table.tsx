@@ -16,6 +16,9 @@ export interface ITableProps{
     /** override Table styles */
     style?: React.CSSProperties;
 
+    /** custom sort function */
+    sortfn?: any;
+
     children?: React.ReactElement<IHeaderProps> | Array<React.ReactElement<IHeaderProps>>;
 
 }
@@ -216,10 +219,14 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
     private sortData = (sortBy: string) => {
 
-        if (this.state.asc){
-            this.sortAsc(sortBy);
+        if (this.props.sortfn){
+            this.props.sortfn(sortBy);
         } else {
-            this.sortDesc(sortBy);
+            if (this.state.asc){
+                this.sortAsc(sortBy);
+            } else {
+                this.sortDesc(sortBy);
+            }
         }
 
     }
