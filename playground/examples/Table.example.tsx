@@ -38,7 +38,7 @@ export default class TableExample extends React.Component<any, any>{
                 name: 'Gent'
             },
             {
-                actions: <SmallIconButton transparent icon="close"/>,
+                actions: <SmallIconButton transparent icon="edit"/>,
                 id: 1,
                 lastname: 'Maksuti',
                 name: 'Shkumbin'

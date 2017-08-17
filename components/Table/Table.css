@@ -82,22 +82,24 @@
         position: absolute;
         left: 2vw;
         display: inline-block;
-    }
-
-    .toggleButton i{
-        font-size: 50px;
+        margin: -5px 5px;
     }
 
     .popover{
         display: flex;
         flex-direction: column;
         position: absolute;
-        right: 27vw;
+        right: 2vw;
+        left: 2vw;
         /* bottom: 5px; */
         border: 3px solid #efefef;
         background: #fff;
         box-shadow: 5px 5px 30px #eaeaea;
         z-index: 5;
+        transition: .5s;
+        transition-delay: background-color .5s;
+        max-height: 0px;
+        overflow: hidden;
     }
 
     .popover .heading{
@@ -117,18 +119,31 @@
     .popover .col{
         display: flex;
         flex-direction: row;
-        width: 70vw;
+        width: 100%;
         padding: 20px;
         justify-content: center;
     }
 
     .popover .content{
+        display: flex;
         flex: 1;
         text-align: left;
         font-size: 3vw;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .popover .toggleButton{
         display: none;
+    }
+
+    .inactive{
+        max-height: 100%;
+    }
+
+    .active{
+        box-shadow: none;
+        max-height: 0px;
+        border: none;
     }
 }

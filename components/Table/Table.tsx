@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import {SmallIconButton} from '../index';
 import styles from './Table.css';
 
 export interface ITableProps{
@@ -139,6 +140,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                             if (i === 0){
                                 cols[i] = (
                                     <Col className={display} key={i} >
+                                        <SmallIconButton
+                                            icon="list"
+                                            onClick={this.showPopover(index)}
+                                            className={styles.toggleButton}
+                                        />
                                         <span className={styles.heading}>{setting.heading}</span>
                                         <span className={styles.content}>{obj[key]}</span>
                                     </Col>
@@ -159,7 +165,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             }
 
             rows.push(
-                <Row key={index} style={{position: 'relative'}} onClick={this.showPopover(index)}>
+                <Row key={index} style={{position: 'relative'}}>
                     {cols}
                     <Popover active={this.state.activeRow === index}>
                         {cols}
@@ -233,7 +239,7 @@ export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
     return(
-        <tr onClick={props.onClick} className={`row ${styles.row} ${props.className}`} style={props.style}>
+        <tr className={`row ${styles.row} ${props.className}`} style={props.style}>
             {props.children}
         </tr>
     );
@@ -250,14 +256,16 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
 
 export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
 
-    const active = props.active ? {display: 'block'} : {display: 'none'};
+    const active = props.active ? styles.inactive : styles.active;
 
     return(
-        <td className={styles.popover} style={active}>
-            <table>
-                <tr>
-                    {props.children}
-                </tr>
+        <td className={`${styles.popover} ${active}`} style={props.style}>
+            <table className={styles.table}>
+                <tbody>
+                    <tr>
+                        {props.children}
+                    </tr>
+                </tbody>
             </table>
         </td>
     );
