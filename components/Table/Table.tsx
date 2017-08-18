@@ -16,9 +16,6 @@ export interface ITableProps{
     /** override Table styles */
     style?: React.CSSProperties;
 
-    /** custom sort function */
-    sortfn?: any;
-
     children?: React.ReactElement<IHeaderProps> | Array<React.ReactElement<IHeaderProps>>;
 
 }
@@ -36,6 +33,12 @@ export interface IHeaderProps{
 
     /** which obj prop should be displayed in this col */
     dataField: string;
+
+    /** wether the row should be sortable or not */
+    sortable?: boolean;
+
+    /** custom sort function */
+    sortfn?: any;
 
     children?: any;
 
@@ -80,7 +83,7 @@ export interface IPopoverProps{
 export interface ITableState {
     activeRow: number;
     sortBy: string;
-    asc: boolean;
+    order: string;
     data: object[];
 }
 
@@ -98,14 +101,20 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         this.state = {
             activeRow: -1,
-            asc: true,
             data: [],
+            order: 'desc',
             sortBy: ''
         };
     }
 
     public componentDidMount(){
         this.setState({data: this.props.data});
+    }
+
+    public componentWillUpdate(nextProps: any, nextState: any){
+        if (nextState.sortBy !== this.state.sortBy){
+            this.sortData(nextState.sortBy, 'desc');
+        }
     }
 
     public render(){
@@ -217,61 +226,40 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return settings;
     }
 
-    private sortData = (sortBy: string) => {
+    private sortData = (sortBy: string, order: string, sortfn?: any) => {
 
-        if (this.props.sortfn){
-            this.props.sortfn(sortBy);
+        const data = this.state.data;
+
+        if (sortfn){
+            data.sort((a, b) => sortfn(a, b, this.state.order, sortBy));
         } else {
-            if (this.state.asc){
-                this.sortAsc(sortBy);
-            } else {
-                this.sortDesc(sortBy);
+            data.sort((a: any, b: any) => {
+
+                let comparison = 0;
+
+                if (a[sortBy] < b[sortBy]){
+                    comparison = -1;
+                } else if (a[sortBy] > b[sortBy]){
+                    comparison = 1;
+                }
+                return comparison;
+            });
+
+            if (order === 'desc'){
+                data.reverse();
             }
         }
 
-    }
-
-    private sortAsc = (sortBy: string) => {
-
-        const data = this.state.data;
-
-        data.sort((a: any, b: any) => {
-
-            console.log(a[sortBy]);
-            let comparison = 0;
-
-            if (a[sortBy] < b[sortBy]){
-                comparison = -1;
-            } else if (a[sortBy] > b[sortBy]){
-                comparison = 1;
-            }
-            return comparison;
-
-        });
-
-        this.setState({data, sortBy, asc: false});
+        this.setState({data, sortBy, order: this.setOrder(order)});
 
     }
 
-    private sortDesc = (sortBy: string) => {
-
-        const data = this.state.data;
-
-        data.sort((a: any, b: any) => {
-
-            console.log(a[sortBy]);
-            let comparison = 0;
-
-            if (a[sortBy] > b[sortBy]){
-                comparison = -1;
-            } else if (a[sortBy] < b[sortBy]){
-                comparison = 1;
-            }
-            return comparison;
-
-        });
-
-        this.setState({data, sortBy, asc: true});
+    private setOrder = (order: string) => {
+        if (order === 'desc'){
+            return 'asc';
+        } else {
+            return 'desc';
+        }
     }
 
     private getHeaders = () => {
@@ -281,14 +269,21 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         React.Children.forEach(this.props.children, (child, index) => {
 
             if (React.isValidElement<IHeaderProps>(child)){
+
+                const pointer = child.props.sortable ? styles.sortHeader : '';
+
+                const sortable = child.props.sortable ?
+                                this.onClickHeader(child.props.dataField, child.props.sortfn) :
+                                undefined;
+
                 headers.push(
                     <TableHeader
                         key={index + 1}
-                        className={child.props.className}
+                        className={`${child.props.className} ${pointer}`}
                         style={child.props.style}
                         dataField={child.props.dataField}
                         hideSmall={child.props.hideSmall}
-                        onClick={this.onClickHeader(child.props.dataField)}
+                        onClick={sortable}
                     >
                         <div>
                             {child.props.children}
@@ -312,18 +307,17 @@ export default class Table extends React.Component<ITableProps, ITableState> {
     }
 
     private getArrow = (dataField: string) => {
-        if (this.state.sortBy === dataField && !this.state.asc){
+        if (this.state.sortBy === dataField && this.state.order === 'desc'){
             return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_up</i>;
         }
-        if (this.state.sortBy === dataField && this.state.asc){
+        if (this.state.sortBy === dataField && this.state.order === 'asc'){
             return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_down</i>;
         }
     }
 
-    private onClickHeader = (sortBy: string) => {
+    private onClickHeader = (sortBy: string, sortfn?: any) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            console.log(sortBy);
-            this.sortData(sortBy);
+            this.sortData(sortBy, this.state.order, sortfn);
         };
     }
 

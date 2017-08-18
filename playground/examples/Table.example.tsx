@@ -59,15 +59,45 @@ export default class TableExample extends React.Component<any, any>{
 
         return(
             <Table data={data}>
-                <TableHeader dataField="delivered" >Delivered</TableHeader>
-                <TableHeader dataField="campaign" >Campaign</TableHeader>
+                <TableHeader dataField="delivered" sortable >Delivered</TableHeader>
+                <TableHeader dataField="campaign" sortable >Campaign</TableHeader>
                 <TableHeader dataField="mailingList" hideSmall >Mailing List / Segment</TableHeader>
-                <TableHeader dataField="status" hideSmall >Status</TableHeader>
-                <TableHeader dataField="open" hideSmall>Open %</TableHeader>
-                <TableHeader dataField="click" hideSmall>Click</TableHeader>
-                <TableHeader dataField="subscribers" hideSmall >Subscribers</TableHeader>
+                <TableHeader dataField="status" sortable hideSmall >Status</TableHeader>
+                <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
+                <TableHeader dataField="click" sortable hideSmall>Click</TableHeader>
+                <TableHeader dataField="subscribers" sortable hideSmall >Subscribers</TableHeader>
                 <TableHeader dataField="actions" hideSmall >Actions</TableHeader>
             </Table>
         );
+    }
+
+    private logIt = (a: any, b: any, order: string, sortBy: string) => {
+
+        console.log(order);
+
+        let comparison = 0;
+
+        if (order === 'desc'){
+
+            console.log('desc called');
+
+            if (a[sortBy] > b[sortBy]){
+                comparison = -1;
+            } else if (a[sortBy] < b[sortBy]){
+                comparison = 1;
+            }
+            return comparison;
+        } else if (order === 'asc') {
+
+            console.log('asc called');
+
+            if (a[sortBy] < b[sortBy]){
+                comparison = -1;
+            } else if (a[sortBy] > b[sortBy]){
+                comparison = 1;
+            }
+            return comparison;
+        }
+
     }
 }
