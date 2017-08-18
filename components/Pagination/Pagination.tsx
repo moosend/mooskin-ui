@@ -188,23 +188,22 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
         });
     }
 
-    // returns a function here because we do not want to do the maxButtons calculations more than once
     getItemType(item: number, leftButtonsCount: number, rightButtonsCount: number){
 
-            const {currentItem} = this.props;
+        const {currentItem} = this.props;
 
-            let itemType: RendereableItemTypes = RendereableItemTypes.none;
+        let itemType: RendereableItemTypes = RendereableItemTypes.none;
 
-            // using some minor math with button counts derived from maxButtons check if item should be rendered
-            if (currentItem && item < currentItem && item + leftButtonsCount >= currentItem){
-                itemType = RendereableItemTypes.left;
-            }else if (currentItem && item > currentItem && item - rightButtonsCount <= currentItem){
-                itemType = RendereableItemTypes.right;
-            }else if (currentItem && item === currentItem){
-                itemType = RendereableItemTypes.current;
-            }
+        // using some minor math with button counts derived from maxButtons check if item should be rendered
+        if (currentItem && item < currentItem && item + leftButtonsCount >= currentItem){
+            itemType = RendereableItemTypes.left;
+        }else if (currentItem && item > currentItem && item - rightButtonsCount <= currentItem){
+            itemType = RendereableItemTypes.right;
+        }else if (currentItem && item === currentItem){
+            itemType = RendereableItemTypes.current;
+        }
 
-            return itemType;
+        return itemType;
     }
 
     getLeftRightButtonCounts(): [number, number]{
