@@ -8,7 +8,7 @@ import SelectExampleCode from './component-strings/Select.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class SelectExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, Option, Select}}

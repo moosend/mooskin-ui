@@ -9,7 +9,7 @@ import StepsCode from './component-strings/Steps.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class StepsCodeExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, Steps, Step, Button}}

@@ -62,12 +62,12 @@ export interface IOptionProps {
 
 class Select extends React.Component<ISelectProps, ISelectState>{
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         filter: ''
     };
 
-    public static Option: React.StatelessComponent<IOptionProps>;
+    static Option: React.StatelessComponent<IOptionProps>;
 
     constructor(props: ISelectProps){
         super(props);
@@ -78,11 +78,11 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         };
     }
 
-    public componentWillReceiveProps(nextProps: ISelectProps){
+    componentWillReceiveProps(nextProps: ISelectProps){
         this.setState({selected: nextProps.selected});
     }
 
-    public render(){
+    render(){
 
         if (!this.validateChildren()){
             throw new Error('Can not have two options with same values!');
@@ -139,30 +139,30 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         );
     }
 
-    private onChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({filter: e.target.value});
     }
 
-    private onClick = (option: string) => {
+    onClick = (option: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
             this.setState({list: false, selected: option, filter: ''});
         };
     }
 
-    private onToggleList = (e: React.MouseEvent<HTMLElement>) => {
+    onToggleList = (e: React.MouseEvent<HTMLElement>) => {
         this.state.list ? this.onCloseList() : this.onOpenList();
     }
 
-    private onOpenList = () => {
+    onOpenList = () => {
         this.setState({list: true});
     }
 
-    private onCloseList = () => {
+    onCloseList = () => {
         this.setState({list: false, filter: ''});
     }
 
-    private assignCbToChildren(){
+    assignCbToChildren(){
 
         // map through the Option children in order to assign them the onClick cb
         return React.Children.map(this.props.children, (child) => {
@@ -195,7 +195,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         });
     }
 
-    private getSelectedChildLabel(){
+    getSelectedChildLabel(){
         const selectedChild = React.Children.toArray(this.props.children)
                 .find((child: React.ReactElement<IOptionProps>) => {
                     return child.props.value === this.state.selected;
@@ -208,7 +208,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 'Select an option';
     }
 
-    private validateChildren(){
+    validateChildren(){
         const values = React.Children.toArray(this.props.children)
             .map((child: React.ReactElement<IOptionProps>) => {
                 return child.props.value;

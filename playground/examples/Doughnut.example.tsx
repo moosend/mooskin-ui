@@ -8,7 +8,7 @@ import DoughnutExampleCode from './component-strings/Doughnut.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class DoughnutExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <div style={{display: 'inline-block'}}>
                 <ReactLiveEditor

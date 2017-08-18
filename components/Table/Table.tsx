@@ -17,12 +17,12 @@ export interface ITableProps extends React.TableHTMLAttributes<HTMLTableElement>
 
 export default class Table extends React.Component<ITableProps, {}> {
 
-    public static defaultProps: Partial<ITableProps> = {
+    static defaultProps: Partial<ITableProps> = {
         className: '',
         style: {}
     };
 
-    public render(){
+    render(){
 
         return (
             <div>

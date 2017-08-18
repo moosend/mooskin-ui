@@ -8,7 +8,7 @@ import TextAreaExampleCode from './component-strings/TextArea.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class TextAreaExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, TextArea}}

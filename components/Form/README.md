@@ -80,7 +80,7 @@ this.state = { name: '' };
 </Form>
 
 // event and data types are TypeScript related
-private getValue = (e: React.ChangeEvent<HTMLElement>, data: InputCallbackData) => {
+getValue = (e: React.ChangeEvent<HTMLElement>, data: InputCallbackData) => {
     data.dataLabel && this.setState({[data.dataLabel]: data.value});
 }
 ```
@@ -107,7 +107,7 @@ this.state = { done: false };
 </Form>
 
 // event and data types are TypeScript related
-private getValue = (e: React.MouseEvent<HTMLElement>, data: InputCallbackData) => {
+getValue = (e: React.MouseEvent<HTMLElement>, data: InputCallbackData) => {
     data.dataLabel && this.setState({[data.dataLabel]: data.value});
 }
 ```
@@ -136,7 +136,7 @@ this.state = { contact: [{}, {}, {}] };
 </Form>
 
 // event and data types are TypeScript related
-private getValue = (e: React.MouseEvent<HTMLElement>, data: InputCallbackData) => {
+getValue = (e: React.MouseEvent<HTMLElement>, data: InputCallbackData) => {
     data.dataLabel && this.setState({[data.dataLabel]: data.value});
 }
 ```
@@ -191,11 +191,11 @@ this.state = {
     <Button>Go!</Button>
 </Form>
 
-private setValue = (e, data) => {
+setValue = (e, data) => {
     data.dataLabel && this.setState({[data.dataLabel]: data.value});
 }
 
-private onSubmit = (e, data) => {
+onSubmit = (e, data) => {
     console.log(data.value);
     // or manipulate the callback data, which is just an object of data within the Form
 }

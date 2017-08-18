@@ -90,14 +90,14 @@ export interface ICheckBoxData{
 
 export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, ICheckBoxState>{
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         style: {},
     };
 
-    public static CheckBox: React.StatelessComponent<ICheckBoxProps>;
+    static CheckBox: React.StatelessComponent<ICheckBoxProps>;
 
-    private name: string;
+    name: string;
 
     constructor(props: ICheckBoxGroupProps){
         super(props);
@@ -109,11 +109,11 @@ export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, 
         };
     }
 
-    public componentWillReceiveProps(nextProps: ICheckBoxGroupProps) {
+    componentWillReceiveProps(nextProps: ICheckBoxGroupProps) {
         this.setState({data: nextProps.selectedChecks ? nextProps.selectedChecks : this.state.data});
     }
 
-    public render() {
+    render() {
 
         const {id, className, style, title} = this.props;
 
@@ -135,7 +135,7 @@ export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, 
         );
     }
 
-    private onClick = (dataArray: {checked: boolean, value: string, label: string}) => {
+    onClick = (dataArray: {checked: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             const data: ICheckBoxData[] = this.state.data;
             data.map ((checkbox, index) => {
@@ -154,7 +154,7 @@ export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, 
         };
     }
 
-    private setData = () => {
+    setData = () => {
         const data: ICheckBoxData[] = [];
         React.Children.map(this.props.children, (child) => {
             if (React.isValidElement<ICheckBoxProps>(child)){
@@ -168,7 +168,7 @@ export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, 
         return data;
     }
 
-    private assignCheckBoxes = () => {
+    assignCheckBoxes = () => {
         const {data} = this.state;
         const checkBoxes: Array<React.ReactElement<ICheckBoxProps>> = [];
         React.Children.map(this.props.children, (child, index) => {
@@ -202,7 +202,7 @@ export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, 
 
     }
 
-    private checkDuplicateValues = () => {
+    checkDuplicateValues = () => {
         const values: string[] = [];
         let duplicates: number = 0;
         React.Children.forEach(this.props.children, (child, index) => {
@@ -225,7 +225,7 @@ export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, 
 
     }
 
-    private generateName = () => {
+    generateName = () => {
         return Date.now().toString();
     }
 }

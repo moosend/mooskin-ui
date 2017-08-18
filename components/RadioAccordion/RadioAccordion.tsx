@@ -46,15 +46,15 @@ export interface IAccordionState {
 
 export default class RadioAccordion extends React.Component<IAccordionProps, IAccordionState>{
 
-    public static defaultProps = {
+    static defaultProps = {
         active: 0,
         className: '',
         style: {}
     };
 
-    public static RadioAccordionContent: React.StatelessComponent<IContentProps>;
+    static RadioAccordionContent: React.StatelessComponent<IContentProps>;
 
-    private name: string;
+    name: string;
 
     constructor(props: IAccordionProps){
         super(props);
@@ -66,7 +66,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         };
     }
 
-    public render() {
+    render() {
 
         const accordion = this.makeContent();
 
@@ -77,13 +77,13 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         );
     }
 
-    public onClickHeader = (index: number) => {
+    onClickHeader = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({active: index});
         };
     }
 
-    private makeContent(){
+    makeContent(){
 
         const accordion: Array<React.ReactElement<IHeaderProps>> = [];
 
@@ -115,7 +115,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         return accordion;
     }
 
-    private getActiveTab() {
+    getActiveTab() {
         const childrenArray = React.Children.toArray(this.props.children);
 
         for (const [index, value] of childrenArray.entries()){
@@ -125,7 +125,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         }
     }
 
-    private generateName = () => {
+    generateName = () => {
         return Date.now().toString();
     }
 }

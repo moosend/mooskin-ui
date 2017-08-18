@@ -86,15 +86,15 @@ export interface IRadioData{
 
 export default class RadioGroup extends React.Component<IRadioGroupProps, IRadioState> {
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         spacing: 10,
         style: {}
     };
 
-    public static Radio: React.StatelessComponent<IRadioProps>;
+    static Radio: React.StatelessComponent<IRadioProps>;
 
-    private name: string;
+    name: string;
 
     constructor(props: IRadioGroupProps){
         super(props);
@@ -106,11 +106,11 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         };
     }
 
-    public componentWillReceiveProps(nextProps: IRadioGroupProps) {
+    componentWillReceiveProps(nextProps: IRadioGroupProps) {
         this.setState({data: nextProps.selectedRadios ? nextProps.selectedRadios : this.state.data});
     }
 
-    public render(){
+    render(){
 
         const {id, className, style, title} = this.props;
 
@@ -131,7 +131,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         );
     }
 
-    private onClick = (dataArray: {selected: boolean, value: string, label: string}) => {
+    onClick = (dataArray: {selected: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             const data: IRadioData[] = this.state.data;
             data.forEach((radio, index) => {
@@ -160,7 +160,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         };
     }
 
-    private setData = () => {
+    setData = () => {
         const data: IRadioData[] = [];
         let selected = false;
         React.Children.map(this.props.children, (child) => {
@@ -181,7 +181,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         return data;
     }
 
-    private assignRadios = () => {
+    assignRadios = () => {
         const {data} = this.state;
         const radios: Array<React.ReactElement<IRadioProps>> = [];
         React.Children.map(this.props.children, (child, index) => {
@@ -215,7 +215,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
     }
 
-    private checkSelected = (radios: Array<React.ReactElement<IRadioProps>>) => {
+    checkSelected = (radios: Array<React.ReactElement<IRadioProps>>) => {
         let selected: number = 0;
         radios.forEach((radio: React.ReactElement<IRadioProps>) => {
             if (radio.props.selected){
@@ -229,7 +229,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         }
     }
 
-    private generateName = () => {
+    generateName = () => {
         return Date.now().toString();
     }
 

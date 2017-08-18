@@ -8,7 +8,7 @@ import HorizontalExampleCode from './component-strings/HorizontalRangeBar.exampl
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class HorizontalRangeBarExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, HorizontalRangeBar, Button}}

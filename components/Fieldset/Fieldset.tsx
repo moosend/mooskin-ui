@@ -22,7 +22,7 @@ export interface IFieldsetProps{
 
 export default class Fieldset extends React.Component<IFieldsetProps, {}>{
 
-    public render(){
+    render(){
 
         const legend = this.props.legend ? {} : {display: 'none'};
 

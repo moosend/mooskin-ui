@@ -64,12 +64,12 @@ export interface ITextAreaProps {
 
 class TextArea extends React.Component<ITextAreaProps, {}> {
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         style: {}
     };
 
-    private id: string;
+    id: string;
 
     constructor(props: ITextAreaProps){
         super(props);
@@ -78,7 +78,7 @@ class TextArea extends React.Component<ITextAreaProps, {}> {
 
     }
 
-    public render(){
+    render(){
 
         const {
             disabled,
@@ -131,13 +131,13 @@ class TextArea extends React.Component<ITextAreaProps, {}> {
         );
     }
 
-    private onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
     }
 
-    private generateId = () => {
+    generateId = () => {
         return Date.now().toString();
     }
 

@@ -20,16 +20,16 @@ export interface IStatsBoxChildProps {
 
 export default class StatsBox extends React.Component<IStatsBoxProps, {}>{
 
-    public static defaultProps: Partial<IStatsBoxProps> = {
+    static defaultProps: Partial<IStatsBoxProps> = {
         className: '',
         style: {}
     };
 
-    public static StatsTitle: React.StatelessComponent<IStatsBoxChildProps>;
-    public static StatsNumber: React.StatelessComponent<IStatsBoxChildProps>;
-    public static StatsResult: React.StatelessComponent<IStatsBoxChildProps>;
+    static StatsTitle: React.StatelessComponent<IStatsBoxChildProps>;
+    static StatsNumber: React.StatelessComponent<IStatsBoxChildProps>;
+    static StatsResult: React.StatelessComponent<IStatsBoxChildProps>;
 
-    public render(){
+    render(){
 
         const {className, style} = this.props;
 

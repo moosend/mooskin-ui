@@ -53,7 +53,7 @@ export interface IFileState{
 
 export default class FileUpload extends React.Component<IFileProps, IFileState>{
 
-    public static defaultProps = {
+    static defaultProps = {
         buttonLabel: 'Upload',
         className: '',
         placeholder: 'No File Selected...',
@@ -69,11 +69,11 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         };
     }
 
-    public componentWillReceiveProps(nextProps: IFileProps){
+    componentWillReceiveProps(nextProps: IFileProps){
         this.setState({file: nextProps.file});
     }
 
-    public render(){
+    render(){
 
         const disabledFile = this.props.disabled ? styles.disabledFile : '';
         const labelStyles = this.props.label ? {} : {display: 'none'};
@@ -100,7 +100,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         );
     }
 
-    private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files.length > 1){
             const files = e.target.files;
             const fileNames = this.fileNames(files);
@@ -117,7 +117,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         }
     }
 
-    private fileNames = (files: any) => {
+    fileNames = (files: any) => {
         const fileNames = [];
         for (let i = 0 ; i < files.length ; i++){
             fileNames.push(files[i].name);

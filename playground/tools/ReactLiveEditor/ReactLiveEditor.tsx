@@ -28,9 +28,9 @@ export interface IReactLiveEditorState{
 
 export default class ReactLiveEditor extends React.Component<IReactLiveEditorProps, IReactLiveEditorState> {
 
-    public state: IReactLiveEditorState;
-    public domParser: DOMParser;
-    public converter: showdown.Converter;
+    state: IReactLiveEditorState;
+    domParser: DOMParser;
+    converter: showdown.Converter;
 
     constructor(props: IReactLiveEditorProps){
         super(props);
@@ -50,7 +50,7 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         };
     }
 
-    public render(){
+    render(){
 
         const displayEditor = this.state.displayEditor ? 'block' : 'none';
         const displayDocs = this.state.displayDocs ? 'block' : 'none';
@@ -98,11 +98,11 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         );
     }
 
-    public onToggle = () => {
+    onToggle = () => {
         this.setState({displayEditor: !this.state.displayEditor});
     }
 
-    public onToggleDocs = () => {
+    onToggleDocs = () => {
         this.setState({displayDocs: !this.state.displayDocs});
     }
 

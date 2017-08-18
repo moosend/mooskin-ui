@@ -9,7 +9,7 @@ import PaginationExampleCode from './component-strings/Pagination.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class PaginationExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, Pagination}}

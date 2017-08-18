@@ -36,13 +36,13 @@ export interface ICheckListItemProps {
 
 export default class CheckListItem extends React.Component<ICheckListItemProps, {}> {
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         status: false,
         style: {}
     };
 
-    public render(){
+    render(){
 
         const {status, id, text, title, className, style} = this.props;
         const {checkitem, iconStyle, content, button} = styles;
@@ -70,7 +70,7 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
         );
     }
 
-    private onClick = (e: React.MouseEvent<HTMLInputElement>, data?: IInputCallbackData) => {
+    onClick = (e: React.MouseEvent<HTMLInputElement>, data?: IInputCallbackData) => {
         this.props.onClick && this.props.onClick(e, {value: !this.props.status, dataLabel: this.props.dataLabel});
     }
 

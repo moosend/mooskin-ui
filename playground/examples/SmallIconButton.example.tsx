@@ -8,7 +8,7 @@ import SmallIconButtonExampleCode from './component-strings/SmallIconButton.exam
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class SmallIconButtonExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, SmallIconButton}}

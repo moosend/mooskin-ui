@@ -8,7 +8,7 @@ import BarExampleCode from './component-strings/Bar.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class BarExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <div style={{display: 'inline-block'}}>
                 <ReactLiveEditor

@@ -40,13 +40,13 @@ export interface IStepBodyProps{
 
 export default class Steps extends React.Component<IStepsProps, {}>{
 
-    public static defaultProps: Partial<IStepsProps> = {
+    static defaultProps: Partial<IStepsProps> = {
         className: ''
     };
 
-    public static Step: React.StatelessComponent<IStepProps>;
+    static Step: React.StatelessComponent<IStepProps>;
 
-    public render(){
+    render(){
 
         const {className} = this.props;
 
@@ -58,7 +58,7 @@ export default class Steps extends React.Component<IStepsProps, {}>{
         );
     }
 
-    private renderBodies= () => {
+    renderBodies= () => {
         return React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement<IStepProps>(child)){
 

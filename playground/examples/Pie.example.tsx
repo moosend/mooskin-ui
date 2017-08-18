@@ -8,7 +8,7 @@ import PieExampleCode from './component-strings/Pie.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class PieExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <div style={{display: 'inline-block'}}>
                 <ReactLiveEditor

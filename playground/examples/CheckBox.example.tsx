@@ -8,7 +8,7 @@ import CheckBoxExampleCode from './component-strings/CheckBox.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class CheckBoxExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, CheckboxGroup, CheckBox}}

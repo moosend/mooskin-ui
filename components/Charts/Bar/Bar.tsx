@@ -8,7 +8,7 @@ import {IBarProps} from '../props';
 
 class BarChart extends React.Component<IBarProps, {}>{
 
-    public static defaultProps = {
+    static defaultProps = {
         barPercentage: 0.6,
         borderWidth: 0,
         boxWidth: 0,
@@ -21,7 +21,7 @@ class BarChart extends React.Component<IBarProps, {}>{
         titleStyle: 'bold'
     };
 
-    public render() {
+    render() {
 
         const {
             id,
@@ -114,7 +114,7 @@ class BarChart extends React.Component<IBarProps, {}>{
         );
     }
 
-    private getBarWidth = (barPercentage: number) => {
+    getBarWidth = (barPercentage: number) => {
         if (barPercentage){
             if (barPercentage < 0.1){
             return 0.1;

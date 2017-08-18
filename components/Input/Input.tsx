@@ -64,12 +64,12 @@ export interface IProps {
 
 class Input extends React.Component<IProps, {}> {
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         style: {}
     };
 
-    private id: string;
+    id: string;
 
     constructor(props: IProps){
         super(props);
@@ -78,7 +78,7 @@ class Input extends React.Component<IProps, {}> {
 
     }
 
-    public render(){
+    render(){
 
         const {
             disabled,
@@ -131,13 +131,13 @@ class Input extends React.Component<IProps, {}> {
         );
     }
 
-    private onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
     }
 
-    private generateId = () => {
+    generateId = () => {
         return Math.random().toString(36).substr(2, 10);
     }
 }
