@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StatsBox StatsNumber renders correctly 1`] = `
+<div
+  className="statsNumber undefined"
+>
+  100%
+</div>
+`;
+
+exports[`StatsBox StatsResult renders correctly 1`] = `
+<div
+  className="statsResult undefined"
+>
+  5 total
+</div>
+`;
+
+exports[`StatsBox StatsTitle renders correctly 1`] = `
+<div
+  className="statsTitle undefined"
+>
+  Unique Opens
+</div>
+`;
+
+exports[`StatsBox renders correctly 1`] = `
+<div
+  className="statsBox "
+  style={Object {}}
+>
+  <StatsTitle>
+    Unique Opens
+  </StatsTitle>
+  <StatsNumber>
+    100%
+  </StatsNumber>
+  <StatsResult>
+    5 total
+  </StatsResult>
+</div>
+`;

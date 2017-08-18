@@ -79,7 +79,7 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
                             <div onClick={this.onToggle} className={styles.closeBtn}>X</div>
                             <LiveEditor style={{height: '100%', width: 700}} />
                         </div>
-                         <LiveError />
+                        <LiveError />
                         <LivePreview />
                     </LiveProvider>
                     <div style={{display: this.props.doc && 'block' || 'none'}}>
@@ -122,3 +122,19 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         return doc || '';
     }
 }
+
+/**
+ *
+ * @param componentName name of the component as a string
+ * @param components array of React component classes to be passed as scope dependencies to the react live editor
+ */
+export const renderEditableExample = (componentName: string, components: {[key: string]: React.ComponentClass}) => {
+    return (
+        <ReactLiveEditor
+            scope={{React, ...components}}
+            code={require(`../../examples/component-strings/${componentName}.example.txt`)}
+            title={`${componentName} Example`}
+            doc={require(`../../../components/${componentName}/README.md`)}
+        />
+    );
+};
