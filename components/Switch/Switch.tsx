@@ -46,7 +46,7 @@ export interface ISwitchProps {
 
 class Switch extends React.Component<ISwitchProps, {}> {
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         disabledLabel: 'INCOMPLETE',
         offLabel: 'INACTIVE',
@@ -54,7 +54,7 @@ class Switch extends React.Component<ISwitchProps, {}> {
         style: {},
     };
 
-    public render(){
+    render(){
 
         const {id, style, className, disabled, label} = this.props;
 
@@ -90,13 +90,13 @@ class Switch extends React.Component<ISwitchProps, {}> {
         );
     }
 
-    private onClick = (e: React.MouseEvent<HTMLElement>, data?: IInputCallbackData) => {
+    onClick = (e: React.MouseEvent<HTMLElement>, data?: IInputCallbackData) => {
         !this.props.disabled &&
         this.props.onClick &&
         this.props.onClick(e, {value: !this.props.on && !this.props.disabled, dataLabel: this.props.dataLabel});
     }
 
-    private switchLabel = () => {
+    switchLabel = () => {
         if (this.props.disabled){
             return this.props.disabledLabel;
         } else if (!this.props.disabled && this.props.on) {

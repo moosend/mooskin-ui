@@ -9,7 +9,7 @@ import GridExampleCode from './component-strings/Grid.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class GridExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, Col, Grid, Row}}

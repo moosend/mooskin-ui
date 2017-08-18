@@ -8,7 +8,7 @@ import LineExampleCode from './component-strings/Line.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class LineExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <div style={{display: 'inline-block'}}>
                 <ReactLiveEditor

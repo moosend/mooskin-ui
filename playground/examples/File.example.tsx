@@ -8,7 +8,7 @@ import FileExampleCode from './component-strings/File.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class FileExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, FileUpload}}

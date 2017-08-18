@@ -8,7 +8,7 @@ import InputExampleCode from './component-strings/Input.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class InputExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, Input}}

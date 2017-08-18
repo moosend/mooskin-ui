@@ -27,12 +27,12 @@ export interface ISmallIconButtonProps {
 
 export default class SmallIconButton extends React.Component<ISmallIconButtonProps, {}> {
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         style: {},
     };
 
-    public render(){
+    render(){
 
         const {style, transparent, disabled, className, id, icon} = this.props;
 
@@ -60,11 +60,11 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
         );
     }
 
-    private onClick = (e: React.MouseEvent<HTMLElement>) => {
+    onClick = (e: React.MouseEvent<HTMLElement>) => {
         !this.props.disabled && this.props.onClick && this.props.onClick(e);
     }
 
-    private getIcon = (icon?: string) => {
+    getIcon = (icon?: string) => {
         return this.props.icon ? this.props.icon.replace(/\s/g, '_') : '';
     }
 }

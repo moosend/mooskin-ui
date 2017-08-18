@@ -89,7 +89,7 @@ export interface ITableState {
 
 export default class Table extends React.Component<ITableProps, ITableState> {
 
-    public static defaultProps: Partial<ITableProps> = {
+    static defaultProps: Partial<ITableProps> = {
         className: '',
         style: {}
     };

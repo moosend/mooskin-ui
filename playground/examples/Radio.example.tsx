@@ -8,7 +8,7 @@ import RadioExampleCode from './component-strings/Radio.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class RadioExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, RadioGroup, Radio}}

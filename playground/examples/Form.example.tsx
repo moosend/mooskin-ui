@@ -25,7 +25,7 @@ import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class FormExample extends React.Component<any, any> {
 
-    public render(){
+    render(){
 
         const components = {
             Button,

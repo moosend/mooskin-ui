@@ -85,7 +85,7 @@ export interface ISideBarState {
 
 export default class SideBar extends React.Component<ISideBarProps, ISideBarState>{
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         style: {},
     };
@@ -106,15 +106,15 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         };
     }
 
-    public componentWillMount(){
+    componentWillMount(){
         this.setState(this.getInitialState());
     }
 
-    // public componentWillReceiveProps(nextProps: ISideBarProps) {
+    // componentWillReceiveProps(nextProps: ISideBarProps) {
     //     this.setState({ display: nextProps.display});
     // }
 
-    public render(){
+    render(){
 
         const cover = this.getCover();
 
@@ -143,14 +143,14 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     }
 
-    private getInitialState = () => {
+    getInitialState = () => {
         return {
             display: this.props.button ? false : true,
             smallDisplay: false
         };
     }
 
-    private getItems(){
+    getItems(){
 
         const items: Array<React.ReactElement<ISideBarItemProps>> = [];
 
@@ -217,7 +217,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         }
     }
 
-    // private getSecondaryItems = (items: ISideBarItemProps[]) => {
+    // getSecondaryItems = (items: ISideBarItemProps[]) => {
 
     //     const secondaryItems: any[] = [];
 
@@ -242,27 +242,27 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     // }
 
-    private onClickButton = () => {
+    onClickButton = () => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
             this.setState({display: true, smallDisplay: true});
         };
     }
 
-    private onClickItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
+    onClickItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
             item.props.onClick && item.props.onClick(e);
             this.setState({activeItem: itemIndex});
         };
     }
 
-    // private onClickSecondaryItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
+    // onClickSecondaryItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
     //     return (e: React.MouseEvent<HTMLDivElement>) => {
     //         item.props.onClick && item.props.onClick(e);
     //         this.setState({activeItem: itemIndex});
     //     };
     // }
 
-    private getActiveItem() {
+    getActiveItem() {
         const childrenArray = React.Children.toArray(this.props.children);
 
         for (const [index, value] of childrenArray.entries()){
@@ -273,12 +273,12 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     }
 
-    private getCover = () => {
+    getCover = () => {
         const coverDisplay = this.coverClasses();
         return <div className={`${styles.cover} ${coverDisplay}`} onClick={this.toggle}/>;
     }
 
-    private coverClasses = () => {
+    coverClasses = () => {
         if (this.props.button && this.state.display){
             return styles.coverOn;
         } else if (this.state.display && this.state.smallDisplay){
@@ -288,7 +288,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         }
     }
 
-    private getButton = () => {
+    getButton = () => {
         const buttonDisplay = this.props.button ? styles.buttonOn : '';
         return (
             <div>
@@ -301,7 +301,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         );
     }
 
-    private toggle = () => {
+    toggle = () => {
         this.setState({display: false, smallDisplay: false});
     }
 

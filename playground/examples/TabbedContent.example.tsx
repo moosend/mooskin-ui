@@ -10,7 +10,7 @@ import TabbedContentExampleCode from './component-strings/TabbedContent.example.
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class TabbedContentExample extends React.Component<any, any> {
-    public render(){
+    render(){
 
         const components = {
             Button, Col, Content, Grid, H2, Header, Input, Row, Tab, TabbedContent, Table, TableHeader

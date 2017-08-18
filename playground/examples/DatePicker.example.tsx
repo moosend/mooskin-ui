@@ -10,7 +10,7 @@ import DatePickerExampleCode from './component-strings/DatePicker.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class DatePickerExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, DatePicker, moment}}

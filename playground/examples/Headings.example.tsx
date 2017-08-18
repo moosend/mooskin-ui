@@ -8,7 +8,7 @@ import HeadingsExampleCode from './component-strings/Headings.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class HeadingsExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, H1, H2, H3, H4, H5, H6}}

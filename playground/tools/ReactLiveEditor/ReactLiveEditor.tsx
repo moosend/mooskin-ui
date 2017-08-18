@@ -28,9 +28,9 @@ export interface IReactLiveEditorState{
 
 export default class ReactLiveEditor extends React.Component<IReactLiveEditorProps, IReactLiveEditorState> {
 
-    public state: IReactLiveEditorState;
-    public domParser: DOMParser;
-    public converter: showdown.Converter;
+    state: IReactLiveEditorState;
+    domParser: DOMParser;
+    converter: showdown.Converter;
 
     constructor(props: IReactLiveEditorProps){
         super(props);
@@ -50,7 +50,7 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         };
     }
 
-    public render(){
+    render(){
 
         const displayEditor = this.state.displayEditor ? 'block' : 'none';
         const displayDocs = this.state.displayDocs ? 'block' : 'none';
@@ -79,7 +79,7 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
                             <div onClick={this.onToggle} className={styles.closeBtn}>X</div>
                             <LiveEditor style={{height: '100%', width: 700}} />
                         </div>
-                         <LiveError />
+                        <LiveError />
                         <LivePreview />
                     </LiveProvider>
                     <div style={{display: this.props.doc && 'block' || 'none'}}>
@@ -98,11 +98,11 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         );
     }
 
-    public onToggle = () => {
+    onToggle = () => {
         this.setState({displayEditor: !this.state.displayEditor});
     }
 
-    public onToggleDocs = () => {
+    onToggleDocs = () => {
         this.setState({displayDocs: !this.state.displayDocs});
     }
 
@@ -122,3 +122,19 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         return doc || '';
     }
 }
+
+/**
+ *
+ * @param componentName name of the component as a string
+ * @param components array of React component classes to be passed as scope dependencies to the react live editor
+ */
+export const renderEditableExample = (componentName: string, components: {[key: string]: React.ComponentClass}) => {
+    return (
+        <ReactLiveEditor
+            scope={{React, ...components}}
+            code={require(`../../examples/component-strings/${componentName}.example.txt`)}
+            title={`${componentName} Example`}
+            doc={require(`../../../components/${componentName}/README.md`)}
+        />
+    );
+};

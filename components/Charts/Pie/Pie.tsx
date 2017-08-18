@@ -8,7 +8,7 @@ import {IPieProps} from '../props';
 
 class PieChart extends React.Component<IPieProps, {}>{
 
-    public static defaultProps = {
+    static defaultProps = {
         borderWidth: 0,
         boxWidth: 30,
         legendPos: 'bottom',
@@ -16,7 +16,7 @@ class PieChart extends React.Component<IPieProps, {}>{
         titleStyle: 'bold'
     };
 
-    public render(){
+    render(){
 
         const {
             id,

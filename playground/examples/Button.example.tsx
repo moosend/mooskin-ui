@@ -9,7 +9,7 @@ import ButtonExampleCode from './component-strings/Button.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class ButtonExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, Button}}

@@ -45,7 +45,7 @@ export interface ITopNotificationProps {
 
 export default class TopNotification extends React.Component<ITopNotificationProps, {}>{
 
-    public static defaultProps: Partial<ITopNotificationProps> = {
+    static defaultProps: Partial<ITopNotificationProps> = {
         cancelButton: false,
         cancelButtonLabel: 'Cancel',
         okButton: false,
@@ -54,7 +54,7 @@ export default class TopNotification extends React.Component<ITopNotificationPro
         visible: true,
     };
 
-    public render(){
+    render(){
 
         const {text, visible} = this.props;
 
@@ -76,15 +76,15 @@ export default class TopNotification extends React.Component<ITopNotificationPro
         );
     }
 
-    private onClickCancel = () => {
+    onClickCancel = () => {
         this.props.onClickCancel && this.props.onClickCancel();
     }
 
-    private onClickOk = () => {
+    onClickOk = () => {
         this.props.onClickOk && this.props.onClickOk();
     }
 
-    private resolveTypeClass(){
+    resolveTypeClass(){
         if (this.props.type === 'success'){
             return styles.successNotification;
         }else if (this.props.type === 'error'){
@@ -94,7 +94,7 @@ export default class TopNotification extends React.Component<ITopNotificationPro
         }
     }
 
-    private renderButtons = () => {
+    renderButtons = () => {
 
         const {okButton, cancelButton, okButtonLabel, cancelButtonLabel} = this.props;
 

@@ -11,8 +11,8 @@
     "trailing-comma": [false],
     "no-unused-expression": false,
     "jsx-no-lambda": false,
-    "prefer-for-of": false
+    "prefer-for-of": false,
+    "member-access": false
     // "no-shadowed-variable": false
-    //"member-access": false
   }
 }

@@ -8,7 +8,7 @@ import RadioAccordionExampleCode from './component-strings/RadioAccordion.exampl
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class RadioAccordionExample extends React.Component<any, any> {
-    public render(){
+    render(){
 
         const components = {React, Button, H2, Input, RadioAccordion, RadioAccordionContent};
 

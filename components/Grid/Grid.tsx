@@ -57,10 +57,10 @@ export interface IColProps{
 
 export default class Grid extends React.Component<IGridProps, {}>{
 
-    public static Col: React.StatelessComponent<IColProps>;
-    public static Row: React.StatelessComponent<IRowProps>;
+    static Col: React.StatelessComponent<IColProps>;
+    static Row: React.StatelessComponent<IRowProps>;
 
-    public render(){
+    render(){
         return(
             <div
                 id={this.props.id}

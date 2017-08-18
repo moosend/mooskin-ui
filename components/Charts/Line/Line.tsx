@@ -9,7 +9,7 @@ import {ISortedData} from '../types';
 
 class LineChart extends React.Component<ILineProps, {}>{
 
-    public static defaultProps = {
+    static defaultProps = {
         backgroundColor: [
             'rgba(92,205,223,0.4)',
             'rgba(244,135,112,0.4)',
@@ -26,7 +26,7 @@ class LineChart extends React.Component<ILineProps, {}>{
         titleStyle: 'bold'
     };
 
-    public render() {
+    render() {
 
         const {
             id,

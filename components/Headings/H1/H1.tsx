@@ -6,12 +6,12 @@ import {IHeadingProps} from '../props';
 
 class H1 extends React.Component<IHeadingProps, {}> {
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         style: {}
     };
 
-    public render() {
+    render() {
 
         const {id, className, style, children} = this.props;
 

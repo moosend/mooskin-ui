@@ -24,14 +24,14 @@ export interface IHorizontalRangeBarProps{
 
 export default class HorizontalRangeBar extends React.Component<IHorizontalRangeBarProps, {}>{
 
-    public static defaultProps: Partial<IHorizontalRangeBarProps> = {
+    static defaultProps: Partial<IHorizontalRangeBarProps> = {
         background: '#53cadc',
         className: '',
         height: 28,
         range: [0, 100],
     };
 
-    public render(){
+    render(){
 
         const {className, range, progress, id} = this.props;
         let currentPercentage;

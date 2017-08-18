@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Steps renders correctly 1`] = `
+<div
+  className="steps "
+>
+  <div
+    className="stepsContainer"
+  >
+    <Step
+      active={true}
+      id="1"
+      title="Step 1"
+    >
+      Content 1
+    </Step>
+    <Step
+      id="2"
+      title="Step 2"
+    >
+      Content 2
+    </Step>
+    <Step
+      id="3"
+      title="Step 3"
+    >
+      Content 3
+    </Step>
+  </div>
+  <div>
+    <StepBody
+      active={true}
+      content="Content 1"
+    />
+    <StepBody
+      content="Content 2"
+    />
+    <StepBody
+      content="Content 3"
+    />
+  </div>
+</div>
+`;

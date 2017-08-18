@@ -58,9 +58,9 @@ export interface IFormGroupProps{
 
 export default class Form extends React.Component<IFormProps, {}>{
 
-    public static FormGroup: React.StatelessComponent<IFormGroupProps>;
+    static FormGroup: React.StatelessComponent<IFormGroupProps>;
 
-    public render(){
+    render(){
 
         const {style, className} = this.props;
         const form = this.assignPropsToChildren();
@@ -77,7 +77,7 @@ export default class Form extends React.Component<IFormProps, {}>{
         );
     }
 
-    private onSubmit = (children: any) => {
+    onSubmit = (children: any) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             e.preventDefault();
             const data = this.getEssence(children);
@@ -85,7 +85,7 @@ export default class Form extends React.Component<IFormProps, {}>{
         };
     }
 
-    private assignPropsToChildren = () => {
+    assignPropsToChildren = () => {
         const formElements: any = [];
         const buttonProps: Partial<IButtonProps> = {
             onClick: this.onSubmit(this.getChildren())
@@ -111,7 +111,7 @@ export default class Form extends React.Component<IFormProps, {}>{
 
     }
 
-    private getChildren = () => {
+    getChildren = () => {
         const formChildren: any = [];
         React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement(child)){
@@ -122,13 +122,13 @@ export default class Form extends React.Component<IFormProps, {}>{
         return formChildren;
     }
 
-    private getEssence = (formChildren: any) => {
+    getEssence = (formChildren: any) => {
         let data: any = {};
         data = this.collectEssence(formChildren, data);
         return data;
     }
 
-    private collectEssence = (formChildren: any, data: any) => {
+    collectEssence = (formChildren: any, data: any) => {
         if (Array.isArray(formChildren)){
             formChildren.map((element: any) => {
                 if (element.type === Input && element.props.value !== undefined && element.props.value !== ''){

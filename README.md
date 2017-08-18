@@ -167,7 +167,8 @@ import {Input} from 'mooskin'
 * [HorizontalRangeBar](https://github.com/moosend/mooskin-ui/tree/master/components/HorizontalRangeBar)
 * [Grid](https://github.com/moosend/mooskin-ui/tree/master/components/Grid)
 * [Pagination](https://github.com/moosend/mooskin-ui/tree/master/components/Pagination)
-* [Breadcrumbs](https://github.com/moosend/mooskin-ui/tree/master/components/Breadcrumbs)
+* [Steps](https://github.com/moosend/mooskin-ui/tree/master/components/Steps)
+* [StatsBox](https://github.com/moosend/mooskin-ui/tree/master/components/StatsBox)
 
 #### Charts
 * [Pie](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Pie)

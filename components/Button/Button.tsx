@@ -33,13 +33,13 @@ export interface IButtonProps {
 
 export default class Button extends React.Component<IButtonProps, {}> {
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         style: {},
         type: 'button'
     };
 
-    public render(){
+    render(){
 
         const {style, inverseStyle, disabled, children, className, id, href, type} = this.props;
 
@@ -62,7 +62,7 @@ export default class Button extends React.Component<IButtonProps, {}> {
         );
     }
 
-    private onClick = (e: React.MouseEvent<HTMLElement>) => {
+    onClick = (e: React.MouseEvent<HTMLElement>) => {
         !this.props.disabled && this.props.onClick && this.props.onClick(e);
     }
 }

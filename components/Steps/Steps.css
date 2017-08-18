@@ -1,22 +1,22 @@
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
 
-.breadcrumbsGroup {
+.steps {
     width: 100%;
 }
 
-.breadcrumbsContainer{
+.stepsContainer{
     display: flex;
     flex-direction: row;
 }
 
-.breadcrumb{
+.step{
     position: relative;
     width: 200px;
     text-align: center;
 }
 
-.breadcrumb > a{
+.step > a{
     display: block;
     font-size: 13px;
     text-decoration: none;
@@ -26,12 +26,12 @@
     border-bottom: 1px solid #efefef;
 }
 
-.activeBreadcrumb a{
+.activeStep a{
     color: var(--moosendBlue);
     border-bottom: 2px solid  var(--moosendBlue);
 }
 
-.breadcrumb > a:before{
+.step > a:before{
     position: absolute;
     content: '';
     background: url(../../assets/images/arrows/icon_arrow_phases.png) center no-repeat;
@@ -42,21 +42,21 @@
     display: block;
 }
 
-.breadcrumb:first-child > a:before{
+.step:first-child > a:before{
     background: none;
 }
 
-.breadcrumbBody{
+.stepBody{
     padding: 10px;
 }
 
 
 @media (--deviceSmall){
-    .breadcrumb{
+    .step{
         width: 100%;
     }
 
-    .breadcrumb > a{
+    .step > a{
         font-size: 3vw;
         padding-top: 2vw;
         padding-bottom: 2vw;
@@ -66,11 +66,11 @@
 
 @media (--deviceXsmall){
 
-    .breadcrumb{
+    .step{
         width: 100%;
     }
 
-    .breadcrumb > a{
+    .step > a{
         font-size: 3vw;
         padding-top: 2vw;
         padding-bottom: 2vw;

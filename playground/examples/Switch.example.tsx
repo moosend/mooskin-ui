@@ -8,7 +8,7 @@ import CheckExampleCode from './component-strings/Switch.example.txt';
 import ReactLiveEditor from '../tools/ReactLiveEditor/ReactLiveEditor';
 
 export default class SwitchExample extends React.Component<any, any> {
-    public render(){
+    render(){
         return(
             <ReactLiveEditor
                 scope={{React, Switch}}
