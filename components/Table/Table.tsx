@@ -94,7 +94,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         style: {}
     };
 
-    public static TableHeader: React.StatelessComponent<IHeaderProps>;
+    static TableHeader: React.StatelessComponent<IHeaderProps>;
 
     constructor(props: ITableProps){
         super(props);
@@ -107,17 +107,17 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         };
     }
 
-    public componentDidMount(){
+    componentDidMount(){
         this.setState({data: this.props.data});
     }
 
-    public componentWillUpdate(nextProps: any, nextState: any){
+    componentWillUpdate(nextProps: any, nextState: any){
         if (nextState.sortBy !== this.state.sortBy){
             this.sortData(nextState.sortBy, 'desc');
         }
     }
 
-    public render(){
+    render(){
 
         const headers = this.getHeaders();
         const rows = this.getRows();
@@ -143,7 +143,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         );
     }
 
-    private getRows = () => {
+    getRows = () => {
 
         const rows: Array<React.ReactElement<ITableProps>> = [];
 
@@ -205,7 +205,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return rows;
     }
 
-    private getSettings = () => {
+    getSettings = () => {
 
         const settings: object[] = [];
 
@@ -226,7 +226,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return settings;
     }
 
-    private sortData = (sortBy: string, order: string, sortfn?: any) => {
+    sortData = (sortBy: string, order: string, sortfn?: any) => {
 
         const data = this.state.data;
 
@@ -254,7 +254,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
     }
 
-    private setOrder = (order: string) => {
+    setOrder = (order: string) => {
         if (order === 'desc'){
             return 'asc';
         } else {
@@ -262,7 +262,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         }
     }
 
-    private getHeaders = () => {
+    getHeaders = () => {
 
         const headers: Array<React.ReactElement<IHeaderProps>> = [];
 
@@ -306,7 +306,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return headers;
     }
 
-    private getArrow = (dataField: string) => {
+    getArrow = (dataField: string) => {
         if (this.state.sortBy === dataField && this.state.order === 'desc'){
             return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_up</i>;
         }
@@ -315,19 +315,19 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         }
     }
 
-    private onClickHeader = (sortBy: string, sortfn?: any) => {
+    onClickHeader = (sortBy: string, sortfn?: any) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.sortData(sortBy, this.state.order, sortfn);
         };
     }
 
-    private showPopover = (index: number) => {
+    showPopover = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({activeRow: index});
         };
     }
 
-    private getCover = () => {
+    getCover = () => {
         if (this.state.activeRow >= 0){
             return (
                 <div className={styles.cover} onClick={this.toggle()}/>
@@ -335,7 +335,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         }
     }
 
-    private toggle = () => {
+    toggle = () => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({activeRow: -1});
         };

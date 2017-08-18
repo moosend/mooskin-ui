@@ -90,8 +90,8 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         style: {},
     };
 
-    public static Item: React.StatelessComponent<ISideBarItemProps>;
-    public static SubMenu: React.StatelessComponent<ISubMenuProps>;
+    static Item: React.StatelessComponent<ISideBarItemProps>;
+    static SubMenu: React.StatelessComponent<ISubMenuProps>;
 
     constructor(props: ISideBarProps){
 
@@ -202,7 +202,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         return items;
     }
 
-    private getSubMenu = (item: React.ReactElement<ISideBarItemProps>) => {
+    getSubMenu = (item: React.ReactElement<ISideBarItemProps>) => {
         if (React.isValidElement<ISideBarItemProps>(item)){
             return (
                 <SubMenu
@@ -305,7 +305,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         this.setState({display: false, smallDisplay: false});
     }
 
-    private toggleSubMenu = () => {
+    toggleSubMenu = () => {
         this.setState({subMenuDisplay: !this.state.subMenuDisplay});
     }
 }

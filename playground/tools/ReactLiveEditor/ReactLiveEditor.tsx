@@ -107,7 +107,7 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
     }
 
     // method to extract only the docs we need from the readme
-    private getDocs = (wholeDocs: string) => {
+    getDocs = (wholeDocs: string) => {
 
         const html = this.domParser.parseFromString(this.converter.makeHtml(wholeDocs), 'text/html');
 
