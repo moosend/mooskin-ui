@@ -17,6 +17,38 @@ class TabbedContentExample extends React.Component {
             width: '100%',
         };
 
+        const table1 = [
+            {
+                name: 'Geralt of Rivia',
+                weapon: 'Aerondight',
+                abilities: 'Sword fighting, Quen Signs',
+                profession: 'Witcher',
+                allegience: 'School of the Wolf'
+            },
+            {
+                name: 'John Shepard',
+                weapon: 'Vindicator',
+                abilities: 'Weapons, Biotics',
+                profession: 'Commander',
+                allegience: 'Alliance, Citadel'
+            }
+        ];
+
+        const table2 = [
+            {
+                name: 'CD Projekt',
+                founded: 1994,
+                hq: 'Warsaw, Poland',
+                employees: 600
+            },
+            {
+                name: 'BioWare',
+                founded: 1995,
+                hq: 'Edmonton, Canada',
+                employees: 800
+            }
+        ]
+
         return (
             <Grid>
                 <Row>
@@ -29,118 +61,23 @@ class TabbedContentExample extends React.Component {
                                     <img width={40} src="https://camo.githubusercontent.com/00dfbc4648e8bf8f7903c85b8c6e2eaf8afd1320/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67" alt=""/>
                                 </Header>
                                 <Content>
-                                    <Table>
-                                        <THead>
-                                            <TR>
-                                                <TH>Date & Time</TH>
-                                                <TH>Campaign Name</TH>
-                                                <TH>Mailing List / Segment</TH>
-                                                <TH>Status</TH>
-                                                <TH>Open %</TH>
-                                                <TH>Click %</TH>
-                                                <TH>Subscribers</TH>
-                                                <TH>Actions</TH>
-                                            </TR>
-                                        </THead>
-                                        <TBody>
-                                            <TR>
-                                                <TD>Row 1 start</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                                <TD>TD 5</TD>
-                                                <TD>TD 6</TD>
-                                                <TD>TD 7</TD>
-                                                <TD>TD 8</TD>
-                                            </TR>
-                                            <TR>
-                                                <TD>Row 2 start</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                                <TD>TD 5</TD>
-                                                <TD>TD 6</TD>
-                                                <TD>TD 7</TD>
-                                                <TD>TD 8</TD>
-                                            </TR>
-                                            <TR>
-                                                <TD>Row 3 start</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                                <TD>TD 5</TD>
-                                                <TD>TD 6</TD>
-                                                <TD>TD 7</TD>
-                                                <TD>TD 8</TD>
-                                            </TR>
-                                            <TR>
-                                                <TD>TD 1</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                                <TD>TD 5</TD>
-                                                <TD>TD 6</TD>
-                                                <TD>TD 7</TD>
-                                                <TD>TD 8</TD>
-                                            </TR>
-                                            <TR>
-                                                <TD>TD 1</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                                <TD>TD 5</TD>
-                                                <TD>TD 6</TD>
-                                                <TD>TD 7</TD>
-                                                <TD>TD 8</TD>
-                                            </TR>
-                                        </TBody>
+                                    <Table data={table1}>
+                                        <TableHeader dataField="name" >Name</TableHeader>
+                                        <TableHeader dataField="profession" hideSmall >Profession</TableHeader>
+                                        <TableHeader dataField="weapon" hideSmall >Weapon</TableHeader>
+                                        <TableHeader dataField="abilities" >Abilities</TableHeader>
+                                        <TableHeader dataField="allegience" hideSmall >Allegience</TableHeader>
                                     </Table>
                                 </Content>
                             </Tab>
                             <Tab>
                                 <Header>Title 2</Header>
                                 <Content>
-                                    <Table>
-                                        <THead>
-                                            <TR>
-                                                <TH>Date & Time</TH>
-                                                <TH>Campaign Name</TH>
-                                                <TH>Mailing List / Segment</TH>
-                                                <TH>Status</TH>
-                                            </TR>
-                                        </THead>
-                                        <TBody>
-                                            <TR>
-                                                <TD>Row 1 start</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                            </TR>
-                                            <TR>
-                                                <TD>Row 2 start</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                            </TR>
-                                            <TR>
-                                                <TD>Row 3 start</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                            </TR>
-                                            <TR>
-                                                <TD>TD 1</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                            </TR>
-                                            <TR>
-                                                <TD>TD 1</TD>
-                                                <TD>TD 2</TD>
-                                                <TD>TD 3</TD>
-                                                <TD>TD 4</TD>
-                                            </TR>
-                                        </TBody>
+                                    <Table data={table2}>
+                                        <TableHeader dataField="name" >Name</TableHeader>
+                                        <TableHeader dataField="founded" hideSmall >Founded</TableHeader>
+                                        <TableHeader dataField="hq" hideSmall >Headquarters</TableHeader>
+                                        <TableHeader dataField="employees" >Employees</TableHeader>
                                     </Table>
                                 </Content>
                             </Tab>

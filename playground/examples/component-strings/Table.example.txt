@@ -1,74 +1,85 @@
 class TableExample extends React.Component{
 
+    constructor(props){
+        super(props);
+
+        this.logIt = this.logIt.bind(this);
+    }
+
     render(){
+        const data = [
+            {
+                actions: <SmallIconButton transparent icon="face"/>,
+                campaign: 'NewsLetters for everybody',
+                click: '50 %',
+                delivered: '13-06-2017 10:59 AM',
+                mailingList: 'Mailing list for me',
+                open: '75 %',
+                status: 'Sent',
+                subscribers: 2947,
+            },
+            {
+                actions: <SmallIconButton transparent icon="check"/>,
+                campaign: 'Another campaign',
+                click: '25 %',
+                delivered: '17-02-2017 10:51 AM',
+                mailingList: 'Mailing list for me',
+                open: '60 %',
+                status: 'Sent',
+                subscribers: 1628,
+            },
+            {
+                actions: <SmallIconButton transparent icon="edit"/>,
+                campaign: 'Airship ready campaign',
+                click: '80 %',
+                delivered: '31-12-2016 04:39 PM',
+                mailingList: 'Mailing list for me',
+                open: '93 %',
+                status: 'Draft',
+                subscribers: 4244,
+            }
+        ];
+
         return(
-            <Table>
-                <THead>
-                    <TR>
-                        <TH>Date & Time</TH>
-                        <TH>Campaign Name</TH>
-                        <TH>Mailing List / Segment</TH>
-                        <TH>Status</TH>
-                        <TH>Open %</TH>
-                        <TH>Click %</TH>
-                        <TH>Subscribers</TH>
-                        <TH>Actions</TH>
-                    </TR>
-                </THead>
-                <TBody>
-                    <TR>
-                        <TD>Row 1 start</TD>
-                        <TD>TD 2</TD>
-                        <TD>TD 3</TD>
-                        <TD>TD 4</TD>
-                        <TD>TD 5</TD>
-                        <TD>TD 6</TD>
-                        <TD>TD 7</TD>
-                        <TD>TD 8</TD>
-                    </TR>
-                    <TR>
-                        <TD>Row 2 start</TD>
-                        <TD>TD 2</TD>
-                        <TD>TD 3</TD>
-                        <TD>TD 4</TD>
-                        <TD>TD 5</TD>
-                        <TD>TD 6</TD>
-                        <TD>TD 7</TD>
-                        <TD>TD 8</TD>
-                    </TR>
-                    <TR>
-                        <TD>Row 3 start</TD>
-                        <TD>TD 2</TD>
-                        <TD>TD 3</TD>
-                        <TD>TD 4</TD>
-                        <TD>TD 5</TD>
-                        <TD>TD 6</TD>
-                        <TD>TD 7</TD>
-                        <TD>TD 8</TD>
-                    </TR>
-                    <TR>
-                        <TD>TD 1</TD>
-                        <TD>TD 2</TD>
-                        <TD>TD 3</TD>
-                        <TD>TD 4</TD>
-                        <TD>TD 5</TD>
-                        <TD>TD 6</TD>
-                        <TD>TD 7</TD>
-                        <TD>TD 8</TD>
-                    </TR>
-                    <TR>
-                        <TD>TD 1</TD>
-                        <TD>TD 2</TD>
-                        <TD>TD 3</TD>
-                        <TD>TD 4</TD>
-                        <TD>TD 5</TD>
-                        <TD>TD 6</TD>
-                        <TD>TD 7</TD>
-                        <TD>TD 8</TD>
-                    </TR>
-                </TBody>
+            <Table data={data}>
+                <TableHeader dataField="delivered" sortable >Delivered</TableHeader>
+                <TableHeader dataField="campaign" sortable >Campaign</TableHeader>
+                <TableHeader dataField="mailingList" hideSmall >Mailing List / Segment</TableHeader>
+                <TableHeader dataField="status" sortable hideSmall >Status</TableHeader>
+                <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
+                <TableHeader dataField="click" sortable hideSmall>Click</TableHeader>
+                <TableHeader dataField="subscribers" sortable hideSmall >Subscribers</TableHeader>
+                <TableHeader dataField="actions" hideSmall >Actions</TableHeader>
             </Table>
         );
+    }
+
+    logIt(a, b, order, sortBy) {
+
+        let comparison = 0;
+
+        if (order === 'desc'){
+
+            console.log('desc called');
+
+            if (a[sortBy] > b[sortBy]){
+                comparison = -1;
+            } else if (a[sortBy] < b[sortBy]){
+                comparison = 1;
+            }
+            return comparison;
+        } else if (order === 'asc') {
+
+            console.log('asc called');
+
+            if (a[sortBy] < b[sortBy]){
+                comparison = -1;
+            } else if (a[sortBy] > b[sortBy]){
+                comparison = 1;
+            }
+            return comparison;
+        }
+
     }
 }
 

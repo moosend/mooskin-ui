@@ -3,7 +3,7 @@ import * as React from 'react';
 import Readme from '../../components/TabbedContent/README.md';
 
 import {
-    Button, Col, Content, Grid, H2, Header, Input, Row, Tab, TabbedContent, Table
+    Button, Col, Content, Grid, H2, Header, Input, Row, Tab, TabbedContent, Table, TableHeader
 } from '../../components/index';
 import TabbedContentExampleCode from './component-strings/TabbedContent.example.txt';
 
@@ -13,7 +13,7 @@ export default class TabbedContentExample extends React.Component<any, any> {
     public render(){
 
         const components = {
-            Button, Col, Content, Grid, H2, Header, Input, Row, Tab, TabbedContent, Table
+            Button, Col, Content, Grid, H2, Header, Input, Row, Tab, TabbedContent, Table, TableHeader
         };
 
         return(
