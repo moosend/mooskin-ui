@@ -106,10 +106,8 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
         }
       }
     >
-      <Secondary
-        className=""
+      <SubMenu
         display={false}
-        style={Object {}}
       >
         <Item
           active={true}
@@ -126,7 +124,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
             }
           }
         />
-      </Secondary>
+      </SubMenu>
     </Item>
   </div>
   <div

@@ -1,48 +1,1200 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Table renders correctly 1`] = `
-<div>
-  <table
-    className="table "
-    style={Object {}}
+<Table
+  className="myStyle"
+  data={
+    Array [
+      Object {
+        "campaign": "Airship ready campaign",
+        "click": "80 %",
+        "delivered": "31-12-2016 04:39 PM",
+        "mailingList": "Mailing list for me",
+        "open": "93 %",
+        "status": "Draft",
+        "subscribers": 4244,
+      },
+      Object {
+        "campaign": "Another campaign",
+        "click": "25 %",
+        "delivered": "17-02-2017 10:51 AM",
+        "mailingList": "Mailing list for me",
+        "open": "60 %",
+        "status": "Sent",
+        "subscribers": 1628,
+      },
+      Object {
+        "campaign": "NewsLetters for everybody",
+        "click": "50 %",
+        "delivered": "13-06-2017 10:59 AM",
+        "mailingList": "Mailing list for me",
+        "open": "75 %",
+        "status": "Sent",
+        "subscribers": 2947,
+      },
+    ]
+  }
+  id="5"
+  style={
+    Object {
+      "background": "red",
+    }
+  }
+>
+  <div
+    className="tableWrapper"
   >
-    <thead>
-      <tr>
-        <th>
-          th 1
-        </th>
-        <th>
-          th 2
-        </th>
-        <th>
-          th 3
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          td 1
-        </td>
-        <td>
-          td 2
-        </td>
-        <td>
-          td 3
-        </td>
-      </tr>
-      <tr>
-        <td>
-          td 1
-        </td>
-        <td>
-          td 2
-        </td>
-        <td>
-          td 3
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <table
+      className="table-component table myStyle"
+      style={
+        Object {
+          "background": "red",
+        }
+      }
+    >
+      <thead>
+        <tr>
+          <TableHeader
+            className="buttonHeader"
+            dataField="button"
+          >
+            <th
+              className="table-header buttonHeader header "
+            >
+              X
+            </th>
+          </TableHeader>
+          <TableHeader
+            className="myStyle sortHeader"
+            dataField="delivered"
+            onClick={[Function]}
+            style={
+              Object {
+                "background": "red",
+              }
+            }
+          >
+            <th
+              className="table-header myStyle sortHeader header "
+              onClick={[Function]}
+              style={
+                Object {
+                  "background": "red",
+                }
+              }
+            >
+              <div>
+                Delivered
+                <i
+                  className="material-icons arrow"
+                >
+                  keyboard_arrow_down
+                </i>
+              </div>
+            </th>
+          </TableHeader>
+          <TableHeader
+            className="undefined sortHeader"
+            dataField="campaign"
+            onClick={[Function]}
+          >
+            <th
+              className="table-header undefined sortHeader header "
+              onClick={[Function]}
+            >
+              <div>
+                Campaign
+              </div>
+            </th>
+          </TableHeader>
+          <TableHeader
+            className="undefined "
+            dataField="mailingList"
+            hideSmall={true}
+          >
+            <th
+              className="table-header undefined  header hide"
+            >
+              <div>
+                Mailing List / Segment
+              </div>
+            </th>
+          </TableHeader>
+          <TableHeader
+            className="undefined sortHeader"
+            dataField="status"
+            hideSmall={true}
+            onClick={[Function]}
+          >
+            <th
+              className="table-header undefined sortHeader header hide"
+              onClick={[Function]}
+            >
+              <div>
+                Status
+              </div>
+            </th>
+          </TableHeader>
+          <TableHeader
+            className="undefined sortHeader"
+            dataField="open"
+            hideSmall={true}
+            onClick={[Function]}
+          >
+            <th
+              className="table-header undefined sortHeader header hide"
+              onClick={[Function]}
+            >
+              <div>
+                Open %
+              </div>
+            </th>
+          </TableHeader>
+          <TableHeader
+            className="undefined sortHeader"
+            dataField="click"
+            hideSmall={true}
+            onClick={[Function]}
+          >
+            <th
+              className="table-header undefined sortHeader header hide"
+              onClick={[Function]}
+            >
+              <div>
+                Click
+              </div>
+            </th>
+          </TableHeader>
+          <TableHeader
+            className="undefined sortHeader"
+            dataField="subscribers"
+            hideSmall={true}
+            onClick={[Function]}
+          >
+            <th
+              className="table-header undefined sortHeader header hide"
+              onClick={[Function]}
+            >
+              <div>
+                Subscribers
+              </div>
+            </th>
+          </TableHeader>
+        </tr>
+      </thead>
+      <tbody
+        className="body"
+      >
+        <Row>
+          <tr
+            className="row row undefined"
+          >
+            <Col
+              className="buttonCol"
+            >
+              <td
+                className="column col buttonCol"
+              >
+                <SmallIconButton
+                  className="toggle"
+                  icon="list"
+                  onClick={[Function]}
+                  style={Object {}}
+                  transparent={true}
+                >
+                  <button
+                    className="button-icon-component
+                                           button
+                                           transparent
+                                           
+                                           toggle"
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    <i
+                      className="material-icons icon"
+                    >
+                      list
+                    </i>
+                  </button>
+                </SmallIconButton>
+              </td>
+            </Col>
+            <Col
+              className=""
+            >
+              <td
+                className="column col "
+              >
+                <span
+                  className="heading"
+                >
+                  Delivered
+                </span>
+                <span
+                  className="content"
+                >
+                  31-12-2016 04:39 PM
+                </span>
+              </td>
+            </Col>
+            <Col
+              className=""
+            >
+              <td
+                className="column col "
+              >
+                <span
+                  className="heading"
+                >
+                  Campaign
+                </span>
+                <span
+                  className="content"
+                >
+                  Airship ready campaign
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Mailing List / Segment
+                </span>
+                <span
+                  className="content"
+                >
+                  Mailing list for me
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Status
+                </span>
+                <span
+                  className="content"
+                >
+                  Draft
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Open %
+                </span>
+                <span
+                  className="content"
+                >
+                  93 %
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Click
+                </span>
+                <span
+                  className="content"
+                >
+                  80 %
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Subscribers
+                </span>
+                <span
+                  className="content"
+                >
+                  4244
+                </span>
+              </td>
+            </Col>
+            <Popover
+              active={false}
+            >
+              <td
+                className="popover inactive"
+              >
+                <table
+                  className="table"
+                >
+                  <tbody>
+                    <tr>
+                      <Col
+                        className="buttonCol"
+                      >
+                        <td
+                          className="column col buttonCol"
+                        >
+                          <SmallIconButton
+                            className="toggle"
+                            icon="list"
+                            onClick={[Function]}
+                            style={Object {}}
+                            transparent={true}
+                          >
+                            <button
+                              className="button-icon-component
+                                                     button
+                                                     transparent
+                                                     
+                                                     toggle"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              <i
+                                className="material-icons icon"
+                              >
+                                list
+                              </i>
+                            </button>
+                          </SmallIconButton>
+                        </td>
+                      </Col>
+                      <Col
+                        className=""
+                      >
+                        <td
+                          className="column col "
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Delivered
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            31-12-2016 04:39 PM
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className=""
+                      >
+                        <td
+                          className="column col "
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Campaign
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            Airship ready campaign
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Mailing List / Segment
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            Mailing list for me
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Status
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            Draft
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Open %
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            93 %
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Click
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            80 %
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Subscribers
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            4244
+                          </span>
+                        </td>
+                      </Col>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </Popover>
+          </tr>
+        </Row>
+        <Row>
+          <tr
+            className="row row undefined"
+          >
+            <Col
+              className="buttonCol"
+            >
+              <td
+                className="column col buttonCol"
+              >
+                <SmallIconButton
+                  className="toggle"
+                  icon="list"
+                  onClick={[Function]}
+                  style={Object {}}
+                  transparent={true}
+                >
+                  <button
+                    className="button-icon-component
+                                           button
+                                           transparent
+                                           
+                                           toggle"
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    <i
+                      className="material-icons icon"
+                    >
+                      list
+                    </i>
+                  </button>
+                </SmallIconButton>
+              </td>
+            </Col>
+            <Col
+              className=""
+            >
+              <td
+                className="column col "
+              >
+                <span
+                  className="heading"
+                >
+                  Delivered
+                </span>
+                <span
+                  className="content"
+                >
+                  17-02-2017 10:51 AM
+                </span>
+              </td>
+            </Col>
+            <Col
+              className=""
+            >
+              <td
+                className="column col "
+              >
+                <span
+                  className="heading"
+                >
+                  Campaign
+                </span>
+                <span
+                  className="content"
+                >
+                  Another campaign
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Mailing List / Segment
+                </span>
+                <span
+                  className="content"
+                >
+                  Mailing list for me
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Status
+                </span>
+                <span
+                  className="content"
+                >
+                  Sent
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Open %
+                </span>
+                <span
+                  className="content"
+                >
+                  60 %
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Click
+                </span>
+                <span
+                  className="content"
+                >
+                  25 %
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Subscribers
+                </span>
+                <span
+                  className="content"
+                >
+                  1628
+                </span>
+              </td>
+            </Col>
+            <Popover
+              active={false}
+            >
+              <td
+                className="popover inactive"
+              >
+                <table
+                  className="table"
+                >
+                  <tbody>
+                    <tr>
+                      <Col
+                        className="buttonCol"
+                      >
+                        <td
+                          className="column col buttonCol"
+                        >
+                          <SmallIconButton
+                            className="toggle"
+                            icon="list"
+                            onClick={[Function]}
+                            style={Object {}}
+                            transparent={true}
+                          >
+                            <button
+                              className="button-icon-component
+                                                     button
+                                                     transparent
+                                                     
+                                                     toggle"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              <i
+                                className="material-icons icon"
+                              >
+                                list
+                              </i>
+                            </button>
+                          </SmallIconButton>
+                        </td>
+                      </Col>
+                      <Col
+                        className=""
+                      >
+                        <td
+                          className="column col "
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Delivered
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            17-02-2017 10:51 AM
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className=""
+                      >
+                        <td
+                          className="column col "
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Campaign
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            Another campaign
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Mailing List / Segment
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            Mailing list for me
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Status
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            Sent
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Open %
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            60 %
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Click
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            25 %
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Subscribers
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            1628
+                          </span>
+                        </td>
+                      </Col>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </Popover>
+          </tr>
+        </Row>
+        <Row>
+          <tr
+            className="row row undefined"
+          >
+            <Col
+              className="buttonCol"
+            >
+              <td
+                className="column col buttonCol"
+              >
+                <SmallIconButton
+                  className="toggle"
+                  icon="list"
+                  onClick={[Function]}
+                  style={Object {}}
+                  transparent={true}
+                >
+                  <button
+                    className="button-icon-component
+                                           button
+                                           transparent
+                                           
+                                           toggle"
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    <i
+                      className="material-icons icon"
+                    >
+                      list
+                    </i>
+                  </button>
+                </SmallIconButton>
+              </td>
+            </Col>
+            <Col
+              className=""
+            >
+              <td
+                className="column col "
+              >
+                <span
+                  className="heading"
+                >
+                  Delivered
+                </span>
+                <span
+                  className="content"
+                >
+                  13-06-2017 10:59 AM
+                </span>
+              </td>
+            </Col>
+            <Col
+              className=""
+            >
+              <td
+                className="column col "
+              >
+                <span
+                  className="heading"
+                >
+                  Campaign
+                </span>
+                <span
+                  className="content"
+                >
+                  NewsLetters for everybody
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Mailing List / Segment
+                </span>
+                <span
+                  className="content"
+                >
+                  Mailing list for me
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Status
+                </span>
+                <span
+                  className="content"
+                >
+                  Sent
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Open %
+                </span>
+                <span
+                  className="content"
+                >
+                  75 %
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Click
+                </span>
+                <span
+                  className="content"
+                >
+                  50 %
+                </span>
+              </td>
+            </Col>
+            <Col
+              className="hide"
+            >
+              <td
+                className="column col hide"
+              >
+                <span
+                  className="heading"
+                >
+                  Subscribers
+                </span>
+                <span
+                  className="content"
+                >
+                  2947
+                </span>
+              </td>
+            </Col>
+            <Popover
+              active={false}
+            >
+              <td
+                className="popover inactive"
+              >
+                <table
+                  className="table"
+                >
+                  <tbody>
+                    <tr>
+                      <Col
+                        className="buttonCol"
+                      >
+                        <td
+                          className="column col buttonCol"
+                        >
+                          <SmallIconButton
+                            className="toggle"
+                            icon="list"
+                            onClick={[Function]}
+                            style={Object {}}
+                            transparent={true}
+                          >
+                            <button
+                              className="button-icon-component
+                                                     button
+                                                     transparent
+                                                     
+                                                     toggle"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              <i
+                                className="material-icons icon"
+                              >
+                                list
+                              </i>
+                            </button>
+                          </SmallIconButton>
+                        </td>
+                      </Col>
+                      <Col
+                        className=""
+                      >
+                        <td
+                          className="column col "
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Delivered
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            13-06-2017 10:59 AM
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className=""
+                      >
+                        <td
+                          className="column col "
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Campaign
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            NewsLetters for everybody
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Mailing List / Segment
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            Mailing list for me
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Status
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            Sent
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Open %
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            75 %
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Click
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            50 %
+                          </span>
+                        </td>
+                      </Col>
+                      <Col
+                        className="hide"
+                      >
+                        <td
+                          className="column col hide"
+                        >
+                          <span
+                            className="heading"
+                          >
+                            Subscribers
+                          </span>
+                          <span
+                            className="content"
+                          >
+                            2947
+                          </span>
+                        </td>
+                      </Col>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </Popover>
+          </tr>
+        </Row>
+      </tbody>
+    </table>
+  </div>
+</Table>
 `;

@@ -46,7 +46,7 @@ Time to fill the SideBar with Items.
 Secondary SideBar is also available to be assigned to SideBar Items. For example:
 
 ```
-Import {Item, SideBar, Secondary} from 'mooskin';
+Import {Item, SideBar} from 'mooskin';
 
 <SideBar
 >
@@ -54,15 +54,13 @@ Import {Item, SideBar, Secondary} from 'mooskin';
         label="Automation"
         onClick={this.toggleSecondary}
     >
-        <Secondary>
-            <Item />
-        </SideBar>
+        <Item />
     </Item>
 </SideBar>
 
 ```
 
-As you can see the main SideBar is a static one, doesnt have a button. When an Item is hovered that has the `Secondary` child the second SideBar will appear with its children.
+As you can see the main SideBar is a static one, doesnt have a button. When an Item is hovered that has the another `Item` child the second SideBar will appear with its children.
 
 <div class="playground-doc">
 
@@ -78,13 +76,10 @@ As you can see the main SideBar is a static one, doesnt have a button. When an I
 * `label` - label below the Item
 * `image` - image covering the main body of the Item
 * `imageOn` - image to replace the `image` prop when the Item is active
+* `subMenuStyle` - styles for the sub menu
+* `subMenuClasses` - classes for the sub menu
 * `onClick` - function that is called when the Item is clicked
 * `className` - add additional classes to the SideBar
-* `style` - or additional styles
-
-## Supported attributes for Secondary
-
-* `className` - custom classes
 * `style` - or additional styles
 
 </div>
