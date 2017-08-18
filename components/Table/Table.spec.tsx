@@ -104,4 +104,284 @@ describe('Table', () => {
 
     });
 
+    test('check if toggle button column exists', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('Col').first().hasClass('buttonCol')).toBeTruthy;
+        expect(component.find('SmallIconButton')).toBeTruthy;
+
+    });
+
+    test('check if if popovers exist and has hidden header', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        const col1 = component.find('Col').at(1).find('span').last().text();
+        const col2 = component.find('Col').at(6).find('span').last().text();
+
+        const header1 = component.find('Col').at(1).find('span').first().text();
+        const header2 = component.find('Col').at(6).find('span').first().text();
+
+        expect(col1).toEqual(col2);
+        expect(header1).toEqual(header2);
+
+    });
+
+    test('popover appears when button is clicked', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.state('activeRow')).toBe(-1);
+
+        component.find('SmallIconButton').first().simulate('click');
+
+        expect(component.state('activeRow')).toBe(0);
+        expect(component.find('Popover').first().hasClass('active')).toBeTruthy;
+
+        component.find('.cover').simulate('click');
+
+        expect(component.state('activeRow')).toBe(-1);
+
+        component.find('SmallIconButton').at(2).simulate('click');
+
+        expect(component.state('activeRow')).toBe(1);
+        expect(component.find('Popover').first().hasClass('inactive')).toBeTruthy;
+        expect(component.find('Popover').at(1).hasClass('active')).toBeTruthy;
+
+    });
+
+    test('sort rows when specific header is clicked', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader dataField="id" sortable>ID</TableHeader>
+                <TableHeader dataField="name" >Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country" sortable>Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.state('data')).toEqual([
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ]);
+
+        expect(component.find('Col').at(1).find('span').last().text()).toEqual('5');
+        expect(component.find('Col').at(2).find('span').last().text()).toEqual('Doni');
+        expect(component.find('Col').at(3).find('span').last().text()).toEqual('Behrami');
+        expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kosovo');
+
+        expect(component.find('Col').at(11).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kaedwen');
+
+        component.find(TableHeader).at(1).simulate('click');
+
+        expect(component.state('sortBy')).toEqual('id');
+
+        expect(component.state('data')).toEqual([
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ]);
+
+        expect(component.find('Col').at(1).find('span').last().text()).toEqual('5');
+        expect(component.find('Col').at(2).find('span').last().text()).toEqual('Doni');
+        expect(component.find('Col').at(3).find('span').last().text()).toEqual('Behrami');
+        expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kosovo');
+
+        expect(component.find('Col').at(11).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kaedwen');
+
+        component.find(TableHeader).at(1).simulate('click');
+
+        expect(component.state('data')).toEqual([
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            },
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            }
+        ]);
+
+        expect(component.find('Col').at(1).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(2).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(3).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kaedwen');
+
+        expect(component.find('Col').at(11).find('span').last().text()).toEqual('5');
+        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Doni');
+        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Behrami');
+        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kosovo');
+
+        component.find(TableHeader).at(4).simulate('click');
+
+        expect(component.state('sortBy')).toEqual('country');
+
+        expect(component.state('data')).toEqual([
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ]);
+
+        expect(component.find('Col').at(1).find('span').last().text()).toEqual('5');
+        expect(component.find('Col').at(2).find('span').last().text()).toEqual('Doni');
+        expect(component.find('Col').at(3).find('span').last().text()).toEqual('Behrami');
+        expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kosovo');
+
+        expect(component.find('Col').at(11).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kaedwen');
+
+        component.find(TableHeader).at(3).simulate('click');
+
+        expect(component.state('sortBy')).toEqual('country');
+
+        expect(component.state('data')).toEqual([
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ]);
+
+        expect(component.find('Col').at(1).find('span').last().text()).toEqual('5');
+        expect(component.find('Col').at(2).find('span').last().text()).toEqual('Doni');
+        expect(component.find('Col').at(3).find('span').last().text()).toEqual('Behrami');
+        expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kosovo');
+
+        expect(component.find('Col').at(11).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kaedwen');
+
+    });
+
 });

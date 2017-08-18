@@ -9,7 +9,7 @@ ___
 To start using the Table Component first you have to Import it
 
 ```
-Import {Table, TR, TH, TD, THead, TBody} from 'mooskin';
+Import {Table, TableHeader} from 'mooskin';
 ```
 or
 ```
@@ -25,39 +25,102 @@ import 'mooskin/lib/Table/styles.css';
 And then you can simply start using it by typing
 
 ```
-<Table attribute1="atr" attribute2="asd" >
-    <THead>
-        <TR>
-            <TH>header 1</TH>
-            <TH>header 2</TH>
-            <TH>header 3</TH>
-        </TR>
-    </THead>
-    <TBody>
-        <TR>
-            <TD>td 1</TD>
-            <TD>td 2</TD>
-            <TD>td 3</TD>
-        </TR>
-    </TBody>
+const data = [
+    {
+        name: 'Geralt of Rivia',
+        weapon: 'Aerondight',
+        abilities: 'Sword fighting, Quen Signs',
+        profession: 'Witcher',
+        allegience: 'School of the Wolf'
+    },
+    {
+        name: 'John Shepard',
+        weapon: 'Vindicator',
+        abilities: 'Weapons, Biotics',
+        profession: 'Commander',
+        allegience: 'Alliance, Citadel'
+    }
+];
+
+<Table data={data}>
+    <TableHeader dataField="name" >Name</TableHeader>
+    <TableHeader dataField="profession" hideSmall >Profession</TableHeader>
+    <TableHeader dataField="weapon" hideSmall >Weapon</TableHeader>
+    <TableHeader dataField="abilities" >Abilities</TableHeader>
+    <TableHeader dataField="allegience" hideSmall >Allegience</TableHeader>
 </Table>
 ```
-As you can see only the first `<Table>` element is a composite component, as its children are just the usual dom element with capital letters.
+Basically the table accepts an array of objects as a prop, those objects it will assign to rows and columns. One object is a row and an object property is a column. Table accepts `TableHeader` components and children, where you can assign which property to which column should be assigned. For example the `abilities` property from the objects will be assigned to the 4th column of the table determined by `TableHeader` component and the `dataField` prop.
 
+Table component can recieve many props. The `sortable` prop for example
+```
+<Table data={data}>
+    <TableHeader dataField="property1" sortable >Header 1</TableHeader>
+    <TableHeader dataField="property2" >Header 2</TableHeader>
+    <TableHeader dataField="property3" >Header 3</TableHeader>
+</Table>
+```
+This will make the first column sortable by clicking on the header.
 
-For easy use, the components are named similar to normal HTML components but with a capital first letter.
+A custom sort function can be passed aswell to headers.
 
-Like the `<table/>` element it will accept given attributes and render differently based on the given attributes
+```
+<Table data={data}>
+    <TableHeader dataField="property1" sortable sortfn={this.sortIt} >Header 1</TableHeader>
+    <TableHeader dataField="property2" >Header 2</TableHeader>
+    <TableHeader dataField="property3" >Header 3</TableHeader>
+</Table>
+
+sortIt(a, b, order, sortBy) {
+
+    let comparison = 0;
+
+    if (order === 'desc'){
+
+        console.log('desc called');
+
+        if (a[sortBy] > b[sortBy]){
+            comparison = -1;
+        } else if (a[sortBy] < b[sortBy]){
+            comparison = 1;
+        }
+        return comparison;
+    } else if (order === 'asc') {
+
+        console.log('asc called');
+
+        if (a[sortBy] < b[sortBy]){
+            comparison = -1;
+        } else if (a[sortBy] > b[sortBy]){
+            comparison = 1;
+        }
+        return comparison;
+    }
+
+}
+```
+
+The custom sort function must accept 4 arguments, `a` and `b` being the compared objects, `order` must bo `asc` or `desc` and `sortBy` is the object property to be compared.
 
 <div class="playground-doc">
 
-## Supported attributes 
+## Supported attributes for Table
 
 * `id` - id of the element
+* `data` - array of objects to be assigned to the Table
 * `className` - css class
 * `style` - table styles
 
-Allthough these attributes are supported, all of them are optional. normal `<table>` props can be used as well(like border, cellpadding etc.). They will just be passed to the underlying `<table>`. 
+## Supported attributes for TableHeader
+
+* `dataField` - which object property of the data array should be assigned to this column
+* `hideSmall` - Hides the column on small screens
+* `sortable` - wether this column should be sortable or not
+* `sortfn` - custom sort function for row sorting, requires `sortable`
+* `className` - css class
+* `style` - table styles
+
+Allthough these attributes are supported, only `data` for Table and `dataField` for TableHeader are required.
 
 </div>
 
