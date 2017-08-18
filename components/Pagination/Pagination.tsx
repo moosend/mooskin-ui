@@ -47,7 +47,7 @@ export interface IPaginationButtonProps {
     onClick: (item: number) => (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-enum RendereableItemTypes {
+export enum RendereableItemTypes {
     right,
     left,
     current,
