@@ -3,8 +3,9 @@
 
 import * as React from 'react';
 
-import {Col, Grid, H1, Row} from '../components/index';
+import {renderEditableExample} from './tools/ReactLiveEditor/ReactLiveEditor';
 
+import {Col, Grid, H1, Row} from '../components/index';
 import Bar from './examples/Bar.example';
 import Button from './examples/Button.example';
 import CheckBox from './examples/CheckBox.example';
@@ -27,11 +28,42 @@ import SideBar from './examples/SideBar.example';
 import SmallIconButton from './examples/SmallIconButton.example';
 import StatsBox from './examples/StatsBox.example';
 import Steps from './examples/Steps.example';
-import Switch from './examples/Switch.example';
+
 import TabbedContent from './examples/TabbedContent.example';
 import Table from './examples/Table.example';
 import TextArea from './examples/TextArea.example';
 import TopNotification from './examples/TopNotification.example';
+
+import {Switch} from '../components/index';
+
+// import {
+//     Button,
+//     CheckListItem,
+//     DatePicker,
+//     Fieldset,
+//     FileUpload,
+//     HorizontalRangeBar,
+//     Input,
+//     Pagination,
+//     SmallIconButton,
+//     Switch,
+//     Table,
+//     TextArea,
+//     TopNotification
+// } from '../components/index';
+
+// import {Option, Select} from '../components/index';
+// import {H1, H2, H3, H4, H5, H6} from '../components/index';
+// import {Radio, RadioGroup} from '../components/index';
+// import {CheckBox, CheckboxGroup} from '../components/index';
+// import {Bar, Doughnut, Line, Pie} from '../components/index';
+// import {Col, Grid, Row} from '../components/index';
+// import {Content, Header, Tab, TabbedContent} from '../components/index';
+// import {RadioAccordion, RadioAccordionContent} from '../components/index';
+// import {Form, FormGroup} from '../components/index';
+// import {Item, Secondary, SideBar} from '../components/index';
+// import {Step, Steps} from '../components/index';
+// import {StatsBox, StatsNumber, StatsResult, StatsTitle} from '../components/index';
 
 export const App = (props: any) => {
     return(
@@ -94,7 +126,7 @@ export const App = (props: any) => {
                     <H1>Toggables</H1>
                 </Col>
                 <Col lg={6} md={6}>
-                    <Switch />
+                    {renderEditableExample('Switch', {Switch})}
                 </Col>
                 <Col lg={6} md={6}>
                     <Pagination />
