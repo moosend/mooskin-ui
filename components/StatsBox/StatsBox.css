@@ -1,15 +1,23 @@
 .statsBox{
-
+    display: inline-block;
 }
 
 .statsTitle{
-    
+    padding:3px;
+    color:#aaa;
 }
 
 .statsNumber{
-
+    width: 100%;
+    font-weight: 700;
+    margin-top:3px;
+    color: #636363;
 }
 
 .statsResult{
-
+    width: 100%;
+    background: #efefef;
+    padding:3px;
+    margin-top:5px;
+    font-size: 14px;
 }

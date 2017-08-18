@@ -1,3 +1,6 @@
+// tslint:disable-next-line:no-reference
+/// <reference path="../../components/custom.d.ts"/>
+
 import * as React from 'react';
 
 import Readme from '../../components/StatsBox/README.md';
@@ -14,7 +17,7 @@ export default class StepsCodeExample extends React.Component<any, any> {
             <ReactLiveEditor
                 scope={{React, StatsBox, StatsTitle, StatsNumber, StatsResult}}
                 code={StepsCode}
-                title="Steps Example"
+                title="StatsBox Example"
                 doc={Readme}
             />
         );
