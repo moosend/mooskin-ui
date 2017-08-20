@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     right: 0;
+    height: 0;
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -21,8 +22,8 @@
     flex:7 1 auto;
 }
 
-.button{
-    flex:2 1 auto;
+.buttonContainer{
+    flex:3 1 auto;
 }
 
 .close{
@@ -58,6 +59,16 @@
     vertical-align: middle;
 }
 
+.content{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.active{
+    height: 80px;
+}
+
 .successNotification{
     background: #accc14;
 }
@@ -81,43 +92,72 @@
 @media (--deviceXsmall){
 
     .message{
-        font-size: 4vw;
+        font-size: 5vw;
+        flex: 9;
     }
 
     .close{
-        height: 7vw;
-        width: 7vw;
+        flex-direction: column;
+        align-items: center;
+        height: 5vw;
+        width: 5w;
+        padding: 0px;
+    }  
+
+     .close div{
+        margin-right: -10px;
+        height: 5vw;
+        width: 5vw;
+    }  
+
+     .iconDiv{
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .content{
+        flex-direction: column;
+        align-items: center;
     }
 
-    .close > div{
-        height: 4vw;
-        width: 4vw;
-    }
+    .active{
+        height: 20vw;
+    } 
 
-    .iconDiv{
-        height: 4vw;
-        width: 4vw;
-    }
 }
 
 @media (--deviceSmall){
     
     .message{
-        font-size: 4vw;
+        font-size: 5vw;
+        flex: 9;
     }
 
     .close{
-        height: 7vw;
-        width: 7vw;
+        flex-direction: column;
+        align-items: center;
+        height: 5vw;
+        width: 5w;
+        padding: 0px;
+    }  
+
+     .close div{
+        margin-right: -10px;
+        height: 5vw;
+        width: 5vw;
+    }  
+
+     .iconDiv{
+        width: 5vw;
+        height: 5vw;
+    }
+    
+    .content{
+        flex-direction: column;
+        align-items: center;
     }
 
-    .close > div{
-        height: 4vw;
-        width: 4vw;
-    }
-
-    .iconDiv{
-        height: 4vw;
-        width: 4vw;
-    }
+    .active{
+        height: 20vw;
+    } 
 }
