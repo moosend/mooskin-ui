@@ -95,7 +95,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
         style: {},
     };
 
-    static CheckBox: React.StatelessComponent<ICheckBoxProps>;
+    static Checkbox: React.StatelessComponent<ICheckBoxProps>;
 
     name: string;
 
