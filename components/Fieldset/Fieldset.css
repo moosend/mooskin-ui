@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence');
-@import '../_utils/globals/screens.css';
 
 .fieldset{
     font-family: sans-serif;
@@ -15,16 +14,4 @@
     font-size: 1rem;
     border-radius: 8px;
     margin-left: 5px;
-}
-
-@media (--deviceSmall){
-    .fieldset legend{
-        font-size: 4vw;
-    }
-}
-
-@media (--deviceXsmall){
-    .fieldset legend{
-        font-size: 4vw;
-    }
 }

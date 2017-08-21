@@ -45,7 +45,7 @@
 }
 
 
-@media (--deviceSmall){
+@media (--small){
     .paginationButton{
         font-size: 3vw;
         padding: 4vw;
@@ -53,9 +53,18 @@
     
 }
 
-@media (--deviceXsmall){
-    .paginationButton{
-        font-size: 3vw;
-        padding: 4vw;
+@media (--xSmall){
+
+    .itemButton{
+        display: none;
     }
+
+    .disabledButton{
+        display: none;
+    }
+
+    .activeButton{
+        display: inherit;
+    }
+
 }

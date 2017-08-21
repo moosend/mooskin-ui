@@ -74,50 +74,5 @@
     .horizontal > .checkbox + .checkbox{
         margin-left: 0px
     }
-    
-}
 
-@media (--deviceXsmall){
-    .horizontal{
-        flex-direction: column
-    }
-
-    .horizontal > .checkbox + .checkbox{
-        margin-left: 0px
-    }
-    
-    .checkbox span {
-        font-size: 3.3vw;
-    }
-
-    .checkbox .description{
-        font-size: 3vw;
-    }
-
-    .checkbox input[type='checkbox']::before {
-        font-size: 4vw;
-    }
-}
-
-@media (--deviceSmall){
-    .horizontal{
-        flex-direction: column
-    }
-
-    .horizontal > .checkbox + .checkbox{
-        margin-left: 0px
-    }
-
-    .checkbox span {
-        font-size: 3.3vw;
-    }
-
-    .checkbox .description{
-        font-size: 3vw;
-    }
-
-    .checkbox input[type='checkbox']::before {
-        font-size: 4vw;
-    }
-    
 }

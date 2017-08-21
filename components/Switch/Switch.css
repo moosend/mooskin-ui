@@ -1,5 +1,4 @@
 @import '../_utils/globals/variables.css';
-@import '../_utils/globals/screens.css';
 
 :root {
   --inactive: #E6E6E6;
@@ -90,72 +89,4 @@
 .disabledSwitch > .text {
   left: 3px;
   right: 3px;
-}
-
-@media (--deviceSmall){
-  .switch{
-    width: 21vw;
-    height: 7vw;
-  }
-
-  .onText{
-    top: 1.9vw;
-    left: 1.7vw;
-    font-size: 3vw;
-  }
-
-  .offText{
-    top: 1.9vw;
-    right: 1.7vw;
-    font-size: 3vw;
-  }
-
-  .slider{
-    top: 1.2vw;
-    left: 1.2vw;
-    height: 4.7vw;
-    width: 4.7vw;
-  }
-
-  .onSlider .slider {
-    transform: translateX(14vw);
-  }
-  
-  .label{
-    font-size: 4vw;
-  }
-}
-
-@media (--deviceXsmall){
-  .switch{
-    width: 21vw;
-    height: 7vw;
-  }
-
-  .onText{
-    top: 1.9vw;
-    left: 1.7vw;
-    font-size: 3vw;
-  }
-
-  .offText{
-    top: 1.9vw;
-    right: 1.7vw;
-    font-size: 3vw;
-  }
-
-  .slider{
-    top: 1.2vw;
-    left: 1.2vw;
-    height: 4.7vw;
-    width: 4.7vw;
-  }
-
-  .onSlider .slider {
-    transform: translateX(14vw);
-  }
-
-  .label{
-    font-size: 4vw;
-  }
 }

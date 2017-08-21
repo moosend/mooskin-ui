@@ -4,7 +4,7 @@
     width: 100%;
 }
 
-.container > div{
+.container > .container > div{
     padding: 10px;
 }
 

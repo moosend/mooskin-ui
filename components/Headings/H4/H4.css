@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence');
 @import '../../_utils/globals/variables.css';
-@import '../../_utils/globals/screens.css';
 
 .h4 {
     font-family: 'Convergence', sans-serif;
@@ -8,16 +7,4 @@
     font-size: 0.9375rem;
     font-weight: 400;
     color: var(--heading);
-}
-
-@media (--deviceSmall){
-    .h4 {
-        font-size: 2.5vw;
-    }
-}
-
-@media (--deviceXsmall){
-    .h4 {
-        font-size: 2.5vw;
-    }
 }

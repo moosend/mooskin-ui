@@ -56,19 +56,3 @@
    border-color: var(--buttonHover);
    color: var(--buttonHover);
 }
-
-@media (--deviceSmall){
-    .button{
-        font-size: 3.5vw;
-        border-radius: 14px;
-        padding: 1vw 5vw;
-    }
-}
-
-@media (--deviceXsmall){
-    .button{
-        font-size: 3.5vw;
-        border-radius: 13px;
-        padding: 1vw 5vw;
-    }
-}

@@ -50,30 +50,10 @@
     padding: 10px;
 }
 
-
-@media (--deviceSmall){
-    .step{
-        width: 100%;
-    }
-
-    .step > a{
-        font-size: 3vw;
-        padding-top: 2vw;
-        padding-bottom: 2vw;
-    }
-
-}
-
-@media (--deviceXsmall){
+@media (--xSmall){
 
     .step{
         width: 100%;
-    }
-
-    .step > a{
-        font-size: 3vw;
-        padding-top: 2vw;
-        padding-bottom: 2vw;
     }
 
 }

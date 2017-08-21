@@ -116,8 +116,6 @@ class ChartsExample extends React.Component {
                             data={this.state.lineData}
                             title={'Line Chart'}
                             height={250}
-                            width={550}
-                            maintainAspectRatio
                             gridLinesY
                             gridLinesX
                         />
@@ -128,8 +126,6 @@ class ChartsExample extends React.Component {
                             data={this.state.lineData}
                             title={'Line Chart'}
                             height={250}
-                            width={550}
-                            maintainAspectRatio
                             gridLinesY
                             borderWidth={1}
                             lineTension={0}
@@ -145,8 +141,6 @@ class ChartsExample extends React.Component {
                             data={this.state.lineData}
                             title={'Line Chart'}
                             height={250}
-                            width={550}
-                            maintainAspectRatio
                             gridLinesY
                             gridLinesX
                             lineTension={0}
@@ -160,8 +154,6 @@ class ChartsExample extends React.Component {
                             data={this.state.lineData}
                             title={'Line Chart'}
                             height={250}
-                            width={550}
-                            maintainAspectRatio
                             borderWidth={1}
                             steppedLine
                         />
