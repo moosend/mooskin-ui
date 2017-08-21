@@ -19,9 +19,9 @@ class CheckBoxExample extends React.Component {
                     title="Vertical checkboxes"
                     dataLabel="horizontal"
                 >
-                    <CheckBox value={'Checkbox1'} checked/>
-                    <CheckBox value={'Checkbox2'} label="This one has a label" description="Check it"/>
-                    <CheckBox value={'Checkbox3'} label="Disabled" disabled description="It's disabled" checked/>
+                    <Checkbox value={'Checkbox1'} checked/>
+                    <Checkbox value={'Checkbox2'} label="This one has a label" description="Check it"/>
+                    <Checkbox value={'Checkbox3'} label="Disabled" disabled description="It's disabled" checked/>
                 </CheckboxGroup>
                 <CheckboxGroup
                     onChange={this.onChange}
@@ -30,12 +30,12 @@ class CheckBoxExample extends React.Component {
                     spacing={15}
                     horizontal
                 >
-                    <CheckBox value={'Checkbox1'}/>
-                    <CheckBox value={'Checkbox2'} label="This one has a label" checked/>
-                    <CheckBox value={'Checkbox3'} label="This one is disabled" disabled description="It's disabled"/>
+                    <Checkbox value={'Checkbox1'}/>
+                    <Checkbox value={'Checkbox2'} label="This one has a label" checked/>
+                    <Checkbox value={'Checkbox3'} label="This one is disabled" disabled description="It's disabled"/>
                 </CheckboxGroup>
                 <br/>
-                <CheckBox value="doni" label="Lone Checkbox" onClick={this.onClick} checked={this.state.checked}/>
+                <Checkbox value="doni" label="Lone Checkbox" onClick={this.onClick} checked={this.state.checked}/>
             </div>
         );
 

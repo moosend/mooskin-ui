@@ -1,5 +1,5 @@
 import * as React from 'react';
-import CheckboxGroup, {CheckBox} from './Checkbox';
+import CheckboxGroup, {Checkbox} from './Checkbox';
 
 import {shallow} from 'enzyme';
 
@@ -34,7 +34,7 @@ describe('CheckBox', () => {
         Math.random = jest.fn(() => 222333444555);
 
         const tree = shallow(
-            <CheckBox
+            <Checkbox
                 value="CheckBox1"
                 onClick={func}
                 className="myClass"
@@ -53,15 +53,15 @@ describe('CheckBox', () => {
 
         const component = shallow(
             <CheckboxGroup className="myClass" dataLabel="plan">
-                <CheckBox value="checkbox1" id="checky" label="dem labels" checked/>
+                <Checkbox value="checkbox1" id="checky" label="dem labels" checked/>
             </CheckboxGroup>
         );
 
-        expect(component.find(CheckBox).length).toBe(1);
-        expect(component.find(CheckBox).prop('value')).toEqual('checkbox1');
-        expect(component.find(CheckBox).prop('label')).toEqual('dem labels');
-        expect(component.find(CheckBox).prop('id')).toEqual('checky');
-        expect(component.find(CheckBox).prop('checked')).toBeTruthy;
+        expect(component.find(Checkbox).length).toBe(1);
+        expect(component.find(Checkbox).prop('value')).toEqual('checkbox1');
+        expect(component.find(Checkbox).prop('label')).toEqual('dem labels');
+        expect(component.find(Checkbox).prop('id')).toEqual('checky');
+        expect(component.find(Checkbox).prop('checked')).toBeTruthy;
         expect(component.find('.myClass')).toBeTruthy;
         // expect(component.find('.myClass').prop('dataLabel')).toEqual('plan');
     });
@@ -70,13 +70,13 @@ describe('CheckBox', () => {
 
         const component = shallow(
             <CheckboxGroup >
-                <CheckBox value="checkbox1" />
-                <CheckBox value="checkbox2" />
-                <CheckBox value="checkbox3" />
+                <Checkbox value="checkbox1" />
+                <Checkbox value="checkbox2" />
+                <Checkbox value="checkbox3" />
             </CheckboxGroup>
         );
 
-        expect(component.find(CheckBox).length).toBe(3);
+        expect(component.find(Checkbox).length).toBe(3);
     });
 
     test('appends onClick callback to each checkbox', () => {
@@ -84,21 +84,21 @@ describe('CheckBox', () => {
 
         const component = shallow(
             <CheckboxGroup onChange={func} style={{color: 'blue'}}>
-                <CheckBox value="checkbox1" />
-                <CheckBox value="checkbox2" checked/>
-                <CheckBox value="checkbox3" />
+                <Checkbox value="checkbox1" />
+                <Checkbox value="checkbox2" checked/>
+                <Checkbox value="checkbox3" />
             </CheckboxGroup>
         );
 
         // expect(component.find(CheckBoxGroup).prop('style')).toEqual({color: 'blue'});
-        component.find(CheckBox).forEach((checkbox) => {
+        component.find(Checkbox).forEach((checkbox) => {
             expect(checkbox.prop('onClick')).toBeTruthy();
         });
     });
 
     test('Option renders without onClick by default', () => {
 
-        const component = shallow(<CheckBox value="checkbox1" />);
+        const component = shallow(<Checkbox value="checkbox1" />);
 
         expect(component.prop('onClick')).toBeFalsy();
     });
@@ -109,11 +109,11 @@ describe('CheckBox', () => {
 
         const component = shallow(
             <CheckboxGroup onChange={func} >
-                <CheckBox value="checkbox1" onClick={func2}/>
+                <Checkbox value="checkbox1" onClick={func2}/>
             </CheckboxGroup>
         );
 
-        expect(component.find(CheckBox).simulate('click'));
+        expect(component.find(Checkbox).simulate('click'));
 
         expect(func).toHaveBeenCalled();
     });
@@ -123,12 +123,12 @@ describe('CheckBox', () => {
 
         const component = shallow(
             <CheckboxGroup onChange={func}>
-                <CheckBox value="checkbox1" disabled />
+                <Checkbox value="checkbox1" disabled />
             </CheckboxGroup>
         );
 
-        expect(component.find(CheckBox).prop('disabled')).toBeTruthy;
-        expect(component.find(CheckBox).dive().find('input').simulate('click'));
+        expect(component.find(Checkbox).prop('disabled')).toBeTruthy;
+        expect(component.find(Checkbox).dive().find('input').simulate('click'));
 
         expect(func).not.toHaveBeenCalled();
     });

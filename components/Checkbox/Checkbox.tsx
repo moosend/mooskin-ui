@@ -88,7 +88,7 @@ export interface ICheckBoxData{
     label?: string;
 }
 
-export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, ICheckBoxState>{
+export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, ICheckBoxState>{
 
     static defaultProps = {
         className: '',
@@ -230,7 +230,7 @@ export default class CheckBoxGroup extends React.Component<ICheckBoxGroupProps, 
     }
 }
 
-export const CheckBox: React.StatelessComponent<ICheckBoxProps> = (props) => {
+export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
 
     const generateId = () => {
         return Math.random().toString(36).substr(2, 10);

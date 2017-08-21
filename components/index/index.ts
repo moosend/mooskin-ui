@@ -13,7 +13,7 @@ export {default as TopNotification} from '../TopNotification';
 export {default as SmallIconButton} from '../SmallIconButton';
 export {default as CheckListItem} from '../CheckListItem';
 export {default as RadioGroup, Radio} from '../Radio';
-export {default as CheckboxGroup, CheckBox} from '../Checkbox';
+export {default as CheckboxGroup, Checkbox} from '../Checkbox';
 export {Bar, Doughnut, Pie, Line} from '../Charts';
 export {default as Grid, Row, Col} from '../Grid';
 

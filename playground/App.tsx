@@ -3,69 +3,66 @@
 
 import * as React from 'react';
 
+import moment from 'moment';
+
 import {renderEditableExample} from './tools/ReactLiveEditor/ReactLiveEditor';
 
-import {Col, Grid, H1, Row} from '../components/index';
-import Bar from './examples/Bar.example';
-import Button from './examples/Button.example';
-import CheckBox from './examples/CheckBox.example';
-import CheckListItem from './examples/CheckListItem.example';
-import DatePicker from './examples/DatePicker.example';
-import Doughnut from './examples/Doughnut.example';
-import File from './examples/File.example';
-import Form from './examples/Form.example';
-import GridExample from './examples/Grid.example';
-import Headings from './examples/Headings.example';
-import HorizontalRangeBar from './examples/HorizontalRangeBar.example';
-import Input from './examples/Input.example';
-import Line from './examples/Line.example';
-import Pagination from './examples/Pagination.example';
-import Pie from './examples/Pie.example';
-import Radio from './examples/Radio.example';
-import RadioAccordion from './examples/RadioAccordion.example';
-import Select from './examples/Select.example';
-import SideBar from './examples/SideBar.example';
-import SmallIconButton from './examples/SmallIconButton.example';
-import StatsBox from './examples/StatsBox.example';
-import Steps from './examples/Steps.example';
+import {
+    Button,
+    CheckListItem,
+    DatePicker,
+    // Fieldset,
+    FileUpload,
+    HorizontalRangeBar,
+    Input,
+    Pagination,
+    SmallIconButton,
+    Switch,
+    TextArea,
+    TopNotification
+} from '../components/index';
 
-import TabbedContent from './examples/TabbedContent.example';
-import Table from './examples/Table.example';
-import TextArea from './examples/TextArea.example';
-import TopNotification from './examples/TopNotification.example';
-
-import {Switch} from '../components/index';
-
-// import {
-//     Button,
-//     CheckListItem,
-//     DatePicker,
-//     Fieldset,
-//     FileUpload,
-//     HorizontalRangeBar,
-//     Input,
-//     Pagination,
-//     SmallIconButton,
-//     Switch,
-//     Table,
-//     TextArea,
-//     TopNotification
-// } from '../components/index';
-
-// import {Option, Select} from '../components/index';
-// import {H1, H2, H3, H4, H5, H6} from '../components/index';
-// import {Radio, RadioGroup} from '../components/index';
-// import {CheckBox, CheckboxGroup} from '../components/index';
-// import {Bar, Doughnut, Line, Pie} from '../components/index';
-// import {Col, Grid, Row} from '../components/index';
-// import {Content, Header, Tab, TabbedContent} from '../components/index';
-// import {RadioAccordion, RadioAccordionContent} from '../components/index';
-// import {Form, FormGroup} from '../components/index';
-// import {Item, Secondary, SideBar} from '../components/index';
-// import {Step, Steps} from '../components/index';
-// import {StatsBox, StatsNumber, StatsResult, StatsTitle} from '../components/index';
+import {Option, Select} from '../components/index';
+import {H1, H2, H3, H4, H5, H6} from '../components/index';
+import {Radio, RadioGroup} from '../components/index';
+import {Checkbox, CheckboxGroup} from '../components/index';
+import {Bar, Doughnut, Line, Pie} from '../components/index';
+import {Col, Grid, Row} from '../components/index';
+import {Content, Header, Tab, TabbedContent} from '../components/index';
+import {RadioAccordion, RadioAccordionContent} from '../components/index';
+import {Form, FormGroup} from '../components/index';
+import {Item, SideBar} from '../components/index';
+import {Step, Steps} from '../components/index';
+import {StatsBox, StatsNumber, StatsResult, StatsTitle} from '../components/index';
+import {Table, TableHeader} from '../components/index';
 
 export const App = (props: any) => {
+
+    const formComponents = {
+        Button,
+        Checkbox,
+        CheckboxGroup,
+        DatePicker,
+        FileUpload,
+        Form,
+        FormGroup,
+        H2,
+        Input,
+        Option,
+        Radio,
+        RadioGroup,
+        Select,
+        Switch,
+        TextArea
+    };
+
+    const tabbedContentComponents = {
+        Button, Col, Content, Grid, H2, Header, Input, Row, Tab, TabbedContent, Table, TableHeader
+    };
+    const radioAccordionComponents = {
+        Button, H2, Input, RadioAccordion, RadioAccordionContent
+    };
+
     return(
         <Grid>
             <Row id="sidebar">
@@ -73,7 +70,7 @@ export const App = (props: any) => {
                     <H1>SideBar</H1>
                 </Col>
                 <Col lg={12}>
-                    <SideBar />
+                    {renderEditableExample('SideBar', {SideBar, Item})}
                 </Col>
             </Row>
             <Row id="buttons">
@@ -81,10 +78,10 @@ export const App = (props: any) => {
                     <H1>Buttons</H1>
                 </Col>
                 <Col lg={6} md={6}>
-                    <Button />
+                    {renderEditableExample('Button', {Button})}
                 </Col>
                 <Col lg={6} md={6}>
-                    <SmallIconButton />
+                    {renderEditableExample('SmallIconButton', {SmallIconButton})}
                 </Col>
             </Row>
             <Row id="formElements">
@@ -92,25 +89,26 @@ export const App = (props: any) => {
                     <H1>Form Elements</H1>
                 </Col>
                 <Col lg={6} md={6}>
-                    <Input />
+                    {renderEditableExample('Input', {Input})}
                 </Col>
                 <Col lg={6} md={6}>
-                    <TextArea />
+                    {renderEditableExample('TextArea', {TextArea})}
                 </Col>
                 <Col lg={6} md={6}>
-                    <Radio />
+                    {renderEditableExample('Radio', {Radio, RadioGroup})}
                 </Col>
                 <Col lg={6} md={6}>
-                    <CheckBox />
+                    {renderEditableExample('Checkbox', {Checkbox, CheckboxGroup})}
+
                 </Col>
                 <Col lg={6} md={6}>
-                    <Select />
+                    {renderEditableExample('Select', {Select, Option})}
                 </Col>
                 <Col lg={6} md={6}>
-                    <DatePicker />
+                    {renderEditableExample('DatePicker', {DatePicker, moment})}
                 </Col>
                 <Col lg={12}>
-                    <File />
+                    {renderEditableExample('File', {FileUpload})}
                 </Col>
             </Row>
             <Row id="forms">
@@ -118,7 +116,7 @@ export const App = (props: any) => {
                     <H1>Forms & FormGroups</H1>
                 </Col>
                 <Col>
-                    <Form />
+                    {renderEditableExample('Form', formComponents)}
                 </Col>
             </Row>
             <Row id="toggables">
@@ -129,10 +127,10 @@ export const App = (props: any) => {
                     {renderEditableExample('Switch', {Switch})}
                 </Col>
                 <Col lg={6} md={6}>
-                    <Pagination />
+                    {renderEditableExample('Pagination', {Pagination})}
                 </Col>
                 <Col lg={12}>
-                    <CheckListItem />
+                    {renderEditableExample('CheckListItem', {CheckListItem})}
                 </Col>
             </Row>
             <Row id="tabs">
@@ -140,10 +138,10 @@ export const App = (props: any) => {
                     <H1>Tabs</H1>
                 </Col>
                 <Col lg={12}>
-                    <RadioAccordion />
+                    {renderEditableExample('RadioAccordion', radioAccordionComponents)}
                 </Col>
                 <Col lg={12}>
-                    <TabbedContent/>
+                    {renderEditableExample('TabbedContent', tabbedContentComponents)}
                 </Col>
             </Row>
             <Row id="tables">
@@ -151,7 +149,7 @@ export const App = (props: any) => {
                     <H1>Tables</H1>
                 </Col>
                 <Col lg={12}>
-                    <Table />
+                    {renderEditableExample('Table', {SmallIconButton, Table, TableHeader})}
                 </Col>
             </Row>
             <Row id="misc">
@@ -159,19 +157,19 @@ export const App = (props: any) => {
                     <H1>Miscellaneous</H1>
                 </Col>
                 <Col lg={6} md={8}>
-                    <TopNotification />
+                    {renderEditableExample('TopNotification', {TopNotification, Button})}
                 </Col>
                 <Col lg={6} md={4}>
-                    <Headings />
+                    {renderEditableExample('Headings', {H1, H2, H3, H4, H5, H6})}
                 </Col>
                 <Col lg ={5} md={7}>
-                    <Steps />
+                    {renderEditableExample('Steps', {Steps, Step, Button})}
                 </Col>
                 <Col lg={4} md={5}>
-                    <HorizontalRangeBar />
+                    {renderEditableExample('HorizontalRangeBar', {HorizontalRangeBar, Button})}
                 </Col>
                 <Col lg={3}>
-                    <StatsBox/>
+                    {renderEditableExample('StatsBox', {StatsBox, StatsNumber, StatsResult, StatsTitle})}
                 </Col>
             </Row>
             <Row id="grid">
@@ -179,18 +177,18 @@ export const App = (props: any) => {
                     <H1>Grid System</H1>
                 </Col>
                 <Col lg={12}>
-                    <GridExample/>
+                    {renderEditableExample('Grid', {Col, Grid, Row})}
                 </Col>
             </Row>
             <Row id="charts">
                 <Col lg={12}>
                     <H1>Charts</H1>
                 </Col>
-                <Pie />
-                <Doughnut />
+                {renderEditableExample('Charts/Pie', {Pie, Col, Grid, Row})}
+                {renderEditableExample('Charts/Doughnut', {Doughnut, Col, Grid, Row})}
             </Row>
-            <Bar />
-            <Line />
+            {renderEditableExample('Charts/Bar', {Bar, Col, Grid, Row})}
+            {renderEditableExample('Charts/Line', {Line, Col, Grid, Row})}
         </Grid>
     );
 };

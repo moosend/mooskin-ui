@@ -110,11 +110,11 @@ class FormExample extends React.Component {
                                 value={this.state.coverletter}
                             />
                             <CheckboxGroup onChange={this.setValue} title="Contact" dataLabel="contact" selectedChecks={this.state.contact} horizontal>
-                                <CheckBox value="email" label="Email" checked={this.state.contact[0].checked}/>
-                                <CheckBox value="tel" label="Telephone" checked={this.state.contact[1].checked}/>
-                                <CheckBox value="skype" label="Skype" checked={this.state.contact[2].checked}/>
-                                <CheckBox value="raven" label="Raven" checked={this.state.contact[3].checked}/>
-                                <CheckBox value="palantir" label="Palantír" checked={this.state.contact[4].checked}/>
+                                <Checkbox value="email" label="Email" checked={this.state.contact[0].checked}/>
+                                <Checkbox value="tel" label="Telephone" checked={this.state.contact[1].checked}/>
+                                <Checkbox value="skype" label="Skype" checked={this.state.contact[2].checked}/>
+                                <Checkbox value="raven" label="Raven" checked={this.state.contact[3].checked}/>
+                                <Checkbox value="palantir" label="Palantír" checked={this.state.contact[4].checked}/>
                             </CheckboxGroup>
                         </FormGroup>
                     </FormGroup>
@@ -163,9 +163,9 @@ class FormExample extends React.Component {
                         </FormGroup>
                         <FormGroup>
                             <CheckboxGroup onChange={this.setValue} dataLabel="checkboxes">
-                                <CheckBox value="Checkbox 1" />
-                                <CheckBox value="Checkbox 2" />
-                                <CheckBox value="Checkbox 3" />
+                                <Checkbox value="Checkbox 1" />
+                                <Checkbox value="Checkbox 2" />
+                                <Checkbox value="Checkbox 3" />
                             </CheckboxGroup>
                         </FormGroup>
                     </FormGroup>

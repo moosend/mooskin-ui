@@ -128,13 +128,15 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
  * @param componentName name of the component as a string
  * @param components array of React component classes to be passed as scope dependencies to the react live editor
  */
-export const renderEditableExample = (componentName: string, components: {[key: string]: React.ComponentClass}) => {
-    return (
-        <ReactLiveEditor
-            scope={{React, ...components}}
-            code={require(`../../examples/component-strings/${componentName}.example.txt`)}
-            title={`${componentName} Example`}
-            doc={require(`../../../components/${componentName}/README.md`)}
-        />
-    );
-};
+export const renderEditableExample =
+    (componentName: string, components: {[key: string]: any}) => {
+
+        return (
+            <ReactLiveEditor
+                scope={{React, ...components}}
+                code={require(`../../examples/${componentName}.example.txt`)}
+                title={`${componentName} Example`}
+                doc={require(`../../../components/${componentName}/README.md`)}
+            />
+        );
+    };
