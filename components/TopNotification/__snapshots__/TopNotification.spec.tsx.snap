@@ -2,34 +2,35 @@
 
 exports[`TopNotification renders correctly 1`] = `
 <div
-  className="top-notification-component container successNotification"
-  style={
-    Object {
-      "height": 80,
-    }
-  }
+  className="top-notification-component container successNotification active"
 >
   <div
-    className="message"
+    className="content"
   >
     <div
-      className="iconDiv"
-    />
-    <span>
-      notification for you
-    </span>
-  </div>
-  <div
-    className="button"
-  >
-    <Button
-      className=""
-      onClick={[Function]}
-      style={Object {}}
-      type="button"
+      className="message"
     >
-      click ok
-    </Button>
+      <div
+        className="iconDiv"
+      />
+      <span
+        className="text"
+      >
+        notification for you
+      </span>
+    </div>
+    <div
+      className="buttonContainer"
+    >
+      <Button
+        className=""
+        onClick={[Function]}
+        style={Object {}}
+        type="button"
+      >
+        click ok
+      </Button>
+    </div>
   </div>
   <div
     className="close-notification close"
