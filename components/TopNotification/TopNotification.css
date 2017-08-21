@@ -93,7 +93,10 @@
 
     .message{
         font-size: 5vw;
-        flex: 9;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .close{
@@ -102,27 +105,39 @@
         height: 5vw;
         width: 5w;
         padding: 0px;
+        flex: 1.5;
     }  
 
      .close div{
-        margin-right: -10px;
         height: 5vw;
         width: 5vw;
+        margin-right: 4vw;
     }  
 
      .iconDiv{
-        width: 5vw;
-        height: 5vw;
+        margin-right: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 6vw;
+        height: 6vw;
     }
     
     .content{
         flex-direction: column;
         align-items: center;
+        flex: 9;
+        padding-right: 4vw;
+        padding-left: 7vw;
     }
 
     .active{
-        height: 20vw;
+        height: 25vw;
     } 
+
+    .buttonContainer{
+        margin-top: 20px;
+    }
 
 }
 
@@ -130,7 +145,6 @@
     
     .message{
         font-size: 5vw;
-        flex: 9;
     }
 
     .close{
@@ -160,4 +174,5 @@
     .active{
         height: 20vw;
     } 
+
 }
