@@ -77,7 +77,7 @@ describe('Bar Chart', () => {
         expect(component.find('Bar').prop<any>('data').datasets[0].borderColor).toEqual('blue');
         expect(component.find('Bar').prop<any>('options').scales.xAxes[0].barPercentage).toEqual(1);
         expect(component.find('Bar').prop<any>('options').scales.yAxes[0].ticks.min).toEqual(5);
-        expect(component.find('Bar').prop<any>('options').title.position).toEqual('bottom');
+        expect(component.find('Bar').prop<any>('options').title.position).toEqual('top');
     });
 
     test('renders properly into dom with data and a low barPercentage', () => {

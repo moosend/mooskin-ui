@@ -57,9 +57,11 @@ exports[`Table renders correctly 1`] = `
           <TableHeader
             className="buttonHeader"
             dataField="button"
+            style={Object {}}
           >
             <th
               className="table-header buttonHeader header "
+              style={Object {}}
             >
               X
             </th>
@@ -97,10 +99,12 @@ exports[`Table renders correctly 1`] = `
             className="undefined sortHeader"
             dataField="campaign"
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header "
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Campaign
@@ -111,9 +115,11 @@ exports[`Table renders correctly 1`] = `
             className="undefined "
             dataField="mailingList"
             hideSmall={true}
+            style={Object {}}
           >
             <th
               className="table-header undefined  header hide"
+              style={Object {}}
             >
               <div>
                 Mailing List / Segment
@@ -125,10 +131,12 @@ exports[`Table renders correctly 1`] = `
             dataField="status"
             hideSmall={true}
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header hide"
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Status
@@ -140,10 +148,12 @@ exports[`Table renders correctly 1`] = `
             dataField="open"
             hideSmall={true}
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header hide"
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Open %
@@ -155,10 +165,12 @@ exports[`Table renders correctly 1`] = `
             dataField="click"
             hideSmall={true}
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header hide"
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Click
@@ -170,10 +182,12 @@ exports[`Table renders correctly 1`] = `
             dataField="subscribers"
             hideSmall={true}
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header hide"
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Subscribers
@@ -185,15 +199,21 @@ exports[`Table renders correctly 1`] = `
       <tbody
         className="body"
       >
-        <Row>
+        <Row
+          className=""
+          style={Object {}}
+        >
           <tr
-            className="row row undefined"
+            className="row row "
+            style={Object {}}
           >
             <Col
               className="buttonCol"
+              style={Object {}}
             >
               <td
                 className="column col buttonCol"
+                style={Object {}}
               >
                 <SmallIconButton
                   className="toggle"
@@ -222,9 +242,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -240,9 +262,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -258,9 +282,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -276,9 +302,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -294,9 +322,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -312,9 +342,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -330,9 +362,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -348,9 +382,12 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Popover
               active={false}
+              className=""
+              style={Object {}}
             >
               <td
                 className="popover inactive"
+                style={Object {}}
               >
                 <table
                   className="table"
@@ -359,9 +396,11 @@ exports[`Table renders correctly 1`] = `
                     <tr>
                       <Col
                         className="buttonCol"
+                        style={Object {}}
                       >
                         <td
                           className="column col buttonCol"
+                          style={Object {}}
                         >
                           <SmallIconButton
                             className="toggle"
@@ -390,9 +429,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className=""
+                        style={Object {}}
                       >
                         <td
                           className="column col "
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -408,9 +449,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className=""
+                        style={Object {}}
                       >
                         <td
                           className="column col "
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -426,9 +469,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -444,9 +489,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -462,9 +509,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -480,9 +529,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -498,9 +549,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -521,15 +574,21 @@ exports[`Table renders correctly 1`] = `
             </Popover>
           </tr>
         </Row>
-        <Row>
+        <Row
+          className=""
+          style={Object {}}
+        >
           <tr
-            className="row row undefined"
+            className="row row "
+            style={Object {}}
           >
             <Col
               className="buttonCol"
+              style={Object {}}
             >
               <td
                 className="column col buttonCol"
+                style={Object {}}
               >
                 <SmallIconButton
                   className="toggle"
@@ -558,9 +617,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -576,9 +637,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -594,9 +657,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -612,9 +677,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -630,9 +697,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -648,9 +717,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -666,9 +737,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -684,9 +757,12 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Popover
               active={false}
+              className=""
+              style={Object {}}
             >
               <td
                 className="popover inactive"
+                style={Object {}}
               >
                 <table
                   className="table"
@@ -695,9 +771,11 @@ exports[`Table renders correctly 1`] = `
                     <tr>
                       <Col
                         className="buttonCol"
+                        style={Object {}}
                       >
                         <td
                           className="column col buttonCol"
+                          style={Object {}}
                         >
                           <SmallIconButton
                             className="toggle"
@@ -726,9 +804,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className=""
+                        style={Object {}}
                       >
                         <td
                           className="column col "
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -744,9 +824,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className=""
+                        style={Object {}}
                       >
                         <td
                           className="column col "
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -762,9 +844,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -780,9 +864,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -798,9 +884,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -816,9 +904,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -834,9 +924,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -857,15 +949,21 @@ exports[`Table renders correctly 1`] = `
             </Popover>
           </tr>
         </Row>
-        <Row>
+        <Row
+          className=""
+          style={Object {}}
+        >
           <tr
-            className="row row undefined"
+            className="row row "
+            style={Object {}}
           >
             <Col
               className="buttonCol"
+              style={Object {}}
             >
               <td
                 className="column col buttonCol"
+                style={Object {}}
               >
                 <SmallIconButton
                   className="toggle"
@@ -894,9 +992,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -912,9 +1012,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -930,9 +1032,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -948,9 +1052,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -966,9 +1072,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -984,9 +1092,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -1002,9 +1112,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -1020,9 +1132,12 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Popover
               active={false}
+              className=""
+              style={Object {}}
             >
               <td
                 className="popover inactive"
+                style={Object {}}
               >
                 <table
                   className="table"
@@ -1031,9 +1146,11 @@ exports[`Table renders correctly 1`] = `
                     <tr>
                       <Col
                         className="buttonCol"
+                        style={Object {}}
                       >
                         <td
                           className="column col buttonCol"
+                          style={Object {}}
                         >
                           <SmallIconButton
                             className="toggle"
@@ -1062,9 +1179,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className=""
+                        style={Object {}}
                       >
                         <td
                           className="column col "
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -1080,9 +1199,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className=""
+                        style={Object {}}
                       >
                         <td
                           className="column col "
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -1098,9 +1219,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -1116,9 +1239,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -1134,9 +1259,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -1152,9 +1279,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
@@ -1170,9 +1299,11 @@ exports[`Table renders correctly 1`] = `
                       </Col>
                       <Col
                         className="hide"
+                        style={Object {}}
                       >
                         <td
                           className="column col hide"
+                          style={Object {}}
                         >
                           <span
                             className="heading"
