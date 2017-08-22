@@ -7,6 +7,7 @@
 .table{
     width: 100%;
     border-collapse: collapse;
+    border: 1px solid #eaeaea;
 }
 
 .header{
@@ -15,7 +16,6 @@
     padding-bottom: 8px;
     color: #aaaaaa;
     font-size: .8rem;
-    border-bottom: 1px solid #d4d4d4;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
     user-select: none;
@@ -34,7 +34,7 @@
 }
 
 .row{
-    border: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .arrow{
@@ -146,7 +146,7 @@
     } 
 
     .buttonCol i{
-        font-size: 20px;
+        font-size: 30px;
     } 
 
     .buttonHeader{
@@ -237,7 +237,7 @@
     } 
 
     .buttonCol i{
-        font-size: 20px;
+        font-size: 30px;
     } 
 
     .buttonHeader{
