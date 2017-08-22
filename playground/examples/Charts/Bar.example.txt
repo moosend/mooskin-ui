@@ -51,7 +51,6 @@ class ChartsExample extends React.Component {
                         label={'Number of subscribers'}
                         minValue={40}
                         height={250}
-                        width={500}
                         gridLinesY
                         gridLinesX
                         borderColor={'rgba(255,99,132,1)'}
