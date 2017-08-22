@@ -140,10 +140,8 @@ class FormExample extends React.Component {
                             <Option value="3-6m">3-6 months</Option>
                         </Select>
                     </FormGroup>
-                    <FormGroup style={{flexDirection: 'row'}}>
                         <Button type="submit">Submit</Button>
                         <Button onClick={this.reset}>Reset</Button>
-                    </FormGroup>
                 </Form>
                 <hr/>
                 <H2>Forms/FormGroups</H2>

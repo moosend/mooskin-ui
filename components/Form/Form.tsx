@@ -99,9 +99,12 @@ export default class Form extends React.Component<IFormProps, {}>{
                     formElements.push(
                         React.cloneElement(child, {...keyProp, ...buttonProps})
                     );
+                } else {
+                    formElements.push(
+                        React.cloneElement(child, keyProp)
+                    );
                 }
-            }
-            if (React.isValidElement<IFormGroupProps>(child)){
+            } else if (React.isValidElement<IFormGroupProps>(child)){
 
                 if (child.type === FormGroup){
 
