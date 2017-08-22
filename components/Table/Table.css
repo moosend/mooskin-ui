@@ -10,6 +10,7 @@
 }
 
 .table tbody{
+    border-collapse: collapse;
     border: 1px solid #eaeaea;
 }
 
@@ -37,6 +38,7 @@
 }
 
 .row{
+    border-collapse: collapse;
     border-bottom: 1px solid #eaeaea;
 }
 
@@ -104,12 +106,6 @@
         font-weight: 800;
         flex: 1;
         text-align: left;
-    }
-
-    .popover .row{
-        display: flex;
-        flex-direction: column;
-        border: 3px solid #eaeaea;
     }
 
     .popover .col{
@@ -183,7 +179,6 @@
         position: absolute;
         right: 5%;
         left: 5%;
-        border: 3px solid #efefef;
         background: #fff;
         box-shadow: 5px 5px 20px #bfbfbf;
         z-index: 5;
@@ -195,12 +190,6 @@
         font-weight: 800;
         flex: 1;
         text-align: left;
-    }
-
-    .popover .row{
-        display: flex;
-        flex-direction: column;
-        border: 3px solid #eaeaea;
     }
 
     .popover .col{
