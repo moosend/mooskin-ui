@@ -7,16 +7,12 @@
 .table{
     width: 100%;
     border-collapse: collapse;
+    border-spacing: 0;
+    box-sizing: border-box;
+    border: 1px solid #eaeaea;
 }
 
- .table tbody{
-    box-sizing: border-box;
-    border-collapse: collapse;
-    border: 1px solid #eaeaea;
-} 
-
 .header{
-    border: 1px solid #efefef;
     background-color: #efefef;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -40,6 +36,7 @@
 }
 
 .row{
+    position: relative;
     border-bottom: 1px solid #eaeaea;
 }
 

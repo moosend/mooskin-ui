@@ -99,12 +99,11 @@ export default class Form extends React.Component<IFormProps, {}>{
                     formElements.push(
                         React.cloneElement(child, {...keyProp, ...buttonProps})
                     );
-                } else {
-                    formElements.push(
-                        React.cloneElement(child, keyProp)
-                    );
                 }
-            } else if (React.isValidElement<IFormGroupProps>(child)){
+            }
+            if (React.isValidElement<IFormGroupProps>(child)){
+
+                console.log('called');
 
                 if (child.type === FormGroup){
 
@@ -145,6 +144,8 @@ export default class Form extends React.Component<IFormProps, {}>{
 
                 if (element.type === Button && element.props.type === 'submit'){
                     elements.push(React.cloneElement(element, {...keyProp, ...buttonProps}));
+                    const buts = React.cloneElement(element, {...keyProp, ...buttonProps});
+                    console.log(buts);
                 } else {
                     elements.push(React.cloneElement(element, keyProp));
                 }

@@ -390,7 +390,11 @@ exports[`Table renders correctly 1`] = `
                 style={Object {}}
               >
                 <table
-                  className="table"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
                 >
                   <tbody>
                     <tr>
@@ -765,7 +769,11 @@ exports[`Table renders correctly 1`] = `
                 style={Object {}}
               >
                 <table
-                  className="table"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
                 >
                   <tbody>
                     <tr>
@@ -1140,7 +1148,11 @@ exports[`Table renders correctly 1`] = `
                 style={Object {}}
               >
                 <table
-                  className="table"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
                 >
                   <tbody>
                     <tr>
