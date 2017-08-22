@@ -7,10 +7,10 @@
 .table{
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #eaeaea;
 }
 
 .table tbody{
+    border: 1px solid #eaeaea;
 }
 
 .header{
