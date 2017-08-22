@@ -194,6 +194,9 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                         onClick={this.showPopover(index)}
                         transparent
                     />
+                    <Popover active={this.state.activeRow === index}>
+                        {popoverData}
+                    </Popover>
                 </Col>
             );
 
@@ -202,9 +205,6 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             rows.push(
                 <Row key={index}>
                     {cols}
-                    <Popover active={this.state.activeRow === index}>
-                        {popoverData}
-                    </Popover>
                 </Row>
             );
 
@@ -410,9 +410,9 @@ export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
     const active = !props.active ? styles.inactive : styles.active;
 
     return(
-        <td className={`${styles.popover} ${active}`} style={props.style}>
+        <div className={`${styles.popover} ${active}`} style={props.style}>
             {props.children}
-        </td>
+        </div>
     );
 
 };

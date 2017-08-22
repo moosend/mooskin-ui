@@ -238,6 +238,115 @@ exports[`Table renders correctly 1`] = `
                     </i>
                   </button>
                 </SmallIconButton>
+                <Popover
+                  active={false}
+                  className=""
+                  style={Object {}}
+                >
+                  <div
+                    className="popover inactive"
+                    style={Object {}}
+                  >
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Delivered
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        31-12-2016 04:39 PM
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Campaign
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Airship ready campaign
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Mailing List / Segment
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Mailing list for me
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Status
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Open %
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        93 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Click
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        80 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Subscribers
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        4244
+                      </span>
+                    </div>
+                  </div>
+                </Popover>
               </td>
             </Col>
             <Col
@@ -380,115 +489,6 @@ exports[`Table renders correctly 1`] = `
                 </span>
               </td>
             </Col>
-            <Popover
-              active={false}
-              className=""
-              style={Object {}}
-            >
-              <td
-                className="popover inactive"
-                style={Object {}}
-              >
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Delivered
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    31-12-2016 04:39 PM
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Campaign
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    Airship ready campaign
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Mailing List / Segment
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    Mailing list for me
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Status
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    Draft
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Open %
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    93 %
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Click
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    80 %
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Subscribers
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    4244
-                  </span>
-                </div>
-              </td>
-            </Popover>
           </tr>
         </Row>
         <Row
@@ -530,6 +530,115 @@ exports[`Table renders correctly 1`] = `
                     </i>
                   </button>
                 </SmallIconButton>
+                <Popover
+                  active={false}
+                  className=""
+                  style={Object {}}
+                >
+                  <div
+                    className="popover inactive"
+                    style={Object {}}
+                  >
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Delivered
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        17-02-2017 10:51 AM
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Campaign
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Another campaign
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Mailing List / Segment
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Mailing list for me
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Status
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Sent
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Open %
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        60 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Click
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        25 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Subscribers
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        1628
+                      </span>
+                    </div>
+                  </div>
+                </Popover>
               </td>
             </Col>
             <Col
@@ -672,115 +781,6 @@ exports[`Table renders correctly 1`] = `
                 </span>
               </td>
             </Col>
-            <Popover
-              active={false}
-              className=""
-              style={Object {}}
-            >
-              <td
-                className="popover inactive"
-                style={Object {}}
-              >
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Delivered
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    17-02-2017 10:51 AM
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Campaign
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    Another campaign
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Mailing List / Segment
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    Mailing list for me
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Status
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    Sent
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Open %
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    60 %
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Click
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    25 %
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Subscribers
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    1628
-                  </span>
-                </div>
-              </td>
-            </Popover>
           </tr>
         </Row>
         <Row
@@ -822,6 +822,115 @@ exports[`Table renders correctly 1`] = `
                     </i>
                   </button>
                 </SmallIconButton>
+                <Popover
+                  active={false}
+                  className=""
+                  style={Object {}}
+                >
+                  <div
+                    className="popover inactive"
+                    style={Object {}}
+                  >
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Delivered
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        13-06-2017 10:59 AM
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Campaign
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        NewsLetters for everybody
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Mailing List / Segment
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Mailing list for me
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Status
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Sent
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Open %
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        75 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Click
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        50 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Subscribers
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        2947
+                      </span>
+                    </div>
+                  </div>
+                </Popover>
               </td>
             </Col>
             <Col
@@ -964,115 +1073,6 @@ exports[`Table renders correctly 1`] = `
                 </span>
               </td>
             </Col>
-            <Popover
-              active={false}
-              className=""
-              style={Object {}}
-            >
-              <td
-                className="popover inactive"
-                style={Object {}}
-              >
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Delivered
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    13-06-2017 10:59 AM
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Campaign
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    NewsLetters for everybody
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Mailing List / Segment
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    Mailing list for me
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Status
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    Sent
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Open %
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    75 %
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Click
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    50 %
-                  </span>
-                </div>
-                <div
-                  className="popoverCol"
-                >
-                  <span
-                    className="heading"
-                  >
-                    Subscribers
-                  </span>
-                  <span
-                    className="content"
-                  >
-                    2947
-                  </span>
-                </div>
-              </td>
-            </Popover>
           </tr>
         </Row>
       </tbody>
