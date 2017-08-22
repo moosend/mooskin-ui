@@ -1,3 +1,5 @@
+@import '../../../components/_utils/globals/screens.css';
+
 .fieldset{
     position:relative;
 }
@@ -16,6 +18,10 @@
     z-index:21;
     overflow: auto;
     background: #1D1F21;
+}
+
+.active{
+    width: 700px;
 }
 
 .overlay{
@@ -94,3 +100,15 @@
     font-weight: bold;
     margin-top:10px;
 }
+
+ @media (--small){
+    .active{
+        width: 95vw;
+    }
+}
+
+@media (--xSmall){
+    .active{
+        width: 95vw;
+    }
+} 
