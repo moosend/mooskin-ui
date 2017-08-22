@@ -232,6 +232,11 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
 
 export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
 
+    Checkbox.defaultProps = {
+        className: '',
+        style: {}
+    };
+
     const generateId = () => {
         return Math.random().toString(36).substr(2, 10);
     };

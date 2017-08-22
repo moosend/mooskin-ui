@@ -213,6 +213,11 @@ export default class Form extends React.Component<IFormProps, {}>{
 
 export const FormGroup: React.StatelessComponent<IFormGroupProps> = (props) => {
 
+    FormGroup.defaultProps = {
+        className: '',
+        style: {}
+    };
+
     const alignment = !props.horizontal ? styles.vertical : styles.horizontal;
 
     return (

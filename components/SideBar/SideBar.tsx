@@ -312,6 +312,11 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
 export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
 
+    Item.defaultProps = {
+        className: '',
+        style: {}
+    };
+
     const getImage = () => {
         if (!props.active){
             return props.image;
@@ -348,6 +353,11 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
 };
 
 export const SubMenu: React.StatelessComponent<ISubMenuProps> = (props) => {
+
+    SubMenu.defaultProps = {
+        className: '',
+        style: {}
+    };
 
     const display = props.display ? styles.subMenuOn : styles.sidebarOff;
 
