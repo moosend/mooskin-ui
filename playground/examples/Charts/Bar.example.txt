@@ -60,7 +60,6 @@ class ChartsExample extends React.Component {
                 </Col>
                 <Col lg={6} md={6}>
                     <Bar
-                        maintainAspectRatio
                         height={250}
                         data={this.state.users}
                         title={'Chart title'}
