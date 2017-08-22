@@ -153,6 +153,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         this.state.data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
+            const popoverData: Array<React.ReactElement<ITableProps>> = [];
 
             for (const key in obj) {
 
@@ -169,6 +170,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                                     <span className={styles.heading}>{setting.heading}</span>
                                     <span className={styles.content}>{obj[key]}</span>
                                 </Col>
+                            );
+
+                            popoverData[i] = (
+                                <div className={styles.popoverCol} key={i}>
+                                    <span className={styles.heading}>{setting.heading}</span>
+                                    <span className={styles.content}>{obj[key]}</span>
+                                </div>
                             );
 
                         }
@@ -195,7 +203,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 <Row key={index}>
                     {cols}
                     <Popover active={this.state.activeRow === index}>
-                        {cols}
+                        {popoverData}
                     </Popover>
                 </Row>
             );
@@ -403,13 +411,7 @@ export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
 
     return(
         <td className={`${styles.popover} ${active}`} style={props.style}>
-            <table style={{width: '100%'}}>
-                <tbody>
-                    <tr>
-                        {props.children}
-                    </tr>
-                </tbody>
-            </table>
+            {props.children}
         </td>
     );
 

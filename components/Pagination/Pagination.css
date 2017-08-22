@@ -44,15 +44,6 @@
   pointer-events: none;
 }
 
-
-@media (--small){
-    .paginationButton{
-        font-size: 3vw;
-        padding: 4vw;
-    }
-    
-}
-
 @media (--xSmall){
 
     .itemButton{

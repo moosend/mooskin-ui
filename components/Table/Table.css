@@ -90,8 +90,9 @@
     }
 
     .popover{
-        display: none;
+        display: flex;
         flex-direction: column;
+        position: absolute;
         right: 8%;
         left: 8%;
         background: #fff;
@@ -107,7 +108,7 @@
         text-align: left;
     }
 
-    .popover .col{
+    .popoverCol{
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -191,7 +192,7 @@
         text-align: left;
     }
 
-    .popover .col{
+    .popoverCol{
         display: flex;
         flex-direction: row;
         width: 100%;
