@@ -109,9 +109,9 @@ class ChartsExample extends React.Component {
 
     render(){
         return(
-            <Grid>
+            <Col>
                 <Row>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={6} sm={6}>
                         <Line
                             data={this.state.lineData}
                             title={'Line Chart'}
@@ -120,7 +120,7 @@ class ChartsExample extends React.Component {
                             gridLinesX
                         />
                     </Col>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={6} sm={6}>
                         <Line
                             fill
                             data={this.state.lineData}
@@ -135,7 +135,7 @@ class ChartsExample extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={6} sm={6}>
                         <Line
                             noLine
                             data={this.state.lineData}
@@ -149,7 +149,7 @@ class ChartsExample extends React.Component {
                             noLegend
                         />
                     </Col>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={6} sm={6}>
                         <Line
                             data={this.state.lineData}
                             title={'Line Chart'}
@@ -159,7 +159,7 @@ class ChartsExample extends React.Component {
                         />
                     </Col>
                 </Row>
-            </Grid>
+            </Col>
         );
     }
 }

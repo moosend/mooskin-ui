@@ -184,8 +184,12 @@ export const App = (props: any) => {
                 <Col lg={12}>
                     <H1>Charts</H1>
                 </Col>
-                {renderEditableExample('Charts/Pie', {Pie, Col, Grid, Row})}
-                {renderEditableExample('Charts/Doughnut', {Doughnut, Col, Grid, Row})}
+                <Col lg={6} md={6} sm={6}>
+                    {renderEditableExample('Charts/Pie', {Pie, Col, Grid, Row})}
+                </Col>
+                <Col lg={6} md={6} sm={6}>
+                    {renderEditableExample('Charts/Doughnut', {Doughnut, Col, Grid, Row})}
+                </Col>
             </Row>
             {renderEditableExample('Charts/Bar', {Bar, Col, Grid, Row})}
             {renderEditableExample('Charts/Line', {Line, Col, Grid, Row})}

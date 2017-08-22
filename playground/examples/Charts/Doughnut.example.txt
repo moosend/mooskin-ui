@@ -143,17 +143,15 @@ class ChartsExample extends React.Component {
 
     render(){
         return(
-            <Col lg={6} md={6}>
-                <Doughnut
-                    data={this.state.users}
-                    title="Doughnut.. yummy"
-                    legendPos="left"
-                    legendStyle="italic"
-                    boxWidth={20}
-                    borderWidth={3}
-                    size={300}
-                />
-            </Col>
+            <Doughnut
+                data={this.state.users}
+                title="Doughnut.. yummy"
+                legendPos="left"
+                legendStyle="italic"
+                boxWidth={20}
+                borderWidth={3}
+                size={300}
+            />
         );
     }
 }

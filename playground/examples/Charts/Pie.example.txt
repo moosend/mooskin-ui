@@ -26,9 +26,7 @@ class ChartsExample extends React.Component {
 
     render(){
         return(
-            <Col>
-                <Pie data={this.state.users} title="Subscribers" size={300}/>
-            </Col>
+            <Pie data={this.state.users} title="Subscribers" size={300}/>
         );
     }
 }
