@@ -403,7 +403,7 @@ export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
 
     return(
         <td className={`${styles.popover} ${active}`} style={props.style}>
-            <table className={styles.table}>
+            <table style={{width: '100%'}}>
                 <tbody>
                     <tr>
                         {props.children}

@@ -9,10 +9,10 @@
     border-collapse: collapse;
 }
 
-.table tbody{
+ .table tbody{
     border-collapse: collapse;
     border: 1px solid #eaeaea;
-}
+} 
 
 .header{
     background-color: #efefef;
@@ -38,7 +38,6 @@
 }
 
 .row{
-    border-collapse: collapse;
     border-bottom: 1px solid #eaeaea;
 }
 
