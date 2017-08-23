@@ -97,10 +97,10 @@ describe('Table', () => {
         expect(component.find('Col').at(3).find('span').last().text()).toEqual('Behrami');
         expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kosovo');
 
-        expect(component.find('Col').at(11).find('span').last().text()).toEqual('1');
-        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Geralt');
-        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Rivia');
-        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kaedwen');
+        expect(component.find('Col').at(6).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(7).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(8).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(9).find('span').last().text()).toEqual('Kaedwen');
 
     });
 
@@ -162,10 +162,10 @@ describe('Table', () => {
         );
 
         const col1 = component.find('Col').at(1).find('span').last().text();
-        const col2 = component.find('Col').at(6).find('span').last().text();
+        const col2 = component.find('Popover').at(0).find('span').at(1).text();
 
         const header1 = component.find('Col').at(1).find('span').first().text();
-        const header2 = component.find('Col').at(6).find('span').first().text();
+        const header2 = component.find('Popover').at(1).find('span').first().text();
 
         expect(col1).toEqual(col2);
         expect(header1).toEqual(header2);
@@ -209,7 +209,7 @@ describe('Table', () => {
 
         expect(component.state('activeRow')).toBe(-1);
 
-        component.find('SmallIconButton').at(2).simulate('click');
+        component.find('SmallIconButton').at(1).simulate('click');
 
         expect(component.state('activeRow')).toBe(1);
         expect(component.find('Popover').first().hasClass('inactive')).toBeTruthy;
@@ -263,10 +263,10 @@ describe('Table', () => {
         expect(component.find('Col').at(3).find('span').last().text()).toEqual('Behrami');
         expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kosovo');
 
-        expect(component.find('Col').at(11).find('span').last().text()).toEqual('1');
-        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Geralt');
-        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Rivia');
-        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kaedwen');
+        expect(component.find('Col').at(6).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(7).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(8).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(9).find('span').last().text()).toEqual('Kaedwen');
 
         component.find(TableHeader).at(1).simulate('click');
 
@@ -292,10 +292,10 @@ describe('Table', () => {
         expect(component.find('Col').at(3).find('span').last().text()).toEqual('Behrami');
         expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kosovo');
 
-        expect(component.find('Col').at(11).find('span').last().text()).toEqual('1');
-        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Geralt');
-        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Rivia');
-        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kaedwen');
+        expect(component.find('Col').at(6).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(7).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(8).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(9).find('span').last().text()).toEqual('Kaedwen');
 
         component.find(TableHeader).at(1).simulate('click');
 
@@ -319,10 +319,10 @@ describe('Table', () => {
         expect(component.find('Col').at(3).find('span').last().text()).toEqual('Rivia');
         expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kaedwen');
 
-        expect(component.find('Col').at(11).find('span').last().text()).toEqual('5');
-        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Doni');
-        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Behrami');
-        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kosovo');
+        expect(component.find('Col').at(6).find('span').last().text()).toEqual('5');
+        expect(component.find('Col').at(7).find('span').last().text()).toEqual('Doni');
+        expect(component.find('Col').at(8).find('span').last().text()).toEqual('Behrami');
+        expect(component.find('Col').at(9).find('span').last().text()).toEqual('Kosovo');
 
         component.find(TableHeader).at(4).simulate('click');
 
@@ -348,10 +348,10 @@ describe('Table', () => {
         expect(component.find('Col').at(3).find('span').last().text()).toEqual('Behrami');
         expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kosovo');
 
-        expect(component.find('Col').at(11).find('span').last().text()).toEqual('1');
-        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Geralt');
-        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Rivia');
-        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kaedwen');
+        expect(component.find('Col').at(6).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(7).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(8).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(9).find('span').last().text()).toEqual('Kaedwen');
 
         component.find(TableHeader).at(3).simulate('click');
 
@@ -377,10 +377,10 @@ describe('Table', () => {
         expect(component.find('Col').at(3).find('span').last().text()).toEqual('Behrami');
         expect(component.find('Col').at(4).find('span').last().text()).toEqual('Kosovo');
 
-        expect(component.find('Col').at(11).find('span').last().text()).toEqual('1');
-        expect(component.find('Col').at(12).find('span').last().text()).toEqual('Geralt');
-        expect(component.find('Col').at(13).find('span').last().text()).toEqual('Rivia');
-        expect(component.find('Col').at(14).find('span').last().text()).toEqual('Kaedwen');
+        expect(component.find('Col').at(6).find('span').last().text()).toEqual('1');
+        expect(component.find('Col').at(7).find('span').last().text()).toEqual('Geralt');
+        expect(component.find('Col').at(8).find('span').last().text()).toEqual('Rivia');
+        expect(component.find('Col').at(9).find('span').last().text()).toEqual('Kaedwen');
 
     });
 

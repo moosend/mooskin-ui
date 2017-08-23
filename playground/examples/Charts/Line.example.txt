@@ -109,27 +109,23 @@ class ChartsExample extends React.Component {
 
     render(){
         return(
-            <Grid>
+            <Col>
                 <Row>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={6} sm={6}>
                         <Line
                             data={this.state.lineData}
                             title={'Line Chart'}
                             height={250}
-                            width={550}
-                            maintainAspectRatio
                             gridLinesY
                             gridLinesX
                         />
                     </Col>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={6} sm={6}>
                         <Line
                             fill
                             data={this.state.lineData}
                             title={'Line Chart'}
                             height={250}
-                            width={550}
-                            maintainAspectRatio
                             gridLinesY
                             borderWidth={1}
                             lineTension={0}
@@ -139,14 +135,12 @@ class ChartsExample extends React.Component {
                     </Col>
                 </Row>
                 <Row>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={6} sm={6}>
                         <Line
                             noLine
                             data={this.state.lineData}
                             title={'Line Chart'}
                             height={250}
-                            width={550}
-                            maintainAspectRatio
                             gridLinesY
                             gridLinesX
                             lineTension={0}
@@ -155,19 +149,17 @@ class ChartsExample extends React.Component {
                             noLegend
                         />
                     </Col>
-                    <Col lg={6} md={6}>
+                    <Col lg={6} md={6} sm={6}>
                         <Line
                             data={this.state.lineData}
                             title={'Line Chart'}
                             height={250}
-                            width={550}
-                            maintainAspectRatio
                             borderWidth={1}
                             steppedLine
                         />
                     </Col>
                 </Row>
-            </Grid>
+            </Col>
         );
     }
 }

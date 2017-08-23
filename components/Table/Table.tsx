@@ -153,6 +153,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         this.state.data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
+            const popoverData: Array<React.ReactElement<ITableProps>> = [];
 
             for (const key in obj) {
 
@@ -171,6 +172,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                                 </Col>
                             );
 
+                            popoverData[i] = (
+                                <div className={styles.popoverCol} key={i}>
+                                    <span className={styles.heading}>{setting.heading}</span>
+                                    <span className={styles.content}>{obj[key]}</span>
+                                </div>
+                            );
+
                         }
 
                     });
@@ -186,6 +194,9 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                         onClick={this.showPopover(index)}
                         transparent
                     />
+                    <Popover active={this.state.activeRow === index}>
+                        {popoverData}
+                    </Popover>
                 </Col>
             );
 
@@ -194,9 +205,6 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             rows.push(
                 <Row key={index}>
                     {cols}
-                    <Popover active={this.state.activeRow === index}>
-                        {cols}
-                    </Popover>
                 </Row>
             );
 
@@ -345,6 +353,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
 export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
 
+    TableHeader.defaultProps = {
+        className: '',
+        style: {}
+    };
+
     const display = props.hideSmall ? styles.hide : '';
 
     return(
@@ -361,6 +374,11 @@ export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
 
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
+    Row.defaultProps = {
+        className: '',
+        style: {}
+    };
+
     return(
         <tr className={`row ${styles.row} ${props.className}`} style={props.style}>
             {props.children}
@@ -369,6 +387,11 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
 };
 
 export const Col: React.StatelessComponent<IColProps> = (props) => {
+
+    Col.defaultProps = {
+        className: '',
+        style: {}
+    };
 
     return(
         <td className={`column ${styles.col} ${props.className}`} style={props.style}>
@@ -379,18 +402,17 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
 
 export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
 
+    Popover.defaultProps = {
+        className: '',
+        style: {}
+    };
+
     const active = !props.active ? styles.inactive : styles.active;
 
     return(
-        <td className={`${styles.popover} ${active}`} style={props.style}>
-            <table className={styles.table}>
-                <tbody>
-                    <tr>
-                        {props.children}
-                    </tr>
-                </tbody>
-            </table>
-        </td>
+        <div className={`${styles.popover} ${active}`} style={props.style}>
+            {props.children}
+        </div>
     );
 
 };

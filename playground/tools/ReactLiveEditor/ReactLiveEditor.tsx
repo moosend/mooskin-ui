@@ -53,6 +53,7 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
     render(){
 
         const displayEditor = this.state.displayEditor ? 'block' : 'none';
+        const activeEditor = this.state.displayDocs ? '' : styles.active;
         const displayDocs = this.state.displayDocs ? 'block' : 'none';
         const displayDocsLabel = this.state.displayDocs ? 'Hide' : 'Show';
         const zIndex = this.state.displayEditor ? 22 : 'auto';
@@ -77,7 +78,7 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
                     <LiveProvider code={this.props.code} scope={this.props.scope}>
                         <div className={styles.editor} style={{display: displayEditor}}>
                             <div onClick={this.onToggle} className={styles.closeBtn}>X</div>
-                            <LiveEditor style={{height: '100%', width: 700}} />
+                            <LiveEditor style={{height: '100%'}} className={activeEditor} />
                         </div>
                         <LiveError />
                         <LivePreview />

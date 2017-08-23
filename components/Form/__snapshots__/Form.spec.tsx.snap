@@ -17,20 +17,49 @@ exports[`Form renders Form correctly 1`] = `
 `;
 
 exports[`Form renders Form with FormGroup correctly 1`] = `
-<div
-  class="form-component container"
-  style="width:50px;"
+<Form
+  className="myClass"
+  dataLabel="SomeForm"
+  onSubmit={[Function]}
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
 >
-  <form
-    class="form form myClass"
-    name="nodejs"
+  <div
+    className="form-component container"
+    style={
+      Object {
+        "width": "50px",
+      }
+    }
   >
-    <div
-      class="formgroup-component container horizontal"
-      style="width:50px;"
-    />
-  </form>
-</div>
+    <form
+      className="form form myClass"
+      name="nodejs"
+    >
+      <FormGroup
+        className="myClass"
+        horizontal={true}
+        style={
+          Object {
+            "width": "50px",
+          }
+        }
+      >
+        <div
+          className="formgroup-component container horizontal"
+          style={
+            Object {
+              "width": "50px",
+            }
+          }
+        />
+      </FormGroup>
+    </form>
+  </div>
+</Form>
 `;
 
 exports[`Form renders FormGroup correctly 1`] = `

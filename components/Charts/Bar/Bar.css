@@ -1,8 +1,6 @@
 .chart{
     display: flex;
     user-select: none;
-}
-
-.chart canvas{
-    width: 100%;
+    position: relative;
+    width: 99%;
 }

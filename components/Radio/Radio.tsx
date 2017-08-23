@@ -237,6 +237,11 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
 export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
 
+    Radio.defaultProps = {
+        className: '',
+        style: {}
+    };
+
     const generateId = () => {
         return Math.random().toString(36).substr(2, 10);
     };

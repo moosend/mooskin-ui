@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import '../_utils/globals/screens.css';
 
 .checkitem {
     display: flex;
@@ -42,50 +41,4 @@
     width: 40px;
     height: 40px;
     border-radius: 8px;
-}
-
-@media (--deviceSmall){
-    .checkitem{
-        padding: 2.5vw;
-    }
-
-    .content{
-        font-size: 3.3vw
-    }
-
-    .iconStyle{
-        font-size: 5vw;
-    }
-
-    .button{
-        height: 5vw;
-        width: 5vw;
-    }
-
-    .button i{
-        font-size: 3vw;
-    }
-}
-
-@media (--deviceXsmall){
-    .checkitem{
-        padding: 2.5vw;
-    }
-
-    .content{
-        font-size: 3.3vw
-    }
-
-    .iconStyle{
-        font-size: 5vw;
-    }
-
-    .button{
-        height: 5vw;
-        width: 5vw;
-    }
-
-    .button i{
-        font-size: 3vw;
-    }
 }

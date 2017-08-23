@@ -57,9 +57,11 @@ exports[`Table renders correctly 1`] = `
           <TableHeader
             className="buttonHeader"
             dataField="button"
+            style={Object {}}
           >
             <th
               className="table-header buttonHeader header "
+              style={Object {}}
             >
               X
             </th>
@@ -97,10 +99,12 @@ exports[`Table renders correctly 1`] = `
             className="undefined sortHeader"
             dataField="campaign"
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header "
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Campaign
@@ -111,9 +115,11 @@ exports[`Table renders correctly 1`] = `
             className="undefined "
             dataField="mailingList"
             hideSmall={true}
+            style={Object {}}
           >
             <th
               className="table-header undefined  header hide"
+              style={Object {}}
             >
               <div>
                 Mailing List / Segment
@@ -125,10 +131,12 @@ exports[`Table renders correctly 1`] = `
             dataField="status"
             hideSmall={true}
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header hide"
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Status
@@ -140,10 +148,12 @@ exports[`Table renders correctly 1`] = `
             dataField="open"
             hideSmall={true}
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header hide"
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Open %
@@ -155,10 +165,12 @@ exports[`Table renders correctly 1`] = `
             dataField="click"
             hideSmall={true}
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header hide"
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Click
@@ -170,10 +182,12 @@ exports[`Table renders correctly 1`] = `
             dataField="subscribers"
             hideSmall={true}
             onClick={[Function]}
+            style={Object {}}
           >
             <th
               className="table-header undefined sortHeader header hide"
               onClick={[Function]}
+              style={Object {}}
             >
               <div>
                 Subscribers
@@ -185,15 +199,21 @@ exports[`Table renders correctly 1`] = `
       <tbody
         className="body"
       >
-        <Row>
+        <Row
+          className=""
+          style={Object {}}
+        >
           <tr
-            className="row row undefined"
+            className="row row "
+            style={Object {}}
           >
             <Col
               className="buttonCol"
+              style={Object {}}
             >
               <td
                 className="column col buttonCol"
+                style={Object {}}
               >
                 <SmallIconButton
                   className="toggle"
@@ -218,13 +238,124 @@ exports[`Table renders correctly 1`] = `
                     </i>
                   </button>
                 </SmallIconButton>
+                <Popover
+                  active={false}
+                  className=""
+                  style={Object {}}
+                >
+                  <div
+                    className="popover inactive"
+                    style={Object {}}
+                  >
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Delivered
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        31-12-2016 04:39 PM
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Campaign
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Airship ready campaign
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Mailing List / Segment
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Mailing list for me
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Status
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Draft
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Open %
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        93 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Click
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        80 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Subscribers
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        4244
+                      </span>
+                    </div>
+                  </div>
+                </Popover>
               </td>
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -240,9 +371,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -258,9 +391,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -276,9 +411,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -294,9 +431,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -312,9 +451,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -330,9 +471,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -346,190 +489,23 @@ exports[`Table renders correctly 1`] = `
                 </span>
               </td>
             </Col>
-            <Popover
-              active={false}
-            >
-              <td
-                className="popover inactive"
-              >
-                <table
-                  className="table"
-                >
-                  <tbody>
-                    <tr>
-                      <Col
-                        className="buttonCol"
-                      >
-                        <td
-                          className="column col buttonCol"
-                        >
-                          <SmallIconButton
-                            className="toggle"
-                            icon="list"
-                            onClick={[Function]}
-                            style={Object {}}
-                            transparent={true}
-                          >
-                            <button
-                              className="button-icon-component
-                                                     button
-                                                     transparent
-                                                     
-                                                     toggle"
-                              onClick={[Function]}
-                              style={Object {}}
-                            >
-                              <i
-                                className="material-icons icon"
-                              >
-                                list
-                              </i>
-                            </button>
-                          </SmallIconButton>
-                        </td>
-                      </Col>
-                      <Col
-                        className=""
-                      >
-                        <td
-                          className="column col "
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Delivered
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            31-12-2016 04:39 PM
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className=""
-                      >
-                        <td
-                          className="column col "
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Campaign
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            Airship ready campaign
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Mailing List / Segment
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            Mailing list for me
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Status
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            Draft
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Open %
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            93 %
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Click
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            80 %
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Subscribers
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            4244
-                          </span>
-                        </td>
-                      </Col>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </Popover>
           </tr>
         </Row>
-        <Row>
+        <Row
+          className=""
+          style={Object {}}
+        >
           <tr
-            className="row row undefined"
+            className="row row "
+            style={Object {}}
           >
             <Col
               className="buttonCol"
+              style={Object {}}
             >
               <td
                 className="column col buttonCol"
+                style={Object {}}
               >
                 <SmallIconButton
                   className="toggle"
@@ -554,13 +530,124 @@ exports[`Table renders correctly 1`] = `
                     </i>
                   </button>
                 </SmallIconButton>
+                <Popover
+                  active={false}
+                  className=""
+                  style={Object {}}
+                >
+                  <div
+                    className="popover inactive"
+                    style={Object {}}
+                  >
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Delivered
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        17-02-2017 10:51 AM
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Campaign
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Another campaign
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Mailing List / Segment
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Mailing list for me
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Status
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Sent
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Open %
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        60 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Click
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        25 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Subscribers
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        1628
+                      </span>
+                    </div>
+                  </div>
+                </Popover>
               </td>
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -576,9 +663,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -594,9 +683,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -612,9 +703,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -630,9 +723,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -648,9 +743,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -666,9 +763,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -682,190 +781,23 @@ exports[`Table renders correctly 1`] = `
                 </span>
               </td>
             </Col>
-            <Popover
-              active={false}
-            >
-              <td
-                className="popover inactive"
-              >
-                <table
-                  className="table"
-                >
-                  <tbody>
-                    <tr>
-                      <Col
-                        className="buttonCol"
-                      >
-                        <td
-                          className="column col buttonCol"
-                        >
-                          <SmallIconButton
-                            className="toggle"
-                            icon="list"
-                            onClick={[Function]}
-                            style={Object {}}
-                            transparent={true}
-                          >
-                            <button
-                              className="button-icon-component
-                                                     button
-                                                     transparent
-                                                     
-                                                     toggle"
-                              onClick={[Function]}
-                              style={Object {}}
-                            >
-                              <i
-                                className="material-icons icon"
-                              >
-                                list
-                              </i>
-                            </button>
-                          </SmallIconButton>
-                        </td>
-                      </Col>
-                      <Col
-                        className=""
-                      >
-                        <td
-                          className="column col "
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Delivered
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            17-02-2017 10:51 AM
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className=""
-                      >
-                        <td
-                          className="column col "
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Campaign
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            Another campaign
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Mailing List / Segment
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            Mailing list for me
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Status
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            Sent
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Open %
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            60 %
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Click
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            25 %
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Subscribers
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            1628
-                          </span>
-                        </td>
-                      </Col>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </Popover>
           </tr>
         </Row>
-        <Row>
+        <Row
+          className=""
+          style={Object {}}
+        >
           <tr
-            className="row row undefined"
+            className="row row "
+            style={Object {}}
           >
             <Col
               className="buttonCol"
+              style={Object {}}
             >
               <td
                 className="column col buttonCol"
+                style={Object {}}
               >
                 <SmallIconButton
                   className="toggle"
@@ -890,13 +822,124 @@ exports[`Table renders correctly 1`] = `
                     </i>
                   </button>
                 </SmallIconButton>
+                <Popover
+                  active={false}
+                  className=""
+                  style={Object {}}
+                >
+                  <div
+                    className="popover inactive"
+                    style={Object {}}
+                  >
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Delivered
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        13-06-2017 10:59 AM
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Campaign
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        NewsLetters for everybody
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Mailing List / Segment
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Mailing list for me
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Status
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        Sent
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Open %
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        75 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Click
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        50 %
+                      </span>
+                    </div>
+                    <div
+                      className="popoverCol"
+                    >
+                      <span
+                        className="heading"
+                      >
+                        Subscribers
+                      </span>
+                      <span
+                        className="content"
+                      >
+                        2947
+                      </span>
+                    </div>
+                  </div>
+                </Popover>
               </td>
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -912,9 +955,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className=""
+              style={Object {}}
             >
               <td
                 className="column col "
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -930,9 +975,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -948,9 +995,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -966,9 +1015,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -984,9 +1035,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -1002,9 +1055,11 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="hide"
+              style={Object {}}
             >
               <td
                 className="column col hide"
+                style={Object {}}
               >
                 <span
                   className="heading"
@@ -1018,179 +1073,6 @@ exports[`Table renders correctly 1`] = `
                 </span>
               </td>
             </Col>
-            <Popover
-              active={false}
-            >
-              <td
-                className="popover inactive"
-              >
-                <table
-                  className="table"
-                >
-                  <tbody>
-                    <tr>
-                      <Col
-                        className="buttonCol"
-                      >
-                        <td
-                          className="column col buttonCol"
-                        >
-                          <SmallIconButton
-                            className="toggle"
-                            icon="list"
-                            onClick={[Function]}
-                            style={Object {}}
-                            transparent={true}
-                          >
-                            <button
-                              className="button-icon-component
-                                                     button
-                                                     transparent
-                                                     
-                                                     toggle"
-                              onClick={[Function]}
-                              style={Object {}}
-                            >
-                              <i
-                                className="material-icons icon"
-                              >
-                                list
-                              </i>
-                            </button>
-                          </SmallIconButton>
-                        </td>
-                      </Col>
-                      <Col
-                        className=""
-                      >
-                        <td
-                          className="column col "
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Delivered
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            13-06-2017 10:59 AM
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className=""
-                      >
-                        <td
-                          className="column col "
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Campaign
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            NewsLetters for everybody
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Mailing List / Segment
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            Mailing list for me
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Status
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            Sent
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Open %
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            75 %
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Click
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            50 %
-                          </span>
-                        </td>
-                      </Col>
-                      <Col
-                        className="hide"
-                      >
-                        <td
-                          className="column col hide"
-                        >
-                          <span
-                            className="heading"
-                          >
-                            Subscribers
-                          </span>
-                          <span
-                            className="content"
-                          >
-                            2947
-                          </span>
-                        </td>
-                      </Col>
-                    </tr>
-                  </tbody>
-                </table>
-              </td>
-            </Popover>
           </tr>
         </Row>
       </tbody>

@@ -99,9 +99,25 @@ export default class Form extends React.Component<IFormProps, {}>{
                     formElements.push(
                         React.cloneElement(child, {...keyProp, ...buttonProps})
                     );
-                } else {
+                }
+            }
+            if (React.isValidElement<IFormGroupProps>(child)){
+
+                console.log('called');
+
+                if (child.type === FormGroup){
+
+                    const elements = child.props.children && this.formGroupButtons(child.props.children);
+
                     formElements.push(
-                        React.cloneElement(child, keyProp)
+                        <FormGroup
+                            key={index}
+                            horizontal={child.props.horizontal}
+                            style={child.props.style}
+                            className={child.props.className}
+                        >
+                            {elements || child.props.children}
+                        </FormGroup>
                     );
                 }
             }
@@ -109,6 +125,34 @@ export default class Form extends React.Component<IFormProps, {}>{
 
         return formElements;
 
+    }
+
+    formGroupButtons = (group: any) => {
+
+        const elements: any = [];
+
+        const buttonProps: Partial<IButtonProps> = {
+            onClick: this.onSubmit(this.getChildren())
+        };
+
+        if (Array.isArray(group)){
+            group.map((element: any, index: number) => {
+
+                const keyProp: Partial<any & {key: number}> = {
+                    key: index,
+                };
+
+                if (element.type === Button && element.props.type === 'submit'){
+                    elements.push(React.cloneElement(element, {...keyProp, ...buttonProps}));
+                    const buts = React.cloneElement(element, {...keyProp, ...buttonProps});
+                    console.log(buts);
+                } else {
+                    elements.push(React.cloneElement(element, keyProp));
+                }
+            });
+        }
+
+        return elements;
     }
 
     getChildren = () => {
@@ -169,6 +213,11 @@ export default class Form extends React.Component<IFormProps, {}>{
 }
 
 export const FormGroup: React.StatelessComponent<IFormGroupProps> = (props) => {
+
+    FormGroup.defaultProps = {
+        className: '',
+        style: {}
+    };
 
     const alignment = !props.horizontal ? styles.vertical : styles.horizontal;
 

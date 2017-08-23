@@ -215,16 +215,22 @@ exports[`TabbedContent renders TabbedContent vertically with radio styles 1`] = 
   >
     <Content
       active={false}
+      className=""
+      style={Object {}}
     >
       Table
     </Content>
     <Content
       active={true}
+      className=""
+      style={Object {}}
     >
       Some Content
     </Content>
     <Content
       active={false}
+      className=""
+      style={Object {}}
     >
       Blla blla
     </Content>

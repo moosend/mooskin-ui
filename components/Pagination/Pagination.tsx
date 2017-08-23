@@ -182,7 +182,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={item.toString()}
                     item={item}
                     onClick={this.onClick}
-                    className="pagination-normal-btn"
+                    className={`pagination-normal-btn ${styles.itemButton}`}
                 />
             );
         });
