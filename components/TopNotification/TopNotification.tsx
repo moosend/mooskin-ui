@@ -45,7 +45,7 @@ export interface ITopNotificationProps {
 
 export default class TopNotification extends React.Component<ITopNotificationProps, {}>{
 
-    public static defaultProps: Partial<ITopNotificationProps> = {
+    static defaultProps: Partial<ITopNotificationProps> = {
         cancelButton: false,
         cancelButtonLabel: 'Cancel',
         okButton: false,
@@ -54,21 +54,23 @@ export default class TopNotification extends React.Component<ITopNotificationPro
         visible: true,
     };
 
-    public render(){
+    render(){
 
         const {text, visible} = this.props;
 
-        const height = visible ? 80 : 0;
+        const height = visible ? styles.active : '';
 
         const typeClass = this.resolveTypeClass();
 
         return (
-            <div className={`top-notification-component ${styles.container} ${typeClass}`} style={{height}}>
-                <div className={styles.message}>
-                    <div className={styles.iconDiv}/>
-                    <span>{text}</span>
+            <div className={`top-notification-component ${styles.container} ${typeClass} ${height}`}>
+                <div className={styles.content}>
+                    <div className={styles.message}>
+                        <div className={styles.iconDiv}/>
+                        <span className={styles.text}>{text}</span>
+                    </div>
+                    {this.renderButtons()}
                 </div>
-                {this.renderButtons()}
                 <div className={`close-notification ${styles.close}`}>
                     <div onClick={this.onClickCancel}/>
                 </div>
@@ -76,15 +78,15 @@ export default class TopNotification extends React.Component<ITopNotificationPro
         );
     }
 
-    private onClickCancel = () => {
+    onClickCancel = () => {
         this.props.onClickCancel && this.props.onClickCancel();
     }
 
-    private onClickOk = () => {
+    onClickOk = () => {
         this.props.onClickOk && this.props.onClickOk();
     }
 
-    private resolveTypeClass(){
+    resolveTypeClass(){
         if (this.props.type === 'success'){
             return styles.successNotification;
         }else if (this.props.type === 'error'){
@@ -94,12 +96,12 @@ export default class TopNotification extends React.Component<ITopNotificationPro
         }
     }
 
-    private renderButtons = () => {
+    renderButtons = () => {
 
         const {okButton, cancelButton, okButtonLabel, cancelButtonLabel} = this.props;
 
         return okButton || cancelButton ? (
-            <div className={styles.button}>
+            <div className={styles.buttonContainer}>
                 {okButton && <Button onClick={this.onClickOk}>{okButtonLabel}</Button>}
                 {cancelButton && <Button onClick={this.onClickCancel}>{cancelButtonLabel}</Button>}
             </div>

@@ -13,7 +13,7 @@ export {default as TopNotification} from '../TopNotification';
 export {default as SmallIconButton} from '../SmallIconButton';
 export {default as CheckListItem} from '../CheckListItem';
 export {default as RadioGroup, Radio} from '../Radio';
-export {default as CheckboxGroup, CheckBox} from '../Checkbox';
+export {default as CheckboxGroup, Checkbox} from '../Checkbox';
 export {Bar, Doughnut, Pie, Line} from '../Charts';
 export {default as Grid, Row, Col} from '../Grid';
 
@@ -22,8 +22,12 @@ export {default as RadioAccordion, RadioAccordionContent} from '../RadioAccordio
 
 export {default as Form, FormGroup} from '../Form';
 
-export {default as Table} from '../Table';
+export {default as Table, TableHeader} from '../Table';
 export {default as Pagination} from '../Pagination';
 export {default as DatePicker} from '../DatePicker';
-export {default as SideBar, Item, Secondary} from '../SideBar';
-export {default as BreadcrumbsGroup, Breadcrumb} from '../Breadcrumbs';
+
+export {default as SideBar, Item} from '../SideBar';
+
+export {default as Steps, Step} from '../Steps';
+
+export {default as StatsBox, StatsTitle, StatsNumber, StatsResult} from '../StatsBox';

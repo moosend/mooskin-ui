@@ -98,6 +98,7 @@ custom height and width
 * `borderColor` - bar border color
 * `barPercentage` - bar width in relation to the chart category (0 to 1)
 * `maintainAspectRatio` - maintains aspect ratio
+* `horizontal` - horizontal view of the chart
 
 Only `data` is required, other attributes are optional and mostly for styling.
 

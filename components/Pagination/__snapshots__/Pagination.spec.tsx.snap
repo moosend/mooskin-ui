@@ -9,21 +9,21 @@ exports[`Pagination renders correctly 1`] = `
   >
     <PaginationButton
       active={true}
-      className="pagination-normal-btn"
+      className="pagination-normal-btn itemButton"
       item={1}
       label="1"
       onClick={[Function]}
     />
     <PaginationButton
       active={false}
-      className="pagination-normal-btn"
+      className="pagination-normal-btn itemButton"
       item={2}
       label="2"
       onClick={[Function]}
     />
     <PaginationButton
       active={false}
-      className="pagination-normal-btn"
+      className="pagination-normal-btn itemButton"
       item={3}
       label="3"
       onClick={[Function]}

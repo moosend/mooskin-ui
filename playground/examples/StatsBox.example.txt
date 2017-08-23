@@ -1,0 +1,31 @@
+class StatsBoxExample extends React.Component {
+    render(){
+
+        const styles = {
+            marginRight: 10
+        };
+
+        return(
+            <div>
+                <StatsBox style={styles}>
+                    <StatsTitle>Unique Opens</StatsTitle>
+                    <StatsNumber>100%</StatsNumber>
+                    <StatsResult>1 unique</StatsResult>
+                    <StatsResult>5 total</StatsResult>
+                </StatsBox>
+                <StatsBox style={styles}>
+                    <StatsTitle>Link Clicks</StatsTitle>
+                    <StatsNumber>100%</StatsNumber>
+                    <StatsResult>1 unique</StatsResult>
+                    <StatsResult>5 total</StatsResult>
+                </StatsBox>
+                <StatsBox style={styles}>
+                    <StatsTitle>Unsubscribed</StatsTitle>
+                    <StatsNumber>100%</StatsNumber>
+                    <StatsResult>1 unique</StatsResult>
+                    <StatsResult>5 total</StatsResult>
+                </StatsBox>
+            </div>
+        );
+    }
+}

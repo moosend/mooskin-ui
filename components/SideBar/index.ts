@@ -1,7 +1,6 @@
-import SideBar, {Item, Secondary} from './SideBar';
+import SideBar, {Item} from './SideBar';
 
 SideBar.Item = Item;
-SideBar.Secondary = Secondary;
 
 export default SideBar;
-export {Item, Secondary};
+export {Item};

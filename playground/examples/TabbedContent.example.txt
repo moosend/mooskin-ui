@@ -1,0 +1,155 @@
+class TabbedContentExample extends React.Component {
+
+    constructor(){
+        super();
+
+        this.onHeaderClick = this.onHeaderClick.bind(this);
+    }
+
+    render(){
+
+        const style = {
+            display: 'inline-block',
+            fontSize: 24,
+            height: 500,
+            paddingTop: 200,
+            textAlign: 'center',
+            width: '100%',
+        };
+
+        const table1 = [
+            {
+                name: 'Geralt of Rivia',
+                weapon: 'Aerondight',
+                abilities: 'Sword fighting, Quen Signs',
+                profession: 'Witcher',
+                allegience: 'School of the Wolf'
+            },
+            {
+                name: 'John Shepard',
+                weapon: 'Vindicator',
+                abilities: 'Weapons, Biotics',
+                profession: 'Commander',
+                allegience: 'Alliance, Citadel'
+            }
+        ];
+
+        const table2 = [
+            {
+                name: 'CD Projekt',
+                founded: 1994,
+                hq: 'Warsaw, Poland',
+                employees: 600
+            },
+            {
+                name: 'BioWare',
+                founded: 1995,
+                hq: 'Edmonton, Canada',
+                employees: 800
+            }
+        ]
+
+        return (
+            <Grid>
+                <Row>
+                    <Col lg={12}>
+                        <H2>Normal Tabs with right align</H2>
+                        <TabbedContent alignHeaders="right">
+                            <Tab>
+                                <Header onClick={this.onHeaderClick}>
+                                    Title 1
+                                    <img width={40} src="https://camo.githubusercontent.com/00dfbc4648e8bf8f7903c85b8c6e2eaf8afd1320/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67" alt=""/>
+                                </Header>
+                                <Content>
+                                    <Table data={table1}>
+                                        <TableHeader dataField="name" >Name</TableHeader>
+                                        <TableHeader dataField="profession" hideSmall >Profession</TableHeader>
+                                        <TableHeader dataField="weapon" hideSmall >Weapon</TableHeader>
+                                        <TableHeader dataField="abilities" >Abilities</TableHeader>
+                                        <TableHeader dataField="allegience" hideSmall >Allegience</TableHeader>
+                                    </Table>
+                                </Content>
+                            </Tab>
+                            <Tab>
+                                <Header>Title 2</Header>
+                                <Content>
+                                    <Table data={table2}>
+                                        <TableHeader dataField="name" >Name</TableHeader>
+                                        <TableHeader dataField="founded" hideSmall >Founded</TableHeader>
+                                        <TableHeader dataField="hq" hideSmall >Headquarters</TableHeader>
+                                        <TableHeader dataField="employees" >Employees</TableHeader>
+                                    </Table>
+                                </Content>
+                            </Tab>
+                        </TabbedContent>
+                        <H2>Vertical Tabs</H2>
+                        <TabbedContent vertical>
+                            <Tab>
+                                <Header>Title 1</Header>
+                                <Content>
+                                    <div style={{...style, backgroundColor: '#5CCDDF'}}>
+                                        Content 1
+                                    </div>
+                                </Content>
+                            </Tab>
+                            <Tab active>
+                                <Header>Title 2</Header>
+                                <Content>
+                                    <div style={{...style, backgroundColor: '#F48770'}}>
+                                        Content 2
+                                    </div>
+                                </Content>
+                            </Tab>
+                            <Tab>
+                                <Header>Title 3</Header>
+                                <Content>
+                                    <div style={{...style, backgroundColor: '#F2C14A'}}>
+                                        Content 3
+                                    </div>
+                                </Content>
+                            </Tab>
+                        </TabbedContent>
+                        <H2>Radio Tabs</H2>
+                        <TabbedContent vertical type="radio">
+                            <Tab>
+                                <Header>Click here!</Header>
+                                <Content>
+                                    Nice Content eh?
+                                </Content>
+                            </Tab>
+                            <Tab>
+                                <Header>I'm a radio too</Header>
+                                <Content style={{color: '#5CCDDF', fontStyle: 'italic'}}>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                </Content>
+                            </Tab>
+                            <Tab>
+                                <Header>Let's try a heading</Header>
+                                <Content style={{color: '#5CCDDF', fontStyle: 'italic'}}>
+                                    <H2 style={{margin: '0px 0px 10px 0px'}}>
+                                        H2 heading incoming!
+                                    </H2>
+                                    ...and some text of course!
+                                </Content>
+                            </Tab>
+                            <Tab>
+                                <Header>Mix of elements</Header>
+                                <Content style={{color: '#5CCDDF', fontStyle: 'italic'}}>
+                                    <H2 style={{margin: '0px 0px 10px 10px'}}>
+                                        H2 heading incoming!
+                                    </H2>
+                                    <Input placeholder="Yoohoo tabs!"/>
+                                    <Button>Ah..Tabs...</Button>
+                                </Content>
+                            </Tab>
+                        </TabbedContent>
+                    </Col>
+                </Row>
+            </Grid>
+        );
+    }
+
+    onHeaderClick(){
+        console.log('Header Clicked!');
+    }
+}

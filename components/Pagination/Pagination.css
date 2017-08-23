@@ -44,18 +44,18 @@
   pointer-events: none;
 }
 
+@media (--xSmall){
 
-@media (--deviceSmall){
-    .paginationButton{
-        font-size: 3vw;
-        padding: 4vw;
+    .itemButton{
+        display: none;
     }
-    
-}
 
-@media (--deviceXsmall){
-    .paginationButton{
-        font-size: 3vw;
-        padding: 4vw;
+    .disabledButton{
+        display: none;
     }
+
+    .activeButton{
+        display: inherit;
+    }
+
 }

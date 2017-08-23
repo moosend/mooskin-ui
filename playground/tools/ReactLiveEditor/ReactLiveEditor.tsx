@@ -28,9 +28,9 @@ export interface IReactLiveEditorState{
 
 export default class ReactLiveEditor extends React.Component<IReactLiveEditorProps, IReactLiveEditorState> {
 
-    public state: IReactLiveEditorState;
-    public domParser: DOMParser;
-    public converter: showdown.Converter;
+    state: IReactLiveEditorState;
+    domParser: DOMParser;
+    converter: showdown.Converter;
 
     constructor(props: IReactLiveEditorProps){
         super(props);
@@ -50,9 +50,10 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         };
     }
 
-    public render(){
+    render(){
 
         const displayEditor = this.state.displayEditor ? 'block' : 'none';
+        const activeEditor = this.state.displayDocs ? '' : styles.active;
         const displayDocs = this.state.displayDocs ? 'block' : 'none';
         const displayDocsLabel = this.state.displayDocs ? 'Hide' : 'Show';
         const zIndex = this.state.displayEditor ? 22 : 'auto';
@@ -77,9 +78,9 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
                     <LiveProvider code={this.props.code} scope={this.props.scope}>
                         <div className={styles.editor} style={{display: displayEditor}}>
                             <div onClick={this.onToggle} className={styles.closeBtn}>X</div>
-                            <LiveEditor style={{height: '100%', width: 700}} />
+                            <LiveEditor style={{height: '100%'}} className={activeEditor} />
                         </div>
-                         <LiveError />
+                        <LiveError />
                         <LivePreview />
                     </LiveProvider>
                     <div style={{display: this.props.doc && 'block' || 'none'}}>
@@ -98,16 +99,16 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         );
     }
 
-    public onToggle = () => {
+    onToggle = () => {
         this.setState({displayEditor: !this.state.displayEditor});
     }
 
-    public onToggleDocs = () => {
+    onToggleDocs = () => {
         this.setState({displayDocs: !this.state.displayDocs});
     }
 
     // method to extract only the docs we need from the readme
-    private getDocs = (wholeDocs: string) => {
+    getDocs = (wholeDocs: string) => {
 
         const html = this.domParser.parseFromString(this.converter.makeHtml(wholeDocs), 'text/html');
 
@@ -122,3 +123,21 @@ export default class ReactLiveEditor extends React.Component<IReactLiveEditorPro
         return doc || '';
     }
 }
+
+/**
+ *
+ * @param componentName name of the component as a string
+ * @param components array of React component classes to be passed as scope dependencies to the react live editor
+ */
+export const renderEditableExample =
+    (componentName: string, components: {[key: string]: any}) => {
+
+        return (
+            <ReactLiveEditor
+                scope={{React, ...components}}
+                code={require(`../../examples/${componentName}.example.txt`)}
+                title={`${componentName} Example`}
+                doc={require(`../../../components/${componentName}/README.md`)}
+            />
+        );
+    };

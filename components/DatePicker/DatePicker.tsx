@@ -48,7 +48,7 @@ export interface IDateState{
 
 export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
-    public static defaultProps = {
+    static defaultProps = {
         className: '',
         format: 'DD MMM YYYY, H:mm',
         style: {}
@@ -63,7 +63,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         };
     }
 
-    public render(){
+    render(){
 
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
         const labelStyles = !this.props.label ? {display: 'none'} : {};
@@ -98,14 +98,14 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         );
     }
 
-    private onChange = (date: any) => {
+    onChange = (date: any) => {
         this.setState({date});
         // !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value: this.state.date.format('x'), dataLabel: this.props.dataLabel});
     }
 
-    private toggle = () => {
+    toggle = () => {
         this.setState({displayPicker: !this.state.displayPicker});
     }
 

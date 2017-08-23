@@ -93,16 +93,16 @@ export interface ITabbedContentState {
 
 export default class TabbedContent extends React.Component<ITabbedContentProps, ITabbedContentState>{
 
-    public static defaultProps = {
+    static defaultProps = {
         activeTab: 0,
         className: '',
         style: {},
         type: 'normal'
     };
 
-    public static Tab: React.StatelessComponent<ITabProps>;
-    public static Header: React.StatelessComponent<IHeaderProps>;
-    public static Content: React.StatelessComponent<IContentProps>;
+    static Tab: React.StatelessComponent<ITabProps>;
+    static Header: React.StatelessComponent<IHeaderProps>;
+    static Content: React.StatelessComponent<IContentProps>;
 
     constructor(props: ITabbedContentProps){
         super(props);
@@ -112,7 +112,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         };
     }
 
-    public render() {
+    render() {
 
         const style = this.getClasses();
 
@@ -137,7 +137,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         );
     }
 
-    private riteOfRakshir = () => {
+    riteOfRakshir = () => {
 
         const headers: Array<React.ReactElement<IHeaderProps>> = [];
         const contents: Array<React.ReactElement<ITabProps>> = [];
@@ -157,7 +157,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         return {headers, contents};
     }
 
-    private assignPropsToChildren = (children: any, index: number) => {
+    assignPropsToChildren = (children: any, index: number) => {
 
         const headerProps: Partial<IHeaderProps & {key: number}> = {
             active: this.state.activeTab === index,
@@ -179,14 +179,14 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         return {header, content};
     }
 
-    private onClickHeader = (tabIndex: number, header: React.ReactElement<IHeaderProps>) => {
+    onClickHeader = (tabIndex: number, header: React.ReactElement<IHeaderProps>) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({activeTab: tabIndex});
             header.props.onClick && header.props.onClick(e);
         };
     }
 
-    private getActiveTab(): number {
+    getActiveTab(): number {
         let activeTab = 0;
         const childrenArray = React.Children.toArray(this.props.children);
 
@@ -199,7 +199,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         return activeTab;
     }
 
-    private getClasses = () => {
+    getClasses = () => {
         switch (this.props.type) {
             case 'normal':
 
@@ -215,7 +215,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         }
     }
 
-    private getAlign = (style: any) => {
+    getAlign = (style: any) => {
         if (this.props.alignHeaders === 'right' || this.props.alignHeaders === 'bottom'){
             return !this.props.vertical ? style.headingHRight : style.headingVRight;
         } else if (this.props.alignHeaders === 'left' || this.props.alignHeaders === 'top'){
@@ -227,6 +227,12 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
 }
 
 export const Tab: React.StatelessComponent<ITabProps> = (props) => {
+
+    Tab.defaultProps = {
+        className: '',
+        style: {}
+    };
+
     return(
         <div className={`tab-component ${props.className}`} style={props.style}>
             {props.children}
@@ -235,6 +241,11 @@ export const Tab: React.StatelessComponent<ITabProps> = (props) => {
 };
 
 export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
+
+    Header.defaultProps = {
+        className: '',
+        style: {}
+    };
 
     const getClasses = () => {
         switch (props.type) {
@@ -279,6 +290,11 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 };
 
 export const Content: React.StatelessComponent<IContentProps> = (props) => {
+
+    Content.defaultProps = {
+        className: '',
+        style: {}
+    };
 
     const displayClass = !props.active ? normal.invisible : normal.visible;
 

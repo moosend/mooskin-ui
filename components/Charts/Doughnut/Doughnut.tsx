@@ -8,7 +8,7 @@ import {IDoughnutProps} from '../props';
 
 class Doughnut extends React.Component<IDoughnutProps, {}>{
 
-    public static defaultProps = {
+    static defaultProps = {
         borderWidth: 0,
         boxWidth: 30,
         doughnutSpace: 50,
@@ -17,7 +17,7 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
         titleStyle: 'bold'
     };
 
-    public render(){
+    render(){
 
         const {
             id,

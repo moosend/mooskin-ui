@@ -5,7 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var distFolder = 'playground-dist';
-var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: distFolder+"/style.css", allChunks: true});
+var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: "style.css", allChunks: true});
 
 
 config.devServer = {
@@ -16,27 +16,29 @@ config.devServer = {
 config.entry = './playground/playground.tsx';
 
 config.output = {
-    filename: './'+distFolder+'/playground.js'
+    path: __dirname + '/'+distFolder,
+    publicPath: "",
+    filename: 'playground.js'
 };
 
 config.plugins.push(
-    extractCSS,
-    // new HtmlWebpackPlugin({
-    //     inject: false,
-    //     template: './playground/index.html',
-    //     filename: distFolder+'/index.html',
-    //     favicon: './playground/favicon.png'
-    // }),
-    new CopyWebpackPlugin([
-       {
-           from: './playground/favicon.png',
-           to: './'+distFolder
-       }
-    ])
+    new HtmlWebpackPlugin({
+        template: './playground/index.html',
+        favicon: './playground/favicon.ico'
+    }),
+    extractCSS
 );
 
 
 config.module.rules.push(
+    {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [ 
+            'babel-loader', 
+            'ts-loader'
+        ]
+    },
     {
         test: /\.txt$|\.md$/,
         loader: "raw-loader"

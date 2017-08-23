@@ -124,18 +124,6 @@
     width: 40px;
 }
 
-@media (--deviceSmall){
-
-    .heading{
-        height: 10vw;
-    }
-
-    .heading span{
-        font-size: 4vw;
-    }
-
-}
-
 @media (--xSmall){
     .containerV{flex-direction: column}
 
@@ -144,6 +132,14 @@
         border-bottom:10px solid #efefef;
         border-right: none;
     }
+
+    /* .headerAlign{
+        flex-grow: 1;
+    }
+
+    .header{
+        flex: 1;
+    } */
 
 }
 /* 
@@ -156,35 +152,3 @@
         border-right: none;
     }
 } */
-
-@media (--deviceXsmall){
-
-    .heading{
-        font-size: 3.5vw;
-    }
-
-    .contentH {
-        font-size: 3vw;
-    }
-
-    .contentV {
-        font-size: 3vw;
-    }
-
-}
-
-@media (--deviceSmall){
-
-    .heading{
-        font-size: 3.5vw;
-    }
-
-    .contentH {
-        font-size: 3vw;
-    }
-
-    .contentV {
-        font-size: 3vw;
-    }
-
-}

@@ -47,7 +47,7 @@ export interface IPaginationButtonProps {
     onClick: (item: number) => (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-enum RendereableItemTypes {
+export enum RendereableItemTypes {
     right,
     left,
     current,
@@ -56,7 +56,7 @@ enum RendereableItemTypes {
 
 export default class Pagination extends React.Component<IPaginationProps, {}>{
 
-    public static defaultProps: Partial<IPaginationProps> = {
+    static defaultProps: Partial<IPaginationProps> = {
         currentItem: 1,
         firstBtn: false,
         lastBtn: false,
@@ -65,7 +65,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
         prevBtn: false,
     };
 
-    public render() {
+    render() {
 
         const {className, style, id} = this.props;
 
@@ -82,13 +82,13 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
         );
     }
 
-    private onClick = (item: number) => {
+    onClick = (item: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onClick(item);
         };
     }
 
-    private renderAllButtons(){
+    renderAllButtons(){
         const {currentItem, items, firstBtn, lastBtn, nextBtn, prevBtn} = this.props;
 
         // render back and prev buttons as well as ellipsis as needed
@@ -165,7 +165,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
         ];
     }
 
-    private renderNormalButtons(){
+    renderNormalButtons(){
 
         const buttonCounts: [number, number] = this.getLeftRightButtonCounts();
 
@@ -182,32 +182,31 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={item.toString()}
                     item={item}
                     onClick={this.onClick}
-                    className="pagination-normal-btn"
+                    className={`pagination-normal-btn ${styles.itemButton}`}
                 />
             );
         });
     }
 
-    // returns a function here because we do not want to do the maxButtons calculations more than once
-    private getItemType(item: number, leftButtonsCount: number, rightButtonsCount: number){
+    getItemType(item: number, leftButtonsCount: number, rightButtonsCount: number){
 
-            const {currentItem} = this.props;
+        const {currentItem} = this.props;
 
-            let itemType: RendereableItemTypes = RendereableItemTypes.none;
+        let itemType: RendereableItemTypes = RendereableItemTypes.none;
 
-            // using some minor math with button counts derived from maxButtons check if item should be rendered
-            if (currentItem && item < currentItem && item + leftButtonsCount >= currentItem){
-                itemType = RendereableItemTypes.left;
-            }else if (currentItem && item > currentItem && item - rightButtonsCount <= currentItem){
-                itemType = RendereableItemTypes.right;
-            }else if (currentItem && item === currentItem){
-                itemType = RendereableItemTypes.current;
-            }
+        // using some minor math with button counts derived from maxButtons check if item should be rendered
+        if (currentItem && item < currentItem && item + leftButtonsCount >= currentItem){
+            itemType = RendereableItemTypes.left;
+        }else if (currentItem && item > currentItem && item - rightButtonsCount <= currentItem){
+            itemType = RendereableItemTypes.right;
+        }else if (currentItem && item === currentItem){
+            itemType = RendereableItemTypes.current;
+        }
 
-            return itemType;
+        return itemType;
     }
 
-    private getLeftRightButtonCounts(): [number, number]{
+    getLeftRightButtonCounts(): [number, number]{
 
         const {maxButtons} = this.props;
 
@@ -223,13 +222,13 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
         return [leftButtonsCount, rightButtonsCount];
     }
 
-    private needsLeftEllipsis(){
+    needsLeftEllipsis(){
         const {currentItem} = this.props;
         const leftButtonCount = this.getLeftRightButtonCounts()[0];
         return currentItem && currentItem - leftButtonCount > 1;
     }
 
-    private needsRightEllipsis(){
+    needsRightEllipsis(){
         const {currentItem, items} = this.props;
         const rightButtonCount = this.getLeftRightButtonCounts()[1];
         return currentItem && currentItem + rightButtonCount < items;

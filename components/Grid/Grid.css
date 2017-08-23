@@ -3,22 +3,24 @@
 .grid {
     width : 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .grid::after, .row::after{
     clear: both;
 }
 
-[class*='col-']{
-    padding: 5px;
-}
-
 .row{
     display: flex;
     flex-flow: row wrap;
+    box-sizing: border-box;
 }
 
-.col {
+.col{
+    box-sizing: border-box;
+}
+
+.default {
     flex: 1;
 }
 

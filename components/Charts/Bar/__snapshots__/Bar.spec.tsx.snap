@@ -47,7 +47,6 @@ exports[`Bar Chart renders correctly 1`] = `
           "position": "top",
         },
         "maintainAspectRatio": true,
-        "responsive": true,
         "scales": Object {
           "xAxes": Array [
             Object {
@@ -74,7 +73,7 @@ exports[`Bar Chart renders correctly 1`] = `
           "fontFamily": undefined,
           "fontSize": 15,
           "fontStyle": "bold",
-          "position": "bottom",
+          "position": "top",
           "text": "Title",
         },
       }

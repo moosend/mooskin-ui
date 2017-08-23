@@ -100,6 +100,9 @@ export interface IGridProps extends IChartProps{
 
 export interface IBarProps extends IGridProps{
 
+    /** horizontal bar chart */
+    horizontal?: boolean;
+
     /** chart label */
     label?: string;
 

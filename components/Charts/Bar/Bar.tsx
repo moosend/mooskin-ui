@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Bar} from 'react-chartjs-2';
+import {Bar, HorizontalBar} from 'react-chartjs-2';
 
 import styles from './Bar.css';
 
@@ -8,7 +8,7 @@ import {IBarProps} from '../props';
 
 class BarChart extends React.Component<IBarProps, {}>{
 
-    public static defaultProps = {
+    static defaultProps = {
         barPercentage: 0.6,
         borderWidth: 0,
         boxWidth: 0,
@@ -16,12 +16,12 @@ class BarChart extends React.Component<IBarProps, {}>{
         legendStyle: 'italic',
         minValue: 0,
         noLegend: true,
-        titlePos: 'bottom',
+        titlePos: 'top',
         titleSize: 15,
         titleStyle: 'bold'
     };
 
-    public render() {
+    render() {
 
         const {
             id,
@@ -47,7 +47,8 @@ class BarChart extends React.Component<IBarProps, {}>{
             minValue,
             borderWidth,
             borderColor,
-            barPercentage
+            barPercentage,
+            horizontal
         } = this.props;
 
         const position = legendPos;
@@ -84,7 +85,6 @@ class BarChart extends React.Component<IBarProps, {}>{
         const options = {
             legend,
             maintainAspectRatio,
-            responsive: true,
             scales,
             title: chartTitle
         };
@@ -102,19 +102,32 @@ class BarChart extends React.Component<IBarProps, {}>{
             labels: chartData.labels
         };
 
+        const chart = !horizontal ?
+        (
+            <Bar
+                data={data}
+                width={width || size}
+                height={height || size}
+                options={options}
+            />
+        ) :
+        (
+            <HorizontalBar
+                data={data}
+                width={width || size}
+                height={height || size}
+                options={options}
+            />
+        );
+
         return(
             <div id={id} className={styles.chart}>
-                <Bar
-                    data={data}
-                    width={width || size}
-                    height={height || size}
-                    options={options}
-                />
+                {chart}
             </div>
         );
     }
 
-    private getBarWidth = (barPercentage: number) => {
+    getBarWidth = (barPercentage: number) => {
         if (barPercentage){
             if (barPercentage < 0.1){
             return 0.1;

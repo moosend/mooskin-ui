@@ -54,37 +54,3 @@
 .icon {
     font-size: 21px;
 }
-
-@media (--deviceSmall){
-    .normalButton{
-        height: 6vw;
-        width: 6vw;
-        padding: 0px;
-    }
-
-    .icon {
-        font-size: 4.5vw;
-    }
-
-    .transparent{
-        width: 6vw;
-        height: 6vw;
-    }
-}
-
-@media (--deviceXsmall){
-    .normalButton{
-        height: 6vw;
-        width: 6vw;
-        padding: 0px;
-    }
-
-    .icon {
-        font-size: 4.5vw;
-    }
-
-    .transparent{
-        width: 6vw;
-        height: 6vw;
-    }
-}
