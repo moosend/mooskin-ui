@@ -36,12 +36,12 @@ Playground
 |   ├── Button.example.txt                 // class where Button component is used
 |   ├── Input.example.txt
 |   └── Radio.example.txt
-├── App.tsx                                // Import the example in the App and you're good to go
+├── App.tsx                              
 ├── index.html
 └── playground.tsx
 ```
 
-Let's take the Button component for example. If we want to display the component to the Playground using the ReactLiveEditor, first create a .txt file inside the `examples` folder. In this file, create the react class that you want to display in ES2015, pls do not use imports or exports here as it is just a txt file that our Live Editor component needs to render the component, the dependencies that you would otherwise import you need to provide in App.tsx (see other examples). Also you can look at how the other components have their examples. We're done here.
+Let's take the Button component for example. If we want to display the component to the Playground using the ReactLiveEditor, first create a Button.example.txt file inside the `examples` folder, example file must be named this way in order to work correctly ( {componentName}.example.txt ). In this file, create the react class that you want to display in ES2015, pls do not use imports or exports here as it is just a txt file that our Live Editor component needs to render the component, the dependencies that you would otherwise import you need to import in App.tsx, then within a `Row` or `Col` within the `Grid` call the `renderEditableExample` function and pass the component name and component import used within the example, in the case of Button component `renderEditableExample('Button', {Button})`. Also you can look at how the other components have their examples. We're done here.
 
 The component should now appear on the Playground, with an `Edit Code` above it.
 
