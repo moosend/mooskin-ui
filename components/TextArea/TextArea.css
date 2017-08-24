@@ -72,8 +72,8 @@ textarea::-webkit-scrollbar-thumb:vertical {
 
  .toolbar{
     position: absolute;
-    z-index: 1;
-    top: -70px;
+    z-index: 10;
+    top: -55px;
 } 
 
 .areaContainer .description{
