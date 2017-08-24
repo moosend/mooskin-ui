@@ -117,6 +117,7 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
                 <div
                     id={this.props.id}
                     style={{position: 'relative'}}
+                    className={styles.editorContainer}
                 >
                     <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                     <Editor

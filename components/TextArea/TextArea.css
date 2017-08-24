@@ -83,12 +83,32 @@ textarea::-webkit-scrollbar-thumb:vertical {
     margin-left: 3px;
 }
 
+.editorContainer{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+ 
+/* .editorContainer .rdw-colorpicker-modal{
+    background: red;
+} */
+
+/* .toolbar .rdw-editor-wrapper .rdw-editor-toolbar .rdw-colorpicker-wrapper .rdw-colorpicker-modal{ 
+    background: red;
+} */
+
 :global(.rdw-colorpicker-modal){
     width: 300px;
-    height: 200px;
+    height: 160px;
 }
 
-:global(.rdw-link-modal){
+:global(.rdw-colorpicker-modal-options){
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.editorContainer .rdw-link-modal{
     height: 220px;
 }
 
@@ -102,5 +122,35 @@ textarea::-webkit-scrollbar-thumb:vertical {
         flex-basis: 10px;
         padding-top: 0px;
         margin-left: 3px;
+    }
+
+    :global(.rdw-colorpicker-modal){
+        position: fixed;
+        top: 25%;
+        left: 15%;
+    }
+
+    :global(.rdw-link-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    :global(.rdw-embedded-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    :global(.rdw-emoji-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    :global(.rdw-image-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
     }
 }
