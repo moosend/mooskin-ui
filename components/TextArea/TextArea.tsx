@@ -78,6 +78,7 @@ export interface ITextAreaProps {
 export interface ITextAreaState{
 
     editorState: EditorState;
+    display: boolean;
 }
 
 class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
@@ -93,6 +94,7 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
         super(props);
 
         this.state = {
+            display: false,
             editorState: this.props.richValue || EditorState.createEmpty()
         };
     }
@@ -110,17 +112,23 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
         this.props.onEditorChange({value: this.state.editorState, dataLabel: this.props.dataLabel});
     }
 
+    toggle = () => {
+        this.setState({display: !this.state.display});
+    }
+
     getComponent = () => {
         if (this.props.richEditor){
             const display = this.props.label ? {display: 'block'} : {display: 'none'};
+            const toolbarDisplay = this.state.display ? 'flex' : 'none';
             return (
-                <div id={this.props.id}>
+                <div id={this.props.id} onBlur={this.toggle} onFocus={this.toggle}>
                     <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                     <Editor
                         editorClassName={styles.textarea}
                         editorState={this.state.editorState}
                         onEditorStateChange={this.onEditorChange}
                         editorStyle={{maxWidth: '100%'}}
+                        toolbarStyle={{display: toolbarDisplay}}
                     />
                 </div>
             );
