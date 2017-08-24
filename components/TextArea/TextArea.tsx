@@ -55,7 +55,8 @@ export interface ITextAreaProps {
     /** wether the text area should be a rich text editor */
     richEditor?: boolean;
 
-    richValue?: EditorState; 
+    /** rich editor value */
+    richValue?: EditorState;
 
     /** override textarea styles */
     style?: React.CSSProperties;
@@ -93,7 +94,7 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
 
         this.state = {
             editorState: this.props.richValue || EditorState.createEmpty()
-        }
+        };
     }
 
     render(){
@@ -125,7 +126,7 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
             );
         } else {
             return (
-                <TextAreaComponent 
+                <TextAreaComponent
                     id={this.props.id}
                     disabled = {this.props.disabled}
                     required = {this.props.required}
@@ -145,7 +146,7 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
                     labelWidth={this.props.labelWidth}
                     value={this.props.value}
                 />
-            )
+            );
         }
     }
 
@@ -157,11 +158,11 @@ export const TextAreaComponent: React.StatelessComponent<ITextAreaProps> = (prop
         !props.disabled &&
         props.onChange &&
         props.onChange(e, {value: e.target.value, dataLabel: props.dataLabel});
-    }
+    };
 
     const generateId = () => {
         return Date.now().toString();
-    }
+    };
 
     const id = generateId();
 
@@ -198,6 +199,6 @@ export const TextAreaComponent: React.StatelessComponent<ITextAreaProps> = (prop
             </div>
         </div>
     );
-}
+};
 
 export default TextArea;
