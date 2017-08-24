@@ -70,6 +70,12 @@ textarea::-webkit-scrollbar-thumb:vertical {
     font-size: .92857142857rem;
 }
 
+ .toolbar{
+    position: absolute;
+    z-index: 1;
+    top: -70px;
+} 
+
 .areaContainer .description{
     display: block;
     color: #b3b3b3;
