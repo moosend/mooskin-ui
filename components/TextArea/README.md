@@ -63,6 +63,39 @@ In this case on each TextArea change, the value will be console logged.
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
+### Rich text editor mode
+
+To enable the Rich editor mode of the TextArea component simply pass the `richEditor` prop to the TextArea:
+
+```
+<TextArea richEditor>
+```
+
+Rich editor value consists of `EditorState` object from `immutable` library. So an object of that kind must be passed as a value, and this kind of object will be passed as a callback value from the component itself. It also uses another callback function which is `onEditorChange`. Lets take a usage within a Form for example:
+
+```
+import { EditorState } from 'draft-js';              // this import is important for the rich text editor
+Import {Form, FormGroup, TextArea} from 'mooskin'
+
+this.state = {
+    editorState: EditorState.reateEmpty()            // or createWithContent()
+}
+
+<Form>
+    <FormGroup>
+        <TextArea
+            richEditor
+            richValue={this.state.editorState}
+            onEditorChange={this.onEditorChange}
+        />
+    </FormGroup>
+</Form>
+
+onEditorChange(data) {
+    this.setState({editorState: data.value})
+}
+```
+
 <div class="playground-doc">
 
 ## Supported attributes
@@ -83,10 +116,14 @@ This can be used in various situations and combinations, for an enhanced develop
 * `dataLabel` - label what kind of data 
 * `style` - textarea field style
 * `onChange` - callback to be triggered on textarea change
+* `richEditor` - rich editor mode for the textArea
+* `richValue` - value of the TextArea (only for Editor mode)
+* `onEditorChange` - change callback for the TextArea (only for Editor mode)
 
 </div>
 
-Allthough these attributes are supported, all of them are optional.
+Allthough these attributes are supported, all of them are optional. 
+NOTE! While in rich editor mode only `richValue` and `onEditorChange` props will take effect, and vice versa.
 
 #### For more
 
