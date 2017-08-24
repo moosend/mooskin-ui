@@ -51,8 +51,8 @@ declare module 'input-moment' {
 
 declare module 'react-draft-wysiwyg' {
   const content: any;
-  const Editor:any;
-  export {Editor};
+  const Editor: any;
+  export { Editor };
   export default content;
 }
 
