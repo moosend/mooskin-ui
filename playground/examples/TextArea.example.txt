@@ -11,6 +11,8 @@ class TextAreaExample extends React.Component {
                 <TextArea onChange={this.onChange} value="with value and custom rows/cols" label="Label:" rows={7} cols={35}/>
                 <hr/>
                 <TextArea onChange={this.onChange} disabled value="disabled" description="This text area is disabled"/>
+                <hr/>
+                <TextArea richEditor />
             </div>
         );
     }

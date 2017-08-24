@@ -5,7 +5,6 @@ class FormExample extends React.Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.setValue = this.setValue.bind(this);
-        this.setValue = this.setValue.bind(this);
         this.getDate = this.getDate.bind(this);
         this.reset = this.reset.bind(this);
 
@@ -43,6 +42,7 @@ class FormExample extends React.Component {
             lastname: 'Behrami',
             position: [{selected: false, value: 'fontend', label: 'Frontend Developer' }, {selected: true, value: 'backend', label: 'Backend Developer'}],
             salary: '',
+            message: EditorState.createEmpty(),
             duration: '',
             start: 1511342490554,
             training: true
@@ -108,6 +108,12 @@ class FormExample extends React.Component {
                                 onChange={this.setValue}
                                 dataLabel="coverletter"
                                 value={this.state.coverletter}
+                            />
+                            <TextArea
+                                richEditor
+                                richValue = {this.state.message}
+                                dataLabel = "message"
+                                onChange = {this.getDate}
                             />
                             <CheckboxGroup onChange={this.setValue} title="Contact" dataLabel="contact" selectedChecks={this.state.contact} horizontal>
                                 <Checkbox value="email" label="Email" checked={this.state.contact[0].checked}/>
@@ -213,6 +219,7 @@ class FormExample extends React.Component {
             lastname: '',
             position: [{selected: true, value: 'fontend', label: 'Frontend Developer' }, {selected: false, value: 'backend', label: 'Backend Developer'}],
             salary: '',
+            message: EditorState.createEmpty(),
             duration: '',
             start: '',
             training: false,
@@ -230,4 +237,5 @@ class FormExample extends React.Component {
     getDate(data) {
         data.dataLabel && this.setState({[data.dataLabel]: data.value});
     }
+
 }

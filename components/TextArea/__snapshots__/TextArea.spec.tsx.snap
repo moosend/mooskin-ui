@@ -1,43 +1,93 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextArea renders correctly 1`] = `
-<div
-  className="textarea-component myClass areaContainer"
+<TextArea
+  className="myClass"
+  cols={40}
+  description="just some textarea"
+  disabled={true}
+  id="textarea"
+  label="with a label ofc"
+  labelWidth={30}
+  maxlength={50}
+  minlength={10}
+  name="textarea name"
+  onChange={[Function]}
+  placeholder="textarea placeholder"
+  required={true}
+  rows={10}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+  value="textarea value"
 >
-  <label
-    className="textareaLabel"
-    htmlFor="textarea"
-    style={Object {}}
-  >
-    with a label ofc
-  </label>
-  <div
-    className="textAreaDiv"
-  >
-    <textarea
-      className="textarea textarea disabledTextArea"
-      cols={40}
-      disabled={true}
-      id="textarea"
-      maxLength={50}
-      minLength={10}
-      name="textarea name"
-      onChange={[Function]}
-      placeholder="textarea placeholder"
-      required={true}
-      rows={10}
-      style={
-        Object {
-          "color": "blue",
-        }
+  <TextAreaComponent
+    className="myClass"
+    cols={40}
+    description="just some textarea"
+    disabled={true}
+    id="textarea"
+    label="with a label ofc"
+    labelWidth={30}
+    maxlength={50}
+    minlength={10}
+    name="textarea name"
+    onChange={[Function]}
+    placeholder="textarea placeholder"
+    required={true}
+    rows={10}
+    style={
+      Object {
+        "color": "blue",
       }
-      value="textarea value"
-    />
-    <i
-      className="description"
+    }
+    value="textarea value"
+  >
+    <div
+      className="textarea-component myClass areaContainer"
     >
-      just some textarea
-    </i>
-  </div>
-</div>
+      <label
+        className="textareaLabel"
+        htmlFor="1482363367071"
+        style={
+          Object {
+            "width": "30px",
+          }
+        }
+      >
+        with a label ofc
+      </label>
+      <div
+        className="textAreaDiv"
+      >
+        <textarea
+          className="textarea textarea disabledTextArea"
+          cols={40}
+          disabled={true}
+          id="textarea"
+          maxLength={50}
+          minLength={10}
+          name="nodejs"
+          onChange={[Function]}
+          placeholder="textarea placeholder"
+          required={true}
+          rows={10}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+          value="textarea value"
+        />
+        <i
+          className="description"
+        >
+          just some textarea
+        </i>
+      </div>
+    </div>
+  </TextAreaComponent>
+</TextArea>
 `;

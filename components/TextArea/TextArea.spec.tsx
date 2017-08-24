@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TextArea from './TextArea';
 
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('TextArea', () => {
 
@@ -9,7 +9,7 @@ describe('TextArea', () => {
         const func = jest.fn();
         Date.now = jest.fn(() => 1482363367071);
 
-        const tree = shallow(
+        const tree = mount(
             <TextArea
                 onChange={func}
                 disabled
@@ -23,7 +23,7 @@ describe('TextArea', () => {
                 name="textarea name"
                 description="just some textarea"
                 label="with a label ofc"
-                spacing={30}
+                labelWidth={30}
                 cols={40}
                 rows={10}
                 required
@@ -34,7 +34,7 @@ describe('TextArea', () => {
 
     test('renders properly into dom and has Placeholder, rows and cols props', () => {
 
-        const component = shallow(<TextArea placeholder="username" rows={30} cols={50}/>);
+        const component = mount(<TextArea placeholder="username" rows={30} cols={50}/>);
 
         expect(component.find('textarea').prop('placeholder')).toContain('username');
         expect(component.find('textarea').prop('rows')).toEqual(30);
@@ -42,14 +42,14 @@ describe('TextArea', () => {
     });
 
     test('renders an textarea with a "required" prop and minlength', () => {
-        const component = shallow(<TextArea minlength={5} required/>);
+        const component = mount(<TextArea minlength={5} required/>);
 
         expect(component.find('textarea').prop('required')).toEqual(true);
         expect(component.find('textarea').prop('minLength')).toEqual(5);
     });
 
     test('renders an textarea with a passed value and maxlength', () => {
-        const component = shallow(<TextArea value="random" maxlength={50}/>);
+        const component = mount(<TextArea value="random" maxlength={50}/>);
 
         expect(component.find('textarea').prop('value')).toEqual('random');
         expect(component.find('textarea').prop('maxLength')).toEqual(50);
@@ -57,13 +57,13 @@ describe('TextArea', () => {
 
     test('renders an textarea with id', () => {
 
-        const component = shallow(<TextArea id="1234"/>);
+        const component = mount(<TextArea id="1234"/>);
 
         expect(component.find('textarea').prop('id')).toEqual('1234');
     });
 
     test('renders an textarea with custom css class and style', () => {
-        const component = shallow(<TextArea style={{color: 'blue'}} className="textarea-group"/>);
+        const component = mount(<TextArea style={{color: 'blue'}} className="textarea-group"/>);
 
         expect(component.find('.areaContainer').hasClass('textarea-group')).toBe(true);
         expect(component.find('textarea').prop('style')).toEqual({color: 'blue'});
@@ -72,10 +72,18 @@ describe('TextArea', () => {
     test('onChange prop callback is called when a key is pressed', () => {
         const func = jest.fn();
 
-        const component = shallow(<TextArea onChange={func}/>);
+        const component = mount(<TextArea onChange={func}/>);
 
         component.find('textarea').simulate('change', { target: { value: 'text' }});
         expect(func).toHaveBeenCalled();
+    });
+
+    test('onChange prop callback is called when a key is pressed', () => {
+
+        const component = mount(<TextArea richEditor/>);
+        expect(component.find('textarea')).toBeFalsy;
+
+        expect(component.find('div').first().hasClass('rdw-editor-wrapper')).toBeTruthy;
     });
 
 });
