@@ -12,7 +12,7 @@ class TextAreaExample extends React.Component {
                 <hr/>
                 <TextArea onChange={this.onChange} disabled value="disabled" description="This text area is disabled"/>
                 <hr/>
-                <TextArea richEditor />
+                <TextArea richEditor label="Editor: " />
             </div>
         );
     }

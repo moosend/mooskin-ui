@@ -111,12 +111,15 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
 
     getComponent = () => {
         if (this.props.richEditor){
+            const display = this.props.label ? {display: 'block'} : {display: 'none'};
             return (
                 <div id={this.props.id}>
+                    <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                     <Editor
                         editorClassName={styles.textarea}
                         editorState={this.state.editorState}
                         onEditorStateChange={this.onEditorChange}
+                        editorStyle={{maxWidth: '100%'}}
                     />
                 </div>
             );

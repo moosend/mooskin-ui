@@ -64,6 +64,12 @@ textarea::-webkit-scrollbar-thumb:vertical {
     flex-basis: 150px;
 }
 
+.editorLabel{
+    color: var(--inputLabel);
+    /* font-size: 13px;*/
+    font-size: .92857142857rem;
+}
+
 .areaContainer .description{
     display: block;
     color: #b3b3b3;
