@@ -80,11 +80,6 @@ export default class Grid extends React.Component<IGridProps, {}>{
 
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
-    Row.defaultProps = {
-        className: '',
-        style: {}
-    };
-
     return(
         <div
             id={props.id}
@@ -96,12 +91,12 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
     );
 };
 
-export const Col: React.StatelessComponent<IColProps> = (props) => {
+Row.defaultProps = {
+    className: '',
+    style: {}
+};
 
-    Col.defaultProps = {
-        className: '',
-        style: {}
-    };
+export const Col: React.StatelessComponent<IColProps> = (props) => {
 
     const large = props.lg || 0;
     const medium = props.md || 0;
@@ -171,4 +166,9 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
             {props.children}
         </div>
     );
+};
+
+Col.defaultProps = {
+    className: '',
+    style: {}
 };

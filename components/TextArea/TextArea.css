@@ -88,21 +88,14 @@ textarea::-webkit-scrollbar-thumb:vertical {
     box-sizing: border-box;
     position: relative;
 }
- 
-/* .editorContainer .rdw-colorpicker-modal{
-    background: red;
-} */
 
-/* .toolbar .rdw-editor-wrapper .rdw-editor-toolbar .rdw-colorpicker-wrapper .rdw-colorpicker-modal{ 
-    background: red;
-} */
 
-:global(.rdw-colorpicker-modal){
+:global(.mooskin-textarea-editor .rdw-colorpicker-modal){
     width: 300px;
     height: 160px;
 }
 
-:global(.rdw-colorpicker-modal-options){
+:global(.mooskin-textarea-editor .rdw-colorpicker-modal-options){
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
@@ -124,31 +117,31 @@ textarea::-webkit-scrollbar-thumb:vertical {
         margin-left: 3px;
     }
 
-    :global(.rdw-colorpicker-modal){
+    :global(.mooskin-textarea-editor .rdw-colorpicker-modal){
         position: fixed;
         top: 25%;
         left: 15%;
     }
 
-    :global(.rdw-link-modal){
+    :global(.mooskin-textarea-editor .rdw-link-modal){
         position: fixed;
         top: 25%;
         left: 20%;
     }
 
-    :global(.rdw-embedded-modal){
+    :global(.mooskin-textarea-editor .rdw-embedded-modal){
         position: fixed;
         top: 25%;
         left: 20%;
     }
 
-    :global(.rdw-emoji-modal){
+    :global(.mooskin-textarea-editor .rdw-emoji-modal){
         position: fixed;
         top: 25%;
         left: 20%;
     }
 
-    :global(.rdw-image-modal){
+    :global(.mooskin-textarea-editor .rdw-image-modal){
         position: fixed;
         top: 25%;
         left: 20%;

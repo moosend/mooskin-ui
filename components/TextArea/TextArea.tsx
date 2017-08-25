@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { EditorState } from 'draft-js';
+
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
@@ -117,7 +118,7 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
                 <div
                     id={this.props.id}
                     style={{position: 'relative'}}
-                    className={styles.editorContainer}
+                    className={`mooskin-textarea-editor ${styles.editorContainer}`}
                 >
                     <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                     <Editor
