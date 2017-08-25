@@ -51,69 +51,70 @@
     left: 0px;
 }
 
-:global(.m-input-moment){
+:global(.datepicker-component .m-input-moment){
     background-color: #ffffff;
     user-select: none;
     height: 355px;
 }
 
-:global(.m-input-moment .tabs){
+:global(.datepicker-component .m-input-moment .tabs){
     margin: 0;
 }
 
-:global(.m-input-moment .options button.is-active){
+:global(.datepicker-component .m-input-moment .options button.is-active){
     background: #5ccdde;
+    color: #fff;
 }
 
-:global(.m-input-moment .options button){
+:global(.datepicker-component .m-input-moment .options button){
     border: 1px solid #5ccdde;
     color: #5ccdde;
     margin: 0px;
 }
 
-:global(.m-calendar tbody td:hover){
+:global(.datepicker-component .m-calendar tbody td:hover){
     background: #5ccdde;
     border: none;
 }
 
-:global(.m-calendar .toolbar button){
+:global(.datepicker-component .m-calendar .toolbar button){
     border: 1px solid #5ccdde;
     background: #5ccdde;
 }
 
-:global(.m-calendar thead td){
+:global(.datepicker-component .m-calendar thead td){
     color: #5ccdde;
 }
 
-:global(.m-calendar .toolbar .current-date){
+:global(.datepicker-component .m-calendar .toolbar .current-date){
     color: #5ccdde;
 }
 
-:global(.m-input-moment .btn-save){
+:global(.datepicker-component .m-input-moment .btn-save){
     display: none;
 }
 
-:global(.m-time .time){
+:global(.datepicker-component .m-time .time){
     background: #5ccdde;
 }
 
-:global(.m-time .separater){
+:global(.datepicker-component .m-time .separater){
     color: #5ccdde;
 }
 
-:global(.u-slider-time .value){
+:global(.datepicker-component .u-slider-time .value){
     background: #5ccdde;
 }
 
-:global(.u-slider-time .handle:after){
+:global(.datepicker-component .u-slider-time .handle:after){
     border: 3px solid #5ccdde;
 }
 
-:global(.m-time .time-text){
+:global(.datepicker-component .m-time .time-text){
     color: #5ccdde;
 }
 
-:global(.m-calendar .current-day){
+:global(.datepicker-component .m-calendar .current-day){
     color: #5ccdde;
 }
 
