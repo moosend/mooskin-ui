@@ -12,6 +12,12 @@ export interface ISideBarProps{
     /** sidebar class */
     className?: string;
 
+    /** styles classes for Sidebar Button */
+    buttonClass?: string;
+
+    /** styles for Sidebar Button */
+    buttonStyle?: React.CSSProperties;
+
     /** override sidebar styles */
     style?: React.CSSProperties;
 
@@ -295,7 +301,8 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                 <SmallIconButton
                     icon="view headline"
                     onClick={this.onClickButton()}
-                    className={`${styles.button} ${buttonDisplay}`}
+                    className={`${styles.button} ${buttonDisplay} ${this.props.buttonClass}`}
+                    style={this.props.buttonStyle}
                 />
             </div>
         );

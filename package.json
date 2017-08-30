@@ -1,6 +1,6 @@
 {
   "name": "mooskin",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "A collection of React components for Moosend UI",
   "main": "lib/index/index.js",
   "types": "lib/index/index.d.ts",
@@ -26,12 +26,15 @@
   },
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
   "dependencies": {
+    "@types/draft-js": "^0.10.10",
     "chart.js": "^2.6.0",
+    "draft-js": "^0.10.1",
     "input-moment": "^0.3.4",
     "moment": "^2.18.1",
     "react": "^15.5.4",
     "react-chartjs-2": "^2.1.0",
     "react-dom": "^15.5.4",
+    "react-draft-wysiwyg": "^1.10.8",
     "react-live": "^1.7.0",
     "showdown": "^1.7.1"
   },

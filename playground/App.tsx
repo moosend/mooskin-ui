@@ -4,6 +4,7 @@
 import * as React from 'react';
 
 import moment from 'moment';
+import { EditorState } from 'draft-js';
 
 import {renderEditableExample} from './tools/ReactLiveEditor/ReactLiveEditor';
 
@@ -43,6 +44,7 @@ export const App = (props: any) => {
         Checkbox,
         CheckboxGroup,
         DatePicker,
+        EditorState,
         FileUpload,
         Form,
         FormGroup,

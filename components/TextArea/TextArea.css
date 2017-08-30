@@ -17,7 +17,6 @@
     font-size: 1rem;
     border-radius: 8px;
     background: #efefef;
-    display: table-cell;
     width: 100%;
 }
 
@@ -65,11 +64,45 @@ textarea::-webkit-scrollbar-thumb:vertical {
     flex-basis: 150px;
 }
 
+.editorLabel{
+    color: var(--inputLabel);
+    /* font-size: 13px;*/
+    font-size: .92857142857rem;
+}
+
+ .toolbar{
+    position: absolute;
+    z-index: 10;
+    top: -55px;
+} 
+
 .areaContainer .description{
     display: block;
     color: #b3b3b3;
     font-size: .78571428571rem;
     margin-left: 3px;
+}
+
+.editorContainer{
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+
+:global(.mooskin-textarea-editor .rdw-colorpicker-modal){
+    width: 300px;
+    height: 160px;
+}
+
+:global(.mooskin-textarea-editor .rdw-colorpicker-modal-options){
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.editorContainer .rdw-link-modal{
+    height: 220px;
 }
 
 @media (--xSmall){
@@ -82,5 +115,35 @@ textarea::-webkit-scrollbar-thumb:vertical {
         flex-basis: 10px;
         padding-top: 0px;
         margin-left: 3px;
+    }
+
+    :global(.mooskin-textarea-editor .rdw-colorpicker-modal){
+        position: fixed;
+        top: 25%;
+        left: 15%;
+    }
+
+    :global(.mooskin-textarea-editor .rdw-link-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    :global(.mooskin-textarea-editor .rdw-embedded-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    :global(.mooskin-textarea-editor .rdw-emoji-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    :global(.mooskin-textarea-editor .rdw-image-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
     }
 }
