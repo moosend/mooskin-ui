@@ -5,9 +5,9 @@ import styles from './Form.css';
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
 import Button, {IButtonProps} from '../Button/Button';
-import {ICheckBoxData, ICheckBoxProps} from '../Checkbox/Checkbox';
+import {ICheckBoxData} from '../Checkbox/Checkbox';
 import {CheckboxGroup, DatePicker, FileUpload, Input, RadioGroup, Select, Switch, TextArea} from '../index/';
-import {IRadioData, IRadioProps} from '../Radio/Radio';
+import {IRadioData} from '../Radio/Radio';
 
 export interface IFormProps{
 
@@ -180,16 +180,10 @@ export default class Form extends React.Component<IFormProps, {}>{
                 } else if (element.type === Select && element.props.selected !== undefined){
                     data[element.props.dataLabel] = element.props.selected;
                 } else if (element.type === RadioGroup){
-                    const radios: IRadioData[] = [];
-                    element.props.children.map((radio: React.ReactElement<IRadioProps>) => {
-                        radios.push(radio.props);
-                    });
+                    const radios: IRadioData[] = element.props.selectedRadios;
                     data[element.props.dataLabel] = radios;
                 } else if (element.type === CheckboxGroup){
-                    const checkboxes: ICheckBoxData[] = [];
-                    element.props.children.map((checkbox: React.ReactElement<ICheckBoxProps>) => {
-                        checkboxes.push(checkbox.props);
-                    });
+                    const checkboxes: ICheckBoxData[] = element.props.selectedChecks;
                     data[element.props.dataLabel] = checkboxes;
                 } else if (element.type === DatePicker){
                     data[element.props.dataLabel] = element.props.date;
