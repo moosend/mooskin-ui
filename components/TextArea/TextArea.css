@@ -146,4 +146,15 @@ textarea::-webkit-scrollbar-thumb:vertical {
         top: 25%;
         left: 20%;
     }
+
+}
+
+
+@media (--deviceXsmall){
+    .toolbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 }
