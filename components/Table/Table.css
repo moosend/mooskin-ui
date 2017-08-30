@@ -149,6 +149,10 @@
         font-size: 30px;
     } 
 
+    .popoverCol i{
+        font-size: 24px;
+    }
+
     .buttonHeader{
         text-indent: -9999px;
     }
@@ -232,7 +236,11 @@
 
     .buttonCol i{
         font-size: 30px;
-    } 
+    }
+
+    .popoverCol i{
+        font-size: 24px;
+    }
 
     .buttonHeader{
         text-indent: -9999px;

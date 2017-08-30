@@ -197,4 +197,35 @@ describe('SideBar', () => {
         expect(component.find('Item').last().dive().find('img').prop('src')).toEqual('imageOnPath');
 
     });
+
+    test('SideBar button classes and styles', () => {
+
+                const component = shallow(
+                    <SideBar
+                        buttonClass="myClass"
+                        buttonStyle={{color: 'blue'}}
+                        button
+                    >
+                        <Item
+                            className="myClass"
+                            style={{color: 'blue'}}
+                            active
+                            href="www.moosend.com"
+                            label="Item"
+                            image="imagePath"
+                        />
+                        <Item
+                            className="myClass"
+                            style={{color: 'blue'}}
+                            active
+                            href="www.moosend.com"
+                            label="Item"
+                            image="imagePath"
+                        />
+                    </SideBar>
+                );
+
+                expect(component.find(SmallIconButton).hasClass('myClass')).toBeTruthy;
+                expect(component.find(SmallIconButton).prop('style')).toEqual({color: 'blue'});
+            });
 });

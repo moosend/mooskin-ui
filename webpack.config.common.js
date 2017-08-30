@@ -48,6 +48,6 @@ module.exports = {
         'node_modules'
     ]
   }
-  // devtool: 'inline-source-map',
+//   devtool: 'inline-source-map',
  
 };
