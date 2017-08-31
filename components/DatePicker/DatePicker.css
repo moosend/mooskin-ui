@@ -144,6 +144,11 @@
         z-index: 99;
     }
 
+    :global(.datepicker-component .m-calendar .current-day:hover){
+        color: #fff;
+        background: #5ccdde;
+    }
+
     /* :global(.m-input-moment){
         width: 90vw;
         height: 118vw;
@@ -252,6 +257,11 @@
         top: 15%;
         left: 5%;
         z-index: 99;
+    }
+
+    :global(.datepicker-component .m-calendar .current-day:hover){
+        color: #fff;
+        background: #5ccdde;
     }
 
     /* :global(.m-input-moment){
