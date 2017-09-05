@@ -1,0 +1,25 @@
+class ButtonExample extends React.Component {
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            tags: [
+                'Prishtina',
+                'Athens',
+                'London',
+                'New York',
+                'Beijing'
+            ]
+        }
+    }
+
+    render(){
+        return(
+            <div>
+                <Tags source={this.state.tags} />
+            </div>
+        );
+    }
+
+}

@@ -1,0 +1,17 @@
+.tags{
+    display: flex;
+}
+
+.tag{
+    background: #5ccdde;
+    border-radius: 8px;
+    padding: 5px;
+    color: #fff;
+    margin: 1px;
+}
+
+.icon{
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+}
