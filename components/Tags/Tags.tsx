@@ -4,8 +4,12 @@ import styles from './Tags.css';
 
 import {Input} from '../index';
 
+import {IInputCallbackData} from '../_utils/types/commonTypes';
+
 export interface ITagsProps{
     source: string[];
+    dataLabel?: string;
+    onChange?: (e: React.ChangeEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
 
 export interface ITagProps{
@@ -57,6 +61,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         const tags = this.state.source;
 
         tags.push(this.state.value);
+
+        this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
         this.setState({source: tags, value: ''});
     }
