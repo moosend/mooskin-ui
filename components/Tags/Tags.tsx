@@ -59,13 +59,14 @@ export interface ITagProps{
 export interface ITagsState{
     tags: string[];
     value: string;
+    activeItem: number;
+    sourceList: string[];
 }
 
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     static defaultProps: Partial<ITagsProps> = {
         delimiters: ['Enter'], // 13 is the keyCode for Enter
-        sourceLimit: 10
     };
 
     id: string;
@@ -76,6 +77,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         this.id = this.generateId();
 
         this.state = {
+            activeItem: 0,
+            sourceList: [],
             tags: [],
             value: ''
         };
@@ -138,6 +141,28 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const tags = this.state.tags;
 
+        const limit = this.props.sourceLimit ? this.props.sourceLimit : 10;
+
+        if (this.props.source){
+
+            const sourceList: any[] = [];
+
+            this.props.source.map((text, i) => {
+
+                const sourceText = text.toLowerCase();
+
+                const stateValue = this.state.value.toLowerCase();
+
+                if (sourceText.startsWith(stateValue) && !this.state.tags.includes(text)){
+
+                    sourceList.push(text);
+                }
+
+            });
+
+            this.setState({sourceList: sourceList.slice(0, limit), activeItem: 0});
+        }
+
         if (this.props.deletable && e.key === 'Backspace' && this.state.value === ''){
 
             tags.pop();
@@ -146,13 +171,29 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
+        } else if (e.key === 'ArrowDown'){
+
+            if (this.state.activeItem < this.state.sourceList.length - 1){
+                this.setState({activeItem: this.state.activeItem + 1});
+            }
+
+        } else if (e.key === 'ArrowUp'){
+
+            if (this.state.activeItem > 0){
+                this.setState({activeItem: this.state.activeItem - 1});
+            }
+
         } else if (delimiters && delimiters.includes(e.key)){
 
             e.preventDefault();
 
             if (!tags.includes(this.state.value)){
 
-                tags.push(this.state.value);
+                if (this.props.source){
+                    tags.push(this.state.sourceList[this.state.activeItem]);
+                } else {
+                    tags.push(this.state.value);
+                }
 
                 this.setState({tags, value: ''});
 
@@ -182,30 +223,30 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     sourceList = () => {
 
-        const source = this.props.source;
+        console.log('called');
+
+        const source = this.state.sourceList ? this.state.sourceList : [];
 
         const sourceList: any[] = [];
 
         source && source.map((text, i) => {
 
-            const sourceText = text.toLowerCase();
+            const active = this.state.activeItem === i ? styles.active : '';
 
-            const stateValue = this.state.value.toLowerCase();
-
-            if (sourceText.includes(stateValue) && !this.state.tags.includes(text)){
-                sourceList.push(
-                    <div onClick={this.addTag(text)} className={styles.sourceItem} key={i}>
-                        {text}
-                    </div>
-                );
-            }
+            sourceList.push(
+                <div
+                    onClick={this.addTag(text)}
+                    className={`${styles.sourceItem} ${active}`}
+                    key={i}
+                >
+                    {text}
+                </div>
+            );
         });
-
-        const limit = this.props.sourceLimit;
 
         return (
             <div className={styles.sourceList}>
-                {sourceList.slice(1, limit && limit - 1)}
+                {sourceList}
             </div>
         );
 
