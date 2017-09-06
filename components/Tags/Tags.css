@@ -44,9 +44,14 @@
     font-size: 1rem; 
 }
 
-.inputContainer
+.inputContainer{
+    position: relative;
+    display: flex;
+    flex: 1;
+}
 
 .sourceList {
+    top: 25px;
     position: absolute;
     background: #fff;
     box-shadow: 5px 5px 20px #bfbfbf;
