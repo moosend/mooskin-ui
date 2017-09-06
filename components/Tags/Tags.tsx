@@ -7,7 +7,7 @@ import {IInputCallbackData} from '../_utils/types/commonTypes';
 export interface ITagsProps{
 
     /** tagged data */
-    source: string[];
+    tags: string[];
 
     /** override tags styles */
     style?: React.CSSProperties;
@@ -27,6 +27,9 @@ export interface ITagsProps{
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
 
+    /** an array of possible delimiters, enter key is the default delimiter */
+    delimiters?: string[];
+
     onChange?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
 
@@ -45,11 +48,15 @@ export interface ITagProps{
 }
 
 export interface ITagsState{
-    source: string[];
+    tags: string[];
     value: string;
 }
 
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
+
+    static defaultProps: Partial<ITagsProps> = {
+        delimiters: ['Enter'] // 13 is the keyCode for Enter
+    };
 
     id: string;
 
@@ -59,32 +66,31 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         this.id = this.generateId();
 
         this.state = {
-            source: [],
+            tags: [],
             value: ''
         };
     }
 
     componentWillMount(){
-        this.setState({source: this.props.source});
+        this.setState({tags: this.props.tags});
     }
 
     render(){
 
-        const tags = this.getTags(this.state.source);
+        const tags = this.getTags(this.state.tags);
 
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style}>
                 <label className={styles.tags} htmlFor={this.id}>
                     {tags}
-                    <form onSubmit={this.onSubmit}>
-                        <input
-                            id={this.id}
-                            value={this.state.value}
-                            onChange={this.handleChange}
-                            className={styles.input}
-                            placeholder={this.props.placeholder}
-                        />
-                    </form>
+                    <input
+                        id={this.id}
+                        value={this.state.value}
+                        className={styles.input}
+                        placeholder={this.props.placeholder}
+                        onChange={this.onHandleChange}
+                        onKeyDown={this.onKeyDown}
+                    />
                 </label>
             </div>
         );
@@ -108,40 +114,43 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         return newTags;
     }
 
-    handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({value: e.target.value});
     }
 
-    onSubmit = (e: React.FormEvent<HTMLElement>) => {
-        e.preventDefault();
+    onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        const {delimiters} = this.props;
 
-        const tags = this.state.source;
+        if (delimiters && delimiters.includes(e.key)){
+            e.preventDefault();
+            const tags = this.state.tags;
 
-        if (!tags.includes(this.state.value)){
+            if (!tags.includes(this.state.value)){
 
-            tags.push(this.state.value);
+                tags.push(this.state.value);
 
-            this.setState({source: tags, value: ''});
+                this.setState({tags, value: ''});
 
-            this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+                this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
-        } else {
-            // this.setState({value: ''});
-            const pos = tags.indexOf(this.state.value);
-            tags.splice(pos, 1, this.state.value);
-            this.setState({source: tags, value: ''});
-            this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+            } else {
+                // this.setState({value: ''});
+                const pos = tags.indexOf(this.state.value);
+                tags.splice(pos, 1, this.state.value);
+                this.setState({tags, value: ''});
+                this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+            }
         }
 
     }
 
     removeTag = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            const tags = this.state.source;
+            const tags = this.state.tags;
 
             tags.splice(index, 1);
 
-            this.setState({source: tags});
+            this.setState({tags});
 
             this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
         };

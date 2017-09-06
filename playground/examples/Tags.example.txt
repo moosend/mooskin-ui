@@ -19,7 +19,7 @@ class ButtonExample extends React.Component {
     render(){
         return(
             <div>
-                <Tags source={this.state.tags} onChange={this.onChange} />
+                <Tags delimiters={[',',' ','Enter']} source={this.state.tags} onChange={this.onChange} />
             </div>
         );
     }
