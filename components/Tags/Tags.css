@@ -43,3 +43,20 @@
     /* font-size: 16px; */
     font-size: 1rem; 
 }
+
+.inputContainer
+
+.sourceList {
+    position: absolute;
+    background: #fff;
+    box-shadow: 5px 5px 20px #bfbfbf;
+    border-radius: 8px;
+}
+
+.sourceItem {
+    padding: 10px;
+}
+
+.sourceItem:hover{
+    background: rgb(239, 239, 239);
+}

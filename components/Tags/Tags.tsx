@@ -82,18 +82,23 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const tags = this.getTags(this.state.tags);
 
+        const source = this.state.value !== '' ? this.sourceList() : '';
+
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style}>
                 <label className={styles.tags} htmlFor={this.id}>
                     {tags}
-                    <input
-                        id={this.id}
-                        value={this.state.value}
-                        className={styles.input}
-                        placeholder={this.props.placeholder}
-                        onChange={this.onHandleChange}
-                        onKeyDown={this.onKeyDown}
-                    />
+                    <div className={styles.inputContainer}>
+                        <input
+                            id={this.id}
+                            value={this.state.value}
+                            className={styles.input}
+                            placeholder={this.props.placeholder}
+                            onChange={this.onHandleChange}
+                            onKeyDown={this.onKeyDown}
+                        />
+                        {source}
+                    </div>
                 </label>
             </div>
         );
@@ -166,6 +171,45 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
         };
+    }
+
+    sourceList = () => {
+
+        const source = this.props.source;
+
+        const sourceList = source && source.map((text, i) => {
+
+            const sourceText = text.toLowerCase();
+
+            const stateValue = this.state.value.toLowerCase();
+
+            if (sourceText.includes(stateValue) && !this.state.tags.includes(text)){
+                return <div onClick={this.addTag(text)} className={styles.sourceItem} key={i}>{text}</div>;
+            }
+        });
+
+        return (
+            <div className={styles.sourceList}>
+                {sourceList}
+            </div>
+        );
+
+    }
+
+    addTag = (text: string) => {
+
+        return (e: React.MouseEvent<HTMLElement>) => {
+
+            const tags = this.state.tags;
+
+            tags.push(text);
+
+            this.setState({tags, value: ''});
+
+            this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+
+        };
+
     }
 
     generateId = () => {
