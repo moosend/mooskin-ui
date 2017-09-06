@@ -58,7 +58,7 @@ export default class TopNotification extends React.Component<ITopNotificationPro
 
         const {text, visible} = this.props;
 
-        const height = visible ? styles.active : '';
+        const height = visible ? styles.active : styles.inactive;
 
         const typeClass = this.resolveTypeClass();
 

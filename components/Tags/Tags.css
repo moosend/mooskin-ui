@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '../_utils/globals/variables.css';
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
 .tags{
     display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: #efefef;
+    padding: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    cursor: pointer;
 }
 
 .tag{
@@ -10,8 +25,21 @@
     margin: 1px;
 }
 
-.icon{
+.close{
     width: 10px;
     height: 10px;
     font-size: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.input{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    border: 0;
+    background: #efefef;
+    color: var(--inputFontColor);
+    /* font-size: 16px; */
+    font-size: 1rem; 
 }

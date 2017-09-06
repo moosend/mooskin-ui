@@ -3,6 +3,8 @@ class ButtonExample extends React.Component {
     constructor(props){
         super(props);
 
+        this.onChange = this.onChange.bind(this);
+
         this.state = {
             tags: [
                 'Prishtina',
@@ -17,9 +19,13 @@ class ButtonExample extends React.Component {
     render(){
         return(
             <div>
-                <Tags source={this.state.tags} />
+                <Tags source={this.state.tags} onChange={this.onChange} />
             </div>
         );
+    }
+
+    onChange(e, data) {
+        console.log(data.value);
     }
 
 }
