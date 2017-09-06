@@ -9,6 +9,9 @@ export interface ITagsProps{
     /** tagged data */
     tags: string[];
 
+    /** source of data for type ahead completion */
+    source?: string[];
+
     /** override tags styles */
     style?: React.CSSProperties;
 
@@ -121,9 +124,19 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         const {delimiters} = this.props;
 
-        if (delimiters && delimiters.includes(e.key)){
+        const tags = this.state.tags;
+
+        if (e.key === 'Backspace' && this.state.value === ''){
+
+            tags.pop();
+
+            this.setState({tags, value: ''});
+
+            this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+
+        } else if (delimiters && delimiters.includes(e.key)){
+
             e.preventDefault();
-            const tags = this.state.tags;
 
             if (!tags.includes(this.state.value)){
 
@@ -134,11 +147,10 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
             } else {
-                // this.setState({value: ''});
-                const pos = tags.indexOf(this.state.value);
-                tags.splice(pos, 1, this.state.value);
+                // const pos = tags.indexOf(this.state.value);
+                // tags.splice(pos, 1, this.state.value);
                 this.setState({tags, value: ''});
-                this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+                // this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
             }
         }
 
