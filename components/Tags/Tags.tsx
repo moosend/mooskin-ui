@@ -12,6 +12,12 @@ export interface ITagsProps{
     /** source of data for type ahead completion */
     source?: string[];
 
+    /** limit number of items available on the source list */
+    sourceLimit?: number;
+
+    /** wether the tags should be deletable by backspace */
+    deletable?: boolean;
+
     /** override tags styles */
     style?: React.CSSProperties;
 
@@ -58,7 +64,8 @@ export interface ITagsState{
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     static defaultProps: Partial<ITagsProps> = {
-        delimiters: ['Enter'] // 13 is the keyCode for Enter
+        delimiters: ['Enter'], // 13 is the keyCode for Enter
+        sourceLimit: 10
     };
 
     id: string;
@@ -131,7 +138,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const tags = this.state.tags;
 
-        if (e.key === 'Backspace' && this.state.value === ''){
+        if (this.props.deletable && e.key === 'Backspace' && this.state.value === ''){
 
             tags.pop();
 
@@ -177,20 +184,28 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const source = this.props.source;
 
-        const sourceList = source && source.map((text, i) => {
+        const sourceList: any[] = [];
+
+        source && source.map((text, i) => {
 
             const sourceText = text.toLowerCase();
 
             const stateValue = this.state.value.toLowerCase();
 
             if (sourceText.includes(stateValue) && !this.state.tags.includes(text)){
-                return <div onClick={this.addTag(text)} className={styles.sourceItem} key={i}>{text}</div>;
+                sourceList.push(
+                    <div onClick={this.addTag(text)} className={styles.sourceItem} key={i}>
+                        {text}
+                    </div>
+                );
             }
         });
 
+        const limit = this.props.sourceLimit;
+
         return (
             <div className={styles.sourceList}>
-                {sourceList}
+                {sourceList.slice(1, limit && limit - 1)}
             </div>
         );
 
