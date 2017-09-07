@@ -4,7 +4,6 @@
 .container{
     display: flex;
     flex-direction: column;
-    z-index: 5;
 }
 
 .tags{
@@ -40,12 +39,13 @@
 .input{
     flex: 1;
     box-sizing: border-box;
-    padding-left: 10px;
+    padding: 5px 10px;
     border: 0;
     background: #efefef;
     color: var(--inputFontColor);
     /* font-size: 16px; */
     font-size: 1rem; 
+    min-width: 30px;
 }
 
 .inputContainer{

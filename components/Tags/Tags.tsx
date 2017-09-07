@@ -6,6 +6,9 @@ import {IInputCallbackData} from '../_utils/types/commonTypes';
 
 export interface ITagsProps{
 
+    /** id of the component */
+    id?: string;
+
     /** tagged data */
     tags?: string[];
 
@@ -106,7 +109,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         const display = this.props.label ? {display: 'block'} : {display: 'none'};
 
         return(
-            <div className={`${styles.container} ${this.props.className}`} style={this.props.style}>
+            <div className={`${styles.container} ${this.props.className}`} style={this.props.style} id={this.id}>
                 <div style={display} className={styles.label}>{this.props.label}</div>
                 <label className={styles.tags} htmlFor={this.id}>
                     {tags}
