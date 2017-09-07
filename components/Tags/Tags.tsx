@@ -163,6 +163,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const tags = this.state.tags;
 
+        console.log('Key: ' + e.key + ', KeyCode:' + e.keyCode);
+
         if (this.props.deletable && e.key === 'Backspace' && this.state.value === ''){
 
             tags.pop();
