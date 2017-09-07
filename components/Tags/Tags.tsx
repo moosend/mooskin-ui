@@ -177,7 +177,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     onHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
-        const value = e.target.value;
+        const value = this.checkDelimeter(e.target.value);
 
         this.setState({value});
 
@@ -186,6 +186,16 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         if (rawSourceList && rawSourceList.length){
 
             this.updateSourceList(value, rawSourceList);
+        }
+    }
+
+    checkDelimeter = (value: string) => {
+        const delimiters = this.props.delimiters ? this.props.delimiters : [];
+
+        if (delimiters.includes(value.charCodeAt(0))){
+            return '';
+        } else {
+            return value;
         }
     }
 
