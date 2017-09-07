@@ -7,7 +7,7 @@ import {IInputCallbackData} from '../_utils/types/commonTypes';
 export interface ITagsProps{
 
     /** tagged data */
-    tags: string[];
+    tags?: string[];
 
     /** source of data for type ahead completion */
     source?: (() => Promise<string[]>) | (() => string[]) | string[];
@@ -90,7 +90,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     componentWillMount(){
-        this.setState({tags: this.props.tags});
+        this.setState({tags: this.props.tags ? this.props.tags : []});
     }
 
     componentDidMount(){
@@ -120,7 +120,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     componentWillReceiveProps(nextProps: ITagsProps){
-        this.setState({tags: nextProps.tags});
+        this.setState({tags: nextProps.tags ? nextProps.tags : []});
     }
 
     render(){
@@ -221,7 +221,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             tags.pop();
 
-            this.setState({tags, value: ''});
+            this.setState({tags});
 
             this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
@@ -238,8 +238,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             }
 
         } else if (delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))){
-
-            e.preventDefault();
 
             if (!tags.includes(this.state.value)){
 
