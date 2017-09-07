@@ -189,7 +189,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             if (!tags.includes(this.state.value)){
 
-                if (this.props.source){
+                if (this.props.source && this.state.sourceList.length > 0){
                     tags.push(this.state.sourceList[this.state.activeItem]);
                 } else {
                     tags.push(this.state.value);
