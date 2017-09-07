@@ -147,7 +147,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
                 const stateValue = e.target.value.toLowerCase();
 
-                if (sourceText.includes(stateValue) && !this.state.tags.includes(text)){
+                if (sourceText.startsWith(stateValue) && !this.state.tags.includes(text)){
 
                     sourceList.push(text);
                 }
