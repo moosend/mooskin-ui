@@ -10,7 +10,7 @@ export interface ITagsProps{
     tags: string[];
 
     /** source of data for type ahead completion */
-    source?: string[];
+    source?: (() => Promise<string[]>) | (() => string[]) | string[];
 
     /** limit number of items available on the source list */
     sourceLimit?: number;
@@ -64,6 +64,7 @@ export interface ITagsState{
     value: string;
     activeItem: number;
     sourceList: string[];
+    rawSourceList: string[];
 }
 
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
@@ -81,6 +82,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         this.state = {
             activeItem: 0,
+            rawSourceList: [],
             sourceList: [],
             tags: [],
             value: ''
@@ -89,6 +91,32 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     componentWillMount(){
         this.setState({tags: this.props.tags});
+    }
+
+    componentDidMount(){
+
+        const {source} = this.props;
+
+        if (typeof source === 'function'){
+            const result = source();
+
+            if (result instanceof Promise){
+                result.then((stringArray) => {
+                    this.setState({rawSourceList: stringArray});
+                });
+            }else if (result instanceof Array && result.length){
+                this.setState({rawSourceList: result});
+            }else{
+                throw new Error(
+                    `source must either be an array of strings,
+                    a function that returns an array of strings or
+                    a function that returns a Promise that resolves into an array of strings!`
+                );
+            }
+
+        }else if (source && source instanceof Array && source.length){
+            this.setState({rawSourceList: source});
+        }
     }
 
     componentWillReceiveProps(nextProps: ITagsProps){
@@ -130,10 +158,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     getTags = (tags: string[]) => {
-        const newTags: Array<React.ReactElement<ITagProps>> = [];
 
-        tags.map((value, i) => {
-            newTags.push(
+        return tags.map((value, i) => {
+            return (
                 <Tag
                     tag={value}
                     key={i}
@@ -143,40 +170,47 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 />
             );
         });
-
-        return newTags;
     }
 
     onHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
+        const value = e.target.value;
+
         this.setState({value: e.target.value});
 
-        const limit = this.props.sourceLimit ? this.props.sourceLimit : 10;
+        const {rawSourceList} = this.state;
 
-        if (this.props.source){
+        if (rawSourceList && rawSourceList.length){
 
-            const sourceList: any[] = [];
-
-            this.props.source.map((text, i) => {
-
-                const sourceText = text.toLowerCase();
-
-                const stateValue = e.target.value.toLowerCase();
-
-                if (sourceText.startsWith(stateValue) && !this.state.tags.includes(text)){
-
-                    sourceList.push(text);
-                }
-
-            });
-
-            this.setState({sourceList: sourceList.slice(0, limit), activeItem: 0});
+            this.updateSourceList(value, rawSourceList);
         }
+    }
+
+    updateSourceList = (value: string, source: string[]) => {
+        const sourceList: string[] = [];
+
+        const limit = this.props.sourceLimit || 10;
+
+        source.map((text, i) => {
+
+            const sourceText = text.toLowerCase();
+
+            const stateValue = value.toLowerCase();
+
+            if (sourceText.startsWith(stateValue) && !this.state.tags.includes(text)){
+
+                sourceList.push(text);
+            }
+
+        });
+
+        this.setState({sourceList: sourceList.slice(0, limit), activeItem: 0});
     }
 
     onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         const {delimiters} = this.props;
 
-        const tags = this.state.tags;
+        const tags: string[] = [...this.state.tags, ...[]]; // always copy here
 
         const key = e.key;
         const keyCode = e.keyCode;
@@ -222,7 +256,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             } else {
                 // const pos = tags.indexOf(this.state.value);
                 // tags.splice(pos, 1, this.state.value);
-                this.setState({tags, value: ''});
+                this.setState({tags: [], value: ''});
                 // this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
             }
         }
@@ -231,7 +265,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     removeTag = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            const tags = this.state.tags;
+            const tags: string[] = [...this.state.tags, ...[]]; // always copy here
 
             tags.splice(index, 1);
 
@@ -245,13 +279,11 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const source = this.state.sourceList ? this.state.sourceList : [];
 
-        const sourceList: any[] = [];
-
-        source && source.map((text, i) => {
+        const sourceList = source.map((text, i) => {
 
             const active = this.state.activeItem === i ? styles.active : '';
 
-            sourceList.push(
+            return (
                 <div
                     onClick={this.addTag(text)}
                     className={`${styles.sourceItem} ${active}`}
@@ -274,7 +306,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         return (e: React.MouseEvent<HTMLElement>) => {
 
-            const tags = this.state.tags;
+            const tags: string[] = [...this.state.tags, ...[]]; // always copy here
 
             tags.push(text);
 
