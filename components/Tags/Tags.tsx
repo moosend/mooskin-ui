@@ -195,7 +195,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     tags.push(this.state.value);
                 }
 
-                this.setState({tags, value: ''});
+                this.setState({tags, value: '', sourceList: [], activeItem: 0});
 
                 this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
