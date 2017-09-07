@@ -88,10 +88,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         this.setState({tags: this.props.tags});
     }
 
-    componentWillUpdate(nextProps: any, nextState: any){
-        console.log(nextState.sourceList);
-    }
-
     render(){
 
         const tags = this.getTags(this.state.tags);
@@ -151,7 +147,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
                 const stateValue = e.target.value.toLowerCase();
 
-                if (sourceText.startsWith(stateValue) && !this.state.tags.includes(text)){
+                if (sourceText.includes(stateValue) && !this.state.tags.includes(text)){
 
                     sourceList.push(text);
                 }
