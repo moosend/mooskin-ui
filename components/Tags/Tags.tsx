@@ -66,7 +66,7 @@ export interface ITagsState{
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     static defaultProps: Partial<ITagsProps> = {
-        delimiters: ['Enter'], // 13 is the keyCode for Enter
+        delimiters: ['Enter', 13] // 13 is the keyCode for Enter
     };
 
     id: string;
@@ -94,22 +94,27 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const source = this.state.value !== '' ? this.sourceList() : '';
 
+        // const cover = this.state.sourceList.length > 0 ? this.getCover() : '';
+
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style}>
                 <label className={styles.tags} htmlFor={this.id}>
                     {tags}
                     <div className={styles.inputContainer}>
                         <input
+                            ref={this.id}
                             id={this.id}
                             value={this.state.value}
                             className={styles.input}
                             placeholder={this.props.placeholder}
                             onChange={this.onHandleChange}
                             onKeyDown={this.onKeyDown}
+                            onClick={this.removeSource}
                         />
                         {source}
                     </div>
                 </label>
+                {/* {cover} */}
             </div>
         );
     }
@@ -166,7 +171,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         const key = e.key;
         const keyCode = e.keyCode;
 
-        console.log('Key: ' + e.key + ', KeyCode:' + e.keyCode);
+        // console.log('Key: ' + e.key + ', KeyCode:' + e.keyCode);
 
         if (this.props.deletable && (key === 'Backspace' || keyCode === 8) && this.state.value === ''){
 
@@ -269,6 +274,14 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         };
 
+    }
+
+    // getCover = () => {
+    //     return <div onClick={this.removeSource} className={styles.cover} />;
+    // }
+
+    removeSource = () => {
+        this.setState({sourceList: []});
     }
 
     generateId = () => {

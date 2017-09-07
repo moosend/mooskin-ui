@@ -36,7 +36,7 @@ class ButtonExample extends React.Component {
 
         return(
             <div>
-                <Tags source={countries} delimiters={[',', 32, 'Enter']} tags={this.state.tags} onChange={this.onChange} deletable/>
+                <Tags source={countries} delimiters={[188, 32, 13]} tags={this.state.tags} onChange={this.onChange} deletable/>
             </div>
         );
     }
