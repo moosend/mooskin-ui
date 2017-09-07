@@ -3,6 +3,7 @@
 exports[`Tags renders Tags correctly 1`] = `
 <div
   className="container myClass"
+  id="4zlbrf"
   style={
     Object {
       "width": "50px",
