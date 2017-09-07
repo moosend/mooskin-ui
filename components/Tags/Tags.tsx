@@ -179,7 +179,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const value = e.target.value;
 
-        this.setState({value: e.target.value});
+        this.setState({value});
 
         const {rawSourceList} = this.state;
 
@@ -242,7 +242,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         } else if (delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))){
 
-            if (!tags.includes(this.state.value)){
+            if (!tags.includes(this.state.value) && this.state.value !== ''){
 
                 if (this.props.source && this.state.sourceList.length > 0){
                     tags.push(this.state.sourceList[this.state.activeItem]);
@@ -257,7 +257,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             } else {
                 // const pos = tags.indexOf(this.state.value);
                 // tags.splice(pos, 1, this.state.value);
-                this.setState({tags: [], value: ''});
+                this.setState({value: ''});
                 // this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
             }
         }
