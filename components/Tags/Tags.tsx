@@ -30,6 +30,9 @@ export interface ITagsProps{
     /** override single tag classes */
     tagClasses?: string;
 
+    /** tags input label */
+    label?: string;
+
     /** input field placehonder */
     placeholder?: string;
 
@@ -88,6 +91,10 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         this.setState({tags: this.props.tags});
     }
 
+    componentWillReceiveProps(nextProps: ITagsProps){
+        this.setState({tags: nextProps.tags});
+    }
+
     render(){
 
         const tags = this.getTags(this.state.tags);
@@ -96,8 +103,11 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         // const cover = this.state.sourceList.length > 0 ? this.getCover() : '';
 
+        const display = this.props.label ? {display: 'block'} : {display: 'none'};
+
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style}>
+                <div style={display} className={styles.label}>{this.props.label}</div>
                 <label className={styles.tags} htmlFor={this.id}>
                     {tags}
                     <div className={styles.inputContainer}>

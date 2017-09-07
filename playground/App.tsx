@@ -56,6 +56,7 @@ export const App = (props: any) => {
         RadioGroup,
         Select,
         Switch,
+        Tags,
         TextArea
     };
 
