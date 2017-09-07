@@ -37,7 +37,7 @@ export interface ITagsProps{
     dataLabel?: string;
 
     /** an array of possible delimiters, enter key is the default delimiter */
-    delimiters?: string[];
+    delimiters?: Array<string | number>;
 
     onChange?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
@@ -163,9 +163,12 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const tags = this.state.tags;
 
+        const key = e.key;
+        const keyCode = e.keyCode;
+
         console.log('Key: ' + e.key + ', KeyCode:' + e.keyCode);
 
-        if (this.props.deletable && e.key === 'Backspace' && this.state.value === ''){
+        if (this.props.deletable && (key === 'Backspace' || keyCode === 8) && this.state.value === ''){
 
             tags.pop();
 
@@ -173,19 +176,19 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
-        } else if (e.key === 'ArrowDown'){
+        } else if (key === 'ArrowDown' || keyCode === 40){
 
             if (this.state.activeItem < this.state.sourceList.length - 1){
                 this.setState({activeItem: this.state.activeItem + 1});
             }
 
-        } else if (e.key === 'ArrowUp'){
+        } else if (key === 'ArrowUp' || keyCode === 38){
 
             if (this.state.activeItem > 0){
                 this.setState({activeItem: this.state.activeItem - 1});
             }
 
-        } else if (delimiters && delimiters.includes(e.key)){
+        } else if (delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))){
 
             e.preventDefault();
 

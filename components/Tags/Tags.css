@@ -67,6 +67,7 @@
 
 .sourceItem:hover{
     background: rgb(239, 239, 239);
+    cursor: pointer;
 }
 
 .active{
