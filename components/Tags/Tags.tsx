@@ -88,6 +88,10 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         this.setState({tags: this.props.tags});
     }
 
+    componentWillUpdate(nextProps: any, nextState: any){
+        console.log(nextState.sourceList);
+    }
+
     render(){
 
         const tags = this.getTags(this.state.tags);
@@ -134,12 +138,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     onHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({value: e.target.value});
-    }
-
-    onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        const {delimiters} = this.props;
-
-        const tags = this.state.tags;
 
         const limit = this.props.sourceLimit ? this.props.sourceLimit : 10;
 
@@ -151,7 +149,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
                 const sourceText = text.toLowerCase();
 
-                const stateValue = this.state.value.toLowerCase();
+                const stateValue = e.target.value.toLowerCase();
 
                 if (sourceText.startsWith(stateValue) && !this.state.tags.includes(text)){
 
@@ -162,6 +160,12 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             this.setState({sourceList: sourceList.slice(0, limit), activeItem: 0});
         }
+    }
+
+    onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        const {delimiters} = this.props;
+
+        const tags = this.state.tags;
 
         if (this.props.deletable && e.key === 'Backspace' && this.state.value === ''){
 
@@ -222,8 +226,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     sourceList = () => {
-
-        console.log('called');
 
         const source = this.state.sourceList ? this.state.sourceList : [];
 
