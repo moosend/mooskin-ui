@@ -161,7 +161,7 @@ export const App = (props: any) => {
                     <H1>Miscellaneous</H1>
                 </Col>
                 <Col lg={12}>
-                    {renderEditableExample('Tags', {Tags})}
+                    {renderEditableExample('Tags', {Tags, Promise})}
                 </Col>
                 <Col lg={6} md={8}>
                     {renderEditableExample('TopNotification', {TopNotification, Button})}

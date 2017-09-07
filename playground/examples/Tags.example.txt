@@ -18,7 +18,7 @@ class ButtonExample extends React.Component {
 
     render(){
 
-        var countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas"
+        const countries = ["Afghanistan","Albania","Algeria","Andorra","Angola","Anguilla","Antigua &amp; Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas"
 		,"Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia &amp; Herzegovina","Botswana","Brazil","British Virgin Islands"
 		,"Brunei","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Chad","Chile","China","Colombia","Congo","Cook Islands","Costa Rica"
 		,"Cote D Ivoire","Croatia","Cruise Ship","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","Ecuador","Egypt","El Salvador","Equatorial Guinea"
@@ -34,9 +34,20 @@ class ButtonExample extends React.Component {
 		,"Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)"
 		,"Yemen","Zambia","Zimbabwe"];
 
+        const promiseFunc = () => 
+            fetch('https://api.github.com/users?since=135')
+                .then(rsp => rsp.json())
+                .then(data => data.map(user => user.login));
+
+        const stringArr = () => countries;
+
         return(
             <div>
-                <Tags source={countries} label="Tags" delimiters={[188, 32, 13]} tags={this.state.tags} onChange={this.onChange} deletable/>
+                <Tags source={countries} label="Tags from string array" delimiters={[188, 32, 13]} tags={this.state.tags} onChange={this.onChange} deletable/>
+                <br/>
+                <Tags source={stringArr} label="Tags from function that returns string array" delimiters={[188, 32, 13]} tags={this.state.tags} onChange={this.onChange} deletable/>
+                <br/>
+                <Tags source={promiseFunc} label="Tags from function that returns Promise(api call for github users)" delimiters={[188, 32, 13]} tags={this.state.tags} onChange={this.onChange} deletable/>
             </div>
         );
     }
