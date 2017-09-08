@@ -77,7 +77,7 @@ describe('Tags', () => {
 
         expect(component.state('value')).toBe('');
 
-        component.find('input').simulate('keyDown', { keyCode: 8, key: 'Backspace' });
+        component.find('input').simulate('keyDown', { keyCode: 8, key: 'Backspace', preventDefault: () => undefined });
 
         expect(component.state('tags')).toEqual(['Prishtina', 'Athens', 'London', 'New York']);
 
@@ -85,7 +85,7 @@ describe('Tags', () => {
 
         expect(component.state('value')).toBe('Tokyo');
 
-        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter' });
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
         expect(component.state('tags')).toEqual(['Prishtina', 'Athens', 'London', 'New York', 'Tokyo']);
 
@@ -135,13 +135,13 @@ describe('Tags', () => {
         component.find('input').simulate('change', { target: { value: 'Tokyo' }});
         expect(component.state('value')).toBe('Tokyo');
 
-        component.find('input').simulate('keyDown', { keyCode: 32, key: 'Space' });
+        component.find('input').simulate('keyDown', { keyCode: 32, key: 'Space', preventDefault: () => undefined });
         expect(component.state('tags')).toEqual(['Prishtina', 'Athens', 'London', 'New York', 'Beijing', 'Tokyo']);
 
         component.find('input').simulate('change', { target: { value: 'Berlin' }});
         expect(component.state('value')).toBe('Berlin');
 
-        component.find('input').simulate('keyDown', { keyCode: 188, key: ',' });
+        component.find('input').simulate('keyDown', { keyCode: 188, key: ',', preventDefault: () => undefined });
         expect(component.state('tags')).toEqual(
             ['Prishtina', 'Athens', 'London', 'New York', 'Beijing', 'Tokyo', 'Berlin']
         );
@@ -217,12 +217,12 @@ describe('Tags', () => {
         expect(component.state('activeItem')).toBe(0);
         expect(component.find('.sourceItem').first().hasClass('active')).toBeTruthy;
 
-        component.find('input').simulate('keyDown', { keyCode: 40, key: 'ArrowDown' });
+        component.find('input').simulate('keyDown', { keyCode: 40, key: 'ArrowDown', preventDefault: () => undefined });
 
         expect(component.state('activeItem')).toBe(1);
         expect(component.find('.sourceItem').last().hasClass('active')).toBeTruthy;
 
-        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter' });
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
         expect(component.state('tags')).toEqual(['Algeria']);
         expect(component.find('Tag').length).toEqual(1);
@@ -235,18 +235,18 @@ describe('Tags', () => {
         expect(component.state('activeItem')).toBe(0);
         expect(component.find('.sourceItem').first().hasClass('active')).toBeTruthy;
 
-        component.find('input').simulate('keyDown', { keyCode: 40, key: 'ArrowDown' });
-        component.find('input').simulate('keyDown', { keyCode: 40, key: 'ArrowDown' });
+        component.find('input').simulate('keyDown', { keyCode: 40, key: 'ArrowDown', preventDefault: () => undefined });
+        component.find('input').simulate('keyDown', { keyCode: 40, key: 'ArrowDown', preventDefault: () => undefined });
 
         expect(component.state('activeItem')).toBe(2);
         expect(component.find('.sourceItem').at(2).hasClass('active')).toBeTruthy;
 
-        component.find('input').simulate('keyDown', { keyCode: 38, key: 'ArrowUp' });
+        component.find('input').simulate('keyDown', { keyCode: 38, key: 'ArrowUp', preventDefault: () => undefined });
 
         expect(component.state('activeItem')).toBe(1);
         expect(component.find('.sourceItem').at(1).hasClass('active')).toBeTruthy;
 
-        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter' });
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
         expect(component.state('tags')).toEqual(['Algeria', 'United Kingdom']);
         expect(component.find('Tag').length).toEqual(2);
@@ -256,7 +256,7 @@ describe('Tags', () => {
 
         expect(component.find('.sourceItem').length).toEqual(0);
 
-        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter' });
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
         expect(component.state('tags')).toEqual(['Algeria', 'United Kingdom', 'Doni']);
         expect(component.find('Tag').length).toEqual(3);
@@ -323,11 +323,11 @@ describe('Tags', () => {
         expect(component.find('.sourceList').length).toEqual(1);
         expect(component.find('.sourceItem').length).toEqual(5);
 
-        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter' });
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
         expect(func).toHaveBeenCalled();
 
-        component.find('input').simulate('keyDown', { keyCode: 8, key: 'Backspace' });
+        component.find('input').simulate('keyDown', { keyCode: 8, key: 'Backspace', preventDefault: () => undefined });
 
         expect(func).toHaveBeenCalled();
 
