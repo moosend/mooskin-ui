@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence');
-@import '../../_utils/globals/global.css';
+@import '../../_utils/globals/variables.css';
 
 .h3 {
     font-family: 'Convergence', sans-serif;

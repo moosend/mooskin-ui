@@ -1,4 +1,5 @@
-@import '../_utils/globals/global.css';
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
 
 .radio {
     display: flex;
