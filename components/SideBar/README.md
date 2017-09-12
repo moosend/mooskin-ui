@@ -69,6 +69,7 @@ As you can see the main SideBar is a static one, doesnt have a button. When an I
 * `button` - Displays a button on the location of the SideBar in the DOM
 * `className` - custom classes
 * `style` - or additional styles
+* `offClick` - close sidebar when an item is clicked
 
 ## Supported attributes for Item
 

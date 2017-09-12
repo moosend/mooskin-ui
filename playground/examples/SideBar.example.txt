@@ -2,7 +2,7 @@ class SideBarExample extends React.Component {
 
     render(){
         return (
-            <SideBar button>
+            <SideBar button offClick>
                 <Item
                     image="https://cdn.moostaging.com/assets/images/icons/icon-dashboard.png"
                     imageOn="https://cdn.moostaging.com/assets/images/icons/icon-dashboard-on.png"

@@ -21,6 +21,9 @@ export interface ISideBarProps{
     /** override sidebar styles */
     style?: React.CSSProperties;
 
+    /** wether the sidebar should hide when an item is clicked */
+    offClick?: boolean;
+
     /** sidebar children */
     children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>;
 }
@@ -86,7 +89,7 @@ export interface ISideBarState {
     display: boolean;
     subMenuDisplay?: boolean;
     smallDisplay?: boolean;
-    // secondaryActive?: number;
+    activeSecondary?: number;
 }
 
 export default class SideBar extends React.Component<ISideBarProps, ISideBarState>{
@@ -105,6 +108,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
         this.state = {
             activeItem: this.getActiveItem(),
+            activeSecondary: -1,
             display: false,
             // secondaryActive: this.getActiveSecondary(),
             smallDisplay: false,
@@ -164,8 +168,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
             if (React.isValidElement<ISideBarItemProps>(child)){
 
-                const subMenu = child.props.children ? this.getSubMenu(child) : '';
-
                 if (child.props.children){
                     items.push(
                         <Item
@@ -176,12 +178,12 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                             href={child.props.href}
                             active={this.state.activeItem === index}
                             onClick={this.onClickItem(index, child)}
-                            onMouseEnter={this.toggleSubMenu}
-                            onMouseLeave={this.toggleSubMenu}
+                            onMouseEnter={this.subMenuOn}
+                            onMouseLeave={this.subMenuOff}
                             style={child.props.style}
                             className={child.props.className}
                         >
-                            {subMenu || child.props.children}
+                            {this.getSubMenu(child) || child.props.children}
                         </Item>
                     );
                 } else {
@@ -210,43 +212,40 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     getSubMenu = (item: React.ReactElement<ISideBarItemProps>) => {
         if (React.isValidElement<ISideBarItemProps>(item)){
+            const items = item.props.children ? item.props.children : [];
             return (
                 <SubMenu
                     className={item.props.subMenuClasses}
                     style={item.props.subMenuStyle}
                     display={this.state.subMenuDisplay}
                 >
-                    {item.props.children}
+                    {this.getSubMenuItems(items)}
                     {/* {secondary.props.children && this.getSecondaryItems(secondary.props.children)} */}
                 </SubMenu>
             );
         }
     }
 
-    // getSecondaryItems = (items: ISideBarItemProps[]) => {
-
-    //     const secondaryItems: any[] = [];
-
-    //     items.forEach((item: ISideBarItemProps, index: number) => {
-    //         if (React.isValidElement<ISideBarItemProps>(item)){
-    //             secondaryItems.push(
-    //                 <Item
-    //                     key={index}
-    //                     image={item.image}
-    //                     label={item.label}
-    //                     href={item.href}
-    //                     style={item.style}
-    //                     className={item.className}
-    //                 >
-    //                     {item.children}
-    //                 </Item>
-    //             );
-    //         }
-    //     });
-
-    //     return secondaryItems;
-
-    // }
+    getSubMenuItems = (items: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>) => {
+        console.log(items);
+        const newItems: Array<React.ReactElement<ISideBarItemProps>> = [];
+        if (Array.isArray(items)){
+            items.forEach((item: React.ReactElement<ISideBarItemProps>, index: number) => {
+                newItems.push(
+                    <Item
+                        key={index}
+                        label={item.props.label}
+                        href={item.props.href}
+                        onClick={this.onClickSecondary(index, item)}
+                        style={item.props.style}
+                        className={item.props.className}
+                        active={this.state.activeSecondary === index}
+                    />
+                );
+            });
+        }
+        return newItems;
+    }
 
     onClickButton = () => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
@@ -256,17 +255,38 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     onClickItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
-            item.props.onClick && item.props.onClick(e);
-            this.setState({activeItem: itemIndex});
+            if (!item.props.children){
+                if (this.props.offClick && this.props.button){
+                    item.props.onClick && item.props.onClick(e);
+                    this.setState({activeItem: itemIndex, display: false, subMenuDisplay: false, smallDisplay: false});
+                } else if (this.props.offClick){
+                    item.props.onClick && item.props.onClick(e);
+                    this.setState({activeItem: itemIndex, subMenuDisplay: false});
+                } else {
+                    item.props.onClick && item.props.onClick(e);
+                    this.setState({activeItem: itemIndex});
+                }
+            } else {
+                item.props.onClick && item.props.onClick(e);
+                this.setState({activeItem: itemIndex});
+            }
         };
     }
 
-    // onClickSecondaryItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
-    //     return (e: React.MouseEvent<HTMLDivElement>) => {
-    //         item.props.onClick && item.props.onClick(e);
-    //         this.setState({activeItem: itemIndex});
-    //     };
-    // }
+    onClickSecondary = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
+        return (e: React.MouseEvent<HTMLDivElement>) => {
+            if (this.props.offClick && this.props.button){
+                item.props.onClick && item.props.onClick(e);
+                this.setState({activeSecondary: itemIndex, display: false, subMenuDisplay: false, smallDisplay: false});
+            } else if (this.props.offClick){
+                item.props.onClick && item.props.onClick(e);
+                this.setState({activeSecondary: itemIndex, subMenuDisplay: false, smallDisplay: false});
+            } else {
+                item.props.onClick && item.props.onClick(e);
+                this.setState({activeSecondary: itemIndex});
+            }
+        };
+    }
 
     getActiveItem() {
         const childrenArray = React.Children.toArray(this.props.children);
@@ -280,8 +300,10 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     }
 
     getCover = () => {
-        const coverDisplay = this.coverClasses();
-        return <div className={`${styles.cover} ${coverDisplay}`} onClick={this.toggle}/>;
+        if (this.state.display){
+            const coverDisplay = this.coverClasses();
+            return <div className={`${styles.cover} ${coverDisplay}`} onClick={this.toggle}/>;
+        }
     }
 
     coverClasses = () => {
@@ -312,8 +334,12 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         this.setState({display: false, smallDisplay: false});
     }
 
-    toggleSubMenu = () => {
-        this.setState({subMenuDisplay: !this.state.subMenuDisplay});
+    subMenuOn = () => {
+        this.setState({subMenuDisplay: true});
+    }
+
+    subMenuOff = () => {
+        this.setState({subMenuDisplay: false});
     }
 }
 
