@@ -12,3 +12,28 @@ export const arrayHasDupes = (array: any[]): boolean => {
 
     return false;
 };
+
+export const debounce = (func: (...args: any[]) => any, wait: number, immediate: boolean) => {
+
+    let timeout: number|null;
+
+    return function() {
+        const args = arguments;
+        const later = () => {
+            timeout = null;
+
+            if (!immediate){
+                func.apply(this, args);
+            }
+        };
+
+        const callNow = immediate && !timeout;
+
+        timeout && clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+
+        if (callNow) {
+            func.apply(this, args);
+        }
+    };
+};

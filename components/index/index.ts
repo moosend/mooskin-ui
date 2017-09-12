@@ -31,3 +31,5 @@ export {default as SideBar, Item} from '../SideBar';
 export {default as Steps, Step} from '../Steps';
 
 export {default as StatsBox, StatsTitle, StatsNumber, StatsResult} from '../StatsBox';
+
+export {default as Tags} from '../Tags';

@@ -6,7 +6,7 @@ import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
 import Button, {IButtonProps} from '../Button/Button';
 import {ICheckBoxData} from '../Checkbox/Checkbox';
-import {CheckboxGroup, DatePicker, FileUpload, Input, RadioGroup, Select, Switch, TextArea} from '../index/';
+import {CheckboxGroup, DatePicker, FileUpload, Input, RadioGroup, Select, Switch, Tags, TextArea} from '../index/';
 import {IRadioData} from '../Radio/Radio';
 
 export interface IFormProps{
@@ -189,6 +189,8 @@ export default class Form extends React.Component<IFormProps, {}>{
                     data[element.props.dataLabel] = element.props.date;
                 } else if (element.type === FileUpload){
                     data[element.props.dataLabel] = element.props.files;
+                } else if (element.type === Tags){
+                    data[element.props.dataLabel] = element.props.tags;
                 } else {
                     this.collectEssence(element, data);
                     // throw new Error('Elements used within the form are not supported');
