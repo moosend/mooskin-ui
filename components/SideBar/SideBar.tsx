@@ -22,7 +22,7 @@ export interface ISideBarProps{
     style?: React.CSSProperties;
 
     /** wether the sidebar should hide when an item is clicked */
-    offClick?: boolean;
+    hideClick?: boolean;
 
     /** sidebar children */
     children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>;
@@ -227,7 +227,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     }
 
     getSubMenuItems = (items: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>) => {
-        console.log(items);
         const newItems: Array<React.ReactElement<ISideBarItemProps>> = [];
         if (Array.isArray(items)){
             items.forEach((item: React.ReactElement<ISideBarItemProps>, index: number) => {
@@ -243,6 +242,17 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                     />
                 );
             });
+        } else {
+            return (
+                <Item
+                    label={items.props.label}
+                    href={items.props.href}
+                    onClick={this.onClickSecondary(0, items)}
+                    style={items.props.style}
+                    className={items.props.className}
+                    active={this.state.activeSecondary === 0}
+                />
+            );
         }
         return newItems;
     }
@@ -256,10 +266,10 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     onClickItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
             if (!item.props.children){
-                if (this.props.offClick && this.props.button){
+                if (this.props.hideClick && this.props.button){
                     item.props.onClick && item.props.onClick(e);
                     this.setState({activeItem: itemIndex, display: false, subMenuDisplay: false, smallDisplay: false});
-                } else if (this.props.offClick){
+                } else if (this.props.hideClick){
                     item.props.onClick && item.props.onClick(e);
                     this.setState({activeItem: itemIndex, subMenuDisplay: false, smallDisplay: false});
                 } else {
@@ -275,10 +285,10 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     onClickSecondary = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
-            if (this.props.offClick && this.props.button){
+            if (this.props.hideClick && this.props.button){
                 item.props.onClick && item.props.onClick(e);
                 this.setState({activeSecondary: itemIndex, display: false, subMenuDisplay: false, smallDisplay: false});
-            } else if (this.props.offClick){
+            } else if (this.props.hideClick){
                 item.props.onClick && item.props.onClick(e);
                 this.setState({activeSecondary: itemIndex, subMenuDisplay: false, smallDisplay: false});
             } else {
