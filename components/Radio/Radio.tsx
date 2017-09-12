@@ -133,7 +133,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
     onClick = (dataArray: {selected: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            const data: IRadioData[] = this.state.data;
+            const data: IRadioData[] = [...this.state.data];
             data.forEach((radio, index) => {
                 data[index] = {
                     label: radio.label,
@@ -182,7 +182,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
     }
 
     assignRadios = () => {
-        const {data} = this.state;
+        const data = [...this.state.data];
         const radios: Array<React.ReactElement<IRadioProps>> = [];
         React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement<IRadioProps>(child)){

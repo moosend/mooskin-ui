@@ -204,6 +204,7 @@
 
     .smallOff{
         width: 0px !important;
+        overflow-x: hidden !important;
     }
 
     .itemContainer{
@@ -266,6 +267,7 @@
 
     .smallOff{
         width: 0px !important;
+        overflow-x: hidden !important;
     }
 
     .itemContainer{

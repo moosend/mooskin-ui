@@ -261,7 +261,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                     this.setState({activeItem: itemIndex, display: false, subMenuDisplay: false, smallDisplay: false});
                 } else if (this.props.offClick){
                     item.props.onClick && item.props.onClick(e);
-                    this.setState({activeItem: itemIndex, subMenuDisplay: false});
+                    this.setState({activeItem: itemIndex, subMenuDisplay: false, smallDisplay: false});
                 } else {
                     item.props.onClick && item.props.onClick(e);
                     this.setState({activeItem: itemIndex});
