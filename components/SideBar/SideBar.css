@@ -90,16 +90,16 @@
 
 .button{
     display: none;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+}
+
+.button i{
+    font-size: 50px;
 }
 
 .buttonOn{
     display: block;
-}
-
-.button i{
-    font-size: 40px;
 }
 
 .arrow{
@@ -111,6 +111,7 @@
     left: 90px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
+    
     border-left: 15px solid #2D2D2D;
 }
 
