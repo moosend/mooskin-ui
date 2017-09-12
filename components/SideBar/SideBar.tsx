@@ -90,6 +90,7 @@ export interface ISideBarState {
     subMenuDisplay?: boolean;
     smallDisplay?: boolean;
     activeSecondary?: number;
+    activeSubMenu?: number;
 }
 
 export default class SideBar extends React.Component<ISideBarProps, ISideBarState>{
@@ -109,6 +110,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         this.state = {
             activeItem: this.getActiveItem(),
             activeSecondary: -1,
+            activeSubMenu: -1,
             display: false,
             // secondaryActive: this.getActiveSecondary(),
             smallDisplay: false,
@@ -178,12 +180,12 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                             href={child.props.href}
                             active={this.state.activeItem === index}
                             onClick={this.onClickItem(index, child)}
-                            onMouseEnter={this.subMenuOn}
+                            onMouseEnter={this.subMenuOn(index)}
                             onMouseLeave={this.subMenuOff}
                             style={child.props.style}
                             className={child.props.className}
                         >
-                            {this.getSubMenu(child) || child.props.children}
+                            {this.getSubMenu(child, index) || child.props.children}
                         </Item>
                     );
                 } else {
@@ -210,20 +212,27 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         return items;
     }
 
-    getSubMenu = (item: React.ReactElement<ISideBarItemProps>) => {
+    getSubMenu = (item: React.ReactElement<ISideBarItemProps>, index: number) => {
         if (React.isValidElement<ISideBarItemProps>(item)){
             const items = item.props.children ? item.props.children : [];
             return (
                 <SubMenu
                     className={item.props.subMenuClasses}
                     style={item.props.subMenuStyle}
-                    display={this.state.subMenuDisplay}
+                    display={this.displaySubMenu(index)}
                 >
                     {this.getSubMenuItems(items)}
                     {/* {secondary.props.children && this.getSecondaryItems(secondary.props.children)} */}
                 </SubMenu>
             );
         }
+    }
+
+    displaySubMenu = (index: number) => {
+        if (this.state.subMenuDisplay && this.state.activeSubMenu === index){
+            return true;
+        }
+        return false;
     }
 
     getSubMenuItems = (items: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>) => {
@@ -344,12 +353,14 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         this.setState({display: false, smallDisplay: false});
     }
 
-    subMenuOn = () => {
-        this.setState({subMenuDisplay: true});
+    subMenuOn = (index?: number) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            this.setState({subMenuDisplay: true, activeSubMenu: index});
+        };
     }
 
     subMenuOff = () => {
-        this.setState({subMenuDisplay: false});
+        this.setState({subMenuDisplay: false, activeSubMenu: -1});
     }
 }
 
