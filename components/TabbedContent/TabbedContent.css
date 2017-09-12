@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import '../_utils/globals/variables.css';
-@import '../_utils/globals/screens.css';
+@import '../_utils/globals/global.css';
 
 .container{
     display: flex;

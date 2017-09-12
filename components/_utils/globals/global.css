@@ -1,6 +1,9 @@
+@import 'variables.css';
+@import 'screens.css';
+
 :global(*){
     box-sizing: border-box;
     outline: none;
     font-family: Arial, sans-serif;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: var(--moosendBlue);
 }

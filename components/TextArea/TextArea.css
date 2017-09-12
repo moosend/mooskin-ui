@@ -1,5 +1,4 @@
-@import '../_utils/globals/variables.css';
-@import '../_utils/globals/screens.css';
+@import '../_utils/globals/global.css';
 
 .areaContainer{
     display: flex;
