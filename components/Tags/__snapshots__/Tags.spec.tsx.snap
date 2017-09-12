@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tags renders Tags correctly 1`] = `
+<div
+  className="container myClass"
+  id="4zlbrf"
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
+>
+  <div
+    className="label"
+    style={
+      Object {
+        "display": "block",
+      }
+    }
+  >
+    label
+  </div>
+  <label
+    className="tags"
+    htmlFor="4zlbrf"
+  >
+    <Tag
+      className="tagClasses"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "50px",
+        }
+      }
+      tag="Prishtina"
+    />
+    <Tag
+      className="tagClasses"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "50px",
+        }
+      }
+      tag="Athens"
+    />
+    <div
+      className="inputContainer"
+    >
+      <input
+        className="input"
+        id="4zlbrf"
+        onChange={[Function]}
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        placeholder="olala"
+        value=""
+      />
+    </div>
+  </label>
+</div>
+`;

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '../_utils/globals/variables.css';
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.tags{
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: #efefef;
+    padding: 7px;
+    flex-wrap: wrap;
+    width: 100%;
+    cursor: text;
+    min-height: 43px;
+}
+
+.tag{
+    background: #5ccdde;
+    border-radius: 6px;
+    padding: 4px;
+    color: #fff;
+    margin: 2px;
+    cursor: unset;
+    font-size: 0.875rem
+}
+
+.close{
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.input{
+    flex: 1;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border: 0;
+    background: #efefef;
+    color: var(--inputFontColor);
+    /* font-size: 16px; */
+    font-size: 1rem; 
+    min-width: 30px;
+}
+
+.inputContainer{
+    position: relative;
+    display: flex;
+    flex: 1;
+}
+
+.sourceList {
+    top: 25px;
+    position: absolute;
+    background: #fff;
+    box-shadow: 5px 5px 20px #bfbfbf;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.sourceItem {
+    padding: 10px;
+}
+
+.sourceItem:hover{
+    background: rgb(239, 239, 239);
+    cursor: pointer;
+}
+
+.active{
+    background: rgb(239, 239, 239);
+    border-radius: inherit;
+}
+
+.label{
+    flex-basis: 20px;
+    color: #6b6b6b;
+    /* font-size: 13px;  */
+    font-size: .92857142857rem; 
+}
+
+/* .cover{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+} */

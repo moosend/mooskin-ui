@@ -3,8 +3,8 @@
 
 import * as React from 'react';
 
-import moment from 'moment';
 import { EditorState } from 'draft-js';
+import moment from 'moment';
 
 import {renderEditableExample} from './tools/ReactLiveEditor/ReactLiveEditor';
 
@@ -36,6 +36,7 @@ import {Item, SideBar} from '../components/index';
 import {Step, Steps} from '../components/index';
 import {StatsBox, StatsNumber, StatsResult, StatsTitle} from '../components/index';
 import {Table, TableHeader} from '../components/index';
+import {Tags} from '../components/index';
 
 export const App = (props: any) => {
 
@@ -55,6 +56,7 @@ export const App = (props: any) => {
         RadioGroup,
         Select,
         Switch,
+        Tags,
         TextArea
     };
 
@@ -157,6 +159,9 @@ export const App = (props: any) => {
             <Row id="misc">
                 <Col lg={12}>
                     <H1>Miscellaneous</H1>
+                </Col>
+                <Col lg={12}>
+                    {renderEditableExample('Tags', {Tags, Promise})}
                 </Col>
                 <Col lg={6} md={8}>
                     {renderEditableExample('TopNotification', {TopNotification, Button})}

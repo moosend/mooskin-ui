@@ -161,6 +161,7 @@ import {Input} from 'mooskin'
 * [SmallIconButton](https://github.com/moosend/mooskin-ui/tree/master/components/SmallIconButton)
 * [TabbedContent](https://github.com/moosend/mooskin-ui/tree/master/components/TabbedContent)
 * [RadioTabs](https://github.com/moosend/mooskin-ui/tree/master/components/RadioTabs)
+* [Tags](https://github.com/moosend/mooskin-ui/tree/master/components/Tags)
 * [RadioAccordion](https://github.com/moosend/mooskin-ui/tree/master/components/Accordion)
 * [CheckListItem](https://github.com/moosend/mooskin-ui/tree/master/components/CheckListItem)
 * [TopNotification](https://github.com/moosend/mooskin-ui/tree/master/components/TopNotification)
