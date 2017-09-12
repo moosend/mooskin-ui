@@ -50,6 +50,21 @@ const sources = ['London', 'Berlin', 'Beijing', 'New York';]
 <Tags tags={this.state.cities} source={sources} />
 ```
 
+Or you can pass a function that returns an array of strings, or a promise that resolves into an array of strings, if you have to get suggestions from an api call
+
+```
+this.state = {
+    cities: ['Prishtina', 'Athens']
+}
+
+const promiseFunc = () => {
+    return fetch('https://api.github.com/users?since=135') // fetch function returns a promise
+                .then(rsp => rsp.json())
+                .then(data => data.map(user => user.login));
+}
+<Tags tags={this.state.cities} source={promiseFunc} />
+```
+
 Now as far as submission goes, `Enter` is the default key to do it, but this can be changed via the `delimiters` prop, which accepts `keyCode` idendifier or `key` idendifier.
 
 ```
@@ -88,7 +103,7 @@ This can be used in various situations and combinations, for an enhanced develop
 * `deletable` - wether tags should be deletable by backspace, still can be deleted by clicking on X
 * `label` - tags label
 * `placeholder` - placeholder on the input
-* `source` - source of the searchable and selectable typeahead data
+* `source` - source of the searchable and selectable typeahead data, can be an array of strings or a function that returns either an array of strings or a promise that resolves into an array of strings
 * `sourceLimit` - number of max results for source
 * `tags` - data to appear as already tagged (array of strings)
 * `onChange` - callback func when tags change
