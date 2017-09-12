@@ -11,6 +11,15 @@ To start using the Fieldset Component first you have to Import it
 ```
 Import {Fieldset} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import Fieldset from 'mooskin/lib/Fieldset';
+
+// CSS
+import 'mooskin/lib/Fieldset/style.css';
+```
+
 
 And then you can simply start using it by typing
 

@@ -9,9 +9,13 @@ To start using the Tags Component first you have to Import it
 ```
 Import {Tags} from 'mooskin';
 ```
-or
+or modular import
 ```
-import Tags from 'mooskin/lib/TabbedContent';
+// JS
+import Tags from 'mooskin/lib/Tags';
+
+// CSS
+import 'mooskin/lib/Tags/style.css';
 ```
 
 And then you can simply start using it by typing

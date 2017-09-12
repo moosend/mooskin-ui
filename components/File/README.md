@@ -9,7 +9,15 @@ ___
 To start using the File Component first you have to Import it
 
 ```
-Import {File} from 'mooskin';
+Import {FileUpload} from 'mooskin';
+```
+or modular import
+```
+// JS
+import FileUpload from 'mooskin/lib/FileUpload';
+
+// CSS
+import 'mooskin/lib/FileUpload/style.css';
 ```
 
 And then you can simply start using it by typing

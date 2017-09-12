@@ -11,11 +11,13 @@ To start using the Accordion Component first you have to Import its two main com
 ```
 Import {RadioAccordion, RadioAccordionContent} from 'mooskin';
 ```
-
-or
-
+or modular import
 ```
+// JS
 import RadioAccordion, {RadioAccordionContent} from 'mooskin/lib/RadioAccordion';
+
+// CSS
+import 'mooskin/lib/RadioAccordion/style.css';
 ```
 
 And then you can simply start using it by typing

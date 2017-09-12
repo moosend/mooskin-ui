@@ -11,6 +11,14 @@ To start using the Heading Components first you have to Import the desired headi
 ```
 Import {H1} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import H1 from 'mooskin/lib/Headings/H1';
+
+// CSS
+import 'mooskin/lib/Headings/H1/style.css';
+```
 
 And then you can simply start using it by typing
 

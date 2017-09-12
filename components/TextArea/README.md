@@ -11,6 +11,14 @@ To start using the TextArea Component first you have to Import it
 ```
 Import {TextArea} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import TextArea from 'mooskin/lib/TextArea';
+
+// CSS
+import 'mooskin/lib/TextArea/style.css';
+```
 
 And then you can simply start using it by typing
 

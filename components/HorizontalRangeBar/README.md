@@ -9,6 +9,14 @@ To start using the HorizontalRangeBar Component first you have to Import it
 ```
 Import {HorizontalRangeBar} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import HorizontalRangeBar from 'mooskin/lib/HorizontalRangeBar';
+
+// CSS
+import 'mooskin/lib/HorizontalRangeBar/style.css';
+```
 
 And then you can simply start using it by typing
 

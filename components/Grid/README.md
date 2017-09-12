@@ -28,6 +28,14 @@ To start using the Grid Component first you have to Import it
 ```
 Import {Col, Grid, Row} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import Grid, {Col, Row} from 'mooskin/lib/Grid';
+
+// CSS
+import 'mooskin/lib/Grid/style.css';
+```
 
 And then you can simply start using it by typing
 
