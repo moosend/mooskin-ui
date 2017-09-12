@@ -51,6 +51,10 @@ exports[`SideBar renders SideBar correctly 1`] = `
       }
     }
   />
+  <div
+    className="cover "
+    onClick={[Function]}
+  />
 </div>
 `;
 
@@ -104,9 +108,29 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
     >
       <SubMenu
         display={false}
-      />
+      >
+        <Item
+          active={true}
+          className="myClass"
+          href="www.moosend.com"
+          image="imagePath"
+          label="Item"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+        />
+      </SubMenu>
     </Item>
   </div>
+  <div
+    className="cover "
+    onClick={[Function]}
+  />
 </div>
 `;
 
@@ -236,6 +260,10 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         </div>
       </Item>
     </div>
+    <div
+      className="cover "
+      onClick={[Function]}
+    />
   </div>
 </SideBar>
 `;
