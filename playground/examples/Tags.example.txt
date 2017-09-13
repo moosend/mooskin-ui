@@ -12,7 +12,9 @@ class ButtonExample extends React.Component {
                 'London',
                 'New York',
                 'Beijing'
-            ]
+            ],
+            tags2: [],
+            tags3: []
         }
     }
 
@@ -43,17 +45,17 @@ class ButtonExample extends React.Component {
 
         return(
             <div>
-                <Tags source={countries} label="Tags from string array" delimiters={[188, 32, 13, ',', 'Enter', ' ']} tags={this.state.tags} onChange={this.onChange} deletable/>
+                <Tags source={countries} label="Tags from string array" delimiters={[188, 32, 13, ',', 'Enter', ' ']} tags={this.state.tags} onChange={this.onChange} deletable dataLabel="tags"/>
                 <br/>
-                <Tags source={stringArr} label="Tags from function that returns string array" delimiters={[188, 32, 13, ',', 'Enter', ' ']} onChange={this.onChange} deletable/>
+                <Tags source={stringArr} label="Tags from function that returns string array" delimiters={[188, 32, 13, ',', 'Enter', ' ']} tags={this.state.tags2} onChange={this.onChange} deletable dataLabel="tags2"/>
                 <br/>
-                <Tags source={promiseFunc} label="Tags from function that returns Promise(api call for github users)"  delimiters={[188, 32, 13, ',', 'Enter', 'Space']} onChange={this.onChange} deletable/>
+                <Tags source={promiseFunc} label="Tags from function that returns Promise(api call for github users)" tags={this.state.tags3}  delimiters={[188, 32, 13, ',', 'Enter', 'Space']} onChange={this.onChange} deletable dataLabel="tags3"/>
             </div>
         );
     }
 
     onChange(e, data) {
-        console.log(data.value);
+        data.dataLabel && this.setState({[data.dataLabel]: data.value});
     }
 
 }

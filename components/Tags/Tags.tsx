@@ -10,7 +10,7 @@ export interface ITagsProps{
     id?: string;
 
     /** tagged data */
-    tags?: string[];
+    tags: string[];
 
     /** source of data for type ahead completion */
     source?: (() => Promise<string[]>) | (() => string[]) | string[];
@@ -63,7 +63,6 @@ export interface ITagProps{
 }
 
 export interface ITagsState{
-    tags: string[];
     value: string;
     activeItem: number;
     sourceList: string[];
@@ -87,13 +86,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             activeItem: 0,
             rawSourceList: [],
             sourceList: [],
-            tags: [],
             value: ''
         };
-    }
-
-    componentWillMount(){
-        this.setState({tags: this.props.tags ? this.props.tags : []});
     }
 
     componentDidMount(){
@@ -122,13 +116,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         }
     }
 
-    componentWillReceiveProps(nextProps: ITagsProps){
-        this.setState({tags: nextProps.tags ? nextProps.tags : []});
-    }
-
     render(){
 
-        const tags = this.getTags(this.state.tags);
+        const tags = this.getTags(this.props.tags);
 
         const source = this.state.value !== '' ? this.sourceList() : '';
 
@@ -200,7 +190,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             const stateValue = value.toLowerCase();
 
-            if (sourceText.startsWith(stateValue) && !this.state.tags.includes(text)){
+            if (sourceText.startsWith(stateValue) && !this.props.tags.includes(text)){
 
                 sourceList.push(text);
             }
@@ -213,7 +203,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         const {delimiters} = this.props;
 
-        const tags: string[] = [...this.state.tags, ...[]]; // always copy here
+        const tags: string[] = this.props.tags; // always copy here
 
         const key = e.key;
         const keyCode = e.keyCode;
@@ -223,8 +213,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         if (this.props.deletable && (key === 'Backspace' || keyCode === 8) && this.state.value === ''){
 
             tags.pop();
-
-            this.setState({tags});
 
             this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
@@ -252,7 +240,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     tags.push(this.state.value);
                 }
 
-                this.setState({tags, value: '', sourceList: [], activeItem: 0});
+                this.setState({value: '', sourceList: [], activeItem: 0});
 
                 this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
@@ -268,11 +256,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     removeTag = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            const tags: string[] = [...this.state.tags, ...[]]; // always copy here
+            const tags: string[] = this.props.tags; // always copy here
 
             tags.splice(index, 1);
-
-            this.setState({tags});
 
             this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
         };
@@ -309,11 +295,11 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         return (e: React.MouseEvent<HTMLElement>) => {
 
-            const tags: string[] = [...this.state.tags, ...[]]; // always copy here
+            const tags: string[] = this.props.tags; // always copy here
 
             tags.push(text);
 
-            this.setState({tags, value: ''});
+            this.setState({value: ''});
 
             this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
 
