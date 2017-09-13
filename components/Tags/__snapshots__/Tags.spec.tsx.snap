@@ -53,6 +53,7 @@ exports[`Tags renders Tags correctly 1`] = `
         onChange={[Function]}
         onClick={[Function]}
         onKeyDown={[Function]}
+        onPaste={[Function]}
         placeholder="olala"
         value=""
       />

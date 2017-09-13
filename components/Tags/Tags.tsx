@@ -80,8 +80,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     constructor(props: ITagsProps){
         super(props);
 
-        this.id = this.generateId();
-
         this.state = {
             activeItem: 0,
             rawSourceList: [],
@@ -129,18 +127,18 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style} id={this.id}>
                 <div style={display} className={styles.label}>{this.props.label}</div>
-                <label className={styles.tags} htmlFor={this.id}>
+                <label className={styles.tags}>
                     {tags}
                     <div className={styles.inputContainer}>
                         <input
                             ref={this.id}
-                            id={this.id}
                             value={this.state.value}
                             className={styles.input}
                             placeholder={this.props.placeholder}
                             onChange={this.onHandleChange}
                             onKeyDown={this.onKeyDown}
                             onClick={this.removeSource}
+                            onPaste={this.onPaste}
                         />
                         {source}
                     </div>
@@ -170,6 +168,18 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         const value = e.target.value;
 
         this.setState({value});
+
+        const delimiters = this.props.delimiters;
+
+        for (let i = 0 ; i < value.length ; i++){
+            delimiters && delimiters.forEach((delimiter) => {
+                if (value.charAt(i) === delimiter){
+                    this.setState({value: ''});
+                } else if (value.charCodeAt(i) === delimiter){
+                    this.setState({value: ''});
+                }
+            });
+        }
 
         const {rawSourceList} = this.state;
 
@@ -254,6 +264,47 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     }
 
+    onPaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+        let tags: string[] = [];
+        const delimiters = this.props.delimiters;
+        const text = e.clipboardData.getData('Text');
+
+        for (let i = 0 ; i < text.length ; i++){
+            delimiters && delimiters.forEach((delimiter) => {
+                if (text.charAt(i) === delimiter){
+                    tags = text.split(text.charAt(i));
+                } else if (text.charCodeAt(i) === delimiter){
+                    tags = text.split(text.charAt(i));
+                }
+            });
+        }
+
+        delimiters && delimiters.forEach((delimiter) => {
+            tags = tags.map((tag) => {
+                if (typeof delimiter === 'string'){
+                    return tag.replace(delimiter, '');
+                } else if (typeof delimiter === 'number'){
+                    const del = String.fromCharCode(delimiter);
+                    return tag.replace(del, '');
+                }
+                return tag;
+            });
+        });
+
+        const newTags = this.props.tags;
+
+        tags.map((tag) => {
+            if (!newTags.includes(tag)){
+                newTags.push(tag);
+            }
+        });
+
+        console.log(newTags);
+
+        this.props.onChange && this.props.onChange(e, {value: newTags, dataLabel: this.props.dataLabel});
+
+    }
+
     removeTag = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             const tags: string[] = this.props.tags; // always copy here
@@ -315,16 +366,15 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         this.setState({sourceList: []});
     }
 
-    generateId = () => {
-        return Math.random().toString(36).substr(2, 10);
-    }
 }
 
 export const Tag: React.StatelessComponent<ITagProps> = (props) => {
 
     return (
         <div className={`${styles.tag} ${props.className}`} style={props.style}>
-            {props.tag}
+            <div>
+                {props.tag}
+            </div>
             <i onClick={props.onClick} className={`material-icons ${styles.close}`}>
                 close
             </i>
