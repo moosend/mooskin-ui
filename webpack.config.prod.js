@@ -76,8 +76,6 @@ config.module.rules.push(
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              localIdentName: '[local]',
-              modules: true
             }
           },
           'postcss-loader'
