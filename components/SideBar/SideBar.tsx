@@ -74,6 +74,12 @@ export interface ISubMenuProps{
     /** wether the sidebar should be displayed or not */
     display?: boolean;
 
+    /** callback function when mouse enters the Item, mainly used to toggle SubMenu */
+    onMouseEnter?: (e: React.MouseEvent<HTMLDivElement>) => void;
+
+    /** callback function when mouse leaves the item, mainly used to toggle SubMenu */
+    onMouseLeave?: (e: React.MouseEvent<HTMLDivElement>) => void;
+
     /** sidebar class */
     className?: string;
 
@@ -132,6 +138,8 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
         const button = this.getButton();
 
+        const subMenus = this.initiateSubMenus();
+
         const smallDisplay = this.state.smallDisplay ? styles.smallOn : styles.smallOff;
 
         const display = this.state.display ? styles.sidebarOn : styles.sidebarOff;
@@ -149,6 +157,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
             <div className={`sidebar-component`}>
                 {button}
                 {sideBar}
+                {subMenus}
                 {cover}
             </div>
         );
@@ -184,9 +193,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                             onMouseLeave={this.subMenuOff}
                             style={child.props.style}
                             className={child.props.className}
-                        >
-                            {this.getSubMenu(child, index) || child.props.children}
-                        </Item>
+                        />
                     );
                 } else {
                     items.push(
@@ -212,6 +219,16 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         return items;
     }
 
+    initiateSubMenus = () => {
+        return React.Children.map(this.props.children, (child, index) => {
+            if (React.isValidElement<ISideBarItemProps>(child)){
+                if (child.props.children){
+                    return this.getSubMenu(child, index);
+                }
+            }
+        });
+    }
+
     getSubMenu = (item: React.ReactElement<ISideBarItemProps>, index: number) => {
         if (React.isValidElement<ISideBarItemProps>(item)){
             const items = item.props.children ? item.props.children : [];
@@ -220,9 +237,10 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                     className={item.props.subMenuClasses}
                     style={item.props.subMenuStyle}
                     display={this.displaySubMenu(index)}
+                    onMouseEnter={this.subMenuOn(index)}
+                    onMouseLeave={this.subMenuOn()}
                 >
                     {this.getSubMenuItems(items)}
-                    {/* {secondary.props.children && this.getSecondaryItems(secondary.props.children)} */}
                 </SubMenu>
             );
         }
@@ -355,6 +373,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     subMenuOn = (index?: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
+            console.log('called');
             this.setState({subMenuDisplay: true, activeSubMenu: index});
         };
     }
@@ -419,6 +438,8 @@ export const SubMenu: React.StatelessComponent<ISubMenuProps> = (props) => {
         <div
             className={`item-component ${styles.sidebar} ${styles.subMenu} ${display} ${props.className}`}
             style={props.style}
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
         >
             {props.children}
         </div>
