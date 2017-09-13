@@ -221,6 +221,8 @@ G
 * `sm` - `Col` behaviour inside `Row` on small screens
 * `xs` - `Col` behaviour inside `Row` on extra small screens
 
+`lg`, `md`, `sm`, `xs` values can be from 1 to 12, or `hidden` to be hidden in the specific size.
+
 </div>
 
 Allthough these attributes are supported, all of them are optional.
