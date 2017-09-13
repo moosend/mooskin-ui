@@ -60,7 +60,7 @@
     color: var(--inputLabel);
     /* font-size: 13px; */
     font-size: .92857142857rem;
-    flex-basis: 130px;
+    flex-basis: 150px;
 }
 
 .disabledFile > .name{

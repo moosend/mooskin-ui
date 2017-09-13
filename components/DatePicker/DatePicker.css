@@ -8,13 +8,20 @@
 }
 
 .wrapper{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    box-sizing: border-box;
 }
 
 .label{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #6b6b6b;
+     /* font-size: 13px;  */
+     font-size: .92857142857rem; 
+    cursor: pointer;
     flex-basis: 150px;
 }
 
