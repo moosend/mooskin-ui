@@ -103,7 +103,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         if (typeof source === 'function'){
             const result = source();
 
-            if (result instanceof Promise){
+            if (!(result instanceof Array) && result.then){
                 result.then((stringArray) => {
                     this.setState({rawSourceList: stringArray});
                 });
