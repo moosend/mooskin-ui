@@ -62,8 +62,6 @@ class Switch extends React.Component<ISwitchProps, {}> {
 
         const disabledSwitch = disabled ? styles.disabledSwitch : '';
 
-        const textClass = this.props.on ? styles.onText : styles.offText;
-
         const spacing = label ?
                         !this.props.labelWidth ?
                         {} :
@@ -83,7 +81,7 @@ class Switch extends React.Component<ISwitchProps, {}> {
                     className={`switch-component ${toggleClasses} ${disabledSwitch} ${styles.switch} ${className}`}
                 >
                     <span className={`switch-component ${styles.slider}`}/>
-                    <label className={`switch-component ${styles.text} ${textClass}`}>{text}</label>
+                    <label className={`switch-component ${styles.text}`}>{text}</label>
                 </div>
             </div>
 

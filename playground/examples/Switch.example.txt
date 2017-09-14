@@ -26,8 +26,8 @@ class SwitchExample extends React.Component {
                 <Switch
                     on={this.state.switchTwo}
                     onClick={this.toggleSwitch}
-                    onLabel={'On'}
-                    offLabel={'Off'}
+                    onLabel={'ACTIVE'}
+                    offLabel={'INACTIVE'}
                     disabledLabel={'Not Working'}
                     dataLabel="switchTwo"
                 />

@@ -45,7 +45,11 @@ export interface ITagsProps{
     /** an array of possible delimiters, enter key is the default delimiter */
     delimiters?: Array<string | number>;
 
-    onChange?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onAdd?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
+
+    onRemove?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData, index: number) => void;
+
+    // onChange?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
 
 export interface ITagProps{
@@ -222,9 +226,10 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         if (this.props.deletable && (key === 'Backspace' || keyCode === 8) && this.state.value === ''){
 
-            tags.pop();
+            const tag = tags[tags.length - 1];
 
-            this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+            this.props.onRemove &&
+            this.props.onRemove(e, {value: tag, dataLabel: this.props.dataLabel}, tags.length - 1);
 
         } else if (key === 'ArrowDown' || keyCode === 40){
 
@@ -244,15 +249,12 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             if (!tags.includes(this.state.value) && this.state.value !== ''){
 
-                if (this.props.source && this.state.sourceList.length > 0){
-                    tags.push(this.state.sourceList[this.state.activeItem]);
-                } else {
-                    tags.push(this.state.value);
-                }
+                const tag = this.props.source && this.state.sourceList.length > 0 ?
+                this.state.sourceList[this.state.activeItem] : this.state.value;
 
                 this.setState({value: '', sourceList: [], activeItem: 0});
 
-                this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+                this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
 
             } else {
                 // const pos = tags.indexOf(this.state.value);
@@ -291,27 +293,16 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             });
         });
 
-        const newTags = this.props.tags;
-
-        tags.map((tag) => {
-            if (!newTags.includes(tag)){
-                newTags.push(tag);
-            }
-        });
-
-        console.log(newTags);
-
-        this.props.onChange && this.props.onChange(e, {value: newTags, dataLabel: this.props.dataLabel});
+        this.props.onAdd && this.props.onAdd(e, {value: tags, dataLabel: this.props.dataLabel});
 
     }
 
     removeTag = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            const tags: string[] = this.props.tags; // always copy here
 
-            tags.splice(index, 1);
+            const tag = this.props.tags[index];
 
-            this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+            this.props.onRemove && this.props.onRemove(e, {value: [tag], dataLabel: this.props.dataLabel}, index);
         };
     }
 
@@ -342,17 +333,13 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     }
 
-    addTag = (text: string) => {
+    addTag = (tag: string) => {
 
         return (e: React.MouseEvent<HTMLElement>) => {
 
-            const tags: string[] = this.props.tags; // always copy here
-
-            tags.push(text);
-
             this.setState({value: ''});
 
-            this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
+            this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
 
         };
 

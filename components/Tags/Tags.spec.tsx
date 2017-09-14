@@ -6,8 +6,8 @@ import {mount, render, shallow} from 'enzyme';
 describe('Tags', () => {
 
     test('renders Tags correctly', () => {
-        const func = jest.fn();
-        Math.random = jest.fn(() => 222333444555);
+        const func1 = jest.fn();
+        const func2 = jest.fn();
 
         const tags = [
             'Prishtina',
@@ -24,7 +24,8 @@ describe('Tags', () => {
 
         const tree = shallow(
             <Tags
-                onChange={func}
+                onAdd={func1}
+                onRemove={func2}
                 tags={tags}
                 className="myClass"
                 dataLabel="SomeForm"
@@ -71,12 +72,21 @@ describe('Tags', () => {
             'Beijing'
         ];
 
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+            data.dataLabel && this.setState({[data.dataLabel]: tags});
+        };
+
         const onChange = (e, data) => {
             tags = data.value;
         };
 
         const component = shallow(
-            <Tags tags={tags} deletable onChange={onChange} />
+            <Tags tags={tags} deletable onAdd={onAdd} onRemove={onRemove} />
         );
 
         expect(component.state('value')).toBe('');
@@ -118,12 +128,17 @@ describe('Tags', () => {
             'Beijing'
         ];
 
-        const onChange = (e, data) => {
-            tags = data.value;
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+            data.dataLabel && this.setState({[data.dataLabel]: tags});
         };
 
         const component = mount(
-            <Tags tags={tags} onChange={onChange} />
+            <Tags tags={tags} onAdd={onAdd} onRemove={onRemove}  />
         );
 
         expect(component.find('i').length).toEqual(tags.length);
@@ -148,12 +163,17 @@ describe('Tags', () => {
             'Beijing'
         ];
 
-        const onChange = (e, data) => {
-            tags = data.value;
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+            data.dataLabel && this.setState({[data.dataLabel]: tags});
         };
 
         const component = shallow(
-            <Tags tags={tags} deletable delimiters={['space', 32, 'enter', 188]} onChange={onChange}/>
+            <Tags tags={tags} deletable delimiters={['space', 32, 'enter', 188]} onAdd={onAdd} onRemove={onRemove} />
         );
 
         expect(component.state('value')).toBe('');
@@ -189,8 +209,13 @@ describe('Tags', () => {
             'Beijing'
         ];
 
-        const onChange = (e, data) => {
-            tags = data.value;
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+            data.dataLabel && this.setState({[data.dataLabel]: tags});
         };
 
         const countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla',
@@ -227,7 +252,7 @@ describe('Tags', () => {
         , 'Yemen', 'Zambia', 'Zimbabwe'];
 
         const component = mount(
-            <Tags source={countries} tags={tags} />
+            <Tags source={countries} tags={tags} onAdd={onAdd} onRemove={onRemove} />
         );
 
         expect(component.find('.sourceList').length).toEqual(0);
@@ -301,8 +326,6 @@ describe('Tags', () => {
 
     test('searchable source is limited by props, and callback function is called on Tags change', () => {
 
-        const func = jest.fn();
-
         const countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla',
         'Antigua &amp; Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas'
         , 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
@@ -344,8 +367,11 @@ describe('Tags', () => {
             'Beijing'
         ];
 
+        const onRemove = jest.fn();
+        const onAdd = jest.fn();
+
         const component = mount(
-            <Tags tags={tags} sourceLimit={5} source={countries} onChange={func} />
+            <Tags tags={tags} sourceLimit={5} source={countries} onAdd={onAdd} onRemove={onRemove} deletable />
         );
 
         expect(component.find('.sourceList').length).toEqual(0);
@@ -360,15 +386,15 @@ describe('Tags', () => {
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        expect(func).toHaveBeenCalled();
+        expect(onAdd).toHaveBeenCalled();
 
         component.find('input').simulate('keyDown', { keyCode: 8, key: 'Backspace', preventDefault: () => undefined });
 
-        expect(func).toHaveBeenCalled();
+        expect(onRemove).toHaveBeenCalled();
 
         component.find('i').first().simulate('click');
 
-        expect(func).toHaveBeenCalled();
+        expect(onRemove).toHaveBeenCalled();
 
     });
 
