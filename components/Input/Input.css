@@ -4,6 +4,7 @@
 .inputContainer{
     display: flex;
     margin: 3px;
+    box-sizing: border-box;
 }
 
 .inputDiv{
@@ -14,6 +15,7 @@
 }
 
 .input{
+    outline: none;
     padding: 15px;
     font-family: Arial,sans-serif;
     border: 0;

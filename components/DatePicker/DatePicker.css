@@ -5,6 +5,7 @@
 .datePicker{
     display: flex;
     margin: 3px;
+    position: relative;
 }
 
 .wrapper{
@@ -26,6 +27,7 @@
 }
 
 .dateInput{
+    outline: none;
     padding: 15px;
     font-family: Arial,sans-serif;
     border: 0;
@@ -34,7 +36,7 @@
     font-size: 1rem; 
     border-radius: 8px;
     background: #efefef;
-    width: 100%;
+    flex: 1;
     cursor: pointer;
 }
 
@@ -46,6 +48,7 @@
  
 .calendar{
     position: absolute;
+    top: 50px;
     z-index: 99;
 }
 
@@ -124,6 +127,11 @@
 :global(.datepicker-component .m-calendar .current-day){
     color: #5ccdde;
 }
+
+:global(.datepicker-component .m-calendar .current-day):hover{
+    color: #fff;
+}
+
 
 @media (--xSmall){
     .datePicker{

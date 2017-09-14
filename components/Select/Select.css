@@ -15,9 +15,9 @@
     flex-grow:1;    
 }
 
-
 .innerInput{
     composes: innerDiv;
+    outline: none;
     background: transparent;
     border: none;   
 }

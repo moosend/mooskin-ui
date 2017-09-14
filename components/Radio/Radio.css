@@ -37,6 +37,7 @@
     border-radius:50%;
     border:1px solid var(--moosendBlue);
     border-radius:50%;
+    outline: none;
 }
 
 .radio input[type='radio']:hover {

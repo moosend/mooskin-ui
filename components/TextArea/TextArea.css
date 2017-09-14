@@ -3,6 +3,7 @@
 
 .areaContainer{
     display: flex;
+    box-sizing: border-box;
 }
 
 .textAreaDiv{
@@ -13,6 +14,7 @@
 }
 
 .textarea{
+    outline: none;
     padding: 7px;
     font-family: Arial,sans-serif;
     border: 0;
