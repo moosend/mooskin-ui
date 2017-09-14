@@ -1,4 +1,4 @@
-class ButtonExample extends React.Component {
+class TagsExample extends React.Component {
 
     constructor(props){
         super(props);
