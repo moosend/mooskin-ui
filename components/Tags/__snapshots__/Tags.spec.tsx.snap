@@ -3,7 +3,6 @@
 exports[`Tags renders Tags correctly 1`] = `
 <div
   className="container myClass"
-  id="4zlbrf"
   style={
     Object {
       "width": "50px",
@@ -22,7 +21,6 @@ exports[`Tags renders Tags correctly 1`] = `
   </div>
   <label
     className="tags"
-    htmlFor="4zlbrf"
   >
     <Tag
       className="tagClasses"
@@ -49,7 +47,6 @@ exports[`Tags renders Tags correctly 1`] = `
     >
       <input
         className="input"
-        id="4zlbrf"
         onChange={[Function]}
         onClick={[Function]}
         onKeyDown={[Function]}
