@@ -11,6 +11,14 @@ To start using the Checkbox component first you have to Import CheckboxGroup and
 ```
 Import {CheckboxGroup, Checkbox} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import CheckboxGroup, {Checkbox} from 'mooskin/lib/Checkbox';
+
+// CSS
+import 'mooskin/lib/Checkbox/style.css';
+```
 
 And then you can simply start using it by typing
 

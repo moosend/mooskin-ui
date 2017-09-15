@@ -11,6 +11,14 @@ To start using the Radio component first you have to Import RadioGroup and the R
 ```
 Import {RadioGroup, Radio} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import RadioGroup, {Radio} from 'mooskin/lib/Radio';
+
+// CSS
+import 'mooskin/lib/Radio/style.css';
+```
 
 And then you can simply start using it by typing
 

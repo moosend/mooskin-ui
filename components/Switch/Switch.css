@@ -17,7 +17,7 @@
   /* font-size: 13px; */
   font-size: .92857142857rem;
   cursor: pointer;
-  flex-basis: 120px;
+  flex-basis: 150px;
   vertical-align: 13px;
 }
 
@@ -26,19 +26,22 @@
   content: '';
   display: inline-block;
   width: 90px;
-  height: 30px;
+  height: 27px;
   margin: 2px;
   cursor: pointer;
   border-radius: 36px;
   transition: background-color .4s;
+  text-align: center;
 }
 
 .onSwitch{
   background-color: var(--moosendBlue);
+  padding: 3px 23px 3px 5px;
 }
 
 .offSwitch{
   background-color: var(--inactive);
+  padding: 3px 5px 3px 23px;
 }
 
 .switch input {display:none;}
@@ -46,10 +49,10 @@
 .slider {
   position: absolute;
   content: "";
-  top: 5px;
+  top: 4px;
   left: 4px;
-  height: 20px;
-  width: 20px;
+  height: 19px;
+  width: 19px;
   background-color: white;
   transition: transform .4s;
   border-radius: 50%;
@@ -57,36 +60,22 @@
 }
 
 .onSlider .slider {
-  transform: translate(62px);
+  transform: translate(63px);
 }
 
 .text {
   cursor: pointer;
-  position: absolute;
   color: white;
   font-family: sans-serif;
-  font-size: 11px;
-  text-align: center;
+  font-size: 10px;
   user-select: none;
-}
-
-.offText{
-  top: 9px;
-  right: 10px;
-}
-
-.onText{
-  top: 9px;
-  left: 10px;
+  font-weight: 500;
 }
 
 .disabledSwitch , .disabledSwitch > .slider, .disabledSwitch > .text {
   cursor: not-allowed;
   background-color: var(--disabled);
-  text-align: center
+  text-align: center;
+  padding: 3px;
 }
 
-.disabledSwitch > .text {
-  left: 3px;
-  right: 3px;
-}

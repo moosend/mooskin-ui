@@ -11,6 +11,14 @@ To start using the Select component first you have to Import it and the Option c
 ```
 Import {Select, Option} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import Select, {Option} from 'mooskin/lib/Select';
+
+// CSS
+import 'mooskin/lib/Select/style.css';
+```
 
 And then you can simply start using it by typing
 

@@ -9,6 +9,14 @@ To start using the SideBar Component first you have to Import it
 ```
 Import {SideBar} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import SideBar, {Item} from 'mooskin/lib/SideBar';
+
+// CSS
+import 'mooskin/lib/SideBar/style.css';
+```
 
 And then you can simply start using it by typing
 

@@ -198,34 +198,98 @@ describe('SideBar', () => {
 
     });
 
-    test('SideBar button classes and styles', () => {
+    test('sidebar hides when hideClick prop is passed and an element is clicked', () => {
+        const func = jest.fn();
 
-                const component = shallow(
-                    <SideBar
-                        buttonClass="myClass"
-                        buttonStyle={{color: 'blue'}}
-                        button
-                    >
-                        <Item
-                            className="myClass"
-                            style={{color: 'blue'}}
-                            active
-                            href="www.moosend.com"
-                            label="Item"
-                            image="imagePath"
-                        />
-                        <Item
-                            className="myClass"
-                            style={{color: 'blue'}}
-                            active
-                            href="www.moosend.com"
-                            label="Item"
-                            image="imagePath"
-                        />
-                    </SideBar>
-                );
+        const component = mount(
+            <SideBar
+                className="myClass"
+                style={{color: 'blue'}}
+                hideClick
+                button
+            >
+                <Item
+                    onClick={func}
+                    className="myClass"
+                    style={{color: 'blue'}}
+                    active
+                    href="www.moosend.com"
+                    label="Item"
+                    image="imagePath"
+                    onMouseEnter={func}
+                    onMouseLeave={func}
+                />
+                <Item
+                    onClick={func}
+                    className="myClass"
+                    style={{color: 'blue'}}
+                    active
+                    href="www.moosend.com"
+                    label="Item"
+                    image="imagePath"
+                    onMouseEnter={func}
+                    onMouseLeave={func}
+                >
+                    <Item
+                        onClick={func}
+                        className="myClass"
+                        style={{color: 'blue'}}
+                        active
+                        href="www.moosend.com"
+                        label="Item"
+                        image="imagePath"
+                        onMouseEnter={func}
+                        onMouseLeave={func}
+                    />
+                </Item>
+            </SideBar>
+        );
 
-                expect(component.find(SmallIconButton).hasClass('myClass')).toBeTruthy;
-                expect(component.find(SmallIconButton).prop('style')).toEqual({color: 'blue'});
-            });
+        expect(component.state('display')).toBe(false);
+        expect(component.state('smallDisplay')).toBe(false);
+        expect(component.state('subMenuDisplay')).toBe(false);
+
+        expect(component.hasClass('sidebarOff')).toBeTruthy;
+        expect(component.hasClass('smallOff')).toBeTruthy;
+
+        expect(component.find('SubMenu').hasClass('subMenuOn')).toBeFalsy;
+        expect(component.find('SubMenu').hasClass('sidebarOff')).toBeTruthy;
+
+        component.find('SmallIconButton').simulate('click');
+
+        expect(component.state('display')).toBe(true);
+        expect(component.state('smallDisplay')).toBe(true);
+        expect(component.state('subMenuDisplay')).toBe(false);
+
+        expect(component.hasClass('sidebarOn')).toBeTruthy;
+        expect(component.hasClass('smallOn')).toBeTruthy;
+
+        component.find('Item').at(1).simulate('mouseenter');
+
+        expect(component.state('display')).toBe(true);
+        expect(component.state('smallDisplay')).toBe(true);
+        expect(component.state('subMenuDisplay')).toBe(true);
+
+        expect(component.hasClass('sidebarOn')).toBeTruthy;
+        expect(component.hasClass('smallOn')).toBeTruthy;
+
+        expect(component.find('SubMenu').hasClass('subMenuOn')).toBeTruthy;
+        expect(component.find('SubMenu').hasClass('sidebarOff')).toBeFalsy;
+
+        expect(component.find('Item').length).toEqual(3);
+
+        component.find('Item').last().simulate('click');
+
+        expect(component.state('display')).toBe(false);
+        expect(component.state('smallDisplay')).toBe(false);
+        expect(component.state('subMenuDisplay')).toBe(false);
+
+        expect(component.hasClass('sidebarOff')).toBeTruthy;
+        expect(component.hasClass('smallOff')).toBeTruthy;
+
+        expect(component.find('SubMenu').hasClass('subMenuOn')).toBeFalsy;
+        expect(component.find('SubMenu').hasClass('sidebarOff')).toBeTruthy;
+
+    });
+
 });

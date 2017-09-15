@@ -6,8 +6,8 @@ import {mount, render, shallow} from 'enzyme';
 describe('Tags', () => {
 
     test('renders Tags correctly', () => {
-        const func = jest.fn();
-        Math.random = jest.fn(() => 222333444555);
+        const func1 = jest.fn();
+        const func2 = jest.fn();
 
         const tags = [
             'Prishtina',
@@ -24,7 +24,8 @@ describe('Tags', () => {
 
         const tree = shallow(
             <Tags
-                onChange={func}
+                onAdd={func1}
+                onRemove={func2}
                 tags={tags}
                 className="myClass"
                 dataLabel="SomeForm"
@@ -54,7 +55,7 @@ describe('Tags', () => {
         ];
 
         const component = shallow(
-            <Tags tags={tags} />
+            <Tags tags={tags} />,
         );
 
         expect(component.find('Tag').length).toEqual(tags.length);
@@ -63,7 +64,7 @@ describe('Tags', () => {
 
     test('deletes tag on backspace when deletable prop is passed, and adds tag on enter click', () => {
 
-        const tags = [
+        let tags = [
             'Prishtina',
             'Athens',
             'London',
@@ -71,29 +72,54 @@ describe('Tags', () => {
             'Beijing'
         ];
 
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const onChange = (e, data) => {
+            tags = data.value;
+        };
+
         const component = shallow(
-            <Tags tags={tags} deletable />
+            <Tags tags={tags} deletable onAdd={onAdd} onRemove={onRemove} />
         );
 
         expect(component.state('value')).toBe('');
 
-        component.find('input').simulate('keyDown', { keyCode: 8, key: 'Backspace', preventDefault: () => undefined });
+        expect(component.find('Tag').length).toBe(5);
+        expect(component.find('Tag').last().prop('tag')).toEqual('Beijing');
 
-        expect(component.state('tags')).toEqual(['Prishtina', 'Athens', 'London', 'New York']);
+        component.find('input').simulate('keyDown',
+            { keyCode: 8, key: 'Backspace', preventDefault: () => undefined }
+        );
+
+        component.setProps({tags});
+
+        expect(component.find('Tag').length).toBe(4);
+        expect(component.find('Tag').last().prop('tag')).toEqual('New York');
 
         component.find('input').simulate('change', { target: { value: 'Tokyo' }});
 
         expect(component.state('value')).toBe('Tokyo');
 
-        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
+        component.find('input').simulate('keyDown',
+            { keyCode: 13, key: 'Enter', preventDefault: () => undefined }
+        );
 
-        expect(component.state('tags')).toEqual(['Prishtina', 'Athens', 'London', 'New York', 'Tokyo']);
+        component.setProps({tags});
+
+        expect(component.find('Tag').length).toBe(5);
+        expect(component.find('Tag').last().prop('tag')).toEqual('Tokyo');
 
     });
 
     test('deletes tag on X click', () => {
 
-        const tags = [
+        let tags = [
             'Prishtina',
             'Athens',
             'London',
@@ -101,23 +127,33 @@ describe('Tags', () => {
             'Beijing'
         ];
 
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
         const component = mount(
-            <Tags tags={tags} />
+            <Tags tags={tags} onAdd={onAdd} onRemove={onRemove}  />
         );
 
         expect(component.find('i').length).toEqual(tags.length);
 
-        expect(component.state('tags')).toEqual(['Prishtina', 'Athens', 'London', 'New York', 'Beijing']);
+        expect(component.find('Tag').at(2).prop('tag')).toEqual('London');
 
         component.find('i').at(2).simulate('click');
 
-        expect(component.state('tags')).toEqual(['Prishtina', 'Athens', 'New York', 'Beijing']);
+        component.setProps({tags});
+
+        expect(component.find('Tag').at(2).prop('tag')).toEqual('New York');
 
     });
 
     test('adds tags on keypress one of custom delimiters', () => {
 
-        const tags = [
+        let tags = [
             'Prishtina',
             'Athens',
             'London',
@@ -125,38 +161,58 @@ describe('Tags', () => {
             'Beijing'
         ];
 
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
         const component = shallow(
-            <Tags tags={tags} deletable delimiters={['space', 32, 'enter', 188]}/>
+            <Tags tags={tags} deletable delimiters={['space', 32, 'enter', 188]} onAdd={onAdd} onRemove={onRemove} />
         );
 
         expect(component.state('value')).toBe('');
-        expect(component.state('tags')).toEqual(['Prishtina', 'Athens', 'London', 'New York', 'Beijing']);
+        expect(component.find('Tag').first().prop('tag')).toEqual('Prishtina');
+        expect(component.find('Tag').at(2).prop('tag')).toEqual('London');
+        expect(component.find('Tag').last().prop('tag')).toEqual('Beijing');
 
         component.find('input').simulate('change', { target: { value: 'Tokyo' }});
         expect(component.state('value')).toBe('Tokyo');
 
         component.find('input').simulate('keyDown', { keyCode: 32, key: 'Space', preventDefault: () => undefined });
-        expect(component.state('tags')).toEqual(['Prishtina', 'Athens', 'London', 'New York', 'Beijing', 'Tokyo']);
+        component.setProps({tags});
+        expect(component.find('Tag').length).toEqual(6);
+        expect(component.find('Tag').last().prop('tag')).toEqual('Tokyo');
 
         component.find('input').simulate('change', { target: { value: 'Berlin' }});
         expect(component.state('value')).toBe('Berlin');
 
         component.find('input').simulate('keyDown', { keyCode: 188, key: ',', preventDefault: () => undefined });
-        expect(component.state('tags')).toEqual(
-            ['Prishtina', 'Athens', 'London', 'New York', 'Beijing', 'Tokyo', 'Berlin']
-        );
+        component.setProps({tags});
+        expect(component.find('Tag').length).toEqual(7);
+        expect(component.find('Tag').last().prop('tag')).toEqual('Berlin');
 
     });
 
     test('creates selectable source list when source prop is passed, and a value is given', () => {
 
-        const tags = [
+        let tags = [
             'Prishtina',
             'Athens',
             'London',
             'New York',
             'Beijing'
         ];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
 
         const countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla',
         'Antigua &amp; Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas'
@@ -192,7 +248,7 @@ describe('Tags', () => {
         , 'Yemen', 'Zambia', 'Zimbabwe'];
 
         const component = mount(
-            <Tags source={countries} />
+            <Tags source={countries} tags={tags} onAdd={onAdd} onRemove={onRemove} />
         );
 
         expect(component.find('.sourceList').length).toEqual(0);
@@ -224,9 +280,9 @@ describe('Tags', () => {
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        expect(component.state('tags')).toEqual(['Algeria']);
-        expect(component.find('Tag').length).toEqual(1);
-        expect(component.find('Tag').first().prop('tag')).toEqual('Algeria');
+        component.setProps({tags});
+        expect(component.find('Tag').length).toEqual(6);
+        expect(component.find('Tag').last().prop('tag')).toEqual('Algeria');
 
         component.find('input').simulate('change', { target: { value: 'uni' }});
 
@@ -248,8 +304,8 @@ describe('Tags', () => {
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        expect(component.state('tags')).toEqual(['Algeria', 'United Kingdom']);
-        expect(component.find('Tag').length).toEqual(2);
+        component.setProps({tags});
+        expect(component.find('Tag').length).toEqual(7);
         expect(component.find('Tag').last().prop('tag')).toEqual('United Kingdom');
 
         component.find('input').simulate('change', { target: { value: 'Doni' }});
@@ -258,15 +314,13 @@ describe('Tags', () => {
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        expect(component.state('tags')).toEqual(['Algeria', 'United Kingdom', 'Doni']);
-        expect(component.find('Tag').length).toEqual(3);
+        component.setProps({tags});
+        expect(component.find('Tag').length).toEqual(8);
         expect(component.find('Tag').last().prop('tag')).toEqual('Doni');
 
     });
 
     test('searchable source is limited by props, and callback function is called on Tags change', () => {
-
-        const func = jest.fn();
 
         const countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla',
         'Antigua &amp; Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas'
@@ -309,8 +363,11 @@ describe('Tags', () => {
             'Beijing'
         ];
 
+        const onRemove = jest.fn();
+        const onAdd = jest.fn();
+
         const component = mount(
-            <Tags tags={tags} sourceLimit={5} source={countries} onChange={func} />
+            <Tags tags={tags} sourceLimit={5} source={countries} onAdd={onAdd} onRemove={onRemove} deletable />
         );
 
         expect(component.find('.sourceList').length).toEqual(0);
@@ -325,15 +382,155 @@ describe('Tags', () => {
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        expect(func).toHaveBeenCalled();
+        expect(onAdd).toHaveBeenCalled();
 
         component.find('input').simulate('keyDown', { keyCode: 8, key: 'Backspace', preventDefault: () => undefined });
 
-        expect(func).toHaveBeenCalled();
+        expect(onRemove).toHaveBeenCalled();
 
         component.find('i').first().simulate('click');
 
-        expect(func).toHaveBeenCalled();
+        expect(onRemove).toHaveBeenCalled();
+
+    });
+
+    test('seperates pasted string into tags depending on the passed delimiters', () => {
+
+        let tags = [];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+                deletable
+                delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(0);
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'Doni wow'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(2);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => ',Doni..Genti , Shkumba'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(3);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {
+            getData: () => '  D, o. n ,i.,. Gen,,ti.Sh . k ,um. .ba , . '
+        }});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(10);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {
+            getData: () => ', Doni .G.E,N T , i .      doni@moosend.com       '
+        }});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(8);
+
+    });
+
+    test('seperates pasted string into tags depending on the different passed delimiters', () => {
+
+        let tags = [];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+                deletable
+                delimiters={[65, 71, 76, 'a', 'g', 'l']}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(0);
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'hey, its me again'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(2);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'Hope of deliverance'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(3);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {
+            getData: () => 'here I go again on my own, with a bucket full of gold'
+        }});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(7);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {
+            getData: () => 'weird seperators are garanteed to be weird, seriously'
+        }});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(6);
+
+    });
+
+    test('paste event doesnt trigger when no delimiter is present on the string', () => {
+
+        let tags = [];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+                deletable
+                delimiters={[188, ',']}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(0);
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'Hope of deliverance'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(0);
 
     });
 

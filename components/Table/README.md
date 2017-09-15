@@ -11,9 +11,13 @@ To start using the Table Component first you have to Import it
 ```
 Import {Table, TableHeader} from 'mooskin';
 ```
-or
+or modular import
 ```
-import Table from 'mooskin/lib/Table';
+// JS
+import Table, {TableHeader} from 'mooskin/lib/Table';
+
+// CSS
+import 'mooskin/lib/Table/style.css';
 ```
 
 Styles can also be imported this way, if they were not imported globaly and you want to import just the table styles to keep the css bundle size healthy: 

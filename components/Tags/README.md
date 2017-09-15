@@ -9,9 +9,13 @@ To start using the Tags Component first you have to Import it
 ```
 Import {Tags} from 'mooskin';
 ```
-or
+or modular import
 ```
-import Tags from 'mooskin/lib/TabbedContent';
+// JS
+import Tags from 'mooskin/lib/Tags';
+
+// CSS
+import 'mooskin/lib/Tags/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -77,15 +81,23 @@ this.state = {
 
 ### Callback
 
-The Tags Component Callback will always return an array of strings, which reflects the state of the component. This can be used with a function passed via the `onChange` prop. For example, if u want to log the state of the Tags, pass a function to the `onChange` prop.
+The Tags Component Callback will always return an array of strings, which reflects the added or removed tags. Callbacks are seperated into two different functions, `onAdd` and `onRemove`. `onAdd` return an array of the newly added tag/tags which then can be used to change the state of the parent component. `onRemove` returns an array of the removed tag/tags and the index of the removed tag.
 
 Playing with data
 ```
-const logValues = (e, data) => {     // data is the callback object, which consists of value and a dataLabel(not required)
-    console.log(data.value);         // this will log the array of objects, with the state of each Radio
+this.state = {
+    cities: ['Prishtina', 'Athens']
+}
+
+onAdd = (e, data) => {            // data is the callback object, which consists of value and a dataLabel(not required)
+    console.log(data.value);      // in the case of adding `London` to the tags, `data.value` will equal `London`
 };
 
-<Tags onChange={this.logValues} />
+onRemove = (e, data, index) => {     // data is the callback object, which consists of value and a dataLabel(not required)
+    console.log(data.value);         // in the case of pressing `Backspace`, `data.value` will equal `Athens`, and index is `1`
+};
+
+<Tags tags={this.state.cities} onAdd={this.onAdd} onRemove={this.onremove} />
 ```
 
 This can be used in various situations and combinations, for an enhanced development experience.
@@ -106,7 +118,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `source` - source of the searchable and selectable typeahead data, can be an array of strings or a function that returns either an array of strings or a promise that resolves into an array of strings
 * `sourceLimit` - number of max results for source
 * `tags` - data to appear as already tagged (array of strings)
-* `onChange` - callback func when tags change
+* `onAdd` - callback func which returns a newly created tag, can be added to the component with unidirectional flow
+* `onRemove` - callback func which returns the tag to be removed and the index of the tag within an array.
 
 </div>
 
