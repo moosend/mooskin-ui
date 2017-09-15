@@ -171,18 +171,12 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const value = e.target.value;
 
-        this.setState({value});
+        console.log(this.shouldSubmitPaste(value));
 
-        const delimiters = this.props.delimiters;
-
-        for (let i = 0 ; i < value.length ; i++){
-            delimiters && delimiters.forEach((delimiter) => {
-                if (value.charAt(i) === delimiter){
-                    this.setState({value: ''});
-                } else if (value.charCodeAt(i) === delimiter){
-                    this.setState({value: ''});
-                }
-            });
+        if (this.shouldSubmitPaste(value)){
+            this.setState({value: ''});
+        } else {
+            this.setState({value});
         }
 
         const {rawSourceList} = this.state;
@@ -270,11 +264,12 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const text = e.clipboardData.getData('Text');
 
-        if (this.props.delimiters){
+        const delimiters = this.props.delimiters;
+
+        if (delimiters && this.shouldSubmitPaste(text)){
 
             let newTag: string[] = [];
             const tags: string[] = [];
-            const delimiters = this.props.delimiters;
 
             const charArray = text.split('');
 
@@ -328,6 +323,28 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         //     });
         // }
 
+    }
+
+    shouldSubmitPaste = (value: string) => {
+
+        const delimiters = this.props.delimiters;
+
+        if (delimiters){
+
+            const text = value.split('');
+
+            for (const char of text) {
+                for (const delimiter of delimiters) {
+                    if (typeof delimiter === 'string' && char === delimiter){
+                        return true;
+                    } else if (typeof delimiter === 'number' && char.charCodeAt(0) === delimiter){
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 
     removeTag = (index: number) => {

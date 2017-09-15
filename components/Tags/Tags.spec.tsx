@@ -78,7 +78,6 @@ describe('Tags', () => {
 
         const onRemove = (e, data, index) => {
             tags.splice(index, 1);
-            data.dataLabel && this.setState({[data.dataLabel]: tags});
         };
 
         const onChange = (e, data) => {
@@ -134,7 +133,6 @@ describe('Tags', () => {
 
         const onRemove = (e, data, index) => {
             tags.splice(index, 1);
-            data.dataLabel && this.setState({[data.dataLabel]: tags});
         };
 
         const component = mount(
@@ -169,7 +167,6 @@ describe('Tags', () => {
 
         const onRemove = (e, data, index) => {
             tags.splice(index, 1);
-            data.dataLabel && this.setState({[data.dataLabel]: tags});
         };
 
         const component = shallow(
@@ -215,7 +212,6 @@ describe('Tags', () => {
 
         const onRemove = (e, data, index) => {
             tags.splice(index, 1);
-            data.dataLabel && this.setState({[data.dataLabel]: tags});
         };
 
         const countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla',
@@ -397,5 +393,35 @@ describe('Tags', () => {
         expect(onRemove).toHaveBeenCalled();
 
     });
+
+    // test('seperates pasted string into tags depending on the passed delimiters', () => {
+
+    //     let tags = [];
+
+    //     const onAdd = (e, data) => {
+    //         tags = tags.concat(data.value);
+    //     };
+
+    //     const onRemove = (e, data, index) => {
+    //         tags.splice(index, 1);
+    //     };
+
+    //     const component = shallow(
+    //         <Tags
+    //             tags={tags}
+    //             deletable
+    //             delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]}
+    //             onAdd={onAdd}
+    //             onRemove={onRemove}
+    //         />
+    //     );
+
+    //     expect(component.find('Tag').length).toBe(0);
+
+    //     component.find('input').simulate('paste', { clipboardData: {text: 'ikak jaja'} });
+    //     component.setProps({tags});
+    //     expect(component.find('Tag').length).toBe(2);
+
+    // });
 
 });
