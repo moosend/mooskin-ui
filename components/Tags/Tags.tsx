@@ -288,7 +288,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 if (!(delimiters.includes(charArray[i])) && !(delimiters.includes(charArray[i].charCodeAt(0)))){
                     newTag.push(charArray[i]);
                 }
-                if (i === charArray.length - 1){
+                if (i === charArray.length - 1 && newTag.join('') !== '' && !delimiters.includes(charArray[i])){
                     tags.push(newTag.join(''));
                 }
 
