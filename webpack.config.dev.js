@@ -70,6 +70,7 @@ config.module.rules.push(
     },
     {
         test: /\.css$/,
+        exclude: /\*/,        
         include: /node_modules/,
         loader: extractCSS.extract([
           {
@@ -78,7 +79,6 @@ config.module.rules.push(
               importLoaders: 1
             }
           },
-          'postcss-loader'
         ])
     }
 );
