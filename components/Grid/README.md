@@ -28,6 +28,14 @@ To start using the Grid Component first you have to Import it
 ```
 Import {Col, Grid, Row} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import Grid, {Col, Row} from 'mooskin/lib/Grid';
+
+// CSS
+import 'mooskin/lib/Grid/style.css';
+```
 
 And then you can simply start using it by typing
 
@@ -212,6 +220,8 @@ G
 * `md` - `Col` behaviour inside `Row` on medium screens
 * `sm` - `Col` behaviour inside `Row` on small screens
 * `xs` - `Col` behaviour inside `Row` on extra small screens
+
+`lg`, `md`, `sm`, `xs` values can be from 1 to 12, or `hidden` to be hidden in the specific size.
 
 </div>
 

@@ -9,9 +9,13 @@ To start using the Check List Item Component first you have to Import it
 ```
 Import {CheckListItem} from 'mooskin';
 ```
-or
+or modular import
 ```
-import CheckListItem from 'mooskin/lib/Button';
+// JS
+import CheckListItem from 'mooskin/lib/CheckListItem';
+
+// CSS
+import 'mooskin/lib/CheckListItem/style.css';
 ```
 
 And then you can simply start using it by typing

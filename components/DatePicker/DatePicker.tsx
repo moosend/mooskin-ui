@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import 'input-moment/dist/input-moment.css';
 import styles from './DatePicker.css';
+
+import 'input-moment/dist/input-moment.css';
 
 import InputMoment from 'input-moment';
 import moment from 'moment';

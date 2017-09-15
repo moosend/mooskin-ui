@@ -11,9 +11,13 @@ To start using the TabbedContent Component first you have to Import its two main
 ```
 Import {TabbedContent, Tab, Content, Header} from 'mooskin';
 ```
-or
+or modular import
 ```
+// JS
 import TabbedContent, {Tab, Content, Header} from 'mooskin/lib/TabbedContent';
+
+// CSS
+import 'mooskin/lib/Switch/style.css';
 ```
 
 And then you can simply start using it by typing

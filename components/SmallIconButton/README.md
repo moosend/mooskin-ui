@@ -11,9 +11,13 @@ To start using the Small Icon Button Component first you have to Import it
 ```
 Import {SmallIconButton} from 'mooskin';
 ```
-or
+or modular import
 ```
+// JS
 import SmallIconButton from 'mooskin/lib/SmallIconButton';
+
+// CSS
+import 'mooskin/lib/SmallIconButton/style.css';
 ```
 
 And then you can simply start using it by typing

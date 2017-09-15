@@ -9,9 +9,13 @@ To start using the TopNotification Component first you have to Import it
 ```
 Import {TopNotification} from 'mooskin';
 ```
-or
+or modular import
 ```
+// JS
 import TopNotification from 'mooskin/lib/TopNotification';
+
+// CSS
+import 'mooskin/lib/TopNotification/style.css';
 ```
 
 And then you can simply start using it by typing

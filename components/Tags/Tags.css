@@ -4,9 +4,11 @@
 .container{
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .tags{
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     border-radius: 8px;
@@ -16,9 +18,13 @@
     width: 100%;
     cursor: text;
     min-height: 43px;
+    word-break: break-all;
 }
 
 .tag{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #5ccdde;
     border-radius: 6px;
     padding: 4px;
@@ -37,6 +43,7 @@
 }
 
 .input{
+    outline: none;
     flex: 1;
     box-sizing: border-box;
     padding: 5px 10px;

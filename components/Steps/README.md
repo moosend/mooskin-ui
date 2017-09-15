@@ -11,9 +11,13 @@ To start using the Steps component first you have to Import its two main compone
 ```
 Import {Steps, Step} from 'mooskin';
 ```
-or
+or modular import
 ```
+// JS
 import Steps, {Step} from 'mooskin/lib/Steps';
+
+// CSS
+import 'mooskin/lib/Steps/style.css';
 ```
 
 And then you can simply start using it by typing

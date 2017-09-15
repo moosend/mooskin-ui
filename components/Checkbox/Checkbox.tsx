@@ -137,7 +137,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
 
     onClick = (dataArray: {checked: boolean, value: string, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            const data: ICheckBoxData[] = this.state.data;
+            const data: ICheckBoxData[] = [...this.state.data];
             data.map ((checkbox, index) => {
                 if (checkbox.value === dataArray.value){
                     data[index] = {

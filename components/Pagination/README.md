@@ -9,9 +9,13 @@ To start using the Pagination Component first you have to Import it
 ```
 Import {Pagination} from 'mooskin';
 ```
-or
+or modular import
 ```
+// JS
 import Pagination from 'mooskin/lib/Pagination';
+
+// CSS
+import 'mooskin/lib/Pagination/style.css';
 ```
 
 And then you can simply start using it by typing

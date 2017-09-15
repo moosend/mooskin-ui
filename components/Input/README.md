@@ -11,6 +11,14 @@ To start using the Input Component first you have to Import it
 ```
 Import {Input} from 'mooskin';
 ```
+or modular import
+```
+// JS
+import Input from 'mooskin/lib/Input';
+
+// CSS
+import 'mooskin/lib/Input/style.css';
+```
 
 And then you can simply start using it by typing
 

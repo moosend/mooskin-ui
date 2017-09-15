@@ -11,9 +11,13 @@ To start using the Button Component first you have to Import it
 ```
 Import {Button} from 'mooskin';
 ```
-or
+or modular import
 ```
+// JS
 import Button from 'mooskin/lib/Button';
+
+// CSS
+import 'mooskin/lib/Button/style.css';
 ```
 
 And then you can simply start using it by typing

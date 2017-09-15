@@ -70,17 +70,15 @@ config.module.rules.push(
     },
     {
         test: /\.css$/,
+        exclude: /\*/,        
         include: /node_modules/,
         loader: extractCSS.extract([
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
-              localIdentName: '[local]',
-              modules: true
+              importLoaders: 1
             }
           },
-          'postcss-loader'
         ])
     }
 );

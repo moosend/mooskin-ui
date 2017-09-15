@@ -4,13 +4,18 @@
 .inputContainer{
     display: flex;
     margin: 3px;
+    box-sizing: border-box;
 }
 
 .inputDiv{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    box-sizing: border-box;
 }
 
 .input{
+    outline: none;
     padding: 15px;
     font-family: Arial,sans-serif;
     border: 0;

@@ -26,7 +26,7 @@ exports[`Switch renders correctly 1`] = `
       className="switch-component slider"
     />
     <label
-      className="switch-component text onText"
+      className="switch-component text"
     >
       this is disabled
     </label>

@@ -3,13 +3,18 @@
 
 .areaContainer{
     display: flex;
+    box-sizing: border-box;
 }
 
 .textAreaDiv{
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    box-sizing: border-box;
 }
 
 .textarea{
+    outline: none;
     padding: 7px;
     font-family: Arial,sans-serif;
     border: 0;
