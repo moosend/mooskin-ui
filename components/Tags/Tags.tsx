@@ -267,33 +267,66 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     onPaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
-        let tags: string[] = [];
-        const delimiters = this.props.delimiters;
+
         const text = e.clipboardData.getData('Text');
 
-        for (let i = 0 ; i < text.length ; i++){
-            delimiters && delimiters.forEach((delimiter) => {
-                if (text.charAt(i) === delimiter){
-                    tags = text.split(text.charAt(i));
-                } else if (text.charCodeAt(i) === delimiter){
-                    tags = text.split(text.charAt(i));
+        if (this.props.delimiters){
+
+            let newTag: string[] = [];
+            const tags: string[] = [];
+            const delimiters = this.props.delimiters;
+
+            const charArray = text.split('');
+
+            for (let i = 0 ; i < charArray.length ; i++){
+                delimiters && delimiters.map((delimiter) => {
+                    if (charArray[i] === delimiter && newTag.join('') !== ''){
+                        tags.push(newTag.join(''));
+                        newTag = [];
+                    }
+                });
+                if (!(delimiters.includes(charArray[i])) && !(delimiters.includes(charArray[i].charCodeAt(0)))){
+                    newTag.push(charArray[i]);
                 }
-            });
+                if (i === charArray.length - 1){
+                    tags.push(newTag.join(''));
+                }
+
+            }
+
+            // for (let i = 0 ; i < tags.length ; i++){
+            //     if (tags[i] === '' || tags[i] === ' '){
+            //         tags.splice(i, 1);
+            //     }
+            // }
+
+            this.props.onAdd && this.props.onAdd(e, {value: tags, dataLabel: this.props.dataLabel});
+
         }
 
-        delimiters && delimiters.forEach((delimiter) => {
-            tags = tags.map((tag) => {
-                if (typeof delimiter === 'string'){
-                    return tag.replace(delimiter, '');
-                } else if (typeof delimiter === 'number'){
-                    const del = String.fromCharCode(delimiter);
-                    return tag.replace(del, '');
-                }
-                return tag;
-            });
-        });
+        // delimiters.forEach((delimiter) => {
+        //     tags = tags.map((tag) => {
+        //         if (typeof delimiter === 'string'){
+        //             return tag.replace(delimiter, '');
+        //         } else if (typeof delimiter === 'number'){
+        //             const del = String.fromCharCode(delimiter);
+        //             return tag.replace(del, '');
+        //         }
+        //         return tag;
+        //     });
+        // });
 
-        this.props.onAdd && this.props.onAdd(e, {value: tags, dataLabel: this.props.dataLabel});
+        // console.log(tags);
+
+        // for (let i = 0 ; i < text.length ; i++){
+        //     delimiters && delimiters.forEach((delimiter) => {
+        //         if (text.charAt(i) === delimiter){
+        //             tags = text.split(text.charAt(i));
+        //         } else if (text.charCodeAt(i) === delimiter){
+        //             tags = text.split(text.charAt(i));
+        //         }
+        //     });
+        // }
 
     }
 
