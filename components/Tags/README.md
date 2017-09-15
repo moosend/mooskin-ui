@@ -103,7 +103,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `source` - source of the searchable and selectable typeahead data
 * `sourceLimit` - number of max results for source
 * `tags` - data to appear as already tagged (array of strings)
-* `onChange` - callback func when tags change
+* `onAdd` - callback func which returns a newly created tag, can be added to the component with unidirectional flow
+* `onRemove` - callback func which returns the tag to be removed and the index of the tag within an array.
 
 </div>
 
