@@ -218,6 +218,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         if (this.props.deletable && (key === 'Backspace' || keyCode === 8) && this.state.value === ''){
 
+            e.preventDefault();
+
             const tag = tags[tags.length - 1];
 
             this.props.onRemove &&
@@ -225,11 +227,15 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         } else if (key === 'ArrowDown' || keyCode === 40){
 
+            e.preventDefault();
+
             if (this.state.activeItem < this.state.sourceList.length - 1){
                 this.setState({activeItem: this.state.activeItem + 1});
             }
 
         } else if (key === 'ArrowUp' || keyCode === 38){
+
+            e.preventDefault();
 
             if (this.state.activeItem > 0){
                 this.setState({activeItem: this.state.activeItem - 1});
@@ -261,8 +267,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     onPaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
 
         const text = e.clipboardData.getData('Text');
-
-        console.log(e.clipboardData.getData);
 
         const delimiters = this.props.delimiters;
 

@@ -394,34 +394,144 @@ describe('Tags', () => {
 
     });
 
-    // test('seperates pasted string into tags depending on the passed delimiters', () => {
+    test('seperates pasted string into tags depending on the passed delimiters', () => {
 
-    //     let tags = [];
+        let tags = [];
 
-    //     const onAdd = (e, data) => {
-    //         tags = tags.concat(data.value);
-    //     };
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
 
-    //     const onRemove = (e, data, index) => {
-    //         tags.splice(index, 1);
-    //     };
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
 
-    //     const component = shallow(
-    //         <Tags
-    //             tags={tags}
-    //             deletable
-    //             delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]}
-    //             onAdd={onAdd}
-    //             onRemove={onRemove}
-    //         />
-    //     );
+        const component = shallow(
+            <Tags
+                tags={tags}
+                deletable
+                delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
 
-    //     expect(component.find('Tag').length).toBe(0);
+        expect(component.find('Tag').length).toBe(0);
 
-    //     component.find('input').simulate('paste', { clipboardData: {text: 'olala'} });
-    //     component.setProps({tags});
-    //     expect(component.find('Tag').length).toBe(2);
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'Doni wow'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(2);
 
-    // });
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => ',Doni..Genti , Shkumba'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(3);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {
+            getData: () => '  D, o. n ,i.,. Gen,,ti.Sh . k ,um. .ba , . '
+        }});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(10);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {
+            getData: () => ', Doni .G.E,N T , i .      doni@moosend.com       '
+        }});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(8);
+
+    });
+
+    test('seperates pasted string into tags depending on the different passed delimiters', () => {
+
+        let tags = [];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+                deletable
+                delimiters={[65, 71, 76, 'a', 'g', 'l']}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(0);
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'hey, its me again'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(2);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'Hope of deliverance'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(3);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {
+            getData: () => 'here I go again on my own, with a bucket full of gold'
+        }});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(7);
+
+        tags = [];
+        component.setProps({tags});
+
+        component.find('input').simulate('paste', {clipboardData: {
+            getData: () => 'weird seperators are garanteed to be weird, seriously'
+        }});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(6);
+
+    });
+
+    test('paste event doesnt trigger when no delimiter is present on the string', () => {
+
+        let tags = [];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+                deletable
+                delimiters={[188, ',']}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(0);
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'Hope of deliverance'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(0);
+
+    });
 
 });
