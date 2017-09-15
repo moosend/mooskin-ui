@@ -418,7 +418,7 @@ describe('Tags', () => {
 
     //     expect(component.find('Tag').length).toBe(0);
 
-    //     component.find('input').simulate('paste', { clipboardData: {text: 'ikak jaja'} });
+    //     component.find('input').simulate('paste', { clipboardData: {text: 'olala'} });
     //     component.setProps({tags});
     //     expect(component.find('Tag').length).toBe(2);
 

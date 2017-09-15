@@ -171,8 +171,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const value = e.target.value;
 
-        console.log(this.shouldSubmitPaste(value));
-
         if (this.shouldSubmitPaste(value)){
             this.setState({value: ''});
         } else {
@@ -263,6 +261,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     onPaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
 
         const text = e.clipboardData.getData('Text');
+
+        console.log(e.clipboardData.getData);
 
         const delimiters = this.props.delimiters;
 
