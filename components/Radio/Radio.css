@@ -27,12 +27,15 @@
 }
 
 .radio input[type='radio'] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     vertical-align: middle;
     appearance:none;
     cursor: pointer;
     width:22px;
     height:22px;
-    padding: 5px;
     background: #fff;
     border-radius:50%;
     border:1px solid var(--moosendBlue);
@@ -48,8 +51,8 @@
     background:var(--moosendBlue);
     content:'';
     display:block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius:50%; 
 }
 

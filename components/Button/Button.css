@@ -11,7 +11,6 @@
     display: inline-block;
     outline: 0;
     margin: 3px;
-    transition: background-color 400ms ease;
 }
 
 .anchor{
@@ -30,12 +29,14 @@
     background-color: var(--moosendBlue);
     border: 1px solid transparent;
     color: #ffffff;
+    transition: background-color 400ms ease;
 }
 
 .inverseButton{
     background-color: #ffffff;
     border: 1px solid var(--moosendBlue);
     color: var(--moosendBlue);
+    transition: 0.4s;
 }
 
 .disabledButton{

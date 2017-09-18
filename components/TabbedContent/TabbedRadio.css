@@ -70,12 +70,15 @@
 }
 
 .header input[type='radio'] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1.125rem;
+    height: 1.125rem;
     appearance: none;
     margin-right: 10px;
     cursor: pointer;
-    width: 1.188rem;
-    height: 1.188rem;
-    padding: 0.3425rem;
     background: #fff;
     border-radius:50%;
     border: 1px solid var(--moosendBlue);
