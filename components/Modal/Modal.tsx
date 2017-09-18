@@ -27,8 +27,6 @@ export default class Modal extends React.Component<IModalProps, {}>{
 
         const display = this.props.active ? styles.modalOn : styles.modalOff;
 
-        const coverStyles = this.props.active ? styles.coverOn : '';
-
         const classes = `${styles.modal} ${display} ${this.props.className}`;
 
         return(
@@ -39,9 +37,14 @@ export default class Modal extends React.Component<IModalProps, {}>{
                 >
                     {this.props.children}
                 </div>
-                <div className={`${styles.cover} ${coverStyles}`} onClick={this.props.onCoverClick} />
+                {this.getCover()}
             </div>
         );
+    }
+
+    getCover = () => {
+        const covStyles = this.props.active ? styles.coverOn : styles.coverOff;
+        return <div className={`${styles.cover} ${covStyles}`} onClick={this.props.onCoverClick} />;
     }
 
 }
