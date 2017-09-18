@@ -4,6 +4,9 @@ import styles from './Modal.css';
 
 export interface IModalProps{
 
+    /** id of the modal */
+    id?: string;
+
     /** wether the modal is active or not */
     active?: boolean;
 
@@ -29,7 +32,7 @@ export default class Modal extends React.Component<IModalProps, {}>{
         const classes = `${styles.modal} ${display} ${this.props.className}`;
 
         return(
-            <div className={'modal-component'}>
+            <div className={'modal-component'} id={this.props.id}>
                 <div
                     className={classes}
                     style={this.props.style}

@@ -138,8 +138,11 @@ export const App = (props: any) => {
                 <Col lg={6} md={6}>
                     {renderEditableExample('Pagination', {Pagination})}
                 </Col>
-                <Col lg={12}>
+                <Col lg={9} md={9}>
                     {renderEditableExample('CheckListItem', {CheckListItem})}
+                </Col>
+                <Col lg={3} md={3}>
+                    {renderEditableExample('Modal', modalComponents)}
                 </Col>
             </Row>
             <Row id="tabs">
@@ -182,9 +185,6 @@ export const App = (props: any) => {
                 </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('StatsBox', {StatsBox, StatsNumber, StatsResult, StatsTitle})}
-                </Col>
-                <Col lg={6} md={6}>
-                    {renderEditableExample('Modal', modalComponents)}
                 </Col>
             </Row>
             <Row id="grid">

@@ -23,7 +23,7 @@ class ModalExample extends React.Component {
 
         return(
             <div>
-                <Button onClick={this.onClick}>Modal on</Button>
+                <Button onClick={this.onClick}>Show Modal</Button>
                 <Modal style={{padding: 10, alignItems: 'flex-end'}} active={this.state.active} onCoverClick={this.onCoverClick} >
                     <div>
                         <SmallIconButton transparent icon="close" onClick={this.onCoverClick} />
