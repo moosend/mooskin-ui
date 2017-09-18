@@ -14,7 +14,7 @@ describe('Modal', () => {
                 className="myClass"
                 style={{color: 'blue'}}
                 id={'button1'}
-                onCoverClick={func}
+                onClickCover={func}
                 active
             >
                 <div>
@@ -28,7 +28,7 @@ describe('Modal', () => {
     test('onCoverClick callback is called when cover is clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(<Modal onCoverClick={func}>asd</Modal>);
+        const component = shallow(<Modal onClickCover={func}>asd</Modal>);
 
         component.find('.cover').simulate('click');
 
@@ -49,7 +49,7 @@ describe('Modal', () => {
         };
 
         const button = shallow(<Button onClick={on}>asd</Button>);
-        const component = shallow(<Modal active={active} onCoverClick={off}>asd</Modal>);
+        const component = shallow(<Modal active={active} onClickCover={off}>asd</Modal>);
 
         expect(component.find('.modalOn')).toBeFalsy;
 
