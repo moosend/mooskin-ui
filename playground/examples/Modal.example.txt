@@ -3,7 +3,7 @@ class ModalExample extends React.Component {
     constructor(){
         super();
         this.onClick = this.onClick.bind(this);
-        this.onCoverClick = this.onCoverClick.bind(this);
+        this.onOverlayClick = this.onOverlayClick.bind(this);
         this.onOpen = this.onOpen.bind(this);
         this.onClose = this.onClose.bind(this);
 
@@ -26,9 +26,9 @@ class ModalExample extends React.Component {
         return(
             <div>
                 <Button onClick={this.onClick}>Show Modal</Button>
-                <Modal style={{padding: 10, alignItems: 'flex-end'}} active={this.state.active} onClose={this.onClose} onOpen={this.onOpen} onClickCover={this.onCoverClick} >
+                <Modal style={{padding: 10, alignItems: 'flex-end'}} active={this.state.active} onClose={this.onClose} onOpen={this.onOpen} onClickOverlay={this.onOverlayClick} >
                     <div>
-                        <SmallIconButton transparent icon="close" onClick={this.onCoverClick} />
+                        <SmallIconButton transparent icon="close" onClick={this.onOverlayClick} />
                     </div>
                     <TabbedContent>
                         <Tab>
@@ -65,7 +65,7 @@ class ModalExample extends React.Component {
         this.setState({active: true});
     }
 
-    onCoverClick(e) {
+    onOverlayClick(e) {
         this.setState({active: false});
     }
 

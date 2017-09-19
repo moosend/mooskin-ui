@@ -17,7 +17,7 @@ export interface IModalProps{
     className?: string;
 
     /** onClick callback function when the background cover is clicked */
-    onClickCover?: (e: React.MouseEvent<HTMLDivElement>) => void;
+    onClickOverlay?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
     /** callback func called when modal is opened */
     onOpen?: () => void;
@@ -51,14 +51,14 @@ export default class Modal extends React.Component<IModalProps, {}>{
                 >
                     {this.props.children}
                 </div>
-                {this.getCover()}
+                {this.getOverlay()}
             </div>
         );
     }
 
-    getCover = () => {
+    getOverlay = () => {
         const covStyles = this.props.active ? styles.coverOn : styles.coverOff;
-        return <div className={`${styles.cover} ${covStyles}`} onClick={this.props.onClickCover} />;
+        return <div className={`${styles.cover} ${covStyles}`} onClick={this.props.onClickOverlay} />;
     }
 
 }
