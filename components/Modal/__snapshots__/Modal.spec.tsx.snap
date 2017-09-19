@@ -13,8 +13,12 @@ exports[`Modal renders correctly 1`] = `
       }
     }
   >
-    <div>
-      Mooskin
+    <div
+      className=""
+    >
+      <div>
+        Mooskin
+      </div>
     </div>
   </div>
   <div

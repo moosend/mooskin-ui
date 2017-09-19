@@ -29,13 +29,17 @@ export default class Modal extends React.Component<IModalProps, {}>{
 
         const classes = `${styles.modal} ${display} ${this.props.className}`;
 
+        const content = !this.props.active ? styles.contentOff : '';
+
         return(
             <div className={'modal-component'} id={this.props.id}>
                 <div
                     className={classes}
                     style={this.props.style}
                 >
-                    {this.props.children}
+                    <div className={content}>
+                        {this.props.children}
+                    </div>
                 </div>
                 {this.getOverlay()}
             </div>

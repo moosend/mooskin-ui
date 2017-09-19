@@ -373,7 +373,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     subMenuOn = (index?: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            console.log('called');
             this.setState({subMenuDisplay: true, activeSubMenu: index});
         };
     }

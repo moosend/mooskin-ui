@@ -24,8 +24,8 @@ class ModalExample extends React.Component {
         return(
             <div>
                 <Button onClick={this.onClick}>Show Modal</Button>
-                <Modal style={{padding: 10, alignItems: 'flex-end'}} active={this.state.active} onClickOverlay={this.onOverlayClick} >
-                    <div>
+                <Modal style={{padding: 10}} active={this.state.active} onClickOverlay={this.onOverlayClick} >
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
                         <SmallIconButton transparent icon="close" onClick={this.onOverlayClick} />
                     </div>
                     <TabbedContent>
