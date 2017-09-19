@@ -19,23 +19,9 @@ export interface IModalProps{
     /** onClick callback function when the background cover is clicked */
     onClickOverlay?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
-    /** callback func called when modal is opened */
-    onOpen?: () => void;
-
-    /** callback func called when modal is closed */
-    onClose?: () => void;
-
 }
 
 export default class Modal extends React.Component<IModalProps, {}>{
-
-    componentWillReceiveProps(nextProps: IModalProps){
-        if (nextProps.active){
-            this.props.onOpen && this.props.onOpen();
-        } else {
-            this.props.onClose && this.props.onClose();
-        }
-    }
 
     render() {
 

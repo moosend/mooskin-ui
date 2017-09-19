@@ -52,8 +52,6 @@ or just give it a custom style
 * `onClickCover` - callback function when the cover behind the modal is clicked, can be used to toggle the modal off.
 * `className` - css class
 * `style` - Modal style
-* `onOpen` - Callback function called when modal is opened
-* `onClose` - Callback function called when modal is closed
 
 </div>
 
