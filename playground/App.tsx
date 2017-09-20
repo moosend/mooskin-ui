@@ -16,9 +16,11 @@ import {
     FileUpload,
     HorizontalRangeBar,
     Input,
+    Modal,
     Pagination,
     SmallIconButton,
     Switch,
+    Tags,
     TextArea,
     TopNotification
 } from '../components/index';
@@ -36,7 +38,6 @@ import {Item, SideBar} from '../components/index';
 import {Step, Steps} from '../components/index';
 import {StatsBox, StatsNumber, StatsResult, StatsTitle} from '../components/index';
 import {Table, TableHeader} from '../components/index';
-import {Tags} from '../components/index';
 
 export const App = (props: any) => {
 
@@ -65,6 +66,10 @@ export const App = (props: any) => {
     };
     const radioAccordionComponents = {
         Button, H2, Input, RadioAccordion, RadioAccordionContent
+    };
+
+    const modalComponents = {
+        Button, Content, Header, Modal, SmallIconButton, Tab, TabbedContent
     };
 
     return(
@@ -133,8 +138,11 @@ export const App = (props: any) => {
                 <Col lg={6} md={6}>
                     {renderEditableExample('Pagination', {Pagination})}
                 </Col>
-                <Col lg={12}>
+                <Col lg={9} md={9}>
                     {renderEditableExample('CheckListItem', {CheckListItem})}
+                </Col>
+                <Col lg={3} md={3}>
+                    {renderEditableExample('Modal', modalComponents)}
                 </Col>
             </Row>
             <Row id="tabs">
@@ -175,7 +183,7 @@ export const App = (props: any) => {
                 <Col lg={4} md={5}>
                     {renderEditableExample('HorizontalRangeBar', {HorizontalRangeBar, Button})}
                 </Col>
-                <Col lg={3}>
+                <Col lg={6} md={6}>
                     {renderEditableExample('StatsBox', {StatsBox, StatsNumber, StatsResult, StatsTitle})}
                 </Col>
             </Row>

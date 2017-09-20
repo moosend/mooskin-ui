@@ -45,6 +45,9 @@ export interface ISideBarItemProps{
     /** if active */
     active?: boolean;
 
+    /** which subMenu is active to apply classes to the Item */
+    activeSubMenu?: boolean;
+
     /** sidebar class */
     className?: string;
 
@@ -193,6 +196,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                             onMouseLeave={this.subMenuOff}
                             style={child.props.style}
                             className={child.props.className}
+                            activeSubMenu={this.state.activeSubMenu === index}
                         />
                     );
                 } else {
@@ -373,7 +377,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     subMenuOn = (index?: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            console.log('called');
             this.setState({subMenuDisplay: true, activeSubMenu: index});
         };
     }
@@ -399,7 +402,7 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
     };
 
     const activeItem = props.active ? styles.activeItem : '';
-    const arrow = props.children ? styles.arrow : '';
+    const arrow = props.activeSubMenu ? styles.arrow : '';
     const arrowStyle = props.image ? styles.arrowImg : styles.arrowNoImg;
 
     return(
@@ -418,9 +421,6 @@ export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
                 <img src={getImage()} className={styles.image} />
                 <span>{props.label}</span>
             </a>
-            <div>
-                {props.children}
-            </div>
         </div>
     );
 };
