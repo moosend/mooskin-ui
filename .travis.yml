@@ -11,10 +11,10 @@ notifications:
 deploy:
   provider: npm
   email: gentgaashi@gmail.com
+  skip_cleanup: true
   api_key:
     secure: Ou21dKSn3+rKFFTI8nzjxYUUNw78vMhuqzwYTFTomwDa9kMvQz+EkoGjYuOuasR5qtiWhlwgZ360EEBohLa3+vSeN6g6dSGzclacgzKKX/Xjyr+I0eqZkuZ9Yd6iK8ZtlwQsulV5j8pnlDSh+Ou5LjA52F1u4iV+WC/YlRgcwASco7YMJNHRkWlFs/Rsm1V6MSsM8LAKzPK2NlhN6rcleFTBXbaaTvYcv66zIz9rtySD4WPOh7Ee6P3sEe8jmDa2+0F/pfuIZY0eoIVe4FhS/zc8ZUGdRlDZyGxMy8bRI30eOWzIpxz+r/rZAWgQM7JlH2spG/Vy66Ko+tOy5tn2i8Yj9rQDlogyQfyPYasMb7ZjUhZHD1FSIpt6jZAll/BwC5+dBiWwO0lnAlPxeYZ+uGdLjlOEHJG1ywGWVZfmWEKjwVU4hxyiuj6mBSTDSsN9AkvH7SowqKbiNdgEn9Qpch8Pp5JkxdVtjECtRiOfk9ovlBm0l5dGbovoEANYpZWAEWdAelewc4LhPYoLOq9zvETWrp9bczviCK5EThwVFBuTTBhfeMPrJ8MCfOrcnifbCi7BNrRr2f4riDvjhqPIsaKUh1ogFAQ2jUr26o4KumAt1jETce2g/uO3cwscp9KtPNwi7E/aWXbErwbPVcgT64nike3yGXYLj/hF2Vr7EEQ=
   on:
     tags: true
     repo: moosend/mooskin-ui
     branch: master
-    skip_cleanup: true
