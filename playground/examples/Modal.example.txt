@@ -54,6 +54,84 @@ class ModalExample extends React.Component {
                             </Content>
                         </Tab>
                     </TabbedContent>
+                    <TabbedContent>
+                        <Tab>
+                            <Header>Title 1</Header>
+                            <Content>
+                                <div style={{...style, backgroundColor: '#5CCDDF'}}>
+                                    Content 1
+                                </div>
+                            </Content>
+                        </Tab>
+                        <Tab>
+                            <Header>Title 2</Header>
+                            <Content>
+                                <div style={{...style, backgroundColor: '#F48770'}}>
+                                    Content 2
+                                </div>
+                            </Content>
+                        </Tab>
+                        <Tab>
+                            <Header>Title 3</Header>
+                            <Content>
+                                <div style={{...style, backgroundColor: '#F2C14A'}}>
+                                    Content 3
+                                </div>
+                            </Content>
+                        </Tab>
+                    </TabbedContent>
+                    <TabbedContent>
+                        <Tab>
+                            <Header>Title 1</Header>
+                            <Content>
+                                <div style={{...style, backgroundColor: '#5CCDDF'}}>
+                                    Content 1
+                                </div>
+                            </Content>
+                        </Tab>
+                        <Tab>
+                            <Header>Title 2</Header>
+                            <Content>
+                                <div style={{...style, backgroundColor: '#F48770'}}>
+                                    Content 2
+                                </div>
+                            </Content>
+                        </Tab>
+                        <Tab>
+                            <Header>Title 3</Header>
+                            <Content>
+                                <div style={{...style, backgroundColor: '#F2C14A'}}>
+                                    Content 3
+                                </div>
+                            </Content>
+                        </Tab>
+                    </TabbedContent>
+                    <TabbedContent>
+                        <Tab>
+                            <Header>Title 1</Header>
+                            <Content>
+                                <div style={{...style, backgroundColor: '#5CCDDF'}}>
+                                    Content 1
+                                </div>
+                            </Content>
+                        </Tab>
+                        <Tab>
+                            <Header>Title 2</Header>
+                            <Content>
+                                <div style={{...style, backgroundColor: '#F48770'}}>
+                                    Content 2
+                                </div>
+                            </Content>
+                        </Tab>
+                        <Tab>
+                            <Header>Title 3</Header>
+                            <Content>
+                                <div style={{...style, backgroundColor: '#F2C14A'}}>
+                                    Content 3
+                                </div>
+                            </Content>
+                        </Tab>
+                    </TabbedContent>
                 </Modal>
             </div>
         );

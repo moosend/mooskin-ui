@@ -54,14 +54,14 @@
 
 @media (--small){
     
-        .modal{
-            width: 80%;
-        }
-
-        .modalOn{
-            top: 10%;
-        }
+    .modal{
+        width: 80%;
     }
+
+    .modalOn{
+        top: 10%;
+    }
+}
 
 @media (--xSmall){
 
