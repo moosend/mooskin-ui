@@ -2,7 +2,7 @@
 
 exports[`Modal renders correctly 1`] = `
 <div
-  className="modal-component"
+  className="modal-component container on"
   id="button1"
 >
   <div
@@ -13,12 +13,8 @@ exports[`Modal renders correctly 1`] = `
       }
     }
   >
-    <div
-      className=""
-    >
-      <div>
-        Mooskin
-      </div>
+    <div>
+      Mooskin
     </div>
   </div>
   <div

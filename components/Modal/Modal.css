@@ -1,27 +1,44 @@
 @import '../_utils/globals/screens.css';
 
-.modal {
+.container{
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.4s;
+    overflow-x: hidden;
+    overflow-y: auto;
     position: fixed;
-    top: 0px;
+    top: 0;
     right: 0;
+    bottom: 0;
     left: 0;
+    z-index: 1040;
+}
+
+.on{
+    opacity: 1;
+    visibility: visible;
+}
+
+.off{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    position: relative;
+    margin: 30px auto;
     background: #fff;
-    margin-right: auto;
-    margin-left: auto;
     border-radius: 8px;
     width: 60%;
-    transition: 0.3s;
-    z-index: 5;
+    transition: 0.4s;
+    /* z-index: 5; */
 }
 
 .modalOn{
-    top: 100px;
-    opacity: 1;
+    top: 0px;
 }
 
 .modalOff{
-    opacity: 0;
-    top: 0;
+    top: -600px;
 }
 
 .cover{
@@ -30,26 +47,15 @@
     height: 100%;
     top: 0px;
     left: 0px;
-    transition: 0.3s;
-    background-color: rgba(0, 0, 0, 0.7);
-    animation: opa 0.3s;
-    z-index: 1;
+    z-index: -1;
 }
 
 .coverOff{
-    z-index: -1;
-    opacity: 0;
-    transition: z-index 0.5s step-end, opacity 0.3s linear;
+    visibility: hidden;
 }
 
 .coverOn{
-    z-index: 1;
-    opacity: 1;
-    transition: z-index 0.5s step-start, opacity 0.3s linear;
-}
-
-.contentOff{
-    display: none;
+    visibility: visible;
 }
 
 @media (--small){
@@ -58,9 +64,6 @@
         width: 80%;
     }
 
-    .modalOn{
-        top: 10%;
-    }
 }
 
 @media (--xSmall){
@@ -69,7 +72,4 @@
         width: 80%;
     }
 
-    .modalOn{
-        top: 10%;
-    }
 }

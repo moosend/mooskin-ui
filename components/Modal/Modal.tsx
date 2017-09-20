@@ -25,21 +25,22 @@ export default class Modal extends React.Component<IModalProps, {}>{
 
     render() {
 
-        const display = this.props.active ? styles.modalOn : styles.modalOff;
+        const display = this.props.active ? styles.on : styles.off;
 
-        const classes = `${styles.modal} ${display} ${this.props.className}`;
+        const modalDisplay = this.props.active ? styles.modalOn : styles.modalOff;
 
-        const content = !this.props.active ? styles.contentOff : '';
+        const classes = `${styles.modal} ${modalDisplay} ${this.props.className}`;
 
         return(
-            <div className={'modal-component'} id={this.props.id}>
+            <div
+                className={`modal-component ${styles.container} ${display}`}
+                id={this.props.id}
+            >
                 <div
                     className={classes}
                     style={this.props.style}
                 >
-                    <div className={content}>
-                        {this.props.children}
-                    </div>
+                    {this.props.children}
                 </div>
                 {this.getOverlay()}
             </div>
