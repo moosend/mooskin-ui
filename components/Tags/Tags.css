@@ -31,7 +31,8 @@
     color: #fff;
     margin: 2px;
     cursor: unset;
-    font-size: 0.875rem
+    font-size: 0.875rem;
+    animation: opa 0.2s;
 }
 
 .close{
@@ -99,3 +100,8 @@
     bottom: 0px;
     z-index: 1;
 } */
+
+@keyframes opa {
+    from {opacity: 0}
+    to {opacity: 1}
+}

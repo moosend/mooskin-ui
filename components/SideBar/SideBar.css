@@ -15,6 +15,7 @@
     font-size: 12px;
     white-space: nowrap;
     overflow-x: hidden; 
+    z-index: 9; /* Stay on top */
 }
 
 .subMenu{
@@ -32,7 +33,6 @@
 }
 
 .sidebarOn{
-    z-index: 9; /* Stay on top */
     width: 90px !important;
 }
 
@@ -112,7 +112,6 @@
     left: 90px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    
     border-left: 15px solid #2D2D2D;
 }
 

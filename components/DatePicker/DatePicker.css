@@ -155,7 +155,7 @@
     .calendar{
         position: fixed;
         top: 15%;
-        left: 5%;
+        left: 4%;
         z-index: 99;
     }
 
@@ -253,8 +253,13 @@
     } */
 
     .cover{
-        background: black;
-        opacity: 0.5;
+        background-color: rgba(0, 0, 0, 0.7);
+        animation: opa 0.2s;
+    }
+
+    @keyframes opa {
+        from {opacity: 0}
+        to {opacity: 1}
     }
 }
 
@@ -270,7 +275,7 @@
     .calendar{
         position: fixed;
         top: 15%;
-        left: 5%;
+        left: 4%;
         z-index: 99;
     }
 
@@ -365,10 +370,15 @@
 
     :global(.m-time .sliders){
         padding: 0px 20px;
-    }
+    } */
 
     .cover{
-        background: black;
-        opacity: 0.5;
-    } */
+        background-color: rgba(0, 0, 0, 0.7);
+        animation: opa 0.2s;
+    }
+
+    @keyframes opa {
+        from {opacity: 0}
+        to {opacity: 1}
+    }
 }

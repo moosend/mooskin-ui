@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders correctly 1`] = `
+<div
+  className="modal-component container on"
+  id="button1"
+>
+  <div
+    className="modal modalOn myClass"
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+  >
+    <div>
+      Mooskin
+    </div>
+  </div>
+  <div
+    className="cover coverOn"
+    onClick={[Function]}
+  />
+</div>
+`;
