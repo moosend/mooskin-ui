@@ -1,7 +1,9 @@
 <p align="center">
     <img src="https://cdn.stat-track.com/20170803-2017-0803-2017-080320170803/ca5ad9249d284435955b75e1a22aa15cmooskinLogo.png" width="100" />
-  <h3 align="center">MooSkin (WIP)</h3>
-
+    <div align="center">
+        <img src="https://travis-ci.org/moosend/mooskin-ui.svg?branch=master">
+    </div>
+  	<h3 align="center">MooSkin</h3>
 <p align="center">
     A collection of React components with pre-defined styles for Moosend UI, at the moment very much a work in progress and a lot of things are subject to change.
 </p>
