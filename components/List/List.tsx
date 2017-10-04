@@ -55,8 +55,7 @@ export const ListItem = (props: IListItemProps) => {
     const {className, description, image, style, title} = props;
 
     const getImage = () => {
-        return image &&
-        (
+        return (
             <div className={styles.image}>
                 <img src={image}/>
             </div>
@@ -64,10 +63,9 @@ export const ListItem = (props: IListItemProps) => {
     };
 
     const getTitle = () => {
-        const classes = props.children ? styles.duetTitle : styles.lone;
         return title || description ?
         (
-            <div className={`${styles.titleContainer} ${classes}`}>
+            <div className={`${styles.titleContainer}`}>
                 {title && <span className={styles.title}>{title}</span>}
                 {description && <span className={styles.description}>{description}</span>}
             </div>
@@ -75,7 +73,7 @@ export const ListItem = (props: IListItemProps) => {
     };
 
     const getContent = () => {
-        const classes = title || description ? styles.duetContent : styles.lone;
+        const classes = title || description ? '' : styles.lone;
         return props.children &&
         (
             <div className={`${styles.content} ${classes}`}>
@@ -84,10 +82,20 @@ export const ListItem = (props: IListItemProps) => {
         );
     };
 
+    const getDetails = () => {
+        const classes = !title || !description ? styles.loneImage : '';
+        return image || title || description ?
+        (
+            <div className={`${styles.detailsContainer} ${classes}`}>
+                {image && getImage()}
+                {getTitle()}
+            </div>
+        ) : null;
+    };
+
     return(
         <div className={`listitem-component ${styles.listItem} ${className}`} style={style}>
-            {getImage()}
-            {getTitle()}
+            {getDetails()}
             {getContent()}
         </div>
     );

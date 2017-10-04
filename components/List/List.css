@@ -37,9 +37,16 @@
 
 .titleContainer{
     display: flex;
+    flex: 4;
     flex-direction: column;
     justify-content: space-around;
     padding-left: 20px;
+}
+
+.detailsContainer{
+    display: flex;
+    flex: 4;
+    flex-direction: row;
 }
 
 .title{
@@ -53,17 +60,28 @@
 }
 
 .content {
-    
+    flex: 6;
 }
 
 .lone{
     flex: 10;
 }
 
-.duetTitle{
-    flex: 4;
+.loneImage{
+    flex: 1;
 }
 
-.duetContent{
-    flex: 6;
+@media(--xSmall){
+
+    .listItem{
+        flex-direction: column;
+    }
+
+    .detailsContainer{
+        margin-bottom: 15px;
+    }
+
+    .titleContainer{
+        flex: 3;
+    }
 }
