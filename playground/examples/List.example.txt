@@ -5,7 +5,7 @@ class ListExample extends React.Component {
             <div>
                 <List>
                     <ListItem title="Automation 1" description="Description for automation 1" image="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png">
-                        <div style={{display: 'flex', flexDirection: 'row-reverse', alignItems: 'center'}}>
+                        <div style={{display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', height: '100%'}}>
                             <Button>Activate</Button>
                             <Select style={{marginRight: 30, width: '100%'}}>
                                 <Option value="option1">Option1</Option>
