@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Convergence');
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
+.list{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+}
+
+.listItem{
+    display: flex;
+    flex-direction: row;
+    padding: 25px 0px;
+}
+
+.listItem + .listItem {
+    border-top: 1px solid #efefef;
+}
+
+.image{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.image img{
+    flex-shrink: 0;
+    flex-grow: 0; 
+    min-width: 100%;
+    max-width: 100%;   
+}
+
+.titleContainer{
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+}
+
+.detailsContainer{
+    display: flex;
+    flex: 4;
+    flex-direction: row;
+}
+
+.title{
+    font-family: 'Convergence', sans-serif;
+    font-size: 1.25rem;
+}
+
+.description{
+    color: var(--italicDescription);
+    font-size: .78571428571rem;
+}
+
+.content {
+    flex: 6;
+}
+
+.lone{
+    flex: 10;
+}
+
+.loneImage{
+    flex: 1;
+}
+
+@media(--xSmall){
+
+    .listItem{
+        flex-direction: column;
+    }
+
+    .detailsContainer{
+        margin-bottom: 15px;
+    }
+
+    .titleContainer{
+        flex: 3;
+    }
+}
