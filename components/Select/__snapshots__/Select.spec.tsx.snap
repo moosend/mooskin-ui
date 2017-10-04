@@ -11,6 +11,11 @@ exports[`Select renders Option correctly 1`] = `
 exports[`Select renders Select correctly 1`] = `
 <div
   className="select-component myClass"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
 >
   <label
     className="label"

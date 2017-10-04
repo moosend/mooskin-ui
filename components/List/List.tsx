@@ -4,6 +4,9 @@ import styles from './List.css';
 
 export interface IListProps {
 
+    /** list id */
+    id?: string;
+
     /** list class */
     className?: string;
 
@@ -43,7 +46,7 @@ export default class List extends React.Component<IListProps, {}>{
         const classes = `${styles.list} ${this.props.className}`;
 
         return(
-            <div className={`list-component ${classes}`} style={this.props.style}>
+            <div className={`list-component ${classes}`} style={this.props.style} id={this.props.id}>
                 {this.props.children}
             </div>
         );
