@@ -96,7 +96,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const selected = this.getSelectedChildLabel();
 
         return (
-            <div className={`select-component ${this.props.className}`}>
+            <div className={`select-component ${this.props.className}`} style={this.props.style}>
                 <label className={styles.label}>
                     {this.props.label}
                 </label>
