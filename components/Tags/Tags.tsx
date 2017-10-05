@@ -126,11 +126,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         // const cover = this.state.sourceList.length > 0 ? this.getCover() : '';
 
-        const display = this.props.label ? {display: 'block'} : {display: 'none'};
-
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style} id={this.id}>
-                <div style={display} className={styles.label}>{this.props.label}</div>
+                {this.props.label && <div className={styles.label}>{this.props.label}</div>}
                 <label className={styles.tags}>
                     {tags}
                     <div className={styles.inputContainer}>

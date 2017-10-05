@@ -1,35 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SideBar renders Item correctly 1`] = `
-<div
-  className="item-component itemContainer myClass"
-  onClick={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
->
-  <div
-    className=" arrowImg"
-  />
-  <a
-    className="anchor activeItem"
-    href="www.moosend.com"
-  >
-    <img
-      className="image"
-      src="imageOnPath"
-    />
-    <span>
-      Item
-    </span>
-  </a>
-</div>
-`;
-
 exports[`SideBar renders SideBar correctly 1`] = `
 <div
   className="sidebar-component"
@@ -73,7 +43,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
       }
     }
   >
-    <Item
+    <SidebarItem
       active={true}
       className="myClass"
       href="www.moosend.com"
@@ -86,7 +56,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
         }
       }
     />
-    <Item
+    <SidebarItem
       active={false}
       activeSubMenu={false}
       className="myClass"
@@ -108,7 +78,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    <Item
+    <SidebarItem
       active={false}
       className="myClass"
       href="www.moosend.com"
@@ -169,7 +139,7 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         }
       }
     >
-      <Item
+      <SidebarItem
         active={true}
         className="myClass"
         href="www.moosend.com"
@@ -207,8 +177,8 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
             </span>
           </a>
         </div>
-      </Item>
-      <Item
+      </SidebarItem>
+      <SidebarItem
         active={false}
         className="myClass"
         href="www.moosend.com"
@@ -246,8 +216,38 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
             </span>
           </a>
         </div>
-      </Item>
+      </SidebarItem>
     </div>
   </div>
 </SideBar>
+`;
+
+exports[`SideBar renders SidebarItem correctly 1`] = `
+<div
+  className="item-component itemContainer myClass"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <div
+    className=" arrowImg"
+  />
+  <a
+    className="anchor activeItem"
+    href="www.moosend.com"
+  >
+    <img
+      className="image"
+      src="imageOnPath"
+    />
+    <span>
+      Item
+    </span>
+  </a>
+</div>
 `;

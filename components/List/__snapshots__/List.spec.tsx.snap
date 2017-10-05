@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders List correctly 1`] = `
+<div
+  className="list-component list myClass"
+  id="button1"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+/>
+`;
+
+exports[`Button renders ListItem correctly 1`] = `
+<div
+  className="listitem-component listItem myClass"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <div
+    className="detailsContainer "
+  >
+    <div
+      className="image"
+    >
+      <img
+        src="imageUrl"
+      />
+    </div>
+    <div
+      className="titleContainer"
+    >
+      <span
+        className="title"
+      >
+        title
+      </span>
+      <span
+        className="description"
+      >
+        desc
+      </span>
+    </div>
+  </div>
+  <div
+    className="content "
+  >
+    test
+  </div>
+</div>
+`;
+
+exports[`Button renders with multiple children 1`] = `
+<List
+  className="myClass"
+  id="button1"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <div
+    className="list-component list myClass"
+    id="button1"
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+  >
+    <ListItem
+      className="myClass"
+      description="desc"
+      hovered={false}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      title="title"
+    >
+      <div
+        className="listitem-component listItem myClass"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="detailsContainer "
+        >
+          <div
+            className="titleContainer"
+          >
+            <span
+              className="title"
+            >
+              title
+            </span>
+            <span
+              className="description"
+            >
+              desc
+            </span>
+          </div>
+        </div>
+        <div
+          className="content "
+        >
+          test
+        </div>
+      </div>
+    </ListItem>
+    <ListItem
+      className="myClass"
+      hovered={false}
+      image="imageUrl"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="listitem-component listItem myClass"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={Object {}}
+      >
+        <div
+          className="detailsContainer loneImage"
+        >
+          <div
+            className="image"
+          >
+            <img
+              src="imageUrl"
+            />
+          </div>
+        </div>
+        <div
+          className="content lone"
+        >
+          test
+        </div>
+      </div>
+    </ListItem>
+  </div>
+</List>
+`;

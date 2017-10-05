@@ -62,18 +62,14 @@ class Switch extends React.Component<ISwitchProps, {}> {
 
         const disabledSwitch = disabled ? styles.disabledSwitch : '';
 
-        const spacing = label ?
-                        !this.props.labelWidth ?
-                        {} :
-                        {width: `${this.props.labelWidth}px`} :
-                        {display: 'none'};
+        const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
 
         const text = this.switchLabel();
 
         return (
 
             <div className={styles.switchContainer}>
-                <span className={styles.label} style={spacing}>{label}</span>
+                {label && <span className={styles.label} style={spacing}>{label}</span>}
                 <div
                     id={id}
                     style={style}

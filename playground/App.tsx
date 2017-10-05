@@ -34,7 +34,8 @@ import {Col, Grid, Row} from '../components/index';
 import {Content, Header, Tab, TabbedContent} from '../components/index';
 import {RadioAccordion, RadioAccordionContent} from '../components/index';
 import {Form, FormGroup} from '../components/index';
-import {Item, SideBar} from '../components/index';
+import {SideBar, SidebarItem} from '../components/index';
+import {List, ListItem} from '../components/index';
 import {Step, Steps} from '../components/index';
 import {StatsBox, StatsNumber, StatsResult, StatsTitle} from '../components/index';
 import {Table, TableHeader} from '../components/index';
@@ -79,7 +80,7 @@ export const App = (props: any) => {
                     <H1>SideBar</H1>
                 </Col>
                 <Col lg={12}>
-                    {renderEditableExample('SideBar', {SideBar, Item})}
+                    {renderEditableExample('SideBar', {SideBar, SidebarItem})}
                 </Col>
             </Row>
             <Row id="buttons">
@@ -126,6 +127,14 @@ export const App = (props: any) => {
                 </Col>
                 <Col>
                     {renderEditableExample('Form', formComponents)}
+                </Col>
+            </Row>
+            <Row id="list">
+                <Col lg={12}>
+                    <H1>List & ListItem</H1>
+                </Col>
+                <Col>
+                    {renderEditableExample('List', {List, ListItem, Select, Option, Button})}
                 </Col>
             </Row>
             <Row id="toggables">

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Item, SideBar, SmallIconButton} from '../index';
+import {SideBar, SidebarItem, SmallIconButton} from '../index';
 
 import { mount, shallow } from 'enzyme';
 
@@ -18,11 +18,11 @@ describe('SideBar', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    test('renders Item correctly', () => {
+    test('renders SidebarItem correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(
-            <Item
+            <SidebarItem
                 onClick={func}
                 className="myClass"
                 style={{color: 'blue'}}
@@ -47,7 +47,7 @@ describe('SideBar', () => {
                 style={{color: 'blue'}}
                 button
             >
-                <Item
+                <SidebarItem
                     onClick={func}
                     className="myClass"
                     style={{color: 'blue'}}
@@ -58,7 +58,7 @@ describe('SideBar', () => {
                     onMouseEnter={func}
                     onMouseLeave={func}
                 />
-                <Item
+                <SidebarItem
                     onClick={func}
                     className="myClass"
                     style={{color: 'blue'}}
@@ -83,7 +83,7 @@ describe('SideBar', () => {
                 style={{color: 'blue'}}
                 button
             >
-                <Item
+                <SidebarItem
                     onClick={func}
                     className="myClass"
                     style={{color: 'blue'}}
@@ -94,7 +94,7 @@ describe('SideBar', () => {
                     onMouseEnter={func}
                     onMouseLeave={func}
                 />
-                <Item
+                <SidebarItem
                     onClick={func}
                     className="myClass"
                     style={{color: 'blue'}}
@@ -105,7 +105,7 @@ describe('SideBar', () => {
                     onMouseEnter={func}
                     onMouseLeave={func}
                 >
-                    <Item
+                    <SidebarItem
                         onClick={func}
                         className="myClass"
                         style={{color: 'blue'}}
@@ -116,7 +116,7 @@ describe('SideBar', () => {
                         onMouseEnter={func}
                         onMouseLeave={func}
                     />
-                </Item>
+                </SidebarItem>
             </SideBar>
         );
         expect(tree).toMatchSnapshot();
@@ -130,7 +130,7 @@ describe('SideBar', () => {
                 style={{color: 'blue'}}
                 button
             >
-                <Item
+                <SidebarItem
                     className="myClass"
                     style={{color: 'blue'}}
                     active
@@ -138,7 +138,7 @@ describe('SideBar', () => {
                     label="Item"
                     image="imagePath"
                 />
-                <Item
+                <SidebarItem
                     className="myClass"
                     style={{color: 'blue'}}
                     active
@@ -153,11 +153,11 @@ describe('SideBar', () => {
         expect(component.find('.sidebar').prop('className')).toContain('myClass');
         expect(component.find('.sidebar').prop('style')).toEqual({color: 'blue'});
 
-        expect(component.find(Item).length).toEqual(2);
-        expect(component.find(Item).first().prop('className')).toEqual('myClass');
-        expect(component.find(Item).first().prop('style')).toEqual({color: 'blue'});
-        expect(component.find(Item).first().prop('href')).toEqual('www.moosend.com');
-        expect(component.find(Item).first().prop('image')).toEqual('imagePath');
+        expect(component.find(SidebarItem).length).toEqual(2);
+        expect(component.find(SidebarItem).first().prop('className')).toEqual('myClass');
+        expect(component.find(SidebarItem).first().prop('style')).toEqual({color: 'blue'});
+        expect(component.find(SidebarItem).first().prop('href')).toEqual('www.moosend.com');
+        expect(component.find(SidebarItem).first().prop('image')).toEqual('imagePath');
     });
 
     test('renders different Item images based on active status', () => {
@@ -166,12 +166,12 @@ describe('SideBar', () => {
             <SideBar
                 button
             >
-                <Item
+                <SidebarItem
                     label="Item"
                     image="imagePath"
                     imageOn="imageOnPath"
                 />
-                <Item
+                <SidebarItem
                     active
                     label="Item"
                     image="imagePath"
@@ -181,20 +181,20 @@ describe('SideBar', () => {
         );
 
         expect(component.state('activeItem')).toBe(1);
-        expect(component.find('Item').first().dive().find('img').prop('src')).toEqual('imagePath');
-        expect(component.find('Item').last().dive().find('img').prop('src')).toEqual('imageOnPath');
+        expect(component.find('SidebarItem').first().dive().find('img').prop('src')).toEqual('imagePath');
+        expect(component.find('SidebarItem').last().dive().find('img').prop('src')).toEqual('imageOnPath');
 
-        component.find('Item').first().simulate('click');
+        component.find('SidebarItem').first().simulate('click');
 
         expect(component.state('activeItem')).toBe(0);
-        expect(component.find('Item').first().dive().find('img').prop('src')).toEqual('imageOnPath');
-        expect(component.find('Item').last().dive().find('img').prop('src')).toEqual('imagePath');
+        expect(component.find('SidebarItem').first().dive().find('img').prop('src')).toEqual('imageOnPath');
+        expect(component.find('SidebarItem').last().dive().find('img').prop('src')).toEqual('imagePath');
 
-        component.find('Item').last().simulate('click');
+        component.find('SidebarItem').last().simulate('click');
 
         expect(component.state('activeItem')).toBe(1);
-        expect(component.find('Item').first().dive().find('img').prop('src')).toEqual('imagePath');
-        expect(component.find('Item').last().dive().find('img').prop('src')).toEqual('imageOnPath');
+        expect(component.find('SidebarItem').first().dive().find('img').prop('src')).toEqual('imagePath');
+        expect(component.find('SidebarItem').last().dive().find('img').prop('src')).toEqual('imageOnPath');
 
     });
 
@@ -208,7 +208,7 @@ describe('SideBar', () => {
                 hideClick
                 button
             >
-                <Item
+                <SidebarItem
                     onClick={func}
                     className="myClass"
                     style={{color: 'blue'}}
@@ -219,7 +219,7 @@ describe('SideBar', () => {
                     onMouseEnter={func}
                     onMouseLeave={func}
                 />
-                <Item
+                <SidebarItem
                     onClick={func}
                     className="myClass"
                     style={{color: 'blue'}}
@@ -230,7 +230,7 @@ describe('SideBar', () => {
                     onMouseEnter={func}
                     onMouseLeave={func}
                 >
-                    <Item
+                    <SidebarItem
                         onClick={func}
                         className="myClass"
                         style={{color: 'blue'}}
@@ -241,7 +241,7 @@ describe('SideBar', () => {
                         onMouseEnter={func}
                         onMouseLeave={func}
                     />
-                </Item>
+                </SidebarItem>
             </SideBar>
         );
 
@@ -264,7 +264,7 @@ describe('SideBar', () => {
         expect(component.hasClass('sidebarOn')).toBeTruthy;
         expect(component.hasClass('smallOn')).toBeTruthy;
 
-        component.find('Item').at(1).simulate('mouseenter');
+        component.find('SidebarItem').at(1).simulate('mouseenter');
 
         expect(component.state('display')).toBe(true);
         expect(component.state('smallDisplay')).toBe(true);
@@ -276,9 +276,9 @@ describe('SideBar', () => {
         expect(component.find('SubMenu').hasClass('subMenuOn')).toBeTruthy;
         expect(component.find('SubMenu').hasClass('sidebarOff')).toBeFalsy;
 
-        expect(component.find('Item').length).toEqual(3);
+        expect(component.find('SidebarItem').length).toEqual(3);
 
-        component.find('Item').last().simulate('click');
+        component.find('SidebarItem').last().simulate('click');
 
         expect(component.state('display')).toBe(false);
         expect(component.state('smallDisplay')).toBe(false);

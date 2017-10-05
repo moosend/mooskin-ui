@@ -24,15 +24,13 @@ export default class Fieldset extends React.Component<IFieldsetProps, {}>{
 
     render(){
 
-        const legend = this.props.legend ? {} : {display: 'none'};
-
         return (
             <fieldset
                 id={this.props.id}
                 className={`fieldset-component ${styles.fieldset} ${this.props.className}`}
                 style={this.props.style}
             >
-                <legend className={styles.legend} style={legend}>{this.props.legend}</legend>
+                {this.props.legend && <legend className={styles.legend} >{this.props.legend}</legend>}
                 {this.props.children}
             </fieldset>
         );

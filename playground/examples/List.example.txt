@@ -1,0 +1,29 @@
+class ListExample extends React.Component {
+
+    render(){
+        return(
+            <div>
+                <List hoverColor="#F6F6F6" >
+                    <ListItem title="Automation 1" description="Description for automation 1" image="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png">
+                        <div style={{display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', height: '100%'}}>
+                            <Button>Activate</Button>
+                            <Select style={{marginRight: 30, width: '100%'}}>
+                                <Option value="option1">Option1</Option>
+                                <Option value="option2">Option2</Option>
+                                <Option value="option3">Option3</Option>
+                                <Option value="option4">Option4</Option>
+                                <Option value="option5">Option5</Option>
+                            </Select>
+                        </div>
+                    </ListItem>
+                    <ListItem title="Integration 1" description="Description for integration 1" style={{padding: '35px 0px'}}>
+                        <div style={{float: 'right'}}>
+                            <Button>Proceed</Button>
+                        </div>
+                    </ListItem>
+                </List>
+            </div>
+        );
+    }
+
+}

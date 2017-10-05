@@ -109,7 +109,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         style: {},
     };
 
-    static Item: React.StatelessComponent<ISideBarItemProps>;
+    static SidebarItem: React.StatelessComponent<ISideBarItemProps>;
     static SubMenu: React.StatelessComponent<ISubMenuProps>;
 
     constructor(props: ISideBarProps){
@@ -184,7 +184,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
                 if (child.props.children){
                     items.push(
-                        <Item
+                        <SidebarItem
                             key={index}
                             image={child.props.image}
                             imageOn={child.props.imageOn}
@@ -201,7 +201,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                     );
                 } else {
                     items.push(
-                        <Item
+                        <SidebarItem
                             key={index}
                             image={child.props.image}
                             imageOn={child.props.imageOn}
@@ -262,7 +262,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         if (Array.isArray(items)){
             items.forEach((item: React.ReactElement<ISideBarItemProps>, index: number) => {
                 newItems.push(
-                    <Item
+                    <SidebarItem
                         key={index}
                         label={item.props.label}
                         href={item.props.href}
@@ -275,7 +275,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
             });
         } else {
             return (
-                <Item
+                <SidebarItem
                     label={items.props.label}
                     href={items.props.href}
                     onClick={this.onClickSecondary(0, items)}
@@ -386,9 +386,9 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     }
 }
 
-export const Item: React.StatelessComponent<ISideBarItemProps> = (props) => {
+export const SidebarItem: React.StatelessComponent<ISideBarItemProps> = (props) => {
 
-    Item.defaultProps = {
+    SidebarItem.defaultProps = {
         className: '',
         style: {}
     };

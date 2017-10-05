@@ -3,61 +3,61 @@ class SideBarExample extends React.Component {
     render(){
         return (
             <SideBar button hideClick>
-                <Item
+                <SidebarItem
                     image="https://cdn.moostaging.com/assets/images/icons/icon-dashboard.png"
                     imageOn="https://cdn.moostaging.com/assets/images/icons/icon-dashboard-on.png"
                     label="React"
                 />
-                <Item
+                <SidebarItem
                     image="https://cdn.moostaging.com/assets/images/icons/icon-campaigns.png"
                     imageOn="https://cdn.moostaging.com/assets/images/icons/icon-campaigns-on.png"
                     label="JavaScript"
                 />
-                <Item
+                <SidebarItem
                     image="https://camo.githubusercontent.com/00dfbc4648e8bf8f7903c85b8c6e2eaf8afd1320/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
                     label="Components"
                 >
-                    <Item
+                    <SidebarItem
                         label="Sidebar"
                         href="#sidebar"
                     />
-                    <Item
+                    <SidebarItem
                         label="Buttons"
                         href="#buttons"
                     />
-                    <Item
+                    <SidebarItem
                         label="Form Elements"
                         href="#formElements"
                     />
-                    <Item
+                    <SidebarItem
                         label="Forms & FormGroups"
                         href="#forms"
                     />
-                    <Item
+                    <SidebarItem
                         label="Toggables"
                         href="#toggables"
                     />
-                    <Item
+                    <SidebarItem
                         label="Tabs"
                         href="#tabs"
                     />
-                    <Item
+                    <SidebarItem
                         label="Tables"
                         href="#tables"
                     />
-                    <Item
+                    <SidebarItem
                         label="Miscellaneous"
                         href="#misc"
                     />
-                    <Item
+                    <SidebarItem
                         label="Grid System"
                         href="#grid"
                     />
-                    <Item
+                    <SidebarItem
                         label="Charts"
                         href="#charts"
                     />
-                </Item>
+                </SidebarItem>
             </SideBar>
         );
     }
