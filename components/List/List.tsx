@@ -10,6 +10,9 @@ export interface IListProps {
     /** list class */
     className?: string;
 
+    /** color to be applied when an item is hovered */
+    hoverColor?: string;
+
     /** override styles */
     style?: React.CSSProperties;
 
@@ -29,6 +32,12 @@ export interface IListItemProps {
     /** listitem description */
     description?: string;
 
+    /** inherited from parent */
+    hovered?: boolean;
+
+    /** color to be applied when this item is hovered (inherited by default) */
+    hoverColor?: string;
+
     /** listitem class */
     className?: string;
 
@@ -37,9 +46,25 @@ export interface IListItemProps {
 
     /** listitem children */
     children?: any;
+
+    onMouseEnter?: (e: React.MouseEvent<HTMLElement>) => void;
+
+    onMouseLeave?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-export default class List extends React.Component<IListProps, {}>{
+export interface IListState {
+    hoverItem?: number;
+}
+
+export default class List extends React.Component<IListProps, IListState>{
+
+    constructor(props: IListProps){
+        super(props);
+
+        this.state = {
+            hoverItem: -1
+        };
+    }
 
     render(){
 
@@ -47,15 +72,51 @@ export default class List extends React.Component<IListProps, {}>{
 
         return(
             <div className={`list-component ${classes}`} style={this.props.style} id={this.props.id}>
-                {this.props.children}
+                {this.getItems()}
             </div>
         );
+    }
+
+    getItems = () => {
+        const items: Array<React.ReactElement<IListItemProps>> = [];
+        React.Children.forEach(this.props.children, (child, index) => {
+            if (React.isValidElement<IListItemProps>(child)){
+                items.push(
+                    <ListItem
+                        key={index}
+                        hovered={index === this.state.hoverItem}
+                        className={child.props.className}
+                        image={child.props.image}
+                        description={child.props.description}
+                        title={child.props.title}
+                        hoverColor={child.props.hoverColor || this.props.hoverColor}
+                        onMouseEnter={this.onItemEnter(index)}
+                        onMouseLeave={this.onItemLeave}
+                    >
+                        {child.props.children}
+                    </ListItem>
+                );
+            }
+        });
+        return items;
+    }
+
+    onItemEnter = (index: number) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            this.setState({hoverItem: index});
+        };
+    }
+
+    onItemLeave = () => {
+        this.setState({hoverItem: -1});
     }
 }
 
 export const ListItem = (props: IListItemProps) => {
 
     const {className, description, image, style, title} = props;
+
+    const hoverColor = props.hoverColor && props.hovered ? {backgroundColor: props.hoverColor} : {};
 
     const getImage = () => {
         return (
@@ -97,7 +158,12 @@ export const ListItem = (props: IListItemProps) => {
     };
 
     return(
-        <div className={`listitem-component ${styles.listItem} ${className}`} style={style}>
+        <div
+            className={`listitem-component ${styles.listItem} ${className}`}
+            style={{...style, ...hoverColor}}
+            onMouseEnter={props.onMouseEnter}
+            onMouseLeave={props.onMouseLeave}
+        >
             {getDetails()}
             {getContent()}
         </div>

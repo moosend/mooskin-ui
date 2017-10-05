@@ -3,7 +3,7 @@ class ListExample extends React.Component {
     render(){
         return(
             <div>
-                <List>
+                <List hoverColor="#F6F6F6" >
                     <ListItem title="Automation 1" description="Description for automation 1" image="https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png">
                         <div style={{display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', height: '100%'}}>
                             <Button>Activate</Button>
