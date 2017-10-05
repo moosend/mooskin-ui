@@ -76,20 +76,16 @@ exports[`Button renders with multiple children 1`] = `
     <ListItem
       className="myClass"
       description="desc"
-      style={
-        Object {
-          "color": "blue",
-        }
-      }
+      hovered={false}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
       title="title"
     >
       <div
         className="listitem-component listItem myClass"
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={Object {}}
       >
         <div
           className="detailsContainer "
@@ -118,20 +114,16 @@ exports[`Button renders with multiple children 1`] = `
     </ListItem>
     <ListItem
       className="myClass"
+      hovered={false}
       image="imageUrl"
-      style={
-        Object {
-          "color": "blue",
-        }
-      }
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
         className="listitem-component listItem myClass"
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={Object {}}
       >
         <div
           className="detailsContainer loneImage"
