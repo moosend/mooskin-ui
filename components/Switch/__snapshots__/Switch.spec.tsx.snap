@@ -4,14 +4,6 @@ exports[`Switch renders correctly 1`] = `
 <div
   className="switchContainer"
 >
-  <span
-    className="label"
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-  />
   <div
     className="switch-component onSwitch onSlider disabledSwitch switch myClass"
     id="switch1"

@@ -17,7 +17,7 @@ export {default as Pagination} from '../Pagination';
 export {default as RadioGroup, Radio} from '../Radio';
 export {default as RadioAccordion, RadioAccordionContent} from '../RadioAccordion';
 export {default as Steps, Step} from '../Steps';
-export {default as SideBar, Item} from '../SideBar';
+export {default as SideBar, SidebarItem} from '../SideBar';
 export {default as SmallIconButton} from '../SmallIconButton';
 export {default as Select, Option} from '../Select';
 export {default as Switch} from '../Switch';

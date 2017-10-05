@@ -174,17 +174,11 @@ export const TextAreaComponent: React.StatelessComponent<ITextAreaProps> = (prop
     const id = generateId();
 
     const disabledtextarea = props.disabled ? styles.disabledTextArea : '';
-    const spacing = props.label ?
-                    !props.labelWidth ?
-                    {} :
-                    {width: `${props.labelWidth}px`} :
-                    {display: 'none'};
+    const spacing = !props.labelWidth ? {} : {flexBasis: `${props.labelWidth}px`};
 
     return (
         <div className={`textarea-component ${props.className} ${styles.areaContainer}`}>
-            <label className={styles.textareaLabel} style={spacing} htmlFor={id}>
-                {props.label}
-            </label>
+            {props.label && <label className={styles.textareaLabel} style={spacing} htmlFor={id}>{props.label}</label>}
             <div className={styles.textAreaDiv}>
                 <textarea
                     id={props.id}
