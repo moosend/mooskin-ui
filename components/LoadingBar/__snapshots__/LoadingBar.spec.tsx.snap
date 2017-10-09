@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingBar LoadingBar renders correctly 1`] = `
+<div
+  className="loading-component loadingBar loadingLeft   myClass"
+  id="5"
+  style={
+    Object {
+      "color": "red",
+      "width": "0%",
+    }
+  }
+/>
+`;

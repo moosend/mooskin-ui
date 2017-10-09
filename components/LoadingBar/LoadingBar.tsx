@@ -59,22 +59,23 @@ export default class LoadingBar extends React.Component<ILoadingBarProps, ILoadi
         };
     }
 
+    componentDidMount(){
+        this.setState({width: this.props.progress});
+    }
+
     componentWillReceiveProps(nextProps: ILoadingBarProps) {
 
-        // Watching Progress Changes
         if (nextProps.progress !== this.props.progress) {
-            this.setState({ width: nextProps.progress }, this.isFull.bind(this));
+            this.setState({ width: nextProps.progress }, this.isFull);
         }
 
-        // Watching Error
         if (nextProps.error !== this.props.error) {
             if (nextProps.error) {
-                this.setState({ width: 100, error: true }, this.isFull.bind(this));
+                this.setState({ width: 100, error: true }, this.isFull);
             }
         }
     }
 
-    // render method
     render() {
 
         const { className, id, style } = this.props;
@@ -102,8 +103,8 @@ export default class LoadingBar extends React.Component<ILoadingBarProps, ILoadi
 
     }
 
-    isFull() {
-        const isFull = this.state.width === 100;
+    isFull = () => {
+        const isFull = this.state.width >= 100;
 
         if (isFull) {
             this.setState({ wait: true });
