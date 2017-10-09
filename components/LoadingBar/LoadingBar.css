@@ -1,0 +1,28 @@
+.loadingBar{
+    transition: all 0.4s ease;
+    position: fixed;
+    top: 0;
+    height: 5px;
+    width: 5%;
+    background: #F48770;
+    box-shadow: -3px 0 15px 1px rgba(244,135,112, 0.4);
+}
+
+.error{
+    background: #cc0000;
+    box-shadow: -3px 0 15px 1px rgba(204,0,0, 0.4);
+}
+
+.loadingRight{
+    left: 0;
+}
+
+.loadingLeft{
+    right: 0;
+}
+
+.full{
+    transition: all 0.1s ease;
+    height: 0;
+    opacity: 0;
+}

@@ -16,6 +16,7 @@ import {
     FileUpload,
     HorizontalRangeBar,
     Input,
+    LoadingBar,
     Modal,
     Pagination,
     SmallIconButton,
@@ -81,6 +82,14 @@ export const App = (props: any) => {
                 </Col>
                 <Col lg={12}>
                     {renderEditableExample('SideBar', {SideBar, SidebarItem})}
+                </Col>
+            </Row>
+            <Row id="loadingBar">
+                <Col lg={12}>
+                    <H1>LoadingBar</H1>
+                </Col>
+                <Col lg={12}>
+                    {renderEditableExample('LoadingBar', {LoadingBar, Button})}
                 </Col>
             </Row>
             <Row id="buttons">
