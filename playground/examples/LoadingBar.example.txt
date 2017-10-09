@@ -9,7 +9,7 @@ class LoadingBarExample extends React.Component {
         this.loadingInterval;
 
         this.state = {
-            loading: 10,
+            loading: 0,
             error: false
         }
     }
