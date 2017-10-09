@@ -53,7 +53,7 @@ exports[`TextArea renders correctly 1`] = `
         htmlFor="1482363367071"
         style={
           Object {
-            "width": "30px",
+            "flexBasis": "30px",
           }
         }
       >

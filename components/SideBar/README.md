@@ -12,7 +12,7 @@ Import {SideBar} from 'mooskin';
 or modular import
 ```
 // JS
-import SideBar, {Item} from 'mooskin/lib/SideBar';
+import SideBar, {SidebarItem} from 'mooskin/lib/SideBar';
 
 // CSS
 import 'mooskin/lib/SideBar/style.css';
@@ -26,13 +26,13 @@ And then you can simply start using it by typing
 </SideBar>
 ```
 
-The `SideBar` component accepts `Item` Components as children.
+The `SideBar` component accepts `SidebarItem` Components as children.
 
 ```
-Import {Item, SideBar} from 'mooskin';
+Import {SidebarItem, SideBar} from 'mooskin';
 
 <SideBar>
-    <Item />
+    <SidebarItem />
 </SideBar>
 ```
 
@@ -54,21 +54,21 @@ Time to fill the SideBar with Items.
 Secondary SideBar is also available to be assigned to SideBar Items. For example:
 
 ```
-Import {Item, SideBar} from 'mooskin';
+Import {SidebarItem, SideBar} from 'mooskin';
 
 <SideBar
 >
-    <Item
+    <SidebarItem
         label="Automation"
         onClick={this.toggleSecondary}
     >
-        <Item />
-    </Item>
+        <SidebarItem />
+    </SidebarItem>
 </SideBar>
 
 ```
 
-As you can see the main SideBar is a static one, doesnt have a button. When an Item is hovered that has the another `Item` child the second SideBar will appear with its children.
+As you can see the main SideBar is a static one, doesnt have a button. When an SidebarItem is hovered that has the another `SidebarItem` child the second SideBar will appear with its children.
 
 <div class="playground-doc">
 
@@ -78,7 +78,7 @@ As you can see the main SideBar is a static one, doesnt have a button. When an I
 * `className` - custom classes
 * `style` - or additional styles
 
-## Supported attributes for Item
+## Supported attributes for SidebarItem
 
 * `href` - simple href when the Item is clicked
 * `label` - label below the Item
@@ -92,7 +92,7 @@ As you can see the main SideBar is a static one, doesnt have a button. When an I
 
 </div>
 
-Allthough these attributes are supported, only `label` of te Item is mandatory.
+Allthough these attributes are supported, only `label` of te SidebarItem is mandatory.
 
 ___
 

@@ -11,11 +11,6 @@ exports[`Tags renders Tags correctly 1`] = `
 >
   <div
     className="label"
-    style={
-      Object {
-        "display": "block",
-      }
-    }
   >
     label
   </div>

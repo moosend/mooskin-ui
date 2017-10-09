@@ -1,7 +1,9 @@
 <p align="center">
     <img src="https://cdn.stat-track.com/20170803-2017-0803-2017-080320170803/ca5ad9249d284435955b75e1a22aa15cmooskinLogo.png" width="100" />
-  <h3 align="center">MooSkin (WIP)</h3>
-
+    <div align="center">
+        <img src="https://travis-ci.org/moosend/mooskin-ui.svg?branch=master">
+    </div>
+  	<h3 align="center">MooSkin</h3>
 <p align="center">
     A collection of React components with pre-defined styles for Moosend UI, at the moment very much a work in progress and a lot of things are subject to change.
 </p>
@@ -160,13 +162,13 @@ import {Input} from 'mooskin'
 * [Fieldset](https://github.com/moosend/mooskin-ui/tree/master/components/Fieldset)
 * [SmallIconButton](https://github.com/moosend/mooskin-ui/tree/master/components/SmallIconButton)
 * [TabbedContent](https://github.com/moosend/mooskin-ui/tree/master/components/TabbedContent)
-* [RadioTabs](https://github.com/moosend/mooskin-ui/tree/master/components/RadioTabs)
 * [Tags](https://github.com/moosend/mooskin-ui/tree/master/components/Tags)
-* [RadioAccordion](https://github.com/moosend/mooskin-ui/tree/master/components/Accordion)
+* [RadioAccordion](https://github.com/moosend/mooskin-ui/tree/master/components/RadioAccordion)
 * [CheckListItem](https://github.com/moosend/mooskin-ui/tree/master/components/CheckListItem)
 * [TopNotification](https://github.com/moosend/mooskin-ui/tree/master/components/TopNotification)
 * [HorizontalRangeBar](https://github.com/moosend/mooskin-ui/tree/master/components/HorizontalRangeBar)
 * [Grid](https://github.com/moosend/mooskin-ui/tree/master/components/Grid)
+* [List](https://github.com/moosend/mooskin-ui/tree/master/components/List)
 * [Pagination](https://github.com/moosend/mooskin-ui/tree/master/components/Pagination)
 * [Steps](https://github.com/moosend/mooskin-ui/tree/master/components/Steps)
 * [StatsBox](https://github.com/moosend/mooskin-ui/tree/master/components/StatsBox)

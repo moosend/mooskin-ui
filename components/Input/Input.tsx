@@ -96,18 +96,12 @@ class Input extends React.Component<IProps, {}> {
         } = this.props;
 
         const disabledInput = disabled ? styles.disabledInput : '';
-        const spacing = label ?
-                        !this.props.labelWidth ?
-                        {} :
-                        {width: `${this.props.labelWidth}px`} :
-                        {display: 'none'};
+        const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
         const autocomplete = !this.props.autocomplete ? 'off' : 'on';
 
         return (
             <div className={`input-component ${className} ${styles.inputContainer}`}>
-                <label className={styles.inputLabel} style={spacing} htmlFor={this.id}>
-                    {label}
-                </label>
+                {label && <label className={styles.inputLabel} style={spacing} htmlFor={this.id}>{label}</label>}
                 <div className={styles.inputDiv}>
                     <input
                         onChange={this.onChange}

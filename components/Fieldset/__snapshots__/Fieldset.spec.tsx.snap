@@ -12,7 +12,6 @@ exports[`Fieldset renders correctly 1`] = `
 >
   <legend
     className="legend"
-    style={Object {}}
   >
     Moosend
   </legend>

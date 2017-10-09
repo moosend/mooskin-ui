@@ -117,8 +117,6 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
 
         const {id, className, style, title} = this.props;
 
-        const headingStyle = title ? {} : {display: 'none'};
-
         const align = this.props.horizontal ? styles.horizontal : '';
 
         return (
@@ -127,7 +125,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                 className={`checkboxgroup-component ${className}`}
                 style={{...style}}
             >
-                <H2 style={headingStyle} >{title}</H2>
+                {title && <H2>{title}</H2>}
                 <div className={align}>
                     {this.assignCheckBoxes()}
                 </div>

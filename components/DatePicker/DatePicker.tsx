@@ -26,6 +26,9 @@ export interface IDateProps{
     /** datepicker label */
     label?: string;
 
+    /** with of the label within the datepicker container */
+    labelWidth?: number;
+
     /** wether this input is disabled or not */
     disabled?: boolean;
 
@@ -67,8 +70,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     render(){
 
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
-        const labelStyles = !this.props.label ? {display: 'none'} : {};
         const disabledClasses = !this.props.disabled ? '' : styles.disabled;
+        const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
 
         return(
             <div
@@ -76,7 +79,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 className={`datepicker-component ${this.props.className} ${styles.datePicker}`}
                 style={this.props.style}
             >
-                <label className={styles.label} style={labelStyles}>{this.props.label}</label>
+                {this.props.label && <label className={styles.label} style={spacing} >{this.props.label}</label>}
                 <div className={styles.wrapper}>
                     <input
                         readOnly

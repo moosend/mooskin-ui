@@ -9,7 +9,7 @@ exports[`Input renders correctly 1`] = `
     htmlFor="input1"
     style={
       Object {
-        "width": "30px",
+        "flexBasis": "30px",
       }
     }
   >

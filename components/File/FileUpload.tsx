@@ -24,6 +24,9 @@ export interface IFileProps{
     /** file upload label */
     label?: string;
 
+    /** with of the label within the fileupload container */
+    labelWidth?: number;
+
     /** file upload input label */
     placeholder?: string;
 
@@ -76,7 +79,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
     render(){
 
         const disabledFile = this.props.disabled ? styles.disabledFile : '';
-        const labelStyles = this.props.label ? {} : {display: 'none'};
+        const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
 
         return (
             <div
@@ -84,7 +87,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
                 className={`file-upload-component ${styles.fileContainer} ${disabledFile}`}
                 style={this.props.style}
             >
-                <label style={labelStyles} className={styles.label}>{this.props.label}</label>
+                {this.props.label && <label className={styles.label} style={spacing}>{this.props.label}</label>}
                 <span className={styles.name}>{this.state.name}</span>
                 <span className={styles.button}>{this.props.buttonLabel}</span>
                 <input
