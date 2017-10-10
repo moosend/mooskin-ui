@@ -37,9 +37,10 @@
     "draft-js": "^0.10.1",
     "input-moment": "^0.3.4",
     "moment": "^2.18.1",
-    "react": "^15.6.2",
+    "moment-with-locales-es6": "^2.18.1",
+    "react": "^16.0.0",
     "react-chartjs-2": "^2.1.0",
-    "react-dom": "^15.6.2",
+    "react-dom": "^16.0.0",
     "react-draft-wysiwyg": "^1.10.8",
     "react-live": "^1.7.0",
     "showdown": "^1.7.1"
