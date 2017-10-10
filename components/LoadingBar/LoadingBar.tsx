@@ -109,12 +109,15 @@ export default class LoadingBar extends React.Component<ILoadingBarProps, ILoadi
         if (isFull) {
             this.setState({ wait: true });
 
-            this.state.error && this.props.onError && this.props.onError();
+            this.state.error && !this.state.full && this.props.onError && this.props.onError();
 
             setTimeout(() => {
                 this.setState({
+                    // error: false,
                     full: true
                 });
+
+                !this.state.error && this.props.onProgressDone && this.props.onProgressDone();
 
                 setTimeout(() => {
                     this.setState({
@@ -124,8 +127,6 @@ export default class LoadingBar extends React.Component<ILoadingBarProps, ILoadi
                     });
 
                     setTimeout(() => {
-
-                        !this.state.error && this.props.onProgressDone && this.props.onProgressDone();
 
                         this.setState({
                             error: false,

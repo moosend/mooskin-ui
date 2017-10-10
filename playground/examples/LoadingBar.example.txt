@@ -41,6 +41,7 @@ class LoadingBarExample extends React.Component {
     }
 
     onProgressDone(){
+        this.onClickStopInterval();
         console.log('done');
         this.setState({loading: 0})
     }
