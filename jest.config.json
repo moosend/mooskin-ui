@@ -49,5 +49,6 @@
     "define-properties",
     "function-bind",
     "object-keys"
-  ]
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/components/_utils/adapter.ts"
 }
