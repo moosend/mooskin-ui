@@ -37,7 +37,6 @@
     "draft-js": "^0.10.1",
     "input-moment": "^0.3.4",
     "moment": "^2.18.1",
-    "moment-with-locales-es6": "^2.18.1",
     "react": "^16.0.0",
     "react-chartjs-2": "^2.1.0",
     "react-dom": "^16.0.0",
