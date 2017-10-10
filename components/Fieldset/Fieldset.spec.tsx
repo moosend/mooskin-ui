@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import Fieldset from './Fieldset';
 
@@ -17,7 +18,7 @@ describe('Fieldset', () => {
                 Mooskin
             </Fieldset>
         );
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders properly into dom with color and label', () => {

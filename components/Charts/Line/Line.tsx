@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Line} from 'react-chartjs-2';
+import {ChartData, Line} from 'react-chartjs-2';
 
 import styles from './Line.css';
 
@@ -91,7 +91,7 @@ class LineChart extends React.Component<ILineProps, {}>{
             position
         };
 
-        const options = {
+        const options: ChartData<any> = {
             legend,
             maintainAspectRatio,
             responsive: true,
@@ -122,7 +122,7 @@ class LineChart extends React.Component<ILineProps, {}>{
             };
 
         });
-        const lineData = {
+        const lineData: ChartData<any> = {
             datasets: finalData,
             labels: chartData[0].labels
         };

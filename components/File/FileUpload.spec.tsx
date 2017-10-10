@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import FileUpload from './FileUpload';
 
@@ -23,7 +24,7 @@ describe('FileUpload', () => {
                 id="5"
             />
         );
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders properly into dom with props', () => {

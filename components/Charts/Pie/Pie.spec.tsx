@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Pie} from 'react-chartjs-2';
 import PieChart from './Pie';
@@ -40,7 +41,7 @@ describe('Chart', () => {
             />
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders properly into dom with data and props', () => {

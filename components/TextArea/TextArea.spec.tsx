@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import TextArea from './TextArea';
 
@@ -29,7 +30,7 @@ describe('TextArea', () => {
                 required
             />
         );
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders properly into dom and has Placeholder, rows and cols props', () => {

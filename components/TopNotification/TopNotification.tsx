@@ -10,7 +10,7 @@ export interface ITopNotificationProps {
     id?: string;
 
     /** override input type */
-    type?: 'error'|'success'|'custom';
+    type?: 'error' | 'success' | 'custom';
 
     /** override input value */
     text?: string;
