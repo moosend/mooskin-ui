@@ -23,22 +23,68 @@ exports[`Grid renders Grid correctly 1`] = `
 `;
 
 exports[`Grid renders Grid with Row & Col correctly 1`] = `
-<div
-  class="grid-component grid myClass"
-  style="width:50px;"
+<Grid
+  className="myClass"
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
 >
   <div
-    class="row-component row myClass"
-    style="width:50px;"
+    className="grid-component grid myClass"
+    id={undefined}
+    style={
+      Object {
+        "width": "50px",
+      }
+    }
   >
-    <div
-      class="col-component col large-8 medium-6 small-4 hidden-xs myClass"
-      style="width:50px;"
+    <Row
+      className="myClass"
+      style={
+        Object {
+          "width": "50px",
+        }
+      }
     >
-      Col
-    </div>
+      <div
+        className="row-component row myClass"
+        id={undefined}
+        style={
+          Object {
+            "width": "50px",
+          }
+        }
+      >
+        <Col
+          className="myClass"
+          lg={8}
+          md={6}
+          sm={4}
+          style={
+            Object {
+              "width": "50px",
+            }
+          }
+          xs="hidden"
+        >
+          <div
+            className="col-component col large-8 medium-6 small-4 hidden-xs myClass"
+            id={undefined}
+            style={
+              Object {
+                "width": "50px",
+              }
+            }
+          >
+            Col
+          </div>
+        </Col>
+      </div>
+    </Row>
   </div>
-</div>
+</Grid>
 `;
 
 exports[`Grid renders Row correctly 1`] = `

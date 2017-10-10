@@ -1,8 +1,9 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Button, Input} from '../index';
 import Grid, {Col, Row} from './Grid';
 
-import {render, shallow} from 'enzyme';
+import {mount, render, shallow} from 'enzyme';
 
 describe('Grid', () => {
 
@@ -13,7 +14,7 @@ describe('Grid', () => {
             <Grid className="myClass" style={{width: '50px'}}/>
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders Row correctly', () => {
@@ -22,7 +23,7 @@ describe('Grid', () => {
             <Row className="myClass" style={{width: '50px'}}/>
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders Col correctly', () => {
@@ -31,13 +32,13 @@ describe('Grid', () => {
             <Col className="myClass" style={{width: '50px'}} lg={8} md={6} sm={4} xs={'hidden'}/>
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders Grid with Row & Col correctly', () => {
         const func = jest.fn();
 
-        const tree = render(
+        const tree = mount(
             <Grid className="myClass" style={{width: '50px'}}>
                 <Row className="myClass" style={{width: '50px'}}>
                     <Col className="myClass" style={{width: '50px'}} lg={8} md={6} sm={4} xs={'hidden'}>
@@ -47,7 +48,7 @@ describe('Grid', () => {
             </Grid>
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders properly with children', () => {

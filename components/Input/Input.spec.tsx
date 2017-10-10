@@ -1,7 +1,8 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import Input from './Input';
 
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Input', () => {
 
@@ -31,7 +32,7 @@ describe('Input', () => {
                 required
             />
         );
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders properly into dom and has Placeholder prop', () => {

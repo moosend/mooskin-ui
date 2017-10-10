@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {H2} from '../Headings';
 import SmallIconButton from '../SmallIconButton';
@@ -21,7 +22,7 @@ describe('CheckListItem', () => {
                 title="check item title"
             />
         );
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders into dom with title text and status', () => {

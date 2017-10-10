@@ -7,7 +7,7 @@ exports[`LoadingBar LoadingBar renders correctly 1`] = `
   style={
     Object {
       "color": "red",
-      "width": "0%",
+      "width": "10%",
     }
   }
 />

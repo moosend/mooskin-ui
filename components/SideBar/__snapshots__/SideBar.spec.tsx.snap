@@ -48,6 +48,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
       className="myClass"
       href="www.moosend.com"
       image="imagePath"
+      key="0"
       label="Item"
       onClick={[Function]}
       style={
@@ -62,6 +63,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
       className="myClass"
       href="www.moosend.com"
       image="imagePath"
+      key="1"
       label="Item"
       onClick={[Function]}
       onMouseEnter={[Function]}
@@ -75,6 +77,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
   </div>
   <SubMenu
     display={false}
+    key=".1"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
@@ -120,6 +123,8 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
                                  normalButton
                                  
                                  button buttonOn undefined"
+          disabled={undefined}
+          id={undefined}
           onClick={[Function]}
           style={Object {}}
         >
@@ -144,6 +149,8 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         className="myClass"
         href="www.moosend.com"
         image="imagePath"
+        imageOn={undefined}
+        key="0"
         label="Item"
         onClick={[Function]}
         style={
@@ -155,6 +162,8 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         <div
           className="item-component itemContainer myClass"
           onClick={[Function]}
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
           style={
             Object {
               "color": "blue",
@@ -183,6 +192,8 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         className="myClass"
         href="www.moosend.com"
         image="imagePath"
+        imageOn={undefined}
+        key="1"
         label="Item"
         onClick={[Function]}
         style={
@@ -194,6 +205,8 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         <div
           className="item-component itemContainer myClass"
           onClick={[Function]}
+          onMouseEnter={undefined}
+          onMouseLeave={undefined}
           style={
             Object {
               "color": "blue",

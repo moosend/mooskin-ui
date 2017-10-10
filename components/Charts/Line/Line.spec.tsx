@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Line} from 'react-chartjs-2';
 import LineChart from './Line';
@@ -66,7 +67,7 @@ describe('Line Chart', () => {
             />
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders properly into dom with data and props', () => {
