@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Pie} from 'react-chartjs-2';
+import {ChartData, Pie} from 'react-chartjs-2';
 
 import styles from './Pie.css';
 
@@ -41,7 +41,7 @@ class PieChart extends React.Component<IPieProps, {}>{
 
         const position = legendPos;
 
-        const chartData = getData(this.props.data);
+        const pieData = getData(this.props.data);
 
         const chartTitle = getTitle(title, titleColor, titleFont, titleSize, titleStyle, titlePos);
 
@@ -53,7 +53,7 @@ class PieChart extends React.Component<IPieProps, {}>{
             position
         };
 
-        const options = {
+        const options: ChartData<any> = {
             legend,
             maintainAspectRatio,
             responsive: true,
@@ -62,11 +62,11 @@ class PieChart extends React.Component<IPieProps, {}>{
 
         const data = {
             datasets: [{
-                backgroundColor: chartData.backgroundColors,
+                backgroundColor: pieData.backgroundColors,
                 borderWidth,
-                data: chartData.values
+                data: pieData.values
             }],
-            labels: chartData.labels
+            labels: pieData.labels
         };
 
         return(

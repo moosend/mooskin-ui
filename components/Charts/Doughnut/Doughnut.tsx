@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Pie} from 'react-chartjs-2';
+import {ChartData, Pie} from 'react-chartjs-2';
 
 import styles from './Doughnut.css';
 
@@ -55,7 +55,7 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
             position
         };
 
-        const options = {
+        const options: ChartData<any> = {
             cutoutPercentage: doughnutSpace,
             legend,
             maintainAspectRatio,

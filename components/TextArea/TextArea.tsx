@@ -135,19 +135,19 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
             return (
                 <TextAreaComponent
                     id={this.props.id}
-                    disabled = {this.props.disabled}
-                    required = {this.props.required}
-                    name = {this.props.name}
-                    placeholder = {this.props.placeholder}
-                    minlength = {this.props.minlength}
-                    maxlength = {this.props.maxlength}
-                    style = {this.props.style}
-                    className = {this.props.className}
-                    label = {this.props.label}
-                    cols = {this.props.cols}
-                    rows = {this.props.rows}
-                    readonly = {this.props.readonly}
-                    description = {this.props.description}
+                    disabled={this.props.disabled}
+                    required={this.props.required}
+                    name={this.props.name}
+                    placeholder={this.props.placeholder}
+                    minlength={this.props.minlength}
+                    maxlength={this.props.maxlength}
+                    style={this.props.style}
+                    className={this.props.className}
+                    label={this.props.label}
+                    cols={this.props.cols}
+                    rows={this.props.rows}
+                    readonly={this.props.readonly}
+                    description={this.props.description}
                     onChange={this.props.onChange}
                     dataLabel={this.props.dataLabel}
                     labelWidth={this.props.labelWidth}

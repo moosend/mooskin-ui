@@ -15,7 +15,7 @@ export const arrayHasDupes = (array: any[]): boolean => {
 
 export const debounce = (func: (...args: any[]) => any, wait: number, immediate: boolean) => {
 
-    let timeout: number|null;
+    let timeout: number | null;
 
     return function() {
         const args = arguments;
