@@ -534,4 +534,33 @@ describe('Tags', () => {
 
     });
 
+    test('submits input value when submitOnBlur prop is passed', () => {
+
+        let tags = ['doni'];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(1);
+
+        component.find('input').simulate('change', { target: { value: 'text' }});
+        component.find('input').simulate('blur');
+
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(1);
+    });
+
 });

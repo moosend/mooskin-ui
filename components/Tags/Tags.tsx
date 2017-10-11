@@ -36,6 +36,9 @@ export interface ITagsProps{
     /** tags input label */
     label?: string;
 
+    /** submits the tag when input is blurred */
+    submitOnBlur?: boolean;
+
     /** input field placehonder */
     placeholder?: string;
 
@@ -141,6 +144,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                             onKeyDown={this.onKeyDown}
                             onClick={this.removeSource}
                             onPaste={this.onPaste}
+                            onBlur={this.onBlur()}
                         />
                         {source}
                     </div>
@@ -395,6 +399,26 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         };
 
+    }
+
+    onBlur = () => {
+        if (this.props.submitOnBlur){
+            return(e: React.SyntheticEvent<HTMLElement>) => {
+
+                const tags: string[] = this.props.tags;
+
+                if (!tags.includes(this.state.value) && this.state.value !== ''){
+
+                    const tag = this.props.source && this.state.sourceList.length > 0 ?
+                    this.state.sourceList[this.state.activeItem] : this.state.value;
+
+                    this.setState({value: '', sourceList: [], activeItem: 0});
+
+                    this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+
+                }
+            };
+        }
     }
 
     // getCover = () => {
