@@ -548,6 +548,7 @@ describe('Tags', () => {
 
         const component = shallow(
             <Tags
+                submitOnBlur
                 tags={tags}
                 onAdd={onAdd}
                 onRemove={onRemove}
@@ -560,7 +561,44 @@ describe('Tags', () => {
         component.find('input').simulate('blur');
 
         component.setProps({tags});
+        expect(component.find('Tag').length).toBe(2);
+    });
+
+    test('submission is refused if type of email is passed and no email is in input', () => {
+        let tags = ['doni'];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = shallow(
+            <Tags
+                type="email"
+                tags={tags}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
+
         expect(component.find('Tag').length).toBe(1);
+
+        component.find('input').simulate('change', { target: { value: 'text' }});
+
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
+
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(1);
+
+        component.find('input').simulate('change', { target: { value: 'doni@moosend.com' }});
+
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
+
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(2);
     });
 
 });

@@ -108,6 +108,8 @@ This can be used in various situations and combinations, for an enhanced develop
 
 * `id` - id of the element
 * `className` - css class
+* `type` - type of the accepted tags, eg. 'email'
+* `errorMessage` - message to appear when the tag has been rejected due to invalid type.
 * `style` - extra styles for the main container
 * `tagStyles` - styles for individual tags
 * `tagClasses` - classes for individual tags
