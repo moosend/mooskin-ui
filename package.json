@@ -36,9 +36,9 @@
     "draft-js": "0.10.3",
     "input-moment": "0.4.0",
     "moment": "2.19.1",
-    "react": "^15.5.4",
+    "react": "16.0.0",
     "react-chartjs-2": "2.6.4",
-    "react-dom": "^15.5.4",
+    "react-dom": "16.0.0",
     "react-draft-wysiwyg": "1.10.12",
     "react-live": "1.7.1",
     "showdown": "1.7.6"
