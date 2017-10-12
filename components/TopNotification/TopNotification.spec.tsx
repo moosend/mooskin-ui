@@ -1,6 +1,7 @@
 // tslint:disable-next-line:no-reference
-/// <reference path="../../custom.d.ts"/>
+/// <reference path="../custom.d.ts"/>
 
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 
 import { mount, shallow } from 'enzyme';
@@ -28,7 +29,7 @@ describe('TopNotification', () => {
                 text="notification for you"
             />
         );
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders properly into dom with text and no buttons by default', () => {

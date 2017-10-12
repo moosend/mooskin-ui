@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import TabbedContent, {Content, Header, Tab} from './TabbedContent';
 
@@ -36,7 +37,7 @@ describe('TabbedContent', () => {
 
         expect(component.find('Header').first().prop('children')).toBe('Moosend');
 
-        expect(component).toMatchSnapshot();
+        expect(toJson(component)).toMatchSnapshot();
     });
 
     test('renders TabbedContent vertically with radio styles', () => {
@@ -63,7 +64,7 @@ describe('TabbedContent', () => {
         expect(component.prop('type')).toBeTruthy;
         expect(component.prop('vertical')).toBeTruthy;
 
-        expect(component).toMatchSnapshot();
+        expect(toJson(component)).toMatchSnapshot();
     });
 
     test('renders Tab properly according to snapshot', () => {
@@ -71,7 +72,7 @@ describe('TabbedContent', () => {
             <Tab style={{color: 'blue'}} active/>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(toJson(component)).toMatchSnapshot();
     });
 
     test('renders Header properly according to snapshot', () => {
@@ -84,7 +85,7 @@ describe('TabbedContent', () => {
             </Header>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(toJson(component)).toMatchSnapshot();
     });
 
     test('renders input and callback function is called when header is clicked', () => {

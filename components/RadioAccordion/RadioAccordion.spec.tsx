@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import Accordion, {Header, RadioAccordionContent} from './RadioAccordion';
 
@@ -23,7 +24,7 @@ describe('RadioAccordion', () => {
 
         expect(component.find(RadioAccordionContent).first().prop('children')).toBe('Content1');
 
-        expect(component).toMatchSnapshot();
+        expect(toJson(component)).toMatchSnapshot();
     });
 
     test('renders Content properly according to snapshot', () => {
@@ -40,7 +41,7 @@ describe('RadioAccordion', () => {
             </RadioAccordionContent>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(toJson(component)).toMatchSnapshot();
     });
 
     test('renders Header properly according to snapshot', () => {
@@ -55,7 +56,7 @@ describe('RadioAccordion', () => {
             />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(toJson(component)).toMatchSnapshot();
     });
 
     test('changes the state and displays appropriate content when one of the headers is clicked and back', () => {

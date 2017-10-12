@@ -1,7 +1,8 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import Steps, {Step} from './Steps';
 
-import { render, shallow} from 'enzyme';
+import { mount, render, shallow} from 'enzyme';
 
 describe('Steps', () => {
 
@@ -19,7 +20,7 @@ describe('Steps', () => {
                 </Step>
             </Steps>
         );
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders correctly with only the active one being visible', () => {

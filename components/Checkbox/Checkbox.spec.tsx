@@ -1,3 +1,4 @@
+import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import CheckboxGroup, {Checkbox} from './Checkbox';
 
@@ -25,7 +26,7 @@ describe('CheckBox', () => {
             />
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders CheckBox correctly', () => {
@@ -46,7 +47,7 @@ describe('CheckBox', () => {
             />
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(toJson(tree)).toMatchSnapshot();
     });
 
     test('renders properly with 1 child', () => {
