@@ -26,6 +26,10 @@
     "url": "https://github.com/moosend/mooskin-ui/issues"
   },
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
+  "peerDependencies": {
+    "react": "16.0.0 || 15.0",
+    "react-dom": "16.0.0 || 15.0"
+  },
   "dependencies": {
     "@types/react-chartjs-2": "2.0.2",
     "chart.js": "^2.6.0",
@@ -36,7 +40,7 @@
     "react-chartjs-2": "2.6.4",
     "react-dom": "^15.5.4",
     "react-draft-wysiwyg": "1.10.12",
-    "react-live": "^1.7.0",
+    "react-live": "1.7.1",
     "showdown": "1.7.6"
   },
   "devDependencies": {
