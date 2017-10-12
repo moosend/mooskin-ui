@@ -108,7 +108,7 @@ This can be used in various situations and combinations, for an enhanced develop
 
 * `id` - id of the element
 * `className` - css class
-* `type` - type of the accepted tags, eg. 'email'
+* `validation` - validate input, can be either 'email' or a custom validation function that acceps a string arg
 * `errorMessage` - message to appear when the tag has been rejected due to invalid type.
 * `style` - extra styles for the main container
 * `tagStyles` - styles for individual tags

@@ -12,8 +12,8 @@ export interface ITagsProps{
     /** tagged data */
     tags: string[];
 
-    /** what type of input should the tags accept */
-    type?: string;
+    /** validate input wether it should accept emails or add a custom validation */
+    validation?: ((tag: string) => void) | 'email';
 
     /** source of data for type ahead completion */
     source?: (() => Promise<string[]>) | (() => string[]) | string[];
@@ -86,7 +86,8 @@ export interface ITagsState{
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     static defaultProps: Partial<ITagsProps> = {
-        delimiters: ['Enter', 13] // 13 is the keyCode for Enter
+        delimiters: ['Enter', 13], // 13 is the keyCode for Enter
+        submitOnBlur: true
     };
 
     id: string;
@@ -173,8 +174,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     tag={value}
                     key={i}
                     onClick={this.removeTag(i)}
-                    className = {this.props.tagClasses}
-                    style = {this.props.tagStyles}
+                    className={this.props.tagClasses}
+                    style={this.props.tagStyles}
                 />
             );
         });
@@ -287,10 +288,12 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     checkValidity = (tag: string) => {
-        const type = this.props.type;
-        if (type){
-            if (type === 'email'){
+        const validation = this.props.validation;
+        if (validation){
+            if (typeof validation === 'string' && validation === 'email'){
                 return this.checkIfEmail(tag);
+            } else if (typeof validation === 'function' && typeof validation !== 'string'){
+                return this.props.validation && this.props.validation(tag);
             }
             return false;
         }

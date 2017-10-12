@@ -577,7 +577,7 @@ describe('Tags', () => {
 
         const component = shallow(
             <Tags
-                type="email"
+                validation="email"
                 tags={tags}
                 onAdd={onAdd}
                 onRemove={onRemove}
