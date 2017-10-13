@@ -4,6 +4,8 @@ import styles from './Tags.css';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
+type customValidation<T, U> = (tag: T) => U;
+
 export interface ITagsProps{
 
     /** id of the component */
@@ -13,7 +15,7 @@ export interface ITagsProps{
     tags: string[];
 
     /** validate input wether it should accept emails or add a custom validation */
-    validation?: ((tag: string) => void) | 'email';
+    validation?: 'email' | customValidation<string, boolean>;
 
     /** source of data for type ahead completion */
     source?: (() => Promise<string[]>) | (() => string[]) | string[];
@@ -293,7 +295,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             if (typeof validation === 'string' && validation === 'email'){
                 return this.checkIfEmail(tag);
             } else if (typeof validation === 'function' && typeof validation !== 'string'){
-                return this.props.validation && this.props.validation(tag);
+                return validation(tag);
             }
             return false;
         }
