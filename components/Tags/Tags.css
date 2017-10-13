@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import '../_utils/globals/variables.css';
+@import url('https://fonts.googleapis.com/css?family=Convergence');
 
 .container{
     display: flex;
@@ -100,6 +101,20 @@
     bottom: 0px;
     z-index: 1;
 } */
+
+.message {
+    font-family: 'Convergence', sans-serif;
+    border-radius: 8px;
+    border: 1px solid #5ccdde;
+    padding: 3px;
+    font-size: 13px;
+    background: #fff;
+    color: #5ccdde;
+    height: 25px;
+    position: absolute;
+    top: 30px;
+    left: 8px;
+}
 
 @keyframes opa {
     from {opacity: 0}
