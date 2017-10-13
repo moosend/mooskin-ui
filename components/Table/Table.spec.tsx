@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Table, TableHeader} from '../index';
 
@@ -63,7 +62,7 @@ describe('Table', () => {
         tree.find(TableHeader).at(1).simulate('click');
         expect(func).toHaveBeenCalled();
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
 
     });
 

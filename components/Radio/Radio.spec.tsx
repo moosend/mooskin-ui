@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import renderer from 'react-test-renderer';
 import RadioGroup, {Radio} from './Radio';
@@ -45,7 +44,7 @@ describe('Radio', () => {
             />
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders properly with 1 child', () => {

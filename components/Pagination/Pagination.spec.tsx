@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import Pagination, {PaginationButton} from './Pagination';
 
@@ -13,7 +12,7 @@ describe('Pagination', () => {
             <Pagination items={10} onClick={() => 'asd'}/>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders correctly with ellipsis, next, prev, first and last buttons', () => {

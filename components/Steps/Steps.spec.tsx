@@ -61,8 +61,7 @@ describe('Steps', () => {
         expect(tree.find('.stepBody').last().text()).toContain('Content 3');
     });
 
-    // TODO: failing test
-    test.skip('onClick is called correctly when one of the Steps is clicked', () => {
+    test('onClick is called correctly when one of the Steps is clicked', () => {
 
         const fn = jest.fn();
 
@@ -83,7 +82,6 @@ describe('Steps', () => {
         tree.find(Step)
             .findWhere((bc) => bc.prop('id') === '2')
             .dive()
-            .find('#2')
             .simulate('click');
 
         expect(fn).toHaveBeenCalledWith('2');

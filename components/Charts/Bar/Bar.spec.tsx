@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Bar} from 'react-chartjs-2';
 import BarChart from './Bar';
@@ -42,7 +41,7 @@ describe('Bar Chart', () => {
             />
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders properly into dom with data and props', () => {

@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import SmallIconButton from './SmallIconButton';
 
@@ -20,7 +19,7 @@ describe('SmallIconButton', () => {
                 icon="check"
             />
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders properly into dom with custom style & callback is called when clicked', () => {

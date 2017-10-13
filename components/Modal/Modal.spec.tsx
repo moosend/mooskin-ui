@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Button} from '../index';
 import Modal from './Modal';
@@ -23,7 +22,7 @@ describe('Modal', () => {
                 </div>
             </Modal>
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('onOverlayClick callback is called when cover is clicked', () => {

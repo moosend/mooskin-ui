@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import Accordion, {Header, RadioAccordionContent} from './RadioAccordion';
 
@@ -24,7 +23,7 @@ describe('RadioAccordion', () => {
 
         expect(component.find(RadioAccordionContent).first().prop('children')).toBe('Content1');
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     test('renders Content properly according to snapshot', () => {
@@ -41,7 +40,7 @@ describe('RadioAccordion', () => {
             </RadioAccordionContent>
         );
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     test('renders Header properly according to snapshot', () => {

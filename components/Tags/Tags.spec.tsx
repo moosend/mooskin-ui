@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Tags} from '../index';
 
@@ -42,7 +41,7 @@ describe('Tags', () => {
             />
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders children correctly', () => {

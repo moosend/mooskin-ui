@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Button, LoadingBar} from '../index';
 
@@ -23,7 +22,7 @@ describe('LoadingBar', () => {
             />
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
 
     });
 

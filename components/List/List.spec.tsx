@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import List, {ListItem} from './List';
 
@@ -16,7 +15,7 @@ describe('Button', () => {
                 id={'button1'}
             />
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders ListItem correctly', () => {
@@ -33,7 +32,7 @@ describe('Button', () => {
                 test
             </ListItem>
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders with multiple children', () => {
@@ -62,7 +61,7 @@ describe('Button', () => {
             </List>
         );
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     test('renders ListItems correctly depending on props', () => {

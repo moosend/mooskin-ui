@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import H2 from './H2';
 
@@ -17,7 +16,7 @@ describe('H2', () => {
                 Mooskin
             </H2>
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders properly into dom with text, id and class', () => {

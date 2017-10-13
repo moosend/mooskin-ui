@@ -2,7 +2,7 @@ import moment from 'moment';
 import * as React from 'react';
 import DatePicker from './DatePicker';
 
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('DatePicker', () => {
 
@@ -34,23 +34,21 @@ describe('DatePicker', () => {
         expect(component.find('input').prop('required')).toBeTruthy;
     });
 
-    // TODO: failing test
-    test.skip('onChange callback is called when date is changed', () => {
+    test('onChange callback is called when date is changed', () => {
         const func = jest.fn();
 
-        const component = shallow(<DatePicker onChange={func}/>);
+        const component = mount(<DatePicker onChange={func}/>);
 
-        component.find('InputMoment').dive().filter('td').at(1).simulate('click');
+        component.find('InputMoment').find('td').at(15).simulate('click');
         expect(func).toHaveBeenCalled();
     });
 
-    // TODO: failing test
-    test.skip('onChange callback is NOT called when date is changed when disabled is passed', () => {
+    test('onChange callback is NOT called when date is changed when disabled is passed', () => {
         const func = jest.fn();
 
-        const component = shallow(<DatePicker onChange={func} disabled/>);
+        const component = mount(<DatePicker onChange={func} disabled/>);
 
-        component.find('InputMoment').dive().filter('td').at(1).simulate('click');
+        component.find('InputMoment').find('td').at(15).simulate('click');
         expect(func).toHaveBeenCalled();
     });
 

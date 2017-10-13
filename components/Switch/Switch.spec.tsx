@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import Switch from './Switch';
 
@@ -23,7 +22,7 @@ describe('Switch', () => {
                 onClick={func}
             />
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders a disabled Switch with custom css class and id', () => {

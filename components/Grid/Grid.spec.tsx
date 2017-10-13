@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Button, Input} from '../index';
 import Grid, {Col, Row} from './Grid';
@@ -14,7 +13,7 @@ describe('Grid', () => {
             <Grid className="myClass" style={{width: '50px'}}/>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders Row correctly', () => {
@@ -23,7 +22,7 @@ describe('Grid', () => {
             <Row className="myClass" style={{width: '50px'}}/>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders Col correctly', () => {
@@ -32,7 +31,7 @@ describe('Grid', () => {
             <Col className="myClass" style={{width: '50px'}} lg={8} md={6} sm={4} xs={'hidden'}/>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders Grid with Row & Col correctly', () => {
@@ -48,7 +47,7 @@ describe('Grid', () => {
             </Grid>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders properly with children', () => {

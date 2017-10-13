@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import TabbedContent, {Content, Header, Tab} from './TabbedContent';
 
@@ -64,7 +63,7 @@ describe('TabbedContent', () => {
         expect(component.prop('type')).toBeTruthy;
         expect(component.prop('vertical')).toBeTruthy;
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     test('renders Tab properly according to snapshot', () => {
@@ -72,7 +71,7 @@ describe('TabbedContent', () => {
             <Tab style={{color: 'blue'}} active/>
         );
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     test('renders Header properly according to snapshot', () => {
@@ -85,7 +84,7 @@ describe('TabbedContent', () => {
             </Header>
         );
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     test('renders input and callback function is called when header is clicked', () => {
@@ -110,7 +109,7 @@ describe('TabbedContent', () => {
     });
 
     // TODO: failing test
-    test.skip('changes the state and displays appropriate tab when one of the headers is clicked and back', () => {
+    test('changes the state and displays appropriate tab when one of the headers is clicked and back', () => {
 
         const component = mount(
             <TabbedContent>
@@ -126,26 +125,26 @@ describe('TabbedContent', () => {
         );
 
         expect(component.state('activeTab')).toBe(1);
-        expect(component.find('Header').first().hasClass('inactiveHeader')).toBeTruthy();
-        expect(component.find('Header').last().hasClass('activeHeader')).toBeTruthy();
-        expect(component.find('Content').first().hasClass('invisible')).toBeTruthy();
-        expect(component.find('Content').last().hasClass('visible')).toBeTruthy();
+        expect(component.find('.tab-header').first().hasClass('inactiveHeader')).toBe(true);
+        expect(component.find('.tab-header').last().hasClass('activeHeader')).toBeTruthy();
+        expect(component.find('.content-component').first().hasClass('invisible')).toBeTruthy();
+        expect(component.find('.content-component').last().hasClass('visible')).toBeTruthy();
 
         component.find('Header').first().simulate('click');
 
         expect(component.state('activeTab')).toBe(0);
-        expect(component.find('Header').last().hasClass('inactiveHeader')).toBeTruthy();
-        expect(component.find('Header').first().hasClass('activeHeader')).toBeTruthy();
-        expect(component.find('Content').last().hasClass('invisible')).toBeTruthy();
-        expect(component.find('Content').first().hasClass('visible')).toBeTruthy();
+        expect(component.find('.tab-header').last().hasClass('inactiveHeader')).toBeTruthy();
+        expect(component.find('.tab-header').first().hasClass('activeHeader')).toBeTruthy();
+        expect(component.find('.content-component').last().hasClass('invisible')).toBeTruthy();
+        expect(component.find('.content-component').first().hasClass('visible')).toBeTruthy();
 
         component.find('Header').last().simulate('click');
 
         expect(component.state('activeTab')).toBe(1);
-        expect(component.find('Header').first().hasClass('inactiveHeader')).toBeTruthy();
-        expect(component.find('Header').last().hasClass('activeHeader')).toBeTruthy();
-        expect(component.find('Content').first().hasClass('invisible')).toBeTruthy();
-        expect(component.find('Content').last().hasClass('visible')).toBeTruthy();
+        expect(component.find('.tab-header').first().hasClass('inactiveHeader')).toBeTruthy();
+        expect(component.find('.tab-header').last().hasClass('activeHeader')).toBeTruthy();
+        expect(component.find('.content-component').first().hasClass('invisible')).toBeTruthy();
+        expect(component.find('.content-component').last().hasClass('visible')).toBeTruthy();
 
     });
 

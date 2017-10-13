@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import StatsBox, {StatsNumber, StatsResult, StatsTitle} from './StatsBox';
 
@@ -16,7 +15,7 @@ describe('StatsBox', () => {
             </StatsBox>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('StatsTitle renders correctly', () => {
@@ -25,7 +24,7 @@ describe('StatsBox', () => {
             <StatsTitle>Unique Opens</StatsTitle>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('StatsNumber renders correctly', () => {
@@ -34,7 +33,7 @@ describe('StatsBox', () => {
             <StatsNumber>100%</StatsNumber>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('StatsResult renders correctly', () => {
@@ -43,6 +42,6 @@ describe('StatsBox', () => {
             <StatsResult>5 total</StatsResult>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 });

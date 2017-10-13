@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import Select, {Option} from './Select';
 
@@ -24,7 +23,7 @@ describe('Select', () => {
                 isLoading
             />
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders Option correctly', () => {
@@ -33,7 +32,7 @@ describe('Select', () => {
         const tree = shallow(
             <Option value="option1" onClick={func}>Option1</Option>
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders properly with 1 child', () => {

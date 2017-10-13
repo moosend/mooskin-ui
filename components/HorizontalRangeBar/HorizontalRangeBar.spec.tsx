@@ -1,7 +1,6 @@
 // tslint:disable-next-line:no-reference
 /// <reference path="../custom.d.ts"/>
 
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import HorizontalRangeBar from './HorizontalRangeBar';
 
@@ -20,7 +19,7 @@ describe('HorizontalRangeBar', () => {
                 id="Range bar"
             />
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders properly into dom progress number', () => {

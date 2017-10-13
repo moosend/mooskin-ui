@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {SideBar, SidebarItem, SmallIconButton} from '../index';
 
@@ -16,7 +15,7 @@ describe('SideBar', () => {
                 button
             />
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders SidebarItem correctly', () => {
@@ -36,7 +35,7 @@ describe('SideBar', () => {
                 onMouseLeave={func}
             />
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders SideBar with Items correctly', () => {
