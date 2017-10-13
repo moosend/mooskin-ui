@@ -11,6 +11,7 @@ exports[`Pagination renders correctly 1`] = `
       active={true}
       className="pagination-normal-btn itemButton"
       item={1}
+      key="1"
       label="1"
       onClick={[Function]}
     />
@@ -18,6 +19,7 @@ exports[`Pagination renders correctly 1`] = `
       active={false}
       className="pagination-normal-btn itemButton"
       item={2}
+      key="2"
       label="2"
       onClick={[Function]}
     />
@@ -25,6 +27,7 @@ exports[`Pagination renders correctly 1`] = `
       active={false}
       className="pagination-normal-btn itemButton"
       item={3}
+      key="3"
       label="3"
       onClick={[Function]}
     />
@@ -33,6 +36,7 @@ exports[`Pagination renders correctly 1`] = `
       className="pagination-ellipsis"
       disabled={true}
       item={1}
+      key="asdd3"
       label="..."
       onClick={[Function]}
     />

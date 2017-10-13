@@ -23,7 +23,7 @@ describe('Radio', () => {
             />
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders Radio correctly', () => {

@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import Button from './Button';
 
@@ -23,7 +22,7 @@ describe('Button', () => {
                 Mooskin
             </Button>
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders properly into dom with color and label', () => {

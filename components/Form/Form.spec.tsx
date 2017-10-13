@@ -1,4 +1,3 @@
-import toJson from 'enzyme-to-json';
 import * as React from 'react';
 import {Button, Form, FormGroup, Input} from '../index';
 
@@ -13,7 +12,7 @@ describe('Form', () => {
             <Form className="myClass" dataLabel="SomeForm" onSubmit={func} style={{width: '50px'}}/>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders FormGroup correctly', () => {
@@ -22,7 +21,7 @@ describe('Form', () => {
             <FormGroup className="myClass" style={{width: '50px'}} horizontal/>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders Form with FormGroup correctly', () => {
@@ -34,7 +33,7 @@ describe('Form', () => {
             </Form>
         );
 
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders properly with FormGroup and a child', () => {
