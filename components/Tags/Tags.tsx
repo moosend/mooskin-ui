@@ -158,8 +158,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     tag={value}
                     key={i}
                     onClick={this.removeTag(i)}
-                    className = {this.props.tagClasses}
-                    style = {this.props.tagStyles}
+                    className={this.props.tagClasses}
+                    style={this.props.tagStyles}
                 />
             );
         });
