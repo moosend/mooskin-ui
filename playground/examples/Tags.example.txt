@@ -15,7 +15,8 @@ class TagsExample extends React.Component {
                 'Beijing'
             ],
             tags2: [],
-            tags3: []
+            tags3: [],
+            tags4: []
         }
     }
 
@@ -37,6 +38,8 @@ class TagsExample extends React.Component {
 		,"Turkey","Turkmenistan","Turks &amp; Caicos","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","United States Minor Outlying Islands","Uruguay","Uzbekistan","Venezuela","Vietnam","Virgin Islands (US)"
 		,"Yemen","Zambia","Zimbabwe"];
 
+        const emails = ["doni@moosend.com", "gent@moosend.com"];
+
         const promiseFunc = () => 
             fetch('https://api.github.com/users?since=135')
                 .then(rsp => rsp.json())
@@ -46,11 +49,13 @@ class TagsExample extends React.Component {
 
         return(
             <div>
-                <Tags source={countries} label="Tags from string array" delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
+                <Tags source={countries} errorMessage={'You cannot tag Doni'} validation={this.validation} label="Tags from string array" tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
                 <br/>
                 <Tags source={stringArr} label="Tags from function that returns string array" delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} tags={this.state.tags2} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags2"/>
                 <br/>
                 <Tags source={promiseFunc} label="Tags from function that returns Promise(api call for github users)" tags={this.state.tags3}  delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags3"/>
+                <br/>
+                <Tags source={emails} errorMessage={'Tags accepts only emails'} validation="email" submitOnBlur={false} label="Email only tags" tags={this.state.tags4} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags4"/>
             </div>
         );
     }
@@ -65,6 +70,13 @@ class TagsExample extends React.Component {
         let tags = [...this.state[data.dataLabel]];
         tags.splice(index, 1);
         data.dataLabel && this.setState({[data.dataLabel]: tags});
+    }
+
+    validation(tag) {
+        if (tag.toLowerCase().includes('doni')){
+            return false;
+        }
+        return true;
     }
 
 }
