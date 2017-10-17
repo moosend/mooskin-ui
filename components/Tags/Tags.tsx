@@ -4,8 +4,6 @@ import styles from './Tags.css';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
-type customValidation<T, U> = (tag: T) => U;
-
 export interface ITagsProps{
 
     /** id of the component */
@@ -15,7 +13,7 @@ export interface ITagsProps{
     tags: string[];
 
     /** validate input wether it should accept emails or add a custom validation */
-    validation?: 'email' | customValidation<string, boolean>;
+    validation?: 'email' | ((tag: string) => boolean);
 
     /** source of data for type ahead completion */
     source?: (() => Promise<string[]>) | (() => string[]) | string[];
