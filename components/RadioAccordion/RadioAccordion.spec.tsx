@@ -55,7 +55,7 @@ describe('RadioAccordion', () => {
             />
         );
 
-        expect(toJson(component)).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
     });
 
     test('changes the state and displays appropriate content when one of the headers is clicked and back', () => {
