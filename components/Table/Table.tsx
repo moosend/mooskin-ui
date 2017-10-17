@@ -187,7 +187,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             }
 
             const buttonCol = (
-                <Col key = {0} className={styles.buttonCol}>
+                <Col key={0} className={styles.buttonCol}>
                     <SmallIconButton
                         icon="list"
                         className={styles.toggle}
