@@ -71,7 +71,7 @@ describe('SideBar', () => {
                 />
             </SideBar>
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('renders SideBar with Items and secondary SideBar correctly', () => {
@@ -119,7 +119,7 @@ describe('SideBar', () => {
                 </SidebarItem>
             </SideBar>
         );
-        expect(toJson(tree)).toMatchSnapshot();
+        expect(tree).toMatchSnapshot();
     });
 
     test('SideBar prop tests', () => {
