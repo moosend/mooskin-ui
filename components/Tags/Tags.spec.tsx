@@ -548,7 +548,6 @@ describe('Tags', () => {
 
         const component = shallow(
             <Tags
-                submitOnBlur
                 tags={tags}
                 onAdd={onAdd}
                 onRemove={onRemove}
@@ -563,6 +562,36 @@ describe('Tags', () => {
         component.setProps({tags});
         expect(component.find('Tag').length).toBe(2);
     });
+
+    test('prevents submission on input blur when preventSubmit is passed', () => {
+        
+                let tags = ['doni'];
+        
+                const onAdd = (e, data) => {
+                    tags = tags.concat(data.value);
+                };
+        
+                const onRemove = (e, data, index) => {
+                    tags.splice(index, 1);
+                };
+        
+                const component = shallow(
+                    <Tags
+                        preventSubmit
+                        tags={tags}
+                        onAdd={onAdd}
+                        onRemove={onRemove}
+                    />
+                );
+        
+                expect(component.find('Tag').length).toBe(1);
+        
+                component.find('input').simulate('change', { target: { value: 'text' }});
+                component.find('input').simulate('blur');
+        
+                component.setProps({tags});
+                expect(component.find('Tag').length).toBe(1);
+            });
 
     test('submission is refused if type of email is passed and no email is in input', () => {
         let tags = ['doni'];

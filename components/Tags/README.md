@@ -114,7 +114,7 @@ This can be used in various situations and combinations, for an enhanced develop
 * `tagStyles` - styles for individual tags
 * `tagClasses` - classes for individual tags
 * `delimiters` - an array of keys (string) or keyCodes (number) which will trigger a submission
-* `submitOnBlur` - wether it should trigger a submission if the input is focused out
+* `preventSubmit` - prevents submission on input blur
 * `deletable` - wether tags should be deletable by backspace, still can be deleted by clicking on X
 * `label` - tags label
 * `placeholder` - placeholder on the input

@@ -39,8 +39,8 @@ export interface ITagsProps{
     /** tags input label */
     label?: string;
 
-    /** submits the tag when input is blurred */
-    submitOnBlur?: boolean;
+    /** prevent submit on input blur */
+    preventSubmit?: boolean;
 
     /** error message when invalid input type is passed */
     errorMessage?: string;
@@ -87,7 +87,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     static defaultProps: Partial<ITagsProps> = {
         delimiters: ['Enter', 13], // 13 is the keyCode for Enter
-        submitOnBlur: true
     };
 
     id: string;
@@ -442,7 +441,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     onBlur = () => {
-        if (this.props.submitOnBlur){
+        if (!this.props.preventSubmit){
             return(e: React.SyntheticEvent<HTMLElement>) => {
 
                 const tags: string[] = this.props.tags;
