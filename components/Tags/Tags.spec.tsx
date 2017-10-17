@@ -564,17 +564,17 @@ describe('Tags', () => {
     });
 
     test('prevents submission on input blur when preventSubmit is passed', () => {
-        
+
                 let tags = ['doni'];
-        
+
                 const onAdd = (e, data) => {
                     tags = tags.concat(data.value);
                 };
-        
+
                 const onRemove = (e, data, index) => {
                     tags.splice(index, 1);
                 };
-        
+
                 const component = shallow(
                     <Tags
                         preventSubmit
@@ -583,12 +583,12 @@ describe('Tags', () => {
                         onRemove={onRemove}
                     />
                 );
-        
+
                 expect(component.find('Tag').length).toBe(1);
-        
+
                 component.find('input').simulate('change', { target: { value: 'text' }});
                 component.find('input').simulate('blur');
-        
+
                 component.setProps({tags});
                 expect(component.find('Tag').length).toBe(1);
             });

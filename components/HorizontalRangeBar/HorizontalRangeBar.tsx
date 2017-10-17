@@ -13,7 +13,7 @@ export interface IHorizontalRangeBarProps{
     range?: [number, number];
 
     /** height of the loader, 20px by default */
-    height?: number|string;
+    height?: number | string;
 
     /** id for the main element */
     id?: string;
