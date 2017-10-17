@@ -8,7 +8,7 @@ describe('DatePicker', () => {
 
     test('renders correctly', () => {
         const func = jest.fn();
-        Date.now = jest.fn(() => new Date(Date.UTC(2018, 5, 5)).valueOf());
+        // Date.now = jest.fn(() => new Date(moment.parseZone('2013-01-01T00:00:00-13:00').utcOffset()));
 
         const tree = shallow(
             <DatePicker
@@ -17,7 +17,7 @@ describe('DatePicker', () => {
                 className="myClass"
                 style={{color: 'blue'}}
                 id={'input1'}
-                date={moment()}
+                date={moment.parseZone('2013-01-01T00:00:00-13:00')}
                 label="with a label ofc"
                 required
             />
@@ -26,11 +26,14 @@ describe('DatePicker', () => {
     });
 
     test('renders properly into dom with props', () => {
-        Date.now = jest.fn(() => new Date(Date.UTC(2018, 5, 5)).valueOf());
+        // Date.now = jest.fn(() => new Date(moment.parseZone('2013-01-01T00:00:00-13:00').utcOffset()));
 
-        const component = shallow(<DatePicker date={moment()} required/>);
+        const component = shallow(
+            <DatePicker date={moment.parseZone('2013-01-01T00:00:00-13:00')} required/>
+        );
 
-        expect(component.find('InputMoment').prop('moment')).toEqual(moment());
+        expect(component.find('InputMoment').prop('moment'))
+        .toEqual(moment.parseZone('2013-01-01T00:00:00-13:00'));
         expect(component.find('input').prop('required')).toBeTruthy;
     });
 
