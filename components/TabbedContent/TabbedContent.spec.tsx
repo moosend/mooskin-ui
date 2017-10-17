@@ -108,6 +108,7 @@ describe('TabbedContent', () => {
 
     });
 
+    // TODO: failing test
     test('changes the state and displays appropriate tab when one of the headers is clicked and back', () => {
 
         const component = mount(
@@ -124,26 +125,26 @@ describe('TabbedContent', () => {
         );
 
         expect(component.state('activeTab')).toBe(1);
-        expect(component.find('Header').first().hasClass('inactiveHeader')).toBeTruthy();
-        expect(component.find('Header').last().hasClass('activeHeader')).toBeTruthy();
-        expect(component.find('Content').first().hasClass('invisible')).toBeTruthy();
-        expect(component.find('Content').last().hasClass('visible')).toBeTruthy();
+        expect(component.find('.tab-header').first().hasClass('inactiveHeader')).toBe(true);
+        expect(component.find('.tab-header').last().hasClass('activeHeader')).toBeTruthy();
+        expect(component.find('.content-component').first().hasClass('invisible')).toBeTruthy();
+        expect(component.find('.content-component').last().hasClass('visible')).toBeTruthy();
 
         component.find('Header').first().simulate('click');
 
         expect(component.state('activeTab')).toBe(0);
-        expect(component.find('Header').last().hasClass('inactiveHeader')).toBeTruthy();
-        expect(component.find('Header').first().hasClass('activeHeader')).toBeTruthy();
-        expect(component.find('Content').last().hasClass('invisible')).toBeTruthy();
-        expect(component.find('Content').first().hasClass('visible')).toBeTruthy();
+        expect(component.find('.tab-header').last().hasClass('inactiveHeader')).toBeTruthy();
+        expect(component.find('.tab-header').first().hasClass('activeHeader')).toBeTruthy();
+        expect(component.find('.content-component').last().hasClass('invisible')).toBeTruthy();
+        expect(component.find('.content-component').first().hasClass('visible')).toBeTruthy();
 
         component.find('Header').last().simulate('click');
 
         expect(component.state('activeTab')).toBe(1);
-        expect(component.find('Header').first().hasClass('inactiveHeader')).toBeTruthy();
-        expect(component.find('Header').last().hasClass('activeHeader')).toBeTruthy();
-        expect(component.find('Content').first().hasClass('invisible')).toBeTruthy();
-        expect(component.find('Content').last().hasClass('visible')).toBeTruthy();
+        expect(component.find('.tab-header').first().hasClass('inactiveHeader')).toBeTruthy();
+        expect(component.find('.tab-header').last().hasClass('activeHeader')).toBeTruthy();
+        expect(component.find('.content-component').first().hasClass('invisible')).toBeTruthy();
+        expect(component.find('.content-component').last().hasClass('visible')).toBeTruthy();
 
     });
 

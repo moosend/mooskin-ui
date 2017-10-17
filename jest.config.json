@@ -11,7 +11,7 @@
     "!**/components/custom.d.ts"
     
   ],
-  "snapshotSerializers": ["<rootDir>/node_modules/jest-serializer-enzyme"],
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
   "mapCoverage": true,
   "moduleDirectories": [
     "node_modules",
@@ -49,5 +49,6 @@
     "define-properties",
     "function-bind",
     "object-keys"
-  ]
+  ],
+  "setupTestFrameworkScriptFile": "<rootDir>/components/_utils/adapter.ts"  
 }

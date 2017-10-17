@@ -45,12 +45,14 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
 >
   <Header
     active={false}
+    key="0"
     name="1482363367071"
     onClick={[Function]}
     title="title1"
   >
     <RadioAccordionContent
       active={false}
+      key="0"
       title="title1"
     >
       Content1
@@ -58,12 +60,14 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
   </Header>
   <Header
     active={true}
+    key="1"
     name="1482363367071"
     onClick={[Function]}
     title="title2"
   >
     <RadioAccordionContent
       active={true}
+      key="1"
       title="title2"
     >
       Content2
@@ -71,6 +75,7 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
   </Header>
   <Header
     active={false}
+    key="2"
     name="1482363367071"
     onClick={[Function]}
     title="title3"
@@ -78,6 +83,7 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
     <RadioAccordionContent
       active={false}
       className="classname"
+      key="2"
       title="title3"
     >
       Content3
