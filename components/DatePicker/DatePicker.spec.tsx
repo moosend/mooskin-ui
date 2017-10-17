@@ -8,7 +8,7 @@ describe('DatePicker', () => {
 
     test('renders correctly', () => {
         const func = jest.fn();
-        Date.now = jest.fn(() => new Date(1434319925275));
+        Date.now = jest.fn(() => moment(1434319925275).utc());
 
         const tree = shallow(
             <DatePicker
@@ -26,7 +26,7 @@ describe('DatePicker', () => {
     });
 
     test('renders properly into dom with props', () => {
-        Date.now = jest.fn(() => new Date(1434319925275));
+        Date.now = jest.fn(() => moment(1434319925275).utc());
 
         const component = shallow(<DatePicker date={moment()} required/>);
 
