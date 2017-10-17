@@ -108,10 +108,13 @@ This can be used in various situations and combinations, for an enhanced develop
 
 * `id` - id of the element
 * `className` - css class
+* `validation` - validate input, can be either 'email' or a custom validation function that acceps a string arg
+* `errorMessage` - message to appear when the tag has been rejected due to invalid type.
 * `style` - extra styles for the main container
 * `tagStyles` - styles for individual tags
 * `tagClasses` - classes for individual tags
 * `delimiters` - an array of keys (string) or keyCodes (number) which will trigger a submission
+* `submitOnBlur` - wether it should trigger a submission if the input is focused out
 * `deletable` - wether tags should be deletable by backspace, still can be deleted by clicking on X
 * `label` - tags label
 * `placeholder` - placeholder on the input
