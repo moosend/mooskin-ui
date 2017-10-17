@@ -12,6 +12,9 @@ export interface ITagsProps{
     /** tagged data */
     tags: string[];
 
+    /** validate input wether it should accept emails or add a custom validation */
+    validation?: 'email' | ((tag: string) => boolean);
+
     /** source of data for type ahead completion */
     source?: (() => Promise<string[]>) | (() => string[]) | string[];
 
@@ -35,6 +38,12 @@ export interface ITagsProps{
 
     /** tags input label */
     label?: string;
+
+    /** prevent submit on input blur */
+    preventSubmit?: boolean;
+
+    /** error message when invalid input type is passed */
+    errorMessage?: string;
 
     /** input field placehonder */
     placeholder?: string;
@@ -71,12 +80,13 @@ export interface ITagsState{
     activeItem: number;
     sourceList: string[];
     rawSourceList: string[];
+    message: string;
 }
 
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     static defaultProps: Partial<ITagsProps> = {
-        delimiters: ['Enter', 13] // 13 is the keyCode for Enter
+        delimiters: ['Enter', 13], // 13 is the keyCode for Enter
     };
 
     id: string;
@@ -86,6 +96,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         this.state = {
             activeItem: 0,
+            message: '',
             rawSourceList: [],
             sourceList: [],
             value: ''
@@ -124,6 +135,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const source = this.state.value !== '' ? this.sourceList() : '';
 
+        const message = this.getMessage();
+
         // const cover = this.state.sourceList.length > 0 ? this.getCover() : '';
 
         return(
@@ -141,7 +154,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                             onKeyDown={this.onKeyDown}
                             onClick={this.removeSource}
                             onPaste={this.onPaste}
+                            onBlur={this.onBlur()}
                         />
+                        {message}
                         {source}
                     </div>
                 </label>
@@ -158,8 +173,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     tag={value}
                     key={i}
                     onClick={this.removeTag(i)}
-                    className = {this.props.tagClasses}
-                    style = {this.props.tagStyles}
+                    className={this.props.tagClasses}
+                    style={this.props.tagStyles}
                 />
             );
         });
@@ -248,9 +263,18 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 const tag = this.props.source && this.state.sourceList.length > 0 ?
                 this.state.sourceList[this.state.activeItem] : this.state.value;
 
-                this.setState({value: '', sourceList: [], activeItem: 0});
+                const validity = this.checkValidity(tag);
 
-                this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                if (validity){
+                    this.setState({value: '', sourceList: [], activeItem: 0});
+
+                    this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                } else {
+                    this.setState({message: this.props.errorMessage || 'Input type is invalid'});
+                    setTimeout(() => {
+                        this.setState({message: ''});
+                    }, 3000);
+                }
 
             } else {
                 // const pos = tags.indexOf(this.state.value);
@@ -260,6 +284,25 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             }
         }
 
+    }
+
+    checkValidity = (tag: string) => {
+        const validation = this.props.validation;
+        if (validation){
+            if (typeof validation === 'string' && validation === 'email'){
+                return this.checkIfEmail(tag);
+            } else if (typeof validation === 'function' && typeof validation !== 'string'){
+                return validation(tag);
+            }
+            return false;
+        }
+        return true;
+    }
+
+    checkIfEmail = (tag: string) => {
+        // tslint:disable-next-line
+        const re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+        return re.test(tag);
     }
 
     onPaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
@@ -395,6 +438,43 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         };
 
+    }
+
+    onBlur = () => {
+        if (!this.props.preventSubmit){
+            return(e: React.SyntheticEvent<HTMLElement>) => {
+
+                const tags: string[] = this.props.tags;
+
+                if (!tags.includes(this.state.value) && this.state.value !== ''){
+
+                    const tag = this.props.source && this.state.sourceList.length > 0 ?
+                    this.state.sourceList[this.state.activeItem] : this.state.value;
+
+                    const validity = this.checkValidity(tag);
+
+                    if (validity){
+                        this.setState({value: '', sourceList: [], activeItem: 0});
+
+                        this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                    } else {
+                        this.setState({message: this.props.errorMessage || 'Input type is invalid'});
+                        setTimeout(() => {
+                            this.setState({message: ''});
+                        }, 3000);
+                    }
+
+                }
+            };
+        }
+    }
+
+    getMessage = () => {
+        const message = this.state.message;
+        if (message !== ''){
+            return <span className={styles.message}>{message}</span>;
+        }
+        return null;
     }
 
     // getCover = () => {
