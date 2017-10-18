@@ -122,9 +122,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const tags = this.getTags(this.props.tags);
 
-        const source = this.state.value !== '' ? this.sourceList() : '';
+        const source = this.state.value !== '' ? this.sourceList() : null;
 
-        // const cover = this.state.sourceList.length > 0 ? this.getCover() : '';
+        const cover = this.state.sourceList.length > 0 ? this.getCover() : null;
 
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style} id={this.id}>
@@ -144,8 +144,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         />
                         {source}
                     </div>
+                    {cover}
                 </label>
-                {/* {cover} */}
             </div>
         );
     }
@@ -397,12 +397,12 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     }
 
-    // getCover = () => {
-    //     return <div onClick={this.removeSource} className={styles.cover} />;
-    // }
+    getCover = () => {
+        return <div onClick={this.removeSource} className={styles.cover} />;
+    }
 
     removeSource = () => {
-        this.setState({sourceList: []});
+        this.setState({sourceList: [], activeItem: -1});
     }
 
 }
