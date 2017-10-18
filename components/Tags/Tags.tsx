@@ -135,7 +135,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const source = this.state.value !== '' ? this.sourceList() : null;
 
-        const cover = this.state.sourceList.length > 0 ? this.getCover() : null;
+        const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
+
+        console.log();
 
         const message = this.getMessage();
 
@@ -167,7 +169,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     getTags = (tags: string[]) => {
 
-        return tags.map((value, i) => {
+        const removedDuplicates = Array.from(new Set(this.props.tags));
+
+        return removedDuplicates.map((value, i) => {
             return (
                 <Tag
                     tag={value}

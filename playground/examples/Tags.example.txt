@@ -12,6 +12,7 @@ class TagsExample extends React.Component {
                 'Athens',
                 'London',
                 'New York',
+                'Beijing',
                 'Beijing'
             ],
             tags2: [],
