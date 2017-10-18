@@ -42,6 +42,7 @@ exports[`Tags renders Tags correctly 1`] = `
     >
       <input
         className="input"
+        onBlur={[Function]}
         onChange={[Function]}
         onClick={[Function]}
         onKeyDown={[Function]}
