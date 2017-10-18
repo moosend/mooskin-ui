@@ -630,4 +630,17 @@ describe('Tags', () => {
         expect(component.find('Tag').length).toBe(2);
     });
 
+    test('checks and removes duplicate values when duplicave tags are passed as props', () => {
+        const tags = ['doni', 'gent', 'shkumbin', 'doni'];
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(tags.length - 1);
+
+    });
+
 });
