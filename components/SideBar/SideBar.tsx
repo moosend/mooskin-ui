@@ -432,7 +432,7 @@ export const SubMenu: React.StatelessComponent<ISubMenuProps> = (props) => {
         style: {}
     };
 
-    const display = props.display ? styles.subMenuOn : styles.sidebarOff;
+    const display = props.display ? styles.subMenuOn : styles.subMenuOff;
 
     return(
         <div
