@@ -4,6 +4,8 @@ import styles from './SideBar.css';
 
 import {SmallIconButton} from '../index';
 
+import {IButtonProps} from '../Button/Button';
+
 export interface ISideBarProps{
 
     /** wether the sidebar should be toggable by a button */
@@ -25,7 +27,8 @@ export interface ISideBarProps{
     hideClick?: boolean;
 
     /** sidebar children */
-    children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>;
+    children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps> |
+                Array<React.ReactElement<IButtonProps>> | React.ReactElement<IButtonProps>;
 }
 
 export interface ISideBarItemProps{
@@ -68,7 +71,8 @@ export interface ISideBarItemProps{
     onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
     /** item children */
-    children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>;
+    children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps> |
+                Array<React.ReactElement<IButtonProps>> | React.ReactElement<IButtonProps>;
 
 }
 
@@ -261,29 +265,37 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         const newItems: Array<React.ReactElement<ISideBarItemProps>> = [];
         if (Array.isArray(items)){
             items.forEach((item: React.ReactElement<ISideBarItemProps>, index: number) => {
-                newItems.push(
-                    <SidebarItem
-                        key={index}
-                        label={item.props.label}
-                        href={item.props.href}
-                        onClick={this.onClickSecondary(index, item)}
-                        style={item.props.style}
-                        className={item.props.className}
-                        active={this.state.activeSecondary === index}
-                    />
-                );
+                if (item.type === SidebarItem){
+                    newItems.push(
+                        <SidebarItem
+                            key={index}
+                            label={item.props.label}
+                            href={item.props.href}
+                            onClick={this.onClickSecondary(index, item)}
+                            style={item.props.style}
+                            className={item.props.className}
+                            active={this.state.activeSecondary === index}
+                        />
+                    );
+                } else {
+                    newItems.push(item);
+                }
             });
         } else {
-            return (
-                <SidebarItem
-                    label={items.props.label}
-                    href={items.props.href}
-                    onClick={this.onClickSecondary(0, items)}
-                    style={items.props.style}
-                    className={items.props.className}
-                    active={this.state.activeSecondary === 0}
-                />
-            );
+            if (items.type === SidebarItem){
+                return (
+                    <SidebarItem
+                        label={items.props.label}
+                        href={items.props.href}
+                        onClick={this.onClickSecondary(0, items)}
+                        style={items.props.style}
+                        className={items.props.className}
+                        active={this.state.activeSecondary === 0}
+                    />
+                );
+            } else {
+                return items;
+            }
         }
         return newItems;
     }
