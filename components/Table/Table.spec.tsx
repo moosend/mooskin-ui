@@ -384,4 +384,33 @@ describe('Table', () => {
 
     });
 
+    test('assigns tds correctly', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader colClasses="columnClass" dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('Col').at(1).hasClass('columnClass')).toBeTruthy();
+    });
+
 });

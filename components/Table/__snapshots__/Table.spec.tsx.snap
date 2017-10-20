@@ -350,11 +350,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -370,11 +370,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -390,11 +390,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -410,11 +410,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -430,11 +430,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -450,11 +450,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -470,11 +470,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -642,11 +642,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -662,11 +662,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -682,11 +682,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -702,11 +702,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -722,11 +722,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -742,11 +742,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -762,11 +762,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -934,11 +934,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -954,11 +954,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -974,11 +974,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -994,11 +994,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -1014,11 +1014,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -1034,11 +1034,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -1054,11 +1054,11 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span

@@ -119,6 +119,8 @@ The custom sort function must accept 4 arguments, `a` and `b` being the compared
 
 * `dataField` - which object property of the data array should be assigned to this column
 * `hideSmall` - Hides the column on small screens
+* `colClasses` - classes to be applied to this column cells
+* `colStyles` - styles to be applied to this column cells
 * `sortable` - wether this column should be sortable or not
 * `sortfn` - custom sort function for row sorting, requires `sortable`
 * `className` - css class

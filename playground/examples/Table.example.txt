@@ -9,8 +9,8 @@ class TableExample extends React.Component{
     render(){
         const data = [
             {
-                actions: [<SmallIconButton transparent key={0} icon="face"/>, <SmallIconButton transparent key={1} icon="edit"/>],
-                campaign: <div><div>Hello there</div><div>is it me  you're looking for</div></div>,
+                actions: <SmallIconButton transparent key={0} icon="face"/>,
+                campaign: 'Newsletters for everybody',
                 click: '50 %',
                 delivered: '13-06-2017 10:59 AM',
                 mailingList: 'Mailing list for me',

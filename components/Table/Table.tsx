@@ -171,27 +171,21 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
                             const display = setting.hide ? styles.hide : '';
 
-                            const content = this.getContent(obj[key]);
-
-                            const defaultDirection = {flexDirection: 'column'};
-
                             cols[i] = (
                                 <Col
-                                    style={{...defaultDirection, ...setting.styles}}
+                                    style={setting.styles}
                                     className={`${styles.colComponent} ${display} ${setting.classes}`}
                                     key={i + 1}
                                 >
                                     <span className={styles.heading}>{setting.heading}</span>
-                                    <div className={styles.contentContainer}>
-                                        {content}
-                                    </div>
+                                    <span key={index} className={styles.content}>{obj[key]}</span>
                                 </Col>
                             );
 
                             popoverData[i] = (
                                 <div className={styles.popoverCol} key={i}>
                                     <span className={styles.heading}>{setting.heading}</span>
-                                    {content}
+                                    <span key={index} className={styles.content}>{obj[key]}</span>
                                 </div>
                             );
 
@@ -365,20 +359,6 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({activeRow: -1});
         };
-    }
-
-    getContent = (content: any) => {
-        if (Array.isArray(content)){
-            return content.map((cont, index) => {
-                if (index === 0){
-                    return <span key={index} className={styles.content}>{content[index]}</span>;
-                } else {
-                    return <span key={index} className={styles.smallContent}>{content[index]}</span>;
-                }
-            });
-        } else {
-            return <span className={styles.content}>{content}</span>;
-        }
     }
 
 }
