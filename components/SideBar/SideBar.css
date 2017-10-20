@@ -5,12 +5,12 @@
     display: flex;
     flex-direction: column;
     height: 100%; /* 100% Full-height */
-    width: 0px;
+    width: 90px;
     position: fixed; /* Stay in place */
     top: 0;
     left: 0;
     background: #2D2D2D;
-    transition: 0.3s;
+    transition: 0.4s;
     color: #fff; 
     font-size: 12px;
     white-space: nowrap;
@@ -20,6 +20,7 @@
 
 .subMenu{
     z-index: 3;
+    width: 185px;
     left: 0px;
     background: #efefef;
     color: #636363;
@@ -28,12 +29,15 @@
 
 .subMenuOn{
     left: 90px;
-    width: 185px;
     overflow-y: auto;
 }
 
+.subMenuOff{
+    left: -185px;
+}
+
 .sidebarOn{
-    width: 90px !important;
+    left: 0px !important;
 }
 
 .sidebarOn:hover{
@@ -41,16 +45,15 @@
 }
 
 .sidebarOff{
-    width: 0px;
-    overflow-x: hidden;
+    left: -90px;
 }
 
 .smallOn{
-    width: 90px;
+    left: 0px;
 }
 
 .smallOff{
-    width: 0px;
+    left: -90px;
 }
 
 /*
@@ -60,7 +63,6 @@
 */
 .itemContainer{
     position: relative;
-    padding: 10px; 
     user-select: none;
     background: inherit;
 }
@@ -73,6 +75,18 @@
     cursor: pointer;
     text-decoration: none;  
     color: inherit;
+    white-space: pre-wrap;
+    padding: 10px; 
+}
+
+.subMenu .anchor{
+    align-items: flex-start;
+    padding: 15px 30px;
+}
+
+.subMenu .anchor{
+    align-items: flex-start;
+
 }
 
 .activeItem{
@@ -182,7 +196,11 @@
 
     .sidebar{
         padding-top:50px;
+        width: 50%;
+    }
 
+    .sidebarOff{
+        left: -50%;
     }
 
     .subMenu{
@@ -190,9 +208,12 @@
         z-index: 11;
     }
 
+    .subMenuOff{
+        left: -50%;
+    }
+
     .subMenuOn{
         left: 10%;
-        width: 50%;
     }
 
     .coverSmall{
@@ -245,7 +266,11 @@
     .sidebar{
         font-size: 4vw;
         padding-top:50px;
+        width: 50%;
+    }
 
+    .sidebarOff{
+        left: -50%;
     }
 
     .subMenu{
@@ -253,9 +278,12 @@
         z-index: 11;
     }
 
+    .subMenuOff{
+        left: -50%;
+    }
+
     .subMenuOn{
         left: 10%;
-        width: 50%;
     }
 
     .coverSmall{

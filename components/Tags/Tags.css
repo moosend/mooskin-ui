@@ -93,14 +93,14 @@
     font-size: .92857142857rem; 
 }
 
-/* .cover{
+.cover{
     position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;
     bottom: 0px;
     z-index: 1;
-} */
+}
 
 .message {
     font-family: 'Convergence', sans-serif;

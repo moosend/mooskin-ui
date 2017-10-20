@@ -80,7 +80,7 @@ export const App = (props: any) => {
                     <H1>SideBar</H1>
                 </Col>
                 <Col lg={12}>
-                    {renderEditableExample('SideBar', {SideBar, SidebarItem})}
+                    {renderEditableExample('SideBar', {Button, SideBar, SidebarItem})}
                 </Col>
             </Row>
             <Row id="buttons">

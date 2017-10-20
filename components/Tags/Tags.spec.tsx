@@ -630,4 +630,50 @@ describe('Tags', () => {
         expect(component.find('Tag').length).toBe(2);
     });
 
+    test('checks and removes duplicate values when duplicave tags are passed as props', () => {
+        const tags = ['doni', 'gent', 'shkumbin', 'doni'];
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(tags.length - 1);
+
+    });
+
+    test('converts delimiters to keyCodes', () => {
+
+        const delimiters = ['.', 'Enter', 'space', ','];
+        let tags = ['doni', 'gent', 'shkumbin'];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+                delimiters={delimiters}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(3);
+
+        component.find('input').simulate('change', { target: { value: 'text' }});
+
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
+
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(4);
+
+    });
+
 });
