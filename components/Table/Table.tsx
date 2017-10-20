@@ -37,6 +37,12 @@ export interface IHeaderProps{
     /** wether the row should be sortable or not */
     sortable?: boolean;
 
+    /** classes to be applied to the columns on this header */
+    colClasses?: string;
+
+    /** styles to be applied to the columns on this header */
+    colStyles?: React.CSSProperties;
+
     /** custom sort function */
     sortfn?: any;
 
@@ -165,17 +171,27 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
                             const display = setting.hide ? styles.hide : '';
 
+                            const content = this.getContent(obj[key]);
+
+                            const defaultDirection = {flexDirection: 'column'};
+
                             cols[i] = (
-                                <Col className={display} key={i + 1} >
+                                <Col
+                                    style={{...defaultDirection, ...setting.styles}}
+                                    className={`${styles.colComponent} ${display} ${setting.classes}`}
+                                    key={i + 1}
+                                >
                                     <span className={styles.heading}>{setting.heading}</span>
-                                    <span className={styles.content}>{obj[key]}</span>
+                                    <div className={styles.contentContainer}>
+                                        {content}
+                                    </div>
                                 </Col>
                             );
 
                             popoverData[i] = (
                                 <div className={styles.popoverCol} key={i}>
                                     <span className={styles.heading}>{setting.heading}</span>
-                                    <span className={styles.content}>{obj[key]}</span>
+                                    {content}
                                 </div>
                             );
 
@@ -222,9 +238,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             if (React.isValidElement<IHeaderProps>(child)){
                 settings.push(
                     {
+                        classes: child.props.colClasses,
                         dataField: child.props.dataField,
                         heading: child.props.children,
-                        hide: child.props.hideSmall
+                        hide: child.props.hideSmall,
+                        styles: child.props.colStyles
                     }
                 );
             }
@@ -347,6 +365,20 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.setState({activeRow: -1});
         };
+    }
+
+    getContent = (content: any) => {
+        if (Array.isArray(content)){
+            return content.map((cont, index) => {
+                if (index === 0){
+                    return <span key={index} className={styles.content}>{content[index]}</span>;
+                } else {
+                    return <span key={index} className={styles.smallContent}>{content[index]}</span>;
+                }
+            });
+        } else {
+            return <span className={styles.content}>{content}</span>;
+        }
     }
 
 }

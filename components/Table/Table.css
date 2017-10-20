@@ -76,8 +76,24 @@
     padding-bottom: 9px;
 }
 
+.smallContent{
+    color: #aaa;
+    font-size: .71428571428rem;
+    vertical-align: middle;
+}
+
+.contentContainer{
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+}
+
 @media (--xSmall){
     .hide{
+        display: none;
+    }
+
+    .smallContent{
         display: none;
     }
 
@@ -167,6 +183,10 @@
 
 @media (--small){
     .hide{
+        display: none;
+    }
+
+    .smallContent{
         display: none;
     }
 
