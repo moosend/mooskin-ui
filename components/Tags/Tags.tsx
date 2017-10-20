@@ -135,9 +135,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const source = this.state.value !== '' ? this.sourceList() : null;
 
-        const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
-
-        console.log();
+        // const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
 
         const message = this.getMessage();
 
@@ -161,7 +159,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         {message}
                         {source}
                     </div>
-                    {cover}
+                    {/* {cover} */}
                 </label>
             </div>
         );
@@ -224,7 +222,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        const {delimiters} = this.props;
+
+        const delimiters = this.props.delimiters && this.getConvertedDelimiters(this.props.delimiters);
 
         const tags: string[] = this.props.tags; // always copy here
 
@@ -444,9 +443,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     }
 
-    getCover = () => {
-        return <div onClick={this.removeSource} className={styles.cover} />;
-    }
+    // getCover = () => {
+    //     return <div onClick={this.removeSource} className={styles.cover} />;
+    // }
 
     onBlur = () => {
         if (!this.props.preventSubmit){
@@ -487,6 +486,35 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     removeSource = () => {
         this.setState({sourceList: [], activeItem: -1});
+    }
+
+    getConvertedDelimiters = (delimiters: any) => {
+        const newDelimiters: Array<string | number> = delimiters.map((delimiter: any) => {
+            if (delimiter === ' ') {
+                return delimiter;
+            } else if (!isNaN(delimiter)) {
+                return parseInt(delimiter, 10);
+            } else if (typeof delimiter === 'string'){
+                return delimiter.toLocaleLowerCase();
+            } else {
+                return delimiter;
+            }
+        });
+
+        if (newDelimiters.includes('space') || newDelimiters.includes('spacebar') || newDelimiters.includes(' ')){
+            !newDelimiters.includes(32) &&  newDelimiters.push(32);
+        }
+        if (newDelimiters.includes('enter')){
+            !newDelimiters.includes(13) && newDelimiters.push(13);
+        }
+        if (newDelimiters.includes(',')){
+            !newDelimiters.includes(188) && newDelimiters.push(188);
+        }
+        if (newDelimiters.includes('.')){
+            !newDelimiters.includes(190) && newDelimiters.push(190);
+        }
+
+        return newDelimiters;
     }
 
 }
