@@ -12,6 +12,7 @@ class TagsExample extends React.Component {
                 'Athens',
                 'London',
                 'New York',
+                'Beijing',
                 'Beijing'
             ],
             tags2: [],
@@ -49,11 +50,11 @@ class TagsExample extends React.Component {
 
         return(
             <div>
-                <Tags source={countries} errorMessage={'You cannot tag Doni'} validation={this.validation} label="Tags from string array" tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
+                <Tags source={countries} delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validation={this.validation} label="Tags from string array" tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
                 <br/>
-                <Tags source={stringArr} label="Tags from function that returns string array" delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} tags={this.state.tags2} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags2"/>
+                <Tags source={stringArr} label="Tags from function that returns string array" delimiters={['188', '32', '13', ',', '.', 'Enter', ' ', '190']} tags={this.state.tags2} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags2"/>
                 <br/>
-                <Tags source={promiseFunc} label="Tags from function that returns Promise(api call for github users)" tags={this.state.tags3}  delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags3"/>
+                <Tags source={promiseFunc} label="Tags from function that returns Promise(api call for github users)" tags={this.state.tags3} delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags3"/>
                 <br/>
                 <Tags source={emails} errorMessage={'Tags accepts only emails'} validation="email" submitOnBlur={false} label="Email only tags" tags={this.state.tags4} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags4"/>
             </div>
