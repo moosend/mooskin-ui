@@ -9,7 +9,7 @@ class TableExample extends React.Component{
     render(){
         const data = [
             {
-                actions: <SmallIconButton transparent key={0} icon="face"/>,
+                actions: [<SmallIconButton key={0} transparent icon="face"/>, <SmallIconButton key={1} transparent icon="check"/>],
                 campaign: 'Newsletters for everybody',
                 click: '50 %',
                 delivered: '13-06-2017 10:59 AM',

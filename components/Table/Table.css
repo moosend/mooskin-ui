@@ -76,12 +76,6 @@
     padding-bottom: 9px;
 }
 
-.smallContent{
-    color: #aaa;
-    font-size: .71428571428rem;
-    vertical-align: middle;
-}
-
 .contentContainer{
     display: flex;
     flex-direction: inherit;
