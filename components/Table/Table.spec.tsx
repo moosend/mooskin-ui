@@ -384,7 +384,7 @@ describe('Table', () => {
 
     });
 
-    test('assigns tds correctly', () => {
+    test('Assigns col and row classes accordingly', () => {
 
         const data = [
             {
@@ -402,7 +402,7 @@ describe('Table', () => {
         ];
 
         const component = mount(
-            <Table data={data}>
+            <Table rowClasses={'rowClass'} data={data}>
                 <TableHeader colClasses="columnClass" dataField="id">ID</TableHeader>
                 <TableHeader dataField="name">Name</TableHeader>
                 <TableHeader dataField="lastname">Lastname</TableHeader>
@@ -411,6 +411,7 @@ describe('Table', () => {
         );
 
         expect(component.find('Col').at(1).hasClass('columnClass')).toBeTruthy();
+        expect(component.find('Row').at(1).hasClass('rowClass')).toBeTruthy();
     });
 
 });

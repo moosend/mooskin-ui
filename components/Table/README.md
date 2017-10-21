@@ -112,6 +112,8 @@ The custom sort function must accept 4 arguments, `a` and `b` being the compared
 
 * `id` - id of the element
 * `data` - array of objects to be assigned to the Table
+* `rowStyles` - styles to be applied on the table Rows
+* `rowClasses` - classes to be applied on the table Rows
 * `className` - css class
 * `style` - table styles
 
