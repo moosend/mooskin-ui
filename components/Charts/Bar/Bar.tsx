@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Bar, HorizontalBar} from 'react-chartjs-2';
+import {Bar, ChartData, HorizontalBar} from 'react-chartjs-2';
 
 import styles from './Bar.css';
 
@@ -82,7 +82,7 @@ class BarChart extends React.Component<IBarProps, {}>{
             position
         };
 
-        const options = {
+        const options: ChartData<any> = {
             legend,
             maintainAspectRatio,
             scales,

@@ -31,12 +31,15 @@ exports[`Steps renders correctly 1`] = `
     <StepBody
       active={true}
       content="Content 1"
+      key=".0"
     />
     <StepBody
       content="Content 2"
+      key=".1"
     />
     <StepBody
       content="Content 3"
+      key=".2"
     />
   </div>
 </div>
