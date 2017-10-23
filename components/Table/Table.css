@@ -1,7 +1,7 @@
 @import '../_utils/globals/screens.css';
 
 .tableWrapper{
-    width: 100%;
+    display: flex;
 }
 
 .table{

@@ -16,6 +16,9 @@ export interface ITableProps{
     /** override Table styles */
     style?: React.CSSProperties;
 
+    /** styling applied to the div containing the table */
+    containerStyle?: React.CSSProperties;
+
     /** Table class */
     rowClasses?: string;
 
@@ -136,7 +139,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         const cover = this.getCover();
 
         return (
-            <div className={styles.tableWrapper}>
+            <div className={styles.tableWrapper} style={this.props.containerStyle}>
                 {cover}
                 <table
                     className={`table-component ${styles.table} ${this.props.className}`}
