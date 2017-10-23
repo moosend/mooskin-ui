@@ -43,6 +43,7 @@ exports[`Table renders correctly 1`] = `
 >
   <div
     className="tableWrapper"
+    style={undefined}
   >
     <table
       className="table-component table myStyle"
@@ -375,6 +376,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent  undefined"
+              key="1"
               style={Object {}}
             >
               <td
@@ -399,6 +401,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent  undefined"
+              key="2"
               style={Object {}}
             >
               <td
@@ -423,6 +426,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="3"
               style={Object {}}
             >
               <td
@@ -447,6 +451,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="4"
               style={Object {}}
             >
               <td
@@ -471,6 +476,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="5"
               style={Object {}}
             >
               <td
@@ -495,6 +501,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="6"
               style={Object {}}
             >
               <td
@@ -519,6 +526,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="7"
               style={Object {}}
             >
               <td
@@ -706,6 +714,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent  undefined"
+              key="1"
               style={Object {}}
             >
               <td
@@ -730,6 +739,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent  undefined"
+              key="2"
               style={Object {}}
             >
               <td
@@ -754,6 +764,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="3"
               style={Object {}}
             >
               <td
@@ -778,6 +789,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="4"
               style={Object {}}
             >
               <td
@@ -802,6 +814,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="5"
               style={Object {}}
             >
               <td
@@ -826,6 +839,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="6"
               style={Object {}}
             >
               <td
@@ -850,6 +864,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="7"
               style={Object {}}
             >
               <td
@@ -1037,6 +1052,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent  undefined"
+              key="1"
               style={Object {}}
             >
               <td
@@ -1061,6 +1077,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent  undefined"
+              key="2"
               style={Object {}}
             >
               <td
@@ -1085,6 +1102,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="3"
               style={Object {}}
             >
               <td
@@ -1109,6 +1127,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="4"
               style={Object {}}
             >
               <td
@@ -1133,6 +1152,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="5"
               style={Object {}}
             >
               <td
@@ -1157,6 +1177,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="6"
               style={Object {}}
             >
               <td
@@ -1181,6 +1202,7 @@ exports[`Table renders correctly 1`] = `
             </Col>
             <Col
               className="colComponent hide undefined"
+              key="7"
               style={Object {}}
             >
               <td
