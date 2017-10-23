@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Steps, {Step} from './Steps';
 
-import { render, shallow} from 'enzyme';
+import { mount, render, shallow} from 'enzyme';
 
 describe('Steps', () => {
 
@@ -82,7 +82,6 @@ describe('Steps', () => {
         tree.find(Step)
             .findWhere((bc) => bc.prop('id') === '2')
             .dive()
-            .find('#2')
             .simulate('click');
 
         expect(fn).toHaveBeenCalledWith('2');

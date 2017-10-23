@@ -42,6 +42,7 @@ exports[`Form renders Form with FormGroup correctly 1`] = `
       <FormGroup
         className="myClass"
         horizontal={true}
+        key="0"
         style={
           Object {
             "width": "50px",
