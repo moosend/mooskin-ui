@@ -20,10 +20,10 @@ export interface ITableProps{
     containerStyle?: React.CSSProperties;
 
     /** Table class */
-    rowClasses?: string;
+    rowClass?: string;
 
     /** override Table styles */
-    rowStyles?: React.CSSProperties;
+    rowStyle?: React.CSSProperties;
 
     children?: React.ReactElement<IHeaderProps> | Array<React.ReactElement<IHeaderProps>>;
 
@@ -226,7 +226,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             cols.splice(0, 0, buttonCol);
 
             rows.push(
-                <Row key={index} style={this.props.rowStyles} className={this.props.rowClasses}>
+                <Row key={index} style={this.props.rowStyle} className={this.props.rowClass}>
                     {cols}
                 </Row>
             );

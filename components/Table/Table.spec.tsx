@@ -402,7 +402,7 @@ describe('Table', () => {
         ];
 
         const component = mount(
-            <Table rowClasses={'rowClass'} data={data}>
+            <Table rowClass={'rowClass'} data={data}>
                 <TableHeader colClasses="columnClass" dataField="id">ID</TableHeader>
                 <TableHeader dataField="name">Name</TableHeader>
                 <TableHeader dataField="lastname">Lastname</TableHeader>
