@@ -81,7 +81,7 @@ export const App = (props: any) => {
                     <H1>SideBar</H1>
                 </Col>
                 <Col lg={6}>
-                    {renderEditableExample('SideBar', {SideBar, SidebarItem})}
+                    {renderEditableExample('SideBar', {Button, SideBar, SidebarItem})}
                 </Col>
                 <Col lg={6}>
                     {renderEditableExample('LoadingBar', {LoadingBar, Button})}

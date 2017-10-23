@@ -61,6 +61,7 @@ class SideBarExample extends React.Component {
                         label="Charts"
                         href="#charts"
                     />
+                    <Button style={{background: '#e16053', marginTop: '20px', width: '140px', alignSelf: 'center'}}>Log Out</Button>
                 </SidebarItem>
             </SideBar>
         );

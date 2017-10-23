@@ -12,6 +12,9 @@ export interface ITagsProps{
     /** tagged data */
     tags: string[];
 
+    /** validate input wether it should accept emails or add a custom validation */
+    validation?: 'email' | ((tag: string) => boolean);
+
     /** source of data for type ahead completion */
     source?: (() => Promise<string[]>) | (() => string[]) | string[];
 
@@ -35,6 +38,12 @@ export interface ITagsProps{
 
     /** tags input label */
     label?: string;
+
+    /** prevent submit on input blur */
+    preventSubmit?: boolean;
+
+    /** error message when invalid input type is passed */
+    errorMessage?: string;
 
     /** input field placehonder */
     placeholder?: string;
@@ -71,12 +80,13 @@ export interface ITagsState{
     activeItem: number;
     sourceList: string[];
     rawSourceList: string[];
+    message: string;
 }
 
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     static defaultProps: Partial<ITagsProps> = {
-        delimiters: ['Enter', 13] // 13 is the keyCode for Enter
+        delimiters: ['Enter', 13], // 13 is the keyCode for Enter
     };
 
     id: string;
@@ -86,6 +96,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         this.state = {
             activeItem: 0,
+            message: '',
             rawSourceList: [],
             sourceList: [],
             value: ''
@@ -122,9 +133,11 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const tags = this.getTags(this.props.tags);
 
-        const source = this.state.value !== '' ? this.sourceList() : '';
+        const source = this.state.value !== '' ? this.sourceList() : null;
 
-        // const cover = this.state.sourceList.length > 0 ? this.getCover() : '';
+        // const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
+
+        const message = this.getMessage();
 
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style} id={this.id}>
@@ -141,18 +154,22 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                             onKeyDown={this.onKeyDown}
                             onClick={this.removeSource}
                             onPaste={this.onPaste}
+                            onBlur={this.onBlur()}
                         />
+                        {message}
                         {source}
                     </div>
+                    {/* {cover} */}
                 </label>
-                {/* {cover} */}
             </div>
         );
     }
 
     getTags = (tags: string[]) => {
 
-        return tags.map((value, i) => {
+        const removedDuplicates = Array.from(new Set(this.props.tags));
+
+        return removedDuplicates.map((value, i) => {
             return (
                 <Tag
                     tag={value}
@@ -205,7 +222,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        const {delimiters} = this.props;
+
+        const delimiters = this.props.delimiters && this.getConvertedDelimiters(this.props.delimiters);
 
         const tags: string[] = this.props.tags; // always copy here
 
@@ -248,9 +266,18 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 const tag = this.props.source && this.state.sourceList.length > 0 ?
                 this.state.sourceList[this.state.activeItem] : this.state.value;
 
-                this.setState({value: '', sourceList: [], activeItem: 0});
+                const validity = this.checkValidity(tag);
 
-                this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                if (validity){
+                    this.setState({value: '', sourceList: [], activeItem: 0});
+
+                    this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                } else {
+                    this.setState({message: this.props.errorMessage || 'Input type is invalid'});
+                    setTimeout(() => {
+                        this.setState({message: ''});
+                    }, 3000);
+                }
 
             } else {
                 // const pos = tags.indexOf(this.state.value);
@@ -260,6 +287,25 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             }
         }
 
+    }
+
+    checkValidity = (tag: string) => {
+        const validation = this.props.validation;
+        if (validation){
+            if (typeof validation === 'string' && validation === 'email'){
+                return this.checkIfEmail(tag);
+            } else if (typeof validation === 'function' && typeof validation !== 'string'){
+                return validation(tag);
+            }
+            return false;
+        }
+        return true;
+    }
+
+    checkIfEmail = (tag: string) => {
+        // tslint:disable-next-line
+        const re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+        return re.test(tag);
     }
 
     onPaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
@@ -401,8 +447,74 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     //     return <div onClick={this.removeSource} className={styles.cover} />;
     // }
 
+    onBlur = () => {
+        if (!this.props.preventSubmit){
+            return(e: React.SyntheticEvent<HTMLElement>) => {
+
+                const tags: string[] = this.props.tags;
+
+                if (!tags.includes(this.state.value) && this.state.value !== ''){
+
+                    const tag = this.props.source && this.state.sourceList.length > 0 ?
+                    this.state.sourceList[this.state.activeItem] : this.state.value;
+
+                    const validity = this.checkValidity(tag);
+
+                    if (validity){
+                        this.setState({value: '', sourceList: [], activeItem: 0});
+
+                        this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                    } else {
+                        this.setState({message: this.props.errorMessage || 'Input type is invalid'});
+                        setTimeout(() => {
+                            this.setState({message: ''});
+                        }, 3000);
+                    }
+
+                }
+            };
+        }
+    }
+
+    getMessage = () => {
+        const message = this.state.message;
+        if (message !== ''){
+            return <span className={styles.message}>{message}</span>;
+        }
+        return null;
+    }
+
     removeSource = () => {
-        this.setState({sourceList: []});
+        this.setState({sourceList: [], activeItem: -1});
+    }
+
+    getConvertedDelimiters = (delimiters: any) => {
+        const newDelimiters: Array<string | number> = delimiters.map((delimiter: any) => {
+            if (delimiter === ' ') {
+                return delimiter;
+            } else if (!isNaN(delimiter)) {
+                return parseInt(delimiter, 10);
+            } else if (typeof delimiter === 'string'){
+                return delimiter.toLocaleLowerCase();
+            } else {
+                return delimiter;
+            }
+        });
+
+        if (newDelimiters.includes('space') || newDelimiters.includes('spacebar') || newDelimiters.includes(' ')){
+            !newDelimiters.includes(32) &&  newDelimiters.push(32);
+        }
+        if (newDelimiters.includes('enter')){
+            !newDelimiters.includes(13) && newDelimiters.push(13);
+        }
+        if (newDelimiters.includes(',')){
+            !newDelimiters.includes(188) && newDelimiters.push(188);
+        }
+        if (newDelimiters.includes('.')){
+            !newDelimiters.includes(190) && newDelimiters.push(190);
+        }
+
+        return newDelimiters;
     }
 
 }
