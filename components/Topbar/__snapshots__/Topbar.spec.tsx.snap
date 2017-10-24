@@ -2,7 +2,7 @@
 
 exports[`Topbar renders correctly 1`] = `
 <div
-  className="topbar-component topbar myClass"
+  className="topbar-component topbar show myClass"
   style={
     Object {
       "color": "blue",

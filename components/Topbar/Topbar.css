@@ -5,4 +5,13 @@
     left: 0px;
     height: 80px;
     z-index: 1;
+    transition: 0.3s;
+}
+
+.hide{
+    top: -80px;
+}
+
+.show {
+    top: 0px;
 }
