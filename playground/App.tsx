@@ -190,7 +190,7 @@ export const App = (props: any) => {
                 <Col lg={6} md={4}>
                     {renderEditableExample('Headings', {H1, H2, H3, H4, H5, H6})}
                 </Col>
-                <Col lg ={5} md={7}>
+                <Col lg={5} md={7}>
                     {renderEditableExample('Steps', {Steps, Step, Button})}
                 </Col>
                 <Col lg={4} md={5}>

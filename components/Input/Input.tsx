@@ -54,6 +54,9 @@ export interface IProps {
     /** override input class */
     className?: string;
 
+    /** status of the input, error or success */
+    status?: 'error' | 'success';
+
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
 
@@ -98,6 +101,8 @@ class Input extends React.Component<IProps, {}> {
         const disabledInput = disabled ? styles.disabledInput : '';
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
         const autocomplete = !this.props.autocomplete ? 'off' : 'on';
+        const status = this.getStatus();
+        const descStatus = this.getDescStatus();
 
         return (
             <div className={`input-component ${className} ${styles.inputContainer}`}>
@@ -114,12 +119,12 @@ class Input extends React.Component<IProps, {}> {
                         maxLength={maxlength}
                         required={required}
                         disabled={disabled}
-                        className={`input ${styles.input} ${disabledInput}`}
+                        className={`input ${styles.input} ${disabledInput} ${status}`}
                         style={style}
                         autoFocus={autofocus}
                         autoComplete={autocomplete}
                     />
-                    <i className={styles.description}>{description}</i>
+                    <i className={`${styles.description} ${descStatus}`}>{description}</i>
                 </div>
             </div>
         );
@@ -129,6 +134,28 @@ class Input extends React.Component<IProps, {}> {
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
+    }
+
+    getStatus = () => {
+        const inputStatus = this.props.status && this.props.status;
+        if (inputStatus){
+            if (inputStatus === 'error'){
+                return styles.error;
+            } else if (inputStatus === 'success'){
+                return styles.success;
+            }
+        }
+    }
+
+    getDescStatus = () => {
+        const inputStatus = this.props.status && this.props.status;
+        if (inputStatus){
+            if (inputStatus === 'error'){
+                return styles.descError;
+            } else if (inputStatus === 'success'){
+                return styles.descSuccess;
+            }
+        }
     }
 
     generateId = () => {
