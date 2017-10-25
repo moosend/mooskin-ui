@@ -86,4 +86,30 @@ describe('TextArea', () => {
         expect(component.find('div').first().hasClass('rdw-editor-wrapper')).toBeTruthy;
     });
 
+    test('error classes get applied when input is not validated', () => {
+        let inputValue = '';
+        let status = null;
+
+        const onChange = (e, data) => {
+            inputValue = data.value;
+        };
+
+        const validate = (value) => {
+            status = value ? value < 5 ? 'error' : '' : 'error';
+        };
+
+        const component = mount(
+            <TextArea status={status} validate={validate} onChange={onChange} value={inputValue}/>
+        );
+
+        component.find('textarea').simulate('blur');
+        expect(component.find('textarea').hasClass('error')).toBeTruthy;
+
+        component.find('textarea').simulate('change', { target: { value: 'text' }});
+        expect(component.find('textarea').hasClass('error')).toBeTruthy;
+
+        component.find('textarea').simulate('change', { target: { value: 'more text' }});
+        expect(component.find('textarea').hasClass('error')).toBeFalsy;
+    });
+
 });

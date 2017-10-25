@@ -40,11 +40,13 @@ exports[`TextArea renders correctly 1`] = `
     readonly={undefined}
     required={true}
     rows={10}
+    status={undefined}
     style={
       Object {
         "color": "blue",
       }
     }
+    validate={undefined}
     value="textarea value"
   >
     <div
@@ -65,13 +67,14 @@ exports[`TextArea renders correctly 1`] = `
         className="textAreaDiv"
       >
         <textarea
-          className="textarea textarea disabledTextArea"
+          className="textarea textarea disabledTextArea undefined"
           cols={40}
           disabled={true}
           id="textarea"
           maxLength={50}
           minLength={10}
           name="nodejs"
+          onBlur={[Function]}
           onChange={[Function]}
           placeholder="textarea placeholder"
           readOnly={undefined}
@@ -85,7 +88,7 @@ exports[`TextArea renders correctly 1`] = `
           value="textarea value"
         />
         <i
-          className="description"
+          className="description undefined"
         >
           just some textarea
         </i>
