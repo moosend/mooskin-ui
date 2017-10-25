@@ -39,10 +39,14 @@ class InputExample extends React.Component {
 
     validate(value){
         console.log(value);
-        if (value.length < 5){
-            this.setState({status: 'error', message: 'Input should have 5 or more characters'});
+        if (value){
+            if (value.length < 5){
+                this.setState({status: 'error', message: 'Input should have 5 or more characters'});
+            } else {
+                this.setState({status: '', message: ''})
+            }
         } else {
-            this.setState({status: '', message: ''})
+            this.setState({status: 'error', message: 'This input field is required'});
         }
     }
 

@@ -58,7 +58,7 @@ export interface IProps {
     status?: 'error' | 'success';
 
     /** validate function */
-    validate?: (value: string) => void;
+    validate?: (value?: string) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -143,14 +143,16 @@ class Input extends React.Component<IProps, {}> {
         this.props.onChange &&
         this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
         if (this.props.status){
-            console.log('its inside');
             this.props.validate && this.props.validate(e.target.value);
         }
     }
 
     validateBlur = () => {
-        console.log('this is called');
-        this.props.value && this.props.validate && this.props.validate(this.props.value);
+        if (this.props.value){
+            this.props.validate && this.props.validate(this.props.value);
+        } else {
+            this.props.validate && this.props.validate();
+        }
     }
 
     getStatus = () => {
