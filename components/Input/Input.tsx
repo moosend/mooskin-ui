@@ -130,7 +130,7 @@ class Input extends React.Component<IProps, {}> {
                         style={style}
                         autoFocus={autofocus}
                         autoComplete={autocomplete}
-                        onBlur={this.validateBlur}
+                        onBlur={this.validateOnBlur}
                     />
                     <i className={`${styles.description} ${descStatus}`}>{description}</i>
                 </div>
@@ -147,7 +147,7 @@ class Input extends React.Component<IProps, {}> {
         }
     }
 
-    validateBlur = () => {
+    validateOnBlur = () => {
         if (this.props.value){
             this.props.validate && this.props.validate(this.props.value);
         } else {

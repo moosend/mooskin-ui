@@ -3,12 +3,19 @@ class TextAreaExample extends React.Component {
     constructor(){
         super();
         this.onChange = this.onChange.bind(this);
+        this.validate = this.validate.bind(this);
+
+        this.state = {
+            status: '',
+            message: '',
+            value: ''
+        }
     }
 
     render(){
         return (
             <div>
-                <TextArea onChange={this.onChange} value="with value and custom rows/cols" label="Label:" rows={7} cols={35}/>
+                <TextArea value={this.state.value} validate={this.validate} status={this.state.status} description={this.state.message} onChange={this.onChange} label="Label:" rows={7} cols={35}/>
                 <hr/>
                 <TextArea onChange={this.onChange} disabled value="disabled" description="This text area is disabled"/>
                 <hr/>
@@ -18,6 +25,19 @@ class TextAreaExample extends React.Component {
     }
 
     onChange(e, data) {
-        console.log(e.target);
+        this.setState({value: data.value})
+    }
+
+    validate(value){
+        console.log(value);
+        if (value){
+            if (value.length < 5){
+                this.setState({status: 'error', message: 'Input should have 5 or more characters'});
+            } else {
+                this.setState({status: '', message: ''})
+            }
+        } else {
+            this.setState({status: 'error', message: 'This input field is required'});
+        }
     }
 }
