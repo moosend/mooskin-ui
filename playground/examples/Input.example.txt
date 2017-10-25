@@ -3,10 +3,12 @@ class InputExample extends React.Component {
     constructor(){
         super();
         this.onChange = this.onChange.bind(this);
+        this.validate = this.validate.bind(this);
 
         this.state = {
             status: '',
-            message: ''
+            message: '',
+            value: ''
         }
     }
 
@@ -23,7 +25,7 @@ class InputExample extends React.Component {
                     description="This has autofocus on page load"
                 />
                 <br/>
-                <Input status={this.state.status} description={this.state.message} onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>
+                <Input value={this.state.value} validate={this.validate} status={this.state.status} description={this.state.message} onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>
                 <br/>
                 <Input onChange={this.onChange} disabled value="disabled" description="This input is disabled"/>
             </div>
@@ -32,7 +34,12 @@ class InputExample extends React.Component {
 
     onChange(e, data) {
         console.log(e.target);
-        if (data.value.length < 5){
+        this.setState({value: data.value})
+    }
+
+    validate(value){
+        console.log(value);
+        if (value.length < 5){
             this.setState({status: 'error', message: 'Input should have 5 or more characters'});
         } else {
             this.setState({status: '', message: ''})

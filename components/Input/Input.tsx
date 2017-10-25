@@ -57,6 +57,9 @@ export interface IProps {
     /** status of the input, error or success */
     status?: 'error' | 'success';
 
+    /** validate function */
+    validate?: (value: string) => void;
+
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
 
@@ -64,6 +67,10 @@ export interface IProps {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 
 }
+
+// export interface IInputState = {
+
+// }
 
 class Input extends React.Component<IProps, {}> {
 
@@ -123,6 +130,7 @@ class Input extends React.Component<IProps, {}> {
                         style={style}
                         autoFocus={autofocus}
                         autoComplete={autocomplete}
+                        onBlur={this.validateBlur}
                     />
                     <i className={`${styles.description} ${descStatus}`}>{description}</i>
                 </div>
@@ -134,6 +142,15 @@ class Input extends React.Component<IProps, {}> {
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
+        if (this.props.status){
+            console.log('its inside');
+            this.props.validate && this.props.validate(e.target.value);
+        }
+    }
+
+    validateBlur = () => {
+        console.log('this is called');
+        this.props.value && this.props.validate && this.props.validate(this.props.value);
     }
 
     getStatus = () => {
