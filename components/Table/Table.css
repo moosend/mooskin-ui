@@ -1,7 +1,7 @@
 @import '../_utils/globals/screens.css';
 
 .tableWrapper{
-    width: 100%;
+    display: flex;
 }
 
 .table{
@@ -76,8 +76,18 @@
     padding-bottom: 9px;
 }
 
+.contentContainer{
+    display: flex;
+    flex-direction: inherit;
+    justify-content: center;
+}
+
 @media (--xSmall){
     .hide{
+        display: none;
+    }
+
+    .smallContent{
         display: none;
     }
 
@@ -167,6 +177,10 @@
 
 @media (--small){
     .hide{
+        display: none;
+    }
+
+    .smallContent{
         display: none;
     }
 

@@ -9,8 +9,8 @@ class TableExample extends React.Component{
     render(){
         const data = [
             {
-                actions: <SmallIconButton transparent icon="face"/>,
-                campaign: 'NewsLetters for everybody',
+                actions: [<SmallIconButton key={0} transparent icon="face"/>, <SmallIconButton key={1} transparent icon="check"/>],
+                campaign: 'Newsletters for everybody',
                 click: '50 %',
                 delivered: '13-06-2017 10:59 AM',
                 mailingList: 'Mailing list for me',
@@ -40,16 +40,29 @@ class TableExample extends React.Component{
             }
         ];
 
+        const spanStyle = {
+            background: 'yellow',
+            width: '8px',
+            height: '8px',
+            borderRadius: '50%',
+            marginRight: '10px'
+        };
+
         return(
             <Table data={data}>
                 <TableHeader dataField="delivered" sortable >Delivered</TableHeader>
-                <TableHeader dataField="campaign" sortable >Campaign</TableHeader>
-                <TableHeader dataField="mailingList" hideSmall >Mailing List / Segment</TableHeader>
+                <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
+                <TableHeader dataField="mailingList" hideSmall >
+                    <span style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                        <div style={spanStyle}/>
+                        Mailing list / segment
+                    </span>
+                </TableHeader>
                 <TableHeader dataField="status" sortable hideSmall >Status</TableHeader>
                 <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
                 <TableHeader dataField="click" sortable hideSmall>Click</TableHeader>
                 <TableHeader dataField="subscribers" sortable hideSmall >Subscribers</TableHeader>
-                <TableHeader dataField="actions" hideSmall >Actions</TableHeader>
+                <TableHeader colStyles={{flexDirection: 'row'}} dataField="actions" hideSmall >Actions</TableHeader>
             </Table>
         );
     }
@@ -82,4 +95,3 @@ class TableExample extends React.Component{
 
     }
 }
-

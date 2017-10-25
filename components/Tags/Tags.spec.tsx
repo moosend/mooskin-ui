@@ -676,4 +676,45 @@ describe('Tags', () => {
 
     });
 
+    test('removes source list when transparent overlay is clicked', () => {
+
+        const delimiters = ['.', 'Enter', 'space', ','];
+        let tags = [];
+        const source = ['doni', 'gent', 'shkumbin'];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = mount(
+            <Tags
+                tags={tags}
+                source={source}
+                delimiters={delimiters}
+                onAdd={onAdd}
+                onRemove={onRemove}
+            />
+        );
+
+        component.find('input').simulate('change', { target: { value: 'do' }});
+
+        expect(component.state('value')).toEqual('do');
+        expect(component.state('sourceList')).toEqual(['doni']);
+
+        expect(component.find('.sourceList').length).toEqual(1);
+        expect(component.find('.sourceItem').length).toEqual(1);
+
+        component.find('.cover').simulate('click');
+
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
+
+        component.setProps({tags});
+        expect(component.find('Tag').prop('tag')).toEqual('do');
+
+    });
+
 });
