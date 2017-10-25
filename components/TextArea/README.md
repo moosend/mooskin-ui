@@ -104,6 +104,42 @@ onEditorChange(data) {
 }
 ```
 
+#### Example
+
+```
+this.state = {
+    status: '',
+    message: '',
+    value: ''
+}
+
+<TextArea
+    value={this.state.value}
+    validate={this.validate}
+    status={this.state.status}
+    description={this.state.message}
+    onChange={this.onChange}
+/>
+
+onChange(e, data) {
+    this.setState({value: data.value})
+}
+
+validate(value){
+    if (value){
+        if (value.length < 5){
+            this.setState({status: 'error', message: 'TextArea should have 5 or more characters'});
+        } else {
+            this.setState({status: '', message: ''})
+        }
+    } else {
+        this.setState({status: 'error', message: 'This TextArea is required'});
+    }
+}
+```
+
+In this case, when the user focuses the textarea and blurs away immediately, an error class will get applied to the textarea and the user will get informed that thee textarea is required. When the user starts typing, the error message will change, saying that the textarea should have 5 or more characters, when this is done, the error classes will get removed. Alternatevely, when the validation passes, we can pass a success status to apply the related class.
+
 <div class="playground-doc">
 
 ## Supported attributes

@@ -86,7 +86,7 @@ describe('TextArea', () => {
         expect(component.find('div').first().hasClass('rdw-editor-wrapper')).toBeTruthy;
     });
 
-    test('error classes get applied when input is not validated', () => {
+    test('error classes get applied when textarea is not validated', () => {
         let inputValue = '';
         let status = null;
 
