@@ -4,38 +4,60 @@ class RadioExample extends React.Component {
         super();
 
         this.onChange = this.onChange.bind(this);
+
+        this.state = {
+            position: [
+                {
+                    selected: false,
+                    value: 'fontend',
+                    label: 'Frontend Developer'
+                },
+                {
+                    selected: false,
+                    value: 'backend',
+                    label: 'Backend Developer'
+                }
+            ],
+            radios: []
+        }
     }
 
     render() {
         return(
             <div>
-                    <RadioGroup
-                        onChange={this.onChange}
-                        title="Horizontal radios"
-                        spacing={10}
-                        dataLabel="horizontal"
-                    >
-                        <Radio value={'Radio1'}/>
-                        <Radio value={'Radio2'} label="This one has a label" selected/>
-                        <Radio value={'Radio3'} label="This one is disabled" disabled/>
-                    </RadioGroup>
-                    <br/>
-                    <RadioGroup
-                        onChange={this.onChange}
-                        title="Vertical radios"
-                        spacing={10}
-                        dataLabel="vertical"
-                        vertical
-                    >
-                        <Radio value={'Radio4'}/>
-                        <Radio value={'Radio5'} label="This one has a label"/>
-                        <Radio value={'Radio6'} label="This one is disabled" disabled/>
-                    </RadioGroup>
+                <RadioGroup
+                    onChange={this.onChange}
+                    title="Horizontal radios"
+                    spacing={10}
+                    selectedRadios={this.state.position}
+                />
+                <br/>
+                <RadioGroup
+                    onChange={this.onRadioChange}
+                    title="Vertical radios"
+                    spacing={10}
+                    selectedRadios={this.state.radios}
+                    vertical
+                >
+                    <Radio
+                        value="radio1"
+                        label="First Radio"
+                    />
+                    <Radio
+                        value="radio2"
+                        label="Second Radio"
+                        disabled
+                    />
+                </RadioGroup>
             </div>
         );
     }
 
     onChange(e, data) {
+       this.setState({position: data.value});
+    }
+
+    onRadioChange(e, data){
         console.log(data.value);
     }
 }
