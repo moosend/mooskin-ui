@@ -41,7 +41,7 @@ Import {CheckboxGroup} from 'mooskin';
     <CheckboxGroup.Checkbox id={'Checkbox3'} value="Checkbox3" label="More Checkbox"/>
 </CheckboxGroup>
 ```
-or by passing the `selectedProp` only
+or by passing the `selectedChecks` prop only
 ```
 const checked = [
     {

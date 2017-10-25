@@ -29,23 +29,175 @@ exports[`Radio renders Radio correctly 1`] = `
 `;
 
 exports[`Radio renders RadioGroup correctly 1`] = `
-<div
-  className="radiogroup-component myClass"
+<RadioGroup
+  className="myClass"
+  dataLabel="plan"
   id="radio1"
+  onChange={[Function]}
+  selectedRadios={
+    Array [
+      Object {
+        "label": "Radio1",
+        "selected": true,
+        "value": "Radio1",
+      },
+      Object {
+        "label": "Radio2",
+        "selected": false,
+        "value": "Radio2",
+      },
+      Object {
+        "label": "Radio3",
+        "selected": false,
+        "value": "Radio3",
+      },
+    ]
+  }
+  spacing={10}
   style={
     Object {
       "color": "blue",
     }
   }
+  title="Select a plan"
+  vertical={true}
 >
-  <H2
-    className=""
-    style={Object {}}
-  >
-    Select a plan
-  </H2>
   <div
-    className=""
-  />
-</div>
+    className="radiogroup-component myClass"
+    id="radio1"
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+  >
+    <H2
+      className=""
+      style={Object {}}
+    >
+      <h2
+        className="h2-component h2 "
+        id={undefined}
+        style={Object {}}
+      >
+        Select a plan
+      </h2>
+    </H2>
+    <div
+      className=""
+    >
+      <Radio
+        key="0"
+        label="Radio1"
+        name="1482363367071"
+        onClick={[Function]}
+        selected={true}
+        spacing={10}
+        value="Radio1"
+        vertical={true}
+      >
+        <div
+          className="radio-component radio  undefined radioChecked"
+          style={
+            Object {
+              "marginBottom": "10px",
+            }
+          }
+        >
+          <input
+            checked={true}
+            disabled={undefined}
+            id="4zlbrf"
+            name="1482363367071"
+            onClick={[Function]}
+            readOnly={true}
+            type="radio"
+            value="Radio1"
+          />
+          <label
+            htmlFor="4zlbrf"
+          >
+            <span>
+              Radio1
+            </span>
+          </label>
+        </div>
+      </Radio>
+      <Radio
+        key="1"
+        label="Radio2"
+        name="1482363367071"
+        onClick={[Function]}
+        selected={false}
+        spacing={10}
+        value="Radio2"
+        vertical={true}
+      >
+        <div
+          className="radio-component radio  undefined "
+          style={
+            Object {
+              "marginBottom": "10px",
+            }
+          }
+        >
+          <input
+            checked={false}
+            disabled={undefined}
+            id="4zlbrf"
+            name="1482363367071"
+            onClick={[Function]}
+            readOnly={true}
+            type="radio"
+            value="Radio2"
+          />
+          <label
+            htmlFor="4zlbrf"
+          >
+            <span>
+              Radio2
+            </span>
+          </label>
+        </div>
+      </Radio>
+      <Radio
+        key="2"
+        label="Radio3"
+        name="1482363367071"
+        onClick={[Function]}
+        selected={false}
+        spacing={10}
+        value="Radio3"
+        vertical={true}
+      >
+        <div
+          className="radio-component radio  undefined "
+          style={
+            Object {
+              "marginBottom": "10px",
+            }
+          }
+        >
+          <input
+            checked={false}
+            disabled={undefined}
+            id="4zlbrf"
+            name="1482363367071"
+            onClick={[Function]}
+            readOnly={true}
+            type="radio"
+            value="Radio3"
+          />
+          <label
+            htmlFor="4zlbrf"
+          >
+            <span>
+              Radio3
+            </span>
+          </label>
+        </div>
+      </Radio>
+    </div>
+  </div>
+</RadioGroup>
 `;
