@@ -5,9 +5,30 @@ class CheckBoxExample extends React.Component {
 
         this.onChange = this.onChange.bind(this);
         this.onClick = this.onClick.bind(this);
+        this.onCheckChange = this.onCheckChange.bind(this);
+        this.validate = this.validate.bind(this);
 
         this.state = {
-            checked: false
+            checked: false,
+            status: 'error',
+            message: '',
+            value: [
+                {
+                    checked: true,
+                    value: 'Checkbox1',
+                    label:'Checkbox1'
+                },
+                {
+                    checked: false,
+                    value: 'Checkbox2',
+                    label: 'Checkbox2'
+                },
+                {
+                    checked: false,
+                    value: 'Checkbox3',
+                    label: 'Checkbox3'
+                }
+            ]
         };
     }
 
@@ -15,13 +36,17 @@ class CheckBoxExample extends React.Component {
         return (
             <div>
                 <CheckboxGroup
-                    onChange={this.onChange}
+                    onChange={this.onCheckChange}
                     title="Vertical checkboxes"
                     dataLabel="horizontal"
+                    validate={this.validate}
+                    status={this.state.status}
+                    description={this.state.message}
+                    selectedChecks={this.state.value}
                 >
-                    <Checkbox value={'Checkbox1'} checked/>
-                    <Checkbox value={'Checkbox2'} label="This one has a label" description="Check it"/>
-                    <Checkbox value={'Checkbox3'} label="Disabled" disabled description="It's disabled" checked/>
+                    <Checkbox value={'Checkbox1'} label="Checkbox1"/>
+                    <Checkbox value={'Checkbox2'} label="Checkbox2"/>
+                    <Checkbox value={'Checkbox3'} label="Checkbox3"/>
                 </CheckboxGroup>
                 <CheckboxGroup
                     onChange={this.onChange}
@@ -43,6 +68,24 @@ class CheckBoxExample extends React.Component {
 
     onChange(e, data) {
         console.log(data.value);
+    }
+
+    onCheckChange(e, data) {
+        this.setState({value: data.value});
+    }
+
+    validate(value) {
+        let checked = 0;
+        value.forEach((check) => {
+            if (check.checked){
+                checked = checked + 1;
+            }
+        });
+        if (checked >= 2){
+            this.setState({status: 'success', message: ''});
+        } else {
+            this.setState({status: 'error', message: 'At least 2 checkboxes need to be checked'});
+        }
     }
 
     onClick(e, data) {

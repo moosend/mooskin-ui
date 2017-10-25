@@ -132,6 +132,8 @@ In this case, when the user focuses the input and blurs away immediately, an err
 * `dataLabel` - label what kind of data 
 * `style` - input field style
 * `onChange` - callback to be triggered on input change
+* `validate` - validate function
+* `status` - to be used with validate, to apply classes based on error or success
 
 </div>
 

@@ -28,6 +28,15 @@ export interface ICheckBoxGroupProps {
     /** reflects to the state of the checkboxGroup */
     selectedChecks?: ICheckBoxData[];
 
+    /** CheckboxGroup description (small italic bottom) */
+    description?: string;
+
+    /** status of the checkbox, error or success */
+    status?: 'error' | 'success';
+
+    /** validate function */
+    validate?: (value?: ICheckBoxData[]) => void;
+
     /** override CheckboxGroup styles */
     style?: React.CSSProperties;
 
@@ -74,6 +83,9 @@ export interface ICheckBoxProps {
     /** Checkbox label */
     label?: string;
 
+    /** status of the checkbox, error or success (inherited from parent) */
+    status?: 'error' | 'success';
+
     /** Checkbox description */
     description?: string;
 }
@@ -119,6 +131,9 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
 
         const align = this.props.horizontal ? styles.horizontal : '';
 
+        const status = this.props.status === 'error' ? styles.descError :
+        this.props.status === 'success' ? styles.descSuccess : '';
+
         return (
             <div
                 id={id}
@@ -129,6 +144,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                 <div className={align}>
                     {this.assignCheckBoxes()}
                 </div>
+                <i className={`${styles.message} ${status}`}>{this.props.description}</i>
             </div>
         );
     }
@@ -149,6 +165,9 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
             });
             this.setState({data});
             this.props.onChange && this.props.onChange(e, {value: data, dataLabel: this.props.dataLabel});
+            if (this.props.status){
+                this.props.validate && this.props.validate(data);
+            }
         };
     }
 
@@ -182,6 +201,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                     onClick: /** child.props.onClick ? child.props.onClick : */
                             this.onClick({checked, value: child.props.value, label}),
                     spacing: this.props.spacing,
+                    status: this.props.status,
                     value: data[index].value
                 };
 
@@ -239,6 +259,18 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
         return Math.random().toString(36).substr(2, 10);
     };
 
+    const getStatus = () => {
+        const checkStatus = props.status && props.status;
+        if (checkStatus){
+            if (checkStatus === 'error'){
+                return styles.error;
+            } else if (checkStatus === 'success'){
+                return styles.success;
+            }
+        }
+    };
+
+    const status = getStatus();
     const disabledStyles = props.disabled ? styles.disabledCheckbox : '';
     const label = props.label ? props.label : props.value;
     const checked = props.checked ? true : false;
@@ -247,7 +279,8 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     props.horizontal ?
                     {marginRight: `${props.spacing}px`} :
                     {marginBottom: `${props.spacing}px`} : {};
-    const classes = `checkbox-component ${styles.checkbox} ${disabledStyles} ${props.className} ${checkedStyles}`;
+    const classes = `checkbox-component ${styles.checkbox}
+                    ${disabledStyles} ${props.className} ${checkedStyles} ${status}`;
 
     const genId = generateId();
 
@@ -271,7 +304,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 onClick={onCheckBoxClick({checked: !checked, value: props.value, label})}
                 disabled={props.disabled}
                 defaultChecked={checked}
-                className={'material-icons'}
+                className={`material-icons`}
             />
             <label htmlFor={genId}>
                 <span>{label}</span>

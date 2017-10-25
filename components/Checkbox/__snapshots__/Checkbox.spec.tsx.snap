@@ -2,7 +2,8 @@
 
 exports[`CheckBox renders CheckBox correctly 1`] = `
 <div
-  className="checkbox-component checkbox disabledCheckbox myClass checkboxChecked"
+  className="checkbox-component checkbox
+                    disabledCheckbox myClass checkboxChecked undefined"
   style={
     Object {
       "color": "blue",
@@ -50,6 +51,9 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
   </H2>
   <div
     className="horizontal"
+  />
+  <i
+    className="message "
   />
 </div>
 `;

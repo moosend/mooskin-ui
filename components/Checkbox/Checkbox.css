@@ -29,7 +29,7 @@
 
 .checkbox input[type='checkbox'] {
     vertical-align: middle;
-    appearance:none;
+    appearance: none;
     cursor: pointer;
     font-size: 1.3125rem;  
     outline: none;  
@@ -63,8 +63,42 @@
     margin-left: 7px;
 }
 
+.message{
+    display: block;
+    color: var(--italicDescription);
+    font-size: .78571428571rem;
+    margin-left: 7px;
+    margin-top: 5px;
+}
+
+.descError{
+    color: #ec3232;
+}
+
+.descSuccess{
+    color: #00cc44;
+}
+
 .disabledCheckbox i{
     cursor: default;
+}
+
+/* .success input[type='checkbox']::before{
+    color: #00cc44;
+} */
+
+.error input[type='checkbox']::before{
+    color: #ec3232;
+}
+
+.checkboxChecked.error input[type='checkbox']::before {
+    content: '\e834';
+    color: var(--moosendBlue);
+}
+
+.disabledCheckbox.error input[type='checkbox']:disabled::before {
+    cursor: not-allowed;
+    color: #eaeaea;
 }
 
 @media (--xSmall){
