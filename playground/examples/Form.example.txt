@@ -155,34 +155,6 @@ class FormExample extends React.Component {
                         <Button onClick={this.reset}>Reset</Button>
                     </FormGroup>
                 </Form>
-                <hr/>
-                <H2>Forms/FormGroups</H2>
-                <Form >
-                    <FormGroup>
-                        <Input label="Your firstname:" dataLabel="firstname"/>
-                        <Input label="Your lastname:" dataLabel="lastname"/>
-                        <Input label="Country:" dataLabel="country"/>
-                    </FormGroup>
-                    <FormGroup>
-                        <FormGroup>
-                            <RadioGroup title="Some Radios" dataLabel="radios" onChange={this.setValue}>
-                                <Radio value="Radio 1"/>
-                                <Radio value="Radio 2"/>
-                                <Radio value="Radio 3"/>
-                                <Radio value="Radio 4"/>
-                                <Radio value="Radio 5"/>
-                            </RadioGroup>
-                        </FormGroup>
-                        <FormGroup>
-                            <CheckboxGroup onChange={this.setValue} dataLabel="checkboxes">
-                                <Checkbox value="Checkbox 1" />
-                                <Checkbox value="Checkbox 2" />
-                                <Checkbox value="Checkbox 3" />
-                            </CheckboxGroup>
-                        </FormGroup>
-                    </FormGroup>
-                    <Button>Submit</Button>
-                </Form>
             </div>
         );
     }

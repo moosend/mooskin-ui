@@ -28,7 +28,8 @@ class CheckBoxExample extends React.Component {
                     value: 'Checkbox3',
                     label: 'Checkbox3'
                 }
-            ]
+            ],
+            value2: []
         };
     }
 
@@ -38,28 +39,21 @@ class CheckBoxExample extends React.Component {
                 <CheckboxGroup
                     onChange={this.onCheckChange}
                     title="Vertical checkboxes"
-                    dataLabel="horizontal"
                     validate={this.validate}
                     status={this.state.status}
                     description={this.state.message}
                     selectedChecks={this.state.value}
-                >
-                    <Checkbox value={'Checkbox1'} label="Checkbox1"/>
-                    <Checkbox value={'Checkbox2'} label="Checkbox2"/>
-                    <Checkbox value={'Checkbox3'} label="Checkbox3"/>
-                </CheckboxGroup>
+                />
                 <CheckboxGroup
+                    horizontal
                     onChange={this.onChange}
                     title="Horizontal checkboxes"
-                    dataLabel="horizontal"
-                    spacing={15}
-                    horizontal
+                    selectedChecks={this.state.value2}
                 >
-                    <Checkbox value={'Checkbox1'}/>
-                    <Checkbox value={'Checkbox2'} label="This one has a label" checked/>
-                    <Checkbox value={'Checkbox3'} label="This one is disabled" disabled description="It's disabled"/>
+                    <Checkbox value="email" label="Email" checked />
+                    <Checkbox value="tel" label="Telephone" />
+                    <Checkbox value="skype" label="Skype" />
                 </CheckboxGroup>
-                <br/>
                 <Checkbox value="doni" label="Lone Checkbox" onClick={this.onClick} checked={this.state.checked}/>
             </div>
         );
@@ -67,10 +61,12 @@ class CheckBoxExample extends React.Component {
     }
 
     onChange(e, data) {
-        console.log(data.value);
+        console.log(data);
+        this.setState({value2: data.value});
     }
 
     onCheckChange(e, data) {
+        console.log(data.value);
         this.setState({value: data.value});
     }
 
