@@ -149,7 +149,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
         );
     }
 
-    onClick = (dataArray: {checked: boolean, value: string, label: string}, data: ICheckBoxData[]) => {
+    onClick = (dataArray: {checked: boolean, value?: string, label?: string}, data: ICheckBoxData[]) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             data.map ((checkbox, index) => {
                 if (checkbox.value === dataArray.value){
@@ -207,7 +207,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
             if (React.isValidElement<ICheckBoxProps>(child)){
                 const checked = data[index].checked === true ? true : false;
                 const value = data[index].value ? data[index].value : `checkbox${index}`;
-                const label = data[index].label ? data[index].label : `Checkbox${index}`;
+                const label = data[index].label ? data[index].label : value;
                 const extraProps: Partial<ICheckBoxProps & {key: number}> = {
                     checked: data[index].checked,
                     horizontal: this.props.horizontal,
