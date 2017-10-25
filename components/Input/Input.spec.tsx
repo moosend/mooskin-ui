@@ -79,4 +79,28 @@ describe('Input', () => {
         expect(func).toHaveBeenCalled();
     });
 
+    test('error classes get applied when input is not validated', () => {
+        let inputValue = '';
+        let status = null;
+
+        const onChange = (e, data) => {
+            inputValue = data.value;
+        };
+
+        const validate = (value) => {
+            status = value ? value < 5 ? 'error' : '' : 'error';
+        };
+
+        const component = shallow(<Input status={status} validate={validate} onChange={onChange} value={inputValue}/>);
+
+        component.find('input').simulate('blur');
+        expect(component.find('input').hasClass('error')).toBeTruthy;
+
+        component.find('input').simulate('change', { target: { value: 'text' }});
+        expect(component.find('input').hasClass('error')).toBeTruthy;
+
+        component.find('input').simulate('change', { target: { value: 'more text' }});
+        expect(component.find('input').hasClass('error')).toBeFalsy;
+    });
+
 });
