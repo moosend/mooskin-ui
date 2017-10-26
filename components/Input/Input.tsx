@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Input.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 export interface IProps {
 
@@ -36,9 +36,6 @@ export interface IProps {
     /** input label */
     label?: string;
 
-    /** input description (small italic bottom) */
-    description?: string;
-
     /** spacing between label and input */
     labelWidth?: number;
 
@@ -54,11 +51,14 @@ export interface IProps {
     /** override input class */
     className?: string;
 
+    /** input description (small italic bottom) */
+    description?: string;
+
     /** status of the input, error or success */
     status?: 'error' | 'success';
 
     /** validate function */
-    validate?: (value?: string) => void;
+    validate?: (data: IValidationCallbackData) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -67,10 +67,6 @@ export interface IProps {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 
 }
-
-// export interface IInputState = {
-
-// }
 
 class Input extends React.Component<IProps, {}> {
 
@@ -143,15 +139,15 @@ class Input extends React.Component<IProps, {}> {
         this.props.onChange &&
         this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
         if (this.props.status){
-            this.props.validate && this.props.validate(e.target.value);
+            this.props.validate && this.props.validate({value: e.target.value, dataLabel: this.props.dataLabel});
         }
     }
 
     validateOnBlur = () => {
         if (this.props.value){
-            this.props.validate && this.props.validate(this.props.value);
+            this.props.validate && this.props.validate({value: this.props.value, dataLabel: this.props.dataLabel});
         } else {
-            this.props.validate && this.props.validate();
+            this.props.validate && this.props.validate({dataLabel: this.props.dataLabel});
         }
     }
 

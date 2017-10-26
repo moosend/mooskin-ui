@@ -196,4 +196,44 @@ describe('CheckBox', () => {
 
         expect(func).not.toHaveBeenCalled();
     });
+
+    test('callback func is not called when a disabled checkbox is clicked', () => {
+        const func = jest.fn();
+        let status = null;
+
+        const checked = [
+            {
+                checked: true,
+                label: 'Checkbox1',
+                value: 'Checkbox1'
+            },
+            {
+                checked: false,
+                label: 'Checkbox2',
+                value: 'Checkbox2'
+            },
+            {
+                checked: false,
+                label: 'Checkbox3',
+                value: 'Checkbox3'
+            }
+        ];
+
+        const validate = (value) => {
+            let checkedNumber = 0;
+            value.forEach((check) => {
+                if (check.checked){
+                    checkedNumber = checkedNumber + 1;
+                }
+            });
+            status = checkedNumber < 2 ? 'error' : '';
+        };
+
+        const component = shallow(
+            <CheckboxGroup status={status} validate={validate} selectedChecks={checked} onChange={func} />
+        );
+
+        expect(component.find('.error')).toBeTruthy;
+
+    });
 });

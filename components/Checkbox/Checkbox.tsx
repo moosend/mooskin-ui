@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Checkbox.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 import {H2} from '../Headings';
 
 export interface ICheckBoxGroupProps {
@@ -35,7 +35,10 @@ export interface ICheckBoxGroupProps {
     status?: 'error' | 'success';
 
     /** validate function */
-    validate?: (value?: ICheckBoxData[]) => void;
+    validate?: (data: IValidationCallbackData) => void;
+
+    /** wether the checkboxes are required (used within forms) */
+    required?: boolean;
 
     /** override CheckboxGroup styles */
     style?: React.CSSProperties;
@@ -89,10 +92,6 @@ export interface ICheckBoxProps {
     /** Checkbox description */
     description?: string;
 }
-
-// export interface ICheckBoxState{
-//     data: ICheckBoxData[];
-// }
 
 export interface ICheckBoxData{
     checked?: boolean | undefined;
@@ -165,7 +164,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
             // this.setState({data});
             this.props.onChange && this.props.onChange(e, {value: data, dataLabel: this.props.dataLabel});
             if (this.props.status){
-                this.props.validate && this.props.validate(data);
+                this.props.validate && this.props.validate({value: data, dataLabel: this.props.dataLabel});
             }
         };
     }

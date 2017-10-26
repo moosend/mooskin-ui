@@ -115,9 +115,26 @@
     margin-bottom: 10px;
 }
 
-.selectContainer .description{
+.description{
     display: block;
-    color: #b3b3b3;
+    color: var(--italicDescription);
     font-size: .78571428571rem;
-    margin: 1px 0px 0px 3px;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.success{
+    box-shadow: inset 0px 0px 0px 2px #00cc44;
+}
+
+.error{
+    box-shadow: inset 0px 0px 0px 2px #ec3232;
+}
+
+.descError{
+    color: #ec3232;
+}
+
+.descSuccess{
+    color: #00cc44;
 }

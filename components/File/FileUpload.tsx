@@ -36,6 +36,15 @@ export interface IFileProps{
     /** disabled file upload */
     disabled?: boolean;
 
+    /** fileupload description (small italic bottom) */
+    description?: string;
+
+    /** status of the fileupload, error or success */
+    status?: 'error' | 'success';
+
+    /** validate function */
+    validate?: (value?: string) => void;
+
     /** override File styles */
     style?: React.CSSProperties;
 
@@ -78,27 +87,33 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
 
     render(){
 
+        const {disabled, description, accept, style, id, label, buttonLabel, required, multiple} = this.props;
         const disabledFile = this.props.disabled ? styles.disabledFile : '';
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
+        const status = this.getStatus();
+        const descStatus = this.getDescStatus();
 
         return (
             <div
-                id={this.props.id}
+                id={id}
                 className={`file-upload-component ${styles.fileContainer} ${disabledFile}`}
-                style={this.props.style}
+                style={style}
             >
-                {this.props.label && <label className={styles.label} style={spacing}>{this.props.label}</label>}
-                <span className={styles.name}>{this.state.name}</span>
-                <span className={styles.button}>{this.props.buttonLabel}</span>
-                <input
-                    accept={this.props.accept}
-                    required={this.props.required}
-                    disabled={this.props.disabled}
-                    onChange={this.onChange}
-                    type="file"
-                    className={styles.input}
-                    multiple={this.props.multiple}
-                />
+                <div className={styles.contentContainer}>
+                    {label && <label className={styles.label} style={spacing}>{label}</label>}
+                    <span className={`${styles.name} ${status}`}>{this.state.name}</span>
+                    <span className={styles.button}>{buttonLabel}</span>
+                    <input
+                        accept={accept}
+                        required={required}
+                        disabled={disabled}
+                        onChange={this.onChange}
+                        type="file"
+                        className={styles.input}
+                        multiple={multiple}
+                    />
+                </div>
+                {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
             </div>
         );
     }
@@ -127,5 +142,27 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         }
         const fileStrings = fileNames.join(', ');
         return fileStrings;
+    }
+
+    getStatus = () => {
+        const fileStatus = this.props.status && this.props.status;
+        if (fileStatus){
+            if (fileStatus === 'error'){
+                return styles.error;
+            } else if (fileStatus === 'success'){
+                return styles.success;
+            }
+        }
+    }
+
+    getDescStatus = () => {
+        const fileStatus = this.props.status && this.props.status;
+        if (fileStatus){
+            if (fileStatus === 'error'){
+                return styles.descError;
+            } else if (fileStatus === 'success'){
+                return styles.descSuccess;
+            }
+        }
     }
 }

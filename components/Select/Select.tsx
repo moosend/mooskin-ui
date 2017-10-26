@@ -37,6 +37,15 @@ export interface ISelectProps {
     /** select description (small italic bottom) */
     description?: string;
 
+    /** status of the select, error or success */
+    status?: 'error' | 'success';
+
+    /** wether the select is required (used within forms) */
+    required?: boolean;
+
+    /** validate function */
+    validate?: (value?: string, datalabel?: string) => void;
+
     /** override button styles */
     style?: React.CSSProperties;
 
@@ -95,6 +104,9 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
         const selected = this.getSelectedChildLabel();
 
+        const status = this.getStatus();
+        const descStatus = this.getDescStatus();
+
         return (
             <div className={`select-component ${this.props.className}`} style={this.props.style}>
                 <label className={styles.label}>
@@ -106,7 +118,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                     style={{display: !this.state.list && 'none'}}
                 />
                 <div className={styles.selectContainer} style={{zIndex}}>
-                    <div className={styles.labelContainer} >
+                    <div className={`${styles.labelContainer} ${status}`} >
                         <input
                             type="text"
                             className={styles.innerInput}
@@ -115,6 +127,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             placeholder="Type to filter options"
                             onChange={this.onChangeFilter}
                             ref={(input) => (input && this.state.list && input.focus())}
+                            onBlur={this.validateOnBlur}
                         />
                         <div
                             onClick={this.onOpenList}
@@ -133,7 +146,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             {options}
                         </ul>
                     </div>
-                    <i className={styles.description}>{this.props.description}</i>
+                    <i className={`${styles.description} ${descStatus}`}>{this.props.description}</i>
                 </div>
             </div>
         );
@@ -215,6 +228,38 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         });
 
         return !arrayHasDupes(values);
+    }
+
+    getStatus = () => {
+        const selectStatus = this.props.status && this.props.status;
+        if (selectStatus){
+            if (selectStatus === 'error'){
+                return styles.error;
+            } else if (selectStatus === 'success'){
+                return styles.success;
+            }
+        }
+    }
+
+    getDescStatus = () => {
+        const selectStatus = this.props.status && this.props.status;
+        if (selectStatus){
+            if (selectStatus === 'error'){
+                return styles.descError;
+            } else if (selectStatus === 'success'){
+                return styles.descSuccess;
+            }
+        }
+    }
+
+    validateOnBlur = () => {
+        if (this.props.required){
+            if (this.props.selected){
+                this.props.validate && this.props.validate(this.props.selected, this.props.dataLabel);
+            } else {
+                this.props.validate && this.props.validate('', this.props.dataLabel);
+            }
+        }
     }
 }
 

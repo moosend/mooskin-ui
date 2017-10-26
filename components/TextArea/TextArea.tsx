@@ -7,7 +7,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 import styles from './TextArea.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 export interface ITextAreaProps {
 
@@ -69,7 +69,7 @@ export interface ITextAreaProps {
     status?: 'error' | 'success';
 
     /** validate function */
-    validate?: (value?: string) => void;
+    validate?: (data: IValidationCallbackData) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -174,15 +174,15 @@ export const TextAreaComponent: React.StatelessComponent<ITextAreaProps> = (prop
         props.onChange &&
         props.onChange(e, {value: e.target.value, dataLabel: props.dataLabel});
         if (props.status){
-            props.validate && props.validate(e.target.value);
+            props.validate && props.validate({value: e.target.value, dataLabel: this.props.dataLabel});
         }
     };
 
     const validateOnBlur = () => {
         if (props.value){
-            props.validate && props.validate(props.value);
+            props.validate && props.validate({value: props.value, dataLabel: props.dataLabel});
         } else {
-            props.validate && props.validate();
+            props.validate && props.validate({dataLabel: props.dataLabel});
         }
     };
 
