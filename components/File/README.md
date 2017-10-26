@@ -84,7 +84,6 @@ this.state = {
 
 <FileUpload
     file={this.state.file}
-    value={this.state.value}
     validate={this.validate}
     status={this.state.status}
     description={this.state.message}
