@@ -67,4 +67,13 @@ describe('DatePicker', () => {
         expect(component.find('div').at(2).prop('style')).toEqual({display: 'none'});
     });
 
+    test('applies relevant classes when the status prop is passed', () => {
+        const func = jest.fn();
+
+        const component = shallow(<DatePicker status="error" onChange={func}/>);
+
+        expect(component.find('.error')).toBeTruthy;
+
+    });
+
 });

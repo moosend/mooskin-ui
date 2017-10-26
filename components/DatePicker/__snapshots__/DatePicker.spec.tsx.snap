@@ -20,12 +20,16 @@ exports[`DatePicker renders correctly 1`] = `
     className="wrapper"
   >
     <input
-      className="dateInput disabled"
+      className="dateInput disabled undefined"
       disabled={true}
+      onBlur={[Function]}
       onClick={[Function]}
       readOnly={true}
       required={true}
       value="01 Jan 2013, 0:00"
+    />
+    <i
+      className="description undefined"
     />
     <div
       className="calendar"

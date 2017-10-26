@@ -96,9 +96,9 @@ onChange(e, data) {
     this.setState({value: data.value})
 }
 
-validate(value){
-    if (value){
-        if (value.length < 5){
+validate(data){
+    if (data.value){
+        if (data.value.length < 5){
             this.setState({status: 'error', message: 'Input should have 5 or more characters'});
         } else {
             this.setState({status: '', message: ''})
