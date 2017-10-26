@@ -48,7 +48,7 @@ describe('FileUpload', () => {
         component.find('input').simulate('change', { target: { files: [{name: 'File1'}] }});
 
         expect(func).toHaveBeenCalled();
-        expect(component.find('div').prop('style')).toEqual({color: 'blue'});
+        expect(component.find('div').first().prop('style')).toEqual({color: 'blue'});
         expect(component.find('span').first().text()).toBe('File1');
     });
 
@@ -60,7 +60,7 @@ describe('FileUpload', () => {
         component.find('input').simulate('change', { target: { files: [{name: 'File1'}, {name: 'File2'}] }});
 
         expect(func).toHaveBeenCalled();
-        expect(component.find('div').hasClass('myClass')).toBeTruthy;
+        expect(component.find('div').first().hasClass('myClass')).toBeTruthy;
         expect(component.find('span').first().text()).toBe('File1, File2');
     });
 

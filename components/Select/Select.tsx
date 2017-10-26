@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import {arrayHasDupes} from '../_utils/helper';
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 import styles from './Select.css';
 
@@ -44,7 +44,7 @@ export interface ISelectProps {
     required?: boolean;
 
     /** validate function */
-    validate?: (value?: string, datalabel?: string) => void;
+    validate?: (data: IValidationCallbackData) => void;
 
     /** override button styles */
     style?: React.CSSProperties;
@@ -159,6 +159,9 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     onClick = (option: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
+            if (this.props.status){
+                this.props.validate && this.props.validate({value: option, dataLabel: this.props.dataLabel});
+            }
             this.setState({list: false, selected: option, filter: ''});
         };
     }
@@ -255,9 +258,10 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     validateOnBlur = () => {
         if (this.props.required){
             if (this.props.selected){
-                this.props.validate && this.props.validate(this.props.selected, this.props.dataLabel);
+                this.props.validate &&
+                this.props.validate({value: this.props.selected, dataLabel: this.props.dataLabel});
             } else {
-                this.props.validate && this.props.validate('', this.props.dataLabel);
+                this.props.validate && this.props.validate({dataLabel: this.props.dataLabel});
             }
         }
     }

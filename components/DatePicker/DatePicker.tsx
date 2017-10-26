@@ -17,6 +17,9 @@ export interface IDateProps{
     /** date passed will be the selected date */
     date?: any;
 
+    /** datepicker placeholder */
+    placeholder?: string;
+
     /** format the labeled date */
     format?: string;
 
@@ -46,7 +49,6 @@ export interface IDateProps{
 }
 
 export interface IDateState{
-    date: any;
     displayPicker: boolean;
 }
 
@@ -62,7 +64,6 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         super(props);
 
         this.state = {
-            date: moment(this.props.date) || moment(),
             displayPicker: false
         };
     }
@@ -72,6 +73,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
         const disabledClasses = !this.props.disabled ? '' : styles.disabled;
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
+        const value = this.props.date ? moment(this.props.date).format(this.props.format) : undefined;
 
         return(
             <div
@@ -83,15 +85,16 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 <div className={styles.wrapper}>
                     <input
                         readOnly
-                        value={moment(this.state.date).format(this.props.format)}
+                        value={value}
                         onClick={this.toggle}
                         className={`${styles.dateInput} ${disabledClasses}`}
                         required={this.props.required}
                         disabled={this.props.disabled}
+                        placeholder={this.props.placeholder}
                     />
                     <div className={styles.calendar} style={{display: displayPicker}}>
                         <InputMoment
-                            moment={this.state.date}
+                            moment={moment(this.props.date)}
                             onChange={this.onChange}
                             onSave={this.toggle}
                         />
@@ -103,10 +106,9 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
     onChange = (date: any) => {
-        this.setState({date});
         // !this.props.disabled &&
         this.props.onChange &&
-        this.props.onChange({value: this.state.date.format('x'), dataLabel: this.props.dataLabel});
+        this.props.onChange({value: date.format('x'), dataLabel: this.props.dataLabel});
     }
 
     toggle = () => {

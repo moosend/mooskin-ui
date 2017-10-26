@@ -94,8 +94,8 @@ describe('TextArea', () => {
             inputValue = data.value;
         };
 
-        const validate = (value) => {
-            status = value ? value < 5 ? 'error' : '' : 'error';
+        const validate = (data) => {
+            status = data.value ? data.value < 5 ? 'error' : '' : 'error';
         };
 
         const component = mount(

@@ -40,10 +40,11 @@ exports[`Select renders Select correctly 1`] = `
     }
   >
     <div
-      className="labelContainer"
+      className="labelContainer undefined"
     >
       <input
         className="innerInput"
+        onBlur={[Function]}
         onChange={[Function]}
         placeholder="Type to filter options"
         style={
@@ -81,7 +82,7 @@ exports[`Select renders Select correctly 1`] = `
       <ul />
     </div>
     <i
-      className="description"
+      className="description undefined"
     >
       with description
     </i>

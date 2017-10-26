@@ -163,9 +163,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
             });
             // this.setState({data});
             this.props.onChange && this.props.onChange(e, {value: data, dataLabel: this.props.dataLabel});
-            if (this.props.status){
-                this.props.validate && this.props.validate({value: data, dataLabel: this.props.dataLabel});
-            }
+            this.props.validate && this.props.validate({value: data, dataLabel: this.props.dataLabel});
         };
     }
 

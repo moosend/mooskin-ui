@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './FileUpload.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 export interface IFileProps{
 
@@ -43,7 +43,7 @@ export interface IFileProps{
     status?: 'error' | 'success';
 
     /** validate function */
-    validate?: (value?: string) => void;
+    validate?: (data: IValidationCallbackData) => void;
 
     /** override File styles */
     style?: React.CSSProperties;
@@ -125,12 +125,18 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
             !this.props.disabled && this.setState({file: files, name: fileNames});
             !this.props.disabled && this.props.onChange &&
             this.props.onChange(e, {value: files, dataLabel: this.props.dataLabel});
+            if (this.props.status){
+                this.props.validate && this.props.validate({value: files, dataLabel: this.props.dataLabel});
+            }
         } else{
             const file = e.target.files && e.target.files[0];
             if (file){
                 !this.props.disabled && this.setState({file, name: file.name});
                 !this.props.disabled && this.props.onChange &&
                 this.props.onChange(e, {value: file, dataLabel: this.props.dataLabel});
+                if (this.props.status){
+                    this.props.validate && this.props.validate({value: file, dataLabel: this.props.dataLabel});
+                }
             }
         }
     }

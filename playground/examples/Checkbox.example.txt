@@ -10,7 +10,7 @@ class CheckBoxExample extends React.Component {
 
         this.state = {
             checked: false,
-            status: 'error',
+            status: '',
             message: '',
             value: [
                 {
@@ -70,9 +70,9 @@ class CheckBoxExample extends React.Component {
         this.setState({value: data.value});
     }
 
-    validate(value) {
+    validate(data) {
         let checked = 0;
-        value.forEach((check) => {
+        data.value.forEach((check) => {
             if (check.checked){
                 checked = checked + 1;
             }
