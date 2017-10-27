@@ -137,7 +137,6 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
                 this.props.onChange(e, {value: file, dataLabel: this.props.dataLabel});
                 if (this.props.status){
                     this.props.validate &&
-                    
                     this.props.validate({value: file, dataLabel: this.props.dataLabel, required: this.props.required});
                 }
             }
