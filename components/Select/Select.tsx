@@ -44,7 +44,7 @@ export interface ISelectProps {
     required?: boolean;
 
     /** validate function */
-    validate?: (data: IValidationCallbackData) => void;
+    validate?: (data: IValidationCallbackData) => boolean;
 
     /** override button styles */
     style?: React.CSSProperties;

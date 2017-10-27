@@ -35,7 +35,7 @@ export interface ICheckBoxGroupProps {
     status?: 'error' | 'success';
 
     /** validate function */
-    validate?: (data: IValidationCallbackData) => void;
+    validate?: (data: IValidationCallbackData) => boolean;
 
     /** wether the checkboxes are required (used within forms) */
     required?: boolean;

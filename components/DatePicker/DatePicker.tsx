@@ -45,7 +45,7 @@ export interface IDateProps{
     status?: 'error' | 'success';
 
     /** validate function */
-    validate?: (data: IValidationCallbackData) => void;
+    validate?: (data: IValidationCallbackData) => boolean;
 
     /** override DatePicker styles */
     style?: React.CSSProperties;

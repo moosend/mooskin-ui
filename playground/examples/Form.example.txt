@@ -13,6 +13,7 @@ class FormExample extends React.Component {
         this.validateForm = this.validateForm.bind(this);
         this.validateInput = this.validateInput.bind(this);
         this.validateCheckbox = this.validateCheckbox.bind(this);
+        this.validateSelect = this.validateSelect.bind(this);
 
         this.state = {
             contact: {
@@ -64,7 +65,7 @@ class FormExample extends React.Component {
             ],
             salary: '',
             message: EditorState.createEmpty(),
-            duration: '',
+            duration: {value: undefined, status: '', message: ''},
             start: {value: undefined, status: '', message: ''},
             coverletter: {value: '', status: '', message: ''},
             logo: {value: undefined, status: '', message: ''},
@@ -208,12 +209,14 @@ class FormExample extends React.Component {
                             description={this.state.logo.message}
                         />
                         <Select
+                            required
                             dataLabel="duration"
                             onChange={this.setValidatedValue}
                             label="Training duration:"
                             selected={this.state.duration.value}
                             status={this.state.duration.status}
                             description={this.state.duration.message}
+                            validate={this.validateSelect}
                         >
                             <Option value="asap">Asap</Option>
                             <Option value="1-4w">1-4 weeks</Option>
@@ -332,6 +335,14 @@ class FormExample extends React.Component {
         });
         if (checked < 3){
             this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'At least three contact methods must be selected'}});
+            return false;
+        }
+        return true;
+    }
+
+    validateSelect(data){
+        if (!data.value && data.required){
+            this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'Please select an option first'}});
             return false;
         }
         return true;

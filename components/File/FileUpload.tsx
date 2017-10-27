@@ -43,7 +43,7 @@ export interface IFileProps{
     status?: 'error' | 'success';
 
     /** validate function */
-    validate?: (data: IValidationCallbackData) => void;
+    validate?: (data: IValidationCallbackData) => boolean;
 
     /** override File styles */
     style?: React.CSSProperties;
@@ -137,6 +137,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
                 this.props.onChange(e, {value: file, dataLabel: this.props.dataLabel});
                 if (this.props.status){
                     this.props.validate &&
+                    
                     this.props.validate({value: file, dataLabel: this.props.dataLabel, required: this.props.required});
                 }
             }
