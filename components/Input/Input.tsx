@@ -58,7 +58,7 @@ export interface IProps {
     status?: 'error' | 'success';
 
     /** validate function */
-    validate?: (data: IValidationCallbackData) => void;
+    validate?: (data: IValidationCallbackData) => boolean | void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
