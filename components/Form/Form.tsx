@@ -171,17 +171,16 @@ export default class Form extends React.Component<IFormProps, {}>{
 
     getEssence = (formChildren: any) => {
         let data: any = {};
-        data = this.collectEssence(formChildren, data, 0);
+        data = this.collectEssence(formChildren, data);
         return data;
     }
 
-    collectEssence = (formChildren: any, data: any, invalid: number) => {
-        console.log(invalid);
+    collectEssence = (formChildren: any, data: any) => {
         if (Array.isArray(formChildren)){
             formChildren.forEach((element: any) => {
                 if (element.type === Input || element.type === TextArea){
                     const value = this.getData(element, 'value');
-                    value ? data[element.props.dataLabel] = value : invalid += 1;
+                    value ? data[element.props.dataLabel] = value : null;
                 } else if (element.type === Switch){
                     const value = this.getData(element, 'on');
                     value ? data[element.props.dataLabel] = value : null;
@@ -204,15 +203,15 @@ export default class Form extends React.Component<IFormProps, {}>{
                     const value = this.getData(element, 'tags');
                     value ? data[element.props.dataLabel] = value : null;
                 } else {
-                    this.collectEssence(element, data, invalid);
+                    this.collectEssence(element, data);
                     // throw new Error('Elements used within the form are not supported');
                 }
             });
         }
         if (formChildren.type === FormGroup){
-            this.collectEssence(formChildren.props.children, data, invalid);
+            this.collectEssence(formChildren.props.children, data);
         }
-        console.log(invalid);
+        console.log(data.invalid);
         return data;
     }
 
