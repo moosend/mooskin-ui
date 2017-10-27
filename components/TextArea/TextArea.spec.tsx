@@ -95,14 +95,18 @@ describe('TextArea', () => {
         };
 
         const validate = (data) => {
-            status = data.value ? data.value < 5 ? 'error' : '' : 'error';
+            if (data.value < 5){
+                status = 'error';
+                return false;
+            }
+            return true;
         };
 
         const component = mount(
             <TextArea status={status} validate={validate} onChange={onChange} value={inputValue}/>
         );
 
-        component.find('textarea').simulate('blur');
+        component.simulate('blur');
         expect(component.find('textarea').hasClass('error')).toBeTruthy;
 
         component.find('textarea').simulate('change', { target: { value: 'text' }});

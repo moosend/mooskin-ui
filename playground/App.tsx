@@ -60,7 +60,8 @@ export const App = (props: any) => {
         Select,
         Switch,
         Tags,
-        TextArea
+        TextArea,
+        moment
     };
 
     const tabbedContentComponents = {

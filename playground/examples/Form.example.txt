@@ -14,6 +14,7 @@ class FormExample extends React.Component {
         this.validateInput = this.validateInput.bind(this);
         this.validateCheckbox = this.validateCheckbox.bind(this);
         this.validateSelect = this.validateSelect.bind(this);
+        this.validateDate = this.validateDate.bind(this);
 
         this.state = {
             contact: {
@@ -66,7 +67,7 @@ class FormExample extends React.Component {
             salary: '',
             message: EditorState.createEmpty(),
             duration: {value: undefined, status: '', message: ''},
-            start: {value: undefined, status: '', message: ''},
+            start: {value: moment(), status: '', message: ''},
             coverletter: {value: '', status: '', message: ''},
             logo: {value: undefined, status: '', message: ''},
             training: true,
@@ -198,6 +199,7 @@ class FormExample extends React.Component {
                             date={this.state.start.value}
                             status={this.state.start.status}
                             description={this.state.start.message}
+                            validate={this.validateDate}
                         />
                         <FileUpload
                             dataLabel="logo"
@@ -343,6 +345,14 @@ class FormExample extends React.Component {
     validateSelect(data){
         if (!data.value && data.required){
             this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'Please select an option first'}});
+            return false;
+        }
+        return true;
+    }
+
+    validateDate(data){
+        if(moment(data.value) < moment()){
+            this.setState({[data.dataLabel]: {value: moment(), status: 'error', message: 'Trying to select a past date'}});
             return false;
         }
         return true;

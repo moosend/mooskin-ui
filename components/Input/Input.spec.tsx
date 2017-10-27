@@ -88,7 +88,11 @@ describe('Input', () => {
         };
 
         const validate = (data) => {
-            status = data.value ? data.value < 5 ? 'error' : '' : 'error';
+            if (data.value < 5){
+                status = 'error';
+                return false;
+            }
+            return true;
         };
 
         const component = shallow(<Input status={status} validate={validate} onChange={onChange} value={inputValue}/>);
