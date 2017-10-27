@@ -160,7 +160,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
             if (this.props.status){
-                this.props.validate && this.props.validate({value: option, dataLabel: this.props.dataLabel});
+                this.props.validate &&
+                this.props.validate({value: option, dataLabel: this.props.dataLabel, required: this.props.required});
             }
             this.setState({list: false, selected: option, filter: ''});
         };
@@ -256,14 +257,10 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     }
 
     validateOnBlur = () => {
-        if (this.props.required){
-            if (this.props.selected){
-                this.props.validate &&
-                this.props.validate({value: this.props.selected, dataLabel: this.props.dataLabel});
-            } else {
-                this.props.validate && this.props.validate({dataLabel: this.props.dataLabel});
-            }
-        }
+        this.props.validate &&
+        this.props.validate(
+            {value: this.props.selected, dataLabel: this.props.dataLabel, required: this.props.required}
+        );
     }
 }
 

@@ -123,7 +123,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         this.props.onChange &&
         this.props.onChange({value: date.format('x'), dataLabel: this.props.dataLabel});
         if (this.props.status){
-            this.props.validate && this.props.validate({value: date, dataLabel: this.props.dataLabel});
+            this.props.validate &&
+            this.props.validate({value: date, dataLabel: this.props.dataLabel, required: this.props.required});
         }
     }
 
@@ -154,11 +155,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
     validateOnBlur = () => {
-        if (this.props.date){
-            this.props.validate && this.props.validate({value: this.props.date, dataLabel: this.props.dataLabel});
-        } else {
-            this.props.validate && this.props.validate({dataLabel: this.props.dataLabel});
-        }
+        this.props.validate &&
+        this.props.validate({value: this.props.date, dataLabel: this.props.dataLabel, required: this.props.required});
     }
 
 }

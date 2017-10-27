@@ -26,6 +26,9 @@ export interface IFormProps{
     /** callback data on submit */
     onSubmit?: (e: React.FormEvent<HTMLElement>, data: IInputCallbackData) => void;
 
+    /** validate form callback function (returns dataLabel of the unvalidated component) */
+    validate?: (dataLabel: string) => void;
+
     // /** Form action */
     // action?: string;
 
@@ -81,7 +84,10 @@ export default class Form extends React.Component<IFormProps, {}>{
         return (e: React.MouseEvent<HTMLElement>) => {
             e.preventDefault();
             const data = this.getEssence(children);
-            this.props.onSubmit && this.props.onSubmit(e, {value: data, dataLabel: this.props.dataLabel});
+            console.log(data);
+            if (data !== undefined){
+                this.props.onSubmit && this.props.onSubmit(e, {value: data, dataLabel: this.props.dataLabel});
+            }
         };
     }
 
@@ -171,13 +177,22 @@ export default class Form extends React.Component<IFormProps, {}>{
     collectEssence = (formChildren: any, data: any) => {
         if (Array.isArray(formChildren)){
             formChildren.map((element: any) => {
-                if (element.type === Input && element.props.value !== undefined && element.props.value !== ''){
-                    data[element.props.dataLabel] = element.props.value;
-                } else if (element.type === TextArea && element.props.value !== undefined){
+                if (element.type === Input){
+                    if (element.props.required && (element.props.value === undefined || element.props.value === '')){
+                        this.props.validate && this.props.validate(element.props.dataLabel);
+                        return;
+                    } else if (element.props.value !== undefined && element.props.value !== ''){
+                        data[element.props.dataLabel] = element.props.value;
+                    }
+                } else if (
+                    element.type === TextArea && element.props.value !== undefined && element.props.value !== ''
+                ){
                     data[element.props.dataLabel] = element.props.value;
                 } else if (element.type === Switch && element.props.on !== undefined){
                     data[element.props.dataLabel] = element.props.on;
-                } else if (element.type === Select && element.props.selected !== undefined){
+                } else if (
+                    element.type === Select && element.props.selected !== undefined && element.props.value !== ''
+                ){
                     data[element.props.dataLabel] = element.props.selected;
                 } else if (element.type === RadioGroup){
                     const radios: IRadioData[] = element.props.selectedRadios;
@@ -185,9 +200,11 @@ export default class Form extends React.Component<IFormProps, {}>{
                 } else if (element.type === CheckboxGroup){
                     const checkboxes: ICheckBoxData[] = element.props.selectedChecks;
                     data[element.props.dataLabel] = checkboxes;
-                } else if (element.type === DatePicker){
+                } else if (
+                    element.type === DatePicker && element.props.selected !== undefined && element.props.value !== ''
+                ){
                     data[element.props.dataLabel] = element.props.date;
-                } else if (element.type === FileUpload){
+                } else if (element.type === FileUpload && element.props.selected !== undefined){
                     data[element.props.dataLabel] = element.props.files;
                 } else if (element.type === Tags){
                     data[element.props.dataLabel] = element.props.tags;

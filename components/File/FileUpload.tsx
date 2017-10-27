@@ -126,7 +126,8 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
             !this.props.disabled && this.props.onChange &&
             this.props.onChange(e, {value: files, dataLabel: this.props.dataLabel});
             if (this.props.status){
-                this.props.validate && this.props.validate({value: files, dataLabel: this.props.dataLabel});
+                this.props.validate &&
+                this.props.validate({value: files, dataLabel: this.props.dataLabel, required: this.props.required});
             }
         } else{
             const file = e.target.files && e.target.files[0];
@@ -135,7 +136,8 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
                 !this.props.disabled && this.props.onChange &&
                 this.props.onChange(e, {value: file, dataLabel: this.props.dataLabel});
                 if (this.props.status){
-                    this.props.validate && this.props.validate({value: file, dataLabel: this.props.dataLabel});
+                    this.props.validate &&
+                    this.props.validate({value: file, dataLabel: this.props.dataLabel, required: this.props.required});
                 }
             }
         }

@@ -139,16 +139,16 @@ class Input extends React.Component<IProps, {}> {
         this.props.onChange &&
         this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
         if (this.props.status){
-            this.props.validate && this.props.validate({value: e.target.value, dataLabel: this.props.dataLabel});
+            this.props.validate &&
+            this.props.validate(
+                {value: e.target.value, dataLabel: this.props.dataLabel, required: this.props.required}
+            );
         }
     }
 
     validateOnBlur = () => {
-        if (this.props.value){
-            this.props.validate && this.props.validate({value: this.props.value, dataLabel: this.props.dataLabel});
-        } else {
-            this.props.validate && this.props.validate({dataLabel: this.props.dataLabel});
-        }
+        this.props.validate &&
+        this.props.validate({value: this.props.value, dataLabel: this.props.dataLabel, required: this.props.required});
     }
 
     getStatus = () => {

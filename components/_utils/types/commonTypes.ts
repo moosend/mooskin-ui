@@ -7,4 +7,5 @@ export interface IInputCallbackData {
 export interface IValidationCallbackData {
     dataLabel: string | undefined | null;
     value?: any;
+    required?: boolean;
 }
