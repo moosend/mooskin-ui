@@ -211,7 +211,6 @@ export default class Form extends React.Component<IFormProps, {}>{
         if (formChildren.type === FormGroup){
             this.collectEssence(formChildren.props.children, data);
         }
-        console.log(data.invalid);
         return data;
     }
 

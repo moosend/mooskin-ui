@@ -220,6 +220,10 @@ So if we fill up the fields, let's say we type on the `<Input>` a string of `Don
 ```
 now you're free to play around with the data, make aSync requests, whatever.
 
+### Validation of components
+
+When the form is submitted, validation functions will be called that has been passed to components within the form. Depending on their return value (true or false) the form will be marked as valid or invalid. If only one validation function returns false the Form will not be submitted, therefore not returning the submit object.
+
 <div class="playground-doc">
 
 ## Supported attributes for Form 
