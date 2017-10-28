@@ -104,6 +104,10 @@ onEditorChange(data) {
 }
 ```
 
+### Validation
+
+The Textarea Component can be validated using the `status` and `validate` props. The `status` prop will accept an 'error' or 'success' string to apply the appropriate classes to the textarea, or none for that matter. The `validate` prop is the validation function which accepts a arg of an object containing `value`, `dataLabel` and `required` props of the component as properties, and depending on the received value, you can use any kind of validation you like. The `description` prop can also be used in the process to inform the user about validation errors. The validation will fire the first time onBlur, and every other time onChange.
+
 #### Example
 
 ```
@@ -125,9 +129,9 @@ onChange(e, data) {
     this.setState({value: data.value})
 }
 
-validate(value){
-    if (value){
-        if (value.length < 5){
+validate(data){
+    if (data.value){
+        if (data.value.length < 5){
             this.setState({status: 'error', message: 'TextArea should have 5 or more characters'});
         } else {
             this.setState({status: '', message: ''})
