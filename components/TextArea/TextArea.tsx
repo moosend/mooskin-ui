@@ -238,7 +238,7 @@ export const TextAreaComponent: React.StatelessComponent<ITextAreaProps> = (prop
                     style={props.style}
                     onBlur={validateOnBlur}
                 />
-                <i className={`${styles.description} ${descStatus}`}>{props.description}</i>
+                {props.description && <i className={`${styles.description} ${descStatus}`}>{props.description}</i>}
             </div>
         </div>
     );

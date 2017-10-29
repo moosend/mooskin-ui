@@ -128,7 +128,7 @@ class Input extends React.Component<IProps, {}> {
                         autoComplete={autocomplete}
                         onBlur={this.validateOnBlur}
                     />
-                    <i className={`${styles.description} ${descStatus}`}>{description}</i>
+                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             </div>
         );

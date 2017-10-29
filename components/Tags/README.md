@@ -102,6 +102,48 @@ onRemove = (e, data, index) => {     // data is the callback object, which consi
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
+### Validation
+
+The Tags Component can be validated using the `status` and `validate` props. The `status` prop will accept an 'error' or 'success' string to apply the appropriate classes to the tags, or none for that matter. The `validate` prop is the validation function which accepts a arg of an object containing `value`, `dataLabel` and `required` props of the component as properties, and depending on the received value, you can use any kind of validation you like. The `description` prop can also be used in the process to inform the user about validation errors. The validation will fire the first time onBlur, and every other time onChange.
+
+#### Example
+
+```
+this.state = {
+    status: '',
+    message: '',
+    tags: []
+}
+
+<Tags
+    validate={this.validate}
+    delimiters={['Enter', 'space', ',']}
+    status={this.state.status}
+    description={this.state.message}
+    validateTag="email"
+    label="Email only tags"
+    tags={this.state.tags4}
+    onAdd={this.onAdd}
+    onRemove={this.onRemove}
+/>
+
+onChange(e, data) {
+    this.setState({value: data.value})
+}
+
+validate(data){
+    if (data.value.length < 2){
+        this.setState({status: 'error', message: 'At least 2 emails are required'});
+        return false;
+    } else {
+        this.setState({status: '', message: ''});
+        return true;
+    }
+}
+```
+
+Now `validate` is the function for validation the whole component (eg. field is required and empty, throw error). `validateTag` on the other hand is for validating single tag inputs (eg. accept only email tags).
+
 <div class="playground-doc">
 
 ## Supported attributes for Tags
@@ -123,6 +165,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `tags` - data to appear as already tagged (array of strings)
 * `onAdd` - callback func which returns a newly created tag, can be added to the component with unidirectional flow
 * `onRemove` - callback func which returns the tag to be removed and the index of the tag within an array.
+* `validateTag` - validate single tag input function
+* `validate` - validate function to validate the whole tags component
 
 </div>
 

@@ -97,6 +97,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
             throw new Error('Can not have two options with same values!');
         }
 
+        const description = this.props.description;
+
         const displayList = this.state.list ? 'block' : 'none';
         const zIndex = this.state.list ? 6 : 0;
 
@@ -146,7 +148,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             {options}
                         </ul>
                     </div>
-                    <i className={`${styles.description} ${descStatus}`}>{this.props.description}</i>
+                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             </div>
         );

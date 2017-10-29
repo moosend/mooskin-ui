@@ -126,7 +126,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
 
     render() {
 
-        const {id, className, style, title} = this.props;
+        const {id, className, style, title, description} = this.props;
 
         const align = this.props.horizontal ? styles.horizontal : '';
 
@@ -143,7 +143,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                 <div className={align}>
                     {this.getCheckboxes() || this.props.children}
                 </div>
-                <i className={`${styles.message} ${status}`}>{this.props.description}</i>
+                {description && <i className={`${styles.description} ${status}`}>{description}</i>}
             </div>
         );
     }

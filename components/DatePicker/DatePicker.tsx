@@ -87,6 +87,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         // const value = this.props.date ? moment(this.props.date).format(this.props.format) : undefined;
         const status = this.getStatus();
         const descStatus = this.getDescStatus();
+        const description = this.props.description;
 
         return(
             <div
@@ -106,7 +107,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         placeholder={this.props.placeholder}
                         onBlur={this.validateOnBlur}
                     />
-                    <i className={`${styles.description} ${descStatus}`}>{this.props.description}</i>
+                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                     <div className={styles.calendar} style={{display: displayPicker}}>
                         <InputMoment
                             moment={this.state.date}

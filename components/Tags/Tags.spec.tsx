@@ -606,7 +606,7 @@ describe('Tags', () => {
 
         const component = shallow(
             <Tags
-                validation="email"
+                validateTag="email"
                 tags={tags}
                 onAdd={onAdd}
                 onRemove={onRemove}
@@ -673,6 +673,60 @@ describe('Tags', () => {
 
         component.setProps({tags});
         expect(component.find('Tag').length).toBe(4);
+
+    });
+
+    test('validates the Tags component if there are less than two tags', () => {
+
+        let status = null;
+
+        const delimiters = ['.', 'Enter', 'space', ','];
+        let tags = ['doni'];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const validate = (data) => {
+            console.log(data.value);
+            if (data.value.length < 2){
+                status = 'error';
+                return false;
+            } else {
+                status = '';
+                return true;
+            }
+        };
+
+        const component = shallow(
+            <Tags
+                validate={validate}
+                tags={tags}
+                delimiters={delimiters}
+                onAdd={onAdd}
+                onRemove={onRemove}
+                status={status}
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(1);
+
+        component.find('input').simulate('blur');
+
+        expect(component.find('.error')).toBeTruthy;
+
+        component.find('input').simulate('change', { target: { value: 'text' }});
+
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
+
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(2);
+
+        expect(component.find('.error')).toBeFalsy;
 
     });
 

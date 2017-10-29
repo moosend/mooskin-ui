@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Input from './Input';
 
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Input', () => {
 
@@ -95,16 +95,17 @@ describe('Input', () => {
             return true;
         };
 
-        const component = shallow(<Input status={status} validate={validate} onChange={onChange} value={inputValue}/>);
+        const component = mount(<Input status={status} validate={validate} onChange={onChange} value={inputValue}/>);
 
         component.find('input').simulate('blur');
-        expect(component.find('input').hasClass('error')).toBeTruthy;
+        expect(component.find('.error')).toBeTruthy();
 
         component.find('input').simulate('change', { target: { value: 'text' }});
-        expect(component.find('input').hasClass('error')).toBeTruthy;
+        component.setProps({status: 'error'});
+        expect(component.find('.error')).toBeTruthy();
 
         component.find('input').simulate('change', { target: { value: 'more text' }});
-        expect(component.find('input').hasClass('error')).toBeFalsy;
+        expect(component.find('.error')).toBeFalsy;
     });
 
 });

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Tags.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 export interface ITagsProps{
 
@@ -13,7 +13,19 @@ export interface ITagsProps{
     tags: string[];
 
     /** validate input wether it should accept emails or add a custom validation */
-    validation?: 'email' | ((tag: string) => boolean);
+    validateTag?: 'email' | ((tag: string) => boolean);
+
+    /** input description (small italic bottom) */
+    description?: string;
+
+    /** status of the input, error or success */
+    status?: 'error' | 'success';
+
+    /** this is for validating the whole component within a Form */
+    validate?: (data: IValidationCallbackData) => boolean;
+
+    /** provide to make the tags component required within a Form */
+    required?: boolean;
 
     /** source of data for type ahead completion */
     source?: (() => Promise<string[]>) | (() => string[]) | string[];
@@ -86,7 +98,10 @@ export interface ITagsState{
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     static defaultProps: Partial<ITagsProps> = {
+        className: '',
         delimiters: ['Enter', 13], // 13 is the keyCode for Enter
+        style: {},
+        tags: []
     };
 
     id: string;
@@ -137,12 +152,17 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         // const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
 
+        const status = this.getStatus();
+        const descStatus = this.getDescStatus();
+
         const message = this.getMessage();
+
+        const description = this.props.description;
 
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style} id={this.id}>
                 {this.props.label && <div className={styles.label}>{this.props.label}</div>}
-                <label className={styles.tags}>
+                <label className={`${styles.tags} ${status}`}>
                     {tags}
                     <div className={styles.inputContainer}>
                         <input
@@ -161,6 +181,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     </div>
                     {/* {cover} */}
                 </label>
+                {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
             </div>
         );
     }
@@ -240,6 +261,16 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             this.props.onRemove &&
             this.props.onRemove(e, {value: tag, dataLabel: this.props.dataLabel}, tags.length - 1);
+            if (this.props.status){
+                this.props.validate &&
+                this.props.validate(
+                    {
+                        dataLabel: this.props.dataLabel,
+                        required: this.props.required,
+                        value: this.props.tags.splice(tags.length - 1, 1)
+                    }
+                );
+            }
 
         } else if (key === 'ArrowDown' || keyCode === 40){
 
@@ -272,6 +303,16 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     this.setState({value: '', sourceList: [], activeItem: 0});
 
                     this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                    if (this.props.status){
+                        this.props.validate &&
+                        this.props.validate(
+                            {
+                                dataLabel: this.props.dataLabel,
+                                required: this.props.required,
+                                value: this.props.tags.concat([tag])
+                            }
+                        );
+                    }
                 } else {
                     this.setState({message: this.props.errorMessage || 'Input type is invalid'});
                     setTimeout(() => {
@@ -290,7 +331,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     checkValidity = (tag: string) => {
-        const validation = this.props.validation;
+        const validation = this.props.validateTag;
         if (validation){
             if (typeof validation === 'string' && validation === 'email'){
                 return this.checkIfEmail(tag);
@@ -344,6 +385,14 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             // }
 
             this.props.onAdd && this.props.onAdd(e, {value: tags, dataLabel: this.props.dataLabel});
+            this.props.validate &&
+            this.props.validate(
+                {
+                    dataLabel: this.props.dataLabel,
+                    required: this.props.required,
+                    value: tags
+                }
+            );
 
         }
 
@@ -438,6 +487,16 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             this.setState({value: ''});
 
             this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+            if (this.props.status){
+                this.props.validate &&
+                this.props.validate(
+                    {
+                        dataLabel: this.props.dataLabel,
+                        required: this.props.required,
+                        value: this.props.tags.concat([tag])
+                    }
+                );
+            }
 
         };
 
@@ -464,6 +523,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         this.setState({value: '', sourceList: [], activeItem: 0});
 
                         this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                        if (this.props.validate){
+                            this.validateOnBlur(tag);
+                        }
                     } else {
                         this.setState({message: this.props.errorMessage || 'Input type is invalid'});
                         setTimeout(() => {
@@ -471,9 +533,22 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         }, 3000);
                     }
 
+                } else if (this.props.validate){
+                    this.validateOnBlur();
                 }
             };
         }
+    }
+
+    validateOnBlur = (tag?: string) => {
+        this.props.validate &&
+        this.props.validate(
+            {
+                dataLabel: this.props.dataLabel,
+                required: this.props.required,
+                value: tag ? this.props.tags.concat([tag]) : this.props.tags
+            }
+        );
     }
 
     getMessage = () => {
@@ -515,6 +590,28 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         }
 
         return newDelimiters;
+    }
+
+    getStatus = () => {
+        const inputStatus = this.props.status && this.props.status;
+        if (inputStatus){
+            if (inputStatus === 'error'){
+                return styles.error;
+            } else if (inputStatus === 'success'){
+                return styles.success;
+            }
+        }
+    }
+
+    getDescStatus = () => {
+        const inputStatus = this.props.status && this.props.status;
+        if (inputStatus){
+            if (inputStatus === 'error'){
+                return styles.descError;
+            } else if (inputStatus === 'success'){
+                return styles.descSuccess;
+            }
+        }
     }
 
 }
