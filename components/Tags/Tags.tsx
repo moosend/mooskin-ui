@@ -105,6 +105,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     };
 
     id: string;
+    myInp: any;
 
     constructor(props: ITagsProps){
         super(props);
@@ -150,7 +151,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const source = this.state.value !== '' ? this.sourceList() : null;
 
-        // const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
+        const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
 
         const status = this.getStatus();
         const descStatus = this.getDescStatus();
@@ -166,7 +167,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     {tags}
                     <div className={styles.inputContainer}>
                         <input
-                            ref={this.id}
+                            ref={(ip) => this.myInp = ip}
                             value={this.state.value}
                             className={styles.input}
                             placeholder={this.props.placeholder}
@@ -179,7 +180,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         {message}
                         {source}
                     </div>
-                    {/* {cover} */}
+                    {cover}
                 </label>
                 {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
             </div>
@@ -502,12 +503,12 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     }
 
-    // getCover = () => {
-    //     return <div onClick={this.removeSource} className={styles.cover} />;
-    // }
+    getCover = () => {
+        return <div onClick={this.removeSource} className={styles.cover} />;
+    }
 
     onBlur = () => {
-        if (!this.props.preventSubmit){
+        if (!this.props.preventSubmit && !(this.state.sourceList.length > 0 && this.state.value !== '')){
             return(e: React.SyntheticEvent<HTMLElement>) => {
 
                 const tags: string[] = this.props.tags;
@@ -560,6 +561,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     removeSource = () => {
+        this.myInp.focus();
         this.setState({sourceList: [], activeItem: -1});
     }
 
