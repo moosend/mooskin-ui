@@ -143,7 +143,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                 <div className={align}>
                     {this.getCheckboxes() || this.props.children}
                 </div>
-                {description && <i className={`${styles.description} ${status}`}>{description}</i>}
+                {description && <i className={`${styles.message} ${status}`}>{description}</i>}
             </div>
         );
     }
