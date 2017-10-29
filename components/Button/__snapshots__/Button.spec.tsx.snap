@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button renders correctly 1`] = `
-<button
-  className="button-component button inverseButton disabledButton myClass"
-  disabled={true}
+<a
+  className="button-component-link button-component button inverseButton disabledButton myClass"
+  href="www.moosend.com"
   id="button1"
   onClick={[Function]}
   style={
@@ -11,13 +11,7 @@ exports[`Button renders correctly 1`] = `
       "color": "blue",
     }
   }
-  type="submit"
 >
-  <a
-    className="anchor"
-    href="www.moosend.com"
-  >
-    Mooskin
-  </a>
-</button>
+  Mooskin
+</a>
 `;
