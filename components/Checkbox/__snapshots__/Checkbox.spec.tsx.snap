@@ -221,9 +221,6 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
         </div>
       </Checkbox>
     </div>
-    <i
-      className="message "
-    />
   </div>
 </CheckboxGroup>
 `;

@@ -28,9 +28,6 @@ exports[`DatePicker renders correctly 1`] = `
       required={true}
       value="01 Jan 2013, 0:00"
     />
-    <i
-      className="description undefined"
-    />
     <div
       className="calendar"
       style={
