@@ -20,8 +20,9 @@ exports[`DatePicker renders correctly 1`] = `
     className="wrapper"
   >
     <input
-      className="dateInput disabled"
+      className="dateInput disabled undefined"
       disabled={true}
+      onBlur={[Function]}
       onClick={[Function]}
       readOnly={true}
       required={true}

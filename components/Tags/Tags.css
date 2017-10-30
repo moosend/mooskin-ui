@@ -116,6 +116,30 @@
     left: 8px;
 }
 
+.description{
+    display: block;
+    color: var(--italicDescription);
+    font-size: .78571428571rem;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.success{
+    box-shadow: inset 0px 0px 0px 2px #00cc44;
+}
+
+.error{
+    box-shadow: inset 0px 0px 0px 2px #ec3232;
+}
+
+.descError{
+    color: #ec3232;
+}
+
+.descSuccess{
+    color: #00cc44;
+}
+
 @keyframes opa {
     from {opacity: 0}
     to {opacity: 1}

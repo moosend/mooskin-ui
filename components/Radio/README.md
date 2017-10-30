@@ -41,6 +41,28 @@ Import {RadioGroup} from 'mooskin';
     <RadioGroup.Radio id={'radio3'} value="radio3" label="More radio"/>
 </RadioGroup>
 ```
+or by passing the `selectedRadio` prop only
+```
+const selected = [
+    {
+        selected: true,
+        label: 'Radio1',
+        value: 'Radio1'
+    },
+    {
+        selected: false,
+        label: 'Radio2',
+        value: 'Radio2'
+    },
+    {
+        selected: false,
+        label: 'Radio3',
+        value: 'Radio3'
+    }
+];
+
+<RadioGroup selectedChecks={checked} onChange={cb} dataLabel="asd">
+```
 
 Like the normal HTML elements, it will accept given attributes and render differently based on the given attributes
 

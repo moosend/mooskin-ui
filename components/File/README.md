@@ -69,6 +69,40 @@ In this case on each file select, the selected file/files will be console logged
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
+### Validation
+
+The FileUpload Component can be validated using the `status` and `validate` props. The `status` prop will accept an 'error' or 'success' string to apply the appropriate classes to the file upload, or none for that matter. The `validate` prop is the validation function which accepts a arg of an object containing `value`, `dataLabel` and `required` props of the component as properties, and depending on the received value, you can use any kind of validation you like. The `description` prop can also be used in the process to inform the user about validation errors. The validation will fire the first time onBlur, and every other time onChange.
+
+#### Example
+
+```
+this.state = {
+    status: '',
+    message: '',
+    file: ''
+}
+
+<FileUpload
+    file={this.state.file}
+    validate={this.validate}
+    status={this.state.status}
+    description={this.state.message}
+    onChange={this.onChange}
+/>
+
+onChange(e, data) {
+    this.setState({file: data.value})
+}
+
+validate(data){
+    if (data.value){
+        this.setState({status: '', message: ''})
+    } else {
+        this.setState({status: 'error', message: 'A file is required for the form to submit'});
+    }
+}
+```
+
 <div class="playground-doc">
 
 ## Supported attributes 

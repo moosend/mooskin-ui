@@ -15,7 +15,7 @@ exports[`Tags renders Tags correctly 1`] = `
     label
   </div>
   <label
-    className="tags"
+    className="tags undefined"
   >
     <Tag
       className="tagClasses"

@@ -5,9 +5,7 @@ import styles from './Form.css';
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
 import Button, {IButtonProps} from '../Button/Button';
-import {ICheckBoxData} from '../Checkbox/Checkbox';
 import {CheckboxGroup, DatePicker, FileUpload, Input, RadioGroup, Select, Switch, Tags, TextArea} from '../index/';
-import {IRadioData} from '../Radio/Radio';
 
 export interface IFormProps{
 
@@ -25,6 +23,9 @@ export interface IFormProps{
 
     /** callback data on submit */
     onSubmit?: (e: React.FormEvent<HTMLElement>, data: IInputCallbackData) => void;
+
+    /** validate form callback function (returns dataLabel of the unvalidated component) */
+    validate?: (dataLabel: string) => void;
 
     // /** Form action */
     // action?: string;
@@ -75,14 +76,6 @@ export default class Form extends React.Component<IFormProps, {}>{
                 </form>
             </div>
         );
-    }
-
-    onSubmit = (children: any) => {
-        return (e: React.MouseEvent<HTMLElement>) => {
-            e.preventDefault();
-            const data = this.getEssence(children);
-            this.props.onSubmit && this.props.onSubmit(e, {value: data, dataLabel: this.props.dataLabel});
-        };
     }
 
     assignPropsToChildren = () => {
@@ -151,6 +144,16 @@ export default class Form extends React.Component<IFormProps, {}>{
         return elements;
     }
 
+    onSubmit = (children: any) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            e.preventDefault();
+            const data = this.getEssence(children);
+            if (data !== undefined && !data.invalidForm){
+                this.props.onSubmit && this.props.onSubmit(e, {value: data, dataLabel: this.props.dataLabel});
+            }
+        };
+    }
+
     getChildren = () => {
         const formChildren: any = [];
         React.Children.map(this.props.children, (child, index) => {
@@ -170,27 +173,23 @@ export default class Form extends React.Component<IFormProps, {}>{
 
     collectEssence = (formChildren: any, data: any) => {
         if (Array.isArray(formChildren)){
-            formChildren.map((element: any) => {
-                if (element.type === Input && element.props.value !== undefined && element.props.value !== ''){
-                    data[element.props.dataLabel] = element.props.value;
-                } else if (element.type === TextArea && element.props.value !== undefined){
-                    data[element.props.dataLabel] = element.props.value;
-                } else if (element.type === Switch && element.props.on !== undefined){
-                    data[element.props.dataLabel] = element.props.on;
-                } else if (element.type === Select && element.props.selected !== undefined){
-                    data[element.props.dataLabel] = element.props.selected;
+            formChildren.forEach((element: any) => {
+                if (element.type === Input || element.type === TextArea){
+                    data = this.getData(data, element, 'value');
+                } else if (element.type === Switch){
+                    data = this.getData(data, element, 'on');
+                } else if (element.type === Select){
+                    data = this.getData(data, element, 'selected');
                 } else if (element.type === RadioGroup){
-                    const radios: IRadioData[] = element.props.selectedRadios;
-                    data[element.props.dataLabel] = radios;
+                    data = this.getData(data, element, 'selectedRadios');
                 } else if (element.type === CheckboxGroup){
-                    const checkboxes: ICheckBoxData[] = element.props.selectedChecks;
-                    data[element.props.dataLabel] = checkboxes;
+                    data = this.getData(data, element, 'selectedChecks');
                 } else if (element.type === DatePicker){
-                    data[element.props.dataLabel] = element.props.date;
+                    data = this.getData(data, element, 'date');
                 } else if (element.type === FileUpload){
-                    data[element.props.dataLabel] = element.props.files;
+                    data = this.getData(data, element, 'files');
                 } else if (element.type === Tags){
-                    data[element.props.dataLabel] = element.props.tags;
+                    data = this.getData(data, element, 'tags');
                 } else {
                     this.collectEssence(element, data);
                     // throw new Error('Elements used within the form are not supported');
@@ -202,6 +201,27 @@ export default class Form extends React.Component<IFormProps, {}>{
         }
         return data;
     }
+
+    checkElementValidation = (element: any, valueName: string) => {
+        const {dataLabel, required} = element.props;
+        return element.props.validate({value: element.props[valueName], dataLabel, required});
+    }
+
+    getData = (data: any, element: any, valueName: string) => {
+        if (element.props.validate){
+            const validate = this.checkElementValidation(element, valueName);
+            if (validate){
+                data[element.props.dataLabel] = element.props[valueName];
+                return data;
+            }
+            data.invalidForm = true;
+            return data;
+        } else {
+            data[element.props.dataLabel] = element.props[valueName];
+            return data;
+        }
+    }
+
 }
 
 export const FormGroup: React.StatelessComponent<IFormGroupProps> = (props) => {

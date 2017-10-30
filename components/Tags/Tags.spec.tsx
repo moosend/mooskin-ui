@@ -606,7 +606,7 @@ describe('Tags', () => {
 
         const component = shallow(
             <Tags
-                validation="email"
+                validateTag="email"
                 tags={tags}
                 onAdd={onAdd}
                 onRemove={onRemove}
@@ -676,11 +676,12 @@ describe('Tags', () => {
 
     });
 
-    test('removes source list when transparent overlay is clicked', () => {
+    test('validates the Tags component if there are less than two tags', () => {
+
+        let status = null;
 
         const delimiters = ['.', 'Enter', 'space', ','];
-        let tags = [];
-        const source = ['doni', 'gent', 'shkumbin'];
+        let tags = ['doni'];
 
         const onAdd = (e, data) => {
             tags = tags.concat(data.value);
@@ -690,30 +691,42 @@ describe('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = mount(
+        const validate = (data) => {
+            console.log(data.value);
+            if (data.value.length < 2){
+                status = 'error';
+                return false;
+            } else {
+                status = '';
+                return true;
+            }
+        };
+
+        const component = shallow(
             <Tags
+                validate={validate}
                 tags={tags}
-                source={source}
                 delimiters={delimiters}
                 onAdd={onAdd}
                 onRemove={onRemove}
+                status={status}
             />
         );
 
-        component.find('input').simulate('change', { target: { value: 'do' }});
+        expect(component.find('Tag').length).toBe(1);
 
-        expect(component.state('value')).toEqual('do');
-        expect(component.state('sourceList')).toEqual(['doni']);
+        component.find('input').simulate('blur');
 
-        expect(component.find('.sourceList').length).toEqual(1);
-        expect(component.find('.sourceItem').length).toEqual(1);
+        expect(component.find('.error')).toBeTruthy;
 
-        component.find('.cover').simulate('click');
+        component.find('input').simulate('change', { target: { value: 'text' }});
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
         component.setProps({tags});
-        expect(component.find('Tag').prop('tag')).toEqual('do');
+        expect(component.find('Tag').length).toBe(2);
+
+        expect(component.find('.error')).toBeFalsy;
 
     });
 

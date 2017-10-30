@@ -71,6 +71,46 @@ In this case on each input change, the value will be console logged.
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
+### Validation
+
+The Input Component can be validated using the `status` and `validate` props. The `status` prop will accept an 'error' or 'success' string to apply the appropriate classes to the input, or none for that matter. The `validate` prop is the validation function which accepts a arg of an object containing `value`, `dataLabel` and `required` props of the component as properties, and depending on the received value, you can use any kind of validation you like. The `description` prop can also be used in the process to inform the user about validation errors. The validation will fire the first time onBlur, and every other time onChange.
+
+#### Example
+
+```
+this.state = {
+    status: '',
+    message: '',
+    value: ''
+}
+
+<Input
+    value={this.state.value}
+    validate={this.validate}
+    status={this.state.status}
+    description={this.state.message}
+    onChange={this.onChange}
+/>
+
+onChange(e, data) {
+    this.setState({value: data.value})
+}
+
+validate(data){
+    if (data.value){
+        if (data.value.length < 5){
+            this.setState({status: 'error', message: 'Input should have 5 or more characters'});
+        } else {
+            this.setState({status: '', message: ''})
+        }
+    } else {
+        this.setState({status: 'error', message: 'This input field is required'});
+    }
+}
+```
+
+In this case, when the user focuses the input and blurs away immediately, an error class will get applied to the input and the user will get informed that thee input field is required. When the user starts typing, the error message will change, saying that the input should have 5 or more characters, when this is done, the error classes will get removed. Alternatevely, when the validation passes, we can pass a success status to apply the related class.
+
 <div class="playground-doc">
 
 ## Supported attributes 
@@ -92,6 +132,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `dataLabel` - label what kind of data 
 * `style` - input field style
 * `onChange` - callback to be triggered on input change
+* `validate` - validate function
+* `status` - to be used with validate, to apply classes based on error or success
 
 </div>
 

@@ -72,6 +72,40 @@ In this case on each input change, the date string will be returned.
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
+### Validation
+
+The Datepicker Component can be validated using the `status` and `validate` props. The `status` prop will accept an 'error' or 'success' string to apply the appropriate classes to the datepicker, or none for that matter. The `validate` prop is the validation function which accepts a arg of an object containing `value`, `dataLabel` and `required` props of the component as properties, and depending on the received value, you can use any kind of validation you like. The `description` prop can also be used in the process to inform the user about validation errors. The validation will fire the first time onBlur, and every other time onChange.
+
+#### Example
+
+```
+this.state = {
+    status: '',
+    message: '',
+    date: ''
+}
+
+<DatePicker
+    file={this.state.file}
+    validate={this.validate}
+    status={this.state.status}
+    description={this.state.message}
+    onChange={this.onChange}
+/>
+
+onChange(e, data) {
+    this.setState({date: data.value})
+}
+
+validate(data){
+    if (data.value < moment()>){
+        this.setState({status: 'error', message: 'You selected a past Date'});
+    } else {
+        this.setState({status: '', message: ''})
+    }
+}
+```
+
 <div class="playground-doc">
 
 ## Supported attributes 

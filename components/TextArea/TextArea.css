@@ -23,6 +23,7 @@
     border-radius: 8px;
     background: #efefef;
     width: 100%;
+    transition: 0.2s;
 }
 
 .textarea::-webkit-scrollbar {
@@ -81,11 +82,12 @@ textarea::-webkit-scrollbar-thumb:vertical {
     top: -55px;
 } 
 
-.areaContainer .description{
+.description{
     display: block;
     color: #b3b3b3;
     font-size: .78571428571rem;
     margin-left: 3px;
+    margin-top: 5px;
 }
 
 .editorContainer{
@@ -94,6 +96,21 @@ textarea::-webkit-scrollbar-thumb:vertical {
     position: relative;
 }
 
+.success{
+    box-shadow: inset 0px 0px 0px 2px #00cc44;
+}
+
+.error{
+    box-shadow: inset 0px 0px 0px 2px #ec3232;
+}
+
+.descError{
+    color: #ec3232;
+}
+
+.descSuccess{
+    color: #00cc44;
+}
 
 :global(.mooskin-textarea-editor .rdw-colorpicker-modal){
     width: 300px;

@@ -5,6 +5,7 @@ class TagsExample extends React.Component {
 
         this.onAdd = this.onAdd.bind(this);
         this.onRemove = this.onRemove.bind(this);
+        this.validate = this.validate.bind(this);
 
         this.state = {
             tags: [
@@ -12,12 +13,13 @@ class TagsExample extends React.Component {
                 'Athens',
                 'London',
                 'New York',
-                'Beijing',
                 'Beijing'
             ],
             tags2: [],
             tags3: [],
-            tags4: []
+            tags4: [],
+            status: '',
+            message: ''
         }
     }
 
@@ -50,13 +52,13 @@ class TagsExample extends React.Component {
 
         return(
             <div>
-                <Tags source={countries} delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validation={this.validation} label="Tags from string array" tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
+                <Tags source={countries} delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validateTag={this.validation} label="Tags from string array" tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
                 <br/>
                 <Tags source={stringArr} label="Tags from function that returns string array" delimiters={['188', '32', '13', ',', '.', 'Enter', ' ', '190']} tags={this.state.tags2} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags2"/>
                 <br/>
                 <Tags source={promiseFunc} label="Tags from function that returns Promise(api call for github users)" tags={this.state.tags3} delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags3"/>
                 <br/>
-                <Tags source={emails} errorMessage={'Tags accepts only emails'} validation="email" submitOnBlur={false} label="Email only tags" tags={this.state.tags4} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags4"/>
+                <Tags validate={this.validate} delimiters={['Enter', 'space', ',']} status={this.state.status} description={this.state.message} source={emails} errorMessage={'Tags accepts only emails'} validateTag="email" submitOnBlur={false} label="Email only tags" tags={this.state.tags4} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags4"/>
             </div>
         );
     }
@@ -78,6 +80,16 @@ class TagsExample extends React.Component {
             return false;
         }
         return true;
+    }
+
+    validate(data){
+        if (data.value.length < 2){
+            this.setState({status: 'error', message: 'At least 2 emails are required'});
+            return false;
+        } else {
+            this.setState({status: '', message: ''});
+            return true;
+        }
     }
 
 }

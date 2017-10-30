@@ -3,8 +3,13 @@
 
 .fileContainer{
     display: flex;
-    position: relative;
+    flex-direction: column;
     margin: 3px;
+}
+
+.contentContainer{
+    display: flex;
+    position: relative;
 }
 
 .button{
@@ -76,6 +81,30 @@
 
 .disabledFile > .input{
     cursor: not-allowed;
+}
+
+.description{
+    display: block;
+    color: var(--italicDescription);
+    font-size: .78571428571rem;
+    margin-left: 3px;
+    margin-top: 5px;
+}
+
+.success{
+    box-shadow: inset 0px 0px 0px 2px #00cc44;
+}
+
+.error{
+    box-shadow: inset 0px 0px 0px 2px #ec3232;
+}
+
+.descError{
+    color: #ec3232;
+}
+
+.descSuccess{
+    color: #00cc44;
 }
 
 @media (--xSmall){

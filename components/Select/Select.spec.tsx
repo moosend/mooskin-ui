@@ -100,4 +100,16 @@ describe('Select', () => {
 
         expect(component.find('.options-container').prop('style')).toEqual({display: 'block'});
     });
+
+    test('applies correct classes when the related status is passed', () => {
+
+        const component = shallow(
+            <Select status={'error'} selected="option1" dataLabel="plan">
+                <Option value="option1">Option1</Option>
+                <Option value="option2">Option2</Option>
+            </Select>
+        );
+
+        expect(component.find('.error')).toBeTruthy;
+    });
 });

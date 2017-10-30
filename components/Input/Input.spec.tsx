@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Input from './Input';
 
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Input', () => {
 
@@ -77,6 +77,35 @@ describe('Input', () => {
 
         component.find('input').simulate('change', { target: { value: 'text' }});
         expect(func).toHaveBeenCalled();
+    });
+
+    test('error classes get applied when input is not validated', () => {
+        let inputValue = '';
+        let status = null;
+
+        const onChange = (e, data) => {
+            inputValue = data.value;
+        };
+
+        const validate = (data) => {
+            if (data.value < 5){
+                status = 'error';
+                return false;
+            }
+            return true;
+        };
+
+        const component = mount(<Input status={status} validate={validate} onChange={onChange} value={inputValue}/>);
+
+        component.find('input').simulate('blur');
+        expect(component.find('.error')).toBeTruthy();
+
+        component.find('input').simulate('change', { target: { value: 'text' }});
+        component.setProps({status: 'error'});
+        expect(component.find('.error')).toBeTruthy();
+
+        component.find('input').simulate('change', { target: { value: 'more text' }});
+        expect(component.find('.error')).toBeFalsy;
     });
 
 });

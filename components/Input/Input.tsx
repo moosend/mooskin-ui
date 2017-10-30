@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Input.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 export interface IProps {
 
@@ -36,9 +36,6 @@ export interface IProps {
     /** input label */
     label?: string;
 
-    /** input description (small italic bottom) */
-    description?: string;
-
     /** spacing between label and input */
     labelWidth?: number;
 
@@ -53,6 +50,15 @@ export interface IProps {
 
     /** override input class */
     className?: string;
+
+    /** input description (small italic bottom) */
+    description?: string;
+
+    /** status of the input, error or success */
+    status?: 'error' | 'success';
+
+    /** validate function */
+    validate?: (data: IValidationCallbackData) => boolean;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -98,6 +104,8 @@ class Input extends React.Component<IProps, {}> {
         const disabledInput = disabled ? styles.disabledInput : '';
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
         const autocomplete = !this.props.autocomplete ? 'off' : 'on';
+        const status = this.getStatus();
+        const descStatus = this.getDescStatus();
 
         return (
             <div className={`input-component ${className} ${styles.inputContainer}`}>
@@ -114,12 +122,13 @@ class Input extends React.Component<IProps, {}> {
                         maxLength={maxlength}
                         required={required}
                         disabled={disabled}
-                        className={`input ${styles.input} ${disabledInput}`}
+                        className={`input ${styles.input} ${disabledInput} ${status}`}
                         style={style}
                         autoFocus={autofocus}
                         autoComplete={autocomplete}
+                        onBlur={this.validateOnBlur}
                     />
-                    <i className={styles.description}>{description}</i>
+                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             </div>
         );
@@ -129,6 +138,39 @@ class Input extends React.Component<IProps, {}> {
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
+        if (this.props.status){
+            this.props.validate &&
+            this.props.validate(
+                {value: e.target.value, dataLabel: this.props.dataLabel, required: this.props.required}
+            );
+        }
+    }
+
+    validateOnBlur = () => {
+        this.props.validate &&
+        this.props.validate({value: this.props.value, dataLabel: this.props.dataLabel, required: this.props.required});
+    }
+
+    getStatus = () => {
+        const inputStatus = this.props.status && this.props.status;
+        if (inputStatus){
+            if (inputStatus === 'error'){
+                return styles.error;
+            } else if (inputStatus === 'success'){
+                return styles.success;
+            }
+        }
+    }
+
+    getDescStatus = () => {
+        const inputStatus = this.props.status && this.props.status;
+        if (inputStatus){
+            if (inputStatus === 'error'){
+                return styles.descError;
+            } else if (inputStatus === 'success'){
+                return styles.descSuccess;
+            }
+        }
     }
 
     generateId = () => {

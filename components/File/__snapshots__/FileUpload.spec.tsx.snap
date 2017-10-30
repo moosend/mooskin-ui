@@ -10,30 +10,34 @@ exports[`FileUpload renders correctly 1`] = `
     }
   }
 >
-  <label
-    className="label"
-    style={Object {}}
+  <div
+    className="contentContainer"
   >
-    with a label ofc
-  </label>
-  <span
-    className="name"
-  >
-    input placeholder
-  </span>
-  <span
-    className="button"
-  >
-    Upload
-  </span>
-  <input
-    accept=".png"
-    className="input"
-    disabled={true}
-    multiple={true}
-    onChange={[Function]}
-    required={true}
-    type="file"
-  />
+    <label
+      className="label"
+      style={Object {}}
+    >
+      with a label ofc
+    </label>
+    <span
+      className="name undefined"
+    >
+      input placeholder
+    </span>
+    <span
+      className="button"
+    >
+      Upload
+    </span>
+    <input
+      accept=".png"
+      className="input"
+      disabled={true}
+      multiple={true}
+      onChange={[Function]}
+      required={true}
+      type="file"
+    />
+  </div>
 </div>
 `;
