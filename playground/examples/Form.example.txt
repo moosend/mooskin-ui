@@ -14,7 +14,7 @@ class FormExample extends React.Component {
         this.validateInput = this.validateInput.bind(this);
         this.validateCheckbox = this.validateCheckbox.bind(this);
         this.validateSelect = this.validateSelect.bind(this);
-        this.validateDate = this.validateDate.bind(this);
+        this.validateTags = this.validateTags.bind(this);
 
         this.state = {
             contact: {
@@ -67,11 +67,11 @@ class FormExample extends React.Component {
             salary: '',
             message: EditorState.createEmpty(),
             duration: {value: undefined, status: '', message: ''},
-            start: {value: moment(), status: '', message: ''},
+            start: moment(),
             coverletter: {value: '', status: '', message: ''},
             logo: {value: undefined, status: '', message: ''},
             training: true,
-            tags: ['avid']
+            tags: {value: ['avid'], status: '', message: ''},
         };
     }
 
@@ -197,9 +197,6 @@ class FormExample extends React.Component {
                             dataLabel="start"
                             label={'Available to start:'}
                             date={this.state.start.value}
-                            status={this.state.start.status}
-                            description={this.state.start.message}
-                            validate={this.validateDate}
                         />
                         <FileUpload
                             dataLabel="logo"
@@ -225,7 +222,17 @@ class FormExample extends React.Component {
                             <Option value="1-3m">1-3 months</Option>
                             <Option value="3-6m">3-6 months</Option>
                         </Select>
-                        <Tags label="Tag yourself" tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} dataLabel="tags" />
+                        <Tags
+                            deletable
+                            label="Tag yourself"
+                            tags={this.state.tags.value}
+                            onAdd={this.onAdd}
+                            onRemove={this.onRemove}
+                            dataLabel="tags"
+                            status={this.state.tags.status}
+                            description={this.state.tags.message}
+                            validate={this.validateTags}
+                        />
                     </FormGroup>
                     <FormGroup style={{flexDirection: 'row'}}>
                         <Button type="submit">Submit</Button>
@@ -299,14 +306,17 @@ class FormExample extends React.Component {
 
     onAdd(e, data) {
         console.log(data.value);
-        data.dataLabel && this.setState({[data.dataLabel]: this.state[data.dataLabel].concat(data.value)});
+        const newTags = this.state[data.dataLabel].value.concat(data.value);
+        data.dataLabel && this.setState({[data.dataLabel]: {value: newTags}});
+        return newTags;
     }
 
     onRemove(e, data, index) {
         console.log(data.value, index);
-        let tags = [...this.state[data.dataLabel]];
+        let tags = [...this.state[data.dataLabel].value];
         tags.splice(index, 1);
-        data.dataLabel && this.setState({[data.dataLabel]: tags});
+        data.dataLabel && this.setState({[data.dataLabel]: {value: tags}});
+        return tags;
     }
 
     validateForm(dataLabel){
@@ -314,18 +324,18 @@ class FormExample extends React.Component {
     }
 
     validateInput(data){
-        if (data.value){
-            if (data.value.length < 5){
-                this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'Input should have 5 or more characters'}});
-                return false;
-            } else {
-                this.setState({[data.dataLabel]: {value: data.value, status: 'success', message: ''}});
-                return true;
+        if (data.required){
+            if (data.value){
+                if (data.value.length < 5){
+                    this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'Input should have 5 or more characters'}});
+                    return false;
+                } else {
+                    this.setState({[data.dataLabel]: {value: data.value, status: 'success', message: ''}});
+                    return true;
+                }
             }
-        } else if(!data.value && data.required) {
-            this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'This input field is required'}});
-            return false;
         }
+        return true;
     }
 
     validateCheckbox(data){
@@ -350,11 +360,12 @@ class FormExample extends React.Component {
         return true;
     }
 
-    validateDate(data){
-        if(moment(data.value) < moment()){
-            this.setState({[data.dataLabel]: {value: moment(), status: 'error', message: 'Trying to select a past date'}});
+    validateTags(data){
+        if(data.value.length < 2){
+            this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'At least two tags are required'}});
             return false;
         }
+        this.setState({[data.dataLabel]: {value: data.value, status: '', message: ''}});
         return true;
     }
 

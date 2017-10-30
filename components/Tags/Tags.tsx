@@ -66,9 +66,9 @@ export interface ITagsProps{
     /** an array of possible delimiters, enter key is the default delimiter */
     delimiters?: Array<string | number>;
 
-    onAdd?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onAdd?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => string [] | void;
 
-    onRemove?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData, index: number) => void;
+    onRemove?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData, index: number) => string [] | void;
 
     // onChange?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
@@ -260,18 +260,18 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             const tag = tags[tags.length - 1];
 
+            const validationTags =
             this.props.onRemove &&
             this.props.onRemove(e, {value: tag, dataLabel: this.props.dataLabel}, tags.length - 1);
-            if (this.props.status){
-                this.props.validate &&
-                this.props.validate(
-                    {
-                        dataLabel: this.props.dataLabel,
-                        required: this.props.required,
-                        value: this.props.tags.splice(tags.length - 1, 1)
-                    }
-                );
-            }
+
+            this.props.validate &&
+            this.props.validate(
+                {
+                    dataLabel: this.props.dataLabel,
+                    required: this.props.required,
+                    value: validationTags || this.props.tags
+                }
+            );
 
         } else if (key === 'ArrowDown' || keyCode === 40){
 
@@ -303,14 +303,16 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 if (validity){
                     this.setState({value: '', sourceList: [], activeItem: 0});
 
-                    this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                    const validationTags = this.props.onAdd &&
+                    this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+
                     if (this.props.status){
                         this.props.validate &&
                         this.props.validate(
                             {
                                 dataLabel: this.props.dataLabel,
                                 required: this.props.required,
-                                value: this.props.tags.concat([tag])
+                                value: validationTags || this.props.tags
                             }
                         );
                     }
@@ -385,13 +387,15 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             //     }
             // }
 
-            this.props.onAdd && this.props.onAdd(e, {value: tags, dataLabel: this.props.dataLabel});
+            const validationTags = this.props.onAdd &&
+            this.props.onAdd(e, {value: tags, dataLabel: this.props.dataLabel});
+
             this.props.validate &&
             this.props.validate(
                 {
                     dataLabel: this.props.dataLabel,
                     required: this.props.required,
-                    value: tags
+                    value: validationTags || this.props.tags
                 }
             );
 
@@ -450,7 +454,18 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             const tag = this.props.tags[index];
 
-            this.props.onRemove && this.props.onRemove(e, {value: [tag], dataLabel: this.props.dataLabel}, index);
+            const validationTags =
+            this.props.onRemove &&
+            this.props.onRemove(e, {value: [tag], dataLabel: this.props.dataLabel}, index);
+
+            this.props.validate &&
+            this.props.validate(
+                {
+                    dataLabel: this.props.dataLabel,
+                    required: this.props.required,
+                    value: validationTags || this.props.tags
+                }
+            );
         };
     }
 
@@ -487,14 +502,17 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             this.setState({value: ''});
 
-            this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+            const validationTags =
+            this.props.onAdd &&
+            this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+
             if (this.props.status){
                 this.props.validate &&
                 this.props.validate(
                     {
                         dataLabel: this.props.dataLabel,
                         required: this.props.required,
-                        value: this.props.tags.concat([tag])
+                        value: validationTags || this.props.tags
                     }
                 );
             }
@@ -523,9 +541,10 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     if (validity){
                         this.setState({value: '', sourceList: [], activeItem: 0});
 
-                        this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                        const validationTags = this.props.onAdd &&
+                        this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
                         if (this.props.validate){
-                            this.validateOnBlur(tag);
+                            this.validateOnBlur(e, validationTags);
                         }
                     } else {
                         this.setState({message: this.props.errorMessage || 'Input type is invalid'});
@@ -535,19 +554,20 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     }
 
                 } else if (this.props.validate){
-                    this.validateOnBlur();
+                    this.validateOnBlur(e);
                 }
             };
         }
     }
 
-    validateOnBlur = (tag?: string) => {
+    validateOnBlur = (e: React.SyntheticEvent<HTMLElement>, tags?: string[] | void) => {
+
         this.props.validate &&
         this.props.validate(
             {
                 dataLabel: this.props.dataLabel,
                 required: this.props.required,
-                value: tag ? this.props.tags.concat([tag]) : this.props.tags
+                value: tags ? tags : this.props.tags
             }
         );
     }

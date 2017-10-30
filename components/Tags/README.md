@@ -163,8 +163,8 @@ Now `validate` is the function for validation the whole component (eg. field is 
 * `source` - source of the searchable and selectable typeahead data, can be an array of strings or a function that returns either an array of strings or a promise that resolves into an array of strings
 * `sourceLimit` - number of max results for source
 * `tags` - data to appear as already tagged (array of strings)
-* `onAdd` - callback func which returns a newly created tag, can be added to the component with unidirectional flow
-* `onRemove` - callback func which returns the tag to be removed and the index of the tag within an array.
+* `onAdd` - callback func which returns a newly created tag, can be added to the component with unidirectional flow, should return the value if validation is used.
+* `onRemove` - callback func which returns the tag to be removed and the index of the tag within an array, should return the value if validation is used.
 * `validateTag` - validate single tag input function
 * `validate` - validate function to validate the whole tags component
 
