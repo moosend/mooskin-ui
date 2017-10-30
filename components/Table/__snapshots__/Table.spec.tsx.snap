@@ -43,6 +43,7 @@ exports[`Table renders correctly 1`] = `
 >
   <div
     className="tableWrapper"
+    style={undefined}
   >
     <table
       className="table-component table myStyle"
@@ -374,12 +375,12 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               key="1"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -387,20 +388,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Delivered
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  31-12-2016 04:39 PM
-                </span>
+                  <span
+                    className="content"
+                  >
+                    31-12-2016 04:39 PM
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               key="2"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -408,20 +413,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Campaign
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  Airship ready campaign
-                </span>
+                  <span
+                    className="content"
+                  >
+                    Airship ready campaign
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="3"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -429,20 +438,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Mailing List / Segment
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  Mailing list for me
-                </span>
+                  <span
+                    className="content"
+                  >
+                    Mailing list for me
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="4"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -450,20 +463,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Status
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  Draft
-                </span>
+                  <span
+                    className="content"
+                  >
+                    Draft
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="5"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -471,20 +488,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Open %
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  93 %
-                </span>
+                  <span
+                    className="content"
+                  >
+                    93 %
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="6"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -492,20 +513,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Click
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  80 %
-                </span>
+                  <span
+                    className="content"
+                  >
+                    80 %
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="7"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -513,11 +538,15 @@ exports[`Table renders correctly 1`] = `
                 >
                   Subscribers
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  4244
-                </span>
+                  <span
+                    className="content"
+                  >
+                    4244
+                  </span>
+                </div>
               </td>
             </Col>
           </tr>
@@ -684,12 +713,12 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               key="1"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -697,20 +726,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Delivered
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  17-02-2017 10:51 AM
-                </span>
+                  <span
+                    className="content"
+                  >
+                    17-02-2017 10:51 AM
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               key="2"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -718,20 +751,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Campaign
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  Another campaign
-                </span>
+                  <span
+                    className="content"
+                  >
+                    Another campaign
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="3"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -739,20 +776,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Mailing List / Segment
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  Mailing list for me
-                </span>
+                  <span
+                    className="content"
+                  >
+                    Mailing list for me
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="4"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -760,20 +801,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Status
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  Sent
-                </span>
+                  <span
+                    className="content"
+                  >
+                    Sent
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="5"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -781,20 +826,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Open %
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  60 %
-                </span>
+                  <span
+                    className="content"
+                  >
+                    60 %
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="6"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -802,20 +851,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Click
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  25 %
-                </span>
+                  <span
+                    className="content"
+                  >
+                    25 %
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="7"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -823,11 +876,15 @@ exports[`Table renders correctly 1`] = `
                 >
                   Subscribers
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  1628
-                </span>
+                  <span
+                    className="content"
+                  >
+                    1628
+                  </span>
+                </div>
               </td>
             </Col>
           </tr>
@@ -994,12 +1051,12 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               key="1"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -1007,20 +1064,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Delivered
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  13-06-2017 10:59 AM
-                </span>
+                  <span
+                    className="content"
+                  >
+                    13-06-2017 10:59 AM
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className=""
+              className="colComponent  undefined"
               key="2"
               style={Object {}}
             >
               <td
-                className="column col "
+                className="column col colComponent  undefined"
                 style={Object {}}
               >
                 <span
@@ -1028,20 +1089,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Campaign
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  NewsLetters for everybody
-                </span>
+                  <span
+                    className="content"
+                  >
+                    NewsLetters for everybody
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="3"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -1049,20 +1114,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Mailing List / Segment
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  Mailing list for me
-                </span>
+                  <span
+                    className="content"
+                  >
+                    Mailing list for me
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="4"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -1070,20 +1139,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Status
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  Sent
-                </span>
+                  <span
+                    className="content"
+                  >
+                    Sent
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="5"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -1091,20 +1164,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Open %
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  75 %
-                </span>
+                  <span
+                    className="content"
+                  >
+                    75 %
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="6"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -1112,20 +1189,24 @@ exports[`Table renders correctly 1`] = `
                 >
                   Click
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  50 %
-                </span>
+                  <span
+                    className="content"
+                  >
+                    50 %
+                  </span>
+                </div>
               </td>
             </Col>
             <Col
-              className="hide"
+              className="colComponent hide undefined"
               key="7"
               style={Object {}}
             >
               <td
-                className="column col hide"
+                className="column col colComponent hide undefined"
                 style={Object {}}
               >
                 <span
@@ -1133,11 +1214,15 @@ exports[`Table renders correctly 1`] = `
                 >
                   Subscribers
                 </span>
-                <span
-                  className="content"
+                <div
+                  className="contentContainer"
                 >
-                  2947
-                </span>
+                  <span
+                    className="content"
+                  >
+                    2947
+                  </span>
+                </div>
               </td>
             </Col>
           </tr>
