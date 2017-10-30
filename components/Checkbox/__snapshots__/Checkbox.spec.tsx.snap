@@ -2,7 +2,8 @@
 
 exports[`CheckBox renders CheckBox correctly 1`] = `
 <div
-  className="checkbox-component checkbox disabledCheckbox myClass checkboxChecked"
+  className="checkbox-component checkbox
+                    disabledCheckbox myClass checkboxChecked undefined"
   style={
     Object {
       "color": "blue",
@@ -33,23 +34,193 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
 `;
 
 exports[`CheckBox renders CheckboxGroup correctly 1`] = `
-<div
-  className="checkboxgroup-component myClass"
+<CheckboxGroup
+  className="myClass"
+  dataLabel="plan"
+  horizontal={true}
   id="checkbox1"
+  onChange={[Function]}
+  selectedChecks={
+    Array [
+      Object {
+        "checked": true,
+        "label": "Checkbox1",
+        "value": "Checkbox1",
+      },
+      Object {
+        "checked": false,
+        "label": "Checkbox2",
+        "value": "Checkbox2",
+      },
+      Object {
+        "checked": false,
+        "label": "Checkbox3",
+        "value": "Checkbox3",
+      },
+    ]
+  }
+  spacing={10}
   style={
     Object {
       "color": "blue",
     }
   }
+  title="Select a plan"
 >
-  <H2
-    className=""
-    style={Object {}}
-  >
-    Select a plan
-  </H2>
   <div
-    className="horizontal"
-  />
-</div>
+    className="checkboxgroup-component myClass"
+    id="checkbox1"
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+  >
+    <H2
+      className=""
+      style={Object {}}
+    >
+      <h2
+        className="h2-component h2 "
+        id={undefined}
+        style={Object {}}
+      >
+        Select a plan
+      </h2>
+    </H2>
+    <div
+      className="horizontal"
+    >
+      <Checkbox
+        checked={true}
+        horizontal={true}
+        key="0"
+        label="Checkbox1"
+        name="1482363367071"
+        onClick={[Function]}
+        spacing={10}
+        status={undefined}
+        value="Checkbox1"
+      >
+        <div
+          className="checkbox-component checkbox
+                     undefined checkboxChecked undefined"
+          style={
+            Object {
+              "marginRight": "10px",
+            }
+          }
+        >
+          <input
+            className="material-icons"
+            defaultChecked={true}
+            disabled={undefined}
+            id="4zlbrf"
+            name="1482363367071"
+            onClick={[Function]}
+            type="checkbox"
+            value="Checkbox1"
+          />
+          <label
+            htmlFor="4zlbrf"
+          >
+            <span>
+              Checkbox1
+            </span>
+          </label>
+          <br />
+          <i
+            className="description"
+          />
+        </div>
+      </Checkbox>
+      <Checkbox
+        checked={false}
+        horizontal={true}
+        key="1"
+        label="Checkbox2"
+        name="1482363367071"
+        onClick={[Function]}
+        spacing={10}
+        status={undefined}
+        value="Checkbox2"
+      >
+        <div
+          className="checkbox-component checkbox
+                     undefined  undefined"
+          style={
+            Object {
+              "marginRight": "10px",
+            }
+          }
+        >
+          <input
+            className="material-icons"
+            defaultChecked={false}
+            disabled={undefined}
+            id="4zlbrf"
+            name="1482363367071"
+            onClick={[Function]}
+            type="checkbox"
+            value="Checkbox2"
+          />
+          <label
+            htmlFor="4zlbrf"
+          >
+            <span>
+              Checkbox2
+            </span>
+          </label>
+          <br />
+          <i
+            className="description"
+          />
+        </div>
+      </Checkbox>
+      <Checkbox
+        checked={false}
+        horizontal={true}
+        key="2"
+        label="Checkbox3"
+        name="1482363367071"
+        onClick={[Function]}
+        spacing={10}
+        status={undefined}
+        value="Checkbox3"
+      >
+        <div
+          className="checkbox-component checkbox
+                     undefined  undefined"
+          style={
+            Object {
+              "marginRight": "10px",
+            }
+          }
+        >
+          <input
+            className="material-icons"
+            defaultChecked={false}
+            disabled={undefined}
+            id="4zlbrf"
+            name="1482363367071"
+            onClick={[Function]}
+            type="checkbox"
+            value="Checkbox3"
+          />
+          <label
+            htmlFor="4zlbrf"
+          >
+            <span>
+              Checkbox3
+            </span>
+          </label>
+          <br />
+          <i
+            className="description"
+          />
+        </div>
+      </Checkbox>
+    </div>
+  </div>
+</CheckboxGroup>
 `;

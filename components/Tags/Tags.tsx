@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Tags.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 export interface ITagsProps{
 
@@ -13,7 +13,19 @@ export interface ITagsProps{
     tags: string[];
 
     /** validate input wether it should accept emails or add a custom validation */
-    validation?: 'email' | ((tag: string) => boolean);
+    validateTag?: 'email' | ((tag: string) => boolean);
+
+    /** input description (small italic bottom) */
+    description?: string;
+
+    /** status of the input, error or success */
+    status?: 'error' | 'success';
+
+    /** this is for validating the whole component within a Form */
+    validate?: (data: IValidationCallbackData) => boolean;
+
+    /** provide to make the tags component required within a Form */
+    required?: boolean;
 
     /** source of data for type ahead completion */
     source?: (() => Promise<string[]>) | (() => string[]) | string[];
@@ -54,9 +66,9 @@ export interface ITagsProps{
     /** an array of possible delimiters, enter key is the default delimiter */
     delimiters?: Array<string | number>;
 
-    onAdd?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onAdd?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => string [] | void;
 
-    onRemove?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData, index: number) => void;
+    onRemove?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData, index: number) => string [] | void;
 
     // onChange?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
@@ -86,10 +98,14 @@ export interface ITagsState{
 export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     static defaultProps: Partial<ITagsProps> = {
+        className: '',
         delimiters: ['Enter', 13], // 13 is the keyCode for Enter
+        style: {},
+        tags: []
     };
 
     id: string;
+    myInp: any;
 
     constructor(props: ITagsProps){
         super(props);
@@ -135,18 +151,23 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const source = this.state.value !== '' ? this.sourceList() : null;
 
-        // const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
+        const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
+
+        const status = this.getStatus();
+        const descStatus = this.getDescStatus();
 
         const message = this.getMessage();
+
+        const description = this.props.description;
 
         return(
             <div className={`${styles.container} ${this.props.className}`} style={this.props.style} id={this.id}>
                 {this.props.label && <div className={styles.label}>{this.props.label}</div>}
-                <label className={styles.tags}>
+                <label className={`${styles.tags} ${status}`}>
                     {tags}
                     <div className={styles.inputContainer}>
                         <input
-                            ref={this.id}
+                            ref={(ip) => this.myInp = ip}
                             value={this.state.value}
                             className={styles.input}
                             placeholder={this.props.placeholder}
@@ -159,8 +180,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         {message}
                         {source}
                     </div>
-                    {/* {cover} */}
+                    {cover}
                 </label>
+                {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
             </div>
         );
     }
@@ -238,8 +260,18 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             const tag = tags[tags.length - 1];
 
+            const validationTags =
             this.props.onRemove &&
             this.props.onRemove(e, {value: tag, dataLabel: this.props.dataLabel}, tags.length - 1);
+
+            this.props.validate &&
+            this.props.validate(
+                {
+                    dataLabel: this.props.dataLabel,
+                    required: this.props.required,
+                    value: validationTags || this.props.tags
+                }
+            );
 
         } else if (key === 'ArrowDown' || keyCode === 40){
 
@@ -271,7 +303,19 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 if (validity){
                     this.setState({value: '', sourceList: [], activeItem: 0});
 
-                    this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                    const validationTags = this.props.onAdd &&
+                    this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+
+                    if (this.props.status){
+                        this.props.validate &&
+                        this.props.validate(
+                            {
+                                dataLabel: this.props.dataLabel,
+                                required: this.props.required,
+                                value: validationTags || this.props.tags
+                            }
+                        );
+                    }
                 } else {
                     this.setState({message: this.props.errorMessage || 'Input type is invalid'});
                     setTimeout(() => {
@@ -290,7 +334,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     checkValidity = (tag: string) => {
-        const validation = this.props.validation;
+        const validation = this.props.validateTag;
         if (validation){
             if (typeof validation === 'string' && validation === 'email'){
                 return this.checkIfEmail(tag);
@@ -343,7 +387,17 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             //     }
             // }
 
-            this.props.onAdd && this.props.onAdd(e, {value: tags, dataLabel: this.props.dataLabel});
+            const validationTags = this.props.onAdd &&
+            this.props.onAdd(e, {value: tags, dataLabel: this.props.dataLabel});
+
+            this.props.validate &&
+            this.props.validate(
+                {
+                    dataLabel: this.props.dataLabel,
+                    required: this.props.required,
+                    value: validationTags || this.props.tags
+                }
+            );
 
         }
 
@@ -400,7 +454,18 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             const tag = this.props.tags[index];
 
-            this.props.onRemove && this.props.onRemove(e, {value: [tag], dataLabel: this.props.dataLabel}, index);
+            const validationTags =
+            this.props.onRemove &&
+            this.props.onRemove(e, {value: [tag], dataLabel: this.props.dataLabel}, index);
+
+            this.props.validate &&
+            this.props.validate(
+                {
+                    dataLabel: this.props.dataLabel,
+                    required: this.props.required,
+                    value: validationTags || this.props.tags
+                }
+            );
         };
     }
 
@@ -437,18 +502,31 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             this.setState({value: ''});
 
-            this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+            const validationTags =
+            this.props.onAdd &&
+            this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+
+            if (this.props.status){
+                this.props.validate &&
+                this.props.validate(
+                    {
+                        dataLabel: this.props.dataLabel,
+                        required: this.props.required,
+                        value: validationTags || this.props.tags
+                    }
+                );
+            }
 
         };
 
     }
 
-    // getCover = () => {
-    //     return <div onClick={this.removeSource} className={styles.cover} />;
-    // }
+    getCover = () => {
+        return <div onClick={this.removeSource} className={styles.cover} />;
+    }
 
     onBlur = () => {
-        if (!this.props.preventSubmit){
+        if (!this.props.preventSubmit && !(this.state.sourceList.length > 0 && this.state.value !== '')){
             return(e: React.SyntheticEvent<HTMLElement>) => {
 
                 const tags: string[] = this.props.tags;
@@ -463,7 +541,11 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     if (validity){
                         this.setState({value: '', sourceList: [], activeItem: 0});
 
-                        this.props.onAdd && this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                        const validationTags = this.props.onAdd &&
+                        this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                        if (this.props.validate){
+                            this.validateOnBlur(e, validationTags);
+                        }
                     } else {
                         this.setState({message: this.props.errorMessage || 'Input type is invalid'});
                         setTimeout(() => {
@@ -471,9 +553,23 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         }, 3000);
                     }
 
+                } else if (this.props.validate){
+                    this.validateOnBlur(e);
                 }
             };
         }
+    }
+
+    validateOnBlur = (e: React.SyntheticEvent<HTMLElement>, tags?: string[] | void) => {
+
+        this.props.validate &&
+        this.props.validate(
+            {
+                dataLabel: this.props.dataLabel,
+                required: this.props.required,
+                value: tags ? tags : this.props.tags
+            }
+        );
     }
 
     getMessage = () => {
@@ -485,6 +581,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     removeSource = () => {
+        this.myInp.focus();
         this.setState({sourceList: [], activeItem: -1});
     }
 
@@ -515,6 +612,28 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         }
 
         return newDelimiters;
+    }
+
+    getStatus = () => {
+        const inputStatus = this.props.status && this.props.status;
+        if (inputStatus){
+            if (inputStatus === 'error'){
+                return styles.error;
+            } else if (inputStatus === 'success'){
+                return styles.success;
+            }
+        }
+    }
+
+    getDescStatus = () => {
+        const inputStatus = this.props.status && this.props.status;
+        if (inputStatus){
+            if (inputStatus === 'error'){
+                return styles.descError;
+            } else if (inputStatus === 'success'){
+                return styles.descSuccess;
+            }
+        }
     }
 
 }

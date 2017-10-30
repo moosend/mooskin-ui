@@ -2,7 +2,7 @@ class SideBarExample extends React.Component {
 
     render(){
         return (
-            <SideBar button hideClick>
+            <SideBar button hideClick style={{top: 80}}>
                 <SidebarItem
                     image="https://cdn.moostaging.com/assets/images/icons/icon-dashboard.png"
                     imageOn="https://cdn.moostaging.com/assets/images/icons/icon-dashboard-on.png"
@@ -16,6 +16,7 @@ class SideBarExample extends React.Component {
                 <SidebarItem
                     image="https://camo.githubusercontent.com/00dfbc4648e8bf8f7903c85b8c6e2eaf8afd1320/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
                     label="Components"
+                    subMenuStyle={{top: 80}}
                 >
                     <SidebarItem
                         label="Sidebar"
@@ -32,6 +33,10 @@ class SideBarExample extends React.Component {
                     <SidebarItem
                         label="Forms & FormGroups"
                         href="#forms"
+                    />
+                    <SidebarItem
+                        label="List & ListItem"
+                        href="#list"
                     />
                     <SidebarItem
                         label="Toggables"

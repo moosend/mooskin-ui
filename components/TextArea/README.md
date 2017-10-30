@@ -104,6 +104,46 @@ onEditorChange(data) {
 }
 ```
 
+### Validation
+
+The Textarea Component can be validated using the `status` and `validate` props. The `status` prop will accept an 'error' or 'success' string to apply the appropriate classes to the textarea, or none for that matter. The `validate` prop is the validation function which accepts a arg of an object containing `value`, `dataLabel` and `required` props of the component as properties, and depending on the received value, you can use any kind of validation you like. The `description` prop can also be used in the process to inform the user about validation errors. The validation will fire the first time onBlur, and every other time onChange.
+
+#### Example
+
+```
+this.state = {
+    status: '',
+    message: '',
+    value: ''
+}
+
+<TextArea
+    value={this.state.value}
+    validate={this.validate}
+    status={this.state.status}
+    description={this.state.message}
+    onChange={this.onChange}
+/>
+
+onChange(e, data) {
+    this.setState({value: data.value})
+}
+
+validate(data){
+    if (data.value){
+        if (data.value.length < 5){
+            this.setState({status: 'error', message: 'TextArea should have 5 or more characters'});
+        } else {
+            this.setState({status: '', message: ''})
+        }
+    } else {
+        this.setState({status: 'error', message: 'This TextArea is required'});
+    }
+}
+```
+
+In this case, when the user focuses the textarea and blurs away immediately, an error class will get applied to the textarea and the user will get informed that thee textarea is required. When the user starts typing, the error message will change, saying that the textarea should have 5 or more characters, when this is done, the error classes will get removed. Alternatevely, when the validation passes, we can pass a success status to apply the related class.
+
 <div class="playground-doc">
 
 ## Supported attributes
@@ -127,6 +167,8 @@ onEditorChange(data) {
 * `richEditor` - rich editor mode for the textArea
 * `richValue` - value of the TextArea (only for Editor mode)
 * `onEditorChange` - change callback for the TextArea (only for Editor mode)
+* `validate` - validate function
+* `status` - to be used with validate, to apply classes based on error or success
 
 </div>
 

@@ -31,7 +31,7 @@ And then you can simply start using it by typing
 
 ```
 
-another way of doing this is by importing `RadioGroup` only and doing a simple workaround
+another way of doing this is by importing `CheckboxGroup` only and doing a simple workaround
 ```
 Import {CheckboxGroup} from 'mooskin';
 
@@ -40,6 +40,28 @@ Import {CheckboxGroup} from 'mooskin';
     <CheckboxGroup.Checkbox id={'Checkbox2'} value="Checkbox2" label="Another Checkbox"/>
     <CheckboxGroup.Checkbox id={'Checkbox3'} value="Checkbox3" label="More Checkbox"/>
 </CheckboxGroup>
+```
+or by passing the `selectedChecks` prop only
+```
+const checked = [
+    {
+        checked: true,
+        label: 'Checkbox1',
+        value: 'Checkbox1'
+    },
+    {
+        checked: false,
+        label: 'Checkbox2',
+        value: 'Checkbox2'
+    },
+    {
+        checked: false,
+        label: 'Checkbox3',
+        value: 'Checkbox3'
+    }
+];
+
+<CheckboxGroup selectedChecks={checked} onChange={cb} dataLabel="asd">
 ```
 
 Like the normal HTML elements, it will accept given attributes and render differently based on the given attributes
@@ -124,6 +146,50 @@ const logValue = (e, data) => {       // data is the callback object, which cons
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
+### Validation
+
+The Checkbox Component can be validated using the `status` and `validate` props. The `status` prop will accept an 'error' or 'success' string to apply the appropriate classes to the checkboxes, or none for that matter. The `validate` prop is the validation function which accepts a arg of an object containing `value`, `dataLabel` and `required` props of the component as properties, and depending on the received value, you can use any kind of validation you like. The `description` prop can also be used in the process to inform the user about validation errors. The validation will fire the first time onBlur, and every other time onChange.
+
+#### Example
+
+```
+this.state = {
+    status: 'error',
+    message: '',
+    value: []
+};
+
+<CheckboxGroup
+    onChange={this.onChange}
+    title="Vertical checkboxes"
+    validate={this.validate}
+    status={this.state.status}
+    description={this.state.message}
+    selectedChecks={this.state.value}
+/>
+
+onChange(e, data) {
+    console.log(data.value);
+    this.setState({value: data.value});
+}
+
+validate(value) {
+    let checked = 0;
+    value.forEach((check) => {
+        if (check.checked){
+            checked = checked + 1;
+        }
+    });
+    if (checked >= 2){
+        this.setState({status: 'success', message: ''});
+    } else {
+        this.setState({status: 'error', message: 'At least 2 checkboxes need to be checked'});
+    }
+}
+```
+
+In this case, if less than two checkboxes are checked, the error classes will get applied to the checkbox and a message will notify the user.
+
 <div class="playground-doc">
 
 ## Supported attributes for CheckboxGroup
@@ -137,6 +203,8 @@ This can be used in various situations and combinations, for an enhanced develop
 * `spacing` - space between Checkboxes
 * `style` - element style
 * `title` - optional title for the Checkboxes group
+
+The `selectedChecks` prop is required.
 
 ## Supported attributes for Checkbox 
 

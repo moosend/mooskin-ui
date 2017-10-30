@@ -7,7 +7,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 import styles from './TextArea.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 export interface ITextAreaProps {
 
@@ -64,6 +64,12 @@ export interface ITextAreaProps {
 
     /** override textarea class */
     className?: string;
+
+    /** status of the textarea, error or success */
+    status?: 'error' | 'success';
+
+    /** validate function */
+    validate?: (data: IValidationCallbackData) => boolean;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -152,6 +158,8 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
                     dataLabel={this.props.dataLabel}
                     labelWidth={this.props.labelWidth}
                     value={this.props.value}
+                    validate={this.props.validate}
+                    status={this.props.status}
                 />
             );
         }
@@ -165,6 +173,37 @@ export const TextAreaComponent: React.StatelessComponent<ITextAreaProps> = (prop
         !props.disabled &&
         props.onChange &&
         props.onChange(e, {value: e.target.value, dataLabel: props.dataLabel});
+        if (props.status){
+            props.validate &&
+            props.validate({value: e.target.value, dataLabel: this.props.dataLabel, required: this.props.required});
+        }
+    };
+
+    const validateOnBlur = () => {
+            props.validate &&
+            props.validate({value: props.value, dataLabel: props.dataLabel, required: this.props.required});
+    };
+
+    const getStatus = () => {
+        const textStatus = props.status && props.status;
+        if (textStatus){
+            if (textStatus === 'error'){
+                return styles.error;
+            } else if (textStatus === 'success'){
+                return styles.success;
+            }
+        }
+    };
+
+    const getDescStatus = () => {
+        const textStatus = props.status && props.status;
+        if (textStatus){
+            if (textStatus === 'error'){
+                return styles.descError;
+            } else if (textStatus === 'success'){
+                return styles.descSuccess;
+            }
+        }
     };
 
     const generateId = () => {
@@ -175,6 +214,8 @@ export const TextAreaComponent: React.StatelessComponent<ITextAreaProps> = (prop
 
     const disabledtextarea = props.disabled ? styles.disabledTextArea : '';
     const spacing = !props.labelWidth ? {} : {flexBasis: `${props.labelWidth}px`};
+    const status = getStatus();
+    const descStatus = getDescStatus();
 
     return (
         <div className={`textarea-component ${props.className} ${styles.areaContainer}`}>
@@ -193,10 +234,11 @@ export const TextAreaComponent: React.StatelessComponent<ITextAreaProps> = (prop
                     required={props.required}
                     disabled={props.disabled}
                     readOnly={props.readonly}
-                    className={`textarea ${styles.textarea} ${disabledtextarea}`}
+                    className={`textarea ${styles.textarea} ${disabledtextarea} ${status}`}
                     style={props.style}
+                    onBlur={validateOnBlur}
                 />
-                <i className={styles.description}>{props.description}</i>
+                {props.description && <i className={`${styles.description} ${descStatus}`}>{props.description}</i>}
             </div>
         </div>
     );

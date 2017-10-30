@@ -41,6 +41,14 @@ export default class Button extends React.Component<IButtonProps, {}> {
 
     render(){
 
+        const button = this.getButton();
+
+        return button;
+
+    }
+
+    getButton = () => {
+
         const {style, inverseStyle, disabled, children, className, id, href, type} = this.props;
 
         const buttonStyles = inverseStyle ? styles.inverseButton : styles.normalButton;
@@ -48,18 +56,32 @@ export default class Button extends React.Component<IButtonProps, {}> {
 
         const classes = `button-component ${styles.button} ${buttonStyles} ${disabledStyles} ${className}`;
 
-        return (
-            <button
-                id={id}
-                type={type}
-                onClick={this.onClick}
-                disabled={disabled}
-                className={classes}
-                style={style}
-            >
-                <a href={href} className={styles.anchor}>{children}</a>
-            </button>
-        );
+        if (href){
+            return (
+                <a
+                    id={id}
+                    href={href}
+                    className={`button-component-link ${classes}`}
+                    style={style}
+                    onClick={this.onClick}
+                >
+                    {children}
+                </a>
+            );
+        } else {
+            return (
+                <button
+                    id={id}
+                    type={type}
+                    onClick={this.onClick}
+                    disabled={disabled}
+                    className={classes}
+                    style={style}
+                >
+                    {children}
+                </button>
+            );
+        }
     }
 
     onClick = (e: React.MouseEvent<HTMLElement>) => {

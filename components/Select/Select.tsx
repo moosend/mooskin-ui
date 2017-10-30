@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import {arrayHasDupes} from '../_utils/helper';
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 import styles from './Select.css';
 
@@ -36,6 +36,15 @@ export interface ISelectProps {
 
     /** select description (small italic bottom) */
     description?: string;
+
+    /** status of the select, error or success */
+    status?: 'error' | 'success';
+
+    /** wether the select is required (used within forms) */
+    required?: boolean;
+
+    /** validate function */
+    validate?: (data: IValidationCallbackData) => boolean;
 
     /** override button styles */
     style?: React.CSSProperties;
@@ -88,12 +97,17 @@ class Select extends React.Component<ISelectProps, ISelectState>{
             throw new Error('Can not have two options with same values!');
         }
 
+        const description = this.props.description;
+
         const displayList = this.state.list ? 'block' : 'none';
         const zIndex = this.state.list ? 6 : 0;
 
         const options = this.assignCbToChildren();
 
         const selected = this.getSelectedChildLabel();
+
+        const status = this.getStatus();
+        const descStatus = this.getDescStatus();
 
         return (
             <div className={`select-component ${this.props.className}`} style={this.props.style}>
@@ -106,7 +120,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                     style={{display: !this.state.list && 'none'}}
                 />
                 <div className={styles.selectContainer} style={{zIndex}}>
-                    <div className={styles.labelContainer} >
+                    <div className={`${styles.labelContainer} ${status}`} >
                         <input
                             type="text"
                             className={styles.innerInput}
@@ -115,6 +129,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             placeholder="Type to filter options"
                             onChange={this.onChangeFilter}
                             ref={(input) => (input && this.state.list && input.focus())}
+                            onBlur={this.validateOnBlur}
                         />
                         <div
                             onClick={this.onOpenList}
@@ -133,7 +148,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             {options}
                         </ul>
                     </div>
-                    <i className={styles.description}>{this.props.description}</i>
+                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             </div>
         );
@@ -146,6 +161,10 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     onClick = (option: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
+            if (this.props.status){
+                this.props.validate &&
+                this.props.validate({value: option, dataLabel: this.props.dataLabel, required: this.props.required});
+            }
             this.setState({list: false, selected: option, filter: ''});
         };
     }
@@ -215,6 +234,35 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         });
 
         return !arrayHasDupes(values);
+    }
+
+    getStatus = () => {
+        const selectStatus = this.props.status && this.props.status;
+        if (selectStatus){
+            if (selectStatus === 'error'){
+                return styles.error;
+            } else if (selectStatus === 'success'){
+                return styles.success;
+            }
+        }
+    }
+
+    getDescStatus = () => {
+        const selectStatus = this.props.status && this.props.status;
+        if (selectStatus){
+            if (selectStatus === 'error'){
+                return styles.descError;
+            } else if (selectStatus === 'success'){
+                return styles.descSuccess;
+            }
+        }
+    }
+
+    validateOnBlur = () => {
+        this.props.validate &&
+        this.props.validate(
+            {value: this.props.selected, dataLabel: this.props.dataLabel, required: this.props.required}
+        );
     }
 }
 

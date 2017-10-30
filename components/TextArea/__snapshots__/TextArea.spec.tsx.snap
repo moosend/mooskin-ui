@@ -26,6 +26,7 @@ exports[`TextArea renders correctly 1`] = `
   <TextAreaComponent
     className="myClass"
     cols={40}
+    dataLabel={undefined}
     description="just some textarea"
     disabled={true}
     id="textarea"
@@ -36,13 +37,16 @@ exports[`TextArea renders correctly 1`] = `
     name="textarea name"
     onChange={[Function]}
     placeholder="textarea placeholder"
+    readonly={undefined}
     required={true}
     rows={10}
+    status={undefined}
     style={
       Object {
         "color": "blue",
       }
     }
+    validate={undefined}
     value="textarea value"
   >
     <div
@@ -63,15 +67,17 @@ exports[`TextArea renders correctly 1`] = `
         className="textAreaDiv"
       >
         <textarea
-          className="textarea textarea disabledTextArea"
+          className="textarea textarea disabledTextArea undefined"
           cols={40}
           disabled={true}
           id="textarea"
           maxLength={50}
           minLength={10}
           name="nodejs"
+          onBlur={[Function]}
           onChange={[Function]}
           placeholder="textarea placeholder"
+          readOnly={undefined}
           required={true}
           rows={10}
           style={
@@ -82,7 +88,7 @@ exports[`TextArea renders correctly 1`] = `
           value="textarea value"
         />
         <i
-          className="description"
+          className="description undefined"
         >
           just some textarea
         </i>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Pie} from 'react-chartjs-2';
+import {ChartData, Pie} from 'react-chartjs-2';
 
 import styles from './Pie.css';
 
@@ -53,7 +53,7 @@ class PieChart extends React.Component<IPieProps, {}>{
             position
         };
 
-        const options = {
+        const options: ChartData<any> = {
             legend,
             maintainAspectRatio,
             responsive: true,

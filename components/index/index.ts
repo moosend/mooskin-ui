@@ -12,6 +12,7 @@ export {default as HorizontalRangeBar} from '../HorizontalRangeBar';
 export {H1, H2, H3, H4, H5, H6} from '../Headings';
 export {default as Input} from '../Input';
 export {default as List, ListItem} from '../List';
+export {default as LoadingBar} from '../LoadingBar';
 export {default as Modal} from '../Modal';
 export {default as Pagination} from '../Pagination';
 export {default as RadioGroup, Radio} from '../Radio';
@@ -27,5 +28,6 @@ export {default as TabbedContent, Content, Header, Tab} from '../TabbedContent';
 export {default as Tags} from '../Tags';
 export {default as TopNotification} from '../TopNotification';
 export {default as Table, TableHeader} from '../Table';
+export {default as Topbar} from '../Topbar';
 
 export {Bar, Doughnut, Pie, Line} from '../Charts';

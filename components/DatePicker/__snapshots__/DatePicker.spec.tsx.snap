@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DatePicker renders correctly 1`] = `
+<div
+  className="datepicker-component myClass datePicker"
+  id="input1"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <label
+    className="label"
+    style={Object {}}
+  >
+    with a label ofc
+  </label>
+  <div
+    className="wrapper"
+  >
+    <input
+      className="dateInput disabled undefined"
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      readOnly={true}
+      required={true}
+      value="01 Jan 2013, 0:00"
+    />
+    <div
+      className="calendar"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <InputMoment
+        hourStep={1}
+        minStep={1}
+        moment={"2013-01-01T13:00:00.000Z"}
+        nextMonthIcon="ion-ios-arrow-right"
+        onChange={[Function]}
+        onSave={[Function]}
+        prevMonthIcon="ion-ios-arrow-left"
+      />
+      <div
+        className="cover"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;

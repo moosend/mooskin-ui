@@ -25,7 +25,7 @@ export interface IRadioGroupProps {
     className?: string;
 
     /** reflects to radioGroup state */
-    selectedRadios?: IRadioData[];
+    selectedRadios: IRadioData[];
 
     /** override RadioGroup styles */
     style?: React.CSSProperties;
@@ -74,9 +74,9 @@ export interface IRadioProps {
     label?: string;
 }
 
-export interface IRadioState{
-    data: IRadioData[];
-}
+// export interface IRadioState{
+//     data: IRadioData[];
+// }
 
 export interface IRadioData{
     selected?: boolean | undefined;
@@ -84,7 +84,7 @@ export interface IRadioData{
     label?: string;
 }
 
-export default class RadioGroup extends React.Component<IRadioGroupProps, IRadioState> {
+export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
 
     static defaultProps = {
         className: '',
@@ -101,14 +101,14 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
 
         this.name = this.generateName();
 
-        this.state = {
-            data: this.props.selectedRadios || this.setData()
-        };
+        // this.state = {
+        //     data: this.props.selectedRadios || this.setData()
+        // };
     }
 
-    componentWillReceiveProps(nextProps: IRadioGroupProps) {
-        this.setState({data: nextProps.selectedRadios ? nextProps.selectedRadios : this.state.data});
-    }
+    // componentWillReceiveProps(nextProps: IRadioGroupProps) {
+    //     this.setState({data: nextProps.selectedRadios ? nextProps.selectedRadios : this.state.data});
+    // }
 
     render(){
 
@@ -124,15 +124,14 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
             >
                 {title && <H2>{title}</H2>}
                 <div className={align}>
-                    {this.assignRadios()}
+                    {this.getRadios()}
                 </div>
             </div>
         );
     }
 
-    onClick = (dataArray: {selected: boolean, value: string, label: string}) => {
+    onClick = (dataArray: {selected: boolean, value?: string, label?: string}, data: IRadioData[]) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            const data: IRadioData[] = [...this.state.data];
             data.forEach((radio, index) => {
                 data[index] = {
                     label: radio.label,
@@ -154,24 +153,89 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
                     };
                 }
             });
-            this.setState({data});
             this.props.onChange && this.props.onChange(e, {value: data, dataLabel: this.props.dataLabel});
         };
     }
 
-    setData = () => {
-        const data: IRadioData[] = [];
+    // setData = () => {
+    //     const data: IRadioData[] = [];
+    //     let selected = false;
+    //     React.Children.map(this.props.children, (child) => {
+    //         if (React.isValidElement<IRadioProps>(child)){
+    //             if (child.props.selected === true){
+    //                 selected = true;
+    //             }
+    //             data.push({
+    //                 label: child.props.label,
+    //                 selected: child.props.selected ? child.props.selected : false,
+    //                 value: child.props.value
+    //             });
+    //         }
+    //     });
+    //     if (selected === false && data.length > 0){
+    //         data[0].selected = true;
+    //     }
+    //     return data;
+    // }
+
+    // assignRadios = () => {
+    //     const data = [...this.state.data];
+    //     const radios: Array<React.ReactElement<IRadioProps>> = [];
+    //     React.Children.map(this.props.children, (child, index) => {
+    //         if (React.isValidElement<IRadioProps>(child)){
+    //             const selected = data[index].selected === true ? true : false;
+    //             const label = child.props.label ? child.props.label : child.props.value;
+    //             const extraProps: Partial<IRadioProps & {key: number}> = {
+    //                 key: index,
+    //                 label: data[index].label,
+    //                 name: this.name,
+    //                 onClick: /** child.props.onClick ? child.props.onClick : */
+    //                     this.onClick({selected, value: child.props.value, label}),
+    //                 selected: data[index].selected,
+    //                 spacing: this.props.spacing,
+    //                 value: data[index].value,
+    //                 vertical: this.props.vertical
+    //             };
+
+    //             radios.push(React.cloneElement(child, extraProps));
+
+    //         }else{
+    //             throw new Error('<RadioGroup> element only accepts <Radio> elements as children');
+    //         }
+    //     });
+
+    //     if (this.checkSelected(radios)){
+    //         return radios;
+    //     } else {
+    //         throw new Error('Only one <Radio> element should have the selected prop');
+    //     }
+
+    // }
+
+    getRadios = () => {
+        if (this.props.children){
+            let data = this.props.selectedRadios.length === 0 ? this.getChildrenData() : this.props.selectedRadios;
+            data = this.checkEmpty(data);
+            if (this.checkSelected(data)){
+                return this.getChildren(data);
+            } else {
+                throw new Error('Only one <Radio> element should have the selected prop');
+            }
+        } else {
+            const data = this.checkEmpty(this.props.selectedRadios);
+            if (this.checkSelected(data)){
+                return this.getPropsRadios(data);
+            } else {
+                throw new Error('Only one <Radio> element should have the selected prop');
+            }
+        }
+    }
+
+    checkEmpty = (data: IRadioData[]) => {
         let selected = false;
-        React.Children.map(this.props.children, (child) => {
-            if (React.isValidElement<IRadioProps>(child)){
-                if (child.props.selected === true){
-                    selected = true;
-                }
-                data.push({
-                    label: child.props.label,
-                    selected: child.props.selected ? child.props.selected : false,
-                    value: child.props.value
-                });
+        data.map((radio) => {
+            if (radio.selected === true){
+                selected = true;
             }
         });
         if (selected === false && data.length > 0){
@@ -180,23 +244,39 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
         return data;
     }
 
-    assignRadios = () => {
-        const data = [...this.state.data];
+    getChildrenData = () => {
+        const data: IRadioData[] = [];
+        React.Children.map(this.props.children, (child, index) => {
+            if (React.isValidElement<IRadioData>(child)){
+                if (React.isValidElement<IRadioProps>(child)){
+                    data.push({
+                        label: child.props.label ? child.props.label : child.props.value,
+                        selected: child.props.selected ? child.props.selected : false,
+                        value: child.props.value
+                    });
+                }
+            }
+        });
+        return data;
+    }
+
+    getChildren = (data: IRadioData[]) => {
         const radios: Array<React.ReactElement<IRadioProps>> = [];
         React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement<IRadioProps>(child)){
                 const selected = data[index].selected === true ? true : false;
-                const label = child.props.label ? child.props.label : child.props.value;
+                const value = data[index].value ? data[index].value : `radio${index}`;
+                const label = data[index].label ? data[index].label : value;
                 const extraProps: Partial<IRadioProps & {key: number}> = {
                     key: index,
                     label: data[index].label,
                     name: this.name,
                     onClick: /** child.props.onClick ? child.props.onClick : */
-                        this.onClick({selected, value: child.props.value, label}),
+                    this.onClick({selected, value, label}, data),
                     selected: data[index].selected,
                     spacing: this.props.spacing,
-                    value: data[index].value,
-                    vertical: this.props.vertical
+                    value,
+                    vertical: this.props.vertical,
                 };
 
                 radios.push(React.cloneElement(child, extraProps));
@@ -205,19 +285,37 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, IRadio
                 throw new Error('<RadioGroup> element only accepts <Radio> elements as children');
             }
         });
-
-        if (this.checkSelected(radios)){
-            return radios;
-        } else {
-            throw new Error('Only one <Radio> element should have the selected prop');
-        }
-
+        return radios;
     }
 
-    checkSelected = (radios: Array<React.ReactElement<IRadioProps>>) => {
+    getPropsRadios = (data: IRadioData[]) => {
+        const radios: Array<React.ReactElement<IRadioProps>> = [];
+        data.forEach((radio, index) => {
+            const selected = radio.selected === true ? true : false;
+            const value = radio.value ? radio.value : `radio${index}`;
+            const label = radio.label ? radio.label : value;
+
+            radios.push(
+                <Radio
+                    selected={selected}
+                    vertical={this.props.vertical}
+                    key={index}
+                    label={label}
+                    name={this.name}
+                    onClick={this.onClick({selected, value, label}, data)}
+                    spacing={this.props.spacing}
+                    value={value}
+                />
+            );
+        });
+
+        return radios;
+    }
+
+    checkSelected = (radios: IRadioData[]) => {
         let selected: number = 0;
-        radios.forEach((radio: React.ReactElement<IRadioProps>) => {
-            if (radio.props.selected){
+        radios.forEach((radio: IRadioData) => {
+            if (radio.selected){
                 selected = selected + 1;
             }
         });

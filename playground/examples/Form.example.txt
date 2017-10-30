@@ -5,50 +5,73 @@ class FormExample extends React.Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.setValue = this.setValue.bind(this);
+        this.setValidatedValue = this.setValidatedValue.bind(this);
         this.getDate = this.getDate.bind(this);
         this.reset = this.reset.bind(this);
         this.onAdd = this.onAdd.bind(this);
         this.onRemove = this.onRemove.bind(this);
+        this.validateForm = this.validateForm.bind(this);
+        this.validateInput = this.validateInput.bind(this);
+        this.validateCheckbox = this.validateCheckbox.bind(this);
+        this.validateSelect = this.validateSelect.bind(this);
+        this.validateTags = this.validateTags.bind(this);
 
         this.state = {
-            contact: [
+            contact: {
+                value: [
+                    {
+                        checked: true,
+                        value: 'email',
+                        label:'Email'
+                    },
+                    {
+                        checked: false,
+                        value: 'tel',
+                        label: 'Telephone'
+                    },
+                    {
+                        checked: false,
+                        value: 'skype',
+                        label: 'Skype'
+                    },
+                    {
+                        checked: false,
+                        value: 'raven',
+                        label: 'Raven'
+                    },
+                    {
+                        checked: false,
+                        value: 'palantir',
+                        label: 'Palantír'
+                    }
+                ],
+                status: '',
+                message: ''
+            },
+            country: {value: '', status: '', message: ''},
+            email: {value: '', status: '', message: ''},
+            firstname: {value: '', status: '', message: ''},
+            lastname: {value: '', status: '', message: ''},
+            position: [
                 {
-                    checked: true,
-                    value: 'email',
-                    label:'Email'
+                    selected: false,
+                    value: 'fontend',
+                    label: 'Frontend Developer'
                 },
                 {
-                    checked: false,
-                    value: 'tel',
-                    label: 'Telephone'
-                },
-                {
-                    checked: false,
-                    value: 'skype',
-                    label: 'Skype'
-                },
-                {
-                    checked: false,
-                    value: 'raven',
-                    label: 'Raven'
-                },
-                {
-                    checked: false,
-                    value: 'palantir',
-                    label: 'Palantír'
+                    selected: true,
+                    value: 'backend',
+                    label: 'Backend Developer'
                 }
             ],
-            country: '',
-            email: '',
-            firstname: 'Doni',
-            lastname: 'Behrami',
-            position: [{selected: false, value: 'fontend', label: 'Frontend Developer' }, {selected: true, value: 'backend', label: 'Backend Developer'}],
             salary: '',
             message: EditorState.createEmpty(),
-            duration: '',
-            start: 1511342490554,
+            duration: {value: undefined, status: '', message: ''},
+            start: moment(),
+            coverletter: {value: '', status: '', message: ''},
+            logo: {value: undefined, status: '', message: ''},
             training: true,
-            tags: ['avid']
+            tags: {value: ['avid'], status: '', message: ''},
         };
     }
 
@@ -61,31 +84,51 @@ class FormExample extends React.Component {
                     <FormGroup horizontal>
                         <FormGroup >
                             <Input
+                                required
                                 label="Firstname:"
-                                onChange={this.setValue}
+                                onChange={this.setValidatedValue}
                                 dataLabel="firstname"
-                                value={this.state.firstname}
+                                value={this.state.firstname.value}
+                                status={this.state.firstname.status}
+                                description={this.state.firstname.message}
+                                validate={this.validateInput}
                             />
                             <Input
+                                required
                                 label="Lastname:"
-                                onChange={this.setValue}
+                                onChange={this.setValidatedValue}
                                 dataLabel="lastname"
-                                value={this.state.lastname}
+                                value={this.state.lastname.value}
+                                status={this.state.lastname.status}
+                                description={this.state.lastname.message}
+                                validate={this.validateInput}
+                            />
+                            <Input
+                                required
+                                label="Email:"
+                                type="email"
+                                onChange={this.setValidatedValue}
+                                dataLabel="email"
+                                value={this.state.email.value}
+                                status={this.state.email.status}
+                                description={this.state.email.message}
+                                validate={this.validateInput}
                             />
                             <Input
                                 label="Country:"
-                                onChange={this.setValue}
+                                onChange={this.setValidatedValue}
                                 dataLabel="country"
-                                value={this.state.country}
+                                value={this.state.country.value}
+                                status={this.state.country.status}
+                                description={this.state.country.message}
+                                validate={this.validateInput}
                             />
-                            <Input
-                                label="Email:"
-                                type="email"
+                            <RadioGroup
+                                title="Position:"
+                                dataLabel="position"
                                 onChange={this.setValue}
-                                dataLabel="email"
-                                value={this.state.email}
-                            />
-                            <RadioGroup title="Position: " dataLabel="position" onChange={this.setValue} selectedRadios={this.state.position}>
+                                selectedRadios={this.state.position}
+                            >
                                 <Radio
                                     value="fontend"
                                     label="Frontend Developer"
@@ -108,9 +151,11 @@ class FormExample extends React.Component {
                             <TextArea
                                 rows={11}
                                 label="Cover Letter:"
-                                onChange={this.setValue}
+                                onChange={this.setValidatedValue}
                                 dataLabel="coverletter"
-                                value={this.state.coverletter}
+                                value={this.state.coverletter.value}
+                                status={this.state.coverletter.status}
+                                description={this.state.coverletter.message}
                             />
                             <TextArea
                                 richEditor
@@ -118,7 +163,17 @@ class FormExample extends React.Component {
                                 dataLabel = "message"
                                 onChange = {this.getDate}
                             />
-                            <CheckboxGroup onChange={this.setValue} title="Contact" dataLabel="contact" selectedChecks={this.state.contact} horizontal>
+                            <CheckboxGroup
+                                required
+                                onChange={this.setValidatedValue}
+                                title="Contact"
+                                dataLabel="contact"
+                                horizontal
+                                selectedChecks={this.state.contact.value}
+                                status={this.state.contact.status}
+                                description={this.state.contact.message}
+                                validate={this.validateCheckbox}
+                            >
                                 <Checkbox value="email" label="Email" />
                                 <Checkbox value="tel" label="Telephone" />
                                 <Checkbox value="skype" label="Skype" />
@@ -132,56 +187,57 @@ class FormExample extends React.Component {
                             label="Desired Salary:"
                             onChange={this.setValue}
                             dataLabel="salary"
-                            value={this.state.salary}
                             type="number"
+                            value={this.state.salary}
                         />
-                        <DatePicker date={this.state.start} onChange={this.getDate} dataLabel="start" label={'Available to start:'}/>
-                        <FileUpload files={this.state.logo} dataLabel="logo" label="Logo:" onChange={this.setValue} accept=".png"/>
+                        <DatePicker
+                            required
+                            placeholder="Select a date"
+                            onChange={this.getDate}
+                            dataLabel="start"
+                            label={'Available to start:'}
+                            date={this.state.start.value}
+                        />
+                        <FileUpload
+                            dataLabel="logo"
+                            label="Logo:"
+                            onChange={this.setValidatedValue}
+                            accept=".png"
+                            files={this.state.logo.value}
+                            status={this.state.logo.status}
+                            description={this.state.logo.message}
+                        />
                         <Select
+                            required
                             dataLabel="duration"
-                            selected={this.state.duration}
-                            onChange={this.setValue}
+                            onChange={this.setValidatedValue}
                             label="Training duration:"
+                            selected={this.state.duration.value}
+                            status={this.state.duration.status}
+                            description={this.state.duration.message}
+                            validate={this.validateSelect}
                         >
                             <Option value="asap">Asap</Option>
                             <Option value="1-4w">1-4 weeks</Option>
                             <Option value="1-3m">1-3 months</Option>
                             <Option value="3-6m">3-6 months</Option>
                         </Select>
-                        <Tags label="Tag yourself" tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} dataLabel="tags" />
+                        <Tags
+                            deletable
+                            label="Tag yourself"
+                            tags={this.state.tags.value}
+                            onAdd={this.onAdd}
+                            onRemove={this.onRemove}
+                            dataLabel="tags"
+                            status={this.state.tags.status}
+                            description={this.state.tags.message}
+                            validate={this.validateTags}
+                        />
                     </FormGroup>
                     <FormGroup style={{flexDirection: 'row'}}>
                         <Button type="submit">Submit</Button>
                         <Button onClick={this.reset}>Reset</Button>
                     </FormGroup>
-                </Form>
-                <hr/>
-                <H2>Forms/FormGroups</H2>
-                <Form >
-                    <FormGroup>
-                        <Input label="Your firstname:" dataLabel="firstname"/>
-                        <Input label="Your lastname:" dataLabel="lastname"/>
-                        <Input label="Country:" dataLabel="country"/>
-                    </FormGroup>
-                    <FormGroup>
-                        <FormGroup>
-                            <RadioGroup title="Some Radios" dataLabel="radios" onChange={this.setValue}>
-                                <Radio value="Radio 1"/>
-                                <Radio value="Radio 2"/>
-                                <Radio value="Radio 3"/>
-                                <Radio value="Radio 4"/>
-                                <Radio value="Radio 5"/>
-                            </RadioGroup>
-                        </FormGroup>
-                        <FormGroup>
-                            <CheckboxGroup onChange={this.setValue} dataLabel="checkboxes">
-                                <Checkbox value="Checkbox 1" />
-                                <Checkbox value="Checkbox 2" />
-                                <Checkbox value="Checkbox 3" />
-                            </CheckboxGroup>
-                        </FormGroup>
-                    </FormGroup>
-                    <Button>Submit</Button>
                 </Form>
             </div>
         );
@@ -235,24 +291,82 @@ class FormExample extends React.Component {
         console.log(data.value);
     }
 
-    setValue(e, data) {
+    setValidatedValue(e, data) {
+        data.dataLabel && this.setState({[data.dataLabel]: {value: data.value}});
+    }
+
+    setValue(e, data){
         data.dataLabel && this.setState({[data.dataLabel]: data.value});
     }
 
     getDate(data) {
-        data.dataLabel && this.setState({[data.dataLabel]: data.value});
+        console.log(data.value);
+        data.dataLabel && this.setState({[data.dataLabel]: {value: data.value}});
     }
 
     onAdd(e, data) {
         console.log(data.value);
-        data.dataLabel && this.setState({[data.dataLabel]: this.state[data.dataLabel].concat(data.value)});
+        const newTags = this.state[data.dataLabel].value.concat(data.value);
+        data.dataLabel && this.setState({[data.dataLabel]: {value: newTags}});
+        return newTags;
     }
 
     onRemove(e, data, index) {
         console.log(data.value, index);
-        let tags = [...this.state[data.dataLabel]];
+        let tags = [...this.state[data.dataLabel].value];
         tags.splice(index, 1);
-        data.dataLabel && this.setState({[data.dataLabel]: tags});
+        data.dataLabel && this.setState({[data.dataLabel]: {value: tags}});
+        return tags;
+    }
+
+    validateForm(dataLabel){
+        this.setState({[dataLabel]: {status: 'error', message: 'This Field is required'}});
+    }
+
+    validateInput(data){
+        if (data.required){
+            if (data.value){
+                if (data.value.length < 5){
+                    this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'Input should have 5 or more characters'}});
+                    return false;
+                } else {
+                    this.setState({[data.dataLabel]: {value: data.value, status: 'success', message: ''}});
+                    return true;
+                }
+            }
+        }
+        return true;
+    }
+
+    validateCheckbox(data){
+        let checked = 0
+        data.value.map((check) => {
+            if (check.checked === true){
+                checked = checked + 1;
+            }
+        });
+        if (checked < 3){
+            this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'At least three contact methods must be selected'}});
+            return false;
+        }
+        return true;
+    }
+
+    validateSelect(data){
+        if (!data.value && data.required){
+            this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'Please select an option first'}});
+            return false;
+        }
+        return true;
+    }
+
+    validateTags(data){
+        if(data.value.length < 2){
+            this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'At least two tags are required'}});
+            return false;
+        }
+        this.setState({[data.dataLabel]: {value: data.value, status: '', message: ''}});
+        return true;
     }
 
 }

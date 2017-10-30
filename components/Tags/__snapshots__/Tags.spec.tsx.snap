@@ -15,10 +15,11 @@ exports[`Tags renders Tags correctly 1`] = `
     label
   </div>
   <label
-    className="tags"
+    className="tags undefined"
   >
     <Tag
       className="tagClasses"
+      key="0"
       onClick={[Function]}
       style={
         Object {
@@ -29,6 +30,7 @@ exports[`Tags renders Tags correctly 1`] = `
     />
     <Tag
       className="tagClasses"
+      key="1"
       onClick={[Function]}
       style={
         Object {

@@ -1,19 +1,36 @@
 import * as React from 'react';
 import CheckboxGroup, {Checkbox} from './Checkbox';
 
-import {shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 
 describe('CheckBox', () => {
 
     test('renders CheckboxGroup correctly', () => {
         const func = jest.fn();
+        Date.now = jest.fn(() => 1482363367071);
+        Math.random = jest.fn(() => 222333444555);
 
-        const checked = {
-            values: ['Checkbox1', 'Checkbox3']
-        };
+        const checked = [
+            {
+                checked: true,
+                label: 'Checkbox1',
+                value: 'Checkbox1'
+            },
+            {
+                checked: false,
+                label: 'Checkbox2',
+                value: 'Checkbox2'
+            },
+            {
+                checked: false,
+                label: 'Checkbox3',
+                value: 'Checkbox3'
+            }
+        ];
 
-        const tree = shallow(
+        const tree = mount(
             <CheckboxGroup
+                selectedChecks={checked}
                 onChange={func}
                 dataLabel="plan"
                 id="checkbox1"
@@ -49,27 +66,37 @@ describe('CheckBox', () => {
         expect(tree).toMatchSnapshot();
     });
 
-    test('renders properly with 1 child', () => {
+    // test('renders properly with 1 child', () => {
 
-        const component = shallow(
-            <CheckboxGroup className="myClass" dataLabel="plan">
-                <Checkbox value="checkbox1" id="checky" label="dem labels" checked/>
-            </CheckboxGroup>
-        );
+    //     Date.now = jest.fn(() => 1490760656000);
+    //     Math.random = jest.fn(() => 222333444555);
 
-        expect(component.find(Checkbox).length).toBe(1);
-        expect(component.find(Checkbox).prop('value')).toEqual('checkbox1');
-        expect(component.find(Checkbox).prop('label')).toEqual('dem labels');
-        expect(component.find(Checkbox).prop('id')).toEqual('checky');
-        expect(component.find(Checkbox).prop('checked')).toBeTruthy;
-        expect(component.find('.myClass')).toBeTruthy;
-        // expect(component.find('.myClass').prop('dataLabel')).toEqual('plan');
-    });
+    //     const checked = [
+    //         {
+    //             checked: true,
+    //             label: 'Checkbox1',
+    //             value: 'checkbox1'
+    //         }
+    //     ];
+
+    //     const component = mount(
+    //         <CheckboxGroup selectedChecks={checked} className="myClass" dataLabel="plan" />
+    //     );
+
+    //     expect(component.find(Checkbox).length).toBe(1);
+    //     expect(component.find(Checkbox).prop('value')).toEqual('checkbox1');
+    //     expect(component.find(Checkbox).prop('label')).toEqual('Checkbox1');
+    //     expect(component.find(Checkbox).prop('checked')).toEqual(true);
+    //     expect(component.find('.myClass')).toBeTruthy;
+    //     // expect(component.find('.myClass').prop('dataLabel')).toEqual('plan');
+    // });
 
     test('renders properly with multiple children', () => {
 
+        const checked = [];
+
         const component = shallow(
-            <CheckboxGroup >
+            <CheckboxGroup selectedChecks={checked}>
                 <Checkbox value="checkbox1" />
                 <Checkbox value="checkbox2" />
                 <Checkbox value="checkbox3" />
@@ -77,23 +104,56 @@ describe('CheckBox', () => {
         );
 
         expect(component.find(Checkbox).length).toBe(3);
+        expect(component.find(Checkbox).first().prop('value')).toEqual('checkbox1');
+    });
+
+    test('renders properly with multiple children with props only', () => {
+
+        const checked = [
+            {
+                checked: true,
+                label: 'Checkbox1',
+                value: 'Checkbox1'
+            },
+            {
+                checked: false,
+                label: 'Checkbox2',
+                value: 'Checkbox2'
+            },
+            {
+                checked: false,
+                label: 'Checkbox3',
+                value: 'Checkbox3'
+            }
+        ];
+
+        const component = shallow(
+            <CheckboxGroup selectedChecks={checked} />
+        );
+
+        expect(component.find(Checkbox).length).toBe(3);
+        expect(component.find(Checkbox).first().prop('value')).toEqual('Checkbox1');
+        expect(component.find(Checkbox).first().prop('checked')).toEqual(true);
     });
 
     test('appends onClick callback to each checkbox', () => {
         const func = jest.fn();
 
+        const checked = [];
+
         const component = shallow(
-            <CheckboxGroup onChange={func} style={{color: 'blue'}}>
+            <CheckboxGroup selectedChecks={checked} onChange={func} style={{color: 'blue'}}>
                 <Checkbox value="checkbox1" />
                 <Checkbox value="checkbox2" checked/>
                 <Checkbox value="checkbox3" />
             </CheckboxGroup>
         );
 
-        // expect(component.find(CheckBoxGroup).prop('style')).toEqual({color: 'blue'});
+        // expect(component.find('CheckBoxGroup').prop('style')).toEqual({color: 'blue'});
         component.find(Checkbox).forEach((checkbox) => {
             expect(checkbox.prop('onClick')).toBeTruthy();
         });
+        expect(component.find(Checkbox).at(1).prop('checked')).toEqual(true);
     });
 
     test('Option renders without onClick by default', () => {
@@ -107,8 +167,10 @@ describe('CheckBox', () => {
         const func = jest.fn();
         const func2 = jest.fn();
 
+        const checked = [];
+
         const component = shallow(
-            <CheckboxGroup onChange={func} >
+            <CheckboxGroup selectedChecks={checked} onChange={func} >
                 <Checkbox value="checkbox1" onClick={func2}/>
             </CheckboxGroup>
         );
@@ -121,8 +183,10 @@ describe('CheckBox', () => {
     test('callback func is not called when a disabled checkbox is clicked', () => {
         const func = jest.fn();
 
+        const checked = [];
+
         const component = shallow(
-            <CheckboxGroup onChange={func}>
+            <CheckboxGroup selectedChecks={checked} onChange={func}>
                 <Checkbox value="checkbox1" disabled />
             </CheckboxGroup>
         );
@@ -131,5 +195,45 @@ describe('CheckBox', () => {
         expect(component.find(Checkbox).dive().find('input').simulate('click'));
 
         expect(func).not.toHaveBeenCalled();
+    });
+
+    test('callback func is not called when a disabled checkbox is clicked', () => {
+        const func = jest.fn();
+        let status = null;
+
+        const checked = [
+            {
+                checked: true,
+                label: 'Checkbox1',
+                value: 'Checkbox1'
+            },
+            {
+                checked: false,
+                label: 'Checkbox2',
+                value: 'Checkbox2'
+            },
+            {
+                checked: false,
+                label: 'Checkbox3',
+                value: 'Checkbox3'
+            }
+        ];
+
+        const validate = (value) => {
+            let checkedNumber = 0;
+            value.forEach((check) => {
+                if (check.checked){
+                    checkedNumber = checkedNumber + 1;
+                }
+            });
+            status = checkedNumber < 2 ? 'error' : '';
+        };
+
+        const component = shallow(
+            <CheckboxGroup status={status} validate={validate} selectedChecks={checked} onChange={func} />
+        );
+
+        expect(component.find('.error')).toBeTruthy;
+
     });
 });

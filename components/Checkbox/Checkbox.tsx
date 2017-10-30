@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Checkbox.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 import {H2} from '../Headings';
 
 export interface ICheckBoxGroupProps {
@@ -26,7 +26,19 @@ export interface ICheckBoxGroupProps {
     className?: string;
 
     /** reflects to the state of the checkboxGroup */
-    selectedChecks?: ICheckBoxData[];
+    selectedChecks: ICheckBoxData[];
+
+    /** CheckboxGroup description (small italic bottom) */
+    description?: string;
+
+    /** status of the checkbox, error or success */
+    status?: 'error' | 'success';
+
+    /** validate function */
+    validate?: (data: IValidationCallbackData) => boolean;
+
+    /** wether the checkboxes are required (used within forms) */
+    required?: boolean;
 
     /** override CheckboxGroup styles */
     style?: React.CSSProperties;
@@ -74,12 +86,11 @@ export interface ICheckBoxProps {
     /** Checkbox label */
     label?: string;
 
+    /** status of the checkbox, error or success (inherited from parent) */
+    status?: 'error' | 'success';
+
     /** Checkbox description */
     description?: string;
-}
-
-export interface ICheckBoxState{
-    data: ICheckBoxData[];
 }
 
 export interface ICheckBoxData{
@@ -88,7 +99,7 @@ export interface ICheckBoxData{
     label?: string;
 }
 
-export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, ICheckBoxState>{
+export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, {}>{
 
     static defaultProps = {
         className: '',
@@ -104,20 +115,23 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
 
         this.name = this.generateName();
 
-        this.state = {
-            data: this.props.selectedChecks || this.setData()
-        };
+        // this.state = {
+        //     data: this.props.selectedChecks || this.setData()
+        // };
     }
 
-    componentWillReceiveProps(nextProps: ICheckBoxGroupProps) {
-        this.setState({data: nextProps.selectedChecks ? nextProps.selectedChecks : this.state.data});
-    }
+    // componentWillReceiveProps(nextProps: ICheckBoxGroupProps) {
+    //     this.setState({data: nextProps.selectedChecks ? nextProps.selectedChecks : this.state.data});
+    // }
 
     render() {
 
-        const {id, className, style, title} = this.props;
+        const {id, className, style, title, description} = this.props;
 
         const align = this.props.horizontal ? styles.horizontal : '';
+
+        const status = this.props.status === 'error' ? styles.descError :
+        this.props.status === 'success' ? styles.descSuccess : '';
 
         return (
             <div
@@ -127,15 +141,15 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
             >
                 {title && <H2>{title}</H2>}
                 <div className={align}>
-                    {this.assignCheckBoxes()}
+                    {this.getCheckboxes() || this.props.children}
                 </div>
+                {description && <i className={`${styles.message} ${status}`}>{description}</i>}
             </div>
         );
     }
 
-    onClick = (dataArray: {checked: boolean, value: string, label: string}) => {
+    onClick = (dataArray: {checked: boolean, value?: string, label?: string}, data: ICheckBoxData[]) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            const data: ICheckBoxData[] = [...this.state.data];
             data.map ((checkbox, index) => {
                 if (checkbox.value === dataArray.value){
                     data[index] = {
@@ -147,32 +161,51 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                     return {checkbox};
                 }
             });
-            this.setState({data});
+            // this.setState({data});
             this.props.onChange && this.props.onChange(e, {value: data, dataLabel: this.props.dataLabel});
+            this.props.validate &&
+            this.props.validate({value: data, dataLabel: this.props.dataLabel, required: this.props.required});
         };
     }
 
-    setData = () => {
+    getCheckboxes = () => {
+        if (this.props.children){
+            const data = this.props.selectedChecks.length === 0 ? this.getChildrenData() : this.props.selectedChecks;
+            if (this.checkDuplicateValues(data)){
+                return this.getChildren(data);
+            } else {
+                throw new Error('<CheckBox> elements must not have duplicate values');
+            }
+        } else {
+            if (this.checkDuplicateValues(this.props.selectedChecks)){
+                return this.getPropsCheckboxes(this.props.selectedChecks);
+            } else {
+                throw new Error('<CheckBox> elements must not have duplicate values');
+            }
+        }
+    }
+
+    getChildrenData = () => {
         const data: ICheckBoxData[] = [];
-        React.Children.map(this.props.children, (child) => {
-            if (React.isValidElement<ICheckBoxProps>(child)){
-                data.push({
-                    checked: child.props.checked ? child.props.checked : false,
-                    label: child.props.label,
-                    value: child.props.value
+        React.Children.map(this.props.children, (child, index) => {
+        if (React.isValidElement<ICheckBoxProps>(child)){
+            data.push({
+                checked: child.props.checked ? child.props.checked : false,
+                label: child.props.label ? child.props.label : child.props.value,
+                value: child.props.value
                 });
             }
         });
         return data;
     }
 
-    assignCheckBoxes = () => {
-        const {data} = this.state;
+    getChildren = (data: ICheckBoxData[]) => {
         const checkBoxes: Array<React.ReactElement<ICheckBoxProps>> = [];
         React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement<ICheckBoxProps>(child)){
                 const checked = data[index].checked === true ? true : false;
-                const label = child.props.label ? child.props.label : child.props.value;
+                const value = data[index].value ? data[index].value : `checkbox${index}`;
+                const label = data[index].label ? data[index].label : value;
                 const extraProps: Partial<ICheckBoxProps & {key: number}> = {
                     checked: data[index].checked,
                     horizontal: this.props.horizontal,
@@ -180,9 +213,10 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                     label: data[index].label,
                     name: this.name,
                     onClick: /** child.props.onClick ? child.props.onClick : */
-                            this.onClick({checked, value: child.props.value, label}),
+                            this.onClick({checked, value, label}, data),
                     spacing: this.props.spacing,
-                    value: data[index].value
+                    status: this.props.status,
+                    value
                 };
 
                 checkBoxes.push(React.cloneElement(child, extraProps));
@@ -191,21 +225,40 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                 throw new Error('<CheckBoxGroup> element only accepts <CheckBox> elements as children');
             }
         });
-
-        if (this.checkDuplicateValues()){
-            return checkBoxes;
-        } else {
-            throw new Error('<CheckBox> elements must not have duplicate values');
-        }
-
+        return checkBoxes;
     }
 
-    checkDuplicateValues = () => {
+    getPropsCheckboxes = (data: ICheckBoxData[]) => {
+        const checkBoxes: Array<React.ReactElement<ICheckBoxProps>> = [];
+        data.forEach((check, index) => {
+            const checked = check.checked === true ? true : false;
+            const value = check.value ? check.value : `checkbox${index}`;
+            const label = check.label ? check.label : value;
+
+            checkBoxes.push(
+                <Checkbox
+                    checked={checked}
+                    horizontal={this.props.horizontal}
+                    key={index}
+                    label={label}
+                    name={this.name}
+                    onClick={this.onClick({checked, value, label}, data)}
+                    spacing={this.props.spacing}
+                    status={this.props.status}
+                    value={value}
+                />
+            );
+        });
+
+        return checkBoxes;
+    }
+
+    checkDuplicateValues = (data: ICheckBoxData[]) => {
         const values: string[] = [];
         let duplicates: number = 0;
-        React.Children.forEach(this.props.children, (child, index) => {
-            if (React.isValidElement<ICheckBoxProps>(child)){
-                values.push(child.props.value);
+        data.forEach((check, index) => {
+            if (React.isValidElement<ICheckBoxProps>(check)){
+                values.push(check.props.value);
             }
         });
         values.forEach((valueOne) => {
@@ -239,6 +292,18 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
         return Math.random().toString(36).substr(2, 10);
     };
 
+    const getStatus = () => {
+        const checkStatus = props.status && props.status;
+        if (checkStatus){
+            if (checkStatus === 'error'){
+                return styles.error;
+            } else if (checkStatus === 'success'){
+                return styles.success;
+            }
+        }
+    };
+
+    const status = getStatus();
     const disabledStyles = props.disabled ? styles.disabledCheckbox : '';
     const label = props.label ? props.label : props.value;
     const checked = props.checked ? true : false;
@@ -247,7 +312,8 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                     props.horizontal ?
                     {marginRight: `${props.spacing}px`} :
                     {marginBottom: `${props.spacing}px`} : {};
-    const classes = `checkbox-component ${styles.checkbox} ${disabledStyles} ${props.className} ${checkedStyles}`;
+    const classes = `checkbox-component ${styles.checkbox}
+                    ${disabledStyles} ${props.className} ${checkedStyles} ${status}`;
 
     const genId = generateId();
 
@@ -271,7 +337,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 onClick={onCheckBoxClick({checked: !checked, value: props.value, label})}
                 disabled={props.disabled}
                 defaultChecked={checked}
-                className={'material-icons'}
+                className={`material-icons`}
             />
             <label htmlFor={genId}>
                 <span>{label}</span>

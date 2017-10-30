@@ -1,0 +1,59 @@
+class LoadingBarExample extends React.Component {
+
+    constructor(props){
+        super(props);
+
+        this.onClickStartInterval = this.onClickStartInterval.bind(this);
+        this.onClickStopInterval = this.onClickStopInterval.bind(this);
+
+        this.loadingInterval;
+
+        this.state = {
+            loading: 0,
+            error: false
+        }
+    }
+
+    render(){
+        return(
+            <div>
+                <LoadingBar progress={this.state.loading} error={this.state.error} onError={this.onError.bind(this)} onProgressDone={() => this.onProgressDone()} />
+
+                <Button onClick={this.onClickStartInterval}>Start Loading</Button>
+                <Button onClick={this.onClickStopInterval}>Stop Loading</Button>
+                <Button onClick={this.onSimulateError.bind(this)}>Simulate Error</Button>
+            </div>
+        );
+    }
+
+    onClickStartInterval(e) {
+        this.loadingInterval = setInterval(() => {
+            if (this.state.loading < 100){
+                this.setState({loading: this.state.loading + 1});
+            } else {
+                this.onClickStopInterval(e);
+            }
+        }, 100);
+    }
+
+    onClickStopInterval(e) {
+        clearInterval(this.loadingInterval);
+    }
+
+    onProgressDone(){
+        this.onClickStopInterval();
+        console.log('done');
+        this.setState({loading: 0})
+    }
+
+    onError(){
+        console.log('Kaboom laddie!');
+        this.onClickStopInterval();
+        this.setState({loading: 0, error: false})
+    }
+
+    onSimulateError(){
+        this.setState({error: true})
+    }
+
+}
