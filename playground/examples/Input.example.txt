@@ -8,7 +8,8 @@ class InputExample extends React.Component {
         this.state = {
             status: '',
             message: '',
-            value: ''
+            value: '',
+            icon: 'search'
         }
     }
 
@@ -22,10 +23,9 @@ class InputExample extends React.Component {
                     value="password"
                     type="password"
                     label="Password:"
-                    description="This has autofocus on page load"
                 />
                 <br/>
-                <Input value={this.state.value} validate={this.validate} status={this.state.status} description={this.state.message} onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>
+                <Input value={this.state.value} validate={this.validate} icon={this.state.icon} status={this.state.status} description={this.state.message} onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>
                 <br/>
                 <Input onChange={this.onChange} disabled value="disabled" description="This input is disabled"/>
             </div>
@@ -41,12 +41,12 @@ class InputExample extends React.Component {
         console.log(data.value);
         if (data.value){
             if (data.value.length < 5){
-                this.setState({status: 'error', message: 'Input should have 5 or more characters'});
+                this.setState({status: 'error', message: 'Input should have 5 or more characters', icon: 'clear'});
             } else {
-                this.setState({status: 'success', message: ''})
+                this.setState({status: 'success', message: '', icon: 'check'})
             }
         } else {
-            this.setState({status: 'error', message: 'This input field is required'});
+            this.setState({status: 'error', message: 'This input field is required', icon: 'clear'});
         }
     }
 

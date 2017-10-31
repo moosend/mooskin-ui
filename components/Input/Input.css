@@ -1,5 +1,6 @@
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 .inputContainer{
     display: flex;
@@ -15,17 +16,39 @@
 }
 
 .input{
+    display: flex;
     outline: none;
-    padding: 15px;
     font-family: Arial,sans-serif;
     border: 0;
     color: var(--inputFontColor);
     /* font-size: 16px; */
     font-size: 1rem; 
-    border-radius: 8px;
-    background: #efefef;
     width: 100%;
     transition: 0.2s;
+    background: transparent;
+}
+
+.innerDiv{
+    background: #efefef;
+    border-radius: 8px;
+    display: flex;
+}
+
+.noIcon{
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.inputLeft{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 15px 5px 15px 15px;
+}
+
+.inputRight{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 15px 15px 15px 5px;
 }
 
 .disabledInput{
@@ -36,6 +59,33 @@
 
 .input::placeholder {
     color: var(--inputPlaceholder);
+}
+
+.iconLeft{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 10px 0 10px 10px;
+}
+
+.iconRight{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 10px 10px 10px 0;
+}
+
+.icon{
+    color: var(--inputPlaceholder);
+    font-size: 25px;
+    font-family: 'Material Icons';
+    background: transparent;
+}
+
+.iconError{
+    color: #ec3232;
+}
+
+.iconSuccess{
+    color: #00cc44;
 }
 
 .input:focus {
