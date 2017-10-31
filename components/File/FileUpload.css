@@ -109,6 +109,7 @@
 
 @media (--xSmall){
     .fileContainer{display: flex; flex-direction: column}
+    .contentContainer{display: flex; flex-direction: column}
     .label{
         margin-left: 3px;
         flex-basis: 20px;
