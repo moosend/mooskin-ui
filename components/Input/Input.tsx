@@ -55,7 +55,7 @@ export interface IProps {
     iconStyle?: React.CSSProperties;
 
     /** override icon class */
-    iconClassName?: string;
+    iconClass?: string;
 
     /** override input styles */
     style?: React.CSSProperties;
@@ -113,6 +113,7 @@ class Input extends React.Component<IProps, {}> {
             label,
             autofocus,
             icon,
+            iconPosition,
             description,
         } = this.props;
 
@@ -122,12 +123,13 @@ class Input extends React.Component<IProps, {}> {
         const status = this.getStatus();
         const descStatus = this.getDescStatus();
         const radius = this.getRadius();
+        const reverse = iconPosition === 'left' && styles.reverse;
 
         return (
             <div className={`input-component ${styles.inputContainer}`}>
                 {label && <label className={styles.inputLabel} style={spacing} htmlFor={this.id}>{label}</label>}
                 <div className={styles.inputDiv}>
-                    <div className={`${styles.innerDiv} ${status}`}>
+                    <div className={`${styles.innerDiv} ${status} ${reverse}`}>
                         <input
                             ref={(input) => this.input = input}
                             onChange={this.onChange}
@@ -216,7 +218,7 @@ class Input extends React.Component<IProps, {}> {
         return (
             <div
                 onClick={this.onIconClick}
-                className={`${styles.icon} ${iconRadius} ${iconStatus} ${this.props.iconClassName}`}
+                className={`${styles.icon} ${iconRadius} ${iconStatus} ${this.props.iconClass}`}
                 style={this.props.iconStyle}
             >
                 {iconFont}

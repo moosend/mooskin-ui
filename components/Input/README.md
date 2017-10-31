@@ -131,6 +131,10 @@ In this case, when the user focuses the input and blurs away immediately, an err
 * `className` - css class
 * `dataLabel` - label what kind of data 
 * `style` - input field style
+* `icon` - icon inside input (material icon names)
+* `iconPosition` - left or right (right is default)
+* `iconClass` - class to be applied to the icon
+* `iconStyle` - styles to be applied to the icon
 * `onChange` - callback to be triggered on input change
 * `validate` - validate function
 * `status` - to be used with validate, to apply classes based on error or success

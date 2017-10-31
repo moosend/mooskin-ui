@@ -29,9 +29,13 @@
 }
 
 .innerDiv{
+    display: flex;
     background: #efefef;
     border-radius: 8px;
-    display: flex;
+}
+
+.reverse{
+    flex-direction: row-reverse;
 }
 
 .noIcon{
