@@ -4,6 +4,9 @@ import styles from './Label.css';
 
 export interface ILabelProps {
 
+    /** id of the component */
+    id?: string;
+
     /** abbreviate numerical values */
     abbreviate?: boolean;
 
@@ -53,18 +56,35 @@ export default class Label extends React.Component<ILabelProps, {}> {
             return String(value);
         }
 
-        if (value >= thousand && value <= 1000000) {
-            return Math.round(value / thousand) + 'K';
+        if (value >= thousand && value <= 999999) {
+            const decimal = this.getDecimalValue(value.toString(), 'thousand');
+            return Math.trunc(value / thousand) + `.${decimal}K`;
         }
 
         if (value >= million && value <= billion) {
-            return Math.round(value / million) + 'M';
+            const decimal = this.getDecimalValue(value.toString(), 'million');
+            return Math.trunc(value / million) + `.${decimal}M`;
         }
 
         if (value >= billion && value <= trillion) {
-            return Math.round(value / billion) + 'B';
+            const decimal = this.getDecimalValue(value.toString(), 'billion');
+            return Math.trunc(value / billion) + `.${decimal}B`;
         } else {
-            return Math.round(value / trillion) + 'T';
+            const decimal = this.getDecimalValue(value.toString(), 'trillion');
+            return Math.trunc(value / trillion) + `.${decimal}T`;
+        }
+    }
+
+    getDecimalValue = (value: string, abbr: string) => {
+        const array = (value.split(''));
+        if (abbr === 'thousand'){
+            return array[array.length - 3];
+        } else if (abbr === 'million'){
+            return array[array.length - 6];
+        } else if (abbr === 'billion'){
+            return array[array.length - 9];
+        } else if (abbr === 'trillion'){
+            return array[array.length - 12];
         }
     }
 
