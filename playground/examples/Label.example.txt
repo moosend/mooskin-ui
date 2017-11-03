@@ -1,0 +1,17 @@
+class LabelExample extends React.Component {
+
+    render(){
+        return(
+            <div>
+                <H3>Simple labels</H3>
+                <Label>Nice</Label>
+                <Label>12345</Label>
+                <H3>Labels with abbreviation</H3>
+                <Label abbreviate>15400</Label>
+                <Label abbreviate>3500400</Label>
+                <Label abbreviate>7100500400</Label>
+            </div>
+        );
+    }
+
+}
