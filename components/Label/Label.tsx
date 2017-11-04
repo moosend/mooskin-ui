@@ -23,6 +23,11 @@ export interface ILabelProps {
 
 export default class Label extends React.Component<ILabelProps, {}> {
 
+    static defaultProps = {
+        className: '',
+        style: {}
+    };
+
     render() {
 
         const { className, style } = this.props;
