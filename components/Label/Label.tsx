@@ -63,20 +63,20 @@ export default class Label extends React.Component<ILabelProps, {}> {
 
         if (value >= thousand && value <= 999999) {
             const decimal = this.getDecimalValue(value.toString(), 'thousand');
-            return Math.trunc(value / thousand) + `.${decimal}K`;
+            return Math.trunc(value / thousand) + `.${decimal}K`.replace('.0', '');
         }
 
         if (value >= million && value <= billion) {
             const decimal = this.getDecimalValue(value.toString(), 'million');
-            return Math.trunc(value / million) + `.${decimal}M`;
+            return Math.trunc(value / million) + `.${decimal}M`.replace('.0', '');
         }
 
         if (value >= billion && value <= trillion) {
             const decimal = this.getDecimalValue(value.toString(), 'billion');
-            return Math.trunc(value / billion) + `.${decimal}B`;
+            return Math.trunc(value / billion) + `.${decimal}B`.replace('.0', '');
         } else {
             const decimal = this.getDecimalValue(value.toString(), 'trillion');
-            return Math.trunc(value / trillion) + `.${decimal}T`;
+            return Math.trunc(value / trillion) + `.${decimal}T`.replace('.0', '');
         }
     }
 

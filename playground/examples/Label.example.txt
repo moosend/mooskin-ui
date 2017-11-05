@@ -9,7 +9,7 @@ class LabelExample extends React.Component {
                 <H3>Labels with abbreviation</H3>
                 <Label abbreviate>15400</Label>
                 <Label abbreviate>3500400</Label>
-                <Label abbreviate>7100500400</Label>
+                <Label abbreviate>7000500400</Label>
             </div>
         );
     }
