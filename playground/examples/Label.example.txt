@@ -6,10 +6,16 @@ class LabelExample extends React.Component {
                 <H3>Simple labels</H3>
                 <Label>Nice</Label>
                 <Label>12345</Label>
-                <H3>Labels with abbreviation</H3>
-                <Label abbreviate>15400</Label>
-                <Label abbreviate>3500400</Label>
-                <Label abbreviate>7000500400</Label>
+                <H3>Labels with type of 'number'</H3>
+                <Label type="number">990</Label>
+                <Label type="number">15400</Label>
+                <Label type="number">3500400</Label>
+                <Label type="number">7100500400</Label>
+                <H3>Labels with type of 'round_number'</H3>
+                <Label type="round_number">990</Label>
+                <Label type="round_number">15400</Label>
+                <Label type="round_number">3500400</Label>
+                <Label type="round_number">7100500400</Label>
             </div>
         );
     }

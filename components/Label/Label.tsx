@@ -7,8 +7,8 @@ export interface ILabelProps {
     /** id of the component */
     id?: string;
 
-    /** abbreviate numerical values */
-    abbreviate?: boolean;
+    /** expected final value of the label */
+    type?: 'number' | 'round_number' | 'string';
 
     /** override label styles */
     style?: React.CSSProperties;
@@ -25,7 +25,8 @@ export default class Label extends React.Component<ILabelProps, {}> {
 
     static defaultProps = {
         className: '',
-        style: {}
+        style: {},
+        type: 'string'
     };
 
     render() {
@@ -45,36 +46,62 @@ export default class Label extends React.Component<ILabelProps, {}> {
     }
 
     getContent = () => {
-        const { children, abbreviate } = this.props;
-        if (abbreviate && !isNaN(children as any)){
+        const { children, type } = this.props;
+        if ((type === 'number' || type === 'round_number') && !isNaN(children as any)){
             return this.prettifyNumber(children as any);
         }
         return children;
     }
 
+    // roundNumber = (value: number) => {
+    //     const thousand = 1000;
+    //     const million = 1000000;
+    //     const billion = 1000000000;
+    //     const trillion = 1000000000000;
+    //     if (value < thousand) {
+    //         return String(value);
+    //     }
+    // }
+
     prettifyNumber = (value: number) => {
+        const {type} = this.props;
         const thousand = 1000;
         const million = 1000000;
         const billion = 1000000000;
         const trillion = 1000000000000;
         if (value < thousand) {
+            if (type === 'round_number' && value >= 500){
+                return Math.round(value / thousand) + 'K';
+            }
             return String(value);
         }
 
         if (value >= thousand && value <= 999999) {
+            if (type === 'round_number'){
+                return Math.round(value / thousand) + 'K';
+            }
             const decimal = this.getDecimalValue(value.toString(), 'thousand');
             return Math.trunc(value / thousand) + `.${decimal}K`.replace('.0', '');
         }
 
         if (value >= million && value <= billion) {
+            if (type === 'round_number'){
+                return Math.round(value / million) + 'M';
+            }
             const decimal = this.getDecimalValue(value.toString(), 'million');
             return Math.trunc(value / million) + `.${decimal}M`.replace('.0', '');
         }
 
         if (value >= billion && value <= trillion) {
+            if (type === 'round_number'){
+                return Math.round(value / billion) + 'B';
+            }
             const decimal = this.getDecimalValue(value.toString(), 'billion');
             return Math.trunc(value / billion) + `.${decimal}B`.replace('.0', '');
         } else {
+            if (type === 'round_number'){
+                return Math.round(value / trillion) + 'T';
+            }
             const decimal = this.getDecimalValue(value.toString(), 'trillion');
             return Math.trunc(value / trillion) + `.${decimal}T`.replace('.0', '');
         }
