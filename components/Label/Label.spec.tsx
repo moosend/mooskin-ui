@@ -63,8 +63,6 @@ describe('Button', () => {
         expect(component.find('div').text()).toBe('8.6T');
     });
 
-
-
     test('abbreviates number values and rounds them if type prop of round_number is passed (thousands)', () => {
 
         const component = shallow(<Label type="round_number">13400</Label>);
