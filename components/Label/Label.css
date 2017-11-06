@@ -1,9 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Convergence');
+
 .label{
-    display: inline-block;
-    background: #F48770;
-    color: #fff;
-    border-radius: 16px;
+    font-family: 'Convergence', sans-serif;
     font-size: 0.875rem;
-    padding: 3px 8px;
-    margin: 2px;  
 }

@@ -40,17 +40,17 @@ Give it custom styles
 <Label style={yourStyle} >Label content</Label>
 ```
 
-or abbreviate numerical values by passing the `type` prop of `number`
+or abbreviate numerical values by passing the `abbreviate` prop
 
 ```
-<Label type="number">13400</Label>
+<Label abbreviate>13400</Label>
 ```
 this returns a label with a value of 13.4K. Works with higher values aswell.
 
-or `round_number`
+and round it aswell with `round` prop
 
 ```
-<Label type="round_number">13400</Label>
+<Label abbreviate round>13400</Label>
 ```
 
 this results in a value of 13K.
@@ -63,7 +63,8 @@ this results in a value of 13K.
 * `id` - id of the element
 * `className` - css class
 * `style` - button style
-* `type` - pass a type of `number`, `round_number` or `string` (default)
+* `abbreviate` - abbreviates large numerical values
+* `round` - rounds large numerical values to the nearest thousand, million, billion etc 
 
 </div>
 

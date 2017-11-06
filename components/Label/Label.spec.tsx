@@ -35,58 +35,86 @@ describe('Button', () => {
         expect(component.find('div').text()).toBe('12345');
     });
 
-    test('abbreviates number values if type prop of number is passed (thousands)', () => {
+    test('abbreviates numerical value if abbreviate prop is passed (thousands)', () => {
 
-        const component = shallow(<Label type="number">13400</Label>);
+        const component = shallow(<Label abbreviate>13400</Label>);
 
         expect(component.find('div').text()).toBe('13.4K');
     });
 
-    test('abbreviates number values if type prop of number prop is passed (millions)', () => {
+    test('abbreviates numerical value if abbreviate prop is passed (millions)', () => {
 
-        const component = shallow(<Label type="number">3235942</Label>);
+        const component = shallow(<Label abbreviate>3235942</Label>);
 
         expect(component.find('div').text()).toBe('3.2M');
     });
 
-    test('abbreviates number values if type prop of number prop is passed (billions)', () => {
+    test('abbreviates numerical value if abbreviate prop is passed (billions)', () => {
 
-        const component = shallow(<Label type="number">6345153975</Label>);
+        const component = shallow(<Label abbreviate>6345153975</Label>);
 
         expect(component.find('div').text()).toBe('6.3B');
     });
 
-    test('abbreviates number values if type prop of number prop is passed (trillion - enthusiast mode)', () => {
+    test('abbreviates numerical value if abbreviate prop is passed (trillion - enthusiast mode)', () => {
 
-        const component = shallow(<Label type="number">8675345876235</Label>);
+        const component = shallow(<Label abbreviate>8675345876235</Label>);
 
         expect(component.find('div').text()).toBe('8.6T');
     });
 
-    test('abbreviates number values and rounds them if type prop of round_number is passed (thousands)', () => {
+    test('rounds to the nearest thousand when round prop is passed (thousands)', () => {
 
-        const component = shallow(<Label type="round_number">13400</Label>);
+        const component = shallow(<Label round>13400</Label>);
+
+        expect(component.find('div').text()).toBe('13000');
+    });
+
+    test('rounds to the nearest million when round prop is passed (millions)', () => {
+
+        const component = shallow(<Label round>3235942</Label>);
+
+        expect(component.find('div').text()).toBe('3000000');
+    });
+
+    test('rounds to the nearest billion when round prop is passed (billions)', () => {
+
+        const component = shallow(<Label round>6345153975</Label>);
+
+        expect(component.find('div').text()).toBe('6000000000');
+    });
+
+    test('rounds to the nearest trillion when round prop is passed (trillion - enthusiast mode)', () => {
+
+        const component = shallow(<Label round>8675345876235</Label>);
+
+        expect(component.find('div').text()).toBe('9000000000000');
+    });
+
+    test('abbreviates and rounds numerical values if both props are passed (thousands)', () => {
+
+        const component = shallow(<Label abbreviate round>13400</Label>);
 
         expect(component.find('div').text()).toBe('13K');
     });
 
-    test('abbreviates number values and rounds them if type prop of round_number is passed (millions)', () => {
+    test('abbreviates and rounds numerical values if both props are passed (millions)', () => {
 
-        const component = shallow(<Label type="round_number">3235942</Label>);
+        const component = shallow(<Label abbreviate round>3235942</Label>);
 
         expect(component.find('div').text()).toBe('3M');
     });
 
-    test('abbreviates number values and rounds them if type prop of round_number is passed (billions)', () => {
+    test('abbreviates and rounds numerical values if both props are passed (billions)', () => {
 
-        const component = shallow(<Label type="round_number">6545153975</Label>);
+        const component = shallow(<Label abbreviate round>6545153975</Label>);
 
         expect(component.find('div').text()).toBe('7B');
     });
 
-    test('abbreviates number values and rounds them if type prop of round_number is passed (trillion)', () => {
+    test('abbreviates and rounds numerical values if both props are passed (trillion)', () => {
 
-        const component = shallow(<Label type="round_number">8675345876235</Label>);
+        const component = shallow(<Label abbreviate round>8675345876235</Label>);
 
         expect(component.find('div').text()).toBe('9T');
     });
