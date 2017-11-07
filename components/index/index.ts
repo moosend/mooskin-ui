@@ -32,3 +32,5 @@ export {default as Table, TableHeader} from '../Table';
 export {default as Topbar} from '../Topbar';
 
 export {Bar, Doughnut, Pie, Line} from '../Charts';
+
+export {default as IInputCallbackData, IValidationCallbackData} from '../_utils';
