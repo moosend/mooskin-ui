@@ -66,7 +66,7 @@ describe('Input', () => {
     test('renders an input with custom css class and style', () => {
         const component = shallow(<Input style={{color: 'blue'}} className="input-group"/>);
 
-        expect(component.find('.inputContainer').hasClass('input-group')).toBe(true);
+        expect(component.find('input').hasClass('input-group')).toBe(true);
         expect(component.find('input').prop('style')).toEqual({color: 'blue'});
     });
 
@@ -106,6 +106,13 @@ describe('Input', () => {
 
         component.find('input').simulate('change', { target: { value: 'more text' }});
         expect(component.find('.error')).toBeFalsy;
+    });
+
+    test('Icon is valid when icon prop is passed', () => {
+
+        const component = shallow(<Input icon="check" />);
+
+        expect(component.find('.icon').length).toBe(1);
     });
 
 });
