@@ -1,0 +1,28 @@
+class LabelExample extends React.Component {
+
+    render(){
+        return(
+            <div>
+                <H3>Simple labels</H3>
+                <Label>Nice</Label>
+                <Label>12345</Label>
+                <H3>Labels with abbreviation</H3>
+                <Label abbreviate>990</Label>
+                <Label abbreviate>15400</Label>
+                <Label abbreviate>3500400</Label>
+                <Label abbreviate>7100500400</Label>
+                <H3>Labels with round</H3>
+                <Label round>990</Label>
+                <Label round>15400</Label>
+                <Label round>3500400</Label>
+                <Label round>7100500400</Label>
+                <H3>Labels with abbreviation & round</H3>
+                <Label abbreviate round>990</Label>
+                <Label abbreviate round>15400</Label>
+                <Label abbreviate round>3500400</Label>
+                <Label abbreviate round>7100500400</Label>
+            </div>
+        );
+    }
+
+}
