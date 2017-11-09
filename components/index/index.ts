@@ -11,6 +11,7 @@ export {default as Grid, Row, Col} from '../Grid';
 export {default as HorizontalRangeBar} from '../HorizontalRangeBar';
 export {H1, H2, H3, H4, H5, H6} from '../Headings';
 export {default as Input} from '../Input';
+export {default as Label} from '../Label';
 export {default as List, ListItem} from '../List';
 export {default as LoadingBar} from '../LoadingBar';
 export {default as Modal} from '../Modal';
@@ -31,3 +32,5 @@ export {default as Table, TableHeader} from '../Table';
 export {default as Topbar} from '../Topbar';
 
 export {Bar, Doughnut, Pie, Line} from '../Charts';
+
+export {default as IInputCallbackData, IValidationCallbackData} from '../_utils';
