@@ -27,6 +27,7 @@ import {
     Header,
     HorizontalRangeBar,
     Input,
+    Label,
     Line,
     List,
     ListItem,
@@ -114,14 +115,19 @@ export const App = (props: any) => {
         <Grid style={{paddingTop: 80}}>
             <Row id="sidebar">
                 <Col lg={12}>
-                    <H1>SideBar</H1>
+                    <H1>SideBar & Topbar</H1>
                     {renderEditableExample('Topbar', { H1, Topbar })}
                 </Col>
-                <Col lg={6}>
+                <Col lg={12}>
                     {renderEditableExample('SideBar', { Button, SideBar, SidebarItem })}
                 </Col>
-                <Col lg={6}>
+            </Row>
+            <Row>
+                <Col lg={6} md={6}>
                     {renderEditableExample('LoadingBar', { LoadingBar, Button })}
+                </Col>
+                <Col lg={6} md={6}>
+                    {renderEditableExample('Label', { Label, H3 })}
                 </Col>
             </Row>
             <Row id="buttons">

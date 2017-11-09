@@ -39,7 +39,7 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
         const buttonStyles = transparent ? styles.transparent : styles.normalButton;
         const disabledStyles = disabled ? styles.disabledButton : '';
         const iconStyle = icon ? `material-icons ${styles.icon}` : '';
-        const iconFont = this.getIcon(icon);
+        const iconFont = this.getIcon();
 
         const classes = `button-icon-component
                          ${styles.button}
@@ -64,7 +64,7 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
         !this.props.disabled && this.props.onClick && this.props.onClick(e);
     }
 
-    getIcon = (icon?: string) => {
+    getIcon = () => {
         return this.props.icon ? this.props.icon.replace(/\s/g, '_') : '';
     }
 }
