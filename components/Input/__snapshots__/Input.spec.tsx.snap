@@ -2,7 +2,7 @@
 
 exports[`Input renders correctly 1`] = `
 <div
-  className="input-component myClass inputContainer"
+  className="input-component inputContainer"
 >
   <label
     className="inputLabel"
@@ -18,27 +18,31 @@ exports[`Input renders correctly 1`] = `
   <div
     className="inputDiv"
   >
-    <input
-      autoComplete="on"
-      autoFocus={true}
-      className="input input disabledInput undefined"
-      disabled={true}
-      id="input1"
-      maxLength={50}
-      minLength={10}
-      name="input name"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="input placeholder"
-      required={true}
-      style={
-        Object {
-          "color": "blue",
+    <div
+      className="innerDiv undefined false"
+    >
+      <input
+        autoComplete="on"
+        autoFocus={true}
+        className="input input disabledInput noIcon myClass"
+        disabled={true}
+        id="input1"
+        maxLength={50}
+        minLength={10}
+        name="input name"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="input placeholder"
+        required={true}
+        style={
+          Object {
+            "color": "blue",
+          }
         }
-      }
-      type="text"
-      value="input value"
-    />
+        type="text"
+        value="input value"
+      />
+    </div>
     <i
       className="description undefined"
     >

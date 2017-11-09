@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "@types/react-chartjs-2": "2.0.2",
+    "@types/draft-js": "0.10.15",
     "chart.js": "^2.7.0",
     "draft-js": "0.10.3",
     "input-moment": "0.4.0",
@@ -44,7 +45,6 @@
     "showdown": "1.7.6"
   },
   "devDependencies": {
-    "@types/draft-js": "0.10.15",
     "@types/enzyme": "^2.8.12",
     "@types/enzyme-adapter-react-16": "^1.0.0",
     "@types/jest": "^21.1.2",

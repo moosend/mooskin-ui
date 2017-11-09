@@ -10,7 +10,6 @@ class FormExample extends React.Component {
         this.reset = this.reset.bind(this);
         this.onAdd = this.onAdd.bind(this);
         this.onRemove = this.onRemove.bind(this);
-        this.validateForm = this.validateForm.bind(this);
         this.validateInput = this.validateInput.bind(this);
         this.validateCheckbox = this.validateCheckbox.bind(this);
         this.validateSelect = this.validateSelect.bind(this);
@@ -48,10 +47,10 @@ class FormExample extends React.Component {
                 status: '',
                 message: ''
             },
-            country: {value: '', status: '', message: ''},
-            email: {value: '', status: '', message: ''},
-            firstname: {value: '', status: '', message: ''},
-            lastname: {value: '', status: '', message: ''},
+            country: {value: '', status: '', message: '', icon: ''},
+            email: {value: '', status: '', message: '', icon: ''},
+            firstname: {value: '', status: '', message: '', icon: ''},
+            lastname: {value: '', status: '', message: '', icon: ''},
             position: [
                 {
                     selected: false,
@@ -91,6 +90,7 @@ class FormExample extends React.Component {
                                 value={this.state.firstname.value}
                                 status={this.state.firstname.status}
                                 description={this.state.firstname.message}
+                                icon={this.state.firstname.icon}
                                 validate={this.validateInput}
                             />
                             <Input
@@ -101,6 +101,7 @@ class FormExample extends React.Component {
                                 value={this.state.lastname.value}
                                 status={this.state.lastname.status}
                                 description={this.state.lastname.message}
+                                icon={this.state.lastname.icon}
                                 validate={this.validateInput}
                             />
                             <Input
@@ -112,6 +113,7 @@ class FormExample extends React.Component {
                                 value={this.state.email.value}
                                 status={this.state.email.status}
                                 description={this.state.email.message}
+                                icon={this.state.email.icon}
                                 validate={this.validateInput}
                             />
                             <Input
@@ -121,6 +123,7 @@ class FormExample extends React.Component {
                                 value={this.state.country.value}
                                 status={this.state.country.status}
                                 description={this.state.country.message}
+                                icon={this.state.email.icon}
                                 validate={this.validateInput}
                             />
                             <RadioGroup
@@ -319,20 +322,17 @@ class FormExample extends React.Component {
         return tags;
     }
 
-    validateForm(dataLabel){
-        this.setState({[dataLabel]: {status: 'error', message: 'This Field is required'}});
-    }
-
     validateInput(data){
-        if (data.required){
-            if (data.value){
-                if (data.value.length < 5){
-                    this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'Input should have 5 or more characters'}});
-                    return false;
-                } else {
-                    this.setState({[data.dataLabel]: {value: data.value, status: 'success', message: ''}});
-                    return true;
-                }
+        if (!data.value && data.required){
+            this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'Input field is required', icon: 'clear'}});
+            return false;
+        } else if (data.value){
+            if (data.value.length < 5){
+                this.setState({[data.dataLabel]: {value: data.value, status: 'error', message: 'Input should have 5 or more characters', icon: 'clear'}});
+                return false;
+            } else {
+                this.setState({[data.dataLabel]: {value: data.value, status: 'success', message: '', icon: 'check'}});
+                return true;
             }
         }
         return true;

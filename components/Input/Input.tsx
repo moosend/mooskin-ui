@@ -45,6 +45,18 @@ export interface IProps {
     /** autofocus specified input */
     autofocus?: boolean;
 
+    /** icon to be placed near input */
+    icon?: string;
+
+    /** position of the icon */
+    iconPosition?: string;
+
+    /** override icon styles */
+    iconStyle?: React.CSSProperties;
+
+    /** override icon class */
+    iconClass?: string;
+
     /** override input styles */
     style?: React.CSSProperties;
 
@@ -72,10 +84,12 @@ class Input extends React.Component<IProps, {}> {
 
     static defaultProps = {
         className: '',
+        iconPosition: 'right',
         style: {}
     };
 
     id: string;
+    input: any;
 
     constructor(props: IProps){
         super(props);
@@ -98,6 +112,8 @@ class Input extends React.Component<IProps, {}> {
             className,
             label,
             autofocus,
+            icon,
+            iconPosition,
             description,
         } = this.props;
 
@@ -106,28 +122,34 @@ class Input extends React.Component<IProps, {}> {
         const autocomplete = !this.props.autocomplete ? 'off' : 'on';
         const status = this.getStatus();
         const descStatus = this.getDescStatus();
+        const radius = this.getRadius();
+        const reverse = iconPosition === 'left' && styles.reverse;
 
         return (
-            <div className={`input-component ${className} ${styles.inputContainer}`}>
+            <div className={`input-component ${styles.inputContainer}`}>
                 {label && <label className={styles.inputLabel} style={spacing} htmlFor={this.id}>{label}</label>}
                 <div className={styles.inputDiv}>
-                    <input
-                        onChange={this.onChange}
-                        id={this.id}
-                        type={type}
-                        name={name}
-                        value={this.props.value}
-                        placeholder={placeholder}
-                        minLength={minlength}
-                        maxLength={maxlength}
-                        required={required}
-                        disabled={disabled}
-                        className={`input ${styles.input} ${disabledInput} ${status}`}
-                        style={style}
-                        autoFocus={autofocus}
-                        autoComplete={autocomplete}
-                        onBlur={this.validateOnBlur}
-                    />
+                    <div className={`${styles.innerDiv} ${status} ${reverse}`}>
+                        <input
+                            ref={(input) => this.input = input}
+                            onChange={this.onChange}
+                            id={this.id}
+                            type={type}
+                            name={name}
+                            value={this.props.value}
+                            placeholder={placeholder}
+                            minLength={minlength}
+                            maxLength={maxlength}
+                            required={required}
+                            disabled={disabled}
+                            className={`input ${styles.input} ${disabledInput} ${radius} ${className}`}
+                            style={style}
+                            autoFocus={autofocus}
+                            autoComplete={autocomplete}
+                            onBlur={this.validateOnBlur}
+                        />
+                        {icon && this.getIcon()}
+                    </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             </div>
@@ -175,6 +197,60 @@ class Input extends React.Component<IProps, {}> {
 
     generateId = () => {
         return Math.random().toString(36).substr(2, 10);
+    }
+
+    getRadius = () => {
+        if (this.props.icon){
+            if (this.props.iconPosition === 'right'){
+                return styles.inputLeft;
+            } else if (this.props.iconPosition === 'left'){
+                return styles.inputRight;
+            }
+        } else {
+            return styles.noIcon;
+        }
+    }
+
+    getIcon = () => {
+        const iconFont = this.props.icon && this.getIconContent();
+        const iconRadius = this.getIconRadius();
+        const iconStatus = this.getIconStatus();
+        return (
+            <div
+                onClick={this.onIconClick}
+                className={`${styles.icon} ${iconRadius} ${iconStatus} ${this.props.iconClass}`}
+                style={this.props.iconStyle}
+            >
+                {iconFont}
+            </div>
+        );
+    }
+
+    getIconRadius = () => {
+        if (this.props.iconPosition === 'right'){
+            return styles.iconRight;
+        } else if (this.props.iconPosition === 'left'){
+            return styles.iconLeft;
+        }
+    }
+
+    getIconStatus = () => {
+        const inputStatus = this.props.status && this.props.status;
+        if (inputStatus){
+            if (inputStatus === 'error'){
+                return styles.iconError;
+            } else if (inputStatus === 'success'){
+                return styles.iconSuccess;
+            }
+        }
+    }
+
+    getIconContent = () => {
+        return this.props.icon ? this.props.icon.replace(/\s/g, '_') : '';
+    }
+
+    onIconClick = () => {
+        this.input.focus();
     }
 }
 
