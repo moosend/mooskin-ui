@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {SmallIconButton} from '../index';
+import {Pagination, SmallIconButton} from '../index';
 import styles from './Table.css';
 
 export interface ITableProps{
@@ -18,6 +18,9 @@ export interface ITableProps{
 
     /** styling applied to the div containing the table */
     containerStyle?: React.CSSProperties;
+
+    /** paginate table based on passed number */
+    paginate?: number;
 
     /** Table class */
     rowClass?: string;
@@ -100,6 +103,7 @@ export interface ITableState {
     sortBy: string;
     order: string;
     data: object[];
+    page: number;
 }
 
 export default class Table extends React.Component<ITableProps, ITableState> {
@@ -118,6 +122,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             activeRow: -1,
             data: [],
             order: 'desc',
+            page: 1,
             sortBy: ''
         };
     }
@@ -139,21 +144,26 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         const cover = this.getCover();
 
         return (
-            <div className={styles.tableWrapper} style={this.props.containerStyle}>
-                {cover}
-                <table
-                    className={`table-component ${styles.table} ${this.props.className}`}
-                    style={this.props.style}
-                >
-                    <thead>
-                        <tr>
-                            {headers}
-                        </tr>
-                    </thead>
-                    <tbody className={styles.body}>
-                        {rows}
-                    </tbody>
-                </table>
+            <div>
+                <div className={styles.tableWrapper} style={this.props.containerStyle}>
+                    {cover}
+                    <table
+                        className={`table-component ${styles.table} ${this.props.className}`}
+                        style={this.props.style}
+                    >
+                        <thead>
+                            <tr>
+                                {headers}
+                            </tr>
+                        </thead>
+                        <tbody className={styles.body}>
+                            {rows}
+                        </tbody>
+                    </table>
+                </div>
+                <div className={styles.pagination}>
+                    {this.props.paginate && this.getPagination()}
+                </div>
             </div>
         );
     }
@@ -232,6 +242,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             );
 
         });
+
+        if (this.props.paginate){
+            const pagRows = this.paginateRows(rows);
+            return pagRows[this.state.page - 1];
+        }
 
         return rows;
     }
@@ -385,6 +400,50 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             });
         } else {
             return <span className={styles.content}>{content}</span>;
+        }
+    }
+
+    paginateRows = (rows: Array<React.ReactElement<ITableProps>>) => {
+        const paginated = [];
+        const size = this.props.paginate;
+
+        while (rows.length > 0) {
+            paginated.push(rows.splice(0, size));
+        }
+
+        return paginated;
+    }
+
+    getPagination = () => {
+
+        const paginate = this.props.paginate;
+
+        if (paginate){
+
+            const pages = Math.ceil(this.state.data.length / paginate);
+
+            return (
+                <Pagination
+                    onClick={this.onPaginationClick}
+                    items={pages}
+                    currentItem={this.state.page}
+                    firstBtn
+                    lastBtn
+                    prevBtn
+                    nextBtn
+                />
+            );
+        }
+
+    }
+
+    onPaginationClick = (item: number) => {
+
+        const paginate = this.props.paginate ? this.props.paginate : 0;
+        const pages = Math.ceil(this.state.data.length / paginate);
+
+        if (item <= pages){
+            this.setState({page: item});
         }
     }
 

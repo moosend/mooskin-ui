@@ -414,4 +414,96 @@ describe('Table', () => {
         expect(component.find('Row').at(1).hasClass('rowClass')).toBeTruthy();
     });
 
+    test('Assigns rows without pagination', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            },
+            {
+                country: 'Citadel',
+                id: 2,
+                lastname: 'Shepard',
+                name: 'John'
+            },
+            {
+                country: 'Tatooine',
+                id: 4,
+                lastname: 'Skywalker',
+                name: 'Luke'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('Pagination').length).toEqual(0);
+        expect(component.find('Row').length).toEqual(4);
+
+    });
+
+    test('Assigns rows with pagination', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            },
+            {
+                country: 'Citadel',
+                id: 2,
+                lastname: 'Shepard',
+                name: 'John'
+            },
+            {
+                country: 'Tatooine',
+                id: 4,
+                lastname: 'Skywalker',
+                name: 'Luke'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data} paginate={3}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.state('page')).toBe(1);
+        expect(component.find('Pagination').length).toEqual(1);
+        expect(component.find('Row').length).toEqual(3);
+
+        component.find('.pagination-next-btn').first().simulate('click');
+
+        expect(component.state('page')).toBe(2);
+        expect(component.find('Row').length).toEqual(1);
+
+    });
+
 });
