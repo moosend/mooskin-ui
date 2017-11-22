@@ -10,6 +10,9 @@ export interface IGridProps{
     /** custom classes for Grid */
     className?: string;
 
+    /** wether the grid should be hidden */
+    hidden?: boolean;
+
     /** custom styles for Grid */
     style?: React.CSSProperties;
 
@@ -25,6 +28,9 @@ export interface IRowProps{
     /** custom classes for Row */
     className?: string;
 
+    /** wether the row should be hidden */
+    hidden?: boolean;
+
     /** custom styles for Row */
     style?: React.CSSProperties;
 
@@ -39,6 +45,9 @@ export interface IColProps{
 
     /** custom classes for Col */
     className?: string;
+
+    /** wether the column should be hidden */
+    hidden?: boolean;
 
     /** custom styles for Col */
     style?: React.CSSProperties;
@@ -66,10 +75,13 @@ export default class Grid extends React.Component<IGridProps, {}>{
     static Row: React.StatelessComponent<IRowProps>;
 
     render(){
+
+        const hidden = this.props.hidden ? styles.hidden : '';
+
         return(
             <div
                 id={this.props.id}
-                className={`grid-component ${styles.grid} ${this.props.className}`}
+                className={`grid-component ${styles.grid} ${hidden} ${this.props.className}`}
                 style={this.props.style}
             >
                 {this.props.children}
@@ -80,10 +92,12 @@ export default class Grid extends React.Component<IGridProps, {}>{
 
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
+    const hidden = props.hidden ? styles.hidden : '';
+
     return(
         <div
             id={props.id}
-            className={`row-component ${styles.row} ${props.className}`}
+            className={`row-component ${styles.row} ${hidden} ${props.className}`}
             style={props.style}
         >
             {props.children}
@@ -97,6 +111,8 @@ Row.defaultProps = {
 };
 
 export const Col: React.StatelessComponent<IColProps> = (props) => {
+
+    const hidden = props.hidden ? styles.hidden : '';
 
     const large = props.lg || 0;
     const medium = props.md || 0;
@@ -160,7 +176,7 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
     return(
         <div
             id={props.id}
-            className={`col-component ${styles.col} ${classes}`}
+            className={`col-component ${styles.col} ${classes} ${hidden}`}
             style={props.style}
         >
             {props.children}

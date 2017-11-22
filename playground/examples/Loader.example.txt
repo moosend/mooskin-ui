@@ -1,0 +1,11 @@
+class LoaderExample extends React.Component {
+
+    render(){
+        return(
+            <div>
+                <Loader />
+            </div>
+        );
+    }
+
+}
