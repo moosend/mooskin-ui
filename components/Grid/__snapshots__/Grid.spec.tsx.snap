@@ -2,7 +2,7 @@
 
 exports[`Grid renders Col correctly 1`] = `
 <div
-  className="col-component col large-8 medium-6 small-4 hidden-xs myClass"
+  className="col-component col large-8 medium-6 small-4 hidden-xs myClass "
   style={
     Object {
       "width": "50px",
@@ -13,7 +13,7 @@ exports[`Grid renders Col correctly 1`] = `
 
 exports[`Grid renders Grid correctly 1`] = `
 <div
-  className="grid-component grid myClass"
+  className="grid-component grid  myClass"
   style={
     Object {
       "width": "50px",
@@ -32,7 +32,7 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
   }
 >
   <div
-    className="grid-component grid myClass"
+    className="grid-component grid  myClass"
     id={undefined}
     style={
       Object {
@@ -42,6 +42,8 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
   >
     <Row
       className="myClass"
+      id={undefined}
+      key="0"
       style={
         Object {
           "width": "50px",
@@ -49,7 +51,7 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
       }
     >
       <div
-        className="row-component row myClass"
+        className="row-component row  myClass"
         id={undefined}
         style={
           Object {
@@ -59,6 +61,7 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
       >
         <Col
           className="myClass"
+          id={undefined}
           lg={8}
           md={6}
           sm={4}
@@ -70,7 +73,7 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
           xs="hidden"
         >
           <div
-            className="col-component col large-8 medium-6 small-4 hidden-xs myClass"
+            className="col-component col large-8 medium-6 small-4 hidden-xs myClass "
             id={undefined}
             style={
               Object {
@@ -89,7 +92,7 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
 
 exports[`Grid renders Row correctly 1`] = `
 <div
-  className="row-component row myClass"
+  className="row-component row  myClass"
   style={
     Object {
       "width": "50px",

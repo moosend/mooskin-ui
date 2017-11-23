@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import {Loader} from '../index';
 import styles from './Grid.css';
 
 export interface IGridProps{
@@ -84,10 +85,97 @@ export default class Grid extends React.Component<IGridProps, {}>{
                 className={`grid-component ${styles.grid} ${hidden} ${this.props.className}`}
                 style={this.props.style}
             >
-                {this.props.children}
+                {this.getRows()}
             </div>
         );
     }
+
+    // assignGridChildren = () => {
+    //     const rows = this.getRows();
+    //     const col
+    // }
+
+    getRows = () => {
+        const children: Array<React.ReactElement<IRowProps>> | React.ReactElement<IRowProps> = [];
+        React.Children.forEach(this.props.children, (row, index) => {
+            if (React.isValidElement<IRowProps>(row)){
+                const cols = this.getCols(row);
+                children.push(
+                    <Row
+                        key={index}
+                        id={row.props.id}
+                        className={row.props.className}
+                        style={row.props.style}
+                    >
+                        {cols}
+                    </Row>
+                );
+            }
+        });
+        return children;
+    }
+
+    getCols = (row: React.ReactElement<IRowProps>) => {
+
+        const cols = row.props.children;
+        const newCols = this.detectLoaders(cols);
+        return newCols;
+    }
+
+    detectLoaders = (cols?: Array<React.ReactElement<IColProps>> | React.ReactElement<IColProps>, index?: number) => {
+
+        if (cols){
+            if (Array.isArray(cols)){
+                const newCols: any = [];
+                cols.forEach((col: React.ReactElement<IColProps>, i: number) => {
+                    newCols.push(this.detectLoaders(col, i));
+                });
+                return newCols;
+            } else {
+                return (
+                    <Col
+                        key={index}
+                        className={cols.props.className}
+                        style={cols.props.style}
+                        xs={cols.props.xs}
+                        sm={cols.props.sm}
+                        md={cols.props.md}
+                        lg={cols.props.lg}
+                        id={cols.props.id}
+                    >
+                        {this.getColChildren(cols.props.children)}
+                    </Col>
+                );
+            }
+        }
+    }
+
+    getColChildren = (children: any) => {
+
+        let loader = '';
+        let isLoading = false;
+
+        if (Array.isArray(children)){
+            children.map((child: any) => {
+                if (!isLoading){
+                    if (child.type === Loader && child.props.active === true){
+                        isLoading = true;
+                        console.log('loader active!!');
+                        loader = child;
+                    }
+                }
+            });
+        } else {
+            return children;
+        }
+
+        if (isLoading){
+            return loader;
+        } else {
+            return children;
+        }
+    }
+
 }
 
 export const Row: React.StatelessComponent<IRowProps> = (props) => {

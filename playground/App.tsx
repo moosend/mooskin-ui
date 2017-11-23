@@ -128,7 +128,7 @@ export const App = (props: any) => {
                     {renderEditableExample('LoadingBar', { LoadingBar, Button })}
                 </Col>
                 <Col lg={6} md={6}>
-                    {renderEditableExample('Loader', { Loader, H3 })}
+                    {renderEditableExample('Loader', { Grid, Row, Col, Button, Loader, H3 })}
                 </Col>
             </Row>
             <Row id="buttons">

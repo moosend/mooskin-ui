@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renders correctly 1`] = `
+<div
+  className="loader-component loader  "
+  style={Object {}}
+>
+  Incoming Transmission
+  <img
+    className="image"
+    src="https://img00.deviantart.net/ae1e/i/2015/196/7/c/40k_imperial_aquila__transparent__by_fuguestock-d91enql.png"
+  />
+</div>
+`;

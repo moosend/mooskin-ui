@@ -1,11 +1,33 @@
 class LoaderExample extends React.Component {
 
+    constructor(props){
+        super(props);
+
+        this.onClick = this.onClick.bind(this);
+
+        this.state = {
+            loader: true
+        }
+    }
+
     render(){
         return(
             <div>
-                <Loader />
+                <Button onClick={this.onClick}>Simulate Loader</Button>
+                <Grid>
+                    <Row>
+                        <Col>
+                            <Loader active={this.state.loader} />
+                            <H3>Complete!</H3>
+                        </Col>
+                    </Row>
+                </Grid>
             </div>
         );
+    }
+
+    onClick(){
+        this.setState({loader: !this.state.loader})
     }
 
 }
