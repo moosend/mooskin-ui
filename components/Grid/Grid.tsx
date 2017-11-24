@@ -135,27 +135,43 @@ export default class Grid extends React.Component<IGridProps, {}>{
                 const {loader} = this.getColChildren(cols.props.children);
                 const {children} = this.getColChildren(cols.props.children);
 
-                const display = loader ? styles.hiddenContent : styles.showContent;
+                const display = loader ? styles.hiddenContent : '';
 
-                return (
-                    <Col
-                        key={index}
-                        className={cols.props.className}
-                        style={{...{position: 'relative'}, ...cols.props.style}}
-                        xs={cols.props.xs}
-                        sm={cols.props.sm}
-                        md={cols.props.md}
-                        lg={cols.props.lg}
-                        id={cols.props.id}
-                    >
-                        <div className={styles.activeLoader}>
-                            {loader}
-                        </div>
-                        <div className={display}>
+                if (loader){
+                    return (
+                        <Col
+                            key={index}
+                            className={cols.props.className}
+                            style={{...{position: 'relative'}, ...cols.props.style}}
+                            xs={cols.props.xs}
+                            sm={cols.props.sm}
+                            md={cols.props.md}
+                            lg={cols.props.lg}
+                            id={cols.props.id}
+                        >
+                            <div className={styles.activeLoader}>
+                                {loader}
+                            </div>
+                            <div className={display}>
+                                {children}
+                            </div>
+                        </Col>
+                    );
+                } else {
+                    return (
+                        <Col
+                            className={cols.props.className}
+                            style={cols.props.style}
+                            xs={cols.props.xs}
+                            sm={cols.props.sm}
+                            md={cols.props.md}
+                            lg={cols.props.lg}
+                            id={cols.props.id}
+                        >
                             {children}
-                        </div>
-                    </Col>
-                );
+                        </Col>
+                    );
+                }
             }
         }
     }
@@ -168,9 +184,9 @@ export default class Grid extends React.Component<IGridProps, {}>{
         if (childrenArray){
             if (Array.isArray(childrenArray)){
                 childrenArray.forEach((child) => {
-                    if (child.type === Loader && child.props.active){
+                    if (child.type === Loader && child.props.active === true){
                         loader = child;
-                    } else {
+                    } else if (child.type !== Loader) {
                         children.push(child);
                     }
                 });

@@ -37,12 +37,7 @@
 }
 
 .hiddenContent{
-    opacity: 0;
-}
-
-.showContent{
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
+    visibility: hidden;
 }
 
 @media screen and (--large){

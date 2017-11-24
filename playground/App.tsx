@@ -124,11 +124,14 @@ export const App = (props: any) => {
                 </Col>
             </Row>
             <Row id="loaders">
+                <Col lg={12}>
+                    <H1>Loaders</H1>
+                </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('LoadingBar', { LoadingBar, Button })}
                 </Col>
                 <Col lg={6} md={6}>
-                    {renderEditableExample('Loader', { Grid, Row, Col, Button, Loader, H3 })}
+                    {renderEditableExample('Loader', { Grid, Row, Col, Button, Pie, Loader, H3 })}
                 </Col>
             </Row>
             <Row id="buttons">
