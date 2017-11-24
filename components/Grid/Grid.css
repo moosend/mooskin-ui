@@ -27,6 +27,24 @@
     display: none;
 }
 
+.activeLoader{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.hiddenContent{
+    opacity: 0;
+}
+
+.showContent{
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
 @media screen and (--large){
 
     .large-1 {flex: 1 1 8.33333333%}

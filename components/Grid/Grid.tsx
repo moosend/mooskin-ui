@@ -132,49 +132,81 @@ export default class Grid extends React.Component<IGridProps, {}>{
                 });
                 return newCols;
             } else {
+                const {loader} = this.getColChildren(cols.props.children);
+                const {children} = this.getColChildren(cols.props.children);
+
+                const display = loader ? styles.hiddenContent : styles.showContent;
+
                 return (
                     <Col
                         key={index}
                         className={cols.props.className}
-                        style={cols.props.style}
+                        style={{...{position: 'relative'}, ...cols.props.style}}
                         xs={cols.props.xs}
                         sm={cols.props.sm}
                         md={cols.props.md}
                         lg={cols.props.lg}
                         id={cols.props.id}
                     >
-                        {this.getColChildren(cols.props.children)}
+                        <div className={styles.activeLoader}>
+                            {loader}
+                        </div>
+                        <div className={display}>
+                            {children}
+                        </div>
                     </Col>
                 );
             }
         }
     }
 
-    getColChildren = (children: any) => {
+    getColChildren = (childrenArray: any) => {
 
-        let loader = '';
-        let isLoading = false;
+        let loader;
+        const children: any = [];
 
-        if (Array.isArray(children)){
-            children.map((child: any) => {
-                if (!isLoading){
-                    if (child.type === Loader && child.props.active === true){
-                        isLoading = true;
-                        console.log('loader active!!');
+        if (childrenArray){
+            if (Array.isArray(childrenArray)){
+                childrenArray.forEach((child) => {
+                    if (child.type === Loader && child.props.active){
                         loader = child;
+                    } else {
+                        children.push(child);
                     }
-                }
-            });
-        } else {
-            return children;
+                });
+            } else {
+                children.push(childrenArray);
+            }
         }
 
-        if (isLoading){
-            return loader;
-        } else {
-            return children;
-        }
+        return {loader, children};
     }
+
+    // getColChildren = (children: any) => {
+
+    //     let loader = '';
+    //     let isLoading = false;
+
+    //     if (Array.isArray(children)){
+    //         children.map((child: any) => {
+    //             if (!isLoading){
+    //                 if (child.type === Loader && child.props.active === true){
+    //                     isLoading = true;
+    //                     console.log('loader active!!');
+    //                     loader = child;
+    //                 }
+    //             }
+    //         });
+    //     } else {
+    //         return children;
+    //     }
+
+    //     if (isLoading){
+    //         return loader;
+    //     } else {
+    //         return children;
+    //     }
+    // }
 
 }
 
