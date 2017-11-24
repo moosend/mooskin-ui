@@ -5,10 +5,21 @@ exports[`Loader renders correctly 1`] = `
   className="loader-component loader  "
   style={Object {}}
 >
-  Incoming Transmission
   <img
-    className="image"
-    src="https://img00.deviantart.net/ae1e/i/2015/196/7/c/40k_imperial_aquila__transparent__by_fuguestock-d91enql.png"
+    className="image animation"
+    src="http://www.freeiconspng.com/uploads/load-icon-png-10.png"
+  />
+</div>
+`;
+
+exports[`Loader renders non-active Loader correctly 1`] = `
+<div
+  className="loader-component loader  "
+  style={Object {}}
+>
+  <img
+    className="image animation"
+    src="http://www.freeiconspng.com/uploads/load-icon-png-10.png"
   />
 </div>
 `;
