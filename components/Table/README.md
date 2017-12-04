@@ -127,6 +127,7 @@ The custom sort function must accept 4 arguments, `a` and `b` being the compared
 * `sortfn` - custom sort function for row sorting, requires `sortable`
 * `className` - css class
 * `style` - table styles
+* `alternate` - alternate table view
 
 Allthough these attributes are supported, only `data` for Table and `dataField` for TableHeader are required.
 

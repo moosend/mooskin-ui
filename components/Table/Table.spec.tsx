@@ -414,4 +414,35 @@ describe('Table', () => {
         expect(component.find('Row').at(1).hasClass('rowClass')).toBeTruthy();
     });
 
+    test('apply alternate table version', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ];
+
+        const component = mount(
+            <Table rowClass={'rowClass'} data={data} alternate>
+                <TableHeader colClasses="columnClass" dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('.alternate').length).toEqual(1);
+        expect(component.find('.alternateHeader').length).toEqual(10);
+        expect(component.find('.alternateCol').length).toEqual(16);
+    });
+
 });

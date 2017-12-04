@@ -56,21 +56,29 @@ exports[`Table renders correctly 1`] = `
       <thead>
         <tr>
           <TableHeader
-            className="buttonHeader"
+            className="header buttonHeader"
             dataField="button"
             key="0"
             style={Object {}}
           >
             <th
-              className="table-header buttonHeader header "
+              className="table-header  header buttonHeader"
               onClick={undefined}
               style={Object {}}
             >
-              X
+              <div
+                style={
+                  Object {
+                    "visibility": "hidden",
+                  }
+                }
+              >
+                X
+              </div>
             </th>
           </TableHeader>
           <TableHeader
-            className="myStyle sortHeader"
+            className="header myStyle sortHeader"
             dataField="delivered"
             hideSmall={undefined}
             key="1"
@@ -82,7 +90,7 @@ exports[`Table renders correctly 1`] = `
             }
           >
             <th
-              className="table-header myStyle sortHeader header "
+              className="table-header  header myStyle sortHeader"
               onClick={[Function]}
               style={
                 Object {
@@ -101,7 +109,7 @@ exports[`Table renders correctly 1`] = `
             </th>
           </TableHeader>
           <TableHeader
-            className="undefined sortHeader"
+            className="header undefined sortHeader"
             dataField="campaign"
             hideSmall={undefined}
             key="2"
@@ -109,7 +117,7 @@ exports[`Table renders correctly 1`] = `
             style={Object {}}
           >
             <th
-              className="table-header undefined sortHeader header "
+              className="table-header  header undefined sortHeader"
               onClick={[Function]}
               style={Object {}}
             >
@@ -119,7 +127,7 @@ exports[`Table renders correctly 1`] = `
             </th>
           </TableHeader>
           <TableHeader
-            className="undefined "
+            className="header undefined "
             dataField="mailingList"
             hideSmall={true}
             key="3"
@@ -127,7 +135,7 @@ exports[`Table renders correctly 1`] = `
             style={Object {}}
           >
             <th
-              className="table-header undefined  header hide"
+              className="table-header hide header undefined "
               onClick={undefined}
               style={Object {}}
             >
@@ -137,7 +145,7 @@ exports[`Table renders correctly 1`] = `
             </th>
           </TableHeader>
           <TableHeader
-            className="undefined sortHeader"
+            className="header undefined sortHeader"
             dataField="status"
             hideSmall={true}
             key="4"
@@ -145,7 +153,7 @@ exports[`Table renders correctly 1`] = `
             style={Object {}}
           >
             <th
-              className="table-header undefined sortHeader header hide"
+              className="table-header hide header undefined sortHeader"
               onClick={[Function]}
               style={Object {}}
             >
@@ -155,7 +163,7 @@ exports[`Table renders correctly 1`] = `
             </th>
           </TableHeader>
           <TableHeader
-            className="undefined sortHeader"
+            className="header undefined sortHeader"
             dataField="open"
             hideSmall={true}
             key="5"
@@ -163,7 +171,7 @@ exports[`Table renders correctly 1`] = `
             style={Object {}}
           >
             <th
-              className="table-header undefined sortHeader header hide"
+              className="table-header hide header undefined sortHeader"
               onClick={[Function]}
               style={Object {}}
             >
@@ -173,7 +181,7 @@ exports[`Table renders correctly 1`] = `
             </th>
           </TableHeader>
           <TableHeader
-            className="undefined sortHeader"
+            className="header undefined sortHeader"
             dataField="click"
             hideSmall={true}
             key="6"
@@ -181,7 +189,7 @@ exports[`Table renders correctly 1`] = `
             style={Object {}}
           >
             <th
-              className="table-header undefined sortHeader header hide"
+              className="table-header hide header undefined sortHeader"
               onClick={[Function]}
               style={Object {}}
             >
@@ -191,7 +199,7 @@ exports[`Table renders correctly 1`] = `
             </th>
           </TableHeader>
           <TableHeader
-            className="undefined sortHeader"
+            className="header undefined sortHeader"
             dataField="subscribers"
             hideSmall={true}
             key="7"
@@ -199,7 +207,7 @@ exports[`Table renders correctly 1`] = `
             style={Object {}}
           >
             <th
-              className="table-header undefined sortHeader header hide"
+              className="table-header hide header undefined sortHeader"
               onClick={[Function]}
               style={Object {}}
             >
@@ -214,21 +222,21 @@ exports[`Table renders correctly 1`] = `
         className="body"
       >
         <Row
-          className=""
+          className=" undefined"
           key="0"
           style={Object {}}
         >
           <tr
-            className="row row "
+            className="row row  undefined"
             style={Object {}}
           >
             <Col
-              className="buttonCol"
+              className="buttonCol "
               key="0"
               style={Object {}}
             >
               <td
-                className="column col buttonCol"
+                className="column buttonCol "
                 style={Object {}}
               >
                 <SmallIconButton
@@ -375,7 +383,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent  undefined"
+              className="col colComponent  undefined"
               key="1"
               style={Object {}}
             >
@@ -400,7 +408,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent  undefined"
+              className="col colComponent  undefined"
               key="2"
               style={Object {}}
             >
@@ -425,7 +433,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="3"
               style={Object {}}
             >
@@ -450,7 +458,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="4"
               style={Object {}}
             >
@@ -475,7 +483,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="5"
               style={Object {}}
             >
@@ -500,7 +508,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="6"
               style={Object {}}
             >
@@ -525,7 +533,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="7"
               style={Object {}}
             >
@@ -552,21 +560,21 @@ exports[`Table renders correctly 1`] = `
           </tr>
         </Row>
         <Row
-          className=""
+          className=" undefined"
           key="1"
           style={Object {}}
         >
           <tr
-            className="row row "
+            className="row row  undefined"
             style={Object {}}
           >
             <Col
-              className="buttonCol"
+              className="buttonCol "
               key="0"
               style={Object {}}
             >
               <td
-                className="column col buttonCol"
+                className="column buttonCol "
                 style={Object {}}
               >
                 <SmallIconButton
@@ -713,7 +721,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent  undefined"
+              className="col colComponent  undefined"
               key="1"
               style={Object {}}
             >
@@ -738,7 +746,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent  undefined"
+              className="col colComponent  undefined"
               key="2"
               style={Object {}}
             >
@@ -763,7 +771,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="3"
               style={Object {}}
             >
@@ -788,7 +796,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="4"
               style={Object {}}
             >
@@ -813,7 +821,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="5"
               style={Object {}}
             >
@@ -838,7 +846,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="6"
               style={Object {}}
             >
@@ -863,7 +871,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="7"
               style={Object {}}
             >
@@ -890,21 +898,21 @@ exports[`Table renders correctly 1`] = `
           </tr>
         </Row>
         <Row
-          className=""
+          className=" undefined"
           key="2"
           style={Object {}}
         >
           <tr
-            className="row row "
+            className="row row  undefined"
             style={Object {}}
           >
             <Col
-              className="buttonCol"
+              className="buttonCol "
               key="0"
               style={Object {}}
             >
               <td
-                className="column col buttonCol"
+                className="column buttonCol "
                 style={Object {}}
               >
                 <SmallIconButton
@@ -1051,7 +1059,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent  undefined"
+              className="col colComponent  undefined"
               key="1"
               style={Object {}}
             >
@@ -1076,7 +1084,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent  undefined"
+              className="col colComponent  undefined"
               key="2"
               style={Object {}}
             >
@@ -1101,7 +1109,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="3"
               style={Object {}}
             >
@@ -1126,7 +1134,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="4"
               style={Object {}}
             >
@@ -1151,7 +1159,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="5"
               style={Object {}}
             >
@@ -1176,7 +1184,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="6"
               style={Object {}}
             >
@@ -1201,7 +1209,7 @@ exports[`Table renders correctly 1`] = `
               </td>
             </Col>
             <Col
-              className="colComponent hide undefined"
+              className="col colComponent hide undefined"
               key="7"
               style={Object {}}
             >

@@ -22,6 +22,9 @@ export interface ITableProps{
     /** Table class */
     rowClass?: string;
 
+    /** alternate view for table */
+    alternate?: boolean;
+
     /** override Table styles */
     rowStyle?: React.CSSProperties;
 
@@ -138,11 +141,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         const rows = this.getRows();
         const cover = this.getCover();
 
+        const tableStyles = !this.props.alternate ? styles.table : styles.alternate;
+
         return (
             <div className={styles.tableWrapper} style={this.props.containerStyle}>
                 {cover}
                 <table
-                    className={`table-component ${styles.table} ${this.props.className}`}
+                    className={`table-component ${tableStyles} ${this.props.className}`}
                     style={this.props.style}
                 >
                     <thead>
@@ -182,10 +187,12 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
                             const content = this.getContent(obj[key]);
 
+                            const colStyles = this.props.alternate ? styles.alternateCol : styles.col;
+
                             cols[i] = (
                                 <Col
                                     style={setting.styles}
-                                    className={`${styles.colComponent} ${display} ${setting.classes}`}
+                                    className={`${colStyles} ${styles.colComponent} ${display} ${setting.classes}`}
                                     key={i + 1}
                                 >
                                     <span className={styles.heading}>{setting.heading}</span>
@@ -209,8 +216,10 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 }
             }
 
+            const alternateButton = this.props.alternate ? styles.alternateButton : '';
+
             const buttonCol = (
-                <Col key={0} className={styles.buttonCol}>
+                <Col key={0} className={`${styles.buttonCol} ${alternateButton}`}>
                     <SmallIconButton
                         icon="list"
                         className={styles.toggle}
@@ -225,8 +234,14 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
             cols.splice(0, 0, buttonCol);
 
+            const rowStyles = this.props.alternate ? styles.alternateRow : '';
+
             rows.push(
-                <Row key={index} style={this.props.rowStyle} className={this.props.rowClass}>
+                <Row
+                    key={index}
+                    style={this.props.rowStyle}
+                    className={`${rowStyles} ${this.props.rowClass}`}
+                >
                     {cols}
                 </Row>
             );
@@ -298,6 +313,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
     getHeaders = () => {
 
         const headers: Array<React.ReactElement<IHeaderProps>> = [];
+        const headerStyles = !this.props.alternate ? styles.header : styles.alternateHeader;
 
         React.Children.forEach(this.props.children, (child, index) => {
 
@@ -306,13 +322,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 const pointer = child.props.sortable ? styles.sortHeader : '';
 
                 const sortable = child.props.sortable ?
-                                this.onClickHeader(child.props.dataField, child.props.sortfn) :
-                                undefined;
+                this.onClickHeader(child.props.dataField, child.props.sortfn) :
+                undefined;
 
                 headers.push(
                     <TableHeader
                         key={index + 1}
-                        className={`${child.props.className} ${pointer}`}
+                        className={`${headerStyles} ${child.props.className} ${pointer}`}
                         style={child.props.style}
                         dataField={child.props.dataField}
                         hideSmall={child.props.hideSmall}
@@ -329,8 +345,10 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         });
 
         const buttonHeader = (
-            <TableHeader dataField="button" key={0} className={styles.buttonHeader}>
-                {'X'}
+            <TableHeader dataField="button" key={0} className={`${headerStyles} ${styles.buttonHeader}`}>
+                <div style={{visibility: 'hidden'}}>
+                    {'X'}
+                </div>
             </TableHeader>
         );
 
@@ -402,7 +420,7 @@ export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
     return(
         <th
             style={props.style}
-            className={`table-header ${props.className} ${styles.header} ${display}`}
+            className={`table-header ${display} ${props.className}`}
             onClick={props.onClick}
         >
             {props.children}
@@ -433,7 +451,7 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
     };
 
     return(
-        <td className={`column ${styles.col} ${props.className}`} style={props.style}>
+        <td className={`column ${props.className}`} style={props.style}>
             {props.children}
         </td>
     );
