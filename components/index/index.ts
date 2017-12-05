@@ -13,6 +13,7 @@ export {H1, H2, H3, H4, H5, H6} from '../Headings';
 export {default as Input} from '../Input';
 export {default as Label} from '../Label';
 export {default as List, ListItem} from '../List';
+export {default as Loader} from '../Loader';
 export {default as LoadingBar} from '../LoadingBar';
 export {default as Modal} from '../Modal';
 export {default as Pagination} from '../Pagination';

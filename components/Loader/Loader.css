@@ -1,0 +1,28 @@
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.image{
+    width: 80px;
+}
+
+.animation{
+    animation: two 2s infinite;
+    /* animation-direction: alternate; */
+}
+
+@keyframes two {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden{
+    display: none;
+}

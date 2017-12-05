@@ -23,6 +23,10 @@ class SideBarExample extends React.Component {
                         href="#sidebar"
                     />
                     <SidebarItem
+                        label="Loaders"
+                        href="#loaders"
+                    />
+                    <SidebarItem
                         label="Buttons"
                         href="#buttons"
                     />

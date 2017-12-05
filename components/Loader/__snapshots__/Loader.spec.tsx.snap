@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renders correctly 1`] = `
+<div
+  className="loader-component loader  "
+  style={Object {}}
+>
+  <img
+    className="image animation"
+    src="http://www.freeiconspng.com/uploads/load-icon-png-10.png"
+  />
+</div>
+`;
+
+exports[`Loader renders non-active Loader correctly 1`] = `
+<div
+  className="loader-component loader  "
+  style={Object {}}
+>
+  <img
+    className="image animation"
+    src="http://www.freeiconspng.com/uploads/load-icon-png-10.png"
+  />
+</div>
+`;
