@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Table, TableHeader} from '../index';
+import Table, {TableHeader} from './index';
 
 import { mount, shallow } from 'enzyme';
 
@@ -412,6 +412,158 @@ describe('Table', () => {
 
         expect(component.find('Col').at(1).hasClass('columnClass')).toBeTruthy();
         expect(component.find('Row').at(1).hasClass('rowClass')).toBeTruthy();
+    });
+
+    test('Assigns rows without pagination', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            },
+            {
+                country: 'Citadel',
+                id: 2,
+                lastname: 'Shepard',
+                name: 'John'
+            },
+            {
+                country: 'Tatooine',
+                id: 4,
+                lastname: 'Skywalker',
+                name: 'Luke'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('Pagination').length).toEqual(0);
+        expect(component.find('Row').length).toEqual(4);
+
+    });
+
+    test('Assigns rows with pagination', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            },
+            {
+                country: 'Citadel',
+                id: 2,
+                lastname: 'Shepard',
+                name: 'John'
+            },
+            {
+                country: 'Tatooine',
+                id: 4,
+                lastname: 'Skywalker',
+                name: 'Luke'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data} paginate={3}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.state('page')).toBe(1);
+        expect(component.find('Pagination').length).toEqual(1);
+        expect(component.find('Row').length).toEqual(3);
+
+        component.find('.pagination-next-btn').first().simulate('click');
+
+        expect(component.state('page')).toBe(2);
+        expect(component.find('Row').length).toEqual(1);
+
+    });
+
+    test('Applies custom pagination props to the Pagination component', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            },
+            {
+                country: 'Citadel',
+                id: 2,
+                lastname: 'Shepard',
+                name: 'John'
+            },
+            {
+                country: 'Tatooine',
+                id: 4,
+                lastname: 'Skywalker',
+                name: 'Luke'
+            }
+        ];
+
+        const paginationProps = {
+            className: 'myClass',
+            firstBtn: false,
+            lastBtn: false,
+            maxButtons: 10,
+            nextBtn: true,
+            prevBtn: true,
+            style: {color: 'blue'}
+
+        };
+
+        const component = mount(
+            <Table data={data} paginate={3} paginationProps={paginationProps}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('Pagination').length).toEqual(1);
+        expect(component.find('Pagination').prop('nextBtn')).toEqual(true);
+        expect(component.find('Pagination').prop('prevBtn')).toEqual(true);
+        expect(component.find('Pagination').prop('firstBtn')).toEqual(false);
+        expect(component.find('Pagination').prop('lastBtn')).toEqual(false);
+        expect(component.find('Pagination').prop('className')).toEqual('myClass');
+        expect(component.find('Pagination').prop('maxButtons')).toEqual(10);
+        expect(component.find('Pagination').prop('style')).toEqual({color: 'blue'});
+
     });
 
 });
