@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Button, Input} from '../index';
+import {Button, Input, Loader} from '../index';
 import Grid, {Col, Row} from './Grid';
 
 import {mount, shallow} from 'enzyme';
