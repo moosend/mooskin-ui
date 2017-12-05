@@ -64,7 +64,9 @@ this results in a value of 13K.
 * `className` - css class
 * `style` - button style
 * `abbreviate` - abbreviates large numerical values
+* `abbrAccuracy` - how many decimal digits should be on the abbreviation
 * `round` - rounds large numerical values to the nearest thousand, million, billion etc 
+* `roundAccuracy` - determines wether it should round the values to hundreds or thousands and so on. Supported values are: `high` | `low` 
 
 </div>
 
