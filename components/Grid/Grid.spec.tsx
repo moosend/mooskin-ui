@@ -119,42 +119,4 @@ describe('Grid', () => {
         expect(component.find(Col).hasClass('xSmall-12')).toBeTruthy;
     });
 
-    test('Col component hides content while an active Loader is present', () => {
-
-        const component = mount(
-            <Grid>
-                <Row>
-                    <Col>
-                        <Loader active/>
-                        <Input />
-                        <Button>Click this</Button>
-                    </Col>
-                </Row>
-            </Grid>
-        );
-
-        expect(component.find(Loader).length).toEqual(1);
-        expect(component.find('.hiddenContent').length).toEqual(1);
-
-    });
-
-    test('Col component shows content and Loader is not rendered while Loader is not active', () => {
-
-        const component = mount(
-            <Grid>
-                <Row>
-                    <Col>
-                        <Loader active={false}/>
-                        <Input />
-                        <Button>Click this</Button>
-                    </Col>
-                </Row>
-            </Grid>
-        );
-
-        expect(component.find(Loader).length).toEqual(0);
-        expect(component.find('.hiddenContent').length).toEqual(0);
-
-    });
-
 });

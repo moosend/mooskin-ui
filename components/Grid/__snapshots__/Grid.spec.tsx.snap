@@ -42,8 +42,6 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
   >
     <Row
       className="myClass"
-      id={undefined}
-      key="0"
       style={
         Object {
           "width": "50px",
@@ -61,7 +59,6 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
       >
         <Col
           className="myClass"
-          id={undefined}
           lg={8}
           md={6}
           sm={4}
