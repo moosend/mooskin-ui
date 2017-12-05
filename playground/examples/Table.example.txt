@@ -50,7 +50,7 @@ class TableExample extends React.Component{
 
         return(
             <div>
-                <Table data={data}>
+                <Table data={data} smallCollapse>
                     <TableHeader dataField="delivered" sortable >Delivered</TableHeader>
                     <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
                     <TableHeader dataField="mailingList" hideSmall >
@@ -66,7 +66,7 @@ class TableExample extends React.Component{
                     <TableHeader colStyles={{flexDirection: 'row'}} dataField="actions" hideSmall >Actions</TableHeader>
                 </Table>
                 <br/>
-                <Table data={data} alternate>
+                <Table data={data} alternate smallCollapse>
                     <TableHeader dataField="delivered" hideSmall sortable >Delivered</TableHeader>
                     <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
                     <TableHeader dataField="mailingList" hideSmall >

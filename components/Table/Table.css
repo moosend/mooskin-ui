@@ -201,7 +201,7 @@ td.alternateCol:last-child{
         display: flex;
         flex: 1;
         text-align: left;
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: center;
     }
 
@@ -302,7 +302,7 @@ td.alternateCol:last-child{
         display: flex;
         flex: 1;
         text-align: left;
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: center;
     }
 

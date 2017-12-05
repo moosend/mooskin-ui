@@ -19,6 +19,9 @@ export interface ITableProps{
     /** styling applied to the div containing the table */
     containerStyle?: React.CSSProperties;
 
+    /** wether the collapse button should be available on small screens */
+    smallCollapse?: boolean;
+
     /** Table class */
     rowClass?: string;
 
@@ -189,11 +192,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
                             const colStyles = this.props.alternate ? styles.alternateCol : styles.col;
 
+                            const colKey = this.props.smallCollapse ? i + 1 : i;
+
                             cols[i] = (
                                 <Col
                                     style={setting.styles}
                                     className={`${colStyles} ${styles.colComponent} ${display} ${setting.classes}`}
-                                    key={i + 1}
+                                    key={colKey}
                                 >
                                     <span className={styles.heading}>{setting.heading}</span>
                                     <div className={styles.contentContainer}>
@@ -202,12 +207,14 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                                 </Col>
                             );
 
-                            popoverData[i] = (
-                                <div className={styles.popoverCol} key={i}>
-                                    <span className={styles.heading}>{setting.heading}</span>
-                                    <span className={styles.content}>{obj[key]}</span>
-                                </div>
-                            );
+                            if (this.props.smallCollapse){
+                                popoverData[i] = (
+                                    <div className={styles.popoverCol} key={i}>
+                                        <span className={styles.heading}>{setting.heading}</span>
+                                        <span className={styles.content}>{obj[key]}</span>
+                                    </div>
+                                );
+                            }
 
                         }
 
@@ -216,23 +223,26 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 }
             }
 
-            const alternateButton = this.props.alternate ? styles.alternateButton : '';
+            if (this.props.smallCollapse){
 
-            const buttonCol = (
-                <Col key={0} className={`${styles.buttonCol} ${alternateButton}`}>
-                    <SmallIconButton
-                        icon="list"
-                        className={styles.toggle}
-                        onClick={this.showPopover(index)}
-                        transparent
-                    />
-                    <Popover active={this.state.activeRow === index}>
-                        {popoverData}
-                    </Popover>
-                </Col>
-            );
+                const alternateButton = this.props.alternate ? styles.alternateButton : '';
 
-            cols.splice(0, 0, buttonCol);
+                const buttonCol = (
+                    <Col key={0} className={`${styles.buttonCol} ${alternateButton}`}>
+                        <SmallIconButton
+                            icon="list"
+                            className={styles.toggle}
+                            onClick={this.showPopover(index)}
+                            transparent
+                        />
+                        <Popover active={this.state.activeRow === index}>
+                            {popoverData}
+                        </Popover>
+                    </Col>
+                );
+
+                cols.splice(0, 0, buttonCol);
+            }
 
             const rowStyles = this.props.alternate ? styles.alternateRow : '';
 
@@ -344,15 +354,17 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         });
 
-        const buttonHeader = (
-            <TableHeader dataField="button" key={0} className={`${headerStyles} ${styles.buttonHeader}`}>
-                <div style={{visibility: 'hidden'}}>
-                    {'X'}
-                </div>
-            </TableHeader>
-        );
+        if (this.props.smallCollapse){
+            const buttonHeader = (
+                <TableHeader dataField="button" key={0} className={`${headerStyles} ${styles.buttonHeader}`}>
+                    <div style={{visibility: 'hidden'}}>
+                        {'X'}
+                    </div>
+                </TableHeader>
+            );
 
-        headers.splice(0, 0, buttonHeader);
+            headers.splice(0, 0, buttonHeader);
+        }
 
         return headers;
     }

@@ -35,6 +35,7 @@ exports[`Table renders correctly 1`] = `
     ]
   }
   id="5"
+  smallCollapse={true}
   style={
     Object {
       "background": "red",
