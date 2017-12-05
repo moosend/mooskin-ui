@@ -335,9 +335,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 this.onClickHeader(child.props.dataField, child.props.sortfn) :
                 undefined;
 
+                const i = this.props.smallCollapse ? index + 1 : index;
+
                 headers.push(
                     <TableHeader
-                        key={index + 1}
+                        key={i}
                         className={`${headerStyles} ${child.props.className} ${pointer}`}
                         style={child.props.style}
                         dataField={child.props.dataField}
