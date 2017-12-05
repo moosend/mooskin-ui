@@ -126,6 +126,10 @@ in this case the table will be paginated, showing only three rows since a value 
 * `rowClasses` - classes to be applied on the table Rows
 * `className` - css class
 * `style` - table styles
+* `alternate` - alternate table view
+* `smallCollapse` - adds another header and column on small screens where the whole row can be collapsed
+* `collapseHeaderClassName` - classes for popover header
+* `collapseHeaderStyle` - styles for popover header
 * `containerStyle` - styling applied to the div containing the table
 * `paginate` - paginate table, with the number of rows passed to this prop
 * `paginationProps` - an object describing table pagination props

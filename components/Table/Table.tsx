@@ -22,11 +22,23 @@ export interface ITableProps{
     /** styling applied to the div containing the table */
     containerStyle?: React.CSSProperties;
 
+    /** wether the collapse button should be available on small screens */
+    smallCollapse?: boolean;
+
+    /** classes for popover header */
+    collapseHeaderClassName?: string;
+
+    /** styles for popover header */
+    collapseHeaderStyle?: React.CSSProperties;
+
     /** paginate table based on passed number */
     paginate?: number;
 
     /** Table class */
     rowClass?: string;
+
+    /** alternate view for table */
+    alternate?: boolean;
 
     /** override Table styles */
     rowStyle?: React.CSSProperties;
@@ -152,12 +164,14 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         const rows = this.getRows();
         const cover = this.getCover();
 
+        const tableStyles = !this.props.alternate ? styles.table : styles.alternate;
+
         return (
             <div>
                 <div className={styles.tableWrapper} style={this.props.containerStyle}>
                     {cover}
                     <table
-                        className={`table-component ${styles.table} ${this.props.className}`}
+                        className={`table-component ${tableStyles} ${this.props.className}`}
                         style={this.props.style}
                     >
                         <thead>
@@ -201,11 +215,15 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
                             const content = this.getContent(obj[key]);
 
+                            const colStyles = this.props.alternate ? styles.alternateCol : styles.col;
+
+                            const colKey = this.props.smallCollapse ? i + 1 : i;
+
                             cols[i] = (
                                 <Col
                                     style={setting.styles}
-                                    className={`${styles.colComponent} ${display} ${setting.classes}`}
-                                    key={i + 1}
+                                    className={`${colStyles} ${styles.colComponent} ${display} ${setting.classes}`}
+                                    key={colKey}
                                 >
                                     <span className={styles.heading}>{setting.heading}</span>
                                     <div className={styles.contentContainer}>
@@ -214,12 +232,14 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                                 </Col>
                             );
 
-                            popoverData[i] = (
-                                <div className={styles.popoverCol} key={i}>
-                                    <span className={styles.heading}>{setting.heading}</span>
-                                    <span className={styles.content}>{obj[key]}</span>
-                                </div>
-                            );
+                            if (this.props.smallCollapse){
+                                popoverData[i] = (
+                                    <div className={styles.popoverCol} key={i}>
+                                        <span className={styles.heading}>{setting.heading}</span>
+                                        <span className={styles.content}>{obj[key]}</span>
+                                    </div>
+                                );
+                            }
 
                         }
 
@@ -228,24 +248,35 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 }
             }
 
-            const buttonCol = (
-                <Col key={0} className={styles.buttonCol}>
-                    <SmallIconButton
-                        icon="list"
-                        className={styles.toggle}
-                        onClick={this.showPopover(index)}
-                        transparent
-                    />
-                    <Popover active={this.state.activeRow === index}>
-                        {popoverData}
-                    </Popover>
-                </Col>
-            );
+            if (this.props.smallCollapse){
 
-            cols.splice(0, 0, buttonCol);
+                const alternateButton = this.props.alternate ? styles.alternateButton : '';
+
+                const buttonCol = (
+                    <Col key={0} className={`${styles.buttonCol} ${alternateButton}`}>
+                        <SmallIconButton
+                            icon="list"
+                            className={styles.toggle}
+                            onClick={this.showPopover(index)}
+                            transparent
+                        />
+                        <Popover active={this.state.activeRow === index}>
+                            {popoverData}
+                        </Popover>
+                    </Col>
+                );
+
+                cols.splice(0, 0, buttonCol);
+            }
+
+            const rowStyles = this.props.alternate ? styles.alternateRow : '';
 
             rows.push(
-                <Row key={index} style={this.props.rowStyle} className={this.props.rowClass}>
+                <Row
+                    key={index}
+                    style={this.props.rowStyle}
+                    className={`${rowStyles} ${this.props.rowClass}`}
+                >
                     {cols}
                 </Row>
             );
@@ -322,6 +353,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
     getHeaders = () => {
 
         const headers: Array<React.ReactElement<IHeaderProps>> = [];
+        const headerStyles = !this.props.alternate ? styles.header : styles.alternateHeader;
 
         React.Children.forEach(this.props.children, (child, index) => {
 
@@ -330,13 +362,15 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 const pointer = child.props.sortable ? styles.sortHeader : '';
 
                 const sortable = child.props.sortable ?
-                                this.onClickHeader(child.props.dataField, child.props.sortfn) :
-                                undefined;
+                this.onClickHeader(child.props.dataField, child.props.sortfn) :
+                undefined;
+
+                const i = this.props.smallCollapse ? index + 1 : index;
 
                 headers.push(
                     <TableHeader
-                        key={index + 1}
-                        className={`${child.props.className} ${pointer}`}
+                        key={i}
+                        className={`${headerStyles} ${child.props.className} ${pointer}`}
                         style={child.props.style}
                         dataField={child.props.dataField}
                         hideSmall={child.props.hideSmall}
@@ -352,13 +386,22 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         });
 
-        const buttonHeader = (
-            <TableHeader dataField="button" key={0} className={styles.buttonHeader}>
-                {'X'}
-            </TableHeader>
-        );
+        if (this.props.smallCollapse){
+            const buttonHeader = (
+                <TableHeader
+                    dataField="collapse-button"
+                    key={0}
+                    className={`${headerStyles} ${styles.buttonHeader} ${this.props.collapseHeaderClassName}`}
+                    style={this.props.collapseHeaderStyle}
+                >
+                    <div style={{visibility: 'hidden'}}>
+                        {'X'}
+                    </div>
+                </TableHeader>
+            );
 
-        headers.splice(0, 0, buttonHeader);
+            headers.splice(0, 0, buttonHeader);
+        }
 
         return headers;
     }
@@ -473,7 +516,7 @@ export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
     return(
         <th
             style={props.style}
-            className={`table-header ${props.className} ${styles.header} ${display}`}
+            className={`table-header ${display} ${props.className}`}
             onClick={props.onClick}
         >
             {props.children}
@@ -504,7 +547,7 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
     };
 
     return(
-        <td className={`column ${styles.col} ${props.className}`} style={props.style}>
+        <td className={`column ${props.className}`} style={props.style}>
             {props.children}
         </td>
     );
