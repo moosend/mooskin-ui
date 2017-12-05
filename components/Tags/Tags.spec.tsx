@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Tags} from '../index';
+import Tags from './Tags';
 
 import {mount, render, shallow} from 'enzyme';
 

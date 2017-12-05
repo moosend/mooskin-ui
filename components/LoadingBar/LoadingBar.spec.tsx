@@ -1,5 +1,7 @@
 import * as React from 'react';
-import {Button, LoadingBar} from '../index';
+
+import Button from '../Button';
+import LoadingBar from './LoadingBar';
 
 import {mount, render, shallow} from 'enzyme';
 
