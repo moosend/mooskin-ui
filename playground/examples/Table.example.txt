@@ -78,8 +78,14 @@ class TableExample extends React.Component{
             marginRight: '10px'
         };
 
+        const paginationProps = {
+            lastBtn: false,
+            firstBtn: false,
+            style: {color: 'blue'}
+        }
+
         return(
-            <Table data={data} paginate={3}>
+            <Table data={data} paginate={3} >
                 <TableHeader dataField="delivered" sortable >Delivered</TableHeader>
                 <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
                 <TableHeader dataField="mailingList" hideSmall >

@@ -16,6 +16,9 @@ export interface ITableProps{
     /** override Table styles */
     style?: React.CSSProperties;
 
+    /** pagionation props */
+    paginationProps?: {[key: string]: any};
+
     /** styling applied to the div containing the table */
     containerStyle?: React.CSSProperties;
 
@@ -110,6 +113,12 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
     static defaultProps: Partial<ITableProps> = {
         className: '',
+        paginationProps: {
+            firstBtn: true,
+            lastBtn: true,
+            nextBtn: true,
+            prevBtn: true
+        },
         style: {}
     };
 
@@ -416,7 +425,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
     getPagination = () => {
 
-        const paginate = this.props.paginate;
+        const {paginate, paginationProps} = this.props;
 
         if (paginate){
 
@@ -427,10 +436,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                     onClick={this.onPaginationClick}
                     items={pages}
                     currentItem={this.state.page}
-                    firstBtn
-                    lastBtn
-                    prevBtn
-                    nextBtn
+                    firstBtn={paginationProps && paginationProps.firstBtn}
+                    lastBtn={paginationProps && paginationProps.lastBtn}
+                    prevBtn={paginationProps && paginationProps.prevBtn}
+                    nextBtn={paginationProps && paginationProps.nextBtn}
+                    className={paginationProps && paginationProps.className}
+                    maxButtons={paginationProps && paginationProps.maxButtons}
+                    style={paginationProps && paginationProps.style}
                 />
             );
         }

@@ -128,6 +128,7 @@ in this case the table will be paginated, showing only three rows since a value 
 * `style` - table styles
 * `containerStyle` - styling applied to the div containing the table
 * `paginate` - paginate table, with the number of rows passed to this prop
+* `paginationProps` - an object describing table pagination props
 
 ## Supported attributes for TableHeader
 

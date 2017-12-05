@@ -35,6 +35,14 @@ exports[`Table renders correctly 1`] = `
     ]
   }
   id="5"
+  paginationProps={
+    Object {
+      "firstBtn": true,
+      "lastBtn": true,
+      "nextBtn": true,
+      "prevBtn": true,
+    }
+  }
   style={
     Object {
       "background": "red",
