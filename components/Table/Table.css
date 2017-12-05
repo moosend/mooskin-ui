@@ -149,9 +149,6 @@ td.alternateCol:last-child{
     justify-content: inherit;
 }
 
-.toggle{
-}
-
 @media (--xSmall){
     .hide{
         display: none;
