@@ -116,6 +116,10 @@ The custom sort function must accept 4 arguments, `a` and `b` being the compared
 * `rowClasses` - classes to be applied on the table Rows
 * `className` - css class
 * `style` - table styles
+* `alternate` - alternate table view
+* `smallCollapse` - adds another header and column on small screens where the whole row can be collapsed
+* `collapseHeaderClassName` - classes for popover header
+* `collapseHeaderStyle` - styles for popover header
 
 ## Supported attributes for TableHeader
 
@@ -127,7 +131,6 @@ The custom sort function must accept 4 arguments, `a` and `b` being the compared
 * `sortfn` - custom sort function for row sorting, requires `sortable`
 * `className` - css class
 * `style` - table styles
-* `alternate` - alternate table view
 
 Allthough these attributes are supported, only `data` for Table and `dataField` for TableHeader are required.
 

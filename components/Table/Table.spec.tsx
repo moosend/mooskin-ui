@@ -486,4 +486,41 @@ describe('Table', () => {
         expect(component.find('.alternateCol').length).toEqual(16);
     });
 
+    test('collapse button header styles get applied correctly', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            }
+        ];
+
+        const component = mount(
+            <Table
+                collapseHeaderClassName="myClass"
+                collapseHeaderStyle={{color: 'blue'}}
+                data={data}
+                alternate
+                smallCollapse
+            >
+                <TableHeader colClasses="columnClass" dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('TableHeader').first().prop('className').includes('myClass')).toEqual(true);
+        expect(component.find('TableHeader').first().prop('style')).toEqual({color: 'blue'});
+
+    });
+
 });

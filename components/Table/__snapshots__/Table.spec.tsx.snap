@@ -57,13 +57,13 @@ exports[`Table renders correctly 1`] = `
       <thead>
         <tr>
           <TableHeader
-            className="header buttonHeader"
-            dataField="button"
+            className="header buttonHeader undefined"
+            dataField="collapse-button"
             key="0"
             style={Object {}}
           >
             <th
-              className="table-header  header buttonHeader"
+              className="table-header  header buttonHeader undefined"
               onClick={undefined}
               style={Object {}}
             >

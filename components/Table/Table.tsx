@@ -22,6 +22,12 @@ export interface ITableProps{
     /** wether the collapse button should be available on small screens */
     smallCollapse?: boolean;
 
+    /** classes for popover header */
+    collapseHeaderClassName?: string;
+
+    /** styles for popover header */
+    collapseHeaderStyle?: React.CSSProperties;
+
     /** Table class */
     rowClass?: string;
 
@@ -358,7 +364,12 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         if (this.props.smallCollapse){
             const buttonHeader = (
-                <TableHeader dataField="button" key={0} className={`${headerStyles} ${styles.buttonHeader}`}>
+                <TableHeader
+                    dataField="collapse-button"
+                    key={0}
+                    className={`${headerStyles} ${styles.buttonHeader} ${this.props.collapseHeaderClassName}`}
+                    style={this.props.collapseHeaderStyle}
+                >
                     <div style={{visibility: 'hidden'}}>
                         {'X'}
                     </div>
