@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {SmallIconButton} from '../index';
+import {Pagination, SmallIconButton} from '../index';
 import styles from './Table.css';
 
 export interface ITableProps{
@@ -16,6 +16,9 @@ export interface ITableProps{
     /** override Table styles */
     style?: React.CSSProperties;
 
+    /** pagionation props */
+    paginationProps?: {[key: string]: any};
+
     /** styling applied to the div containing the table */
     containerStyle?: React.CSSProperties;
 
@@ -27,6 +30,9 @@ export interface ITableProps{
 
     /** styles for popover header */
     collapseHeaderStyle?: React.CSSProperties;
+
+    /** paginate table based on passed number */
+    paginate?: number;
 
     /** Table class */
     rowClass?: string;
@@ -112,12 +118,19 @@ export interface ITableState {
     sortBy: string;
     order: string;
     data: object[];
+    page: number;
 }
 
 export default class Table extends React.Component<ITableProps, ITableState> {
 
     static defaultProps: Partial<ITableProps> = {
         className: '',
+        paginationProps: {
+            firstBtn: true,
+            lastBtn: true,
+            nextBtn: true,
+            prevBtn: true
+        },
         style: {}
     };
 
@@ -130,6 +143,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             activeRow: -1,
             data: [],
             order: 'desc',
+            page: 1,
             sortBy: ''
         };
     }
@@ -153,21 +167,26 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         const tableStyles = !this.props.alternate ? styles.table : styles.alternate;
 
         return (
-            <div className={styles.tableWrapper} style={this.props.containerStyle}>
-                {cover}
-                <table
-                    className={`table-component ${tableStyles} ${this.props.className}`}
-                    style={this.props.style}
-                >
-                    <thead>
-                        <tr>
-                            {headers}
-                        </tr>
-                    </thead>
-                    <tbody className={styles.body}>
-                        {rows}
-                    </tbody>
-                </table>
+            <div>
+                <div className={styles.tableWrapper} style={this.props.containerStyle}>
+                    {cover}
+                    <table
+                        className={`table-component ${tableStyles} ${this.props.className}`}
+                        style={this.props.style}
+                    >
+                        <thead>
+                            <tr>
+                                {headers}
+                            </tr>
+                        </thead>
+                        <tbody className={styles.body}>
+                            {rows}
+                        </tbody>
+                    </table>
+                </div>
+                <div className={styles.pagination}>
+                    {this.props.paginate && this.getPagination()}
+                </div>
             </div>
         );
     }
@@ -263,6 +282,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             );
 
         });
+
+        if (this.props.paginate){
+            const pagRows = this.paginateRows(rows);
+            return pagRows[this.state.page - 1];
+        }
 
         return rows;
     }
@@ -428,6 +452,53 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             });
         } else {
             return <span className={styles.content}>{content}</span>;
+        }
+    }
+
+    paginateRows = (rows: Array<React.ReactElement<ITableProps>>) => {
+        const paginated = [];
+        const size = this.props.paginate;
+
+        while (rows.length > 0) {
+            paginated.push(rows.splice(0, size));
+        }
+
+        return paginated;
+    }
+
+    getPagination = () => {
+
+        const {paginate, paginationProps} = this.props;
+
+        if (paginate){
+
+            const pages = Math.ceil(this.state.data.length / paginate);
+
+            return (
+                <Pagination
+                    onClick={this.onPaginationClick}
+                    items={pages}
+                    currentItem={this.state.page}
+                    firstBtn={paginationProps && paginationProps.firstBtn}
+                    lastBtn={paginationProps && paginationProps.lastBtn}
+                    prevBtn={paginationProps && paginationProps.prevBtn}
+                    nextBtn={paginationProps && paginationProps.nextBtn}
+                    className={paginationProps && paginationProps.className}
+                    maxButtons={paginationProps && paginationProps.maxButtons}
+                    style={paginationProps && paginationProps.style}
+                />
+            );
+        }
+
+    }
+
+    onPaginationClick = (item: number) => {
+
+        const paginate = this.props.paginate ? this.props.paginate : 0;
+        const pages = Math.ceil(this.state.data.length / paginate);
+
+        if (item <= pages){
+            this.setState({page: item});
         }
     }
 

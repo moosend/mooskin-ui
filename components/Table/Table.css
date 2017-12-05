@@ -149,6 +149,10 @@ td.alternateCol:last-child{
     justify-content: inherit;
 }
 
+.pagination{
+    margin-top: 20px;
+}
+
 @media (--xSmall){
     .hide{
         display: none;

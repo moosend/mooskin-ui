@@ -19,7 +19,7 @@
 }
 
 .subMenu{
-    z-index: 3;
+    z-index: 8;
     width: 185px;
     left: 0px;
     background: #efefef;
@@ -119,7 +119,7 @@
 
 .arrow{
     display: none;
-    z-index: 1;
+    z-index: 9;
     position: absolute;
     width: 0; 
     height: 0;
