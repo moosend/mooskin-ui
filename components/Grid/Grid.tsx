@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import {Loader} from '../index';
 import styles from './Grid.css';
 
 export interface IGridProps{
