@@ -491,7 +491,7 @@ describe('Tags', () => {
             getData: () => 'here I go again on my own, with a bucket full of gold'
         }});
         component.setProps({tags});
-        expect(component.find('Tag').length).toBe(7);
+        expect(component.find('Tag').length).toBe(6);
 
         tags = [];
         component.setProps({tags});
@@ -727,6 +727,45 @@ describe('Tags', () => {
         expect(component.find('Tag').length).toBe(2);
 
         expect(component.find('.error')).toBeFalsy;
+
+    });
+
+    test('validates individual tags when a text with delimiters is pasted, removes duplicates', () => {
+
+        let tags = [];
+
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
+
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
+
+        const component = shallow(
+            <Tags
+                tags={tags}
+                deletable
+                delimiters={[',', 'Enter', ' ']}
+                onAdd={onAdd}
+                onRemove={onRemove}
+                validateTag="email"
+            />
+        );
+
+        expect(component.find('Tag').length).toBe(0);
+
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'doni@moosend.com, wow'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(1);
+
+        // tags = [];
+        // component.setProps({tags});
+
+        // tslint:disable-next-line
+        component.find('input').simulate('paste', {clipboardData: {getData: () => 'doni@moosend.com, genti@moosend.com, olala'}});
+        component.setProps({tags});
+        expect(component.find('Tag').length).toBe(2);
 
     });
 

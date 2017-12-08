@@ -309,7 +309,7 @@ class FormExample extends React.Component {
 
     onAdd(e, data) {
         console.log(data.value);
-        const newTags = this.state[data.dataLabel].value.concat(data.value);
+        const newTags = this.state[data.dataLabel].value.push(data.value);
         data.dataLabel && this.setState({[data.dataLabel]: {value: newTags}});
         return newTags;
     }
