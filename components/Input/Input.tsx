@@ -126,7 +126,7 @@ class Input extends React.Component<IProps, {}> {
         const reverse = iconPosition === 'left' && styles.reverse;
 
         return (
-            <div className={`input-component ${styles.inputContainer}`}>
+            <div className={`input-component ${styles.inputContainer} ${className}`} style={style}>
                 {label && <label className={styles.inputLabel} style={spacing} htmlFor={this.id}>{label}</label>}
                 <div className={styles.inputDiv}>
                     <div className={`${styles.innerDiv} ${status} ${reverse}`}>
@@ -142,8 +142,7 @@ class Input extends React.Component<IProps, {}> {
                             maxLength={maxlength}
                             required={required}
                             disabled={disabled}
-                            className={`input ${styles.input} ${disabledInput} ${radius} ${className}`}
-                            style={style}
+                            className={`input ${styles.input} ${disabledInput} ${radius}`}
                             autoFocus={autofocus}
                             autoComplete={autocomplete}
                             onBlur={this.validateOnBlur}

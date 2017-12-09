@@ -4,6 +4,7 @@
 .areaContainer{
     display: flex;
     box-sizing: border-box;
+    flex: 1;
 }
 
 .textAreaDiv{
@@ -129,7 +130,6 @@ textarea::-webkit-scrollbar-thumb:vertical {
 
 @media (--xSmall){
     .areaContainer{
-        display: flex;
         flex-direction: column
     }
     
