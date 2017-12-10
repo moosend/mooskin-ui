@@ -12,7 +12,6 @@
 .inputDiv{
     display: flex;
     flex-direction: column;
-    flex: 1;
     box-sizing: border-box;
 }
 
