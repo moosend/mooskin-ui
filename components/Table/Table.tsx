@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import {Pagination, SmallIconButton} from '../index';
+import Pagination from '../Pagination';
+import SmallIconButton from '../SmallIconButton';
 import styles from './Table.css';
 
 export interface ITableProps{

@@ -34,7 +34,8 @@ export default class Topbar extends React.Component<ITopbarProps, ITopbarState> 
     }
 
     componentDidMount(){
-        if (window.outerWidth <= 991){
+        // console.log(window.screen.width);
+        if (window.screen.width <= 991){
             window.addEventListener('scroll', this.hideBar);
         }
     }

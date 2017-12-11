@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Table, {TableHeader} from './index';
+import Table, {TableHeader} from './Table';
 
 import { mount, shallow } from 'enzyme';
 

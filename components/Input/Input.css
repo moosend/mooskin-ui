@@ -4,6 +4,7 @@
 
 .inputContainer{
     display: flex;
+    flex: 1;
     margin: 3px;
     box-sizing: border-box;
 }
@@ -132,8 +133,7 @@
 
 @media (--xSmall){
     .inputContainer{
-        display: flex;
-        flex-direction: column
+        flex-direction: column;
     }
     
     .inputLabel{
