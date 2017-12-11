@@ -5,7 +5,15 @@ import styles from './Form.css';
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
 import Button, {IButtonProps} from '../Button/Button';
-import {CheckboxGroup, DatePicker, FileUpload, Input, RadioGroup, Select, Switch, Tags, TextArea} from '../index/';
+import CheckboxGroup from '../Checkbox';
+import DatePicker from '../DatePicker';
+import FileUpload from '../File';
+import Input from '../Input';
+import RadioGroup from '../Radio';
+import Select from '../Select';
+import Switch from '../Switch';
+import Tags from '../Tags';
+import TextArea from '../TextArea';
 
 export interface IFormProps{
 

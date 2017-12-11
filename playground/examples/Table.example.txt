@@ -37,6 +37,36 @@ class TableExample extends React.Component{
                 open: '93 %',
                 status: 'Draft',
                 subscribers: 4244,
+            },
+            {
+                actions: <SmallIconButton transparent icon="close"/>,
+                campaign: 'Some campaign name',
+                click: '20 %',
+                delivered: '12-05-2015 04:39 PM',
+                mailingList: 'Another Mailing list',
+                open: '45 %',
+                status: 'Sent',
+                subscribers: 8503,
+            },
+            {
+                actions: <SmallIconButton transparent icon="edit"/>,
+                campaign: 'Pascal cards are here',
+                click: '95 %',
+                delivered: '30-05-2017 04:39 PM',
+                mailingList: 'Gamer Mailing list',
+                open: '99 %',
+                status: 'Sent',
+                subscribers: 56321,
+            },
+            {
+                actions: <SmallIconButton transparent icon="check"/>,
+                campaign: 'Random Campaign',
+                click: '50 %',
+                delivered: '11-02-2014 04:39 PM',
+                mailingList: 'Another Mailing list',
+                open: '55 %',
+                status: 'Draft',
+                subscribers: 1234,
             }
         ];
 
@@ -48,22 +78,46 @@ class TableExample extends React.Component{
             marginRight: '10px'
         };
 
+        const paginationProps = {
+            lastBtn: false,
+            firstBtn: false,
+            style: {color: 'blue'}
+        }
+
         return(
-            <Table data={data}>
-                <TableHeader dataField="delivered" sortable >Delivered</TableHeader>
-                <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
-                <TableHeader dataField="mailingList" hideSmall >
-                    <span style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-                        <div style={spanStyle}/>
-                        Mailing list / segment
-                    </span>
-                </TableHeader>
-                <TableHeader dataField="status" sortable hideSmall >Status</TableHeader>
-                <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
-                <TableHeader dataField="click" sortable hideSmall>Click</TableHeader>
-                <TableHeader dataField="subscribers" sortable hideSmall >Subscribers</TableHeader>
-                <TableHeader colStyles={{flexDirection: 'row'}} dataField="actions" hideSmall >Actions</TableHeader>
-            </Table>
+            <div>
+                <Table data={data} paginate={3} smallCollapse>
+                    <TableHeader dataField="delivered" sortable >Delivered</TableHeader>
+                    <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
+                    <TableHeader dataField="mailingList" hideSmall >
+                        <span style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                            <div style={spanStyle}/>
+                            Mailing list / segment
+                        </span>
+                    </TableHeader>
+                    <TableHeader dataField="status" sortable hideSmall >Status</TableHeader>
+                    <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
+                    <TableHeader dataField="click" sortable hideSmall>Click</TableHeader>
+                    <TableHeader dataField="subscribers" sortable hideSmall >Subscribers</TableHeader>
+                    <TableHeader colStyles={{flexDirection: 'row'}} dataField="actions" hideSmall >Actions</TableHeader>
+                </Table>
+                <br/>
+                <Table data={data} paginate={3} alternate smallCollapse>
+                    <TableHeader dataField="delivered" hideSmall sortable >Delivered</TableHeader>
+                    <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
+                    <TableHeader dataField="mailingList" hideSmall >
+                        <span style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+                            <div style={spanStyle}/>
+                            Mailing list / segment
+                        </span>
+                    </TableHeader>
+                    <TableHeader dataField="status" sortable hideSmall >Status</TableHeader>
+                    <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
+                    <TableHeader dataField="click" sortable hideSmall>Click</TableHeader>
+                    <TableHeader dataField="subscribers" sortable hideSmall >Subscribers</TableHeader>
+                    <TableHeader colStyles={{flexDirection: 'row'}} dataField="actions" >Actions</TableHeader>
+                </Table>
+            </div>
         );
     }
 

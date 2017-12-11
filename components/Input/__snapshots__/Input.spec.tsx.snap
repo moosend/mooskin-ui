@@ -2,7 +2,12 @@
 
 exports[`Input renders correctly 1`] = `
 <div
-  className="input-component inputContainer"
+  className="input-component inputContainer myClass"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
 >
   <label
     className="inputLabel"
@@ -24,7 +29,7 @@ exports[`Input renders correctly 1`] = `
       <input
         autoComplete="on"
         autoFocus={true}
-        className="input input disabledInput noIcon myClass"
+        className="input input disabledInput noIcon"
         disabled={true}
         id="input1"
         maxLength={50}
@@ -34,11 +39,6 @@ exports[`Input renders correctly 1`] = `
         onChange={[Function]}
         placeholder="input placeholder"
         required={true}
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
         type="text"
         value="input value"
       />

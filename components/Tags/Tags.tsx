@@ -147,7 +147,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
     render(){
 
-        const tags = this.getTags(this.props.tags);
+        const tags = this.getTags();
 
         const source = this.state.value !== '' ? this.sourceList() : null;
 
@@ -187,11 +187,11 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         );
     }
 
-    getTags = (tags: string[]) => {
+    getTags = () => {
 
-        const removedDuplicates = Array.from(new Set(this.props.tags));
+        const tags = this.removeDuplicates();
 
-        return removedDuplicates.map((value, i) => {
+        return tags.map((value, i) => {
             return (
                 <Tag
                     tag={value}
@@ -202,6 +202,13 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 />
             );
         });
+    }
+
+    removeDuplicates = (tags?: string []) => {
+        if (tags){
+            return Array.from(new Set(tags));
+        }
+        return Array.from(new Set(this.props.tags));
     }
 
     onHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -247,7 +254,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const delimiters = this.props.delimiters && this.getConvertedDelimiters(this.props.delimiters);
 
-        const tags: string[] = this.props.tags; // always copy here
+        const tags: string[] = this.removeDuplicates(this.props.tags); // always copy here
 
         const key = e.key;
         const keyCode = e.keyCode;
@@ -264,12 +271,14 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             this.props.onRemove &&
             this.props.onRemove(e, {value: tag, dataLabel: this.props.dataLabel}, tags.length - 1);
 
+            tags.pop();
+
             this.props.validate &&
             this.props.validate(
                 {
                     dataLabel: this.props.dataLabel,
                     required: this.props.required,
-                    value: validationTags || this.props.tags
+                    value: validationTags || tags
                 }
             );
 
@@ -304,7 +313,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     this.setState({value: '', sourceList: [], activeItem: 0});
 
                     const validationTags = this.props.onAdd &&
-                    this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                    this.props.onAdd(e, {value: tag, dataLabel: this.props.dataLabel});
+
+                    tags.push(tag);
 
                     if (this.props.status){
                         this.props.validate &&
@@ -312,7 +323,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                             {
                                 dataLabel: this.props.dataLabel,
                                 required: this.props.required,
-                                value: validationTags || this.props.tags
+                                value: validationTags || tags
                             }
                         );
                     }
@@ -368,62 +379,45 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             for (let i = 0 ; i < charArray.length ; i++){
                 delimiters && delimiters.map((delimiter) => {
                     if (charArray[i] === delimiter && newTag.join('') !== ''){
-                        tags.push(newTag.join(''));
-                        newTag = [];
+                        // tags.push(newTag.join(''));
+                        // newTag = [];
+                        if (this.checkValidity(newTag.join('')) && !this.props.tags.includes(newTag.join(''))){
+                            console.log();
+                            tags.push(newTag.join('').trim());
+                            newTag = [];
+                        } else {
+                            newTag = [];
+                        }
                     }
                 });
                 if (!(delimiters.includes(charArray[i])) && !(delimiters.includes(charArray[i].charCodeAt(0)))){
                     newTag.push(charArray[i]);
                 }
                 if (i === charArray.length - 1 && newTag.join('') !== '' && !delimiters.includes(charArray[i])){
-                    tags.push(newTag.join(''));
+                    if (this.checkValidity(newTag.join('')) && !this.props.tags.includes(newTag.join('').trim())){
+                        tags.push(newTag.join('').trim());
+                    }
                 }
 
             }
 
-            // for (let i = 0 ; i < tags.length ; i++){
-            //     if (tags[i] === '' || tags[i] === ' '){
-            //         tags.splice(i, 1);
-            //     }
-            // }
+            console.log(this.props.tags);
 
+            // if (tags.length === 0){
             const validationTags = this.props.onAdd &&
-            this.props.onAdd(e, {value: tags, dataLabel: this.props.dataLabel});
+            this.props.onAdd(e, {value: this.removeDuplicates(tags), dataLabel: this.props.dataLabel});
 
             this.props.validate &&
             this.props.validate(
                 {
                     dataLabel: this.props.dataLabel,
                     required: this.props.required,
-                    value: validationTags || this.props.tags
+                    value: validationTags || this.removeDuplicates(this.props.tags.concat(tags))
                 }
             );
+            // }
 
         }
-
-        // delimiters.forEach((delimiter) => {
-        //     tags = tags.map((tag) => {
-        //         if (typeof delimiter === 'string'){
-        //             return tag.replace(delimiter, '');
-        //         } else if (typeof delimiter === 'number'){
-        //             const del = String.fromCharCode(delimiter);
-        //             return tag.replace(del, '');
-        //         }
-        //         return tag;
-        //     });
-        // });
-
-        // console.log(tags);
-
-        // for (let i = 0 ; i < text.length ; i++){
-        //     delimiters && delimiters.forEach((delimiter) => {
-        //         if (text.charAt(i) === delimiter){
-        //             tags = text.split(text.charAt(i));
-        //         } else if (text.charCodeAt(i) === delimiter){
-        //             tags = text.split(text.charAt(i));
-        //         }
-        //     });
-        // }
 
     }
 
@@ -452,18 +446,21 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     removeTag = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
 
-            const tag = this.props.tags[index];
+            const tag = this.removeDuplicates(this.props.tags)[index];
 
             const validationTags =
             this.props.onRemove &&
-            this.props.onRemove(e, {value: [tag], dataLabel: this.props.dataLabel}, index);
+            this.props.onRemove(e, {value: tag, dataLabel: this.props.dataLabel}, index);
+
+            const tags = this.removeDuplicates(this.props.tags);
+            tags.splice(index, 1);
 
             this.props.validate &&
             this.props.validate(
                 {
                     dataLabel: this.props.dataLabel,
                     required: this.props.required,
-                    value: validationTags || this.props.tags
+                    value: validationTags || tags
                 }
             );
         };
@@ -504,7 +501,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             const validationTags =
             this.props.onAdd &&
-            this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+            this.props.onAdd(e, {value: tag, dataLabel: this.props.dataLabel});
 
             if (this.props.status){
                 this.props.validate &&
@@ -512,7 +509,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     {
                         dataLabel: this.props.dataLabel,
                         required: this.props.required,
-                        value: validationTags || this.props.tags
+                        value: validationTags || this.removeDuplicates(this.props.tags).concat(tag)
                     }
                 );
             }
@@ -529,7 +526,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         if (!this.props.preventSubmit && !(this.state.sourceList.length > 0 && this.state.value !== '')){
             return(e: React.SyntheticEvent<HTMLElement>) => {
 
-                const tags: string[] = this.props.tags;
+                const tags: string[] = this.removeDuplicates(this.props.tags);
 
                 if (!tags.includes(this.state.value) && this.state.value !== ''){
 
@@ -542,9 +539,9 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         this.setState({value: '', sourceList: [], activeItem: 0});
 
                         const validationTags = this.props.onAdd &&
-                        this.props.onAdd(e, {value: [tag], dataLabel: this.props.dataLabel});
+                        this.props.onAdd(e, {value: tag, dataLabel: this.props.dataLabel});
                         if (this.props.validate){
-                            this.validateOnBlur(e, validationTags);
+                            this.validateOnBlur(e, validationTags || this.removeDuplicates().concat(tag));
                         }
                     } else {
                         this.setState({message: this.props.errorMessage || 'Input type is invalid'});
@@ -567,7 +564,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             {
                 dataLabel: this.props.dataLabel,
                 required: this.props.required,
-                value: tags ? tags : this.props.tags
+                value: tags ? tags : this.removeDuplicates(this.props.tags)
             }
         );
     }
@@ -615,22 +612,22 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     getStatus = () => {
-        const inputStatus = this.props.status && this.props.status;
-        if (inputStatus){
-            if (inputStatus === 'error'){
+        const tagsStatus = this.props.status && this.props.status;
+        if (tagsStatus){
+            if (tagsStatus === 'error'){
                 return styles.error;
-            } else if (inputStatus === 'success'){
+            } else if (tagsStatus === 'success'){
                 return styles.success;
             }
         }
     }
 
     getDescStatus = () => {
-        const inputStatus = this.props.status && this.props.status;
-        if (inputStatus){
-            if (inputStatus === 'error'){
+        const tagsStatus = this.props.status && this.props.status;
+        if (tagsStatus){
+            if (tagsStatus === 'error'){
                 return styles.descError;
-            } else if (inputStatus === 'success'){
+            } else if (tagsStatus === 'success'){
                 return styles.descSuccess;
             }
         }

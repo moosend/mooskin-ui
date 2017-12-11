@@ -31,6 +31,7 @@ import {
     Line,
     List,
     ListItem,
+    Loader,
     LoadingBar,
     Modal,
     Option,
@@ -122,12 +123,15 @@ export const App = (props: any) => {
                     {renderEditableExample('SideBar', { Button, SideBar, SidebarItem })}
                 </Col>
             </Row>
-            <Row>
+            <Row id="loaders">
+                <Col lg={12}>
+                    <H1>Loaders</H1>
+                </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('LoadingBar', { LoadingBar, Button })}
                 </Col>
                 <Col lg={6} md={6}>
-                    {renderEditableExample('Label', { Label, H3 })}
+                    {renderEditableExample('Loader', { Grid, Row, Col, Button, Pie, Loader, H3 })}
                 </Col>
             </Row>
             <Row id="buttons">
@@ -230,8 +234,11 @@ export const App = (props: any) => {
                 <Col lg={6} md={8}>
                     {renderEditableExample('TopNotification', { TopNotification, Button })}
                 </Col>
-                <Col lg={6} md={4}>
+                <Col lg={3} md={4}>
                     {renderEditableExample('Headings', { H1, H2, H3, H4, H5, H6 })}
+                </Col>
+                <Col lg={3}>
+                    {renderEditableExample('Label', { Label, H3 })}
                 </Col>
                 <Col lg={5} md={7}>
                     {renderEditableExample('Steps', { Steps, Step, Button })}

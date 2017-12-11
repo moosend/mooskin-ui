@@ -66,8 +66,8 @@ describe('Input', () => {
     test('renders an input with custom css class and style', () => {
         const component = shallow(<Input style={{color: 'blue'}} className="input-group"/>);
 
-        expect(component.find('input').hasClass('input-group')).toBe(true);
-        expect(component.find('input').prop('style')).toEqual({color: 'blue'});
+        expect(component.find('.inputContainer').hasClass('input-group')).toBe(true);
+        expect(component.find('.inputContainer').prop('style')).toEqual({color: 'blue'});
     });
 
     test('onChange prop callback is called when a key is pressed', () => {

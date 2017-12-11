@@ -13,7 +13,8 @@ class TagsExample extends React.Component {
                 'Athens',
                 'London',
                 'New York',
-                'Beijing'
+                'Beijing',
+                'London'
             ],
             tags2: [],
             tags3: [],
@@ -58,18 +59,18 @@ class TagsExample extends React.Component {
                 <br/>
                 <Tags source={promiseFunc} label="Tags from function that returns Promise(api call for github users)" tags={this.state.tags3} delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags3"/>
                 <br/>
-                <Tags validate={this.validate} delimiters={['Enter', 'space', ',']} status={this.state.status} description={this.state.message} source={emails} errorMessage={'Tags accepts only emails'} validateTag="email" submitOnBlur={false} label="Email only tags" tags={this.state.tags4} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags4"/>
+                <Tags validate={this.validate} delimiters={['Enter', ',']} status={this.state.status} description={this.state.message} source={emails} errorMessage={'Tags accepts only emails'} validateTag="email" submitOnBlur={false} label="Email only tags" tags={this.state.tags4} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags4"/>
             </div>
         );
     }
 
     onAdd(e, data) {
-        console.log(data.value);
+        // console.log(data.value);
         data.dataLabel && this.setState({[data.dataLabel]: this.state[data.dataLabel].concat(data.value)});
     }
 
     onRemove(e, data, index) {
-        console.log(data.value, index);
+        // console.log(data.value, index);
         let tags = [...this.state[data.dataLabel]];
         tags.splice(index, 1);
         data.dataLabel && this.setState({[data.dataLabel]: tags});
@@ -83,6 +84,7 @@ class TagsExample extends React.Component {
     }
 
     validate(data){
+        console.log(data.value);
         if (data.value.length < 2){
             this.setState({status: 'error', message: 'At least 2 emails are required'});
             return false;

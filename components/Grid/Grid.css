@@ -23,6 +23,23 @@
     flex: 1;
 }
 
+.hidden{
+    display: none;
+}
+
+.activeLoader{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+.hiddenContent{
+    visibility: hidden;
+}
+
 @media screen and (--large){
 
     .large-1 {flex: 1 1 8.33333333%}
@@ -112,6 +129,7 @@
 }
 
 @media (--xSmall){
+
     .xSmall-1 {flex: 1 1 8.33333333%}
 
     .xSmall-2 {flex: 2 1 16.66666667%}
