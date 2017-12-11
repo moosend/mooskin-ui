@@ -17,7 +17,7 @@ class TextAreaExample extends React.Component {
             <div>
                 <TextArea value={this.state.value} validate={this.validate} status={this.state.status} description={this.state.message} onChange={this.onChange} label="Label:" rows={7} cols={35}/>
                 <hr/>
-                <TextArea onChange={this.onChange} disabled value="disabled" description="This text area is disabled"/>
+                <TextArea onChange={this.onChange} disabled value="disabled" description="This text area is disabled" required/>
                 <hr/>
                 <TextArea richEditor label="Editor: " />
             </div>

@@ -1,5 +1,8 @@
 import * as React from 'react';
-import {Button, Form, FormGroup, Input} from '../index';
+
+import Button from '../Button';
+import Input from '../Input';
+import Form, {FormGroup} from './Form';
 
 import {mount, render, shallow} from 'enzyme';
 

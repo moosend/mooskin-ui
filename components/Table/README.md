@@ -103,8 +103,18 @@ sortIt(a, b, order, sortBy) {
 
 }
 ```
-
 The custom sort function must accept 4 arguments, `a` and `b` being the compared objects, `order` must bo `asc` or `desc` and `sortBy` is the object property to be compared.
+
+The table can also be paginated using the `paginate` props,
+
+```
+<Table data={data} paginate={3}>
+    <TableHeader dataField="property1" sortable sortfn={this.sortIt} >Header 1</TableHeader>
+    <TableHeader dataField="property2" >Header 2</TableHeader>
+    <TableHeader dataField="property3" >Header 3</TableHeader>
+</Table>
+```
+in this case the table will be paginated, showing only three rows since a value of 3 is passed, and pagination buttons will appear.
 
 <div class="playground-doc">
 
@@ -116,6 +126,13 @@ The custom sort function must accept 4 arguments, `a` and `b` being the compared
 * `rowClasses` - classes to be applied on the table Rows
 * `className` - css class
 * `style` - table styles
+* `alternate` - alternate table view
+* `smallCollapse` - adds another header and column on small screens where the whole row can be collapsed
+* `collapseHeaderClassName` - classes for popover header
+* `collapseHeaderStyle` - styles for popover header
+* `containerStyle` - styling applied to the div containing the table
+* `paginate` - paginate table, with the number of rows passed to this prop
+* `paginationProps` - an object describing table pagination props
 
 ## Supported attributes for TableHeader
 

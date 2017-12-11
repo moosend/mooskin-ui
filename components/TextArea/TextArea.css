@@ -4,6 +4,7 @@
 .areaContainer{
     display: flex;
     box-sizing: border-box;
+    flex: 1;
 }
 
 .textAreaDiv{
@@ -78,8 +79,8 @@ textarea::-webkit-scrollbar-thumb:vertical {
 
  .toolbar{
     position: absolute;
-    z-index: 10;
-    top: -55px;
+    z-index: 1;
+    bottom: 65px;
 } 
 
 .description{
@@ -129,7 +130,6 @@ textarea::-webkit-scrollbar-thumb:vertical {
 
 @media (--xSmall){
     .areaContainer{
-        display: flex;
         flex-direction: column
     }
     

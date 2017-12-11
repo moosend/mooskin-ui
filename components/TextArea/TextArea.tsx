@@ -175,13 +175,13 @@ export const TextAreaComponent: React.StatelessComponent<ITextAreaProps> = (prop
         props.onChange(e, {value: e.target.value, dataLabel: props.dataLabel});
         if (props.status){
             props.validate &&
-            props.validate({value: e.target.value, dataLabel: this.props.dataLabel, required: this.props.required});
+            props.validate({value: e.target.value, dataLabel: props.dataLabel, required: props.required});
         }
     };
 
     const validateOnBlur = () => {
             props.validate &&
-            props.validate({value: props.value, dataLabel: props.dataLabel, required: this.props.required});
+            props.validate({value: props.value, dataLabel: props.dataLabel, required: props.required});
     };
 
     const getStatus = () => {
