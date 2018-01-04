@@ -147,6 +147,12 @@ export default class Form extends React.Component<IFormProps, {}>{
                     elements.push(React.cloneElement(element, keyProp));
                 }
             });
+        } else {
+            if (group.type === Button && group.props.type === 'submit'){
+                return React.cloneElement(group, {...buttonProps});
+            } else {
+                return group;
+            }
         }
 
         return elements;
@@ -242,7 +248,7 @@ export const FormGroup: React.StatelessComponent<IFormGroupProps> = (props) => {
     const alignment = !props.horizontal ? styles.vertical : styles.horizontal;
 
     return (
-        <div style={props.style} className={`formgroup-component ${styles.container} ${alignment}`}>
+        <div style={props.style} className={`formgroup-component ${styles.container} ${alignment} ${props.className}`}>
             {props.children}
         </div>
     );
