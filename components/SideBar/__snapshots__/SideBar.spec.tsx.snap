@@ -46,7 +46,6 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
     <SidebarItem
       active={true}
       className="myClass"
-      href="www.moosend.com"
       image="imagePath"
       key="0"
       label="Item"
@@ -61,7 +60,6 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
       active={false}
       activeSubMenu={false}
       className="myClass"
-      href="www.moosend.com"
       image="imagePath"
       key="1"
       label="Item"
@@ -84,7 +82,6 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
     <SidebarItem
       active={false}
       className="myClass"
-      href="www.moosend.com"
       label="Item"
       onClick={[Function]}
       style={
@@ -147,7 +144,6 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
       <SidebarItem
         active={true}
         className="myClass"
-        href="www.moosend.com"
         image="imagePath"
         imageOn={undefined}
         key="0"
@@ -160,7 +156,7 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         }
       >
         <div
-          className="item-component itemContainer myClass"
+          className="item-component itemContainer myClass activeItem"
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -171,26 +167,20 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
           }
         >
           <div
-            className=" arrowImg"
+            className=""
           />
-          <a
-            className="anchor activeItem"
-            href="www.moosend.com"
-          >
-            <img
-              className="image"
-              src="imagePath"
-            />
-            <span>
-              Item
-            </span>
-          </a>
+          <img
+            className="image"
+            src="imagePath"
+          />
+          <span>
+            Item
+          </span>
         </div>
       </SidebarItem>
       <SidebarItem
         active={false}
         className="myClass"
-        href="www.moosend.com"
         image="imagePath"
         imageOn={undefined}
         key="1"
@@ -203,7 +193,7 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         }
       >
         <div
-          className="item-component itemContainer myClass"
+          className="item-component itemContainer myClass "
           onClick={[Function]}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -214,20 +204,15 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
           }
         >
           <div
-            className=" arrowImg"
+            className=""
           />
-          <a
-            className="anchor "
-            href="www.moosend.com"
-          >
-            <img
-              className="image"
-              src="imagePath"
-            />
-            <span>
-              Item
-            </span>
-          </a>
+          <img
+            className="image"
+            src="imagePath"
+          />
+          <span>
+            Item
+          </span>
         </div>
       </SidebarItem>
     </div>
@@ -237,7 +222,7 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
 
 exports[`SideBar renders SidebarItem correctly 1`] = `
 <div
-  className="item-component itemContainer myClass"
+  className="item-component itemContainer myClass activeItem"
   onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
@@ -248,19 +233,14 @@ exports[`SideBar renders SidebarItem correctly 1`] = `
   }
 >
   <div
-    className=" arrowImg"
+    className=""
   />
-  <a
-    className="anchor activeItem"
-    href="www.moosend.com"
-  >
-    <img
-      className="image"
-      src="imageOnPath"
-    />
-    <span>
-      Item
-    </span>
-  </a>
+  <img
+    className="image"
+    src="imageOnPath"
+  />
+  <span>
+    Item
+  </span>
 </div>
 `;

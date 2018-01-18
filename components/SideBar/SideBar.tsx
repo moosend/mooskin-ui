@@ -33,11 +33,8 @@ export interface ISideBarProps{
 
 export interface ISideBarItemProps{
 
-    /** item href */
-    href?: string;
-
     /** item label */
-    label: string;
+    label?: string;
 
     /** item image */
     image?: string;
@@ -71,9 +68,7 @@ export interface ISideBarItemProps{
     onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
     /** item children */
-    children?: React.ReactElement<ISideBarItemProps> | React.ReactElement<IButtonProps> |
-                Array<React.ReactElement<IButtonProps> | React.ReactElement<ISideBarItemProps>> |
-                Array<React.ReactElement<IButtonProps> & React.ReactElement<ISideBarItemProps>>;
+    children?: any;
 
 }
 
@@ -95,7 +90,7 @@ export interface ISubMenuProps{
     style?: React.CSSProperties;
 
     /** sidebar children */
-    children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps>;
+    children?: any;
 }
 
 export interface ISideBarState {
@@ -181,29 +176,45 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     getItems(){
 
-        const items: Array<React.ReactElement<ISideBarItemProps>> = [];
+        const items: any = [];
 
         React.Children.forEach(this.props.children, (child, index) => {
 
             if (React.isValidElement<ISideBarItemProps>(child)){
 
                 if (child.props.children){
-                    items.push(
-                        <SidebarItem
-                            key={index}
-                            image={child.props.image}
-                            imageOn={child.props.imageOn}
-                            label={child.props.label}
-                            href={child.props.href}
-                            active={this.state.activeItem === index}
-                            onClick={this.onClickItem(index, child)}
-                            onMouseEnter={this.subMenuOn(index)}
-                            onMouseLeave={this.subMenuOff}
-                            style={child.props.style}
-                            className={child.props.className}
-                            activeSubMenu={this.state.activeSubMenu === index}
-                        />
-                    );
+                    const isSubmenu = this.checkChildrenType(child.props.children);
+                    if (isSubmenu){
+                        items.push(
+                            <SidebarItem
+                                key={index}
+                                image={child.props.image}
+                                imageOn={child.props.imageOn}
+                                label={child.props.label}
+                                active={this.state.activeItem === index}
+                                onClick={this.onClickItem(index, child)}
+                                onMouseEnter={this.subMenuOn(index)}
+                                onMouseLeave={this.subMenuOff}
+                                style={child.props.style}
+                                className={child.props.className}
+                                activeSubMenu={this.state.activeSubMenu === index}
+                            >
+                                {this.getNonSubMenuItems(child.props.children)}
+                            </SidebarItem>
+                        );
+                    } else {
+                        items.push(
+                            <SidebarItem
+                                key={index}
+                                active={this.state.activeItem === index}
+                                onClick={this.onClickItem(index, child)}
+                                style={child.props.style}
+                                className={child.props.className}
+                            >
+                                {child.props.children}
+                            </SidebarItem>
+                        );
+                    }
                 } else {
                     items.push(
                         <SidebarItem
@@ -211,7 +222,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                             image={child.props.image}
                             imageOn={child.props.imageOn}
                             label={child.props.label}
-                            href={child.props.href}
                             active={this.state.activeItem === index}
                             onClick={this.onClickItem(index, child)}
                             style={child.props.style}
@@ -226,6 +236,30 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         });
 
         return items;
+    }
+
+    checkChildrenType = (children: any) => {
+        let isSubmenu: boolean = false;
+        if (Array.isArray(children)){
+            children.forEach((child) => {
+                isSubmenu = child.type === SidebarItem ? true : isSubmenu;
+            });
+        } else {
+            isSubmenu = children.type === SidebarItem ? true : isSubmenu;
+        }
+        return isSubmenu;
+    }
+
+    getNonSubMenuItems = (children: any) => {
+        const customItemElements: any[] = [];
+        if (Array.isArray(children)){
+            children.forEach((child) => {
+                if (child.type !== SidebarItem){
+                    customItemElements.push(child);
+                }
+            });
+        }
+        return customItemElements;
     }
 
     initiateSubMenus = () => {
@@ -267,19 +301,29 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         if (Array.isArray(items)){
             items.forEach((item: React.ReactElement<ISideBarItemProps>, index: number) => {
                 if (item.type === SidebarItem){
-                    newItems.push(
-                        <SidebarItem
-                            key={index}
-                            label={item.props.label}
-                            href={item.props.href}
-                            onClick={this.onClickSecondary(index, item)}
-                            style={item.props.style}
-                            className={item.props.className}
-                            active={this.state.activeSecondary === index}
-                        />
-                    );
-                } else {
-                    newItems.push(item);
+                    if (!item.props.children){
+                        newItems.push(
+                            <SidebarItem
+                                key={index}
+                                label={item.props.label}
+                                onClick={this.onClickSecondary(index, item)}
+                                style={item.props.style}
+                                className={item.props.className}
+                                active={this.state.activeSecondary === index}
+                            />
+                        );
+                    } else {
+                        newItems.push(
+                            <div
+                                key={index}
+                                onClick={this.onClickItem(index, item)}
+                                style={item.props.style}
+                                className={item.props.className}
+                            >
+                                {item.props.children}
+                            </div>
+                        );
+                    }
                 }
             });
         } else {
@@ -287,15 +331,12 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                 return (
                     <SidebarItem
                         label={items.props.label}
-                        href={items.props.href}
                         onClick={this.onClickSecondary(0, items)}
                         style={items.props.style}
                         className={items.props.className}
                         active={this.state.activeSecondary === 0}
                     />
                 );
-            } else {
-                return items;
             }
         }
         return newItems;
@@ -416,24 +457,20 @@ export const SidebarItem: React.StatelessComponent<ISideBarItemProps> = (props) 
 
     const activeItem = props.active ? styles.activeItem : '';
     const arrow = props.activeSubMenu ? styles.arrow : '';
-    const arrowStyle = props.image ? styles.arrowImg : styles.arrowNoImg;
+    // const arrowStyle = props.image ? styles.arrowImg : styles.arrowNoImg;
 
     return(
         <div
             onClick={props.onClick}
             onMouseEnter={props.onMouseEnter}
             onMouseLeave={props.onMouseLeave}
-            className={`item-component ${styles.itemContainer} ${props.className}`}
+            className={`item-component ${styles.itemContainer} ${props.className} ${activeItem}`}
             style={props.style}
         >
-            <div className={`${arrow} ${arrowStyle}`} />
-            <a
-                href={props.href}
-                className={`${styles.anchor} ${activeItem}`}
-            >
-                <img src={getImage()} className={styles.image} />
-                <span>{props.label}</span>
-            </a>
+            <div className={`${arrow}`} />
+            {props.image && <img src={getImage()} className={styles.image} />}
+            {props.label && <span>{props.label}</span>}
+            {props.children}
         </div>
     );
 };
