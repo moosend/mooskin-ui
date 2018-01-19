@@ -70,6 +70,24 @@ Import {SidebarItem, SideBar} from 'mooskin';
 
 As you can see the main SideBar is a static one, doesnt have a button. When an SidebarItem is hovered that has the another `SidebarItem` child the second SideBar will appear with its children.
 
+### Custom SidebarItem
+
+Custom SidebarItems can be created by passing children to the component.
+
+```
+Import {SidebarItem, SideBar} from 'mooskin';
+
+<SideBar>
+    <SidebarItem>
+        <label> this is a custom SidebarItem </label>
+        and whatever else here....
+    </SidebarItem>
+</SideBar>
+
+```
+
+This also applies to SubMenu items, the same way.
+
 <div class="playground-doc">
 
 ## Supported attributes for SideBar 
@@ -80,7 +98,6 @@ As you can see the main SideBar is a static one, doesnt have a button. When an S
 
 ## Supported attributes for SidebarItem
 
-* `href` - simple href when the Item is clicked
 * `label` - label below the Item
 * `image` - image covering the main body of the Item
 * `imageOn` - image to replace the `image` prop when the Item is active
