@@ -4,7 +4,6 @@
 
 .inputContainer{
     display: flex;
-    flex: 1;
     margin: 3px;
     box-sizing: border-box;
 }

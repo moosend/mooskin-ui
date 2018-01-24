@@ -1,10 +1,5 @@
 @import '../_utils/globals/screens.css';
 
-.container{
-    width: 100%;
-    box-sizing: border-box;
-}
-
 /* .container > div{
     padding: 10px;
 }
@@ -17,16 +12,17 @@
     display: block;
 }
 
-/* .horizontal{
-    width: 100%;
+.horizontal{
     display: flex;
+    flex: 1 0 auto;
     flex-direction: row;
 }
 
 .vertical{
     display: flex;
+    flex: 1 0 auto;
     flex-direction: column;
-} */
+}
 
 
 @media (--xSmall){
