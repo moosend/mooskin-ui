@@ -1,7 +1,9 @@
 @import '../_utils/globals/screens.css';
 
 .grid {
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
     box-sizing: border-box;
 }
 
@@ -16,11 +18,12 @@
 }
 
 .col{
+    display: flex;
     box-sizing: border-box;
 }
 
 .default {
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 .hidden{
