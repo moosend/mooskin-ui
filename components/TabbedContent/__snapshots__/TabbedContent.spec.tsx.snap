@@ -137,7 +137,6 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
       >
         <div
           className="content-component invisible undefined"
-          style={undefined}
         >
           Table
         </div>
@@ -148,7 +147,6 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
       >
         <div
           className="content-component visible undefined"
-          style={undefined}
         >
           Some Content
         </div>
@@ -159,7 +157,6 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
       >
         <div
           className="content-component invisible undefined"
-          style={undefined}
         >
           Blla blla
         </div>

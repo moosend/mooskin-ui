@@ -53,7 +53,6 @@ exports[`Table renders correctly 1`] = `
   <div>
     <div
       className="tableWrapper"
-      style={undefined}
     >
       <table
         className="table-component table myStyle"
@@ -73,7 +72,6 @@ exports[`Table renders correctly 1`] = `
             >
               <th
                 className="table-header  header buttonHeader undefined"
-                onClick={undefined}
                 style={Object {}}
               >
                 <div
@@ -90,7 +88,6 @@ exports[`Table renders correctly 1`] = `
             <TableHeader
               className="header myStyle sortHeader"
               dataField="delivered"
-              hideSmall={undefined}
               key="1"
               onClick={[Function]}
               style={
@@ -121,7 +118,6 @@ exports[`Table renders correctly 1`] = `
             <TableHeader
               className="header undefined sortHeader"
               dataField="campaign"
-              hideSmall={undefined}
               key="2"
               onClick={[Function]}
               style={Object {}}
@@ -141,12 +137,10 @@ exports[`Table renders correctly 1`] = `
               dataField="mailingList"
               hideSmall={true}
               key="3"
-              onClick={undefined}
               style={Object {}}
             >
               <th
                 className="table-header hide header undefined "
-                onClick={undefined}
                 style={Object {}}
               >
                 <div>
@@ -262,8 +256,6 @@ exports[`Table renders correctly 1`] = `
                          transparent
                          
                          toggle"
-                      disabled={undefined}
-                      id={undefined}
                       onClick={[Function]}
                       style={Object {}}
                     >
@@ -600,8 +592,6 @@ exports[`Table renders correctly 1`] = `
                          transparent
                          
                          toggle"
-                      disabled={undefined}
-                      id={undefined}
                       onClick={[Function]}
                       style={Object {}}
                     >
@@ -938,8 +928,6 @@ exports[`Table renders correctly 1`] = `
                          transparent
                          
                          toggle"
-                      disabled={undefined}
-                      id={undefined}
                       onClick={[Function]}
                       style={Object {}}
                     >
