@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
   "peerDependencies": {
-    "react": "16.0.0 || 15.0",
-    "react-dom": "16.0.0 || 15.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "dependencies": {
     "@types/react-chartjs-2": "2.0.2",
