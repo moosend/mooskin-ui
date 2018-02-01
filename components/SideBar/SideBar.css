@@ -16,6 +16,7 @@
     white-space: nowrap;
     overflow-x: hidden; 
     z-index: 9; /* Stay on top */
+    flex: 1 0 auto;
 }
 
 .subMenu{
@@ -65,35 +66,25 @@
     position: relative;
     user-select: none;
     background: inherit;
-}
-
-.anchor{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    text-decoration: none;  
     color: inherit;
     white-space: pre-wrap;
-    padding: 10px; 
 }
 
-.subMenu .anchor{
+.subMenu .itemContainer{
     align-items: flex-start;
-    padding: 15px 30px;
-}
-
-.subMenu .anchor{
-    align-items: flex-start;
-
+    /* padding: 15px 30px; */
 }
 
 .activeItem{
     color: var(--moosendBlue);
 }
 
-.anchor:hover{
+.itemContainer:hover{
     color: var(--moosendBlue);
 }
 
@@ -123,6 +114,10 @@
     position: absolute;
     width: 0; 
     height: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    top: 0;
+    bottom: 0;
     left: 90px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
@@ -131,14 +126,6 @@
 
 .itemContainer:hover > .arrow{
     display: block;
-}
-
-.arrowNoImg{
-    top: 25%;
-}
-
-.arrowImg{
-    top: 25%;
 }
 
 .cover{

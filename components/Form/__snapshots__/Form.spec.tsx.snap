@@ -1,19 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Form renders Form correctly 1`] = `
-<div
-  className="form-component container"
-  style={
-    Object {
-      "width": "50px",
-    }
-  }
->
-  <form
-    className="form form myClass"
-    name="nodejs"
-  />
-</div>
+<form
+  className="form form myClass"
+  name="nodejs"
+/>
 `;
 
 exports[`Form renders Form with FormGroup correctly 1`] = `
@@ -27,45 +18,36 @@ exports[`Form renders Form with FormGroup correctly 1`] = `
     }
   }
 >
-  <div
-    className="form-component container"
-    style={
-      Object {
-        "width": "50px",
-      }
-    }
+  <form
+    className="form form myClass"
+    name="nodejs"
   >
-    <form
-      className="form form myClass"
-      name="nodejs"
+    <FormGroup
+      className="myClass"
+      horizontal={true}
+      key="0"
+      style={
+        Object {
+          "width": "50px",
+        }
+      }
     >
-      <FormGroup
-        className="myClass"
-        horizontal={true}
-        key="0"
+      <div
+        className="formgroup-component container horizontal myClass"
         style={
           Object {
             "width": "50px",
           }
         }
-      >
-        <div
-          className="formgroup-component container horizontal"
-          style={
-            Object {
-              "width": "50px",
-            }
-          }
-        />
-      </FormGroup>
-    </form>
-  </div>
+      />
+    </FormGroup>
+  </form>
 </Form>
 `;
 
 exports[`Form renders FormGroup correctly 1`] = `
 <div
-  className="formgroup-component container horizontal"
+  className="formgroup-component container horizontal myClass"
   style={
     Object {
       "width": "50px",

@@ -4,7 +4,6 @@
 
 .inputContainer{
     display: flex;
-    flex: 1;
     margin: 3px;
     box-sizing: border-box;
 }
@@ -12,8 +11,8 @@
 .inputDiv{
     display: flex;
     flex-direction: column;
-    flex: 1;
     box-sizing: border-box;
+    flex: 1 0 auto;
 }
 
 .input{

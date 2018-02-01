@@ -77,7 +77,6 @@ exports[`Radio renders RadioGroup correctly 1`] = `
     >
       <h2
         className="h2-component h2 "
-        id={undefined}
         style={Object {}}
       >
         Select a plan
@@ -106,7 +105,6 @@ exports[`Radio renders RadioGroup correctly 1`] = `
         >
           <input
             checked={true}
-            disabled={undefined}
             id="4zlbrf"
             name="1482363367071"
             onClick={[Function]}
@@ -143,7 +141,6 @@ exports[`Radio renders RadioGroup correctly 1`] = `
         >
           <input
             checked={false}
-            disabled={undefined}
             id="4zlbrf"
             name="1482363367071"
             onClick={[Function]}
@@ -180,7 +177,6 @@ exports[`Radio renders RadioGroup correctly 1`] = `
         >
           <input
             checked={false}
-            disabled={undefined}
             id="4zlbrf"
             name="1482363367071"
             onClick={[Function]}
