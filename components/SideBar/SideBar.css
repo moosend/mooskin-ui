@@ -16,6 +16,7 @@
     white-space: nowrap;
     overflow-x: hidden; 
     z-index: 9; /* Stay on top */
+    flex: 1 0 auto;
 }
 
 .subMenu{
@@ -72,12 +73,11 @@
     cursor: pointer;
     color: inherit;
     white-space: pre-wrap;
-    padding: 10px; 
 }
 
 .subMenu .itemContainer{
     align-items: flex-start;
-    padding: 15px 30px;
+    /* padding: 15px 30px; */
 }
 
 .activeItem{

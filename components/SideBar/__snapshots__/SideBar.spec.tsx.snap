@@ -120,8 +120,6 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
                          normalButton
                          
                          button buttonOn undefined"
-          disabled={undefined}
-          id={undefined}
           onClick={[Function]}
           style={Object {}}
         >
@@ -145,7 +143,6 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         active={true}
         className="myClass"
         image="imagePath"
-        imageOn={undefined}
         key="0"
         label="Item"
         onClick={[Function]}
@@ -158,8 +155,6 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         <div
           className="item-component itemContainer myClass activeItem"
           onClick={[Function]}
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
           style={
             Object {
               "color": "blue",
@@ -182,7 +177,6 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         active={false}
         className="myClass"
         image="imagePath"
-        imageOn={undefined}
         key="1"
         label="Item"
         onClick={[Function]}
@@ -195,8 +189,6 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
         <div
           className="item-component itemContainer myClass "
           onClick={[Function]}
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
           style={
             Object {
               "color": "blue",

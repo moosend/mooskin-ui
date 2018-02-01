@@ -58,7 +58,7 @@ export default class Steps extends React.Component<IStepsProps, {}>{
         );
     }
 
-    renderBodies= () => {
+    renderBodies = () => {
         return React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement<IStepProps>(child)){
 

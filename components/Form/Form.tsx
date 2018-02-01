@@ -71,18 +71,16 @@ export default class Form extends React.Component<IFormProps, {}>{
 
     render(){
 
-        const {style, className} = this.props;
+        const {className} = this.props;
         const form = this.assignPropsToChildren();
 
         return(
-            <div style={style} className={`form-component ${styles.container}`}>
-                <form
-                    className={`form ${styles.form} ${className}`}
-                    name={name}
-                >
-                     {form}
-                </form>
-            </div>
+            <form
+                className={`form ${styles.form} ${className}`}
+                name={name}
+            >
+                {form}
+            </form>
         );
     }
 

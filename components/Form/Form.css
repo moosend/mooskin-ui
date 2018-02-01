@@ -1,30 +1,26 @@
 @import '../_utils/globals/screens.css';
 
-.container{
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.container > div{
+/* .container > div{
     padding: 10px;
 }
 
 .container button{
     margin: 10px;
-}
+} */
 
 .form{
     display: block;
 }
 
 .horizontal{
-    width: 100%;
     display: flex;
+    flex: 1 0 auto;
     flex-direction: row;
 }
 
 .vertical{
     display: flex;
+    flex: 1 0 auto;
     flex-direction: column;
 }
 

@@ -82,7 +82,6 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
     >
       <h2
         className="h2-component h2 "
-        id={undefined}
         style={Object {}}
       >
         Select a plan
@@ -99,7 +98,6 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
         name="1482363367071"
         onClick={[Function]}
         spacing={10}
-        status={undefined}
         value="Checkbox1"
       >
         <div
@@ -114,7 +112,6 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
           <input
             className="material-icons"
             defaultChecked={true}
-            disabled={undefined}
             id="4zlbrf"
             name="1482363367071"
             onClick={[Function]}
@@ -142,7 +139,6 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
         name="1482363367071"
         onClick={[Function]}
         spacing={10}
-        status={undefined}
         value="Checkbox2"
       >
         <div
@@ -157,7 +153,6 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
           <input
             className="material-icons"
             defaultChecked={false}
-            disabled={undefined}
             id="4zlbrf"
             name="1482363367071"
             onClick={[Function]}
@@ -185,7 +180,6 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
         name="1482363367071"
         onClick={[Function]}
         spacing={10}
-        status={undefined}
         value="Checkbox3"
       >
         <div
@@ -200,7 +194,6 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
           <input
             className="material-icons"
             defaultChecked={false}
-            disabled={undefined}
             id="4zlbrf"
             name="1482363367071"
             onClick={[Function]}
