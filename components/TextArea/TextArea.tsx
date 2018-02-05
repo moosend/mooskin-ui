@@ -56,6 +56,12 @@ export interface ITextAreaProps {
     /** wether the text area should be a rich text editor */
     richEditor?: boolean;
 
+    /** rich text editor toolbar className */
+    toolbarClassName?: string;
+
+    /** rich text editor toolbar style */
+    toolbarStyle?: React.CSSProperties;
+
     /** rich editor value */
     richValue?: EditorState;
 
@@ -128,12 +134,13 @@ class TextArea extends React.Component<ITextAreaProps, ITextAreaState> {
                 >
                     <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                     <Editor
-                        editorClassName={styles.textarea}
                         editorState={this.state.editorState}
                         onEditorStateChange={this.onEditorChange}
-                        editorStyle={{maxWidth: '100%'}}
+                        editorClassName={`${styles.textarea} ${this.props.className}`}
+                        editorStyle={this.props.style}
                         toolbarOnFocus
-                        toolbarClassName={styles.toolbar}
+                        toolbarClassName={`${styles.toolbar} ${this.props.toolbarClassName}`}
+                        toolbarStyle={this.props.toolbarStyle}
                     />
                 </div>
             );
