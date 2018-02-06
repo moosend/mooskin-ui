@@ -1,0 +1,123 @@
+@import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
+
+.editor{
+    outline: none;
+    padding: 7px;
+    font-family: Arial,sans-serif;
+    border: 0;
+    /* color: var(--inputFontColor); */
+    /* font-size: 1rem; */
+    border-radius: 8px;
+    background: #fff;
+    width: 100%;
+    transition: 0.2s;
+    border: 2px solid #efefef;
+    max-height: 400px;
+    overflow: auto;
+    max-height: 300px;
+    /* max-width: 100%; */
+}
+
+/* .editor::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+} */
+
+/* .editor::-webkit-scrollbar-button:start:decrement,
+.editor::-webkit-scrollbar-button:end:increment  {
+    display: none;
+} */
+
+/* .editor::-webkit-scrollbar-track-piece  {
+    background-color: #eeeeee;
+} */
+
+/* editor::-webkit-scrollbar-thumb:vertical {
+    background: #d9d9d9;
+    border-radius: 16px;
+} */
+
+.editorContainer{
+    position: relative;
+}
+
+.editorLabel{
+    color: var(--inputLabel);
+    /* font-size: 13px;*/
+    padding-left: 5px;
+    font-size: .92857142857rem;
+}
+
+ .toolbar{
+    position: absolute;
+    z-index: 5;
+    top: -70px;
+    border-radius: 8px;
+    border: 2px solid #efefef;
+    /* flex-wrap: nowrap; */
+    width: 700px;
+}
+
+.draggable {
+    cursor: move;
+}
+
+:global(.mooskin-textarea-editor .rdw-colorpicker-modal){
+    width: 300px;
+    height: 160px;
+}
+
+:global(.mooskin-textarea-editor .rdw-colorpicker-modal-options){
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.editorContainer .rdw-link-modal{
+    height: 220px;
+}
+
+@media (--xSmall){
+
+    :global(.mooskin-textarea-editor .rdw-colorpicker-modal){
+        position: fixed;
+        top: 25%;
+        left: 15%;
+    }
+
+    :global(.mooskin-textarea-editor .rdw-link-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    :global(.mooskin-textarea-editor .rdw-embedded-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    :global(.mooskin-textarea-editor .rdw-emoji-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+    :global(.mooskin-textarea-editor .rdw-image-modal){
+        position: fixed;
+        top: 25%;
+        left: 20%;
+    }
+
+}
+
+
+@media (--deviceXsmall){
+    .toolbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}

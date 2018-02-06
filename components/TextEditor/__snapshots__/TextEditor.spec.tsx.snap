@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextEditor renders correctly 1`] = `
+<div
+  className="mooskin-text-editor editorContainer"
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <label
+    className="editorLabel"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  />
+  <t
+    className=""
+    customDecorators={Array []}
+    editorClassName="editor undefined"
+    editorState={
+      EditorState {
+        "_immutable": Immutable.Record {
+          "allowUndo": true,
+          "currentContent": Immutable.Record {
+            "entityMap": Object {
+              "__add": [Function],
+              "__create": [Function],
+              "__get": [Function],
+              "__getLastCreatedEntityKey": [Function],
+              "__mergeData": [Function],
+              "__replaceData": [Function],
+              "add": [Function],
+              "create": [Function],
+              "get": [Function],
+              "getLastCreatedEntityKey": [Function],
+              "mergeData": [Function],
+              "replaceData": [Function],
+            },
+            "blockMap": Immutable.OrderedMap {
+              "blep6": Immutable.Record {
+                "key": "blep6",
+                "type": "unstyled",
+                "text": "",
+                "characterList": Immutable.List [],
+                "depth": 0,
+                "data": Immutable.Map {},
+              },
+            },
+            "selectionBefore": Immutable.Record {
+              "anchorKey": "blep6",
+              "anchorOffset": 0,
+              "focusKey": "blep6",
+              "focusOffset": 0,
+              "isBackward": false,
+              "hasFocus": false,
+            },
+            "selectionAfter": Immutable.Record {
+              "anchorKey": "blep6",
+              "anchorOffset": 0,
+              "focusKey": "blep6",
+              "focusOffset": 0,
+              "isBackward": false,
+              "hasFocus": false,
+            },
+          },
+          "decorator": null,
+          "directionMap": Immutable.OrderedMap {
+            "blep6": "LTR",
+          },
+          "forceSelection": false,
+          "inCompositionMode": false,
+          "inlineStyleOverride": null,
+          "lastChangeType": null,
+          "nativelyRenderedContent": null,
+          "redoStack": Immutable.Stack [],
+          "selection": Immutable.Record {
+            "anchorKey": "blep6",
+            "anchorOffset": 0,
+            "focusKey": "blep6",
+            "focusOffset": 0,
+            "isBackward": false,
+            "hasFocus": false,
+          },
+          "treeMap": Immutable.OrderedMap {
+            "blep6": Immutable.List [
+              Immutable.Record {
+                "start": 0,
+                "end": 0,
+                "decoratorKey": null,
+                "leaves": Immutable.List [
+                  Immutable.Record {
+                    "start": 0,
+                    "end": 0,
+                  },
+                ],
+              },
+            ],
+          },
+          "undoStack": Immutable.Stack [],
+        },
+      }
+    }
+    localization={
+      Object {
+        "locale": "en",
+        "translations": Object {},
+      }
+    }
+    onEditorStateChange={[Function]}
+    stripPastedStyles={false}
+    style={Object {}}
+    toolbarClassName="toolbar  undefined"
+    toolbarHidden={false}
+    toolbarOnFocus={true}
+    toolbarStyle={
+      Object {
+        "left": 0,
+        "top": -70,
+      }
+    }
+  />
+</div>
+`;

@@ -2,7 +2,7 @@ class ButtonExample extends React.Component {
 
     render(){
         return(
-            <TextEditor />
+            <TextEditor draggable label="Rich text editor" />
         );
     }
 
