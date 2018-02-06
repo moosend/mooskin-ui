@@ -1,9 +1,18 @@
 class ButtonExample extends React.Component {
 
+    constructor(){
+        super();
+        this.onChange = this.onChange.bind(this);
+    }
+
     render(){
         return(
-            <TextEditor draggable label="Rich text editor" />
+            <TextEditor onChange={this.onChange} draggable label="Rich text editor" />
         );
+    }
+
+    onChange(data) {
+        console.log(data);
     }
 
 }

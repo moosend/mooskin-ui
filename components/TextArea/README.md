@@ -131,9 +131,6 @@ In this case, when the user focuses the textarea and blurs away immediately, an 
 * `dataLabel` - label what kind of data 
 * `style` - textarea field style
 * `onChange` - callback to be triggered on textarea change
-* `richEditor` - rich editor mode for the textArea
-* `richValue` - value of the TextArea (only for Editor mode)
-* `onEditorChange` - change callback for the TextArea (only for Editor mode)
 * `validate` - validate function
 * `status` - to be used with validate, to apply classes based on error or success
 
