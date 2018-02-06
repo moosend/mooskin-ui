@@ -27,8 +27,8 @@
   },
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   },
   "dependencies": {
     "@types/draft-js": "0.10.15",
