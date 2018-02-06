@@ -1,0 +1,9 @@
+class ButtonExample extends React.Component {
+
+    render(){
+        return(
+            <TextEditor />
+        );
+    }
+
+}

@@ -23,72 +23,49 @@ exports[`TextArea renders correctly 1`] = `
   }
   value="textarea value"
 >
-  <TextAreaComponent
-    className="myClass"
-    cols={40}
-    description="just some textarea"
-    disabled={true}
-    id="textarea"
-    label="with a label ofc"
-    labelWidth={30}
-    maxlength={50}
-    minlength={10}
-    name="textarea name"
-    onChange={[Function]}
-    placeholder="textarea placeholder"
-    required={true}
-    rows={10}
-    style={
-      Object {
-        "color": "blue",
-      }
-    }
-    value="textarea value"
+  <div
+    className="textarea-component myClass areaContainer"
   >
-    <div
-      className="textarea-component myClass areaContainer"
+    <label
+      className="textareaLabel"
+      htmlFor="textarea"
+      style={
+        Object {
+          "flexBasis": "30px",
+        }
+      }
     >
-      <label
-        className="textareaLabel"
-        htmlFor="1482363367071"
+      with a label ofc
+    </label>
+    <div
+      className="textAreaDiv"
+    >
+      <textarea
+        className="textarea textarea disabledTextArea undefined"
+        cols={40}
+        disabled={true}
+        id="textarea"
+        maxLength={50}
+        minLength={10}
+        name="nodejs"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="textarea placeholder"
+        required={true}
+        rows={10}
         style={
           Object {
-            "flexBasis": "30px",
+            "color": "blue",
           }
         }
+        value="textarea value"
+      />
+      <i
+        className="description undefined"
       >
-        with a label ofc
-      </label>
-      <div
-        className="textAreaDiv"
-      >
-        <textarea
-          className="textarea textarea disabledTextArea undefined"
-          cols={40}
-          disabled={true}
-          id="textarea"
-          maxLength={50}
-          minLength={10}
-          name="nodejs"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder="textarea placeholder"
-          required={true}
-          rows={10}
-          style={
-            Object {
-              "color": "blue",
-            }
-          }
-          value="textarea value"
-        />
-        <i
-          className="description undefined"
-        >
-          just some textarea
-        </i>
-      </div>
+        just some textarea
+      </i>
     </div>
-  </TextAreaComponent>
+  </div>
 </TextArea>
 `;

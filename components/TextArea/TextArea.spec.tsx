@@ -78,14 +78,6 @@ describe('TextArea', () => {
         expect(func).toHaveBeenCalled();
     });
 
-    test('onChange prop callback is called when a key is pressed', () => {
-
-        const component = mount(<TextArea richEditor/>);
-        expect(component.find('textarea')).toBeFalsy;
-
-        expect(component.find('div').first().hasClass('rdw-editor-wrapper')).toBeTruthy;
-    });
-
     test('error classes get applied when textarea is not validated', () => {
         let inputValue = '';
         let status = null;
