@@ -14,6 +14,15 @@ export interface ITextEditorProps {
     /** editor id */
     id?: string;
 
+    /** position of the toolbar */
+    toolbarPos?: 'top' | 'bottom';
+
+    /** what options should be available to the toolbar */
+    options?: string[];
+
+    /** custom emojis */
+    customEmojis?: any[];
+
     /** override wrapper styles */
     wrapperStyle?: React.CSSProperties;
 
@@ -57,21 +66,44 @@ export interface ITextEditorProps {
 export interface ITextEditorState {
     dragging: boolean;
     pos: IPosition;
-    relPos: IPosition;
+    relPos: IRelateivePos;
     editorState: EditorState;
 }
 
 export interface IPosition {
     left: number;
+    top: number | undefined;
+    bottom: number | undefined;
+}
+
+export interface IRelateivePos {
+    left: number;
     top: number;
+    bottom: number;
 }
 
 export default class TextEditor extends React.Component<ITextEditorProps, ITextEditorState> {
 
     static defaultProps = {
         className: '',
+        option: [
+            'inline',
+            'blockType',
+            'fontSize',
+            'fontFamily',
+            'list',
+            'textAlign',
+            'colorPicker',
+            'link',
+            'embedded',
+            'emoji',
+            'image',
+            'remove',
+            'history'
+        ],
         style: {},
-        toolbarOnFocus: true
+        toolbarOnFocus: true,
+        toolbarPos: 'top'
     };
 
     constructor(props: ITextEditorProps){
@@ -81,10 +113,11 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             dragging: false,
             editorState: this.props.value || EditorState.createEmpty(),
             pos: {
+                bottom: this.props.toolbarPos === 'bottom' ? -80 : undefined,
                 left: 0,
-                top: -70
+                top: this.props.toolbarPos === 'top' ? -70 : undefined
             },
-            relPos: {left: 0, top: 0}
+            relPos: {left: 0, top: 0, bottom: 0}
         };
     }
 
@@ -105,10 +138,13 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         const dragClass = this.props.draggable ? styles.draggable : '';
 
         const toolbarStyles = {
+            bottom: this.state.pos.bottom,
             left: this.state.pos.left,
             top: this.state.pos.top,
             ...this.props.toolbarStyle
         };
+
+        const toolbar = this.props.toolbar ? this.props.toolbar : this.getToolbar();
 
         return (
             <div
@@ -127,7 +163,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     toolbarOnFocus={this.props.toolbarOnFocus}
                     toolbarClassName={`${styles.toolbar} ${dragClass} ${this.props.toolbarClassName}`}
                     toolbarStyle={toolbarStyles}
-                    toolbar={this.props.toolbar}
+                    toolbar={toolbar}
                     {...this.props}
                 />
             </div>
@@ -150,11 +186,12 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         e.preventDefault();
         if (e.button === 0) {
             this.setState({
-              dragging: true,
-              relPos: {
-                left: e.pageX - this.state.pos.left,
-                top: e.pageY - this.state.pos.top
-              }
+                dragging: true,
+                relPos: {
+                    bottom: e.pageY - (this.state.pos.bottom || 0),
+                    left: e.pageX - this.state.pos.left,
+                    top: e.pageY - (this.state.pos.top || 0)
+                }
             });
         }
     }
@@ -166,16 +203,57 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onMouseMove = (e: any) => {
+        console.log(e.pageY);
         e.stopPropagation();
         e.preventDefault();
         if (this.state.dragging) {
-            this.setState({
-              pos: {
-                left: e.pageX - this.state.relPos.left,
-                top: e.pageY - this.state.relPos.top
-              }
-            });
+            if (this.props.toolbarPos === 'top'){
+                this.setState({
+                    pos: {
+                        bottom: undefined,
+                        left: e.pageX - this.state.relPos.left,
+                        top: e.pageY - this.state.relPos.top
+                    }
+                });
+            } else if (this.props.toolbarPos === 'bottom'){
+                this.setState({
+                    pos: {
+                        bottom: e.pageY - this.state.relPos.bottom,
+                        left: e.pageX - this.state.relPos.left,
+                        top: undefined
+                    }
+                });
+            }
         }
       }
+
+    getToolbar = () => {
+
+        const starterEmojis = [
+            '😀', '😁', '😂', '😃', '😉', '😋', '😎', '😍', '😗', '🤗', '🤔', '😣', '😫', '😴', '😌', '🤓',
+            '😛', '😜', '😠', '😇', '😷', '😈', '👻', '😺', '😸', '😹', '😻', '😼', '😽', '🙀', '🙈',
+            '🙉', '🙊', '👼', '👮', '🕵', '💂', '👳', '🎅', '👸', '👰', '👲', '🙍', '🙇', '🚶', '🏃', '💃',
+            '⛷', '🏂', '🏌', '🏄', '🚣', '🏊', '⛹', '🏋', '🚴', '👫', '💪', '👈', '👉', '👉', '👆', '🖕',
+            '👇', '🖖', '🤘', '🖐', '👌', '👍', '👎', '✊', '👊', '👏', '🙌', '🙏', '🐵', '🐶', '🐇', '🐥',
+            '🐸', '🐌', '🐛', '🐜', '🐝', '🍉', '🍄', '🍔', '🍤', '🍨', '🍪', '🎂', '🍰', '🍾', '🍷', '🍸',
+            '🍺', '🌍', '🚑', '⏰', '🌙', '🌝', '🌞', '⭐', '🌟', '🌠', '🌨', '🌩', '⛄', '🔥', '🎄', '🎈',
+            '🎉', '🎊', '🎁', '🎗', '🏀', '🏈', '🎲', '🔇', '🔈', '📣', '🔔', '🎵', '🎷', '💰', '🖊', '📅',
+            '✅', '❎', '💯'
+        ];
+
+        const emojis = this.props.customEmojis ? starterEmojis.concat(this.props.customEmojis) : starterEmojis;
+
+        return (
+            {
+                emoji: {
+                    className: undefined,
+                    component: undefined,
+                    emojis,
+                    popupClassName: undefined
+                },
+                options: this.props.options
+            }
+        );
+    }
 
 }

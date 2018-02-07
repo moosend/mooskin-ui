@@ -6,8 +6,14 @@ class ButtonExample extends React.Component {
     }
 
     render(){
+
         return(
-            <TextEditor onChange={this.onChange} draggable label="Rich text editor" />
+            <TextEditor
+                onChange={this.onChange}
+                toolbarPos="top"
+                draggable
+                label="Rich text editor"
+            />
         );
     }
 
