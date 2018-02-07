@@ -7,6 +7,17 @@ class ButtonExample extends React.Component {
 
     render(){
 
+        const personalizationTags = [
+            {
+                label: 'Unsubscribe Link',
+                value: '#unsubscriblelink#'
+            },
+            {
+                label: 'Update Profile Link',
+                value: '#updateprofilelink#'
+            }
+        ]
+
         return(
             <TextEditor
                 onChange={this.onChange}
@@ -14,6 +25,7 @@ class ButtonExample extends React.Component {
                 draggable
                 label="Rich text editor"
                 toolbarOnFocus
+                personalizationTags={personalizationTags}
             />
         );
     }

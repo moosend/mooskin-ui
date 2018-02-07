@@ -91,6 +91,7 @@ In this case on each TextEditor change, the value will be console logged.
 * `customEmojis` - add custom emojis to the toolbar
 * `width` - width of the editor field
 * `height` - height of the editor field
+* `personalizationTags` - adds personalization tag dropdown which requires an array of objects consisting of keys `label` & `value`
 * `wrapperStyle` - wrapper style for both editor and toolbar
 * `wrapperClassName` - wrapper classes for both editor and toolbar
 * `editorStyle` - editor styles

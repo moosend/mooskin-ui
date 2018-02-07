@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { EditorState } from 'draft-js';
+import { EditorState, Modifier } from 'draft-js';
 
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
@@ -28,6 +28,9 @@ export interface ITextEditorProps {
 
     /** height of the editor field */
     height?: number;
+
+    /** adds personalization tags dropdown */
+    personalizationTags?: Array<{[key: string]: string}>;
 
     /** override wrapper styles */
     wrapperStyle?: React.CSSProperties;
@@ -74,6 +77,7 @@ export interface ITextEditorState {
     pos: IPosition;
     relPos: IRelateivePos;
     editorState: EditorState;
+    activeDropDown: boolean;
 }
 
 export interface IPosition {
@@ -86,6 +90,14 @@ export interface IRelateivePos {
     left: number;
     top: number;
     bottom: number;
+}
+
+export interface IDropDownProps {
+    active: boolean;
+    editorState: EditorState;
+    personalizationTags?: Array<{[key: string]: string}>;
+    onChange?: (data: any) => void;
+    onClick: () => void;
 }
 
 export default class TextEditor extends React.Component<ITextEditorProps, ITextEditorState> {
@@ -117,6 +129,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         super(props);
 
         this.state = {
+            activeDropDown: false,
             dragging: false,
             editorState: this.props.value || EditorState.createEmpty(),
             pos: {
@@ -184,6 +197,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     toolbarClassName={`${styles.toolbar} ${absoluteToolbar} ${dragClass} ${toolbarClassName}`}
                     toolbarStyle={toolbarStyles}
                     toolbar={toolbar}
+                    toolbarCustomButtons={[this.props.personalizationTags && this.getCustomDropDown()]}
                     {...this.props}
                 />
             </div>
@@ -244,7 +258,22 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 });
             }
         }
-      }
+    }
+
+    onDropDownClick = () => {
+        this.setState({activeDropDown: !this.state.activeDropDown});
+    }
+
+    getCustomDropDown = () => {
+        return (
+            <CustomDropDown
+                active={this.state.activeDropDown}
+                onClick={this.onDropDownClick}
+                editorState={this.state.editorState}
+                personalizationTags={this.props.personalizationTags}
+            />
+        );
+    }
 
     getToolbar = () => {
 
@@ -276,3 +305,51 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
 }
+
+export const CustomDropDown = (props: IDropDownProps) => {
+
+    const addTag = (value: string) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            const { editorState, onChange } = props;
+            const contentState = Modifier.replaceText(
+                editorState.getCurrentContent(),
+                editorState.getSelection(),
+                value,
+                editorState.getCurrentInlineStyle(),
+            );
+            onChange && onChange(EditorState.push(editorState, contentState, 'insert-characters'));
+        };
+    };
+
+    const popullateTags = () => {
+
+        const tagDivs = props.personalizationTags && props.personalizationTags.map((tag, i) => {
+            return (
+                <div
+                    className={styles.tag}
+                    key={i}
+                    onClick={addTag(tag.value)}
+                >
+                    {tag.label}
+                </div>
+            );
+        });
+
+        return tagDivs;
+    };
+
+    const listClass = props.active ? '' : styles.disabled;
+
+    return (
+        <div
+            className={styles.tags}
+        >
+            <div className={styles.arrow} onClick={props.onClick}>
+                Personalization Tags
+            </div>
+            <div className={`${styles.tagsList} ${listClass}`}>
+                {popullateTags()}
+            </div>
+        </div>
+    );
+};

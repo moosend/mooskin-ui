@@ -90,6 +90,56 @@
     height: 220px;
 }
 
+.tags {
+    display: flex;
+    margin-bottom: 6px;
+    border: 1px solid #F1F1F1;
+    padding: 5px;
+    min-width: 25px;
+    height: 20px;
+    border-radius: 2px;
+    margin: 0 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: white;
+    text-transform: capitalize;
+    flex-direction: column;
+    position: relative;
+}
+
+.arrow:after{
+    color: #444;
+    content: ' ▾';
+}
+
+.tagsList{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    border: 1px solid #F1F1F1;
+    z-index: 6;
+}
+
+.tag {
+    padding: 5px;
+    width: 100%;
+}
+
+.tag:hover {
+    background: #F1F1F1;
+}
+
+.disabled {
+    display: none;
+}
+
 /* @media (--xSmall){
 
     :global(.mooskin-textarea-editor .rdw-colorpicker-modal){
