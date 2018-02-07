@@ -23,6 +23,12 @@ export interface ITextEditorProps {
     /** custom emojis */
     customEmojis?: any[];
 
+    /** width of the editor field */
+    width?: number;
+
+    /** height of the editor field */
+    height?: number;
+
     /** override wrapper styles */
     wrapperStyle?: React.CSSProperties;
 
@@ -86,6 +92,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
     static defaultProps = {
         className: '',
+        height: 300,
         option: [
             'inline',
             'blockType',
@@ -103,7 +110,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         ],
         style: {},
         toolbarOnFocus: true,
-        toolbarPos: 'top'
+        toolbarPos: 'top',
     };
 
     constructor(props: ITextEditorProps){
@@ -144,6 +151,12 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             ...this.props.toolbarStyle
         };
 
+        const editorStyles = {
+            maxHeight: this.props.height,
+            maxWidth: this.props.width,
+            ...this.props.editorStyle
+        };
+
         const toolbar = this.props.toolbar ? this.props.toolbar : this.getToolbar();
 
         return (
@@ -159,7 +172,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     wrapperClassName={this.props.wrapperClassName}
                     wrapperStyle={this.props.wrapperStyle}
                     editorClassName={`${styles.editor} ${this.props.editorClassName}`}
-                    // editorStyle={this.props.editorStyle}
+                    editorStyle={editorStyles}
                     toolbarOnFocus={this.props.toolbarOnFocus}
                     toolbarClassName={`${styles.toolbar} ${dragClass} ${this.props.toolbarClassName}`}
                     toolbarStyle={toolbarStyles}
@@ -188,7 +201,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             this.setState({
                 dragging: true,
                 relPos: {
-                    bottom: e.pageY - (this.state.pos.bottom || 0),
+                    bottom: e.pageY + (this.state.pos.bottom || 0),
                     left: e.pageX - this.state.pos.left,
                     top: e.pageY - (this.state.pos.top || 0)
                 }
@@ -218,7 +231,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             } else if (this.props.toolbarPos === 'bottom'){
                 this.setState({
                     pos: {
-                        bottom: e.pageY - this.state.relPos.bottom,
+                        bottom: this.state.relPos.bottom - e.pageY,
                         left: e.pageX - this.state.relPos.left,
                         top: undefined
                     }

@@ -89,6 +89,8 @@ In this case on each TextEditor change, the value will be console logged.
 * `toolbarPos` - position of the toolbar
 * `options` - options to be available to the toolbar
 * `customEmojis` - add custom emojis to the toolbar
+* `width` - width of the editor field
+* `height` - height of the editor field
 * `wrapperStyle` - wrapper style for both editor and toolbar
 * `wrapperClassName` - wrapper classes for both editor and toolbar
 * `editorStyle` - editor styles
