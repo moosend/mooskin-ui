@@ -90,26 +90,29 @@
     height: 220px;
 }
 
-.tags {
+.tagsContainer{
     display: flex;
-    margin-bottom: 6px;
+    align-self: center;
     border: 1px solid #F1F1F1;
     padding: 5px;
     min-width: 25px;
     height: 20px;
     border-radius: 2px;
-    margin: 0 4px;
+    margin: 0 4px 6px 4px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     background: white;
     text-transform: capitalize;
-    flex-direction: column;
     position: relative;
 }
 
-.arrow:after{
+.tagsLabel {
+    align-self: center;
+}
+
+.tagsLabel:after{
     color: #444;
     content: ' ▾';
 }
@@ -140,6 +143,25 @@
     display: none;
 }
 
+.htmlContainer {
+    position: relative;
+    align-self: center;
+    user-select: auto;
+}
+
+.htmlContent {
+    position: absolute;
+    left: 4px;
+    top: 20px;
+    background: #fff;
+    border: 1px solid #F1F1F1;
+    z-index: 6;
+    padding: 20px;
+    /* overflow: auto; */
+    height: 500px;
+    width: 500px;
+    user-select: auto !important;
+}
 /* @media (--xSmall){
 
     :global(.mooskin-textarea-editor .rdw-colorpicker-modal){

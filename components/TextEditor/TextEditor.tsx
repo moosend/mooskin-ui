@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import { EditorState, Modifier } from 'draft-js';
+import { convertToRaw, EditorState, Modifier } from 'draft-js';
+import draftToHtml from 'draftjs-to-html';
 
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
@@ -78,6 +79,7 @@ export interface ITextEditorState {
     relPos: IRelateivePos;
     editorState: EditorState;
     activeDropDown: boolean;
+    showHtml: boolean;
 }
 
 export interface IPosition {
@@ -97,6 +99,12 @@ export interface IDropDownProps {
     editorState: EditorState;
     personalizationTags?: Array<{[key: string]: string}>;
     onChange?: (data: any) => void;
+    onClick: () => void;
+}
+
+export interface IToHtmlProps {
+    active: boolean;
+    editorState: EditorState;
     onClick: () => void;
 }
 
@@ -125,6 +133,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         toolbarPos: 'top',
     };
 
+    editor: any;
+
     constructor(props: ITextEditorProps){
         super(props);
 
@@ -137,7 +147,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 left: 0,
                 top: this.props.toolbarPos === 'top' ? -70 : undefined
             },
-            relPos: {left: 0, top: 0, bottom: 0}
+            relPos: {left: 0, top: 0, bottom: 0},
+            showHtml: false
         };
     }
 
@@ -179,6 +190,10 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         const wrapperClasses = this.props.toolbarPos === 'bottom' ? styles.wrapperReverse : styles.wrapper;
 
+        const personalizationTags = this.props.personalizationTags && this.getCustomDropDown();
+
+        const customToolbarButtons = personalizationTags ? [personalizationTags] : [];
+
         return (
             <div
                 id={this.props.id}
@@ -197,11 +212,17 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     toolbarClassName={`${styles.toolbar} ${absoluteToolbar} ${dragClass} ${toolbarClassName}`}
                     toolbarStyle={toolbarStyles}
                     toolbar={toolbar}
-                    toolbarCustomButtons={[this.props.personalizationTags && this.getCustomDropDown()]}
+                    editorRef={this.setEditorReference}
+                    toolbarCustomButtons={customToolbarButtons.concat(this.getToHtml())}
                     {...this.props}
                 />
             </div>
         );
+    }
+
+    setEditorReference = (ref: any) => {
+        this.editor = ref;
+        ref.focusEditor();
     }
 
     onEditorChange = (editorState: EditorState) => {
@@ -264,6 +285,10 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         this.setState({activeDropDown: !this.state.activeDropDown});
     }
 
+    onHtmlClick = () => {
+        this.setState({showHtml: !this.state.showHtml});
+    }
+
     getCustomDropDown = () => {
         return (
             <CustomDropDown
@@ -271,6 +296,16 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 onClick={this.onDropDownClick}
                 editorState={this.state.editorState}
                 personalizationTags={this.props.personalizationTags}
+            />
+        );
+    }
+
+    getToHtml = () => {
+        return (
+            <ConvertToHtml
+                active={this.state.showHtml}
+                editorState={this.state.editorState}
+                onClick={this.onHtmlClick}
             />
         );
     }
@@ -342,14 +377,35 @@ export const CustomDropDown = (props: IDropDownProps) => {
 
     return (
         <div
-            className={styles.tags}
+            className={styles.tagsContainer}
         >
-            <div className={styles.arrow} onClick={props.onClick}>
+            <div className={styles.tagsLabel} onClick={props.onClick}>
                 Personalization Tags
             </div>
             <div className={`${styles.tagsList} ${listClass}`}>
                 {popullateTags()}
             </div>
+        </div>
+    );
+};
+
+export const ConvertToHtml = (props: IToHtmlProps) => {
+
+    const htmlStyles = !props.active ? {display: 'none'} : {};
+
+    const htmlContent = draftToHtml(convertToRaw(props.editorState.getCurrentContent()));
+
+    return (
+        <div className={styles.htmlContainer}>
+            <div className={styles.tagsContainer} onClick={props.onClick}>
+                {'</>'}
+            </div>
+            <textarea
+                readOnly
+                className={styles.htmlContent}
+                style={htmlStyles}
+                value={htmlContent}
+            />
         </div>
     );
 };

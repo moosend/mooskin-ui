@@ -186,7 +186,7 @@ class TextArea extends React.Component<ITextAreaProps, {}> {
     }
 
     generateId = () => {
-        return Date.now().toString();
+        return Math.random().toString(36).substr(2, 10);
     }
 }
 

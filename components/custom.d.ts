@@ -56,4 +56,9 @@ declare module 'react-draft-wysiwyg' {
   export default content;
 }
 
+declare module 'draftjs-to-html' {
+  const content: any;
+  export default content;
+}
+
 // declare var global: any;
