@@ -139,10 +139,15 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
       }
 
     render() {
-        const display = this.props.label ? {display: 'block'} : {display: 'none'};
 
-        this.props.draggable && this.addEvents();
-        const dragClass = this.props.draggable ? styles.draggable : '';
+        const {draggable, height, label, toolbarClassName, toolbarOnFocus, width} = this.props;
+
+        const display = label ? {display: 'block'} : {display: 'none'};
+
+        draggable && toolbarOnFocus && this.addEvents();
+        const dragClass = draggable && toolbarOnFocus ? styles.draggable : '';
+
+        const absoluteToolbar = toolbarOnFocus ? styles.toolbarOnFocus : '';
 
         const toolbarStyles = {
             bottom: this.state.pos.bottom,
@@ -152,12 +157,14 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         };
 
         const editorStyles = {
-            maxHeight: this.props.height,
-            maxWidth: this.props.width,
+            maxHeight: height,
+            maxWidth: width,
             ...this.props.editorStyle
         };
 
         const toolbar = this.props.toolbar ? this.props.toolbar : this.getToolbar();
+
+        const wrapperClasses = this.props.toolbarPos === 'bottom' ? styles.wrapperReverse : styles.wrapper;
 
         return (
             <div
@@ -169,12 +176,12 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 <Editor
                     editorState={this.state.editorState}
                     onEditorStateChange={this.onEditorChange}
-                    wrapperClassName={this.props.wrapperClassName}
+                    wrapperClassName={`${wrapperClasses} ${this.props.wrapperClassName}`}
                     wrapperStyle={this.props.wrapperStyle}
                     editorClassName={`${styles.editor} ${this.props.editorClassName}`}
                     editorStyle={editorStyles}
                     toolbarOnFocus={this.props.toolbarOnFocus}
-                    toolbarClassName={`${styles.toolbar} ${dragClass} ${this.props.toolbarClassName}`}
+                    toolbarClassName={`${styles.toolbar} ${absoluteToolbar} ${dragClass} ${toolbarClassName}`}
                     toolbarStyle={toolbarStyles}
                     toolbar={toolbar}
                     {...this.props}
@@ -216,7 +223,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onMouseMove = (e: any) => {
-        console.log(e.pageY);
         e.stopPropagation();
         e.preventDefault();
         if (this.state.dragging) {

@@ -18,6 +18,16 @@
     /* max-width: 100%; */
 }
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapperReverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 /* .editor::-webkit-scrollbar {
     width: 5px;
     height: 10px;
@@ -49,11 +59,15 @@
 }
 
  .toolbar{
-    position: absolute;
-    z-index: 5;
     border-radius: 8px;
     border: 2px solid #efefef;
     /* flex-wrap: nowrap; */
+    margin-top: 10px;
+}
+
+.toolbarOnFocus {
+    position: absolute;
+    z-index: 5;
     max-width: 700px;
 }
 

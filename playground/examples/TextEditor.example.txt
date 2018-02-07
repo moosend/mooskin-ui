@@ -10,9 +10,10 @@ class ButtonExample extends React.Component {
         return(
             <TextEditor
                 onChange={this.onChange}
-                toolbarPos="bottom"
+                toolbarPos="top"
                 draggable
                 label="Rich text editor"
+                toolbarOnFocus
             />
         );
     }
