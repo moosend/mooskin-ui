@@ -8,6 +8,7 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 import boldIcon from '../../assets/images/editor/Bold.png';
 import centerIcon from '../../assets/images/editor/center.png';
+import removeIcon from '../../assets/images/editor/clearStyles.png';
 import codeIcon from '../../assets/images/editor/codeview.png';
 import colorIcon from '../../assets/images/editor/colour.png';
 import emojiIcon from '../../assets/images/editor/emoji.png';
@@ -277,8 +278,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onMouseDown = (e: any) => {
-        e.stopPropagation();
-        e.preventDefault();
         if (e.button === 0) {
             this.setState({
                 dragging: true,
@@ -289,17 +288,17 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 }
             });
         }
+        e.stopPropagation();
+        e.preventDefault();
     }
 
     onMouseUp = (e: any) => {
+        this.setState({dragging: false});
         e.stopPropagation();
         e.preventDefault();
-        this.setState({dragging: false});
     }
 
     onMouseMove = (e: any) => {
-        e.stopPropagation();
-        e.preventDefault();
         if (this.state.dragging) {
             if (this.props.toolbarPos === 'top'){
                 this.setState({
@@ -319,6 +318,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 });
             }
         }
+        e.stopPropagation();
+        e.preventDefault();
     }
 
     onDropDownClick = () => {
@@ -352,6 +353,24 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
     getToolbar = () => {
 
+        const defaultOptions = [
+            'inline',
+            'blockType',
+            'fontSize',
+            'fontFamily',
+            'list',
+            'textAlign',
+            'colorPicker',
+            'link',
+            // 'embedded',
+            'emoji',
+            'image',
+            'remove',
+            'history'
+        ];
+
+        const options = this.props.options ? this.props.options : defaultOptions;
+
         const starterEmojis = [
             '😀', '😁', '😂', '😃', '😉', '😋', '😎', '😍', '😗', '🤗', '🤔', '😣', '😫', '😴', '😌', '🤓',
             '😛', '😜', '😠', '😇', '😷', '😈', '👻', '😺', '😸', '😹', '😻', '😼', '😽', '🙀', '🙈',
@@ -369,41 +388,58 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         return (
             {
                 colorPicker: {
+                    className: styles.option,
                     icon: colorIcon
                 },
                 emoji: {
+                    className: styles.option,
                     emojis,
                     icon: emojiIcon
                 },
                 fontSize: {
                     icon: textSizeIcon
                 },
+                history: {
+                    redo: { className: styles.option },
+                    undo: { className: styles.option }
+                },
                 image: {
+                    className: styles.option,
                     icon: imageIcon
                 },
                 inline: {
-                    bold: { icon: boldIcon },
-                    inDropdown: false,
-                    italic: { icon: italicIcon },
-                    underline: { icon: underlineIcon }
+                    bold: { icon: boldIcon, className: styles.option },
+                    italic: { icon: italicIcon, className: styles.option },
+                    options: [
+                        'bold',
+                        'italic',
+                        'underline',
+                        // 'strikethrough',
+                        // 'monospace',
+                        // 'superscript',
+                        // 'subscript'
+                    ],
+                    underline: { icon: underlineIcon, className: styles.option }
                 },
                 link: {
                     defaultTargetOption: '_self',
-                    link: { icon: linkIcon },
+                    link: { icon: linkIcon, className: styles.option },
                     options: ['link', 'unlink'],
-                    unlink: { icon: unlinkIcon },
+                    unlink: { icon: unlinkIcon, className: styles.option}
                 },
                 list: {
-                    ordered: { icon: orderedIcon },
-                    unordered: { icon: unorderedIcon }
+                    options: ['unordered', 'ordered'],
+                    ordered: { icon: orderedIcon, className: styles.option },
+                    unordered: { icon: unorderedIcon, className: styles.option }
                 },
-                options: this.props.options,
+                options,
+                remove: { icon: removeIcon, className: styles.option },
                 textAlign: {
-                    center: { icon: centerIcon },
-                    justify: { icon: justifiedIcon },
-                    left: { icon: leftIcon },
-                    right: { icon: rightIcon }
-                }
+                    center: { icon: centerIcon, className: styles.option, },
+                    justify: { icon: justifiedIcon, className: styles.option, },
+                    left: { icon: leftIcon, className: styles.option, },
+                    right: { icon: rightIcon, className: styles.option, }
+                },
             }
         );
     }
@@ -472,7 +508,7 @@ export const ConvertToHtml: React.StatelessComponent<IToHtmlProps> = (props) => 
 
     return (
         <div className={styles.htmlContainer}>
-            <div className={styles.tagsContainer} onClick={props.onClick}>
+            <div className={styles.customContainer} onClick={props.onClick}>
                 <img src={codeIcon} alt="View Html" className={styles.codeImage}/>
             </div>
             <div style={htmlStyles} className={styles.copyHtml} onClick={copyHtml}>

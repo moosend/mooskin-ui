@@ -28,6 +28,21 @@
     flex-direction: column-reverse;
 }
 
+.option{
+    border: none;
+    padding: 5px;
+    min-width: 25px;
+    height: 20px;
+    border-radius: 2px;
+    margin: 0 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: white;
+    text-transform: capitalize;
+}
+
 /* .editor::-webkit-scrollbar {
     width: 5px;
     height: 10px;
@@ -90,10 +105,9 @@
     height: 220px;
 }
 
-.tagsContainer{
+.customContainer{
     display: flex;
     align-self: center;
-    border: 1px solid #F1F1F1;
     padding: 5px;
     min-width: 25px;
     height: 20px;
@@ -106,6 +120,11 @@
     background: white;
     text-transform: capitalize;
     position: relative;
+}
+
+.tagsContainer {
+    composes: customContainer;
+    border: 1px solid #F1F1F1;
 }
 
 .tagsLabel {
