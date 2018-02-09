@@ -24,7 +24,12 @@ exports[`TextArea renders correctly 1`] = `
   value="textarea value"
 >
   <div
-    className="textarea-component myClass areaContainer"
+    className="textarea-component areaContainermyClass"
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
   >
     <label
       className="textareaLabel"
@@ -53,11 +58,6 @@ exports[`TextArea renders correctly 1`] = `
         placeholder="textarea placeholder"
         required={true}
         rows={10}
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
         value="textarea value"
       />
       <i
