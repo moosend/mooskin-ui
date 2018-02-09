@@ -130,6 +130,12 @@
     width: 100%;
 }
 
+:global(.rdw-fontsize-dropdown){
+    padding-right: 3px;
+    width: 49px;
+    margin: 0;
+}
+
 .editorContainer .rdw-link-modal{
     height: 220px;
 }
