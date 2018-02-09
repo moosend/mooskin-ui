@@ -43,6 +43,35 @@
     text-transform: capitalize;
 }
 
+.option:hover {
+    box-shadow: inset 0 0 2px #bfbfbf;
+}
+
+.dropDown {
+    border: none;
+}
+
+.group {
+    border-left: 2px solid rgba(241, 241, 241, 0.829);
+    border-right: 2px solid rgba(241, 241, 241, 0.829);
+}
+
+.groupRight {
+    border-right: 2px solid rgba(241, 241, 241, 0.829);
+}
+
+.groupLeft {
+    border-left: 2px solid rgba(241, 241, 241, 0.829);
+}
+
+:global(.rdw-colorpicker-wrapper){
+    border-right: 2px solid rgba(241, 241, 241, 0.829);
+}
+
+:global(.rdw-image-wrapper){
+    border-right: 2px solid rgba(241, 241, 241, 0.829);
+}
+
 /* .editor::-webkit-scrollbar {
     width: 5px;
     height: 10px;
@@ -112,7 +141,7 @@
     min-width: 25px;
     height: 20px;
     border-radius: 2px;
-    margin: 0 4px 6px 4px;
+    margin-bottom: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,6 +158,7 @@
 
 .tagsLabel {
     align-self: center;
+    margin: 0 4px;
 }
 
 .tagsLabel:after{

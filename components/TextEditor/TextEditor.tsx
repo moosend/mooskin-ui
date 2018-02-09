@@ -387,6 +387,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         return (
             {
+                blockType: {
+                    className: `${styles.dropDown} ${styles.groupRight}`,
+                },
                 colorPicker: {
                     className: styles.option,
                     icon: colorIcon
@@ -396,10 +399,15 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     emojis,
                     icon: emojiIcon
                 },
+                fontFamily: {
+                    className: styles.dropDown,
+                },
                 fontSize: {
+                    className: `${styles.dropDown} ${styles.groupRight}`,
                     icon: textSizeIcon
                 },
                 history: {
+                    className: styles.groupRight,
                     redo: { className: styles.option },
                     undo: { className: styles.option }
                 },
@@ -409,6 +417,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 },
                 inline: {
                     bold: { icon: boldIcon, className: styles.option },
+                    className: styles.groupRight,
                     italic: { icon: italicIcon, className: styles.option },
                     options: [
                         'bold',
@@ -422,12 +431,14 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     underline: { icon: underlineIcon, className: styles.option }
                 },
                 link: {
+                    className: styles.groupRight,
                     defaultTargetOption: '_self',
                     link: { icon: linkIcon, className: styles.option },
                     options: ['link', 'unlink'],
                     unlink: { icon: unlinkIcon, className: styles.option}
                 },
                 list: {
+                    className: styles.groupLeft,
                     options: ['unordered', 'ordered'],
                     ordered: { icon: orderedIcon, className: styles.option },
                     unordered: { icon: unorderedIcon, className: styles.option }
@@ -436,6 +447,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 remove: { icon: removeIcon, className: styles.option },
                 textAlign: {
                     center: { icon: centerIcon, className: styles.option, },
+                    className: styles.group,
                     justify: { icon: justifiedIcon, className: styles.option, },
                     left: { icon: leftIcon, className: styles.option, },
                     right: { icon: rightIcon, className: styles.option, }
@@ -482,7 +494,7 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
 
     return (
         <div
-            className={styles.tagsContainer}
+            className={`${styles.customContainer} ${styles.groupRight}`}
         >
             <div className={styles.tagsLabel} onClick={props.onClick}>
                 Personalization Tags

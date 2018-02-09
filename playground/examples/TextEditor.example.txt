@@ -24,7 +24,7 @@ class ButtonExample extends React.Component {
                 toolbarPos="top"
                 draggable
                 label="Rich text editor"
-                toolbarOnFocus
+                toolbarOnFocus={false}
                 personalizationTags={personalizationTags}
             />
         );
