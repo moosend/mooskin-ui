@@ -59,8 +59,8 @@
 }
 
  .toolbar{
-    border-radius: 8px;
-    border: 2px solid #efefef;
+    border-radius: 4px;
+    border: 1px solid #efefef;
     /* flex-wrap: nowrap; */
     margin-top: 10px;
 }
@@ -75,12 +75,12 @@
     cursor: move;
 }
 
-:global(.mooskin-textarea-editor .rdw-colorpicker-modal){
+:global(.mooskin-text-editor .rdw-colorpicker-modal){
     width: 300px;
     height: 160px;
 }
 
-:global(.mooskin-textarea-editor .rdw-colorpicker-modal-options){
+:global(.mooskin-text-editor .rdw-colorpicker-modal-options){
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
@@ -121,7 +121,7 @@
     position: absolute;
     left: 0px;
     right: 0px;
-    top: 20px;
+    top: 19px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -146,7 +146,7 @@
 .htmlContainer {
     position: relative;
     align-self: center;
-    user-select: auto;
+    user-select: contain !important;
 }
 
 .htmlContent {
@@ -160,7 +160,23 @@
     /* overflow: auto; */
     height: 500px;
     width: 500px;
-    user-select: auto !important;
+    user-select: contain !important;
+}
+
+.copyHtml{
+    position: absolute;
+    top: 20px;
+    left: 4px;
+    background: rgb(173, 173, 173);
+    font-size: 12px;
+    width: 68px;
+    z-index: 7;
+    cursor: pointer;
+}
+
+.codeImage{
+    width: 20px;
+    height: 12px;
 }
 /* @media (--xSmall){
 

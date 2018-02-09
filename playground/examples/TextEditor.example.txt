@@ -31,7 +31,7 @@ class ButtonExample extends React.Component {
     }
 
     onChange(data) {
-        console.log(data);
+        // console.log(data);
     }
 
 }

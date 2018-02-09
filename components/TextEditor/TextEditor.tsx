@@ -6,6 +6,23 @@ import draftToHtml from 'draftjs-to-html';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
+import boldIcon from '../../assets/images/editor/Bold.png';
+import centerIcon from '../../assets/images/editor/center.png';
+import codeIcon from '../../assets/images/editor/codeview.png';
+import colorIcon from '../../assets/images/editor/colour.png';
+import emojiIcon from '../../assets/images/editor/emoji.png';
+import imageIcon from '../../assets/images/editor/image.png';
+import italicIcon from '../../assets/images/editor/Italics.png';
+import justifiedIcon from '../../assets/images/editor/justified.png';
+import leftIcon from '../../assets/images/editor/left.png';
+import linkIcon from '../../assets/images/editor/Link.png';
+import orderedIcon from '../../assets/images/editor/orderedList.png';
+import rightIcon from '../../assets/images/editor/right.png';
+import textSizeIcon from '../../assets/images/editor/textsize.png';
+import underlineIcon from '../../assets/images/editor/Underline.png';
+import unlinkIcon from '../../assets/images/editor/unlink.png';
+import unorderedIcon from '../../assets/images/editor/unorderedList.png';
+
 import styles from './TextEditor.css';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
@@ -133,8 +150,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         toolbarPos: 'top',
     };
 
-    editor: any;
-
     constructor(props: ITextEditorProps){
         super(props);
 
@@ -152,6 +167,10 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         };
     }
 
+    componentDidMount(){
+        this.addColorPickerEvents();
+    }
+
     componentDidUpdate(props: ITextEditorProps, state: ITextEditorState) {
         if (this.state.dragging && !state.dragging) {
           document.addEventListener('mousemove', this.onMouseMove);
@@ -167,6 +186,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         const {draggable, height, label, toolbarClassName, toolbarOnFocus, width} = this.props;
 
         const display = label ? {display: 'block'} : {display: 'none'};
+
+        this.addColorPickerEvents();
 
         draggable && toolbarOnFocus && this.addEvents();
         const dragClass = draggable && toolbarOnFocus ? styles.draggable : '';
@@ -212,7 +233,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     toolbarClassName={`${styles.toolbar} ${absoluteToolbar} ${dragClass} ${toolbarClassName}`}
                     toolbarStyle={toolbarStyles}
                     toolbar={toolbar}
-                    editorRef={this.setEditorReference}
                     toolbarCustomButtons={customToolbarButtons.concat(this.getToHtml())}
                     {...this.props}
                 />
@@ -220,15 +240,35 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         );
     }
 
-    setEditorReference = (ref: any) => {
-        this.editor = ref;
-        ref.focusEditor();
-    }
-
     onEditorChange = (editorState: EditorState) => {
         this.setState({editorState});
         this.props.onChange &&
         this.props.onChange({value: this.state.editorState, dataLabel: this.props.dataLabel});
+    }
+
+    addColorPickerEvents = () => {
+        const colorPicker: any = document.getElementsByClassName('rdw-colorpicker-wrapper');
+        colorPicker && colorPicker[0] && colorPicker[0].addEventListener('click', this.addCubeEvents);
+        const imageElement: any = colorPicker[0] ? colorPicker[0].childNodes[0].childNodes[0] : undefined;
+        if (imageElement && imageElement.style.backgroundColor === '') {
+            imageElement.style.backgroundColor = 'black';
+        }
+    }
+
+    addCubeEvents = () => {
+        setTimeout(() => {
+            const colorPickerCubes: any = document.getElementsByClassName('rdw-colorpicker-cube');
+            const cubeArray = Array.from(colorPickerCubes);
+            cubeArray && cubeArray.length > 0 && cubeArray.forEach((cube: any) => {
+                cube.addEventListener('click', () => this.onCubeClick(cube));
+            });
+        });
+    }
+
+    onCubeClick = (cube: any) => {
+        const colorPicker: any = document.getElementsByClassName('rdw-colorpicker-wrapper');
+        const imageElement: any = colorPicker[0].childNodes[0].childNodes[0];
+        imageElement.style.backgroundColor = cube.style.backgroundColor;
     }
 
     addEvents = () => {
@@ -328,20 +368,49 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         return (
             {
-                emoji: {
-                    className: undefined,
-                    component: undefined,
-                    emojis,
-                    popupClassName: undefined
+                colorPicker: {
+                    icon: colorIcon
                 },
-                options: this.props.options
+                emoji: {
+                    emojis,
+                    icon: emojiIcon
+                },
+                fontSize: {
+                    icon: textSizeIcon
+                },
+                image: {
+                    icon: imageIcon
+                },
+                inline: {
+                    bold: { icon: boldIcon },
+                    inDropdown: false,
+                    italic: { icon: italicIcon },
+                    underline: { icon: underlineIcon }
+                },
+                link: {
+                    defaultTargetOption: '_self',
+                    link: { icon: linkIcon },
+                    options: ['link', 'unlink'],
+                    unlink: { icon: unlinkIcon },
+                },
+                list: {
+                    ordered: { icon: orderedIcon },
+                    unordered: { icon: unorderedIcon }
+                },
+                options: this.props.options,
+                textAlign: {
+                    center: { icon: centerIcon },
+                    justify: { icon: justifiedIcon },
+                    left: { icon: leftIcon },
+                    right: { icon: rightIcon }
+                }
             }
         );
     }
 
 }
 
-export const CustomDropDown = (props: IDropDownProps) => {
+export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) => {
 
     const addTag = (value: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
@@ -389,18 +458,28 @@ export const CustomDropDown = (props: IDropDownProps) => {
     );
 };
 
-export const ConvertToHtml = (props: IToHtmlProps) => {
+export const ConvertToHtml: React.StatelessComponent<IToHtmlProps> = (props) => {
 
     const htmlStyles = !props.active ? {display: 'none'} : {};
 
     const htmlContent = draftToHtml(convertToRaw(props.editorState.getCurrentContent()));
 
+    const copyHtml = () => {
+        const textarea: HTMLTextAreaElement | any = document.getElementById('textEditor-to-html-block');
+        textarea && textarea.select();
+        document.execCommand('copy');
+    };
+
     return (
         <div className={styles.htmlContainer}>
             <div className={styles.tagsContainer} onClick={props.onClick}>
-                {'</>'}
+                <img src={codeIcon} alt="View Html" className={styles.codeImage}/>
+            </div>
+            <div style={htmlStyles} className={styles.copyHtml} onClick={copyHtml}>
+                Copy HTML
             </div>
             <textarea
+                id="textEditor-to-html-block"
                 readOnly
                 className={styles.htmlContent}
                 style={htmlStyles}
