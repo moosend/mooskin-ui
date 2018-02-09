@@ -1,10 +1,13 @@
 import * as React from 'react';
 
-import { convertToRaw, EditorState, Modifier } from 'draft-js';
+import { ContentState, convertToRaw, EditorState, Modifier } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
+import htmlToDraft from 'html-to-draftjs';
 
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+
+import {Button} from '../index';
 
 import boldIcon from '../../assets/images/editor/Bold.png';
 import centerIcon from '../../assets/images/editor/center.png';
@@ -12,6 +15,7 @@ import removeIcon from '../../assets/images/editor/clearStyles.png';
 import codeIcon from '../../assets/images/editor/codeview.png';
 import colorIcon from '../../assets/images/editor/colour.png';
 import emojiIcon from '../../assets/images/editor/emoji.png';
+import hashtag from '../../assets/images/editor/hashtag.png';
 import imageIcon from '../../assets/images/editor/image.png';
 import italicIcon from '../../assets/images/editor/Italics.png';
 import justifiedIcon from '../../assets/images/editor/justified.png';
@@ -79,7 +83,7 @@ export interface ITextEditorProps {
     draggable?: boolean;
 
     /** rich editor value */
-    value?: EditorState;
+    editorState: EditorState;
 
     /** editor label */
     label?: string;
@@ -95,9 +99,9 @@ export interface ITextEditorState {
     dragging: boolean;
     pos: IPosition;
     relPos: IRelateivePos;
-    editorState: EditorState;
     activeDropDown: boolean;
     showHtml: boolean;
+    htmlContent: string;
 }
 
 export interface IPosition {
@@ -121,8 +125,6 @@ export interface IDropDownProps {
 }
 
 export interface IToHtmlProps {
-    active: boolean;
-    editorState: EditorState;
     onClick: () => void;
 }
 
@@ -131,21 +133,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     static defaultProps = {
         className: '',
         height: 300,
-        option: [
-            'inline',
-            'blockType',
-            'fontSize',
-            'fontFamily',
-            'list',
-            'textAlign',
-            'colorPicker',
-            'link',
-            'embedded',
-            'emoji',
-            'image',
-            'remove',
-            'history'
-        ],
         style: {},
         toolbarOnFocus: true,
         toolbarPos: 'top',
@@ -157,7 +144,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         this.state = {
             activeDropDown: false,
             dragging: false,
-            editorState: this.props.value || EditorState.createEmpty(),
+            htmlContent: '',
             pos: {
                 bottom: this.props.toolbarPos === 'bottom' ? -80 : undefined,
                 left: 0,
@@ -169,7 +156,16 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     componentDidMount(){
+        const htmlContent = draftToHtml(convertToRaw(this.props.editorState.getCurrentContent()));
+        this.setState({htmlContent});
         this.addColorPickerEvents();
+    }
+
+    componentWillReceiveProps(nextProps: ITextEditorProps) {
+        if (nextProps.editorState && !this.isEmptyObject(nextProps.editorState)){
+            const htmlContent = draftToHtml(convertToRaw(nextProps.editorState.getCurrentContent()));
+            this.setState({htmlContent});
+        }
     }
 
     componentDidUpdate(props: ITextEditorProps, state: ITextEditorState) {
@@ -216,6 +212,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         const customToolbarButtons = personalizationTags ? [personalizationTags] : [];
 
+        const editHtmlStyles = !this.state.showHtml ? {display: 'none'} : {};
+        const editorEditHtml = this.state.showHtml ? {display: 'none'} : {};
+
         return (
             <div
                 id={this.props.id}
@@ -224,27 +223,59 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             >
                 <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                 <Editor
-                    editorState={this.state.editorState}
+                    editorState={this.props.editorState}
                     onEditorStateChange={this.onEditorChange}
                     wrapperClassName={`${wrapperClasses} ${this.props.wrapperClassName}`}
                     wrapperStyle={this.props.wrapperStyle}
                     editorClassName={`${styles.editor} ${this.props.editorClassName}`}
-                    editorStyle={editorStyles}
+                    editorStyle={{...editorEditHtml, ...editorStyles}}
                     toolbarOnFocus={this.props.toolbarOnFocus}
                     toolbarClassName={`${styles.toolbar} ${absoluteToolbar} ${dragClass} ${toolbarClassName}`}
                     toolbarStyle={toolbarStyles}
                     toolbar={toolbar}
                     toolbarCustomButtons={customToolbarButtons.concat(this.getToHtml())}
-                    {...this.props}
                 />
+                <textarea
+                    className={styles.textArea}
+                    value={this.state.htmlContent}
+                    onChange={this.onTextAreaChange}
+                    style={editHtmlStyles}
+                />
+                <div className={styles.buttonGroup} style={editHtmlStyles}>
+                    <Button onClick={this.onAccept}>Accept</Button>
+                    <Button inverseStyle onClick={this.onCancel}>Cancel</Button>
+                </div>
             </div>
         );
     }
 
     onEditorChange = (editorState: EditorState) => {
-        this.setState({editorState});
         this.props.onChange &&
-        this.props.onChange({value: this.state.editorState, dataLabel: this.props.dataLabel});
+        this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
+    }
+
+    onTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        this.setState({htmlContent: e.target.value});
+        // this.props.onChange &&
+        // this.props.onChange({value: e.target.value, dataLabel: this.props.dataLabel});
+    }
+
+    onAccept = () => {
+        try {
+            const contentBlock = htmlToDraft(this.state.htmlContent);
+            const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks, {});
+            const editorState = EditorState.createWithContent(contentState);
+            this.props.onChange &&
+            this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
+            this.setState({showHtml: false});
+        } catch (e) {
+            throw new Error('Wrong HTML!');
+        }
+    }
+
+    onCancel = () => {
+        const htmlContent = draftToHtml(convertToRaw(this.props.editorState.getCurrentContent()));
+        this.setState({showHtml: false, htmlContent});
     }
 
     addColorPickerEvents = () => {
@@ -335,7 +366,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             <CustomDropDown
                 active={this.state.activeDropDown}
                 onClick={this.onDropDownClick}
-                editorState={this.state.editorState}
+                editorState={this.props.editorState}
                 personalizationTags={this.props.personalizationTags}
             />
         );
@@ -344,8 +375,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     getToHtml = () => {
         return (
             <ConvertToHtml
-                active={this.state.showHtml}
-                editorState={this.state.editorState}
                 onClick={this.onHtmlClick}
             />
         );
@@ -456,6 +485,14 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         );
     }
 
+    isEmptyObject = (obj: EditorState) => {
+        for (const key in obj) {
+            if (obj.hasOwnProperty(key)){
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) => {
@@ -497,7 +534,7 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
             className={`${styles.customContainer} ${styles.groupRight}`}
         >
             <div className={styles.tagsLabel} onClick={props.onClick}>
-                Personalization Tags
+                <img src={hashtag} style={{verticalAlign: 'text-top'}} alt=""/>
             </div>
             <div className={`${styles.tagsList} ${listClass}`}>
                 {popullateTags()}
@@ -508,31 +545,31 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
 
 export const ConvertToHtml: React.StatelessComponent<IToHtmlProps> = (props) => {
 
-    const htmlStyles = !props.active ? {display: 'none'} : {};
+    // const htmlStyles = !props.active ? {display: 'none'} : {};
 
-    const htmlContent = draftToHtml(convertToRaw(props.editorState.getCurrentContent()));
+    // const htmlContent = draftToHtml(convertToRaw(props.editorState.getCurrentContent()));
 
-    const copyHtml = () => {
-        const textarea: HTMLTextAreaElement | any = document.getElementById('textEditor-to-html-block');
-        textarea && textarea.select();
-        document.execCommand('copy');
-    };
+    // const copyHtml = () => {
+    //     const textarea: HTMLTextAreaElement | any = document.getElementById('textEditor-to-html-block');
+    //     textarea && textarea.select();
+    //     document.execCommand('copy');
+    // };
 
     return (
         <div className={styles.htmlContainer}>
             <div className={styles.customContainer} onClick={props.onClick}>
                 <img src={codeIcon} alt="View Html" className={styles.codeImage}/>
             </div>
-            <div style={htmlStyles} className={styles.copyHtml} onClick={copyHtml}>
-                Copy HTML
-            </div>
-            <textarea
-                id="textEditor-to-html-block"
-                readOnly
-                className={styles.htmlContent}
-                style={htmlStyles}
-                value={htmlContent}
-            />
+            {/* <div style={htmlStyles} className={styles.copyHtml} onClick={copyHtml}> */}
+                {/* Copy HTML */}
+            {/* </div> */}
+            {/* <textarea */}
+                {/* id="textEditor-to-html-block" */}
+                {/* readOnly */}
+                {/* className={styles.htmlContent} */}
+                {/* style={htmlStyles} */}
+                {/* value={htmlContent} */}
+            {/* /> */}
         </div>
     );
 };

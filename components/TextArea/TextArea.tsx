@@ -90,7 +90,10 @@ class TextArea extends React.Component<ITextAreaProps, {}> {
         const status = this.getStatus();
 
         return (
-            <div className={`textarea-component ${this.props.className} ${styles.areaContainer}`}>
+            <div
+                className={`textarea-component ${styles.areaContainer}${this.props.className}`}
+                style={this.props.style}
+            >
                 {this.props.label && this.getLabel()}
                 <div className={styles.textAreaDiv}>
                     <textarea
@@ -107,7 +110,6 @@ class TextArea extends React.Component<ITextAreaProps, {}> {
                         disabled={this.props.disabled}
                         readOnly={this.props.readonly}
                         className={`textarea ${styles.textarea} ${disabledtextarea} ${status}`}
-                        style={this.props.style}
                         onBlur={this.validateOnBlur}
                     />
                     {this.props.description && this.getDescription()}

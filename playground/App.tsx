@@ -157,7 +157,7 @@ export const App = (props: any) => {
                     {renderEditableExample('TextArea', { TextArea })}
                 </Col>
                 <Col lg={12}>
-                {renderEditableExample('TextEditor', { TextEditor })}
+                {renderEditableExample('TextEditor', { TextEditor, EditorState })}
                 </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('Radio', { Radio, RadioGroup })}

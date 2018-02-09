@@ -18,6 +18,17 @@
     /* max-width: 100%; */
 }
 
+.textArea{
+    composes: editor;
+    height: 400px;
+}
+
+.buttonGroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -170,6 +181,7 @@
 .tagsLabel:after{
     color: #444;
     content: ' ▾';
+    font-size: 16px
 }
 
 .tagsList{
@@ -183,6 +195,7 @@
     background: #fff;
     border: 1px solid #F1F1F1;
     z-index: 6;
+    width: 150px;
 }
 
 .tag {

@@ -61,4 +61,9 @@ declare module 'draftjs-to-html' {
   export default content;
 }
 
+declare module 'html-to-draftjs' {
+  const content: any;
+  export default content;
+}
+
 // declare var global: any;

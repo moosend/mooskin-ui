@@ -3,6 +3,10 @@ class ButtonExample extends React.Component {
     constructor(){
         super();
         this.onChange = this.onChange.bind(this);
+
+        this.state = {
+            editorState: EditorState.createEmpty()
+        }
     }
 
     render(){
@@ -24,14 +28,16 @@ class ButtonExample extends React.Component {
                 toolbarPos="top"
                 draggable
                 label="Rich text editor"
-                toolbarOnFocus
+                toolbarOnFocus={false}
                 personalizationTags={personalizationTags}
+                editorState={this.state.editorState}
             />
         );
     }
 
     onChange(data) {
-        // console.log(data);
+        console.log(data.value);
+        this.setState({editorState: data.value});
     }
 
 }
