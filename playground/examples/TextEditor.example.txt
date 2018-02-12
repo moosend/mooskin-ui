@@ -1,0 +1,43 @@
+class ButtonExample extends React.Component {
+
+    constructor(){
+        super();
+        this.onChange = this.onChange.bind(this);
+
+        this.state = {
+            editorState: EditorState.createEmpty()
+        }
+    }
+
+    render(){
+
+        const personalizationTags = [
+            {
+                label: 'Unsubscribe Link',
+                value: '#unsubscriblelink#'
+            },
+            {
+                label: 'Update Profile Link',
+                value: '#updateprofilelink#'
+            }
+        ]
+
+        return(
+            <TextEditor
+                onChange={this.onChange}
+                toolbarPos="top"
+                draggable
+                label="Rich text editor"
+                toolbarOnFocus={false}
+                personalizationTags={personalizationTags}
+                editorState={this.state.editorState}
+            />
+        );
+    }
+
+    onChange(data) {
+        console.log(data.value);
+        this.setState({editorState: data.value});
+    }
+
+}

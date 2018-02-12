@@ -59,6 +59,7 @@ import {
     TableHeader,
     Tags,
     TextArea,
+    TextEditor,
     Topbar,
     TopNotification
 } from '../components/index';
@@ -155,12 +156,14 @@ export const App = (props: any) => {
                 <Col lg={6} md={6}>
                     {renderEditableExample('TextArea', { TextArea })}
                 </Col>
+                <Col lg={12}>
+                {renderEditableExample('TextEditor', { TextEditor, EditorState })}
+                </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('Radio', { Radio, RadioGroup })}
                 </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('Checkbox', { Checkbox, CheckboxGroup })}
-
                 </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('Select', { Select, Option })}

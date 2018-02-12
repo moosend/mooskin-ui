@@ -3,7 +3,7 @@
 .grid {
     display: flex;
     flex-direction: column;
-    flex: 1 0 auto;
+    flex: 1;
     box-sizing: border-box;
 }
 
@@ -22,7 +22,7 @@
 }
 
 .default {
-    flex: 1 0 auto;
+    flex: 1;
 }
 
 .hidden{
