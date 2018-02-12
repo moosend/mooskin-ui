@@ -71,39 +71,6 @@ In this case on each TextArea change, the value will be console logged.
 
 This can be used in various situations and combinations, for an enhanced development experience.
 
-### Rich text editor mode
-
-To enable the Rich editor mode of the TextArea component simply pass the `richEditor` prop to the TextArea:
-
-```
-<TextArea richEditor>
-```
-
-Rich editor value consists of `EditorState` object from `DraftJS` library. So an object of that kind must be passed as a value, and this kind of object will be passed as a callback value from the component itself. It also uses another callback function which is `onEditorChange`. Lets take a usage within a Form as an example:
-
-```
-import { EditorState } from 'draft-js';              // this import is important for the rich text editor
-Import {Form, FormGroup, TextArea} from 'mooskin'
-
-this.state = {
-    editorState: EditorState.reateEmpty()            // or createWithContent()
-}
-
-<Form>
-    <FormGroup>
-        <TextArea
-            richEditor
-            richValue={this.state.editorState}
-            onEditorChange={this.onEditorChange}
-        />
-    </FormGroup>
-</Form>
-
-onEditorChange(data) {
-    this.setState({editorState: data.value})
-}
-```
-
 ### Validation
 
 The Textarea Component can be validated using the `status` and `validate` props. The `status` prop will accept an 'error' or 'success' string to apply the appropriate classes to the textarea, or none for that matter. The `validate` prop is the validation function which accepts a arg of an object containing `value`, `dataLabel` and `required` props of the component as properties, and depending on the received value, you can use any kind of validation you like. The `description` prop can also be used in the process to inform the user about validation errors. The validation will fire the first time onBlur, and every other time onChange.
@@ -164,9 +131,6 @@ In this case, when the user focuses the textarea and blurs away immediately, an 
 * `dataLabel` - label what kind of data 
 * `style` - textarea field style
 * `onChange` - callback to be triggered on textarea change
-* `richEditor` - rich editor mode for the textArea
-* `richValue` - value of the TextArea (only for Editor mode)
-* `onEditorChange` - change callback for the TextArea (only for Editor mode)
 * `validate` - validate function
 * `status` - to be used with validate, to apply classes based on error or success
 

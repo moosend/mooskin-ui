@@ -71,30 +71,12 @@ textarea::-webkit-scrollbar-thumb:vertical {
     flex-basis: 150px;
 }
 
-.editorLabel{
-    color: var(--inputLabel);
-    /* font-size: 13px;*/
-    font-size: .92857142857rem;
-}
-
- .toolbar{
-    position: absolute;
-    z-index: 1;
-    bottom: 65px;
-} 
-
 .description{
     display: block;
     color: #b3b3b3;
     font-size: .78571428571rem;
     margin-left: 3px;
     margin-top: 5px;
-}
-
-.editorContainer{
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
 }
 
 .success{
@@ -111,21 +93,6 @@ textarea::-webkit-scrollbar-thumb:vertical {
 
 .descSuccess{
     color: #00cc44;
-}
-
-:global(.mooskin-textarea-editor .rdw-colorpicker-modal){
-    width: 300px;
-    height: 160px;
-}
-
-:global(.mooskin-textarea-editor .rdw-colorpicker-modal-options){
-    overflow-x: hidden;
-    overflow-y: hidden;
-    width: 100%;
-}
-
-.editorContainer .rdw-link-modal{
-    height: 220px;
 }
 
 @media (--xSmall){
