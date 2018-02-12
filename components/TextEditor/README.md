@@ -27,7 +27,7 @@ And then you can simply start using it by typing
 <TextEditor />
 ```
 
-For correct use the TextEditor `value` prop should be controlled by state which is a draftJS EditorState
+For correct use the TextEditor `editorState` prop should be controlled by state which is a draftJS EditorState
 
 ```
 import { EditorState } from 'draft-js';
@@ -87,8 +87,8 @@ In this case on each TextEditor change, the value will be console logged.
 
 * `id` - id of the element
 * `toolbarPos` - position of the toolbar
-* `options` - options to be available to the toolbar
-* `customEmojis` - add custom emojis to the toolbar
+* `options` - options to be available to the toolbar. Available options [`inline`, `blockType`, `fontSize`, `fontFamily`, `list`,`textAlign`, `colorPicker`, `link`, `embedded`, `emoji`, `image`, `remove`, `history`].
+* `customEmojis` - add custom emojis to the toolbar, requres array of emojis, ['😁', '😂', '😃'].
 * `width` - width of the editor field
 * `height` - height of the editor field
 * `personalizationTags` - adds personalization tag dropdown which requires an array of objects consisting of keys `label` & `value`
@@ -101,7 +101,7 @@ In this case on each TextEditor change, the value will be console logged.
 * `toolbarOnFocus` - pop toolbar on editor focus
 * `toolbar` - object defining editor options and custom options
 * `draggable` - wether the toolbar should be draggable
-* `value` - value of the editor (EditorState from DraftJS)
+* `editorState` - value of the editor (EditorState from DraftJS)
 * `label` - label for editor
 * `onChange` - onChange callback when editor changes, returns EditorState
 * `dataLabel` - label what kind of data 
