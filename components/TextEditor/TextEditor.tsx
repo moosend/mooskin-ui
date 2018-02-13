@@ -221,6 +221,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 style={{position: 'relative'}}
                 className={`mooskin-text-editor ${styles.editorContainer}`}
             >
+                {this.state.activeDropDown && <div onClick={this.onDropDownClick} className={styles.overlay}/>}
                 <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                 <Editor
                     editorState={this.props.editorState}
@@ -532,6 +533,7 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
     return (
         <div
             className={`${styles.customContainer} ${styles.groupRight}`}
+            onBlur={() => console.log('blurred')}
         >
             <div className={styles.tagsLabel} onClick={props.onClick}>
                 <img src={hashtag} style={{verticalAlign: 'text-top'}} alt=""/>
