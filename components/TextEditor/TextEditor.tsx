@@ -293,15 +293,17 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             const colorPickerCubes: any = document.getElementsByClassName('rdw-colorpicker-cube');
             const cubeArray = Array.from(colorPickerCubes);
             cubeArray && cubeArray.length > 0 && cubeArray.forEach((cube: any) => {
-                cube.addEventListener('click', () => this.onCubeClick(cube));
+                cube.addEventListener('click', this.onCubeClick(cube));
             });
         });
     }
 
     onCubeClick = (cube: any) => {
-        const colorPicker: any = document.getElementsByClassName('rdw-colorpicker-wrapper');
-        const imageElement: any = colorPicker[0].childNodes[0].childNodes[0];
-        imageElement.style.backgroundColor = cube.style.backgroundColor;
+        return (e: React.MouseEvent<HTMLElement>) => {
+            const colorPicker: any = document.getElementsByClassName('rdw-colorpicker-wrapper');
+            const imageElement: any = colorPicker[0].childNodes[0].childNodes[0];
+            imageElement.style.backgroundColor = cube.style.backgroundColor;
+        };
     }
 
     addEvents = () => {
@@ -533,7 +535,6 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
     return (
         <div
             className={`${styles.customContainer} ${styles.groupRight}`}
-            onBlur={() => console.log('blurred')}
         >
             <div className={styles.tagsLabel} onClick={props.onClick}>
                 <img src={hashtag} style={{verticalAlign: 'text-top'}} alt=""/>
@@ -547,31 +548,11 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
 
 export const ConvertToHtml: React.StatelessComponent<IToHtmlProps> = (props) => {
 
-    // const htmlStyles = !props.active ? {display: 'none'} : {};
-
-    // const htmlContent = draftToHtml(convertToRaw(props.editorState.getCurrentContent()));
-
-    // const copyHtml = () => {
-    //     const textarea: HTMLTextAreaElement | any = document.getElementById('textEditor-to-html-block');
-    //     textarea && textarea.select();
-    //     document.execCommand('copy');
-    // };
-
     return (
         <div className={styles.htmlContainer}>
             <div className={styles.customContainer} onClick={props.onClick}>
                 <img src={codeIcon} alt="View Html" className={styles.codeImage}/>
             </div>
-            {/* <div style={htmlStyles} className={styles.copyHtml} onClick={copyHtml}> */}
-                {/* Copy HTML */}
-            {/* </div> */}
-            {/* <textarea */}
-                {/* id="textEditor-to-html-block" */}
-                {/* readOnly */}
-                {/* className={styles.htmlContent} */}
-                {/* style={htmlStyles} */}
-                {/* value={htmlContent} */}
-            {/* /> */}
         </div>
     );
 };
