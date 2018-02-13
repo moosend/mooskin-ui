@@ -467,6 +467,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     defaultTargetOption: '_self',
                     link: { icon: linkIcon, className: styles.option },
                     options: ['link', 'unlink'],
+                    showOpenOptionOnHover: false,
                     unlink: { icon: unlinkIcon, className: styles.option}
                 },
                 list: {
