@@ -161,12 +161,14 @@
 }
 
 :global(.rdw-dropdown-carettoopen){
+    top: 40%;
     border-top: 4px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
 }
 
 :global(.rdw-dropdown-carettoclose){
+    top: 40%;
     border-bottom: 4px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
@@ -183,15 +185,17 @@
 }
 
 .customContainer{
+    position: relative;
     display: flex;
     align-self: center;
     padding: 5px;
     min-width: 25px;
+    width: 50px;
     height: 20px;
     border-radius: 2px;
     margin-bottom: 6px;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     cursor: pointer;
     background: white;
@@ -209,11 +213,33 @@
     margin: 0 4px;
 }
 
-.tagsLabel:after{
+.arrowDown {
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 35%;
+    right: 20%;
+    border-top: 4px solid #4c4c4c;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+.arrowUp {
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    top: 35%;
+    right: 20%;
+    border-bottom: 4px solid #4c4c4c;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+}
+
+/* .tagsLabel:after{
     color: #4c4c4c;
     content: ' ▾';
-    font-size: 16px
-}
+    font-size: 14px
+} */
 
 .tagsList{
     position: absolute;

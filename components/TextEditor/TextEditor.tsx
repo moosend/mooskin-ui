@@ -505,6 +505,8 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
 
     const addTag = (value: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
+            e.preventDefault();
+            e.stopPropagation();
             const { editorState, onChange } = props;
             const contentState = Modifier.replaceText(
                 editorState.getCurrentContent(),
@@ -535,12 +537,16 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
 
     const listClass = props.active ? '' : styles.disabled;
 
+    const arrow = !props.active ? styles.arrowDown : styles.arrowUp;
+
     return (
         <div
             className={`${styles.customContainer} ${styles.groupRight}`}
+            onClick={props.onClick}
         >
-            <div className={styles.tagsLabel} onClick={props.onClick}>
+            <div className={styles.tagsLabel}>
                 <img src={hashtag} style={{verticalAlign: 'text-top'}} alt=""/>
+                <div className={arrow} />
             </div>
             <div className={`${styles.tagsList} ${listClass}`}>
                 {popullateTags()}
