@@ -22,9 +22,11 @@ import justifiedIcon from '../../assets/images/editor/justified.png';
 import leftIcon from '../../assets/images/editor/left.png';
 import linkIcon from '../../assets/images/editor/Link.png';
 import orderedIcon from '../../assets/images/editor/orderedList.png';
+import redoIcon from '../../assets/images/editor/redo.png';
 import rightIcon from '../../assets/images/editor/right.png';
 import textSizeIcon from '../../assets/images/editor/textsize.png';
 import underlineIcon from '../../assets/images/editor/Underline.png';
+import undoIcon from '../../assets/images/editor/undo.png';
 import unlinkIcon from '../../assets/images/editor/unlink.png';
 import unorderedIcon from '../../assets/images/editor/unorderedList.png';
 
@@ -440,8 +442,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 },
                 history: {
                     className: styles.groupRight,
-                    redo: { className: styles.option },
-                    undo: { className: styles.option }
+                    redo: { icon: redoIcon, className: styles.option },
+                    undo: { icon: undoIcon, className: styles.option }
                 },
                 image: {
                     className: styles.option,

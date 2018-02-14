@@ -87,6 +87,10 @@
     left: 100%;
 }
 
+:global(.rdw-link-modal){
+    display: block;
+}
+
 /* .editor::-webkit-scrollbar {
     width: 5px;
     height: 10px;
