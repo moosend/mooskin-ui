@@ -83,6 +83,10 @@
     border-right: 2px solid rgba(241, 241, 241, 0.829);
 }
 
+:global(.rdw-link-decorator-icon){
+    left: 100%;
+}
+
 /* .editor::-webkit-scrollbar {
     width: 5px;
     height: 10px;
