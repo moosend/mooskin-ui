@@ -57,7 +57,7 @@
 .emojiOption:after{
     color: #4c4c4c;
     content: ' ▾';
-    font-size: 16px
+    font-size: 17px
 }
 
 .option:hover {
