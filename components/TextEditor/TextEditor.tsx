@@ -135,6 +135,22 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     static defaultProps = {
         className: '',
         height: 300,
+        options: [
+            'inline',
+            'blockType',
+            'fontSize',
+            'fontFamily',
+            'list',
+            'textAlign',
+            'colorPicker',
+            'link',
+            // 'embedded',
+            'emoji',
+            'image',
+            'remove',
+            'history',
+            'html'
+        ],
         style: {},
         toolbarOnFocus: true,
         toolbarPos: 'top',
@@ -212,7 +228,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         const personalizationTags = this.props.personalizationTags && this.getCustomDropDown();
 
-        const customToolbarButtons = personalizationTags ? [personalizationTags] : [];
+        const customToolbarButtons: any = [];
+        personalizationTags && customToolbarButtons.push(personalizationTags);
+        this.props.options && this.props.options.includes('html') && customToolbarButtons.push(this.getToHtml());
 
         const editHtmlStyles = !this.state.showHtml ? {display: 'none'} : {};
         const editorEditHtml = this.state.showHtml ? {display: 'none'} : {};
@@ -236,7 +254,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     toolbarClassName={`${styles.toolbar} ${absoluteToolbar} ${dragClass} ${toolbarClassName}`}
                     toolbarStyle={toolbarStyles}
                     toolbar={toolbar}
-                    toolbarCustomButtons={customToolbarButtons.concat(this.getToHtml())}
+                    toolbarCustomButtons={customToolbarButtons}
                 />
                 <textarea
                     className={styles.textArea}
@@ -387,23 +405,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
     getToolbar = () => {
 
-        const defaultOptions = [
-            'inline',
-            'blockType',
-            'fontSize',
-            'fontFamily',
-            'list',
-            'textAlign',
-            'colorPicker',
-            'link',
-            // 'embedded',
-            'emoji',
-            'image',
-            'remove',
-            'history'
-        ];
-
-        const options = this.props.options ? this.props.options : defaultOptions;
+        const options = this.props.options ? [...this.props.options] : [];
+        options.includes('html') && options.splice(options.indexOf('html'), 1);
 
         const starterEmojis = [
             '😀', '😁', '😂', '😃', '😉', '😋', '😎', '😍', '😗', '🤗', '🤔', '😣', '😫', '😴', '😌', '🤓',
