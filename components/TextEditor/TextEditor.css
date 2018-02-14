@@ -85,6 +85,7 @@
 
 :global(.rdw-link-decorator-icon){
     left: 100%;
+    content:url("../../assets/images/editor/GoTolink.png");
 }
 
 :global(.rdw-link-modal){
