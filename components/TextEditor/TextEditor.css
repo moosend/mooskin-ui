@@ -54,6 +54,12 @@
     text-transform: capitalize;
 }
 
+.emojiOption:after{
+    color: #4c4c4c;
+    content: ' ▾';
+    font-size: 16px
+}
+
 .option:hover {
     box-shadow: inset 0 0 2px #bfbfbf;
 }
@@ -162,14 +168,14 @@
 
 :global(.rdw-dropdown-carettoopen){
     top: 40%;
-    border-top: 4px solid #4c4c4c;
+    border-top: 5px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
 }
 
 :global(.rdw-dropdown-carettoclose){
     top: 40%;
-    border-bottom: 4px solid #4c4c4c;
+    border-bottom: 5px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
 }
@@ -219,7 +225,7 @@
     position: absolute;
     top: 35%;
     right: 20%;
-    border-top: 4px solid #4c4c4c;
+    border-top: 5px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
 }
@@ -230,16 +236,10 @@
     position: absolute;
     top: 35%;
     right: 20%;
-    border-bottom: 4px solid #4c4c4c;
+    border-bottom: 5px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
 }
-
-/* .tagsLabel:after{
-    color: #4c4c4c;
-    content: ' ▾';
-    font-size: 14px
-} */
 
 .tagsList{
     position: absolute;

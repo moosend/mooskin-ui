@@ -429,7 +429,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     icon: colorIcon
                 },
                 emoji: {
-                    className: styles.option,
+                    className: `${styles.option} ${styles.emojiOption}`,
                     emojis,
                     icon: emojiIcon
                 },
