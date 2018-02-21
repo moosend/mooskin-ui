@@ -69,25 +69,29 @@
 }
 
 .group {
-    border-left: 2px solid rgba(241, 241, 241, 0.829);
-    border-right: 2px solid rgba(241, 241, 241, 0.829);
+    /* border-left: 1px solid #e5e5e5; */
+    border-right: 1px solid #e5e5e5;
 }
 
 .groupRight {
-    border-right: 2px solid rgba(241, 241, 241, 0.829);
+    border-right: 1px solid #e5e5e5;
 }
 
 .groupLeft {
-    border-left: 2px solid rgba(241, 241, 241, 0.829);
+    border-left: 1px solid #e5e5e5;
 }
 
 :global(.rdw-colorpicker-wrapper){
+    border-right: 1px solid #e5e5e5;
+}
+
+/* :global(.rdw-colorpicker-wrapper){
     border-right: 2px solid rgba(241, 241, 241, 0.829);
 }
 
 :global(.rdw-image-wrapper){
     border-right: 2px solid rgba(241, 241, 241, 0.829);
-}
+} */
 
 :global(.rdw-link-decorator-icon){
     left: 100%;
@@ -96,6 +100,23 @@
 
 :global(.rdw-link-modal){
     display: block;
+}
+
+:global(.rdw-dropdown-wrapper){
+    margin: 0px;
+    padding: 0px 11px;
+}
+
+:global(.rdw-dropdown-selectedtext){
+    padding: 0;
+}
+
+.toolbar > .group:not(:last-child) > .option:last-child {
+    margin-right: 11px;
+}
+
+.toolbar > .group:not(:first-child) > .option:first-child {
+    margin-left: 11px;
 }
 
 /* .editor::-webkit-scrollbar {
@@ -181,32 +202,61 @@
 }
 
 :global(.rdw-fontsize-dropdown){
-    padding-right: 3px;
-    width: 49px;
+    padding: 0px 11px;
+    width: 60px;
     margin: 0;
+}
+
+:global(.rdw-option-wrapper){
+    border: none;
+}
+
+:global(.rdw-colorpicker-wrapper){
+    padding: 0px 11px;
+}
+
+:global(.rdw-emoji-wrapper){
+    padding: 0px 5px 0px 5px;
+    border-right: 1px solid #e5e5e5;
+}
+
+:global(.rdw-image-wrapper){
+    padding: 0px 8px;
+    border-right: 1px solid #e5e5e5;
+}
+
+:global(.rdw-remove-wrapper){
+    padding: 0px 8px;
+    border-right: 1px solid #e5e5e5;
 }
 
 .editorContainer .rdw-link-modal{
     height: 220px;
 }
 
+.alignDropdown {
+    width: 48px;
+    overflow-y: unset;
+}
+
 .customContainer{
     position: relative;
     display: flex;
     align-self: center;
-    padding: 5px;
+    padding: 5px 11px;
     min-width: 25px;
     width: 50px;
-    height: 20px;
+    height: 30px;
     border-radius: 2px;
     margin-bottom: 6px;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     background: white;
     text-transform: capitalize;
     position: relative;
+    border-right: 1px solid #e5e5e5;
 }
 
 .tagsContainer {
@@ -217,14 +267,16 @@
 .tagsLabel {
     align-self: center;
     margin: 0 4px;
+    display: flex;
+    flex-direction: row;
 }
 
 .arrowDown {
     height: 0px;
     width: 0px;
-    position: absolute;
-    top: 35%;
-    right: 20%;
+    /* position: absolute; */
+    margin-left: 5px;
+    margin-top: 5px;
     border-top: 5px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
@@ -233,9 +285,9 @@
 .arrowUp {
     height: 0px;
     width: 0px;
-    position: absolute;
-    top: 35%;
-    right: 20%;
+    /* position: absolute; */
+    margin-left: 5px;
+    margin-top: 5px;
     border-bottom: 5px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
