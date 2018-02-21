@@ -68,6 +68,34 @@
     border: none;
 }
 
+.option img {
+    width: 14px;
+}
+
+.emojiOption > img {
+    width: 14px;
+}
+
+.group > img {
+    width: 14px;
+}
+
+.group > a > img {
+    width: 14px;
+}
+
+.customContainer > img {
+    width: 16px;
+}
+
+:global(.rdw-history-wrapper img){
+    width: 12px;
+}
+
+:global(.rdw-image-wrapper img){
+    width: 17px;
+}
+
 .group {
     /* border-left: 1px solid #e5e5e5; */
     border-right: 1px solid #e5e5e5;
@@ -83,6 +111,10 @@
 
 :global(.rdw-colorpicker-wrapper){
     border-right: 1px solid #e5e5e5;
+}
+
+:global(.rdw-dropdown-optionwrapper){
+    left: -10px;
 }
 
 /* :global(.rdw-colorpicker-wrapper){
