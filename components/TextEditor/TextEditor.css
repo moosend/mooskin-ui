@@ -54,10 +54,9 @@
     text-transform: capitalize;
 }
 
-.emojiOption:after{
-    color: #4c4c4c;
-    content: ' ▾';
-    font-size: 17px
+.emojiOption{
+    display: flex;
+    flex-direction: row;
 }
 
 .option:hover {
@@ -301,6 +300,8 @@
     margin: 0 4px;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .arrowDown {
@@ -308,7 +309,6 @@
     width: 0px;
     /* position: absolute; */
     margin-left: 5px;
-    margin-top: 5px;
     border-top: 5px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
@@ -319,7 +319,6 @@
     width: 0px;
     /* position: absolute; */
     margin-left: 5px;
-    margin-top: 5px;
     border-bottom: 5px solid #4c4c4c;
     border-left: 3px solid transparent;
     border-right: 3px solid transparent;
@@ -329,7 +328,7 @@
     position: absolute;
     left: 0px;
     right: 0px;
-    top: 25px;
+    top: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

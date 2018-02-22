@@ -235,6 +235,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         const editHtmlStyles = !this.state.showHtml ? {display: 'none'} : {};
         const editorEditHtml = this.state.showHtml ? {display: 'none'} : {};
 
+        this.initializeEmoji();
+
         return (
             <div
                 id={this.props.id}
@@ -268,6 +270,24 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 </div>
             </div>
         );
+    }
+
+    initializeEmoji = () => {
+        let emojiDiv: any = null;
+        const toolbarElements: HTMLCollectionOf<any> = document.getElementsByClassName('rdw-option-wrapper');
+        const elementsArray = Array.from(toolbarElements);
+        elementsArray.forEach((element) => {
+            if (element.className.includes('emojiOption')){
+                emojiDiv = element;
+            }
+        });
+        const arrow = `<div class=${styles.arrowDown} />`;
+        // emojiDiv && emojiDiv.children && emojiDiv.children.push(arrow);
+        if (emojiDiv !== null && Array.from(emojiDiv.children).length === 1){
+            const image = emojiDiv.innerHTML;
+            emojiDiv.innerHTML = image + arrow;
+        }
+        // emojiDiv !== null && emojiDiv.appendChild(arrow);
     }
 
     onEditorChange = (editorState: EditorState) => {
