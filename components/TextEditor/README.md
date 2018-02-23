@@ -87,7 +87,7 @@ In this case on each TextEditor change, the value will be console logged.
 
 * `id` - id of the element
 * `toolbarPos` - position of the toolbar
-* `options` - options to be available to the toolbar, Array of strings. Available options [`inline`, `blockType`, `fontSize`, `fontFamily`, `list`,`textAlign`, `colorPicker`, `link`, `embedded`, `emoji`, `image`, `remove`, `history`, `html`].
+* `options` - options to be available to the toolbar, Array of strings. Available options [`'inline'`, `'blockType'`, `'fontSize'`, `'fontFamily'`, `'list'`,`'textAlign'`, `'colorPicker'`, `'link'`, `'embedded'`, `'emoji'`, `'image'`, `'remove'`, `'history'`, `'html'`, `'/'`].
 * `customEmojis` - add custom emojis to the toolbar, requres array of emojis, ['😁', '😂', '😃'].
 * `width` - width of the editor field
 * `height` - height of the editor field
