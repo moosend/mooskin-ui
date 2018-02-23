@@ -236,6 +236,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         const editorEditHtml = this.state.showHtml ? {display: 'none'} : {};
 
         this.initializeEmoji();
+        !document.getElementById('rdw-separator-1') && this.addSeparators();
 
         return (
             <div
@@ -270,6 +271,30 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 </div>
             </div>
         );
+    }
+
+    addSeparators = () => {
+        let index = 1;
+        const {options} = this.props;
+        const toolbar = document.getElementsByClassName('rdw-editor-toolbar');
+        const separator = document.createElement('div');
+        separator.className = styles.separator;
+        separator.id = `rdw-separator-${index}`;
+        const elementsArray = toolbar[0] ? Array.from(toolbar[0].children) : [];
+        if (!options || (options && !options.includes('/'))){
+            elementsArray.forEach((element) => {
+                toolbar[0] && toolbar[0].insertBefore(separator.cloneNode(), toolbar[0].children[index]);
+                index = index + 2;
+            });
+        } else if (options && options.includes('/')){
+            const separatorPos: number[] = [];
+            options.forEach((option, i) => {
+                option === '/' && separatorPos.push(i);
+            });
+            separatorPos.forEach((pos) => {
+                toolbar[0] && toolbar[0].insertBefore(separator.cloneNode(), toolbar[0].children[pos]);
+            });
+        }
     }
 
     initializeEmoji = () => {
@@ -427,6 +452,11 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         const options = this.props.options ? [...this.props.options] : [];
         options.includes('html') && options.splice(options.indexOf('html'), 1);
+        options.forEach((option, i) => {
+            if (option === '/'){
+                options.splice(i, 1);
+            }
+        });
 
         const starterEmojis = [
             '😀', '😁', '😂', '😃', '😉', '😋', '😎', '😍', '😗', '🤗', '🤔', '😣', '😫', '😴', '😌', '🤓',
@@ -445,35 +475,35 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         return (
             {
                 blockType: {
-                    className: `${styles.dropDown} ${styles.group}`,
+                    className: styles.dropDown,
                 },
                 colorPicker: {
                     icon: colorIcon
                 },
                 emoji: {
-                    className: `${styles.emojiOption} ${styles.group}`,
+                    className: styles.emojiOption,
                     emojis,
                     icon: emojiIcon
                 },
                 fontFamily: {
-                    className: `${styles.dropDown} ${styles.group}`,
+                    className: styles.dropDown,
                 },
                 fontSize: {
-                    className: `${styles.dropDown} ${styles.group}`,
+                    className: styles.dropDown,
                     icon: textSizeIcon
                 },
                 history: {
-                    className: `${styles.group}`,
+                    className: styles.group,
                     redo: { icon: redoIcon, className: styles.option },
                     undo: { icon: undoIcon, className: styles.option }
                 },
                 image: {
-                    className: `${styles.group}`,
+                    className: styles.group,
                     icon: imageIcon
                 },
                 inline: {
                     bold: { icon: boldIcon, className: styles.option },
-                    className: `${styles.group}`,
+                    className: styles.group,
                     italic: { icon: italicIcon, className: styles.option },
                     options: [
                         'bold',
@@ -502,12 +532,12 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 },
                 options,
                 remove: {
-                    className: `${styles.group}`,
+                    className: styles.group,
                     icon: removeIcon
                 },
                 textAlign: {
                     center: { icon: centerIcon, className: styles.option, },
-                    className: `${styles.dropDown} ${styles.group}`,
+                    className: styles.dropDown,
                     dropdownClassName: styles.alignDropdown,
                     inDropdown: true,
                     justify: { icon: justifiedIcon, className: styles.option, },
