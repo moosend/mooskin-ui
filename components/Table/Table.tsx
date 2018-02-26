@@ -142,7 +142,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         this.state = {
             activeRow: -1,
-            data: [],
+            data: this.props.data,
             order: 'desc',
             page: 1,
             sortBy: ''
@@ -154,6 +154,9 @@ export default class Table extends React.Component<ITableProps, ITableState> {
     }
 
     componentWillUpdate(nextProps: any, nextState: any){
+        // if (nextProps !== this.state.data){
+        //     this.setState({data: this.props.data});
+        // }
         if (nextState.sortBy !== this.state.sortBy){
             this.sortData(nextState.sortBy, 'desc');
         }
