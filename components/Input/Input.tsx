@@ -130,10 +130,11 @@ class Input extends React.Component<IProps, {}> {
         const reverse = iconPosition === 'left' && styles.reverse;
         const labelPos = labelTop ? styles.column : '';
         const topLabel = labelTop ? styles.topLabel : '';
+        const inputClasses = `${styles.inputLabel} ${topLabel}`;
 
         return (
             <div className={`input-component ${styles.inputContainer} ${labelPos} ${className}`} style={style}>
-                {label && <label className={`${styles.inputLabel} ${topLabel}`} style={spacing} htmlFor={this.id}>{label}</label>}
+                {label && <label className={inputClasses} style={spacing} htmlFor={this.id}>{label}</label>}
                 <div className={styles.inputDiv}>
                     <div className={`${styles.innerDiv} ${status} ${reverse}`}>
                         <input

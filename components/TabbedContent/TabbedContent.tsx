@@ -120,7 +120,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         const headingStyles = !this.props.vertical ? style.headingH : style.headingV;
         const contentStyles = !this.props.vertical ? style.contentH : style.contentV;
 
-        const verticalAlign = this.props.alignHeaders ? style.headingVAlign : '';
+        const verticalAlign = this.props.alignHeaders && this.props.vertical ? style.headingVAlign : '';
         const align = this.getAlign(style);
 
         const {headers, contents} = this.riteOfRakshir();
