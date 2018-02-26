@@ -39,6 +39,9 @@ export interface IProps {
     /** spacing between label and input */
     labelWidth?: number;
 
+    /** place label on top of Input */
+    labelTop?: boolean;
+
     /** toggle autocomplete specified input */
     autocomplete?: boolean;
 
@@ -111,6 +114,7 @@ class Input extends React.Component<IProps, {}> {
             style,
             className,
             label,
+            labelTop,
             autofocus,
             icon,
             iconPosition,
@@ -124,10 +128,12 @@ class Input extends React.Component<IProps, {}> {
         const descStatus = this.getDescStatus();
         const radius = this.getRadius();
         const reverse = iconPosition === 'left' && styles.reverse;
+        const labelPos = labelTop ? styles.column : '';
+        const topLabel = labelTop ? styles.topLabel : '';
 
         return (
-            <div className={`input-component ${styles.inputContainer} ${className}`} style={style}>
-                {label && <label className={styles.inputLabel} style={spacing} htmlFor={this.id}>{label}</label>}
+            <div className={`input-component ${styles.inputContainer} ${labelPos} ${className}`} style={style}>
+                {label && <label className={`${styles.inputLabel} ${topLabel}`} style={spacing} htmlFor={this.id}>{label}</label>}
                 <div className={styles.inputDiv}>
                     <div className={`${styles.innerDiv} ${status} ${reverse}`}>
                         <input
