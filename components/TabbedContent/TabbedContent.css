@@ -22,7 +22,7 @@
 }
 
 .headingH {
-    flex: 1;
+    flex: 1 0 auto;
     border-bottom:10px solid #efefef;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -30,7 +30,7 @@
 
 .headingV {
     flex-direction: column;
-    flex: 1;
+    flex: 1 0 auto;
     border-right:10px solid #efefef;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
