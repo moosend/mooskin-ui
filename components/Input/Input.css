@@ -112,6 +112,8 @@
 
 .topLabel {
     flex-basis: auto;
+    padding-top: 0px;
+    margin-left: 3px;
 }
 
 .description{
