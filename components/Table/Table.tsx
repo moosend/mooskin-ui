@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Pagination from '../Pagination';
+// import Pagination from '../Pagination';
 import SmallIconButton from '../SmallIconButton';
 import styles from './Table.css';
 
@@ -18,7 +18,7 @@ export interface ITableProps{
     style?: React.CSSProperties;
 
     /** pagionation props */
-    paginationProps?: {[key: string]: any};
+    // paginationProps?: {[key: string]: any};
 
     /** styling applied to the div containing the table */
     containerStyle?: React.CSSProperties;
@@ -33,7 +33,7 @@ export interface ITableProps{
     collapseHeaderStyle?: React.CSSProperties;
 
     /** paginate table based on passed number */
-    paginate?: number;
+    // paginate?: number;
 
     /** Table class */
     rowClass?: string;
@@ -63,7 +63,7 @@ export interface IHeaderProps{
     dataField: string;
 
     /** wether the row should be sortable or not */
-    sortable?: boolean;
+    // sortable?: boolean;
 
     /** classes to be applied to the columns on this header */
     colClasses?: string;
@@ -72,7 +72,7 @@ export interface IHeaderProps{
     colStyles?: React.CSSProperties;
 
     /** custom sort function */
-    sortfn?: any;
+    // sortfn?: any;
 
     children?: any;
 
@@ -116,22 +116,22 @@ export interface IPopoverProps{
 
 export interface ITableState {
     activeRow: number;
-    sortBy: string;
-    order: string;
-    data: object[];
-    page: number;
+    // sortBy: string;
+    // order: string;
+    // data: object[];
+    // page: number;
 }
 
 export default class Table extends React.Component<ITableProps, ITableState> {
 
     static defaultProps: Partial<ITableProps> = {
         className: '',
-        paginationProps: {
-            firstBtn: true,
-            lastBtn: true,
-            nextBtn: true,
-            prevBtn: true
-        },
+        // paginationProps: {
+        //     firstBtn: true,
+        //     lastBtn: true,
+        //     nextBtn: true,
+        //     prevBtn: true
+        // },
         style: {}
     };
 
@@ -142,28 +142,28 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         this.state = {
             activeRow: -1,
-            data: [],
-            order: 'desc',
-            page: 1,
-            sortBy: ''
+            // data: [],
+            // order: 'desc',
+            // page: 1,
+            // sortBy: ''
         };
     }
 
-    componentDidMount(){
-        this.setState({data: this.props.data});
-    }
+    // componentDidMount(){
+    //     this.setState({data: this.props.data});
+    // }
 
-    componentWillReceiveProps(nextProps: ITableProps){
-        if (nextProps.data !== this.state.data){
-            this.setState({data: this.props.data});
-        }
-    }
+    // componentWillReceiveProps(nextProps: ITableProps){
+    //     if (nextProps.data !== this.state.data){
+    //         this.setState({data: this.props.data});
+    //     }
+    // }
 
-    componentWillUpdate(nextProps: ITableProps, nextState: ITableState){
-        if (nextState.sortBy !== this.state.sortBy){
-            this.sortData(nextState.sortBy, 'desc');
-        }
-    }
+    // componentWillUpdate(nextProps: ITableProps, nextState: ITableState){
+    //     if (nextState.sortBy !== this.state.sortBy){
+    //         this.sortData(nextState.sortBy, 'desc');
+    //     }
+    // }
 
     render(){
 
@@ -191,9 +191,9 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                         </tbody>
                     </table>
                 </div>
-                <div className={styles.pagination}>
-                    {this.props.paginate && this.getPagination()}
-                </div>
+                {/* <div className={styles.pagination}> */}
+                    {/* {this.props.paginate && this.getPagination()} */}
+                {/* </div> */}
             </div>
         );
     }
@@ -206,7 +206,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         const settings = this.getSettings();
 
-        this.state.data.map((obj: any, index: number) => {
+        this.props.data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
             const popoverData: Array<React.ReactElement<ITableProps>> = [];
 
@@ -290,10 +290,10 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         });
 
-        if (this.props.paginate){
-            const pagRows = this.paginateRows(rows);
-            return pagRows[this.state.page - 1];
-        }
+        // if (this.props.paginate){
+        //     const pagRows = this.paginateRows(rows);
+        //     return pagRows[this.state.page - 1];
+        // }
 
         return rows;
     }
@@ -321,33 +321,33 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return settings;
     }
 
-    sortData = (sortBy: string, order: string, sortfn?: any) => {
+    // sortData = (sortBy: string, order: string, sortfn?: any) => {
 
-        const data = this.state.data;
+    //     const data = this.state.data;
 
-        if (sortfn){
-            data.sort((a, b) => sortfn(a, b, this.state.order, sortBy));
-        } else {
-            data.sort((a: any, b: any) => {
+    //     if (sortfn){
+    //         data.sort((a, b) => sortfn(a, b, this.state.order, sortBy));
+    //     } else {
+    //         data.sort((a: any, b: any) => {
 
-                let comparison = 0;
+    //             let comparison = 0;
 
-                if (a[sortBy] < b[sortBy]){
-                    comparison = -1;
-                } else if (a[sortBy] > b[sortBy]){
-                    comparison = 1;
-                }
-                return comparison;
-            });
+    //             if (a[sortBy] < b[sortBy]){
+    //                 comparison = -1;
+    //             } else if (a[sortBy] > b[sortBy]){
+    //                 comparison = 1;
+    //             }
+    //             return comparison;
+    //         });
 
-            if (order === 'desc'){
-                data.reverse();
-            }
-        }
+    //         if (order === 'desc'){
+    //             data.reverse();
+    //         }
+    //     }
 
-        this.setState({data, sortBy, order: this.setOrder(order)});
+    //     this.setState({data, sortBy, order: this.setOrder(order)});
 
-    }
+    // }
 
     setOrder = (order: string) => {
         if (order === 'desc'){
@@ -366,11 +366,12 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
             if (React.isValidElement<IHeaderProps>(child)){
 
-                const pointer = child.props.sortable ? styles.sortHeader : '';
+                // const pointer = child.props.sortable ? styles.sortHeader : '';
+                const pointer = child.props.onClick ? styles.sortHeader : '';
 
-                const sortable = child.props.sortable ?
-                this.onClickHeader(child.props.dataField, child.props.sortfn) :
-                undefined;
+                // const sortable = child.props.sortable ?
+                // this.onClickHeader(child.props.dataField, child.props.sortfn) :
+                // undefined;
 
                 const i = this.props.smallCollapse ? index + 1 : index;
 
@@ -381,11 +382,12 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                         style={child.props.style}
                         dataField={child.props.dataField}
                         hideSmall={child.props.hideSmall}
-                        onClick={sortable}
+                        // onClick={sortable}
+                        onClick={child.props.onClick}
                     >
                         <div>
                             {child.props.children}
-                            {this.getArrow(child.props.dataField)}
+                            {/* {this.getArrow(child.props.dataField)} */}
                         </div>
                     </TableHeader>
                 );
@@ -413,20 +415,20 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return headers;
     }
 
-    getArrow = (dataField: string) => {
-        if (this.state.sortBy === dataField && this.state.order === 'desc'){
-            return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_up</i>;
-        }
-        if (this.state.sortBy === dataField && this.state.order === 'asc'){
-            return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_down</i>;
-        }
-    }
+    // getArrow = (dataField: string) => {
+    //     if (this.state.sortBy === dataField && this.state.order === 'desc'){
+    //         return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_up</i>;
+    //     }
+    //     if (this.state.sortBy === dataField && this.state.order === 'asc'){
+    //         return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_down</i>;
+    //     }
+    // }
 
-    onClickHeader = (sortBy: string, sortfn?: any) => {
-        return (e: React.MouseEvent<HTMLElement>) => {
-            this.sortData(sortBy, this.state.order, sortfn);
-        };
-    }
+    // onClickHeader = (sortBy: string, sortfn?: any) => {
+    //     return (e: React.MouseEvent<HTMLElement>) => {
+    //         this.sortData(sortBy, this.state.order, sortfn);
+    //     };
+    // }
 
     showPopover = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
@@ -462,52 +464,52 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         }
     }
 
-    paginateRows = (rows: Array<React.ReactElement<ITableProps>>) => {
-        const paginated = [];
-        const size = this.props.paginate;
+    // paginateRows = (rows: Array<React.ReactElement<ITableProps>>) => {
+    //     const paginated = [];
+    //     const size = this.props.paginate;
 
-        while (rows.length > 0) {
-            paginated.push(rows.splice(0, size));
-        }
+    //     while (rows.length > 0) {
+    //         paginated.push(rows.splice(0, size));
+    //     }
 
-        return paginated;
-    }
+    //     return paginated;
+    // }
 
-    getPagination = () => {
+    // getPagination = () => {
 
-        const {paginate, paginationProps} = this.props;
+    //     const {paginate, paginationProps} = this.props;
 
-        if (paginate){
+    //     if (paginate){
 
-            const pages = Math.ceil(this.state.data.length / paginate);
+    //         const pages = Math.ceil(this.state.data.length / paginate);
 
-            return (
-                <Pagination
-                    onClick={this.onPaginationClick}
-                    items={pages}
-                    currentItem={this.state.page}
-                    firstBtn={paginationProps && paginationProps.firstBtn}
-                    lastBtn={paginationProps && paginationProps.lastBtn}
-                    prevBtn={paginationProps && paginationProps.prevBtn}
-                    nextBtn={paginationProps && paginationProps.nextBtn}
-                    className={paginationProps && paginationProps.className}
-                    maxButtons={paginationProps && paginationProps.maxButtons}
-                    style={paginationProps && paginationProps.style}
-                />
-            );
-        }
+    //         return (
+    //             <Pagination
+    //                 onClick={this.onPaginationClick}
+    //                 items={pages}
+    //                 currentItem={this.state.page}
+    //                 firstBtn={paginationProps && paginationProps.firstBtn}
+    //                 lastBtn={paginationProps && paginationProps.lastBtn}
+    //                 prevBtn={paginationProps && paginationProps.prevBtn}
+    //                 nextBtn={paginationProps && paginationProps.nextBtn}
+    //                 className={paginationProps && paginationProps.className}
+    //                 maxButtons={paginationProps && paginationProps.maxButtons}
+    //                 style={paginationProps && paginationProps.style}
+    //             />
+    //         );
+    //     }
 
-    }
+    // }
 
-    onPaginationClick = (item: number) => {
+    // onPaginationClick = (item: number) => {
 
-        const paginate = this.props.paginate ? this.props.paginate : 0;
-        const pages = Math.ceil(this.state.data.length / paginate);
+    //     const paginate = this.props.paginate ? this.props.paginate : 0;
+    //     const pages = Math.ceil(this.state.data.length / paginate);
 
-        if (item <= pages){
-            this.setState({page: item});
-        }
-    }
+    //     if (item <= pages){
+    //         this.setState({page: item});
+    //     }
+    // }
 
 }
 
