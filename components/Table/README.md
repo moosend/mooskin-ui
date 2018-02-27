@@ -131,8 +131,8 @@ in this case the table will be paginated, showing only three rows since a value 
 * `collapseHeaderClassName` - classes for popover header
 * `collapseHeaderStyle` - styles for popover header
 * `containerStyle` - styling applied to the div containing the table
-* `paginate` - paginate table, with the number of rows passed to this prop
-* `paginationProps` - an object describing table pagination props
+* `paginate` - paginate table, with the number of rows passed to this prop (OUT OF ORDER!)
+* `paginationProps` - an object describing table pagination props (OUT OF ORDER!)
 
 ## Supported attributes for TableHeader
 
@@ -140,8 +140,8 @@ in this case the table will be paginated, showing only three rows since a value 
 * `hideSmall` - Hides the column on small screens
 * `colClasses` - classes to be applied to this column cells
 * `colStyles` - styles to be applied to this column cells
-* `sortable` - wether this column should be sortable or not
-* `sortfn` - custom sort function for row sorting, requires `sortable`
+* `sortable` - wether this column should be sortable or not (OUT OF ORDER!)
+* `sortfn` - custom sort function for row sorting, requires `sortable` (OUT OF ORDER!)
 * `className` - css class
 * `style` - table styles
 
