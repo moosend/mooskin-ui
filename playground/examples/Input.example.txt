@@ -23,6 +23,7 @@ class InputExample extends React.Component {
                     value="password"
                     type="password"
                     label="Password:"
+                    labelTop
                 />
                 <br/>
                 <Input value={this.state.value} validate={this.validate} icon={this.state.icon} status={this.state.status} description={this.state.message} onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>

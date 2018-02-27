@@ -22,9 +22,11 @@ import justifiedIcon from '../../assets/images/editor/justified.png';
 import leftIcon from '../../assets/images/editor/left.png';
 import linkIcon from '../../assets/images/editor/Link.png';
 import orderedIcon from '../../assets/images/editor/orderedList.png';
+import redoIcon from '../../assets/images/editor/redo.png';
 import rightIcon from '../../assets/images/editor/right.png';
 import textSizeIcon from '../../assets/images/editor/textsize.png';
 import underlineIcon from '../../assets/images/editor/Underline.png';
+import undoIcon from '../../assets/images/editor/undo.png';
 import unlinkIcon from '../../assets/images/editor/unlink.png';
 import unorderedIcon from '../../assets/images/editor/unorderedList.png';
 
@@ -133,6 +135,22 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     static defaultProps = {
         className: '',
         height: 300,
+        options: [
+            'inline',
+            'blockType',
+            'fontSize',
+            'fontFamily',
+            'list',
+            'textAlign',
+            'colorPicker',
+            'link',
+            // 'embedded',
+            'emoji',
+            'image',
+            'history',
+            'remove',
+            'html'
+        ],
         style: {},
         toolbarOnFocus: true,
         toolbarPos: 'top',
@@ -210,10 +228,15 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         const personalizationTags = this.props.personalizationTags && this.getCustomDropDown();
 
-        const customToolbarButtons = personalizationTags ? [personalizationTags] : [];
+        const customToolbarButtons: any = [];
+        personalizationTags && customToolbarButtons.push(personalizationTags);
+        this.props.options && this.props.options.includes('html') && customToolbarButtons.push(this.getToHtml());
 
         const editHtmlStyles = !this.state.showHtml ? {display: 'none'} : {};
         const editorEditHtml = this.state.showHtml ? {display: 'none'} : {};
+
+        this.initializeEmoji();
+        !document.getElementById('rdw-separator-1') && this.addSeparators();
 
         return (
             <div
@@ -221,6 +244,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 style={{position: 'relative'}}
                 className={`mooskin-text-editor ${styles.editorContainer}`}
             >
+                {this.state.activeDropDown && <div onClick={this.onDropDownClick} className={styles.overlay}/>}
                 <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                 <Editor
                     editorState={this.props.editorState}
@@ -233,7 +257,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     toolbarClassName={`${styles.toolbar} ${absoluteToolbar} ${dragClass} ${toolbarClassName}`}
                     toolbarStyle={toolbarStyles}
                     toolbar={toolbar}
-                    toolbarCustomButtons={customToolbarButtons.concat(this.getToHtml())}
+                    toolbarCustomButtons={customToolbarButtons}
                 />
                 <textarea
                     className={styles.textArea}
@@ -247,6 +271,48 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 </div>
             </div>
         );
+    }
+
+    addSeparators = () => {
+        let index = 1;
+        const {options} = this.props;
+        const toolbar = document.getElementsByClassName('rdw-editor-toolbar');
+        const separator = document.createElement('div');
+        separator.className = styles.separator;
+        separator.id = `rdw-separator-${index}`;
+        const elementsArray = toolbar[0] ? Array.from(toolbar[0].children) : [];
+        if (!options || (options && !options.includes('/'))){
+            elementsArray.forEach((element) => {
+                toolbar[0] && toolbar[0].insertBefore(separator.cloneNode(), toolbar[0].children[index]);
+                index = index + 2;
+            });
+        } else if (options && options.includes('/')){
+            const separatorPos: number[] = [];
+            options.forEach((option, i) => {
+                option === '/' && separatorPos.push(i);
+            });
+            separatorPos.forEach((pos) => {
+                toolbar[0] && toolbar[0].insertBefore(separator.cloneNode(), toolbar[0].children[pos]);
+            });
+        }
+    }
+
+    initializeEmoji = () => {
+        let emojiDiv: any = null;
+        const toolbarElements: HTMLCollectionOf<any> = document.getElementsByClassName('rdw-option-wrapper');
+        const elementsArray = Array.from(toolbarElements);
+        elementsArray.forEach((element) => {
+            if (element.className.includes('emojiOption')){
+                emojiDiv = element;
+            }
+        });
+        const arrow = `<div class=${styles.arrowDown} />`;
+        // emojiDiv && emojiDiv.children && emojiDiv.children.push(arrow);
+        if (emojiDiv !== null && Array.from(emojiDiv.children).length === 1){
+            const image = emojiDiv.innerHTML;
+            emojiDiv.innerHTML = image + arrow;
+        }
+        // emojiDiv !== null && emojiDiv.appendChild(arrow);
     }
 
     onEditorChange = (editorState: EditorState) => {
@@ -292,15 +358,17 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             const colorPickerCubes: any = document.getElementsByClassName('rdw-colorpicker-cube');
             const cubeArray = Array.from(colorPickerCubes);
             cubeArray && cubeArray.length > 0 && cubeArray.forEach((cube: any) => {
-                cube.addEventListener('click', () => this.onCubeClick(cube));
+                cube.addEventListener('click', this.onCubeClick(cube));
             });
         });
     }
 
     onCubeClick = (cube: any) => {
-        const colorPicker: any = document.getElementsByClassName('rdw-colorpicker-wrapper');
-        const imageElement: any = colorPicker[0].childNodes[0].childNodes[0];
-        imageElement.style.backgroundColor = cube.style.backgroundColor;
+        return (e: React.MouseEvent<HTMLElement>) => {
+            const colorPicker: any = document.getElementsByClassName('rdw-colorpicker-wrapper');
+            const imageElement: any = colorPicker[0].childNodes[0].childNodes[0];
+            imageElement.style.backgroundColor = cube.style.backgroundColor;
+        };
     }
 
     addEvents = () => {
@@ -382,23 +450,13 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
     getToolbar = () => {
 
-        const defaultOptions = [
-            'inline',
-            'blockType',
-            'fontSize',
-            'fontFamily',
-            'list',
-            'textAlign',
-            'colorPicker',
-            'link',
-            // 'embedded',
-            'emoji',
-            'image',
-            'remove',
-            'history'
-        ];
-
-        const options = this.props.options ? this.props.options : defaultOptions;
+        const options = this.props.options ? [...this.props.options] : [];
+        options.includes('html') && options.splice(options.indexOf('html'), 1);
+        options.forEach((option, i) => {
+            if (option === '/'){
+                options.splice(i, 1);
+            }
+        });
 
         const starterEmojis = [
             '😀', '😁', '😂', '😃', '😉', '😋', '😎', '😍', '😗', '🤗', '🤔', '😣', '😫', '😴', '😌', '🤓',
@@ -417,14 +475,13 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         return (
             {
                 blockType: {
-                    className: `${styles.dropDown} ${styles.groupRight}`,
+                    className: styles.dropDown,
                 },
                 colorPicker: {
-                    className: styles.option,
                     icon: colorIcon
                 },
                 emoji: {
-                    className: styles.option,
+                    className: styles.emojiOption,
                     emojis,
                     icon: emojiIcon
                 },
@@ -432,21 +489,21 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     className: styles.dropDown,
                 },
                 fontSize: {
-                    className: `${styles.dropDown} ${styles.groupRight}`,
+                    className: styles.dropDown,
                     icon: textSizeIcon
                 },
                 history: {
-                    className: styles.groupRight,
-                    redo: { className: styles.option },
-                    undo: { className: styles.option }
+                    className: styles.group,
+                    redo: { icon: redoIcon, className: styles.option },
+                    undo: { icon: undoIcon, className: styles.option }
                 },
                 image: {
-                    className: styles.option,
+                    className: styles.group,
                     icon: imageIcon
                 },
                 inline: {
                     bold: { icon: boldIcon, className: styles.option },
-                    className: styles.groupRight,
+                    className: styles.group,
                     italic: { icon: italicIcon, className: styles.option },
                     options: [
                         'bold',
@@ -460,23 +517,29 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     underline: { icon: underlineIcon, className: styles.option }
                 },
                 link: {
-                    className: styles.groupRight,
+                    className: styles.group,
                     defaultTargetOption: '_self',
                     link: { icon: linkIcon, className: styles.option },
                     options: ['link', 'unlink'],
+                    // showOpenOptionOnHover: false,
                     unlink: { icon: unlinkIcon, className: styles.option}
                 },
                 list: {
-                    className: styles.groupLeft,
+                    className: styles.group,
                     options: ['unordered', 'ordered'],
                     ordered: { icon: orderedIcon, className: styles.option },
                     unordered: { icon: unorderedIcon, className: styles.option }
                 },
                 options,
-                remove: { icon: removeIcon, className: styles.option },
+                remove: {
+                    className: styles.group,
+                    icon: removeIcon
+                },
                 textAlign: {
                     center: { icon: centerIcon, className: styles.option, },
-                    className: styles.group,
+                    className: styles.dropDown,
+                    dropdownClassName: styles.alignDropdown,
+                    inDropdown: true,
                     justify: { icon: justifiedIcon, className: styles.option, },
                     left: { icon: leftIcon, className: styles.option, },
                     right: { icon: rightIcon, className: styles.option, }
@@ -499,6 +562,8 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
 
     const addTag = (value: string) => {
         return (e: React.MouseEvent<HTMLElement>) => {
+            e.preventDefault();
+            e.stopPropagation();
             const { editorState, onChange } = props;
             const contentState = Modifier.replaceText(
                 editorState.getCurrentContent(),
@@ -529,12 +594,16 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
 
     const listClass = props.active ? '' : styles.disabled;
 
+    const arrow = !props.active ? styles.arrowDown : styles.arrowUp;
+
     return (
         <div
-            className={`${styles.customContainer} ${styles.groupRight}`}
+            className={`${styles.customContainer}`}
+            onClick={props.onClick}
         >
-            <div className={styles.tagsLabel} onClick={props.onClick}>
+            <div className={styles.tagsLabel}>
                 <img src={hashtag} style={{verticalAlign: 'text-top'}} alt=""/>
+                <div className={arrow} />
             </div>
             <div className={`${styles.tagsList} ${listClass}`}>
                 {popullateTags()}
@@ -545,31 +614,11 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
 
 export const ConvertToHtml: React.StatelessComponent<IToHtmlProps> = (props) => {
 
-    // const htmlStyles = !props.active ? {display: 'none'} : {};
-
-    // const htmlContent = draftToHtml(convertToRaw(props.editorState.getCurrentContent()));
-
-    // const copyHtml = () => {
-    //     const textarea: HTMLTextAreaElement | any = document.getElementById('textEditor-to-html-block');
-    //     textarea && textarea.select();
-    //     document.execCommand('copy');
-    // };
-
     return (
         <div className={styles.htmlContainer}>
             <div className={styles.customContainer} onClick={props.onClick}>
                 <img src={codeIcon} alt="View Html" className={styles.codeImage}/>
             </div>
-            {/* <div style={htmlStyles} className={styles.copyHtml} onClick={copyHtml}> */}
-                {/* Copy HTML */}
-            {/* </div> */}
-            {/* <textarea */}
-                {/* id="textEditor-to-html-block" */}
-                {/* readOnly */}
-                {/* className={styles.htmlContent} */}
-                {/* style={htmlStyles} */}
-                {/* value={htmlContent} */}
-            {/* /> */}
         </div>
     );
 };

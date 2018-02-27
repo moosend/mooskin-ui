@@ -67,6 +67,11 @@ export interface IFormGroupProps{
 
 export default class Form extends React.Component<IFormProps, {}>{
 
+    static defaultProps = {
+        className: '',
+        style: {}
+    };
+
     static FormGroup: React.StatelessComponent<IFormGroupProps>;
 
     render(){
@@ -77,7 +82,6 @@ export default class Form extends React.Component<IFormProps, {}>{
         return(
             <form
                 className={`form ${styles.form} ${className}`}
-                name={name}
             >
                 {form}
             </form>

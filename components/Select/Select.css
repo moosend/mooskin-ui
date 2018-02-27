@@ -53,6 +53,9 @@
     cursor: pointer;
     border: none;
     padding:0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .overlay{
@@ -73,6 +76,8 @@
     border-bottom-left-radius: 8px;
     top:46px;
     z-index: 5;
+    max-height: 300px;
+    overflow-y: auto;
 }
 
 .optionsContainer ul{

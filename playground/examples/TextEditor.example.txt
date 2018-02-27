@@ -31,6 +31,7 @@ class ButtonExample extends React.Component {
                 toolbarOnFocus={false}
                 personalizationTags={personalizationTags}
                 editorState={this.state.editorState}
+                // options={['emoji', '/', 'blockType', 'inline', '/', 'fontSize', '/', 'fontFamily', '/']}
             />
         );
     }
