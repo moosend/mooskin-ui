@@ -153,7 +153,13 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         this.setState({data: this.props.data});
     }
 
-    componentWillUpdate(nextProps: any, nextState: any){
+    componentWillReceiveProps(nextProps: ITableProps){
+        if (nextProps.data !== this.state.data){
+            this.setState({data: this.props.data});
+        }
+    }
+
+    componentWillUpdate(nextProps: ITableProps, nextState: ITableState){
         if (nextState.sortBy !== this.state.sortBy){
             this.sortData(nextState.sortBy, 'desc');
         }

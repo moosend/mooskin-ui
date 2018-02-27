@@ -1,7 +1,7 @@
 @import '../_utils/globals/screens.css';
 
 .container{
-    z-index: 9;
+    z-index: 130;
     position: fixed;
     top: 0;
     left: 0;

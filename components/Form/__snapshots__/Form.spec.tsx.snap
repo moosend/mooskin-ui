@@ -3,7 +3,6 @@
 exports[`Form renders Form correctly 1`] = `
 <form
   className="form form myClass"
-  name="nodejs"
 />
 `;
 
@@ -20,7 +19,6 @@ exports[`Form renders Form with FormGroup correctly 1`] = `
 >
   <form
     className="form form myClass"
-    name="nodejs"
   >
     <FormGroup
       className="myClass"

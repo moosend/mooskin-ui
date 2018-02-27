@@ -2,7 +2,7 @@
 
 exports[`Input renders correctly 1`] = `
 <div
-  className="input-component inputContainer myClass"
+  className="input-component inputContainer  myClass"
   style={
     Object {
       "color": "blue",
@@ -10,7 +10,7 @@ exports[`Input renders correctly 1`] = `
   }
 >
   <label
-    className="inputLabel"
+    className="inputLabel "
     htmlFor="input1"
     style={
       Object {
