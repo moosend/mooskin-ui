@@ -81,16 +81,19 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
     renderSlider = () => {
         if (this.props.range){
-            return this.rangeSlider();
+            // return this.rangeSlider();
+            const min = this.props.range ? this.props.range[0] : 1;
+            const max = this.props.range ? this.props.range[1] : 100;
+            return this.getSliderWithType(min, max, this.props.value as number, this.onSliderChange);
         } else if (this.props.values) {
-            return this.valuesSlider();
+            const min = 0;
+            const max = this.props.values ? this.props.values.length - 1 : 100;
+            const value = this.props.values && this.props.values.indexOf(this.props.value);
+            return this.getSliderWithType(min, max, value, this.onValuesSliderChange);
         }
     }
 
-    rangeSlider = () => {
-
-        const min = this.props.range ? this.props.range[0] : 1;
-        const max = this.props.range ? this.props.range[1] : 100;
+    getSliderWithType = (min: number, max: number, value: number, callback: any) => {
 
         const disabled = this.props.disabled ? styles.disabled : '';
 
@@ -100,39 +103,15 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
                 id={this.props.id}
                 style={this.props.style}
                 className={`${styles.slider} ${disabled} ${this.props.className}`}
-                value={this.props.value}
-                min={min}
-                max={max}
-                type="range"
-                onChange={this.onSliderChange}
-                disabled={this.props.disabled}
-                onMouseDown={this.onMouseDown}
-                onMouseUp={this.onMouseUp}
-                onMouseMove={this.onMouseMove}
-            />
-        );
-
-    }
-
-    valuesSlider = () => {
-
-        const min = 0;
-        const max = this.props.values ? this.props.values.length - 1 : 100;
-
-        const disabled = this.props.disabled ? styles.disabled : '';
-        const value = this.props.values && this.props.values.indexOf(this.props.value);
-
-        return (
-            <input
-                id={this.props.id}
-                style={this.props.style}
-                className={`${styles.slider} ${disabled} ${this.props.className}`}
                 value={value}
                 min={min}
                 max={max}
                 type="range"
-                onChange={this.onValuesSliderChange}
+                onChange={callback}
                 disabled={this.props.disabled}
+                onMouseDown={this.onMouseDown}
+                onMouseUp={this.onMouseUp}
+                onMouseMove={this.onMouseMove}
             />
         );
     }
