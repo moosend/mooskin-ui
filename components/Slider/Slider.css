@@ -82,7 +82,7 @@
 
 .sliderContainer input[type=range]:disabled::-webkit-slider-thumb {
     background: #dbdbdb;
-    cursor: disabled;
+    cursor: not-allowed;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
