@@ -20,6 +20,7 @@ class ButtonExample extends React.Component {
                     onChange={this.onRangeChange}
                     range={[0, 10]}
                     value={this.state.rangeValue}
+                    tooltip
                 />
                 <br/>
                 <Slider
@@ -27,6 +28,8 @@ class ButtonExample extends React.Component {
                     onChange={this.onValuesChange}
                     values={['hello', 34, 'MOO!!', 98]}
                     value={this.state.value}
+                    trackLabels
+                    tooltip
                 />
                 <br/>
                 <Slider

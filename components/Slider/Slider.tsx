@@ -21,6 +21,12 @@ export interface ISliderProps{
     /** Slider label */
     label?: string;
 
+    /** adds track labels to the Slider */
+    trackLabels?: boolean;
+
+    /** adds current value tooltip to the Slider on sliding */
+    tooltip?: boolean;
+
     /** value of the Slider */
     value: string | number;
 
@@ -37,11 +43,29 @@ export interface ISliderProps{
     onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 }
 
-export default class Slider extends React.Component<ISliderProps>{
+export interface ISliderState {
+    dragging: boolean;
+    pos: number;
+    oldPos: number;
+}
+
+export default class Slider extends React.Component<ISliderProps, ISliderState>{
+
+    slider: any;
+
+    constructor(props: ISliderProps){
+        super(props);
+
+        this.state = {
+            dragging: false,
+            oldPos: 0,
+            pos: 0
+        };
+    }
 
     render(){
 
-        const {label} = this.props;
+        const {label, tooltip, trackLabels} = this.props;
 
         const slider = this.renderSlider();
 
@@ -49,6 +73,8 @@ export default class Slider extends React.Component<ISliderProps>{
             <div className={styles.sliderContainer}>
                 {label && <label className={styles.sliderLabel} >{label}</label>}
                 {slider}
+                {trackLabels && this.renderTrackLabels()}
+                {tooltip && this.renderTooltip()}
             </div>
         );
     }
@@ -70,6 +96,7 @@ export default class Slider extends React.Component<ISliderProps>{
 
         return (
             <input
+                ref={(slider) => this.slider = slider}
                 id={this.props.id}
                 style={this.props.style}
                 className={`${styles.slider} ${disabled} ${this.props.className}`}
@@ -79,6 +106,9 @@ export default class Slider extends React.Component<ISliderProps>{
                 type="range"
                 onChange={this.onSliderChange}
                 disabled={this.props.disabled}
+                onMouseDown={this.onMouseDown}
+                onMouseUp={this.onMouseUp}
+                onMouseMove={this.onMouseMove}
             />
         );
 
@@ -107,6 +137,42 @@ export default class Slider extends React.Component<ISliderProps>{
         );
     }
 
+    renderTrackLabels = () => {
+
+        const {range, values} = this.props;
+        let type: any[] = [];
+
+        if (range){
+            type = range;
+        } else if (values){
+            type = values;
+        } else {
+            return '';
+        }
+
+        const labels = type.map((label, i) => {
+            return <span key={i} className={styles.trackLabel}>{label}</span>;
+        });
+
+        return (
+            <div className={styles.trackLabels}>
+                {labels}
+            </div>
+        );
+    }
+
+    renderTooltip = () => {
+        const display = this.state.dragging ? {} : {display: 'none'};
+        return (
+            <div
+                style={{...display, left: this.state.pos}}
+                className={styles.tooltip}
+            >
+                {this.props.value}
+            </div>
+        );
+    }
+
     onSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.props.onChange &&
         this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
@@ -116,6 +182,37 @@ export default class Slider extends React.Component<ISliderProps>{
         const value = this.props.values && this.props.values[e.target.value as any];
         this.props.onChange &&
         this.props.onChange(e, {value, dataLabel: this.props.dataLabel});
+    }
+
+    onMouseMove = (e: React.MouseEvent<HTMLInputElement>) => {
+        // const mouseStart = window.innerWidth - e.pageX;
+        const {dragging} = this.state;
+        if (dragging) {
+            // console.log(e.nativeEvent.offsetX);
+            const pos = this.getPosition(e);
+            this.setState({pos});
+        }
+    }
+
+    getPosition = (e: React.MouseEvent<HTMLInputElement>) => {
+        // let pos = e.nativeEvent.offsetX;
+        const sliderWidth = this.slider.offsetWidth - 25;
+        if (e.nativeEvent.offsetX < 0){
+            return 0;
+        } else if (e.nativeEvent.offsetX > sliderWidth){
+            return sliderWidth;
+        } else {
+            return e.nativeEvent.offsetX;
+        }
+    }
+
+    onMouseDown = (e: React.MouseEvent<HTMLInputElement>) => {
+        const pos = this.getPosition(e);
+        this.setState({dragging: true, pos});
+    }
+
+    onMouseUp = (e: React.MouseEvent<HTMLInputElement>) => {
+        this.setState({dragging: false});
     }
 
 }

@@ -1,6 +1,7 @@
 .sliderContainer{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .sliderContainer input[type=range], .sliderContainer input[type=range]::-webkit-slider-thumb {
@@ -30,6 +31,31 @@
     color: #6b6b6b;
      /* font-size: 13px;  */
      font-size: .92857142857rem; 
+     margin-bottom: 5px;
+}
+
+.trackLabels{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.trackLabel {
+    color: #6b6b6b;
+     /* font-size: 13px;  */
+     font-size: .75rem; 
+}
+
+.tooltip{
+    position: absolute;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid #eaeaea;
+    top: -20px;
+    left: 0px;
+    z-index: 1;
+    background: #ffffff;
 }
 
 .sliderContainer input[type=range]::-webkit-slider-thumb {
@@ -40,7 +66,7 @@
     border-radius: 4px;
     background: #efefef;
     cursor: pointer;
-    margin-top: -4px;
+    margin-top: -5px;
     box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
 }
 
