@@ -46,7 +46,6 @@ export interface ISliderProps{
 export interface ISliderState {
     dragging: boolean;
     pos: number;
-    oldPos: number;
 }
 
 export default class Slider extends React.Component<ISliderProps, ISliderState>{
@@ -58,7 +57,6 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
         this.state = {
             dragging: false,
-            oldPos: 0,
             pos: 0
         };
     }
