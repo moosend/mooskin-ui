@@ -1,0 +1,15 @@
+class CarouselExample extends React.Component {
+
+    render(){
+        return(
+            <Carousel>
+                <img width="150" src="http://madewithreact.com/content/images/2016/06/logo-small.png" />
+                <img width="150" src="https://orig00.deviantart.net/1d75/f/2009/220/b/0/spongebob_4_150x150_png_by_somemilk.png" />
+                <img width="150" src="https://orig00.deviantart.net/92ae/f/2009/230/4/1/spongebob_9_150x150_png_by_somemilk.png" />
+                <img width="150" src="https://orig00.deviantart.net/5073/f/2009/220/c/e/spongebob_7_150x150_png_by_somemilk.png" />
+                <img width="150" src="http://www.blindfiveyearold.com/wp-content/uploads/2011/01/homer-simpson-150x150.jpg" />
+                <img width="150" src="http://www.fakesteve.net/wp-content/uploads/2009/12/drooling_homer-712749.gif2-150x150.png" />
+            </Carousel>
+        );
+    }
+}

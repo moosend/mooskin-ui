@@ -1,0 +1,51 @@
+
+.carouselContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.carousel{
+    background: #fff;
+    display: flex;
+    /* flex: 1 0 auto; */
+    /* justify-content: space-around; */
+}
+
+.element{
+    padding: 20px;
+}
+
+.active{
+    display: flex;
+    flex: 1;
+}
+
+.arrowContainer {
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    transition: .5s;
+    box-shadow: -4px 4px 0 #5ccdde;
+    border-bottom-left-radius: 8px;
+}
+
+.arrowLeft {
+    composes: arrow;
+    transform: rotate(45deg);
+}
+
+.arrowRight {
+    composes: arrow;
+    transform: rotate(225deg);
+}
