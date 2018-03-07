@@ -116,6 +116,40 @@ The table can also be paginated using the `paginate` props,
 ```
 in this case the table will be paginated, showing only three rows since a value of 3 is passed, and pagination buttons will appear.
 
+### Row styles via data
+
+Specific rows can be styled by passing a `style` key through the object in the `data` prop.
+
+```
+const data = [
+    {
+        name: 'Geralt of Rivia',
+        weapon: 'Aerondight',
+        abilities: 'Sword fighting, Quen Signs',
+        profession: 'Witcher',
+        allegience: 'School of the Wolf'
+    },
+    {
+        name: 'John Shepard',
+        weapon: 'Vindicator',
+        abilities: 'Weapons, Biotics',
+        profession: 'Commander',
+        allegience: 'Alliance, Citadel',
+        style: {color: '#5ccdde'}
+    }
+];
+
+<Table data={data}>
+    <TableHeader dataField="name" >Name</TableHeader>
+    <TableHeader dataField="profession" hideSmall >Profession</TableHeader>
+    <TableHeader dataField="weapon" hideSmall >Weapon</TableHeader>
+    <TableHeader dataField="abilities" >Abilities</TableHeader>
+    <TableHeader dataField="allegience" hideSmall >Allegience</TableHeader>
+</Table>
+```
+
+in this case, the second object in the array has a style key value, that style will be applied to the second row of the Table, more precicly to all cells in that specific row.
+
 <div class="playground-doc">
 
 ## Supported attributes for Table

@@ -3,6 +3,7 @@ import '../_utils/globals/global.css';
 export {default as Button} from '../Button';
 export {default as CheckListItem} from '../CheckListItem';
 export {default as CheckboxGroup, Checkbox} from '../Checkbox';
+export {default as ClipboardButton} from '../ClipboardButton';
 export {default as DatePicker} from '../DatePicker';
 export {default as Form, FormGroup} from '../Form';
 export {default as FileUpload} from '../File';

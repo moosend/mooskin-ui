@@ -226,9 +226,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
                             const colKey = this.props.smallCollapse ? i + 1 : i;
 
+                            // console.log(obj.style);
+
                             cols[i] = (
                                 <Col
-                                    style={setting.styles}
+                                    style={{...setting.styles, ...obj.style}}
                                     className={`${colStyles} ${styles.colComponent} ${display} ${setting.classes}`}
                                     key={colKey}
                                 >
