@@ -16,7 +16,6 @@ class ButtonExample extends React.Component {
         return(
             <div>
                 <Slider
-                    label="Slider with range"
                     onChange={this.onRangeChange}
                     range={[0, 10]}
                     value={this.state.rangeValue}
@@ -44,12 +43,10 @@ class ButtonExample extends React.Component {
     }
 
     onRangeChange(e, data){
-        console.log(data.value);
         this.setState({rangeValue: data.value});
     }
 
     onValuesChange(e, data){
-        console.log(data.value);
         this.setState({value: data.value});
     }
 

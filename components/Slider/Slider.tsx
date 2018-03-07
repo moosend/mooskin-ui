@@ -30,6 +30,12 @@ export interface ISliderProps{
     /** value of the Slider */
     value: string | number;
 
+    /** fill className */
+    fillClassName?: string;
+
+    /** styles for fill */
+    fillStyle?: React.CSSProperties;
+
     /** range of the Slider */
     range?: number[];
 
@@ -45,7 +51,8 @@ export interface ISliderProps{
 
 export interface ISliderState {
     dragging: boolean;
-    pos: number;
+    left: number;
+    fill: any;
 }
 
 export default class Slider extends React.Component<ISliderProps, ISliderState>{
@@ -57,8 +64,17 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
         this.state = {
             dragging: false,
-            pos: 0
+            fill: <div/>,
+            left: 0
         };
+    }
+
+    componentDidMount(){
+        this.renderFill();
+    }
+
+    componentWillReceiveProps(){
+        this.renderFill();
     }
 
     render(){
@@ -71,6 +87,7 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
             <div className={styles.sliderContainer}>
                 {label && <label className={styles.sliderLabel} >{label}</label>}
                 {slider}
+                {this.state.fill}
                 {trackLabels && this.renderTrackLabels()}
                 {tooltip && this.renderTooltip()}
             </div>
@@ -140,9 +157,10 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
     renderTooltip = () => {
         const display = this.state.dragging ? {} : {display: 'none'};
+        const top = this.props.label ? {} : {top: -40};
         return (
             <div
-                style={{...display, left: this.state.pos}}
+                style={{...display, left: this.state.left, ...top}}
                 className={styles.tooltip}
             >
                 {this.props.value}
@@ -166,8 +184,8 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
         const {dragging} = this.state;
         if (dragging) {
             // console.log(e.nativeEvent.offsetX);
-            const pos = this.getPosition(e);
-            this.setState({pos});
+            const left = this.getPosition(e);
+            this.setState({left});
         }
     }
 
@@ -183,9 +201,28 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
         }
     }
 
+    getThumbPosition = () => {
+        // const width = this.slider ? this.slider.value / this.slider.max : 50;
+        const pos = this.slider.value / this.slider.max;
+        const thumbPos = this.slider.clientWidth * pos;
+        const width = 100 / (this.slider.clientWidth / thumbPos);
+        return width > 98 ? 98 : width;
+    }
+
+    renderFill = () => {
+        const {fillClassName, fillStyle} = this.props;
+        const width = this.slider ? this.getThumbPosition() + '%' : '0%';
+        const top = this.props.label ? {top: '23px'} : {};
+        const disabled = this.props.disabled ? styles.disabledFill : '';
+        const fill = (
+            <div className={`${styles.fill} ${disabled} ${fillClassName}`} style={{width, ...top, ...fillStyle}} />
+        );
+        this.setState({fill});
+    }
+
     onMouseDown = (e: React.MouseEvent<HTMLInputElement>) => {
-        const pos = this.getPosition(e);
-        this.setState({dragging: true, pos});
+        const left = this.getPosition(e);
+        this.setState({dragging: true, left});
     }
 
     onMouseUp = (e: React.MouseEvent<HTMLInputElement>) => {
