@@ -2,7 +2,8 @@
 
 exports[`StatsBox StatsNumber renders correctly 1`] = `
 <div
-  className="statsNumber undefined"
+  className="statsNumber "
+  style={Object {}}
 >
   100%
 </div>
@@ -10,7 +11,8 @@ exports[`StatsBox StatsNumber renders correctly 1`] = `
 
 exports[`StatsBox StatsResult renders correctly 1`] = `
 <div
-  className="statsResult undefined"
+  className="statsResult "
+  style={Object {}}
 >
   5 total
 </div>
@@ -18,7 +20,8 @@ exports[`StatsBox StatsResult renders correctly 1`] = `
 
 exports[`StatsBox StatsTitle renders correctly 1`] = `
 <div
-  className="statsTitle undefined"
+  className="statsTitle "
+  style={Object {}}
 >
   Unique Opens
 </div>
@@ -29,13 +32,22 @@ exports[`StatsBox renders correctly 1`] = `
   className="statsBox "
   style={Object {}}
 >
-  <StatsTitle>
+  <StatsTitle
+    className=""
+    style={Object {}}
+  >
     Unique Opens
   </StatsTitle>
-  <StatsNumber>
+  <StatsNumber
+    className=""
+    style={Object {}}
+  >
     100%
   </StatsNumber>
-  <StatsResult>
+  <StatsResult
+    className=""
+    style={Object {}}
+  >
     5 total
   </StatsResult>
 </div>

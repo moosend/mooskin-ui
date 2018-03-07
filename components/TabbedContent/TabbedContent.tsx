@@ -228,11 +228,6 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
 
 export const Tab: React.StatelessComponent<ITabProps> = (props) => {
 
-    Tab.defaultProps = {
-        className: '',
-        style: {}
-    };
-
     return(
         <div className={`tab-component ${props.className}`} style={props.style}>
             {props.children}
@@ -240,12 +235,12 @@ export const Tab: React.StatelessComponent<ITabProps> = (props) => {
     );
 };
 
-export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
+Tab.defaultProps = {
+    className: '',
+    style: {}
+};
 
-    Header.defaultProps = {
-        className: '',
-        style: {}
-    };
+export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const getClasses = () => {
         switch (props.type) {
@@ -289,12 +284,12 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
     );
 };
 
-export const Content: React.StatelessComponent<IContentProps> = (props) => {
+Header.defaultProps = {
+    className: '',
+    style: {}
+};
 
-    Content.defaultProps = {
-        className: '',
-        style: {}
-    };
+export const Content: React.StatelessComponent<IContentProps> = (props) => {
 
     const displayClass = !props.active ? normal.invisible : normal.visible;
 
@@ -303,4 +298,9 @@ export const Content: React.StatelessComponent<IContentProps> = (props) => {
             {props.children}
         </div>
     );
+};
+
+Content.defaultProps = {
+    className: '',
+    style: {}
 };

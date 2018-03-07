@@ -23,6 +23,11 @@ export interface ITopbarState {
 
 export default class Topbar extends React.Component<ITopbarProps, ITopbarState> {
 
+    static defaultProps = {
+        className: '',
+        style: {}
+    };
+
     prev: any;
 
     constructor(props: ITopbarProps){

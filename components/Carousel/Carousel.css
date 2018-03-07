@@ -1,40 +1,23 @@
 
 .carouselContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-}
-
-.carousel{
-    background: #fff;
-    display: flex;
-    /* flex: 1 0 auto; */
-    /* justify-content: space-around; */
-}
-
-.element{
-    padding: 20px;
-}
-
-.active{
-    display: flex;
-    flex: 1;
+    margin: 0 auto;
+    padding: 20px 40px;
+    width: 700px;
 }
 
 .arrowContainer {
     cursor: pointer;
-    height: 80px;
-    width: 80px;
+    height: 100%;
+    width: 45px;
+    vertical-align: middle;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .arrow {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     transition: .5s;
     box-shadow: -4px 4px 0 #5ccdde;
     border-bottom-left-radius: 8px;
@@ -42,10 +25,87 @@
 
 .arrowLeft {
     composes: arrow;
-    transform: rotate(45deg);
+    transform: rotate(45deg) translateX(15px) translateY(-15px);
 }
 
 .arrowRight {
     composes: arrow;
-    transform: rotate(225deg);
+    transform: rotate(225deg) translateX(15px) translateY(-15px);
 }
+
+.dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.dots li{
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '\2022';
+    text-align: center;
+    opacity: .25;
+    color: #5ccdde;
+    -webkit-font-smoothing: antialiased;
+}
+
+.dots li button:before:hover {
+    opacity: .75;
+}
+
+.dots li.slick-active button::before{
+    background: red;
+}
+
+/* .dots li.slick-active button::before {
+    opacity: 1;
+    color: #5ccdde;
+} */
+
+:global(.slick-next:before){
+    display: none;
+}
+
+:global(.slick-prev:before){
+    display: none;
+}
+
+/* :global(.slick-next){
+    display: flex;
+    
+} */
