@@ -93,7 +93,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
 
         // render back and prev buttons as well as ellipsis as needed
         return currentItem && [
-            firstBtn &&
+            firstBtn && currentItem > 2 &&
             (
                 <PaginationButton
                     key={'asd1'}
@@ -104,7 +104,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     className="pagination-first-btn"
                 />
             ),
-            prevBtn &&
+            prevBtn && currentItem > 1 &&
             (
                 <PaginationButton
                     key={'asd2'}
@@ -140,7 +140,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     className="pagination-ellipsis"
                 />
             ),
-            nextBtn &&
+            nextBtn && currentItem <= items - 1 &&
             (
                 <PaginationButton
                     key={'asd3'}
@@ -151,7 +151,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     className="pagination-next-btn"
                 />
             ),
-            lastBtn &&
+            lastBtn && currentItem < items - 1 &&
             (
                 <PaginationButton
                     key={'asd4'}
