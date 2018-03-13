@@ -89,7 +89,7 @@ describe('Carousel', () => {
         expect(component.find('Carousel').prop('slidesToScroll')).toEqual(2);
         expect(component.find('Carousel').prop('autoplay')).toEqual(true);
         expect(component.find('div').first().prop('className')).toContain('className');
-        expect(component.find('div').first().prop('style')).toEqual({color: 'red'});
+        expect(component.find('div').first().prop('style')).toEqual({color: 'red', width: null});
         expect(component.find('Carousel').prop('autoplay')).toEqual(true);
         expect(component.find('div').first().prop('id')).toEqual('Carousel1');
         // expect(component.find('CarouselComponent').prop('swipeToSlide')).toBeTruthy();

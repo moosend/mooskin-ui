@@ -7,6 +7,7 @@ exports[`Carousel renders correctly 1`] = `
   style={
     Object {
       "color": "red",
+      "width": null,
     }
   }
 >

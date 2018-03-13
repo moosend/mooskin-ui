@@ -15,7 +15,7 @@ export interface ICarouselProps {
     className?: string;
 
     /** override Carousel styles */
-    // style?: React.CSSProperties;
+    style?: React.CSSProperties;
 
     /** container className */
     containerClassName?: string;
@@ -56,6 +56,9 @@ export interface ICarouselProps {
     /** animation speed in milliseconds */
     animationSpeed?: number;
 
+    /** dynamic width for Carousel based on parent node width */
+    dynamicWidth?: boolean;
+
     /** which slide to go to */
     goTo?: number;
 
@@ -81,7 +84,12 @@ export interface ICustomArrowProps {
     onClick?: () => void;
 }
 
-export default class Carousel extends React.Component<ICarouselProps>{
+export interface ICarouselState {
+    width: number;
+    windowsWidth: number;
+}
+
+export default class Carousel extends React.Component<ICarouselProps, ICarouselState>{
 
     static defaultProps = {
         animationSpeed: 500,
@@ -93,6 +101,7 @@ export default class Carousel extends React.Component<ICarouselProps>{
         containerStyle: {},
         dotsClass: '',
         draggable: true,
+        dynamicWidth: true,
         infinite: true,
         pauseOnHover: true,
         slidesToScroll: 1,
@@ -100,17 +109,36 @@ export default class Carousel extends React.Component<ICarouselProps>{
         style: {}
     };
 
-    componentDidMount(){
-        this.overrideArrowStyle();
+    carousel: any;
+
+    constructor(props: ICarouselProps){
+        super(props);
+
+        this.state = {
+            width: this.getParentWidth(),
+            windowsWidth: window.innerWidth
+        };
     }
+
+    componentDidMount(){
+        this.setState({width: this.getParentWidth()});
+        this.overrideArrowStyle();
+        window.addEventListener('resize', this.updateWidth);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateWidth);
+      }
 
     render(){
 
         return(
             <div
                 className={`${styles.carouselContainer} ${this.props.containerClassName}`}
-                style={this.props.containerStyle}
+                // style={{width: this.state.width, ...this.props.containerStyle}}
+                style={{width: this.state.width, ...this.props.containerStyle}}
                 id={this.props.id}
+                ref={(carousel) => this.carousel = carousel}
             >
                 <CarouselComponent
                     slidesToShow={this.props.slidesToShow}
@@ -143,6 +171,17 @@ export default class Carousel extends React.Component<ICarouselProps>{
         for (let index = 0; index < Array.from(arrows).length; index ++){
             arrows[index].style.display = 'flex';
         }
+    }
+
+    getParentWidth = () => {
+        const parent = this.carousel && this.carousel.parentNode;
+        const width = parent && parent.offsetWidth;
+        return width ? width : null;
+    }
+
+    updateWidth = () => {
+        const width = window.innerWidth - this.state.windowsWidth ;
+        this.setState({width: this.state.width + width, windowsWidth: window.innerWidth});
     }
 
 }

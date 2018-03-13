@@ -2,7 +2,6 @@
 .carouselContainer {
     margin: 0 auto;
     padding: 20px 40px;
-    width: 700px;
 }
 
 .arrowContainer {
@@ -16,21 +15,21 @@
 }
 
 .arrow {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     transition: .5s;
-    box-shadow: -4px 4px 0 #5ccdde;
-    border-bottom-left-radius: 8px;
+    box-shadow: -3px 3px 0 #5ccdde;
+    border-bottom-left-radius: 4px;
 }
 
 .arrowLeft {
     composes: arrow;
-    transform: rotate(45deg) translateX(15px) translateY(-15px);
+    transform: rotate(45deg) translateX(4px) translateY(-4px);
 }
 
 .arrowRight {
     composes: arrow;
-    transform: rotate(225deg) translateX(15px) translateY(-15px);
+    transform: rotate(225deg) translateX(4px) translateY(-4px);
 }
 
 .dots {
