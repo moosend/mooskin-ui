@@ -141,3 +141,22 @@
 .disabledFill{
     background: #cccccc;
 }
+
+.edgeClasses {
+    width: 100%;
+}
+
+input.edgeClasses[type=range]::-ms-fill-lower {
+    background: #eeeeee;
+    border: 0.2px solid #aaa;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
+}
+
+input.edgeClasses[type=range]::-ms-fill-upper {
+    background: #fff;
+    box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
+    /* background: transparent; */
+    border-radius: 1.3px;
+    border: 0.2px solid #aaa;
+  }

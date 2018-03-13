@@ -10,7 +10,7 @@ exports[`Slider renders correctly 1`] = `
     Slider Label
   </label>
   <input
-    className="slider disabled myClass"
+    className="slider disabled  myClass"
     disabled={true}
     id="Slider1"
     max={10}

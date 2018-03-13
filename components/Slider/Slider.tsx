@@ -2,6 +2,11 @@ import * as React from 'react';
 
 import styles from './Slider.css';
 
+interface IDocumentProps {
+    documentMode?: any;
+    StyleMedia?: any;
+}
+
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
 export interface ISliderProps{
@@ -84,10 +89,10 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
         const slider = this.renderSlider();
 
         return (
-            <div className={styles.sliderContainer}>
+            <div className={`${styles.sliderContainer}`}>
                 {label && <label className={styles.sliderLabel} >{label}</label>}
                 {slider}
-                {this.state.fill}
+                {!this.isEdge() && this.state.fill}
                 {trackLabels && this.renderTrackLabels()}
                 {tooltip && this.renderTooltip()}
             </div>
@@ -111,13 +116,14 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
     getSliderWithType = (min: number, max: number, value: number, callback: any) => {
 
         const disabled = this.props.disabled ? styles.disabled : '';
+        const edgeClasses = this.isEdge() ? styles.edgeClasses : '';
 
         return (
             <input
                 ref={(slider) => this.slider = slider}
                 id={this.props.id}
                 style={this.props.style}
-                className={`${styles.slider} ${disabled} ${this.props.className}`}
+                className={`${styles.slider} ${disabled} ${edgeClasses} ${this.props.className}`}
                 value={value}
                 min={min}
                 max={max}
@@ -227,6 +233,15 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
     onMouseUp = (e: React.MouseEvent<HTMLInputElement>) => {
         this.setState({dragging: false});
+    }
+
+    isEdge = () => {
+        // tslint:disable-next-line
+        const doc = document as IDocumentProps;
+        const win = window as IDocumentProps;
+        const isIE = false || !!doc.documentMode as IDocumentProps;
+        const isEdge = !isIE && !!win.StyleMedia;
+        return isEdge;
     }
 
 }
