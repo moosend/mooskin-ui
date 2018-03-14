@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import styles from './Input.css';
 
+import {ClipboardButton} from '../index';
+
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 export interface IProps {
@@ -22,7 +24,7 @@ export interface IProps {
     name?: string;
 
     /** override input value */
-    value?: string;
+    value: string;
 
     /** override input placeholder */
     placeholder?: string;
@@ -72,6 +74,12 @@ export interface IProps {
     /** status of the input, error or success */
     status?: 'error' | 'success';
 
+    /** adds clipboardButton to the input component and assigns a label */
+    clipboardButton?: string;
+
+    /** clipboardButton callback function when clicked */
+    onClipboardButtonClick?: (e: React.MouseEvent<HTMLButtonElement>, data: IInputCallbackData) => void;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -104,6 +112,7 @@ class Input extends React.Component<IProps, {}> {
     render(){
 
         const {
+            clipboardButton,
             disabled,
             required,
             type,
@@ -135,28 +144,31 @@ class Input extends React.Component<IProps, {}> {
         return (
             <div className={`input-component ${styles.inputContainer} ${labelPos} ${className}`} style={style}>
                 {label && <label className={inputClasses} style={spacing} htmlFor={this.id}>{label}</label>}
-                <div className={styles.inputDiv}>
-                    <div className={`${styles.innerDiv} ${status} ${reverse}`}>
-                        <input
-                            ref={(input) => this.input = input}
-                            onChange={this.onChange}
-                            id={this.id}
-                            type={type}
-                            name={name}
-                            value={this.props.value}
-                            placeholder={placeholder}
-                            minLength={minlength}
-                            maxLength={maxlength}
-                            required={required}
-                            disabled={disabled}
-                            className={`input ${styles.input} ${disabledInput} ${radius}`}
-                            autoFocus={autofocus}
-                            autoComplete={autocomplete}
-                            onBlur={this.validateOnBlur}
-                        />
-                        {icon && this.getIcon()}
+                <div className={styles.innerContainer}>
+                    <div className={styles.inputDiv}>
+                        <div className={`${styles.innerDiv} ${status} ${reverse}`}>
+                            <input
+                                ref={(input) => this.input = input}
+                                onChange={this.onChange}
+                                id={this.id}
+                                type={type}
+                                name={name}
+                                value={this.props.value}
+                                placeholder={placeholder}
+                                minLength={minlength}
+                                maxLength={maxlength}
+                                required={required}
+                                disabled={disabled}
+                                className={`input ${styles.input} ${disabledInput} ${radius}`}
+                                autoFocus={autofocus}
+                                autoComplete={autocomplete}
+                                onBlur={this.validateOnBlur}
+                            />
+                            {icon && this.getIcon()}
+                        </div>
+                        {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                     </div>
-                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
+                    {clipboardButton && this.getClipboardButton()}
                 </div>
             </div>
         );
@@ -257,6 +269,22 @@ class Input extends React.Component<IProps, {}> {
 
     onIconClick = () => {
         this.input.focus();
+    }
+
+    getClipboardButton = () => {
+        return (
+            <ClipboardButton
+                label={this.props.clipboardButton}
+                value={this.props.value}
+                className={styles.copyButton}
+                onClick={this.onClipboardButtonClick}
+            />
+        );
+    }
+
+    onClipboardButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        this.props.onClipboardButtonClick &&
+        this.props.onClipboardButtonClick(e, {value: this.props.value, dataLabel: this.props.dataLabel});
     }
 }
 

@@ -36,13 +36,13 @@ describe('Input', () => {
 
     test('renders properly into dom and has Placeholder prop', () => {
 
-        const component = shallow(<Input placeholder="username"/>);
+        const component = shallow(<Input value="value" placeholder="username"/>);
 
         expect(component.find('input').prop('placeholder')).toContain('username');
     });
 
     test('renders an input with a "required" prop and minlength', () => {
-        const component = shallow(<Input minlength={5} required/>);
+        const component = shallow(<Input value="value" minlength={5} required/>);
 
         expect(component.find('input').prop('required')).toEqual(true);
         expect(component.find('input').prop('minLength')).toEqual(5);
@@ -57,14 +57,14 @@ describe('Input', () => {
 
     test('renders an input with id and type', () => {
 
-        const component = shallow(<Input type="text" id="1234"/>);
+        const component = shallow(<Input value="value" type="text" id="1234"/>);
 
         expect(component.find('input').prop('id')).toEqual('1234');
         expect(component.find('input').prop('type')).toEqual('text');
     });
 
     test('renders an input with custom css class and style', () => {
-        const component = shallow(<Input style={{color: 'blue'}} className="input-group"/>);
+        const component = shallow(<Input value="value" style={{color: 'blue'}} className="input-group"/>);
 
         expect(component.find('.inputContainer').hasClass('input-group')).toBe(true);
         expect(component.find('.inputContainer').prop('style')).toEqual({color: 'blue'});
@@ -73,7 +73,7 @@ describe('Input', () => {
     test('onChange prop callback is called when a key is pressed', () => {
         const func = jest.fn();
 
-        const component = shallow(<Input onChange={func}/>);
+        const component = shallow(<Input value="value" onChange={func}/>);
 
         component.find('input').simulate('change', { target: { value: 'text' }});
         expect(func).toHaveBeenCalled();
@@ -110,9 +110,16 @@ describe('Input', () => {
 
     test('Icon is valid when icon prop is passed', () => {
 
-        const component = shallow(<Input icon="check" />);
+        const component = shallow(<Input value="value" icon="check" />);
 
         expect(component.find('.icon').length).toBe(1);
+    });
+
+    test('clipboardButton is available when the prop is passed', () => {
+
+        const component = mount(<Input value="value" clipboardButton="Copy Text" />);
+
+        expect(component.find('Button').length).toBe(1);
     });
 
 });

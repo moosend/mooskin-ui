@@ -566,6 +566,37 @@ describe('Table', () => {
 
     });
 
+    test('Assigns rows without pagination', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt',
+                style: {background: '#5ccdde'}
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('Col').last().prop('style')).toEqual({background: '#5ccdde'});
+
+    });
+
     // test('Assigns rows with pagination', () => {
 
     //     const data = [
