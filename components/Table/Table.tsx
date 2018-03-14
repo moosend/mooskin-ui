@@ -517,11 +517,6 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
 export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
 
-    TableHeader.defaultProps = {
-        className: '',
-        style: {}
-    };
-
     const display = props.hideSmall ? styles.hide : '';
 
     return(
@@ -536,12 +531,12 @@ export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
 
 };
 
-export const Row: React.StatelessComponent<IRowProps> = (props) => {
+TableHeader.defaultProps = {
+    className: '',
+    style: {}
+};
 
-    Row.defaultProps = {
-        className: '',
-        style: {}
-    };
+export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
     return(
         <tr className={`row ${styles.row} ${props.className}`} style={props.style}>
@@ -550,12 +545,12 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
     );
 };
 
-export const Col: React.StatelessComponent<IColProps> = (props) => {
+Row.defaultProps = {
+    className: '',
+    style: {}
+};
 
-    Col.defaultProps = {
-        className: '',
-        style: {}
-    };
+export const Col: React.StatelessComponent<IColProps> = (props) => {
 
     return(
         <td className={`column ${props.className}`} style={props.style}>
@@ -564,12 +559,12 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
     );
 };
 
-export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
+Col.defaultProps = {
+    className: '',
+    style: {}
+};
 
-    Popover.defaultProps = {
-        className: '',
-        style: {}
-    };
+export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
 
     const active = !props.active ? styles.inactive : styles.active;
 
@@ -579,4 +574,9 @@ export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
         </div>
     );
 
+};
+
+Popover.defaultProps = {
+    className: '',
+    style: {}
 };

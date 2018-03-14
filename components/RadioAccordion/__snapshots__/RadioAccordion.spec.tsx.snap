@@ -52,7 +52,9 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
   >
     <RadioAccordionContent
       active={false}
+      className=""
       key="0"
+      style={Object {}}
       title="title1"
     >
       Content1
@@ -67,7 +69,9 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
   >
     <RadioAccordionContent
       active={true}
+      className=""
       key="1"
+      style={Object {}}
       title="title2"
     >
       Content2
@@ -84,6 +88,7 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
       active={false}
       className="classname"
       key="2"
+      style={Object {}}
       title="title3"
     >
       Content3

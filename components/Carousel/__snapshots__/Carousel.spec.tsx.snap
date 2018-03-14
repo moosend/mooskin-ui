@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel renders correctly 1`] = `
+<div
+  className="carouselContainer className"
+  id="Carousel1"
+  style={
+    Object {
+      "color": "red",
+      "width": null,
+    }
+  }
+>
+  <Slider
+    afterChange={[Function]}
+    arrows={true}
+    autoplay={true}
+    autoplaySpeed={3000}
+    className="carousel myClass"
+    draggable={true}
+    infinite={true}
+    nextArrow={
+      <CustomArrow
+        direction="right"
+      />
+    }
+    pauseOnHover={true}
+    prevArrow={
+      <CustomArrow
+        direction="left"
+      />
+    }
+    slidesToScroll={2}
+    slidesToShow={2}
+    speed={500}
+    swipeToSlide={true}
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <img
+        src="https://orig00.deviantart.net/1d75/f/2009/220/b/0/spongebob_4_150x150_png_by_somemilk.png"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <img
+        src="https://orig00.deviantart.net/92ae/f/2009/230/4/1/spongebob_9_150x150_png_by_somemilk.png"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <img
+        src="http://www.blindfiveyearold.com/wp-content/uploads/2011/01/homer-simpson-150x150.jpg"
+      />
+    </div>
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <img
+        src="http://www.fakesteve.net/wp-content/uploads/2009/12/drooling_homer-712749.gif2-150x150.png"
+      />
+    </div>
+  </Slider>
+</div>
+`;

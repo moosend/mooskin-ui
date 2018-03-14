@@ -249,3 +249,7 @@ export const PaginationButton: React.StatelessComponent<IPaginationButtonProps> 
         </div>
     );
 };
+
+PaginationButton.defaultProps = {
+    className: ''
+};

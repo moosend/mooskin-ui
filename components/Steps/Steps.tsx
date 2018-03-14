@@ -86,6 +86,10 @@ export const Step: React.StatelessComponent<IStepProps> = (props) => {
     );
 };
 
+Step.defaultProps = {
+    className: ''
+};
+
 export const StepBody: React.StatelessComponent<IStepBodyProps> = (props) => {
 
     const display = props.active ? 'block' : 'none';

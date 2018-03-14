@@ -442,11 +442,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
 export const SidebarItem: React.StatelessComponent<ISideBarItemProps> = (props) => {
 
-    SidebarItem.defaultProps = {
-        className: '',
-        style: {}
-    };
-
     const getImage = () => {
         if (!props.active){
             return props.image;
@@ -494,4 +489,9 @@ export const SubMenu: React.StatelessComponent<ISubMenuProps> = (props) => {
             {props.children}
         </div>
     );
+};
+
+SidebarItem.defaultProps = {
+    className: '',
+    style: {}
 };

@@ -22,6 +22,11 @@ export interface IFieldsetProps{
 
 export default class Fieldset extends React.Component<IFieldsetProps, {}>{
 
+    static defaultProps = {
+        className: '',
+        style: {}
+    };
+
     render(){
 
         return (
