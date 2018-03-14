@@ -58,6 +58,11 @@ export interface IListState {
 
 export default class List extends React.Component<IListProps, IListState>{
 
+    static defaultProps = {
+        className: '',
+        style: {}
+    };
+
     constructor(props: IListProps){
         super(props);
 
@@ -112,7 +117,7 @@ export default class List extends React.Component<IListProps, IListState>{
     }
 }
 
-export const ListItem = (props: IListItemProps) => {
+export const ListItem: React.StatelessComponent<IListItemProps> = (props) => {
 
     const {className, description, image, style, title} = props;
 
@@ -168,4 +173,9 @@ export const ListItem = (props: IListItemProps) => {
             {getContent()}
         </div>
     );
+};
+
+ListItem.defaultProps = {
+    className: '',
+    style: {}
 };

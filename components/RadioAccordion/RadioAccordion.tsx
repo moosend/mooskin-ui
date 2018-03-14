@@ -132,11 +132,6 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
 
 export const RadioAccordionContent: React.StatelessComponent<IContentProps> = (props) => {
 
-    RadioAccordionContent.defaultProps = {
-        className: '',
-        style: {}
-    };
-
     const displayClass = !props.active ? styles.invisible : styles.visible;
 
     return (
@@ -178,4 +173,9 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
             </div>
         </div>
     );
+};
+
+RadioAccordionContent.defaultProps = {
+    className: '',
+    style: {}
 };

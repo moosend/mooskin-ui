@@ -30,7 +30,8 @@ class TabbedContentExample extends React.Component {
                 weapon: 'Vindicator',
                 abilities: 'Weapons, Biotics',
                 profession: 'Commander',
-                allegience: 'Alliance, Citadel'
+                allegience: 'Alliance, Citadel',
+                style: {color: '#5ccdde'}
             }
         ];
 

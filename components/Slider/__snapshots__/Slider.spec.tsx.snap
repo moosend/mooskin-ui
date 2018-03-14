@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider renders correctly 1`] = `
+<div
+  className="sliderContainer"
+>
+  <label
+    className="sliderLabel"
+  >
+    Slider Label
+  </label>
+  <input
+    className="slider disabled  myClass"
+    disabled={true}
+    id="Slider1"
+    max={10}
+    min={0}
+    onChange={[Function]}
+    onMouseDown={[Function]}
+    onMouseMove={[Function]}
+    onMouseUp={[Function]}
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+    type="range"
+    value={4}
+  />
+  <div
+    className="fill disabledFill undefined"
+    style={
+      Object {
+        "top": "23px",
+        "width": "0%",
+      }
+    }
+  />
+  <div
+    className="trackLabels"
+  >
+    <span
+      className="trackLabel"
+      key="0"
+    >
+      0
+    </span>
+    <span
+      className="trackLabel"
+      key="1"
+    >
+      10
+    </span>
+  </div>
+  <div
+    className="tooltip"
+    style={
+      Object {
+        "display": "none",
+        "left": 0,
+      }
+    }
+  >
+    4
+  </div>
+</div>
+`;

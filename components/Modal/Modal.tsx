@@ -23,6 +23,11 @@ export interface IModalProps{
 
 export default class Modal extends React.Component<IModalProps, {}>{
 
+    static defaultProps = {
+        className: '',
+        style: {}
+    };
+
     render() {
 
         const display = this.props.active ? styles.on : styles.off;

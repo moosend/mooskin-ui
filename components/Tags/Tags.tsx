@@ -648,3 +648,8 @@ export const Tag: React.StatelessComponent<ITagProps> = (props) => {
         </div>
     );
 };
+
+Tag.defaultProps = {
+    className: '',
+    style: {}
+};

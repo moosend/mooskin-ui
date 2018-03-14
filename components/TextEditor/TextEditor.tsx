@@ -174,9 +174,11 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     componentDidMount(){
+        const {draggable, toolbarOnFocus} = this.props;
         const htmlContent = draftToHtml(convertToRaw(this.props.editorState.getCurrentContent()));
         this.setState({htmlContent});
         this.addColorPickerEvents();
+        draggable && toolbarOnFocus && this.addEvents();
     }
 
     componentWillReceiveProps(nextProps: ITextEditorProps) {
@@ -202,9 +204,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         const display = label ? {display: 'block'} : {display: 'none'};
 
-        this.addColorPickerEvents();
-
-        draggable && toolbarOnFocus && this.addEvents();
         const dragClass = draggable && toolbarOnFocus ? styles.draggable : '';
 
         const absoluteToolbar = toolbarOnFocus ? styles.toolbarOnFocus : '';
