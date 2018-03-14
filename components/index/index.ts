@@ -24,6 +24,7 @@ export {default as Steps, Step} from '../Steps';
 export {default as SideBar, SidebarItem} from '../SideBar';
 export {default as SmallIconButton} from '../SmallIconButton';
 export {default as Select, Option} from '../Select';
+export {default as Slider} from '../Slider';
 export {default as Switch} from '../Switch';
 export {default as StatsBox, StatsTitle, StatsNumber, StatsResult} from '../StatsBox';
 export {default as TextArea} from '../TextArea';
