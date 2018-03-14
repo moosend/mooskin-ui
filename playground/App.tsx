@@ -46,6 +46,7 @@ import {
     Select,
     SideBar,
     SidebarItem,
+    Slider,
     SmallIconButton,
     StatsBox,
     StatsNumber,
@@ -252,6 +253,9 @@ export const App = (props: any) => {
                 </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('StatsBox', { StatsBox, StatsNumber, StatsResult, StatsTitle })}
+                </Col>
+                <Col lg={6} md={6}>
+                    {renderEditableExample('Slider', { H3, Slider })}
                 </Col>
                 <Col lg={12} md={12}>
                     {renderEditableExample('Carousel', { Carousel })}
