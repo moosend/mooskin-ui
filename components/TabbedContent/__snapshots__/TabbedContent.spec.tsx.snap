@@ -16,7 +16,7 @@ exports[`TabbedContent renders Header properly according to snapshot 1`] = `
 
 exports[`TabbedContent renders Tab properly according to snapshot 1`] = `
 <div
-  className="tab-component undefined"
+  className="tab-component "
   style={
     Object {
       "color": "blue",
@@ -133,30 +133,39 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
     >
       <Content
         active={false}
+        className=""
         key="0"
+        style={Object {}}
       >
         <div
-          className="content-component invisible undefined"
+          className="content-component invisible "
+          style={Object {}}
         >
           Table
         </div>
       </Content>
       <Content
         active={true}
+        className=""
         key="1"
+        style={Object {}}
       >
         <div
-          className="content-component visible undefined"
+          className="content-component visible "
+          style={Object {}}
         >
           Some Content
         </div>
       </Content>
       <Content
         active={false}
+        className=""
         key="2"
+        style={Object {}}
       >
         <div
-          className="content-component invisible undefined"
+          className="content-component invisible "
+          style={Object {}}
         >
           Blla blla
         </div>

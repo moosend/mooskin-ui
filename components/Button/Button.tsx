@@ -28,7 +28,7 @@ export interface IButtonProps {
     onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
 
     /** children can only be a string */
-    children?: string;
+    children?: Element | string;
 }
 
 export default class Button extends React.Component<IButtonProps, {}> {

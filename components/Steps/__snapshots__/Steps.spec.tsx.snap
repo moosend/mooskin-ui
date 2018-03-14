@@ -9,18 +9,21 @@ exports[`Steps renders correctly 1`] = `
   >
     <Step
       active={true}
+      className=""
       id="1"
       title="Step 1"
     >
       Content 1
     </Step>
     <Step
+      className=""
       id="2"
       title="Step 2"
     >
       Content 2
     </Step>
     <Step
+      className=""
       id="3"
       title="Step 3"
     >

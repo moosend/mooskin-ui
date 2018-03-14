@@ -213,16 +213,16 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
     // }
 
     getRadios = () => {
+        const data = this.props.selectedRadios.length === 0 ? this.getChildrenData() : this.props.selectedRadios;
         if (this.props.children){
-            let data = this.props.selectedRadios.length === 0 ? this.getChildrenData() : this.props.selectedRadios;
-            data = this.checkEmpty(data);
+            // data = this.checkEmpty(data);
             if (this.checkSelected(data)){
                 return this.getChildren(data);
             } else {
                 throw new Error('Only one <Radio> element should have the selected prop');
             }
         } else {
-            const data = this.checkEmpty(this.props.selectedRadios);
+            // const data = this.checkEmpty(this.props.selectedRadios);
             if (this.checkSelected(data)){
                 return this.getPropsRadios(data);
             } else {
@@ -231,18 +231,18 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
         }
     }
 
-    checkEmpty = (data: IRadioData[]) => {
-        let selected = false;
-        data.map((radio) => {
-            if (radio.selected === true){
-                selected = true;
-            }
-        });
-        if (selected === false && data.length > 0){
-            data[0].selected = true;
-        }
-        return data;
-    }
+    // checkEmpty = (data: IRadioData[]) => {
+    //     let selected = false;
+    //     data.map((radio) => {
+    //         if (radio.selected === true){
+    //             selected = true;
+    //         }
+    //     });
+    //     if (selected === false && data.length > 0){
+    //         data[0].selected = true;
+    //     }
+    //     return data;
+    // }
 
     getChildrenData = () => {
         const data: IRadioData[] = [];
@@ -382,4 +382,9 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
             </label>
         </div>
     );
+};
+
+Radio.defaultProps = {
+    className: '',
+    style: {}
 };

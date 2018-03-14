@@ -50,5 +50,6 @@
     "function-bind",
     "object-keys"
   ],
-  "setupTestFrameworkScriptFile": "<rootDir>/components/_utils/adapter.ts"  
+  "setupTestFrameworkScriptFile": "<rootDir>/components/_utils/adapter.ts",
+  "setupFiles": ["<rootDir>/components/_utils/test-setup.ts"]
 }

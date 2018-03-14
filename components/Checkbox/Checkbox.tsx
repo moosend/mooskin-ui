@@ -205,7 +205,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
             if (React.isValidElement<ICheckBoxProps>(child)){
                 const checked = data[index].checked === true ? true : false;
                 const value = data[index].value ? data[index].value : `checkbox${index}`;
-                const label = data[index].label ? data[index].label : value;
+                // const label = data[index].label ? data[index].label : value;
                 const extraProps: Partial<ICheckBoxProps & {key: number}> = {
                     checked: data[index].checked,
                     horizontal: this.props.horizontal,
@@ -213,7 +213,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                     label: data[index].label,
                     name: this.name,
                     onClick: /** child.props.onClick ? child.props.onClick : */
-                            this.onClick({checked, value, label}, data),
+                            this.onClick({checked, value, label: data[index].label}, data),
                     spacing: this.props.spacing,
                     status: this.props.status,
                     value
@@ -233,16 +233,16 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
         data.forEach((check, index) => {
             const checked = check.checked === true ? true : false;
             const value = check.value ? check.value : `checkbox${index}`;
-            const label = check.label ? check.label : value;
+            // const label = check.label ? check.label : value;
 
             checkBoxes.push(
                 <Checkbox
                     checked={checked}
                     horizontal={this.props.horizontal}
                     key={index}
-                    label={label}
+                    label={check.label}
                     name={this.name}
-                    onClick={this.onClick({checked, value, label}, data)}
+                    onClick={this.onClick({checked, value, label: check.label}, data)}
                     spacing={this.props.spacing}
                     status={this.props.status}
                     value={value}
@@ -283,11 +283,6 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
 
 export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
 
-    Checkbox.defaultProps = {
-        className: '',
-        style: {}
-    };
-
     const generateId = () => {
         return Math.random().toString(36).substr(2, 10);
     };
@@ -305,7 +300,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
 
     const status = getStatus();
     const disabledStyles = props.disabled ? styles.disabledCheckbox : '';
-    const label = props.label ? props.label : props.value;
+    const label = props.label || '';
     const checked = props.checked ? true : false;
     const checkedStyles = !props.checked ? '' : styles.checkboxChecked;
     const spacing = props.spacing ?
@@ -346,4 +341,9 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
             <i className={styles.description}>{props.description}</i>
         </div>
     );
+};
+
+Checkbox.defaultProps = {
+    className: '',
+    style: {}
 };

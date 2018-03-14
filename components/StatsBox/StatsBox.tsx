@@ -45,10 +45,25 @@ export const StatsTitle: React.StatelessComponent<IStatsBoxChildProps> = (props)
     return <div style={props.style} className={`${styles.statsTitle} ${props.className}`}>{props.children}</div>;
 };
 
+StatsTitle.defaultProps = {
+    className: '',
+    style: {}
+};
+
 export const StatsNumber: React.StatelessComponent<IStatsBoxChildProps> = (props) => {
     return <div style={props.style} className={`${styles.statsNumber} ${props.className}`}>{props.children}</div>;
 };
 
+StatsNumber.defaultProps = {
+    className: '',
+    style: {}
+};
+
 export const StatsResult: React.StatelessComponent<IStatsBoxChildProps> = (props) => {
     return <div style={props.style} className={`${styles.statsResult} ${props.className}`}>{props.children}</div>;
+};
+
+StatsResult.defaultProps = {
+    className: '',
+    style: {}
 };

@@ -1,0 +1,53 @@
+class ButtonExample extends React.Component {
+
+    constructor(props){
+        super(props);
+
+        this.onRangeChange = this.onRangeChange.bind(this);
+        this.onValuesChange = this.onValuesChange.bind(this);
+
+        this.state = {
+            rangeValue: 3,
+            value: 34
+        }
+    }
+
+    render(){
+        return(
+            <div>
+                <Slider
+                    onChange={this.onRangeChange}
+                    range={[0, 10]}
+                    value={this.state.rangeValue}
+                    tooltip
+                />
+                <br/>
+                <Slider
+                    label="Slider with custom values"
+                    onChange={this.onValuesChange}
+                    values={['hello', 34, 'MOO!!', 98]}
+                    value={this.state.value}
+                    trackLabels
+                    tooltip
+                />
+                <br/>
+                <Slider
+                    disabled
+                    label="Disabled"
+                    onChange={this.onRangeChange}
+                    range={[0, 10]}
+                    value={7}
+                />
+            </div>
+        );
+    }
+
+    onRangeChange(e, data){
+        this.setState({rangeValue: data.value});
+    }
+
+    onValuesChange(e, data){
+        this.setState({value: data.value});
+    }
+
+}

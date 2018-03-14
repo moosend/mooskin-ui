@@ -86,17 +86,19 @@ exports[`Radio renders RadioGroup correctly 1`] = `
       className=""
     >
       <Radio
+        className=""
         key="0"
         label="Radio1"
         name="1482363367071"
         onClick={[Function]}
         selected={true}
         spacing={10}
+        style={Object {}}
         value="Radio1"
         vertical={true}
       >
         <div
-          className="radio-component radio  undefined radioChecked"
+          className="radio-component radio   radioChecked"
           style={
             Object {
               "marginBottom": "10px",
@@ -122,17 +124,19 @@ exports[`Radio renders RadioGroup correctly 1`] = `
         </div>
       </Radio>
       <Radio
+        className=""
         key="1"
         label="Radio2"
         name="1482363367071"
         onClick={[Function]}
         selected={false}
         spacing={10}
+        style={Object {}}
         value="Radio2"
         vertical={true}
       >
         <div
-          className="radio-component radio  undefined "
+          className="radio-component radio   "
           style={
             Object {
               "marginBottom": "10px",
@@ -158,17 +162,19 @@ exports[`Radio renders RadioGroup correctly 1`] = `
         </div>
       </Radio>
       <Radio
+        className=""
         key="2"
         label="Radio3"
         name="1482363367071"
         onClick={[Function]}
         selected={false}
         spacing={10}
+        style={Object {}}
         value="Radio3"
         vertical={true}
       >
         <div
-          className="radio-component radio  undefined "
+          className="radio-component radio   "
           style={
             Object {
               "marginBottom": "10px",

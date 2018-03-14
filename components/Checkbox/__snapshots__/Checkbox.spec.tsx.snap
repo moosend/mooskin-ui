@@ -92,17 +92,19 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
     >
       <Checkbox
         checked={true}
+        className=""
         horizontal={true}
         key="0"
         label="Checkbox1"
         name="1482363367071"
         onClick={[Function]}
         spacing={10}
+        style={Object {}}
         value="Checkbox1"
       >
         <div
           className="checkbox-component checkbox
-                     undefined checkboxChecked undefined"
+                      checkboxChecked undefined"
           style={
             Object {
               "marginRight": "10px",
@@ -133,17 +135,19 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
       </Checkbox>
       <Checkbox
         checked={false}
+        className=""
         horizontal={true}
         key="1"
         label="Checkbox2"
         name="1482363367071"
         onClick={[Function]}
         spacing={10}
+        style={Object {}}
         value="Checkbox2"
       >
         <div
           className="checkbox-component checkbox
-                     undefined  undefined"
+                       undefined"
           style={
             Object {
               "marginRight": "10px",
@@ -174,17 +178,19 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
       </Checkbox>
       <Checkbox
         checked={false}
+        className=""
         horizontal={true}
         key="2"
         label="Checkbox3"
         name="1482363367071"
         onClick={[Function]}
         spacing={10}
+        style={Object {}}
         value="Checkbox3"
       >
         <div
           className="checkbox-component checkbox
-                     undefined  undefined"
+                       undefined"
           style={
             Object {
               "marginRight": "10px",
