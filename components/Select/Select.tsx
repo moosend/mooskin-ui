@@ -53,7 +53,7 @@ export interface ISelectProps {
     style?: React.CSSProperties;
 
     /** children here can only be Option elements */
-    children?: Array<React.ReactElement<IOptionProps>> | React.ReactElement<IOptionProps> | Element[];
+    children?: Array<React.ReactElement<IOptionProps>> | React.ReactElement<IOptionProps> | JSX.Element[];
 }
 
 export interface ISelectState {
