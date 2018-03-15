@@ -168,7 +168,9 @@ class Input extends React.Component<IProps, {}> {
                         </div>
                         {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                     </div>
-                    {clipboardButton && this.getClipboardButton()}
+                    <div>
+                        {clipboardButton && this.getClipboardButton()}
+                    </div>
                 </div>
             </div>
         );
