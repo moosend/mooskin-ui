@@ -274,7 +274,7 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     return(
         <div
-            className={`tab-header ${style.header} ${activeTab} ${align}`}
+            className={`tab-header ${style.header} ${activeTab} ${align} ${props.className}`}
             style={{width: props.width, ...props.style}}
             onClick={props.onClick}
         >

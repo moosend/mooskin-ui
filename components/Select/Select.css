@@ -1,8 +1,14 @@
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
 
+.componentContainer{
+    display: flex;
+    flex: 1 0 auto;
+}
+
 .selectContainer{
     position: relative;
+    flex: 1 0 auto;
 }
 
 .innerDiv{
@@ -26,7 +32,6 @@
     color: #bebebe;
 }
  
-
 .selectIcon{
     min-width: 50px;
     height: 100%;
@@ -44,7 +49,7 @@
     font-size: 0.875rem;
     border-radius: 8px;
     background: var(--inputBackground);
-    min-width:120px;
+    /* min-width:120px; */
     height:50px;
     display:flex;
     flex-direction: row;
@@ -86,7 +91,6 @@
     margin:0;
 }
 
-
 .optionsContainer ul li{
     font-family: var(--inputFontFamily);
     padding:10px;
@@ -104,6 +108,10 @@
 
 }
 
+.column {
+    flex-direction: column;
+}
+
 .optionsContainer ul li:hover{
     background: #e4e4e4;
 }
@@ -112,12 +120,18 @@
     background: #e4e4e4;
 }
 
-
 .label {
     color: #6b6b6b;
     /*font-size: 16px;*/
     font-size: 1rem;
-    margin-bottom: 10px;
+    flex-basis: 150px;
+    padding-top: 15px;
+}
+
+.topLabel {
+    flex-basis: auto;
+    padding-top: 0px;
+    margin-left: 3px;
 }
 
 .description{
@@ -143,3 +157,17 @@
 .descSuccess{
     color: #00cc44;
 }
+
+@media (--xSmall){
+    .componentContainer{
+        flex-direction: column;
+    }
+
+    .label {
+        padding-top: 0;
+        margin-left: 3px;
+        flex-basis: auto; 
+    };
+
+}
+

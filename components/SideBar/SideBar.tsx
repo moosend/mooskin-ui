@@ -173,6 +173,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     }
 
     getInitialState = () => {
+
         return {
             display: this.props.button ? false : true,
             smallDisplay: false
@@ -296,6 +297,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                         className={`${isFixed} ${smallDisplay} ${item.props.subMenuClasses}`}
                         style={item.props.subMenuStyle}
                         display={this.displaySubMenu(index)}
+                        onMouseEnter={this.subMenuOn(index)}
                     >
                         {this.getSubMenuItems(items)}
                     </SubMenu>

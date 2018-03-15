@@ -19,6 +19,9 @@ export interface ISelectProps {
     /** select box label */
     label?: string;
 
+    /** place label on top of Select */
+    labelTop?: boolean;
+
     /** select box placeholder */
     placeholder?: string;
 
@@ -50,7 +53,7 @@ export interface ISelectProps {
     style?: React.CSSProperties;
 
     /** children here can only be Option elements */
-    children?: Array<React.ReactElement<IOptionProps>> | React.ReactElement<IOptionProps>;
+    children?: Array<React.ReactElement<IOptionProps>> | React.ReactElement<IOptionProps> | Element[];
 }
 
 export interface ISelectState {
@@ -109,11 +112,15 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const status = this.getStatus();
         const descStatus = this.getDescStatus();
 
+        const labelPos = this.props.labelTop ? styles.column : '';
+        const topLabel = this.props.labelTop ? styles.topLabel : '';
+
         return (
-            <div className={`select-component ${this.props.className}`} style={this.props.style}>
-                <label className={styles.label}>
-                    {this.props.label}
-                </label>
+            <div
+                className={`select-component ${styles.componentContainer} ${labelPos} ${this.props.className}`}
+                style={this.props.style}
+            >
+                {this.props.label && <label className={`${styles.label} ${topLabel}`}>{this.props.label}</label>}
                 <div
                     onClick={this.onCloseList}
                     className={styles.overlay}
