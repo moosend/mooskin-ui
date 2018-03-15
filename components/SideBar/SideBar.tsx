@@ -290,6 +290,17 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
             const smallDisplay = this.state.smallDisplay && this.state.smallActiveItem === index ?
                                 styles.smallSubOn : styles.smallSubOff;
 
+            if (item.props.subMenuFixed){
+                return (
+                    <SubMenu
+                        className={`${isFixed} ${smallDisplay} ${item.props.subMenuClasses}`}
+                        style={item.props.subMenuStyle}
+                        display={this.displaySubMenu(index)}
+                    >
+                        {this.getSubMenuItems(items)}
+                    </SubMenu>
+                );
+            }
             return (
                 <SubMenu
                     className={`${isFixed} ${smallDisplay} ${item.props.subMenuClasses}`}
@@ -301,6 +312,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                     {this.getSubMenuItems(items)}
                 </SubMenu>
             );
+
         }
     }
 
