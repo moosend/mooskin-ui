@@ -9,7 +9,7 @@ export interface ITableProps{
     /** override Table id */
     id?: string;
 
-    data: object[] | Element;
+    data: object[] | Element[];
 
     /** Table class */
     className?: string;
