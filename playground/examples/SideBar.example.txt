@@ -85,6 +85,7 @@ class SideBarExample extends React.Component {
                 <SidebarItem
                     style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}
                     subMenuStyle={{top: 80}}
+                    subMenuFixed
                 >
                     <img src="http://media.moddb.com/cache/images/mods/1/13/12172/thumb_620x2000/republic_symbol.png" width={50}/>
                     Custom with<br/>
