@@ -24,7 +24,6 @@
     flex-direction: column;
 }
 
-
 @media (--xSmall){
     .horizontal{display: flex; flex-direction: column}
 }

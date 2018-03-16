@@ -15,27 +15,27 @@
     display: flex;
     flex-direction: column;
     flex: 1; 
-    margin-right: 10px;
-    padding-right: 10px;
-    border-right: 1px solid var(--moosendBlue);
+    border-radius: 8px;
+    background: #efefef;
+    /* border-right: 1px solid var(--moosendBlue); */
 }
 
-.headingV > .header + .header{
+/* .headingV > .header + .header{
     margin-top: 10px;
-}
+} */
 
 .headingH {
     display: flex;
     flex: 1;
     flex-direction: row;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--moosendBlue);
+    border-radius: 8px;
+    background: #efefef;
+    /* border-bottom: 1px solid var(--moosendBlue); */
 }
 
-.headingH > .header + .header{
+/* .headingH > .header + .header{
     margin-left: 10px;
-}
+} */
 
 .content{
     color: #7b7b7b;
@@ -52,24 +52,27 @@
 
 .header {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
     border-radius: 8px;
-    color: var(--moosendBlue);
+    /* color: var(--moosendBlue); */
+    color: #aaa;
+    font-size: 1.125rem;
     background: transparent;
     transition: background-color 0.3s;
-    border: 1px solid var(--moosendBlue);
-    padding: 12px;
+    /* border: 1px solid var(--moosendBlue); */
+    padding: 20px;
     cursor: pointer;
 }
 
-.header:hover {
+/* .header:hover {
     background-color: var(--radioHover);
     color: #fff;
     border-color: var(--radioHover);
-}
+} */
 
-.header input[type='radio'] {
+/* .header input[type='radio'] {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,20 +85,20 @@
     background: #fff;
     border-radius:50%;
     border: 1px solid var(--moosendBlue);
-}
+} */
 
-.header:hover input[type='radio']{
+/* .header:hover input[type='radio']{
     border-color: var(--radioHover);
-}
+} */
 
-.header input[type='radio']:checked::after {
+/* .header input[type='radio']:checked::after {
     background: var(--moosendBlue);
     content:'';
     display: block;
     width: 0.375rem;
     height: 0.375rem;
     border-radius:50%; 
-}
+} */
 
 .header label {
     display: flex;
@@ -125,9 +128,9 @@
     border-color: var(--moosendBlue);
 }
 
-.activeHeader:hover input[type='radio']{
+/* .activeHeader:hover input[type='radio']{
     border-color: var(--moosendBlue);
-}
+} */
 
 .visible {
     display: block;

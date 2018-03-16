@@ -21,6 +21,12 @@
     flex-direction: row;
 }
 
+/* .alternateHeading {
+    compose: heading;
+    background: #efefef;
+    border-radius: 8px;
+} */
+
 .headingH {
     flex: 1 0 auto;
     border-bottom:10px solid #efefef;

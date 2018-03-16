@@ -110,40 +110,6 @@ class TabbedContentExample extends React.Component {
                                 </Content>
                             </Tab>
                         </TabbedContent>
-                        <H2>Radio Tabs</H2>
-                        <TabbedContent vertical type="radio">
-                            <Tab>
-                                <Header>Click here!</Header>
-                                <Content>
-                                    Nice Content eh?
-                                </Content>
-                            </Tab>
-                            <Tab>
-                                <Header>I'm a radio too</Header>
-                                <Content style={{color: '#5CCDDF', fontStyle: 'italic'}}>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                </Content>
-                            </Tab>
-                            <Tab>
-                                <Header>Let's try a heading</Header>
-                                <Content style={{color: '#5CCDDF', fontStyle: 'italic'}}>
-                                    <H2 style={{margin: '0px 0px 10px 0px'}}>
-                                        H2 heading incoming!
-                                    </H2>
-                                    ...and some text of course!
-                                </Content>
-                            </Tab>
-                            <Tab>
-                                <Header>Mix of elements</Header>
-                                <Content style={{color: '#5CCDDF', fontStyle: 'italic'}}>
-                                    <H2 style={{margin: '0px 0px 10px 10px'}}>
-                                        H2 heading incoming!
-                                    </H2>
-                                    <Input placeholder="Yoohoo tabs!"/>
-                                    <Button>Ah..Tabs...</Button>
-                                </Content>
-                            </Tab>
-                        </TabbedContent>
                     </Col>
                 </Row>
             </Grid>
