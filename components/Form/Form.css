@@ -14,13 +14,13 @@
 
 .horizontal{
     display: flex;
-    flex: 1 0 auto;
+    flex: 1;
     flex-direction: row;
 }
 
 .vertical{
     display: flex;
-    flex: 1 0 auto;
+    flex: 1;
     flex-direction: column;
 }
 
