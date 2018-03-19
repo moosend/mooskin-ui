@@ -42,7 +42,8 @@ export interface ITabProps {
     style?: React.CSSProperties;
 
     /** children here can only be Tab elements */
-    children?: Array<React.ReactElement<IHeaderProps> | React.ReactElement<IContentProps>>;
+    children?: React.ReactElement<IHeaderProps> |
+            Array<React.ReactElement<IHeaderProps> | React.ReactElement<IContentProps>>;
 }
 
 export interface IHeaderProps {

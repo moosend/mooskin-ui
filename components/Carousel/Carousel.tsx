@@ -59,6 +59,9 @@ export interface ICarouselProps {
     /** dynamic width for Carousel based on parent node width */
     dynamicWidth?: boolean;
 
+    /** max width with dynamic width */
+    // maxWidth?: number;
+
     /** which slide to go to */
     goTo?: number;
 
@@ -128,7 +131,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWidth);
-      }
+    }
 
     render(){
 
@@ -180,7 +183,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
     }
 
     updateWidth = () => {
-        const width = window.innerWidth - this.state.windowsWidth ;
+        const width = window.innerWidth - this.state.windowsWidth;
         this.setState({width: this.state.width + width, windowsWidth: window.innerWidth});
     }
 
