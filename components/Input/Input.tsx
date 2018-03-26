@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Input.css';
 
-import {ClipboardButton} from '../index';
+import ClipboardButton from '../ClipboardButton';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 

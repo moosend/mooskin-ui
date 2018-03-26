@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './SideBar.css';
 
-import {SmallIconButton} from '../index';
+import SmallIconButton from '../SmallIconButton';
 
 import {IButtonProps} from '../Button/Button';
 

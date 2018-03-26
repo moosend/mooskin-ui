@@ -2,7 +2,7 @@ import * as React from 'react';
 
 // import styles from './ClipboardButton.css';
 
-import {Button} from '../index';
+import Button from '../Button';
 
 export interface IClipboardButtonProps{
 
