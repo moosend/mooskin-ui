@@ -7,7 +7,7 @@ import htmlToDraft from 'html-to-draftjs';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-import {Button} from '../index';
+import Button from '../Button';
 
 import boldIcon from '../../assets/images/editor/Bold.png';
 import centerIcon from '../../assets/images/editor/center.png';

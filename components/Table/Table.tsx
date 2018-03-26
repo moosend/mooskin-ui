@@ -9,7 +9,7 @@ export interface ITableProps{
     /** override Table id */
     id?: string;
 
-    data: object[];
+    data: object[] | Element[];
 
     /** Table class */
     className?: string;
@@ -206,7 +206,9 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         const settings = this.getSettings();
 
-        this.props.data.map((obj: any, index: number) => {
+        const data = this.props.data as any;
+
+        data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
             const popoverData: Array<React.ReactElement<ITableProps>> = [];
 

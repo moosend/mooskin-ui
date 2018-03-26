@@ -10,6 +10,6 @@ export interface IHeadingProps {
     style?: React.CSSProperties;
 
     /** children can only be a string */
-    children?: string;
+    children?: any;
 
 }

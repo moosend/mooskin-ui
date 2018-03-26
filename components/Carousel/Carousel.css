@@ -104,6 +104,10 @@
     display: none;
 }
 
+:global(.slick-slide){
+    height: auto;
+}
+
 /* :global(.slick-next){
     display: flex;
     
