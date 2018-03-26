@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import SmallIconButton from '../SmallIconButton';
-import SideBar, {SidebarItem} from './Sidebar';
+import SideBar, {SidebarItem} from './SideBar';
 
 import { mount, shallow } from 'enzyme';
 
