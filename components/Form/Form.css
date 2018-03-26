@@ -14,21 +14,22 @@
 
 .horizontal{
     display: flex;
-    flex: 1 0 auto;
+    flex: 1;
     flex-direction: row;
 }
 
 .vertical{
     display: flex;
-    flex: 1 0 auto;
+    flex: 1;
     flex-direction: column;
 }
 
-
 @media (--xSmall){
     .horizontal{display: flex; flex-direction: column}
+    .vertical{flex: 1 0 auto}
 }
 
 @media (--small){
     .horizontal{display: flex; flex-direction: column}
+    .vertical{flex: 1 0 auto}
 }

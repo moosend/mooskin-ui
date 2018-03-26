@@ -13,7 +13,7 @@ exports[`SideBar renders SideBar correctly 1`] = `
     />
   </div>
   <div
-    className="sidebar myClass sidebarOff smallOff"
+    className="sidebar sidebarOff smallOff myClass"
     style={
       Object {
         "color": "blue",
@@ -36,7 +36,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
     />
   </div>
   <div
-    className="sidebar myClass sidebarOff smallOff"
+    className="sidebar sidebarOff smallOff myClass"
     style={
       Object {
         "color": "blue",
@@ -74,6 +74,7 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
     />
   </div>
   <SubMenu
+    className=" smallSubOff undefined"
     display={false}
     key=".1"
     onMouseEnter={[Function]}
@@ -132,7 +133,7 @@ exports[`SideBar renders SideBar with Items correctly 1`] = `
       </SmallIconButton>
     </div>
     <div
-      className="sidebar myClass sidebarOff smallOff"
+      className="sidebar sidebarOff smallOff myClass"
       style={
         Object {
           "color": "blue",

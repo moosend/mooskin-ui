@@ -2,7 +2,7 @@
 
 exports[`TabbedContent renders Header properly according to snapshot 1`] = `
 <div
-  className="tab-header header activeHeader "
+  className="tab-header header activeHeader  "
   onClick={[Function]}
   style={
     Object {
@@ -61,7 +61,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
         vertical={true}
       >
         <div
-          className="tab-header header inactiveHeader headerAlign"
+          className="tab-header header inactiveHeader headerAlign mySwitch"
           onClick={[Function]}
           style={
             Object {
@@ -88,7 +88,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
         vertical={true}
       >
         <div
-          className="tab-header header activeHeader headerAlign"
+          className="tab-header header activeHeader headerAlign mySwitch"
           onClick={[Function]}
           style={
             Object {
@@ -115,7 +115,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
         vertical={true}
       >
         <div
-          className="tab-header header inactiveHeader headerAlign"
+          className="tab-header header inactiveHeader headerAlign mySwitch"
           onClick={[Function]}
           style={
             Object {

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
-import {H2} from '../Headings/index';
+import H2 from '../Headings/H2/H2';
 import SmallIconButton from '../SmallIconButton/SmallIconButton';
 import styles from './CheckListItem.css';
 

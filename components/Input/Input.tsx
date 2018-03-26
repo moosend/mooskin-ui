@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Input.css';
 
-import {ClipboardButton} from '../index';
+import ClipboardButton from '../ClipboardButton';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
@@ -168,7 +168,9 @@ class Input extends React.Component<IProps, {}> {
                         </div>
                         {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                     </div>
-                    {clipboardButton && this.getClipboardButton()}
+                    <div>
+                        {clipboardButton && this.getClipboardButton()}
+                    </div>
                 </div>
             </div>
         );

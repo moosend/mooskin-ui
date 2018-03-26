@@ -103,6 +103,7 @@ This also applies to SubMenu items, the same way.
 * `imageOn` - image to replace the `image` prop when the Item is active
 * `subMenuStyle` - styles for the sub menu
 * `subMenuClasses` - classes for the sub menu
+* `subMenuFixed` - makes the subMenu for this item fixed, while the item is active. It will behave with hover on small screens (works only on fixed SideBar)
 * `onClick` - function that is called when the Item is clicked
 * `className` - add additional classes to the SideBar
 * `style` - or additional styles

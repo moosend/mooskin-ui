@@ -28,8 +28,14 @@
     font-size: 16px;
 }
 
+.subMenuFixed{
+    z-index: 7;
+    left: 90px !important;
+    transition: 0.1s;
+}
+
 .subMenuOn{
-    left: 90px;
+    left: 90px !important;
     overflow-y: auto;
 }
 
@@ -55,6 +61,14 @@
 
 .smallOff{
     left: -90px;
+}
+
+.smallSubOn{
+    left: 90px;
+}
+
+.smallSubOff{
+    left: -185px;
 }
 
 /*
@@ -195,6 +209,19 @@
         z-index: 11;
     }
 
+    .subMenuFixed{
+        z-index: 11;
+        left: inherit;
+    }
+
+    .smallSubOn{
+        left: 10% !important;
+    }
+
+    .smallSubOff{
+        left: -50% !important;
+    }
+
     .subMenuOff{
         left: -50%;
     }
@@ -263,6 +290,19 @@
     .subMenu{
         font-size: 4vw;
         z-index: 11;
+    }
+    
+    .subMenuFixed{
+        z-index: 11;
+        left: inherit;
+    }
+
+    .smallSubOn{
+        left: 10% !important;
+    }
+
+    .smallSubOff{
+        left: -50% !important;
     }
 
     .subMenuOff{

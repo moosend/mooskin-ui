@@ -5,6 +5,7 @@
 .inputContainer{
     display: flex;
     margin: 3px;
+    flex: 1 0 auto;
     box-sizing: border-box;
     align-items: baseline;
 }
@@ -156,6 +157,19 @@
     .inputContainer{
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .innerContainer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .inputDiv{
+        flex: 1 0 auto;
+    }
+
+    .copyButton{
+        margin: 5px 0 0 0;
     }
     
     .inputLabel{

@@ -10,20 +10,20 @@ class SelectExample extends React.Component {
 
     render(){
         return (
-        <div>
-            <Select onChange={this.onChange} dataLabel="plan" selected="Option1" label="Some label">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-                <Option value="option3">Option3</Option>
-                <Option value="option4">Option4</Option>
-                <Option value="option5">Option5</Option>
-            </Select>
-            <br/>
-            <Select onChange={this.onClick} selected="option" dataLabel="plan" description="Select description goes here">
-                <Option value="option1">Option1</Option>
-            </Select>
-        </div>
-    );
+            <div>
+                <Select onChange={this.onChange} dataLabel="plan" selected="Option1" label="Some label">
+                    <Option value="option1">Option1</Option>
+                    <Option value="option2">Option2</Option>
+                    <Option value="option3">Option3</Option>
+                    <Option value="option4">Option4</Option>
+                    <Option value="option5">Option5</Option>
+                </Select>
+                <br/>
+                <Select onChange={this.onClick} selected="option" dataLabel="plan" description="Select description goes here">
+                    <Option value="option1">Option1</Option>
+                </Select>
+            </div>
+        );
     }
 
     onChange(e, data) {

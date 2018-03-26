@@ -10,7 +10,7 @@ exports[`Select renders Option correctly 1`] = `
 
 exports[`Select renders Select correctly 1`] = `
 <div
-  className="select-component myClass"
+  className="select-component componentContainer  myClass"
   style={
     Object {
       "color": "blue",
@@ -18,7 +18,7 @@ exports[`Select renders Select correctly 1`] = `
   }
 >
   <label
-    className="label"
+    className="label "
   >
     Select something
   </label>

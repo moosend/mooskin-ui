@@ -52,6 +52,7 @@ exports[`Input renders correctly 1`] = `
         just some input
       </i>
     </div>
+    <div />
   </div>
 </div>
 `;
