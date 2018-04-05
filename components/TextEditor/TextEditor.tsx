@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ContentState, convertToRaw, EditorState, Modifier } from 'draft-js';
+import { ContentState, EditorState, Modifier, RawDraftContentState } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 
@@ -85,7 +85,7 @@ export interface ITextEditorProps {
     draggable?: boolean;
 
     /** rich editor value */
-    editorState: EditorState;
+    value: IEditorValueProps;
 
     /** editor label */
     label?: string;
@@ -95,6 +95,11 @@ export interface ITextEditorProps {
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
+}
+
+export interface IEditorValueProps {
+    editorState: EditorState;
+    rawState: RawDraftContentState;
 }
 
 export interface ITextEditorState {
@@ -175,17 +180,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
     componentDidMount(){
         const {draggable, toolbarOnFocus} = this.props;
-        const htmlContent = draftToHtml(convertToRaw(this.props.editorState.getCurrentContent()));
-        this.setState({htmlContent});
         this.addColorPickerEvents();
         draggable && toolbarOnFocus && this.addEvents();
-    }
-
-    componentWillReceiveProps(nextProps: ITextEditorProps) {
-        if (nextProps.editorState && !this.isEmptyObject(nextProps.editorState)){
-            const htmlContent = draftToHtml(convertToRaw(nextProps.editorState.getCurrentContent()));
-            this.setState({htmlContent});
-        }
     }
 
     componentDidUpdate(props: ITextEditorProps, state: ITextEditorState) {
@@ -196,7 +192,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
           document.removeEventListener('mousemove', this.onMouseMove);
           document.removeEventListener('mouseup', this.onMouseUp);
         }
-      }
+    }
 
     render() {
 
@@ -246,7 +242,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 {this.state.activeDropDown && <div onClick={this.onDropDownClick} className={styles.overlay}/>}
                 <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                 <Editor
-                    editorState={this.props.editorState}
+                    editorState={this.props.value.editorState}
                     onEditorStateChange={this.onEditorChange}
                     wrapperClassName={`${wrapperClasses} ${this.props.wrapperClassName}`}
                     wrapperStyle={this.props.wrapperStyle}
@@ -331,7 +327,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks, {});
             const editorState = EditorState.createWithContent(contentState);
             this.props.onChange &&
-            this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
+            this.props.onChange({dataLabel: this.props.dataLabel, value: editorState});
             this.setState({showHtml: false});
         } catch (e) {
             throw new Error('Wrong HTML!');
@@ -339,8 +335,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onCancel = () => {
-        const htmlContent = draftToHtml(convertToRaw(this.props.editorState.getCurrentContent()));
-        this.setState({showHtml: false, htmlContent});
+        // const htmlContent = draftToHtml(convertToRaw(this.props.editorState.getCurrentContent()));
+        this.setState({showHtml: false});
     }
 
     addColorPickerEvents = () => {
@@ -425,6 +421,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onHtmlClick = () => {
+        const {value} = this.props;
+        const htmlContent = draftToHtml(value.rawState);
+        this.setState({htmlContent});
         this.setState({showHtml: !this.state.showHtml});
     }
 
@@ -433,7 +432,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             <CustomDropDown
                 active={this.state.activeDropDown}
                 onClick={this.onDropDownClick}
-                editorState={this.props.editorState}
+                editorState={this.props.value.editorState}
                 personalizationTags={this.props.personalizationTags}
             />
         );

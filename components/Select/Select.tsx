@@ -81,6 +81,10 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     static Option: React.StatelessComponent<IOptionProps>;
 
+    static getDerivedStateFromProps(nextProps: ISelectProps){
+        return {selected: nextProps.selected};
+    }
+
     constructor(props: ISelectProps){
         super(props);
         this.state = {
@@ -88,10 +92,6 @@ class Select extends React.Component<ISelectProps, ISelectState>{
             list: false,
             selected: this.props.selected,
         };
-    }
-
-    componentWillReceiveProps(nextProps: ISelectProps){
-        this.setState({selected: nextProps.selected});
     }
 
     render(){
@@ -124,7 +124,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 <div
                     onClick={this.onCloseList}
                     className={styles.overlay}
-                    style={{display: !this.state.list && 'none'}}
+                    style={{display: !this.state.list ? 'none' : 'block'}}
                 />
                 <div className={styles.selectContainer} style={{zIndex}}>
                     <div className={`${styles.labelContainer} ${status}`} >

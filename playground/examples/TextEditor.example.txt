@@ -22,6 +22,11 @@ class ButtonExample extends React.Component {
             }
         ]
 
+        const value = {
+            editorState: this.state.editorState,
+            rawState: convertToRaw(this.state.editorState.getCurrentContent())
+        }
+
         return(
             <TextEditor
                 onChange={this.onChange}
@@ -30,7 +35,7 @@ class ButtonExample extends React.Component {
                 label="Rich text editor"
                 toolbarOnFocus
                 personalizationTags={personalizationTags}
-                editorState={this.state.editorState}
+                value={value}
                 // options={['emoji', '/', 'blockType', 'inline', '/', 'fontSize', '/', 'fontFamily', '/']}
             />
         );
