@@ -171,7 +171,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             pos: {
                 bottom: this.props.toolbarPos === 'bottom' ? -80 : undefined,
                 left: 0,
-                top: this.props.toolbarPos === 'top' ? -70 : undefined
+                top: this.props.toolbarPos === 'top' ? -90 : undefined
             },
             relPos: {left: 0, top: 0, bottom: 0},
             showHtml: false
