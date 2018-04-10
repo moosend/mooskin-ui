@@ -86,7 +86,7 @@ In this case on each TextEditor change, the value will be console logged.
 ## Supported attributes
 
 * `id` - id of the element
-* `toolbarPos` - position of the toolbar
+* `toolbarPos` - position of the toolbar (`top`, `bottom`)
 * `options` - options to be available to the toolbar, Array of strings. Available options [`'inline'`, `'blockType'`, `'fontSize'`, `'fontFamily'`, `'list'`,`'textAlign'`, `'colorPicker'`, `'link'`, `'embedded'`, `'emoji'`, `'image'`, `'remove'`, `'history'`, `'html'`, `'/'`].
 * `customEmojis` - add custom emojis to the toolbar, requres array of emojis, ['😁', '😂', '😃'].
 * `width` - width of the editor field
@@ -101,7 +101,7 @@ In this case on each TextEditor change, the value will be console logged.
 * `toolbarOnFocus` - pop toolbar on editor focus
 * `toolbar` - object defining editor options and custom options
 * `draggable` - wether the toolbar should be draggable
-* `editorState` - value of the editor (EditorState from DraftJS)
+* `value` - value of the editor, object consisting of 2 key/value pairs. `editorState` which is EditorState from DraftJS & `rawState` which is a converted to raw state of the editorState
 * `label` - label for editor
 * `onChange` - onChange callback when editor changes, returns EditorState
 * `dataLabel` - label what kind of data 

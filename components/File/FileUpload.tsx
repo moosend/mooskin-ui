@@ -72,6 +72,10 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         style: {}
     };
 
+    static getDerivedStateFromProps(nextProps: IFileProps) {
+        return {file: nextProps.file};
+    }
+
     constructor(props: IFileProps){
         super(props);
 
@@ -81,9 +85,9 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         };
     }
 
-    componentWillReceiveProps(nextProps: IFileProps){
-        this.setState({file: nextProps.file});
-    }
+    // componentWillReceiveProps(nextProps: IFileProps){
+    //     this.setState({file: nextProps.file});
+    // }
 
     render(){
 

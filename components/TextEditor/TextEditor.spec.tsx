@@ -1,7 +1,7 @@
 import * as React from 'react';
 import TextEditor from './TextEditor';
 
-import {EditorState} from 'draft-js';
+import {convertToRaw, EditorState} from 'draft-js';
 
 import { Editor } from 'react-draft-wysiwyg';
 
@@ -32,12 +32,14 @@ describe('TextEditor', () => {
     test('renders correctly with custom editor props', () => {
         const func = jest.fn();
 
+        const editorState = EditorState.createEmpty();
+
         const component = shallow(
             <TextEditor
                 label="label"
                 editorClassName="myClass"
                 editorStyle={{color: 'blue'}}
-                editorState={EditorState.createEmpty()}
+                value={{editorState, rawState: convertToRaw(editorState.getCurrentContent())}}
                 onChange={func}
                 toolbarClassName="toolbarClass"
                 wrapperClassName="wrapperClass"
