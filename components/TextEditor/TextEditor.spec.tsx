@@ -32,14 +32,14 @@ describe('TextEditor', () => {
     test('renders correctly with custom editor props', () => {
         const func = jest.fn();
 
-        const editorState = EditorState.createEmpty();
+        const editorState = convertToRaw(EditorState.createEmpty().getCurrentContent());
 
         const component = shallow(
             <TextEditor
                 label="label"
                 editorClassName="myClass"
                 editorStyle={{color: 'blue'}}
-                value={{editorState, rawState: convertToRaw(editorState.getCurrentContent())}}
+                editorState={editorState}
                 onChange={func}
                 toolbarClassName="toolbarClass"
                 wrapperClassName="wrapperClass"
@@ -48,7 +48,7 @@ describe('TextEditor', () => {
 
         expect(component.find(Editor).prop('editorClassName')).toContain('myClass');
         expect(component.find(Editor).prop('editorStyle')).toEqual(
-            {color: 'blue', maxHeight: 300, maxWidth: undefined}
+            {color: 'blue', maxHeight: 400, maxWidth: undefined}
         );
         expect(component.find(Editor).prop('toolbarClassName')).toContain('toolbarClass');
 

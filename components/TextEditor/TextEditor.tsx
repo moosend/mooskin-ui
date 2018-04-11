@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ContentState, EditorState, Modifier, RawDraftContentState } from 'draft-js';
+import { ContentState, convertFromRaw, EditorState, Modifier, RawDraftContentState } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 
@@ -85,7 +85,7 @@ export interface ITextEditorProps {
     draggable?: boolean;
 
     /** rich editor value */
-    value: IEditorValueProps;
+    editorState: RawDraftContentState;
 
     /** editor label */
     label?: string;
@@ -97,10 +97,10 @@ export interface ITextEditorProps {
     dataLabel?: string;
 }
 
-export interface IEditorValueProps {
-    editorState: EditorState;
-    rawState: RawDraftContentState;
-}
+// export interface IEditorValueProps {
+//     editorState: EditorState;
+//     rawState: RawDraftContentState;
+// }
 
 export interface ITextEditorState {
     dragging: boolean;
@@ -109,6 +109,10 @@ export interface ITextEditorState {
     activeDropDown: boolean;
     showHtml: boolean;
     htmlContent: string;
+    editorState: EditorState;
+    rawState: RawDraftContentState;
+    width: number;
+    windowsWidth: number;
 }
 
 export interface IPosition {
@@ -139,7 +143,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
     static defaultProps = {
         className: '',
-        height: 300,
+        height: 400,
         options: [
             'inline',
             'blockType',
@@ -161,27 +165,37 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         toolbarPos: 'top',
     };
 
+    editor: any;
+
     constructor(props: ITextEditorProps){
         super(props);
 
         this.state = {
             activeDropDown: false,
             dragging: false,
+            editorState: EditorState.createEmpty(),
             htmlContent: '',
             pos: {
                 bottom: this.props.toolbarPos === 'bottom' ? -80 : undefined,
                 left: 0,
                 top: this.props.toolbarPos === 'top' ? -90 : undefined
             },
+            rawState: this.props.editorState,
             relPos: {left: 0, top: 0, bottom: 0},
-            showHtml: false
+            showHtml: false,
+            width: this.getParentWidth(),
+            windowsWidth: window.innerWidth
         };
     }
 
     componentDidMount(){
+        window.addEventListener('resize', this.updateWidth);
         const {draggable, toolbarOnFocus} = this.props;
         this.addColorPickerEvents();
         draggable && toolbarOnFocus && this.addEvents();
+        const contentState = convertFromRaw(this.props.editorState);
+        const editorState = EditorState.createWithContent(contentState);
+        this.setState({editorState, width: this.getParentWidth()});
     }
 
     componentDidUpdate(props: ITextEditorProps, state: ITextEditorState) {
@@ -236,14 +250,16 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         return (
             <div
                 id={this.props.id}
-                style={{position: 'relative'}}
+                style={{width: this.state.width, position: 'relative'}}
                 className={`mooskin-text-editor ${styles.editorContainer}`}
+                ref={(editor) => this.editor = editor}
             >
                 {this.state.activeDropDown && <div onClick={this.onDropDownClick} className={styles.overlay}/>}
                 <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                 <Editor
-                    editorState={this.props.value.editorState}
-                    onEditorStateChange={this.onEditorChange}
+                    editorState={this.state.editorState}
+                    onEditorStateChange={this.onEditorStateChange}
+                    onContentStateChange={this.onContentStateChange}
                     wrapperClassName={`${wrapperClasses} ${this.props.wrapperClassName}`}
                     wrapperStyle={this.props.wrapperStyle}
                     editorClassName={`${styles.editor} ${this.props.editorClassName}`}
@@ -253,12 +269,13 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     toolbarStyle={toolbarStyles}
                     toolbar={toolbar}
                     toolbarCustomButtons={customToolbarButtons}
+                    onBlur={this.onBlur}
                 />
                 <textarea
                     className={styles.textArea}
                     value={this.state.htmlContent}
                     onChange={this.onTextAreaChange}
-                    style={editHtmlStyles}
+                    style={{width: this.state.width, ...editHtmlStyles}}
                 />
                 <div className={styles.buttonGroup} style={editHtmlStyles}>
                     <Button onClick={this.onAccept}>Accept</Button>
@@ -310,9 +327,22 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         // emojiDiv !== null && emojiDiv.appendChild(arrow);
     }
 
-    onEditorChange = (editorState: EditorState) => {
+    onEditorStateChange = (editorState: EditorState) => {
+        this.setState({editorState});
         this.props.onChange &&
         this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
+    }
+
+    onContentStateChange = (rawState: RawDraftContentState) => {
+        this.setState({rawState});
+        this.props.onChange &&
+        this.props.onChange({value: rawState, dataLabel: this.props.dataLabel});
+    }
+
+    onBlur = () => {
+        this.setState({activeDropDown: false});
+        this.props.onChange &&
+        this.props.onChange({value: this.state.rawState, dataLabel: this.props.dataLabel});
     }
 
     onTextAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -326,9 +356,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             const contentBlock = htmlToDraft(this.state.htmlContent);
             const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks, {});
             const editorState = EditorState.createWithContent(contentState);
-            this.props.onChange &&
-            this.props.onChange({dataLabel: this.props.dataLabel, value: editorState});
-            this.setState({showHtml: false});
+            // this.props.onChange &&
+            // this.props.onChange({dataLabel: this.props.dataLabel, value: editorState});
+            this.setState({editorState, showHtml: false});
         } catch (e) {
             throw new Error('Wrong HTML!');
         }
@@ -421,8 +451,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onHtmlClick = () => {
-        const {value} = this.props;
-        const htmlContent = draftToHtml(value.rawState);
+        const {editorState} = this.props;
+        const htmlContent = draftToHtml(editorState);
         this.setState({htmlContent});
         this.setState({showHtml: !this.state.showHtml});
     }
@@ -432,7 +462,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             <CustomDropDown
                 active={this.state.activeDropDown}
                 onClick={this.onDropDownClick}
-                editorState={this.props.value.editorState}
+                editorState={this.state.editorState}
                 personalizationTags={this.props.personalizationTags}
             />
         );
@@ -444,6 +474,17 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 onClick={this.onHtmlClick}
             />
         );
+    }
+
+    getParentWidth = () => {
+        const parent = this.editor && this.editor.parentNode;
+        const width = parent && parent.offsetWidth;
+        return width ? width : null;
+    }
+
+    updateWidth = () => {
+        const width = window.innerWidth - this.state.windowsWidth;
+        this.setState({width: this.state.width + width, windowsWidth: window.innerWidth});
     }
 
     getToolbar = () => {

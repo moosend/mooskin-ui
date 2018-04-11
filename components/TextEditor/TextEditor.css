@@ -21,6 +21,8 @@
 .textArea{
     composes: editor;
     height: 400px;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .buttonGroup{
@@ -179,7 +181,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 6;
+    z-index: 2;
 }
 
 .editorLabel{
@@ -240,6 +242,10 @@
 
 :global(.rdw-option-wrapper){
     border: none;
+}
+
+:global(.public-DraftStyleDefault-block){
+    white-space: nowrap;
 }
 
 /* :global(.rdw-colorpicker-wrapper){
@@ -332,7 +338,7 @@
     align-items: flex-start;
     background: #fff;
     border: 1px solid #F1F1F1;
-    z-index: 7;
+    /* z-index: 7; */
     width: 150px;
 }
 
