@@ -275,7 +275,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     className={styles.textArea}
                     value={this.state.htmlContent}
                     onChange={this.onTextAreaChange}
-                    style={editHtmlStyles}
+                    style={{width: this.state.width, ...editHtmlStyles}}
                 />
                 <div className={styles.buttonGroup} style={editHtmlStyles}>
                     <Button onClick={this.onAccept}>Accept</Button>

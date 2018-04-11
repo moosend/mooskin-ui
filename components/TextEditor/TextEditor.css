@@ -21,6 +21,8 @@
 .textArea{
     composes: editor;
     height: 400px;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .buttonGroup{
