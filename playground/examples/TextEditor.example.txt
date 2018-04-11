@@ -5,7 +5,7 @@ class ButtonExample extends React.Component {
         this.onChange = this.onChange.bind(this);
 
         this.state = {
-            editorState: EditorState.createEmpty()
+            editorState: convertToRaw(EditorState.createEmpty().getCurrentContent())
         }
     }
 
@@ -22,11 +22,6 @@ class ButtonExample extends React.Component {
             }
         ]
 
-        const value = {
-            editorState: this.state.editorState,
-            rawState: convertToRaw(this.state.editorState.getCurrentContent())
-        }
-
         return(
             <TextEditor
                 onChange={this.onChange}
@@ -35,7 +30,7 @@ class ButtonExample extends React.Component {
                 label="Rich text editor"
                 toolbarOnFocus
                 personalizationTags={personalizationTags}
-                value={value}
+                editorState={this.state.editorState}
                 // options={['emoji', '/', 'blockType', 'inline', '/', 'fontSize', '/', 'fontFamily', '/']}
             />
         );
