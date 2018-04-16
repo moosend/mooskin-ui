@@ -1,6 +1,6 @@
 @import '../_utils/globals/screens.css';
 @import '../_utils/globals/variables.css';
-@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+@import url('//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 
 .datePicker{
     display: flex;
@@ -119,6 +119,7 @@
 
 :global(.datepicker-component .u-slider-time .handle:after){
     border: 3px solid #5ccdde;
+    top: -13px;
 }
 
 :global(.datepicker-component .m-time .time-text){
