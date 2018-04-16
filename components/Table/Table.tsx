@@ -87,6 +87,8 @@ export interface IColProps{
     /** override Column styles */
     style?: React.CSSProperties;
 
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+
 }
 
 export interface IRowProps{
@@ -228,13 +230,14 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
                             const colKey = this.props.smallCollapse ? i + 1 : i;
 
-                            // console.log(obj.style);
+                            const dataField = setting.dataField;
 
                             cols[i] = (
                                 <Col
                                     style={{...setting.styles, ...obj.style}}
                                     className={`${colStyles} ${styles.colComponent} ${display} ${setting.classes}`}
                                     key={colKey}
+                                    onClick={this.onCellClick(obj.onClick, {content: obj[key], dataField})}
                                 >
                                     <span className={styles.heading}>{setting.heading}</span>
                                     <div className={styles.contentContainer}>
@@ -352,6 +355,15 @@ export default class Table extends React.Component<ITableProps, ITableState> {
     //     this.setState({data, sortBy, order: this.setOrder(order)});
 
     // }
+
+    onCellClick = (
+        callback: (e: React.MouseEvent<HTMLElement>, data: {content: any, dataField: string}) => void,
+        data: {content: any, dataField: string}
+    ) => {
+        return (e: React.MouseEvent<HTMLElement>) => {
+            return callback(e, data);
+        };
+    }
 
     setOrder = (order: string) => {
         if (order === 'desc'){
@@ -555,7 +567,7 @@ Row.defaultProps = {
 export const Col: React.StatelessComponent<IColProps> = (props) => {
 
     return(
-        <td className={`column ${props.className}`} style={props.style}>
+        <td className={`column ${props.className}`} style={props.style} onClick={props.onClick}>
             {props.children}
         </td>
     );

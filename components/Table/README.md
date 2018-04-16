@@ -150,6 +150,40 @@ const data = [
 
 in this case, the second object in the array has a style key value, that style will be applied to the second row of the Table, more precicly to all cells in that specific row.
 
+### Row (Cell) callback functions via data
+
+Specific rows can have callback functions by passing a `onClick` key through the object in the `data` prop.
+
+```
+const data = [
+    {
+        name: 'Geralt of Rivia',
+        weapon: 'Aerondight',
+        abilities: 'Sword fighting, Quen Signs',
+        profession: 'Witcher',
+        allegience: 'School of the Wolf'
+    },
+    {
+        name: 'John Shepard',
+        weapon: 'Vindicator',
+        abilities: 'Weapons, Biotics',
+        profession: 'Commander',
+        allegience: 'Alliance, Citadel',
+        onClick: (e, data) => console.log(e, data);
+    }
+];
+
+<Table data={data}>
+    <TableHeader dataField="name" >Name</TableHeader>
+    <TableHeader dataField="profession" hideSmall >Profession</TableHeader>
+    <TableHeader dataField="weapon" hideSmall >Weapon</TableHeader>
+    <TableHeader dataField="abilities" >Abilities</TableHeader>
+    <TableHeader dataField="allegience" hideSmall >Allegience</TableHeader>
+</Table>
+```
+
+the callback will return two args, `e` for event & `data` which is an object consisting of the relevant `dataLabel` of the cell & `content` which is the inner content of the cell
+
 <div class="playground-doc">
 
 ## Supported attributes for Table
