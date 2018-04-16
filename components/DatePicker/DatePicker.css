@@ -119,6 +119,7 @@
 
 :global(.datepicker-component .u-slider-time .handle:after){
     border: 3px solid #5ccdde;
+    top: -13px;
 }
 
 :global(.datepicker-component .m-time .time-text){
