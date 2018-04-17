@@ -27,6 +27,7 @@ class TableExample extends React.Component{
                     open: '60 %',
                     status: 'Sent',
                     subscribers: 1628,
+                    onClick: (e, data) => {console.log(e, data)}
                 },
                 {
                     actions: <SmallIconButton transparent icon="edit"/>,

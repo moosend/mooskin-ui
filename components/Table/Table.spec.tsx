@@ -566,7 +566,7 @@ describe('Table', () => {
 
     });
 
-    test('Assigns rows without pagination', () => {
+    test('sets row styles through passed data', () => {
 
         const data = [
             {
@@ -594,6 +594,41 @@ describe('Table', () => {
         );
 
         expect(component.find('Col').last().prop('style')).toEqual({background: '#5ccdde'});
+
+    });
+
+    test('Cell callback function is called when cell is clicked', () => {
+
+        const fn = jest.fn();
+
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni',
+                onClick: fn
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt',
+                style: {background: '#5ccdde'}
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        component.find('Col').at(3).simulate('click');
+        expect(fn).toHaveBeenCalled();
 
     });
 
