@@ -68,6 +68,9 @@ export interface IProps {
     /** override input class */
     className?: string;
 
+    /** data to be used with RecurlyJS billing service */
+    recurlyData?: string;
+
     /** input description (small italic bottom) */
     description?: string;
 
@@ -163,6 +166,7 @@ class Input extends React.Component<IProps, {}> {
                                 autoFocus={autofocus}
                                 autoComplete={autocomplete}
                                 onBlur={this.validateOnBlur}
+                                data-recurly={this.props.recurlyData}
                             />
                             {icon && this.getIcon()}
                         </div>

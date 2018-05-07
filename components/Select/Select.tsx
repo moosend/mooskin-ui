@@ -46,6 +46,9 @@ export interface ISelectProps {
     /** wether the select is required (used within forms) */
     required?: boolean;
 
+    /** data to be used with RecurlyJS billing service */
+    recurlyData?: string;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -137,6 +140,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             onChange={this.onChangeFilter}
                             ref={(input) => (input && this.state.list && input.focus())}
                             onBlur={this.validateOnBlur}
+                            data-recurly={this.props.recurlyData}
                         />
                         <div
                             onClick={this.onOpenList}
