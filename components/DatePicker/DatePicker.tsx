@@ -29,6 +29,9 @@ export interface IDateProps{
     /** datepicker label */
     label?: string;
 
+    /** wether the datepicker should be for date only */
+    dateOnly?: boolean;
+
     /** with of the label within the datepicker container */
     labelWidth?: number;
 
@@ -74,7 +77,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         super(props);
 
         this.state = {
-            date: moment(this.props.date) || moment(),
+            date: this.setDate(),
             displayPicker: false
         };
     }
@@ -88,6 +91,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         const status = this.getStatus();
         const descStatus = this.getDescStatus();
         const description = this.props.description;
+
+        this.toggleButtons();
 
         return(
             <div
@@ -121,15 +126,23 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         );
     }
 
+    setDate = () => {
+        if (this.props.dateOnly){
+            return moment(this.props.date).startOf('day') || moment().startOf('day');
+        }
+        return moment(this.props.date) || moment();
+    }
+
     onChange = (date: any) => {
+        const value = this.props.dateOnly ? this.state.date.startOf('day').format('x') : this.state.date.format('x');
         this.setState({date});
         // !this.props.disabled &&
         this.props.onChange &&
-        this.props.onChange({value: this.state.date.format('x'), dataLabel: this.props.dataLabel});
+        this.props.onChange({value, dataLabel: this.props.dataLabel});
         if (this.props.status){
             this.props.validate &&
             this.props.validate(
-                {value: this.state.date.format('x'), dataLabel: this.props.dataLabel, required: this.props.required}
+                {value, dataLabel: this.props.dataLabel, required: this.props.required}
             );
         }
     }
@@ -163,6 +176,20 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     validateOnBlur = () => {
         this.props.validate &&
         this.props.validate({value: this.props.date, dataLabel: this.props.dataLabel, required: this.props.required});
+    }
+
+    toggleButtons = () => {
+        const options: any = document.getElementsByClassName('options');
+        const optionsArray = this.state.displayPicker && options && Array.from(options);
+
+        optionsArray && this.changeTimeOptions(optionsArray);
+    }
+
+    changeTimeOptions = (elements: any[]) => {
+        for (let index = 0; index < elements.length; index ++){
+            this.props.dateOnly ? elements[index].style.display = 'none' :
+            elements[index].style.display = 'inline-block';
+        }
     }
 
 }
