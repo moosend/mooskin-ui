@@ -68,8 +68,11 @@ export interface IProps {
     /** override input class */
     className?: string;
 
-    /** data to be used with RecurlyJS billing service */
-    recurlyData?: string;
+    /** extra html attributes */
+    extraHtmlAttr?: {[key: string]: any};
+
+    /** type of input should be a div instead of input */
+    divType?: boolean;
 
     /** input description (small italic bottom) */
     description?: string;
@@ -115,31 +118,14 @@ class Input extends React.Component<IProps, {}> {
     render(){
 
         const {
-            clipboardButton,
-            disabled,
-            required,
-            type,
-            name,
-            placeholder,
-            minlength,
-            maxlength,
             style,
             className,
             label,
             labelTop,
-            autofocus,
-            icon,
-            iconPosition,
-            description,
         } = this.props;
 
-        const disabledInput = disabled ? styles.disabledInput : '';
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
-        const autocomplete = !this.props.autocomplete ? 'off' : 'on';
-        const status = this.getStatus();
-        const descStatus = this.getDescStatus();
-        const radius = this.getRadius();
-        const reverse = iconPosition === 'left' && styles.reverse;
+
         const labelPos = labelTop ? styles.column : '';
         const topLabel = labelTop ? styles.topLabel : '';
         const inputClasses = `${styles.inputLabel} ${topLabel}`;
@@ -147,6 +133,48 @@ class Input extends React.Component<IProps, {}> {
         return (
             <div className={`input-component ${styles.inputContainer} ${labelPos} ${className}`} style={style}>
                 {label && <label className={inputClasses} style={spacing} htmlFor={this.id}>{label}</label>}
+                {this.renderInput()}
+            </div>
+        );
+    }
+
+    renderInput = () => {
+        const {
+            autofocus,
+            clipboardButton,
+            disabled,
+            divType,
+            maxlength,
+            minlength,
+            placeholder,
+            required,
+            iconPosition,
+            description,
+            icon,
+            type
+        } = this.props;
+
+        const autocomplete = !this.props.autocomplete ? 'off' : 'on';
+        const disabledInput = disabled ? styles.disabledInput : '';
+        const radius = this.getRadius();
+
+        if (divType){
+            return (
+                <div
+                    ref={(input) => this.input = input}
+                    // onChange={this.onChange}
+                    id={this.id}
+                    // value={this.props.value}
+                    className={`input ${styles.input} ${disabledInput} ${radius}`}
+                    onBlur={this.validateOnBlur}
+                    {...this.props.extraHtmlAttr}
+                />
+            );
+        } else {
+            const status = this.getStatus();
+            const descStatus = this.getDescStatus();
+            const reverse = iconPosition === 'left' && styles.reverse;
+            return (
                 <div className={styles.innerContainer}>
                     <div className={styles.inputDiv}>
                         <div className={`${styles.innerDiv} ${status} ${reverse}`}>
@@ -166,7 +194,7 @@ class Input extends React.Component<IProps, {}> {
                                 autoFocus={autofocus}
                                 autoComplete={autocomplete}
                                 onBlur={this.validateOnBlur}
-                                data-recurly={this.props.recurlyData}
+                                {...this.props.extraHtmlAttr}
                             />
                             {icon && this.getIcon()}
                         </div>
@@ -176,8 +204,8 @@ class Input extends React.Component<IProps, {}> {
                         {clipboardButton && this.getClipboardButton()}
                     </div>
                 </div>
-            </div>
-        );
+            );
+        }
     }
 
     onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

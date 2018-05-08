@@ -40,14 +40,14 @@ export interface ISelectProps {
     /** select description (small italic bottom) */
     description?: string;
 
+    /** extra html attributes */
+    extraHtmlAttr?: {[key: string]: any};
+
     /** status of the select, error or success */
     status?: 'error' | 'success';
 
     /** wether the select is required (used within forms) */
     required?: boolean;
-
-    /** data to be used with RecurlyJS billing service */
-    recurlyData?: string;
 
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
@@ -140,7 +140,6 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             onChange={this.onChangeFilter}
                             ref={(input) => (input && this.state.list && input.focus())}
                             onBlur={this.validateOnBlur}
-                            data-recurly={this.props.recurlyData}
                         />
                         <div
                             onClick={this.onOpenList}
@@ -150,6 +149,12 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             {selected}
                         </div>
                         <div className={styles.selectIcon} onClick={this.onToggleList}/>
+                        <input
+                            value={this.state.selected || ''}
+                            readOnly
+                            style={{display: 'none'}}
+                            {...this.props.extraHtmlAttr}
+                        />
                     </div>
                     <div
                         className={`options-container ${styles.optionsContainer}`}
@@ -170,11 +175,12 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     }
 
     onClick = (option: string) => {
+        const {dataLabel, required} = this.props;
         return (e: React.MouseEvent<HTMLElement>) => {
-            this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
+            this.props.onChange && this.props.onChange(e, {value: option, dataLabel});
             if (this.props.status){
                 this.props.validate &&
-                this.props.validate({value: option, dataLabel: this.props.dataLabel, required: this.props.required});
+                this.props.validate({value: option, dataLabel, required});
             }
             this.setState({list: false, selected: option, filter: ''});
         };

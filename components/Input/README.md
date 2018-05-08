@@ -138,6 +138,7 @@ In this case, when the user focuses the input and blurs away immediately, an err
 * `onChange` - callback to be triggered on input change
 * `validate` - validate function
 * `status` - to be used with validate, to apply classes based on error or success
+* `extraHtmlAttr` - extra html attributes applied to the input
 
 </div>
 
