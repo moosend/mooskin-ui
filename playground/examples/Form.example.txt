@@ -295,6 +295,7 @@ class FormExample extends React.Component {
     }
 
     setValidatedValue(e, data) {
+        console.log(data.value);
         data.dataLabel && this.setState({[data.dataLabel]: {value: data.value}});
     }
 
