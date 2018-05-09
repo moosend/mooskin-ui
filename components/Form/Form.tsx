@@ -17,11 +17,17 @@ import TextArea from '../TextArea';
 
 export interface IFormProps{
 
+    /** form id */
+    id?: string;
+
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
 
     /** Form children */
     children?: any;
+
+    /** form to be used with RecurlyJS */
+    withRecurly?: boolean;
 
     /** Form classname */
     className?: string;
@@ -81,9 +87,12 @@ export default class Form extends React.Component<IFormProps, {}>{
 
         return(
             <form
+                id={this.props.id}
                 className={`form ${styles.form} ${className}`}
+                style={this.props.style}
             >
                 {form}
+                {this.props.withRecurly && <input type="hidden" name="recurly-token" data-recurly="token" />}
             </form>
         );
     }

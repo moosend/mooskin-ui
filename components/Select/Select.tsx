@@ -40,6 +40,9 @@ export interface ISelectProps {
     /** select description (small italic bottom) */
     description?: string;
 
+    /** extra html attributes */
+    extraHtmlAttr?: {[key: string]: any};
+
     /** status of the select, error or success */
     status?: 'error' | 'success';
 
@@ -146,6 +149,12 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             {selected}
                         </div>
                         <div className={styles.selectIcon} onClick={this.onToggleList}/>
+                        <input
+                            value={this.state.selected || ''}
+                            readOnly
+                            style={{display: 'none'}}
+                            {...this.props.extraHtmlAttr}
+                        />
                     </div>
                     <div
                         className={`options-container ${styles.optionsContainer}`}
@@ -166,11 +175,12 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     }
 
     onClick = (option: string) => {
+        const {dataLabel, required} = this.props;
         return (e: React.MouseEvent<HTMLElement>) => {
-            this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
+            this.props.onChange && this.props.onChange(e, {value: option, dataLabel});
             if (this.props.status){
                 this.props.validate &&
-                this.props.validate({value: option, dataLabel: this.props.dataLabel, required: this.props.required});
+                this.props.validate({value: option, dataLabel, required});
             }
             this.setState({list: false, selected: option, filter: ''});
         };
