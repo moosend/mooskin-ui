@@ -135,11 +135,15 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
 
     render(){
 
+        const {containerStyle, dynamicWidth} = this.props;
+
+        const style = dynamicWidth ? {width: this.state.width, ...containerStyle} : containerStyle;
+
         return(
             <div
                 className={`${styles.carouselContainer} ${this.props.containerClassName}`}
                 // style={{width: this.state.width, ...this.props.containerStyle}}
-                style={{width: this.state.width, ...this.props.containerStyle}}
+                style={style}
                 id={this.props.id}
                 ref={(carousel) => this.carousel = carousel}
             >
