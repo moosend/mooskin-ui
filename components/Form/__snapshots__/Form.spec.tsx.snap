@@ -3,6 +3,11 @@
 exports[`Form renders Form correctly 1`] = `
 <form
   className="form form myClass"
+  style={
+    Object {
+      "width": "50px",
+    }
+  }
 />
 `;
 
@@ -19,6 +24,11 @@ exports[`Form renders Form with FormGroup correctly 1`] = `
 >
   <form
     className="form form myClass"
+    style={
+      Object {
+        "width": "50px",
+      }
+    }
   >
     <FormGroup
       className="myClass"

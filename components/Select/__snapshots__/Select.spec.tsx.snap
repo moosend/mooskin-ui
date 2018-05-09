@@ -70,6 +70,15 @@ exports[`Select renders Select correctly 1`] = `
         className="selectIcon"
         onClick={[Function]}
       />
+      <input
+        readOnly={true}
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+        value="option1"
+      />
     </div>
     <div
       className="options-container optionsContainer"
