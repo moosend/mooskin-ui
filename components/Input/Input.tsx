@@ -183,7 +183,7 @@ class Input extends React.Component<IProps, {}> {
                                 onChange={this.onChange}
                                 id={this.id}
                                 type={type}
-                                name={name}
+                                name={this.props.name}
                                 value={this.props.value}
                                 placeholder={placeholder}
                                 minLength={minlength}
