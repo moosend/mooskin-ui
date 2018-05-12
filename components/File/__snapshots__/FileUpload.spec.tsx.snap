@@ -10,15 +10,15 @@ exports[`FileUpload renders correctly 1`] = `
     }
   }
 >
+  <label
+    className="label"
+    style={Object {}}
+  >
+    with a label ofc
+  </label>
   <div
     className="contentContainer"
   >
-    <label
-      className="label"
-      style={Object {}}
-    >
-      with a label ofc
-    </label>
     <span
       className="name undefined"
     >
