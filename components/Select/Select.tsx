@@ -129,33 +129,31 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                     className={styles.overlay}
                     style={{display: !this.state.list ? 'none' : 'block'}}
                 />
-                <div className={styles.selectContainer} style={{zIndex}}>
-                    <div className={`${styles.labelContainer} ${status}`} >
-                        <input
-                            type="text"
-                            className={styles.innerInput}
-                            style={{display: this.state.list ? 'block' : 'none'}}
-                            value={this.state.filter}
-                            placeholder="Type to filter options"
-                            onChange={this.onChangeFilter}
-                            ref={(input) => (input && this.state.list && input.focus())}
-                            onBlur={this.validateOnBlur}
-                        />
-                        <div
-                            onClick={this.onOpenList}
-                            className={`label-container ${styles.innerDiv}`}
-                            style={{display: this.state.list ? 'none' : 'block' }}
-                        >
-                            {selected}
-                        </div>
-                        <div className={styles.selectIcon} onClick={this.onToggleList}/>
-                        <input
-                            value={this.state.selected || ''}
-                            readOnly
-                            style={{display: 'none'}}
-                            {...this.props.extraHtmlAttr}
-                        />
+                <div className={`${styles.selectContainer} ${styles.labelContainer} ${status}`} style={{zIndex}}>
+                    <input
+                        type="text"
+                        className={styles.innerInput}
+                        style={{display: this.state.list ? 'block' : 'none'}}
+                        value={this.state.filter}
+                        placeholder="Type to filter options"
+                        onChange={this.onChangeFilter}
+                        ref={(input) => (input && this.state.list && input.focus())}
+                        onBlur={this.validateOnBlur}
+                    />
+                    <div
+                        onClick={this.onOpenList}
+                        className={`label-container ${styles.innerDiv}`}
+                        style={{display: this.state.list ? 'none' : 'block' }}
+                    >
+                        {selected}
                     </div>
+                    <div className={styles.selectIcon} onClick={this.onToggleList}/>
+                    <input
+                        value={this.state.selected || ''}
+                        readOnly
+                        style={{display: 'none'}}
+                        {...this.props.extraHtmlAttr}
+                    />
                     <div
                         className={`options-container ${styles.optionsContainer}`}
                         style={{display: displayList}}

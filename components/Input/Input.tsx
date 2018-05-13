@@ -121,6 +121,7 @@ class Input extends React.Component<IProps, {}> {
             style,
             className,
             label,
+            clipboardButton,
             labelTop,
         } = this.props;
 
@@ -134,6 +135,7 @@ class Input extends React.Component<IProps, {}> {
             <div className={`input-component ${styles.inputContainer} ${labelPos} ${className}`} style={style}>
                 {label && <label className={inputClasses} style={spacing} htmlFor={this.id}>{label}</label>}
                 {this.renderInput()}
+                {clipboardButton && this.getClipboardButton()}
             </div>
         );
     }
@@ -141,7 +143,6 @@ class Input extends React.Component<IProps, {}> {
     renderInput = () => {
         const {
             autofocus,
-            clipboardButton,
             disabled,
             divType,
             maxlength,
@@ -175,34 +176,27 @@ class Input extends React.Component<IProps, {}> {
             const descStatus = this.getDescStatus();
             const reverse = iconPosition === 'left' && styles.reverse;
             return (
-                <div className={styles.innerContainer}>
-                    <div className={styles.inputDiv}>
-                        <div className={`${styles.innerDiv} ${status} ${reverse}`}>
-                            <input
-                                ref={(input) => this.input = input}
-                                onChange={this.onChange}
-                                id={this.id}
-                                type={type}
-                                name={this.props.name}
-                                value={this.props.value}
-                                placeholder={placeholder}
-                                minLength={minlength}
-                                maxLength={maxlength}
-                                required={required}
-                                disabled={disabled}
-                                className={`input ${styles.input} ${disabledInput} ${radius}`}
-                                autoFocus={autofocus}
-                                autoComplete={autocomplete}
-                                onBlur={this.validateOnBlur}
-                                {...this.props.extraHtmlAttr}
-                            />
-                            {icon && this.getIcon()}
-                        </div>
-                        {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
-                    </div>
-                    <div>
-                        {clipboardButton && this.getClipboardButton()}
-                    </div>
+                <div className={`${styles.innerDiv} ${status} ${reverse}`}>
+                    <input
+                        ref={(input) => this.input = input}
+                        onChange={this.onChange}
+                        id={this.id}
+                        type={type}
+                        name={this.props.name}
+                        value={this.props.value}
+                        placeholder={placeholder}
+                        minLength={minlength}
+                        maxLength={maxlength}
+                        required={required}
+                        disabled={disabled}
+                        className={`input ${styles.input} ${disabledInput} ${radius}`}
+                        autoFocus={autofocus}
+                        autoComplete={autocomplete}
+                        onBlur={this.validateOnBlur}
+                        {...this.props.extraHtmlAttr}
+                    />
+                    {icon && this.getIcon()}
+                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             );
         }

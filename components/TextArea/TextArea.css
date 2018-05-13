@@ -12,6 +12,7 @@
     flex-direction: column;
     flex: 1;
     box-sizing: border-box;
+    position: relative;
 }
 
 .textarea{
@@ -72,6 +73,8 @@ textarea::-webkit-scrollbar-thumb:vertical {
 }
 
 .description{
+    position: absolute;
+    bottom: -17px;
     display: block;
     color: #b3b3b3;
     font-size: .78571428571rem;

@@ -197,6 +197,9 @@ export default class Form extends React.Component<IFormProps, {}>{
     }
 
     collectEssence = (formChildren: any, data: any) => {
+        if (formChildren.type === FormGroup){
+            this.collectEssence(formChildren.props.children, data);
+        }
         if (Array.isArray(formChildren)){
             formChildren.forEach((element: any) => {
                 if (element.type === Input || element.type === TextArea){
@@ -220,9 +223,6 @@ export default class Form extends React.Component<IFormProps, {}>{
                     // throw new Error('Elements used within the form are not supported');
                 }
             });
-        }
-        if (formChildren.type === FormGroup){
-            this.collectEssence(formChildren.props.children, data);
         }
         return data;
     }

@@ -21,38 +21,29 @@ exports[`Input renders correctly 1`] = `
     with a label ofc
   </label>
   <div
-    className="innerContainer"
+    className="innerDiv undefined false"
   >
-    <div
-      className="inputDiv"
+    <input
+      autoComplete="on"
+      autoFocus={true}
+      className="input input disabledInput noIcon"
+      disabled={true}
+      id="input1"
+      maxLength={50}
+      minLength={10}
+      name="input name"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder="input placeholder"
+      required={true}
+      type="text"
+      value="input value"
+    />
+    <i
+      className="description undefined"
     >
-      <div
-        className="innerDiv undefined false"
-      >
-        <input
-          autoComplete="on"
-          autoFocus={true}
-          className="input input disabledInput noIcon"
-          disabled={true}
-          id="input1"
-          maxLength={50}
-          minLength={10}
-          name="input name"
-          onBlur={[Function]}
-          onChange={[Function]}
-          placeholder="input placeholder"
-          required={true}
-          type="text"
-          value="input value"
-        />
-      </div>
-      <i
-        className="description undefined"
-      >
-        just some input
-      </i>
-    </div>
-    <div />
+      just some input
+    </i>
   </div>
 </div>
 `;

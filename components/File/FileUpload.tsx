@@ -103,8 +103,8 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
                 className={`file-upload-component ${styles.fileContainer} ${disabledFile}`}
                 style={style}
             >
+                {label && <label className={styles.label} style={spacing}>{label}</label>}
                 <div className={styles.contentContainer}>
-                    {label && <label className={styles.label} style={spacing}>{label}</label>}
                     <span className={`${styles.name} ${status}`}>{this.state.name}</span>
                     <span className={styles.button}>{buttonLabel}</span>
                     <input
@@ -116,8 +116,8 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
                         className={styles.input}
                         multiple={multiple}
                     />
+                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
-                {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
             </div>
         );
     }
