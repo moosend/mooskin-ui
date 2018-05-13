@@ -190,7 +190,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
                 if (child.props.children){
                     const isSubmenu = this.checkChildrenType(child.props.children);
-                    // console.log(child.p)
                     if (isSubmenu){
                         items.push(
                             <SidebarItem
@@ -272,7 +271,7 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
     initiateSubMenus = () => {
         return React.Children.map(this.props.children, (child, index) => {
             if (React.isValidElement<ISideBarItemProps>(child)){
-                if (child.props.children && child.type === SidebarItem){
+                if (child.props.children && child.props.children.length > 1 && child.type === SidebarItem){
                     return this.getSubMenu(child, index);
                 }
             }
@@ -379,7 +378,10 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
 
     onClickItem = (itemIndex: number, item: React.ReactElement<ISideBarItemProps>) => {
         return (e: React.MouseEvent<HTMLDivElement>) => {
-            if (!item.props.children){
+            if (item.props.children && item.props.children.length > 1){
+                item.props.onClick && item.props.onClick(e);
+                this.setState({activeItem: itemIndex, smallActiveItem: itemIndex});
+            } else {
                 if (this.props.hideClick && this.props.button){
                     item.props.onClick && item.props.onClick(e);
                     this.setState({
@@ -401,9 +403,6 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
                     item.props.onClick && item.props.onClick(e);
                     this.setState({activeItem: itemIndex, smallActiveItem: itemIndex});
                 }
-            } else {
-                item.props.onClick && item.props.onClick(e);
-                this.setState({activeItem: itemIndex, smallActiveItem: itemIndex});
             }
         };
     }

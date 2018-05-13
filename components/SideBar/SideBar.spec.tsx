@@ -239,11 +239,11 @@ describe('SideBar', () => {
         expect(component.state('smallDisplay')).toBe(false);
         expect(component.state('subMenuDisplay')).toBe(false);
 
-        expect(component.hasClass('sidebarOff')).toBeTruthy;
-        expect(component.hasClass('smallOff')).toBeTruthy;
+        // expect(component.hasClass('sidebarOff')).toBeTruthy;
+        // expect(component.hasClass('smallOff')).toBeTruthy;
 
-        expect(component.find('SubMenu').hasClass('subMenuOn')).toBeFalsy;
-        expect(component.find('SubMenu').hasClass('sidebarOff')).toBeTruthy;
+        // expect(component.find('SubMenu').hasClass('subMenuOn')).toBeFalsy;
+        // expect(component.find('SubMenu').hasClass('sidebarOff')).toBeTruthy;
 
         component.find('SmallIconButton').simulate('click');
 
@@ -263,10 +263,7 @@ describe('SideBar', () => {
         expect(component.hasClass('sidebarOn')).toBeTruthy;
         expect(component.hasClass('smallOn')).toBeTruthy;
 
-        expect(component.find('SubMenu').hasClass('subMenuOn')).toBeTruthy;
-        expect(component.find('SubMenu').hasClass('sidebarOff')).toBeFalsy;
-
-        expect(component.find('SidebarItem').length).toEqual(3);
+        expect(component.find('SidebarItem').length).toEqual(2);
 
         component.find('SidebarItem').last().simulate('click');
 
@@ -277,8 +274,8 @@ describe('SideBar', () => {
         expect(component.hasClass('sidebarOff')).toBeTruthy;
         expect(component.hasClass('smallOff')).toBeTruthy;
 
-        expect(component.find('SubMenu').hasClass('subMenuOn')).toBeFalsy;
-        expect(component.find('SubMenu').hasClass('sidebarOff')).toBeTruthy;
+        // expect(component.find('SubMenu').hasClass('subMenuOn')).toBeFalsy;
+        // expect(component.find('SubMenu').hasClass('sidebarOff')).toBeTruthy;
 
     });
 
