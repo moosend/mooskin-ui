@@ -3,7 +3,6 @@
 
 .fileContainer{
     display: flex;
-    flex-direction: column;
     margin: 3px;
     flex: 1;
 }
@@ -11,6 +10,7 @@
 .contentContainer{
     display: flex;
     position: relative;
+    flex: 1;
 }
 
 .button{
@@ -63,7 +63,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    flex: 0 0 100px;
+    flex-basis: 100px;
     color: var(--inputLabel);
     /* font-size: 13px; */
     font-size: .92857142857rem;
@@ -85,6 +85,8 @@
 }
 
 .description{
+    position: absolute;
+    bottom: -17px;
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;

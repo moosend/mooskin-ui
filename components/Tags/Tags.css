@@ -5,6 +5,7 @@
 .container{
     display: flex;
     flex-direction: column;
+    position: relative;
     box-sizing: border-box;
 }
 
@@ -117,6 +118,8 @@
 }
 
 .description{
+    position: absolute;
+    bottom: -17px;
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;
