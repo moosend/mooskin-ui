@@ -135,7 +135,11 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         const {headers, contents} = this.riteOfRakshir();
 
         return(
-            <div id={this.props.id} className={`tabbed-content-component ${style.container} ${containerStyles}`}>
+            <div
+                id={this.props.id}
+                className={`tabbed-content-component ${style.container} ${containerStyles}`}
+                style={this.props.style}
+            >
                 <div className={`${style.heading} ${headingStyles} ${align} ${verticalAlign}`}>
                     {headers}
                 </div>

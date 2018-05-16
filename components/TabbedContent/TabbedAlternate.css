@@ -58,11 +58,11 @@
     border-radius: 10px;
     /* color: var(--moosendBlue); */
     color: #aaa;
-    font-size: 1.125rem;
+    font-size: 1rem;
     background: transparent;
     transition: background-color 0.3s;
     /* border: 1px solid var(--moosendBlue); */
-    padding: 20px;
+    padding: 13px;
     cursor: pointer;
     user-select: none;
 }
@@ -122,6 +122,7 @@
 .activeHeader {
     background: var(--moosendBlue);
     color: #fff;
+    margin: -3px 0;
 }
 
 .activeHeader:hover {
@@ -156,9 +157,9 @@
         flex-direction: column;
     }
 
-    .headingH > .header + .header{
+    /* .headingH > .header + .header{
         margin: 10px 0 0 0
-    }
+    } */
 
     .containerV{flex-direction: column}
 
