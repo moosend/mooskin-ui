@@ -44,7 +44,7 @@ export interface ITableProps{
     /** override Table styles */
     rowStyle?: React.CSSProperties;
 
-    children?: React.ReactElement<IHeaderProps> | Array<React.ReactElement<IHeaderProps>>;
+    children?: any;
 
 }
 
