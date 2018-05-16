@@ -370,12 +370,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent  undefined"
                 key="1"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent  undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -397,12 +395,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent  undefined"
                 key="2"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent  undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -424,12 +420,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="3"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -451,12 +445,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="4"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -478,12 +470,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="5"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -505,12 +495,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="6"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -532,12 +520,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="7"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -720,12 +706,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent  undefined"
                 key="1"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent  undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -747,12 +731,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent  undefined"
                 key="2"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent  undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -774,12 +756,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="3"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -801,12 +781,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="4"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -828,12 +806,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="5"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -855,12 +831,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="6"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -882,12 +856,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="7"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -1070,12 +1042,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent  undefined"
                 key="1"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent  undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -1097,12 +1067,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent  undefined"
                 key="2"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent  undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -1124,12 +1092,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="3"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -1151,12 +1117,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="4"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -1178,12 +1142,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="5"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -1205,12 +1167,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="6"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
@@ -1232,12 +1192,10 @@ exports[`Table renders correctly 1`] = `
               <Col
                 className="col colComponent hide undefined"
                 key="7"
-                onClick={[Function]}
                 style={Object {}}
               >
                 <td
                   className="column col colComponent hide undefined"
-                  onClick={[Function]}
                   style={Object {}}
                 >
                   <span
