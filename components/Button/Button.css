@@ -9,9 +9,9 @@
     text-decoration: none;
     border-radius: 10px;
     font-size: .875rem;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-family: Helvetica, sans-serif;
-    padding: 8px 38px;    
+    padding: 9px 38px;    
     cursor: pointer;
     outline: 0;
     margin: 3px;    

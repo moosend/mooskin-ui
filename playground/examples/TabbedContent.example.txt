@@ -84,30 +84,18 @@ class TabbedContentExample extends React.Component {
                             </Tab>
                         </TabbedContent>
                         <H2>Vertical Tabs</H2>
-                        <TabbedContent vertical>
+                        <TabbedContent type="alternate">
                             <Tab>
                                 <Header>Title 1</Header>
-                                <Content>
-                                    <div style={{...style, backgroundColor: '#5CCDDF'}}>
-                                        Content 1
-                                    </div>
-                                </Content>
+                                <Content/>
                             </Tab>
                             <Tab active>
                                 <Header>Title 2</Header>
-                                <Content>
-                                    <div style={{...style, backgroundColor: '#F48770'}}>
-                                        Content 2
-                                    </div>
-                                </Content>
+                                <Content/>
                             </Tab>
                             <Tab>
                                 <Header>Title 3</Header>
-                                <Content>
-                                    <div style={{...style, backgroundColor: '#F2C14A'}}>
-                                        Content 3
-                                    </div>
-                                </Content>
+                                <Content/>
                             </Tab>
                         </TabbedContent>
                     </Col>
