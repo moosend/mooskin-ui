@@ -17,10 +17,13 @@
 
 .message{
     text-align: center;
+    display: flex;
+    align-items: center;
     color: #ffffff;
     align-self: center;
     font-size: 18px;
     flex:7 1 auto;
+    justify-content: center;
 }
 
 .buttonContainer{
@@ -34,29 +37,7 @@
     align-items: center;
 }
 
-.close div{
-    background-image: url('assets/images/icons/notifications/icon-close.png');
-    width:20px;
-    height:20px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    cursor: pointer;
-}
-
 .message span{
-    vertical-align: middle;
-}
-
-.iconDiv{
-    vertical-align: middle;
-    margin: 0 10px;
-    width:20px;
-    height:20px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    display: inline-block;
     vertical-align: middle;
 }
 
@@ -84,14 +65,6 @@
 
 .customNotification {
     background: #2d2d2d
-}
-
-.successNotification .iconDiv{
-    background-image: url('assets/images/icons/notifications/icon-success.png');
-}
-
-.errorNotification .iconDiv{
-    background-image: url('assets/images/icons/notifications/icon-error.png');
 }
 
 @media (--deviceXsmall){
