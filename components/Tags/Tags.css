@@ -126,6 +126,7 @@
     position: absolute;
     top: 30px;
     left: 8px;
+    z-index: 99;
 }
 
 .description{
@@ -167,7 +168,7 @@
     }
 
     .labelLeft {
-        flex: 1;
+        flex: 1 0 auto;
     }
 
 }
