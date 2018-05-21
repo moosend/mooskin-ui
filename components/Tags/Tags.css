@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import '../_utils/globals/variables.css';
+@import '../_utils/globals/screens.css';
 @import url('https://fonts.googleapis.com/css?family=Convergence');
 
 .container{
@@ -7,6 +8,11 @@
     flex-direction: column;
     position: relative;
     box-sizing: border-box;
+}
+
+.rowContainer {
+    flex-direction: row;
+    align-items: center;
 }
 
 .tags{
@@ -94,6 +100,11 @@
     font-size: .92857142857rem; 
 }
 
+.labelLeft{
+    display: flex;
+    flex: 1 0 150px;
+}
+
 .cover{
     position: fixed;
     top: 0px;
@@ -123,7 +134,7 @@
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;
-    margin-left: 3px;
+    margin-left: -2px;
     margin-top: 5px;
 }
 
@@ -146,4 +157,17 @@
 @keyframes opa {
     from {opacity: 0}
     to {opacity: 1}
+}
+
+@media (--xSmall){
+
+    .rowContainer {
+        flex-direction: column;
+        align-items: unset;
+    }
+
+    .labelLeft {
+        flex: 1;
+    }
+
 }

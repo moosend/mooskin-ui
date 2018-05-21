@@ -167,6 +167,7 @@ Now `validate` is the function for validation the whole component (eg. field is 
 * `onRemove` - callback func which returns the tag to be removed and the index of the tag within an array, should return the value if validation is used.
 * `validateTag` - validate single tag input function
 * `validate` - validate function to validate the whole tags component
+* `labelLeft` - positions the label to the left of the input
 
 </div>
 
