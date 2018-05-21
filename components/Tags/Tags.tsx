@@ -51,6 +51,9 @@ export interface ITagsProps{
     /** tags input label */
     label?: string;
 
+    /** place label on top of Input */
+    labelLeft?: boolean;
+
     /** prevent submit on input blur */
     preventSubmit?: boolean;
 
@@ -160,9 +163,16 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const description = this.props.description;
 
+        const containerClasses = this.props.labelLeft ? styles.rowContainer : '';
+        const labelClasses = this.props.labelLeft ? styles.labelLeft : '';
+
         return(
-            <div className={`${styles.container} ${this.props.className}`} style={this.props.style} id={this.id}>
-                {this.props.label && <div className={styles.label}>{this.props.label}</div>}
+            <div
+                id={this.id}
+                className={`${styles.container} ${this.props.className} ${containerClasses}`}
+                style={this.props.style}
+            >
+                {this.props.label && <div className={`${styles.label} ${labelClasses}`}>{this.props.label}</div>}
                 <label className={`${styles.tags} ${status}`}>
                     {tags}
                     <div className={styles.inputContainer}>
@@ -181,8 +191,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         {source}
                     </div>
                     {cover}
+                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </label>
-                {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
             </div>
         );
     }
