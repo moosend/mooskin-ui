@@ -2,6 +2,10 @@ import * as React from 'react';
 
 import Button from '../Button';
 
+import closeIcon from '../../assets/images/icons/notifications/icon-close.png';
+import errorIcon from '../../assets/images/icons/notifications/icon-error.png';
+import successIcon from '../../assets/images/icons/notifications/icon-success.png';
+
 import styles from './TopNotification.css';
 
 export interface ITopNotificationProps {
@@ -56,11 +60,13 @@ export default class TopNotification extends React.Component<ITopNotificationPro
 
     render(){
 
-        const {className, style, text, visible} = this.props;
+        const {className, style, text, visible, type} = this.props;
 
         const height = visible ? styles.active : styles.inactive;
 
         const typeClass = this.resolveTypeClass();
+
+        const icon = type === 'success' ? successIcon : type === 'error' ? errorIcon : '';
 
         return (
             <div
@@ -69,13 +75,13 @@ export default class TopNotification extends React.Component<ITopNotificationPro
             >
                 <div className={styles.content}>
                     <div className={styles.message}>
-                        <div className={styles.iconDiv}/>
+                        <img src={icon} alt="" style={{marginRight: 10}}/>
                         <span className={styles.text}>{text}</span>
                     </div>
                     {this.renderButtons()}
                 </div>
-                <div className={`close-notification ${styles.close}`}>
-                    <div onClick={this.onClickCancel}/>
+                <div className={`close-notification ${styles.close}`} onClick={this.onClickCancel}>
+                    <img src={closeIcon} alt=""/>
                 </div>
             </div>
         );

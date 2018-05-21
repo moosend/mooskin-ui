@@ -15,8 +15,14 @@ exports[`TopNotification renders correctly 1`] = `
     <div
       className="message"
     >
-      <div
-        className="iconDiv"
+      <img
+        alt=""
+        src=""
+        style={
+          Object {
+            "marginRight": 10,
+          }
+        }
       />
       <span
         className="text"
@@ -39,9 +45,11 @@ exports[`TopNotification renders correctly 1`] = `
   </div>
   <div
     className="close-notification close"
+    onClick={[Function]}
   >
-    <div
-      onClick={[Function]}
+    <img
+      alt=""
+      src=""
     />
   </div>
 </div>
