@@ -61,6 +61,10 @@ export interface ICarouselProps {
 
     maxDynamicWidth?: number;
 
+    responsive?: any[];
+
+    keySlide?: boolean;
+
     /** max width with dynamic width */
     // maxWidth?: number;
 
@@ -115,6 +119,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
     };
 
     carousel: any;
+    slider: any;
 
     constructor(props: ICarouselProps){
         super(props);
@@ -129,10 +134,12 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
         this.setState({width: this.getParentWidth()});
         this.overrideArrowStyle();
         window.addEventListener('resize', this.updateWidth);
+        this.props.keySlide && window.addEventListener('keydown', (e) => this.keyPressChangeSlide(e));
     }
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWidth);
+        this.props.keySlide && window.removeEventListener('keydown', (e) => this.keyPressChangeSlide(e));
     }
 
     render(){
@@ -150,6 +157,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
                 ref={(carousel) => this.carousel = carousel}
             >
                 <CarouselComponent
+                    ref={(slider) => this.slider = slider}
                     slidesToShow={this.props.slidesToShow}
                     className={`${styles.carousel} ${this.props.className}`}
                     swipeToSlide
@@ -167,6 +175,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
                     slickGoTo={this.props.goTo}
                     pauseOnHover={this.props.pauseOnHover}
                     afterChange={this.props.onChange}
+                    responsive={this.props.responsive}
                 >
                     {this.props.children}
                 </CarouselComponent>
@@ -206,6 +215,16 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
             return this.props.maxDynamicWidth;
         }
         return parent;
+    }
+
+    keyPressChangeSlide = (e: any) => {
+        if (e.keyCode === 37){
+            // left
+            this.slider.slickPrev();
+        } else if (e.keyCode === 39) {
+            // right
+            this.slider.slickNext();
+        }
     }
 
 }
