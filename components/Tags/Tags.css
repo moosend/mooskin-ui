@@ -46,7 +46,7 @@
 .close{
     width: 10px;
     height: 10px;
-    font-size: 10px;
+    font-size: 10px !important;
     margin-left: 10px;
     cursor: pointer;
 }
