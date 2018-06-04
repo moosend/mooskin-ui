@@ -10,13 +10,13 @@ class DatePickerExample extends React.Component {
         const settings = {
             format: '12-Hour',
             itemType: 'hour',
-            label: 'Hour'
+            label: 'Hour (12H)'
         }
 
         const settings2 = {
             format: '24-Hour',
             itemType: 'hour',
-            label: 'Hour'
+            label: 'Hour (24H)'
         }
 
         const settings3 = {
