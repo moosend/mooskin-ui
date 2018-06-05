@@ -44,7 +44,7 @@ describe('TabbedContent', () => {
         Math.random = jest.fn(() => 222333444555);
 
         const component = shallow(
-            <TabbedContent vertical type="radio">
+            <TabbedContent vertical type="alternate">
                 <Tab>
                     <Header className="mySwitch" style={{color: 'black'}}>Moosend</Header>
                     <Content>Table</Content>

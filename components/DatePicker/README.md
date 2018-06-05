@@ -106,6 +106,66 @@ validate(data){
 }
 ```
 
+### Alternate selection of time
+
+The `dateSelect` prop provides a different way of selecting minutes/hours/days/weekdays/month days from a select field based on the passed down object on this prop. The following example shows the selection of hours depending on the time format (24 hours/12 hours)
+
+#### Example
+
+```
+const settings = {
+    format: '24-Hour',
+    itemType: 'hour',
+    label: 'Hour (12H)'
+}
+
+<DatePicker onChange={this.onChange} dateSelect={settings}/>
+
+onChange(data){
+    console.log(data.value);
+}
+```
+
+This will render a Mooskin Select component with 24 options, one for each hour. It is in 24-Hours format so the first Option will be of the value 00, the last one will be 23.
+
+```
+const settings = {
+    format: '12-Hour',
+    itemType: 'hour',
+    label: 'Hour (12H)'
+}
+
+<DatePicker onChange={this.onChange} dateSelect={settings}/>
+
+onChange(data){
+    console.log(data.value);
+}
+```
+
+This renders a Select component with 24 options, the twelve first options will be of the AM time, starting from 00 to 11, followed by PM time of the same options.
+
+The days of the month Select will render as in the following example:
+
+```
+const settings = {
+    format: '1',
+    itemType: 'day',
+    label: 'Day'
+}
+
+<DatePicker onChange={this.onChange} dateSelect={settings}/>
+
+onChange(data){
+    console.log(data.value);
+}
+```
+
+Now in this case, the component will render a Select with 31 Options, where `format` reflects the day of the month, in this case `1` for January, hence 31 options. If in the case of passing down the `format` option with `2` (February), the Select will render with 28 options, the first being `1st` with a value of 1, and the last being the `28th` with the value of 28.
+
+#### Callback
+
+The callback works the same as with the DatePicker component, where it returns a `data` object consisting of `value` & `dataLabel` of the component. The value will always be returned as a number. For example: on the 24-Hours format of the hours component type, when selecting `01`, will return 1 as a callback value, selecting `22` will return 22. On the 12-Hours format, selecting `02 AM` will return 2, selecting `01 PM` will return 13 and so on. On the weekly type, selecting 'Tuesday' will return 2, on the `ordinal` type, selecting `First` will return 1, selecting `Last` will return 01.
+
 <div class="playground-doc">
 
 ## Supported attributes 
@@ -120,6 +180,7 @@ validate(data){
 * `dataLabel` - label what kind of data 
 * `style` - input field style
 * `onChange` - callback to be triggered on input change
+* `dateSelect` - alternate selection of date/time (see above)
 
 </div>
 
