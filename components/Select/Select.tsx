@@ -14,7 +14,7 @@ export interface ISelectProps {
     dataLabel?: string;
 
     /** to specify which value is selected, has to be one of the option values */
-    selected?: string;
+    selected?: string | number;
 
     /** select box label */
     label?: string;
@@ -61,7 +61,7 @@ export interface ISelectProps {
 
 export interface ISelectState {
     list: boolean;
-    selected?: string;
+    selected?: string | number;
     filter: string;
 }
 
@@ -69,7 +69,7 @@ export interface IOptionProps {
     onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 
     /** value for this option */
-    value: string;
+    value: string | number;
 
     /** children must be a string */
     children?: string;
@@ -172,7 +172,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         this.setState({filter: e.target.value});
     }
 
-    onClick = (option: string) => {
+    onClick = (option: string | number) => {
         const {dataLabel, required} = this.props;
         return (e: React.MouseEvent<HTMLElement>) => {
             this.props.onChange && this.props.onChange(e, {value: option, dataLabel});

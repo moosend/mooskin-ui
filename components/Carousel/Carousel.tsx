@@ -239,7 +239,7 @@ export const CustomArrow = (props: ICustomArrowProps) => {
     return (
         <div
             className={`${styles.arrowContainer} ${className}`}
-            style={{...spacing, ...style}}
+            style={{...{height: '100%', width: 45}, ...spacing, ...style}}
             onClick={onClick}
         >
             {arrow}
