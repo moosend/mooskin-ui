@@ -198,7 +198,7 @@ exports[`TabbedContent renders TabbedContent vertically with radio styles 1`] = 
           "color": "black",
         }
       }
-      type="radio"
+      type="alternate"
       vertical={true}
     >
       Moosend
@@ -213,7 +213,7 @@ exports[`TabbedContent renders TabbedContent vertically with radio styles 1`] = 
           "color": "black",
         }
       }
-      type="radio"
+      type="alternate"
       vertical={true}
     >
       Home
@@ -228,7 +228,7 @@ exports[`TabbedContent renders TabbedContent vertically with radio styles 1`] = 
           "color": "black",
         }
       }
-      type="radio"
+      type="alternate"
       vertical={true}
     >
       About
