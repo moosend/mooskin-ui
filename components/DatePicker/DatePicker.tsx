@@ -177,7 +177,7 @@ export interface IDateSelectValue {
     dataLabel?: string;
     label?: string;
     format?: string;
-    type: string;
+    type: 'hour' | 'minute' | 'month' | 'week' | 'ordinal';
     value?: number;
     labelTop?: boolean;
     className?: string;
@@ -185,7 +185,7 @@ export interface IDateSelectValue {
     onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
 
-export const DateSelect: React.StatelessComponent<any> = (props) => {
+export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) => {
 
     const renderDateSelect = () => {
         const {id, dataLabel, value, labelTop, label, className, style} = props;
@@ -212,7 +212,7 @@ export const DateSelect: React.StatelessComponent<any> = (props) => {
             return renderHourOption();
         } else if (type && type === 'minute'){
             return renderMinuteOptions();
-        } else if (type && type === 'day'){
+        } else if (type && type === 'month'){
             return renderDayOptions();
         } else if (type && type === 'week'){
             return renderWeekOptions();
@@ -362,7 +362,7 @@ export const DateSelect: React.StatelessComponent<any> = (props) => {
     };
 
     const onSelectChange = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        props.onChange && props.onChange({value: parseInt(data.value, 10), dataLabel: props.dataLabel});
+        props.onChange && props.onChange(e, {value: parseInt(data.value, 10), dataLabel: props.dataLabel});
     };
 
     return renderDateSelect();

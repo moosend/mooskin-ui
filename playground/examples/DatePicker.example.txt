@@ -19,7 +19,7 @@ class DatePickerExample extends React.Component {
                 <br/>
                 <DateSelect onChange={this.onChange} type="minute" label="Minute" />
                 <br/>
-                <DateSelect onChange={this.onChange} format="1" type="day" label="Day" />
+                <DateSelect onChange={this.onChange} format="1" type="month" label="Day" />
                 <br/>
                 <DateSelect onChange={this.onChange} type="week" />
                 <br/>
@@ -30,7 +30,7 @@ class DatePickerExample extends React.Component {
         );
     }
 
-    onChange(data){
+    onChange(e, data){
         console.log(data.value);
     }
 }

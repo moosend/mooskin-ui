@@ -162,7 +162,19 @@ The callback works the same as with the DatePicker component, where it returns a
 * `dataLabel` - label what kind of data 
 * `style` - input field style
 * `onChange` - callback to be triggered on input change
-* `dateSelect` - alternate selection of date/time (see above)
+
+## DateSelect attributes
+
+* `id` - id of the element
+* `format` - formats the select options, example `12-Hour` or `24-Hour` for `hour` type. Or `1...12` for rendering day options for a month in `month` type
+* `type` - 'hour' | 'minute' | 'month' | 'week' | 'ordinal'
+* `label` - datepicker label
+* `value` - selected value
+* `labelTop` - positions the label on the top
+* `className` - css class
+* `dataLabel` - label what kind of data 
+* `style` - input field style
+* `onChange` - callback to be triggered on input change
 
 </div>
 
