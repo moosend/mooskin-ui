@@ -232,7 +232,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     getSelectedChildLabel(){
         const selectedChild = React.Children.toArray(this.props.children)
                 .find((child: React.ReactElement<IOptionProps>) => {
-                    return child.props.value === this.state.selected;
+                    return child.props.value.toString() === (this.state.selected && this.state.selected.toString());
                 });
 
         return selectedChild &&

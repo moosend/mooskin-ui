@@ -52,8 +52,6 @@ export interface IDateProps{
     /** override DatePicker styles */
     style?: React.CSSProperties;
 
-    dateSelect?: IDateSelectProps;
-
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
 
@@ -64,13 +62,6 @@ export interface IDateProps{
 export interface IDateState{
     date: any;
     displayPicker: boolean;
-}
-
-export interface IDateSelectProps {
-    label?: string;
-    format?: string;
-    itemType: string;
-    value?: number;
 }
 
 export default class DatePicker extends React.Component<IDateProps, IDateState>{
@@ -91,10 +82,6 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
     render(){
-        const {dateSelect} = this.props;
-        if (dateSelect){
-            return this.renderDateSelect();
-        }
         return this.renderDatePicker();
     }
 
@@ -183,58 +170,80 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         this.props.validate({value: this.props.date, dataLabel: this.props.dataLabel, required: this.props.required});
     }
 
-    renderDateSelect = () => {
-        const {dateSelect} = this.props;
-        const options = this.renderOptions();
+}
+
+export interface IDateSelectValue {
+    id?: string;
+    dataLabel?: string;
+    label?: string;
+    format?: string;
+    type: string;
+    value?: number;
+    labelTop?: boolean;
+    className?: string;
+    style?: React.CSSProperties;
+    onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+}
+
+export const DateSelect: React.StatelessComponent<any> = (props) => {
+
+    const renderDateSelect = () => {
+        const {id, dataLabel, value, labelTop, label, className, style} = props;
+        const options = renderOptions();
         return (
             <Select
-                selected={dateSelect && dateSelect.value}
-                onChange={this.onSelectChange}
-                label={dateSelect && dateSelect.label}
+                selected={value}
+                onChange={onSelectChange}
+                label={label}
+                id={id}
+                dataLabel={dataLabel}
+                labelTop={labelTop}
+                className={`date-select-component ${className}`}
+                style={style}
             >
                 {options}
             </Select>
         );
-    }
+    };
 
-    renderOptions = () => {
-        const {dateSelect} = this.props;
-        if (dateSelect && dateSelect.itemType === 'hour'){
-            return this.renderHourOption();
-        } else if (dateSelect && dateSelect.itemType === 'minute'){
-            return this.renderMinuteOptions();
-        } else if (dateSelect && dateSelect.itemType === 'day'){
-            return this.renderDayOptions();
-        } else if (dateSelect && dateSelect.itemType === 'week'){
-            return this.renderWeekOptions();
-        } else if (dateSelect && dateSelect.itemType === 'ordinal'){
-            return this.renderOrdinalOptions();
+    const renderOptions = () => {
+        const {type} = props;
+        if (type && type === 'hour'){
+            return renderHourOption();
+        } else if (type && type === 'minute'){
+            return renderMinuteOptions();
+        } else if (type && type === 'day'){
+            return renderDayOptions();
+        } else if (type && type === 'week'){
+            return renderWeekOptions();
+        } else if (type && type === 'ordinal'){
+            return renderOrdinalOptions();
         } else {
             throw new Error('Item type is not valid!');
         }
-    }
+    };
 
-    renderHourOption = () => {
-        const {dateSelect} = this.props;
+    const renderHourOption = () => {
+        const {format} = props;
         const options = [];
-        if (dateSelect && dateSelect.format === '24-Hour'){
+        if (format && format === '24-Hour'){
             while (options.length < 24){
-                options.push(this.renderHoursClockBased(options.length));
+                options.push(renderHoursClockBased(options.length));
             }
-        } else if (dateSelect && dateSelect.format === '12-Hour') {
+        } else if (format && format === '12-Hour') {
             while (options.length < 12){
-                options.push(this.renderHoursClockBased(options.length, 'AM'));
+                options.push(renderHoursClockBased(options.length, 'AM'));
             }
             while (options.length < 24){
-                options.push(this.renderHoursClockBased(options.length, 'PM'));
+                options.push(renderHoursClockBased(options.length, 'PM'));
             }
         } else {
             throw new Error('Hour format not valid!');
         }
         return options;
-    }
+    };
 
-    renderHoursClockBased = (clock: number, period?: string) => {
+    const renderHoursClockBased = (clock: number, period?: string) => {
         if (period){
             if (period === 'AM'){
                 const text = clock.toString().length === 1 ? `0${clock} ${period}` : `${clock.toString()} ${period}`;
@@ -247,9 +256,9 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         }
         const otherText = clock.toString().length === 1 ? `0${clock}` : clock.toString();
         return <Option key={clock} value={clock.toString()}>{otherText}</Option>;
-    }
+    };
 
-    renderMinuteOptions = () => {
+    const renderMinuteOptions = () => {
         const options = [];
         for (let i = 0 ; i < 60 ; i++) {
             const text = i.toString().length === 1 ? `0${i}` : i.toString();
@@ -258,11 +267,11 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             );
         }
         return options;
-    }
+    };
 
-    renderDayOptions = () => {
+    const renderDayOptions = () => {
         const options = [];
-        const format = this.getDayFormat() || 31;
+        const format = getDayFormat() || 31;
         const days = moment(format.toString()).daysInMonth();
         for (let i = 1 ; i <= days ; i++) {
             const text = moment({ month: format - 1, day: i }).format('Do');
@@ -271,18 +280,18 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             );
         }
         return options;
-    }
+    };
 
-    getDayFormat = () => {
-        const {dateSelect} = this.props;
-        if (dateSelect && dateSelect.format && parseInt(dateSelect.format, 10)){
-            return parseInt(dateSelect.format, 10);
+    const getDayFormat = () => {
+        const {format} = props;
+        if (format && parseInt(format, 10)){
+            return parseInt(format, 10);
         } else {
             throw new Error('Day format not valid!');
         }
-    }
+    };
 
-    renderWeekOptions = () => {
+    const renderWeekOptions = () => {
         const options = [];
         for (let i = 1 ; i <= 7 ; i++){
             let text: string = 'Monday';
@@ -316,9 +325,9 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             );
         }
         return options;
-    }
+    };
 
-    renderOrdinalOptions = () => {
+    const renderOrdinalOptions = () => {
         const options = [];
         for (let i = 1 ; i <= 6 ; i++){
             let text: string = 'First';
@@ -350,10 +359,11 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             );
         }
         return options;
-    }
+    };
 
-    onSelectChange = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-        this.props.onChange && this.props.onChange({value: parseInt(data.value, 10), dataLabel: this.props.dataLabel});
-    }
+    const onSelectChange = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
+        props.onChange && props.onChange({value: parseInt(data.value, 10), dataLabel: props.dataLabel});
+    };
 
-}
+    return renderDateSelect();
+};

@@ -108,18 +108,12 @@ validate(data){
 
 ### Alternate selection of time
 
-The `dateSelect` prop provides a different way of selecting minutes/hours/days/weekdays/month days from a select field based on the passed down object on this prop. The following example shows the selection of hours depending on the time format (24 hours/12 hours)
+The `DateSelect` Component provides a different way of selecting minutes/hours/days/weekdays/month days from a select field based on the passed down props. The following example shows the selection of hours depending on the time format (24 hours/12 hours)
 
 #### Example
 
 ```
-const settings = {
-    format: '24-Hour',
-    itemType: 'hour',
-    label: 'Hour (12H)'
-}
-
-<DatePicker onChange={this.onChange} dateSelect={settings}/>
+<DateSelect onChange={this.onChange} format="24-Hour" value={17} type="hour" label="Hour (24H)" />
 
 onChange(data){
     console.log(data.value);
@@ -129,13 +123,7 @@ onChange(data){
 This will render a Mooskin Select component with 24 options, one for each hour. It is in 24-Hours format so the first Option will be of the value 00, the last one will be 23.
 
 ```
-const settings = {
-    format: '12-Hour',
-    itemType: 'hour',
-    label: 'Hour (12H)'
-}
-
-<DatePicker onChange={this.onChange} dateSelect={settings}/>
+<DateSelect onChange={this.onChange} format="12-Hour" type="hour" label="Hour (12H)" />
 
 onChange(data){
     console.log(data.value);
@@ -147,13 +135,7 @@ This renders a Select component with 24 options, the twelve first options will b
 The days of the month Select will render as in the following example:
 
 ```
-const settings = {
-    format: '1',
-    itemType: 'day',
-    label: 'Day'
-}
-
-<DatePicker onChange={this.onChange} dateSelect={settings}/>
+<DateSelect onChange={this.onChange} format="1" type="day" label="Day" />
 
 onChange(data){
     console.log(data.value);
