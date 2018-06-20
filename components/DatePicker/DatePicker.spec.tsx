@@ -94,6 +94,15 @@ describe('DatePicker', () => {
 
     });
 
+    test('datepicker to date only if dateOnly prop is passed', () => {
+        const func = jest.fn();
+
+        const component = mount(<DatePicker dateOnly onChange={func}/>);
+
+        // expect(component.find('.ion-calendar').prop('style')).toEqual({display: 'none'});
+
+    });
+
     test('creates select component for date related hours', () => {
         const func = jest.fn();
 

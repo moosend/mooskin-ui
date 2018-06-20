@@ -156,6 +156,7 @@ The callback works the same as with the DatePicker component, where it returns a
 * `date` - selected date
 * `format` - format the date differently. See [format](https://momentjs.com/docs/#/parsing/string-format/) types
 * `label` - datepicker label
+* `dateOnly` - datepicker with date only
 * `disabled` - input field should be disabled
 * `required` - input field is required
 * `className` - css class
