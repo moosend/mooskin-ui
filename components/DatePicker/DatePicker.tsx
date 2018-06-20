@@ -205,6 +205,8 @@ export interface IDateSelectValue {
     label?: string;
     format?: string;
     type: 'hour' | 'minute' | 'month' | 'week' | 'ordinal';
+    placeholder?: string;
+    description?: string;
     value?: number;
     labelTop?: boolean;
     className?: string;
@@ -215,15 +217,18 @@ export interface IDateSelectValue {
 export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) => {
 
     const renderDateSelect = () => {
-        const {id, dataLabel, value, labelTop, label, className, style} = props;
+        const {id, dataLabel, value, labelTop, label, className, placeholder, description, style} = props;
         const options = renderOptions();
+        const selected = value ? value.toString() : '';
         return (
             <Select
-                selected={value}
+                selected={selected}
                 onChange={onSelectChange}
                 label={label}
                 id={id}
                 dataLabel={dataLabel}
+                placeholder={placeholder}
+                description={description}
                 labelTop={labelTop}
                 className={`date-select-component ${className}`}
                 style={style}
@@ -290,7 +295,7 @@ export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) =>
         for (let i = 0 ; i < 60 ; i++) {
             const text = i.toString().length === 1 ? `0${i}` : i.toString();
             options.push(
-                <Option key={i} value={i}>{text}</Option>
+                <Option key={i} value={i.toString()}>{text}</Option>
             );
         }
         return options;
@@ -303,7 +308,7 @@ export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) =>
         for (let i = 1 ; i <= days ; i++) {
             const text = moment({ month: format - 1, day: i }).format('Do');
             options.push(
-                <Option key={i} value={i}>{text}</Option>
+                <Option key={i} value={i.toString()}>{text}</Option>
             );
         }
         return options;
@@ -348,7 +353,7 @@ export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) =>
                     break;
             }
             options.push(
-                <Option key={i} value={i}>{text}</Option>
+                <Option key={i} value={i.toString()}>{text}</Option>
             );
         }
         return options;
@@ -382,7 +387,7 @@ export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) =>
             }
             const value = i === 6 ? -1 : i;
             options.push(
-                <Option key={i} value={value}>{text}</Option>
+                <Option key={i} value={value.toString()}>{text}</Option>
             );
         }
         return options;
