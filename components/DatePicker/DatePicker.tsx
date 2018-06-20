@@ -207,7 +207,7 @@ export interface IDateSelectValue {
     type: 'hour' | 'minute' | 'month' | 'week' | 'ordinal';
     placeholder?: string;
     description?: string;
-    value?: number;
+    value?: string | number;
     labelTop?: boolean;
     className?: string;
     style?: React.CSSProperties;
