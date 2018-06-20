@@ -5,7 +5,7 @@ export {default as Carousel} from '../Carousel';
 export {default as CheckListItem} from '../CheckListItem';
 export {default as CheckboxGroup, Checkbox} from '../Checkbox';
 export {default as ClipboardButton} from '../ClipboardButton';
-export {default as DatePicker} from '../DatePicker';
+export {default as DatePicker, DateSelect} from '../DatePicker';
 export {default as Form, FormGroup} from '../Form';
 export {default as FileUpload} from '../File';
 export {default as Fieldset} from '../Fieldset';

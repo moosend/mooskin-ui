@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import loaderImage from '../../assets/images/loader/loader.png';
+
 import styles from './Loader.css';
 
 export interface ILoaderProps {
@@ -35,8 +37,7 @@ export default class Loader extends React.Component<ILoaderProps, {}> {
 
         const display = this.props.active ? '' : styles.hidden;
 
-        const loader = this.props.loader ? this.props.loader :
-                    'http://www.freeiconspng.com/uploads/load-icon-png-10.png';
+        const loader = this.props.loader ? this.props.loader : loaderImage;
 
         const animation = this.props.animation ? this.props.animation :
                         styles.animation;

@@ -56,154 +56,160 @@ exports[`DatePicker renders correctly 1`] = `
 
 exports[`DatePicker renders other type of the component correctly 1`] = `
 <Select
-  className=""
+  className="date-select-component myClass"
   filter=""
-  label="Hour (24H)"
+  id="input1"
+  label="Hour"
   onChange={[Function]}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
 >
   <Option
     key="0"
     value="0"
   >
-    00
+    00 AM
   </Option>
   <Option
     key="1"
     value="1"
   >
-    01
+    01 AM
   </Option>
   <Option
     key="2"
     value="2"
   >
-    02
+    02 AM
   </Option>
   <Option
     key="3"
     value="3"
   >
-    03
+    03 AM
   </Option>
   <Option
     key="4"
     value="4"
   >
-    04
+    04 AM
   </Option>
   <Option
     key="5"
     value="5"
   >
-    05
+    05 AM
   </Option>
   <Option
     key="6"
     value="6"
   >
-    06
+    06 AM
   </Option>
   <Option
     key="7"
     value="7"
   >
-    07
+    07 AM
   </Option>
   <Option
     key="8"
     value="8"
   >
-    08
+    08 AM
   </Option>
   <Option
     key="9"
     value="9"
   >
-    09
+    09 AM
   </Option>
   <Option
     key="10"
     value="10"
   >
-    10
+    10 AM
   </Option>
   <Option
     key="11"
     value="11"
   >
-    11
+    11 AM
   </Option>
   <Option
     key="12"
     value="12"
   >
-    12
+    00 PM
   </Option>
   <Option
     key="13"
     value="13"
   >
-    13
+    01 PM
   </Option>
   <Option
     key="14"
     value="14"
   >
-    14
+    02 PM
   </Option>
   <Option
     key="15"
     value="15"
   >
-    15
+    03 PM
   </Option>
   <Option
     key="16"
     value="16"
   >
-    16
+    04 PM
   </Option>
   <Option
     key="17"
     value="17"
   >
-    17
+    05 PM
   </Option>
   <Option
     key="18"
     value="18"
   >
-    18
+    06 PM
   </Option>
   <Option
     key="19"
     value="19"
   >
-    19
+    07 PM
   </Option>
   <Option
     key="20"
     value="20"
   >
-    20
+    08 PM
   </Option>
   <Option
     key="21"
     value="21"
   >
-    21
+    09 PM
   </Option>
   <Option
     key="22"
     value="22"
   >
-    22
+    10 PM
   </Option>
   <Option
     key="23"
     value="23"
   >
-    23
+    11 PM
   </Option>
 </Select>
 `;

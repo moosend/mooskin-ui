@@ -84,18 +84,24 @@ class TabbedContentExample extends React.Component {
                             </Tab>
                         </TabbedContent>
                         <H2>Vertical Tabs</H2>
-                        <TabbedContent type="alternate">
+                        <TabbedContent type="radio" vertical>
                             <Tab>
                                 <Header>Title 1</Header>
-                                <Content/>
+                                <Content>
+                                    Content 1
+                                </Content>
                             </Tab>
                             <Tab active>
                                 <Header>Title 2</Header>
-                                <Content/>
+                                <Content>
+                                    Content 2
+                                </Content>
                             </Tab>
                             <Tab>
                                 <Header>Title 3</Header>
-                                <Content/>
+                                <Content>
+                                    Content 3
+                                </Content>
                             </Tab>
                         </TabbedContent>
                     </Col>

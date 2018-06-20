@@ -1,6 +1,6 @@
 import moment from 'moment';
 import * as React from 'react';
-import DatePicker from './DatePicker';
+import DatePicker, {DateSelect} from './DatePicker';
 
 import { mount, shallow } from 'enzyme';
 
@@ -29,19 +29,15 @@ describe('DatePicker', () => {
         const func = jest.fn();
         // Date.now = jest.fn(() => new Date(moment.parseZone('2013-01-01T00:00:00-13:00').utcOffset()));
 
-        const settings = {
-            format: '24-Hour',
-            itemType: 'hour',
-            label: 'Hour (24H)'
-        };
-
         const tree = shallow(
-            <DatePicker
+            <DateSelect
                 onChange={func}
                 className="myClass"
                 style={{color: 'blue'}}
                 id={'input1'}
-                dateSelect={settings}
+                format="12-Hour"
+                type="hour"
+                label="Hour"
             />
         );
         expect(tree).toMatchSnapshot();
@@ -98,16 +94,19 @@ describe('DatePicker', () => {
 
     });
 
+    test('datepicker to date only if dateOnly prop is passed', () => {
+        const func = jest.fn();
+
+        const component = mount(<DatePicker dateOnly onChange={func}/>);
+
+        // expect(component.find('.ion-calendar').prop('style')).toEqual({display: 'none'});
+
+    });
+
     test('creates select component for date related hours', () => {
         const func = jest.fn();
 
-        const settings = {
-            format: '24-Hour',
-            itemType: 'hour',
-            label: 'Hour (24H)'
-        };
-
-        const component = shallow(<DatePicker onChange={func} dateSelect={settings} />);
+        const component = shallow(<DateSelect onChange={func} format="24-Hour" type="hour" label="Hour (24H)" />);
 
         expect(component.find('Option').length).toBe(24);
         expect(component.find('Option').first().prop('value')).toEqual('0');
@@ -120,13 +119,7 @@ describe('DatePicker', () => {
     test('creates select component for date related hours (12-Hours)', () => {
         const func = jest.fn();
 
-        const settings = {
-            format: '12-Hour',
-            itemType: 'hour',
-            label: 'Hour (12H)'
-        };
-
-        const component = shallow(<DatePicker onChange={func} dateSelect={settings} />);
+        const component = shallow(<DateSelect onChange={func} format="12-Hour" type="hour" label="Hour (12H)" />);
 
         expect(component.find('Option').length).toBe(24);
         expect(component.find('Option').first().prop('value')).toEqual('0');
@@ -139,11 +132,7 @@ describe('DatePicker', () => {
     test('creates select component for minute selection', () => {
         const func = jest.fn();
 
-        const settings = {
-            itemType: 'minute',
-        };
-
-        const component = shallow(<DatePicker onChange={func} dateSelect={settings} />);
+        const component = shallow(<DateSelect onChange={func} type="minute" />);
 
         expect(component.find('Option').length).toBe(60);
         expect(component.find('Option').first().prop('value')).toEqual(0);
@@ -156,13 +145,7 @@ describe('DatePicker', () => {
     test('creates select component for day of the month selection', () => {
         const func = jest.fn();
 
-        const settings = {
-            format: '1',
-            itemType: 'day',
-            label: 'Day'
-        };
-
-        const component = shallow(<DatePicker onChange={func} dateSelect={settings} />);
+        const component = shallow(<DateSelect onChange={func} format="1" type="month" label="Day" />);
 
         expect(component.find('Option').length).toBe(31);
         expect(component.find('Option').first().prop('value')).toEqual(1);
@@ -175,13 +158,7 @@ describe('DatePicker', () => {
     test('creates select component for day of the month (february) selection', () => {
         const func = jest.fn();
 
-        const settings = {
-            format: '2',
-            itemType: 'day',
-            label: 'Day'
-        };
-
-        const component = shallow(<DatePicker onChange={func} dateSelect={settings} />);
+        const component = shallow(<DateSelect onChange={func} format="2" type="month" label="Day" />);
 
         expect(component.find('Option').length).toBe(28);
         expect(component.find('Option').first().prop('value')).toEqual(1);
@@ -194,11 +171,7 @@ describe('DatePicker', () => {
     test('creates select component for day of the week selection', () => {
         const func = jest.fn();
 
-        const settings = {
-            itemType: 'week',
-        };
-
-        const component = shallow(<DatePicker onChange={func} dateSelect={settings} />);
+        const component = shallow(<DateSelect onChange={func} type="week" />);
 
         expect(component.find('Option').length).toBe(7);
         expect(component.find('Option').first().prop('value')).toEqual(1);
@@ -211,11 +184,7 @@ describe('DatePicker', () => {
     test('creates select component for ordinal selection of days of the month', () => {
         const func = jest.fn();
 
-        const settings = {
-            itemType: 'ordinal',
-        };
-
-        const component = shallow(<DatePicker onChange={func} dateSelect={settings} />);
+        const component = shallow(<DateSelect onChange={func} type="ordinal" />);
 
         expect(component.find('Option').length).toBe(6);
         expect(component.find('Option').first().prop('value')).toEqual(1);
