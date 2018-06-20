@@ -7,61 +7,30 @@ class DatePickerExample extends React.Component {
     
     render(){
 
-        const settings = {
-            format: '12-Hour',
-            itemType: 'hour',
-            label: 'Hour (12H)'
-        }
-
-        const settings2 = {
-            format: '24-Hour',
-            itemType: 'hour',
-            label: 'Hour (24H)'
-        }
-
-        const settings3 = {
-            itemType: 'minute',
-            label: 'Minute'
-        }
-
-        const settings4 = {
-            format: '1',
-            itemType: 'day',
-            label: 'Day'
-        }
-
-        const settings5 = {
-            itemType: 'week',
-        }
-
-        const settings6 = {
-            itemType: 'ordinal',
-        }
-
         return(
             <div>
                 <DatePicker onChange={this.onChange} label={'Select Date:'} dataLabel={'date'} date={1511342490554}/>
                 <br/>
                 <DatePicker date={moment().add(45, 'days')} format={'D / M / Y'} onChange={this.onChange}/>
                 <br/>
-                <DatePicker onChange={this.onChange} dateSelect={settings}/>
+                <DateSelect onChange={this.onChange} format="12-Hour" type="hour" label="Hour (12H)" />
                 <br/>
-                <DatePicker onChange={this.onChange} dateSelect={settings2}/>
+                <DateSelect onChange={this.onChange} format="24-Hour" value={17} type="hour" label="Hour (24H)" />
                 <br/>
-                <DatePicker onChange={this.onChange} dateSelect={settings3}/>
+                <DateSelect onChange={this.onChange} type="minute" label="Minute" />
                 <br/>
-                <DatePicker onChange={this.onChange} dateSelect={settings4}/>
+                <DateSelect onChange={this.onChange} format="1" type="month" label="Day" />
                 <br/>
-                <DatePicker onChange={this.onChange} dateSelect={settings5}/>
+                <DateSelect onChange={this.onChange} type="week" />
                 <br/>
-                <DatePicker onChange={this.onChange} dateSelect={settings6}/>
+                <DateSelect onChange={this.onChange} type="ordinal" />
                 <br/>
                 <DatePicker disabled/>
             </div>
         );
     }
 
-    onChange(data){
+    onChange(e, data){
         console.log(data.value);
     }
 }
