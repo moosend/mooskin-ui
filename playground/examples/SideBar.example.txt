@@ -78,9 +78,11 @@ class SideBarExample extends React.Component {
                         <Button style={{background: '#e16053', marginTop: '20px', width: '140px', alignSelf: 'center'}}>Log Out</Button>
                     </SidebarItem>
                 </SidebarItem>
-                <SidebarItem style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
-                    <img src="http://media.moddb.com/cache/images/mods/1/13/12172/thumb_620x2000/republic_symbol.png" width={50}/>
-                    Custom
+                <SidebarItem>
+                    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+                        <img src="http://media.moddb.com/cache/images/mods/1/13/12172/thumb_620x2000/republic_symbol.png" width={50}/>
+                        Custom
+                    </div>
                 </SidebarItem>
                 <SidebarItem
                     style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', textAlign: 'center'}}

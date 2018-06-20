@@ -73,25 +73,6 @@ exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] 
       }
     />
   </div>
-  <SubMenu
-    className=" smallSubOff undefined"
-    display={false}
-    key=".1"
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-  >
-    <SidebarItem
-      active={false}
-      className="myClass"
-      label="Item"
-      onClick={[Function]}
-      style={
-        Object {
-          "color": "blue",
-        }
-      }
-    />
-  </SubMenu>
 </div>
 `;
 

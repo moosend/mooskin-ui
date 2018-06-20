@@ -4,23 +4,9 @@
 
 .inputContainer{
     display: flex;
-    margin: 3px;
     flex: 1 0 auto;
     box-sizing: border-box;
-    align-items: baseline;
-}
-
-.innerContainer{
-    display: flex;
-    flex: 1 0 auto;
-    align-items: baseline;
-}
-
-.inputDiv{
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    flex: 1 0 auto;
+    align-items: center;
 }
 
 .column {
@@ -43,6 +29,8 @@
 
 .innerDiv{
     display: flex;
+    flex: 1;
+    position: relative;
     background: #efefef;
     border-radius: 8px;
 }
@@ -115,7 +103,6 @@
      /* font-size: 13px;  */
      font-size: .92857142857rem; 
     cursor: pointer;
-    padding-top: 15px;
     flex-basis: 150px;
 }
 
@@ -126,6 +113,8 @@
 }
 
 .description{
+    position: absolute;
+    bottom: -17px;
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;

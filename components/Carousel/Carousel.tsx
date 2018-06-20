@@ -59,6 +59,12 @@ export interface ICarouselProps {
     /** dynamic width for Carousel based on parent node width */
     dynamicWidth?: boolean;
 
+    maxDynamicWidth?: number;
+
+    responsive?: any[];
+
+    keySlide?: boolean;
+
     /** max width with dynamic width */
     // maxWidth?: number;
 
@@ -113,12 +119,13 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
     };
 
     carousel: any;
+    slider: any;
 
     constructor(props: ICarouselProps){
         super(props);
 
         this.state = {
-            width: this.getParentWidth(),
+            width: this.getInitialWidth(),
             windowsWidth: window.innerWidth
         };
     }
@@ -127,23 +134,30 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
         this.setState({width: this.getParentWidth()});
         this.overrideArrowStyle();
         window.addEventListener('resize', this.updateWidth);
+        this.props.keySlide && window.addEventListener('keydown', (e) => this.keyPressChangeSlide(e));
     }
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.updateWidth);
+        this.props.keySlide && window.removeEventListener('keydown', (e) => this.keyPressChangeSlide(e));
     }
 
     render(){
+
+        const {containerStyle, dynamicWidth} = this.props;
+
+        const style = dynamicWidth ? {width: this.state.width, ...containerStyle} : containerStyle;
 
         return(
             <div
                 className={`${styles.carouselContainer} ${this.props.containerClassName}`}
                 // style={{width: this.state.width, ...this.props.containerStyle}}
-                style={{width: this.state.width, ...this.props.containerStyle}}
+                style={style}
                 id={this.props.id}
                 ref={(carousel) => this.carousel = carousel}
             >
                 <CarouselComponent
+                    ref={(slider) => this.slider = slider}
                     slidesToShow={this.props.slidesToShow}
                     className={`${styles.carousel} ${this.props.className}`}
                     swipeToSlide
@@ -161,6 +175,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
                     slickGoTo={this.props.goTo}
                     pauseOnHover={this.props.pauseOnHover}
                     afterChange={this.props.onChange}
+                    responsive={this.props.responsive}
                 >
                     {this.props.children}
                 </CarouselComponent>
@@ -183,8 +198,33 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
     }
 
     updateWidth = () => {
+
+        const parentWidth = this.getParentWidth();
+
+        if (this.props.maxDynamicWidth && parentWidth > this.props.maxDynamicWidth){
+            return;
+        }
+
         const width = window.innerWidth - this.state.windowsWidth;
         this.setState({width: this.state.width + width, windowsWidth: window.innerWidth});
+    }
+
+    getInitialWidth = () => {
+        const parent = this.getParentWidth();
+        if (this.props.maxDynamicWidth && parent > this.props.maxDynamicWidth){
+            return this.props.maxDynamicWidth;
+        }
+        return parent;
+    }
+
+    keyPressChangeSlide = (e: any) => {
+        if (e.keyCode === 37){
+            // left
+            this.slider.slickPrev();
+        } else if (e.keyCode === 39) {
+            // right
+            this.slider.slickNext();
+        }
     }
 
 }
@@ -199,7 +239,7 @@ export const CustomArrow = (props: ICustomArrowProps) => {
     return (
         <div
             className={`${styles.arrowContainer} ${className}`}
-            style={{...spacing, ...style}}
+            style={{...{height: '100%', width: 45}, ...spacing, ...style}}
             onClick={onClick}
         >
             {arrow}

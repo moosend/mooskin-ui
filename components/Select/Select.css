@@ -18,15 +18,20 @@
     color: var(--inputColor);
     vertical-align: middle;
     padding: 15px;
-    display: flex;
     flex: 1;
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .innerInput{
     composes: innerDiv;
     outline: none;
     background: transparent;
-    border: none;   
+    border: none;
+    min-width: 0;
+    width: 0;
+    white-space: nowrap;
 }
 
 .innerInput::placeholder {
@@ -132,6 +137,8 @@
 }
 
 .description{
+    position: absolute;
+    bottom: -17px;
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;

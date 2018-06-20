@@ -9,6 +9,8 @@ import moment from 'moment';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
+import Select, {Option} from '../Select';
+
 export interface IDateProps{
 
     /** component id */
@@ -83,7 +85,10 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
     render(){
+        return this.renderDatePicker();
+    }
 
+    renderDatePicker = () => {
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
         const disabledClasses = !this.props.disabled ? '' : styles.disabled;
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
@@ -193,3 +198,199 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
 }
+
+export interface IDateSelectValue {
+    id?: string;
+    dataLabel?: string;
+    label?: string;
+    format?: string;
+    type: 'hour' | 'minute' | 'month' | 'week' | 'ordinal';
+    value?: number;
+    labelTop?: boolean;
+    className?: string;
+    style?: React.CSSProperties;
+    onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+}
+
+export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) => {
+
+    const renderDateSelect = () => {
+        const {id, dataLabel, value, labelTop, label, className, style} = props;
+        const options = renderOptions();
+        return (
+            <Select
+                selected={value}
+                onChange={onSelectChange}
+                label={label}
+                id={id}
+                dataLabel={dataLabel}
+                labelTop={labelTop}
+                className={`date-select-component ${className}`}
+                style={style}
+            >
+                {options}
+            </Select>
+        );
+    };
+
+    const renderOptions = () => {
+        const {type} = props;
+        if (type && type === 'hour'){
+            return renderHourOption();
+        } else if (type && type === 'minute'){
+            return renderMinuteOptions();
+        } else if (type && type === 'month'){
+            return renderDayOptions();
+        } else if (type && type === 'week'){
+            return renderWeekOptions();
+        } else if (type && type === 'ordinal'){
+            return renderOrdinalOptions();
+        } else {
+            throw new Error('Item type is not valid!');
+        }
+    };
+
+    const renderHourOption = () => {
+        const {format} = props;
+        const options = [];
+        if (format && format === '24-Hour'){
+            while (options.length < 24){
+                options.push(renderHoursClockBased(options.length));
+            }
+        } else if (format && format === '12-Hour') {
+            while (options.length < 12){
+                options.push(renderHoursClockBased(options.length, 'AM'));
+            }
+            while (options.length < 24){
+                options.push(renderHoursClockBased(options.length, 'PM'));
+            }
+        } else {
+            throw new Error('Hour format not valid!');
+        }
+        return options;
+    };
+
+    const renderHoursClockBased = (clock: number, period?: string) => {
+        if (period){
+            if (period === 'AM'){
+                const text = clock.toString().length === 1 ? `0${clock} ${period}` : `${clock.toString()} ${period}`;
+                return <Option key={clock} value={clock.toString()}>{text}</Option>;
+            } else if (period === 'PM'){
+                const text = (clock - 12).toString().length === 1 ? `0${clock - 12} ${period}` :
+                    `${(clock - 12).toString()} ${period}`;
+                return <Option key={clock} value={clock.toString()}>{text}</Option>;
+            }
+        }
+        const otherText = clock.toString().length === 1 ? `0${clock}` : clock.toString();
+        return <Option key={clock} value={clock.toString()}>{otherText}</Option>;
+    };
+
+    const renderMinuteOptions = () => {
+        const options = [];
+        for (let i = 0 ; i < 60 ; i++) {
+            const text = i.toString().length === 1 ? `0${i}` : i.toString();
+            options.push(
+                <Option key={i} value={i}>{text}</Option>
+            );
+        }
+        return options;
+    };
+
+    const renderDayOptions = () => {
+        const options = [];
+        const format = getDayFormat() || 31;
+        const days = moment(format.toString()).daysInMonth();
+        for (let i = 1 ; i <= days ; i++) {
+            const text = moment({ month: format - 1, day: i }).format('Do');
+            options.push(
+                <Option key={i} value={i}>{text}</Option>
+            );
+        }
+        return options;
+    };
+
+    const getDayFormat = () => {
+        const {format} = props;
+        if (format && parseInt(format, 10)){
+            return parseInt(format, 10);
+        } else {
+            throw new Error('Day format not valid!');
+        }
+    };
+
+    const renderWeekOptions = () => {
+        const options = [];
+        for (let i = 1 ; i <= 7 ; i++){
+            let text: string = 'Monday';
+            switch (i) {
+                case 1:
+                    text = 'Monday';
+                    break;
+                case 2:
+                    text = 'Tuesday';
+                    break;
+                case 3:
+                    text = 'Wednesday';
+                    break;
+                case 4:
+                    text = 'Thursday';
+                    break;
+                case 5:
+                    text = 'Friday';
+                    break;
+                case 6:
+                    text = 'Saturday';
+                    break;
+                case 7:
+                    text = 'Sunday';
+                    break;
+                default:
+                    break;
+            }
+            options.push(
+                <Option key={i} value={i}>{text}</Option>
+            );
+        }
+        return options;
+    };
+
+    const renderOrdinalOptions = () => {
+        const options = [];
+        for (let i = 1 ; i <= 6 ; i++){
+            let text: string = 'First';
+            switch (i) {
+                case 1:
+                    text = 'First';
+                    break;
+                case 2:
+                    text = 'Second';
+                    break;
+                case 3:
+                    text = 'Third';
+                    break;
+                case 4:
+                    text = 'Fourth';
+                    break;
+                case 5:
+                    text = 'Fifth';
+                    break;
+                case 6:
+                    text = 'Last';
+                    break;
+                default:
+                    break;
+            }
+            const value = i === 6 ? -1 : i;
+            options.push(
+                <Option key={i} value={value}>{text}</Option>
+            );
+        }
+        return options;
+    };
+
+    const onSelectChange = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
+        props.onChange && props.onChange(e, {value: parseInt(data.value, 10), dataLabel: props.dataLabel});
+    };
+
+    return renderDateSelect();
+};

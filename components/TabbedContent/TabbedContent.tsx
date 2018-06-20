@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import alternate from './TabbedAlternate.css';
 import normal from './TabbedContent.css';
+import radio from './TabbedRadio.css';
 
 export interface ITabbedContentProps {
 
@@ -9,7 +10,7 @@ export interface ITabbedContentProps {
     id?: string;
 
     /** type of the tabbed content normal/radio/advanced */
-    type?: 'normal' | 'alternate';
+    type?: 'normal' | 'alternate' | 'radio';
 
     /** align headers left/center/right */
     alignHeaders?: string;
@@ -135,7 +136,11 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         const {headers, contents} = this.riteOfRakshir();
 
         return(
-            <div id={this.props.id} className={`tabbed-content-component ${style.container} ${containerStyles}`}>
+            <div
+                id={this.props.id}
+                className={`tabbed-content-component ${style.container} ${containerStyles}`}
+                style={this.props.style}
+            >
                 <div className={`${style.heading} ${headingStyles} ${align} ${verticalAlign}`}>
                     {headers}
                 </div>
@@ -218,6 +223,10 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
 
                 return alternate;
 
+            case 'radio':
+
+                return radio;
+
             default:
 
                 return normal;
@@ -261,6 +270,10 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
                 return alternate;
 
+            case 'radio':
+
+                return radio;
+
             default:
 
                 return normal;
@@ -271,13 +284,13 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const activeTab = props.active ? style.activeHeader : style.inactiveHeader;
 
-    // const input = props.type === 'alternate' ? (
-    //     <input
-    //         type="alternate"
-    //         checked={props.active}
-    //         readOnly
-    //     />
-    // ) : '';
+    const input = props.type === 'radio' ? (
+        <input
+            type="radio"
+            checked={props.active}
+            readOnly
+        />
+    ) : '';
 
     const align = props.align ? style.headerAlign : '';
 
@@ -287,7 +300,7 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
             style={{width: props.width, ...props.style}}
             onClick={props.onClick}
         >
-            {/* {input} */}
+            {input}
             {props.children}
         </div>
     );

@@ -14,7 +14,7 @@ export interface ISelectProps {
     dataLabel?: string;
 
     /** to specify which value is selected, has to be one of the option values */
-    selected?: string;
+    selected?: string | number;
 
     /** select box label */
     label?: string;
@@ -40,6 +40,9 @@ export interface ISelectProps {
     /** select description (small italic bottom) */
     description?: string;
 
+    /** extra html attributes */
+    extraHtmlAttr?: {[key: string]: any};
+
     /** status of the select, error or success */
     status?: 'error' | 'success';
 
@@ -58,7 +61,7 @@ export interface ISelectProps {
 
 export interface ISelectState {
     list: boolean;
-    selected?: string;
+    selected?: string | number;
     filter: string;
 }
 
@@ -66,7 +69,7 @@ export interface IOptionProps {
     onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 
     /** value for this option */
-    value: string;
+    value: string | number;
 
     /** children must be a string */
     children?: string;
@@ -126,27 +129,31 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                     className={styles.overlay}
                     style={{display: !this.state.list ? 'none' : 'block'}}
                 />
-                <div className={styles.selectContainer} style={{zIndex}}>
-                    <div className={`${styles.labelContainer} ${status}`} >
-                        <input
-                            type="text"
-                            className={styles.innerInput}
-                            style={{display: this.state.list ? 'block' : 'none'}}
-                            value={this.state.filter}
-                            placeholder="Type to filter options"
-                            onChange={this.onChangeFilter}
-                            ref={(input) => (input && this.state.list && input.focus())}
-                            onBlur={this.validateOnBlur}
-                        />
-                        <div
-                            onClick={this.onOpenList}
-                            className={`label-container ${styles.innerDiv}`}
-                            style={{display: this.state.list ? 'none' : 'block' }}
-                        >
-                            {selected}
-                        </div>
-                        <div className={styles.selectIcon} onClick={this.onToggleList}/>
+                <div className={`${styles.selectContainer} ${styles.labelContainer} ${status}`} style={{zIndex}}>
+                    <input
+                        type="text"
+                        className={styles.innerInput}
+                        style={{display: this.state.list ? 'block' : 'none'}}
+                        value={this.state.filter}
+                        placeholder="Type to filter options"
+                        onChange={this.onChangeFilter}
+                        ref={(input) => (input && this.state.list && input.focus())}
+                        onBlur={this.validateOnBlur}
+                    />
+                    <div
+                        onClick={this.onOpenList}
+                        className={`label-container ${styles.innerDiv}`}
+                        style={{display: this.state.list ? 'none' : 'block' }}
+                    >
+                        {selected}
                     </div>
+                    <div className={styles.selectIcon} onClick={this.onToggleList}/>
+                    <input
+                        value={this.state.selected || ''}
+                        readOnly
+                        style={{display: 'none'}}
+                        {...this.props.extraHtmlAttr}
+                    />
                     <div
                         className={`options-container ${styles.optionsContainer}`}
                         style={{display: displayList}}
@@ -165,12 +172,13 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         this.setState({filter: e.target.value});
     }
 
-    onClick = (option: string) => {
+    onClick = (option: string | number) => {
+        const {dataLabel, required} = this.props;
         return (e: React.MouseEvent<HTMLElement>) => {
-            this.props.onChange && this.props.onChange(e, {value: option, dataLabel: this.props.dataLabel});
+            this.props.onChange && this.props.onChange(e, {value: option, dataLabel});
             if (this.props.status){
                 this.props.validate &&
-                this.props.validate({value: option, dataLabel: this.props.dataLabel, required: this.props.required});
+                this.props.validate({value: option, dataLabel, required});
             }
             this.setState({list: false, selected: option, filter: ''});
         };
@@ -224,7 +232,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     getSelectedChildLabel(){
         const selectedChild = React.Children.toArray(this.props.children)
                 .find((child: React.ReactElement<IOptionProps>) => {
-                    return child.props.value === this.state.selected;
+                    return child.props.value.toString() === (this.state.selected && this.state.selected.toString());
                 });
 
         return selectedChild &&

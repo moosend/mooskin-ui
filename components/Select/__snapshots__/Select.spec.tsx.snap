@@ -32,45 +32,50 @@ exports[`Select renders Select correctly 1`] = `
     }
   />
   <div
-    className="selectContainer"
+    className="selectContainer labelContainer undefined"
     style={
       Object {
         "zIndex": 0,
       }
     }
   >
+    <input
+      className="innerInput"
+      onBlur={[Function]}
+      onChange={[Function]}
+      placeholder="Type to filter options"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+      type="text"
+      value=""
+    />
     <div
-      className="labelContainer undefined"
+      className="label-container innerDiv"
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "block",
+        }
+      }
     >
-      <input
-        className="innerInput"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder="Type to filter options"
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-        type="text"
-        value=""
-      />
-      <div
-        className="label-container innerDiv"
-        onClick={[Function]}
-        style={
-          Object {
-            "display": "block",
-          }
-        }
-      >
-        placeholder
-      </div>
-      <div
-        className="selectIcon"
-        onClick={[Function]}
-      />
+      placeholder
     </div>
+    <div
+      className="selectIcon"
+      onClick={[Function]}
+    />
+    <input
+      readOnly={true}
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+      value="option1"
+    />
     <div
       className="options-container optionsContainer"
       style={

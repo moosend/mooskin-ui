@@ -3,22 +3,27 @@
 .container{
     z-index: 130;
     position: fixed;
-    top: 0;
+    top: -80px;
     left: 0;
     right: 0;
     display:flex;
     flex-direction: row;
     align-items: center;
     overflow: hidden;
-
+    transition: all 0.5s ease;
+    max-height: 80px;
+    min-height: 80px;
 }
 
 .message{
     text-align: center;
+    display: flex;
+    align-items: center;
     color: #ffffff;
     align-self: center;
     font-size: 18px;
     flex:7 1 auto;
+    justify-content: center;
 }
 
 .buttonContainer{
@@ -26,35 +31,13 @@
 }
 
 .close{
-    padding:20px;
-    height:65px;
-    width:65px;
-    flex:0 1 auto;
-}
-
-.close div{
-    background-image: url('assets/images/icons/notifications/icon-close.png');
-    width:25px;
-    height:25px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    cursor: pointer;
+    display: flex;
+    flex-basis: 80px;
+    justify-content: center;
+    align-items: center;
 }
 
 .message span{
-    vertical-align: middle;
-}
-
-.iconDiv{
-    vertical-align: middle;
-    margin-right:10px;
-    width:25px;
-    height:25px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    display: inline-block;
     vertical-align: middle;
 }
 
@@ -62,17 +45,14 @@
     display: flex;
     flex-direction: row;
     flex: 1;
-    padding: 25px 0px;
 }
 
 .active{
-    max-height: 200px;
-    transition: max-height 1s ease;
+    top: 0px;
 }
 
 .inactive{
-    max-height: 0;
-    transition: max-height 0.5s ease;
+    top: -80px;
 }
 
 .successNotification{
@@ -85,14 +65,6 @@
 
 .customNotification {
     background: #2d2d2d
-}
-
-.successNotification .iconDiv{
-    background-image: url('assets/images/icons/notifications/icon-success.png');
-}
-
-.errorNotification .iconDiv{
-    background-image: url('assets/images/icons/notifications/icon-error.png');
 }
 
 @media (--deviceXsmall){
@@ -131,17 +103,11 @@
         flex-direction: column;
         align-items: center;
         flex: 7;
-        padding: 20px 10px 20px 20px;
     }
 
     .active{
         max-height: 100%;
     }
-
-    .buttonContainer{
-        margin-top: 10px;
-    }
-
 }
 
 @media (--deviceSmall){
@@ -181,15 +147,10 @@
         flex-direction: column;
         align-items: center;
         flex: 7;
-        padding: 20px 10px 20px 20px;
     }
 
     .active{
         max-height: 100%;
-    }
-
-    .buttonContainer{
-        margin-top: 10px;
     }
 
 }

@@ -2,7 +2,7 @@
 
 exports[`Tags renders Tags correctly 1`] = `
 <div
-  className="container myClass"
+  className="container myClass "
   style={
     Object {
       "width": "50px",
@@ -10,7 +10,7 @@ exports[`Tags renders Tags correctly 1`] = `
   }
 >
   <div
-    className="label"
+    className="label "
   >
     label
   </div>

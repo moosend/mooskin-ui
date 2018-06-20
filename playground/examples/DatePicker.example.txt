@@ -6,6 +6,7 @@ class DatePickerExample extends React.Component {
     }
     
     render(){
+
         return(
             <div>
                 <DatePicker onChange={this.onChange} label={'Select Date:'} dataLabel={'date'} date={1511342490554}/>
@@ -14,12 +15,24 @@ class DatePickerExample extends React.Component {
                 <br/>
                 <DatePicker date={moment().add(45, 'days')} format={'D / M / Y'} onChange={this.onChange}/>
                 <br/>
+                <DateSelect onChange={this.onChange} format="12-Hour" type="hour" label="Hour (12H)" />
+                <br/>
+                <DateSelect onChange={this.onChange} format="24-Hour" value={17} type="hour" label="Hour (24H)" />
+                <br/>
+                <DateSelect onChange={this.onChange} type="minute" label="Minute" />
+                <br/>
+                <DateSelect onChange={this.onChange} format="1" type="month" label="Day" />
+                <br/>
+                <DateSelect onChange={this.onChange} type="week" />
+                <br/>
+                <DateSelect onChange={this.onChange} type="ordinal" />
+                <br/>
                 <DatePicker disabled/>
             </div>
         );
     }
 
-    onChange(data){
+    onChange(e, data){
         console.log(data.value);
     }
 }

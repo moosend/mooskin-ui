@@ -199,8 +199,8 @@ the callback will return two args, `e` for event & `data` which is an object con
 * `collapseHeaderClassName` - classes for popover header
 * `collapseHeaderStyle` - styles for popover header
 * `containerStyle` - styling applied to the div containing the table
-* `paginate` - paginate table, with the number of rows passed to this prop (OUT OF ORDER!)
-* `paginationProps` - an object describing table pagination props (OUT OF ORDER!)
+* `paginate` - paginate table, with the number of rows passed to this prop
+* `paginationProps` - an object describing table pagination props
 
 ## Supported attributes for TableHeader
 
@@ -208,8 +208,8 @@ the callback will return two args, `e` for event & `data` which is an object con
 * `hideSmall` - Hides the column on small screens
 * `colClasses` - classes to be applied to this column cells
 * `colStyles` - styles to be applied to this column cells
-* `sortable` - wether this column should be sortable or not (OUT OF ORDER!)
-* `sortfn` - custom sort function for row sorting, requires `sortable` (OUT OF ORDER!)
+* `sortable` - wether this column should be sortable or not
+* `sortfn` - custom sort function for row sorting, requires `sortable`
 * `className` - css class
 * `style` - table styles
 

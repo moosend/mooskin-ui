@@ -18,6 +18,7 @@ import {
     Col,
     Content,
     DatePicker,
+    DateSelect,
     Doughnut,
     // Fieldset,
     FileUpload,
@@ -171,7 +172,7 @@ export const App = (props: any) => {
                     {renderEditableExample('Select', { Select, Option })}
                 </Col>
                 <Col lg={6} md={6}>
-                    {renderEditableExample('DatePicker', { DatePicker, moment })}
+                    {renderEditableExample('DatePicker', { DatePicker, DateSelect, moment })}
                 </Col>
                 <Col lg={12}>
                     {renderEditableExample('File', { FileUpload })}
