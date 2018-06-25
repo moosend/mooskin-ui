@@ -12,7 +12,7 @@
 }
 
 .slider {
-    flex: 1 0 auto;
+    flex: 1;
     cursor: pointer;
     opacity: 1;
     transition: all 0.2s;

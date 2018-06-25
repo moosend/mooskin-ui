@@ -4,7 +4,7 @@
 
 .inputContainer{
     display: flex;
-    flex: 1 0 auto;
+    /* flex: 1; */
     box-sizing: border-box;
     align-items: center;
 }
@@ -153,10 +153,6 @@
         align-items: stretch;
     }
     
-    .inputDiv{
-        flex: 1 0 auto;
-    }
-
     .copyButton{
         margin: 5px 0 0 0;
     }
