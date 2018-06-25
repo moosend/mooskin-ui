@@ -12,14 +12,16 @@
     display: block;
 }
 
-.horizontal{
+.formGroup {
     display: flex;
+}
+
+.horizontal{
     flex: 1;
     flex-direction: row;
 }
 
 .vertical{
-    display: flex;
     flex: 1;
     flex-direction: column;
 }
