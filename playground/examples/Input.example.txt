@@ -15,9 +15,21 @@ class InputExample extends React.Component {
     }
 
     render(){
+
+        const pers = [
+            {
+                value: 'haha',
+                label: 'hihi'
+            },
+            {
+                value: 'test',
+                label: 'testLabel'
+            }    
+        ];
+
         return(
             <div>
-                <Input onChange={this.onChange} type="text" maxlength={5} placeholder="max length 5" label="Some label:"/>
+                <Input value={this.state.value} onChange={this.onChange} personalizationTags={pers} emoji icon="check" description="hahah" status="success" type="text" placeholder="max length 5" label="Some label:"/>
                 <br/>
                 <Input
                     onChange={this.onChange}

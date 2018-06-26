@@ -15,14 +15,14 @@
 }
 
 .input{
-    display: flex;
     outline: none;
+    display: flex;
+    flex: 1;
     font-family: Arial,sans-serif;
     border: 0;
     color: var(--inputFontColor);
     /* font-size: 16px; */
     font-size: 1rem; 
-    width: 100%;
     transition: 0.2s;
     background: transparent;
 }
@@ -30,18 +30,17 @@
 .innerDiv{
     display: flex;
     flex: 1;
+    align-items: center;
+    justify-content: center;
     position: relative;
     background: #efefef;
+    border-radius: 8px;
+    padding: 15px;
     border-radius: 8px;
 }
 
 .reverse{
     flex-direction: row-reverse;
-}
-
-.noIcon{
-    padding: 15px;
-    border-radius: 8px;
 }
 
 .inputLeft{
@@ -66,21 +65,9 @@
     color: var(--inputPlaceholder);
 }
 
-.iconLeft{
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
-    padding: 10px 0 10px 10px;
-}
-
-.iconRight{
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
-    padding: 10px 10px 10px 0;
-}
-
 .icon{
     color: var(--inputPlaceholder);
-    font-size: 25px;
+    font-size: 20px;
     font-family: 'Material Icons';
     background: transparent;
 }
@@ -115,11 +102,10 @@
 .description{
     position: absolute;
     bottom: -17px;
+    left: 5px;
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;
-    margin-left: 3px;
-    margin-top: 5px;
 }
 
 .success{
@@ -140,6 +126,69 @@
 
 .copyButton {
     margin-left: 15px;
+}
+
+.dropDown {
+    position: absolute;
+    top: 25px;
+    right: -7px;
+    height: auto;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 4;
+    display: none;
+    box-shadow: 0 1px 5px rgba(0,0,0,.32);
+}
+
+.dropDownArrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #F5F7F9;
+    top: -5px;
+    right: 10px;
+    position: absolute;
+}
+
+.dropDownLabel {
+    padding: 5px;
+    border-bottom: 1px solid #f1f1f1;
+    background-color: #F5F7F9;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.dropDownContent {
+    max-height: 400px;
+    overflow-y: auto;
+    width: 250px;
+    padding: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.tag {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.dropDownContent > .tag:not(:last-child) {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.tag:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
 }
 
 @media (--xSmall){
