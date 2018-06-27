@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+import EmojiPicker from 'emojione-picker';
+import 'emojione-picker/css/picker.css';
+
 import styles from './Input.css';
 
 import ClipboardButton from '../ClipboardButton';
@@ -326,7 +329,7 @@ class Input extends React.Component<IProps, IInputState> {
         const display = this.state.activeDropDown === i ? {display: 'block'} : {display: 'none'};
         return (
             <div key={i} style={{position: 'relative'}} onClick={() => this.onDropDownIconClick(i)}>
-                <img style={{paddingLeft: 10}} src={icon}/>
+                <img className={styles.dropDownIcon} src={icon}/>
                 {this.renderDropDown(display, type)}
             </div>
         );
@@ -341,48 +344,63 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     renderDropDown = (display: React.CSSProperties, type: string) => {
-        const label = type === 'personalization' ? 'Personalization Tags' : 'categories';
         return (
             <div style={display} className={styles.dropDown}>
                 <div className={styles.dropDownArrow} />
-                <div className={styles.dropDownLabel}>{label}</div>
-                <div className={styles.dropDownContent}>
-                    {type === 'personalization' && this.getPersonalizationTags()}
-                    {type === 'emoji' && this.getEmojis()}
-                </div>
+                {type === 'personalization' && this.getPersDropDown()}
+                {type === 'emoji' && this.getEmojis()}
             </div>
+        );
+    }
+
+    getPersDropDown = () => {
+        return (
+            <>
+                <div className={styles.dropDownLabel}>Personalization Tags</div>
+                <div className={styles.dropDownContent}>
+                    {this.getPersonalizationTags()}
+                </div>
+            </>
         );
     }
 
     getPersonalizationTags = () => {
         return this.props.personalizationTags && this.props.personalizationTags.map((tag, i) => {
             return (
-                <div key={i} onClick={this.addTag(tag.value)} className={styles.tag}>
+                <div key={i} onClick={(e) => this.addTag(e, tag.value)} className={styles.tag}>
                     {tag.label}
                 </div>
             );
         });
     }
 
-    addTag = (value: string) => {
+    addTag = (e: any, value: string) => {
         const finalValue = this.props.value ? this.props.value + value : value;
-        return (e: any) => {
-            this.props.onChange &&
-            this.props.onChange(e, {value: finalValue, dataLabel: this.props.dataLabel});
-            if (this.props.status){
-                this.props.validate &&
-                this.props.validate(
-                    {value: finalValue, dataLabel: this.props.dataLabel, required: this.props.required}
-                );
-            }
-        };
+        this.props.onChange &&
+        this.props.onChange(e, {value: finalValue, dataLabel: this.props.dataLabel});
+        if (this.props.status){
+            this.props.validate &&
+            this.props.validate(
+                {value: finalValue, dataLabel: this.props.dataLabel, required: this.props.required}
+            );
+        }
     }
 
     getEmojis = () => {
-        const emojis = ['😮', '😀', '😁', '😐', '😑', '😬'];
-        emojis.map((emoji, i) => {
+        return <EmojiPicker onChange={this.onEmojiChange} />;
+    }
 
-        });
+    onEmojiChange = (data: any) => {
+        const emoji = String.fromCodePoint(parseInt('0x' + data.unicode, 16));
+        const finalValue = this.props.value ? this.props.value + emoji :  emoji;
+        this.props.onChange &&
+        this.props.onChange({} as any, {value: finalValue, dataLabel: this.props.dataLabel});
+        if (this.props.status){
+            this.props.validate &&
+            this.props.validate(
+                {value: finalValue, dataLabel: this.props.dataLabel, required: this.props.required}
+            );
+        }
     }
 
 }

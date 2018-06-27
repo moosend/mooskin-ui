@@ -148,6 +148,7 @@
     border-bottom: 5px solid #F5F7F9;
     top: -5px;
     right: 10px;
+    z-index: 5;
     position: absolute;
 }
 
@@ -189,6 +190,33 @@
 .tag:hover {
     background-color: #f9f9f9;
     cursor: pointer;
+}
+
+.dropDownIcon{
+    padding-left: 10px;
+}
+
+.dropDownIcon:hover{
+    cursor: pointer;
+}
+
+:global(.emoji-dialog .emoji-row .emoji){
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+
+:global(.emoji-dialog .emoji-row .emoji):hover{
+    cursor: pointer;
+}
+
+:global(.emoji-dialog .emojione){
+    width: 25px;
+}
+
+:global(.emoji-dialog .emoji-dialog-header li img):hover{
+    cursor: pointer;
+    filter: grayscale(0);
 }
 
 @media (--xSmall){

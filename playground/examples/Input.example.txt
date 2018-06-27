@@ -24,12 +24,12 @@ class InputExample extends React.Component {
             {
                 value: 'test',
                 label: 'testLabel'
-            }    
+            }   
         ];
 
         return(
             <div>
-                <Input value={this.state.value} onChange={this.onChange} personalizationTags={pers} emoji icon="check" description="hahah" status="success" type="text" placeholder="max length 5" label="Some label:"/>
+                <Input value={this.state.value} onChange={this.onChange} personalizationTags={pers} emoji type="text" placeholder="max length 5" label="Some label:"/>
                 <br/>
                 <Input
                     onChange={this.onChange}
@@ -47,7 +47,7 @@ class InputExample extends React.Component {
     }
 
     onChange(e, data) {
-        console.log(e.target);
+        console.log(data.value);
         this.setState({value: data.value})
     }
 
