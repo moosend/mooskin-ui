@@ -18,12 +18,12 @@ class InputExample extends React.Component {
 
         const pers = [
             {
-                value: 'haha',
-                label: 'hihi'
+                value: '#unsubscribeLink#',
+                label: 'Unsibscribe Link'
             },
             {
-                value: 'test',
-                label: 'testLabel'
+                value: '#account:email#',
+                label: 'Account Email'
             }   
         ];
 

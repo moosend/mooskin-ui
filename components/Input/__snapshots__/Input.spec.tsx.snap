@@ -21,12 +21,12 @@ exports[`Input renders correctly 1`] = `
     with a label ofc
   </label>
   <div
-    className="innerDiv undefined false"
+    className="innerDiv undefined false disabledInput"
   >
     <input
       autoComplete="on"
       autoFocus={true}
-      className="input input disabledInput noIcon"
+      className="input"
       disabled={true}
       id="input1"
       maxLength={50}
