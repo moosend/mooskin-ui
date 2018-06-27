@@ -201,9 +201,9 @@
 }
 
 :global(.emoji-dialog .emoji-row .emoji){
-    width: 30px;
-    height: 30px;
-    padding: 3px;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
 }
 
 :global(.emoji-dialog .emoji-row .emoji):hover{
@@ -217,6 +217,21 @@
 :global(.emoji-dialog .emoji-dialog-header li img):hover{
     cursor: pointer;
     filter: grayscale(0);
+}
+
+:global(.emoji-dialog .emoji-dialog-header li img){
+    height: 26px;
+    width: 26px;
+}
+
+:global(.emoji-dialog .emoji-dialog-header .emoji){
+    height: 26px;
+    width: 26px;
+}
+
+:global(.emoji-dialog){
+    width: 310px;
+    height: 285px;
 }
 
 @media (--xSmall){
