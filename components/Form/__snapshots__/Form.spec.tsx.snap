@@ -41,7 +41,7 @@ exports[`Form renders Form with FormGroup correctly 1`] = `
       }
     >
       <div
-        className="formgroup-component container horizontal myClass"
+        className="formgroup-component formGroup container horizontal myClass"
         style={
           Object {
             "width": "50px",
@@ -55,7 +55,7 @@ exports[`Form renders Form with FormGroup correctly 1`] = `
 
 exports[`Form renders FormGroup correctly 1`] = `
 <div
-  className="formgroup-component container horizontal myClass"
+  className="formgroup-component formGroup container horizontal myClass"
   style={
     Object {
       "width": "50px",
