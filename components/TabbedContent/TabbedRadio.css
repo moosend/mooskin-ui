@@ -26,15 +26,15 @@
 
 .headingH {
     display: flex;
-    flex: 1;
-    flex-direction: row;
+    flex: 1 0 auto;
+    flex-direction: column;
     border-bottom: 1px solid var(--moosendBlue);
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
 .headingH > .header + .header{
-    margin-left: 10px;
+    margin: 10px 0px 0px 0px
 }
 
 .content{
@@ -52,7 +52,7 @@
 
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-end;
     width: 100%;
     border-radius: 10px;
@@ -180,7 +180,7 @@
     }
 
     .headingH > .header + .header{
-        margin: 10px 0 0 0
+        margin: 10px 0px 0px 0px
     }
 
     .containerV{flex-direction: column}
