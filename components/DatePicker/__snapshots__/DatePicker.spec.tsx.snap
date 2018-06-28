@@ -61,6 +61,7 @@ exports[`DatePicker renders other type of the component correctly 1`] = `
   id="input1"
   label="Hour"
   onChange={[Function]}
+  selected=""
   style={
     Object {
       "color": "blue",

@@ -19,9 +19,9 @@ class DatePickerExample extends React.Component {
                 <br/>
                 <DateSelect onChange={this.onChange} format="24-Hour" value={17} type="hour" label="Hour (24H)" />
                 <br/>
-                <DateSelect onChange={this.onChange} type="minute" label="Minute" />
+                <DateSelect onChange={this.onChange} value={'33'} type="minute" label="Minute" />
                 <br/>
-                <DateSelect onChange={this.onChange} format="1" type="month" label="Day" />
+                <DateSelect onChange={this.onChange} placeholder="Select a day of the month" description="Description goes here" format="1" type="month" label="Day" />
                 <br/>
                 <DateSelect onChange={this.onChange} type="week" />
                 <br/>
