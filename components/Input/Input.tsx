@@ -1,8 +1,14 @@
 import * as React from 'react';
 
+import EmojiPicker from 'emojione-picker';
+import 'emojione-picker/css/picker.css';
+
 import styles from './Input.css';
 
 import ClipboardButton from '../ClipboardButton';
+
+import emojiIcon from '../../assets/images/editor/emoji.png';
+import hashtag from '../../assets/images/editor/hashtag.png';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
@@ -37,6 +43,12 @@ export interface IProps {
 
     /** input label */
     label?: string;
+
+    /** sets emoji dropdown to the input for adding emojis */
+    emoji?: boolean;
+
+    /** add personalization tags dropdown */
+    personalizationTags?: Array<{value: string, label: string}>;
 
     /** spacing between label and input */
     labelWidth?: number;
@@ -97,7 +109,11 @@ export interface IProps {
 
 }
 
-class Input extends React.Component<IProps, {}> {
+export interface IInputState{
+    activeDropDown: number;
+}
+
+class Input extends React.Component<IProps, IInputState> {
 
     static defaultProps = {
         className: '',
@@ -112,6 +128,10 @@ class Input extends React.Component<IProps, {}> {
         super(props);
 
         this.id = this.props.id || this.generateId();
+
+        this.state = {
+            activeDropDown: -1
+        };
 
     }
 
@@ -136,6 +156,7 @@ class Input extends React.Component<IProps, {}> {
                 {label && <label className={inputClasses} style={spacing} htmlFor={this.id}>{label}</label>}
                 {this.renderInput()}
                 {clipboardButton && this.getClipboardButton()}
+                {this.state.activeDropDown !== -1 && <div onClick={this.removeDropDown} className={styles.overlay} />}
             </div>
         );
     }
@@ -157,7 +178,6 @@ class Input extends React.Component<IProps, {}> {
 
         const autocomplete = !this.props.autocomplete ? 'off' : 'on';
         const disabledInput = disabled ? styles.disabledInput : '';
-        const radius = this.getRadius();
 
         if (divType){
             return (
@@ -166,7 +186,7 @@ class Input extends React.Component<IProps, {}> {
                     // onChange={this.onChange}
                     id={this.id}
                     // value={this.props.value}
-                    className={`input ${styles.input} ${disabledInput} ${radius}`}
+                    className={`input ${styles.input} ${disabledInput}`}
                     onBlur={this.validateOnBlur}
                     {...this.props.extraHtmlAttr}
                 />
@@ -176,7 +196,7 @@ class Input extends React.Component<IProps, {}> {
             const descStatus = this.getDescStatus();
             const reverse = iconPosition === 'left' && styles.reverse;
             return (
-                <div className={`${styles.innerDiv} ${status} ${reverse}`}>
+                <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
                     <input
                         ref={(input) => this.input = input}
                         onChange={this.onChange}
@@ -189,12 +209,13 @@ class Input extends React.Component<IProps, {}> {
                         maxLength={maxlength}
                         required={required}
                         disabled={disabled}
-                        className={`input ${styles.input} ${disabledInput} ${radius}`}
+                        className={styles.input}
                         autoFocus={autofocus}
                         autoComplete={autocomplete}
                         onBlur={this.validateOnBlur}
                         {...this.props.extraHtmlAttr}
                     />
+                    {this.getDropDown()}
                     {icon && this.getIcon()}
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
@@ -245,39 +266,19 @@ class Input extends React.Component<IProps, {}> {
         return Math.random().toString(36).substr(2, 10);
     }
 
-    getRadius = () => {
-        if (this.props.icon){
-            if (this.props.iconPosition === 'right'){
-                return styles.inputLeft;
-            } else if (this.props.iconPosition === 'left'){
-                return styles.inputRight;
-            }
-        } else {
-            return styles.noIcon;
-        }
-    }
-
     getIcon = () => {
         const iconFont = this.props.icon && this.getIconContent();
-        const iconRadius = this.getIconRadius();
         const iconStatus = this.getIconStatus();
+        const iconPadding = this.props.iconPosition === 'right' ? {paddingLeft: 10} : {paddingRight: 10};
         return (
             <div
                 onClick={this.onIconClick}
-                className={`${styles.icon} ${iconRadius} ${iconStatus} ${this.props.iconClass}`}
-                style={this.props.iconStyle}
+                className={`${styles.icon} ${iconStatus} ${this.props.iconClass}`}
+                style={{...iconPadding, ...this.props.iconStyle}}
             >
                 {iconFont}
             </div>
         );
-    }
-
-    getIconRadius = () => {
-        if (this.props.iconPosition === 'right'){
-            return styles.iconRight;
-        } else if (this.props.iconPosition === 'left'){
-            return styles.iconLeft;
-        }
     }
 
     getIconStatus = () => {
@@ -314,6 +315,99 @@ class Input extends React.Component<IProps, {}> {
         this.props.onClipboardButtonClick &&
         this.props.onClipboardButtonClick(e, {value: this.props.value, dataLabel: this.props.dataLabel});
     }
+
+    getDropDown = () => {
+        const dropdowns = [];
+        let i = 0;
+        this.props.personalizationTags &&
+        dropdowns.push(this.getDropDownIcon(hashtag, i, 'personalization')) && (i = i + 1);
+        this.props.emoji && dropdowns.push(this.getDropDownIcon(emojiIcon, i, 'emoji'));
+        return dropdowns;
+    }
+
+    getDropDownIcon = (icon: string, i: number, type: string) => {
+        const display = this.state.activeDropDown === i ? {display: 'block'} : {display: 'none'};
+        return (
+            <div
+                className="dropdown-icon"
+                key={i}
+                style={{position: 'relative'}}
+                onClick={() => this.onDropDownIconClick(i)}
+            >
+                <img className={styles.dropDownIcon} src={icon}/>
+                {this.renderDropDown(display, type)}
+            </div>
+        );
+    }
+
+    onDropDownIconClick = (i: number) => {
+        this.setState({activeDropDown: i});
+    }
+
+    removeDropDown = () => {
+        this.setState({activeDropDown: -1});
+    }
+
+    renderDropDown = (display: React.CSSProperties, type: string) => {
+        return (
+            <div style={display} className={styles.dropDown}>
+                <div className={styles.dropDownArrow} />
+                {type === 'personalization' && this.getPersDropDown()}
+                {type === 'emoji' && this.getEmojis()}
+            </div>
+        );
+    }
+
+    getPersDropDown = () => {
+        return (
+            <>
+                <div className={styles.dropDownLabel}>Personalization Tags</div>
+                <div className={styles.dropDownContent}>
+                    {this.getPersonalizationTags()}
+                </div>
+            </>
+        );
+    }
+
+    getPersonalizationTags = () => {
+        return this.props.personalizationTags && this.props.personalizationTags.map((tag, i) => {
+            return (
+                <div key={i} onClick={(e) => this.addTag(e, tag.value)} className={styles.tag}>
+                    {tag.label}
+                </div>
+            );
+        });
+    }
+
+    addTag = (e: any, value: string) => {
+        const finalValue = this.props.value ? this.props.value + value : value;
+        this.props.onChange &&
+        this.props.onChange(e, {value: finalValue, dataLabel: this.props.dataLabel});
+        if (this.props.status){
+            this.props.validate &&
+            this.props.validate(
+                {value: finalValue, dataLabel: this.props.dataLabel, required: this.props.required}
+            );
+        }
+    }
+
+    getEmojis = () => {
+        return <EmojiPicker onChange={this.onEmojiChange} />;
+    }
+
+    onEmojiChange = (data: any) => {
+        const emoji = String.fromCodePoint(parseInt('0x' + data.unicode, 16));
+        const finalValue = this.props.value ? this.props.value + emoji :  emoji;
+        this.props.onChange &&
+        this.props.onChange({} as any, {value: finalValue, dataLabel: this.props.dataLabel});
+        if (this.props.status){
+            this.props.validate &&
+            this.props.validate(
+                {value: finalValue, dataLabel: this.props.dataLabel, required: this.props.required}
+            );
+        }
+    }
+
 }
 
 export default Input;

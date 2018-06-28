@@ -137,6 +137,8 @@ In this case, when the user focuses the input and blurs away immediately, an err
 * `iconStyle` - styles to be applied to the icon
 * `onChange` - callback to be triggered on input change
 * `validate` - validate function
+* `emoji` - adds emoji icon to the input, which opens a dropdown for adding emojis
+* `personalizationTags` - adds personalization tags based on passed prop, should be an array of object {label: string, value: string}
 * `status` - to be used with validate, to apply classes based on error or success
 * `extraHtmlAttr` - extra html attributes applied to the input
 
