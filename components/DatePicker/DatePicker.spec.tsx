@@ -135,8 +135,8 @@ describe('DatePicker', () => {
         const component = shallow(<DateSelect onChange={func} type="minute" />);
 
         expect(component.find('Option').length).toBe(60);
-        expect(component.find('Option').first().prop('value')).toEqual(0);
-        expect(component.find('Option').last().prop('value')).toEqual(59);
+        expect(component.find('Option').first().prop('value')).toEqual('0');
+        expect(component.find('Option').last().prop('value')).toEqual('59');
         expect(component.find('Option').first().children().text()).toEqual('00');
         expect(component.find('Option').last().children().text()).toEqual('59');
 
@@ -148,8 +148,8 @@ describe('DatePicker', () => {
         const component = shallow(<DateSelect onChange={func} format="1" type="month" label="Day" />);
 
         expect(component.find('Option').length).toBe(31);
-        expect(component.find('Option').first().prop('value')).toEqual(1);
-        expect(component.find('Option').last().prop('value')).toEqual(31);
+        expect(component.find('Option').first().prop('value')).toEqual('1');
+        expect(component.find('Option').last().prop('value')).toEqual('31');
         expect(component.find('Option').first().children().text()).toEqual('1st');
         expect(component.find('Option').last().children().text()).toEqual('31st');
 
@@ -161,8 +161,8 @@ describe('DatePicker', () => {
         const component = shallow(<DateSelect onChange={func} format="2" type="month" label="Day" />);
 
         expect(component.find('Option').length).toBe(28);
-        expect(component.find('Option').first().prop('value')).toEqual(1);
-        expect(component.find('Option').last().prop('value')).toEqual(28);
+        expect(component.find('Option').first().prop('value')).toEqual('1');
+        expect(component.find('Option').last().prop('value')).toEqual('28');
         expect(component.find('Option').first().children().text()).toEqual('1st');
         expect(component.find('Option').last().children().text()).toEqual('28th');
 
@@ -174,8 +174,8 @@ describe('DatePicker', () => {
         const component = shallow(<DateSelect onChange={func} type="week" />);
 
         expect(component.find('Option').length).toBe(7);
-        expect(component.find('Option').first().prop('value')).toEqual(1);
-        expect(component.find('Option').last().prop('value')).toEqual(7);
+        expect(component.find('Option').first().prop('value')).toEqual('1');
+        expect(component.find('Option').last().prop('value')).toEqual('7');
         expect(component.find('Option').first().children().text()).toEqual('Monday');
         expect(component.find('Option').last().children().text()).toEqual('Sunday');
 
@@ -187,8 +187,8 @@ describe('DatePicker', () => {
         const component = shallow(<DateSelect onChange={func} type="ordinal" />);
 
         expect(component.find('Option').length).toBe(6);
-        expect(component.find('Option').first().prop('value')).toEqual(1);
-        expect(component.find('Option').last().prop('value')).toEqual(-1);
+        expect(component.find('Option').first().prop('value')).toEqual('1');
+        expect(component.find('Option').last().prop('value')).toEqual('-1');
         expect(component.find('Option').first().children().text()).toEqual('First');
         expect(component.find('Option').last().children().text()).toEqual('Last');
 

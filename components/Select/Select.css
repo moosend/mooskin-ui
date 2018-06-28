@@ -3,12 +3,11 @@
 
 .componentContainer{
     display: flex;
-    margin: 3px;
 }
 
 .selectContainer{
     position: relative;
-    flex: 1 0 auto;
+    flex: 1;
 }
 
 .innerDiv{
