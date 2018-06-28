@@ -328,7 +328,12 @@ class Input extends React.Component<IProps, IInputState> {
     getDropDownIcon = (icon: string, i: number, type: string) => {
         const display = this.state.activeDropDown === i ? {display: 'block'} : {display: 'none'};
         return (
-            <div key={i} style={{position: 'relative'}} onClick={() => this.onDropDownIconClick(i)}>
+            <div
+                className="dropdown-icon"
+                key={i}
+                style={{position: 'relative'}}
+                onClick={() => this.onDropDownIconClick(i)}
+            >
                 <img className={styles.dropDownIcon} src={icon}/>
                 {this.renderDropDown(display, type)}
             </div>

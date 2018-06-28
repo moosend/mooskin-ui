@@ -122,4 +122,83 @@ describe('Input', () => {
         expect(component.find('Button').length).toBe(1);
     });
 
+    test('emoji dropdown is available when emoji prop is passed', () => {
+
+        const component = mount(<Input value="value" emoji />);
+
+        expect(component.find('.dropDown').length).toBe(1);
+
+        expect(component.find('.dropDown').prop('style')).toEqual({display: 'none'});
+
+        expect(component.state('activeDropDown')).toBe(-1);
+
+        component.find('.dropdown-icon').simulate('click');
+
+        expect(component.state('activeDropDown')).toBe(0);
+
+        expect(component.find('.dropDown').prop('style')).toEqual({display: 'block'});
+    });
+
+    test('both dropdowns are available when relevant props are passed', () => {
+
+        const pers = [
+            {
+                label: 'Unsibscribe Link',
+                value: '#unsubscribeLink#'
+            },
+            {
+                label: 'Account Email',
+                value: '#account:email#'
+            }
+        ];
+
+        const component = mount(<Input value="value" personalizationTags={pers} emoji />);
+
+        expect(component.find('.dropDown').length).toBe(2);
+
+        expect(component.find('.dropDown').first().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.dropDown').last().prop('style')).toEqual({display: 'none'});
+
+        expect(component.state('activeDropDown')).toBe(-1);
+
+        component.find('.dropdown-icon').first().simulate('click');
+
+        expect(component.state('activeDropDown')).toBe(0);
+
+        expect(component.find('.dropDown').first().prop('style')).toEqual({display: 'block'});
+        expect(component.find('.dropDown').last().prop('style')).toEqual({display: 'none'});
+
+        component.find('.dropdown-icon').last().simulate('click');
+
+        expect(component.state('activeDropDown')).toBe(1);
+
+        expect(component.find('.dropDown').first().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.dropDown').last().prop('style')).toEqual({display: 'block'});
+    });
+
+    test('onChange callback is called when a personalization tag is clicked', () => {
+
+        const func = jest.fn();
+
+        const pers = [
+            {
+                label: 'Unsibscribe Link',
+                value: '#unsubscribeLink#'
+            },
+            {
+                label: 'Account Email',
+                value: '#account:email#'
+            }
+        ];
+
+        const component = mount(<Input onChange={func} value="value" personalizationTags={pers} />);
+
+        expect(component.find('.dropDown').length).toBe(1);
+
+        component.find('.tag').first().simulate('click');
+
+        expect(func).toHaveBeenCalled();
+
+    });
+
 });
