@@ -45,7 +45,7 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
     render(){
 
         const {status, id, text, title, className, style} = this.props;
-        const {checkitem, iconStyle, content, button} = styles;
+        const {checkitem, iconStyle, content} = styles;
         const icon = status ? 'check' : 'close';
 
         return (
@@ -59,14 +59,22 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
                     <div className={content}>
                             <span>{text}</span>
                     </div>
-                    <SmallIconButton
-                        className={button}
-                        icon="create"
-                        onClick={this.onClick}
-                    />
+                    {this.renderButton()}
                 </div>
             </div>
         );
+    }
+
+    renderButton = () => {
+        if (this.props.onClick){
+            return (
+                <SmallIconButton
+                    className={styles.button}
+                    icon="create"
+                    onClick={this.onClick}
+                />
+            );
+        }
     }
 
     onClick = (e: React.MouseEvent<HTMLInputElement>, data?: IInputCallbackData) => {

@@ -66,4 +66,9 @@ declare module 'html-to-draftjs' {
   export default content;
 }
 
+declare module 'emojione-picker' {
+  const content: any;
+  export default content;
+}
+
 // declare var global: any;

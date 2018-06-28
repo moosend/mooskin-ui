@@ -58,7 +58,7 @@ export interface IFormProps{
 export interface IFormGroupProps{
 
     /** Form children */
-    children?: any;
+    children?: JSX.Element | JSX.Element[];
 
     /** Form classname */
     className?: string;
@@ -254,7 +254,10 @@ export const FormGroup: React.StatelessComponent<IFormGroupProps> = (props) => {
     const alignment = !props.horizontal ? styles.vertical : styles.horizontal;
 
     return (
-        <div style={props.style} className={`formgroup-component ${styles.container} ${alignment} ${props.className}`}>
+        <div
+            style={props.style}
+            className={`formgroup-component ${styles.formGroup} ${styles.container} ${alignment} ${props.className}`}
+        >
             {props.children}
         </div>
     );
