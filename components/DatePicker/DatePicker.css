@@ -4,7 +4,6 @@
 
 .datePicker{
     display: flex;
-    margin: 3px;
     position: relative;
     flex: 1;
 }

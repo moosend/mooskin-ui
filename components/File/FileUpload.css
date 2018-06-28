@@ -3,7 +3,6 @@
 
 .fileContainer{
     display: flex;
-    margin: 3px;
     flex: 1;
 }
 
