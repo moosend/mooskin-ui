@@ -1,3 +1,4 @@
-import Slider from './Slider';
+import Slider, {ABSlider} from './Slider';
 
 export default Slider;
+export {ABSlider};

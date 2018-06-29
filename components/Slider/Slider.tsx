@@ -245,3 +245,73 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
     }
 
 }
+
+export interface IABSliderProps {
+    id?: string;
+    dataLabel?: string;
+    value?: number;
+    percentage: number;
+    count: number;
+    max?: number;
+    min?: number;
+    style?: React.CSSProperties;
+    className?: React.CSSProperties;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+}
+
+export const ABSlider: React.StatelessComponent<any> = (props) => {
+
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value < props.percentage ? props.percentage :
+                        e.target.value > (100 - props.percentage).toString() ? 100 - props.percentage :
+                        e.target.value;
+        props.onChange &&
+        props.onChange(e, {value: parseInt(value, 10), dataLabel: props.dataLabel});
+    };
+
+    const getPercentage = (num: number, per: number) => {
+        return Math.round((num / 100) * per);
+    };
+
+    const min = props.min ? props.min : 5;
+    const max = props.max ? props.max : 40;
+
+    const percentage = props.percentage > max ? max : props.percentage < min ? min : props.percentage;
+
+    return(
+        <div className={styles.abContainer}>
+            <div
+                className={`${styles.section} ${styles.sectionA}`}
+                style={{left: 0, right: `${100 - percentage}%`}}
+            >
+                <span className={styles.font}>A</span>
+                <span>({getPercentage(props.count, percentage)})</span>
+            </div>
+            <div
+                className={`${styles.section} ${styles.sectionB}`}
+                style={{left: `${percentage}%`, right: `${100 - 2 * percentage}%`}}
+            >
+                <span className={styles.font}>B</span>
+                <span>({getPercentage(props.count, percentage)})</span>
+            </div>
+            <div
+                className={`${styles.section} ${styles.sectionW}`}
+                style={{left: `${2 * percentage}%`, right: 0}}
+            >
+                <span className={styles.font}>Winner</span>
+                <span>({getPercentage(props.count, 100 - percentage)})</span>
+            </div>
+            <input
+                id={props.id}
+                style={props.style}
+                // className={`${styles.slider} ${props.className}`}
+                value={props.value}
+                type="range"
+                step={Math.round(100 / props.percentage)}
+                min={0}
+                max={100}
+                onChange={onChange}
+            />
+        </div>
+    );
+};
