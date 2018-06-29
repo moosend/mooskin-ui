@@ -255,18 +255,18 @@ export interface IABSliderProps {
     max?: number;
     min?: number;
     style?: React.CSSProperties;
-    className?: React.CSSProperties;
+    className?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 }
 
-export const ABSlider: React.StatelessComponent<any> = (props) => {
+export const ABSlider: React.StatelessComponent<IABSliderProps> = (props) => {
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = e.target.value < props.percentage ? props.percentage :
-                        e.target.value > (100 - props.percentage).toString() ? 100 - props.percentage :
+        const value = parseInt(e.target.value, 10) < props.percentage ? props.percentage :
+                        parseInt(e.target.value, 10) > (100 - props.percentage) ? 100 - props.percentage :
                         e.target.value;
         props.onChange &&
-        props.onChange(e, {value: parseInt(value, 10), dataLabel: props.dataLabel});
+        props.onChange(e, {value: parseInt(value.toString(), 10), dataLabel: props.dataLabel});
     };
 
     const getPercentage = (num: number, per: number) => {
@@ -279,7 +279,7 @@ export const ABSlider: React.StatelessComponent<any> = (props) => {
     const percentage = props.percentage > max ? max : props.percentage < min ? min : props.percentage;
 
     return(
-        <div className={styles.abContainer}>
+        <div className={`${styles.abContainer} ${props.className}`} style={props.style}>
             <div
                 className={`${styles.section} ${styles.sectionA}`}
                 style={{left: 0, right: `${100 - percentage}%`}}
@@ -303,7 +303,6 @@ export const ABSlider: React.StatelessComponent<any> = (props) => {
             </div>
             <input
                 id={props.id}
-                style={props.style}
                 // className={`${styles.slider} ${props.className}`}
                 value={props.value}
                 type="range"
