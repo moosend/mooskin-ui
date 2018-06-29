@@ -195,6 +195,7 @@ input.edgeClasses[type=range]::-ms-fill-upper {
     background: #efefef;
     cursor: pointer;
     margin-top: 0px;
+    margin-left: -5px;
     box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
 }
 

@@ -306,7 +306,7 @@ export const ABSlider: React.StatelessComponent<IABSliderProps> = (props) => {
                 // className={`${styles.slider} ${props.className}`}
                 value={props.value}
                 type="range"
-                step={Math.round(100 / props.percentage)}
+                // step={Math.round(100 / props.percentage / 5)}
                 min={0}
                 max={100}
                 onChange={onChange}
