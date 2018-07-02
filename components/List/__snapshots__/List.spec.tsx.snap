@@ -29,11 +29,9 @@ exports[`Button create expanded section content correctly 1`] = `
       }
     >
       <ListItem
-        active={false}
         className="myClass"
         hovered={false}
         image="imageURL"
-        onClick={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         style={
@@ -45,7 +43,6 @@ exports[`Button create expanded section content correctly 1`] = `
       >
         <div
           className="listitem-component listItem myClass"
-          onClick={[Function]}
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           style={
@@ -80,7 +77,7 @@ exports[`Button create expanded section content correctly 1`] = `
         </div>
       </ListItem>
       <ExpandedSection
-        active={false}
+        expanded={false}
       >
         <div
           className="expanded-section-component expandedSection undefined"
@@ -183,7 +180,6 @@ exports[`Button renders with multiple children 1`] = `
       }
     >
       <ListItem
-        active={false}
         className="myClass"
         description="desc"
         hovered={false}
@@ -248,7 +244,6 @@ exports[`Button renders with multiple children 1`] = `
       }
     >
       <ListItem
-        active={false}
         className="myClass"
         hovered={false}
         image="imageUrl"

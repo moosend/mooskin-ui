@@ -6,7 +6,7 @@ class ListExample extends React.Component {
                 <List hoverColor="#F6F6F6" >
                     <ListItem title="Automation 1" description="Description for automation 1" image="https://laracasts.com/images/series/circles/do-you-react.png">
                         <ItemContent style={{display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', height: '100%'}}>
-                            <Button>Activate</Button>
+                            <button>Activate</button>
                             <Select style={{marginRight: 30, width: '100%'}}>
                                 <Option value="option1">Option1</Option>
                                 <Option value="option2">Option2</Option>
@@ -18,18 +18,18 @@ class ListExample extends React.Component {
                     </ListItem>
                     <ListItem title="Integration 1" description="Description for integration 1" style={{padding: '35px 0px'}}>
                         <ItemContent style={{float: 'right'}}>
-                            <Button>Proceed</Button>
+                            <button>Proceed</button>
                         </ItemContent>
                     </ListItem>
-                    <ListItem title="Expanding item" description="This item can be expanded" style={{padding: '35px 0px'}}>
+                    <ListItem expanded title="Expanding item" description="This item can be expanded" style={{padding: '35px 0px'}}>
                         <ItemContent style={{float: 'right'}}>
-                            <Button onClick={(e) => {e.stopPropagation(); console.log('haha')}}>Proceed</Button>
+                            <button onClick={(e) => {e.stopPropagation(); console.log('haha')}}>Proceed</button>
                         </ItemContent>
                         <ExpandedSection>
                             yay this is expandable!
                         </ExpandedSection>
                     </ListItem>
-                    <ListItem title="Expanding item the second" description="This item can be expanded too" style={{padding: '35px 0px'}}>
+                    <ListItem expanded title="Expanding item the second" description="This item can be expanded too" style={{padding: '35px 0px'}}>
                         <ExpandedSection>
                             yay this is expandable!
                         </ExpandedSection>

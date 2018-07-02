@@ -17,7 +17,7 @@ class ButtonExample extends React.Component {
             <div>
                 <Slider
                     onChange={this.onRangeChange}
-                    range={[0, 10]}
+                    range={[1, 24]}
                     value={this.state.rangeValue}
                     tooltip
                 />

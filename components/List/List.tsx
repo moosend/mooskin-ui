@@ -23,8 +23,8 @@ export interface IListProps {
 
 export interface IListItemProps {
 
-    /** wether the list item is active to expand inner content */
-    active?: boolean;
+    /** wether the list item is expanded */
+    expanded?: boolean;
 
     /** listitem image */
     image?: string;
@@ -56,12 +56,11 @@ export interface IListItemProps {
 
     onMouseLeave?: (e: React.MouseEvent<HTMLElement>) => void;
 
-    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface IListState {
     hoverItem?: number;
-    activeLists: number[];
+    // expandedLists: number[];
 }
 
 export default class List extends React.Component<IListProps, IListState>{
@@ -75,7 +74,7 @@ export default class List extends React.Component<IListProps, IListState>{
         super(props);
 
         this.state = {
-            activeLists: [],
+            // expandedLists: [],
             hoverItem: -1
         };
     }
@@ -96,16 +95,17 @@ export default class List extends React.Component<IListProps, IListState>{
         React.Children.forEach(this.props.children, (child, index) => {
             if (React.isValidElement<IListItemProps>(child)){
                 const {content, expandedSection} = child.props.children ?
-                    this.getItemChildren(child.props.children, index) : {content: null, expandedSection: null};
-                const onClick = expandedSection ? this.onListClick(index) : undefined;
-                child.props.active && this.setActiveState(index);
-                const active = child.props.active ? child.props.active
-                            : this.state.activeLists.includes(index) ? true : false;
+                    this.getItemChildren(child.props.children, child.props.expanded || false, index) :
+                        {content: null, expandedSection: null};
+                // const onClick = expandedSection ? this.onListClick(index) : undefined;
+                // child.props.expanded && this.setActiveState(index);
+                // const expanded = child.props.expanded ? child.props.expanded
+                //             : this.state.expandedLists.includes(index) ? true : false;
                 const cursor = expandedSection ? {cursor: 'pointer'} : {};
                 items.push(
                     <div style={{display: 'flex', flexDirection: 'column'}} key={index}>
                         <ListItem
-                            active={active}
+                            expanded={child.props.expanded}
                             hovered={index === this.state.hoverItem}
                             className={child.props.className}
                             image={child.props.image}
@@ -115,7 +115,6 @@ export default class List extends React.Component<IListProps, IListState>{
                             hoverColor={child.props.hoverColor || this.props.hoverColor}
                             onMouseEnter={this.onItemEnter(index)}
                             onMouseLeave={this.onItemLeave}
-                            onClick={onClick}
                         >
                             {content}
                         </ListItem>
@@ -127,29 +126,29 @@ export default class List extends React.Component<IListProps, IListState>{
         return items;
     }
 
-    onListClick = (index: number) => {
-        return (e: React.MouseEvent<HTMLElement>) => {
-            e.stopPropagation();
-            if (this.state.activeLists.includes(index)){
-                const activeLists = [...this.state.activeLists];
-                const i = activeLists.indexOf(index);
-                activeLists.splice(i, 1);
-                this.setState({activeLists});
-            } else {
-                const activeLists = [...this.state.activeLists];
-                activeLists.push(index);
-                this.setState({activeLists});
-            }
-        };
-    }
+    // onListClick = (index: number) => {
+    //     return (e: React.MouseEvent<HTMLElement>) => {
+    //         e.stopPropagation();
+    //         if (this.state.expandedLists.includes(index)){
+    //             const expandedLists = [...this.state.expandedLists];
+    //             const i = expandedLists.indexOf(index);
+    //             expandedLists.splice(i, 1);
+    //             this.setState({expandedLists});
+    //         } else {
+    //             const expandedLists = [...this.state.expandedLists];
+    //             expandedLists.push(index);
+    //             this.setState({expandedLists});
+    //         }
+    //     };
+    // }
 
-    setActiveState = (index: number) => {
-        if (!this.state.activeLists.includes(index)){
-            const activeLists = [...this.state.activeLists];
-            activeLists.push(index);
-            this.setState({activeLists});
-        }
-    }
+    // setActiveState = (index: number) => {
+    //     if (!this.state.expandedLists.includes(index)){
+    //         const expandedLists = [...this.state.expandedLists];
+    //         expandedLists.push(index);
+    //         this.setState({expandedLists});
+    //     }
+    // }
 
     onItemEnter = (index: number) => {
         return (e: React.MouseEvent<HTMLElement>) => {
@@ -161,15 +160,15 @@ export default class List extends React.Component<IListProps, IListState>{
         this.setState({hoverItem: -1});
     }
 
-    getItemChildren = (children: any, index: number) => {
+    getItemChildren = (children: any, expaded: boolean, index: number) => {
         let content;
         let expandedSection;
         if (Array.isArray(children)){
             children.forEach((child, i) => {
                 if (child.type === ExpandedSection){
-                    const active = this.state.activeLists.includes(index) ? true : false;
+                    // const expanded = this.state.expandedLists.includes(index) ? true : false;
                     expandedSection = (
-                        <ExpandedSection active={active}>
+                        <ExpandedSection expanded={expaded}>
                             {child.props.children}
                         </ExpandedSection>
                     );
@@ -179,9 +178,9 @@ export default class List extends React.Component<IListProps, IListState>{
             });
         } else {
             if (children.type === ExpandedSection){
-                const active = this.state.activeLists.includes(index) ? true : false;
+                // const expanded = this.state.expandedLists.includes(index) ? true : false;
                 expandedSection = (
-                    <ExpandedSection active={active}>
+                    <ExpandedSection expanded={expaded}>
                         {children.props.children}
                     </ExpandedSection>
                 );
@@ -239,7 +238,7 @@ export const ListItem: React.StatelessComponent<IListItemProps> = (props) => {
     };
 
     const arrow = () => {
-        return props.active ? (
+        return props.expanded ? (
             <div className={styles.arrow}>
                 <div style={{position: 'relative', height: '100%', width: '100%'}}>
                     <div className={styles.innerArrow}/>
@@ -255,7 +254,6 @@ export const ListItem: React.StatelessComponent<IListItemProps> = (props) => {
             style={{...style, ...hoverColor}}
             onMouseEnter={props.onMouseEnter}
             onMouseLeave={props.onMouseLeave}
-            onClick={props.onClick}
         >
             {arrow()}
             {getDetails()}
@@ -267,12 +265,12 @@ export const ListItem: React.StatelessComponent<IListItemProps> = (props) => {
 export interface IExpandedSectionProps {
     className?: string;
     style?: React.CSSProperties;
-    active?: boolean;
+    expanded?: boolean;
 }
 
 export const ExpandedSection: React.StatelessComponent<IExpandedSectionProps> = (props) => {
 
-    const display = props.active ? {display: 'block'} : {display: 'none'};
+    const display = props.expanded ? {display: 'block'} : {display: 'none'};
 
     return(
         <div
