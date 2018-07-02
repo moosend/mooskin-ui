@@ -5,10 +5,12 @@ class ButtonExample extends React.Component {
 
         this.onRangeChange = this.onRangeChange.bind(this);
         this.onValuesChange = this.onValuesChange.bind(this);
+        this.onAbChange = this.onAbChange.bind(this);
 
         this.state = {
             rangeValue: 3,
-            value: 34
+            value: 34,
+            ab: 10
         }
     }
 
@@ -38,6 +40,8 @@ class ButtonExample extends React.Component {
                     range={[0, 10]}
                     value={7}
                 />
+                <br/>
+                <ABSlider percentage={this.state.ab} count={1370} value={this.state.ab} onChange={this.onAbChange} />
             </div>
         );
     }
@@ -48,6 +52,11 @@ class ButtonExample extends React.Component {
 
     onValuesChange(e, data){
         this.setState({value: data.value});
+    }
+
+    onAbChange(e, data){
+        console.log(data.value);
+        this.setState({ab: data.value});
     }
 
 }

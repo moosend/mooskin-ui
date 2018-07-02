@@ -9,6 +9,7 @@ import moment from 'moment';
 import { renderEditableExample } from './tools/ReactLiveEditor/ReactLiveEditor';
 
 import {
+    ABSlider,
     Bar,
     Button,
     Carousel,
@@ -256,7 +257,7 @@ export const App = (props: any) => {
                     {renderEditableExample('StatsBox', { StatsBox, StatsNumber, StatsResult, StatsTitle })}
                 </Col>
                 <Col lg={6} md={6}>
-                    {renderEditableExample('Slider', { H3, Slider })}
+                    {renderEditableExample('Slider', { H3, Slider, ABSlider })}
                 </Col>
                 <Col lg={12} md={12}>
                     {renderEditableExample('Carousel', { Carousel })}
