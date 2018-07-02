@@ -96,7 +96,10 @@ export default class List extends React.Component<IListProps, IListState>{
             if (React.isValidElement<IListItemProps>(child)){
                 const {content, expandedSection} = child.props.children ?
                     this.getItemChildren(child.props.children, child.props.expanded || false, index) :
-                        {content: null, expandedSection: null};
+                    {content: child, expandedSection: null};
+                if (child.props.expanded && !expandedSection){
+                    throw new Error('No expanded section available to be expanded!');
+                }
                 // const onClick = expandedSection ? this.onListClick(index) : undefined;
                 // child.props.expanded && this.setActiveState(index);
                 // const expanded = child.props.expanded ? child.props.expanded
