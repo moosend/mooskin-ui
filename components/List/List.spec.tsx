@@ -1,5 +1,5 @@
 import * as React from 'react';
-import List, {ListItem} from './List';
+import List, {Expandable, ItemContent, ListItem} from './List';
 
 import { mount, shallow } from 'enzyme';
 
@@ -29,7 +29,9 @@ describe('Button', () => {
                 style={{color: 'blue'}}
                 image="imageUrl"
             >
-                test
+                <ItemContent>
+                    test
+                </ItemContent>
             </ListItem>
         );
         expect(tree).toMatchSnapshot();
@@ -49,14 +51,18 @@ describe('Button', () => {
                     className="myClass"
                     style={{color: 'blue'}}
                 >
-                    test
+                    <ItemContent>
+                        test
+                    </ItemContent>
                 </ListItem>
                 <ListItem
                     className="myClass"
                     style={{color: 'blue'}}
                     image="imageUrl"
                 >
-                    test
+                    <ItemContent>
+                        test
+                    </ItemContent>
                 </ListItem>
             </List>
         );
@@ -104,7 +110,9 @@ describe('Button', () => {
                     className="myClass"
                     style={{color: 'blue'}}
                 >
-                    Some Content
+                    <ItemContent>
+                        Some Content
+                    </ItemContent>
                 </ListItem>
             </List>
         );
@@ -132,13 +140,133 @@ describe('Button', () => {
                     className="myClass"
                     style={{color: 'blue'}}
                 >
-                    Some Content
+                    <ItemContent>
+                        Some Content
+                    </ItemContent>
                 </ListItem>
             </List>
         );
 
         expect(component.find('.detailsContainer').hasClass('loneImage')).toBe(true);
         expect(component.find('.content').hasClass('lone')).toBe(true);
+
+    });
+
+    test('create expandable content correctly', () => {
+
+        const component = mount(
+            <List
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'button1'}
+            >
+                <ListItem
+                    image="imageURL"
+                    className="myClass"
+                    style={{color: 'blue'}}
+                >
+                    <ItemContent>
+                        Some Content
+                    </ItemContent>
+                    <Expandable>
+                        Some Expandable Content
+                    </Expandable>
+                </ListItem>
+            </List>
+        );
+
+        expect(component).toMatchSnapshot();
+    });
+
+    test('create expandable content when proper child is assigned', () => {
+
+        const component = mount(
+            <List
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'button1'}
+            >
+                <ListItem
+                    image="imageURL"
+                    className="myClass"
+                    style={{color: 'blue'}}
+                >
+                    <ItemContent>
+                        Some Content
+                    </ItemContent>
+                    <Expandable>
+                        Some Expandable Content
+                    </Expandable>
+                </ListItem>
+            </List>
+        );
+
+        expect(component.find('.expandable-content-component').length).toBe(1);
+        expect(component.find('.expandable-content-component').prop('style')).toEqual({display: 'none'});
+        expect(component.state('activeLists')).toEqual([]);
+
+        component.find('.listitem-component').simulate('click');
+
+        expect(component.find('.expandable-content-component').prop('style')).toEqual({display: 'block'});
+        expect(component.state('activeLists')).toEqual([0]);
+
+    });
+
+    test('render multiple expandable items and multi items can be active', () => {
+
+        const component = mount(
+            <List
+                className="myClass"
+                style={{color: 'blue'}}
+                id={'button1'}
+            >
+                <ListItem>
+                    <ItemContent>
+                        Some Content
+                    </ItemContent>
+                    <Expandable>
+                        Some Expandable Content
+                    </Expandable>
+                </ListItem>
+                <ListItem>
+                    <ItemContent>
+                        Some Content
+                    </ItemContent>
+                    <Expandable>
+                        Expandable content the second
+                    </Expandable>
+                </ListItem>
+            </List>
+        );
+
+        expect(component.find('.expandable-content-component').length).toBe(2);
+        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'none'});
+        expect(component.state('activeLists')).toEqual([]);
+
+        component.find('.listitem-component').first().simulate('click');
+
+        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'block'});
+        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'none'});
+        expect(component.state('activeLists')).toEqual([0]);
+
+        component.find('.listitem-component').last().simulate('click');
+
+        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'block'});
+        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'block'});
+        expect(component.state('activeLists')).toEqual([0, 1]);
+
+        component.find('.listitem-component').first().simulate('click');
+
+        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'block'});
+        expect(component.state('activeLists')).toEqual([1]);
+
+        component.find('.listitem-component').last().simulate('click');
+
+        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'none'});
+        expect(component.state('activeLists')).toEqual([]);
 
     });
 

@@ -5,7 +5,7 @@ class ListExample extends React.Component {
             <div>
                 <List hoverColor="#F6F6F6" >
                     <ListItem title="Automation 1" description="Description for automation 1" image="https://laracasts.com/images/series/circles/do-you-react.png">
-                        <div style={{display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', height: '100%'}}>
+                        <ItemContent style={{display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', height: '100%'}}>
                             <Button>Activate</Button>
                             <Select style={{marginRight: 30, width: '100%'}}>
                                 <Option value="option1">Option1</Option>
@@ -14,12 +14,25 @@ class ListExample extends React.Component {
                                 <Option value="option4">Option4</Option>
                                 <Option value="option5">Option5</Option>
                             </Select>
-                        </div>
+                        </ItemContent>
                     </ListItem>
                     <ListItem title="Integration 1" description="Description for integration 1" style={{padding: '35px 0px'}}>
-                        <div style={{float: 'right'}}>
+                        <ItemContent style={{float: 'right'}}>
                             <Button>Proceed</Button>
-                        </div>
+                        </ItemContent>
+                    </ListItem>
+                    <ListItem title="Expanding item" description="This item can be expanded" style={{padding: '35px 0px'}}>
+                        <ItemContent style={{float: 'right'}}>
+                            <Button onClick={(e) => {e.stopPropagation(); console.log('haha')}}>Proceed</Button>
+                        </ItemContent>
+                        <Expandable>
+                            yay this is expandable!
+                        </Expandable>
+                    </ListItem>
+                    <ListItem title="Expanding item the second" description="This item can be expanded too" style={{padding: '35px 0px'}}>
+                        <Expandable>
+                            yay this is expandable!
+                        </Expandable>
                     </ListItem>
                 </List>
             </div>

@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: row;
     padding: 25px 0px;
+    position: relative;
 }
 
 .listItem + .listItem {
@@ -45,7 +46,7 @@
 
 .detailsContainer{
     display: flex;
-    flex: 4;
+    flex: 1;
     flex-direction: row;
 }
 
@@ -60,7 +61,7 @@
 }
 
 .content {
-    flex: 6;
+    flex: 1;
 }
 
 .lone{
@@ -69,6 +70,45 @@
 
 .loneImage{
     flex: 1;
+}
+
+.expandable {
+    background: #f9f9f9;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    transition: all 0.4s;
+    overflow: hidden;
+    /* height: 1px; */
+}
+
+.arrow {
+    bottom: -1px;
+    left: 20px;
+    z-index: 5;
+    position: absolute;
+}
+
+.innerArrow{
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #eaeaea;
+    /* border-bottom: 20px solid black; */
+    position: absolute;
+    bottom: 0px;
+}
+
+.borderArrow{
+    width: 0;
+    height: 0;
+    border-left: 19px solid transparent;
+    border-right: 19px solid transparent;
+    border-bottom: 19px solid #f9f9f9;
+    z-index: 11;
+    position: absolute;
+    bottom: 0px;
+    left: 1px;
 }
 
 @media(--xSmall){

@@ -9,7 +9,7 @@ ___
 To start using the List & ListItem Component first you have to Import it
 
 ```
-Import {List, ListItem} from 'mooskin';
+Import {List, ListItem, ItemContent} from 'mooskin';
 ```
 or modular import
 ```
@@ -24,9 +24,21 @@ And then you can simply start using it by typing
 
 ```
 <List attribute1="atr" attribute2="asd" >
-    <ListItem>content 1</ListItem>
-    <ListItem>content 2</ListItem>
-    <ListItem>content 3</ListItem>
+    <ListItem>
+        <ItemContent>
+            content 1
+        <ItemContent/>
+    </ListItem>
+    <ListItem>
+        <ItemContent>
+            content 2
+        <ItemContent/>
+    </ListItem>
+    <ListItem>
+        <ItemContent>
+            content 3
+        <ItemContent/>
+    </ListItem>
 </List>
 ```
 
@@ -44,9 +56,44 @@ or pass props to the LinkItem component
 
 ```
 <List>
-    <ListItem image="imageUrl"> content 1 </ListItem>
-    <ListItem title="Some Title"> content 2 </ListItem>
-    <ListItem title="Another title" description="Item description" > content 3 </ListItem>
+    <ListItem image="imageUrl"/>
+    <ListItem title="Some Title"/>
+    <ListItem title="Another title" description="Item description" />
+</List>
+```
+
+### Expandable content
+
+A list item can have an expandable hidden content which will reveal on list item click, example:
+
+```
+Import {List, ListItem, ItemContent, Expandable} from 'mooskin';
+
+<List attribute1="atr" attribute2="asd" >
+    <ListItem>
+        <ItemContent>
+            content 1
+        <ItemContent/>
+        <Expandable>
+            expandable content 1
+        <Expandable/>
+    </ListItem>
+    <ListItem>
+        <ItemContent>
+            content 2
+        <ItemContent/>
+        <Expandable>
+            expandable content 2
+        <Expandable/>
+    </ListItem>
+    <ListItem>
+        <ItemContent>
+            content 3
+        <ItemContent/>
+        <Expandable>
+            expandable content 3
+        <Expandable/>
+    </ListItem>
 </List>
 ```
 

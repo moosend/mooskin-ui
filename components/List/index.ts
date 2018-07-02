@@ -1,4 +1,4 @@
-import List, {ListItem} from './List';
+import List, {Expandable, ItemContent, ListItem} from './List';
 
 export default List;
-export {ListItem};
+export {ListItem, Expandable, ItemContent};
