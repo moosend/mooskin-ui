@@ -10,7 +10,7 @@ class ButtonExample extends React.Component {
         this.state = {
             rangeValue: 3,
             value: 34,
-            ab: 30
+            ab: 10
         }
     }
 
@@ -41,7 +41,7 @@ class ButtonExample extends React.Component {
                     value={7}
                 />
                 <br/>
-                <ABSlider percentage={10} count={1370} value={this.state.ab} onChange={this.onAbChange} />
+                <ABSlider percentage={this.state.ab} count={1370} value={this.state.ab} onChange={this.onAbChange} />
             </div>
         );
     }

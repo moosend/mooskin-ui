@@ -195,7 +195,6 @@ input.edgeClasses[type=range]::-ms-fill-upper {
     background: #efefef;
     cursor: pointer;
     margin-top: 0px;
-    margin-left: -5px;
     box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
 }
 
@@ -232,6 +231,7 @@ input.edgeClasses[type=range]::-ms-fill-upper {
     z-index: -1;
     top: 0px;
     bottom: 0px;
+    text-align: center;
 }
 
 .font {
@@ -259,4 +259,14 @@ input.edgeClasses[type=range]::-ms-fill-upper {
     background: #f2c14a;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.abSlider{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
 }
