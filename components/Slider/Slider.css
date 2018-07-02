@@ -159,4 +159,119 @@ input.edgeClasses[type=range]::-ms-fill-upper {
     /* background: transparent; */
     border-radius: 1.3px;
     border: 0.2px solid #aaa;
-  }
+}
+
+.abContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100px;
+}
+
+.abContainer input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    height: 110px;
+    width: 20px;
+    border-radius: 4px;
+    background: #efefef;
+    cursor: pointer;
+    margin-top: -4px;
+    box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
+    background: green;
+}
+
+.abContainer input[type=range], .abContainer input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    background: transparent;
+}
+
+.abContainer input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    height: 110px;
+    width: 10px;
+    border-radius: 4px;
+    background: #efefef;
+    cursor: pointer;
+    margin-top: 0px;
+    box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
+}
+
+.abContainer input[type=range]::-webkit-slider-thumb:hover {
+    cursor: col-resize;
+}
+
+.abContainer input[type=range]:active::-webkit-slider-thumb {
+    background: #ffffff;
+}
+
+.abContainer input[type=range]::-webkit-slider-runnable-track {
+    appearance: none;
+}
+
+.abContainer input[type=range]:disabled::-webkit-slider-runnable-track {
+    appearance: none;
+}
+
+.abContainer input[type=range]::-moz-range-track {
+    appearance: none;
+}
+
+.abContainer input[type=range]::-ms-track {
+    appearance: none;
+}
+
+.section {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: -1;
+    top: 0px;
+    bottom: 0px;
+    text-align: center;
+}
+
+.font {
+    font-size: 32px;
+    font-weight: 400;
+    color: #6b6b6b;
+    font-family: Convergence,sans-serif;
+}
+
+.abContainer input:hover {
+    cursor: col-resize;
+}
+
+.sectionA {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #5ccddf;
+}
+
+.sectionB {
+    background: #f48770;
+}
+
+.sectionW {
+    background: #f2c14a;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.abSlider{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.percentText {
+    color: #6b6b6b;
+    font-size: 14px;
+}

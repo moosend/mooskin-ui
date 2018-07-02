@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Slider from './Slider';
+import Slider, {ABSlider} from './Slider';
 
 import { mount, shallow } from 'enzyme';
 
@@ -99,6 +99,47 @@ describe('Slider', () => {
 
         expect(component.find('.tooltip').length).toEqual(1);
         expect(component.find('.tooltip').text()).toEqual('hello');
+
+    });
+
+    test('render AB Slider correctly', () => {
+        const func = jest.fn();
+
+        const component = mount(
+            <ABSlider
+                onChange={func}
+                percentage={20}
+                count={1370}
+            >
+                Mooskin
+            </ABSlider>
+        );
+
+        expect(component).toMatchSnapshot();
+
+    });
+
+    test('render AB Slider with sections', () => {
+        const func = jest.fn();
+
+        const component = mount(
+            <ABSlider
+                onChange={func}
+                percentage={20}
+                count={1370}
+            >
+                Mooskin
+            </ABSlider>
+        );
+
+        expect(component.find('.section').length).toBe(3);
+        expect(component.find('.sectionA').length).toBe(1);
+        expect(component.find('.sectionB').length).toBe(1);
+        expect(component.find('.sectionW').length).toBe(1);
+
+        expect(component.find('.sectionA').prop('style')).toEqual({left: 0, right: '80%'});
+        expect(component.find('.sectionB').prop('style')).toEqual({left: '20%', right: '60%'});
+        expect(component.find('.sectionW').prop('style')).toEqual({left: '40%', right: 0});
 
     });
 

@@ -1,5 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Slider render AB Slider correctly 1`] = `
+<ABSlider
+  count={1370}
+  onChange={[Function]}
+  percentage={20}
+>
+  <div
+    className="abContainer undefined"
+  >
+    <div
+      className="section sectionA"
+      style={
+        Object {
+          "left": 0,
+          "right": "80%",
+        }
+      }
+    >
+      <span
+        className="font"
+      >
+        A
+      </span>
+      <span
+        className="percentText"
+      >
+        20
+        % (
+        274
+        )
+      </span>
+    </div>
+    <div
+      className="section sectionB"
+      style={
+        Object {
+          "left": "20%",
+          "right": "60%",
+        }
+      }
+    >
+      <span
+        className="font"
+      >
+        B
+      </span>
+      <span
+        className="percentText"
+      >
+        20
+        % (
+        274
+        )
+      </span>
+    </div>
+    <div
+      className="section sectionW"
+      style={
+        Object {
+          "left": "40%",
+          "right": 0,
+        }
+      }
+    >
+      <span
+        className="font"
+      >
+        Winner
+      </span>
+      <span
+        className="percentText"
+      >
+        60
+        % (
+        822
+        )
+      </span>
+    </div>
+    <input
+      max={100}
+      min={0}
+      onChange={[Function]}
+      step={2}
+      style={
+        Object {
+          "margin": 0,
+        }
+      }
+      type="range"
+      value={40}
+    />
+  </div>
+</ABSlider>
+`;
+
 exports[`Slider renders correctly 1`] = `
 <div
   className="sliderContainer"
