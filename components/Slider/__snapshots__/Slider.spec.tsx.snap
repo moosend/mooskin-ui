@@ -23,7 +23,9 @@ exports[`Slider render AB Slider correctly 1`] = `
       >
         A
       </span>
-      <span>
+      <span
+        className="percentText"
+      >
         20
         % (
         274
@@ -44,7 +46,9 @@ exports[`Slider render AB Slider correctly 1`] = `
       >
         B
       </span>
-      <span>
+      <span
+        className="percentText"
+      >
         20
         % (
         274
@@ -65,7 +69,9 @@ exports[`Slider render AB Slider correctly 1`] = `
       >
         Winner
       </span>
-      <span>
+      <span
+        className="percentText"
+      >
         60
         % (
         822
