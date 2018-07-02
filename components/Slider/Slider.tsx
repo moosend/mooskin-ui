@@ -284,21 +284,23 @@ export const ABSlider: React.StatelessComponent<IABSliderProps> = (props) => {
                 style={{left: 0, right: `${100 - percentage}%`}}
             >
                 <span className={styles.font}>A</span>
-                <span>{percentage}% ({getPercentage(props.count, percentage)})</span>
+                <span className={styles.percentText}>{percentage}% ({getPercentage(props.count, percentage)})</span>
             </div>
             <div
                 className={`${styles.section} ${styles.sectionB}`}
                 style={{left: `${percentage}%`, right: `${100 - 2 * percentage}%`}}
             >
                 <span className={styles.font}>B</span>
-                <span>{percentage}% ({getPercentage(props.count, percentage)})</span>
+                <span className={styles.percentText}>{percentage}% ({getPercentage(props.count, percentage)})</span>
             </div>
             <div
                 className={`${styles.section} ${styles.sectionW}`}
                 style={{left: `${2 * percentage}%`, right: 0}}
             >
                 <span className={styles.font}>Winner</span>
-                <span>{100 - percentage * 2}% ({getPercentage(props.count, 100 - percentage * 2)})</span>
+                <span className={styles.percentText}>
+                    {100 - percentage * 2}% ({getPercentage(props.count, 100 - percentage * 2)})
+                </span>
             </div>
             <input
                 id={props.id}

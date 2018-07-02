@@ -226,7 +226,7 @@ input.edgeClasses[type=range]::-ms-fill-upper {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     z-index: -1;
     top: 0px;
@@ -269,4 +269,9 @@ input.edgeClasses[type=range]::-ms-fill-upper {
     bottom: 0;
     width: 100%;
     margin: 0;
+}
+
+.percentText {
+    color: #6b6b6b;
+    font-size: 14px;
 }
