@@ -48,8 +48,8 @@ export interface IListItemProps {
     style?: React.CSSProperties;
 
     /** listitem children */
-    children?: React.ReactElement<IExpandableProps> | React.ReactElement<IItemContentProps> |
-        Array<React.ReactElement<IExpandableProps> | React.ReactElement<IItemContentProps>>;
+    children?: React.ReactElement<IExpandedSectionProps> | React.ReactElement<IItemContentProps> |
+        Array<React.ReactElement<IExpandedSectionProps> | React.ReactElement<IItemContentProps>>;
     // children?: any;
 
     onMouseEnter?: (e: React.MouseEvent<HTMLElement>) => void;
@@ -95,13 +95,13 @@ export default class List extends React.Component<IListProps, IListState>{
         const items: Array<React.ReactElement<IListItemProps>> = [];
         React.Children.forEach(this.props.children, (child, index) => {
             if (React.isValidElement<IListItemProps>(child)){
-                const {content, expandable} = child.props.children ?
-                    this.getItemChildren(child.props.children, index) : {content: null, expandable: null};
-                const onClick = expandable ? this.onListClick(index) : undefined;
+                const {content, expandedSection} = child.props.children ?
+                    this.getItemChildren(child.props.children, index) : {content: null, expandedSection: null};
+                const onClick = expandedSection ? this.onListClick(index) : undefined;
                 child.props.active && this.setActiveState(index);
                 const active = child.props.active ? child.props.active
                             : this.state.activeLists.includes(index) ? true : false;
-                const cursor = expandable ? {cursor: 'pointer'} : {};
+                const cursor = expandedSection ? {cursor: 'pointer'} : {};
                 items.push(
                     <div style={{display: 'flex', flexDirection: 'column'}} key={index}>
                         <ListItem
@@ -119,7 +119,7 @@ export default class List extends React.Component<IListProps, IListState>{
                         >
                             {content}
                         </ListItem>
-                        {expandable}
+                        {expandedSection}
                     </div>
                 );
             }
@@ -163,33 +163,33 @@ export default class List extends React.Component<IListProps, IListState>{
 
     getItemChildren = (children: any, index: number) => {
         let content;
-        let expandable;
+        let expandedSection;
         if (Array.isArray(children)){
             children.forEach((child, i) => {
-                if (child.type === Expandable){
+                if (child.type === ExpandedSection){
                     const active = this.state.activeLists.includes(index) ? true : false;
-                    expandable = (
-                        <Expandable active={active}>
+                    expandedSection = (
+                        <ExpandedSection active={active}>
                             {child.props.children}
-                        </Expandable>
+                        </ExpandedSection>
                     );
                 } else {
                     content = child;
                 }
             });
         } else {
-            if (children.type === Expandable){
+            if (children.type === ExpandedSection){
                 const active = this.state.activeLists.includes(index) ? true : false;
-                expandable = (
-                    <Expandable active={active}>
+                expandedSection = (
+                    <ExpandedSection active={active}>
                         {children.props.children}
-                    </Expandable>
+                    </ExpandedSection>
                 );
             } else {
                 content = children;
             }
         }
-        return {content, expandable};
+        return {content, expandedSection};
     }
 }
 
@@ -264,19 +264,19 @@ export const ListItem: React.StatelessComponent<IListItemProps> = (props) => {
     );
 };
 
-export interface IExpandableProps {
+export interface IExpandedSectionProps {
     className?: string;
     style?: React.CSSProperties;
     active?: boolean;
 }
 
-export const Expandable: React.StatelessComponent<IExpandableProps> = (props) => {
+export const ExpandedSection: React.StatelessComponent<IExpandedSectionProps> = (props) => {
 
     const display = props.active ? {display: 'block'} : {display: 'none'};
 
     return(
         <div
-            className={`expandable-content-component ${styles.expandable} ${props.className}`}
+            className={`expanded-section-component ${styles.expandedSection} ${props.className}`}
             style={{...display, ...props.style}}
         >
             {props.children}

@@ -20,7 +20,7 @@ import {
     DatePicker,
     DateSelect,
     Doughnut,
-    Expandable,
+    ExpandedSection,
     // Fieldset,
     FileUpload,
     Form,
@@ -193,7 +193,7 @@ export const App = (props: any) => {
                     <H1>List & ListItem</H1>
                 </Col>
                 <Col>
-                    {renderEditableExample('List', { List, ListItem, Select, Option, Button, Expandable, ItemContent })}
+                    {renderEditableExample('List', { List, ListItem, Select, Option, ExpandedSection, ItemContent })}
                 </Col>
             </Row>
             <Row id="toggables">

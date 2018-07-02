@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button create expandable content correctly 1`] = `
+exports[`Button create expanded section content correctly 1`] = `
 <List
   className="myClass"
   id="button1"
@@ -79,20 +79,20 @@ exports[`Button create expandable content correctly 1`] = `
           </div>
         </div>
       </ListItem>
-      <Expandable
+      <ExpandedSection
         active={false}
       >
         <div
-          className="expandable-content-component expandable undefined"
+          className="expanded-section-component expandedSection undefined"
           style={
             Object {
               "display": "none",
             }
           }
         >
-          Some Expandable Content
+          Some ExpandedSection Content
         </div>
-      </Expandable>
+      </ExpandedSection>
     </div>
   </div>
 </List>

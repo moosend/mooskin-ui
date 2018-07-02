@@ -62,37 +62,37 @@ or pass props to the LinkItem component
 </List>
 ```
 
-### Expandable content
+### ExpandedSection content
 
 A list item can have an expandable hidden content which will reveal on list item click, example:
 
 ```
-Import {List, ListItem, ItemContent, Expandable} from 'mooskin';
+Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
 
 <List attribute1="atr" attribute2="asd" >
     <ListItem>
         <ItemContent>
             content 1
         <ItemContent/>
-        <Expandable>
+        <ExpandedSection>
             expandable content 1
-        <Expandable/>
+        <ExpandedSection/>
     </ListItem>
     <ListItem>
         <ItemContent>
             content 2
         <ItemContent/>
-        <Expandable>
+        <ExpandedSection>
             expandable content 2
-        <Expandable/>
+        <ExpandedSection/>
     </ListItem>
     <ListItem>
         <ItemContent>
             content 3
         <ItemContent/>
-        <Expandable>
+        <ExpandedSection>
             expandable content 3
-        <Expandable/>
+        <ExpandedSection/>
     </ListItem>
 </List>
 ```

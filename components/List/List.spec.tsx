@@ -1,5 +1,5 @@
 import * as React from 'react';
-import List, {Expandable, ItemContent, ListItem} from './List';
+import List, {ExpandedSection, ItemContent, ListItem} from './List';
 
 import { mount, shallow } from 'enzyme';
 
@@ -152,7 +152,7 @@ describe('Button', () => {
 
     });
 
-    test('create expandable content correctly', () => {
+    test('create expanded section content correctly', () => {
 
         const component = mount(
             <List
@@ -168,9 +168,9 @@ describe('Button', () => {
                     <ItemContent>
                         Some Content
                     </ItemContent>
-                    <Expandable>
-                        Some Expandable Content
-                    </Expandable>
+                    <ExpandedSection>
+                        Some ExpandedSection Content
+                    </ExpandedSection>
                 </ListItem>
             </List>
         );
@@ -178,7 +178,7 @@ describe('Button', () => {
         expect(component).toMatchSnapshot();
     });
 
-    test('create expandable content when proper child is assigned', () => {
+    test('create expanded section content when proper child is assigned', () => {
 
         const component = mount(
             <List
@@ -194,25 +194,25 @@ describe('Button', () => {
                     <ItemContent>
                         Some Content
                     </ItemContent>
-                    <Expandable>
-                        Some Expandable Content
-                    </Expandable>
+                    <ExpandedSection>
+                        Some ExpandedSection Content
+                    </ExpandedSection>
                 </ListItem>
             </List>
         );
 
-        expect(component.find('.expandable-content-component').length).toBe(1);
-        expect(component.find('.expandable-content-component').prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expanded-section-component').length).toBe(1);
+        expect(component.find('.expanded-section-component').prop('style')).toEqual({display: 'none'});
         expect(component.state('activeLists')).toEqual([]);
 
         component.find('.listitem-component').simulate('click');
 
-        expect(component.find('.expandable-content-component').prop('style')).toEqual({display: 'block'});
+        expect(component.find('.expanded-section-component').prop('style')).toEqual({display: 'block'});
         expect(component.state('activeLists')).toEqual([0]);
 
     });
 
-    test('render multiple expandable items and multi items can be active', () => {
+    test('render multiple expanded section items and multi items can be active', () => {
 
         const component = mount(
             <List
@@ -224,48 +224,48 @@ describe('Button', () => {
                     <ItemContent>
                         Some Content
                     </ItemContent>
-                    <Expandable>
-                        Some Expandable Content
-                    </Expandable>
+                    <ExpandedSection>
+                        Some ExpandedSection Content
+                    </ExpandedSection>
                 </ListItem>
                 <ListItem>
                     <ItemContent>
                         Some Content
                     </ItemContent>
-                    <Expandable>
-                        Expandable content the second
-                    </Expandable>
+                    <ExpandedSection>
+                        ExpandedSection content the second
+                    </ExpandedSection>
                 </ListItem>
             </List>
         );
 
-        expect(component.find('.expandable-content-component').length).toBe(2);
-        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'none'});
-        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expanded-section-component').length).toBe(2);
+        expect(component.find('.expanded-section-component').first().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expanded-section-component').last().prop('style')).toEqual({display: 'none'});
         expect(component.state('activeLists')).toEqual([]);
 
         component.find('.listitem-component').first().simulate('click');
 
-        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'block'});
-        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expanded-section-component').first().prop('style')).toEqual({display: 'block'});
+        expect(component.find('.expanded-section-component').last().prop('style')).toEqual({display: 'none'});
         expect(component.state('activeLists')).toEqual([0]);
 
         component.find('.listitem-component').last().simulate('click');
 
-        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'block'});
-        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'block'});
+        expect(component.find('.expanded-section-component').first().prop('style')).toEqual({display: 'block'});
+        expect(component.find('.expanded-section-component').last().prop('style')).toEqual({display: 'block'});
         expect(component.state('activeLists')).toEqual([0, 1]);
 
         component.find('.listitem-component').first().simulate('click');
 
-        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'none'});
-        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'block'});
+        expect(component.find('.expanded-section-component').first().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expanded-section-component').last().prop('style')).toEqual({display: 'block'});
         expect(component.state('activeLists')).toEqual([1]);
 
         component.find('.listitem-component').last().simulate('click');
 
-        expect(component.find('.expandable-content-component').first().prop('style')).toEqual({display: 'none'});
-        expect(component.find('.expandable-content-component').last().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expanded-section-component').first().prop('style')).toEqual({display: 'none'});
+        expect(component.find('.expanded-section-component').last().prop('style')).toEqual({display: 'none'});
         expect(component.state('activeLists')).toEqual([]);
 
     });

@@ -25,14 +25,14 @@ class ListExample extends React.Component {
                         <ItemContent style={{float: 'right'}}>
                             <Button onClick={(e) => {e.stopPropagation(); console.log('haha')}}>Proceed</Button>
                         </ItemContent>
-                        <Expandable>
+                        <ExpandedSection>
                             yay this is expandable!
-                        </Expandable>
+                        </ExpandedSection>
                     </ListItem>
                     <ListItem title="Expanding item the second" description="This item can be expanded too" style={{padding: '35px 0px'}}>
-                        <Expandable>
+                        <ExpandedSection>
                             yay this is expandable!
-                        </Expandable>
+                        </ExpandedSection>
                     </ListItem>
                 </List>
             </div>
