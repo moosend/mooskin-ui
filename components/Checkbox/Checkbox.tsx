@@ -66,7 +66,7 @@ export interface ICheckBoxProps {
     checked?: boolean;
 
     /** value for this Checkbox */
-    value: string;
+    value: string | number;
 
     /** horizontal align Checkboxes */
     horizontal?: boolean;
@@ -95,7 +95,7 @@ export interface ICheckBoxProps {
 
 export interface ICheckBoxData{
     checked?: boolean | undefined;
-    value?: string;
+    value?: string | number;
     label?: string;
 }
 
@@ -148,7 +148,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
         );
     }
 
-    onClick = (dataArray: {checked: boolean, value?: string, label?: string}, data: ICheckBoxData[]) => {
+    onClick = (dataArray: {checked: boolean, value?: string | number, label?: string}, data: ICheckBoxData[]) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             data.map ((checkbox, index) => {
                 if (checkbox.value === dataArray.value){
@@ -191,7 +191,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
         if (React.isValidElement<ICheckBoxProps>(child)){
             data.push({
                 checked: child.props.checked ? child.props.checked : false,
-                label: child.props.label ? child.props.label : child.props.value,
+                label: child.props.label ? child.props.label : child.props.value.toString(),
                 value: child.props.value
                 });
             }
@@ -254,7 +254,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
     }
 
     checkDuplicateValues = (data: ICheckBoxData[]) => {
-        const values: string[] = [];
+        const values: any[] = [];
         let duplicates: number = 0;
         data.forEach((check, index) => {
             if (React.isValidElement<ICheckBoxProps>(check)){
@@ -312,7 +312,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
 
     const genId = generateId();
 
-    const onCheckBoxClick = (data: {checked: boolean, value: string, label: string}) => {
+    const onCheckBoxClick = (data: {checked: boolean, value: string | number, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             !props.disabled && props.onClick && props.onClick(e, {value: data, dataLabel: props.dataLabel});
         };
