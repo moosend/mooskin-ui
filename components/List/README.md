@@ -64,7 +64,7 @@ or pass props to the LinkItem component
 
 ### ExpandedSection content
 
-A list item can have an expandable hidden content which will reveal on list item click, example:
+A list item can have an expandable hidden content which will reveal when the `ListItem` prop of `expanded` is true, example:
 
 ```
 Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
@@ -86,7 +86,7 @@ Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
             expandable content 2
         <ExpandedSection/>
     </ListItem>
-    <ListItem>
+    <ListItem expanded>
         <ItemContent>
             content 3
         <ItemContent/>
@@ -96,6 +96,7 @@ Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
     </ListItem>
 </List>
 ```
+so in the above example, the third and last list item will have the hidden section expanded, the others will have the section hidden.
 
 <div class="playground-doc">
 
@@ -109,6 +110,7 @@ Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
 
 * `image` - image related to the list item
 * `title` - list item title
+* `expanded` - expands the hidden section of the list item
 * `description` - list item description
 * `className` - css class
 * `style` - listitem style
