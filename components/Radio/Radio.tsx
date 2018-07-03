@@ -53,7 +53,7 @@ export interface IRadioProps {
     selected?: boolean;
 
     /** value for this radio */
-    value: string;
+    value: string | number;
 
     /** Spacing radios */
     spacing?: number;
@@ -80,7 +80,7 @@ export interface IRadioProps {
 
 export interface IRadioData{
     selected?: boolean | undefined;
-    value?: string;
+    value?: string | number;
     label?: string;
 }
 
@@ -130,7 +130,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
         );
     }
 
-    onClick = (dataArray: {selected: boolean, value?: string, label?: string}, data: IRadioData[]) => {
+    onClick = (dataArray: {selected: boolean, value?: string | number, label?: string}, data: IRadioData[]) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             data.forEach((radio, index) => {
                 data[index] = {
@@ -250,7 +250,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
             if (React.isValidElement<IRadioData>(child)){
                 if (React.isValidElement<IRadioProps>(child)){
                     data.push({
-                        label: child.props.label ? child.props.label : child.props.value,
+                        label: child.props.label ? child.props.label : child.props.value.toString(),
                         selected: child.props.selected ? child.props.selected : false,
                         value: child.props.value
                     });
@@ -266,7 +266,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
             if (React.isValidElement<IRadioProps>(child)){
                 const selected = data[index].selected === true ? true : false;
                 const value = data[index].value ? data[index].value : `radio${index}`;
-                const label = data[index].label ? data[index].label : value;
+                const label = data[index].label ? data[index].label : value && value.toString() || '';
                 const extraProps: Partial<IRadioProps & {key: number}> = {
                     key: index,
                     label: data[index].label,
@@ -293,7 +293,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
         data.forEach((radio, index) => {
             const selected = radio.selected === true ? true : false;
             const value = radio.value ? radio.value : `radio${index}`;
-            const label = radio.label ? radio.label : value;
+            const label = radio.label ? radio.label : value.toString();
 
             radios.push(
                 <Radio
@@ -344,7 +344,7 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
     };
 
     const disabledStyles = props.disabled ? styles.disabledRadio : '';
-    const label = props.label ? props.label : props.value;
+    const label = props.label ? props.label : props.value.toString();
     const checkedStyles = !props.selected ? '' : styles.radioChecked;
     const selected = props.selected ? props.selected : false;
     const spacing = props.spacing ?
@@ -355,7 +355,7 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
 
     const genId = generateId();
 
-    const onRadioClick = (data: {selected: boolean, value: string, label: string}) => {
+    const onRadioClick = (data: {selected: boolean, value: string | number, label: string}) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             !props.disabled && props.onClick && props.onClick(e, {value: data, dataLabel: props.dataLabel});
         };

@@ -57,7 +57,7 @@ export interface ISliderProps{
 export interface ISliderState {
     dragging: boolean;
     left: number;
-    fill: any;
+    // fill: any;
 }
 
 export default class Slider extends React.Component<ISliderProps, ISliderState>{
@@ -69,18 +69,18 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
         this.state = {
             dragging: false,
-            fill: <div/>,
+            // fill: <div/>,
             left: 0
         };
     }
 
     componentDidMount(){
-        this.renderFill();
+        this.forceUpdate();
     }
 
-    componentWillReceiveProps(){
-        this.renderFill();
-    }
+    // componentWillReceiveProps(){
+    //     this.renderFill();
+    // }
 
     render(){
 
@@ -92,7 +92,7 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
             <div className={`${styles.sliderContainer}`}>
                 {label && <label className={styles.sliderLabel} >{label}</label>}
                 {slider}
-                {!this.isEdge() && this.state.fill}
+                {!this.isEdge() && this.renderFill()}
                 {trackLabels && this.renderTrackLabels()}
                 {tooltip && this.renderTooltip()}
             </div>
@@ -207,9 +207,22 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
         }
     }
 
+    getStepsCount = () => {
+        const start = this.props.range && this.props.range[0] || 0;
+        const end = this.props.range && this.props.range[1] || 0;
+        const steps = [];
+        for (let i = start; i <= end; i++){
+            steps.push(i);
+        }
+        return steps.indexOf(parseInt(this.props.value.toString(), 10));
+    }
+
     getThumbPosition = () => {
         // const width = this.slider ? this.slider.value / this.slider.max : 50;
-        const pos = this.slider.value / this.slider.max;
+        const max = this.props.values ? this.slider.max : this.props.range ?
+        this.props.range[1] - this.props.range[0] : 0;
+        const value = this.props.range ? this.getStepsCount() : this.slider.value;
+        const pos = value / max;
         const thumbPos = this.slider.clientWidth * pos;
         const width = 100 / (this.slider.clientWidth / thumbPos);
         return width > 98 ? 98 : width;
@@ -220,10 +233,10 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
         const width = this.slider ? this.getThumbPosition() + '%' : '0%';
         const top = this.props.label ? {top: '23px'} : {};
         const disabled = this.props.disabled ? styles.disabledFill : '';
-        const fill = (
+        return (
             <div className={`${styles.fill} ${disabled} ${fillClassName}`} style={{width, ...top, ...fillStyle}} />
         );
-        this.setState({fill});
+        // this.setState({fill});
     }
 
     onMouseDown = (e: React.MouseEvent<HTMLInputElement>) => {
