@@ -17,6 +17,7 @@ describe('CheckListItem', () => {
                 id={'check1'}
                 onClick={func}
                 status
+                buttonIcon="close"
                 text="check item text"
                 title="check item title"
             />

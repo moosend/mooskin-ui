@@ -87,13 +87,13 @@ describe('Button', () => {
             </List>
         );
 
-        expect(component.find('.detailsContainer').length).toBe(1);
+        expect(component.find('.detailsContainer').length).toBe(2);
 
         expect(component.find('img').length).toBe(0);
-        expect(component.find('.content').length).toBe(0);
+        expect(component.find('.content').length).toBe(1);
 
-        expect(component.find('.title').length).toBe(1);
-        expect(component.find('.description').length).toBe(1);
+        expect(component.find('.title').length).toBe(2);
+        expect(component.find('.description').length).toBe(2);
 
     });
 

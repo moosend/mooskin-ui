@@ -20,6 +20,9 @@ export interface ICheckListItemProps {
     /** item text */
     text?: string;
 
+    /** button icon */
+    buttonIcon?: string;
+
     /** check list item class */
     className?: string;
 
@@ -66,11 +69,12 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
     }
 
     renderButton = () => {
+        const icon = this.props.buttonIcon ? this.props.buttonIcon : 'create';
         if (this.props.onClick){
             return (
                 <SmallIconButton
                     className={styles.button}
-                    icon="create"
+                    icon={icon}
                     onClick={this.onClick}
                 />
             );
