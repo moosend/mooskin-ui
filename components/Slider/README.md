@@ -84,6 +84,19 @@ or just give it a custom style
 * `dataLabel` - data label for component to be used within forms
 * `onChange` - callback to be triggered when Slider changes, returning new value
 
+# AB Slider
+
+* `id` - id of the element
+* `dataLabel` - what data is being used
+* `value` - current value of the slider
+* `percentage` - current percentage for an AB section
+* `count` - count number to be split into section per percentage
+* `max` - max number of percentage for a AB section (default: 40)
+* `min` - min number of percentage for a AB section (default: 5)
+* `style` - Slider style
+* `className` - css class
+* `onChange` - (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+
 </div>
 
 Allthough these attributes are supported, all of them are optional.

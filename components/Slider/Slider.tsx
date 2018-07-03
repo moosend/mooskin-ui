@@ -57,7 +57,7 @@ export interface ISliderProps{
 export interface ISliderState {
     dragging: boolean;
     left: number;
-    fill: any;
+    // fill: any;
 }
 
 export default class Slider extends React.Component<ISliderProps, ISliderState>{
@@ -69,18 +69,18 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
         this.state = {
             dragging: false,
-            fill: <div/>,
+            // fill: <div/>,
             left: 0
         };
     }
 
     componentDidMount(){
-        this.renderFill();
+        this.forceUpdate();
     }
 
-    componentWillReceiveProps(){
-        this.renderFill();
-    }
+    // componentWillReceiveProps(){
+    //     this.renderFill();
+    // }
 
     render(){
 
@@ -92,7 +92,7 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
             <div className={`${styles.sliderContainer}`}>
                 {label && <label className={styles.sliderLabel} >{label}</label>}
                 {slider}
-                {!this.isEdge() && this.state.fill}
+                {!this.isEdge() && this.renderFill()}
                 {trackLabels && this.renderTrackLabels()}
                 {tooltip && this.renderTooltip()}
             </div>
@@ -207,9 +207,22 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
         }
     }
 
+    getStepsCount = () => {
+        const start = this.props.range && this.props.range[0] || 0;
+        const end = this.props.range && this.props.range[1] || 0;
+        const steps = [];
+        for (let i = start; i <= end; i++){
+            steps.push(i);
+        }
+        return steps.indexOf(parseInt(this.props.value.toString(), 10));
+    }
+
     getThumbPosition = () => {
         // const width = this.slider ? this.slider.value / this.slider.max : 50;
-        const pos = this.slider.value / this.slider.max;
+        const max = this.props.values ? this.slider.max : this.props.range ?
+        this.props.range[1] - this.props.range[0] : 0;
+        const value = this.props.range ? this.getStepsCount() : this.slider.value;
+        const pos = value / max;
         const thumbPos = this.slider.clientWidth * pos;
         const width = 100 / (this.slider.clientWidth / thumbPos);
         return width > 98 ? 98 : width;
@@ -220,10 +233,10 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
         const width = this.slider ? this.getThumbPosition() + '%' : '0%';
         const top = this.props.label ? {top: '23px'} : {};
         const disabled = this.props.disabled ? styles.disabledFill : '';
-        const fill = (
+        return (
             <div className={`${styles.fill} ${disabled} ${fillClassName}`} style={{width, ...top, ...fillStyle}} />
         );
-        this.setState({fill});
+        // this.setState({fill});
     }
 
     onMouseDown = (e: React.MouseEvent<HTMLInputElement>) => {
@@ -245,3 +258,73 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
     }
 
 }
+
+export interface IABSliderProps {
+    id?: string;
+    dataLabel?: string;
+    percentage: number;
+    count: number;
+    max?: number;
+    min?: number;
+    style?: React.CSSProperties;
+    className?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+}
+
+export const ABSlider: React.StatelessComponent<IABSliderProps> = (props) => {
+
+    const min = props.min ? props.min : 5;
+    const max = props.max ? props.max : 40;
+
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const value = parseInt(e.target.value, 10) / 2 < min ? min :
+                        parseInt(e.target.value, 10) / 2 > max ? max :
+                        parseInt(e.target.value, 10) / 2;
+        props.onChange &&
+        props.onChange(e, {value, dataLabel: props.dataLabel});
+    };
+
+    const getPercentage = (num: number, per: number) => {
+        return Math.round((num / 100) * per);
+    };
+
+    const percentage = props.percentage > max ? max : props.percentage < min ? min : props.percentage;
+
+    return(
+        <div className={`${styles.abContainer} ${props.className}`} style={props.style}>
+            <div
+                className={`${styles.section} ${styles.sectionA}`}
+                style={{left: 0, right: `${100 - percentage}%`}}
+            >
+                <span className={styles.font}>A</span>
+                <span className={styles.percentText}>{percentage}% ({getPercentage(props.count, percentage)})</span>
+            </div>
+            <div
+                className={`${styles.section} ${styles.sectionB}`}
+                style={{left: `${percentage}%`, right: `${100 - 2 * percentage}%`}}
+            >
+                <span className={styles.font}>B</span>
+                <span className={styles.percentText}>{percentage}% ({getPercentage(props.count, percentage)})</span>
+            </div>
+            <div
+                className={`${styles.section} ${styles.sectionW}`}
+                style={{left: `${2 * percentage}%`, right: 0}}
+            >
+                <span className={styles.font}>Winner</span>
+                <span className={styles.percentText}>
+                    {100 - percentage * 2}% ({getPercentage(props.count, 100 - percentage * 2)})
+                </span>
+            </div>
+            <input
+                id={props.id}
+                value={props.percentage * 2}
+                type="range"
+                style={{margin: 0}}
+                step={2}
+                min={0}
+                max={100}
+                onChange={onChange}
+            />
+        </div>
+    );
+};
