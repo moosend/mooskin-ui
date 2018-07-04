@@ -25,6 +25,7 @@
     color: var(--inputFontColor);
     border-radius: 3px; 
     user-select: none;
+    font-size: 14px;
 }
 
 .paginationButton:hover{
@@ -36,12 +37,22 @@
     color: #fff;
 }
 
+.inverseActive {
+    color: var(--moosendBlue);
+}
+
 .activeButton:hover{
     background: var(--moosendBlue);
 }
 
 .disabledButton {
   pointer-events: none;
+}
+
+.inverseButton{
+    width: unset;
+    height: unset;
+    margin: 0 5px;
 }
 
 @media (--xSmall){
