@@ -34,6 +34,9 @@ export interface IPaginationProps {
     /** boolean to specify whether to show the very first item button */
     firstBtn?: boolean;
 
+    /** inverse stying for pagination */
+    inverseStyle?: boolean;
+
     /** callback that is called when a button is clicked */
     onClick: (item: number) => void;
 }
@@ -42,6 +45,7 @@ export interface IPaginationButtonProps {
     active: boolean;
     disabled?: boolean;
     label: string; // could be an icon
+    inverseStyle?: boolean;
     item: number;
     className?: string;
     onClick: (item: number) => (e: React.MouseEvent<HTMLElement>) => void;
@@ -98,8 +102,9 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                 <PaginationButton
                     key={'asd1'}
                     active={false}
-                    label={'<<'}
+                    label={this.props.inverseStyle ? '<< First' : '<<'}
                     item={1}
+                    inverseStyle={this.props.inverseStyle}
                     onClick={this.onClick}
                     className="pagination-first-btn"
                 />
@@ -109,8 +114,9 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                 <PaginationButton
                     key={'asd2'}
                     active={false}
-                    label={'<'}
+                    label={this.props.inverseStyle ? '< Prev' : '<'}
                     item={currentItem && currentItem - 1 || 1}
+                    inverseStyle={this.props.inverseStyle}
                     onClick={this.onClick}
                     className="pagination-prev-btn"
                 />
@@ -123,6 +129,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={'...'}
                     item={currentItem}
                     onClick={(this.onClick)}
+                    inverseStyle={this.props.inverseStyle}
                     disabled
                     className="pagination-ellipsis"
                 />
@@ -136,6 +143,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={'...'}
                     item={currentItem}
                     onClick={(this.onClick)}
+                    inverseStyle={this.props.inverseStyle}
                     disabled
                     className="pagination-ellipsis"
                 />
@@ -145,8 +153,9 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                 <PaginationButton
                     key={'asd3'}
                     active={false}
-                    label={'>'}
+                    label={this.props.inverseStyle ? 'Next >' : '>'}
                     item={currentItem && currentItem + 1 || items}
+                    inverseStyle={this.props.inverseStyle}
                     onClick={this.onClick}
                     className="pagination-next-btn"
                 />
@@ -156,8 +165,9 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                 <PaginationButton
                     key={'asd4'}
                     active={false}
-                    label={'>>'}
+                    label={this.props.inverseStyle ? 'Last >>' : '>>'}
                     item={items}
+                    inverseStyle={this.props.inverseStyle}
                     onClick={this.onClick}
                     className="pagination-last-btn"
                 />
@@ -182,6 +192,7 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
                     label={item.toString()}
                     item={item}
                     onClick={this.onClick}
+                    inverseStyle={this.props.inverseStyle}
                     className={`pagination-normal-btn ${styles.itemButton}`}
                 />
             );
@@ -237,12 +248,14 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
 
 export const PaginationButton: React.StatelessComponent<IPaginationButtonProps> = (props) => {
 
-    const activeClass = props.active ? styles.activeButton : '';
+    const activeClass = props.inverseStyle ? styles.inverseActive : styles.activeButton;
+    const activeStyle = props.active ? activeClass : '';
     const disabledClass = props.disabled ? styles.disabledButton : '';
+    const inverseStyle = props.inverseStyle ? styles.inverseButton : '';
 
     return (
         <div
-            className={`${styles.paginationButton} ${activeClass} ${disabledClass} ${props.className || ''}`}
+            className={`${styles.paginationButton} ${activeStyle} ${disabledClass} ${inverseStyle} ${props.className}`}
             onClick={props.onClick(props.item)}
         >
             {props.label}

@@ -8,7 +8,7 @@ class ButtonExample extends React.Component {
         this.onAbChange = this.onAbChange.bind(this);
 
         this.state = {
-            rangeValue: 3,
+            rangeValue: 6,
             value: 34,
             ab: 10
         }
@@ -19,7 +19,7 @@ class ButtonExample extends React.Component {
             <div>
                 <Slider
                     onChange={this.onRangeChange}
-                    range={[0, 10]}
+                    range={[4, 12]}
                     value={this.state.rangeValue}
                     tooltip
                 />

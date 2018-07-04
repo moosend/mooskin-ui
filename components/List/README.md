@@ -9,7 +9,7 @@ ___
 To start using the List & ListItem Component first you have to Import it
 
 ```
-Import {List, ListItem} from 'mooskin';
+Import {List, ListItem, ItemContent} from 'mooskin';
 ```
 or modular import
 ```
@@ -24,9 +24,21 @@ And then you can simply start using it by typing
 
 ```
 <List attribute1="atr" attribute2="asd" >
-    <ListItem>content 1</ListItem>
-    <ListItem>content 2</ListItem>
-    <ListItem>content 3</ListItem>
+    <ListItem>
+        <ItemContent>
+            content 1
+        <ItemContent/>
+    </ListItem>
+    <ListItem>
+        <ItemContent>
+            content 2
+        <ItemContent/>
+    </ListItem>
+    <ListItem>
+        <ItemContent>
+            content 3
+        <ItemContent/>
+    </ListItem>
 </List>
 ```
 
@@ -44,11 +56,47 @@ or pass props to the LinkItem component
 
 ```
 <List>
-    <ListItem image="imageUrl"> content 1 </ListItem>
-    <ListItem title="Some Title"> content 2 </ListItem>
-    <ListItem title="Another title" description="Item description" > content 3 </ListItem>
+    <ListItem image="imageUrl"/>
+    <ListItem title="Some Title"/>
+    <ListItem title="Another title" description="Item description" />
 </List>
 ```
+
+### ExpandedSection content
+
+A list item can have an expandable hidden content which will reveal when the `ListItem` prop of `expanded` is true, example:
+
+```
+Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
+
+<List attribute1="atr" attribute2="asd" >
+    <ListItem>
+        <ItemContent>
+            content 1
+        <ItemContent/>
+        <ExpandedSection>
+            expandable content 1
+        <ExpandedSection/>
+    </ListItem>
+    <ListItem>
+        <ItemContent>
+            content 2
+        <ItemContent/>
+        <ExpandedSection>
+            expandable content 2
+        <ExpandedSection/>
+    </ListItem>
+    <ListItem expanded>
+        <ItemContent>
+            content 3
+        <ItemContent/>
+        <ExpandedSection>
+            expandable content 3
+        <ExpandedSection/>
+    </ListItem>
+</List>
+```
+so in the above example, the third and last list item will have the hidden section expanded, the others will have the section hidden.
 
 <div class="playground-doc">
 
@@ -62,6 +110,7 @@ or pass props to the LinkItem component
 
 * `image` - image related to the list item
 * `title` - list item title
+* `expanded` - expands the hidden section of the list item
 * `description` - list item description
 * `className` - css class
 * `style` - listitem style

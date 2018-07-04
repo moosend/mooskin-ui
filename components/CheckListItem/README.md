@@ -73,6 +73,7 @@ This can be used in various situations and combinations, for an enhanced develop
 * `status` - status of the check list item (active/nonactive, done/undone)
 * `title` - Check list item title
 * `text` - Check list item text
+* `buttonIcon` - icon to be added to the check list button
 * `style` - button style
 * `onClick` - callback to be triggered on button click
 

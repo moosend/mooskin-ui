@@ -1,5 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button create expanded section content correctly 1`] = `
+<List
+  className="myClass"
+  id="button1"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <div
+    className="list-component list myClass"
+    id="button1"
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+  >
+    <div
+      key="0"
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
+    >
+      <ListItem
+        className="myClass"
+        hovered={false}
+        image="imageURL"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "color": "blue",
+            "cursor": "pointer",
+          }
+        }
+      >
+        <div
+          className="listitem-component listItem myClass"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "blue",
+              "cursor": "pointer",
+            }
+          }
+        >
+          <div
+            className="detailsContainer loneImage"
+          >
+            <div
+              className="image"
+            >
+              <img
+                src="imageURL"
+              />
+            </div>
+          </div>
+          <div
+            className="content lone"
+          >
+            <ItemContent>
+              <div
+                className="item-content-component undefined"
+              >
+                Some Content
+              </div>
+            </ItemContent>
+          </div>
+        </div>
+      </ListItem>
+      <ExpandedSection
+        expanded={false}
+      >
+        <div
+          className="expanded-section-component expandedSection undefined"
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+        >
+          Some ExpandedSection Content
+        </div>
+      </ExpandedSection>
+    </div>
+  </div>
+</List>
+`;
+
 exports[`Button renders List correctly 1`] = `
 <div
   className="list-component list myClass"
@@ -49,7 +144,9 @@ exports[`Button renders ListItem correctly 1`] = `
   <div
     className="content "
   >
-    test
+    <ItemContent>
+      test
+    </ItemContent>
   </div>
 </div>
 `;
@@ -73,80 +170,126 @@ exports[`Button renders with multiple children 1`] = `
       }
     }
   >
-    <ListItem
-      className="myClass"
-      description="desc"
-      hovered={false}
+    <div
       key="0"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={Object {}}
-      title="title"
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
     >
-      <div
-        className="listitem-component listItem myClass"
+      <ListItem
+        className="myClass"
+        description="desc"
+        hovered={false}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
-        style={Object {}}
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+        title="title"
       >
         <div
-          className="detailsContainer "
+          className="listitem-component listItem myClass"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
         >
           <div
-            className="titleContainer"
+            className="detailsContainer "
           >
-            <span
-              className="title"
+            <div
+              className="titleContainer"
             >
-              title
-            </span>
-            <span
-              className="description"
-            >
-              desc
-            </span>
+              <span
+                className="title"
+              >
+                title
+              </span>
+              <span
+                className="description"
+              >
+                desc
+              </span>
+            </div>
+          </div>
+          <div
+            className="content "
+          >
+            <ItemContent>
+              <div
+                className="item-content-component undefined"
+              >
+                test
+              </div>
+            </ItemContent>
           </div>
         </div>
-        <div
-          className="content "
-        >
-          test
-        </div>
-      </div>
-    </ListItem>
-    <ListItem
-      className="myClass"
-      hovered={false}
-      image="imageUrl"
+      </ListItem>
+    </div>
+    <div
       key="1"
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={Object {}}
+      style={
+        Object {
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
     >
-      <div
-        className="listitem-component listItem myClass"
+      <ListItem
+        className="myClass"
+        hovered={false}
+        image="imageUrl"
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
-        style={Object {}}
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
       >
         <div
-          className="detailsContainer loneImage"
+          className="listitem-component listItem myClass"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
         >
           <div
-            className="image"
+            className="detailsContainer loneImage"
           >
-            <img
-              src="imageUrl"
-            />
+            <div
+              className="image"
+            >
+              <img
+                src="imageUrl"
+              />
+            </div>
+          </div>
+          <div
+            className="content lone"
+          >
+            <ItemContent>
+              <div
+                className="item-content-component undefined"
+              >
+                test
+              </div>
+            </ItemContent>
           </div>
         </div>
-        <div
-          className="content lone"
-        >
-          test
-        </div>
-      </div>
-    </ListItem>
+      </ListItem>
+    </div>
   </div>
 </List>
 `;
