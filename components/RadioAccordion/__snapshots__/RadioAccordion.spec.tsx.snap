@@ -28,6 +28,7 @@ exports[`RadioAccordion renders Header properly according to snapshot 1`] = `
       type="radio"
     />
     <label
+      className="labelContainer"
       htmlFor="4zlbrf"
     >
       <span>
@@ -71,6 +72,7 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
       active={true}
       className=""
       key="1"
+      onClick={[Function]}
       style={Object {}}
       title="title2"
     >
