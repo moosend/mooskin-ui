@@ -54,6 +54,20 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
 
     static RadioAccordionContent: React.StatelessComponent<IContentProps>;
 
+    static getActiveTab = (children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
+        const childrenArray = React.Children.toArray(children);
+
+        for (const [index, value] of childrenArray.entries()){
+            if (React.isValidElement<IContentProps>(value) && value.props.active){
+                return index;
+            }
+        }
+    }
+
+    static getDerivedStateFromProps(nextProps: IAccordionProps) {
+        return {active: RadioAccordion.getActiveTab(nextProps.children)};
+    }
+
     name: string;
 
     constructor(props: IAccordionProps){
@@ -62,7 +76,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         this.name = this.generateName();
 
         this.state = {
-            active: this.getActiveTab()
+            active: -1
         };
     }
 
@@ -116,6 +130,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
     }
 
     getActiveTab() {
+        console.log('called');
         const childrenArray = React.Children.toArray(this.props.children);
 
         for (const [index, value] of childrenArray.entries()){
