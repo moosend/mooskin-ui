@@ -96,6 +96,7 @@ Import {RadioAccordionContent, RadioAccordion} from 'mooskin';
 
 * `title` - (required) sets the title for the radio tab
 * `active` - sets which radio tab is active, the first is active by default
+* `onClick` - onClick callback when radio header is clicked
 * `style` -  extra styles 
 
 </div>

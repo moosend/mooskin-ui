@@ -15,11 +15,11 @@ class DatePickerExample extends React.Component {
                 <br/>
                 <DatePicker date={moment().add(45, 'days')} format={'D / M / Y'} onChange={this.onChange}/>
                 <br/>
-                <DateSelect onChange={this.onChange} format="12-Hour" type="hour" label="Hour (12H)" />
+                <DateSelect onChange={this.onChange} format="12-Hour" value={0} type="hour" label="Hour (12H)" />
                 <br/>
-                <DateSelect onChange={this.onChange} format="24-Hour" value={17} type="hour" label="Hour (24H)" />
+                <DateSelect onChange={this.onChange} format="24-Hour" value={0} type="hour" label="Hour (24H)" />
                 <br/>
-                <DateSelect onChange={this.onChange} value={'33'} type="minute" label="Minute" />
+                <DateSelect onChange={this.onChange} value={0} type="minute" label="Minute" />
                 <br/>
                 <DateSelect onChange={this.onChange} placeholder="Select a day of the month" description="Description goes here" format="1" type="month" label="Day" />
                 <br/>

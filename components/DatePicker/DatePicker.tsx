@@ -219,7 +219,7 @@ export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) =>
     const renderDateSelect = () => {
         const {id, dataLabel, value, labelTop, label, className, placeholder, description, style} = props;
         const options = renderOptions();
-        const selected = value ? value.toString() : '';
+        const selected = value || value === 0 ? value.toString() : '';
         return (
             <Select
                 selected={selected}
@@ -304,7 +304,7 @@ export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) =>
     const renderDayOptions = () => {
         const options = [];
         const format = getDayFormat() || 31;
-        const days = moment(format.toString()).daysInMonth();
+        const days = moment(format.toString(), 'M').daysInMonth();
         for (let i = 1 ; i <= days ; i++) {
             const text = moment({ month: format - 1, day: i }).format('Do');
             options.push(
