@@ -129,17 +129,6 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         return accordion;
     }
 
-    getActiveTab() {
-        console.log('called');
-        const childrenArray = React.Children.toArray(this.props.children);
-
-        for (const [index, value] of childrenArray.entries()){
-            if (React.isValidElement<IContentProps>(value) && value.props.active){
-                return index;
-            }
-        }
-    }
-
     generateName = () => {
         return Date.now().toString();
     }

@@ -1,36 +1,20 @@
 class RadioAccordionExample extends React.Component {
 
-    constructor(){
-        super();
-
-        this.accordion = this.accordion.bind(this)
-        this.accordion2 = this.accordion2.bind(this)
-        this.accordion3 = this.accordion3.bind(this)
-        this.accordion4 = this.accordion4.bind(this)
-
-        this.state = {
-            accordion: false,
-            accordion2: false,
-            accordion3: true,
-            accordion4: false,
-        }
-    }
-
     render(){
         return(
             <div>
                 <RadioAccordion>
-                    <RadioAccordionContent active={this.state.accordion} title="Click here!">Nice Content eh?</RadioAccordionContent>
-                    <RadioAccordionContent active={this.state.accordion2} title="I'm a radio too" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
+                    <RadioAccordionContent title="Click here!">Nice Content eh?</RadioAccordionContent>
+                    <RadioAccordionContent title="I'm a radio too" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </RadioAccordionContent>
-                    <RadioAccordionContent active={this.state.accordion3} title="Let's try a heading">
+                    <RadioAccordionContent title="Let's try a heading">
                         <H2 style={{margin: '0px 0px 10px 0px'}}>
                             H2 heading incoming!
                         </H2>
                         ...and some text of course!
                     </RadioAccordionContent>
-                    <RadioAccordionContent active={this.state.accordion4} title="Mix of elements">
+                    <RadioAccordionContent title="Mix of elements">
                         <H2 style={{margin: '0px 0px 10px 10px'}}>
                             H2 heading incoming!
                         </H2>
@@ -38,27 +22,8 @@ class RadioAccordionExample extends React.Component {
                         <Button>Ah..Tabs...</Button>
                     </RadioAccordionContent>
                 </RadioAccordion>
-                <button onClick={this.accordion}>accordion 1</button>
-                <button onClick={this.accordion2}>accordion 2</button>
-                <button onClick={this.accordion3}>accordion 3</button>
-                <button onClick={this.accordion4}>accordion 4</button>
             </div>
         );
     }
 
-    accordion() {
-        this.setState({accordion: true, accordion2: false, accordion3: false, accordion4: false})
-    }
-
-    accordion2() {
-        this.setState({accordion: false, accordion2: true, accordion3: false, accordion4: false})
-    }
-
-    accordion3() {
-        this.setState({accordion: false, accordion2: false, accordion3: true, accordion4: false})
-    }
-
-    accordion4() {
-        this.setState({accordion: false, accordion2: false, accordion3: false, accordion4: true})
-    }
 }
