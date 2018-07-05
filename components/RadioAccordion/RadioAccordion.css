@@ -42,7 +42,7 @@
     justify-content: center;
     align-items: center;
     appearance: none;
-    margin: 0 auto;
+    margin: 0;
     cursor: pointer;
     width: 1.125rem;
     height: 1.125rem;
@@ -66,7 +66,8 @@
 
 .radio label {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    /* align-items: center; */
     flex-direction: column;
     cursor: pointer;
     font-size: 0.875rem;

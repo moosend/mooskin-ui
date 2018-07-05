@@ -4,7 +4,7 @@ class RadioAccordionExample extends React.Component {
         return(
             <div>
                 <RadioAccordion>
-                    <RadioAccordionContent title="Click here!">Nice Content eh?</RadioAccordionContent>
+                    <RadioAccordionContent onClick={() => console.log('Content Clicked!')} title="Click here!">Nice Content eh?</RadioAccordionContent>
                     <RadioAccordionContent title="I'm a radio too" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     </RadioAccordionContent>
