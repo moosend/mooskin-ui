@@ -108,12 +108,11 @@ export default class TopNotification extends React.Component<ITopNotificationPro
     renderButtons = () => {
 
         const {okButton, cancelButton, okButtonLabel, cancelButtonLabel} = this.props;
-        const margin = '0 6px';
 
         return okButton || cancelButton ? (
             <div className={styles.buttonContainer}>
-                {okButton && <Button style={{margin}} onClick={this.onClickOk}>{okButtonLabel}</Button>}
-                {cancelButton && <Button style={{margin}} onClick={this.onClickCancel}>{cancelButtonLabel}</Button>}
+                {okButton && <Button style={{margin: 6}} onClick={this.onClickOk}>{okButtonLabel}</Button>}
+                {cancelButton && <Button style={{margin: 6}} onClick={this.onClickCancel}>{cancelButtonLabel}</Button>}
             </div>
         ) : null;
     }
