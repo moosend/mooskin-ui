@@ -153,7 +153,7 @@ The callback works the same as with the DatePicker component, where it returns a
 ## Supported attributes 
 
 * `id` - id of the element
-* `date` - selected date
+* `date` - selected date (MomentJS object)
 * `format` - format the date differently. See [format](https://momentjs.com/docs/#/parsing/string-format/) types
 * `label` - datepicker label
 * `dateOnly` - datepicker with date only

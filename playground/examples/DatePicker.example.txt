@@ -3,15 +3,24 @@ class DatePickerExample extends React.Component {
     constructor(){
         super();
         this.onChange = this.onChange.bind(this);
+        this.addDay = this.addDay.bind(this);
+
+        this.state = {
+            date: moment().add(24, 'days'),
+            date2: moment()
+        }
     }
     
     render(){
 
         return(
             <div>
-                <DatePicker onChange={this.onChange} label={'Select Date:'} dataLabel={'date'} date={1511342490554}/>
+                <div style={{display: 'flex'}}>
+                    <DatePicker onChange={this.onChange} label={'Select Date:'} dataLabel={'date'} date={this.state.date}/>
+                    <Button style={{marginLeft: 6, alignSelf: 'center'}} onClick={this.addDay}>Add day</Button>
+                </div>
                 <br/>
-                <DatePicker onChange={this.onChange} format={'DD MMM YYYY'} label={'Date only:'} dateOnly dataLabel={'date'} date={1511342490554}/>
+                <DatePicker onChange={this.onChange} format={'DD MMM YYYY'} label={'Date only:'} dateOnly dataLabel={'date2'} date={this.state.date2}/>
                 <br/>
                 <DatePicker date={moment().add(45, 'days')} format={'D / M / Y'} onChange={this.onChange}/>
                 <br/>
@@ -32,7 +41,12 @@ class DatePickerExample extends React.Component {
         );
     }
 
-    onChange(e, data){
+    onChange(data){
         console.log(data.value);
+        this.setState({[data.dataLabel]: data.value});
+    }
+
+    addDay(){
+        this.setState({date: this.state.date.add(1, 'day')});
     }
 }
