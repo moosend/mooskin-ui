@@ -38,7 +38,7 @@ exports[`TopNotification renders correctly 1`] = `
         onClick={[Function]}
         style={
           Object {
-            "margin": 3,
+            "margin": "0 6px",
           }
         }
         type="button"
