@@ -31,6 +31,9 @@ export interface IContentProps {
     /** override styles */
     style?: React.CSSProperties;
 
+    /** onClick event handler when content is clicked */
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+
 }
 
 export interface IHeaderProps {
@@ -77,8 +80,9 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         );
     }
 
-    onClickHeader = (index: number) => {
+    onClickHeader = (index: number, onClick?: (e: React.MouseEvent<HTMLElement>) => void) => {
         return (e: React.MouseEvent<HTMLElement>) => {
+            onClick && onClick(e);
             this.setState({active: index});
         };
     }
@@ -95,12 +99,14 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
                     key: index
                 };
 
+                const onClick = child.props.onClick ? child.props.onClick : undefined;
+
                 accordion.push(
                     <Header
                         key={index}
                         title={child.props.title}
                         active={this.state.active === index}
-                        onClick={this.onClickHeader(index)}
+                        onClick={this.onClickHeader(index, onClick)}
                         name={this.name}
                     >
                         {React.cloneElement(child, extraProps)}
@@ -164,7 +170,7 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
                     checked={props.active}
                     readOnly
                 />
-                <label htmlFor={genId}>
+                <label htmlFor={genId} className={styles.labelContainer}>
                     <span>{props.title}</span>
                 </label>
             </div>

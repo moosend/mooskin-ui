@@ -16,20 +16,55 @@ class InputExample extends React.Component {
 
     render(){
 
-        const pers = [
-            {
-                value: '#unsubscribeLink#',
-                label: 'Unsibscribe Link'
-            },
-            {
-                value: '#account:email#',
-                label: 'Account Email'
-            }   
-        ];
+        personalizationTags=[
+                            {
+                                label: 'Unsubscribe Link',
+                                value: '#unsubscribeLink#'
+                            },
+                            {
+                                label: 'Update Profile Link',
+                                value: '#updateProfileLink#'
+                            },
+                            {
+                                label: 'Forward to a Friend Link',
+                                value: '#forwardToFriendLink#'
+                            },
+                            {
+                                label: 'Double Opt-in Verification Link',
+                                value: '#VerificationLink#'
+                            },
+                            {
+                                label: 'Account VAT',
+                                value: '#account:vat#'
+                            },
+                            {
+                                label: 'Account Email',
+                                value: '#account:email#'
+                            },
+                            {
+                                label: 'Account Address',
+                                value: '#account:address#'
+                            },
+                            {
+                                label: 'Account Company',
+                                value: '#account:company#'
+                            },
+                            {
+                                label: 'Current Date and Time',
+                                value: '#datetime#'
+                            },
+                            {
+                                label: 'Recipient Name',
+                                value: '#recipient:name#'
+                            },
+                            {
+                                label: 'Recipient Email',
+                                value: '#recipient:email#'
+                            }];
 
         return(
             <div>
-                <Input value={this.state.value} onChange={this.onChange} personalizationTags={pers} emoji type="text" placeholder="max length 5" label="Some label:"/>
+                <Input value={this.state.value} type="text" name="olala" onChange={this.onChange} personalizationTags={personalizationTags} emoji type="text" placeholder="max length 5" label="Some label:"/>
                 <br/>
                 <Input
                     onChange={this.onChange}
