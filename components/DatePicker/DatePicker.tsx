@@ -145,7 +145,6 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     onChange = (date: any) => {
         const value = this.props.dateOnly ? moment(this.state.date).startOf('day') :
                     moment(this.state.date);
-        this.setState({date: value});
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value, dataLabel: this.props.dataLabel});
@@ -155,6 +154,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 {value, dataLabel: this.props.dataLabel, required: this.props.required}
             );
         }
+        this.setState({date: value});
     }
 
     toggle = () => {
