@@ -5,8 +5,13 @@ class TableExample extends React.Component{
 
         this.logIt = this.logIt.bind(this);
         this.onClick = this.onClick.bind(this);
+        this.tableContent = this.tableContent.bind(this);
+        this.onSearch = this.onSearch.bind(this);
+        this.getFiltered = this.getFiltered.bind(this);
 
         this.state = {
+            tableContent: [],
+            search: '',
             data: [
                 {
                     actions: [<SmallIconButton key={0} transparent icon="face"/>, <SmallIconButton key={1} transparent icon="check"/>],
@@ -73,6 +78,10 @@ class TableExample extends React.Component{
         };
     }
 
+    componentDidMount() {
+        this.setState({tableContent: this.tableContent()})
+    }
+
     render(){
 
         const spanStyle = {
@@ -89,39 +98,21 @@ class TableExample extends React.Component{
             style: {color: 'blue'}
         }
 
+        const filtered = this.getFiltered();
+
         return(
             <div>
-                <button onClick={this.onClick}>Click</button>
-                <Table data={this.state.data} paginate={3} smallCollapse>
-                    <TableHeader dataField="delivered" sortable >Delivered</TableHeader>
+                <Input
+                    label="Search by title"
+                    value={this.state.search}
+                    placeholder="Title..."
+                    style={{marginBottom: 20}}
+                    onChange={this.onSearch}
+                />
+                <Table data={filtered} paginate={10} smallCollapse>
                     <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
-                    <TableHeader dataField="mailingList" hideSmall >
-                        <span style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-                            <div style={spanStyle}/>
-                            Mailing list / segment
-                        </span>
-                    </TableHeader>
-                    <TableHeader dataField="status" sortable hideSmall >Status</TableHeader>
+                    <TableHeader dataField="title" hideSmall sortable >Title</TableHeader>
                     <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
-                    <TableHeader dataField="click" sortable hideSmall>Click</TableHeader>
-                    <TableHeader dataField="subscribers" sortable hideSmall >Subscribers</TableHeader>
-                    <TableHeader colStyles={{flexDirection: 'row'}} dataField="actions" hideSmall >Actions</TableHeader>
-                </Table>
-                <br/>
-                <Table data={this.state.data} paginate={3} alternate smallCollapse>
-                    <TableHeader dataField="delivered" hideSmall sortable >Delivered</TableHeader>
-                    <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
-                    <TableHeader dataField="mailingList" hideSmall >
-                        <span style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
-                            <div style={spanStyle}/>
-                            Mailing list / segment
-                        </span>
-                    </TableHeader>
-                    <TableHeader dataField="status" sortable hideSmall >Status</TableHeader>
-                    <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
-                    <TableHeader dataField="click" sortable hideSmall>Click</TableHeader>
-                    <TableHeader dataField="subscribers" sortable hideSmall >Subscribers</TableHeader>
-                    <TableHeader colStyles={{flexDirection: 'row'}} dataField="actions" >Actions</TableHeader>
                 </Table>
             </div>
         );
@@ -157,5 +148,34 @@ class TableExample extends React.Component{
             return comparison;
         }
 
+    }
+
+    tableContent() {
+        const tableContent = [];
+        let campaign = 10;
+        for(let i = 0; i < 2000; i++){
+            if (i % 10 === 0){
+                campaign = i;
+            }
+            tableContent.push({
+                campaign: 'campaign ' + campaign,
+                title: 'title ' + i,
+                open: i
+            });
+        }
+        return tableContent;
+    }
+
+    onSearch(e, data) {
+        this.setState({search: data.value})
+    }
+
+    getFiltered() {
+        if (this.state.search && this.state.search !== ''){
+            return this.state.tableContent.filter((row) => {
+                return row.title.includes(this.state.search)
+            });
+        }
+        return this.state.tableContent;
     }
 }
