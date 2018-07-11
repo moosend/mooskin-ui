@@ -347,7 +347,7 @@ export const ItemContent: React.StatelessComponent<IItemContentProps> = (props) 
     return(
         <div
             id={props.id}
-            className={`item-content-component ${props.className}`}
+            className={`item-content-component ${styles.content} ${props.className}`}
             style={props.style}
         >
             {props.children}

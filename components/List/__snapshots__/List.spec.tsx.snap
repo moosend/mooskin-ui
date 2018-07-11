@@ -37,7 +37,7 @@ exports[`Button create expanded section content correctly 1`] = `
       >
         <ItemContent>
           <div
-            className="item-content-component undefined"
+            className="item-content-component content undefined"
           >
             Some Content
           </div>
@@ -152,7 +152,7 @@ exports[`Button renders with multiple children 1`] = `
       >
         <ItemContent>
           <div
-            className="item-content-component undefined"
+            className="item-content-component content undefined"
           >
             test
           </div>
@@ -212,7 +212,7 @@ exports[`Button renders with multiple children 1`] = `
       >
         <ItemContent>
           <div
-            className="item-content-component undefined"
+            className="item-content-component content undefined"
           >
             test
           </div>

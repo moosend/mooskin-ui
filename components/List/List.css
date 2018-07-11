@@ -16,15 +16,11 @@
     position: relative;
 }
 
-.listItem:hover {
-    background: #F6F6F6;
-}
-
 .listItem + .listItem {
     border-top: 1px solid #efefef;
 }
 
-.image{
+/* .image{
     display: flex;
     flex: 1;
     justify-content: center;
@@ -61,18 +57,10 @@
 .description{
     color: var(--italicDescription);
     font-size: .78571428571rem;
-}
+} */
 
-.content {
-    flex: 1;
-}
-
-.lone{
-    flex: 10;
-}
-
-.loneImage{
-    flex: 1;
+.content:hover {
+    background: #F6F6F6;
 }
 
 .expandedSection {
