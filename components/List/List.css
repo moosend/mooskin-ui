@@ -11,10 +11,13 @@
 }
 
 .listItem{
-    display: flex;
-    flex-direction: row;
-    padding: 25px 0px;
+    /* display: flex; */
+    /* flex-direction: row; */
     position: relative;
+}
+
+.listItem:hover {
+    background: #F6F6F6;
 }
 
 .listItem + .listItem {
@@ -77,12 +80,13 @@
     border-top: 1px solid #eaeaea;
     border-bottom: 1px solid #eaeaea;
     transition: all 0.4s;
-    overflow: hidden;
+    position: relative;
+    /* overflow: hidden; */
     /* height: 1px; */
 }
 
 .arrow {
-    bottom: -1px;
+    top: 1px;
     left: 20px;
     z-index: 5;
     position: absolute;
@@ -113,9 +117,9 @@
 
 @media(--xSmall){
 
-    .listItem{
+    /* .listItem{
         flex-direction: column;
-    }
+    } */
 
     .detailsContainer{
         margin-bottom: 15px;

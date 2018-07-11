@@ -3,11 +3,12 @@ class ListExample extends React.Component {
     render(){
         return(
             <div>
-                <List hoverColor="#F6F6F6" >
-                    <ListItem title="Automation 1" description="Description for automation 1" image="https://laracasts.com/images/series/circles/do-you-react.png">
-                        <ItemContent style={{display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', height: '100%'}}>
-                            <button>Activate</button>
-                            <Select style={{marginRight: 30, width: '100%'}}>
+                <List>
+                    <ListItem>
+                        <ItemContent style={{display: 'flex', alignItems: 'center', height: '100%', justifyContent: 'space-between'}}>
+                            <img src="https://laracasts.com/images/series/circles/do-you-react.png" width={120}/>
+                            <div>Automation 1</div>
+                            <Select>
                                 <Option value="option1">Option1</Option>
                                 <Option value="option2">Option2</Option>
                                 <Option value="option3">Option3</Option>
@@ -16,21 +17,11 @@ class ListExample extends React.Component {
                             </Select>
                         </ItemContent>
                     </ListItem>
-                    <ListItem title="Integration 1" description="Description for integration 1" style={{padding: '35px 0px'}}>
-                        <ItemContent style={{float: 'right'}}>
-                            <button>Proceed</button>
+                    <ListItem onClick={() => console.log('List Item Clicked')}>
+                        <ItemContent style={{padding: '35px 0px'}}>
+                            Item Content
                         </ItemContent>
-                    </ListItem>
-                    <ListItem expanded title="Expanding item" description="This item can be expanded" style={{padding: '35px 0px'}}>
-                        <ItemContent style={{float: 'right'}}>
-                            <button onClick={(e) => {e.stopPropagation(); console.log('haha')}}>Proceed</button>
-                        </ItemContent>
-                        <ExpandedSection>
-                            yay this is expandable!
-                        </ExpandedSection>
-                    </ListItem>
-                    <ListItem expanded title="Expanding item the second" description="This item can be expanded too" style={{padding: '35px 0px'}}>
-                        <ExpandedSection>
+                        <ExpandedSection style={{padding: '35px 0px'}} expanded>
                             yay this is expandable!
                         </ExpandedSection>
                     </ListItem>
@@ -38,5 +29,19 @@ class ListExample extends React.Component {
             </div>
         );
     }
+
+    renderItem(props) {
+
+        return(
+            <ListItem>
+                <ItemContent>
+                    {props.title}
+                </ItemContent>
+                <ExpandedSection>
+                    {props.expandable}
+                </ExpandedSection>
+            </ListItem>
+        );
+    };
 
 }

@@ -56,9 +56,7 @@ or pass props to the LinkItem component
 
 ```
 <List>
-    <ListItem image="imageUrl"/>
-    <ListItem title="Some Title"/>
-    <ListItem title="Another title" description="Item description" />
+    <ListItem style={yourStyle} className={yourClass}>...</ListItem>
 </List>
 ```
 
@@ -74,7 +72,7 @@ Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
         <ItemContent>
             content 1
         <ItemContent/>
-        <ExpandedSection>
+        <ExpandedSection expanded={true || false}>
             expandable content 1
         <ExpandedSection/>
     </ListItem>
@@ -82,7 +80,7 @@ Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
         <ItemContent>
             content 2
         <ItemContent/>
-        <ExpandedSection>
+        <ExpandedSection expanded={true || false}>
             expandable content 2
         <ExpandedSection/>
     </ListItem>
@@ -90,7 +88,7 @@ Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
         <ItemContent>
             content 3
         <ItemContent/>
-        <ExpandedSection>
+        <ExpandedSection expanded={true || false}>
             expandable content 3
         <ExpandedSection/>
     </ListItem>
@@ -114,6 +112,19 @@ so in the above example, the third and last list item will have the hidden secti
 * `description` - list item description
 * `className` - css class
 * `style` - listitem style
+
+## Supported ListContent attributes
+
+* `id` - id of the element
+* `style` - listitem style
+* `className` - css class
+
+## Supported ExpandedSection attributes
+
+* `id` - id of the element
+* `style` - listitem style
+* `className` - css class
+* `expanded` - if true, displays hidden content
 
 </div>
 

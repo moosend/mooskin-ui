@@ -14,7 +14,8 @@
     "prefer-for-of": false,
     "member-access": false,
     "no-submodule-imports": false,
-    "no-implicit-dependencies": [true, "dev"]
+    "no-implicit-dependencies": [true, "dev"],
+    "max-line-length": [true, 150]
     // "no-shadowed-variable": false
   }
 }
