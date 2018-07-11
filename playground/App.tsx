@@ -175,7 +175,7 @@ export const App = (props: any) => {
                     {renderEditableExample('Select', { Select, Option })}
                 </Col>
                 <Col lg={6} md={6}>
-                    {renderEditableExample('DatePicker', { DatePicker, DateSelect, moment })}
+                    {renderEditableExample('DatePicker', { DatePicker, DateSelect, moment, Button })}
                 </Col>
                 <Col lg={12}>
                     {renderEditableExample('File', { FileUpload })}

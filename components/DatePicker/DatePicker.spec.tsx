@@ -70,7 +70,7 @@ describe('DatePicker', () => {
         const component = mount(<DatePicker onChange={func} disabled/>);
 
         component.find('InputMoment').find('td').at(15).simulate('click');
-        expect(func).toHaveBeenCalled();
+        expect(func).not.toHaveBeenCalled();
     });
 
     test('datepicker shows when input is clicked and disappears when anywhere except datepicker is clicked', () => {

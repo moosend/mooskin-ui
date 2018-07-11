@@ -36,7 +36,11 @@ exports[`TopNotification renders correctly 1`] = `
       <Button
         className=""
         onClick={[Function]}
-        style={Object {}}
+        style={
+          Object {
+            "margin": 6,
+          }
+        }
         type="button"
       >
         click ok
