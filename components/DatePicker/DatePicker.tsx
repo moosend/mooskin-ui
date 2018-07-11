@@ -17,7 +17,7 @@ export interface IDateProps{
     id?: string;
 
     /** date passed will be the selected date */
-    date?: any;
+    date?: moment.Moment;
 
     /** datepicker placeholder */
     placeholder?: string;
@@ -63,7 +63,7 @@ export interface IDateProps{
 }
 
 export interface IDateState{
-    date: any;
+    date: moment.Moment;
     displayPicker: boolean;
 }
 
@@ -75,11 +75,22 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         style: {}
     };
 
+    static setDate = (props: IDateProps) => {
+        if (props.dateOnly){
+            return moment(props.date).startOf('day') || moment().startOf('day');
+        }
+        return moment(props.date) || moment();
+    }
+
+    static getDerivedStateFromProps(nextProps: IDateProps){
+        return {date: DatePicker.setDate(nextProps)};
+    }
+
     constructor(props: IDateProps){
         super(props);
 
         this.state = {
-            date: this.setDate(),
+            date: DatePicker.setDate(this.props),
             displayPicker: false
         };
     }
@@ -131,17 +142,10 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         );
     }
 
-    setDate = () => {
-        if (this.props.dateOnly){
-            return moment(this.props.date).startOf('day') || moment().startOf('day');
-        }
-        return moment(this.props.date) || moment();
-    }
-
     onChange = (date: any) => {
-        const value = this.props.dateOnly ? this.state.date.startOf('day').format('x') : this.state.date.format('x');
-        this.setState({date});
-        // !this.props.disabled &&
+        const value = this.props.dateOnly ? moment(this.state.date).startOf('day') :
+                    moment(this.state.date);
+        !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value, dataLabel: this.props.dataLabel});
         if (this.props.status){
@@ -150,6 +154,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 {value, dataLabel: this.props.dataLabel, required: this.props.required}
             );
         }
+        this.setState({date: value});
     }
 
     toggle = () => {

@@ -2,27 +2,28 @@ class RadioAccordionExample extends React.Component {
 
     render(){
         return(
-        <div>
-            <RadioAccordion>
-                <RadioAccordionContent onClick={() => console.log('Content Clicked!')} title="Click here!">Nice Content eh?</RadioAccordionContent>
-                <RadioAccordionContent title="I'm a radio too" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                </RadioAccordionContent>
-                <RadioAccordionContent title="Let's try a heading">
-                    <H2 style={{margin: '0px 0px 10px 0px'}}>
-                        H2 heading incoming!
-                    </H2>
-                    ...and some text of course!
-                </RadioAccordionContent>
-                <RadioAccordionContent title="Mix of elements">
-                    <H2 style={{margin: '0px 0px 10px 10px'}}>
-                        H2 heading incoming!
-                    </H2>
-                    <Input placeholder="Yoohoo tabs!"/>
-                    <Button>Ah..Tabs...</Button>
-                </RadioAccordionContent>
-            </RadioAccordion>
-        </div>
-    );
+            <div>
+                <RadioAccordion>
+                    <RadioAccordionContent onClick={() => console.log('Content Clicked!')} title="Click here!">Nice Content eh?</RadioAccordionContent>
+                    <RadioAccordionContent title="I'm a radio too" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </RadioAccordionContent>
+                    <RadioAccordionContent title="Let's try a heading">
+                        <H2 style={{margin: '0px 0px 10px 0px'}}>
+                            H2 heading incoming!
+                        </H2>
+                        ...and some text of course!
+                    </RadioAccordionContent>
+                    <RadioAccordionContent title="Mix of elements">
+                        <H2 style={{margin: '0px 0px 10px 10px'}}>
+                            H2 heading incoming!
+                        </H2>
+                        <Input placeholder="Yoohoo tabs!"/>
+                        <Button>Ah..Tabs...</Button>
+                    </RadioAccordionContent>
+                </RadioAccordion>
+            </div>
+        );
     }
+
 }

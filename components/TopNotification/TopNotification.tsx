@@ -111,8 +111,8 @@ export default class TopNotification extends React.Component<ITopNotificationPro
 
         return okButton || cancelButton ? (
             <div className={styles.buttonContainer}>
-                {okButton && <Button onClick={this.onClickOk}>{okButtonLabel}</Button>}
-                {cancelButton && <Button onClick={this.onClickCancel}>{cancelButtonLabel}</Button>}
+                {okButton && <Button style={{margin: 6}} onClick={this.onClickOk}>{okButtonLabel}</Button>}
+                {cancelButton && <Button style={{margin: 6}} onClick={this.onClickCancel}>{cancelButtonLabel}</Button>}
             </div>
         ) : null;
     }
