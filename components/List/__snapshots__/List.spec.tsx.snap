@@ -19,78 +19,66 @@ exports[`Button create expanded section content correctly 1`] = `
       }
     }
   >
-    <div
-      key="0"
+    <ListItem
+      className="myClass"
       style={
         Object {
-          "display": "flex",
-          "flexDirection": "column",
+          "color": "blue",
         }
       }
     >
-      <ListItem
-        className="myClass"
-        hovered={false}
-        image="imageURL"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="listitem-component listItem myClass"
         style={
           Object {
             "color": "blue",
-            "cursor": "pointer",
           }
         }
       >
-        <div
-          className="listitem-component listItem myClass"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "color": "blue",
-              "cursor": "pointer",
-            }
-          }
+        <ItemContent>
+          <div
+            className="item-content-component content undefined"
+          >
+            Some Content
+          </div>
+        </ItemContent>
+        <ExpandedSection
+          expanded={true}
         >
           <div
-            className="detailsContainer loneImage"
+            className="expanded-section-component expandedSection undefined"
+            onClick={[Function]}
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              className="image"
+              className="arrow"
             >
-              <img
-                src="imageURL"
-              />
-            </div>
-          </div>
-          <div
-            className="content lone"
-          >
-            <ItemContent>
               <div
-                className="item-content-component undefined"
+                style={
+                  Object {
+                    "height": "100%",
+                    "position": "relative",
+                    "width": "100%",
+                  }
+                }
               >
-                Some Content
+                <div
+                  className="innerArrow"
+                />
+                <div
+                  className="borderArrow"
+                />
               </div>
-            </ItemContent>
+            </div>
+            Some ExpandedSection Content
           </div>
-        </div>
-      </ListItem>
-      <ExpandedSection
-        expanded={false}
-      >
-        <div
-          className="expanded-section-component expandedSection undefined"
-          style={
-            Object {
-              "display": "none",
-            }
-          }
-        >
-          Some ExpandedSection Content
-        </div>
-      </ExpandedSection>
-    </div>
+        </ExpandedSection>
+      </div>
+    </ListItem>
   </div>
 </List>
 `;
@@ -116,38 +104,14 @@ exports[`Button renders ListItem correctly 1`] = `
     }
   }
 >
-  <div
-    className="detailsContainer "
+  <ItemContent>
+    test
+  </ItemContent>
+  <ExpandedSection
+    expanded={true}
   >
-    <div
-      className="image"
-    >
-      <img
-        src="imageUrl"
-      />
-    </div>
-    <div
-      className="titleContainer"
-    >
-      <span
-        className="title"
-      >
-        title
-      </span>
-      <span
-        className="description"
-      >
-        desc
-      </span>
-    </div>
-  </div>
-  <div
-    className="content "
-  >
-    <ItemContent>
-      test
-    </ItemContent>
-  </div>
+    expanded test
+  </ExpandedSection>
 </div>
 `;
 
@@ -170,126 +134,126 @@ exports[`Button renders with multiple children 1`] = `
       }
     }
   >
-    <div
-      key="0"
+    <ListItem
+      className="myClass"
       style={
         Object {
-          "display": "flex",
-          "flexDirection": "column",
+          "color": "blue",
         }
       }
     >
-      <ListItem
-        className="myClass"
-        description="desc"
-        hovered={false}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
-        title="title"
-      >
-        <div
-          className="listitem-component listItem myClass"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "color": "blue",
-            }
-          }
-        >
-          <div
-            className="detailsContainer "
-          >
-            <div
-              className="titleContainer"
-            >
-              <span
-                className="title"
-              >
-                title
-              </span>
-              <span
-                className="description"
-              >
-                desc
-              </span>
-            </div>
-          </div>
-          <div
-            className="content "
-          >
-            <ItemContent>
-              <div
-                className="item-content-component undefined"
-              >
-                test
-              </div>
-            </ItemContent>
-          </div>
-        </div>
-      </ListItem>
-    </div>
-    <div
-      key="1"
-      style={
-        Object {
-          "display": "flex",
-          "flexDirection": "column",
-        }
-      }
-    >
-      <ListItem
-        className="myClass"
-        hovered={false}
-        image="imageUrl"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+      <div
+        className="listitem-component listItem myClass"
         style={
           Object {
             "color": "blue",
           }
         }
       >
-        <div
-          className="listitem-component listItem myClass"
-          onMouseEnter={[Function]}
-          onMouseLeave={[Function]}
-          style={
-            Object {
-              "color": "blue",
-            }
-          }
+        <ItemContent>
+          <div
+            className="item-content-component content undefined"
+          >
+            test
+          </div>
+        </ItemContent>
+        <ExpandedSection
+          expanded={true}
         >
           <div
-            className="detailsContainer loneImage"
+            className="expanded-section-component expandedSection undefined"
+            onClick={[Function]}
+            style={
+              Object {
+                "display": "block",
+              }
+            }
           >
             <div
-              className="image"
+              className="arrow"
             >
-              <img
-                src="imageUrl"
-              />
-            </div>
-          </div>
-          <div
-            className="content lone"
-          >
-            <ItemContent>
               <div
-                className="item-content-component undefined"
+                style={
+                  Object {
+                    "height": "100%",
+                    "position": "relative",
+                    "width": "100%",
+                  }
+                }
               >
-                test
+                <div
+                  className="innerArrow"
+                />
+                <div
+                  className="borderArrow"
+                />
               </div>
-            </ItemContent>
+            </div>
+            expanded test
           </div>
-        </div>
-      </ListItem>
-    </div>
+        </ExpandedSection>
+      </div>
+    </ListItem>
+    <ListItem
+      className="myClass"
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
+    >
+      <div
+        className="listitem-component listItem myClass"
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+      >
+        <ItemContent>
+          <div
+            className="item-content-component content undefined"
+          >
+            test
+          </div>
+        </ItemContent>
+        <ExpandedSection
+          expanded={false}
+        >
+          <div
+            className="expanded-section-component expandedSection undefined"
+            onClick={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="arrow"
+            >
+              <div
+                style={
+                  Object {
+                    "height": "100%",
+                    "position": "relative",
+                    "width": "100%",
+                  }
+                }
+              >
+                <div
+                  className="innerArrow"
+                />
+                <div
+                  className="borderArrow"
+                />
+              </div>
+            </div>
+            expanded test
+          </div>
+        </ExpandedSection>
+      </div>
+    </ListItem>
   </div>
 </List>
 `;
