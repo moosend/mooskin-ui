@@ -1,42 +1,75 @@
 class ListExample extends React.Component {
 
+    constructor(props){
+        super(props);
+
+        this.renderList = this.renderList.bind(this);
+        this.onClick = this.onClick.bind(this);
+
+        this.state = {
+            activeItems: []
+        }
+    }
+
     render(){
+
+        const list = [
+            {
+                title: 'title 1',
+                content: 'content 1'
+            },
+            {
+                title: 'title 2',
+                content: 'content 2'
+            },
+            {
+                title: 'title 3',
+                content: 'content 3'
+            },
+            {
+                title: 'title 4',
+                content: 'content 4'
+            },
+            {
+                title: 'title 5',
+                content: 'content 5'
+            }
+        ];
+
         return(
-            <div>
-                <List hoverColor="#F6F6F6" >
-                    <ListItem title="Automation 1" description="Description for automation 1" image="https://laracasts.com/images/series/circles/do-you-react.png">
-                        <ItemContent style={{display: 'flex', flexDirection: 'row-reverse', alignItems: 'center', height: '100%'}}>
-                            <button>Activate</button>
-                            <Select style={{marginRight: 30, width: '100%'}}>
-                                <Option value="option1">Option1</Option>
-                                <Option value="option2">Option2</Option>
-                                <Option value="option3">Option3</Option>
-                                <Option value="option4">Option4</Option>
-                                <Option value="option5">Option5</Option>
-                            </Select>
-                        </ItemContent>
-                    </ListItem>
-                    <ListItem title="Integration 1" description="Description for integration 1" style={{padding: '35px 0px'}}>
-                        <ItemContent style={{float: 'right'}}>
-                            <button>Proceed</button>
-                        </ItemContent>
-                    </ListItem>
-                    <ListItem expanded title="Expanding item" description="This item can be expanded" style={{padding: '35px 0px'}}>
-                        <ItemContent style={{float: 'right'}}>
-                            <button onClick={(e) => {e.stopPropagation(); console.log('haha')}}>Proceed</button>
-                        </ItemContent>
-                        <ExpandedSection>
-                            yay this is expandable!
-                        </ExpandedSection>
-                    </ListItem>
-                    <ListItem expanded title="Expanding item the second" description="This item can be expanded too" style={{padding: '35px 0px'}}>
-                        <ExpandedSection>
-                            yay this is expandable!
-                        </ExpandedSection>
-                    </ListItem>
-                </List>
-            </div>
+            <List>
+                {this.renderList(list)}
+            </List>
         );
     }
 
-}
+    renderList(list) {
+        return list.map((item, i) => {
+            const expanded = this.state.activeItems.includes(i) ? true : false;
+            return (
+                <ListItem key={i} onClick={() => this.onClick(i)}>
+                    <ItemContent style={{padding: '35px 0px', cursor: 'pointer'}}>
+                        {item.title}
+                    </ItemContent>
+                    <ExpandedSection style={{padding: '35px 0px'}} expanded={expanded} >
+                        {item.content}
+                    </ExpandedSection>
+                </ListItem>
+            );
+        })
+    }
+
+    onClick(i) {
+        if (this.state.activeItems.includes(i)){
+            const activeItems = [...this.state.activeItems];
+            const pos = activeItems.indexOf(i);
+            activeItems.splice(pos, 1);
+            this.setState({activeItems});
+        } else {
+            const activeItems = [...this.state.activeItems];
+            activeItems.push(i);
+            this.setState({activeItems});
+        }
+    }
+};
+

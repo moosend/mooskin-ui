@@ -230,7 +230,7 @@ export const App = (props: any) => {
                     <H1>Tables</H1>
                 </Col>
                 <Col lg={12}>
-                    {renderEditableExample('Table', { SmallIconButton, Table, TableHeader })}
+                    {renderEditableExample('Table', { SmallIconButton, Table, TableHeader, Input })}
                 </Col>
             </Row>
             <Row id="misc">
