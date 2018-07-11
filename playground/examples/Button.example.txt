@@ -8,10 +8,10 @@ class ButtonExample extends React.Component {
     render(){
         return(
             <div>
-                <Button onClick={this.onClick}>Complete your payment</Button>
-                <Button onClick={this.onClick} disabled>Button</Button>
-                <Button href="https://github.com/moosend/mooskin-ui" onClick={this.onClick} inverseStyle>Button</Button>
-                <Button onClick={this.onClick} inverseStyle disabled>Button</Button>
+                <Button style={{margin: 3}} onClick={this.onClick}>Complete your payment</Button>
+                <Button style={{margin: 3}} onClick={this.onClick} disabled>Button</Button>
+                <Button style={{margin: 3}} href="https://github.com/moosend/mooskin-ui" onClick={this.onClick} inverseStyle>Button</Button>
+                <Button style={{margin: 3}} onClick={this.onClick} inverseStyle disabled>Button</Button>
             </div>
         );
     }
