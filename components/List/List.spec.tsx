@@ -52,7 +52,7 @@ describe('Button', () => {
                     <ItemContent>
                         test
                     </ItemContent>
-                    <ExpandedSection expanded>
+                    <ExpandedSection expanded arrow={false}>
                         expanded test
                     </ExpandedSection>
                 </ListItem>

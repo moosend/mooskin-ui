@@ -304,6 +304,7 @@ export interface IExpandedSectionProps {
     className?: string;
     style?: React.CSSProperties;
     expanded: boolean;
+    arrow?: boolean;
     children?: JSX.Element | Element | Element[] | JSX.Element[] | string;
 }
 
@@ -311,15 +312,17 @@ export const ExpandedSection: React.StatelessComponent<IExpandedSectionProps> = 
 
     const display = props.expanded ? {display: 'block'} : {display: 'none'};
 
+    const displayArrow = props.arrow !== undefined ? props.arrow : true;
+
     const arrow = () => {
-        return (
+        return displayArrow && (
             <div className={styles.arrow}>
                 <div style={{position: 'relative', height: '100%', width: '100%'}}>
                     <div className={styles.innerArrow}/>
                     <div className={styles.borderArrow}/>
                 </div>
             </div>
-        );
+        ) || null;
     };
 
     return(
