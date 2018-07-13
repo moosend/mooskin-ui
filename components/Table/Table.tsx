@@ -518,6 +518,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                     className={paginationProps && paginationProps.className}
                     maxButtons={paginationProps && paginationProps.maxButtons}
                     style={paginationProps && paginationProps.style}
+                    inverseStyle={paginationProps && paginationProps.inverseStyle}
                 />
             );
         }
