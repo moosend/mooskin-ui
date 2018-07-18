@@ -411,8 +411,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
             }
 
-            console.log(this.props.tags);
-
             // if (tags.length === 0){
             const validationTags = this.props.onAdd &&
             this.props.onAdd(e, {value: this.removeDuplicates(tags), dataLabel: this.props.dataLabel});
