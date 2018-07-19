@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {  ContentState, convertFromRaw, convertToRaw, EditorState, Modifier, RawDraftContentState, SelectionState } from 'draft-js';
+import {  ContentState, convertToRaw, EditorState, Modifier, SelectionState } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 
@@ -85,7 +85,7 @@ export interface ITextEditorProps {
     draggable?: boolean;
 
     /** rich editor value */
-    editorState: RawDraftContentState;
+    editorState: EditorState;
 
     /** editor label */
     label?: string;
@@ -110,7 +110,7 @@ export interface ITextEditorState {
     showHtml: boolean;
     htmlContent: string;
     editorState: EditorState;
-    rawState: RawDraftContentState;
+    // rawState: RawDraftContentState;
     selectionState: SelectionState;
     width: number;
     windowsWidth: number;
@@ -168,9 +168,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
     static getDerivedStateFromProps(nextProps: ITextEditorProps){
         return {
-            editorState: EditorState.createWithContent(convertFromRaw(nextProps.editorState)),
-            htmlContent: draftToHtml(nextProps.editorState),
-            rawState: nextProps.editorState
+            editorState: nextProps.editorState,
+            htmlContent: draftToHtml(convertToRaw(nextProps.editorState.getCurrentContent())),
+            // rawState: nextProps.editorState
         };
     }
 
@@ -182,16 +182,16 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         this.state = {
             activeDropDown: false,
             dragging: false,
-            editorState: EditorState.createWithContent(convertFromRaw(this.props.editorState)),
+            editorState: this.props.editorState,
             htmlContent: draftToHtml(this.props.editorState),
             pos: {
                 bottom: this.props.toolbarPos === 'bottom' ? -80 : undefined,
                 left: 0,
                 top: this.props.toolbarPos === 'top' ? -90 : undefined
             },
-            rawState: this.props.editorState,
+            // rawState: this.props.editorState,
             relPos: {left: 0, top: 0, bottom: 0},
-            selectionState: EditorState.createWithContent(convertFromRaw(this.props.editorState)).getSelection(),
+            selectionState: this.props.editorState.getSelection(),
             showHtml: false,
             width: this.getParentWidth(),
             windowsWidth: window.innerWidth
@@ -270,7 +270,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 <Editor
                     editorState={this.state.editorState}
                     onEditorStateChange={this.onEditorStateChange}
-                    onContentStateChange={this.onContentStateChange}
                     wrapperClassName={`${wrapperClasses} ${this.props.wrapperClassName}`}
                     wrapperStyle={this.props.wrapperStyle}
                     editorClassName={`${styles.editor} ${this.props.editorClassName}`}
@@ -288,7 +287,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     onChange={this.onTextAreaChange}
                     style={{width: this.state.width, ...editHtmlStyles}}
                 />
-                <div dangerouslySetInnerHTML={{ __html: this.state.htmlContent }} id="invisible-html-placeholder" />
+                {/* <div dangerouslySetInnerHTML={{ __html: this.state.htmlContent }} id="invisible-html-placeholder" /> */}
                 <div className={styles.buttonGroup} style={editHtmlStyles}>
                     <Button onClick={this.onAccept}>Accept</Button>
                     <Button inverseStyle onClick={this.onCancel}>Cancel</Button>
@@ -340,18 +339,23 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onEditorStateChange = (editorState: EditorState) => {
-        this.setState({editorState});
+        const htmlContent = draftToHtml(convertToRaw(editorState.getCurrentContent()));
+        const newHTML = this.addLink(htmlContent);
+
+        // const selectionState = editorState.getSelection();
+        // const contentBlock = htmlToDraft(this.state.htmlContent);
+        // const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks, {});
+        // const newEditorState = EditorState.createWithContent(contentState);
+        // const blocksFromHTML = convertFromHTML(newHTML);
+        // const state = ContentState.createFromBlockArray(
+        //     blocksFromHTML.contentBlocks,
+        //     blocksFromHTML.entityMap
+        // );
+        // const newEditorState = EditorState.createWithContent(state);
+
+        this.setState({editorState, htmlContent: newHTML});
         // this.props.onChange &&
         // this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
-    }
-
-    onContentStateChange = (rawState: RawDraftContentState) => {
-        const htmlContent = draftToHtml(rawState);
-        this.setState({htmlContent, rawState});
-        // this.props.onChange &&
-        // this.props.onChange({value: rawState, dataLabel: this.props.dataLabel});
-        this.addLink();
-        // this.applyLinkAddition();
     }
 
     onBlur = () => {
@@ -388,9 +392,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         this.setState({showHtml: false});
     }
 
-    addLink = () => {
+    addLink = (htmlContent: string) => {
         const ancestor = document.createElement('div');
-        ancestor.innerHTML = this.state.htmlContent;
+        ancestor.innerHTML = htmlContent;
         const descendents = ancestor && ancestor.getElementsByTagName('*') || [];
 
         for (let index = 0; index < descendents.length; index++) {
@@ -399,8 +403,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
                 const stringArray = element && element.textContent && element.textContent.split(' ');
                 const result = stringArray && stringArray.map((word: string) => {
+                    const style = element.getAttribute('style') ? `style="${element.getAttribute('style')}"` : '';
                     if (this.isURL(word)){
-                        return `<a style="${element.getAttribute('style')}" href="${word}">${word}</a>`;
+                        return `<a ${style} href="${word}">${word}</a>`;
                     }
                     return word;
                 }).join(' ');
@@ -428,7 +433,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         // const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
         // const editorState = EditorState.createWithContent(contentState);
 
-        ancestor && this.setState({htmlContent: ancestor.innerHTML});
+        return ancestor.innerHTML;
     }
 
     isURL = (str: string) => {
@@ -444,11 +449,10 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         const contentBlock = htmlToDraft(this.state.htmlContent);
         const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
-        // const editorState = EditorState.createWithContent(contentState);
-        const rawState = convertToRaw(contentState);
+        const editorState = EditorState.createWithContent(contentState);
 
         this.props.onChange &&
-        this.props.onChange({value: rawState, dataLabel: this.props.dataLabel});
+        this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
 
         // this.setState({rawState, editorState});
 
