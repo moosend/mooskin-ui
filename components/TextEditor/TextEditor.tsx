@@ -193,9 +193,11 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         const {draggable, toolbarOnFocus} = this.props;
         this.addColorPickerEvents();
         const toolbar = document.getElementsByClassName('rdw-editor-toolbar')[0];
-        const toolbarStyle = toolbar.getAttribute('style');
-        toolbarOnFocus && document.getElementsByClassName('rdw-editor-toolbar')[0]
-                    .setAttribute('style', `${toolbarStyle} box-shadow: 1px 10px 20px rgba(0,0,0,.2);`);
+        if (toolbar){
+            const toolbarStyle = toolbar.getAttribute('style');
+            toolbarOnFocus && document.getElementsByClassName('rdw-editor-toolbar')[0]
+                        .setAttribute('style', `${toolbarStyle} box-shadow: 1px 10px 20px rgba(0,0,0,.2);`);
+        }
         draggable && toolbarOnFocus && this.addEvents();
         const contentState = convertFromRaw(this.props.editorState);
         const editorState = EditorState.createWithContent(contentState);
