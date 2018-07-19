@@ -18,7 +18,7 @@ export interface ITableProps{
     style?: React.CSSProperties;
 
     /** pagionation props */
-    paginationProps?: {[key: string]: any};
+    paginationProps?: {[key: string]: React.CSSProperties | string | number | boolean};
 
     /** styling applied to the div containing the table */
     containerStyle?: React.CSSProperties;
@@ -511,14 +511,14 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                     onClick={this.onPaginationClick}
                     items={pages}
                     currentItem={this.state.page}
-                    firstBtn={paginationProps && paginationProps.firstBtn}
-                    lastBtn={paginationProps && paginationProps.lastBtn}
-                    prevBtn={paginationProps && paginationProps.prevBtn}
-                    nextBtn={paginationProps && paginationProps.nextBtn}
-                    className={paginationProps && paginationProps.className}
-                    maxButtons={paginationProps && paginationProps.maxButtons}
-                    style={paginationProps && paginationProps.style}
-                    inverseStyle={paginationProps && paginationProps.inverseStyle}
+                    firstBtn={paginationProps && paginationProps.firstBtn as boolean}
+                    lastBtn={paginationProps && paginationProps.lastBtn as boolean}
+                    prevBtn={paginationProps && paginationProps.prevBtn as boolean}
+                    nextBtn={paginationProps && paginationProps.nextBtn as boolean}
+                    className={paginationProps && paginationProps.className as string}
+                    maxButtons={paginationProps && paginationProps.maxButtons as number}
+                    style={paginationProps && paginationProps.style as React.CSSProperties}
+                    inverseStyle={paginationProps && paginationProps.inverseStyle as boolean}
                 />
             );
         }
