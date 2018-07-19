@@ -1,6 +1,6 @@
 :global(*){
     box-sizing: border-box;
     outline: none;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

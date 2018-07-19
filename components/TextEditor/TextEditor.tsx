@@ -389,21 +389,38 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     addLink = () => {
-        const ancestor = document.getElementById('invisible-html-placeholder');
+        const ancestor = document.createElement('div');
+        ancestor.innerHTML = this.state.htmlContent;
         const descendents = ancestor && ancestor.getElementsByTagName('*') || [];
 
         for (let index = 0; index < descendents.length; index++) {
             const element = descendents[index];
-            if (element.tagName !== 'A'){
+            if (element.tagName !== 'A' && !element.children.length){
 
                 const stringArray = element && element.textContent && element.textContent.split(' ');
                 const result = stringArray && stringArray.map((word: string) => {
                     if (this.isURL(word)){
-                        return `<a href="${word}">${word}</a>`;
+                        return `<a style="${element.getAttribute('style')}" href="${word}">${word}</a>`;
                     }
                     return word;
                 }).join(' ');
                 element.innerHTML = result || '';
+            } else if (element.tagName !== 'A' && element.children.length) {
+                for (let i = 0; i < element.childNodes.length; i++){
+                    if (element.childNodes[i].nodeName === '#text'){
+                        const stringArray = (element.childNodes[i].textContent as any).split(' ');
+                        const result = stringArray && stringArray.map((word: string) => {
+                            if (this.isURL(word)){
+                                return `<a href="${word}">${word}</a>`;
+                            }
+                            return word;
+                        }).join(' ');
+                        const newElement = document.createElement('span');
+                        newElement.removeAttribute('style');
+                        newElement.innerHTML = result;
+                        element.replaceChild(newElement, element.childNodes[i]);
+                    }
+                }
             }
         }
 
