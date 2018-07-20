@@ -32,7 +32,7 @@ describe('TextEditor', () => {
     test('renders correctly with custom editor props', () => {
         const func = jest.fn();
 
-        const editorState = EditorState.createEmpty();
+        const editorState = convertToRaw(EditorState.createEmpty().getCurrentContent());
 
         const component = shallow(
             <TextEditor

@@ -5,7 +5,7 @@ class ButtonExample extends React.Component {
         this.onChange = this.onChange.bind(this);
 
         this.state = {
-            editorState: EditorState.createEmpty()
+            editorState: convertToRaw(EditorState.createEmpty().getCurrentContent())
         }
     }
 
