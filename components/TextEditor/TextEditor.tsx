@@ -110,7 +110,7 @@ export interface ITextEditorState {
     showHtml: boolean;
     htmlContent: string;
     editorState: EditorState;
-    rawState: RawDraftContentState;
+    // rawState: RawDraftContentState;
     width: number;
     windowsWidth: number;
 }
@@ -165,13 +165,14 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         toolbarPos: 'top',
     };
 
-    static getDerivedStateFromProps(nextProps: ITextEditorProps){
-        return {
-            editorState: EditorState.createWithContent(convertFromRaw(nextProps.editorState)),
-            htmlContent: draftToHtml(nextProps.editorState),
-            rawState: nextProps.editorState
-        };
-    }
+    // static getDerivedStateFromProps(nextProps: ITextEditorProps, prevState: ITextEditorState){
+    //     return {
+    //         editorState: EditorState.createWithContent(convertFromRaw(nextProps.editorState)),
+    //         htmlContent: draftToHtml(nextProps.editorState),
+    //         rawState: nextProps.editorState
+    //     };
+    // }
+
     editor: any;
 
     constructor(props: ITextEditorProps){
@@ -187,7 +188,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 left: 0,
                 top: this.props.toolbarPos === 'top' ? -90 : undefined
             },
-            rawState: this.props.editorState,
+            // rawState: this.props.editorState,
             relPos: {left: 0, top: 0, bottom: 0},
             showHtml: false,
             width: this.getParentWidth(),
@@ -219,6 +220,16 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
           document.removeEventListener('mousemove', this.onMouseMove);
           document.removeEventListener('mouseup', this.onMouseUp);
         }
+    }
+
+    componentWillReceiveProps(nextProps: ITextEditorProps){
+        // if (draftToHtml(nextProps.editorState) !== draftToHtml(this.state.rawState)){
+
+        // }
+        this.setState({
+            editorState: EditorState.createWithContent(convertFromRaw(nextProps.editorState)),
+            htmlContent: draftToHtml(nextProps.editorState),
+        });
     }
 
     render() {
@@ -271,8 +282,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                 <Editor
                     editorState={this.state.editorState}
+                    // contentState={this.state.rawState}
                     onEditorStateChange={this.onEditorStateChange}
-                    onContentStateChange={this.onContentStateChange}
+                    // onContentStateChange={this.onContentStateChange}
                     wrapperClassName={`${wrapperClasses} ${this.props.wrapperClassName}`}
                     wrapperStyle={this.props.wrapperStyle}
                     editorClassName={`${styles.editor} ${this.props.editorClassName}`}
@@ -291,8 +303,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     style={{width: this.state.width, ...editHtmlStyles}}
                 />
                 <div className={styles.buttonGroup} style={editHtmlStyles}>
-                    <Button onClick={this.onAccept}>Accept</Button>
-                    <Button inverseStyle onClick={this.onCancel}>Cancel</Button>
+                    <Button style={{margin: 3}} onClick={this.onAccept}>Accept</Button>
+                    <Button style={{margin: 3}} inverseStyle onClick={this.onCancel}>Cancel</Button>
                 </div>
             </div>
         );
@@ -341,29 +353,32 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onEditorStateChange = (editorState: EditorState) => {
-        this.setState({editorState});
+        const rawState = convertToRaw(editorState.getCurrentContent());
+        const htmlContent = draftToHtml(rawState);
+        const newHTML = this.addLink(htmlContent);
+        this.setState({editorState, htmlContent: newHTML});
         // this.props.onChange &&
         // this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
     }
 
-    onContentStateChange = (rawState: RawDraftContentState) => {
-        const htmlContent = draftToHtml(rawState);
-        const newHTML = this.addLink(htmlContent);
-        this.setState({htmlContent: newHTML, rawState});
-        // this.props.onChange &&
-        // this.props.onChange({value: rawState, dataLabel: this.props.dataLabel});
-    }
+    // onContentStateChange = (rawState: RawDraftContentState) => {
+    //     const htmlContent = draftToHtml(rawState);
+    //     const newHTML = this.addLink(htmlContent);
+    //     this.setState({htmlContent: newHTML, rawState});
+    //     // this.props.onChange &&
+    //     // this.props.onChange({value: rawState, dataLabel: this.props.dataLabel});
+    // }
 
     onBlur = () => {
         this.setState({activeDropDown: false});
 
         const contentBlock = htmlToDraft(this.state.htmlContent);
         const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
-        // const editorState = EditorState.createWithContent(contentState);
         const rawState = convertToRaw(contentState);
 
         this.props.onChange &&
         this.props.onChange({value: rawState, dataLabel: this.props.dataLabel});
+
         // this.props.onChange &&
         // this.props.onChange({value: this.state.rawState, dataLabel: this.props.dataLabel});
     }
