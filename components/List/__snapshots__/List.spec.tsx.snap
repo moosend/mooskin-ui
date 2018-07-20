@@ -158,6 +158,7 @@ exports[`Button renders with multiple children 1`] = `
           </div>
         </ItemContent>
         <ExpandedSection
+          arrow={false}
           expanded={true}
         >
           <div
@@ -169,26 +170,6 @@ exports[`Button renders with multiple children 1`] = `
               }
             }
           >
-            <div
-              className="arrow"
-            >
-              <div
-                style={
-                  Object {
-                    "height": "100%",
-                    "position": "relative",
-                    "width": "100%",
-                  }
-                }
-              >
-                <div
-                  className="innerArrow"
-                />
-                <div
-                  className="borderArrow"
-                />
-              </div>
-            </div>
             expanded test
           </div>
         </ExpandedSection>

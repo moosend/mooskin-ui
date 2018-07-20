@@ -125,6 +125,7 @@ so in the above example, the third and last list item will have the hidden secti
 * `style` - listitem style
 * `className` - css class
 * `expanded` - if true, displays hidden content
+* `arrow` - boolean value wether to display expanded section arrow, defaults to true
 
 </div>
 
