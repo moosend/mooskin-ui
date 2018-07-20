@@ -5,7 +5,7 @@ class ButtonExample extends React.Component {
         this.onChange = this.onChange.bind(this);
 
         this.state = {
-            editorState: convertToRaw(EditorState.createEmpty().getCurrentContent())
+            editorState: EditorState.createEmpty()
         }
     }
 
@@ -28,7 +28,7 @@ class ButtonExample extends React.Component {
                 toolbarPos="top"
                 draggable
                 label="Rich text editor"
-                toolbarOnFocus
+                toolbarOnFocus={false}
                 personalizationTags={personalizationTags}
                 editorState={this.state.editorState}
                 // options={['emoji', '/', 'blockType', 'inline', '/', 'fontSize', '/', 'fontFamily', '/']}

@@ -84,6 +84,7 @@
     z-index: 5;
     max-height: 300px;
     overflow-y: auto;
+    box-shadow: 1px 10px 20px rgba(0,0,0,.2);
 }
 
 .optionsContainer ul{

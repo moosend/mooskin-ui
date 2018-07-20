@@ -58,6 +58,7 @@ or just give it a custom style
 * `lastBtn` - boolean, whether to show the 'navigate to last' button, defaults to false
 * `onClick` - callback to be triggered on button click, takes item number as an argument
 * `id` - main element id
+* `inverseStyle` - inverse stying for pagination
 * `className` - main element css class
 * `style` - main element style
 
