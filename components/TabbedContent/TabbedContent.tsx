@@ -112,11 +112,48 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
     static Header: React.StatelessComponent<IHeaderProps>;
     static Content: React.StatelessComponent<IContentProps>;
 
+    static getActiveTab = (children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
+        let activeTab = 0;
+        const childrenArray = React.Children.toArray(children);
+
+        for (const [index, value] of childrenArray.entries()){
+            if (React.isValidElement<IContentProps>(value) && value.props.active){
+                activeTab = index;
+            }
+        }
+
+        return activeTab;
+    }
+
+    static activeChildren = (children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
+
+        const childrenArray = React.Children.toArray(children);
+
+        let count = 0;
+
+        childrenArray.forEach((child: React.ReactElement<IContentProps>, i: number) => {
+            if (child.props.active){
+                count = count + 1;
+            }
+        });
+        return count;
+    }
+
+    static getDerivedStateFromProps(nextProps: ITabbedContentProps) {
+        const activeCount = TabbedContent.activeChildren(nextProps.children);
+        if (activeCount === 0){
+            return null;
+        } else if (activeCount > 1){
+            throw new Error(`There can't be more than one active tab content`);
+        }
+        return {activeTab: TabbedContent.getActiveTab(nextProps.children)};
+    }
+
     constructor(props: ITabbedContentProps){
         super(props);
 
         this.state = {
-            activeTab: this.getActiveTab()
+            activeTab: TabbedContent.getActiveTab(this.props.children)
         };
     }
 
@@ -195,23 +232,26 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
 
     onClickHeader = (tabIndex: number, header: React.ReactElement<IHeaderProps>) => {
         return (e: React.MouseEvent<HTMLElement>) => {
-            this.setState({activeTab: tabIndex});
             header.props.onClick && header.props.onClick(e);
+            const activeCount = TabbedContent.activeChildren(this.props.children);
+            if (activeCount === 0){
+                this.setState({activeTab: tabIndex});
+            }
         };
     }
 
-    getActiveTab(): number {
-        let activeTab = 0;
-        const childrenArray = React.Children.toArray(this.props.children);
+    // getActiveTab(): number {
+    //     let activeTab = 0;
+    //     const childrenArray = React.Children.toArray(this.props.children);
 
-        for (const [index, value] of childrenArray.entries()){
-            if (React.isValidElement<ITabProps>(value) && value.props.active){
-                activeTab = index;
-            }
-        }
+    //     for (const [index, value] of childrenArray.entries()){
+    //         if (React.isValidElement<ITabProps>(value) && value.props.active){
+    //             activeTab = index;
+    //         }
+    //     }
 
-        return activeTab;
-    }
+    //     return activeTab;
+    // }
 
     getClasses = () => {
         switch (this.props.type) {
