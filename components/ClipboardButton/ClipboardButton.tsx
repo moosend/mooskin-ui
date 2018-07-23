@@ -16,7 +16,7 @@ export interface IClipboardButtonProps{
     style?: React.CSSProperties;
 
     /** value to be copied to clipboard */
-    value: string;
+    value: string | number;
 
     /** button label */
     label?: string;
@@ -48,7 +48,7 @@ export default class ClipboardButton extends React.Component<IClipboardButtonPro
 
     onButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         const valueElement = document.createElement('textarea');
-        valueElement.innerText = this.props.value;
+        valueElement.innerText = this.props.value.toString();
         document.body.appendChild(valueElement);
         valueElement.select();
         document.execCommand('copy');

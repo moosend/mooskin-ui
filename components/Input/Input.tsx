@@ -30,7 +30,7 @@ export interface IProps {
     name?: string;
 
     /** override input value */
-    value: string;
+    value: string | number;
 
     /** override input placeholder */
     placeholder?: string;
