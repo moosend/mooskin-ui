@@ -65,15 +65,15 @@ describe('RadioAccordion', () => {
         const component = mount(
             <Accordion>
                 <RadioAccordionContent title="title1">Content1</RadioAccordionContent>
-                <RadioAccordionContent title="title2" active>Content2</RadioAccordionContent>
+                <RadioAccordionContent title="title2">Content2</RadioAccordionContent>
             </Accordion>
         );
 
-        expect(component.state('active')).toBe(1);
+        expect(component.state('active')).toBe(-1);
         expect(component.find('.accordion-header').first().find('input').prop('checked')).toBeFalsy();
-        expect(component.find('.accordion-header').last().find('input').prop('checked')).toBeTruthy();
+        expect(component.find('.accordion-header').last().find('input').prop('checked')).toBeFalsy();
         expect(component.find('.accordion-content').first().hasClass('invisible')).toBeTruthy();
-        expect(component.find('.accordion-content').last().hasClass('visible')).toBeTruthy();
+        expect(component.find('.accordion-content').last().hasClass('invisible')).toBeTruthy();
 
         component.find('.radio').first().simulate('click');
 
@@ -93,7 +93,7 @@ describe('RadioAccordion', () => {
 
     });
 
-    test('changes the state and displays appropriate content when one of the headers is clicked and back', () => {
+    test('callback function is called when header is clicked', () => {
 
         const func = jest.fn();
 

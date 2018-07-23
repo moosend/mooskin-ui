@@ -3,7 +3,11 @@ class TabbedContentExample extends React.Component {
     constructor(){
         super();
 
-        this.onHeaderClick = this.onHeaderClick.bind(this);
+        this.state = {
+            tab1: false,
+            tab2: true,
+            tab3: false
+        }
     }
 
     render(){
@@ -57,7 +61,7 @@ class TabbedContentExample extends React.Component {
                         <H2>Normal Tabs with right align</H2>
                         <TabbedContent alignHeaders="right">
                             <Tab>
-                                <Header onClick={this.onHeaderClick}>
+                                <Header>
                                     Title 1
                                     <img width={40} src="https://camo.githubusercontent.com/00dfbc4648e8bf8f7903c85b8c6e2eaf8afd1320/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67" alt=""/>
                                 </Header>
@@ -85,20 +89,20 @@ class TabbedContentExample extends React.Component {
                         </TabbedContent>
                         <H2>Vertical Tabs</H2>
                         <TabbedContent type="radio">
-                            <Tab>
-                                <Header>Title 1</Header>
+                            <Tab active={this.state.tab1}>
+                                <Header onClick={() => this.onHeaderClick('tab1')}>Title 1</Header>
                                 <Content>
                                     Content 1
                                 </Content>
                             </Tab>
-                            <Tab active>
-                                <Header>Title 2</Header>
+                            <Tab active={this.state.tab2}>
+                                <Header onClick={() => this.onHeaderClick('tab2')}>Title 2</Header>
                                 <Content>
                                     Content 2
                                 </Content>
                             </Tab>
-                            <Tab>
-                                <Header>Title 3</Header>
+                            <Tab active={this.state.tab3}>
+                                <Header onClick={() => this.onHeaderClick('tab3')}>Title 3</Header>
                                 <Content>
                                     Content 3
                                 </Content>
@@ -110,7 +114,8 @@ class TabbedContentExample extends React.Component {
         );
     }
 
-    onHeaderClick(){
-        console.log('Header Clicked!');
+    onHeaderClick(tabName){
+        const active = {[tabName]: true};
+        this.setState({...{tab1: false, tab2: false, tab3: false}, ...active});
     }
 }
