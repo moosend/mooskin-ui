@@ -137,6 +137,7 @@ In this case, when the user focuses the input and blurs away immediately, an err
 * `iconStyle` - styles to be applied to the icon
 * `onChange` - callback to be triggered on input change
 * `validate` - validate function
+* `minmax` - an array of one or two number values, if array has one value, that will be set as the maximum allowed number, if array has two values, the first will be set as the minimum value, the second will be set as the maximum value (only works with type="number" input)
 * `emoji` - adds emoji icon to the input, which opens a dropdown for adding emojis
 * `personalizationTags` - adds personalization tags based on passed prop, should be an array of object {label: string, value: string}
 * `status` - to be used with validate, to apply classes based on error or success

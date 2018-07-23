@@ -10,6 +10,7 @@ class InputExample extends React.Component {
             status: '',
             message: '',
             value: 'copy value!!',
+            valueAsNumber: 5,
             icon: 'search'
         }
     }
@@ -64,7 +65,9 @@ class InputExample extends React.Component {
 
         return(
             <div>
-                <Input value={this.state.value} type="text" name="olala" onChange={this.onChange} personalizationTags={personalizationTags} emoji type="text" placeholder="max length 5" label="Some label:"/>
+                <Input value={this.state.value} dataLabel='value' type="text" name="olala" onChange={this.onChange} personalizationTags={personalizationTags} emoji type="text" placeholder="max length 5" label="Some label:"/>
+                <br/>
+                <Input value={this.state.valueAsNumber} minmax={[10, 213]} dataLabel='valueAsNumber' type="number" onChange={this.onChange} label="Number only:"/>
                 <br/>
                 <Input
                     onChange={this.onChange}
@@ -83,7 +86,7 @@ class InputExample extends React.Component {
 
     onChange(e, data) {
         console.log(data.value);
-        this.setState({value: data.value})
+        this.setState({[data.dataLabel]: data.value})
     }
 
     validate(data){
