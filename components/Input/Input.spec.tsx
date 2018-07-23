@@ -201,4 +201,58 @@ describe('Input', () => {
 
     });
 
+    test('assigns minmax prop correctly and returns the expected value', () => {
+
+        let value = 5;
+
+        const onChange = (e, data) => {
+            value = data.value;
+        };
+
+        const component = mount(<Input onChange={onChange} type="number" value={value} minmax={[32]} />);
+
+        component.find('input').simulate('change', { target: { valueAsNumber: 7 }});
+
+        component.setProps({value});
+
+        expect(component.prop('value')).toEqual(7);
+
+        component.find('input').simulate('change', { target: { valueAsNumber: 35 }});
+
+        component.setProps({value});
+
+        expect(component.prop('value')).toEqual(32);
+
+    });
+
+    test('assigns minmax prop correctly and returns the expected value, chapter 2', () => {
+
+        let value = 5;
+
+        const onChange = (e, data) => {
+            value = data.value;
+        };
+
+        const component = mount(<Input onChange={onChange} type="number" value={value} minmax={[32, 153]} />);
+
+        component.find('input').simulate('change', { target: { valueAsNumber: 7 }});
+
+        component.setProps({value});
+
+        expect(component.prop('value')).toEqual(32);
+
+        component.find('input').simulate('change', { target: { valueAsNumber: 99 }});
+
+        component.setProps({value});
+
+        expect(component.prop('value')).toEqual(99);
+
+        component.find('input').simulate('change', { target: { valueAsNumber: 170 }});
+
+        component.setProps({value});
+
+        expect(component.prop('value')).toEqual(153);
+
+    });
+
 });

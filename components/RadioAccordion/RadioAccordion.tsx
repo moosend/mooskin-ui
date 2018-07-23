@@ -67,7 +67,32 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         }
     }
 
+    static activeChildren = (children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
+
+        const childrenArray = React.Children.toArray(children);
+
+        let count = 0;
+        let activeCount = 0;
+
+        childrenArray.forEach((child: React.ReactElement<IContentProps>, i: number) => {
+            if (child.props.active !== undefined){
+                count = count + 1;
+            }
+            if (child.props.active === true){
+                activeCount = activeCount + 1;
+            }
+        });
+        return {activeCount, count};
+    }
+
     static getDerivedStateFromProps(nextProps: IAccordionProps) {
+        const {activeCount, count} = RadioAccordion.activeChildren(nextProps.children);
+        if (count === 0){
+            return null;
+        }
+        if (activeCount > 1){
+            throw new Error(`There can't be more than one active accordion content`);
+        }
         return {active: RadioAccordion.getActiveTab(nextProps.children)};
     }
 

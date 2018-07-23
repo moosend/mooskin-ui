@@ -125,7 +125,7 @@
 .label {
     color: #6b6b6b;
     /*font-size: 16px;*/
-    font-size: 1rem;
+    font-size: .92857142857rem; 
     flex-basis: 150px;
     padding-top: 15px;
 }

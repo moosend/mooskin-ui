@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {  ContentState, convertToRaw, EditorState, Modifier, SelectionState } from 'draft-js';
+import { ContentState, convertFromRaw, convertToRaw, EditorState, Modifier, RawDraftContentState } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 
@@ -85,7 +85,7 @@ export interface ITextEditorProps {
     draggable?: boolean;
 
     /** rich editor value */
-    editorState: EditorState;
+    editorState: RawDraftContentState;
 
     /** editor label */
     label?: string;
@@ -111,7 +111,6 @@ export interface ITextEditorState {
     htmlContent: string;
     editorState: EditorState;
     // rawState: RawDraftContentState;
-    selectionState: SelectionState;
     width: number;
     windowsWidth: number;
 }
@@ -166,13 +165,13 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         toolbarPos: 'top',
     };
 
-    static getDerivedStateFromProps(nextProps: ITextEditorProps){
-        return {
-            editorState: nextProps.editorState,
-            htmlContent: draftToHtml(convertToRaw(nextProps.editorState.getCurrentContent())),
-            // rawState: nextProps.editorState
-        };
-    }
+    // static getDerivedStateFromProps(nextProps: ITextEditorProps, prevState: ITextEditorState){
+    //     return {
+    //         editorState: EditorState.createWithContent(convertFromRaw(nextProps.editorState)),
+    //         htmlContent: draftToHtml(nextProps.editorState),
+    //         rawState: nextProps.editorState
+    //     };
+    // }
 
     editor: any;
 
@@ -182,8 +181,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         this.state = {
             activeDropDown: false,
             dragging: false,
-            editorState: this.props.editorState,
-            htmlContent: draftToHtml(this.props.editorState),
+            editorState: EditorState.createEmpty(),
+            htmlContent: '',
             pos: {
                 bottom: this.props.toolbarPos === 'bottom' ? -80 : undefined,
                 left: 0,
@@ -191,7 +190,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             },
             // rawState: this.props.editorState,
             relPos: {left: 0, top: 0, bottom: 0},
-            selectionState: this.props.editorState.getSelection(),
             showHtml: false,
             width: this.getParentWidth(),
             windowsWidth: window.innerWidth
@@ -202,17 +200,16 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         window.addEventListener('resize', this.updateWidth);
         const {draggable, toolbarOnFocus} = this.props;
         this.addColorPickerEvents();
+        draggable && toolbarOnFocus && this.addEvents();
         const toolbar = document.getElementsByClassName('rdw-editor-toolbar')[0];
         if (toolbar){
             const toolbarStyle = toolbar.getAttribute('style');
             toolbarOnFocus && document.getElementsByClassName('rdw-editor-toolbar')[0]
                         .setAttribute('style', `${toolbarStyle} box-shadow: 1px 10px 20px rgba(0,0,0,.2);`);
         }
-        draggable && toolbarOnFocus && this.addEvents();
-        this.setState({width: this.getParentWidth()});
-
-        // const editor = this.editor.getElementsByClassName('rdw-editor-wrapper')[0].getElementsByClassName(styles.editor)[0];
-        // editor.addEventListener('keydown', this.applyLinkAddition);
+        const contentState = convertFromRaw(this.props.editorState);
+        const editorState = EditorState.createWithContent(contentState);
+        this.setState({editorState, width: this.getParentWidth(), htmlContent: draftToHtml(this.props.editorState)});
     }
 
     componentDidUpdate(props: ITextEditorProps, state: ITextEditorState) {
@@ -223,6 +220,16 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
           document.removeEventListener('mousemove', this.onMouseMove);
           document.removeEventListener('mouseup', this.onMouseUp);
         }
+    }
+
+    componentWillReceiveProps(nextProps: ITextEditorProps){
+        // if (draftToHtml(nextProps.editorState) !== draftToHtml(this.state.rawState)){
+
+        // }
+        this.setState({
+            editorState: EditorState.createWithContent(convertFromRaw(nextProps.editorState)),
+            htmlContent: draftToHtml(nextProps.editorState),
+        });
     }
 
     render() {
@@ -275,7 +282,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 <label className={styles.editorLabel} style={display}>{this.props.label}</label>
                 <Editor
                     editorState={this.state.editorState}
+                    // contentState={this.state.rawState}
                     onEditorStateChange={this.onEditorStateChange}
+                    // onContentStateChange={this.onContentStateChange}
                     wrapperClassName={`${wrapperClasses} ${this.props.wrapperClassName}`}
                     wrapperStyle={this.props.wrapperStyle}
                     editorClassName={`${styles.editor} ${this.props.editorClassName}`}
@@ -293,10 +302,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     onChange={this.onTextAreaChange}
                     style={{width: this.state.width, ...editHtmlStyles}}
                 />
-                {/* <div dangerouslySetInnerHTML={{ __html: this.state.htmlContent }} id="invisible-html-placeholder" /> */}
                 <div className={styles.buttonGroup} style={editHtmlStyles}>
-                    <Button onClick={this.onAccept}>Accept</Button>
-                    <Button inverseStyle onClick={this.onCancel}>Cancel</Button>
+                    <Button style={{margin: 3}} onClick={this.onAccept}>Accept</Button>
+                    <Button style={{margin: 3}} inverseStyle onClick={this.onCancel}>Cancel</Button>
                 </div>
             </div>
         );
@@ -345,30 +353,31 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onEditorStateChange = (editorState: EditorState) => {
-        const htmlContent = draftToHtml(convertToRaw(editorState.getCurrentContent()));
+        const rawState = convertToRaw(editorState.getCurrentContent());
+        const htmlContent = draftToHtml(rawState);
         const newHTML = this.addLink(htmlContent);
-
-        // const selectionState = editorState.getSelection();
-        // const contentBlock = htmlToDraft(this.state.htmlContent);
-        // const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks, {});
-        // const newEditorState = EditorState.createWithContent(contentState);
-        // const blocksFromHTML = convertFromHTML(newHTML);
-        // const state = ContentState.createFromBlockArray(
-        //     blocksFromHTML.contentBlocks,
-        //     blocksFromHTML.entityMap
-        // );
-        // const newEditorState = EditorState.createWithContent(state);
-
         this.setState({editorState, htmlContent: newHTML});
         // this.props.onChange &&
         // this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
     }
 
-    onBlur = () => {
+    // onContentStateChange = (rawState: RawDraftContentState) => {
+    //     const htmlContent = draftToHtml(rawState);
+    //     const newHTML = this.addLink(htmlContent);
+    //     this.setState({htmlContent: newHTML, rawState});
+    //     // this.props.onChange &&
+    //     // this.props.onChange({value: rawState, dataLabel: this.props.dataLabel});
+    // }
 
+    onBlur = () => {
         this.setState({activeDropDown: false});
 
-        this.applyLinkAddition();
+        const contentBlock = htmlToDraft(this.state.htmlContent);
+        const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
+        const rawState = convertToRaw(contentState);
+
+        this.props.onChange &&
+        this.props.onChange({value: rawState, dataLabel: this.props.dataLabel});
 
         // this.props.onChange &&
         // this.props.onChange({value: this.state.rawState, dataLabel: this.props.dataLabel});
@@ -449,19 +458,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         } else {
           return true;
         }
-    }
-
-    applyLinkAddition = () => {
-
-        const contentBlock = htmlToDraft(this.state.htmlContent);
-        const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
-        const editorState = EditorState.createWithContent(contentState);
-
-        this.props.onChange &&
-        this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
-
-        // this.setState({rawState, editorState});
-
     }
 
     addColorPickerEvents = () => {
