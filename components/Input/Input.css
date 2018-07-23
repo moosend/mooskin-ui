@@ -88,7 +88,7 @@
 .inputLabel {
     color: #6b6b6b;
      /* font-size: 13px;  */
-     font-size: .92857142857rem; 
+    font-size: .92857142857rem; 
     cursor: pointer;
     flex-basis: 150px;
 }

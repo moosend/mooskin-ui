@@ -30,7 +30,10 @@ export interface IProps {
     name?: string;
 
     /** override input value */
-    value: string;
+    value: string | number;
+
+    /** min and max values for number values */
+    minmax?: number[];
 
     /** override input placeholder */
     placeholder?: string;
@@ -179,6 +182,8 @@ class Input extends React.Component<IProps, IInputState> {
         const autocomplete = !this.props.autocomplete ? 'off' : 'on';
         const disabledInput = disabled ? styles.disabledInput : '';
 
+        const value = type === 'number' ? this.getNumberValue(this.props.value as number) : this.props.value;
+
         if (divType){
             return (
                 <div
@@ -203,7 +208,7 @@ class Input extends React.Component<IProps, IInputState> {
                         id={this.id}
                         type={type}
                         name={this.props.name}
-                        value={this.props.value}
+                        value={value}
                         placeholder={placeholder}
                         minLength={minlength}
                         maxLength={maxlength}
@@ -224,13 +229,14 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const returnValue = this.props.type === 'number' ? this.getNumberValue(e.target.valueAsNumber) : e.target.value;
         !this.props.disabled &&
         this.props.onChange &&
-        this.props.onChange(e, {value: e.target.value, dataLabel: this.props.dataLabel});
+        this.props.onChange(e, {value: returnValue, dataLabel: this.props.dataLabel});
         if (this.props.status){
             this.props.validate &&
             this.props.validate(
-                {value: e.target.value, dataLabel: this.props.dataLabel, required: this.props.required}
+                {value: returnValue, dataLabel: this.props.dataLabel, required: this.props.required}
             );
         }
     }
@@ -260,6 +266,34 @@ class Input extends React.Component<IProps, IInputState> {
                 return styles.descSuccess;
             }
         }
+    }
+
+    getNumberValue = (value: number) => {
+        if (isNaN(value)){
+            return 0;
+        }
+        if (this.props.minmax){
+            let min;
+            let max;
+            if (this.props.minmax.length > 2) {
+                throw new Error(`Prop 'minmax' has more values than expected!`);
+            } else if (this.props.minmax.length === 0) {
+                throw new Error(`Prop 'minmax' has no values!`);
+            } else if (this.props.minmax.length === 1) {
+                max = this.props.minmax && this.props.minmax[0];
+            } else if (this.props.minmax.length === 2){
+                min = this.props.minmax && this.props.minmax[0];
+                max = this.props.minmax && this.props.minmax[1];
+            }
+            if (min && value < min){
+                return min;
+            } else if (max && value > max) {
+                return max;
+            } else {
+                return value;
+            }
+        }
+        return value;
     }
 
     generateId = () => {
