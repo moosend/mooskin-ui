@@ -132,7 +132,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         let count = 0;
 
         childrenArray.forEach((child: React.ReactElement<IContentProps>, i: number) => {
-            if (child.props.active){
+            if (child.props.active !== undefined){
                 count = count + 1;
             }
         });

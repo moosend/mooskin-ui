@@ -74,7 +74,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         let count = 0;
 
         childrenArray.forEach((child: React.ReactElement<IContentProps>, i: number) => {
-            if (child.props.active){
+            if (child.props.active !== undefined){
                 count = count + 1;
             }
         });
