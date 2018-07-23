@@ -43,7 +43,7 @@ exports[`Select renders Select correctly 1`] = `
       className="innerInput"
       onBlur={[Function]}
       onChange={[Function]}
-      placeholder="Type to filter options"
+      placeholder="Filter"
       style={
         Object {
           "display": "none",

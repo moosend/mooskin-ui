@@ -14,7 +14,7 @@ export interface ISelectProps {
     dataLabel?: string;
 
     /** to specify which value is selected, has to be one of the option values */
-    selected?: string;
+    selected?: string | number;
 
     /** select box label */
     label?: string;
@@ -61,7 +61,7 @@ export interface ISelectProps {
 
 export interface ISelectState {
     list: boolean;
-    selected?: string;
+    selected?: string | number;
     filter: string;
 }
 
@@ -135,7 +135,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                         className={styles.innerInput}
                         style={{display: this.state.list ? 'block' : 'none'}}
                         value={this.state.filter}
-                        placeholder="Type to filter options"
+                        placeholder="Filter"
                         onChange={this.onChangeFilter}
                         ref={(input) => (input && this.state.list && input.focus())}
                         onBlur={this.validateOnBlur}
