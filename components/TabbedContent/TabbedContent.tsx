@@ -10,7 +10,7 @@ export interface ITabbedContentProps {
     id?: string;
 
     /** type of the tabbed content normal/radio/advanced */
-    type?: 'normal' | 'alternate' | 'radio';
+    type?: 'normal' | 'alternate' | 'radio' | 'radioAlternate';
 
     /** align headers left/center/right */
     alignHeaders?: string;
@@ -20,9 +20,6 @@ export interface ITabbedContentProps {
 
     /** container class */
     className?: string;
-
-    /** alternative tab header style */
-    alternateHeaders?: boolean;
 
     /** override styles */
     style?: React.CSSProperties;
@@ -57,9 +54,6 @@ export interface IHeaderProps {
 
     /** how headers should be aligned (inherited from parent) */
     align?: string;
-
-    /** alternate header styles (inherited from parent) */
-    alternateHeaders?: boolean;
 
     /** wether the headers should be aligned vertically (inherited from parent) */
     vertical?: boolean;
@@ -168,9 +162,8 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
 
         const containerStyles = !this.props.vertical ? style.containerH : style.containerV;
         const headingStyles = !this.props.vertical ? style.headingH : style.headingV;
+        const separator = this.props.type !== 'radioAlternate' ? !this.props.vertical ? style.borderH : style.borderV : '';
         const contentStyles = !this.props.vertical ? style.contentH : style.contentV;
-
-        // const isAlternative = !this.props.alternateHeaders ? style.heading : style.alternateHeading;
 
         const verticalAlign = this.props.alignHeaders && this.props.vertical ? style.headingVAlign : '';
         const align = this.getAlign(style);
@@ -183,7 +176,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
                 className={`tabbed-content-component ${style.container} ${containerStyles}`}
                 style={this.props.style}
             >
-                <div className={`${style.heading} ${headingStyles} ${align} ${verticalAlign}`}>
+                <div className={`${style.heading} ${headingStyles} ${separator} ${align} ${verticalAlign}`}>
                     {headers}
                 </div>
                 <div className={`${style.content} ${contentStyles}`}>
@@ -272,6 +265,10 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
 
                 return radio;
 
+            case 'radioAlternate':
+
+                return radio;
+
             default:
 
                 return normal;
@@ -319,6 +316,10 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
                 return radio;
 
+            case 'radioAlternate':
+
+                return radio;
+
             default:
 
                 return normal;
@@ -327,9 +328,9 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const style = getClasses();
 
-    const activeTab = props.active ? style.activeHeader : style.inactiveHeader;
+    const activeTab = props.active && props.type !== 'radioAlternate' ? style.activeHeader : style.inactiveHeader;
 
-    const input = props.type === 'radio' ? (
+    const input = props.type === 'radio' || props.type === 'radioAlternate' ? (
         <input
             type="radio"
             checked={props.active}
@@ -339,9 +340,11 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const align = props.align ? style.headerAlign : '';
 
+    const headerStyle = props.type === 'radioAlternate' ? style.headerAlternate : style.header;
+
     return(
         <div
-            className={`tab-header ${style.header} ${activeTab} ${align} ${props.className}`}
+            className={`tab-header ${headerStyle} ${activeTab} ${align} ${props.className}`}
             style={{width: props.width, ...props.style}}
             onClick={props.onClick}
         >

@@ -15,12 +15,15 @@
     display: flex;
     flex-direction: column;
     flex: 1; 
-    border-right: 1px solid var(--moosendBlue);
     padding-right: 10px;
     margin-right: 10px;
 }
 
-.headingV > .header + .header{
+.borderV {
+    border-right: 1px solid var(--moosendBlue);
+}
+
+.headingV > .header + .header, .headingH > .headerAlternate + .headerAlternate{
     margin-top: 10px;
 }
 
@@ -28,12 +31,15 @@
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
-    border-bottom: 1px solid var(--moosendBlue);
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
-.headingH > .header + .header{
+.borderH {
+    border-bottom: 1px solid var(--moosendBlue);
+}
+
+.headingH > .header + .header, .headingH > .headerAlternate + .headerAlternate{
     margin: 10px 0px 0px 0px
 }
 
@@ -67,6 +73,20 @@
     user-select: none;
 }
 
+.headerAlternate {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    padding: 15px;
+    cursor: pointer;
+    user-select: none;
+    color: #7b7b7b;
+    background: #f2f2f2;
+}
+
 .header:hover {
     background-color: var(--radioHover);
     color: #fff;
@@ -88,6 +108,19 @@
     border: 1px solid var(--moosendBlue);
 }
 
+.headerAlternate input[type='radio'] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    appearance: none;
+    margin-right: 10px;
+    cursor: pointer;
+    background: #fff;
+    border-radius:50%;
+}
+
 .header:hover input[type='radio']{
     border-color: var(--radioHover);
 }
@@ -101,7 +134,16 @@
     border-radius:50%; 
 }
 
-.header label {
+.headerAlternate input[type='radio']:checked::after {
+    background: #333;
+    content:'';
+    display: block;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius:50%;
+}
+
+.header label, .headerAlternate label {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -111,7 +153,7 @@
     height: 100%;
 }
 
-.header span {
+.header span, .headerAlternate span {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

@@ -18,7 +18,7 @@ export interface ICheckListItemProps {
     title?: string;
 
     /** item text */
-    text?: string;
+    text?: string | JSX.Element | Element;
 
     /** button icon */
     buttonIcon?: string;
@@ -60,7 +60,7 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
                 <div className={checkitem} id={id}>
                     <i className={`material-icons ${iconStyle}`} >{icon}</i>
                     <div className={content}>
-                            <span>{text}</span>
+                        {text}
                     </div>
                     {this.renderButton()}
                 </div>

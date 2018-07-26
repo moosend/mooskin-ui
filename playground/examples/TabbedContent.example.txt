@@ -87,8 +87,29 @@ class TabbedContentExample extends React.Component {
                                 </Content>
                             </Tab>
                         </TabbedContent>
-                        <H2>Vertical Tabs</H2>
+                        <H2>Radio Tabs</H2>
                         <TabbedContent type="radio">
+                            <Tab active={this.state.tab1}>
+                                <Header onClick={() => this.onHeaderClick('tab1')}>Title 1</Header>
+                                <Content>
+                                    Content 1
+                                </Content>
+                            </Tab>
+                            <Tab active={this.state.tab2}>
+                                <Header onClick={() => this.onHeaderClick('tab2')}>Title 2</Header>
+                                <Content>
+                                    Content 2
+                                </Content>
+                            </Tab>
+                            <Tab active={this.state.tab3}>
+                                <Header onClick={() => this.onHeaderClick('tab3')}>Title 3</Header>
+                                <Content>
+                                    Content 3
+                                </Content>
+                            </Tab>
+                        </TabbedContent>
+                        <br/>
+                        <TabbedContent type="radioAlternate">
                             <Tab active={this.state.tab1}>
                                 <Header onClick={() => this.onHeaderClick('tab1')}>Title 1</Header>
                                 <Content>

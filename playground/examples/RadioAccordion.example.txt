@@ -38,7 +38,7 @@ class RadioAccordionExample extends React.Component {
                 </RadioAccordion>
                 <br/>
                 <H2>Controlled Accordion</H2>
-                <RadioAccordion>
+                <RadioAccordion alternate>
                     <RadioAccordionContent onClick={() => this.changeTab('tab1')} active={this.state.tab1} title="Click here!">Nice Content eh?</RadioAccordionContent>
                     <RadioAccordionContent onClick={() => this.changeTab('tab2')} active={this.state.tab2} title="I'm a radio too" style={{color: '#5CCDDF', fontStyle: 'italic'}}>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry.
