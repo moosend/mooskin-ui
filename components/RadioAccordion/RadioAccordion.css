@@ -11,18 +11,6 @@
     display: flex;
     align-items: center;
     border-radius: 8px;
-    color: var(--moosendBlue);
-    background: transparent;
-    transition: background-color 0.3s;
-    border: 1px solid var(--moosendBlue);
-    padding: 12px;
-    cursor: pointer;
-}
-
-.radioAlternative {
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
     color: #7b7b7b;
     background: #f2f2f2;
     transition: background-color 0.3s;
@@ -31,7 +19,7 @@
     cursor: pointer;
 }
 
-.radio span, .radioAlternative span {
+.radio span {
     margin-left: 10px;
     cursor: pointer;
     vertical-align: middle;
@@ -42,28 +30,7 @@
     margin-top: 10px;
 }
 
-.radio:hover {
-    background-color: var(--radioHover);
-    color: #fff;
-    border-color: var(--radioHover);
-}
-
 .radio input[type='radio'] {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    appearance: none;
-    margin: 0;
-    cursor: pointer;
-    width: 1.125rem;
-    height: 1.125rem;
-    background: #fff;
-    border-radius:50%;
-    border: 1px solid var(--moosendBlue);
-}
-
-.radioAlternative input[type='radio'] {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,15 +49,6 @@
 }
 
 .radio input[type='radio']:checked::after {
-    background:var(--moosendBlue);
-    content:'';
-    display:block;
-    width: 0.375rem;
-    height: 0.375rem;
-    border-radius:50%; 
-}
-
-.radioAlternative input[type='radio']:checked::after {
     background: #333;
     content:'';
     display:block;
@@ -99,7 +57,7 @@
     border-radius:50%; 
 }
 
-.radio label, .radioAlternative label {
+.radio label {
     display: flex;
     justify-content: flex-start;
     /* align-items: center; */
@@ -107,20 +65,6 @@
     cursor: pointer;
     font-size: 0.875rem;
     width: 100%;
-}
-
-.checkedRadio {
-    background: var(--moosendBlue);
-    color: #fff;
-}
-
-.checkedRadio:hover {
-    background: var(--moosendBlue);
-    border-color: var(--moosendBlue);
-}
-
-.checkedRadio:hover input[type='radio']{
-    border-color: var(--moosendBlue);
 }
 
 .content {

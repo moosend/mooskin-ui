@@ -109,7 +109,7 @@ class TabbedContentExample extends React.Component {
                             </Tab>
                         </TabbedContent>
                         <br/>
-                        <TabbedContent type="radioAlternate">
+                        <TabbedContent type="alternate">
                             <Tab active={this.state.tab1}>
                                 <Header onClick={() => this.onHeaderClick('tab1')}>Title 1</Header>
                                 <Content>
