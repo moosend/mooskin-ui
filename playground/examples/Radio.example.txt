@@ -4,6 +4,7 @@ class RadioExample extends React.Component {
         super();
 
         this.onChange = this.onChange.bind(this);
+        this.onRadioChange = this.onRadioChange.bind(this);
 
         this.state = {
             position: [
@@ -59,5 +60,6 @@ class RadioExample extends React.Component {
 
     onRadioChange(e, data){
         console.log(data.value);
+        this.setState({radios: data.value});
     }
 }

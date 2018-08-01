@@ -49,7 +49,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
     }
   >
     <div
-      className="heading headingV headingVRight headingVAlign"
+      className="heading headingV borderV headingVRight headingVAlign"
     >
       <Header
         active={false}
@@ -186,7 +186,7 @@ exports[`TabbedContent renders TabbedContent vertically with radio styles 1`] = 
   style={Object {}}
 >
   <div
-    className="heading headingV headingCenter "
+    className="heading headingV borderV headingCenter "
   >
     <Header
       active={false}
