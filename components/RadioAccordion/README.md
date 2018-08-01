@@ -88,6 +88,7 @@ Import {RadioAccordionContent, RadioAccordion} from 'mooskin';
 ## Supported attributes for RadioAccordion 
 
 * `id` - id of the element
+* `alternate` - alternate styling for headers
 * `className` - css class
 * `style` - extra styles for the main container
 
