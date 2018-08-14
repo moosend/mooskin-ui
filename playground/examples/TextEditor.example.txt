@@ -23,6 +23,7 @@ class ButtonExample extends React.Component {
         ]
 
         return(
+            <div style={{color: 'red'}}>
             <TextEditor
                 onChange={this.onChange}
                 toolbarPos="top"
@@ -33,6 +34,7 @@ class ButtonExample extends React.Component {
                 editorState={this.state.editorState}
                 // options={['emoji', '/', 'blockType', 'inline', '/', 'fontSize', '/', 'fontFamily', '/']}
             />
+            </div>
         );
     }
 

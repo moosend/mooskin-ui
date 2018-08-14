@@ -132,7 +132,8 @@
 }
 
 :global(.rdw-link-modal){
-    display: block;
+    display: flex;
+    height: 240px;
 }
 
 :global(.rdw-dropdown-wrapper){
@@ -221,6 +222,20 @@
     width: 100%;
 }
 
+:global(.rdw-link-modal-input) {
+    width: 100%;
+    padding: 5px;
+}
+
+:global(.rdw-link-modal-target-option){
+    margin-bottom: 10px;
+}
+
+:global(.rdw-link-modal-target-option > input[type='checkbox']){
+    width: 13px;
+    height: 13px;
+}
+
 :global(.rdw-dropdown-carettoopen){
     top: 40%;
     border-top: 5px solid #4c4c4c;
@@ -268,9 +283,9 @@
     border-right: 1px solid #e5e5e5;
 } */
 
-.editorContainer .rdw-link-modal{
+/* .editorContainer .rdw-link-modal{
     height: 220px;
-}
+} */
 
 .alignDropdown {
     width: 48px;
