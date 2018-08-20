@@ -18,7 +18,7 @@ describe('CheckListItem', () => {
                 onClick={func}
                 status
                 buttonIcon="close"
-                text="check item text"
+                content="check item text"
                 title="check item title"
             />
         );
@@ -27,10 +27,10 @@ describe('CheckListItem', () => {
 
     test('renders into dom with title text and status', () => {
 
-        const component = shallow(<CheckListItem title="One Ring" text="Toss the One Ring into Mt. Doom" />);
+        const component = shallow(<CheckListItem title="One Ring" content="Toss the One Ring into Mt. Doom" />);
 
         expect(component.find(H2).prop('children')).toBe('One Ring');
-        expect(component.find('span').text()).toBe('Toss the One Ring into Mt. Doom');
+        expect(component.find('.content').text()).toBe('Toss the One Ring into Mt. Doom');
         expect(component.find('i').hasClass('material-icons')).toBe(true);
         expect(component.find('i').text()).toBe('close');
     });

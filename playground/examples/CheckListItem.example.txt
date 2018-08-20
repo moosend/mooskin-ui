@@ -29,7 +29,7 @@ class CheckListItemExample extends React.Component {
                     onClick={this.checkIt(i)}
                     status={process.status}
                     title={process.name}
-                    text={process.content}
+                    content={process.content}
                 />
             );
         });

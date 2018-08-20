@@ -17,8 +17,8 @@ export interface ICheckListItemProps {
     /** item title */
     title?: string;
 
-    /** item text */
-    text?: string;
+    /** item content */
+    content?: string | JSX.Element | Element;
 
     /** button icon */
     buttonIcon?: string;
@@ -47,8 +47,8 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
 
     render(){
 
-        const {status, id, text, title, className, style} = this.props;
-        const {checkitem, iconStyle, content} = styles;
+        const {status, id, content, title, className, style} = this.props;
+        const {checkitem, iconStyle} = styles;
         const icon = status ? 'check' : 'close';
 
         return (
@@ -59,8 +59,8 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
                 {title && <H2 style={{marginLeft: '5px'}}>{title}</H2>}
                 <div className={checkitem} id={id}>
                     <i className={`material-icons ${iconStyle}`} >{icon}</i>
-                    <div className={content}>
-                            <span>{text}</span>
+                    <div className={styles.content}>
+                        {content}
                     </div>
                     {this.renderButton()}
                 </div>

@@ -21,9 +21,6 @@ export interface ITabbedContentProps {
     /** container class */
     className?: string;
 
-    /** alternative tab header style */
-    alternateHeaders?: boolean;
-
     /** override styles */
     style?: React.CSSProperties;
 
@@ -57,9 +54,6 @@ export interface IHeaderProps {
 
     /** how headers should be aligned (inherited from parent) */
     align?: string;
-
-    /** alternate header styles (inherited from parent) */
-    alternateHeaders?: boolean;
 
     /** wether the headers should be aligned vertically (inherited from parent) */
     vertical?: boolean;
@@ -168,9 +162,8 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
 
         const containerStyles = !this.props.vertical ? style.containerH : style.containerV;
         const headingStyles = !this.props.vertical ? style.headingH : style.headingV;
+        const separator = !this.props.vertical ? style.borderH : style.borderV;
         const contentStyles = !this.props.vertical ? style.contentH : style.contentV;
-
-        // const isAlternative = !this.props.alternateHeaders ? style.heading : style.alternateHeading;
 
         const verticalAlign = this.props.alignHeaders && this.props.vertical ? style.headingVAlign : '';
         const align = this.getAlign(style);
@@ -183,7 +176,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
                 className={`tabbed-content-component ${style.container} ${containerStyles}`}
                 style={this.props.style}
             >
-                <div className={`${style.heading} ${headingStyles} ${align} ${verticalAlign}`}>
+                <div className={`${style.heading} ${headingStyles} ${separator} ${align} ${verticalAlign}`}>
                     {headers}
                 </div>
                 <div className={`${style.content} ${contentStyles}`}>
@@ -327,7 +320,7 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const style = getClasses();
 
-    const activeTab = props.active ? style.activeHeader : style.inactiveHeader;
+    const activeTab = props.active && props.type !== 'radio' ? style.activeHeader : style.inactiveHeader;
 
     const input = props.type === 'radio' ? (
         <input
