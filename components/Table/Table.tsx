@@ -172,6 +172,8 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         const cover = this.getCover();
 
         const tableStyles = !this.props.alternate ? styles.table : styles.alternate;
+        const { paginate } = this.props;
+        const pagination = paginate ? true : false;
 
         return (
             <div>
@@ -191,9 +193,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                         </tbody>
                     </table>
                 </div>
-                <div className={styles.pagination}>
-                    {this.props.paginate && this.getPagination()}
-                </div>
+                {pagination && this.getPagination()}
             </div>
         );
     }
@@ -507,19 +507,21 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             const pages = Math.ceil(this.state.data.length / paginate);
 
             return (
-                <Pagination
-                    onClick={this.onPaginationClick}
-                    items={pages}
-                    currentItem={this.state.page}
-                    firstBtn={paginationProps && paginationProps.firstBtn as boolean}
-                    lastBtn={paginationProps && paginationProps.lastBtn as boolean}
-                    prevBtn={paginationProps && paginationProps.prevBtn as boolean}
-                    nextBtn={paginationProps && paginationProps.nextBtn as boolean}
-                    className={paginationProps && paginationProps.className as string}
-                    maxButtons={paginationProps && paginationProps.maxButtons as number}
-                    style={paginationProps && paginationProps.style as React.CSSProperties}
-                    inverseStyle={paginationProps && paginationProps.inverseStyle as boolean}
-                />
+                <div className={styles.pagination}>
+                    <Pagination
+                        onClick={this.onPaginationClick}
+                        items={pages}
+                        currentItem={this.state.page}
+                        firstBtn={paginationProps && paginationProps.firstBtn as boolean}
+                        lastBtn={paginationProps && paginationProps.lastBtn as boolean}
+                        prevBtn={paginationProps && paginationProps.prevBtn as boolean}
+                        nextBtn={paginationProps && paginationProps.nextBtn as boolean}
+                        className={paginationProps && paginationProps.className as string}
+                        maxButtons={paginationProps && paginationProps.maxButtons as number}
+                        style={paginationProps && paginationProps.style as React.CSSProperties}
+                        inverseStyle={paginationProps && paginationProps.inverseStyle as boolean}
+                    />
+                </div>
             );
         }
 
