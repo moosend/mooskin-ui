@@ -103,7 +103,8 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
 
     static defaultProps = {
         className: '',
-        style: {},
+        spacing: 5,
+        style: {}
     };
 
     static Checkbox: React.StatelessComponent<ICheckBoxProps>;
@@ -335,7 +336,8 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 className={`material-icons`}
             />
             <label htmlFor={genId}>
-                <span>{label}</span>
+                <span className={styles.checkmark} />
+                <span className={styles.label}>{label}</span>
             </label>
             <br/>
             <i className={styles.description}>{props.description}</i>
