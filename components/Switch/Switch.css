@@ -24,7 +24,8 @@
 .switch {
   position: relative;
   content: '';
-  display: inline-block;
+  display: flex;
+  align-items: center;
   width: 90px;
   height: 27px;
   margin: 2px;
@@ -64,6 +65,9 @@
 }
 
 .text {
+  display: flex;
+  flex: 1;
+  justify-content: center;
   cursor: pointer;
   color: white;
   font-family: sans-serif;
