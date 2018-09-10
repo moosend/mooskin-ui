@@ -112,4 +112,14 @@ describe('TopNotification', () => {
 
         expect(component.find('.top-notification-component').hasClass(styles.customNotification)).toBe(true);
     });
+
+    test('renders with proper background when type is warning', () => {
+        const component = shallow(
+            <TopNotification text="Hello" type="warning"/>
+        );
+
+        expect(component.find('.top-notification-component').hasClass(styles.customNotification)).toBe(true);
+        expect(component.find('.text').prop('style')).toEqual({fontSize:  16, marginTop: 2});
+        expect(component.find('img').length).toEqual(2);
+    });
 });
