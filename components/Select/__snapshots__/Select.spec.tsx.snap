@@ -54,14 +54,13 @@ exports[`Select renders Select correctly 1`] = `
     />
     <div
       className="label-container innerDiv"
-      onClick={[Function]}
       style={
         Object {
           "display": "block",
         }
       }
     >
-      placeholder
+      No options available
     </div>
     <div
       className="selectIcon"

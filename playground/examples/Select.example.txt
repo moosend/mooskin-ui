@@ -22,6 +22,8 @@ class SelectExample extends React.Component {
                 <Select onChange={this.onClick} selected="option" dataLabel="plan" description="Select description goes here">
                     <Option value="option1">Option1</Option>
                 </Select>
+                <br/>
+                <Select onChange={this.onChange} dataLabel="plan" label="Some label" description="Empty Select" />
             </div>
         );
     }

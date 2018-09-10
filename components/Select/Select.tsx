@@ -49,6 +49,9 @@ export interface ISelectProps {
     /** wether the select is required (used within forms) */
     required?: boolean;
 
+    /** text to be shown when there are no options available */
+    emptySelectText?: string;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -118,6 +121,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const labelPos = this.props.labelTop ? styles.column : '';
         const topLabel = this.props.labelTop ? styles.topLabel : '';
 
+        const shouldOpen = this.props.children ? this.onOpenList : undefined;
+
         return (
             <div
                 className={`select-component ${styles.componentContainer} ${labelPos} ${this.props.className}`}
@@ -141,7 +146,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                         onBlur={this.validateOnBlur}
                     />
                     <div
-                        onClick={this.onOpenList}
+                        onClick={shouldOpen}
                         className={`label-container ${styles.innerDiv}`}
                         style={{display: this.state.list ? 'none' : 'block' }}
                     >
@@ -235,11 +240,16 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                     return child.props.value === (this.state.selected && this.state.selected);
                 });
 
-        return selectedChild &&
-                React.isValidElement<IOptionProps>(selectedChild) &&
-                selectedChild.props.children ||
-                this.props.placeholder ||
-                'Select an option';
+        if (this.props.children){
+            return selectedChild &&
+                    React.isValidElement<IOptionProps>(selectedChild) &&
+                    selectedChild.props.children ||
+                    this.props.placeholder ||
+                    'Select an option';
+        }
+
+        return this.props.emptySelectText || 'No options available';
+
     }
 
     validateChildren(){
