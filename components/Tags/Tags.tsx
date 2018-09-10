@@ -173,26 +173,28 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 style={this.props.style}
             >
                 {this.props.label && <div className={`${styles.label} ${labelClasses}`}>{this.props.label}</div>}
-                <label className={`${styles.tags} ${status}`}>
-                    {tags}
-                    <div className={styles.inputContainer}>
-                        <input
-                            ref={(ip) => this.myInp = ip}
-                            value={this.state.value}
-                            className={styles.input}
-                            placeholder={this.props.placeholder}
-                            onChange={this.onHandleChange}
-                            onKeyDown={this.onKeyDown}
-                            onClick={this.removeSource}
-                            onPaste={this.onPaste}
-                            onBlur={this.onBlur()}
-                        />
-                        {message}
-                        {source}
-                    </div>
-                    {cover}
+                <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
+                    <label className={`${styles.tags} ${status}`}>
+                        {tags}
+                        <div className={styles.inputContainer}>
+                            <input
+                                ref={(ip) => this.myInp = ip}
+                                value={this.state.value}
+                                className={styles.input}
+                                placeholder={this.props.placeholder}
+                                onChange={this.onHandleChange}
+                                onKeyDown={this.onKeyDown}
+                                onClick={this.removeSource}
+                                onPaste={this.onPaste}
+                                onBlur={this.onBlur()}
+                            />
+                            {message}
+                            {source}
+                        </div>
+                        {cover}
+                    </label>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
-                </label>
+                </div>
             </div>
         );
     }

@@ -205,27 +205,29 @@ class Input extends React.Component<IProps, IInputState> {
             const descStatus = this.getDescStatus();
             const reverse = iconPosition === 'left' && styles.reverse;
             return (
-                <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
-                    <input
-                        ref={(input) => this.input = input}
-                        onChange={this.onChange}
-                        id={this.id}
-                        type={type}
-                        name={this.props.name}
-                        value={value}
-                        placeholder={placeholder}
-                        minLength={minlength}
-                        maxLength={maxlength}
-                        required={required}
-                        disabled={disabled}
-                        className={styles.input}
-                        autoFocus={autofocus}
-                        autoComplete={autocomplete}
-                        onBlur={this.validateOnBlur}
-                        {...this.props.extraHtmlAttr}
-                    />
-                    {this.getDropDown()}
-                    {icon && this.getIcon()}
+                <div style={{flex: 1}}>
+                    <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
+                        <input
+                            ref={(input) => this.input = input}
+                            onChange={this.onChange}
+                            id={this.id}
+                            type={type}
+                            name={this.props.name}
+                            value={value}
+                            placeholder={placeholder}
+                            minLength={minlength}
+                            maxLength={maxlength}
+                            required={required}
+                            disabled={disabled}
+                            className={styles.input}
+                            autoFocus={autofocus}
+                            autoComplete={autocomplete}
+                            onBlur={this.validateOnBlur}
+                            {...this.props.extraHtmlAttr}
+                        />
+                        {this.getDropDown()}
+                        {icon && this.getIcon()}
+                    </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             );

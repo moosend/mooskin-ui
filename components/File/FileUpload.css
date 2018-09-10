@@ -8,7 +8,6 @@
 
 .contentContainer{
     display: flex;
-    position: relative;
     flex: 1;
 }
 
@@ -84,8 +83,6 @@
 }
 
 .description{
-    position: absolute;
-    bottom: -19px;
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;
