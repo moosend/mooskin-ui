@@ -255,4 +255,33 @@ describe('Input', () => {
 
     });
 
+    test('close personalization tags dropdown when a personalization tag is added', () => {
+
+        const pers = [
+            {
+                label: 'Unsibscribe Link',
+                value: '#unsubscribeLink#'
+            },
+            {
+                label: 'Account Email',
+                value: '#account:email#'
+            }
+        ];
+
+        const component = shallow(<Input value="value" personalizationTags={pers}/>);
+
+        expect(component.find('.dropDown').prop('style')).toEqual({display: 'none'});
+
+        component.find('.dropdown-icon').simulate('click');
+
+        expect(component.find('.dropDown').prop('style')).toEqual({display: 'block'});
+
+        component.find('.tag').first().simulate('click');
+
+        setTimeout(() => {
+            expect(component.find('.dropDown').prop('style')).toEqual({display: 'none'});
+        }, 100);
+
+    });
+
 });
