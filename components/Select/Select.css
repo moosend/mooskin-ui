@@ -83,7 +83,7 @@
     z-index: 5;
     max-height: 300px;
     overflow-y: auto;
-    box-shadow: 1px 10px 20px rgba(0,0,0,.2);
+    box-shadow: 0px 5px 25px -7px rgba(0, 0, 0, 0.1);
 }
 
 .optionsContainer ul{
