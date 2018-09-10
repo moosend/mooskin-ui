@@ -144,8 +144,6 @@ class Input extends React.Component<IProps, IInputState> {
 
     render(){
 
-        console.log(this.state.activeDropDown);
-
         const {
             style,
             className,
