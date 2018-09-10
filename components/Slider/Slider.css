@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Convergence');
 
 .sliderContainer{
+    z-index: 0;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -162,6 +163,7 @@ input.edgeClasses[type=range]::-ms-fill-upper {
 }
 
 .abContainer {
+    z-index: 0;
     display: flex;
     flex-direction: column;
     position: relative;

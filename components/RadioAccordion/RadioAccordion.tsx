@@ -39,6 +39,7 @@ export interface IContentProps {
 export interface IHeaderProps {
     title: string;
     active: boolean;
+    alternate?: boolean;
     name?: string;
     onClick: (e: React.MouseEvent<HTMLElement>) => void;
 }
@@ -186,12 +187,11 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
     };
 
     const activeRadio = props.active ? styles.activeHeader : styles.inactiveHeader;
-    const checkedRadio = !props.active ? '' : styles.checkedRadio;
     const genId = generateId();
 
     return (
         <div className={`accordion-header ${styles.container}`}>
-            <div className={`${styles.radio} ${activeRadio} ${checkedRadio}`} onClick={props.onClick}>
+            <div className={`${styles.radio} ${activeRadio}`} onClick={props.onClick}>
                 <input
                     id={genId}
                     type="radio"

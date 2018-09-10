@@ -18,7 +18,7 @@ exports[`RadioAccordion renders Header properly according to snapshot 1`] = `
   className="accordion-header container"
 >
   <div
-    className="radio activeHeader checkedRadio"
+    className="radio activeHeader"
     onClick={[Function]}
   >
     <input

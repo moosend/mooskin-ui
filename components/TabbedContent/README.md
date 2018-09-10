@@ -107,7 +107,7 @@ The type component will alter the styles of the TabbedContent, like a radio styl
 
 * `id` - id of the element
 * `vertical` - tab headers will be aligned vertically, content on the right
-* `type` - renders a different tabbed content based on the passed value, for now only `radio` & `alternate` are supported.
+* `type` - renders a different tabbed content based on the passed value, for now only `radio`, `alternate` & `radioAlternate` are supported.
 * `alignHeaders` - align tab headers to the left/center/right or top/center/bottom for vertical
 * `className` - css class
 * `style` - extra styles for the main container

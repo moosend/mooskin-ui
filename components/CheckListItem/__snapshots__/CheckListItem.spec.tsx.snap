@@ -31,9 +31,7 @@ exports[`CheckListItem renders correctly 1`] = `
     <div
       className="content"
     >
-      <span>
-        check item text
-      </span>
+      check item text
     </div>
     <SmallIconButton
       className="button"
