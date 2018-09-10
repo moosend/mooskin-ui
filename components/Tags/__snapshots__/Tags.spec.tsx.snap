@@ -14,45 +14,55 @@ exports[`Tags renders Tags correctly 1`] = `
   >
     label
   </div>
-  <label
-    className="tags undefined"
+  <div
+    style={
+      Object {
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "column",
+      }
+    }
   >
-    <Tag
-      className="tagClasses"
-      key="0"
-      onClick={[Function]}
-      style={
-        Object {
-          "width": "50px",
-        }
-      }
-      tag="Prishtina"
-    />
-    <Tag
-      className="tagClasses"
-      key="1"
-      onClick={[Function]}
-      style={
-        Object {
-          "width": "50px",
-        }
-      }
-      tag="Athens"
-    />
-    <div
-      className="inputContainer"
+    <label
+      className="tags undefined"
     >
-      <input
-        className="input"
-        onBlur={[Function]}
-        onChange={[Function]}
+      <Tag
+        className="tagClasses"
+        key="0"
         onClick={[Function]}
-        onKeyDown={[Function]}
-        onPaste={[Function]}
-        placeholder="olala"
-        value=""
+        style={
+          Object {
+            "width": "50px",
+          }
+        }
+        tag="Prishtina"
       />
-    </div>
-  </label>
+      <Tag
+        className="tagClasses"
+        key="1"
+        onClick={[Function]}
+        style={
+          Object {
+            "width": "50px",
+          }
+        }
+        tag="Athens"
+      />
+      <div
+        className="inputContainer"
+      >
+        <input
+          className="input"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onPaste={[Function]}
+          placeholder="olala"
+          value=""
+        />
+      </div>
+    </label>
+  </div>
 </div>
 `;
