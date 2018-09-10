@@ -18,9 +18,11 @@
     vertical-align: middle;
     padding: 15px;
     flex: 1;
-    /* white-space: nowrap; */
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 0;
+    width: 0;
 }
 
 .innerInput{
@@ -28,9 +30,6 @@
     outline: none;
     background: transparent;
     border: none;
-    min-width: 0;
-    width: 0;
-    white-space: nowrap;
 }
 
 .innerInput::placeholder {
@@ -137,8 +136,8 @@
 }
 
 .description{
-    position: absolute;
-    bottom: -19px;
+    /* position: absolute;
+    bottom: -19px; */
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;
