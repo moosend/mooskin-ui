@@ -112,4 +112,13 @@ describe('Select', () => {
 
         expect(component.find('.error')).toBeTruthy;
     });
+
+    test('text from prop is applied when there are no options available', () => {
+
+        const component = shallow(
+            <Select dataLabel="plan" emptySelectText="The select is empty" />
+        );
+
+        expect(component.find('.label-container').text()).toEqual('The select is empty');
+    });
 });

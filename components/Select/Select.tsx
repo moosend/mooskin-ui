@@ -49,6 +49,9 @@ export interface ISelectProps {
     /** wether the select is required (used within forms) */
     required?: boolean;
 
+    /** text to be shown when there are no options available */
+    emptySelectText?: string;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -118,6 +121,9 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const labelPos = this.props.labelTop ? styles.column : '';
         const topLabel = this.props.labelTop ? styles.topLabel : '';
 
+        const shouldOpen = this.props.children ? this.onOpenList : undefined;
+        const shouldToggle = this.props.children ? this.onToggleList : undefined;
+
         return (
             <div
                 className={`select-component ${styles.componentContainer} ${labelPos} ${this.props.className}`}
@@ -129,38 +135,40 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                     className={styles.overlay}
                     style={{display: !this.state.list ? 'none' : 'block'}}
                 />
-                <div className={`${styles.selectContainer} ${styles.labelContainer} ${status}`} style={{zIndex}}>
-                    <input
-                        type="text"
-                        className={styles.innerInput}
-                        style={{display: this.state.list ? 'block' : 'none'}}
-                        value={this.state.filter}
-                        placeholder="Filter"
-                        onChange={this.onChangeFilter}
-                        ref={(input) => (input && this.state.list && input.focus())}
-                        onBlur={this.validateOnBlur}
-                    />
-                    <div
-                        onClick={this.onOpenList}
-                        className={`label-container ${styles.innerDiv}`}
-                        style={{display: this.state.list ? 'none' : 'block' }}
-                    >
-                        {selected}
-                    </div>
-                    <div className={styles.selectIcon} onClick={this.onToggleList}/>
-                    <input
-                        value={this.state.selected || ''}
-                        readOnly
-                        style={{display: 'none'}}
-                        {...this.props.extraHtmlAttr}
-                    />
-                    <div
-                        className={`options-container ${styles.optionsContainer}`}
-                        style={{display: displayList}}
-                    >
-                        <ul>
-                            {options}
-                        </ul>
+                <div style={{flex: 1}}>
+                    <div className={`${styles.selectContainer} ${styles.labelContainer} ${status}`} style={{zIndex}}>
+                        <input
+                            type="text"
+                            className={styles.innerInput}
+                            style={{display: this.state.list ? 'block' : 'none'}}
+                            value={this.state.filter}
+                            placeholder="Filter"
+                            onChange={this.onChangeFilter}
+                            ref={(input) => (input && this.state.list && input.focus())}
+                            onBlur={this.validateOnBlur}
+                        />
+                        <div
+                            onClick={shouldOpen}
+                            className={`label-container ${styles.innerDiv}`}
+                            style={{display: this.state.list ? 'none' : 'block' }}
+                        >
+                            {selected}
+                        </div>
+                        <div className={styles.selectIcon} onClick={shouldToggle}/>
+                        <input
+                            value={this.state.selected || ''}
+                            readOnly
+                            style={{display: 'none'}}
+                            {...this.props.extraHtmlAttr}
+                        />
+                        <div
+                            className={`options-container ${styles.optionsContainer}`}
+                            style={{display: displayList}}
+                        >
+                            <ul>
+                                {options}
+                            </ul>
+                        </div>
                     </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
@@ -235,11 +243,16 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                     return child.props.value === (this.state.selected && this.state.selected);
                 });
 
-        return selectedChild &&
-                React.isValidElement<IOptionProps>(selectedChild) &&
-                selectedChild.props.children ||
-                this.props.placeholder ||
-                'Select an option';
+        if (this.props.children){
+            return selectedChild &&
+                    React.isValidElement<IOptionProps>(selectedChild) &&
+                    selectedChild.props.children ||
+                    this.props.placeholder ||
+                    'Select an option';
+        }
+
+        return this.props.emptySelectText || 'No options available';
+
     }
 
     validateChildren(){

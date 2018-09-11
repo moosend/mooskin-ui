@@ -9,7 +9,7 @@ class HorizontalRangeBarExample extends React.Component {
         this.horizontalRangeInterval;
 
         this.state = {
-            progress: 0
+            progress: 33
         };
 
     }
@@ -17,7 +17,7 @@ class HorizontalRangeBarExample extends React.Component {
     render(){
         return (
             <div>
-                <HorizontalRangeBar progress={this.state.progress}/><br/>
+                <HorizontalRangeBar progress={this.state.progress} additionalBars={[{value: 10, background: 'yellow'}, {value: 5, background: 'red'}, {value: 10, background: 'blue'}]}/><br/>
                 <HorizontalRangeBar progress={this.state.progress} range={[0, 1000]} background={'green'}/><br/>
                 <HorizontalRangeBar progress={this.state.progress} range={[0, 500]} background={'red'}/><br/>
                 <HorizontalRangeBar progress={this.state.progress} range={[0, 50]} background={'blue'}/><br/>

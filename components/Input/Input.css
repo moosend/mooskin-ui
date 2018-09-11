@@ -100,12 +100,12 @@
 }
 
 .description{
-    position: absolute;
-    bottom: -17px;
     left: 5px;
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;
+    margin-left: 3px;
+    margin-top: 5px;
 }
 
 .success{

@@ -3,9 +3,61 @@
 @import '../_utils/globals/screens.css';
 
 .checkbox {
-    border-radius: 8px;
+    display: block;
+    position: relative;
     color: var(--checkRadioGrey);
     transition: all 0.3s;
+    height: 20px;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    background-color: #efefef;
+}
+
+.checkbox label:hover > .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox input:checked ~ label:hover > .checkmark {
+    background-color: #ccc;
+}
+
+.checkbox input:checked ~ label .checkmark:after {
+    display: block;
+    left: 7px;
+    top: 4px;
+    width: 3px;
+    height: 7px;
+    border: solid #575757;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.checkbox input:checked ~ label .checkmark {
+    background: transparent;
+}
+
+.checkbox input:checked .checkmark {
+    background-color: #2196F3;
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+.label {
+    padding-left: 25px;
 }
 
 .horizontal {
@@ -21,29 +73,36 @@
     margin-left: 10px;
 }
 
-.checkbox span {
+.checkbox > label > span {
     vertical-align: middle;
     cursor: pointer;
     font-size: 0.875rem;
 }
 
-.checkbox input[type='checkbox'] {
+/* .checkbox input[type='checkbox'] {
     vertical-align: middle;
     appearance: none;
     cursor: pointer;
     font-size: 1.3125rem;  
     outline: none;  
+} */
+
+.checkbox input {
+    position: absolute;
+    opacity: 0;
+    appearance: none;
+    cursor: pointer;
 }
 
-.checkbox input[type='checkbox']::before {
+/* .checkbox input[type='checkbox']::before {
     content: '\e835';
     color: #dfdfdf;
-}
+} */
 
-.checkboxChecked input[type='checkbox']::before {
+/* .checkboxChecked input[type='checkbox']::before {
     content: '\e834';
     color: var(--moosendBlue);
-}
+} */
 
 .disabledCheckbox, .disabledCheckbox label span, .disabledCheckbox label, .disabledCheckbox.checkbox:hover {
     cursor: not-allowed;
@@ -91,10 +150,10 @@
     color: #ec3232;
 }
 
-.checkboxChecked.error input[type='checkbox']::before {
+/* .checkboxChecked.error input[type='checkbox']::before {
     content: '\e834';
     color: var(--moosendBlue);
-}
+} */
 
 .disabledCheckbox.error input[type='checkbox']:disabled::before {
     cursor: not-allowed;
@@ -107,7 +166,8 @@
     }
 
     .horizontal > .checkbox + .checkbox{
-        margin-left: 0px
+        margin-left: 0px;
+        margin-bottom: 5px;
     }
 
 }

@@ -15,6 +15,7 @@ class FileExample extends React.Component {
                     buttonLabel="Select File!"
                     multiple
                     style={{marginBottom: 15}}
+                    description="Description goes here"
                 />
                 <FileUpload onChange={this.onChange} accept=".png" style={{marginBottom: 15}}/>
                 <FileUpload disabled />

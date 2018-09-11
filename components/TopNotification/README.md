@@ -57,7 +57,7 @@ You can give it callbacks for clicking on any of the buttons
 ## Supported attributes
 
 * `id` - id of the element
-* `type` - notification type, can be 'error', 'success' or 'custom'
+* `type` - notification type, can be 'error', 'success', 'warning' or 'custom'
 * `visible` - boolean to tell if the notification should be displayed or not
 * `className` - css class
 * `text` - text shown inside
