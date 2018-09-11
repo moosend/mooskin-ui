@@ -741,4 +741,54 @@ describe('Table', () => {
 
     });
 
+    test('Doesn\'t render pagination when paginate prop is 0(zero)', () => {
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            },
+            {
+                country: 'Citadel',
+                id: 2,
+                lastname: 'Shepard',
+                name: 'John'
+            },
+            {
+                country: 'Tatooine',
+                id: 4,
+                lastname: 'Skywalker',
+                name: 'Luke'
+            }
+        ];
+
+        const paginationProps = {
+            className: 'myClass',
+            firstBtn: false,
+            lastBtn: false,
+            maxButtons: 10,
+            nextBtn: true,
+            prevBtn: true,
+            style: {color: 'blue'}
+        };
+
+        const component = mount(
+            <Table data={data} paginate={0} paginationProps={paginationProps}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('Pagination').length).toEqual(0);
+    });
+
 });
