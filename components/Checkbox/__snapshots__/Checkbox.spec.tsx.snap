@@ -22,7 +22,12 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
   <label
     htmlFor="4zlbrf"
   >
-    <span>
+    <span
+      className="checkmark"
+    />
+    <span
+      className="label"
+    >
       This is CheckBox 1
     </span>
   </label>
@@ -123,7 +128,12 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
           <label
             htmlFor="4zlbrf"
           >
-            <span>
+            <span
+              className="checkmark"
+            />
+            <span
+              className="label"
+            >
               Checkbox1
             </span>
           </label>
@@ -166,7 +176,12 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
           <label
             htmlFor="4zlbrf"
           >
-            <span>
+            <span
+              className="checkmark"
+            />
+            <span
+              className="label"
+            >
               Checkbox2
             </span>
           </label>
@@ -209,7 +224,12 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
           <label
             htmlFor="4zlbrf"
           >
-            <span>
+            <span
+              className="checkmark"
+            />
+            <span
+              className="label"
+            >
               Checkbox3
             </span>
           </label>

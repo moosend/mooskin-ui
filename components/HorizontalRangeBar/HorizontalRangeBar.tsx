@@ -9,6 +9,8 @@ export interface IHorizontalRangeBarProps{
     /** optional background color, default is cyan */
     background?: string;
 
+    additionalBars?: Array<{value: number, background: string}>;
+
     /** number range is an array tuple [min, max] */
     range?: [number, number];
 
@@ -56,8 +58,29 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
                     style={style}
                 >
                     <div className={`loader-text ${styles.label}`}>{progress}</div>
+                    {this.renderAdditionalBars()}
                 </div>
             </div>
         );
+    }
+
+    renderAdditionalBars = () => {
+        const {additionalBars} = this.props;
+        const bars: JSX.Element[] = [];
+        let right = 0;
+        additionalBars && additionalBars.forEach((bar, i) => {
+            const width = bar.value * 100 / this.props.progress;
+            if ((right + width) > 100){
+                throw new Error('Values are larger than expected!');
+            }
+            bars.push(
+                <div
+                    key={i}
+                    style={{position: 'absolute', top: 0, bottom: 0, right: `${right}%`, width: `${width}%`, background: bar.background}}
+                />
+            );
+            right = right + width;
+        });
+        return bars;
     }
 }

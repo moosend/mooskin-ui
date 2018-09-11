@@ -3,7 +3,7 @@
 
 .editor{
     outline: none;
-    padding: 7px;
+    padding: 20px;
     font-family: Arial,sans-serif;
     border: 0;
     /* color: var(--inputFontColor); */
@@ -407,6 +407,18 @@
     height: 30px;
     padding-left: 5px;
     margin-left: 5px;
+}
+
+:global(.public-DraftStyleDefault-block){
+    margin: 0;
+}
+
+:global(.public-DraftStyleDefault-ol){
+    margin: 16px 25px;
+}
+
+:global(.public-DraftStyleDefault-ul){
+    margin: 16px 20px;
 }
 /* @media (--xSmall){
 

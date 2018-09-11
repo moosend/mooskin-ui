@@ -1219,9 +1219,6 @@ exports[`Table renders correctly 1`] = `
         </tbody>
       </table>
     </div>
-    <div
-      className="pagination"
-    />
   </div>
 </Table>
 `;

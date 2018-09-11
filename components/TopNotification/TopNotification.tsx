@@ -14,7 +14,7 @@ export interface ITopNotificationProps {
     id?: string;
 
     /** override input type */
-    type?: 'error' | 'success' | 'custom';
+    type?: 'error' | 'success' | 'warning' | 'custom';
 
     /** override input value */
     text?: string;
@@ -66,7 +66,9 @@ export default class TopNotification extends React.Component<ITopNotificationPro
 
         const typeClass = this.resolveTypeClass();
 
-        const icon = type === 'success' ? successIcon : type === 'error' ? errorIcon : '';
+        const icon = type === 'success' ? successIcon : type === 'error' || type === 'warning' ? errorIcon : '';
+
+        const fontSize = type !== 'success' && type !== 'error' ? {fontSize:  16, marginTop: 2} : {};
 
         return (
             <div
@@ -76,7 +78,7 @@ export default class TopNotification extends React.Component<ITopNotificationPro
                 <div className={styles.content}>
                     <div className={styles.message}>
                         <img src={icon} alt="" style={{marginRight: 10}}/>
-                        <span className={styles.text}>{text}</span>
+                        <span style={fontSize} className={styles.text}>{text}</span>
                     </div>
                     {this.renderButtons()}
                 </div>

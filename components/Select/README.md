@@ -116,6 +116,7 @@ The Input Component can be validated using the `status` and `validate` props. Th
 * `className` - css class
 * `description` - select description (small italic bottom)
 * `style` - element style
+* `emptySelectText` - text to be shown when there are no options available
 * `extraHtmlAttr` - extra html attributes applied to the input
 
 ## Supported attributes for Option 

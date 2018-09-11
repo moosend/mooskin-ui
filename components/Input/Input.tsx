@@ -53,6 +53,9 @@ export interface IProps {
     /** add personalization tags dropdown */
     personalizationTags?: Array<{value: string, label: string}>;
 
+    /** close personalization tags dropdown when a tag is added */
+    closeOnTagAdd?: boolean;
+
     /** spacing between label and input */
     labelWidth?: number;
 
@@ -120,6 +123,7 @@ class Input extends React.Component<IProps, IInputState> {
 
     static defaultProps = {
         className: '',
+        closeOnTagAdd: true,
         iconPosition: 'right',
         style: {}
     };
@@ -201,27 +205,29 @@ class Input extends React.Component<IProps, IInputState> {
             const descStatus = this.getDescStatus();
             const reverse = iconPosition === 'left' && styles.reverse;
             return (
-                <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
-                    <input
-                        ref={(input) => this.input = input}
-                        onChange={this.onChange}
-                        id={this.id}
-                        type={type}
-                        name={this.props.name}
-                        value={value}
-                        placeholder={placeholder}
-                        minLength={minlength}
-                        maxLength={maxlength}
-                        required={required}
-                        disabled={disabled}
-                        className={styles.input}
-                        autoFocus={autofocus}
-                        autoComplete={autocomplete}
-                        onBlur={this.validateOnBlur}
-                        {...this.props.extraHtmlAttr}
-                    />
-                    {this.getDropDown()}
-                    {icon && this.getIcon()}
+                <div style={{flex: 1}}>
+                    <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
+                        <input
+                            ref={(input) => this.input = input}
+                            onChange={this.onChange}
+                            id={this.id}
+                            type={type}
+                            name={this.props.name}
+                            value={value}
+                            placeholder={placeholder}
+                            minLength={minlength}
+                            maxLength={maxlength}
+                            required={required}
+                            disabled={disabled}
+                            className={styles.input}
+                            autoFocus={autofocus}
+                            autoComplete={autocomplete}
+                            onBlur={this.validateOnBlur}
+                            {...this.props.extraHtmlAttr}
+                        />
+                        {this.getDropDown()}
+                        {icon && this.getIcon()}
+                    </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             );
@@ -423,6 +429,9 @@ class Input extends React.Component<IProps, IInputState> {
                 {value: finalValue, dataLabel: this.props.dataLabel, required: this.props.required}
             );
         }
+        setTimeout(() => {
+            this.props.closeOnTagAdd && this.removeDropDown();
+        }, 1);
     }
 
     getEmojis = () => {

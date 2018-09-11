@@ -32,59 +32,65 @@ exports[`Select renders Select correctly 1`] = `
     }
   />
   <div
-    className="selectContainer labelContainer undefined"
     style={
       Object {
-        "zIndex": 0,
+        "flex": 1,
       }
     }
   >
-    <input
-      className="innerInput"
-      onBlur={[Function]}
-      onChange={[Function]}
-      placeholder="Filter"
-      style={
-        Object {
-          "display": "none",
-        }
-      }
-      type="text"
-      value=""
-    />
     <div
-      className="label-container innerDiv"
-      onClick={[Function]}
+      className="selectContainer labelContainer undefined"
       style={
         Object {
-          "display": "block",
+          "zIndex": 0,
         }
       }
     >
-      placeholder
-    </div>
-    <div
-      className="selectIcon"
-      onClick={[Function]}
-    />
-    <input
-      readOnly={true}
-      style={
-        Object {
-          "display": "none",
+      <input
+        className="innerInput"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Filter"
+        style={
+          Object {
+            "display": "none",
+          }
         }
-      }
-      value="option1"
-    />
-    <div
-      className="options-container optionsContainer"
-      style={
-        Object {
-          "display": "none",
+        type="text"
+        value=""
+      />
+      <div
+        className="label-container innerDiv"
+        style={
+          Object {
+            "display": "block",
+          }
         }
-      }
-    >
-      <ul />
+      >
+        No options available
+      </div>
+      <div
+        className="selectIcon"
+      />
+      <input
+        readOnly={true}
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+        value="option1"
+      />
+      <div
+        className="options-container optionsContainer"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
+      >
+        <ul />
+      </div>
     </div>
     <i
       className="description undefined"

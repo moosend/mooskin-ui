@@ -64,7 +64,7 @@
 }
 
 .customNotification {
-    background: #2d2d2d
+    background: #2d2d2d;
 }
 
 @media (--deviceXsmall){

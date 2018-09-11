@@ -104,18 +104,20 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
                 style={style}
             >
                 {label && <label className={styles.label} style={spacing}>{label}</label>}
-                <div className={styles.contentContainer}>
-                    <span className={`${styles.name} ${status}`}>{this.state.name}</span>
-                    <span className={styles.button}>{buttonLabel}</span>
-                    <input
-                        accept={accept}
-                        required={required}
-                        disabled={disabled}
-                        onChange={this.onChange}
-                        type="file"
-                        className={styles.input}
-                        multiple={multiple}
-                    />
+                <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
+                    <div className={styles.contentContainer}>
+                        <span className={`${styles.name} ${status}`}>{this.state.name}</span>
+                        <span className={styles.button}>{buttonLabel}</span>
+                        <input
+                            accept={accept}
+                            required={required}
+                            disabled={disabled}
+                            onChange={this.onChange}
+                            type="file"
+                            className={styles.input}
+                            multiple={multiple}
+                        />
+                    </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             </div>

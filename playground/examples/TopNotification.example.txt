@@ -10,7 +10,8 @@ class TopNotificationExample extends React.Component {
             visible1: false,
             visible2: false,
             visible3: false,
-            visible4: false
+            visible4: false,
+            visible5: false
         };
     }
 
@@ -44,6 +45,10 @@ class TopNotificationExample extends React.Component {
                 />
                 <Button style={{margin: 3}} onClick={this.onClickShow('visible4')}>Show Notification 4</Button>
                 <Button style={{margin: 3}} onClick={this.onClickHide('visible4')} inverseStyle>Hide Notification 4</Button>
+                <br/>
+                <TopNotification text="Some warning here!" visible={this.state.visible5} type="warning"/>
+                <Button style={{margin: 3}} onClick={this.onClickShow('visible5')}>Show Notification 5</Button>
+                <Button style={{margin: 3}} onClick={this.onClickHide('visible5')} inverseStyle>Hide Notification 5</Button>
             </div>
         );
     }
