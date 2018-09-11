@@ -225,8 +225,10 @@ class Input extends React.Component<IProps, IInputState> {
                             onBlur={this.validateOnBlur}
                             {...this.props.extraHtmlAttr}
                         />
-                        {this.getDropDown()}
-                        {icon && this.getIcon()}
+                        <div className={styles.iconContainer}>
+                            {this.getDropDown()}
+                            {icon && this.getIcon()}
+                        </div>
                     </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
@@ -371,7 +373,7 @@ class Input extends React.Component<IProps, IInputState> {
             <div
                 className="dropdown-icon"
                 key={i}
-                style={{position: 'relative'}}
+                style={{position: 'relative', display: 'flex', alignItems: 'center'}}
                 onClick={() => this.onDropDownIconClick(i)}
             >
                 <img className={styles.dropDownIcon} src={icon}/>
