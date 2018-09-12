@@ -24,7 +24,7 @@ exports[`TextArea renders correctly 1`] = `
   value="textarea value"
 >
   <div
-    className="textarea-component areaContainermyClass"
+    className="textarea-component areaContainer myClass"
     style={
       Object {
         "color": "blue",
