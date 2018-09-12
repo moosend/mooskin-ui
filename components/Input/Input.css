@@ -6,7 +6,7 @@
     display: flex;
     /* flex: 1; */
     box-sizing: border-box;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .column {
@@ -96,6 +96,7 @@
     font-size: .92857142857rem; 
     cursor: pointer;
     flex-basis: 150px;
+    padding-top: 15px;
 }
 
 .topLabel {
