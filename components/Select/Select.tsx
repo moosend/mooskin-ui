@@ -52,6 +52,9 @@ export interface ISelectProps {
     /** text to be shown when there are no options available */
     emptySelectText?: string;
 
+    /** filter placeholder text */
+    filterPlaceholder?: string;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -142,7 +145,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             className={styles.innerInput}
                             style={{display: this.state.list ? 'block' : 'none'}}
                             value={this.state.filter}
-                            placeholder="Filter"
+                            placeholder={this.props.filterPlaceholder || 'Type to filter'}
                             onChange={this.onChangeFilter}
                             ref={(input) => (input && this.state.list && input.focus())}
                             onBlur={this.validateOnBlur}
