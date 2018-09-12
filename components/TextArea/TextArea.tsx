@@ -91,7 +91,7 @@ class TextArea extends React.Component<ITextAreaProps, {}> {
 
         return (
             <div
-                className={`textarea-component ${styles.areaContainer}${this.props.className}`}
+                className={`textarea-component ${styles.areaContainer} ${this.props.className}`}
                 style={this.props.style}
             >
                 {this.props.label && this.getLabel()}
