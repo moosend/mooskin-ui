@@ -348,6 +348,7 @@ class Input extends React.Component<IProps, IInputState> {
                 label={this.props.clipboardButton}
                 value={this.props.value}
                 className={styles.copyButton}
+                style={{alignSelf: 'center'}}
                 onClick={this.onClipboardButtonClick}
             />
         );
