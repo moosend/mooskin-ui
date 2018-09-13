@@ -74,8 +74,7 @@ textarea::-webkit-scrollbar-thumb:vertical {
     display: block;
     color: #b3b3b3;
     font-size: .78571428571rem;
-    margin-left: 3px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .success{

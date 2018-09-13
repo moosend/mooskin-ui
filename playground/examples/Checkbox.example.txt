@@ -54,7 +54,7 @@ class CheckBoxExample extends React.Component {
                     <Checkbox value="tel" label="Telephone" />
                     <Checkbox value="skype" label="Skype" />
                 </CheckboxGroup>
-                <Checkbox value="doni" label="Lone Checkbox" onClick={this.onClick} checked={this.state.checked}/>
+                <Checkbox value="doni" label="Lone Checkbox" onClick={this.onClick} checked={this.state.checked} description="Solo checkbox here"/>
             </div>
         );
 

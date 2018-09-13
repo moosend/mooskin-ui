@@ -9,6 +9,7 @@
 .contentContainer{
     display: flex;
     flex: 1;
+    position: relative;
 }
 
 .button{
@@ -55,17 +56,22 @@
 
 .disabledFile{
     cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.disabledFile input {
+    cursor: not-allowed;
 }
 
 .label {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    flex-basis: 100px;
+    /* justify-content: center; */
+    /* flex-direction: column; */
     color: var(--inputLabel);
     /* font-size: 13px; */
     font-size: .92857142857rem;
     flex-basis: 150px;
+    padding-top: 15px;
 }
 
 .disabledFile > .name{
@@ -86,8 +92,7 @@
     display: block;
     color: var(--italicDescription);
     font-size: .78571428571rem;
-    margin-left: 3px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .success{
@@ -116,6 +121,10 @@
 
     .name{
         margin-bottom: 5px
+    }
+
+    .label {
+        padding-top: 0;
     }
 
 }

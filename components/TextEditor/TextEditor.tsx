@@ -90,6 +90,9 @@ export interface ITextEditorProps {
     /** editor label */
     label?: string;
 
+    /** hides open link in new window option on the link dialog */
+    hideTargetSetting?: boolean;
+
     /** onChange callback for rich editor type of textarea */
     onChange?: (data: IInputCallbackData) => void;
 
@@ -144,6 +147,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     static defaultProps = {
         className: '',
         height: 400,
+        hideTargetSetting: false,
         options: [
             'inline',
             'blockType',
@@ -162,7 +166,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         ],
         style: {},
         toolbarOnFocus: true,
-        toolbarPos: 'top',
+        toolbarPos: 'top'
     };
 
     // static getDerivedStateFromProps(nextProps: ITextEditorProps, prevState: ITextEditorState){
@@ -210,6 +214,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         const contentState = convertFromRaw(this.props.editorState);
         const editorState = EditorState.createWithContent(contentState);
         this.setState({editorState, width: this.getParentWidth(), htmlContent: draftToHtml(this.props.editorState)});
+
     }
 
     componentDidUpdate(props: ITextEditorProps, state: ITextEditorState) {
@@ -295,6 +300,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     toolbar={toolbar}
                     toolbarCustomButtons={customToolbarButtons}
                     onBlur={this.onBlur}
+                    hideTargetSetting={this.props.hideTargetSetting}
                 />
                 <textarea
                     className={styles.textArea}

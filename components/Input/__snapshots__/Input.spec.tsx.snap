@@ -46,6 +46,9 @@ exports[`Input renders correctly 1`] = `
         type="text"
         value="input value"
       />
+      <div
+        className="iconContainer"
+      />
     </div>
     <i
       className="description undefined"
