@@ -24,7 +24,11 @@ export interface IHorizontalRangeBarProps{
     className?: string;
 }
 
-export default class HorizontalRangeBar extends React.Component<IHorizontalRangeBarProps, {}>{
+export interface IHorizontalRangeBarState{
+    width: number;
+}
+
+export default class HorizontalRangeBar extends React.Component<IHorizontalRangeBarProps, IHorizontalRangeBarState>{
 
     static defaultProps: Partial<IHorizontalRangeBarProps> = {
         background: '#53cadc',
@@ -33,31 +37,58 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         range: [0, 100],
     };
 
-    render(){
-
-        const {className, range, progress, id} = this.props;
-        let currentPercentage;
-
+    static getWidth = (props: IHorizontalRangeBarProps) => {
+        const {range, progress} = props;
+        let percentage = 0;
         if (range && progress > range[1]){
             console.error('progress can not be greater that the max range');
-            currentPercentage = 100;
+            percentage = 100;
         }else{
-            currentPercentage = range && ((progress - range[0]) * 100) /  (range[1] - range[0]);
+            percentage = range && ((progress - range[0]) * 100) /  (range[1] - range[0]) || 0;
         }
+        return percentage;
+    }
 
-        const style = {
-            background: this.props.background,
+    static getDerivedStateFromProps(nextProps: IHorizontalRangeBarProps, prevState: IHorizontalRangeBarState){
+        const width = HorizontalRangeBar.getWidth(nextProps);
+        return {
+            width
+        };
+    }
+
+    constructor(props: IHorizontalRangeBarProps){
+        super(props);
+
+        this.state = {
+            width: 0
+        };
+    }
+
+    componentDidMount(){
+        this.setState({width: HorizontalRangeBar.getWidth(this.props)});
+    }
+
+    render(){
+
+        const {className, progress, id} = this.props;
+
+        const containerStyle = {
             height: this.props.height,
-            width: currentPercentage + '%',
+            width: this.state.width + '%'
+        };
+
+        const barStyle = {
+            background: this.props.background,
+            borderRadius: 4
         };
 
         return (
             <div className={`loader-component ${styles.loaderContainer} ${className}`} id={id}>
                 <div
                     className={`loader-bar ${styles.loader}`}
-                    style={style}
+                    style={containerStyle}
                 >
-                    <div className={`loader-text ${styles.label}`}>{progress}</div>
+                    <div className={`loader-text ${styles.label}`} style={barStyle}>{progress}</div>
                     {this.renderAdditionalBars()}
                 </div>
             </div>
@@ -83,4 +114,5 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         });
         return bars;
     }
+
 }
