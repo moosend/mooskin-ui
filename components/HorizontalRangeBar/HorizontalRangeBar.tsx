@@ -46,13 +46,13 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         }
 
         const containerStyle = {
-            height: this.props.height,
             width: currentPercentage + '%',
         };
 
         const barStyle = {
             background: this.props.background,
-            borderRadius: 4
+            borderRadius: 4,
+            height: this.props.height
         };
 
         return (
