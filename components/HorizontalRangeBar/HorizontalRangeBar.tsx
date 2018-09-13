@@ -24,11 +24,7 @@ export interface IHorizontalRangeBarProps{
     className?: string;
 }
 
-export interface IHorizontalRangeBarState{
-    width: number;
-}
-
-export default class HorizontalRangeBar extends React.Component<IHorizontalRangeBarProps, IHorizontalRangeBarState>{
+export default class HorizontalRangeBar extends React.Component<IHorizontalRangeBarProps, {}>{
 
     static defaultProps: Partial<IHorizontalRangeBarProps> = {
         background: '#53cadc',
@@ -37,44 +33,21 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         range: [0, 100],
     };
 
-    static getWidth = (props: IHorizontalRangeBarProps) => {
-        const {range, progress} = props;
-        let percentage = 0;
-        if (range && progress > range[1]){
-            console.error('progress can not be greater that the max range');
-            percentage = 100;
-        }else{
-            percentage = range && ((progress - range[0]) * 100) /  (range[1] - range[0]) || 0;
-        }
-        return percentage;
-    }
-
-    static getDerivedStateFromProps(nextProps: IHorizontalRangeBarProps, prevState: IHorizontalRangeBarState){
-        const width = HorizontalRangeBar.getWidth(nextProps);
-        return {
-            width
-        };
-    }
-
-    constructor(props: IHorizontalRangeBarProps){
-        super(props);
-
-        this.state = {
-            width: 0
-        };
-    }
-
-    componentDidMount(){
-        this.setState({width: HorizontalRangeBar.getWidth(this.props)});
-    }
-
     render(){
 
-        const {className, progress, id} = this.props;
+        const {className, range, progress, id} = this.props;
+        let currentPercentage;
+
+        if (range && progress > range[1]){
+            console.error('progress can not be greater that the max range');
+            currentPercentage = 100;
+        }else{
+            currentPercentage = range && ((progress - range[0]) * 100) /  (range[1] - range[0]);
+        }
 
         const containerStyle = {
             height: this.props.height,
-            width: this.state.width + '%'
+            width: currentPercentage + '%',
         };
 
         const barStyle = {
@@ -99,6 +72,13 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         const {additionalBars} = this.props;
         const bars: JSX.Element[] = [];
         let right = 0;
+
+        const style = {
+            borderBottomRightRadius: 4,
+            borderTopRightRadius: 4,
+            padding: 5
+        };
+
         additionalBars && additionalBars.forEach((bar, i) => {
             const width = bar.value * 100 / this.props.progress;
             if ((right + width) > 100){
@@ -106,13 +86,15 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
             }
             bars.push(
                 <div
+                    className={`loader-text ${styles.label}`}
                     key={i}
-                    style={{position: 'absolute', top: 0, bottom: 0, right: `${right}%`, width: `${width}%`, background: bar.background}}
-                />
+                    style={{position: 'absolute', top: 0, bottom: 0, right: `${right}%`, width: `${width}%`, background: bar.background, ...style}}
+                >
+                    {bar.value}
+                </div>
             );
             right = right + width;
         });
         return bars;
     }
-
 }
