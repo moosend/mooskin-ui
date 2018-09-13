@@ -3,7 +3,7 @@
 
 .editor{
     outline: none;
-    padding: 20px;
+    padding: 0 15px;
     font-family: Arial,sans-serif;
     border: 0;
     /* color: var(--inputFontColor); */
@@ -409,16 +409,18 @@
     margin-left: 5px;
 }
 
-:global(.public-DraftStyleDefault-block){
-    margin: 0;
-}
-
 :global(.public-DraftStyleDefault-ol){
-    margin: 16px 25px;
+    padding-left: 45px;
+    margin: 30px 0;
 }
 
 :global(.public-DraftStyleDefault-ul){
-    margin: 16px 20px;
+    padding-left: 40px;
+    margin: 30px 0;
+}
+
+:global(.public-DraftStyleDefault-depth0.public-DraftStyleDefault-listLTR){
+    margin: -14px 0;
 }
 /* @media (--xSmall){
 
