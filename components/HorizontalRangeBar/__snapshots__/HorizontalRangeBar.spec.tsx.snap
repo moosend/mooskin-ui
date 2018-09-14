@@ -9,14 +9,19 @@ exports[`HorizontalRangeBar renders correctly 1`] = `
     className="loader-bar loader"
     style={
       Object {
-        "background": "#53cadc",
-        "height": 5,
         "width": "20%",
       }
     }
   >
     <div
       className="loader-text label"
+      style={
+        Object {
+          "background": "#53cadc",
+          "borderRadius": 4,
+          "height": 5,
+        }
+      }
     >
       20
     </div>

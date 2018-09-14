@@ -6118,7 +6118,7 @@ react-dom@^16.0.3:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-draft-wysiwyg@donibehrami/react-draft-wysiwyg:
+react-draft-wysiwyg@donibehrami/react-draft-wysiwyg#5a7de2980b4c6166027e3dd1332556d025ec9c40:
   version "1.12.13"
   resolved "https://codeload.github.com/donibehrami/react-draft-wysiwyg/tar.gz/5a7de2980b4c6166027e3dd1332556d025ec9c40"
   dependencies:
