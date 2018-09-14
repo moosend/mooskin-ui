@@ -9,7 +9,6 @@ exports[`HorizontalRangeBar renders correctly 1`] = `
     className="loader-bar loader"
     style={
       Object {
-        "height": 5,
         "width": "20%",
       }
     }
@@ -20,6 +19,7 @@ exports[`HorizontalRangeBar renders correctly 1`] = `
         Object {
           "background": "#53cadc",
           "borderRadius": 4,
+          "height": 5,
         }
       }
     >
