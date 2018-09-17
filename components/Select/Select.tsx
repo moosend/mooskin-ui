@@ -85,7 +85,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     static defaultProps = {
         className: '',
-        filter: ''
+        filterPlaceholder: ''
     };
 
     static Option: React.StatelessComponent<IOptionProps>;
@@ -145,7 +145,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                             className={styles.innerInput}
                             style={{display: this.state.list ? 'block' : 'none'}}
                             value={this.state.filter}
-                            placeholder={this.props.filterPlaceholder || 'Type to filter'}
+                            placeholder={this.props.filterPlaceholder}
                             onChange={this.onChangeFilter}
                             ref={(input) => (input && this.state.list && input.focus())}
                             onBlur={this.validateOnBlur}

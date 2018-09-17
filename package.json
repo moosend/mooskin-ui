@@ -43,7 +43,7 @@
     "input-moment": "^0.4.0",
     "moment": "2.20.1",
     "react-chartjs-2": "2.6.4",
-    "react-draft-wysiwyg": "donibehrami/react-draft-wysiwyg#5a7de2980b4c6166027e3dd1332556d025ec9c40",
+    "react-draft-wysiwyg": "donibehrami/react-draft-wysiwyg",
     "react-live": "1.9.2",
     "react-slick": "^0.20.0",
     "showdown": "1.8.6",

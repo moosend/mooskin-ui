@@ -319,6 +319,8 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
         };
     };
 
+    const checkmarkDisplay = props.checked ? styles.transparentCheckmark : '';
+
     return (
         <div
             // htmlFor={props.id}
@@ -336,7 +338,8 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 className={`material-icons`}
             />
             <label htmlFor={genId}>
-                <span className={styles.checkmark} />
+                <span className={`${styles.checkmark} ${checkmarkDisplay}`} />
+                {props.checked && <span className={styles.checkboxTick} />}
                 <span className={styles.label}>{label}</span>
             </label>
             <br/>

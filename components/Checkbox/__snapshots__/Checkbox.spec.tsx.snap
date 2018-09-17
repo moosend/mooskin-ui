@@ -23,7 +23,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
     htmlFor="4zlbrf"
   >
     <span
-      className="checkmark"
+      className="checkmark transparentCheckmark"
+    />
+    <span
+      className="checkboxTick"
     />
     <span
       className="label"
@@ -129,7 +132,10 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
             htmlFor="4zlbrf"
           >
             <span
-              className="checkmark"
+              className="checkmark transparentCheckmark"
+            />
+            <span
+              className="checkboxTick"
             />
             <span
               className="label"
@@ -177,7 +183,7 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
             htmlFor="4zlbrf"
           >
             <span
-              className="checkmark"
+              className="checkmark "
             />
             <span
               className="label"
@@ -225,7 +231,7 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
             htmlFor="4zlbrf"
           >
             <span
-              className="checkmark"
+              className="checkmark "
             />
             <span
               className="label"
