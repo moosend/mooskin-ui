@@ -23,6 +23,7 @@
     text-overflow: ellipsis;
     min-width: 0;
     width: 0;
+    line-height: 18px;
 }
 
 .innerInput{
