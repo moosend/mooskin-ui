@@ -2,7 +2,7 @@
     transition: all 0.4s ease;
     position: fixed;
     top: 0;
-    height: 3px;
+    height: 5px;
     background: #F48770;
     box-shadow: -3px 0 15px 1px rgba(244,135,112, 0.4);
     z-index: 9999;

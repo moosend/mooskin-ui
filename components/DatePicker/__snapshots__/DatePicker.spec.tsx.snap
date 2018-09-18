@@ -57,7 +57,7 @@ exports[`DatePicker renders correctly 1`] = `
 exports[`DatePicker renders other type of the component correctly 1`] = `
 <Select
   className="date-select-component myClass"
-  filter=""
+  filterPlaceholder=""
   id="input1"
   label="Hour"
   onChange={[Function]}
