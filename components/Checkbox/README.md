@@ -202,6 +202,7 @@ In this case, if less than two checkboxes are checked, the error classes will ge
 * `horizontal` - horizontal styled Checkboxes (default is vertical)
 * `spacing` - space between Checkboxes
 * `style` - element style
+* `inverseStyle` - inverse styles for checkboxes
 * `title` - optional title for the Checkboxes group
 
 The `selectedChecks` prop is required.
