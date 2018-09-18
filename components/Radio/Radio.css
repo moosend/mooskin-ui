@@ -55,6 +55,31 @@
     border-radius:50%; 
 }
 
+.inverseRadio input[type='radio'] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    appearance: none;
+    margin: 0;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    border: 1px solid #3F3F3F;
+    background: #3F3F3F;
+}
+
+.inverseChecked input[type='radio']:before {
+    background: #fff;
+    content:'';
+    display: block;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius:50%; 
+}
+
 .disabledRadio input[type='radio']:disabled {
     cursor: not-allowed;
     border: 1px solid var(--disabledCheckRadio);

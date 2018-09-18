@@ -39,6 +39,7 @@ class RadioExample extends React.Component {
                     spacing={10}
                     selectedRadios={this.state.radios}
                     vertical
+                    inverseStyle
                 >
                     <Radio
                         value="radio1"
@@ -47,7 +48,6 @@ class RadioExample extends React.Component {
                     <Radio
                         value="radio2"
                         label="Second Radio"
-                        disabled
                     />
                 </RadioGroup>
             </div>

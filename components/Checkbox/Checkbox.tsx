@@ -331,8 +331,6 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
     const inverseCheckbox = props.inverseStyle ? styles.inverseCheckbox : '';
     const inverseTick = props.inverseStyle ? styles.inverseTick : '';
 
-    console.log(props.inverseStyle);
-
     return (
         <div
             // htmlFor={props.id}

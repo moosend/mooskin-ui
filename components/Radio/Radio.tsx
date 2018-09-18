@@ -30,6 +30,9 @@ export interface IRadioGroupProps {
     /** override RadioGroup styles */
     style?: React.CSSProperties;
 
+    /** inverse styles for radios */
+    inverseStyle?: boolean;
+
     /** childrens must be a Radio Component */
     children?: Array<React.ReactElement<IRadioProps>> | React.ReactElement<IRadioProps>;
 
@@ -72,6 +75,9 @@ export interface IRadioProps {
 
     /** radio label */
     label?: string;
+
+    /** inverse styles for radios */
+    inverseStyle?: boolean;
 }
 
 // export interface IRadioState{
@@ -268,6 +274,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
                 const value = data[index].value ? data[index].value : `radio${index}`;
                 const label = data[index].label ? data[index].label : value && value.toString() || '';
                 const extraProps: Partial<IRadioProps & {key: number}> = {
+                    inverseStyle: this.props.inverseStyle,
                     key: index,
                     label: data[index].label,
                     name: this.name,
@@ -304,6 +311,7 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
                     name={this.name}
                     onClick={this.onClick({selected, value, label}, data)}
                     spacing={this.props.spacing}
+                    inverseStyle={this.props.inverseStyle}
                     value={value}
                 />
             );
@@ -343,6 +351,9 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
         return Math.random().toString(36).substr(2, 10);
     };
 
+    const inverseRadio = props.inverseStyle ? styles.inverseRadio : '';
+    const inverseChecked = props.inverseStyle && props.selected ? styles.inverseChecked : '';
+
     const disabledStyles = props.disabled ? styles.disabledRadio : '';
     const label = props.label ? props.label : props.value.toString();
     const checkedStyles = !props.selected ? '' : styles.radioChecked;
@@ -351,7 +362,7 @@ export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
                     props.vertical ?
                     {marginBottom: `${props.spacing}px`} :
                     {marginRight: `${props.spacing}px`} : {};
-    const classes = `radio-component ${styles.radio} ${disabledStyles} ${props.className} ${checkedStyles}`;
+    const classes = `radio-component ${styles.radio} ${disabledStyles} ${checkedStyles} ${inverseRadio} ${inverseChecked} ${props.className}`;
 
     const genId = generateId();
 
