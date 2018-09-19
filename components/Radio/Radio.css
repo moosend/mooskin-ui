@@ -65,9 +65,12 @@
     cursor: pointer;
     width: 22px;
     height: 22px;
-    background: #fff;
     border-radius: 50%;
-    border: 1px solid #3F3F3F;
+    border: 1px solid #efefef;
+    background: #efefef;
+}
+
+.inverseChecked input[type='radio'] {
     background: #3F3F3F;
 }
 
