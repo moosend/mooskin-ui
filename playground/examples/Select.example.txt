@@ -11,7 +11,7 @@ class SelectExample extends React.Component {
     render(){
         return (
             <div>
-                <Select onChange={this.onChange} dataLabel="plan" selected="Option1" label="Some label" filterPlaceholder="Type to filter">
+                <Select noDuplicates onChange={this.onChange} dataLabel="plan" selected="Option1" label="Some label" filterPlaceholder="Type to filter">
                     <Option value="option1">Option1</Option>
                     <Option value="option2">Option2</Option>
                     <Option value="option3">Option3</Option>
@@ -20,7 +20,10 @@ class SelectExample extends React.Component {
                 </Select>
                 <br/>
                 <Select onChange={this.onClick} selected="option" dataLabel="plan" description="this one has no filter placeholder (default)">
-                    <Option value="option1">Option1</Option>
+                    <Option value="option1">Same value 1</Option>
+                    <Option value="option1">Same value 2</Option>
+                    <Option value="option1">Same value 3</Option>
+                    <Option value="option1">Same value 4</Option>
                 </Select>
                 <br/>
                 <Select onChange={this.onChange} dataLabel="plan" label="Some label" description="Empty Select" />
@@ -32,7 +35,7 @@ class SelectExample extends React.Component {
         console.log(e.target);
     }
 
-    onClick(e) {
-        console.log(e.target);
+    onClick(e, data) {
+        console.log(data.value);
     };
 }
