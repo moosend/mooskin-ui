@@ -86,6 +86,9 @@ export interface IProps {
     /** override input class */
     className?: string;
 
+    /** numberType */
+    numberType?: 'integer' | 'float';
+
     /** extra html attributes */
     extraHtmlAttr?: {[key: string]: any};
 
@@ -125,6 +128,7 @@ class Input extends React.Component<IProps, IInputState> {
         className: '',
         closeOnTagAdd: true,
         iconPosition: 'right',
+        numberType: 'float',
         style: {}
     };
 
@@ -144,6 +148,9 @@ class Input extends React.Component<IProps, IInputState> {
 
     componentDidMount(){
         this.setMinMaxValues();
+        // this.input.addEventListener('input', () => {
+        //     this.input.value = this.props.value;
+        // });
     }
 
     render(){
@@ -191,6 +198,7 @@ class Input extends React.Component<IProps, IInputState> {
         const disabledInput = disabled ? styles.disabledInput : '';
 
         const value = type === 'number' ? this.props.value as number : this.props.value;
+        const inputType = type === 'number' ? 'text' : type;
 
         if (divType){
             return (
@@ -215,7 +223,7 @@ class Input extends React.Component<IProps, IInputState> {
                             ref={(input) => this.input = input}
                             onChange={this.onChange}
                             id={this.id}
-                            type={type}
+                            type={inputType}
                             name={this.props.name}
                             value={value}
                             placeholder={placeholder}
@@ -241,23 +249,33 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        let returnValue = this.props.type === 'number' ? e.target.valueAsNumber : e.target.value;
-        if (this.props.minmax){
-            const {min, max} = this.getMinMaxConfig();
-            if (max && e.target.valueAsNumber > max){
-                returnValue = this.getNumberValue(e.target.valueAsNumber);
+        let returnValue: string | number = e.target.value;
+        if (this.props.numberType === 'integer'){
+            returnValue = returnValue.replace(/\./g, '');
+        }
+        if (this.props.type === 'number' && returnValue.charAt(returnValue.length - 1) !== '.'){
+            returnValue = parseFloat(returnValue);
+            if (this.props.minmax){
+                const {max} = this.getMinMaxConfig();
+                if (max && parseFloat(e.target.value) > max){
+                    returnValue = this.getNumberValue(parseFloat(returnValue.toString()));
+                }
+            }
+            if (isNaN(returnValue)){
+                returnValue = '';
             }
         }
-        // if (this.props.type === 'number' && this.props.minmax && isNaN(returnValue as number)){
-        //     returnValue = this.props.minmax[0];
-        // }
+        this.callItBack(e, returnValue);
+    }
+
+    callItBack = (e: React.ChangeEvent<HTMLInputElement>, value: string | number) => {
         !this.props.disabled &&
         this.props.onChange &&
-        this.props.onChange(e, {value: returnValue, dataLabel: this.props.dataLabel});
+        this.props.onChange(e, {value, dataLabel: this.props.dataLabel});
         if (this.props.status){
             this.props.validate &&
             this.props.validate(
-                {value: returnValue, dataLabel: this.props.dataLabel, required: this.props.required}
+                {value, dataLabel: this.props.dataLabel, required: this.props.required}
             );
         }
     }
@@ -292,7 +310,10 @@ class Input extends React.Component<IProps, IInputState> {
 
     setMinMaxValues = () => {
         if (this.props.type === 'number' && this.props.minmax){
-            const returnValue = this.getNumberValue(this.props.value as number);
+            let returnValue: string | number = this.getNumberValue(parseFloat(this.props.value.toString()));
+            if (isNaN(returnValue)){
+                returnValue = '';
+            }
             !this.props.disabled &&
             this.props.onChange &&
             this.props.onChange({} as any, {value: returnValue, dataLabel: this.props.dataLabel});
@@ -319,9 +340,6 @@ class Input extends React.Component<IProps, IInputState> {
 
     getNumberValue = (value: number) => {
         if (this.props.minmax){
-            if (isNaN(value)){
-                return this.props.minmax[0];
-            }
             const {min, max} = this.getMinMaxConfig();
             if (min && value < min){
                 return min;
