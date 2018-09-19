@@ -47,6 +47,7 @@ class CheckBoxExample extends React.Component {
                 <CheckboxGroup
                     horizontal
                     onChange={this.onChange}
+                    inverseStyle
                     title="Horizontal checkboxes"
                     selectedChecks={this.state.value2}
                 >

@@ -46,6 +46,9 @@ export interface ICheckBoxGroupProps {
     /** childrens must be a Checkbox Component */
     children?: Array<React.ReactElement<ICheckBoxProps>> | React.ReactElement<ICheckBoxProps>;
 
+    /** inverse styles for checkboxes */
+    inverseStyle?: boolean;
+
     /** Callback that fires when Checkbox Group state changes */
     onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
@@ -88,6 +91,9 @@ export interface ICheckBoxProps {
 
     /** status of the checkbox, error or success (inherited from parent) */
     status?: 'error' | 'success';
+
+    /** inverse styles for checkboxes */
+    inverseStyle?: boolean;
 
     /** Checkbox description */
     description?: string;
@@ -210,6 +216,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                 const extraProps: Partial<ICheckBoxProps & {key: number}> = {
                     checked: data[index].checked,
                     horizontal: this.props.horizontal,
+                    inverseStyle: this.props.inverseStyle,
                     key: index,
                     label: data[index].label,
                     name: this.name,
@@ -246,6 +253,7 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
                     onClick={this.onClick({checked, value, label: check.label}, data)}
                     spacing={this.props.spacing}
                     status={this.props.status}
+                    inverseStyle={this.props.inverseStyle}
                     value={value}
                 />
             );
@@ -319,7 +327,9 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
         };
     };
 
-    const checkmarkDisplay = props.checked ? styles.transparentCheckmark : '';
+    const checkmarkDisplay = props.checked && !props.inverseStyle ? styles.transparentCheckmark : '';
+    const inverseCheckbox = props.inverseStyle ? styles.inverseCheckbox : '';
+    const inverseTick = props.inverseStyle ? styles.inverseTick : '';
 
     return (
         <div
@@ -338,8 +348,8 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 className={`material-icons`}
             />
             <label htmlFor={genId}>
-                <span className={`${styles.checkmark} ${checkmarkDisplay}`} />
-                {props.checked && <span className={styles.checkboxTick} />}
+                <span className={`${styles.checkmark} ${checkmarkDisplay} ${inverseCheckbox}`} />
+                {props.checked && <span className={`${styles.checkboxTick} ${inverseTick}`} />}
                 <span className={styles.label}>{label}</span>
             </label>
             <br/>

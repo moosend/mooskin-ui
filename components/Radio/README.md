@@ -158,6 +158,7 @@ This can be used in various situations and combinations, for an enhanced develop
 * `vertical` - vertical styled radios (default is horizontal)
 * `spacing` - space between radios
 * `style` - element style
+* `inverseStyle` - inverse styles for radios
 * `title` - optional title for the radio group
 
 ## Supported attributes for Radio
