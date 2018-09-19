@@ -35,12 +35,29 @@
     left: 7px;
     top: 4px;
     width: 6px;
-    height: 9px;
+    height: 10px;
     border: solid #575757;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+.inverseCheckbox {
+    background: #3F3F3F;
+}
+
+.inverseTick {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+}
+
+.checkbox label:hover > .inverseCheckbox {
+    background-color: #3F3F3F;
+}
+
+.checkbox input:checked ~ label:hover > .inverseCheckbox {
+    background-color: #3F3F3F;
 }
 
 .transparentCheckmark {

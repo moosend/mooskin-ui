@@ -2,7 +2,7 @@
 
 exports[`Radio renders Radio correctly 1`] = `
 <div
-  className="radio-component radio disabledRadio myClass radioChecked"
+  className="radio-component radio disabledRadio radioChecked   myClass"
   style={
     Object {
       "color": "blue",
@@ -98,7 +98,7 @@ exports[`Radio renders RadioGroup correctly 1`] = `
         vertical={true}
       >
         <div
-          className="radio-component radio   radioChecked"
+          className="radio-component radio  radioChecked   "
           style={
             Object {
               "marginBottom": "10px",
@@ -136,7 +136,7 @@ exports[`Radio renders RadioGroup correctly 1`] = `
         vertical={true}
       >
         <div
-          className="radio-component radio   "
+          className="radio-component radio     "
           style={
             Object {
               "marginBottom": "10px",
@@ -174,7 +174,7 @@ exports[`Radio renders RadioGroup correctly 1`] = `
         vertical={true}
       >
         <div
-          className="radio-component radio   "
+          className="radio-component radio     "
           style={
             Object {
               "marginBottom": "10px",
