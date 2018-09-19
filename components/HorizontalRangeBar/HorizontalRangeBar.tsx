@@ -46,12 +46,14 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         }
 
         const containerStyle = {
-            width: currentPercentage + '%',
+            height: this.props.height,
+            width: currentPercentage + '%'
         };
 
         const barStyle = {
+            // background: this.props.progress > 0 ? this.props.background : 'initial',
             background: this.props.background,
-            borderRadius: 4,
+            borderRadius: 3,
             height: this.props.height
         };
 
@@ -61,7 +63,8 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
                     className={`loader-bar ${styles.loader}`}
                     style={containerStyle}
                 >
-                    <div className={`loader-text ${styles.label}`} style={barStyle}>{progress}</div>
+                    <div className={`loader-text ${styles.label} ${styles.number}`}>{progress}</div>
+                    <div style={barStyle}/>
                     {this.renderAdditionalBars()}
                 </div>
             </div>
@@ -74,9 +77,13 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         let right = 0;
 
         const style = {
-            borderBottomRightRadius: 4,
-            borderTopRightRadius: 4,
-            padding: 5
+            borderBottomRightRadius: 3,
+            borderTopRightRadius: 3,
+            bottom: 0,
+            color: '#414141',
+            padding: 5,
+            right: `${right}%`,
+            top: 0
         };
 
         additionalBars && additionalBars.forEach((bar, i) => {
@@ -88,7 +95,7 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
                 <div
                     className={`loader-text ${styles.label}`}
                     key={i}
-                    style={{position: 'absolute', top: 0, bottom: 0, right: `${right}%`, width: `${width}%`, background: bar.background, ...style}}
+                    style={{position: 'absolute', width: `${width}%`, background: bar.background, ...style}}
                 >
                     {bar.value}
                 </div>

@@ -86,6 +86,9 @@ export interface IProps {
     /** override input class */
     className?: string;
 
+    /** numberType */
+    numberType?: 'integer' | 'float';
+
     /** extra html attributes */
     extraHtmlAttr?: {[key: string]: any};
 
@@ -125,6 +128,7 @@ class Input extends React.Component<IProps, IInputState> {
         className: '',
         closeOnTagAdd: true,
         iconPosition: 'right',
+        numberType: 'float',
         style: {}
     };
 
@@ -140,6 +144,13 @@ class Input extends React.Component<IProps, IInputState> {
             activeDropDown: -1
         };
 
+    }
+
+    componentDidMount(){
+        this.setMinMaxValues();
+        // this.input.addEventListener('input', () => {
+        //     this.input.value = this.props.value;
+        // });
     }
 
     render(){
@@ -186,7 +197,8 @@ class Input extends React.Component<IProps, IInputState> {
         const autocomplete = !this.props.autocomplete ? 'off' : 'on';
         const disabledInput = disabled ? styles.disabledInput : '';
 
-        const value = type === 'number' ? this.getNumberValue(this.props.value as number) : this.props.value;
+        const value = type === 'number' ? this.props.value as number : this.props.value;
+        const inputType = type === 'number' ? 'text' : type;
 
         if (divType){
             return (
@@ -211,7 +223,7 @@ class Input extends React.Component<IProps, IInputState> {
                             ref={(input) => this.input = input}
                             onChange={this.onChange}
                             id={this.id}
-                            type={type}
+                            type={inputType}
                             name={this.props.name}
                             value={value}
                             placeholder={placeholder}
@@ -237,19 +249,39 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const returnValue = this.props.type === 'number' ? this.getNumberValue(e.target.valueAsNumber) : e.target.value;
+        let returnValue: string | number = e.target.value;
+        if (this.props.numberType === 'integer'){
+            returnValue = returnValue.replace(/\./g, '');
+        }
+        if (this.props.type === 'number' && returnValue.charAt(returnValue.length - 1) !== '.'){
+            returnValue = parseFloat(returnValue);
+            if (this.props.minmax){
+                const {max} = this.getMinMaxConfig();
+                if (max && parseFloat(e.target.value) > max){
+                    returnValue = this.getNumberValue(parseFloat(returnValue.toString()));
+                }
+            }
+            if (isNaN(returnValue)){
+                returnValue = '';
+            }
+        }
+        this.callItBack(e, returnValue);
+    }
+
+    callItBack = (e: React.ChangeEvent<HTMLInputElement>, value: string | number) => {
         !this.props.disabled &&
         this.props.onChange &&
-        this.props.onChange(e, {value: returnValue, dataLabel: this.props.dataLabel});
+        this.props.onChange(e, {value, dataLabel: this.props.dataLabel});
         if (this.props.status){
             this.props.validate &&
             this.props.validate(
-                {value: returnValue, dataLabel: this.props.dataLabel, required: this.props.required}
+                {value, dataLabel: this.props.dataLabel, required: this.props.required}
             );
         }
     }
 
     validateOnBlur = () => {
+        this.setMinMaxValues();
         this.props.validate &&
         this.props.validate({value: this.props.value, dataLabel: this.props.dataLabel, required: this.props.required});
     }
@@ -276,13 +308,22 @@ class Input extends React.Component<IProps, IInputState> {
         }
     }
 
-    getNumberValue = (value: number) => {
-        if (isNaN(value)){
-            return 0;
+    setMinMaxValues = () => {
+        if (this.props.type === 'number' && this.props.minmax){
+            let returnValue: string | number = this.getNumberValue(parseFloat(this.props.value.toString()));
+            if (isNaN(returnValue)){
+                returnValue = '';
+            }
+            !this.props.disabled &&
+            this.props.onChange &&
+            this.props.onChange({} as any, {value: returnValue, dataLabel: this.props.dataLabel});
         }
+    }
+
+    getMinMaxConfig = () => {
+        let min;
+        let max;
         if (this.props.minmax){
-            let min;
-            let max;
             if (this.props.minmax.length > 2) {
                 throw new Error(`Prop 'minmax' has more values than expected!`);
             } else if (this.props.minmax.length === 0) {
@@ -293,6 +334,13 @@ class Input extends React.Component<IProps, IInputState> {
                 min = this.props.minmax && this.props.minmax[0];
                 max = this.props.minmax && this.props.minmax[1];
             }
+        }
+        return {min, max};
+    }
+
+    getNumberValue = (value: number) => {
+        if (this.props.minmax){
+            const {min, max} = this.getMinMaxConfig();
             if (min && value < min){
                 return min;
             } else if (max && value > max) {

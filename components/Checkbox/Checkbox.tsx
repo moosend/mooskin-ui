@@ -327,8 +327,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
         };
     };
 
-    const checkmarkDisplay = props.checked && !props.inverseStyle ? styles.transparentCheckmark : '';
-    const inverseCheckbox = props.inverseStyle ? styles.inverseCheckbox : '';
+    const checkmarkDisplay = props.checked ? props.inverseStyle ? styles.inverseCheckbox : styles.transparentCheckmark : '';
     const inverseTick = props.inverseStyle ? styles.inverseTick : '';
 
     return (
@@ -348,7 +347,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 className={`material-icons`}
             />
             <label htmlFor={genId}>
-                <span className={`${styles.checkmark} ${checkmarkDisplay} ${inverseCheckbox}`} />
+                <span className={`${styles.checkmark} ${checkmarkDisplay}`} />
                 {props.checked && <span className={`${styles.checkboxTick} ${inverseTick}`} />}
                 <span className={styles.label}>{label}</span>
             </label>
