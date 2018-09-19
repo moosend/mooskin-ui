@@ -20,7 +20,7 @@ class HorizontalRangeBarExample extends React.Component {
                 <HorizontalRangeBar progress={this.state.progress} background="#f2c14a" additionalBars={[{value: 10, background: '#e0723c'}]}/><br/>
                 <HorizontalRangeBar progress={this.state.progress} range={[0, 1000]} background={'green'}/><br/>
                 <HorizontalRangeBar progress={this.state.progress} range={[0, 500]} background={'red'}/><br/>
-                <HorizontalRangeBar progress={this.state.progress} range={[0, 50]} background={'blue'}/><br/>
+                <HorizontalRangeBar progress={0} range={[0, 50]} background={'blue'}/><br/>
 
                 <Button onClick={this.onClickStartInterval}>Start Race</Button>
                 <Button onClick={this.onClickStopInterval}>Stop Race</Button>

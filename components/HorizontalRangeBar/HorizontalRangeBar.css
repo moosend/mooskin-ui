@@ -8,10 +8,17 @@
 }
 
 .label{
-    padding:5px;
-    font-size: 16px;
-    font-size: 1rem;
+    font-size: 14px;
+    /* font-size: 1rem; */
     text-align: left;
     display: flex;
     align-items: center;
+}
+
+.number {
+    color: #414141;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
 }

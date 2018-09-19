@@ -55,6 +55,9 @@ export interface ISelectProps {
     /** filter placeholder text */
     filterPlaceholder?: string;
 
+    /** prevent duplicate options to the Select */
+    noDuplicates?: boolean;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -105,7 +108,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     render(){
 
-        if (!this.validateChildren()){
+        if (this.props.noDuplicates && !this.validateChildren()){
             throw new Error('Can not have two options with same values!');
         }
 
