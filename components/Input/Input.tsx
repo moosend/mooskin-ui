@@ -142,6 +142,10 @@ class Input extends React.Component<IProps, IInputState> {
 
     }
 
+    componentDidMount(){
+        this.setMinMaxValues();
+    }
+
     render(){
 
         const {
@@ -186,7 +190,7 @@ class Input extends React.Component<IProps, IInputState> {
         const autocomplete = !this.props.autocomplete ? 'off' : 'on';
         const disabledInput = disabled ? styles.disabledInput : '';
 
-        const value = type === 'number' ? this.getNumberValue(this.props.value as number) : this.props.value;
+        const value = type === 'number' ? this.props.value as number : this.props.value;
 
         if (divType){
             return (
@@ -237,7 +241,16 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const returnValue = this.props.type === 'number' ? this.getNumberValue(e.target.valueAsNumber) : e.target.value;
+        let returnValue = this.props.type === 'number' ? e.target.valueAsNumber : e.target.value;
+        if (this.props.minmax){
+            const {min, max} = this.getMinMaxConfig();
+            if (max && e.target.valueAsNumber > max){
+                returnValue = this.getNumberValue(e.target.valueAsNumber);
+            }
+        }
+        // if (this.props.type === 'number' && this.props.minmax && isNaN(returnValue as number)){
+        //     returnValue = this.props.minmax[0];
+        // }
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange(e, {value: returnValue, dataLabel: this.props.dataLabel});
@@ -250,6 +263,7 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     validateOnBlur = () => {
+        this.setMinMaxValues();
         this.props.validate &&
         this.props.validate({value: this.props.value, dataLabel: this.props.dataLabel, required: this.props.required});
     }
@@ -276,13 +290,19 @@ class Input extends React.Component<IProps, IInputState> {
         }
     }
 
-    getNumberValue = (value: number) => {
-        if (isNaN(value)){
-            return 0;
+    setMinMaxValues = () => {
+        if (this.props.type === 'number' && this.props.minmax){
+            const returnValue = this.getNumberValue(this.props.value as number);
+            !this.props.disabled &&
+            this.props.onChange &&
+            this.props.onChange({} as any, {value: returnValue, dataLabel: this.props.dataLabel});
         }
+    }
+
+    getMinMaxConfig = () => {
+        let min;
+        let max;
         if (this.props.minmax){
-            let min;
-            let max;
             if (this.props.minmax.length > 2) {
                 throw new Error(`Prop 'minmax' has more values than expected!`);
             } else if (this.props.minmax.length === 0) {
@@ -293,6 +313,16 @@ class Input extends React.Component<IProps, IInputState> {
                 min = this.props.minmax && this.props.minmax[0];
                 max = this.props.minmax && this.props.minmax[1];
             }
+        }
+        return {min, max};
+    }
+
+    getNumberValue = (value: number) => {
+        if (this.props.minmax){
+            if (isNaN(value)){
+                return this.props.minmax[0];
+            }
+            const {min, max} = this.getMinMaxConfig();
             if (min && value < min){
                 return min;
             } else if (max && value > max) {

@@ -67,7 +67,7 @@ class InputExample extends React.Component {
             <div>
                 <Input icon="check" value={this.state.value} dataLabel='value' type="text" name="olala" onChange={this.onChange} personalizationTags={personalizationTags} emoji type="text" placeholder="max length 5" label="Some label:"/>
                 <br/>
-                <Input value={this.state.valueAsNumber} minmax={[10, 213]} dataLabel='valueAsNumber' type="number" onChange={this.onChange} label="Number only:"/>
+                <Input value={this.state.valueAsNumber} minmax={[32]} dataLabel='valueAsNumber' type="number" onChange={this.onChange} label="Number only:"/>
                 <br/>
                 <Input
                     onChange={this.onChange}

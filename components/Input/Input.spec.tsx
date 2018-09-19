@@ -239,6 +239,12 @@ describe('Input', () => {
 
         component.setProps({value});
 
+        expect(component.prop('value')).toEqual(7);
+
+        component.find('input').simulate('blur');
+
+        component.setProps({value});
+
         expect(component.prop('value')).toEqual(32);
 
         component.find('input').simulate('change', { target: { valueAsNumber: 99 }});
