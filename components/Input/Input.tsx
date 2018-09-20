@@ -262,7 +262,8 @@ class Input extends React.Component<IProps, IInputState> {
                 }
             }
             if (isNaN(returnValue)){
-                returnValue = '';
+                this.input.value = this.props.value;
+                return;
             }
         }
         this.callItBack(e, returnValue);
@@ -310,10 +311,10 @@ class Input extends React.Component<IProps, IInputState> {
 
     setMinMaxValues = () => {
         if (this.props.type === 'number' && this.props.minmax){
-            let returnValue: string | number = this.getNumberValue(parseFloat(this.props.value.toString()));
-            if (isNaN(returnValue)){
-                returnValue = '';
-            }
+            const returnValue: string | number = this.getNumberValue(parseFloat(this.props.value.toString()));
+            // if (isNaN(returnValue)){
+            //     returnValue = '';
+            // }
             !this.props.disabled &&
             this.props.onChange &&
             this.props.onChange({} as any, {value: returnValue, dataLabel: this.props.dataLabel});
