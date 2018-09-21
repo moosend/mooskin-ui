@@ -148,7 +148,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         );
     }
 
-    onChange = (date: moment.Moment;) => {
+    onChange = (date: moment.Moment) => {
         const value = this.props.dateOnly ? moment(date).startOf('day') :
                     moment(date);
         !this.props.disabled &&
