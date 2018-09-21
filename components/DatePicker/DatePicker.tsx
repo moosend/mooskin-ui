@@ -86,6 +86,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         return {date: DatePicker.setDate(nextProps)};
     }
 
+    // inputMoment: HTMLDivElement;
+
     constructor(props: IDateProps){
         super(props);
 
@@ -94,6 +96,10 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             displayPicker: false
         };
     }
+
+    // componentDidMount(){
+    //     const inputMoment = this.inputMoment.getElementsByClassName('m-input-moment') || <div/>;
+    // }
 
     render(){
         return this.renderDatePicker();
@@ -129,7 +135,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         onBlur={this.validateOnBlur}
                     />
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
-                    <div className={styles.calendar} style={{display: displayPicker}}>
+                    <div className={styles.calendar} style={{display: displayPicker}} ref={(inputMoment) => this.inputMoment = inputMoment}>
                         <InputMoment
                             moment={this.state.date}
                             onChange={this.onChange}

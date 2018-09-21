@@ -41,7 +41,7 @@ class DatePickerExample extends React.Component {
         );
     }
 
-    onChange(e, data){
+    onChange(data){
         console.log(data.value);
         this.setState({[data.dataLabel]: data.value});
     }
