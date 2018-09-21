@@ -135,7 +135,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         onBlur={this.validateOnBlur}
                     />
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
-                    <div className={styles.calendar} style={{display: displayPicker}} ref={(inputMoment) => this.inputMoment = inputMoment}>
+                    <div className={styles.calendar} style={{display: displayPicker}}>
                         <InputMoment
                             moment={this.state.date}
                             onChange={this.onChange}
