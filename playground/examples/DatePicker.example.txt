@@ -3,11 +3,18 @@ class DatePickerExample extends React.Component {
     constructor(){
         super();
         this.onChange = this.onChange.bind(this);
+        this.onSelectChange = this.onSelectChange.bind(this);
         this.addDay = this.addDay.bind(this);
 
         this.state = {
             date: moment().add(24, 'days'),
-            date2: moment()
+            date2: moment(),
+            dateSelect1: 0,
+            dateSelect2: 0,
+            dateSelect3: 0,
+            dateSelect4: undefined,
+            dateSelect5: undefined,
+            dateSelect6: undefined
         }
     }
     
@@ -16,7 +23,7 @@ class DatePickerExample extends React.Component {
         return(
             <div>
                 <div style={{display: 'flex'}}>
-                    <DatePicker onChange={this.onChange} label={'Select Date:'} dataLabel={'date'} date={this.state.date}/>
+                    <DatePicker nowButton onChange={this.onChange} label={'Select Date:'} dataLabel={'date'} date={this.state.date}/>
                     <Button style={{marginLeft: 6, alignSelf: 'center'}} onClick={this.addDay}>Add day</Button>
                 </div>
                 <br/>
@@ -24,17 +31,17 @@ class DatePickerExample extends React.Component {
                 <br/>
                 <DatePicker date={moment().add(45, 'days')} format={'D / M / Y'} onChange={this.onChange}/>
                 <br/>
-                <DateSelect onChange={this.onChange} format="12-Hour" value={0} type="hour" label="Hour (12H)" />
+                <DateSelect dataLabel={'dateSelect1'} onChange={this.onSelectChange} format="12-Hour" value={this.state.dateSelect1} type="hour" label="Hour (12H)" />
                 <br/>
-                <DateSelect onChange={this.onChange} format="24-Hour" value={0} type="hour" label="Hour (24H)" />
+                <DateSelect dataLabel={'dateSelect2'} onChange={this.onSelectChange} format="24-Hour" value={this.state.dateSelect2} type="hour" label="Hour (24H)" />
                 <br/>
-                <DateSelect onChange={this.onChange} value={0} type="minute" label="Minute" />
+                <DateSelect dataLabel={'dateSelect3'} onChange={this.onSelectChange} value={this.state.dateSelect3} type="minute" label="Minute" />
                 <br/>
-                <DateSelect onChange={this.onChange} placeholder="Select a day of the month" description="Description goes here" format="1" type="month" label="Day" />
+                <DateSelect dataLabel={'dateSelect4'} onChange={this.onSelectChange} value={this.state.dateSelect4} placeholder="Select a day of the month" description="Description goes here" format="1" type="month" label="Day" />
                 <br/>
-                <DateSelect onChange={this.onChange} type="week" />
+                <DateSelect dataLabel={'dateSelect5'} onChange={this.onSelectChange} value={this.state.dateSelect5} type="week" />
                 <br/>
-                <DateSelect onChange={this.onChange} type="ordinal" />
+                <DateSelect dataLabel={'dateSelect6'} onChange={this.onSelectChange} value={this.state.dateSelect6} type="ordinal" />
                 <br/>
                 <DatePicker disabled/>
             </div>
@@ -43,6 +50,11 @@ class DatePickerExample extends React.Component {
 
     onChange(data){
         console.log(data.value);
+        this.setState({[data.dataLabel]: data.value});
+    }
+
+    onSelectChange(e, data){
+        console.log(data.value, data.dataLabel);
         this.setState({[data.dataLabel]: data.value});
     }
 

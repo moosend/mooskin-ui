@@ -199,7 +199,7 @@ class FormExample extends React.Component {
                             onChange={this.getDate}
                             dataLabel="start"
                             label={'Available to start:'}
-                            date={this.state.start.value}
+                            date={this.state.start}
                         />
                         <FileUpload
                             dataLabel="logo"

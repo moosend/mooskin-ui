@@ -5,10 +5,11 @@ import styles from './DatePicker.css';
 import 'input-moment/dist/input-moment.css';
 
 import InputMoment from 'input-moment';
-import moment from 'moment';
+import moment, { Moment } from 'moment';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
+import Button from '../Button';
 import Select, {Option} from '../Select';
 
 export interface IDateProps{
@@ -49,6 +50,9 @@ export interface IDateProps{
     /** status of the input, error or success */
     status?: 'error' | 'success';
 
+    /** Add now button to the Datepicker */
+    nowButton?: boolean;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -63,7 +67,7 @@ export interface IDateProps{
 }
 
 export interface IDateState{
-    date: moment.Moment;
+    // date: moment.Moment;
     displayPicker: boolean;
 }
 
@@ -75,37 +79,32 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         style: {}
     };
 
-    static setDate = (props: IDateProps) => {
-        if (props.dateOnly){
-            return moment(props.date).startOf('day') || moment().startOf('day');
-        }
-        return moment(props.date) || moment();
-    }
+    // static setDate = (props: IDateProps) => {
+    //     if (props.dateOnly){
+    //         return moment(props.date).startOf('day') || moment().startOf('day');
+    //     }
+    //     return moment(props.date) || moment();
+    // }
 
-    static getDerivedStateFromProps(nextProps: IDateProps){
-        return {date: DatePicker.setDate(nextProps)};
-    }
-
-    // inputMoment: HTMLDivElement;
+    // static getDerivedStateFromProps(nextProps: IDateProps){
+    //     return {date: DatePicker.setDate(nextProps)};
+    // }
 
     constructor(props: IDateProps){
         super(props);
 
         this.state = {
-            date: DatePicker.setDate(this.props),
+            // date: DatePicker.setDate(this.props),
             displayPicker: false
         };
     }
-
-    // componentDidMount(){
-    //     const inputMoment = this.inputMoment.getElementsByClassName('m-input-moment') || <div/>;
-    // }
 
     render(){
         return this.renderDatePicker();
     }
 
     renderDatePicker = () => {
+
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
         const disabledClasses = !this.props.disabled ? '' : styles.disabled;
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
@@ -126,7 +125,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 <div className={styles.wrapper}>
                     <input
                         readOnly
-                        value={moment(this.state.date).format(this.props.format)}
+                        value={moment(this.props.date || moment()).format(this.props.format)}
                         onClick={this.toggle}
                         className={`${styles.dateInput} ${disabledClasses} ${status}`}
                         required={this.props.required}
@@ -137,10 +136,11 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                     <div className={styles.calendar} style={{display: displayPicker}}>
                         <InputMoment
-                            moment={this.state.date}
+                            moment={this.props.date || moment()}
                             onChange={this.onChange}
                             onSave={this.toggle}
                         />
+                        {this.props.nowButton && this.renderNowButton()}
                         <div className={styles.cover} onClick={this.toggle}/>
                     </div>
                 </div>
@@ -148,9 +148,9 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         );
     }
 
-    onChange = (date: any) => {
-        const value = this.props.dateOnly ? moment(this.state.date).startOf('day') :
-                    moment(this.state.date);
+    onChange = (date: moment.Moment;) => {
+        const value = this.props.dateOnly ? moment(date).startOf('day') :
+                    moment(date);
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value, dataLabel: this.props.dataLabel});
@@ -160,7 +160,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 {value, dataLabel: this.props.dataLabel, required: this.props.required}
             );
         }
-        this.setState({date: value});
+        // this.setState({date: value});
     }
 
     toggle = () => {
@@ -206,6 +206,14 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             this.props.dateOnly ? elements[index].style.display = 'none' :
             elements[index].style.display = 'inline-block';
         }
+    }
+
+    renderNowButton = () => {
+        return (
+            <div style={{display: 'flex', justifyContent: 'center', background: '#fff', padding: 10}}>
+                <Button onClick={() => this.onChange(moment())}>Now</Button>
+            </div>
+        );
     }
 
 }

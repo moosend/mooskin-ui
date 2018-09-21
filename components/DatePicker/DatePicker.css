@@ -74,8 +74,16 @@
 
 :global(.datepicker-component .m-input-moment .tabs){
     margin: 0;
-    height: 285px;
+    /* height: 285px; */
     padding: 0 !important;
+}
+
+:global(.m-input-moment .tabs .m-calendar){
+    height: unset;
+}
+
+:global(.m-input-moment .tabs .m-time){
+    height: unset;
 }
 
 :global(.datepicker-component .m-input-moment .options){
