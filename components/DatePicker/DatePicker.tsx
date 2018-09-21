@@ -5,7 +5,7 @@ import styles from './DatePicker.css';
 import 'input-moment/dist/input-moment.css';
 
 import InputMoment from 'input-moment';
-import moment, { Moment } from 'moment';
+import moment from 'moment';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
@@ -149,8 +149,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
     onChange = (date: moment.Moment) => {
-        const value = this.props.dateOnly ? moment(date).startOf('day') :
-                    moment(date);
+        const value = this.props.dateOnly ? moment(date).startOf('day') : moment(date);
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value, dataLabel: this.props.dataLabel});
