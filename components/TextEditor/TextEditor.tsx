@@ -733,6 +733,7 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
         <div
             className={`${styles.customContainer}`}
             onClick={props.onClick}
+            title="Personalization Tags"
         >
             <div className={styles.tagsLabel}>
                 <img src={hashtag} style={{verticalAlign: 'text-top'}} alt=""/>

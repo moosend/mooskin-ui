@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import loaderImage from '../../assets/images/loader/loader.png';
+// import loaderImage from '../../assets/images/loader/loader.png';
 
 import styles from './Loader.css';
 

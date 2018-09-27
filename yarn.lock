@@ -6120,7 +6120,7 @@ react-dom@^16.0.3:
 
 "react-draft-wysiwyg@https://github.com/donibehrami/react-draft-wysiwyg.git":
   version "1.12.13"
-  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#58003c4fd9e23b6b00f8a4bd74fd2afd04bc7c62"
+  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#0b740fa9634acce3fa7051ced46c5d6bd55da355"
   dependencies:
     classnames "^2.2.5"
     draftjs-utils "^0.9.3"
