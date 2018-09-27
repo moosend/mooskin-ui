@@ -23,11 +23,11 @@ class DatePickerExample extends React.Component {
         return(
             <div>
                 <div style={{display: 'flex'}}>
-                    <DatePicker nowButton onChange={this.onChange} label={'Select Date:'} dataLabel={'date'} date={this.state.date}/>
+                    <DatePicker preventPast nowButton onChange={this.onChange} label={'Select Date:'} dataLabel={'date'} date={this.state.date}/>
                     <Button style={{marginLeft: 6, alignSelf: 'center'}} onClick={this.addDay}>Add day</Button>
                 </div>
                 <br/>
-                <DatePicker description="some description" onChange={this.onChange} format={'DD MMM YYYY'} label={'Date only:'} dateOnly dataLabel={'date2'} date={this.state.date2}/>
+                <DatePicker preventPast description="some description" onChange={this.onChange} format={'DD MMM YYYY'} label={'Date only:'} dateOnly dataLabel={'date2'} date={this.state.date2}/>
                 <br/>
                 <DatePicker date={moment().add(45, 'days')} format={'D / M / Y'} onChange={this.onChange}/>
                 <br/>

@@ -170,7 +170,7 @@
     max-height: 400px;
     overflow-y: auto;
     width: 250px;
-    padding: 5px;
+    /* padding: 5px; */
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -184,8 +184,7 @@
 }
 
 .tag {
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding: 3px 5px;
 }
 
 .dropDownContent > .tag:not(:last-child) {

@@ -62,6 +62,10 @@
     left: 0px;
 }
 
+.disabledCell {
+    background: #efefef;
+}
+
 :global(.datepicker-component .m-input-moment){
     background-color: #ffffff;
     user-select: none;
