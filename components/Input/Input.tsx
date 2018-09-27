@@ -102,7 +102,7 @@ export interface IProps {
     status?: 'error' | 'success';
 
     /** add custom dropdown */
-    customDropdown?: ICustomDropdown | ICustomDropdown[];
+    customDropdowns?: ICustomDropdown | ICustomDropdown[];
 
     /** adds clipboardButton to the input component and assigns a label */
     clipboardButton?: string;
@@ -123,8 +123,9 @@ export interface IProps {
 
 export interface ICustomDropdown {
     icon: string;
-    label: string;
+    title: string;
     content: JSX.Element | Element | JSX.Element[] | Element[];
+    open?: boolean;
 }
 
 export interface IInputState{
@@ -248,7 +249,7 @@ class Input extends React.Component<IProps, IInputState> {
                             />
                             <div className={styles.iconContainer}>
                                 {this.getDropDown()}
-                                {icon && this.getIcon()}
+                                {icon && this.getIcon(icon)}
                             </div>
                         </div>
                         {clipboardButton && this.getClipboardButton()}
@@ -368,15 +369,16 @@ class Input extends React.Component<IProps, IInputState> {
         return Math.random().toString(36).substr(2, 10);
     }
 
-    getIcon = () => {
-        const iconFont = this.props.icon && this.getIconContent();
-        const iconStatus = this.getIconStatus();
+    getIcon = (icon: string, dropdown?: boolean) => {
+        const iconFont = icon && this.getIconContent(icon);
+        const iconStatus = !dropdown ? this.getIconStatus() : '';
         const iconPadding = this.props.iconPosition === 'right' ? {paddingLeft: 10} : {paddingRight: 10};
+        const iconSize = dropdown ? {fontSize: 16} : {};
         return (
             <div
                 onClick={this.onIconClick}
                 className={`${styles.icon} ${iconStatus} ${this.props.iconClass}`}
-                style={{...iconPadding, ...this.props.iconStyle}}
+                style={{...iconPadding, ...iconSize, ...this.props.iconStyle}}
             >
                 {iconFont}
             </div>
@@ -394,8 +396,8 @@ class Input extends React.Component<IProps, IInputState> {
         }
     }
 
-    getIconContent = () => {
-        return this.props.icon ? this.props.icon.replace(/\s/g, '_') : '';
+    getIconContent = (icon: string) => {
+        return icon ? icon.replace(/\s/g, '_') : '';
     }
 
     onIconClick = () => {
@@ -422,9 +424,9 @@ class Input extends React.Component<IProps, IInputState> {
     getDropDown = () => {
         let dropdowns = [];
         let i = 0;
-        if (this.props.customDropdown){
-            const {customDropdowns, newIndex} = this.props.customDropdown && this.getCustomDropdowns(i);
-            dropdowns = customDropdowns;
+        if (this.props.customDropdowns){
+            const {newDropdowns, newIndex} = this.props.customDropdowns && this.getCustomDropdowns(i);
+            dropdowns = newDropdowns;
             i = i + newIndex;
             // dropdowns.concat(customDropdowns) && (i = i + newIndex);
         }
@@ -436,36 +438,40 @@ class Input extends React.Component<IProps, IInputState> {
 
     getDropDownIcon = (icon: string, i: number, type: string, custom?: ICustomDropdown) => {
         const display = this.state.activeDropDown === i ? {display: 'block'} : {display: 'none'};
+        const title = custom ? custom.title : type === 'emoji' ? 'Emoji' : type === 'personalization' ? 'Personalization tags' : '';
+        /* tslint:disable */
         return (
             <div
                 className="dropdown-icon"
                 key={i}
                 style={{position: 'relative', display: 'flex', alignItems: 'center'}}
                 onClick={() => this.onDropDownIconClick(i)}
+                title={title}
             >
-                <img className={styles.dropDownIcon} src={icon}/>
+                {custom && custom.icon.includes('mooskin') && this.getIcon(custom.icon.split('-').pop() || '', true) || <img className={styles.dropDownIcon} src={icon}/>}
                 {this.renderDropDown(display, type, custom)}
             </div>
+            /* tslint:enable */
         );
     }
 
     getCustomDropdowns = (index: number) => {
         let newIndex: number = index;
-        const customDropdowns: any[] = [];
-        if (this.props.customDropdown){
-            if (Array.isArray(this.props.customDropdown)){
-                this.props.customDropdown.forEach((dropdown, i) => {
-                    customDropdowns.push(this.getDropDownIcon(dropdown.icon, newIndex + i, dropdown.label, dropdown));
+        const newDropdowns: any[] = [];
+        if (this.props.customDropdowns){
+            if (Array.isArray(this.props.customDropdowns)){
+                this.props.customDropdowns.forEach((dropdown, i) => {
+                    newDropdowns.push(this.getDropDownIcon(dropdown.icon, newIndex + i, dropdown.title, dropdown));
                     newIndex = index + i;
                 });
             } else {
-                customDropdowns.push(this.getDropDownIcon(
-                    this.props.customDropdown.icon, newIndex, this.props.customDropdown.label, this.props.customDropdown
+                newDropdowns.push(this.getDropDownIcon(
+                    this.props.customDropdowns.icon, newIndex, this.props.customDropdowns.title, this.props.customDropdowns
                 ));
                 newIndex = index + 1;
             }
         }
-        return {customDropdowns, newIndex};
+        return {newDropdowns, newIndex};
     }
 
     onDropDownIconClick = (i: number) => {
@@ -477,8 +483,9 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     renderDropDown = (display: React.CSSProperties, type: string, custom?: ICustomDropdown) => {
+        const displayStyle = custom && custom.open ? {display: 'block'} : display;
         return (
-            <div style={display} className={styles.dropDown}>
+            <div style={displayStyle} className={styles.dropDown}>
                 <div className={styles.dropDownArrow} />
                 {type === 'personalization' && this.getPersDropDown()}
                 {type === 'emoji' && this.getEmojis()}
@@ -490,8 +497,8 @@ class Input extends React.Component<IProps, IInputState> {
     renderCustom = (custom: ICustomDropdown) => {
         return (
             <>
-                <div className={styles.dropDownLabel}>{custom.label}</div>
-                <div className={styles.dropDownContent}>
+                <div className={styles.dropDownLabel}>{custom.title}</div>
+                <div className={styles.dropDownContent} style={{width: 'auto'}}>
                     {custom.content}
                 </div>
             </>

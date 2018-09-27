@@ -129,7 +129,6 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 id={this.props.id}
                 className={`datepicker-component ${this.props.className} ${styles.datePicker}`}
                 style={this.props.style}
-                onClick={() => this.forceUpdate()}
             >
                 {this.props.label && <label className={styles.label} style={spacing} >{this.props.label}</label>}
                 <div className={styles.wrapper}>

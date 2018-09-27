@@ -301,14 +301,14 @@ describe('Input', () => {
                 <div key={5}>Content 5</div>
             ],
             icon: 'https://s1.piq.land/2015/10/05/Fix77XEm3n3EfO1dObGIEAnO_400x400.png',
-            label: 'Custom Dropdown',
+            title: 'Custom Dropdown',
         };
 
-        const component = shallow(<Input value="value" customDropdown={customDropdown}/>);
+        const component = shallow(<Input value="value" customDropdowns={customDropdown}/>);
 
         expect(component.find('.dropDown').length).toEqual(1);
 
-        expect(component.find('.dropDownLabel').text()).toEqual(customDropdown.label);
+        expect(component.find('.dropDownLabel').text()).toEqual(customDropdown.title);
 
         expect(component.find('.dropDownContent').prop('children')).toEqual(customDropdown.content);
 
@@ -326,7 +326,7 @@ describe('Input', () => {
                     <div key={5}>Content 5</div>
                 ],
                 icon: 'https://s1.piq.land/2015/10/05/Fix77XEm3n3EfO1dObGIEAnO_400x400.png',
-                label: 'Custom Dropdown 1',
+                title: 'Custom Dropdown 1',
             },
             {
                 content: [
@@ -337,7 +337,7 @@ describe('Input', () => {
                     <div key={5}>Content 5</div>
                 ],
                 icon: 'https://doitgeekly.files.wordpress.com/2016/01/22c04c094e328d92fc7488fc6e2262b3.jpg',
-                label: 'Custom Dropdown 2',
+                title: 'Custom Dropdown 2',
             },
             {
                 content: [
@@ -348,16 +348,16 @@ describe('Input', () => {
                     <div key={5}>Content 5</div>
                 ],
                 icon: 'https://s1.piq.land/2016/02/17/kmeRltKJo5wELTWFipYHl5je_400x400.png',
-                label: 'Custom Dropdown 3',
+                title: 'Custom Dropdown 3',
             }
         ];
 
-        const component = shallow(<Input value="value" customDropdown={multipleDropdowns}/>);
+        const component = shallow(<Input value="value" customDropdowns={multipleDropdowns}/>);
 
         expect(component.find('.dropDown').length).toEqual(3);
 
         multipleDropdowns.forEach((dropdown, i = 1) => {
-            expect(component.find('.dropDownLabel').at(i).text()).toEqual(dropdown.label);
+            expect(component.find('.dropDownLabel').at(i).text()).toEqual(dropdown.title);
 
             expect(component.find('.dropDownContent').at(i).prop('children')).toEqual(dropdown.content);
         });
