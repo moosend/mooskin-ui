@@ -19,54 +19,103 @@ class InputExample extends React.Component {
     render(){
 
         personalizationTags=[
-                            {
-                                label: 'Unsubscribe Link',
-                                value: '#unsubscribeLink#'
-                            },
-                            {
-                                label: 'Update Profile Link',
-                                value: '#updateProfileLink#'
-                            },
-                            {
-                                label: 'Forward to a Friend Link',
-                                value: '#forwardToFriendLink#'
-                            },
-                            {
-                                label: 'Double Opt-in Verification Link',
-                                value: '#VerificationLink#'
-                            },
-                            {
-                                label: 'Account VAT',
-                                value: '#account:vat#'
-                            },
-                            {
-                                label: 'Account Email',
-                                value: '#account:email#'
-                            },
-                            {
-                                label: 'Account Address',
-                                value: '#account:address#'
-                            },
-                            {
-                                label: 'Account Company',
-                                value: '#account:company#'
-                            },
-                            {
-                                label: 'Current Date and Time',
-                                value: '#datetime#'
-                            },
-                            {
-                                label: 'Recipient Name',
-                                value: '#recipient:name#'
-                            },
-                            {
-                                label: 'Recipient Email',
-                                value: '#recipient:email#'
-                            }];
+            {
+                label: 'Unsubscribe Link',
+                value: '#unsubscribeLink#'
+            },
+            {
+                label: 'Update Profile Link',
+                value: '#updateProfileLink#'
+            },
+            {
+                label: 'Forward to a Friend Link',
+                value: '#forwardToFriendLink#'
+            },
+            {
+                label: 'Double Opt-in Verification Link',
+                value: '#VerificationLink#'
+            },
+            {
+                label: 'Account VAT',
+                value: '#account:vat#'
+            },
+            {
+                label: 'Account Email',
+                value: '#account:email#'
+            },
+            {
+                label: 'Account Address',
+                value: '#account:address#'
+            },
+            {
+                label: 'Account Company',
+                value: '#account:company#'
+            },
+            {
+                label: 'Current Date and Time',
+                value: '#datetime#'
+            },
+            {
+                label: 'Recipient Name',
+                value: '#recipient:name#'
+            },
+            {
+                label: 'Recipient Email',
+                value: '#recipient:email#'
+            }
+        ];
+
+        const customDropdown = {
+            icon: 'https://s1.piq.land/2015/10/05/Fix77XEm3n3EfO1dObGIEAnO_400x400.png',
+            label: 'Custom Dropdown',
+            content: [
+                <div key={1}>Content 1</div>,
+                <div key={2}>Content 2</div>,
+                <div key={3}>Content 3</div>,
+                <div key={4}>Content 4</div>,
+                <div key={5}>Content 5</div>
+            ]
+        }
+
+        const multipleDropdowns = [
+            {
+                icon: 'https://s1.piq.land/2015/10/05/Fix77XEm3n3EfO1dObGIEAnO_400x400.png',
+                label: 'Custom Dropdown 1',
+                content: [
+                    <div key={1}>Content 1</div>,
+                    <div key={2}>Content 2</div>,
+                    <div key={3}>Content 3</div>,
+                    <div key={4}>Content 4</div>,
+                    <div key={5}>Content 5</div>
+                ]
+            },
+            {
+                icon: 'https://doitgeekly.files.wordpress.com/2016/01/22c04c094e328d92fc7488fc6e2262b3.jpg',
+                label: 'Custom Dropdown 2',
+                content: [
+                    <div key={1}>Content 1</div>,
+                    <div key={2}>Content 2</div>,
+                    <div key={3}>Content 3</div>,
+                    <div key={4}>Content 4</div>,
+                    <div key={5}>Content 5</div>
+                ]
+            },
+            {
+                icon: 'https://s1.piq.land/2016/02/17/kmeRltKJo5wELTWFipYHl5je_400x400.png',
+                label: 'Custom Dropdown 3',
+                content: [
+                    <div key={1}>Content 1</div>,
+                    <div key={2}>Content 2</div>,
+                    <div key={3}>Content 3</div>,
+                    <div key={4}>Content 4</div>,
+                    <div key={5}>Content 5</div>
+                ]
+            }
+        ];
 
         return(
             <div>
-                <Input icon="check" value={this.state.value} dataLabel='value' type="text" name="olala" onChange={this.onChange} personalizationTags={personalizationTags} emoji type="text" placeholder="max length 5" label="Some label:"/>
+                <Input icon="check" customDropdown={customDropdown} value={this.state.value} dataLabel='value' type="text" name="olala" onChange={this.onChange} personalizationTags={personalizationTags} emoji type="text" placeholder="max length 5" label="Some label:"/>
                 <br/>
                 <Input value={this.state.valueAsNumber} minmax={[10, 213]} dataLabel='valueAsNumber' type="number" onChange={this.onChange} label="Number only:"/>
                 <br/>
@@ -80,7 +129,7 @@ class InputExample extends React.Component {
                     labelTop
                 />
                 <br/>
-                <Input value={this.state.value} onClipboardButtonClick={this.onClipboardButtonClick} clipboardButton="Copy Value" validate={this.validate} icon={this.state.icon} status={this.state.status} description={this.state.message} onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>
+                <Input customDropdown={multipleDropdowns} label={'Multiple Custom Dropdowns'} labelTop value={this.state.value} onClipboardButtonClick={this.onClipboardButtonClick} clipboardButton="Copy Value" validate={this.validate} icon={this.state.icon} status={this.state.status} description={'Random stuff'} onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>
                 <br/>
                 <Input onChange={this.onChange} disabled value="disabled" description="This input is disabled"/>
             </div>

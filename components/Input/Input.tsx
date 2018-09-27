@@ -101,6 +101,9 @@ export interface IProps {
     /** status of the input, error or success */
     status?: 'error' | 'success';
 
+    /** add custom dropdown */
+    customDropdown?: ICustomDropdown | ICustomDropdown[];
+
     /** adds clipboardButton to the input component and assigns a label */
     clipboardButton?: string;
 
@@ -116,6 +119,12 @@ export interface IProps {
     /** callback that is called when the input changes */
     onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 
+}
+
+export interface ICustomDropdown {
+    icon: string;
+    label: string;
+    content: JSX.Element | Element | JSX.Element[] | Element[];
 }
 
 export interface IInputState{
@@ -159,7 +168,6 @@ class Input extends React.Component<IProps, IInputState> {
             style,
             className,
             label,
-            clipboardButton,
             labelTop,
         } = this.props;
 
@@ -173,7 +181,6 @@ class Input extends React.Component<IProps, IInputState> {
             <div className={`input-component ${styles.inputContainer} ${labelPos} ${className}`} style={style}>
                 {label && <label className={inputClasses} style={spacing} htmlFor={this.id}>{label}</label>}
                 {this.renderInput()}
-                {clipboardButton && this.getClipboardButton()}
                 {this.state.activeDropDown !== -1 && <div onClick={this.removeDropDown} className={styles.overlay} />}
             </div>
         );
@@ -182,6 +189,7 @@ class Input extends React.Component<IProps, IInputState> {
     renderInput = () => {
         const {
             autofocus,
+            clipboardButton,
             disabled,
             divType,
             maxlength,
@@ -218,29 +226,32 @@ class Input extends React.Component<IProps, IInputState> {
             const reverse = iconPosition === 'left' && styles.reverse;
             return (
                 <div style={{flex: 1}}>
-                    <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
-                        <input
-                            ref={(input) => this.input = input}
-                            onChange={this.onChange}
-                            id={this.id}
-                            type={inputType}
-                            name={this.props.name}
-                            value={value}
-                            placeholder={placeholder}
-                            minLength={minlength}
-                            maxLength={maxlength}
-                            required={required}
-                            disabled={disabled}
-                            className={styles.input}
-                            autoFocus={autofocus}
-                            autoComplete={autocomplete}
-                            onBlur={this.validateOnBlur}
-                            {...this.props.extraHtmlAttr}
-                        />
-                        <div className={styles.iconContainer}>
-                            {this.getDropDown()}
-                            {icon && this.getIcon()}
+                    <div style={{display: 'flex', flex: 1}}>
+                        <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
+                            <input
+                                ref={(input) => this.input = input}
+                                onChange={this.onChange}
+                                id={this.id}
+                                type={inputType}
+                                name={this.props.name}
+                                value={value}
+                                placeholder={placeholder}
+                                minLength={minlength}
+                                maxLength={maxlength}
+                                required={required}
+                                disabled={disabled}
+                                className={styles.input}
+                                autoFocus={autofocus}
+                                autoComplete={autocomplete}
+                                onBlur={this.validateOnBlur}
+                                {...this.props.extraHtmlAttr}
+                            />
+                            <div className={styles.iconContainer}>
+                                {this.getDropDown()}
+                                {icon && this.getIcon()}
+                            </div>
                         </div>
+                        {clipboardButton && this.getClipboardButton()}
                     </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
@@ -409,15 +420,21 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     getDropDown = () => {
-        const dropdowns = [];
+        let dropdowns = [];
         let i = 0;
+        if (this.props.customDropdown){
+            const {customDropdowns, newIndex} = this.props.customDropdown && this.getCustomDropdowns(i);
+            dropdowns = customDropdowns;
+            i = i + newIndex;
+            // dropdowns.concat(customDropdowns) && (i = i + newIndex);
+        }
         this.props.personalizationTags &&
         dropdowns.push(this.getDropDownIcon(hashtag, i, 'personalization')) && (i = i + 1);
         this.props.emoji && dropdowns.push(this.getDropDownIcon(emojiIcon, i, 'emoji'));
         return dropdowns;
     }
 
-    getDropDownIcon = (icon: string, i: number, type: string) => {
+    getDropDownIcon = (icon: string, i: number, type: string, custom?: ICustomDropdown) => {
         const display = this.state.activeDropDown === i ? {display: 'block'} : {display: 'none'};
         return (
             <div
@@ -427,9 +444,28 @@ class Input extends React.Component<IProps, IInputState> {
                 onClick={() => this.onDropDownIconClick(i)}
             >
                 <img className={styles.dropDownIcon} src={icon}/>
-                {this.renderDropDown(display, type)}
+                {this.renderDropDown(display, type, custom)}
             </div>
         );
+    }
+
+    getCustomDropdowns = (index: number) => {
+        let newIndex: number = index;
+        const customDropdowns: any[] = [];
+        if (this.props.customDropdown){
+            if (Array.isArray(this.props.customDropdown)){
+                this.props.customDropdown.forEach((dropdown, i) => {
+                    customDropdowns.push(this.getDropDownIcon(dropdown.icon, newIndex + i, dropdown.label, dropdown));
+                    newIndex = index + i;
+                });
+            } else {
+                customDropdowns.push(this.getDropDownIcon(
+                    this.props.customDropdown.icon, newIndex, this.props.customDropdown.label, this.props.customDropdown
+                ));
+                newIndex = index + 1;
+            }
+        }
+        return {customDropdowns, newIndex};
     }
 
     onDropDownIconClick = (i: number) => {
@@ -440,13 +476,25 @@ class Input extends React.Component<IProps, IInputState> {
         this.setState({activeDropDown: -1});
     }
 
-    renderDropDown = (display: React.CSSProperties, type: string) => {
+    renderDropDown = (display: React.CSSProperties, type: string, custom?: ICustomDropdown) => {
         return (
             <div style={display} className={styles.dropDown}>
                 <div className={styles.dropDownArrow} />
                 {type === 'personalization' && this.getPersDropDown()}
                 {type === 'emoji' && this.getEmojis()}
+                {custom && this.renderCustom(custom)}
             </div>
+        );
+    }
+
+    renderCustom = (custom: ICustomDropdown) => {
+        return (
+            <>
+                <div className={styles.dropDownLabel}>{custom.label}</div>
+                <div className={styles.dropDownContent}>
+                    {custom.content}
+                </div>
+            </>
         );
     }
 

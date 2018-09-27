@@ -240,8 +240,6 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
         const tdArray: any = tds && Array.from(tds);
 
-        const currentMonth = parseInt(moment().format('M'), 10);
-
         // if (month < currentMonth){
         //     tBody[0].style.background = '#efefef';
         //     tBody[0].style.color = '#999';
@@ -267,9 +265,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 date.style.pointerEvents = 'none';
             } else {
                 date.style.pointerEvents = 'auto';
-                console.log(date.className);
                 date.className = date.className.replace(`${styles.disabledCell}`, '').replace(` ${styles.disabledCell}`, '');
-                console.log(date.className);
             }
         });
         // }
