@@ -37,7 +37,8 @@ export default class Loader extends React.Component<ILoaderProps, {}> {
 
         const display = this.props.active ? '' : styles.hidden;
 
-        const loader = this.props.loader ? this.props.loader : loaderImage;
+        // const loader = this.props.loader ? this.props.loader : loaderImage;
+        const loader = this.props.loader ? this.props.loader : 'https://image.ibb.co/cMfEhU/loader.png';
 
         const animation = this.props.animation ? this.props.animation :
                         styles.animation;
