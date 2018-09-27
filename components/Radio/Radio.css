@@ -78,9 +78,9 @@
     background: #fff;
     content:'';
     display: block;
-    width: 0.45rem;
-    height: 0.45rem;
-    border-radius:50%; 
+    width: 8px;
+    height: 8px;
+    border-radius: 50%; 
 }
 
 .disabledRadio input[type='radio']:disabled {
