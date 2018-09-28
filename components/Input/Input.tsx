@@ -373,12 +373,12 @@ class Input extends React.Component<IProps, IInputState> {
         const iconFont = icon && this.getIconContent(icon);
         const iconStatus = !dropdown ? this.getIconStatus() : '';
         const iconPadding = this.props.iconPosition === 'right' ? {paddingLeft: 10} : {paddingRight: 10};
-        const iconSize = dropdown ? {fontSize: 16} : {};
+        const style = dropdown ? {fontSize: 16, cursor: 'pointer'} : {};
         return (
             <div
                 onClick={this.onIconClick}
                 className={`${styles.icon} ${iconStatus} ${this.props.iconClass}`}
-                style={{...iconPadding, ...iconSize, ...this.props.iconStyle}}
+                style={{...iconPadding, ...style, ...this.props.iconStyle}}
             >
                 {iconFont}
             </div>
