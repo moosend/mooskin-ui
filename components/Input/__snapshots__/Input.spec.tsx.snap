@@ -28,27 +28,36 @@ exports[`Input renders correctly 1`] = `
     }
   >
     <div
-      className="innerDiv undefined false disabledInput"
+      style={
+        Object {
+          "display": "flex",
+          "flex": 1,
+        }
+      }
     >
-      <input
-        autoComplete="on"
-        autoFocus={true}
-        className="input"
-        disabled={true}
-        id="input1"
-        maxLength={50}
-        minLength={10}
-        name="input name"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder="input placeholder"
-        required={true}
-        type="text"
-        value="input value"
-      />
       <div
-        className="iconContainer"
-      />
+        className="innerDiv undefined false disabledInput"
+      >
+        <input
+          autoComplete="on"
+          autoFocus={true}
+          className="input"
+          disabled={true}
+          id="input1"
+          maxLength={50}
+          minLength={10}
+          name="input name"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="input placeholder"
+          required={true}
+          type="text"
+          value="input value"
+        />
+        <div
+          className="iconContainer"
+        />
+      </div>
     </div>
     <i
       className="description undefined"

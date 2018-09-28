@@ -1,6 +1,7 @@
 @import '../_utils/globals/screens.css';
 @import '../_utils/globals/variables.css';
 @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+@import url('https://fonts.googleapis.com/css?family=Convergence');
 
 .datePicker{
     display: flex;
@@ -61,43 +62,121 @@
     left: 0px;
 }
 
+.disabledCell {
+    background: #efefef;
+}
+
 :global(.datepicker-component .m-input-moment){
     background-color: #ffffff;
     user-select: none;
-    height: 355px;
+    /* height: 360px; */
+    padding: 0;
+    width: 300px;
+    border-radius: 0;
+    border: 0;
 }
 
 :global(.datepicker-component .m-input-moment .tabs){
     margin: 0;
+    /* height: 285px; */
+    padding: 0 !important;
+}
+
+:global(.m-input-moment .tabs .m-calendar){
+    height: unset;
+}
+
+:global(.m-input-moment .tabs .m-time){
+    height: unset;
+}
+
+:global(.datepicker-component .m-input-moment .options){
+    margin: 0;
+    border-bottom: 5px solid #EDECED;
+    margin-bottom: -5px;
 }
 
 :global(.datepicker-component .m-input-moment .options button.is-active){
-    background: #5ccdde;
-    color: #fff;
+    background: #EDECED;
+    color: #666;
 }
 
 :global(.datepicker-component .m-input-moment .options button){
-    border: 1px solid #5ccdde;
-    color: #5ccdde;
+    border: 0;
+    color: #C3C3C3;
     margin: 0px;
+    border-radius: 0;
+    height: 40px;
+    font-family: 'Convergence', sans-serif;
+}
+
+:global(.datepicker-component .m-input-moment .options button::before){
+    content: '';
+    margin-left: 0;
+    transform: translate(0, 2px);
+}
+
+:global(.datepicker-component .m-input-moment .options .ion-calendar::before){
+    content: url('../../assets/images/date/calendar_date_icon_faded.png');
+}
+
+:global(.datepicker-component .m-input-moment .options button.is-active.ion-calendar::before){
+    content: url('../../assets/images/date/calendar_date_icon.png');
+}
+
+:global(.datepicker-component .m-input-moment .options .ion-clock::before){
+    content: url('../../assets/images/date/calendar_time_icon_faded.png');
+}
+
+:global(.datepicker-component .m-input-moment .options button.is-active.ion-clock::before){
+    content: url('../../assets/images/date/calendar_time_icon.png');
+}
+
+:global(.datepicker-component .m-calendar tbody td){
+    border: none;
+    border-radius: 3px;
 }
 
 :global(.datepicker-component .m-calendar tbody td:hover){
     background: #5ccdde;
-    border: none;
+}
+
+:global(.datepicker-component .m-calendar .toolbar){
+    background: #5ccdde;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+    height: 45px;
 }
 
 :global(.datepicker-component .m-calendar .toolbar button){
-    border: 1px solid #5ccdde;
-    background: #5ccdde;
+    border: none;
+    background: transparent;
+    margin: 0 5px;
+    height: 100%;
+}
+
+:global(.datepicker-component .m-calendar .toolbar button > *){
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 :global(.datepicker-component .m-calendar thead td){
     color: #5ccdde;
+    border: none;
 }
 
+:global(.datepicker-component .m-calendar table){
+    margin-top: 6px;
+}
+
+
 :global(.datepicker-component .m-calendar .toolbar .current-date){
-    color: #5ccdde;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 :global(.datepicker-component .m-input-moment .btn-save){

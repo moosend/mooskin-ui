@@ -7,7 +7,7 @@ exports[`Loader renders correctly 1`] = `
 >
   <img
     className="image animation"
-    src=""
+    src="https://image.ibb.co/cMfEhU/loader.png"
   />
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`Loader renders non-active Loader correctly 1`] = `
 >
   <img
     className="image animation"
-    src=""
+    src="https://image.ibb.co/cMfEhU/loader.png"
   />
 </div>
 `;
