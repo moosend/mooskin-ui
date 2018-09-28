@@ -9,6 +9,7 @@ import moment from 'moment';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
+import Button from '../Button';
 import Select, {Option} from '../Select';
 
 export interface IDateProps{
@@ -49,6 +50,12 @@ export interface IDateProps{
     /** status of the input, error or success */
     status?: 'error' | 'success';
 
+    /** Add now button to the Datepicker */
+    nowButton?: boolean;
+
+    /** prevent on selection a past date */
+    preventPast?: boolean;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -63,7 +70,7 @@ export interface IDateProps{
 }
 
 export interface IDateState{
-    date: moment.Moment;
+    // date: moment.Moment;
     displayPicker: boolean;
 }
 
@@ -75,22 +82,24 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         style: {}
     };
 
-    static setDate = (props: IDateProps) => {
-        if (props.dateOnly){
-            return moment(props.date).startOf('day') || moment().startOf('day');
-        }
-        return moment(props.date) || moment();
-    }
+    datepicker: any;
 
-    static getDerivedStateFromProps(nextProps: IDateProps){
-        return {date: DatePicker.setDate(nextProps)};
-    }
+    // static setDate = (props: IDateProps) => {
+    //     if (props.dateOnly){
+    //         return moment(props.date).startOf('day') || moment().startOf('day');
+    //     }
+    //     return moment(props.date) || moment();
+    // }
+
+    // static getDerivedStateFromProps(nextProps: IDateProps){
+    //     return {date: DatePicker.setDate(nextProps)};
+    // }
 
     constructor(props: IDateProps){
         super(props);
 
         this.state = {
-            date: DatePicker.setDate(this.props),
+            // date: DatePicker.setDate(this.props),
             displayPicker: false
         };
     }
@@ -100,6 +109,11 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
     renderDatePicker = () => {
+
+        setTimeout(() => {
+            this.props.preventPast && this.preventPast();
+        }, 10);
+
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
         const disabledClasses = !this.props.disabled ? '' : styles.disabled;
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
@@ -120,7 +134,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 <div className={styles.wrapper}>
                     <input
                         readOnly
-                        value={moment(this.state.date).format(this.props.format)}
+                        value={moment(this.props.date || moment()).format(this.props.format)}
                         onClick={this.toggle}
                         className={`${styles.dateInput} ${disabledClasses} ${status}`}
                         required={this.props.required}
@@ -129,12 +143,13 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         onBlur={this.validateOnBlur}
                     />
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
-                    <div className={styles.calendar} style={{display: displayPicker}}>
+                    <div className={styles.calendar} style={{display: displayPicker}} ref={(datepicker) => this.datepicker = datepicker}>
                         <InputMoment
-                            moment={this.state.date}
+                            moment={this.props.date || moment()}
                             onChange={this.onChange}
                             onSave={this.toggle}
                         />
+                        {this.props.nowButton && this.renderNowButton()}
                         <div className={styles.cover} onClick={this.toggle}/>
                     </div>
                 </div>
@@ -142,9 +157,9 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         );
     }
 
-    onChange = (date: any) => {
-        const value = this.props.dateOnly ? moment(this.state.date).startOf('day') :
-                    moment(this.state.date);
+    onChange = (date: moment.Moment) => {
+        let value = this.props.dateOnly ? moment(date).startOf('day') : moment(date);
+        value = this.props.preventPast && value.isBefore(moment()) ? moment() : value;
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value, dataLabel: this.props.dataLabel});
@@ -154,7 +169,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 {value, dataLabel: this.props.dataLabel, required: this.props.required}
             );
         }
-        this.setState({date: value});
+        // this.setState({date: value});
     }
 
     toggle = () => {
@@ -200,6 +215,60 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             this.props.dateOnly ? elements[index].style.display = 'none' :
             elements[index].style.display = 'inline-block';
         }
+    }
+
+    renderNowButton = () => {
+        return (
+            <div style={{display: 'flex', justifyContent: 'center', background: '#fff', padding: 10}}>
+                <Button onClick={() => this.onChange(moment())}>Now</Button>
+            </div>
+        );
+    }
+
+    preventPast = () => {
+        const monthElement = this.datepicker && this.datepicker.getElementsByClassName('current-date');
+        const dateStrings = monthElement && monthElement[0].innerText.split(' ');
+
+        const monthString = dateStrings && dateStrings[0];
+        const month = monthString && parseInt(moment(monthString, 'MMMM').format('MM'), 10);
+        const year = dateStrings && parseInt(dateStrings[1], 10);
+
+        const table = this.datepicker && this.datepicker.getElementsByTagName('table');
+        const tBody = table && table[0].getElementsByTagName('tbody');
+        const tds = tBody && tBody[0].getElementsByTagName('td');
+
+        const tdArray: any = tds && Array.from(tds);
+
+        // if (month < currentMonth){
+        //     tBody[0].style.background = '#efefef';
+        //     tBody[0].style.color = '#999';
+        //     tBody[0].style.pointerEvents = 'none';
+        // } else {
+        //     tBody[0].style.background = '#fff';
+        //     tBody[0].style.color = 'initial';
+        //     tBody[0].style.pointerEvents = 'auto';
+        tdArray && tdArray.forEach((date: any, i: any) => {
+            const className = date.className;
+            const day = parseInt(date.innerText, 10);
+            let setMonth = month - 1;
+            if (className.includes('prev-month')){
+                setMonth = setMonth - 1;
+            } else if (className.includes('next-month')){
+                setMonth = setMonth + 1;
+            }
+            const cellDate = moment().set('year', year).set('month', setMonth).set('date', day);
+            const isPastDate = cellDate.isBefore(moment());
+            // console.log(cellDate.format('DD MM YYYY'), isPastDate);
+            if (isPastDate){
+                date.className = `${date.className} ${styles.disabledCell}`;
+                date.style.pointerEvents = 'none';
+            } else {
+                date.style.pointerEvents = 'auto';
+                date.className = date.className.replace(`${styles.disabledCell}`, '').replace(` ${styles.disabledCell}`, '');
+            }
+        });
+        // }
+
     }
 
 }

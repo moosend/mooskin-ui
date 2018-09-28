@@ -193,4 +193,20 @@ describe('DatePicker', () => {
         expect(component.find('Option').last().children().text()).toEqual('Last');
 
     });
+
+    test('adds now button to the component, and selects current date when clicked', () => {
+
+        let date = moment().add(20, 'days');
+
+        const onChange = (data) => {
+            date = data.value;
+        };
+
+        const component = shallow(<DatePicker nowButton onChange={onChange} date={date}/>);
+
+        expect(component.find('InputMoment').prop('moment')).toEqual(date);
+
+        expect(component.find('Button').length).toBe(1);
+
+    });
 });

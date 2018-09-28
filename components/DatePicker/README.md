@@ -160,7 +160,8 @@ The callback works the same as with the DatePicker component, where it returns a
 * `disabled` - input field should be disabled
 * `required` - input field is required
 * `className` - css class
-* `dataLabel` - label what kind of data 
+* `dataLabel` - label what kind of data
+* `nowButton` - adds a button that selects current date when clicked
 * `style` - input field style
 * `onChange` - callback to be triggered on input change
 
