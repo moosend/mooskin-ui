@@ -1,7 +1,7 @@
 @import '../_utils/globals/screens.css';
 @import '../_utils/globals/variables.css';
 @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
-@import url('https://fonts.googleapis.com/css?family=Convergence');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Convergence');
 
 .datePicker{
     display: flex;
@@ -107,7 +107,7 @@
     margin: 0px;
     border-radius: 0;
     height: 40px;
-    font-family: 'Convergence', sans-serif;
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
 }
 
 :global(.datepicker-component .m-input-moment .options button::before){
