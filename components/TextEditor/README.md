@@ -104,7 +104,8 @@ In this case on each TextEditor change, the value will be console logged.
 * `draggable` - wether the toolbar should be draggable
 * `label` - label for editor
 * `onChange` - onChange callback when editor changes, returns EditorState
-* `dataLabel` - label what kind of data 
+* `dataLabel` - label what kind of data
+* `noSeparators` - removes section separators from the editor
 
 For more props and customization, see [React-Draft-WYSIWYG](https://jpuri.github.io/react-draft-wysiwyg/#/docs?_k=jjqinp)
 
