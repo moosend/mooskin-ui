@@ -81,7 +81,7 @@ class InputExample extends React.Component {
             {
                 icon: 'https://s1.piq.land/2015/10/05/Fix77XEm3n3EfO1dObGIEAnO_400x400.png',
                 title: 'Custom Dropdown 1',
-                onClick: () => console.log('Icon Clicked!!'),
+                onClick: () => {console.log('Icon Clicked!!'); return false;},
                 content: [
                     <div style={{width: 159}} key={1}>Content 1</div>,
                     <div style={{width: 159}} key={2}>Content 2</div>,
@@ -104,15 +104,14 @@ class InputExample extends React.Component {
             {
                 icon: 'mooskin-send',
                 title: 'Custom Dropdown 3',
-                onClick: () => console.log('Google Icon Clicked!!'),
+                onClick: () => {console.log('Google Icon Clicked!!'); return true;},
                 content: [
                     <div style={{width: 159}} key={1}>Content 1</div>,
                     <div style={{width: 159}} key={2}>Content 2</div>,
                     <div style={{width: 159}} key={3}>Content 3</div>,
                     <div style={{width: 159}} key={4}>Content 4</div>,
                     <div style={{width: 159}} key={5}>Content 5</div>
-                ],
-                open: true
+                ]
             }
         ];
 
