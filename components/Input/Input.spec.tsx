@@ -364,4 +364,55 @@ describe('Input', () => {
 
     });
 
+    test('calls onClick function when icon is clicked', () => {
+
+        const func = jest.fn();
+
+        const multipleDropdowns = [
+            {
+                content: [
+                    <div key={1}>Content 1</div>,
+                    <div key={2}>Content 2</div>,
+                    <div key={3}>Content 3</div>,
+                    <div key={4}>Content 4</div>,
+                    <div key={5}>Content 5</div>
+                ],
+                icon: 'https://s1.piq.land/2015/10/05/Fix77XEm3n3EfO1dObGIEAnO_400x400.png',
+                onClick: func,
+                title: 'Custom Dropdown 1',
+            },
+            {
+                content: [
+                    <div key={1}>Content 1</div>,
+                    <div key={2}>Content 2</div>,
+                    <div key={3}>Content 3</div>,
+                    <div key={4}>Content 4</div>,
+                    <div key={5}>Content 5</div>
+                ],
+                icon: 'https://doitgeekly.files.wordpress.com/2016/01/22c04c094e328d92fc7488fc6e2262b3.jpg',
+                title: 'Custom Dropdown 2',
+            },
+            {
+                content: [
+                    <div key={1}>Content 1</div>,
+                    <div key={2}>Content 2</div>,
+                    <div key={3}>Content 3</div>,
+                    <div key={4}>Content 4</div>,
+                    <div key={5}>Content 5</div>
+                ],
+                icon: 'https://s1.piq.land/2016/02/17/kmeRltKJo5wELTWFipYHl5je_400x400.png',
+                title: 'Custom Dropdown 3',
+            }
+        ];
+
+        const component = shallow(<Input value="value" customDropdowns={multipleDropdowns}/>);
+
+        expect(component.find('.dropDown').length).toEqual(3);
+
+        component.find('.dropDownIcon').first().simulate('click');
+
+        expect(func).toHaveBeenCalled();
+
+    });
+
 });
