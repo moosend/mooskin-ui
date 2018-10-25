@@ -132,7 +132,7 @@ describe('Input', () => {
 
         expect(component.state('activeDropDown')).toBe(-1);
 
-        component.find('.dropdown-icon').simulate('click');
+        component.find('.dropDownIcon').simulate('click');
 
         expect(component.state('activeDropDown')).toBe(0);
 
@@ -161,14 +161,14 @@ describe('Input', () => {
 
         expect(component.state('activeDropDown')).toBe(-1);
 
-        component.find('.dropdown-icon').first().simulate('click');
+        component.find('.dropDownIcon').first().simulate('click');
 
         expect(component.state('activeDropDown')).toBe(0);
 
         expect(component.find('.dropDown').first().prop('style')).toEqual({display: 'block'});
         expect(component.find('.dropDown').last().prop('style')).toEqual({display: 'none'});
 
-        component.find('.dropdown-icon').last().simulate('click');
+        component.find('.dropDownIcon').last().simulate('click');
 
         expect(component.state('activeDropDown')).toBe(1);
 
@@ -278,7 +278,7 @@ describe('Input', () => {
 
         expect(component.find('.dropDown').prop('style')).toEqual({display: 'none'});
 
-        component.find('.dropdown-icon').simulate('click');
+        component.find('.dropDownIcon').simulate('click');
 
         expect(component.find('.dropDown').prop('style')).toEqual({display: 'block'});
 
