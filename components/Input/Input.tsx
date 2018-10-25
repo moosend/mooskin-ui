@@ -370,16 +370,18 @@ class Input extends React.Component<IProps, IInputState> {
         return Math.random().toString(36).substr(2, 10);
     }
 
-    getIcon = (icon: string, dropdown?: boolean) => {
+    getIcon = (icon: string, custom?: ICustomDropdown, title?: string) => {
         const iconFont = icon && this.getIconContent(icon);
-        const iconStatus = !dropdown ? this.getIconStatus() : '';
+        const iconStatus = !custom ? this.getIconStatus() : '';
         const iconPadding = this.props.iconPosition === 'right' ? {paddingLeft: 10} : {paddingRight: 10};
-        const style = dropdown ? {fontSize: 16, cursor: 'pointer'} : {};
+        const style = custom ? {fontSize: 16, cursor: 'pointer', color: '#6b6b6b'} : {};
+        const onClick = custom ? custom.onClick : this.onIconClick;
         return (
             <div
-                onClick={this.onIconClick}
+                onClick={onClick}
                 className={`${styles.icon} ${iconStatus} ${this.props.iconClass}`}
                 style={{...iconPadding, ...style, ...this.props.iconStyle}}
+                title={title}
             >
                 {iconFont}
             </div>
@@ -448,9 +450,8 @@ class Input extends React.Component<IProps, IInputState> {
                 key={i}
                 style={{position: 'relative', display: 'flex', alignItems: 'center'}}
                 onClick={() => this.onDropDownIconClick(i)}
-                title={title}
             >
-                {custom && custom.icon.includes('mooskin') && this.getIcon(custom.icon.split('-').pop() || '', true) || <img onClick={onClick} className={styles.dropDownIcon} src={icon}/>}
+                {custom && custom.icon.includes('mooskin') && this.getIcon(custom.icon.split('-').pop() || '', custom) || <img title={title} onClick={onClick} className={styles.dropDownIcon} src={icon}/>}
                 {this.renderDropDown(display, type, custom)}
             </div>
             /* tslint:enable */

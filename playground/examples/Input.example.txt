@@ -104,6 +104,7 @@ class InputExample extends React.Component {
             {
                 icon: 'mooskin-send',
                 title: 'Custom Dropdown 3',
+                onClick: () => console.log('Google Icon Clicked!!'),
                 content: [
                     <div style={{width: 159}} key={1}>Content 1</div>,
                     <div style={{width: 159}} key={2}>Content 2</div>,
