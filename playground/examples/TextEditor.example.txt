@@ -27,6 +27,7 @@ class ButtonExample extends React.Component {
                 onChange={this.onChange}
                 toolbarPos="top"
                 draggable
+                noSeparators
                 label="Rich text editor"
                 toolbarOnFocus={false}
                 personalizationTags={personalizationTags}

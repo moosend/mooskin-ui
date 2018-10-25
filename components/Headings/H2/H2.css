@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Convergence');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Convergence');
 @import '../../_utils/globals/variables.css';
 
 .h2 {
-    font-family: 'Convergence', sans-serif;
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
     /*font-size: 19px;*/
     font-size: 1.188rem;
     font-weight: 400;

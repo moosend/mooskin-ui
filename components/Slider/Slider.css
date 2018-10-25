@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Convergence');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Convergence');
 
 .sliderContainer{
     z-index: 0;
@@ -60,9 +60,8 @@
     left: 0px;
     z-index: 1;
     background: #ffffff;
-    font-family: Convergence,sans-serif;
     font-size: .875rem;
-    font-family: 'Convergence', sans-serif;
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
 }
 
 .sliderContainer input[type=range]::-webkit-slider-thumb {
@@ -240,7 +239,7 @@ input.edgeClasses[type=range]::-ms-fill-upper {
     font-size: 32px;
     font-weight: 400;
     color: #6b6b6b;
-    font-family: Convergence,sans-serif;
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
 }
 
 .abContainer input:hover {

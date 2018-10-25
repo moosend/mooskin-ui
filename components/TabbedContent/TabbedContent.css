@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Convergence');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Convergence');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
@@ -63,7 +63,7 @@
     border-top-right-radius: inherit;
     border-bottom-left-radius: inherit;
     color: #575757;
-    font-family: Convergence,sans-serif;
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
     font-size: 1.125rem;
 }
 

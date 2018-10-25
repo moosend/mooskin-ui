@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
-@import url('https://fonts.googleapis.com/css?family=Convergence');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Convergence');
 
 .container{
     display: flex;
@@ -115,7 +115,7 @@
 }
 
 .message {
-    font-family: 'Convergence', sans-serif;
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
     border-radius: 8px;
     border: 1px solid #5ccdde;
     padding: 3px;
