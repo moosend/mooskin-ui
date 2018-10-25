@@ -75,6 +75,9 @@ export interface ITextEditorProps {
     /** rich text editor toolbar style */
     toolbarStyle?: React.CSSProperties;
 
+    /** removes section separators from the editor */
+    noSeparators?: boolean;
+
     /** wether the toolbar should show on editor focus */
     toolbarOnFocus?: boolean;
 
@@ -274,7 +277,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         const editorEditHtml = this.state.showHtml ? {display: 'none'} : {};
 
         this.initializeEmoji();
-        !document.getElementById('rdw-separator-1') && this.addSeparators();
+        !document.getElementById('rdw-separator-1') && !this.props.noSeparators && this.addSeparators();
 
         return (
             <div

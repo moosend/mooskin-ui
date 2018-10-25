@@ -126,6 +126,7 @@ export interface ICustomDropdown {
     title: string;
     content: JSX.Element | Element | JSX.Element[] | Element[];
     open?: boolean;
+    onClick?: () => void;
 }
 
 export interface IInputState{
@@ -439,6 +440,7 @@ class Input extends React.Component<IProps, IInputState> {
     getDropDownIcon = (icon: string, i: number, type: string, custom?: ICustomDropdown) => {
         const display = this.state.activeDropDown === i ? {display: 'block'} : {display: 'none'};
         const title = custom ? custom.title : type === 'emoji' ? 'Emoji' : type === 'personalization' ? 'Personalization tags' : '';
+        const onClick = () => custom && custom.onClick && custom.onClick();
         /* tslint:disable */
         return (
             <div
@@ -448,7 +450,7 @@ class Input extends React.Component<IProps, IInputState> {
                 onClick={() => this.onDropDownIconClick(i)}
                 title={title}
             >
-                {custom && custom.icon.includes('mooskin') && this.getIcon(custom.icon.split('-').pop() || '', true) || <img className={styles.dropDownIcon} src={icon}/>}
+                {custom && custom.icon.includes('mooskin') && this.getIcon(custom.icon.split('-').pop() || '', true) || <img onClick={onClick} className={styles.dropDownIcon} src={icon}/>}
                 {this.renderDropDown(display, type, custom)}
             </div>
             /* tslint:enable */

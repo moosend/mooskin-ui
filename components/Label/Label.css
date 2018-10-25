@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Convergence');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Convergence');
 
 .label{
-    font-family: 'Convergence', sans-serif;
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
     font-size: 0.875rem;
 }
