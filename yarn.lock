@@ -6128,6 +6128,16 @@ react-dom@^16.0.3:
     linkify-it "^2.0.3"
     prop-types "^15.6.0"
 
+"react-draft-wysiwyg@https://github.com/donibehrami/react-draft-wysiwyg.git#master":
+  version "1.12.13"
+  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#0a099cb091d4f43ce8f3b3f66878d98afdafd3b8"
+  dependencies:
+    classnames "^2.2.5"
+    draftjs-utils "^0.9.3"
+    html-to-draftjs "^1.4.0"
+    linkify-it "^2.0.3"
+    prop-types "^15.6.0"
+
 react-input-slider@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/react-input-slider/-/react-input-slider-4.0.1.tgz#cb1b691baa67555ab4d1c66b9f1a134574f1c25c"
