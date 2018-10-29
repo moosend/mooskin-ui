@@ -1,6 +1,6 @@
 {
   "name": "mooskin",
-  "version": "0.8.42",
+  "version": "0.8.43",
   "description": "A collection of React components for Moosend UI",
   "main": "lib/index/index.js",
   "types": "lib/index/index.d.ts",
@@ -43,7 +43,7 @@
     "input-moment": "^0.4.0",
     "moment": "2.20.1",
     "react-chartjs-2": "2.6.4",
-    "react-draft-wysiwyg": "https://github.com/donibehrami/react-draft-wysiwyg.git",
+    "react-draft-wysiwyg": "https://github.com/donibehrami/react-draft-wysiwyg.git#master",
     "react-live": "1.9.2",
     "react-slick": "^0.20.0",
     "showdown": "1.8.6",
