@@ -481,9 +481,10 @@ class Input extends React.Component<IProps, IInputState> {
     onDropDownIconClick = (i: number, onClick?: () => boolean | void) => {
         if (onClick){
             const proceed = onClick();
-            if (typeof proceed === 'boolean' && proceed === true){
-                this.setState({activeDropDown: i});
+            if (typeof proceed === 'boolean' && proceed === false){
+                return;
             }
+            this.setState({activeDropDown: i});
         } else {
             this.setState({activeDropDown: i});
         }
