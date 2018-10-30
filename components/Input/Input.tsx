@@ -126,7 +126,7 @@ export interface ICustomDropdown {
     title: string;
     content: JSX.Element | Element | JSX.Element[] | Element[];
     open?: boolean;
-    onClick?: () => void;
+    onClick?: () => boolean | void;
 }
 
 export interface IInputState{
@@ -370,12 +370,14 @@ class Input extends React.Component<IProps, IInputState> {
         return Math.random().toString(36).substr(2, 10);
     }
 
-    getIcon = (icon: string, custom?: ICustomDropdown, title?: string) => {
+    getIcon = (icon: string, args?: {custom: ICustomDropdown, i: number}) => {
         const iconFont = icon && this.getIconContent(icon);
-        const iconStatus = !custom ? this.getIconStatus() : '';
+        const iconStatus = !args || !args.custom ? this.getIconStatus() : '';
         const iconPadding = this.props.iconPosition === 'right' ? {paddingLeft: 10} : {paddingRight: 10};
-        const style = custom ? {fontSize: 16, cursor: 'pointer', color: '#6b6b6b'} : {};
-        const onClick = custom ? custom.onClick : this.onIconClick;
+        const style = args && args.custom ? {fontSize: 16, cursor: 'pointer', color: '#6b6b6b'} : {};
+        const title = args && args.custom && args.custom.title;
+        const onClick = () => args && args.custom ? args.custom.onClick ?
+        this.onDropDownIconClick(args.i, args.custom.onClick) : this.onDropDownIconClick(args.i) : this.onIconClick();
         return (
             <div
                 onClick={onClick}
@@ -442,16 +444,15 @@ class Input extends React.Component<IProps, IInputState> {
     getDropDownIcon = (icon: string, i: number, type: string, custom?: ICustomDropdown) => {
         const display = this.state.activeDropDown === i ? {display: 'block'} : {display: 'none'};
         const title = custom ? custom.title : type === 'emoji' ? 'Emoji' : type === 'personalization' ? 'Personalization tags' : '';
-        const onClick = () => custom && custom.onClick && custom.onClick();
+        const onClick = () => custom && custom.onClick ? this.onDropDownIconClick(i, custom.onClick) : this.onDropDownIconClick(i);
         /* tslint:disable */
         return (
             <div
                 className="dropdown-icon"
                 key={i}
                 style={{position: 'relative', display: 'flex', alignItems: 'center'}}
-                onClick={() => this.onDropDownIconClick(i)}
             >
-                {custom && custom.icon.includes('mooskin') && this.getIcon(custom.icon.split('-').pop() || '', custom) || <img title={title} onClick={onClick} className={styles.dropDownIcon} src={icon}/>}
+                {custom && custom.icon.includes('mooskin') && this.getIcon(custom.icon.split('-').pop() || '', {custom, i}) || <img title={title} onClick={onClick} className={styles.dropDownIcon} src={icon}/>}
                 {this.renderDropDown(display, type, custom)}
             </div>
             /* tslint:enable */
@@ -477,8 +478,15 @@ class Input extends React.Component<IProps, IInputState> {
         return {newDropdowns, newIndex};
     }
 
-    onDropDownIconClick = (i: number) => {
-        this.setState({activeDropDown: i});
+    onDropDownIconClick = (i: number, onClick?: () => boolean | void) => {
+        if (onClick){
+            const proceed = onClick();
+            if (typeof proceed === 'boolean' && proceed === true){
+                this.setState({activeDropDown: i});
+            }
+        } else {
+            this.setState({activeDropDown: i});
+        }
     }
 
     removeDropDown = () => {

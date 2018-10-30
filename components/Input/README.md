@@ -125,7 +125,7 @@ In this case, when the user focuses the input and blurs away immediately, an err
 * `disabled` - input field should be disabled
 * `required` - input field is required
 * `description` - input description (small italic bottom)
-* `customDropdown` - adds a custom dropdown like the dropdown for emoji or personalization tags. Should consist of the follow object, `icon` which will appear as dropdown icon, can be a google icon like `mooskin-{iconName}`, `label`, which will appear as label & `content` which should be a JSX element or an array of such. The prop acceps an array of such dropdown objects aswell, rendering multiple dropdowns.
+* `customDropdown` - adds a custom dropdown like the dropdown for emoji or personalization tags. Should consist of the follow object, `icon` which will appear as dropdown icon, can be a google icon like `mooskin-{iconName}`, `label`, which will appear as label & `content` which should be a JSX element or an array of such. The prop acceps an array of such dropdown objects aswell, rendering multiple dropdowns. An on click callback function is also supported, with `onClick` property. IF the callback function returns false, then the relevant dropdown of the clicked icon will not be opened.
 * `labelWidth` - label width (default 150 px)
 * `autofocus` - autofocus specified input on page load
 * `autocomplete` - toggle autocomplete

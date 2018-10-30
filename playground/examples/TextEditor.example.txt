@@ -19,6 +19,46 @@ class ButtonExample extends React.Component {
             {
                 label: 'Update Profile Link',
                 value: '#updateprofilelink#'
+            },
+            {
+                label: 'Unsubscribe Link',
+                value: '#unsubscriblelink#'
+            },
+            {
+                label: 'Update Profile Link',
+                value: '#updateprofilelink#'
+            },
+            {
+                label: 'Unsubscribe Link',
+                value: '#unsubscriblelink#'
+            },
+            {
+                label: 'Update Profile Link',
+                value: '#updateprofilelink#'
+            },
+            {
+                label: 'Unsubscribe Link',
+                value: '#unsubscriblelink#'
+            },
+            {
+                label: 'Update Profile Link',
+                value: '#updateprofilelink#'
+            },
+            {
+                label: 'Unsubscribe Link',
+                value: '#unsubscriblelink#'
+            },
+            {
+                label: 'Update Profile Link',
+                value: '#updateprofilelink#'
+            },
+            {
+                label: 'Unsubscribe Link',
+                value: '#unsubscriblelink#'
+            },
+            {
+                label: 'Update Profile Link',
+                value: '#updateprofilelink#'
             }
         ]
 
