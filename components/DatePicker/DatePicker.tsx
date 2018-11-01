@@ -104,15 +104,23 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         };
     }
 
+    componentDidMount(){
+        setTimeout(() => {
+            this.props.preventPast && this.preventPast();
+        }, 10);
+    }
+
+    componentDidUpdate(){
+        setTimeout(() => {
+            this.props.preventPast && this.preventPast();
+        }, 10);
+    }
+
     render(){
         return this.renderDatePicker();
     }
 
     renderDatePicker = () => {
-
-        setTimeout(() => {
-            this.props.preventPast && this.preventPast();
-        }, 10);
 
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
         const disabledClasses = !this.props.disabled ? '' : styles.disabled;
@@ -248,6 +256,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         //     tBody[0].style.color = 'initial';
         //     tBody[0].style.pointerEvents = 'auto';
         tdArray && tdArray.forEach((date: any, i: any) => {
+            // document.body.style.cursor = 'auto';
             const className = date.className;
             const day = parseInt(date.innerText, 10);
             let setMonth = month - 1;
@@ -261,13 +270,15 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             // console.log(cellDate.format('DD MM YYYY'), isPastDate);
             if (isPastDate){
                 date.className = `${date.className} ${styles.disabledCell}`;
-                date.style.pointerEvents = 'none';
+                date.onclick = (e: any) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                };
+                date.style.borderRadius = 0;
             } else {
-                date.style.pointerEvents = 'auto';
-                date.className = date.className.replace(`${styles.disabledCell}`, '').replace(` ${styles.disabledCell}`, '');
+                date.className = date.className.replace(`${styles.disabledCell}`, '');
             }
         });
-        // }
 
     }
 
