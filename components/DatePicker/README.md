@@ -155,6 +155,7 @@ The callback works the same as with the DatePicker component, where it returns a
 * `id` - id of the element
 * `date` - selected date (MomentJS object)
 * `format` - format the date differently. See [format](https://momentjs.com/docs/#/parsing/string-format/) types
+* `allowInput` - allows date input through input typing, this will however ignore the format prop.
 * `label` - datepicker label
 * `dateOnly` - datepicker with date only
 * `disabled` - input field should be disabled
