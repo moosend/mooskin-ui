@@ -227,8 +227,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
     renderNowButton = () => {
         return (
-            <div style={{display: 'flex', justifyContent: 'center', background: '#fff', padding: 10}}>
-                <Button onClick={() => this.onChange(moment())}>Now</Button>
+            <div style={{display: 'flex', justifyContent: 'center', background: '#fff', padding: 15}}>
+                <Button inverseStyle onClick={() => this.onChange(moment())}>Set Current Date and Time</Button>
             </div>
         );
     }
