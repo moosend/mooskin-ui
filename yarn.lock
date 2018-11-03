@@ -6118,19 +6118,9 @@ react-dom@^16.0.3:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-"react-draft-wysiwyg@https://github.com/donibehrami/react-draft-wysiwyg.git":
-  version "1.12.13"
-  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#72476874f2ff304e9838985838e941ad3515d4f3"
-  dependencies:
-    classnames "^2.2.5"
-    draftjs-utils "^0.9.3"
-    html-to-draftjs "^1.4.0"
-    linkify-it "^2.0.3"
-    prop-types "^15.6.0"
-
 "react-draft-wysiwyg@https://github.com/donibehrami/react-draft-wysiwyg.git#master":
   version "1.12.13"
-  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#0a099cb091d4f43ce8f3b3f66878d98afdafd3b8"
+  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#cb62869e3bd707286010bd8ba86f46d927e93a9a"
   dependencies:
     classnames "^2.2.5"
     draftjs-utils "^0.9.3"
