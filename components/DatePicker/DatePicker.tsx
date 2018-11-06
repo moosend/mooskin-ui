@@ -75,11 +75,11 @@ export interface IDateProps{
 export interface IDateState{
     // date: moment.Moment;
     displayPicker: boolean;
-    day?: number;
-    month?: number;
-    year?: number;
-    hour?: number;
-    minute?: number;
+    day?: string;
+    month?: string;
+    year?: string;
+    hour?: string;
+    minute?: string;
 }
 
 export default class DatePicker extends React.Component<IDateProps, IDateState>{
@@ -100,18 +100,23 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     // }
 
     datepicker: any;
+    dayInput: HTMLInputElement | null;
+    monthInput: HTMLInputElement | null;
+    yearInput: HTMLInputElement | null;
+    hourInput: HTMLInputElement | null;
+    minuteInput: HTMLInputElement | null;
 
     constructor(props: IDateProps){
         super(props);
 
         this.state = {
             // date: DatePicker.setDate(this.props),
-            day: 0,
+            day: '',
             displayPicker: false,
-            hour: 0,
-            minute: 0,
-            month: 0,
-            year: 0
+            hour: '',
+            minute: '',
+            month: '',
+            year: ''
         };
     }
 
@@ -181,33 +186,45 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         const indexStyle = this.state.displayPicker ? {zIndex: 100} : {};
         if (allowInput){
             return (
-                <div className={styles.inputGroup} style={indexStyle} onBlur={this.onGroupBlur} onFocus={this.onGroupFocus}>
+                <div
+                    className={styles.inputGroup}
+                    onClick={this.onGroupClick}
+                    style={indexStyle}
+                    onBlur={this.onGroupBlur}
+                    onFocus={this.onGroupFocus}
+                >
                     <input
+                        ref={(dayInput) => this.dayInput = dayInput}
                         type="number"
                         min={1}
                         max={maxDays}
                         value={this.state.day}
                         className={styles.smallInput}
                         style={{width: this.state.day && this.state.day.toString().length * 10}}
-                        onChange={(e) => this.onInputChange(e, 'day')}
+                        onChange={(e) => this.onInputChange(e, 'day', 2, {min: 1, max: maxDays}, this.monthInput)}
+                        onFocus={this.selectText}
                     />
                     {dateSeparator}
                     <input
+                        ref={(monthInput) => this.monthInput = monthInput}
                         type="number"
                         min={1}
                         max={12}
                         value={this.state.month}
                         className={styles.smallInput}
                         style={{width: this.state.month && this.state.month.toString().length * 10}}
-                        onChange={(e) => this.onInputChange(e, 'month')}
+                        onChange={(e) => this.onInputChange(e, 'month', 2, {min: 1, max: 12}, this.yearInput)}
+                        onFocus={this.selectText}
                     />
                     {dateSeparator}
                     <input
+                        ref={(yearInput) => this.yearInput = yearInput}
                         type="number"
                         value={this.state.year}
                         className={styles.smallInput}
                         style={{width: this.state.year && this.state.year.toString().length * 10, marginRight: 10}}
-                        onChange={(e) => this.onInputChange(e, 'year')}
+                        onChange={(e) => this.onInputChange(e, 'year', 4, {min: 0, max: 9999}, this.hourInput)}
+                        onFocus={this.selectText}
                     />
                     {!this.props.dateOnly && this.renderTimeFields()}
                 </div>
@@ -232,30 +249,63 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         return (
             <>
                 <input
+                    ref={(hourInput) => this.hourInput = hourInput}
                     type="number"
                     min={0}
                     max={23}
                     value={this.state.hour}
                     className={styles.smallInput}
                     style={{width: this.state.hour && this.state.hour.toString().length * 10}}
-                    onChange={(e) => this.onInputChange(e, 'hour')}
+                    onChange={(e) => this.onInputChange(e, 'hour', 2, {min: 0, max: 23}, this.minuteInput)}
+                    onFocus={this.selectText}
                 />
                 {timeSeparator}
                 <input
+                    ref={(minuteInput) => this.minuteInput = minuteInput}
                     type="number"
                     min={0}
                     max={59}
                     value={this.state.minute}
                     className={styles.smallInput}
                     style={{width: this.state.minute && this.state.minute.toString().length * 10}}
-                    onChange={(e) => this.onInputChange(e, 'minute')}
+                    onChange={(e) => this.onInputChange(e, 'minute', 2, {min: 0, max: 59})}
+                    onFocus={this.selectText}
                 />
             </>
         );
     }
 
-    onInputChange = (e: React.ChangeEvent<HTMLInputElement>, dataLabel: string) => {
-        this.setState({[dataLabel]: e.target.value, displayPicker: this.state.displayPicker});
+    selectText = (e: React.FocusEvent<HTMLInputElement>) => {
+        e.target.select();
+    }
+
+    onInputChange = (
+        e: React.ChangeEvent<HTMLInputElement>,
+        dataLabel: string,
+        maxLength: number,
+        minMax: {min: number, max: number},
+        next?: HTMLInputElement | null
+    ) => {
+        if (e.target.value.length > maxLength){
+            return;
+        }
+        let value = e.target.value;
+        const numberValue = parseInt(value, 10);
+        if (numberValue > minMax.max){
+            value = minMax.max.toString();
+        } else if (numberValue < minMax.min){
+            value = minMax.min.toString();
+        }
+        if (next && e.target.value.length === maxLength){
+            next.focus();
+        }
+        this.setState({[dataLabel]: value, displayPicker: this.state.displayPicker});
+    }
+
+    onGroupClick = () => {
+        if (document.activeElement.tagName === 'BODY'){
+            this.dayInput && this.dayInput.focus();
+        }
     }
 
     onGroupFocus = () => {
@@ -265,9 +315,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     onGroupBlur = () => {
         const format = 'DD - MM - YYYY / HH - mm';
         const {day, hour, minute, month, year} = this.state;
-        console.log(hour);
         const date = moment(`${day} - ${month} - ${year} / ${hour} - ${minute}`, format);
-        console.log(date);
         this.onChange(date);
     }
 
@@ -288,11 +336,11 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
     updateInputFields = (date: moment.Moment) => {
-        const day = parseInt(moment(date).format('DD'), 10);
-        const month = parseInt(moment(date).format('MM'), 10);
-        const year = parseInt(moment(date).format('YYYY'), 10);
-        const hour = parseInt(moment(date).format('HH'), 10);
-        const minute = parseInt(moment(date).format('mm'), 10);
+        const day = moment(date).format('DD');
+        const month = moment(date).format('MM');
+        const year = moment(date).format('YYYY');
+        const hour = moment(date).format('HH');
+        const minute = moment(date).format('mm');
         this.setState({day, month, year, hour, minute});
     }
 
