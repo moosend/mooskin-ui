@@ -21,6 +21,7 @@
     background: #efefef;
     display: flex;
     padding: 14px;
+    cursor: pointer;
 }
 
 .smallInput {
