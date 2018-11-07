@@ -318,11 +318,15 @@
         margin-left: 3px;
     }
 
-    .calendar{
+    /* .calendar{
         position: fixed;
         top: 15%;
         left: 4%;
         z-index: 99;
+    } */
+
+    .calendar{
+        top: 100%
     }
 
     :global(.datepicker-component .m-calendar .current-day:hover){
@@ -438,11 +442,15 @@
         margin-left: 3px;
     }
 
-    .calendar{
+    /* .calendar{
         position: fixed;
         top: 15%;
         left: 4%;
         z-index: 99;
+    } */
+
+    .calendar{
+        top: 100%
     }
 
     :global(.datepicker-component .m-calendar .current-day:hover){

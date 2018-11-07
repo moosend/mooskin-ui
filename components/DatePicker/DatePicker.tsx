@@ -111,12 +111,12 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
         this.state = {
             // date: DatePicker.setDate(this.props),
-            day: '',
+            day: this.props.date ? moment(this.props.date).format('DD') : '',
             displayPicker: false,
-            hour: '',
-            minute: '',
-            month: '',
-            year: ''
+            hour: this.props.date ? moment(this.props.date).format('HH') : '',
+            minute: this.props.date ? moment(this.props.date).format('mm') : '',
+            month: this.props.date ? moment(this.props.date).format('MM') : '',
+            year: this.props.date ? moment(this.props.date).format('YYYY') : '',
         };
     }
 
@@ -137,6 +137,12 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         setTimeout(() => {
             this.props.preventPast && this.preventPast();
         }, 10);
+    }
+
+    componentWillReceiveProps(nextProps: IDateProps){
+        if (nextProps.date !== this.props.date){
+            this.props.allowInput && this.replaceTimeDisplays();
+        }
     }
 
     render(){
@@ -198,6 +204,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         type="number"
                         min={1}
                         max={maxDays}
+                        maxLength={2}
                         value={this.state.day}
                         className={styles.smallInput}
                         style={{width: this.state.day && this.state.day.toString().length * 10}}
@@ -210,6 +217,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         type="number"
                         min={1}
                         max={12}
+                        maxLength={2}
                         value={this.state.month}
                         className={styles.smallInput}
                         style={{width: this.state.month && this.state.month.toString().length * 10}}
@@ -222,6 +230,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         type="number"
                         value={this.state.year}
                         className={styles.smallInput}
+                        maxLength={4}
                         style={{width: this.state.year && this.state.year.toString().length * 10, marginRight: 10}}
                         onChange={(e) => this.onInputChange(e, 'year', 4, {min: 0, max: 9999}, this.hourInput)}
                         onFocus={this.selectText}
@@ -248,35 +257,112 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         const timeSeparator = <div style={{margin: '0 3px'}}>:</div>;
         return (
             <>
-                <input
-                    ref={(hourInput) => this.hourInput = hourInput}
-                    type="number"
-                    min={0}
-                    max={23}
-                    value={this.state.hour}
-                    className={styles.smallInput}
-                    style={{width: this.state.hour && this.state.hour.toString().length * 10}}
-                    onChange={(e) => this.onInputChange(e, 'hour', 2, {min: 0, max: 23}, this.minuteInput)}
-                    onFocus={this.selectText}
-                />
+                {this.renderHourField()}
                 {timeSeparator}
-                <input
-                    ref={(minuteInput) => this.minuteInput = minuteInput}
-                    type="number"
-                    min={0}
-                    max={59}
-                    value={this.state.minute}
-                    className={styles.smallInput}
-                    style={{width: this.state.minute && this.state.minute.toString().length * 10}}
-                    onChange={(e) => this.onInputChange(e, 'minute', 2, {min: 0, max: 59})}
-                    onFocus={this.selectText}
-                />
+                {this.renderMinuteField()}
             </>
+        );
+    }
+
+    renderHourField = () => {
+        return (
+            <input
+                ref={(hourInput) => this.hourInput = hourInput}
+                type="number"
+                min={0}
+                max={23}
+                maxLength={2}
+                value={this.state.hour}
+                className={styles.smallInput}
+                style={{width: this.state.hour && this.state.hour.toString().length * 10}}
+                onChange={(e) => this.onInputChange(e, 'hour', 2, {min: 0, max: 23}, this.minuteInput)}
+                onFocus={this.selectText}
+            />
+        );
+    }
+
+    renderMinuteField = () => {
+        return (
+            <input
+                ref={(minuteInput) => this.minuteInput = minuteInput}
+                type="number"
+                min={0}
+                max={59}
+                maxLength={2}
+                value={this.state.minute}
+                className={styles.smallInput}
+                style={{width: this.state.minute && this.state.minute.toString().length * 10}}
+                onChange={(e) => this.onInputChange(e, 'minute', 2, {min: 0, max: 59})}
+                onFocus={this.selectText}
+            />
         );
     }
 
     selectText = (e: React.FocusEvent<HTMLInputElement>) => {
         e.target.select();
+    }
+
+    replaceTimeDisplays = () => {
+        const timeCollection = this.datepicker.getElementsByClassName('time');
+        const timeArray = timeCollection && Array.from(timeCollection);
+        timeArray && timeArray.map((el: HTMLSpanElement, i) => {
+            el.innerHTML = '<input/ >';
+            const input = el.getElementsByTagName('input')[0];
+            if (i === 0){
+                this.changeInputAttr(input, 'hour');
+            } else {
+                this.changeInputAttr(input, 'minute');
+            }
+        });
+    }
+
+    changeInputAttr = (input: HTMLInputElement, type: 'minute' | 'hour') => {
+        input.onfocus = (e) => this.selectText(e as any);
+        input.className = styles.smallInput;
+        input.type = 'number';
+        input.style.width = '43px';
+        input.style.color = '#fff';
+        input.value = this.state[type] || '';
+        input.oninput = (e: any) => {
+            let value = e.target.value;
+            const numberValue = parseInt(value, 10);
+            const min = 0;
+            const max = type === 'minute' ? 59 : 23;
+            if (numberValue > max){
+                value = max.toString();
+            } else if (numberValue < min){
+                value = min.toString();
+            }
+            if (type === 'minute'){
+                this.setMinuteState(value);
+            } else {
+                this.setHourState(value);
+            }
+            input.value = value;
+        };
+        input.onblur = () => {
+            if (input.value.length === 1){
+                const newValue = `0${input.value}`;
+                input.value = newValue;
+                if (type === 'minute'){
+                    this.setMinuteState(newValue);
+                } else {
+                    this.setHourState(newValue);
+                }
+            }
+            this.onGroupBlur();
+            setTimeout(() => {
+                this.replaceTimeDisplays();
+            }, 10);
+        };
+    }
+
+    setMinuteState = (minute: string) => {
+        this.setState({minute});
+    }
+
+    setHourState = (hour: string) => {
+        this.setState({hour});
     }
 
     onInputChange = (
