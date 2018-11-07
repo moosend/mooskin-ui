@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ContentState, convertFromRaw, convertToRaw, EditorState, Modifier, RawDraftContentState } from 'draft-js';
+import { ContentState, convertToRaw, EditorState, Modifier } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
 import htmlToDraft from 'html-to-draftjs';
 
@@ -88,7 +88,7 @@ export interface ITextEditorProps {
     draggable?: boolean;
 
     /** rich editor value */
-    editorState: RawDraftContentState;
+    editorState: EditorState;
 
     /** editor label */
     label?: string;
@@ -188,7 +188,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         this.state = {
             activeDropDown: false,
             dragging: false,
-            editorState: EditorState.createEmpty(),
+            editorState: this.props.editorState,
             htmlContent: '',
             pos: {
                 bottom: this.props.toolbarPos === 'bottom' ? -80 : undefined,
@@ -214,9 +214,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             toolbarOnFocus && document.getElementsByClassName('rdw-editor-toolbar')[0]
                         .setAttribute('style', `${toolbarStyle} box-shadow: 1px 10px 20px rgba(0,0,0,.2);`);
         }
-        const contentState = convertFromRaw(this.props.editorState);
-        const editorState = EditorState.createWithContent(contentState);
-        this.setState({editorState, width: this.getParentWidth(), htmlContent: draftToHtml(this.props.editorState)});
+        // const contentState = convertFromRaw(this.props.editorState);
+        const {editorState} = this.props;
+        this.setState({editorState, width: this.getParentWidth(), htmlContent: draftToHtml(convertToRaw(editorState.getCurrentContent()))});
 
     }
 
@@ -235,8 +235,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         // }
         this.setState({
-            editorState: EditorState.createWithContent(convertFromRaw(nextProps.editorState)),
-            htmlContent: draftToHtml(nextProps.editorState),
+            editorState: nextProps.editorState,
+            htmlContent: draftToHtml(convertToRaw(nextProps.editorState.getCurrentContent())),
         });
     }
 
@@ -362,12 +362,13 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onEditorStateChange = (editorState: EditorState) => {
-        const rawState = convertToRaw(editorState.getCurrentContent());
-        const htmlContent = draftToHtml(rawState);
-        const newHTML = this.addLink(htmlContent);
-        this.setState({editorState, htmlContent: newHTML});
-        // this.props.onChange &&
-        // this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
+        // const rawState = convertToRaw(editorState.getCurrentContent());
+        const htmlContent = draftToHtml(convertToRaw(editorState.getCurrentContent()));
+        // const newHTML = this.addLink(htmlContent);
+        // const contentBlock = htmlToDraft(newHTML);
+        this.setState({editorState, htmlContent});
+        this.props.onChange &&
+        this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
     }
 
     // onContentStateChange = (rawState: RawDraftContentState) => {
@@ -381,12 +382,14 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     onBlur = () => {
         this.setState({activeDropDown: false});
 
-        const contentBlock = htmlToDraft(this.state.htmlContent);
+        const newHTML = this.addLink(this.state.htmlContent);
+        const contentBlock = htmlToDraft(newHTML);
         const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
-        const rawState = convertToRaw(contentState);
+        const editorState = EditorState.createWithContent(contentState);
+        this.setState({editorState, htmlContent: newHTML});
 
         this.props.onChange &&
-        this.props.onChange({value: rawState, dataLabel: this.props.dataLabel});
+        this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
 
         // this.props.onChange &&
         // this.props.onChange({value: this.state.rawState, dataLabel: this.props.dataLabel});
