@@ -418,9 +418,9 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         const contentBlock = htmlToDraft(newHTML);
         const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
         const editorState = EditorState.createWithContent(contentState);
-        this.setState({editorState, htmlContent: newHTML});
+        this.setState({htmlContent: newHTML});
 
-        const value = this.props.returnWithHtml ? {editorState, htmlContent: newHTML} : editorState;
+        const value = this.props.returnWithHtml ? {editorState: this.state.editorState, htmlContent: newHTML} : editorState;
 
         this.props.onChange &&
         this.props.onChange({value, dataLabel: this.props.dataLabel});
