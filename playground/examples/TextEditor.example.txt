@@ -70,6 +70,7 @@ class ButtonExample extends React.Component {
                 noSeparators
                 label="Rich text editor"
                 toolbarOnFocus={false}
+                returnWithHtml
                 personalizationTags={personalizationTags}
                 editorState={this.state.editorState}
                 // options={['emoji', '/', 'blockType', 'inline', '/', 'fontSize', '/', 'fontFamily', '/']}
@@ -78,8 +79,8 @@ class ButtonExample extends React.Component {
     }
 
     onChange(data) {
-        console.log(data.value);
-        this.setState({editorState: data.value});
+        console.log(data.value.htmlContent);
+        this.setState({editorState: data.value.editorState});
     }
 
 }

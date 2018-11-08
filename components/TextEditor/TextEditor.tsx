@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import { ContentState, convertToRaw, EditorState, Modifier } from 'draft-js';
+import { ContentState, convertToRaw, EditorState, Modifier, RawDraftContentState } from 'draft-js';
 import draftToHtml from 'draftjs-to-html';
+import emojiRegex from 'emoji-regex';
 import htmlToDraft from 'html-to-draftjs';
 
 import { Editor } from 'react-draft-wysiwyg';
@@ -89,6 +90,9 @@ export interface ITextEditorProps {
 
     /** rich editor value */
     editorState: EditorState;
+
+    /** returns callback value with html */
+    returnWithHtml?: boolean;
 
     /** editor label */
     label?: string;
@@ -216,7 +220,11 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         }
         // const contentState = convertFromRaw(this.props.editorState);
         const {editorState} = this.props;
-        this.setState({editorState, width: this.getParentWidth(), htmlContent: draftToHtml(convertToRaw(editorState.getCurrentContent()))});
+        const rawState = convertToRaw(editorState.getCurrentContent());
+        const blocks = this.manipulateRawBlocks(rawState);
+        const newRawState = { ...rawState, blocks };
+        const htmlContent = draftToHtml(newRawState);
+        this.setState({editorState, width: this.getParentWidth(), htmlContent});
 
     }
 
@@ -234,9 +242,21 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         // if (draftToHtml(nextProps.editorState) !== draftToHtml(this.state.rawState)){
 
         // }
+
+        // const options = {
+        //     inlineStyles: {
+        //         RED: {style: {color: '#900'}}
+        //     }
+        // };
+
+        const rawState = convertToRaw(nextProps.editorState.getCurrentContent());
+        const blocks = this.manipulateRawBlocks(rawState);
+        const newRawState = { ...rawState, blocks };
+        const htmlContent = draftToHtml(newRawState);
+
         this.setState({
             editorState: nextProps.editorState,
-            htmlContent: draftToHtml(convertToRaw(nextProps.editorState.getCurrentContent())),
+            htmlContent
         });
     }
 
@@ -362,13 +382,20 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     onEditorStateChange = (editorState: EditorState) => {
+
         // const rawState = convertToRaw(editorState.getCurrentContent());
-        const htmlContent = draftToHtml(convertToRaw(editorState.getCurrentContent()));
+
+        const rawState = convertToRaw(editorState.getCurrentContent());
+        const blocks = this.manipulateRawBlocks(rawState);
+        const newRawState = { ...rawState, blocks };
+        const htmlContent = draftToHtml(newRawState);
+
         // const newHTML = this.addLink(htmlContent);
         // const contentBlock = htmlToDraft(newHTML);
         this.setState({editorState, htmlContent});
+        const value = this.props.returnWithHtml ? {editorState, htmlContent} : editorState;
         this.props.onChange &&
-        this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
+        this.props.onChange({value, dataLabel: this.props.dataLabel});
     }
 
     // onContentStateChange = (rawState: RawDraftContentState) => {
@@ -382,14 +409,21 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     onBlur = () => {
         this.setState({activeDropDown: false});
 
-        const newHTML = this.addLink(this.state.htmlContent);
+        const rawState = convertToRaw(this.state.editorState.getCurrentContent());
+        const blocks = this.manipulateRawBlocks(rawState);
+        const newRawState = { ...rawState, blocks };
+        const htmlContent = draftToHtml(newRawState);
+
+        const newHTML = this.addLink(htmlContent);
         const contentBlock = htmlToDraft(newHTML);
         const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
         const editorState = EditorState.createWithContent(contentState);
         this.setState({editorState, htmlContent: newHTML});
 
+        const value = this.props.returnWithHtml ? {editorState, htmlContent: newHTML} : editorState;
+
         this.props.onChange &&
-        this.props.onChange({value: editorState, dataLabel: this.props.dataLabel});
+        this.props.onChange({value, dataLabel: this.props.dataLabel});
 
         // this.props.onChange &&
         // this.props.onChange({value: this.state.rawState, dataLabel: this.props.dataLabel});
@@ -691,6 +725,74 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         }
         return true;
     }
+
+    getEmojiIndexes = (text: any) => {
+        // Note: because the regular expression has the global flag set, this module
+        // exports a function that returns the regex rather than exporting the regular
+        // expression itself, to make it impossible to (accidentally) mutate the
+        // original regular expression.
+        const regex = emojiRegex();
+        const result = [];
+        const match = regex.exec(text);
+        // while (match) {
+        //   const emoji = match[0];
+        //   const index = text.indexOf(match[0]);
+        //   const { length } = emoji;
+        //   result.push({ index, length });
+        // }
+        if (match) {
+            const emoji = match[0];
+            const index = text.indexOf(match[0]);
+            const { length } = emoji;
+            result.push({ index, length });
+        }
+        return result;
+      }
+
+      /*
+       check if inlineStyleRange object's range (offset, length) includes an emoji
+       */
+    indexMatch = (range: any, emojiIndex: any, emojiLength: any) => {
+        const { offset, length } = range;
+        const rangeEnd = offset + length;
+        const emojiEnd = emojiIndex + emojiLength;
+        return offset < emojiEnd && rangeEnd >= emojiIndex;
+      }
+
+      /*
+       emojis may treated as a single index inside draft block's inlineStyleRanges
+       calculate appropriate offset / length for an inlineStyleRange of a raw draft block;
+       */
+    manipulateStyleRange = (range: any, emojiIndex: any, emojiLength: any) => {
+        const { offset, length } = range;
+        const newOffset = Math.min(offset, emojiIndex);
+        const emojiEnd = emojiIndex + emojiLength;
+        const rangeEnd = offset + length;
+        const newLength = Math.max(emojiEnd, rangeEnd) - newOffset;
+        return { offset: newOffset, length: newLength };
+      }
+
+      /*
+       find inlineStyleRange objects covering emoji indexes inside a raw draft block,
+       update offset and length attributes of these inlineStyleRange objects with an appropriate values
+       return manipulated raw editor state object
+       */
+    manipulateRawBlocks = (rawState: RawDraftContentState) => rawState.blocks.map((entry) => {
+        const emojiIndexes = this.getEmojiIndexes(entry.text);
+        let { inlineStyleRanges } = entry;
+        emojiIndexes.forEach(({ index, length }) => {
+          inlineStyleRanges = inlineStyleRanges
+            .map((inline) => {
+                const matches = this.indexMatch(inline, index, length);
+                if (matches) {
+                    const newRangeConfig = this.manipulateStyleRange(inline, index, length);
+                    return { ...inline, ...newRangeConfig };
+                }
+                return inline;
+            });
+        });
+        return { ...entry, inlineStyleRanges };
+      })
 }
 
 export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) => {
