@@ -131,6 +131,14 @@
     content:url("../../assets/images/editor/GoTolink.png");
 }
 
+:global(.rdw-image-alignment-options-popup){
+    height: 37px;
+}
+
+:global(.rdw-image-alignment-option){
+    padding: 12px !important;
+}
+
 :global(.rdw-link-modal){
     display: flex;
     height: 240px;

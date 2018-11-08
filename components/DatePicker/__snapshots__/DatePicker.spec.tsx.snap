@@ -26,7 +26,7 @@ exports[`DatePicker renders correctly 1`] = `
       onClick={[Function]}
       readOnly={true}
       required={true}
-      value="01 Jan 2013, 0:00"
+      value="01 01 2013, 00:00"
     />
     <div
       className="calendar"
