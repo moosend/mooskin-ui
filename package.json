@@ -1,6 +1,6 @@
 {
   "name": "mooskin",
-  "version": "0.8.45",
+  "version": "0.8.46",
   "description": "A collection of React components for Moosend UI",
   "main": "lib/index/index.js",
   "types": "lib/index/index.d.ts",
@@ -32,12 +32,14 @@
   },
   "dependencies": {
     "@types/draft-js": "0.10.23",
+    "@types/emoji-regex": "^7.0.0",
     "@types/react-chartjs-2": "2.0.2",
     "@types/react-slick": "^0.15.1",
     "@types/showdown": "1.7.2",
     "chart.js": "^2.7.0",
     "draft-js": "0.10.4",
     "draftjs-to-html": "^0.8.3",
+    "emoji-regex": "^7.0.1",
     "emojione-picker": "^2.2.2",
     "html-to-draftjs": "^1.3.0",
     "input-moment": "^0.4.0",

@@ -17,6 +17,10 @@
     "@types/react" "*"
     immutable "^3.8.1"
 
+"@types/emoji-regex@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@types/emoji-regex/-/emoji-regex-7.0.0.tgz#c06c861c27b4094fdc7f54f9abe80f56d82da397"
+
 "@types/enzyme-adapter-react-16@^1.0.0":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.2.tgz#15ae37c64d6221a6f4b3a4aacc357cf773859de4"
@@ -2475,6 +2479,10 @@ elliptic@^6.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.0"
+
+emoji-regex@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.1.tgz#5a132b28ebf84a289ba692862f7d4206ebcd32d0"
 
 emojione-picker@^2.2.2:
   version "2.2.2"
