@@ -456,10 +456,6 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
             }
         }
 
-        // const contentBlock = htmlToDraft(ancestor && ancestor.innerHTML);
-        // const contentState = ContentState.createFromBlockArray(contentBlock.contentBlocks);
-        // const editorState = EditorState.createWithContent(contentState);
-
         return ancestor.innerHTML;
     }
 

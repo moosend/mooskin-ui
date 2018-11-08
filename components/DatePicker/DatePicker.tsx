@@ -56,6 +56,9 @@ export interface IDateProps{
     /** prevent on selection a past date */
     preventPast?: boolean;
 
+    /** allow manual date input */
+    allowInput?: boolean;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -72,36 +75,74 @@ export interface IDateProps{
 export interface IDateState{
     // date: moment.Moment;
     displayPicker: boolean;
+    day?: string;
+    month?: string;
+    year?: string;
+    hour?: string;
+    minute?: string;
 }
 
 export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
     static defaultProps = {
         className: '',
-        format: 'DD MMM YYYY, H:mm',
+        format: 'DD MM YYYY, HH:mm',
         style: {}
     };
 
-    datepicker: any;
-
-    // static setDate = (props: IDateProps) => {
-    //     if (props.dateOnly){
-    //         return moment(props.date).startOf('day') || moment().startOf('day');
-    //     }
-    //     return moment(props.date) || moment();
-    // }
-
     // static getDerivedStateFromProps(nextProps: IDateProps){
-    //     return {date: DatePicker.setDate(nextProps)};
+    //     const day = parseInt(moment(nextProps.date).format('DD'), 10);
+    //     const month = parseInt(moment(nextProps.date).format('MM'), 10);
+    //     const year = parseInt(moment(nextProps.date).format('YYYY'), 10);
+    //     const hour = parseInt(moment(nextProps.date).format('HH'), 10);
+    //     const minute = parseInt(moment(nextProps.date).format('mm'), 10);
+    //     return {day, month, year, hour, minute};
     // }
+
+    datepicker: any;
+    dayInput: HTMLInputElement | null;
+    monthInput: HTMLInputElement | null;
+    yearInput: HTMLInputElement | null;
+    hourInput: HTMLInputElement | null;
+    minuteInput: HTMLInputElement | null;
 
     constructor(props: IDateProps){
         super(props);
 
         this.state = {
             // date: DatePicker.setDate(this.props),
-            displayPicker: false
+            day: this.props.date ? moment(this.props.date).format('DD') : '',
+            displayPicker: false,
+            hour: this.props.date ? moment(this.props.date).format('HH') : '',
+            minute: this.props.date ? moment(this.props.date).format('mm') : '',
+            month: this.props.date ? moment(this.props.date).format('MM') : '',
+            year: this.props.date ? moment(this.props.date).format('YYYY') : '',
         };
+    }
+
+    componentDidMount(){
+        if (this.props.preventPast && this.props.date && this.props.date.isBefore(moment())){
+            this.props.onChange &&
+            this.props.onChange({value: moment(), dataLabel: this.props.dataLabel});
+        }
+        setTimeout(() => {
+            this.props.preventPast && this.preventPast();
+        }, 10);
+        if (this.props.allowInput){
+            this.updateInputFields(this.props.date || moment());
+        }
+    }
+
+    componentDidUpdate(){
+        setTimeout(() => {
+            this.props.preventPast && this.preventPast();
+        }, 10);
+    }
+
+    componentWillReceiveProps(nextProps: IDateProps){
+        if (nextProps.date !== this.props.date){
+            this.props.allowInput && this.replaceTimeDisplays();
+        }
     }
 
     render(){
@@ -110,15 +151,9 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
     renderDatePicker = () => {
 
-        setTimeout(() => {
-            this.props.preventPast && this.preventPast();
-        }, 10);
-
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
-        const disabledClasses = !this.props.disabled ? '' : styles.disabled;
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
         // const value = this.props.date ? moment(this.props.date).format(this.props.format) : undefined;
-        const status = this.getStatus();
         const descStatus = this.getDescStatus();
         const description = this.props.description;
 
@@ -132,16 +167,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             >
                 {this.props.label && <label className={styles.label} style={spacing} >{this.props.label}</label>}
                 <div className={styles.wrapper}>
-                    <input
-                        readOnly
-                        value={moment(this.props.date || moment()).format(this.props.format)}
-                        onClick={this.toggle}
-                        className={`${styles.dateInput} ${disabledClasses} ${status}`}
-                        required={this.props.required}
-                        disabled={this.props.disabled}
-                        placeholder={this.props.placeholder}
-                        onBlur={this.validateOnBlur}
-                    />
+                    {this.renderInputs()}
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                     <div className={styles.calendar} style={{display: displayPicker}} ref={(datepicker) => this.datepicker = datepicker}>
                         <InputMoment
@@ -157,12 +183,235 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         );
     }
 
+    renderInputs = () => {
+        const {allowInput} = this.props;
+        const dateSeparator = <div style={{margin: '0 3px'}}>/</div>;
+        const disabledClasses = !this.props.disabled ? '' : styles.disabled;
+        const status = this.getStatus();
+        const maxDays = this.state.minute && moment(this.state.month, 'MM').daysInMonth() || 31;
+        const indexStyle = this.state.displayPicker ? {zIndex: 100} : {};
+        if (allowInput){
+            return (
+                <div
+                    className={styles.inputGroup}
+                    onClick={this.onGroupClick}
+                    style={indexStyle}
+                    onBlur={this.onGroupBlur}
+                    onFocus={this.onGroupFocus}
+                >
+                    <input
+                        ref={(dayInput) => this.dayInput = dayInput}
+                        type="number"
+                        min={1}
+                        max={maxDays}
+                        maxLength={2}
+                        value={this.state.day}
+                        className={styles.smallInput}
+                        style={{width: this.state.day && this.state.day.toString().length * 10}}
+                        onChange={(e) => this.onInputChange(e, 'day', 2, {min: 1, max: maxDays}, this.monthInput)}
+                        onFocus={this.selectText}
+                    />
+                    {dateSeparator}
+                    <input
+                        ref={(monthInput) => this.monthInput = monthInput}
+                        type="number"
+                        min={1}
+                        max={12}
+                        maxLength={2}
+                        value={this.state.month}
+                        className={styles.smallInput}
+                        style={{width: this.state.month && this.state.month.toString().length * 10}}
+                        onChange={(e) => this.onInputChange(e, 'month', 2, {min: 1, max: 12}, this.yearInput)}
+                        onFocus={this.selectText}
+                    />
+                    {dateSeparator}
+                    <input
+                        ref={(yearInput) => this.yearInput = yearInput}
+                        type="number"
+                        value={this.state.year}
+                        className={styles.smallInput}
+                        maxLength={4}
+                        style={{width: this.state.year && this.state.year.toString().length * 10, marginRight: 10}}
+                        onChange={(e) => this.onInputChange(e, 'year', 4, {min: 0, max: 9999}, this.hourInput)}
+                        onFocus={this.selectText}
+                    />
+                    {!this.props.dateOnly && this.renderTimeFields()}
+                </div>
+            );
+        }
+        return (
+            <input
+                readOnly
+                value={moment(this.props.date || moment()).format(this.props.format)}
+                onClick={this.toggle}
+                className={`${styles.dateInput} ${disabledClasses} ${status}`}
+                required={this.props.required}
+                disabled={this.props.disabled}
+                placeholder={this.props.placeholder}
+                onBlur={this.validateOnBlur}
+            />
+        );
+    }
+
+    renderTimeFields = () => {
+        const timeSeparator = <div style={{margin: '0 3px'}}>:</div>;
+        return (
+            <>
+                {this.renderHourField()}
+                {timeSeparator}
+                {this.renderMinuteField()}
+            </>
+        );
+    }
+
+    renderHourField = () => {
+        return (
+            <input
+                ref={(hourInput) => this.hourInput = hourInput}
+                type="number"
+                min={0}
+                max={23}
+                maxLength={2}
+                value={this.state.hour}
+                className={styles.smallInput}
+                style={{width: this.state.hour && this.state.hour.toString().length * 10}}
+                onChange={(e) => this.onInputChange(e, 'hour', 2, {min: 0, max: 23}, this.minuteInput)}
+                onFocus={this.selectText}
+            />
+        );
+    }
+
+    renderMinuteField = () => {
+        return (
+            <input
+                ref={(minuteInput) => this.minuteInput = minuteInput}
+                type="number"
+                min={0}
+                max={59}
+                maxLength={2}
+                value={this.state.minute}
+                className={styles.smallInput}
+                style={{width: this.state.minute && this.state.minute.toString().length * 10}}
+                onChange={(e) => this.onInputChange(e, 'minute', 2, {min: 0, max: 59})}
+                onFocus={this.selectText}
+            />
+        );
+    }
+
+    selectText = (e: React.FocusEvent<HTMLInputElement>) => {
+        e.target.select();
+    }
+
+    replaceTimeDisplays = () => {
+        const timeCollection = this.datepicker.getElementsByClassName('time');
+        const timeArray = timeCollection && Array.from(timeCollection);
+        timeArray && timeArray.map((el: HTMLSpanElement, i) => {
+            el.innerHTML = '<input/ >';
+            const input = el.getElementsByTagName('input')[0];
+            if (i === 0){
+                this.changeInputAttr(input, 'hour');
+            } else {
+                this.changeInputAttr(input, 'minute');
+            }
+        });
+    }
+
+    changeInputAttr = (input: HTMLInputElement, type: 'minute' | 'hour') => {
+        input.onfocus = (e) => this.selectText(e as any);
+        input.className = styles.smallInput;
+        input.type = 'number';
+        input.style.width = '43px';
+        input.style.color = '#fff';
+        input.value = this.state[type] || '';
+        input.oninput = (e: any) => {
+            let value = e.target.value;
+            const numberValue = parseInt(value, 10);
+            const min = 0;
+            const max = type === 'minute' ? 59 : 23;
+            if (numberValue > max){
+                value = max.toString();
+            } else if (numberValue < min){
+                value = min.toString();
+            }
+            if (type === 'minute'){
+                this.setMinuteState(value);
+            } else {
+                this.setHourState(value);
+            }
+            input.value = value;
+        };
+        input.onblur = () => {
+            if (input.value.length === 1){
+                const newValue = `0${input.value}`;
+                input.value = newValue;
+                if (type === 'minute'){
+                    this.setMinuteState(newValue);
+                } else {
+                    this.setHourState(newValue);
+                }
+            }
+            this.onGroupBlur();
+            setTimeout(() => {
+                this.replaceTimeDisplays();
+            }, 10);
+        };
+    }
+
+    setMinuteState = (minute: string) => {
+        this.setState({minute});
+    }
+
+    setHourState = (hour: string) => {
+        this.setState({hour});
+    }
+
+    onInputChange = (
+        e: React.ChangeEvent<HTMLInputElement>,
+        dataLabel: string,
+        maxLength: number,
+        minMax: {min: number, max: number},
+        next?: HTMLInputElement | null
+    ) => {
+        if (e.target.value.length > maxLength){
+            return;
+        }
+        let value = e.target.value;
+        const numberValue = parseInt(value, 10);
+        if (numberValue > minMax.max){
+            value = minMax.max.toString();
+        } else if (numberValue < minMax.min){
+            value = minMax.min.toString();
+        }
+        if (next && e.target.value.length === maxLength){
+            next.focus();
+        }
+        this.setState({[dataLabel]: value, displayPicker: this.state.displayPicker});
+    }
+
+    onGroupClick = () => {
+        if (document.activeElement.tagName === 'BODY'){
+            this.dayInput && this.dayInput.focus();
+        }
+    }
+
+    onGroupFocus = () => {
+        this.setState({displayPicker: true});
+    }
+
+    onGroupBlur = () => {
+        const format = 'DD - MM - YYYY / HH - mm';
+        const {day, hour, minute, month, year} = this.state;
+        const date = moment(`${day} - ${month} - ${year} / ${hour} - ${minute}`, format);
+        this.onChange(date);
+    }
+
     onChange = (date: moment.Moment) => {
         let value = this.props.dateOnly ? moment(date).startOf('day') : moment(date);
         value = this.props.preventPast && value.isBefore(moment()) ? moment() : value;
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value, dataLabel: this.props.dataLabel});
+        this.updateInputFields(date);
         if (this.props.status){
             this.props.validate &&
             this.props.validate(
@@ -170,6 +419,15 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             );
         }
         // this.setState({date: value});
+    }
+
+    updateInputFields = (date: moment.Moment) => {
+        const day = moment(date).format('DD');
+        const month = moment(date).format('MM');
+        const year = moment(date).format('YYYY');
+        const hour = moment(date).format('HH');
+        const minute = moment(date).format('mm');
+        this.setState({day, month, year, hour, minute});
     }
 
     toggle = () => {
@@ -219,8 +477,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
     renderNowButton = () => {
         return (
-            <div style={{display: 'flex', justifyContent: 'center', background: '#fff', padding: 10}}>
-                <Button onClick={() => this.onChange(moment())}>Now</Button>
+            <div style={{display: 'flex', justifyContent: 'center', background: '#fff', padding: 15}}>
+                <Button inverseStyle onClick={() => this.onChange(moment())}>Set Current Date and Time</Button>
             </div>
         );
     }
@@ -248,6 +506,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         //     tBody[0].style.color = 'initial';
         //     tBody[0].style.pointerEvents = 'auto';
         tdArray && tdArray.forEach((date: any, i: any) => {
+            // document.body.style.cursor = 'auto';
             const className = date.className;
             const day = parseInt(date.innerText, 10);
             let setMonth = month - 1;
@@ -261,13 +520,15 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             // console.log(cellDate.format('DD MM YYYY'), isPastDate);
             if (isPastDate){
                 date.className = `${date.className} ${styles.disabledCell}`;
-                date.style.pointerEvents = 'none';
+                date.onclick = (e: any) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                };
+                date.style.borderRadius = 0;
             } else {
-                date.style.pointerEvents = 'auto';
-                date.className = date.className.replace(`${styles.disabledCell}`, '').replace(` ${styles.disabledCell}`, '');
+                date.className = date.className.replace(`${styles.disabledCell}`, '');
             }
         });
-        // }
 
     }
 
