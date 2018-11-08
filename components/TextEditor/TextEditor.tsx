@@ -777,12 +777,12 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
        update offset and length attributes of these inlineStyleRange objects with an appropriate values
        return manipulated raw editor state object
        */
-    manipulateRawBlocks = (rawState: RawDraftContentState) => rawState.blocks.map((entry) => {
+    manipulateRawBlocks = (rawState: RawDraftContentState) => rawState.blocks.map((entry: any) => {
         const emojiIndexes = this.getEmojiIndexes(entry.text);
         let { inlineStyleRanges } = entry;
         emojiIndexes.forEach(({ index, length }) => {
           inlineStyleRanges = inlineStyleRanges
-            .map((inline) => {
+            .map((inline: any) => {
                 const matches = this.indexMatch(inline, index, length);
                 if (matches) {
                     const newRangeConfig = this.manipulateStyleRange(inline, index, length);
