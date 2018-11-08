@@ -103,6 +103,7 @@ In this case on each TextEditor change, the value will be console logged.
 * `toolbar` - object defining editor options and custom options
 * `draggable` - wether the toolbar should be draggable
 * `label` - label for editor
+* `returnWithHtml` - returns callback value with editorState and html
 * `onChange` - onChange callback when editor changes, returns EditorState
 * `dataLabel` - label what kind of data
 * `noSeparators` - removes section separators from the editor
