@@ -150,6 +150,7 @@ import {Input} from 'mooskin'
 ## List of Components
 
 * [Button](https://github.com/moosend/mooskin-ui/tree/master/components/Button)
+* [Carousel](https://github.com/moosend/mooskin-ui/tree/master/components/Carousel)
 * [CheckBox](https://github.com/moosend/mooskin-ui/tree/master/components/Checkbox)
 * [CheckListItem](https://github.com/moosend/mooskin-ui/tree/master/components/CheckListItem)
 * [ClipboardButton](https://github.com/moosend/mooskin-ui/tree/master/components/ClipboardButton)

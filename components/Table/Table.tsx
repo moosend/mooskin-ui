@@ -4,6 +4,9 @@ import Pagination from '../Pagination';
 import SmallIconButton from '../SmallIconButton';
 import styles from './Table.css';
 
+import {arrow} from '../List/List';
+import listStyles from '../List/List.css';
+
 export interface ITableProps{
 
     /** override Table id */
@@ -80,6 +83,8 @@ export interface IHeaderProps{
 }
 
 export interface IColProps{
+
+    colSpan?: number;
 
     /** Column class */
     className?: string;
@@ -206,15 +211,21 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         const data = this.props.paginate || sortable ? this.state.data : this.props.data;
 
+        let pushedIndex = 0;
+
         // const data = this.props.data as any;
 
         data.map((obj: any, index: number) => {
             const cols: Array<React.ReactElement<ITableProps>> = [];
             const popoverData: Array<React.ReactElement<ITableProps>> = [];
 
+            let colSpan = 1;
+
             for (const key in obj) {
 
                 if (obj.hasOwnProperty(key)) {
+
+                    colSpan = colSpan + 1;
 
                     settings.forEach((setting: any, i: number) => {
 
@@ -231,7 +242,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                             const dataField = setting.dataField;
 
                             const onCellClick = obj.onClick ?
-                            this.onCellClick(obj.onClick, {label: obj[key], dataField, content: data[index]}) :
+                            this.onCellClick(obj.onClick, {label: obj[key], dataField, content: data[index], index}) :
                             undefined;
 
                             cols[i] = (
@@ -287,15 +298,40 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
             const rowStyles = this.props.alternate ? styles.alternateRow : '';
 
-            rows.push(
-                <Row
-                    key={index}
-                    style={this.props.rowStyle}
-                    className={`${rowStyles} ${this.props.rowClass}`}
-                >
-                    {cols}
-                </Row>
-            );
+            if (obj && obj.expandable && obj.expandable.expanded){
+                rows.push(
+                    <Row
+                        key={index + pushedIndex}
+                        style={this.props.rowStyle}
+                        className={`${rowStyles} ${this.props.rowClass}`}
+                    >
+                        {cols}
+                    </Row>
+                );
+                rows.push(
+                    <Row style={{border: 'none'}} key={index + pushedIndex + 1}>
+                        <Col
+                            style={{position: 'relative', ...obj.expandable.style}}
+                            className={`${listStyles.expandedSection} ${obj.expandable.className}`}
+                            colSpan={colSpan}
+                        >
+                            {obj.expandable.content}
+                            {arrow(obj.expandable.expanded)}
+                        </Col>
+                    </Row>
+                );
+                pushedIndex = pushedIndex + 1;
+            } else {
+                rows.push(
+                    <Row
+                        key={index + pushedIndex}
+                        style={this.props.rowStyle}
+                        className={`${rowStyles} ${this.props.rowClass}`}
+                    >
+                        {cols}
+                    </Row>
+                );
+            }
 
         });
 
@@ -364,7 +400,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
     onCellClick = (
         callback: (e: React.MouseEvent<HTMLElement>, data: {label: any, dataField: string, content: {}}) => void,
-        data: {label: any, dataField: string, content: {}}
+        data: {label: any, dataField: string, content: {}, index: number}
     ) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             return callback(e, data);
@@ -577,7 +613,7 @@ Row.defaultProps = {
 export const Col: React.StatelessComponent<IColProps> = (props) => {
 
     return(
-        <td className={`column ${props.className}`} style={props.style} onClick={props.onClick}>
+        <td className={`column ${props.className}`} style={props.style} onClick={props.onClick} colSpan={props.colSpan}>
             {props.children}
         </td>
     );

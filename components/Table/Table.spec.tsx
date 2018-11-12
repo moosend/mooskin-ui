@@ -791,4 +791,51 @@ describe('Table', () => {
         expect(component.find('Pagination').length).toEqual(0);
     });
 
+    test('Applies expandable section (another row), when a certain type of object property is passed to the data array', () => {
+
+        const data = [
+            {
+                country: 'Kosovo',
+                expandable: {
+                    content: <div className="expandable">Expanded Section</div>,
+                    expanded: true
+                },
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            },
+            {
+                country: 'Citadel',
+                id: 2,
+                lastname: 'Shepard',
+                name: 'John'
+            },
+            {
+                country: 'Tatooine',
+                id: 4,
+                lastname: 'Skywalker',
+                name: 'Luke'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+
+        expect(component.find('tr').length).toEqual(6); // 5 + 1 expandable section row
+        expect(component.find('.expandable').length).toEqual(1);
+
+    });
+
 });
