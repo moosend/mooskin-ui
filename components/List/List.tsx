@@ -314,17 +314,6 @@ export const ExpandedSection: React.StatelessComponent<IExpandedSectionProps> = 
 
     const displayArrow = props.arrow !== undefined ? props.arrow : true;
 
-    const arrow = () => {
-        return displayArrow && (
-            <div className={styles.arrow}>
-                <div style={{position: 'relative', height: '100%', width: '100%'}}>
-                    <div className={styles.innerArrow}/>
-                    <div className={styles.borderArrow}/>
-                </div>
-            </div>
-        ) || null;
-    };
-
     return(
         <div
             id={props.id}
@@ -332,7 +321,7 @@ export const ExpandedSection: React.StatelessComponent<IExpandedSectionProps> = 
             style={{...display, ...props.style}}
             onClick={(e) => e.stopPropagation()}
         >
-            {arrow()}
+            {arrow(displayArrow)}
             {props.children}
         </div>
     );
@@ -344,6 +333,17 @@ export interface IItemContentProps {
     style?: React.CSSProperties;
     children?: JSX.Element | Element | Element[] | JSX.Element[] | string;
 }
+
+export const arrow = (displayArrow: boolean) => {
+    return displayArrow && (
+        <div className={styles.arrow}>
+            <div style={{position: 'relative', height: '100%', width: '100%'}}>
+                <div className={styles.innerArrow}/>
+                <div className={styles.borderArrow}/>
+            </div>
+        </div>
+    ) || null;
+};
 
 export const ItemContent: React.StatelessComponent<IItemContentProps> = (props) => {
 
