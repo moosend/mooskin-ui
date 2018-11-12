@@ -8,6 +8,7 @@ class TableExample extends React.Component{
         this.tableContent = this.tableContent.bind(this);
         this.onSearch = this.onSearch.bind(this);
         this.getFiltered = this.getFiltered.bind(this);
+        this.onRowClick = this.onRowClick.bind(this);
 
         this.state = {
             tableContent: [],
@@ -33,6 +34,22 @@ class TableExample extends React.Component{
                     status: 'Sent',
                     subscribers: 1628,
                     onClick: (e, data) => {console.log(e, data)}
+                },
+                {
+                    actions: <SmallIconButton transparent icon="edit"/>,
+                    campaign: 'This row can be expanded',
+                    click: '22 %',
+                    delivered: '12-07-2011 09:35 PM',
+                    mailingList: 'Some Mailing list',
+                    open: '12 %',
+                    status: 'Pending',
+                    subscribers: 5321,
+                    style: {cursor: 'pointer'},
+                    onClick: this.onRowClick,
+                    expandable: {
+                        expanded: false,
+                        content: <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: 70}}>This is the expanded section</div>
+                    }
                 },
                 {
                     actions: <SmallIconButton transparent icon="edit"/>,
@@ -63,6 +80,12 @@ class TableExample extends React.Component{
                     open: '99 %',
                     status: 'Sent',
                     subscribers: 56321,
+                    style: {cursor: 'pointer'},
+                    onClick: this.onRowClick,
+                    expandable: {
+                        expanded: true,
+                        content: <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: 70}}>This is the expanded section</div>
+                    }
                 },
                 {
                     actions: <SmallIconButton transparent icon="check"/>,
@@ -113,6 +136,16 @@ class TableExample extends React.Component{
                     <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
                     <TableHeader dataField="title" hideSmall sortable >Title</TableHeader>
                     <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
+                </Table>
+                <Table data={this.state.data} smallCollapse>
+                    <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
+                    <TableHeader dataField="mailingList" hideSmall sortable >Mailing List</TableHeader>
+                    <TableHeader dataField="delivered" sortable>Delivered</TableHeader>
+                    <TableHeader dataField="status" sortable>Status</TableHeader>
+                    <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
+                    <TableHeader dataField="click" sortable>Clicks</TableHeader>
+                    <TableHeader dataField="subscribers" sortable>Subscribers</TableHeader>
+                    <TableHeader dataField="actions" sortable>Actions</TableHeader>
                 </Table>
             </div>
         );
@@ -178,4 +211,17 @@ class TableExample extends React.Component{
         }
         return this.state.tableContent;
     }
+
+    onRowClick(e, data){
+        const dataArray = [...this.state.data];
+        let targetObject = dataArray[data.index];
+        let newExpandable = targetObject.expandable;
+        newExpandable = {...newExpandable, expanded: !newExpandable.expanded};
+        targetObject.expandable = newExpandable;
+        dataArray.splice(data.index, 1, targetObject);
+        this.setState({data: dataArray});
+        console.log(targetObject, dataArray);
+    }
+
+
 }
