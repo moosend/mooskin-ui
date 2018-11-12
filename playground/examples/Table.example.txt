@@ -213,6 +213,7 @@ class TableExample extends React.Component{
     }
 
     onRowClick(e, data){
+        console.log(data);
         const dataArray = [...this.state.data];
         let targetObject = dataArray[data.index];
         let newExpandable = targetObject.expandable;
@@ -220,7 +221,6 @@ class TableExample extends React.Component{
         targetObject.expandable = newExpandable;
         dataArray.splice(data.index, 1, targetObject);
         this.setState({data: dataArray});
-        console.log(targetObject, dataArray);
     }
 
 

@@ -182,7 +182,45 @@ const data = [
 </Table>
 ```
 
-the callback will return two args, `e` for event & `data` which is an object consisting of the relevant `dataLabel` of the cell & `content` which is the inner content of the cell
+the callback will return two args, `e` for event & `data` which is an object consisting of the relevant `dataLabel` of the cell, `label` which is the text, or content, of the clicked cell, `index` is the index of the row in the data array & `content` which is the inner content of the cell
+
+### Expanded sections for Rows
+
+As each row is represented by a object in the array that is passed to the `data` prop, an expanded section can be added to the Row, similar to the [List](https://github.com/moosend/mooskin-ui/tree/master/components/List) component. The expanded section will be rendered by the `expandable` property of the Rows object. The `expandable` property should be an object, consisting of two mandatory properties (`expanded`: boolean, `content`: whatever should be rendered, preferebly JSX Element) and two optional ones (`className`: string, `style`: CSS properties). The proper way to change the `expandable` section properties, is by using the above mentioned `onClick` callbacks for Rows.
+
+Example:
+```
+const data = [
+    {
+        name: 'Geralt of Rivia',
+        weapon: 'Aerondight',
+        abilities: 'Sword fighting, Quen Signs',
+        profession: 'Witcher',
+        allegience: 'School of the Wolf',
+        expandable: {
+            expanded: true,
+            content: <div style={{background: 'red'}}>This section is expandable</div>
+        }
+    },
+    {
+        name: 'John Shepard',
+        weapon: 'Vindicator',
+        abilities: 'Weapons, Biotics',
+        profession: 'Commander',
+        allegience: 'Alliance, Citadel',
+        onClick: (e, data) => console.log(e, data);
+    }
+];
+
+<Table data={data}>
+    <TableHeader dataField="name" >Name</TableHeader>
+    <TableHeader dataField="profession" hideSmall >Profession</TableHeader>
+    <TableHeader dataField="weapon" hideSmall >Weapon</TableHeader>
+    <TableHeader dataField="abilities" >Abilities</TableHeader>
+    <TableHeader dataField="allegience" hideSmall >Allegience</TableHeader>
+</Table>
+```
+
 
 <div class="playground-doc">
 

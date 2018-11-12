@@ -309,8 +309,12 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                     </Row>
                 );
                 rows.push(
-                    <Row style={{border: 'none', ...obj.expandable.style}} className={obj.expandable.className} key={index + pushedIndex + 1}>
-                        <Col style={{position: 'relative'}} className={listStyles.expandedSection} colSpan={colSpan}>
+                    <Row style={{border: 'none'}} key={index + pushedIndex + 1}>
+                        <Col
+                            style={{position: 'relative', ...obj.expandable.style}}
+                            className={`${listStyles.expandedSection} ${obj.expandable.className}`}
+                            colSpan={colSpan}
+                        >
                             {obj.expandable.content}
                             {arrow(obj.expandable.expanded)}
                         </Col>
