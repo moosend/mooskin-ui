@@ -23,9 +23,9 @@ describe('H3', () => {
 
         const component = shallow(<H3 id="Campaigns" className="headers">Mooo!</H3>);
 
-        expect(component.find('h3').text()).toBe('Mooo!');
-        expect(component.find('h3').prop('id')).toEqual('Campaigns');
-        expect(component.find('h3').hasClass('headers')).toBe(true);
+        expect(component.find('p').text()).toBe('Mooo!');
+        expect(component.find('p').prop('id')).toEqual('Campaigns');
+        expect(component.find('p').hasClass('headers')).toBe(true);
     });
 
 });
