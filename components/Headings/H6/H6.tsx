@@ -18,13 +18,13 @@ class H6 extends React.Component<IHeadingProps, {}> {
         const classes = `h6-component ${styles.h6} ${className}`;
 
         return (
-            <h6
+            <p
                 id={id}
                 className={classes}
                 style={style}
             >
                 {children}
-            </h6>
+            </p>
         );
     }
 }
