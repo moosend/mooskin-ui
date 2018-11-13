@@ -844,7 +844,7 @@ describe('Table', () => {
             {
                 country: 'Kosovo',
                 expandable: {
-                    content: [<td style={{color: 'red'}}>Hello There!</td>, <td>General Kenobi</td>],
+                    content: [<td key={0} style={{color: 'red'}}>Hello There!</td>, <td key={1}>General Kenobi</td>],
                     expanded: true
                 },
                 id: 5,
@@ -870,8 +870,6 @@ describe('Table', () => {
                 name: 'Luke'
             }
         ];
-
-        const expectedChildren = ["Hello There!", <div className="arrow"><div style={{"height": "100%", "position": "relative", "width": "100%"}}><div className="innerArrow" /><div className="borderArrow" /></div></div>];
 
         const component = mount(
             <Table data={data}>
