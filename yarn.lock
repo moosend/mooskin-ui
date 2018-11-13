@@ -2433,9 +2433,11 @@ draft-js@0.10.4:
     immutable "~3.7.4"
     object-assign "^4.1.0"
 
-draftjs-to-html@^0.8.3:
+"draftjs-to-html@https://github.com/HsuTing/draftjs-to-html.git#fix-emoji":
   version "0.8.4"
-  resolved "https://registry.yarnpkg.com/draftjs-to-html/-/draftjs-to-html-0.8.4.tgz#bda0adc00945db1f1baf0191b34b49b24191f1df"
+  resolved "https://github.com/HsuTing/draftjs-to-html.git#8a0696b193be0e83e011803477597a0a7d993a17"
+  dependencies:
+    emoji-regex "^7.0.1"
 
 draftjs-utils@^0.9.3:
   version "0.9.4"
@@ -6128,7 +6130,7 @@ react-dom@^16.0.3:
 
 "react-draft-wysiwyg@https://github.com/donibehrami/react-draft-wysiwyg.git#master":
   version "1.12.13"
-  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#068bcf1bdd86b48a943b91a2f643416ad74d111b"
+  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#1aa58f02bd857f89ecb89474eec4bceb5fce10e4"
   dependencies:
     classnames "^2.2.5"
     draftjs-utils "^0.9.3"
