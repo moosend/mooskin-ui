@@ -570,7 +570,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
     }
 
     prepareContent = (content: JSX.Element | JSX.Element[], expanded: boolean) => {
-        if(Array.isArray(content)){
+        if (Array.isArray(content)){
             const newElementArray: JSX.Element[] = [];
             content.map((element, i) => {
                 const jsexy = this.constructElement(element, expanded, i);
