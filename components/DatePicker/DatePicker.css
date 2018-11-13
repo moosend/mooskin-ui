@@ -1,7 +1,7 @@
 @import '../_utils/globals/screens.css';
 @import '../_utils/globals/variables.css';
 @import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Convergence');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:500|Convergence');
 
 .datePicker{
     display: flex;

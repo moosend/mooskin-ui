@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans|Convergence');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:500|Convergence');
 @import '../../_utils/globals/variables.css';
 
 .h1 {
     font-family: 'Convergence', 'Alegreya Sans', sans-serif;
     /*font-size: 28px;*/
     font-size: 1.75rem;
-    font-weight: 400;
     color: var(--heading);
+    margin: 19px 0;
 }
