@@ -18,13 +18,13 @@ class H4 extends React.Component<IHeadingProps, {}> {
         const classes = `h4-component ${styles.h4} ${className}`;
 
         return (
-            <p
+            <div
                 id={id}
                 className={classes}
                 style={style}
             >
                 {children}
-            </p>
+            </div>
         );
     }
 }
