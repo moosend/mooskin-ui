@@ -321,7 +321,7 @@ export const ABSlider: React.StatelessComponent<IABSliderProps> = (props) => {
             >
                 <span className={styles.font}>Winner</span>
                 <span className={styles.percentText}>
-                    {100 - percentage * 2}% ({percentageWinner})
+                    {100 - percentage * 2}% ({percentageWinner < 1 ? 1 : percentageWinner})
                 </span>
             </div>
             <input
