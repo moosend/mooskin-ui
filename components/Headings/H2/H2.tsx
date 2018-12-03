@@ -18,13 +18,13 @@ class H2 extends React.Component<IHeadingProps, {}> {
         const classes = `h2-component ${styles.h2} ${className}`;
 
         return (
-            <p
+            <div
                 id={id}
                 className={classes}
                 style={style}
             >
                 {children}
-            </p>
+            </div>
         );
     }
 }
