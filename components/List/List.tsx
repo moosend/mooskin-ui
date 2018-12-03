@@ -334,9 +334,10 @@ export interface IItemContentProps {
     children?: JSX.Element | Element | Element[] | JSX.Element[] | string;
 }
 
-export const arrow = (displayArrow: boolean) => {
+export const arrow = (displayArrow: boolean, index?: number) => {
+    const key = index ? index : undefined;
     return displayArrow && (
-        <div className={styles.arrow}>
+        <div key={key} className={styles.arrow}>
             <div style={{position: 'relative', height: '100%', width: '100%'}}>
                 <div className={styles.innerArrow}/>
                 <div className={styles.borderArrow}/>

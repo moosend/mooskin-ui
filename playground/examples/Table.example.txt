@@ -48,7 +48,7 @@ class TableExample extends React.Component{
                     onClick: this.onRowClick,
                     expandable: {
                         expanded: false,
-                        content: <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: 70}}>This is the expanded section</div>
+                        content: <td colSpan={10} style={{textAlign: 'center', height: 70}}>This is the expanded section</td>
                     }
                 },
                 {
@@ -84,7 +84,13 @@ class TableExample extends React.Component{
                     onClick: this.onRowClick,
                     expandable: {
                         expanded: true,
-                        content: <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: 70}}>This is the expanded section</div>
+                        content: [
+                            <td key="0" colSpan={1} style={{textAlign: 'center', height: 70}}>Campaign Section</td>,
+                            <td key="1" colSpan={1} style={{textAlign: 'center', height: 70}}>Mailing Lists</td>,
+                            <td key="2" colSpan={2} style={{textAlign: 'center', height: 70}}>Delivered & Status</td>,
+                            <td key="3" colSpan={3} style={{textAlign: 'center', height: 70}}>Opens, Clicks & Subs</td>,
+                            <td key="4" colSpan={1} style={{textAlign: 'center', height: 70}}>Actions</td>
+                        ]
                     }
                 },
                 {

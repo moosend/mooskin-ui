@@ -18,13 +18,13 @@ class H3 extends React.Component<IHeadingProps, {}> {
         const classes = `h3-component ${styles.h3} ${className}`;
 
         return (
-            <p
+            <div
                 id={id}
                 className={classes}
                 style={style}
             >
                 {children}
-            </p>
+            </div>
         );
     }
 }
