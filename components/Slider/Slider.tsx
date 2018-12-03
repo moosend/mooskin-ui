@@ -285,10 +285,19 @@ export const ABSlider: React.StatelessComponent<IABSliderProps> = (props) => {
     };
 
     const getPercentage = (num: number, per: number) => {
-        return Math.round((num / 100) * per);
+        const value = Math.floor((num / 100) * per);
+        return value < 1 ? 1 : value;
+    };
+
+    const getWinnerPercentage = (num: number, per: number) => {
+        return Math.ceil((num / 100) * per);
     };
 
     const percentage = props.percentage > max ? max : props.percentage < min ? min : props.percentage;
+
+    const percentageAB = getPercentage(props.count, percentage);
+    // const percentageWinner = getPercentage(props.count, 100 - percentage * 2);
+    const percentageWinner = props.count <= 1000 ? props.count - 2 * percentageAB : getWinnerPercentage(props.count, 100 - percentage * 2);
 
     return(
         <div className={`${styles.abContainer} ${props.className}`} style={props.style}>
@@ -297,14 +306,14 @@ export const ABSlider: React.StatelessComponent<IABSliderProps> = (props) => {
                 style={{left: 0, right: `${100 - percentage}%`}}
             >
                 <span className={styles.font}>A</span>
-                <span className={styles.percentText}>{percentage}% ({getPercentage(props.count, percentage)})</span>
+                <span className={styles.percentText}>{percentage}% ({percentageAB})</span>
             </div>
             <div
                 className={`${styles.section} ${styles.sectionB}`}
                 style={{left: `${percentage}%`, right: `${100 - 2 * percentage}%`}}
             >
                 <span className={styles.font}>B</span>
-                <span className={styles.percentText}>{percentage}% ({getPercentage(props.count, percentage)})</span>
+                <span className={styles.percentText}>{percentage}% ({percentageAB})</span>
             </div>
             <div
                 className={`${styles.section} ${styles.sectionW}`}
@@ -312,7 +321,7 @@ export const ABSlider: React.StatelessComponent<IABSliderProps> = (props) => {
             >
                 <span className={styles.font}>Winner</span>
                 <span className={styles.percentText}>
-                    {100 - percentage * 2}% ({getPercentage(props.count, 100 - percentage * 2)})
+                    {100 - percentage * 2}% ({percentageWinner})
                 </span>
             </div>
             <input
