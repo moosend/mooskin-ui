@@ -18,13 +18,13 @@ class H5 extends React.Component<IHeadingProps, {}> {
         const classes = `h5-component ${styles.h5} ${className}`;
 
         return (
-            <p
+            <div
                 id={id}
                 className={classes}
                 style={style}
             >
                 {children}
-            </p>
+            </div>
         );
     }
 }

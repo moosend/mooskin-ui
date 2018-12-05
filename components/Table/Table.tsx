@@ -84,8 +84,6 @@ export interface IHeaderProps{
 
 export interface IColProps{
 
-    colSpan?: number;
-
     /** Column class */
     className?: string;
 
@@ -299,6 +297,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             const rowStyles = this.props.alternate ? styles.alternateRow : '';
 
             if (obj && obj.expandable && obj.expandable.expanded){
+                const content = obj.expandable.content ? this.prepareContent(obj.expandable.content, obj.expandable.expanded) : null;
                 rows.push(
                     <Row
                         key={index + pushedIndex}
@@ -309,15 +308,12 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                     </Row>
                 );
                 rows.push(
-                    <Row style={{border: 'none'}} key={index + pushedIndex + 1}>
-                        <Col
-                            style={{position: 'relative', ...obj.expandable.style}}
-                            className={`${listStyles.expandedSection} ${obj.expandable.className}`}
-                            colSpan={colSpan}
-                        >
-                            {obj.expandable.content}
-                            {arrow(obj.expandable.expanded)}
-                        </Col>
+                    <Row
+                        style={obj.expandable.style}
+                        className={`${listStyles.expandedSection} ${obj.expandable.className}`}
+                        key={index + pushedIndex + 1}
+                    >
+                        {content}
                     </Row>
                 );
                 pushedIndex = pushedIndex + 1;
@@ -573,6 +569,25 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         }
     }
 
+    prepareContent = (content: JSX.Element | JSX.Element[], expanded: boolean) => {
+        if (Array.isArray(content)){
+            const newElementArray: JSX.Element[] = [];
+            content.map((element, i) => {
+                const jsexy = this.constructElement(element, expanded, i);
+                newElementArray.push(jsexy);
+            });
+            return newElementArray;
+        }
+        return this.constructElement(content, expanded, 0);
+    }
+
+    constructElement = (element: JSX.Element, expanded: boolean, index?: number) => {
+        const renderedArrow = arrow(expanded, 1);
+        const children = index === 0 ? [element.props.children, renderedArrow] : element.props.children;
+        const props = {...element.props, style: {...element.props.style, ...{position: 'relative'}}, children};
+        return React.cloneElement(element, props, children);
+    }
+
 }
 
 export const TableHeader: React.StatelessComponent<IHeaderProps> = (props) => {
@@ -613,7 +628,7 @@ Row.defaultProps = {
 export const Col: React.StatelessComponent<IColProps> = (props) => {
 
     return(
-        <td className={`column ${props.className}`} style={props.style} onClick={props.onClick} colSpan={props.colSpan}>
+        <td className={`column ${props.className}`} style={props.style} onClick={props.onClick}>
             {props.children}
         </td>
     );

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`H4 renders correctly 1`] = `
-<p
+<div
   className="h4-component h4 myClass"
   id="heading4"
   style={
@@ -11,5 +11,5 @@ exports[`H4 renders correctly 1`] = `
   }
 >
   Mooskin
-</p>
+</div>
 `;

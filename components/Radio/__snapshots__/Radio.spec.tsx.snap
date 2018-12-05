@@ -75,12 +75,12 @@ exports[`Radio renders RadioGroup correctly 1`] = `
       className=""
       style={Object {}}
     >
-      <p
+      <div
         className="h2-component h2 "
         style={Object {}}
       >
         Select a plan
-      </p>
+      </div>
     </H2>
     <div
       className=""
