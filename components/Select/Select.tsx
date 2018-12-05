@@ -135,7 +135,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
         const alternateLabelContainer = this.props.alternate ? {padding: 11} : {};
         const alternateLabel = this.props.alternate ? {paddingTop: 11} : {};
-        const alternateOptions = this.props.alternate ? styles.alteranteOptions : '';
+        const alternateOptions = this.props.alternate ? styles.alternateOptions : '';
         const alternateContainer = this.props.alternate ? styles.alternateContainer : '';
         const valueColor = this.props.alternate && this.props.selected ? {color: '#5ccdde'} : {};
 

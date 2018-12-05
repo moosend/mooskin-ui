@@ -217,7 +217,7 @@
     border-width: 0px 5px 5px;
 }
 
-.alteranteOptions{
+.alternateOptions{
     border-radius: 0;
     top: 37px;
     max-height: 180px;
@@ -225,20 +225,20 @@
     border: 1px solid var(--inputBackground);;
 }
 
-.alteranteOptions ul li{
+.alternateOptions ul li{
     color: #3F3F3F;
 }
 
-.alteranteOptions ul li:first-child{
+.alternateOptions ul li:first-child{
     border-top: none;
 }
 
-.alteranteOptions ul li:last-child{
+.alternateOptions ul li:last-child{
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
 
-.alteranteOptions ul li:hover{
+.alternateOptions ul li:hover{
     background: #EBF5FF;
 }
 
