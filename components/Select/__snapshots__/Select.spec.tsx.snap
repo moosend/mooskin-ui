@@ -19,6 +19,7 @@ exports[`Select renders Select correctly 1`] = `
 >
   <label
     className="label "
+    style={Object {}}
   >
     Select something
   </label>
@@ -39,7 +40,7 @@ exports[`Select renders Select correctly 1`] = `
     }
   >
     <div
-      className="selectContainer labelContainer undefined"
+      className="selectContainer labelContainer undefined "
       style={
         Object {
           "zIndex": 0,
@@ -82,7 +83,7 @@ exports[`Select renders Select correctly 1`] = `
         value="option1"
       />
       <div
-        className="options-container optionsContainer"
+        className="options-container  optionsContainer"
         style={
           Object {
             "display": "none",

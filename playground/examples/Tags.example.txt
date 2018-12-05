@@ -60,6 +60,8 @@ class TagsExample extends React.Component {
                 <Tags source={promiseFunc} label="Tags from function that returns Promise(api call for github users)" tags={this.state.tags3} delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags3"/>
                 <br/>
                 <Tags labelLeft validate={this.validate} delimiters={['Enter', ',']} status={this.state.status} description={this.state.message} source={emails} errorMessage={'Tags accepts only emails'} validateTag="email" submitOnBlur={false} label="Email only tags" tags={this.state.tags4} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags4"/>
+                <br/>
+                <Tags preventSubmit source={countries} alternate delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validateTag={this.validation} tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
             </div>
         );
     }

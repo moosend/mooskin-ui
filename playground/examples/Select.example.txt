@@ -4,14 +4,18 @@ class SelectExample extends React.Component {
         super();
 
         this.onChange = this.onChange.bind(this);
-        this.onClick = this.onClick.bind(this);
+
+        this.state = {
+            selected: 'option2',
+            selected2: undefined,
+        }
 
     }
 
     render(){
         return (
             <div>
-                <Select noDuplicates onChange={this.onChange} dataLabel="plan" selected="Option1" label="Some label" filterPlaceholder="Type to filter">
+                <Select noDuplicates onChange={this.onChange} dataLabel="plan" selected={this.state.selected} dataLabel="selected" label="Some label" filterPlaceholder="Type to filter">
                     <Option value="option1">Option1</Option>
                     <Option value="option2">Option2</Option>
                     <Option value="option3">Option3</Option>
@@ -19,23 +23,30 @@ class SelectExample extends React.Component {
                     <Option value={5}>Option5</Option>
                 </Select>
                 <br/>
-                <Select onChange={this.onClick} selected="option" dataLabel="plan" description="this one has no filter placeholder (default)">
-                    <Option value="option1">Same value 1</Option>
-                    <Option value="option1">Same value 2</Option>
-                    <Option value="option1">Same value 3</Option>
-                    <Option value="option1">Same value 4</Option>
+                <Select placeholder="Sort by..." alternate lockSelected onChange={this.onChange} selected={this.state.selected2} dataLabel="selected2">
+                    <Option value="option1">Some value 1</Option>
+                    <Option value="option2">Some value 2</Option>
+                    <Option value="option3">Some value 3</Option>
+                    <Option value="option4">Some value 4</Option>
                 </Select>
                 <br/>
-                <Select onChange={this.onChange} dataLabel="plan" label="Some label" description="Empty Select" />
+                <Select placeholder="Sort by..." alternate onChange={this.onChange} selected={this.state.selected2} dataLabel="selected2">
+                    <Option value="option1">Some value 1</Option>
+                    <Option value="option2">Some value 2</Option>
+                    <Option value="option3">Some value 3</Option>
+                    <Option value="option4">Some value 4</Option>
+                    <Option value="option5">Some value 5</Option>
+                    <Option value="option6">Some value 6</Option>
+                    <Option value="option7">Some value 7</Option>
+                    <Option value="option8">Some value 8</Option>
+                </Select>
             </div>
         );
     }
 
     onChange(e, data) {
         console.log(e.target);
+        this.setState({[data.dataLabel]: data.value});
     }
 
-    onClick(e, data) {
-        console.log(data.value);
-    };
 }

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Select, {Option} from './Select';
 
-import {shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 
 describe('Select', () => {
 
@@ -120,5 +120,30 @@ describe('Select', () => {
         );
 
         expect(component.find('.label-container').text()).toEqual('The select is empty');
+    });
+
+    test('adds alternate styles when prop is passed', () => {
+
+        const component = mount(
+            <Select selected="option1" alternate dataLabel="plan">
+                <Option value="option1">Option1</Option>
+                <Option value="option2">Option2</Option>
+            </Select>
+        );
+
+        expect(component.find('.options-container').hasClass('alternateOptions')).toBe(true);
+        expect(component.find('.selectContainer').hasClass('alternateContainer')).toBe(true);
+    });
+
+    test('locks the Select when an option is selected, with the relevant prop', () => {
+
+        const component = mount(
+            <Select selected="option1" alternate lockSelected dataLabel="plan">
+                <Option value="option1">Option1</Option>
+                <Option value="option2">Option2</Option>
+            </Select>
+        );
+
+        expect(component.find('.lockContainer').length).toBe(1);
     });
 });
