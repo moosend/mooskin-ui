@@ -63,6 +63,9 @@ export interface ITagsProps{
     /** input field placehonder */
     placeholder?: string;
 
+    /** renders with different styles */
+    alternate?: boolean;
+
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
 
@@ -80,6 +83,9 @@ export interface ITagProps{
 
     /** data to be tagged */
     tag?: string;
+
+    /** renders with different styles */
+    alternate?: boolean;
 
     /** override tags styles */
     style?: React.CSSProperties;
@@ -166,21 +172,25 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         const containerClasses = this.props.labelLeft ? styles.rowContainer : '';
         const labelClasses = this.props.labelLeft ? styles.labelLeft : '';
 
+        const alternateContainer = this.props.alternate ? styles.alternateContainer : '';
+        const alternateInput = this.props.alternate ? styles.alternateInput : '';
+        const alternateInputContainer = this.props.alternate ? styles.alternateInputContainer : '';
+
         return(
             <div
                 id={this.id}
-                className={`${styles.container} ${this.props.className} ${containerClasses}`}
+                className={`${styles.container} ${containerClasses} ${this.props.className}`}
                 style={this.props.style}
             >
                 {this.props.label && <div className={`${styles.label} ${labelClasses}`}>{this.props.label}</div>}
                 <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
-                    <label className={`${styles.tags} ${status}`}>
+                    <label className={`${styles.tags} ${alternateContainer} ${status}`}>
                         {tags}
-                        <div className={styles.inputContainer}>
+                        <div className={`${styles.inputContainer} ${alternateInputContainer}`}>
                             <input
                                 ref={(ip) => this.myInp = ip}
                                 value={this.state.value}
-                                className={styles.input}
+                                className={`${styles.input} ${alternateInput}`}
                                 placeholder={this.props.placeholder}
                                 onChange={this.onHandleChange}
                                 onKeyDown={this.onKeyDown}
@@ -190,6 +200,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                             />
                             {message}
                             {source}
+                            {this.props.alternate && this.renderAddIcon()}
                         </div>
                         {cover}
                     </label>
@@ -206,6 +217,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         return tags.map((value, i) => {
             return (
                 <Tag
+                    alternate={this.props.alternate}
                     tag={value}
                     key={i}
                     onClick={this.removeTag(i)}
@@ -643,12 +655,25 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         }
     }
 
+    renderAddIcon = () => {
+
+        const onClick = this.state.value !== '' && this.props.preventSubmit ? this.addTag(this.state.value) : undefined;
+
+        return (
+            <i onClick={onClick} className={`material-icons ${styles.add}`}>
+                add
+            </i>
+        );
+    }
+
 }
 
 export const Tag: React.StatelessComponent<ITagProps> = (props) => {
 
+    const alternateTag = props.alternate ? styles.alternateTag : '';
+
     return (
-        <div className={`${styles.tag} ${props.className}`} style={props.style}>
+        <div className={`${styles.tag} ${alternateTag} ${props.className}`} style={props.style}>
             <div>
                 {props.tag}
             </div>

@@ -769,4 +769,25 @@ describe('Tags', () => {
 
     });
 
+    test('adds alternate styles when the related prop is passed', () => {
+
+        const tags = ['doni', 'gent', 'shkumbin'];
+
+        const component = mount(
+            <Tags
+                tags={tags}
+                deletable
+                delimiters={[',', 'Enter', ' ']}
+                validateTag="email"
+                alternate
+            />
+        );
+
+        expect(component.find('.tags').first().hasClass('alternateContainer')).toBe(true);
+        expect(component.find('.inputContainer').first().hasClass('alternateInputContainer')).toBe(true);
+        expect(component.find('.input').first().hasClass('alternateInput')).toBe(true);
+        expect(component.find('.tag').first().hasClass('alternateTag')).toBe(true);
+
+    });
+
 });
