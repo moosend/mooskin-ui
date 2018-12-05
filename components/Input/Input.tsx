@@ -89,12 +89,6 @@ export interface IProps {
     /** numberType */
     numberType?: 'integer' | 'float';
 
-    /** extra html attributes */
-    extraHtmlAttr?: {[key: string]: any};
-
-    /** type of input should be a div instead of input */
-    divType?: boolean;
-
     /** input description (small italic bottom) */
     description?: string;
 
@@ -193,7 +187,6 @@ class Input extends React.Component<IProps, IInputState> {
             autofocus,
             clipboardButton,
             disabled,
-            divType,
             maxlength,
             minlength,
             placeholder,
@@ -210,55 +203,40 @@ class Input extends React.Component<IProps, IInputState> {
         const value = type === 'number' ? this.props.value as number : this.props.value;
         const inputType = type === 'number' ? 'text' : type;
 
-        if (divType){
-            return (
-                <div
-                    ref={(input) => this.input = input}
-                    // onChange={this.onChange}
-                    id={this.id}
-                    // value={this.props.value}
-                    className={`input ${styles.input} ${disabledInput}`}
-                    onBlur={this.validateOnBlur}
-                    {...this.props.extraHtmlAttr}
-                />
-            );
-        } else {
-            const status = this.getStatus();
-            const descStatus = this.getDescStatus();
-            const reverse = iconPosition === 'left' && styles.reverse;
-            return (
-                <div style={{flex: 1}}>
-                    <div style={{display: 'flex', flex: 1}}>
-                        <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
-                            <input
-                                ref={(input) => this.input = input}
-                                onChange={this.onChange}
-                                id={this.id}
-                                type={inputType}
-                                name={this.props.name}
-                                value={value}
-                                placeholder={placeholder}
-                                minLength={minlength}
-                                maxLength={maxlength}
-                                required={required}
-                                disabled={disabled}
-                                className={styles.input}
-                                autoFocus={autofocus}
-                                autoComplete={autocomplete}
-                                onBlur={this.validateOnBlur}
-                                {...this.props.extraHtmlAttr}
-                            />
-                            <div className={styles.iconContainer}>
-                                {this.getDropDown()}
-                                {icon && this.getIcon(icon)}
-                            </div>
+        const status = this.getStatus();
+        const descStatus = this.getDescStatus();
+        const reverse = iconPosition === 'left' && styles.reverse;
+        return (
+            <div style={{flex: 1}}>
+                <div style={{display: 'flex', flex: 1}}>
+                    <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
+                        <input
+                            ref={(input) => this.input = input}
+                            onChange={this.onChange}
+                            id={this.id}
+                            type={inputType}
+                            name={this.props.name}
+                            value={value}
+                            placeholder={placeholder}
+                            minLength={minlength}
+                            maxLength={maxlength}
+                            required={required}
+                            disabled={disabled}
+                            className={styles.input}
+                            autoFocus={autofocus}
+                            autoComplete={autocomplete}
+                            onBlur={this.validateOnBlur}
+                        />
+                        <div className={styles.iconContainer}>
+                            {this.getDropDown()}
+                            {icon && this.getIcon(icon)}
                         </div>
-                        {clipboardButton && this.getClipboardButton()}
                     </div>
-                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
+                    {clipboardButton && this.getClipboardButton()}
                 </div>
-            );
-        }
+                {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
+            </div>
+        );
     }
 
     onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

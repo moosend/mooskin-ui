@@ -143,7 +143,6 @@ In this case, when the user focuses the input and blurs away immediately, an err
 * `personalizationTags` - adds personalization tags based on passed prop, should be an array of object {label: string, value: string}
 & `closeOnTagAdd` - closes personalization tags dropdown when a personalization tag is added
 * `status` - to be used with validate, to apply classes based on error or success
-* `extraHtmlAttr` - extra html attributes applied to the input
 
 </div>
 

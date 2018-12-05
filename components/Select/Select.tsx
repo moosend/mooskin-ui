@@ -40,9 +40,6 @@ export interface ISelectProps {
     /** select description (small italic bottom) */
     description?: string;
 
-    /** extra html attributes */
-    extraHtmlAttr?: {[key: string]: any};
-
     /** status of the select, error or success */
     status?: 'error' | 'success';
 
@@ -58,6 +55,12 @@ export interface ISelectProps {
     /** prevent duplicate options to the Select */
     noDuplicates?: boolean;
 
+    /** adds alternate styles for select */
+    alternate?: boolean;
+
+    /** locks select when a value is selected */
+    lockSelected?: boolean;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -70,7 +73,7 @@ export interface ISelectProps {
 
 export interface ISelectState {
     list: boolean;
-    selected?: string | number;
+    // selected?: string | number;
     filter: string;
 }
 
@@ -81,7 +84,7 @@ export interface IOptionProps {
     value: string;
 
     /** children must be a string */
-    children?: string;
+    children?: string | JSX.Element;
 }
 
 class Select extends React.Component<ISelectProps, ISelectState>{
@@ -102,7 +105,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         this.state = {
             filter: '',
             list: false,
-            selected: this.props.selected,
+            // selected: this.props.selected,
         };
     }
 
@@ -130,55 +133,67 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const shouldOpen = this.props.children ? this.onOpenList : undefined;
         const shouldToggle = this.props.children ? this.onToggleList : undefined;
 
+        const alternateLabelContainer = this.props.alternate ? {padding: 11} : {};
+        const alternateLabel = this.props.alternate ? {paddingTop: 11} : {};
+        const alternateOptions = this.props.alternate ? styles.alteranteOptions : '';
+        const alternateContainer = this.props.alternate ? styles.alternateContainer : '';
+        const valueColor = this.props.alternate && this.props.selected ? {color: '#5ccdde'} : {};
+
         return (
             <div
                 className={`select-component ${styles.componentContainer} ${labelPos} ${this.props.className}`}
                 style={this.props.style}
             >
-                {this.props.label && <label className={`${styles.label} ${topLabel}`}>{this.props.label}</label>}
+                {this.props.label && <label style={alternateLabel} className={`${styles.label} ${topLabel}`}>{this.props.label}</label>}
                 <div
                     onClick={this.onCloseList}
                     className={styles.overlay}
                     style={{display: !this.state.list ? 'none' : 'block'}}
                 />
                 <div style={{flex: 1}}>
-                    <div className={`${styles.selectContainer} ${styles.labelContainer} ${status}`} style={{zIndex}}>
-                        <input
-                            type="text"
-                            className={styles.innerInput}
-                            style={{display: this.state.list ? 'block' : 'none'}}
-                            value={this.state.filter}
-                            placeholder={this.props.filterPlaceholder}
-                            onChange={this.onChangeFilter}
-                            ref={(input) => (input && this.state.list && input.focus())}
-                            onBlur={this.validateOnBlur}
-                        />
+                    <div className={`${styles.selectContainer} ${styles.labelContainer} ${status} ${alternateContainer}`} style={{zIndex}}>
+                        {!this.props.alternate && this.renderSearchInput()}
                         <div
                             onClick={shouldOpen}
                             className={`label-container ${styles.innerDiv}`}
-                            style={{display: this.state.list ? 'none' : 'block' }}
+                            style={{...alternateLabelContainer, ...valueColor, display: !this.props.alternate && this.state.list ? 'none' : 'block' }}
                         >
                             {selected}
                         </div>
-                        <div className={styles.selectIcon} onClick={shouldToggle}/>
+                        {this.props.alternate ? this.renderArrow() : <div className={styles.selectIcon} onClick={shouldToggle}/>}
                         <input
-                            value={this.state.selected || ''}
+                            value={this.props.selected || ''}
                             readOnly
                             style={{display: 'none'}}
-                            {...this.props.extraHtmlAttr}
                         />
                         <div
-                            className={`options-container ${styles.optionsContainer}`}
+                            className={`options-container ${alternateOptions} ${styles.optionsContainer}`}
                             style={{display: displayList}}
                         >
                             <ul>
                                 {options}
                             </ul>
                         </div>
+                        {this.props.lockSelected && this.props.selected && this.renderLockContainer()}
                     </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
             </div>
+        );
+    }
+
+    renderSearchInput = () => {
+        return (
+            <input
+                type="text"
+                className={styles.innerInput}
+                style={{display: this.state.list ? 'block' : 'none'}}
+                value={this.state.filter}
+                placeholder={this.props.filterPlaceholder}
+                onChange={this.onChangeFilter}
+                ref={(input) => (input && this.state.list && input.focus())}
+                onBlur={this.validateOnBlur}
+            />
         );
     }
 
@@ -194,7 +209,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 this.props.validate &&
                 this.props.validate({value: option, dataLabel, required});
             }
-            this.setState({list: false, selected: option, filter: ''});
+            this.setState({list: false, filter: ''});
         };
     }
 
@@ -221,13 +236,17 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                     onClick: this.onClick(child.props.value)
                 };
 
-                const selectedClass = this.state.selected === child.props.value ? styles.selectedOption : '';
+                const selectedClass = this.props.selected === child.props.value ?
+                this.props.alternate ? styles.alternateSelectedOption : styles.selectedOption : '';
 
+                let visible = 'block';
                 // hide options when filtering
-                const visible = child.props.children &&
-                    child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
-                    ? 'block'
-                    : 'none';
+                if (!this.props.alternate && typeof child.props.children === 'string'){
+                    visible = child.props.children &&
+                        child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
+                        ? 'block'
+                        : 'none';
+                }
 
                 return (
                     <div
@@ -246,7 +265,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     getSelectedChildLabel(){
         const selectedChild = React.Children.toArray(this.props.children)
                 .find((child: React.ReactElement<IOptionProps>) => {
-                    return child.props.value === (this.state.selected && this.state.selected);
+                    return child.props.value === (this.props.selected && this.props.selected);
                 });
 
         if (this.props.children){
@@ -296,6 +315,29 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         this.props.validate &&
         this.props.validate(
             {value: this.props.selected, dataLabel: this.props.dataLabel, required: this.props.required}
+        );
+    }
+
+    renderLockContainer = () => {
+        return (
+            <div className={styles.lockContainer}>
+                <div className={styles.lockText}>
+                    {this.props.selected}
+                </div>
+                <i onClick={this.onClick('')} className={`material-icons ${styles.close}`}>
+                    close
+                </i>
+            </div>
+        );
+    }
+
+    renderArrow = () => {
+        const shouldToggle = this.props.children ? this.onToggleList : undefined;
+        const arrow = this.state.list ? styles.arrowUp : styles.arrowDown;
+        return (
+            <div onClick={shouldToggle} className={styles.arrowContainer}>
+                <div className={arrow}/>
+            </div>
         );
     }
 }

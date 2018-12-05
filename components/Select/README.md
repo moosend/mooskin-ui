@@ -118,7 +118,8 @@ The Input Component can be validated using the `status` and `validate` props. Th
 * `style` - element style
 * `noDuplicates` - prevent duplicate options to the Select
 * `emptySelectText` - text to be shown when there are no options available
-* `extraHtmlAttr` - extra html attributes applied to the input
+* `alternate` - renders select with alternate styles
+* `lockSelected` - locks the select when a value is selected
 
 ## Supported attributes for Option 
 
