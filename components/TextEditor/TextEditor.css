@@ -268,9 +268,9 @@
     border: none;
 }
 
-:global(.public-DraftStyleDefault-block){
+/* :global(.public-DraftStyleDefault-block){
     white-space: nowrap;
-}
+} */
 
 /* :global(.rdw-colorpicker-wrapper){
     padding: 0px 11px;
