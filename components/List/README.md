@@ -106,10 +106,6 @@ so in the above example, the third and last list item will have the hidden secti
 
 ## Supported ListItem attributes
 
-* `image` - image related to the list item
-* `title` - list item title
-* `expanded` - expands the hidden section of the list item
-* `description` - list item description
 * `className` - css class
 * `style` - listitem style
 

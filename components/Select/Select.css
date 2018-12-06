@@ -1,5 +1,6 @@
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 .componentContainer{
     display: flex;
@@ -160,6 +161,96 @@
 
 .descSuccess{
     color: #00cc44;
+}
+
+.lockContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    background: #5ccdde;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 12px 20px;
+    cursor: initial;
+}
+
+.lockText {
+    flex: 1;
+}
+
+.close {
+    margin-left: 12px;
+    height: 16px;
+    width: 16px;
+    font-size: 16px;
+    font-weight: 800;
+    user-select: none;
+    cursor: pointer;
+}
+
+.arrowContainer {
+    min-width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrowDown {
+    height: 0px;
+    width: 0px;
+    /* position: absolute; */
+    border-color: #999 transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 2.5px;
+}
+
+.arrowUp {
+    height: 0px;
+    width: 0px;
+    /* position: absolute; */
+    border-color: transparent transparent #999;
+    border-style: solid;
+    border-width: 0px 5px 5px;
+}
+
+.alternateOptions{
+    border-radius: 0;
+    top: 37px;
+    max-height: 180px;
+    background: #fff;
+    border: 1px solid var(--inputBackground);;
+}
+
+.alternateOptions ul li{
+    color: #3F3F3F;
+}
+
+.alternateOptions ul li:first-child{
+    border-top: none;
+}
+
+.alternateOptions ul li:last-child{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.alternateOptions ul li:hover{
+    background: #EBF5FF;
+}
+
+.alternateSelectedOption {
+    background: #F5FAFF;
+}
+
+.alternateContainer{
+    background: #fff;
+    /* outline: 1px solid #e5e5e5; */
+    border-radius: 8px;
+    box-shadow: 0 0 1px #888888;
 }
 
 @media (--xSmall){

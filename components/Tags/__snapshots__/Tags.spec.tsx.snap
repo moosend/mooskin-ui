@@ -2,7 +2,7 @@
 
 exports[`Tags renders Tags correctly 1`] = `
 <div
-  className="container myClass "
+  className="container  myClass"
   style={
     Object {
       "width": "50px",
@@ -24,7 +24,7 @@ exports[`Tags renders Tags correctly 1`] = `
     }
   >
     <label
-      className="tags undefined"
+      className="tags  undefined"
     >
       <Tag
         className="tagClasses"
@@ -49,10 +49,10 @@ exports[`Tags renders Tags correctly 1`] = `
         tag="Athens"
       />
       <div
-        className="inputContainer"
+        className="inputContainer "
       >
         <input
-          className="input"
+          className="input "
           onBlur={[Function]}
           onChange={[Function]}
           onClick={[Function]}
