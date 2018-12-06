@@ -15,7 +15,7 @@ class SelectExample extends React.Component {
     render(){
         return (
             <div>
-                <Select noDuplicates onChange={this.onChange} dataLabel="plan" selected={this.state.selected} dataLabel="selected" label="Some label" filterPlaceholder="Type to filter">
+                <Select noDuplicates noFilter onChange={this.onChange} dataLabel="plan" selected={this.state.selected} dataLabel="selected" label="Some label" filterPlaceholder="Type to filter">
                     <Option value="option1">Option1</Option>
                     <Option value="option2">Option2</Option>
                     <Option value="option3">Option3</Option>

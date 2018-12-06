@@ -120,6 +120,7 @@ The Input Component can be validated using the `status` and `validate` props. Th
 * `emptySelectText` - text to be shown when there are no options available
 * `alternate` - renders select with alternate styles
 * `lockSelected` - locks the select when a value is selected
+* `noFilter` - disables option filtering
 
 ## Supported attributes for Option 
 
