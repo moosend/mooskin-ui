@@ -5,15 +5,6 @@ import styles from './Form.css';
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
 import {IButtonProps} from '../Button/Button';
-// import CheckboxGroup from '../Checkbox';
-// import DatePicker from '../DatePicker';
-// import FileUpload from '../File';
-// import Input from '../Input';
-// import RadioGroup from '../Radio';
-// import Select from '../Select';
-// import Switch from '../Switch';
-// import Tags from '../Tags';
-// import TextArea from '../TextArea';
 
 export interface IFormProps{
 
@@ -100,7 +91,7 @@ export default class Form extends React.Component<IFormProps, {}>{
     }
 
     assignPropsToChildren = () => {
-        const formElements: any = [];
+        const formElements: Array<React.ReactElement<any>> = [];
         const buttonProps: Partial<IButtonProps> = {
             onClick: this.onSubmit(this.getChildren())
         };
@@ -108,16 +99,16 @@ export default class Form extends React.Component<IFormProps, {}>{
             const keyProp: Partial<any & {key: number}> = {
                 key: index,
             };
-            if (React.isValidElement<IButtonProps>(child)){
-                if ((child as any).type.displayName === 'Button' && child.props.type === 'submit'){
+            if (React.isValidElement<IButtonProps>(child)) {
+                if ((child.type as React.ComponentClass<IButtonProps>).displayName === 'Button' && child.props.type === 'submit'){
                     formElements.push(
                         React.cloneElement(child, {...keyProp, ...buttonProps})
                     );
                 }
             }
-            if (React.isValidElement<IFormGroupProps>(child)){
+            if (React.isValidElement<IFormGroupProps>(child)) {
 
-                if ((child as any).type.displayName === 'FormGroup'){
+                if ((child.type as React.ComponentClass<IFormGroupProps>).displayName === 'FormGroup'){
 
                     const elements = child.props.children && this.formGroupButtons(child.props.children);
 
