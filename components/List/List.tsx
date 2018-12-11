@@ -72,6 +72,8 @@ export default class List extends React.Component<IListProps, {} /* IListState *
         style: {}
     };
 
+    static displayName = 'List';
+
     constructor(props: IListProps){
         super(props);
 
@@ -299,6 +301,13 @@ export const ListItem: React.StatelessComponent<IListItemProps> = (props) => {
     );
 };
 
+ListItem.defaultProps = {
+    className: '',
+    style: {}
+};
+
+ListItem.displayName = 'ListItem';
+
 export interface IExpandedSectionProps {
     id?: string;
     className?: string;
@@ -326,6 +335,8 @@ export const ExpandedSection: React.StatelessComponent<IExpandedSectionProps> = 
         </div>
     );
 };
+
+ExpandedSection.displayName = 'ExpandedSection';
 
 export interface IItemContentProps {
     id?: string;
@@ -359,10 +370,7 @@ export const ItemContent: React.StatelessComponent<IItemContentProps> = (props) 
     );
 };
 
-ListItem.defaultProps = {
-    className: '',
-    style: {}
-};
+ItemContent.displayName = 'ItemContent';
 
 // export interface IExpandableProps {
 //     className?: string;

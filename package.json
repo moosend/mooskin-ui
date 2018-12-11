@@ -26,6 +26,9 @@
     "url": "https://github.com/moosend/mooskin-ui/issues"
   },
   "homepage": "https://github.com/moosend/mooskin-ui#readme",
+  "files": [
+    "lib"
+  ],
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"

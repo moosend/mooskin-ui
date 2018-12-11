@@ -137,6 +137,8 @@ class Input extends React.Component<IProps, IInputState> {
         style: {}
     };
 
+    static displayName = 'Input';
+
     id: string;
     input: any;
 

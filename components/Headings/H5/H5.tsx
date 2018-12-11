@@ -11,6 +11,8 @@ class H5 extends React.Component<IHeadingProps, {}> {
         style: {}
     };
 
+    static displayName = 'H5';
+
     render() {
 
         const {id, className, style, children} = this.props;

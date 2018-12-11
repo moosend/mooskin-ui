@@ -113,6 +113,8 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         tags: []
     };
 
+    static displayName = 'Tags';
+
     id: string;
     myInp: any;
 
@@ -688,3 +690,5 @@ Tag.defaultProps = {
     className: '',
     style: {}
 };
+
+Tag.displayName = 'Tag';

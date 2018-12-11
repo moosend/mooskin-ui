@@ -71,6 +71,8 @@ export default class Grid extends React.Component<IGridProps, {}>{
         style: {}
     };
 
+    static displayName = 'Grid';
+
     static Col: React.StatelessComponent<IColProps>;
     static Row: React.StatelessComponent<IRowProps>;
 
@@ -110,6 +112,8 @@ Row.defaultProps = {
     className: '',
     style: {}
 };
+
+Row.displayName = 'Row';
 
 export const Col: React.StatelessComponent<IColProps> = (props) => {
 
@@ -189,3 +193,5 @@ Col.defaultProps = {
     className: '',
     style: {}
 };
+
+Col.displayName = 'Col';

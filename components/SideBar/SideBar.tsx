@@ -113,6 +113,8 @@ export default class SideBar extends React.Component<ISideBarProps, ISideBarStat
         style: {},
     };
 
+    static displayName = 'SideBar';
+
     static SidebarItem: React.StatelessComponent<ISideBarItemProps>;
     static SubMenu: React.StatelessComponent<ISubMenuProps>;
 
@@ -512,6 +514,13 @@ export const SidebarItem: React.StatelessComponent<ISideBarItemProps> = (props) 
     );
 };
 
+SidebarItem.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SidebarItem.displayName = 'SidebarItem';
+
 export const SubMenu: React.StatelessComponent<ISubMenuProps> = (props) => {
 
     SubMenu.defaultProps = {
@@ -533,7 +542,4 @@ export const SubMenu: React.StatelessComponent<ISubMenuProps> = (props) => {
     );
 };
 
-SidebarItem.defaultProps = {
-    className: '',
-    style: {}
-};
+SubMenu.displayName = 'SubMenu';
