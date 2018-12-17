@@ -192,6 +192,9 @@ class Input extends React.Component<IProps, IInputState> {
             placeholder,
             required,
             iconPosition,
+            personalizationTags,
+            emoji,
+            customDropdowns,
             description,
             icon,
             type
@@ -205,12 +208,15 @@ class Input extends React.Component<IProps, IInputState> {
 
         const status = this.getStatus();
         const descStatus = this.getDescStatus();
-        const reverse = iconPosition === 'left' && styles.reverse;
+
+        const inputPaddingLeft = icon ? iconPosition === 'left' ? 0 : 15 : '';
+        const inputPaddingRight = icon ? iconPosition === 'left' ? 15 : 0 : '';
         return (
             <div style={{flex: 1}}>
                 <div style={{display: 'flex', flex: 1}}>
-                    <div className={`${styles.innerDiv} ${status} ${reverse} ${disabledInput}`}>
+                    <div className={`${styles.innerDiv} ${status} ${disabledInput}`}>
                         <input
+                            style={{order: iconPosition === 'left' ? 2 : 1, paddingLeft: inputPaddingLeft, paddingRight: inputPaddingRight}}
                             ref={(input) => this.input = input}
                             onChange={this.onChange}
                             id={this.id}
@@ -227,10 +233,8 @@ class Input extends React.Component<IProps, IInputState> {
                             autoComplete={autocomplete}
                             onBlur={this.validateOnBlur}
                         />
-                        <div className={styles.iconContainer}>
-                            {this.getDropDown()}
-                            {icon && this.getIcon(icon)}
-                        </div>
+                        {(personalizationTags || emoji || customDropdowns) && this.getDropDownContainer()}
+                        {icon && this.getIconContainer()}
                     </div>
                     {clipboardButton && this.getClipboardButton()}
                 </div>
@@ -352,11 +356,11 @@ class Input extends React.Component<IProps, IInputState> {
     getIcon = (icon: string, args?: {custom: ICustomDropdown, i: number}) => {
         const iconFont = icon && this.getIconContent(icon);
         const iconStatus = !args || !args.custom ? this.getIconStatus() : '';
-        const iconPadding = this.props.iconPosition === 'right' ? {paddingLeft: 10} : {paddingRight: 10};
-        const style = args && args.custom ? {fontSize: 16, cursor: 'pointer', color: '#6b6b6b'} : {};
+        const iconPadding = this.props.iconPosition === 'left' ? {paddingRight: 10} : {paddingLeft: 10};
+        const style = args && args.custom ? {fontSize: 16, cursor: 'pointer', color: '#6b6b6b', paddingLeft: 10} : {};
         const title = args && args.custom && args.custom.title;
         const onClick = () => args && args.custom ? args.custom.onClick ?
-        this.onDropDownIconClick(args.i, args.custom.onClick) : this.onDropDownIconClick(args.i) : this.onIconClick();
+        this.onDropDownIconClick(args.i, args.custom.onClick) : this.onDropDownIconClick(args.i) : undefined;
         return (
             <div
                 onClick={onClick}
@@ -403,6 +407,32 @@ class Input extends React.Component<IProps, IInputState> {
     onClipboardButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         this.props.onClipboardButtonClick &&
         this.props.onClipboardButtonClick(e, {value: this.props.value, dataLabel: this.props.dataLabel});
+    }
+
+    getIconContainer = () => {
+        const {icon, iconPosition} = this.props;
+        const reverse = iconPosition === 'left' ? styles.reverse : '';
+        return (
+            <div
+                className={`${styles.iconContainer} ${reverse}`}
+                style={{order: iconPosition === 'left' ? 1 : 3, cursor: 'text'}}
+                onClick={() => this.onIconClick()}
+            >
+                {icon && this.getIcon(icon)}
+            </div>
+        );
+    }
+
+    getDropDownContainer = () => {
+        const {iconPosition} = this.props;
+        return (
+            <div
+                className={styles.dropDownContainer}
+                style={{order: iconPosition === 'left' ? 3 : 2}}
+            >
+                {this.getDropDown()}
+            </div>
+        );
     }
 
     getDropDown = () => {

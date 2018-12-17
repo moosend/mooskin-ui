@@ -100,6 +100,9 @@
     padding:10px;
     color: var(--inputFontColor);
     cursor:pointer;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 
 .optionsContainer ul li:first-child{
@@ -227,6 +230,9 @@
 
 .alternateOptions ul li{
     color: #3F3F3F;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }
 
 .alternateOptions ul li:first-child{

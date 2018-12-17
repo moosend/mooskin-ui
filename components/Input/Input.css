@@ -39,10 +39,6 @@
     border-radius: 8px;
 }
 
-.reverse{
-    flex-direction: row-reverse;
-}
-
 .inputLeft{
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -61,6 +57,10 @@
     background: #f6f6f6;
 }
 
+.disabledInput input {
+    cursor: not-allowed;
+}
+
 .input::placeholder {
     color: var(--inputPlaceholder);
 }
@@ -68,6 +68,14 @@
 .iconContainer{
     display: flex;
     padding: 15px 15px 15px 0;
+}
+
+.reverse {
+    padding: 15px 0 15px 15px;
+}
+
+.dropDownContainer {
+    display: flex;
 }
 
 .icon{
