@@ -179,6 +179,9 @@
     color: #fff;
     padding: 12px 20px;
     cursor: initial;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .lockText {

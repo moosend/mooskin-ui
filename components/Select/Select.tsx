@@ -179,7 +179,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                                 {options}
                             </ul>
                         </div>
-                        {this.props.lockSelected && this.props.selected && this.renderLockContainer()}
+                        {this.props.lockSelected && this.props.selected && this.renderLockContainer(selected)}
                     </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
@@ -323,11 +323,11 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         );
     }
 
-    renderLockContainer = () => {
+    renderLockContainer = (selected: string | Element | JSX.Element) => {
         return (
             <div className={styles.lockContainer}>
                 <div className={styles.lockText}>
-                    {this.props.selected}
+                    {selected}
                 </div>
                 <i onClick={this.onClick('')} className={`material-icons ${styles.close}`}>
                     close
