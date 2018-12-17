@@ -55,6 +55,9 @@ export interface ISelectProps {
     /** prevent duplicate options to the Select */
     noDuplicates?: boolean;
 
+    /** disables option filtering */
+    noFilter?: boolean;
+
     /** adds alternate styles for select */
     alternate?: boolean;
 
@@ -133,6 +136,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const shouldOpen = this.props.children ? this.onOpenList : undefined;
         const shouldToggle = this.props.children ? this.onToggleList : undefined;
 
+        const labelContainerDisplay = (!this.props.alternate && !this.props.noFilter) && this.state.list ? 'none' : 'block';
+
         const alternateLabelContainer = this.props.alternate ? {padding: 11} : {};
         const alternateLabel = this.props.alternate ? {paddingTop: 11} : {};
         const alternateOptions = this.props.alternate ? styles.alternateOptions : '';
@@ -152,11 +157,11 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 />
                 <div style={{flex: 1}}>
                     <div className={`${styles.selectContainer} ${styles.labelContainer} ${status} ${alternateContainer}`} style={{zIndex}}>
-                        {!this.props.alternate && this.renderSearchInput()}
+                        {(!this.props.alternate && !this.props.noFilter) && this.renderSearchInput()}
                         <div
                             onClick={shouldOpen}
                             className={`label-container ${styles.innerDiv}`}
-                            style={{...alternateLabelContainer, ...valueColor, display: !this.props.alternate && this.state.list ? 'none' : 'block' }}
+                            style={{...alternateLabelContainer, ...valueColor, display: labelContainerDisplay }}
                         >
                             {selected}
                         </div>
