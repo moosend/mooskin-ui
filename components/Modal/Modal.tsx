@@ -28,6 +28,8 @@ export default class Modal extends React.Component<IModalProps, {}>{
         style: {}
     };
 
+    static displayName = 'Modal';
+
     render() {
 
         const display = this.props.active ? styles.on : styles.off;

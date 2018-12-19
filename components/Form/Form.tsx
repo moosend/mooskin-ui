@@ -4,16 +4,7 @@ import styles from './Form.css';
 
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import Button, {IButtonProps} from '../Button/Button';
-import CheckboxGroup from '../Checkbox';
-import DatePicker from '../DatePicker';
-import FileUpload from '../File';
-import Input from '../Input';
-import RadioGroup from '../Radio';
-import Select from '../Select';
-import Switch from '../Switch';
-import Tags from '../Tags';
-import TextArea from '../TextArea';
+import {IButtonProps} from '../Button/Button';
 
 export interface IFormProps{
 
@@ -78,6 +69,8 @@ export default class Form extends React.Component<IFormProps, {}>{
         style: {}
     };
 
+    static displayName = 'Form';
+
     static FormGroup: React.StatelessComponent<IFormGroupProps>;
 
     render(){
@@ -98,7 +91,7 @@ export default class Form extends React.Component<IFormProps, {}>{
     }
 
     assignPropsToChildren = () => {
-        const formElements: any = [];
+        const formElements: Array<React.ReactElement<any>> = [];
         const buttonProps: Partial<IButtonProps> = {
             onClick: this.onSubmit(this.getChildren())
         };
@@ -106,16 +99,16 @@ export default class Form extends React.Component<IFormProps, {}>{
             const keyProp: Partial<any & {key: number}> = {
                 key: index,
             };
-            if (React.isValidElement<IButtonProps>(child)){
-                if (child.type === Button && child.props.type === 'submit'){
+            if (React.isValidElement<IButtonProps>(child)) {
+                if ((child.type as React.ComponentClass<IButtonProps>).displayName === 'Button' && child.props.type === 'submit'){
                     formElements.push(
                         React.cloneElement(child, {...keyProp, ...buttonProps})
                     );
                 }
             }
-            if (React.isValidElement<IFormGroupProps>(child)){
+            if (React.isValidElement<IFormGroupProps>(child)) {
 
-                if (child.type === FormGroup){
+                if ((child.type as React.ComponentClass<IFormGroupProps>).displayName === 'FormGroup'){
 
                     const elements = child.props.children && this.formGroupButtons(child.props.children);
 
@@ -152,14 +145,14 @@ export default class Form extends React.Component<IFormProps, {}>{
                     key: index,
                 };
 
-                if (element.type === Button && element.props.type === 'submit'){
+                if (element.type.displayName === 'Button' && element.props.type === 'submit'){
                     elements.push(React.cloneElement(element, {...keyProp, ...buttonProps}));
                 } else {
                     elements.push(React.cloneElement(element, keyProp));
                 }
             });
         } else {
-            if (group.type === Button && group.props.type === 'submit'){
+            if (group.type.displayName === 'Button' && group.props.type === 'submit'){
                 return React.cloneElement(group, {...buttonProps});
             } else {
                 return group;
@@ -202,21 +195,21 @@ export default class Form extends React.Component<IFormProps, {}>{
         }
         if (Array.isArray(formChildren)){
             formChildren.forEach((element: any) => {
-                if (element.type === Input || element.type === TextArea){
+                if (element.type.displayName === 'Input' || element.type.displayName === 'TextArea'){
                     data = this.getData(data, element, 'value');
-                } else if (element.type === Switch){
+                } else if (element.type.displayName === 'Switch'){
                     data = this.getData(data, element, 'on');
-                } else if (element.type === Select){
+                } else if (element.type.displayName === 'Select'){
                     data = this.getData(data, element, 'selected');
-                } else if (element.type === RadioGroup){
+                } else if (element.type.displayName === 'RadioGroup'){
                     data = this.getData(data, element, 'selectedRadios');
-                } else if (element.type === CheckboxGroup){
+                } else if (element.type.displayName === 'CheckboxGroup'){
                     data = this.getData(data, element, 'selectedChecks');
-                } else if (element.type === DatePicker){
+                } else if (element.type.displayName === 'DatePicker'){
                     data = this.getData(data, element, 'date');
-                } else if (element.type === FileUpload){
+                } else if (element.type.displayName === 'FileUpload'){
                     data = this.getData(data, element, 'files');
-                } else if (element.type === Tags){
+                } else if (element.type.displayName === 'Tags'){
                     data = this.getData(data, element, 'tags');
                 } else {
                     this.collectEssence(element, data);
@@ -267,3 +260,5 @@ FormGroup.defaultProps = {
     className: '',
     style: {}
 };
+
+FormGroup.displayName = 'FormGroup';

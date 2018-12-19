@@ -25,6 +25,8 @@ export default class StatsBox extends React.Component<IStatsBoxProps, {}>{
         style: {}
     };
 
+    static displayName = 'StatsBox';
+
     static StatsTitle: React.StatelessComponent<IStatsBoxChildProps>;
     static StatsNumber: React.StatelessComponent<IStatsBoxChildProps>;
     static StatsResult: React.StatelessComponent<IStatsBoxChildProps>;
@@ -50,6 +52,8 @@ StatsTitle.defaultProps = {
     style: {}
 };
 
+StatsTitle.displayName = 'StatsTitle';
+
 export const StatsNumber: React.StatelessComponent<IStatsBoxChildProps> = (props) => {
     return <div style={props.style} className={`${styles.statsNumber} ${props.className}`}>{props.children}</div>;
 };
@@ -59,6 +63,8 @@ StatsNumber.defaultProps = {
     style: {}
 };
 
+StatsNumber.displayName = 'StatsNumber';
+
 export const StatsResult: React.StatelessComponent<IStatsBoxChildProps> = (props) => {
     return <div style={props.style} className={`${styles.statsResult} ${props.className}`}>{props.children}</div>;
 };
@@ -67,3 +73,5 @@ StatsResult.defaultProps = {
     className: '',
     style: {}
 };
+
+StatsResult.displayName = 'StatsResult';

@@ -47,6 +47,8 @@ export default class LoadingBar extends React.Component<ILoadingBarProps, ILoadi
         style: {}
     };
 
+    static displayName = 'LoadingBar';
+
     constructor(props: ILoadingBarProps) {
         super(props);
 

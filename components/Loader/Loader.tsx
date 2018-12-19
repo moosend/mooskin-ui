@@ -33,6 +33,8 @@ export default class Loader extends React.Component<ILoaderProps, {}> {
         style: {}
     };
 
+    static displayName = 'Loader';
+
     render() {
 
         const display = this.props.active ? '' : styles.hidden;

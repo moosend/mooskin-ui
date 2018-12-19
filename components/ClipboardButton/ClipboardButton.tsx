@@ -33,6 +33,8 @@ export default class ClipboardButton extends React.Component<IClipboardButtonPro
         style: {}
     };
 
+    static displayName = 'ClipboardButton';
+
     render(){
         return (
             <Button

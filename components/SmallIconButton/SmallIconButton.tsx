@@ -32,6 +32,8 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
         style: {},
     };
 
+    static displayName = 'SmallIconButton';
+
     render(){
 
         const {style, transparent, disabled, className, id, icon} = this.props;

@@ -39,6 +39,8 @@ export default class Label extends React.Component<ILabelProps, {}> {
         type: 'string'
     };
 
+    static displayName = 'Label';
+
     render() {
 
         const { className, style } = this.props;

@@ -28,6 +28,8 @@ export default class Topbar extends React.Component<ITopbarProps, ITopbarState> 
         style: {}
     };
 
+    static displayName = 'Topbar';
+
     prev: any;
 
     constructor(props: ITopbarProps){

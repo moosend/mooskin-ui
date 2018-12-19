@@ -39,6 +39,8 @@ export default class Button extends React.Component<IButtonProps, {}> {
         type: 'button'
     };
 
+    static displayName = 'Button';
+
     render(){
 
         const button = this.getButton();

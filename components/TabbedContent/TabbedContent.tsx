@@ -102,6 +102,8 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         type: 'normal'
     };
 
+    static displayName = 'TabbedContent';
+
     static Tab: React.StatelessComponent<ITabProps>;
     static Header: React.StatelessComponent<IHeaderProps>;
     static Content: React.StatelessComponent<IContentProps>;
@@ -296,6 +298,8 @@ Tab.defaultProps = {
     style: {}
 };
 
+Tab.displayName = 'Tab';
+
 export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const getClasses = () => {
@@ -349,6 +353,8 @@ Header.defaultProps = {
     style: {}
 };
 
+Header.displayName = 'Header';
+
 export const Content: React.StatelessComponent<IContentProps> = (props) => {
 
     const displayClass = !props.active ? normal.invisible : normal.visible;
@@ -364,3 +370,5 @@ Content.defaultProps = {
     className: '',
     style: {}
 };
+
+Content.displayName = 'Content';
