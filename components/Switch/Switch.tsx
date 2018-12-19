@@ -54,6 +54,8 @@ class Switch extends React.Component<ISwitchProps, {}> {
         style: {},
     };
 
+    static displayName = 'Switch';
+
     render(){
 
         const {id, style, className, disabled, label} = this.props;

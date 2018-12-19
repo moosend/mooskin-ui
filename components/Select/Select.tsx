@@ -97,6 +97,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         filterPlaceholder: ''
     };
 
+    static displayName = 'Select';
+
     static Option: React.StatelessComponent<IOptionProps>;
 
     static getDerivedStateFromProps(nextProps: ISelectProps){
@@ -350,5 +352,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 export const Option: React.StatelessComponent<IOptionProps> = (props) => {
     return <li onClick={props.onClick}>{props.children}</li>;
 };
+
+Option.displayName = 'Option';
 
 export default Select;

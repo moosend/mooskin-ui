@@ -58,6 +58,8 @@ export default class TopNotification extends React.Component<ITopNotificationPro
         visible: true,
     };
 
+    static displayName = 'TopNotification';
+
     render(){
 
         const {className, style, text, visible, type} = this.props;

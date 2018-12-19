@@ -28,6 +28,8 @@ export interface IReactLiveEditorState{
 
 export default class ReactLiveEditor extends React.Component<IReactLiveEditorProps, IReactLiveEditorState> {
 
+    static displayName = 'ReactLiveEditor';
+
     state: IReactLiveEditorState;
     domParser: DOMParser;
     converter: showdown.Converter;

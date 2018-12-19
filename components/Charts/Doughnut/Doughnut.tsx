@@ -17,6 +17,8 @@ class Doughnut extends React.Component<IDoughnutProps, {}>{
         titleStyle: 'bold'
     };
 
+    static displayName = 'Doughnut';
+
     render(){
 
         const {

@@ -44,6 +44,8 @@ export default class Steps extends React.Component<IStepsProps, {}>{
         className: ''
     };
 
+    static displayName = 'StatsBox';
+
     static Step: React.StatelessComponent<IStepProps>;
 
     render(){
@@ -90,6 +92,8 @@ Step.defaultProps = {
     className: ''
 };
 
+Step.displayName = 'Step';
+
 export const StepBody: React.StatelessComponent<IStepBodyProps> = (props) => {
 
     const display = props.active ? 'block' : 'none';
@@ -100,3 +104,5 @@ export const StepBody: React.StatelessComponent<IStepBodyProps> = (props) => {
         </div>
     );
 };
+
+StepBody.displayName = 'StepBody';

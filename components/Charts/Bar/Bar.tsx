@@ -21,6 +21,8 @@ class BarChart extends React.Component<IBarProps, {}>{
         titleStyle: 'bold'
     };
 
+    static displayName = 'BarChart';
+
     render() {
 
         const {

@@ -33,6 +33,8 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         range: [0, 100],
     };
 
+    static displayName = 'HorizontalRangeBar';
+
     render(){
 
         const {className, range, progress, id} = this.props;

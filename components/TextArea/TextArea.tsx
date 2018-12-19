@@ -75,6 +75,8 @@ class TextArea extends React.Component<ITextAreaProps, {}> {
         style: {}
     };
 
+    static displayName = 'TextArea';
+
     id: string;
 
     constructor(props: ITextAreaProps){
