@@ -36,7 +36,7 @@ exports[`Input renders correctly 1`] = `
       }
     >
       <div
-        className="innerDiv undefined false disabledInput"
+        className="innerDiv undefined disabledInput"
       >
         <input
           autoComplete="on"
@@ -51,11 +51,15 @@ exports[`Input renders correctly 1`] = `
           onChange={[Function]}
           placeholder="input placeholder"
           required={true}
+          style={
+            Object {
+              "order": 1,
+              "paddingLeft": "",
+              "paddingRight": "",
+            }
+          }
           type="text"
           value="input value"
-        />
-        <div
-          className="iconContainer"
         />
       </div>
     </div>

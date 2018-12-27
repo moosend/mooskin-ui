@@ -90,6 +90,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         style: {}
     };
 
+    static displayName = 'DatePicker';
+
     // static getDerivedStateFromProps(nextProps: IDateProps){
     //     const day = parseInt(moment(nextProps.date).format('DD'), 10);
     //     const month = parseInt(moment(nextProps.date).format('MM'), 10);
@@ -734,3 +736,5 @@ export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) =>
 
     return renderDateSelect();
 };
+
+DateSelect.displayName = 'DateSelect';

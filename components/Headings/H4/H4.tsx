@@ -11,6 +11,8 @@ class H4 extends React.Component<IHeadingProps, {}> {
         style: {}
     };
 
+    static displayName = 'H4';
+
     render() {
 
         const {id, className, style, children} = this.props;

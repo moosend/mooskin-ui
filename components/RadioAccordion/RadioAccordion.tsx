@@ -56,6 +56,8 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         style: {}
     };
 
+    static displayName = 'RadioAccordion';
+
     static RadioAccordionContent: React.StatelessComponent<IContentProps>;
 
     static getActiveTab = (children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
@@ -180,6 +182,13 @@ export const RadioAccordionContent: React.StatelessComponent<IContentProps> = (p
     );
 };
 
+RadioAccordionContent.defaultProps = {
+    className: '',
+    style: {}
+};
+
+RadioAccordionContent.displayName = 'RadioAccordionContent';
+
 export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
 
     const generateId = () => {
@@ -210,7 +219,4 @@ export const Header: React.StatelessComponent<IHeaderProps> = (props) => {
     );
 };
 
-RadioAccordionContent.defaultProps = {
-    className: '',
-    style: {}
-};
+Header.displayName = 'Header';

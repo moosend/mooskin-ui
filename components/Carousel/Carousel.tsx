@@ -118,6 +118,8 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
         style: {}
     };
 
+    static displayName = 'Carousel';
+
     carousel: any;
     slider: any;
 
@@ -229,7 +231,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
 
 }
 
-export const CustomArrow = (props: ICustomArrowProps) => {
+export const CustomArrow: React.StatelessComponent<ICustomArrowProps> = (props) => {
 
     const {direction, className, style, onClick} = props;
 
@@ -247,3 +249,5 @@ export const CustomArrow = (props: ICustomArrowProps) => {
     );
 
 };
+
+CustomArrow.displayName = 'CustomArrow';

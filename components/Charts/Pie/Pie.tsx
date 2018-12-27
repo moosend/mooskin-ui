@@ -16,6 +16,8 @@ class PieChart extends React.Component<IPieProps, {}>{
         titleStyle: 'bold'
     };
 
+    static displayName = 'PieChart';
+
     render(){
 
         const {

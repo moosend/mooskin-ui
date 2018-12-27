@@ -27,6 +27,8 @@ export default class Fieldset extends React.Component<IFieldsetProps, {}>{
         style: {}
     };
 
+    static displayName = 'Fieldset';
+
     render(){
 
         return (

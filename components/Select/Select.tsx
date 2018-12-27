@@ -97,6 +97,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         filterPlaceholder: ''
     };
 
+    static displayName = 'Select';
+
     static Option: React.StatelessComponent<IOptionProps>;
 
     static getDerivedStateFromProps(nextProps: ISelectProps){
@@ -179,7 +181,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                                 {options}
                             </ul>
                         </div>
-                        {this.props.lockSelected && this.props.selected && this.renderLockContainer()}
+                        {this.props.lockSelected && this.props.selected && this.renderLockContainer(selected)}
                     </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
@@ -323,11 +325,11 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         );
     }
 
-    renderLockContainer = () => {
+    renderLockContainer = (selected: string | Element | JSX.Element) => {
         return (
             <div className={styles.lockContainer}>
                 <div className={styles.lockText}>
-                    {this.props.selected}
+                    {selected}
                 </div>
                 <i onClick={this.onClick('')} className={`material-icons ${styles.close}`}>
                     close
@@ -350,5 +352,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 export const Option: React.StatelessComponent<IOptionProps> = (props) => {
     return <li onClick={props.onClick}>{props.children}</li>;
 };
+
+Option.displayName = 'Option';
 
 export default Select;

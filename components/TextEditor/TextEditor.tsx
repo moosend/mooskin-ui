@@ -175,6 +175,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         toolbarPos: 'top'
     };
 
+    static displayName = 'TextEditor';
+
     // static getDerivedStateFromProps(nextProps: ITextEditorProps, prevState: ITextEditorState){
     //     return {
     //         editorState: EditorState.createWithContent(convertFromRaw(nextProps.editorState)),
@@ -762,6 +764,8 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
     );
 };
 
+CustomDropDown.displayName = 'CustomDropDown';
+
 export const ConvertToHtml: React.StatelessComponent<IToHtmlProps> = (props) => {
 
     return (
@@ -772,3 +776,5 @@ export const ConvertToHtml: React.StatelessComponent<IToHtmlProps> = (props) => 
         </div>
     );
 };
+
+ConvertToHtml.displayName = 'ConvertToHtml';

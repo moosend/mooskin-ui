@@ -98,6 +98,8 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
         style: {}
     };
 
+    static displayName = 'RadioGroup';
+
     static Radio: React.StatelessComponent<IRadioProps>;
 
     name: string;
@@ -342,11 +344,6 @@ export default class RadioGroup extends React.Component<IRadioGroupProps, {}> {
 
 export const Radio: React.StatelessComponent<IRadioProps> = (props) => {
 
-    Radio.defaultProps = {
-        className: '',
-        style: {}
-    };
-
     const generateId = () => {
         return Math.random().toString(36).substr(2, 10);
     };
@@ -399,3 +396,5 @@ Radio.defaultProps = {
     className: '',
     style: {}
 };
+
+Radio.displayName = 'Radio';

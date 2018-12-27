@@ -140,6 +140,8 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         style: {}
     };
 
+    static displayName = 'Table';
+
     static TableHeader: React.StatelessComponent<IHeaderProps>;
 
     static getDerivedStateFromProps(nextProps: ITableProps, prevState: ITableState){
@@ -611,6 +613,8 @@ TableHeader.defaultProps = {
     style: {}
 };
 
+TableHeader.displayName = 'TableHeader';
+
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
     return(
@@ -625,6 +629,8 @@ Row.defaultProps = {
     style: {}
 };
 
+Row.displayName = 'Row';
+
 export const Col: React.StatelessComponent<IColProps> = (props) => {
 
     return(
@@ -638,6 +644,8 @@ Col.defaultProps = {
     className: '',
     style: {}
 };
+
+Col.displayName = 'Col';
 
 export const Popover: React.StatelessComponent<IPopoverProps> = (props) => {
 
@@ -655,3 +663,5 @@ Popover.defaultProps = {
     className: '',
     style: {}
 };
+
+Popover.displayName = 'Popover';

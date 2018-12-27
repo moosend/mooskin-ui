@@ -26,6 +26,8 @@ class LineChart extends React.Component<ILineProps, {}>{
         titleStyle: 'bold'
     };
 
+    static displayName = 'LineChart';
+
     render() {
 
         const {

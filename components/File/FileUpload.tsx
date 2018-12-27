@@ -72,6 +72,8 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         style: {}
     };
 
+    static displayName = 'FileUpload';
+
     static getDerivedStateFromProps(nextProps: IFileProps) {
         return {file: nextProps.file};
     }

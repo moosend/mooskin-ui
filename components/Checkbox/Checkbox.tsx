@@ -113,6 +113,8 @@ export default class CheckboxGroup extends React.Component<ICheckBoxGroupProps, 
         style: {}
     };
 
+    static displayName = 'CheckboxGroup';
+
     static Checkbox: React.StatelessComponent<ICheckBoxProps>;
 
     name: string;
@@ -361,3 +363,5 @@ Checkbox.defaultProps = {
     className: '',
     style: {}
 };
+
+Checkbox.displayName = 'Checkbox';

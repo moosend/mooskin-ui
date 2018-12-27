@@ -45,6 +45,8 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
         style: {}
     };
 
+    static displayName = 'CheckListItem';
+
     render(){
 
         const {status, id, content, title, className, style} = this.props;

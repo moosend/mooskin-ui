@@ -69,6 +69,8 @@ export default class Pagination extends React.Component<IPaginationProps, {}>{
         prevBtn: false,
     };
 
+    static displayName = 'Pagination';
+
     render() {
 
         const {className, style, id} = this.props;
@@ -266,3 +268,5 @@ export const PaginationButton: React.StatelessComponent<IPaginationButtonProps> 
 PaginationButton.defaultProps = {
     className: ''
 };
+
+PaginationButton.displayName = 'PaginationButton';

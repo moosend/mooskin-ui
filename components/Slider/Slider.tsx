@@ -62,6 +62,8 @@ export interface ISliderState {
 
 export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
+    static displayName = 'Slider';
+
     slider: any;
 
     constructor(props: ISliderProps){
@@ -337,3 +339,5 @@ export const ABSlider: React.StatelessComponent<IABSliderProps> = (props) => {
         </div>
     );
 };
+
+ABSlider.displayName = 'ABSlider';
