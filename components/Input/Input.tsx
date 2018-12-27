@@ -363,11 +363,12 @@ class Input extends React.Component<IProps, IInputState> {
         const title = args && args.custom && args.custom.title;
         const onClick = () => args && args.custom ? args.custom.onClick ?
         this.onDropDownIconClick(args.i, args.custom.onClick) : this.onDropDownIconClick(args.i) : undefined;
+        const paddingForDropDownIcon = args && args.custom ? {padding: 0} : {};
         return (
             <div
                 onClick={onClick}
                 className={`${styles.icon} ${iconStatus} ${this.props.iconClass}`}
-                style={{...iconPadding, ...style, ...this.props.iconStyle}}
+                style={{...iconPadding, ...style, ...paddingForDropDownIcon, ...this.props.iconStyle}}
                 title={title}
             >
                 {iconFont}
@@ -459,7 +460,7 @@ class Input extends React.Component<IProps, IInputState> {
         /* tslint:disable */
         return (
             <div
-                className="dropdown-icon"
+                className={`dropdown-icon ${styles.dropDownIconWrapper}`}
                 key={i}
                 style={{position: 'relative', display: 'flex', alignItems: 'center'}}
             >

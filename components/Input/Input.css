@@ -78,6 +78,10 @@
     display: flex;
 }
 
+.dropDownContainer .dropDownIconWrapper:last-child{
+    margin-right: 10px;
+}
+
 .icon{
     color: var(--inputPlaceholder);
     font-size: 18px;
@@ -206,8 +210,11 @@
 }
 
 .dropDownIcon{
-    margin-left: 10px;
     width: 16px;
+}
+
+.dropDownIconWrapper {
+    margin-left: 10px;
 }
 
 .dropDownIcon:hover{
