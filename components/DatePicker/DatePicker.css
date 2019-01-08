@@ -50,6 +50,8 @@
      /* font-size: 13px;  */
      font-size: .92857142857rem; 
     cursor: pointer;
+    align-self: flex-start;
+    padding-top: 15px;
     flex-basis: 150px;
 }
 
@@ -304,9 +306,11 @@
         flex-direction: column;
     }
 
-    .label{
-        flex-basis: 20px;
-    }
+    .label {
+        padding-top: 0;
+        margin-left: 3px;
+        flex-basis: auto; 
+    };
 }
 
 @media (--deviceXsmall){
@@ -314,9 +318,11 @@
         flex-direction: column;
     }
 
-    .label{
+    .label {
+        padding-top: 0;
         margin-left: 3px;
-    }
+        flex-basis: auto; 
+    };
 
     /* .calendar{
         position: fixed;
@@ -438,9 +444,11 @@
         flex-direction: column;
     }
 
-    .label{
+    .label {
+        padding-top: 0;
         margin-left: 3px;
-    }
+        flex-basis: auto; 
+    };
 
     /* .calendar{
         position: fixed;
