@@ -117,7 +117,7 @@ class InputExample extends React.Component {
 
         return(
             <div>
-                <Input icon="check" customDropdowns={customDropdown} value={this.state.value} dataLabel='value' type="text" name="olala" onChange={this.onChange} personalizationTags={personalizationTags} emoji type="text" placeholder="max length 5" label="Some label:"/>
+                <Input icon="check" iconStyle={{padding: 0}} customDropdowns={customDropdown} value={this.state.value} dataLabel='value' type="text" name="olala" onChange={this.onChange} personalizationTags={personalizationTags} emoji type="text" placeholder="max length 5" label="Some label:"/>
                 <br/>
                 <Input value={this.state.valueAsNumber} minmax={[10, 213]} dataLabel='valueAsNumber' type="number" onChange={this.onChange} label="Number only:"/>
                 <br/>
