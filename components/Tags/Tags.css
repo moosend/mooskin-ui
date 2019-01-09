@@ -103,6 +103,7 @@
 .labelLeft{
     display: flex;
     flex-basis: 150px;
+    padding-top: 15px
     /* flex: 1 0 150px; */
 }
 
@@ -216,6 +217,7 @@
 
     .labelLeft {
         flex: 1;
+        padding-top: 0px;
     }
 
 }
