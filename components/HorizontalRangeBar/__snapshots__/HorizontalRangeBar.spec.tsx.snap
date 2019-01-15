@@ -1,33 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`HorizontalRangeBar renders correctly 1`] = `
-<div
-  className="loader-component loaderContainer myClass"
+<HorizontalRangeBar
+  background="#53cadc"
+  className="myClass"
+  fallbackColor="#414141"
+  height={5}
   id="Range bar"
+  progress={20}
+  range={
+    Array [
+      0,
+      100,
+    ]
+  }
 >
   <div
-    className="loader-bar loader"
-    style={
-      Object {
-        "height": 5,
-        "width": "20%",
-      }
-    }
+    className="loader-component loaderContainer myClass"
+    id="Range bar"
   >
     <div
-      className="loader-text label number"
-    >
-      20
-    </div>
-    <div
+      className="loader-bar loader"
       style={
         Object {
-          "background": "#53cadc",
-          "borderRadius": 3,
           "height": 5,
+          "width": "20%",
         }
       }
-    />
+    >
+      <div
+        className="loader-text label number"
+      >
+        20
+      </div>
+      <div
+        style={
+          Object {
+            "background": "#53cadc",
+            "borderRadius": 3,
+            "height": 5,
+          }
+        }
+      />
+    </div>
   </div>
-</div>
+</HorizontalRangeBar>
 `;

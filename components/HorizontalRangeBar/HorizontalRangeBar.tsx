@@ -22,6 +22,12 @@ export interface IHorizontalRangeBarProps{
 
     /** className for the main element */
     className?: string;
+
+    /** custom styles */
+    style?: React.CSSProperties;
+
+    /** fallback color */
+    fallbackColor?: string;
 }
 
 export default class HorizontalRangeBar extends React.Component<IHorizontalRangeBarProps, {}>{
@@ -29,27 +35,28 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
     static defaultProps: Partial<IHorizontalRangeBarProps> = {
         background: '#53cadc',
         className: '',
+        fallbackColor: '#414141',
         height: 28,
         range: [0, 100],
     };
 
     static displayName = 'HorizontalRangeBar';
+    bar: any;
+
+    componentDidMount(){
+        this.assignValueColor();
+    }
 
     render(){
 
         const {className, range, progress, id} = this.props;
-        let currentPercentage;
-
-        if (range && progress > range[1]){
-            console.error('progress can not be greater that the max range');
-            currentPercentage = 100;
-        }else{
-            currentPercentage = range && ((progress - range[0]) * 100) /  (range[1] - range[0]);
-        }
+        const currentPercentage = range && progress > range[1] ? 100 :
+        range && ((progress - range[0]) * 100) /  (range[1] - range[0]);
 
         const containerStyle = {
             height: this.props.height,
-            width: currentPercentage + '%'
+            width: currentPercentage + '%',
+            ...this.props.style
         };
 
         const barStyle = {
@@ -60,7 +67,11 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         };
 
         return (
-            <div className={`loader-component ${styles.loaderContainer} ${className}`} id={id}>
+            <div
+                className={`loader-component ${styles.loaderContainer} ${className}`}
+                id={id}
+                ref={(bar) => this.bar = bar}
+            >
                 <div
                     className={`loader-bar ${styles.loader}`}
                     style={containerStyle}
@@ -82,7 +93,7 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
             borderBottomRightRadius: 3,
             borderTopRightRadius: 3,
             bottom: 0,
-            color: '#414141',
+            // color: '#414141',
             padding: 5,
             right: `${right}%`,
             top: 0
@@ -95,15 +106,31 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
             }
             bars.push(
                 <div
-                    className={`loader-text ${styles.label}`}
+                    className={styles.label}
                     key={i}
                     style={{position: 'absolute', width: `${width}%`, background: bar.background, ...style}}
                 >
-                    {bar.value}
+                    <span className="loader-text">{bar.value}</span>
                 </div>
             );
             right = right + width;
         });
         return bars;
+    }
+
+    assignValueColor = () => {
+        const values = this.bar.getElementsByClassName('loader-text');
+        const valuesArray = values && Array.from(values);
+        valuesArray && valuesArray.forEach((element) => {
+            if (element){
+                const currentElement = element as any;
+                const parent = currentElement.parentNode;
+                const elementWidth = currentElement.offsetWidth;
+                const parentWidth = parent.offsetWidth - 5;
+                if (elementWidth > parentWidth){
+                    currentElement.style.color = this.props.fallbackColor;
+                }
+            }
+        });
     }
 }
