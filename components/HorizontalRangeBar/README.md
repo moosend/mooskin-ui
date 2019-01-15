@@ -48,6 +48,8 @@ it must have an optional range determining between what numbers must the progres
 * `progress` - current progress where of the bar
 * `range` - a tuple for the range
 * `background` - background color
+* `style` - adds styles to the main element
+* `fallbackColor` - fallback color for horizontal range bar, when text exceeds bar width, to prevent text blending in the same background color 
 
 </div>
 

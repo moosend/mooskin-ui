@@ -16,7 +16,7 @@
 }
 
 .number {
-    color: #414141;
+    /* color: #414141; */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
