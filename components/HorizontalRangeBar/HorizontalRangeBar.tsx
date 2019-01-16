@@ -47,6 +47,10 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
         this.assignValueColor();
     }
 
+    componentWillReceiveProps(){
+        this.assignValueColor();
+    }
+
     render(){
 
         const {className, range, progress, id} = this.props;
@@ -127,9 +131,7 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
                 const parent = currentElement.parentNode;
                 const elementWidth = currentElement.offsetWidth;
                 const parentWidth = parent.offsetWidth - 5;
-                if (elementWidth > parentWidth){
-                    currentElement.style.color = this.props.fallbackColor;
-                }
+                elementWidth > parentWidth ? currentElement.style.color = this.props.fallbackColor : currentElement.removeAttribute('style');
             }
         });
     }

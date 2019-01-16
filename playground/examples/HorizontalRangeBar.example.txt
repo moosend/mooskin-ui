@@ -9,7 +9,9 @@ class HorizontalRangeBarExample extends React.Component {
         this.horizontalRangeInterval;
 
         this.state = {
-            progress: 33
+            progress: 33,
+            progress2: 15000,
+            progress3: 3000
         };
 
     }
@@ -18,7 +20,8 @@ class HorizontalRangeBarExample extends React.Component {
         return (
             <div>
                 <HorizontalRangeBar style={{color: 'white'}} progress={this.state.progress} background="#f2c14a" additionalBars={[{value: 10, background: '#e0723c'}]}/><br/>
-                <HorizontalRangeBar style={{color: 'white'}} progress={10000} range={[0, 150000]} background={'green'}/><br/>
+                <HorizontalRangeBar style={{color: 'white'}} progress={this.state.progress2} range={[0, 150000]} background={'green'}/><br/>
+                <HorizontalRangeBar style={{color: 'white'}} progress={this.state.progress3} range={[0, 150000]} background={'#5ccdde'}/><br/>
                 <HorizontalRangeBar style={{color: 'white'}} progress={this.state.progress} range={[0, 500]} background={'red'}/><br/>
                 <HorizontalRangeBar style={{color: 'white'}} progress={0} range={[0, 50]} background={'blue'}/><br/>
 
@@ -30,7 +33,7 @@ class HorizontalRangeBarExample extends React.Component {
 
     onClickStartInterval(e) {
         this.horizontalRangeInterval = setInterval(() => {
-           this.setState({progress: this.state.progress + 5});
+           this.setState({progress: this.state.progress + 5, progress2: this.state.progress2 - 300, progress3: this.state.progress3 + 200});
         }, 100);
         console.log(e.target);
     }
