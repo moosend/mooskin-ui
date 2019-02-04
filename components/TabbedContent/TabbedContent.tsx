@@ -40,8 +40,7 @@ export interface ITabProps {
     style?: React.CSSProperties;
 
     /** children here can only be Tab elements */
-    children?: React.ReactElement<IHeaderProps> |
-            Array<React.ReactElement<IHeaderProps> | React.ReactElement<IContentProps>>;
+    children?: Array<React.ReactElement<IHeaderProps> | React.ReactElement<IContentProps>>;
 }
 
 export interface IHeaderProps {
@@ -196,6 +195,17 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         React.Children.forEach(this.props.children, (child, index) => {
 
             if (React.isValidElement<ITabProps>(child)){
+
+                if (!child.props.children){
+                    console.error(`Tab ${index} did not render correctly, due to missing children (<Header>, <Content>)`);
+                    return;
+                }
+
+                if (!Array.isArray(child.props.children)){
+                    console.error(`Tab ${index} did not render correctly, <Header> or <Content> is missing on the Tab component`);
+                    return;
+                }
+
                 const {header, content} = this.assignPropsToChildren(child.props.children, index);
 
                 headers.push(header);
