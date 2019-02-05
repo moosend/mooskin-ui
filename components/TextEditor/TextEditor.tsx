@@ -186,6 +186,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     // }
 
     editor: any;
+    mounted: boolean;
 
     constructor(props: ITextEditorProps){
         super(props);
@@ -224,7 +225,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         const rawState = convertToRaw(editorState.getCurrentContent());
         const htmlContent = draftToHtml(rawState);
         this.setState({editorState, width: this.getParentWidth(), htmlContent});
-
+        this.mounted = true;
     }
 
     componentDidUpdate(props: ITextEditorProps, state: ITextEditorState) {
@@ -237,12 +238,16 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
         }
     }
 
+    componentWillUnmount(){
+        this.mounted = false;
+    }
+
     componentWillReceiveProps(nextProps: ITextEditorProps){
 
         const rawState = convertToRaw(nextProps.editorState.getCurrentContent());
         const htmlContent = draftToHtml(rawState);
 
-        this.setState({
+        this.mounted && this.setState({
             editorState: nextProps.editorState,
             htmlContent
         });
@@ -310,7 +315,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                     toolbarStyle={toolbarStyles}
                     toolbar={toolbar}
                     toolbarCustomButtons={customToolbarButtons}
-                    onBlur={this.onBlur}
+                    onBlur={() => this.mounted && this.onBlur()}
                     hideTargetSetting={this.props.hideTargetSetting}
                 />
                 <textarea
@@ -376,7 +381,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
 
         // const newHTML = this.addLink(htmlContent);
         // const contentBlock = htmlToDraft(newHTML);
-        this.setState({editorState, htmlContent});
+        this.mounted && this.setState({editorState, htmlContent});
         const value = this.props.returnWithHtml ? {editorState, htmlContent} : editorState;
         this.props.onChange &&
         this.props.onChange({value, dataLabel: this.props.dataLabel});

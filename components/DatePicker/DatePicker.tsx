@@ -391,7 +391,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     }
 
     onGroupClick = () => {
-        if (document.activeElement.tagName === 'BODY'){
+        if (document.activeElement && document.activeElement.tagName === 'BODY'){
             this.dayInput && this.dayInput.focus();
         }
     }
@@ -661,39 +661,10 @@ export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) =>
     };
 
     const renderWeekOptions = () => {
-        const options = [];
-        for (let i = 1 ; i <= 7 ; i++){
-            let text: string = 'Monday';
-            switch (i) {
-                case 1:
-                    text = 'Monday';
-                    break;
-                case 2:
-                    text = 'Tuesday';
-                    break;
-                case 3:
-                    text = 'Wednesday';
-                    break;
-                case 4:
-                    text = 'Thursday';
-                    break;
-                case 5:
-                    text = 'Friday';
-                    break;
-                case 6:
-                    text = 'Saturday';
-                    break;
-                case 7:
-                    text = 'Sunday';
-                    break;
-                default:
-                    break;
-            }
-            options.push(
-                <Option key={i} value={i.toString()}>{text}</Option>
-            );
-        }
-        return options;
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        return days.map((day, i) => {
+            return <Option key={i} value={(i + 1).toString()}>{day}</Option>;
+        });
     };
 
     const renderOrdinalOptions = () => {

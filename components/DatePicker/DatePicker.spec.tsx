@@ -176,8 +176,8 @@ describe('DatePicker', () => {
         expect(component.find('Option').length).toBe(7);
         expect(component.find('Option').first().prop('value')).toEqual('1');
         expect(component.find('Option').last().prop('value')).toEqual('7');
-        expect(component.find('Option').first().children().text()).toEqual('Monday');
-        expect(component.find('Option').last().children().text()).toEqual('Sunday');
+        expect(component.find('Option').first().children().text()).toEqual('Sunday');
+        expect(component.find('Option').last().children().text()).toEqual('Saturday');
 
     });
 
