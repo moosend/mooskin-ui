@@ -146,4 +146,46 @@ describe('Select', () => {
 
         expect(component.find('.lockContainer').length).toBe(1);
     });
+
+    test('should be rendered as a multi select if the selected prop is an array', () => {
+
+        let options = [
+            'option1',
+            'option3'
+        ];
+
+        const onChange = (e, data) => {
+            options = data.value;
+        };
+
+        const component = mount(
+            <Select selected={options} onChange={onChange} dataLabel="plan">
+                <Option value="option1">Option1</Option>
+                <Option value="option2">Option2</Option>
+                <Option value="option3">Option3</Option>
+                <Option value="option4">Option4</Option>
+            </Select>
+        );
+
+        expect(component.find('i').length).toBe(2);
+        expect(component.prop('selected')).toEqual(options);
+
+        component.find('li').first().simulate('click');
+        component.setProps({selected: options});
+
+        expect(component.prop('selected')).toEqual(options);
+        expect(component.find('i').length).toBe(1);
+
+        component.find('li').at(1).simulate('click');
+        component.setProps({selected: options});
+
+        expect(component.prop('selected')).toEqual(options);
+        expect(component.find('i').length).toBe(2);
+
+        component.find('li').last().simulate('click');
+        component.setProps({selected: options});
+
+        expect(component.prop('selected')).toEqual(options);
+        expect(component.find('i').length).toBe(3);
+    });
 });
