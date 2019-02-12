@@ -14,7 +14,7 @@ export interface ISelectProps {
     dataLabel?: string;
 
     /** to specify which value is selected, has to be one of the option values */
-    selected?: string | number;
+    selected?: string | number | Array<string | number>;
 
     /** select box label */
     label?: string;
@@ -86,6 +86,9 @@ export interface IOptionProps {
     /** value for this option */
     value: string;
 
+    /** label to be used when children are of type other than string */
+    label?: string;
+
     /** children must be a string */
     children?: string | JSX.Element;
 }
@@ -146,6 +149,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const alternateContainer = this.props.alternate ? styles.alternateContainer : '';
         const valueColor = this.props.alternate && this.props.selected ? {color: '#5ccdde'} : {};
 
+        const selectValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : this.props.selected;
+
         return (
             <div
                 className={`select-component ${styles.componentContainer} ${labelPos} ${this.props.className}`}
@@ -169,7 +174,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                         </div>
                         {this.props.alternate ? this.renderArrow() : <div className={styles.selectIcon} onClick={shouldToggle}/>}
                         <input
-                            value={this.props.selected || ''}
+                            value={selectValue}
                             readOnly
                             style={{display: 'none'}}
                         />
@@ -210,14 +215,35 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     onClick = (option: string) => {
         const {dataLabel, required} = this.props;
+        const selectedAsArray = Array.isArray(this.props.selected);
+        let returnValue: any = '';
+        const selected = this.props.selected as any;
         return (e: React.MouseEvent<HTMLElement>) => {
-            this.props.onChange && this.props.onChange(e, {value: option, dataLabel});
+            if (selectedAsArray){
+                if (selected.includes(option)){
+                    returnValue = this.removeOption(option);
+                } else {
+                    returnValue = [...selected];
+                    returnValue.push(option);
+                }
+            } else {
+                returnValue = option;
+            }
+            this.props.onChange && this.props.onChange(e, {value: returnValue, dataLabel});
             if (this.props.status){
                 this.props.validate &&
-                this.props.validate({value: option, dataLabel, required});
+                this.props.validate({value: returnValue, dataLabel, required});
             }
-            this.setState({list: false, filter: ''});
+            !selectedAsArray && this.setState({list: false, filter: ''});
         };
+    }
+
+    removeOption(option: string){
+        const selected = this.props.selected as any;
+        const returnArray = [...selected];
+        const index = selected.indexOf(option);
+        returnArray.splice(index, 1);
+        return returnArray;
     }
 
     onToggleList = (e: React.MouseEvent<HTMLElement>) => {
@@ -246,21 +272,24 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 const selectedClass = this.props.selected === child.props.value ?
                 this.props.alternate ? styles.alternateSelectedOption : styles.selectedOption : '';
 
-                let visible = 'block';
+                let visible = 'flex';
                 // hide options when filtering
                 if (!this.props.alternate && typeof child.props.children === 'string'){
                     visible = child.props.children &&
                         child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
-                        ? 'block'
+                        ? 'flex'
                         : 'none';
                 }
 
+                const active = Array.isArray(this.props.selected) && this.props.selected.includes(child.props.value);
+
                 return (
                     <div
-                        className={selectedClass}
-                        style={{display: visible}}
+                        className={`select-option-container ${selectedClass}`}
+                        style={{display: visible, flex: 1, position: 'relative'}}
                     >
                         {React.cloneElement(child, extraProps)}
+                        {active && <i onClick={this.onClick(child.props.value)} className={`material-icons ${styles.checkIcon}`} >check</i>}
                     </div>
                 );
             }else{
@@ -270,17 +299,38 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     }
 
     getSelectedChildLabel(){
-        const selectedChild = React.Children.toArray(this.props.children)
-                .find((child: React.ReactElement<IOptionProps>) => {
-                    return child.props.value === (this.props.selected && this.props.selected);
-                });
+        if (Array.isArray(this.props.selected)){
+            const selectedArray: Array<number | string> = [];
 
-        if (this.props.children){
-            return selectedChild &&
-                    React.isValidElement<IOptionProps>(selectedChild) &&
-                    selectedChild.props.children ||
-                    this.props.placeholder ||
-                    'Select an option';
+            React.Children.toArray(this.props.children)
+                    .forEach((child: React.ReactElement<IOptionProps>) => {
+                        if (this.props.selected && (this.props.selected as any).includes(child.props.value)){
+                            if (typeof child.props.children === 'string'){
+                                selectedArray.push(child.props.children);
+                            } else {
+                                child.props.label && selectedArray.push(child.props.label);
+                            }
+                        }
+                    });
+
+            if (this.props.children){
+                    return selectedArray.join(', ') ||
+                        this.props.placeholder ||
+                        'Select an option';
+            }
+        } else {
+            const selectedChild = React.Children.toArray(this.props.children)
+                    .find((child: React.ReactElement<IOptionProps>) => {
+                        return child.props.value === (this.props.selected && this.props.selected);
+                    });
+
+            if (this.props.children){
+                return selectedChild &&
+                        React.isValidElement<IOptionProps>(selectedChild) &&
+                        selectedChild.props.children ||
+                        this.props.placeholder ||
+                        'Select an option';
+            }
         }
 
         return this.props.emptySelectText || 'No options available';

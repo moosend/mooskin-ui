@@ -110,7 +110,7 @@ The Input Component can be validated using the `status` and `validate` props. Th
 * `id` - id of the element
 * `dataLabel` - label what kind of data 
 * `onChange` - callback that is fired when you click on one of the options
-* `selected` - selected value, has to correspond to one of the Option values
+* `selected` - selected value, has to correspond to one of the Option values. NOTO: if passed as an array of strings, it will render a multiple select, using array as callback value
 * `value` - text value of the element
 * `placeholder` - backtext description of the element
 * `className` - css class
