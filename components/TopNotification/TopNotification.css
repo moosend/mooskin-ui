@@ -44,7 +44,8 @@
 .content{
     display: flex;
     flex-direction: row;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .active{
@@ -82,7 +83,8 @@
         height: 5vw;
         width: 5w;
         padding: 0px;
-        flex: 1;
+        flex-grow: 1;
+        flex-shrink: 1;
     }  
 
      .close div{
@@ -125,7 +127,8 @@
         height: 5vw;
         width: 5w;
         padding: 0px;
-        flex: 1;
+        flex-grow: 1;
+    flex-shrink: 1;
     }  
 
      .close div{

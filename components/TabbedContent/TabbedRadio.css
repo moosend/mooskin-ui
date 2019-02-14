@@ -14,7 +14,8 @@
 .headingV {
     display: flex;
     flex-direction: column;
-    flex: 1; 
+    flex-grow: 1;
+    flex-shrink: 1; 
     margin-right: 10px;
 }
 
@@ -28,7 +29,8 @@
 
 .headingH {
     display: flex;
-    flex: 1 0 auto;
+    flex-grow: 1;
+    flex-shrink: 0;
     flex-direction: column;
     margin-bottom: 10px;
 }
@@ -43,7 +45,8 @@
 }
 
 .contentH {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .contentV {

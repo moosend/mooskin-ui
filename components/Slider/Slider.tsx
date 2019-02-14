@@ -120,12 +120,14 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
         const disabled = this.props.disabled ? styles.disabled : '';
         const edgeClasses = this.isEdge() ? styles.edgeClasses : '';
 
+        const classesIE = this.isIE() ? styles.classesIE : '';
+
         return (
             <input
                 ref={(slider) => this.slider = slider}
                 id={this.props.id}
                 style={this.props.style}
-                className={`${styles.slider} ${disabled} ${edgeClasses} ${this.props.className}`}
+                className={`${styles.slider} ${disabled} ${edgeClasses} ${classesIE} ${this.props.className}`}
                 value={value}
                 min={min}
                 max={max}
@@ -252,11 +254,16 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
     isEdge = () => {
         // tslint:disable-next-line
-        const doc = document as IDocumentProps;
         const win = window as IDocumentProps;
-        const isIE = false || !!doc.documentMode as IDocumentProps;
+        const isIE = this.isIE();
         const isEdge = !isIE && !!win.StyleMedia;
         return isEdge;
+    }
+
+    isIE = () => {
+        const doc = document as IDocumentProps;
+        const isIE = false || !!doc.documentMode as IDocumentProps;
+        return isIE;
     }
 
 }

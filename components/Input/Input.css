@@ -4,7 +4,8 @@
 
 .inputContainer{
     display: flex;
-    /* flex: 1; */
+    /* flex-grow: 1;
+    flex-shrink: 1; */
     box-sizing: border-box;
     /* align-items: center; */
 }
@@ -17,7 +18,8 @@
 .input{
     outline: none;
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     font-family: Arial,sans-serif;
     border: 0;
     color: var(--inputFontColor);
@@ -30,7 +32,8 @@
 
 .innerDiv{
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     align-items: center;
     justify-content: center;
     position: relative;

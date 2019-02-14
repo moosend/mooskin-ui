@@ -3,13 +3,15 @@
 
 .areaContainer{
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .textAreaDiv{
     display: flex;
     flex-direction: column;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     box-sizing: border-box;
 }
 

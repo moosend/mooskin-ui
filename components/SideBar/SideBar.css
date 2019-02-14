@@ -16,7 +16,8 @@
     white-space: nowrap;
     overflow-x: hidden; 
     z-index: 9; /* Stay on top */
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .subMenu{

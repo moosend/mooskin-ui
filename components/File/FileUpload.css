@@ -3,12 +3,14 @@
 
 .fileContainer{
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .contentContainer{
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     position: relative;
 }
 
@@ -31,7 +33,8 @@
 
 .name{
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     justify-content: center;
     flex-direction: column;
     padding: 15px;
