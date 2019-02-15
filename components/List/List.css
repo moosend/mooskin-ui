@@ -22,7 +22,8 @@
 
 /* .image{
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     justify-content: center;
     align-items: center;
     overflow: hidden
@@ -45,7 +46,8 @@
 
 .detailsContainer{
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     flex-direction: row;
 }
 

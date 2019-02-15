@@ -19,9 +19,9 @@ exports[`FileUpload renders correctly 1`] = `
   <div
     style={
       Object {
-        "display": "flex",
-        "flex": 1,
         "flexDirection": "column",
+        "flexGrow": 1,
+        "flexShrink": 1,
       }
     }
   >

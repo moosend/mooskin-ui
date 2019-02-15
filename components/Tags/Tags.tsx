@@ -185,7 +185,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 style={this.props.style}
             >
                 {this.props.label && <div className={`${styles.label} ${labelClasses}`}>{this.props.label}</div>}
-                <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
+                <div style={{display: 'flex', flexDirection: 'column', flexGrow: 1, flexShrink: 1}}>
                     <label className={`${styles.tags} ${alternateContainer} ${status}`}>
                         {tags}
                         <div className={`${styles.inputContainer} ${alternateInputContainer}`}>

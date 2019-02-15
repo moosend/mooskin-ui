@@ -186,7 +186,8 @@ td.alternateCol:last-child{
     .popover .heading{
         display: block;
         font-weight: 800;
-        flex: 1;
+        flex-grow: 1;
+        flex-shrink: 1;
         text-align: left;
     }
 
@@ -200,7 +201,8 @@ td.alternateCol:last-child{
 
     .popover .content{
         display: flex;
-        flex: 1;
+        flex-grow: 1;
+        flex-shrink: 1;
         text-align: left;
         /* flex-direction: column; */
         justify-content: center;
@@ -287,7 +289,8 @@ td.alternateCol:last-child{
     .popover .heading{
         display: block;
         font-weight: 800;
-        flex: 1;
+        flex-grow: 1;
+        flex-shrink: 1;
         text-align: left;
     }
 
@@ -301,7 +304,8 @@ td.alternateCol:last-child{
 
     .popover .content{
         display: flex;
-        flex: 1;
+        flex-grow: 1;
+        flex-shrink: 1;
         text-align: left;
         /* flex-direction: column; */
         justify-content: center;

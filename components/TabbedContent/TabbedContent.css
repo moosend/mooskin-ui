@@ -28,7 +28,8 @@
 } */
 
 .headingH {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     border-bottom:10px solid #efefef;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -36,14 +37,16 @@
 
 .headingV {
     flex-direction: column;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     border-right:10px solid #efefef;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
 .contentH {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .contentV {
@@ -145,7 +148,8 @@
     }
 
     .header{
-        flex: 1;
+        flex-grow: 1;
+    flex-shrink: 1;
     } */
 
 }

@@ -8,7 +8,8 @@
 
 .selectContainer{
     position: relative;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .innerDiv{
@@ -18,7 +19,8 @@
     color: var(--inputColor);
     vertical-align: middle;
     padding: 15px;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -73,7 +75,8 @@
     cursor: pointer;
     border: none;
     padding:0;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .overlay{
@@ -93,6 +96,8 @@
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     top:46px;
+    left: 0px;
+    right: 0px;
     z-index: 5;
     max-height: 300px;
     overflow-y: auto;
@@ -113,7 +118,8 @@
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .optionsContainer ul li{
@@ -195,7 +201,8 @@
 }
 
 .lockText {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .close {
@@ -236,6 +243,8 @@
 .alternateOptions{
     border-radius: 0;
     top: 37px;
+    left: 0px;
+    right: 0px;
     max-height: 180px;
     background: #fff;
     border: 1px solid var(--inputBackground);;
@@ -246,7 +255,8 @@
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .alternateOptions ul li:first-child{
