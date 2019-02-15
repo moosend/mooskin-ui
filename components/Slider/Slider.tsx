@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Slider.css';
 
-interface IDocumentProps {
+interface any {
     documentMode?: any;
     StyleMedia?: any;
 }
@@ -254,7 +254,7 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
     isEdge = () => {
         // tslint:disable-next-line
-        const win = window as IDocumentProps;
+        const win = window as any;
         const isIE = this.isIE();
         const isEdge = !isIE && !!win.StyleMedia;
         return isEdge;
@@ -262,8 +262,8 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
     isIE = () => {
         // tslint:disable-next-line
-        const doc = document as IDocumentProps;
-        const isIE = false || !!doc.documentMode as IDocumentProps;
+        const doc = document as any;
+        const isIE = false || !!doc.documentMode as any;
         return isIE;
     }
 
