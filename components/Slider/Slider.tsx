@@ -261,6 +261,7 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
     }
 
     isIE = () => {
+        // tslint:disable-next-line
         const doc = document as IDocumentProps;
         const isIE = false || !!doc.documentMode as IDocumentProps;
         return isIE;
