@@ -106,7 +106,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
                 style={style}
             >
                 {label && <label className={styles.label} style={spacing}>{label}</label>}
-                <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
+                <div style={{flexShrink: 1, flexGrow: 1, flexDirection: 'column'}}>
                     <div className={styles.contentContainer}>
                         <span className={`${styles.name} ${status}`}>{this.state.name}</span>
                         <span className={styles.button}>{buttonLabel}</span>

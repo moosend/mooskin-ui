@@ -16,7 +16,8 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     color: #aaa;
     font-size: 1rem;
     display: flex;

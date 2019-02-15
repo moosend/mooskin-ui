@@ -17,12 +17,14 @@
 }
 
 .horizontal{
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     flex-direction: row;
 }
 
 .vertical{
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     flex-direction: column;
 }
 

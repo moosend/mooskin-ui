@@ -13,7 +13,8 @@
 }
 
 .slider {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     cursor: pointer;
     opacity: 1;
     transition: all 0.2s;
@@ -76,6 +77,22 @@
     box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
 }
 
+.sliderContainer input[type=range]::-ms-thumb {
+    appearance: none;
+    border: 1px solid #d3d3d3;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    background: #efefef;
+    cursor: pointer;
+    margin-top: -4px;
+    box-shadow: 1px 1px 1px #aaa, 0px 0px 1px #aaa;
+}
+
+.sliderContainer input[type=range]::-ms-tooltip {
+    display: none;
+}
+
 .sliderContainer input[type=range]:active::-webkit-slider-thumb {
     background: #ffffff;
 }
@@ -121,6 +138,16 @@
     border-color: transparent;
     border-width: 16px 0;
     color: transparent;
+
+}
+
+.classesIE {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
 }
 
 .fill {
@@ -221,6 +248,35 @@ input.edgeClasses[type=range]::-ms-fill-upper {
 
 .abContainer input[type=range]::-ms-track {
     appearance: none;
+    visibility: hidden;
+    /* position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px; */
+}
+
+.abContainer input[type=range] {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: transparent;
+    color: transparent;
+}
+
+.abContainer input[type=range]::-ms-fill-lower {
+    background-color: transparent;
+    color: transparent;
+}
+
+
+.abContainer input[type=range]::-ms-thumb {
+    appearance: none;
+    visibility: hidden;
 }
 
 .section {

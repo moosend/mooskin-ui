@@ -14,7 +14,8 @@
 .headingV {
     display: flex;
     flex-direction: column;
-    flex: 1; 
+    flex-grow: 1;
+    flex-shrink: 1; 
     border-radius: 8px;
     background: #efefef;
     /* border-right: 1px solid var(--moosendBlue); */
@@ -26,7 +27,8 @@
 
 .headingH {
     display: flex;
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
     flex-direction: row;
     border-radius: 8px;
     background: #efefef;
@@ -43,7 +45,8 @@
 }
 
 .contentH {
-    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .contentV {

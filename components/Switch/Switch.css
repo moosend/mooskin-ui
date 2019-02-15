@@ -67,7 +67,8 @@
 
 .text {
   display: flex;
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
   justify-content: center;
   cursor: pointer;
   color: white;
