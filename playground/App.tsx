@@ -4,7 +4,7 @@
 import * as React from 'react';
 
 import { convertToRaw, EditorState } from 'draft-js';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 import { renderEditableExample } from './tools/ReactLiveEditor/ReactLiveEditor';
 
@@ -105,7 +105,7 @@ export const App = (props: any) => {
         Switch,
         Tags,
         TextArea,
-        moment
+        dayjs
     };
 
     const tabbedContentComponents = {
@@ -175,7 +175,7 @@ export const App = (props: any) => {
                     {renderEditableExample('Select', { Select, Option })}
                 </Col>
                 <Col lg={6} md={6}>
-                    {renderEditableExample('DatePicker', { DatePicker, DateSelect, moment, Button })}
+                    {renderEditableExample('DatePicker', { DatePicker, DateSelect, dayjs, Button })}
                 </Col>
                 <Col lg={12}>
                     {renderEditableExample('File', { FileUpload })}

@@ -1,4 +1,4 @@
-import moment from 'moment';
+import dayjs from 'dayjs';
 import * as React from 'react';
 import DatePicker, {DateSelect} from './DatePicker';
 
@@ -8,7 +8,7 @@ describe('DatePicker', () => {
 
     test('renders correctly', () => {
         const func = jest.fn();
-        // Date.now = jest.fn(() => new Date(moment.parseZone('2013-01-01T00:00:00-13:00').utcOffset()));
+        // Date.now = jest.fn(() => new Date(dayjs('2013-01-01T00:00:00-13:00').utcOffset()));
 
         const tree = shallow(
             <DatePicker
@@ -17,7 +17,7 @@ describe('DatePicker', () => {
                 className="myClass"
                 style={{color: 'blue'}}
                 id={'input1'}
-                date={moment.parseZone('2013-01-01T00:00:00-13:00')}
+                date={dayjs('2013-01-01T00:00:00-13:00')}
                 label="with a label ofc"
                 required
             />
@@ -27,7 +27,7 @@ describe('DatePicker', () => {
 
     test('renders other type of the component correctly', () => {
         const func = jest.fn();
-        // Date.now = jest.fn(() => new Date(moment.parseZone('2013-01-01T00:00:00-13:00').utcOffset()));
+        // Date.now = jest.fn(() => new Date(dayjs('2013-01-01T00:00:00-13:00').utcOffset()));
 
         const tree = shallow(
             <DateSelect
@@ -44,14 +44,14 @@ describe('DatePicker', () => {
     });
 
     test('renders properly into dom with props', () => {
-        // Date.now = jest.fn(() => new Date(moment.parseZone('2013-01-01T00:00:00-13:00').utcOffset()));
+        // Date.now = jest.fn(() => new Date(dayjs('2013-01-01T00:00:00-13:00').utcOffset()));
 
         const component = shallow(
-            <DatePicker date={moment.parseZone('2013-01-01T00:00:00-13:00')} required/>
+            <DatePicker date={dayjs('2013-01-01T00:00:00-13:00')} required/>
         );
 
-        expect(component.find('InputMoment').prop('moment'))
-        .toEqual(moment.parseZone('2013-01-01T00:00:00-13:00'));
+        expect(component.find('InputDayJS').prop('dayjs'))
+        .toEqual(dayjs('2013-01-01T00:00:00-13:00'));
         expect(component.find('input').prop('required')).toBeTruthy;
     });
 
@@ -60,7 +60,7 @@ describe('DatePicker', () => {
 
         const component = mount(<DatePicker onChange={func}/>);
 
-        component.find('InputMoment').find('td').at(15).simulate('click');
+        component.find('InputDayJS').find('td').at(15).simulate('click');
         expect(func).toHaveBeenCalled();
     });
 
@@ -69,7 +69,7 @@ describe('DatePicker', () => {
 
         const component = mount(<DatePicker onChange={func} disabled/>);
 
-        component.find('InputMoment').find('td').at(15).simulate('click');
+        component.find('InputDayJS').find('td').at(15).simulate('click');
         expect(func).not.toHaveBeenCalled();
     });
 
@@ -196,7 +196,7 @@ describe('DatePicker', () => {
 
     test('adds now button to the component, and selects current date when clicked', () => {
 
-        let date = moment().add(20, 'days');
+        let date = dayjs().add(1, 'day');
 
         const onChange = (data) => {
             date = data.value;
@@ -204,7 +204,7 @@ describe('DatePicker', () => {
 
         const component = shallow(<DatePicker nowButton onChange={onChange} date={date}/>);
 
-        expect(component.find('InputMoment').prop('moment')).toEqual(date);
+        expect(component.find('InputDayJS').prop('dayjs')).toEqual(date);
 
         expect(component.find('Button').length).toBe(1);
 

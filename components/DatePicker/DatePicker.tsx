@@ -2,15 +2,19 @@ import * as React from 'react';
 
 import styles from './DatePicker.css';
 
-import 'input-moment/dist/input-moment.css';
+import 'input-dayjs/dist/input-dayjs.css';
 
-import InputMoment from 'input-moment';
-import moment from 'moment';
+import dayjs from 'dayjs';
+import InputDayJS from 'input-dayjs';
+
+import AdvancedFormat from 'dayjs/plugin/advancedFormat';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 import Button from '../Button';
 import Select, {Option} from '../Select';
+
+dayjs.extend(AdvancedFormat);
 
 export interface IDateProps{
 
@@ -18,7 +22,7 @@ export interface IDateProps{
     id?: string;
 
     /** date passed will be the selected date */
-    date?: moment.Moment;
+    date?: dayjs.Dayjs;
 
     /** datepicker placeholder */
     placeholder?: string;
@@ -73,7 +77,7 @@ export interface IDateProps{
 }
 
 export interface IDateState{
-    // date: moment.Moment;
+    // date: dayjs.Dayjs;
     displayPicker: boolean;
     day?: string;
     month?: string;
@@ -93,11 +97,11 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     static displayName = 'DatePicker';
 
     // static getDerivedStateFromProps(nextProps: IDateProps){
-    //     const day = parseInt(moment(nextProps.date).format('DD'), 10);
-    //     const month = parseInt(moment(nextProps.date).format('MM'), 10);
-    //     const year = parseInt(moment(nextProps.date).format('YYYY'), 10);
-    //     const hour = parseInt(moment(nextProps.date).format('HH'), 10);
-    //     const minute = parseInt(moment(nextProps.date).format('mm'), 10);
+    //     const day = parseInt(dayjs(nextProps.date).format('DD'), 10);
+    //     const month = parseInt(dayjs(nextProps.date).format('MM'), 10);
+    //     const year = parseInt(dayjs(nextProps.date).format('YYYY'), 10);
+    //     const hour = parseInt(dayjs(nextProps.date).format('HH'), 10);
+    //     const minute = parseInt(dayjs(nextProps.date).format('mm'), 10);
     //     return {day, month, year, hour, minute};
     // }
 
@@ -113,25 +117,25 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
         this.state = {
             // date: DatePicker.setDate(this.props),
-            day: this.props.date ? moment(this.props.date).format('DD') : '',
+            day: this.props.date ? dayjs(this.props.date).format('DD') : '',
             displayPicker: false,
-            hour: this.props.date ? moment(this.props.date).format('HH') : '',
-            minute: this.props.date ? moment(this.props.date).format('mm') : '',
-            month: this.props.date ? moment(this.props.date).format('MM') : '',
-            year: this.props.date ? moment(this.props.date).format('YYYY') : '',
+            hour: this.props.date ? dayjs(this.props.date).format('HH') : '',
+            minute: this.props.date ? dayjs(this.props.date).format('mm') : '',
+            month: this.props.date ? dayjs(this.props.date).format('MM') : '',
+            year: this.props.date ? dayjs(this.props.date).format('YYYY') : '',
         };
     }
 
     componentDidMount(){
-        if (this.props.preventPast && this.props.date && this.props.date.isBefore(moment())){
+        if (this.props.preventPast && this.props.date && this.props.date.isBefore(dayjs())){
             this.props.onChange &&
-            this.props.onChange({value: moment(), dataLabel: this.props.dataLabel});
+            this.props.onChange({value: dayjs(), dataLabel: this.props.dataLabel});
         }
         setTimeout(() => {
             this.props.preventPast && this.preventPast();
         }, 10);
         if (this.props.allowInput){
-            this.updateInputFields(this.props.date || moment());
+            this.updateInputFields(this.props.date || dayjs());
         }
     }
 
@@ -155,7 +159,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
 
         const displayPicker = !this.state.displayPicker ? 'none' : 'block';
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
-        // const value = this.props.date ? moment(this.props.date).format(this.props.format) : undefined;
+        // const value = this.props.date ? dayjs(this.props.date).format(this.props.format) : undefined;
         const descStatus = this.getDescStatus();
         const description = this.props.description;
 
@@ -172,8 +176,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                     {this.renderInputs()}
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                     <div className={styles.calendar} style={{display: displayPicker}} ref={(datepicker) => this.datepicker = datepicker}>
-                        <InputMoment
-                            moment={this.props.date || moment()}
+                        <InputDayJS
+                            dayjs={this.props.date || dayjs()}
                             onChange={this.onChange}
                             onSave={this.toggle}
                         />
@@ -190,7 +194,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         const dateSeparator = <div style={{margin: '0 3px'}}>/</div>;
         const disabledClasses = !this.props.disabled ? '' : styles.disabled;
         const status = this.getStatus();
-        const maxDays = this.state.minute && moment(this.state.month, 'MM').daysInMonth() || 31;
+        const maxDays = this.state.minute && dayjs(this.state.month).daysInMonth() || 31;
         const indexStyle = this.state.displayPicker ? {zIndex: 100} : {};
         if (allowInput){
             return (
@@ -244,7 +248,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         return (
             <input
                 readOnly
-                value={moment(this.props.date || moment()).format(this.props.format)}
+                value={dayjs(this.props.date || dayjs()).format(this.props.format)}
                 onClick={this.toggle}
                 className={`${styles.dateInput} ${disabledClasses} ${status}`}
                 required={this.props.required}
@@ -403,13 +407,13 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     onGroupBlur = () => {
         const format = 'DD - MM - YYYY / HH - mm';
         const {day, hour, minute, month, year} = this.state;
-        const date = moment(`${day} - ${month} - ${year} / ${hour} - ${minute}`, format);
+        const date = dayjs(dayjs(`${day} - ${month} - ${year} / ${hour} - ${minute}`).format(format));
         this.onChange(date);
     }
 
-    onChange = (date: moment.Moment) => {
-        let value = this.props.dateOnly ? moment(date).startOf('day') : moment(date);
-        value = this.props.preventPast && value.isBefore(moment()) ? moment() : value;
+    onChange = (date: dayjs.Dayjs) => {
+        let value = this.props.dateOnly ? dayjs(date).startOf('day') : dayjs(date);
+        value = this.props.preventPast && value.isBefore(dayjs()) ? dayjs() : value;
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value, dataLabel: this.props.dataLabel});
@@ -423,12 +427,12 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         // this.setState({date: value});
     }
 
-    updateInputFields = (date: moment.Moment) => {
-        const day = moment(date).format('DD');
-        const month = moment(date).format('MM');
-        const year = moment(date).format('YYYY');
-        const hour = moment(date).format('HH');
-        const minute = moment(date).format('mm');
+    updateInputFields = (date: dayjs.Dayjs) => {
+        const day = dayjs(date).format('DD');
+        const month = dayjs(date).format('MM');
+        const year = dayjs(date).format('YYYY');
+        const hour = dayjs(date).format('HH');
+        const minute = dayjs(date).format('mm');
         this.setState({day, month, year, hour, minute});
     }
 
@@ -480,7 +484,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     renderNowButton = () => {
         return (
             <div style={{display: 'flex', justifyContent: 'center', background: '#fff', padding: 15}}>
-                <Button inverseStyle onClick={() => this.onChange(moment())}>Set Current Date and Time</Button>
+                <Button inverseStyle onClick={() => this.onChange(dayjs())}>Set Current Date and Time</Button>
             </div>
         );
     }
@@ -490,7 +494,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         const dateStrings = monthElement && monthElement[0].innerText.split(' ');
 
         const monthString = dateStrings && dateStrings[0];
-        const month = monthString && parseInt(moment(monthString, 'MMMM').format('MM'), 10);
+        const month = monthString && parseInt(dayjs(monthString).format('MM'), 10);
         const year = dateStrings && parseInt(dateStrings[1], 10);
 
         const table = this.datepicker && this.datepicker.getElementsByTagName('table');
@@ -517,8 +521,8 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             } else if (className.includes('next-month')){
                 setMonth = setMonth + 1;
             }
-            const cellDate = moment().set('year', year).set('month', setMonth).set('date', day);
-            const isPastDate = cellDate.isBefore(moment());
+            const cellDate = dayjs().set('year', year).set('month', setMonth).set('date', day);
+            const isPastDate = cellDate.isBefore(dayjs());
             // console.log(cellDate.format('DD MM YYYY'), isPastDate);
             if (isPastDate){
                 date.className = `${date.className} ${styles.disabledCell}`;
@@ -641,9 +645,9 @@ export const DateSelect: React.StatelessComponent<IDateSelectValue> = (props) =>
     const renderDayOptions = () => {
         const options = [];
         const format = getDayFormat() || 31;
-        const days = moment(format.toString(), 'M').daysInMonth();
+        const days = dayjs(format.toString()).daysInMonth();
         for (let i = 1 ; i <= days ; i++) {
-            const text = moment({ month: format - 1, day: i }).format('Do');
+            const text = dayjs().set('month', format - 1).set('date', i).format('Do');
             options.push(
                 <Option key={i} value={i.toString()}>{text}</Option>
             );

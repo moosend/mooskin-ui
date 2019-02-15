@@ -7,9 +7,9 @@ class DatePickerExample extends React.Component {
         this.addDay = this.addDay.bind(this);
 
         this.state = {
-            date: moment().add(24, 'days'),
-            date2: moment(),
-            date3: moment(),
+            date: dayjs().add(24, 'days'),
+            date2: dayjs(),
+            date3: dayjs(),
             dateSelect1: 0,
             dateSelect2: 0,
             dateSelect3: 0,
@@ -50,7 +50,7 @@ class DatePickerExample extends React.Component {
     }
 
     onChange(data){
-        console.log(moment(data.value).format('DD / MM / YYYY - HH:mm'));
+        console.log(dayjs(data.value).format('DD / MM / YYYY - HH:mm'));
         this.setState({[data.dataLabel]: data.value});
     }
 

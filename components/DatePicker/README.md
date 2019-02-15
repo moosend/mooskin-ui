@@ -31,12 +31,12 @@ Like the `<input type="date"/>` element it will accept given attributes and rend
 
 ### Examples
 
-Passing the date attribute, which requires [MomentJS](https://momentjs.com/).
+Passing the date attribute, which requires [DayJS](https://github.com/iamkun/dayjs).
 
 ```
-import moment from 'moment';
+import dayjs from 'dayjs';
 
-<DatePicker date={moment()} />
+<DatePicker date={dayjs()} />
 ```
 
 or making it disabled with a label, in this case the proper disabled class will be loaded (ex. disabling cursor)
@@ -59,7 +59,7 @@ or just give it a custom style
 
 ### Callback
 
-The DatePicker Component Callback will always return a [MomentJS](https://momentjs.com/) object on each change. This can be used with a function passed via the `onChange` prop. For example, if u want to console log the callback value, pass a function to the `onChange` prop.
+The DatePicker Component Callback will always return a [DayJS](https://github.com/iamkun/dayjs) object on each change. This can be used with a function passed via the `onChange` prop. For example, if u want to console log the callback value, pass a function to the `onChange` prop.
 
 ```
 const logValue = (data) => {     // data is the callback object, which consists of value and a dataLabel(not required)
@@ -98,7 +98,7 @@ onChange(e, data) {
 }
 
 validate(data){
-    if (data.value < moment()>){
+    if (data.value < dayjs()>){
         this.setState({status: 'error', message: 'You selected a past Date'});
     } else {
         this.setState({status: '', message: ''})
@@ -153,8 +153,8 @@ The callback works the same as with the DatePicker component, where it returns a
 ## Supported attributes 
 
 * `id` - id of the element
-* `date` - selected date (MomentJS object)
-* `format` - format the date differently. See [format](https://momentjs.com/docs/#/parsing/string-format/) types
+* `date` - selected date (DayJS object)
+* `format` - format the date differently. See [format](https://github.com/iamkun/dayjs/blob/dev/docs/en/API-reference.md#format-formatstringwithtokens-string) types
 * `allowInput` - allows date input through input typing, this will however ignore the format prop.
 * `label` - datepicker label
 * `dateOnly` - datepicker with date only

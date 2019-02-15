@@ -95,7 +95,7 @@
     background: #efefef;
 }
 
-:global(.datepicker-component .m-input-moment){
+:global(.datepicker-component .m-input-dayjs){
     background-color: #ffffff;
     user-select: none;
     /* height: 360px; */
@@ -105,17 +105,17 @@
     border: 0;
 }
 
-:global(.datepicker-component .m-input-moment .tabs){
+:global(.datepicker-component .m-input-dayjs .tabs){
     margin: 0;
     /* height: 285px; */
     padding: 0 !important;
 }
 
-:global(.m-input-moment .tabs .m-calendar){
+:global(.m-input-dayjs .tabs .m-calendar){
     height: unset;
 }
 
-:global(.m-input-moment .tabs .m-time){
+:global(.m-input-dayjs .tabs .m-time){
     height: unset;
     padding-top: 0;
 }
@@ -125,18 +125,18 @@
     flex-direction: column-reverse;
 }
 
-:global(.datepicker-component .m-input-moment .options){
+:global(.datepicker-component .m-input-dayjs .options){
     margin: 0;
     border-bottom: 5px solid #EDECED;
     margin-bottom: -5px;
 }
 
-:global(.datepicker-component .m-input-moment .options button.is-active){
+:global(.datepicker-component .m-input-dayjs .options button.is-active){
     background: #EDECED;
     color: #666;
 }
 
-:global(.datepicker-component .m-input-moment .options button){
+:global(.datepicker-component .m-input-dayjs .options button){
     border: 0;
     color: #C3C3C3;
     margin: 0px;
@@ -145,25 +145,25 @@
     font-family: 'Convergence', 'Alegreya Sans', sans-serif;
 }
 
-:global(.datepicker-component .m-input-moment .options button::before){
+:global(.datepicker-component .m-input-dayjs .options button::before){
     content: '';
     margin-left: 0;
     transform: translate(0, 2px);
 }
 
-:global(.datepicker-component .m-input-moment .options .ion-calendar::before){
+:global(.datepicker-component .m-input-dayjs .options .ion-calendar::before){
     content: url('../../assets/images/date/calendar_date_icon_faded.png');
 }
 
-:global(.datepicker-component .m-input-moment .options button.is-active.ion-calendar::before){
+:global(.datepicker-component .m-input-dayjs .options button.is-active.ion-calendar::before){
     content: url('../../assets/images/date/calendar_date_icon.png');
 }
 
-:global(.datepicker-component .m-input-moment .options .ion-clock::before){
+:global(.datepicker-component .m-input-dayjs .options .ion-clock::before){
     content: url('../../assets/images/date/calendar_time_icon_faded.png');
 }
 
-:global(.datepicker-component .m-input-moment .options button.is-active.ion-clock::before){
+:global(.datepicker-component .m-input-dayjs .options button.is-active.ion-clock::before){
     content: url('../../assets/images/date/calendar_time_icon.png');
 }
 
@@ -220,7 +220,7 @@
     text-transform: uppercase;
 }
 
-:global(.datepicker-component .m-input-moment .btn-save){
+:global(.datepicker-component .m-input-dayjs .btn-save){
     display: none;
 }
 
@@ -340,7 +340,7 @@
         background: #5ccdde;
     }
 
-    /* :global(.m-input-moment){
+    /* :global(.m-input-dayjs){
         width: 90vw;
         height: 118vw;
     }
@@ -380,7 +380,7 @@
         font-size: 6vw;
     }
 
-    :global(.m-input-moment .options button){
+    :global(.m-input-dayjs .options button){
         height: 11vw;
         font-size: 5vw;
     }
@@ -389,7 +389,7 @@
         color: #5ccdde;
     }
 
-    :global(.m-input-moment .btn-save){
+    :global(.m-input-dayjs .btn-save){
         font-size: 4vw;
     }
 
@@ -466,7 +466,7 @@
         background: #5ccdde;
     }
 
-    /* :global(.m-input-moment){
+    /* :global(.m-input-dayjs){
         width: 90vw;
         height: 118vw;
     }
@@ -506,7 +506,7 @@
         font-size: 6vw;
     }
 
-    :global(.m-input-moment .options button){
+    :global(.m-input-dayjs .options button){
         height: 11vw;
         font-size: 5vw;
     }
@@ -515,7 +515,7 @@
         color: #5ccdde;
     }
 
-    :global(.m-input-moment .btn-save){
+    :global(.m-input-dayjs .btn-save){
         font-size: 4vw;
     }
 

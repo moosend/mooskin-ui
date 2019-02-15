@@ -44,7 +44,12 @@ declare module '*.md' {
   export default content;
 }
 
-declare module 'input-moment' {
+declare module 'input-dayjs' {
+  const content: any;
+  export default content;
+}
+
+declare module 'dayjs/plugin/advancedFormat' {
   const content: any;
   export default content;
 }

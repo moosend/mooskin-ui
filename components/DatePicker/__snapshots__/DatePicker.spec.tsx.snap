@@ -26,7 +26,7 @@ exports[`DatePicker renders correctly 1`] = `
       onClick={[Function]}
       readOnly={true}
       required={true}
-      value="01 01 2013, 00:00"
+      value="01 01 2013, 14:00"
     />
     <div
       className="calendar"
@@ -36,10 +36,10 @@ exports[`DatePicker renders correctly 1`] = `
         }
       }
     >
-      <InputMoment
+      <InputDayJS
+        dayjs={"2013-01-01T13:00:00.000Z"}
         hourStep={1}
         minStep={1}
-        moment={"2013-01-01T13:00:00.000Z"}
         nextMonthIcon="ion-ios-arrow-right"
         onChange={[Function]}
         onSave={[Function]}
