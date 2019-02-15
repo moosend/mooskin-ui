@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import styles from './Slider.css';
 
-interface any {
-    documentMode?: any;
-    StyleMedia?: any;
-}
+// interface IDocumentProps {
+//     documentMode?: any;
+//     StyleMedia?: any;
+// }
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
