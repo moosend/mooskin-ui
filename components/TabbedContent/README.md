@@ -9,15 +9,15 @@ ___
 To start using the TabbedContent Component first you have to Import its two main components
 
 ```
-Import {TabbedContent, Tab, Content, Header} from 'mooskin';
+Import {TabbedContent, Tab, Content, Header} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import TabbedContent, {Tab, Content, Header} from 'mooskin/lib/TabbedContent';
+import TabbedContent, {Tab, Content, Header} from '@moosend/mooskin/lib/TabbedContent';
 
 // CSS
-import 'mooskin/lib/Switch/style.css';
+import '@moosend/mooskin/lib/Switch/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -64,7 +64,7 @@ Many props can be passed to individual components which will render them differe
 Can be used without importing the Tab component with shorthand dot(.) notation.
 
 ```
-Import {TabbedContent} from 'mooskin';
+Import {TabbedContent} from '@moosend/mooskin';
 
 <TabbedContent>
     <TabbedContent.Tab>

@@ -9,15 +9,15 @@ ___
 To start using the Topbar Component first you have to Import it
 
 ```
-Import {Topbar} from 'mooskin';
+Import {Topbar} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Topbar from 'mooskin/lib/Topbar';
+import Topbar from '@moosend/mooskin/lib/Topbar';
 
 // CSS
-import 'mooskin/lib/Topbar/style.css';
+import '@moosend/mooskin/lib/Topbar/style.css';
 ```
 
 And then you can simply start using it by typing

@@ -7,15 +7,15 @@ The MooSkin Form Component works similar to the normal HTML `<form></form>` elem
 To start using the Form Component first you have to Import it
 
 ```
-Import {Form, FormGroup} from 'mooskin';
+Import {Form, FormGroup} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Form, {FormGroup} from 'mooskin/lib/Form';
+import Form, {FormGroup} from '@moosend/mooskin/lib/Form';
 
 // CSS
-import 'mooskin/lib/Form/style.css';
+import '@moosend/mooskin/lib/Form/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -30,7 +30,7 @@ For easy use, the components are named similar to normal HTML components but wit
 For better content management, there is the `FormGroup` available.
 
 ```
-Import {Form, FormGroup} from 'mooskin';
+Import {Form, FormGroup} from '@moosend/mooskin';
 
 <Form>
     <FormGroup>

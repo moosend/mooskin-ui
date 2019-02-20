@@ -9,15 +9,15 @@ ___
 To start using the Loader Component first you have to Import it
 
 ```
-Import {Loader} from 'mooskin';
+Import {Loader} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Loader from 'mooskin/lib/Loader';
+import Loader from '@moosend/mooskin/lib/Loader';
 
 // CSS
-import 'mooskin/lib/Loader/style.css';
+import '@moosend/mooskin/lib/Loader/style.css';
 ```
 
 And then you can simply start using it by typing

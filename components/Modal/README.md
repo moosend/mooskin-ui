@@ -7,15 +7,15 @@ ___
 To start using the Modal Component first you have to Import it
 
 ```
-Import {Modal} from 'mooskin';
+Import {Modal} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Modal from 'mooskin/lib/Modal';
+import Modal from '@moosend/mooskin/lib/Modal';
 
 // CSS
-import 'mooskin/lib/Modal/style.css';
+import '@moosend/mooskin/lib/Modal/style.css';
 ```
 
 

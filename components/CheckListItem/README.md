@@ -7,15 +7,15 @@ ___
 To start using the Check List Item Component first you have to Import it
 
 ```
-Import {CheckListItem} from 'mooskin';
+Import {CheckListItem} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import CheckListItem from 'mooskin/lib/CheckListItem';
+import CheckListItem from '@moosend/mooskin/lib/CheckListItem';
 
 // CSS
-import 'mooskin/lib/CheckListItem/style.css';
+import '@moosend/mooskin/lib/CheckListItem/style.css';
 ```
 
 And then you can simply start using it by typing

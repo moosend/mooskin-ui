@@ -9,15 +9,15 @@ ___
 To start using the Checkbox component first you have to Import CheckboxGroup and the Checkbox component
 
 ```
-Import {CheckboxGroup, Checkbox} from 'mooskin';
+Import {CheckboxGroup, Checkbox} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import CheckboxGroup, {Checkbox} from 'mooskin/lib/Checkbox';
+import CheckboxGroup, {Checkbox} from '@moosend/mooskin/lib/Checkbox';
 
 // CSS
-import 'mooskin/lib/Checkbox/style.css';
+import '@moosend/mooskin/lib/Checkbox/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -33,7 +33,7 @@ And then you can simply start using it by typing
 
 another way of doing this is by importing `CheckboxGroup` only and doing a simple workaround
 ```
-Import {CheckboxGroup} from 'mooskin';
+Import {CheckboxGroup} from '@moosend/mooskin';
 
 <CheckboxGroup onChange={cb} dataLabel="asd">
     <CheckboxGroup.Checkbox id={'Checkbox1'} value="Checkbox1" label="This is a Checkbox"/>

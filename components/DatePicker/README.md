@@ -9,15 +9,15 @@ ___
 To start using the DatePicker Component first you have to Import it
 
 ```
-Import {DatePicker} from 'mooskin';
+Import {DatePicker} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import DatePicker from 'mooskin/lib/DatePicker';
+import DatePicker from '@moosend/mooskin/lib/DatePicker';
 
 // CSS
-import 'mooskin/lib/DatePicker/style.css';
+import '@moosend/mooskin/lib/DatePicker/style.css';
 ```
 
 

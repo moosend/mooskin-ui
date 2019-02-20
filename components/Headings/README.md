@@ -9,15 +9,15 @@ ___
 To start using the Heading Components first you have to Import the desired heading
 
 ```
-Import {H1} from 'mooskin';
+Import {H1} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import H1 from 'mooskin/lib/Headings/H1';
+import H1 from '@moosend/mooskin/lib/Headings/H1';
 
 // CSS
-import 'mooskin/lib/Headings/H1/style.css';
+import '@moosend/mooskin/lib/Headings/H1/style.css';
 ```
 
 And then you can simply start using it by typing

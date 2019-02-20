@@ -9,15 +9,15 @@ ___
 To start using the Label Component first you have to Import it
 
 ```
-Import {Label} from 'mooskin';
+Import {Label} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Label from 'mooskin/lib/Label';
+import Label from '@moosend/mooskin/lib/Label';
 
 // CSS
-import 'mooskin/lib/Label/style.css';
+import '@moosend/mooskin/lib/Label/style.css';
 ```
 
 And then you can simply start using it by typing

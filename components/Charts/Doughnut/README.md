@@ -9,11 +9,11 @@ ___
 To start using the Chart Component first you have to Import it
 
 ```
-Import {Doughnut} from 'mooskin';
+Import {Doughnut} from '@moosend/mooskin';
 ```
 or
 ```
-import Doughnut from 'mooskin/lib/Doughnut';
+import Doughnut from '@moosend/mooskin/lib/Doughnut';
 ```
 
 And then you can simply start using it by typing

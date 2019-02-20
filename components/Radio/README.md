@@ -9,15 +9,15 @@ ___
 To start using the Radio component first you have to Import RadioGroup and the Radio component
 
 ```
-Import {RadioGroup, Radio} from 'mooskin';
+Import {RadioGroup, Radio} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import RadioGroup, {Radio} from 'mooskin/lib/Radio';
+import RadioGroup, {Radio} from '@moosend/mooskin/lib/Radio';
 
 // CSS
-import 'mooskin/lib/Radio/style.css';
+import '@moosend/mooskin/lib/Radio/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -33,7 +33,7 @@ And then you can simply start using it by typing
 
 another way of doing this is by importing `RadioGroup` only and doing a simple workaround
 ```
-Import {RadioGroup} from 'mooskin';
+Import {RadioGroup} from '@moosend/mooskin';
 
 <RadioGroup onChange={cb} dataLabel="asd">
     <RadioGroup.Radio id={'radio1'} value="radio1" label="This is a radio"/>

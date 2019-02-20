@@ -7,15 +7,15 @@ ___
 To start using the StatsBox Component first you have to Import it
 
 ```
-Import {StatsBox, StatsNumber, StatsResult, StatsTitle} from 'mooskin';
+Import {StatsBox, StatsNumber, StatsResult, StatsTitle} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import StatsBox, {StatsNumber, StatsResult, StatsTitle} from 'mooskin/lib/StatsBox';
+import StatsBox, {StatsNumber, StatsResult, StatsTitle} from '@moosend/mooskin/lib/StatsBox';
 
 // CSS
-import 'mooskin/lib/StatsBox/style.css';
+import '@moosend/mooskin/lib/StatsBox/style.css';
 ```
 
 And then you can simply start using it by typing

@@ -9,15 +9,15 @@ ___
 To start using the Accordion Component first you have to Import its two main components
 
 ```
-Import {RadioAccordion, RadioAccordionContent} from 'mooskin';
+Import {RadioAccordion, RadioAccordionContent} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import RadioAccordion, {RadioAccordionContent} from 'mooskin/lib/RadioAccordion';
+import RadioAccordion, {RadioAccordionContent} from '@moosend/mooskin/lib/RadioAccordion';
 
 // CSS
-import 'mooskin/lib/RadioAccordion/style.css';
+import '@moosend/mooskin/lib/RadioAccordion/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -50,7 +50,7 @@ Individual <RadioAccordionContent> components has a required 'title' prop which 
 Can be used without importing the <RadioAccordionContent> component with shorthand dot(.) notation.
 
 ```
-Import {RadioAccordion} from 'mooskin';
+Import {RadioAccordion} from '@moosend/mooskin';
 
 <RadioAccordion>
     <RadioAccordion.RadioAccordionContent title="Title 1" iconClass="fa fa-icon">
@@ -67,7 +67,7 @@ Import {RadioAccordion} from 'mooskin';
 ```
 
 ```
-Import {RadioAccordionContent, RadioAccordion} from 'mooskin';
+Import {RadioAccordionContent, RadioAccordion} from '@moosend/mooskin';
 
 <RadioAccordion horizontal>
     <RadioAccordionContent title="Title 1" iconClass="fa fa-icon">

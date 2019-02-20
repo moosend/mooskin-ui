@@ -9,15 +9,15 @@ ___
 To start using the Steps component first you have to Import its two main components
 
 ```
-Import {Steps, Step} from 'mooskin';
+Import {Steps, Step} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Steps, {Step} from 'mooskin/lib/Steps';
+import Steps, {Step} from '@moosend/mooskin/lib/Steps';
 
 // CSS
-import 'mooskin/lib/Steps/style.css';
+import '@moosend/mooskin/lib/Steps/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -68,7 +68,7 @@ Steps with title, id, first on is 'active' and will be displayed, also has a onC
 Can be used without importing the Step component component with shorthand dot(.) notation.
 
 ```
-Import {Steps} from 'mooskin';
+Import {Steps} from '@moosend/mooskin';
 
 <Steps>
     <Steps.Step title="Title 1" id="1">
