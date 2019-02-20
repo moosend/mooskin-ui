@@ -9,15 +9,15 @@ ___
 To start using the Slider Component first you have to Import it
 
 ```
-Import {Slider} from 'mooskin';
+Import {Slider} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Slider from 'mooskin/lib/Slider';
+import Slider from '@moosend/mooskin/lib/Slider';
 
 // CSS
-import 'mooskin/lib/Slider/style.css';
+import '@moosend/mooskin/lib/Slider/style.css';
 ```
 
 And then you can simply start using it by typing

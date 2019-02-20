@@ -10,15 +10,15 @@ ___
 To start using the TextEditor Component first you have to Import it
 
 ```
-Import {TextEditor} from 'mooskin';
+Import {TextEditor} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import TextEditor from 'mooskin/lib/TextEditor';
+import TextEditor from '@moosend/mooskin/lib/TextEditor';
 
 // CSS
-import 'mooskin/lib/TextEditor/style.css';
+import '@moosend/mooskin/lib/TextEditor/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -63,7 +63,7 @@ Rich editor value consists of `EditorState` object from `DraftJS` library. So an
 
 ```
 import { EditorState } from 'draft-js';              // this import is important for the rich text editor
-Import {TextEditor} from 'mooskin'
+Import {TextEditor} from '@moosend/mooskin'
 
 this.state = {
     editorState: EditorState.reateEmpty()            // or createWithContent()

@@ -9,15 +9,15 @@ ___
 To start using the Select component first you have to Import it and the Option component
 
 ```
-Import {Select, Option} from 'mooskin';
+Import {Select, Option} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Select, {Option} from 'mooskin/lib/Select';
+import Select, {Option} from '@moosend/mooskin/lib/Select';
 
 // CSS
-import 'mooskin/lib/Select/style.css';
+import '@moosend/mooskin/lib/Select/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -34,7 +34,7 @@ And then you can simply start using it by typing
 
 another way of doing this is by importing `Select` only and doing a simple workaround
 ```
-Import {Select} from 'mooskin';
+Import {Select} from '@moosend/mooskin';
 
 <Select onChange={cb} dataLabel="asd">
     <Select.Option value="option1">Option1</Option>

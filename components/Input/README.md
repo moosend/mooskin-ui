@@ -9,15 +9,15 @@ ___
 To start using the Input Component first you have to Import it
 
 ```
-Import {Input} from 'mooskin';
+Import {Input} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Input from 'mooskin/lib/Input';
+import Input from '@moosend/mooskin/lib/Input';
 
 // CSS
-import 'mooskin/lib/Input/style.css';
+import '@moosend/mooskin/lib/Input/style.css';
 ```
 
 And then you can simply start using it by typing

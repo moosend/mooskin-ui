@@ -9,15 +9,15 @@ ___
 To start using the TextArea Component first you have to Import it
 
 ```
-Import {TextArea} from 'mooskin';
+Import {TextArea} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import TextArea from 'mooskin/lib/TextArea';
+import TextArea from '@moosend/mooskin/lib/TextArea';
 
 // CSS
-import 'mooskin/lib/TextArea/style.css';
+import '@moosend/mooskin/lib/TextArea/style.css';
 ```
 
 And then you can simply start using it by typing

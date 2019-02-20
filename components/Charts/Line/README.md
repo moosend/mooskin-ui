@@ -9,11 +9,11 @@ ___
 To start using the Line Chart Component first you have to Import it
 
 ```
-Import {Line} from 'mooskin';
+Import {Line} from '@moosend/mooskin';
 ```
 or
 ```
-import Line from 'mooskin/lib/Line';
+import Line from '@moosend/mooskin/lib/Line';
 ```
 
 And then you can simply start using it by typing

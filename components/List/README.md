@@ -9,15 +9,15 @@ ___
 To start using the List & ListItem Component first you have to Import it
 
 ```
-Import {List, ListItem, ItemContent} from 'mooskin';
+Import {List, ListItem, ItemContent} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import List, {ListItem} from 'mooskin/lib/List';
+import List, {ListItem} from '@moosend/mooskin/lib/List';
 
 // CSS
-import 'mooskin/lib/List/style.css';
+import '@moosend/mooskin/lib/List/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -65,7 +65,7 @@ or pass props to the LinkItem component
 A list item can have an expandable hidden content which will reveal when the `ListItem` prop of `expanded` is true, example:
 
 ```
-Import {List, ListItem, ItemContent, ExpandedSection} from 'mooskin';
+Import {List, ListItem, ItemContent, ExpandedSection} from '@moosend/mooskin';
 
 <List attribute1="atr" attribute2="asd" >
     <ListItem>

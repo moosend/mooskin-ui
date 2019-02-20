@@ -23,7 +23,7 @@ Since it is a React Component Library, we recommend that you get to know [React]
 MooSkin-UI is available as an npm package.
 
 ```
-npm install mooskin --save
+npm install @moosend/mooskin --save
 ```
  
 ### Usage
@@ -31,28 +31,28 @@ npm install mooskin --save
 Apart from [React](https://facebook.github.io/react/) itself, you need to be able to import the CSS file for the library by using a loader or some plugin for your build tool of choice(css-loader if you re using webpack, which is recommended).
 
 ```
-import 'mooskin/lib/index/style.css'
+import '@moosend/mooskin/lib/index/style.css'
 ``` 
 and then you can simply import the desired component and start using it
 ```
-import {Input} from 'mooskin';
+import {Input} from '@moosend/mooskin';
 ```
 Modular usage is also possible for both css and js(components) files, if you just want to use a few components, you should not have to import the whole CSS file, but instead have just what you need.
 
 ```
-import 'mooskin/lib/Button/style.css';
-import Button from 'mooskin/lib/Button';
-// import {Button} from 'mooskin';  //this works as well
+import '@moosend/mooskin/lib/Button/style.css';
+import Button from '@moosend/mooskin/lib/Button';
+// import {Button} from '@moosend/mooskin';  //this works as well
 ```
 
 ### Example
 ```
-import 'mooskin/lib/index/style.css'
+import '@moosend/mooskin/lib/index/style.css'
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import {Button} from 'mooskin';
+import {Button} from '@moosend/mooskin';
 
 class App extends Component (
   render(){
@@ -78,12 +78,12 @@ Please refer to each component's documentation page to see how they should be im
 Mooskin itself is written in Typescript, so it has type definitions out of the box, no need to install any. Just import stuff as usual. Static types should greatly help with potential bugs and autocompletion. Here is an example below.
 
 ```
-import 'mooskin/lib/index/style.css'
+import '@moosend/mooskin/lib/index/style.css'
 
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import {Button} from 'mooskin';
+import {Button} from '@moosend/mooskin';
 
 interface IProps {
   //some prop types
@@ -127,7 +127,7 @@ As you may have noticed, for easy use, the components are named similar to norma
 Lets say we want to use the Select Component. First we have to import it
 
 ```
-import {Select, Option} from 'mooskin';
+import {Select, Option} from '@moosend/mooskin';
 ```
 
 And then you can simply start using it by typing
@@ -142,7 +142,7 @@ And then you can simply start using it by typing
 The components are built to support attributes like normal HTML elements. For example, an Input component with a placeholder:
 
 ```
-import {Input} from 'mooskin'
+import {Input} from '@moosend/mooskin'
 
 <Input placeholder="Your Name" />
 ```

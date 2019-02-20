@@ -9,15 +9,15 @@ ___
 To start using the Carousel Component first you have to Import it
 
 ```
-Import {Carousel} from 'mooskin';
+Import {Carousel} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Carousel from 'mooskin/lib/Carousel';
+import Carousel from '@moosend/mooskin/lib/Carousel';
 
 // CSS
-import 'mooskin/lib/Carousel/style.css';
+import '@moosend/mooskin/lib/Carousel/style.css';
 ```
 
 And then you can simply start using it by typing

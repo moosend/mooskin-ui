@@ -9,11 +9,11 @@ ___
 To start using the Chart Component first you have to Import it
 
 ```
-Import {Bar} from 'mooskin';
+Import {Bar} from '@moosend/mooskin';
 ```
 or
 ```
-import Bar from 'mooskin/lib/Bar';
+import Bar from '@moosend/mooskin/lib/Bar';
 ```
 
 And then you can simply start using it by typing
