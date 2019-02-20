@@ -26,15 +26,15 @@ The Grid system utilizes 4 main props, which are `lg`, `md`, `sm`, `xs`. These p
 To start using the Grid Component first you have to Import it
 
 ```
-Import {Col, Grid, Row} from 'mooskin';
+Import {Col, Grid, Row} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Grid, {Col, Row} from 'mooskin/lib/Grid';
+import Grid, {Col, Row} from '@moosend/mooskin/lib/Grid';
 
 // CSS
-import 'mooskin/lib/Grid/style.css';
+import '@moosend/mooskin/lib/Grid/style.css';
 ```
 
 And then you can simply start using it by typing

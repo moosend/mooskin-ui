@@ -7,15 +7,15 @@ ___
 To start using the LoadingBar Component first you have to Import it
 
 ```
-Import {LoadingBar} from 'mooskin';
+Import {LoadingBar} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import LoadingBar from 'mooskin/lib/LoadingBar';
+import LoadingBar from '@moosend/mooskin/lib/LoadingBar';
 
 // CSS
-import 'mooskin/lib/LoadingBar/style.css';
+import '@moosend/mooskin/lib/LoadingBar/style.css';
 ```
 
 And then you can simply start using it by typing

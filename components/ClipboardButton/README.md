@@ -9,15 +9,15 @@ ___
 To start using the ClipboardButton Component first you have to Import it
 
 ```
-Import {ClipboardButton} from 'mooskin';
+Import {ClipboardButton} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import ClipboardButton from 'mooskin/lib/ClipboardButton';
+import ClipboardButton from '@moosend/mooskin/lib/ClipboardButton';
 
 // CSS
-import 'mooskin/lib/ClipboardButton/style.css';
+import '@moosend/mooskin/lib/ClipboardButton/style.css';
 ```
 
 And then you can simply start using it by typing

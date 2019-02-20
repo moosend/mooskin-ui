@@ -9,15 +9,15 @@ ___
 To start using the Switch Component first you have to Import it
 
 ```
-Import {Switch} from 'mooskin';
+Import {Switch} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Switch from 'mooskin/lib/Switch';
+import Switch from '@moosend/mooskin/lib/Switch';
 
 // CSS
-import 'mooskin/lib/Switch/style.css';
+import '@moosend/mooskin/lib/Switch/style.css';
 ```
 
 And then you can simply start using it by typing

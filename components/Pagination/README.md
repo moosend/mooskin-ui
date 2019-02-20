@@ -7,15 +7,15 @@ ___
 To start using the Pagination Component first you have to Import it
 
 ```
-Import {Pagination} from 'mooskin';
+Import {Pagination} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Pagination from 'mooskin/lib/Pagination';
+import Pagination from '@moosend/mooskin/lib/Pagination';
 
 // CSS
-import 'mooskin/lib/Pagination/style.css';
+import '@moosend/mooskin/lib/Pagination/style.css';
 ```
 
 And then you can simply start using it by typing

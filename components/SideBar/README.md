@@ -7,15 +7,15 @@ The MooSkin SideBar Component is a simple sidebar, but with pre-defined styling 
 To start using the SideBar Component first you have to Import it
 
 ```
-Import {SideBar} from 'mooskin';
+Import {SideBar} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import SideBar, {SidebarItem} from 'mooskin/lib/SideBar';
+import SideBar, {SidebarItem} from '@moosend/mooskin/lib/SideBar';
 
 // CSS
-import 'mooskin/lib/SideBar/style.css';
+import '@moosend/mooskin/lib/SideBar/style.css';
 ```
 
 And then you can simply start using it by typing
@@ -29,7 +29,7 @@ And then you can simply start using it by typing
 The `SideBar` component accepts `SidebarItem` Components as children.
 
 ```
-Import {SidebarItem, SideBar} from 'mooskin';
+Import {SidebarItem, SideBar} from '@moosend/mooskin';
 
 <SideBar>
     <SidebarItem />
@@ -40,7 +40,7 @@ A SideBar can be toggleable or static, this is decided by passing the `button` p
 This way the SideBar will be displayed if the button is clicked. The SideBar can be hidden by clicking anywhere on the page, but the SideBar.
 
 ```
-Import {Item, SideBar} from 'mooskin';
+Import {Item, SideBar} from '@moosend/mooskin';
 
 <SideBar>
     <Item />
@@ -54,7 +54,7 @@ Time to fill the SideBar with Items.
 Secondary SideBar is also available to be assigned to SideBar Items. For example:
 
 ```
-Import {SidebarItem, SideBar} from 'mooskin';
+Import {SidebarItem, SideBar} from '@moosend/mooskin';
 
 <SideBar
 >
@@ -75,7 +75,7 @@ As you can see the main SideBar is a static one, doesnt have a button. When an S
 Custom SidebarItems can be created by passing children to the component.
 
 ```
-Import {SidebarItem, SideBar} from 'mooskin';
+Import {SidebarItem, SideBar} from '@moosend/mooskin';
 
 <SideBar>
     <SidebarItem>

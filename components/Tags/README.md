@@ -7,15 +7,15 @@ ___
 To start using the Tags Component first you have to Import it
 
 ```
-Import {Tags} from 'mooskin';
+Import {Tags} from '@moosend/mooskin';
 ```
 or modular import
 ```
 // JS
-import Tags from 'mooskin/lib/Tags';
+import Tags from '@moosend/mooskin/lib/Tags';
 
 // CSS
-import 'mooskin/lib/Tags/style.css';
+import '@moosend/mooskin/lib/Tags/style.css';
 ```
 
 And then you can simply start using it by typing
