@@ -339,7 +339,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
             style={{...spacing, ...props.style}}
         >
             <input
-                id={genId}
+                id={props.id || genId}
                 name={props.name}
                 type="checkbox"
                 value={props.value}
@@ -348,7 +348,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 defaultChecked={checked}
                 className={`material-icons`}
             />
-            <label htmlFor={genId}>
+            <label htmlFor={props.id || genId}>
                 <span className={`${styles.checkmark} ${checkmarkDisplay}`} />
                 {props.checked && <span className={`${styles.checkboxTick} ${inverseTick}`} />}
                 <span className={styles.label}>{label}</span>
