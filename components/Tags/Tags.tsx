@@ -72,6 +72,9 @@ export interface ITagsProps{
     /** an array of possible delimiters, enter key is the default delimiter */
     delimiters?: Array<string | number>;
 
+    /** maximum number of characters allowed */
+    maxLength?: number;
+
     onAdd?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => string [] | void;
 
     onRemove?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData, index: number) => string [] | void;
@@ -199,6 +202,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                                 onClick={this.removeSource}
                                 onPaste={this.onPaste}
                                 onBlur={this.onBlur()}
+                                maxLength={this.props.maxLength}
                             />
                             {message}
                             {source}
