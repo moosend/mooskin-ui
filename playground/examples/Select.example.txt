@@ -24,7 +24,7 @@ class SelectExample extends React.Component {
                     <Option value={5}>Option5</Option>
                 </Select>
                 <br/>
-                <Select noDuplicates noFilter onChange={this.onChange} dataLabel="plan" selected={this.state.selected} dataLabel="selected" label="No Filtering" filterPlaceholder="Type to filter">
+                <Select noDuplicates noFilter isLoading onChange={this.onChange} dataLabel="plan" selected={this.state.selected} dataLabel="selected" label="No Filtering" filterPlaceholder="Type to filter">
                     <Option value="option1">Option1</Option>
                     <Option value="option2">Option2</Option>
                     <Option value="option3">Option3</Option>
@@ -39,7 +39,7 @@ class SelectExample extends React.Component {
                     <Option value="option4">Some value 4</Option>
                 </Select>
                 <br/>
-                <Select placeholder="Sort by..." alternate onChange={this.onChange} selected={this.state.selected2} dataLabel="selected2">
+                <Select placeholder="Sort by..." isLoading alternate onChange={this.onChange} selected={this.state.selected2} dataLabel="selected2">
                     <Option value="option1">Some value 1</Option>
                     <Option value="option2">Some value 2</Option>
                     <Option value="option3">Some value 3</Option>

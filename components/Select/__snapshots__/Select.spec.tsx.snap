@@ -60,6 +60,10 @@ exports[`Select renders Select correctly 1`] = `
         type="text"
         value=""
       />
+      <img
+        className="spinner"
+        src=""
+      />
       <div
         className="label-container innerDiv"
         style={
