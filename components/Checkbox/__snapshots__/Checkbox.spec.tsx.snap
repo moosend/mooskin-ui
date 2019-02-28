@@ -14,13 +14,13 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
     className="material-icons"
     defaultChecked={true}
     disabled={true}
-    id="4zlbrf"
+    id="checkbox1"
     onClick={[Function]}
     type="checkbox"
     value="CheckBox1"
   />
   <label
-    htmlFor="4zlbrf"
+    htmlFor="checkbox1"
   >
     <span
       className="checkmark transparentCheckmark"

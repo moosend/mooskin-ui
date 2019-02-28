@@ -139,7 +139,7 @@ class TableExample extends React.Component{
                     onChange={this.onSearch}
                 />
                 <Table data={filtered} paginate={10} smallCollapse>
-                    <TableHeader dataField="campaign" sortable>Campaigns</TableHeader>
+                    <TableHeader arrowDirection="desc" dataField="campaign" sortable>Campaigns</TableHeader>
                     <TableHeader dataField="title" hideSmall sortable >Title</TableHeader>
                     <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
                 </Table>

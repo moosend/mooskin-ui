@@ -68,6 +68,9 @@ export interface IHeaderProps{
     /** wether the row should be sortable or not */
     sortable?: boolean;
 
+    /** determines the direction of the sorting arrow */
+    arrowDirection?: 'asc' | 'desc';
+
     /** classes to be applied to the columns on this header */
     colClasses?: string;
 
@@ -443,7 +446,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                     >
                         <div>
                             {child.props.children}
-                            {this.getArrow(child.props.dataField)}
+                            {this.getArrow(child.props.dataField, child.props.arrowDirection)}
                         </div>
                     </TableHeader>
                 );
@@ -471,11 +474,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         return headers;
     }
 
-    getArrow = (dataField: string) => {
-        if (this.state.sortBy === dataField && this.state.order === 'desc'){
+    getArrow = (dataField: string, arrowDirection?: 'asc' | 'desc') => {
+        if ((this.state.sortBy === dataField && this.state.order === 'desc') || arrowDirection === 'asc'){
             return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_up</i>;
         }
-        if (this.state.sortBy === dataField && this.state.order === 'asc'){
+        if ((this.state.sortBy === dataField && this.state.order === 'asc') || arrowDirection === 'desc'){
             return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_down</i>;
         }
     }
