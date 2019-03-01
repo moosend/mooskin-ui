@@ -200,6 +200,22 @@
     text-overflow: ellipsis;
 }
 
+.spinner {
+    position: absolute;
+    right: 60px;
+    top: 11px;
+    width: 25px;
+    animation: spin 2s linear infinite;
+}
+
+.alternateSpinner {
+    position: absolute;
+    right: 35px;
+    top: 11px;
+    width: 15px;
+    animation: spin 2s linear infinite;
+}
+
 .lockText {
     flex-grow: 1;
     flex-shrink: 1;
@@ -282,6 +298,13 @@
     border-radius: 8px;
     box-shadow: 0 0 1px #888888;
 }
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 @media (--xSmall){
     .componentContainer{
