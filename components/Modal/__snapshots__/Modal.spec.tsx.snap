@@ -2,11 +2,11 @@
 
 exports[`Modal renders correctly 1`] = `
 <div
-  className="modal-component container on"
+  className="modal-component container on myClass"
   id="button1"
 >
   <div
-    className="modal modalOn myClass"
+    className="modal modalOn"
     style={
       Object {
         "color": "blue",

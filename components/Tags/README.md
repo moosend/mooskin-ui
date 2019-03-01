@@ -170,6 +170,7 @@ Now `validate` is the function for validation the whole component (eg. field is 
 * `status` - to be used with validate, to apply classes based on error or success
 * `labelLeft` - positions the label to the left of the input
 * `alternate` - renders with different styles
+* `maxLength` - maximum number of characters allowed
 
 </div>
 

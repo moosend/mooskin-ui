@@ -248,6 +248,7 @@ const data = [
 * `colStyles` - styles to be applied to this column cells
 * `sortable` - wether this column should be sortable or not
 * `sortfn` - custom sort function for row sorting, requires `sortable`
+* `arrowDirection` - determines the direction of the sorting arrow
 * `className` - css class
 * `style` - table styles
 

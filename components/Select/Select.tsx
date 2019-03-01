@@ -3,6 +3,7 @@ import * as React from 'react';
 import {arrayHasDupes} from '../_utils/helper';
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
+import spinner from '../../assets/images/loader/spinner.png';
 import styles from './Select.css';
 
 export interface ISelectProps {
@@ -150,6 +151,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const valueColor = this.props.alternate && this.props.selected ? {color: '#5ccdde'} : {};
 
         const selectValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : this.props.selected;
+        const spinnerClass = this.props.alternate ? styles.alternateSpinner : styles.spinner;
 
         return (
             <div
@@ -165,6 +167,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 <div style={{flex: 1}}>
                     <div className={`${styles.selectContainer} ${styles.labelContainer} ${status} ${alternateContainer}`} style={{zIndex}}>
                         {(!this.props.alternate && !this.props.noFilter) && this.renderSearchInput()}
+                        {this.props.isLoading && <img src={spinner} className={spinnerClass} />}
                         <div
                             onClick={shouldOpen}
                             className={`label-container ${styles.innerDiv}`}
@@ -186,7 +189,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                                 {options}
                             </ul>
                         </div>
-                        {this.props.lockSelected && this.props.selected && this.renderLockContainer(selected)}
+                        {this.props.lockSelected && this.props.selected && !this.props.isLoading && this.renderLockContainer(selected)}
                     </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
