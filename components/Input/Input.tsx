@@ -140,7 +140,7 @@ class Input extends React.Component<IProps, IInputState> {
     static displayName = 'Input';
 
     id: string;
-    
+
     inputRef = React.createRef<any>();
 
     constructor(props: IProps){

@@ -186,7 +186,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     // }
 
     editorRef = React.createRef<any>();
-    
+
     mounted: boolean;
 
     constructor(props: ITextEditorProps){
