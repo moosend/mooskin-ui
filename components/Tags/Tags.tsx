@@ -119,7 +119,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     static displayName = 'Tags';
 
     id: string;
-    myInp: any;
+    myInpRef = React.createRef<any>();
 
     constructor(props: ITagsProps){
         super(props);
@@ -193,7 +193,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         {tags}
                         <div className={`${styles.inputContainer} ${alternateInputContainer}`}>
                             <input
-                                ref={(ip) => this.myInp = ip}
+                                ref={this.myInpRef}
                                 value={this.state.value}
                                 className={`${styles.input} ${alternateInput}`}
                                 placeholder={this.props.placeholder}
@@ -606,7 +606,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
     }
 
     removeSource = () => {
-        this.myInp.focus();
+        this.myInpRef.current.focus();
         this.setState({sourceList: [], activeItem: -1});
     }
 

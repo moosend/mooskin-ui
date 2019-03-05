@@ -185,7 +185,8 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     //     };
     // }
 
-    editor: any;
+    editorRef = React.createRef<any>();
+    
     mounted: boolean;
 
     constructor(props: ITextEditorProps){
@@ -297,7 +298,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
                 id={this.props.id}
                 style={{width: this.state.width, position: 'relative'}}
                 className={`mooskin-text-editor ${styles.editorContainer}`}
-                ref={(editor) => this.editor = editor}
+                ref={this.editorRef}
             >
                 {this.state.activeDropDown && <div onClick={this.onDropDownClick} className={styles.overlay}/>}
                 <label className={styles.editorLabel} style={display}>{this.props.label}</label>
@@ -594,7 +595,7 @@ export default class TextEditor extends React.Component<ITextEditorProps, ITextE
     }
 
     getParentWidth = () => {
-        const parent = this.editor && this.editor.parentNode;
+        const parent = this.editorRef.current && this.editorRef.current.parentNode;
         const width = parent && parent.offsetWidth;
         return width ? width : null;
     }
