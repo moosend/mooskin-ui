@@ -41,7 +41,7 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
     };
 
     static displayName = 'HorizontalRangeBar';
-    bar: any;
+    barRef = React.createRef<any>();
 
     componentDidMount(){
         this.assignValueColor();
@@ -74,7 +74,7 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
             <div
                 className={`loader-component ${styles.loaderContainer} ${className}`}
                 id={id}
-                ref={(bar) => this.bar = bar}
+                ref={this.barRef}
             >
                 <div
                     className={`loader-bar ${styles.loader}`}
@@ -123,7 +123,7 @@ export default class HorizontalRangeBar extends React.Component<IHorizontalRange
     }
 
     assignValueColor = () => {
-        const values = this.bar.getElementsByClassName('loader-text');
+        const values = this.barRef.current.getElementsByClassName('loader-text');
         const valuesArray = values && Array.from(values);
         valuesArray && valuesArray.forEach((element) => {
             if (element){

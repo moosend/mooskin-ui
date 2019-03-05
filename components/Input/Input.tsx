@@ -140,7 +140,8 @@ class Input extends React.Component<IProps, IInputState> {
     static displayName = 'Input';
 
     id: string;
-    input: any;
+
+    inputRef = React.createRef<any>();
 
     constructor(props: IProps){
         super(props);
@@ -219,7 +220,7 @@ class Input extends React.Component<IProps, IInputState> {
                     <div className={`${styles.innerDiv} ${status} ${disabledInput}`}>
                         <input
                             style={{order: iconPosition === 'left' ? 2 : 1, paddingLeft: inputPaddingLeft, paddingRight: inputPaddingRight}}
-                            ref={(input) => this.input = input}
+                            ref={this.inputRef}
                             onChange={this.onChange}
                             id={this.id}
                             type={inputType}
@@ -392,7 +393,7 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     onIconClick = () => {
-        this.input.focus();
+        this.inputRef.current.focus();
     }
 
     getClipboardButton = () => {

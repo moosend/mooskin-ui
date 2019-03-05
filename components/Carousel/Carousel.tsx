@@ -120,8 +120,8 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
 
     static displayName = 'Carousel';
 
-    carousel: any;
-    slider: any;
+    carouselRef = React.createRef<any>();
+    sliderRef = React.createRef<any>();
 
     constructor(props: ICarouselProps){
         super(props);
@@ -156,10 +156,10 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
                 // style={{width: this.state.width, ...this.props.containerStyle}}
                 style={style}
                 id={this.props.id}
-                ref={(carousel) => this.carousel = carousel}
+                ref={this.carouselRef}
             >
                 <CarouselComponent
-                    ref={(slider) => this.slider = slider}
+                    ref={this.sliderRef}
                     slidesToShow={this.props.slidesToShow}
                     className={`${styles.carousel} ${this.props.className}`}
                     swipeToSlide
@@ -194,7 +194,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
     }
 
     getParentWidth = () => {
-        const parent = this.carousel && this.carousel.parentNode;
+        const parent = this.carouselRef.current && this.carouselRef.current.parentNode;
         const width = parent && parent.offsetWidth;
         return width ? width : null;
     }
@@ -222,10 +222,10 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
     keyPressChangeSlide = (e: any) => {
         if (e.keyCode === 37){
             // left
-            this.slider.slickPrev();
+            this.sliderRef.current.slickPrev();
         } else if (e.keyCode === 39) {
             // right
-            this.slider.slickNext();
+            this.sliderRef.current.slickNext();
         }
     }
 

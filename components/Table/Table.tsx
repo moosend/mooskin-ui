@@ -429,7 +429,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                 // const pointer = child.props.onClick ? styles.sortHeader : '';
 
                 const sortable = child.props.sortable || child.props.onClick ?
-                this.onClickHeader(child.props.dataField, child.props.sortfn, child.props.onClick) :
+                this.onClickHeader(child.props.dataField, child.props.sortfn, child.props.onClick, child.props.sortable) :
                 undefined;
 
                 const i = this.props.smallCollapse ? index + 1 : index;
@@ -483,10 +483,10 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         }
     }
 
-    onClickHeader = (sortBy: string, sortfn?: any, onHeaderClick?: any) => {
+    onClickHeader = (sortBy: string, sortfn?: any, onHeaderClick?: any, sortable?: boolean) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             onHeaderClick && onHeaderClick();
-            this.sortData(sortBy, this.state.order, sortfn);
+            sortable && this.sortData(sortBy, this.state.order, sortfn);
         };
     }
 
