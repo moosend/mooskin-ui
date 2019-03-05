@@ -64,7 +64,7 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
     static displayName = 'Slider';
 
-    slider: any;
+    sliderRef = React.createRef<any>();
 
     constructor(props: ISliderProps){
         super(props);
@@ -124,7 +124,7 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
         return (
             <input
-                ref={(slider) => this.slider = slider}
+                ref={this.sliderRef}
                 id={this.props.id}
                 style={this.props.style}
                 className={`${styles.slider} ${disabled} ${edgeClasses} ${classesIE} ${this.props.className}`}
@@ -201,7 +201,7 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
 
     getPosition = (e: React.MouseEvent<HTMLInputElement>) => {
         // let pos = e.nativeEvent.offsetX;
-        const sliderWidth = this.slider.offsetWidth - 25;
+        const sliderWidth = this.sliderRef.current.offsetWidth - 25;
         if (e.nativeEvent.offsetX < 0){
             return 0;
         } else if (e.nativeEvent.offsetX > sliderWidth){
@@ -221,20 +221,20 @@ export default class Slider extends React.Component<ISliderProps, ISliderState>{
         return steps.indexOf(parseInt(this.props.value.toString(), 10));
     }
 
-    getThumbPosition = () => {
+    getThumbPosition = (refElem: HTMLInputElement) => {
         // const width = this.slider ? this.slider.value / this.slider.max : 50;
-        const max = this.props.values ? this.slider.max : this.props.range ?
-        this.props.range[1] - this.props.range[0] : 0;
-        const value = this.props.range ? this.getStepsCount() : this.slider.value;
+        const max = this.props.values ? refElem.max : this.props.range ?
+        this.props.range[1] - this.props.range[0] : 0 as any;
+        const value = this.props.range ? this.getStepsCount() : refElem.value as any;
         const pos = value / max;
-        const thumbPos = this.slider.clientWidth * pos;
-        const width = 100 / (this.slider.clientWidth / thumbPos);
+        const thumbPos = refElem.clientWidth * pos;
+        const width = 100 / refElem.clientWidth / thumbPos;
         return width > 98 ? 98 : width;
     }
 
     renderFill = () => {
         const {fillClassName, fillStyle} = this.props;
-        const width = this.slider ? this.getThumbPosition() + '%' : '0%';
+        const width = this.sliderRef.current ? this.getThumbPosition(this.sliderRef.current) + '%' : '0%';
         const top = this.props.label ? {top: '23px'} : {};
         const disabled = this.props.disabled ? styles.disabledFill : '';
         return (
