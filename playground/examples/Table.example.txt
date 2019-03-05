@@ -9,8 +9,10 @@ class TableExample extends React.Component{
         this.onSearch = this.onSearch.bind(this);
         this.getFiltered = this.getFiltered.bind(this);
         this.onRowClick = this.onRowClick.bind(this);
+        this.onHeaderClick = this.onHeaderClick.bind(this);
 
         this.state = {
+            arrowDirection: 'desc',
             tableContent: [],
             search: '',
             data: [
@@ -139,7 +141,7 @@ class TableExample extends React.Component{
                     onChange={this.onSearch}
                 />
                 <Table data={filtered} paginate={10} smallCollapse>
-                    <TableHeader arrowDirection="desc" dataField="campaign" sortable>Campaigns</TableHeader>
+                    <TableHeader onClick={this.onHeaderClick} arrowDirection={this.state.arrowDirection} dataField="campaign">Campaigns</TableHeader>
                     <TableHeader dataField="title" hideSmall sortable >Title</TableHeader>
                     <TableHeader dataField="open" sortable sortfn={this.logIt} hideSmall>Open %</TableHeader>
                 </Table>
@@ -227,6 +229,16 @@ class TableExample extends React.Component{
         targetObject.expandable = newExpandable;
         dataArray.splice(data.index, 1, targetObject);
         this.setState({data: dataArray});
+    }
+
+    onHeaderClick(){
+        let arrowDirection = '';
+        if (this.state.arrowDirection === 'desc'){
+            arrowDirection = 'asc';
+        } else {
+            arrowDirection = 'desc';
+        }
+        this.setState({arrowDirection: arrowDirection});
     }
 
 
