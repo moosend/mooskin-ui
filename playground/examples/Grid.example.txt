@@ -5,6 +5,11 @@ class GridExample extends React.Component{
             <div>
                 <Grid style={{textAlign: 'center'}}>
                     <Row style={{padding: 10, border: '3px solid #F48770'}}>
+                        <Col lg={12} md={8} sm={6} xs={3} style={{padding: 10, border: '3px solid #5ccdde'}}>
+                            Col lg-12 md-8 sm-6 xs-3
+                        </Col>
+                    </Row>
+                    <Row style={{padding: 10, border: '3px solid #F48770'}}>
                         <Col lg={6} style={{padding: 10, border: '3px solid #5ccdde'}}>
                             Col lg-6
                         </Col>
@@ -21,11 +26,11 @@ class GridExample extends React.Component{
                         </Col>
                     </Row>
                     <Row style={{padding: 10, border: '3px solid #F48770'}}>
-                        <Col lg={3} md={4} sm={6} xs={1} style={{padding: 10, border: '3px solid #5ccdde'}}>
-                            Col lg-3 md-4 sm-6 xs-1
+                        <Col lg={3} md={4} sm={6} xs={6} style={{padding: 10, border: '3px solid #5ccdde'}}>
+                            Col lg-3 md-4 sm-6 xs-6
                         </Col>
-                        <Col lg={3} md={4} sm={3} xs={1} style={{padding: 10, border: '3px solid #5ccdde'}}>
-                            Col lg-3 md-4 sm-3 xs-1
+                        <Col lg={3} md={4} sm={3} xs={6} style={{padding: 10, border: '3px solid #5ccdde'}}>
+                            Col lg-3 md-4 sm-3 xs-6
                         </Col>
                         <Col lg={6} md={4} sm={3} xs={12} style={{padding: 10, border: '3px solid #5ccdde'}}>
                             Col lg-6 md-4 sm-3 xs-12
@@ -40,13 +45,13 @@ class GridExample extends React.Component{
                         </Col>
                     </Row>
                     <Row style={{padding: 10, border: '3px solid #F48770'}}>
-                        <Col lg={4} md={10} sm={1} xs={1} style={{padding: 10, border: '3px solid #5ccdde'}}>
+                        <Col lg={4} md={10} sm={1} xs={2} style={{padding: 10, border: '3px solid #5ccdde'}}>
                             Col lg-4 md-10 sm-1 xs-1
                         </Col>
-                        <Col lg={4} md={1} sm={10} xs={1} style={{padding: 10, border: '3px solid #5ccdde'}}>
+                        <Col lg={4} md={1} sm={10} xs={2} style={{padding: 10, border: '3px solid #5ccdde'}}>
                             Col lg-4 md-1 sm-10 xs-1
                         </Col>
-                        <Col lg={4} md={1} sm={1} xs={10} style={{padding: 10, border: '3px solid #5ccdde'}}>
+                        <Col lg={4} md={1} sm={1} xs={8} style={{padding: 10, border: '3px solid #5ccdde'}}>
                             Col lg-4 md-1 sm-1 xs-10
                         </Col>
                     </Row>
