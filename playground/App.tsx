@@ -3,7 +3,8 @@
 
 import * as React from 'react';
 
-import { convertToRaw, EditorState } from 'draft-js';
+import { convertToRaw, EditorState, ContentState } from 'draft-js';
+import htmlToDraft from 'html-to-draftjs';
 import moment from 'moment';
 
 import { renderEditableExample } from './tools/ReactLiveEditor/ReactLiveEditor';
@@ -163,7 +164,7 @@ export const App = (props: any) => {
                     {renderEditableExample('TextArea', { TextArea })}
                 </Col>
                 <Col lg={12}>
-                {renderEditableExample('TextEditor', { TextEditor, EditorState, convertToRaw })}
+                {renderEditableExample('TextEditor', { TextEditor, EditorState, convertToRaw, htmlToDraft, ContentState })}
                 </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('Radio', { Radio, RadioGroup })}
