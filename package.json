@@ -8,7 +8,7 @@
     "access": "public"
   },
   "scripts": {
-    "prepare": "npm run lint && webpack --config webpack.config.prod.js",
+    "prepare": "npm run lint && webpack --config webpack.config.prod.js -p",
     "build:playground": "webpack --config webpack.config.dev.js -p",
     "playground": "webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
     "start": "webpack-dev-server --config webpack.config.dev.js --hot --inline --progress --colors",
