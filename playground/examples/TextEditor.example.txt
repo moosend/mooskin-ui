@@ -2,14 +2,23 @@ class ButtonExample extends React.Component {
 
     constructor(){
         super();
-        this.onChange = this.onChange.bind(this);
+        this.onHtmlFieldChange = this.onHtmlFieldChange.bind(this);
+        this.getStateFromHtml = this.getStateFromHtml.bind(this);
+        this.correctifyHtml = this.correctifyHtml.bind(this);
 
         this.state = {
-            editorState: EditorState.createEmpty()
+            editorState: undefined,
+            htmlContent: `<p style="clear: both; font-size: 16px; margin: 0px;">First Line</p>
+<p style="clear: both; font-size: 16px; margin: 0px;">Second Line</p>
+<p style="clear: both; font-size: 16px; margin: 0px;"><a href="www.google.com" target="_self" style="clear: both;">www.google.com</a></p>`
+
         }
     }
 
     render(){
+        const editorState = this.state.editorState ? this.state.editorState : 
+                                    this.state.htmlContent ? this.getStateFromHtml(this.state.htmlContent) :
+                                    EditorState.createEmpty();
 
         const personalizationTags = [
             {
@@ -60,27 +69,72 @@ class ButtonExample extends React.Component {
                 label: 'Update Profile Link',
                 value: '#updateprofilelink#'
             }
-        ]
+        ];
+
+        console.log(this.state);
 
         return(
             <TextEditor
-                onChange={this.onChange}
-                toolbarPos="top"
-                draggable
-                noSeparators
-                label="Rich text editor"
+                onChange={this.onHtmlFieldChange}
+                options={['fontFamily', 'fontSize', 'colorPicker', 'inline', 'link', 'list', 'image', 'remove', 'emoji']}
                 toolbarOnFocus={false}
+                editorClassName="textEditor"
+                editorState={editorState}
+                hideTargetSetting
+                noSeparators
                 returnWithHtml
                 personalizationTags={personalizationTags}
-                editorState={this.state.editorState}
-                // options={['emoji', '/', 'blockType', 'inline', '/', 'fontSize', '/', 'fontFamily', '/']}
             />
         );
     }
 
-    onChange(data) {
-        console.log(data.value.htmlContent);
-        this.setState({editorState: data.value.editorState});
+    onHtmlFieldChange(data) {
+        const htmlValue = this.correctifyHtml(data.value.htmlContent);
+        this.setState({editorState: data.value.editorState, htmlContent: htmlValue});
+    }
+
+    getStateFromHtml(html) {
+        const blocksFromHtml = htmlToDraft(html);
+        const { contentBlocks, entityMap } = blocksFromHtml;
+        const contentState = ContentState.createFromBlockArray(contentBlocks, entityMap);
+        return EditorState.createWithContent(contentState);
+    }
+
+    correctifyHtml(html) {
+        const parent = document.createElement('div');
+        parent.innerHTML = html;
+        const imgCollection = parent.getElementsByTagName('img');
+        const imgArray = imgCollection && Array.from(imgCollection);
+
+        // add image styles for centering
+        imgArray && imgArray.map((img) => {
+            img.style.display = 'block';
+            img.style.margin = `0 auto`;
+            img.style.clear = 'both';
+
+            return img;
+        })
+
+        // add clear: both to all elements to prevent other element changing position on image float
+        const elementsCollection = parent.getElementsByTagName('*');
+        const elementsArray = elementsCollection && Array.from(elementsCollection);
+        elementsArray && elementsArray.map((element) => {
+            element.style.clear = 'both';
+            
+            return element;
+        });
+
+        // add default font size and remove margin to paragraphs
+        const paragraphCollection = parent.getElementsByTagName('p');
+        const paragraphArray = paragraphCollection && Array.from(paragraphCollection);
+        paragraphArray && paragraphArray.map((element) => {
+            element.style.fontSize = '16px';
+            element.style.margin = 0;
+            
+            return element;
+        });
+
+        return parent.innerHTML;
     }
 
 }
