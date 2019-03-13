@@ -2425,9 +2425,10 @@ domutils@^1.5.1:
     dom-serializer "0"
     domelementtype "1"
 
-"draft-js@https://github.com/donibehrami/draft-js.git#fixed-refs":
+draft-js@0.10.4:
   version "0.10.4"
-  resolved "https://github.com/donibehrami/draft-js.git#03e79587c830b34de9e11e7e9c16b012eb13a8a3"
+  resolved "https://registry.yarnpkg.com/draft-js/-/draft-js-0.10.4.tgz#147741642097c8120d8edc232e9503e8b7fb8d35"
+  integrity sha1-FHdBZCCXyBINjtwjLpUD6Lf7jTU=
   dependencies:
     fbjs "^0.8.15"
     immutable "~3.7.4"
@@ -6131,7 +6132,7 @@ react-dom@^16.0.3:
 
 "react-draft-wysiwyg@https://github.com/donibehrami/react-draft-wysiwyg.git#master":
   version "1.12.13"
-  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#9e94a7b1be34f45ce5560eb0d7c5647249fbc0d6"
+  resolved "https://github.com/donibehrami/react-draft-wysiwyg.git#4e347b53eea2843c53a906d22cf691454a4c41fc"
   dependencies:
     classnames "^2.2.5"
     draftjs-utils "^0.9.3"
