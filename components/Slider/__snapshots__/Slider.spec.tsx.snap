@@ -3,7 +3,7 @@
 exports[`Slider render AB Slider correctly 1`] = `
 <ABSlider
   count={1370}
-  onChange={[Function]}
+  onChange={[MockFunction]}
   percentage={20}
 >
   <div
