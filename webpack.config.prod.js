@@ -1,9 +1,9 @@
 var config = require('./webpack.config.common'),
   glob = require("glob"),
-  ExtractTextPlugin = require('extract-text-webpack-plugin');
+  MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 var distFolder = 'lib';
-var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: "[name]/style.css", allChunks: true});
+var extractCSS = new MiniCssExtractPlugin({fallback: "style-loader", filename: "[name]/style.css", allChunks: true});
 
 var entries = glob.sync("./components/*/index.ts", {ignore: ['**/*.spec.tsx', '**/*.spec.ts']}).map(function(entry){ //gets the module paths in components containing index.ts and assigns them to an object
   var obj = {};
@@ -41,23 +41,14 @@ config.module.rules.push(
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [ 
-          'babel-loader', 
-          {
-            loader: 'ts-loader',
-            options: {
-              compilerOptions: {
-                declaration: true,
-                declarationDir: '.',
-              }
-            }
-            
-          }
+          'babel-loader'
         ]
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: extractCSS.extract([
+        use: [
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -67,21 +58,22 @@ config.module.rules.push(
             }
           },
           'postcss-loader'
-        ])
+        ]
       },
       {
         test: /\.css$/,    
         exclude: /\*/,                
         include: /node_modules/,
-        loader: extractCSS.extract([
+        use: [
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
+              importLoaders: 1,
             }
           },
           'postcss-loader'
-        ])
+        ]
     }
 );
 

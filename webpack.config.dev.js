@@ -1,11 +1,10 @@
 
 var config = require('./webpack.config.common');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+var MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 var distFolder = 'playground-dist';
-var extractCSS = new ExtractTextPlugin({fallback: "style-loader", filename: "style.css", allChunks: true});
+var extractCSS = new MiniCssExtractPlugin({fallback: "style-loader", filename: "style.css", allChunks: true});
 
 
 config.devServer = {
@@ -35,8 +34,7 @@ config.module.rules.push(
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [ 
-            'babel-loader', 
-            'ts-loader'
+            'babel-loader'
         ]
     },
     {
@@ -56,7 +54,8 @@ config.module.rules.push(
     {
         test: /\.css$/,
         exclude: /node_modules/,
-        loader: extractCSS.extract([
+        use: [
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -66,20 +65,22 @@ config.module.rules.push(
             }
           },
           'postcss-loader'
-        ])
+        ]
     },
     {
         test: /\.css$/,
         exclude: /\*/,        
         include: /node_modules/,
-        loader: extractCSS.extract([
+        use: [
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
+              importLoaders: 1,
             }
           },
-        ])
+          'postcss-loader'
+        ]
     }
 );
 
