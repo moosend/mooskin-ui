@@ -10,6 +10,7 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "noFallthroughCasesInSwitch": true,
     "pretty": true,
     "noUnusedLocals": true,
