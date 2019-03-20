@@ -99,7 +99,10 @@ describe('LoadingBar', () => {
         component.setProps({error});
 
         expect(component.state('error')).toEqual(true);
-        expect(func).toHaveBeenCalled();
+
+        setTimeout(() => {
+            expect(func).toHaveBeenCalled();
+        }, 1000);
 
     });
 
