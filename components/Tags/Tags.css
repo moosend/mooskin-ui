@@ -81,6 +81,10 @@
     z-index: 10;
 }
 
+.alternateSourceList{
+    top: 17px;
+}
+
 .sourceItem {
     padding: 10px;
 }
