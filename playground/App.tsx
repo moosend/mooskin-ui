@@ -3,7 +3,7 @@
 
 import * as React from 'react';
 
-import { convertToRaw, EditorState, ContentState } from 'draft-js';
+import { ContentState, convertToRaw, EditorState } from 'draft-js';
 import htmlToDraft from 'html-to-draftjs';
 import moment from 'moment';
 

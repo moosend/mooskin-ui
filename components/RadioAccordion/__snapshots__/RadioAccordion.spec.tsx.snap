@@ -72,7 +72,7 @@ exports[`RadioAccordion renders RadioAccordion properly according to snapshot 1`
       active={true}
       className=""
       key="1"
-      onClick={[Function]}
+      onClick={[MockFunction]}
       style={Object {}}
       title="title2"
     >

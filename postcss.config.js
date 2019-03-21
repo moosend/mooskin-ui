@@ -4,6 +4,7 @@ module.exports = {
     'postcss-url':{},
     'postcss-cssnext': {},
     'cssnano': {zindex: false},
+    'postcss-flexbugs-fixes': {},
     'postcss-browser-reporter':{},
     'postcss-reporter':{},
   }

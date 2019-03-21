@@ -43,7 +43,7 @@
  
 .selectIcon{
     min-width: 50px;
-    background: url(assets/images/arrows/select-arrow.png);
+    background: url('../../assets/images/arrows/select-arrow.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;

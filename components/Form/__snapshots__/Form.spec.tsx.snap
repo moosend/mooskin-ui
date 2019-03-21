@@ -15,7 +15,7 @@ exports[`Form renders Form with FormGroup correctly 1`] = `
 <Form
   className="myClass"
   dataLabel="SomeForm"
-  onSubmit={[Function]}
+  onSubmit={[MockFunction]}
   style={
     Object {
       "width": "50px",

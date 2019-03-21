@@ -47,7 +47,7 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
   dataLabel="plan"
   horizontal={true}
   id="checkbox1"
-  onChange={[Function]}
+  onChange={[MockFunction]}
   selectedChecks={
     Array [
       Object {
