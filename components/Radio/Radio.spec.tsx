@@ -1,5 +1,4 @@
 import * as React from 'react';
-import renderer from 'react-test-renderer';
 import RadioGroup, {Radio} from './Radio';
 
 import {mount, shallow} from 'enzyme';

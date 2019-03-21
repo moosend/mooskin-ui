@@ -12,7 +12,7 @@ exports[`Carousel renders correctly 1`] = `
   }
 >
   <Slider
-    afterChange={[Function]}
+    afterChange={[MockFunction]}
     arrows={true}
     autoplay={true}
     autoplaySpeed={3000}

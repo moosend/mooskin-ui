@@ -33,7 +33,7 @@ exports[`Radio renders RadioGroup correctly 1`] = `
   className="myClass"
   dataLabel="plan"
   id="radio1"
-  onChange={[Function]}
+  onChange={[MockFunction]}
   selectedRadios={
     Array [
       Object {

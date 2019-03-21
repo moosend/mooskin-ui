@@ -137,9 +137,9 @@ export const renderEditableExample =
         return (
             <ReactLiveEditor
                 scope={{React, ...components}}
-                code={require(`../../examples/${componentName}.example.txt`)}
+                code={require(`../../examples/${componentName}.example.txt`).default}
                 title={`${componentName} Example`}
-                doc={require(`../../../components/${componentName}/README.md`)}
+                doc={require(`../../../components/${componentName}/README.md`).default}
             />
         );
     };

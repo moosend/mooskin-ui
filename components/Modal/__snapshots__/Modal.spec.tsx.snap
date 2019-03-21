@@ -19,7 +19,7 @@ exports[`Modal renders correctly 1`] = `
   </div>
   <div
     className="cover coverOn"
-    onClick={[Function]}
+    onClick={[MockFunction]}
   />
 </div>
 `;

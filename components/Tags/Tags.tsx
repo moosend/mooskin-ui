@@ -513,8 +513,10 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             );
         });
 
+        const alternateStyles = this.props.alternate ? styles.alternateSourceList : '';
+
         return (
-            <div className={styles.sourceList}>
+            <div className={`${styles.sourceList} ${alternateStyles}`}>
                 {sourceList}
             </div>
         );
