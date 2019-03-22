@@ -60,7 +60,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
 
     static RadioAccordionContent: React.StatelessComponent<IContentProps>;
 
-    static getActiveTab = (children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
+    static getActiveTab = (children: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
         const childrenArray = React.Children.toArray(children);
 
         for (const [index, value] of childrenArray.entries()){
@@ -70,7 +70,7 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
         }
     }
 
-    static activeChildren = (children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
+    static activeChildren = (children: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
 
         const childrenArray = React.Children.toArray(children);
 
@@ -89,14 +89,16 @@ export default class RadioAccordion extends React.Component<IAccordionProps, IAc
     }
 
     static getDerivedStateFromProps(nextProps: IAccordionProps) {
-        const {activeCount, count} = RadioAccordion.activeChildren(nextProps.children);
-        if (count === 0){
-            return null;
+        if (nextProps.children){
+            const {activeCount, count} = RadioAccordion.activeChildren(nextProps.children);
+            if (count === 0){
+                return null;
+            }
+            if (activeCount > 1){
+                throw new Error(`There can't be more than one active accordion content`);
+            }
+            return {active: RadioAccordion.getActiveTab(nextProps.children)};
         }
-        if (activeCount > 1){
-            throw new Error(`There can't be more than one active accordion content`);
-        }
-        return {active: RadioAccordion.getActiveTab(nextProps.children)};
     }
 
     name: string;

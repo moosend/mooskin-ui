@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import CarouselComponent from 'react-slick';
+import * as CarouselComponent from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
@@ -158,7 +158,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
                 id={this.props.id}
                 ref={this.carouselRef}
             >
-                <CarouselComponent
+                <CarouselComponent.default
                     ref={this.sliderRef}
                     slidesToShow={this.props.slidesToShow}
                     className={`${styles.carousel} ${this.props.className}`}
@@ -180,7 +180,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
                     responsive={this.props.responsive}
                 >
                     {this.props.children}
-                </CarouselComponent>
+                </CarouselComponent.default>
             </div>
         );
 

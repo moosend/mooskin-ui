@@ -71,4 +71,9 @@ declare module 'emojione-picker' {
   export default content;
 }
 
+declare module 'react-slick' {
+  const content: any;
+  export default content;
+}
+
 // declare var global: any;

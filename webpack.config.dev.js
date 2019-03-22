@@ -34,7 +34,8 @@ config.module.rules.push(
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [ 
-            'babel-loader'
+            'babel-loader',
+            'ts-loader'
         ]
     },
     {
