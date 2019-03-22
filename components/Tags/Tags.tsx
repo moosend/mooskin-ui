@@ -79,6 +79,8 @@ export interface ITagsProps{
 
     onRemove?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData, index: number) => string [] | void;
 
+    onTagClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData, index: number) => void;
+
     // onChange?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
 
@@ -96,7 +98,9 @@ export interface ITagProps{
     /** override tags class */
     className?: string;
 
-    onClick: (e: React.MouseEvent<HTMLElement>) => void;
+    onClickTag?: (e: React.MouseEvent<HTMLElement>) => void;
+
+    onClickRemove: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface ITagsState{
@@ -220,14 +224,21 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const tags = this.removeDuplicates();
 
+        const onClickTag = (e: React.MouseEvent<HTMLElement>, value: string, index: number) => {
+            this.props.onTagClick && this.props.onTagClick(e, {dataLabel: this.props.dataLabel, value}, index);
+        };
+
+        const clickableTag = this.props.onTagClick ? styles.clickableTag : '';
+
         return tags.map((value, i) => {
             return (
                 <Tag
                     alternate={this.props.alternate}
                     tag={value}
                     key={i}
-                    onClick={this.removeTag(i)}
-                    className={this.props.tagClasses}
+                    onClickTag={(e) => onClickTag(e, value, i)}
+                    onClickRemove={this.removeTag(i)}
+                    className={`${clickableTag} ${this.props.tagClasses}`}
                     style={this.props.tagStyles}
                 />
             );
@@ -412,7 +423,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                         // tags.push(newTag.join(''));
                         // newTag = [];
                         if (this.checkValidity(newTag.join('')) && !this.props.tags.includes(newTag.join(''))){
-                            console.log();
                             tags.push(newTag.join('').trim());
                             newTag = [];
                         } else {
@@ -680,12 +690,25 @@ export const Tag: React.StatelessComponent<ITagProps> = (props) => {
 
     const alternateTag = props.alternate ? styles.alternateTag : '';
 
+    const onClickTag = (e: React.MouseEvent<HTMLElement>) => {
+        props.onClickTag && props.onClickTag(e);
+    };
+
+    const onClickRemove = (e: React.MouseEvent<HTMLElement>) => {
+        e.stopPropagation();
+        props.onClickRemove && props.onClickRemove(e);
+    };
+
     return (
-        <div className={`${styles.tag} ${alternateTag} ${props.className}`} style={props.style}>
+        <div
+            className={`${styles.tag} ${alternateTag} ${props.className}`}
+            style={props.style}
+            onClick={onClickTag}
+        >
             <div>
                 {props.tag}
             </div>
-            <i onClick={props.onClick} className={`material-icons ${styles.close}`}>
+            <i onClick={onClickRemove} className={`material-icons ${styles.close}`}>
                 close
             </i>
         </div>

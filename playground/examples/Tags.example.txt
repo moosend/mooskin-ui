@@ -6,6 +6,7 @@ class TagsExample extends React.Component {
         this.onAdd = this.onAdd.bind(this);
         this.onRemove = this.onRemove.bind(this);
         this.validate = this.validate.bind(this);
+        this.onTagClick = this.onTagClick.bind(this);
 
         this.state = {
             tags: [
@@ -53,7 +54,7 @@ class TagsExample extends React.Component {
 
         return(
             <div>
-                <Tags source={countries} delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validateTag={this.validation} label="Tags from string array" tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
+                <Tags onTagClick={this.onTagClick} source={countries} delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validateTag={this.validation} label="Tags from string array" tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
                 <br/>
                 <Tags source={stringArr} label="Tags from function that returns string array" delimiters={['188', '32', '13', ',', '.', 'Enter', ' ', '190']} tags={this.state.tags2} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags2"/>
                 <br/>
@@ -61,7 +62,7 @@ class TagsExample extends React.Component {
                 <br/>
                 <Tags labelLeft validate={this.validate} delimiters={['Enter', ',']} status={this.state.status} description={this.state.message} source={emails} errorMessage={'Tags accepts only emails'} validateTag="email" submitOnBlur={false} label="Email only tags" tags={this.state.tags4} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags4"/>
                 <br/>
-                <Tags preventSubmit source={countries} alternate delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validateTag={this.validation} tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
+                <Tags onTagClick={this.onTagClick} preventSubmit source={countries} alternate delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validateTag={this.validation} tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
             </div>
         );
     }
@@ -76,6 +77,10 @@ class TagsExample extends React.Component {
         let tags = [...this.state[data.dataLabel]];
         tags.splice(index, 1);
         data.dataLabel && this.setState({[data.dataLabel]: tags});
+    }
+
+    onTagClick(e, data, index){
+        console.log(e, data, index);
     }
 
     validation(tag) {

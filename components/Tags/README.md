@@ -171,6 +171,7 @@ Now `validate` is the function for validation the whole component (eg. field is 
 * `labelLeft` - positions the label to the left of the input
 * `alternate` - renders with different styles
 * `maxLength` - maximum number of characters allowed
+* `onTagClick` - called when a tag is clicked, returning event, data, and index of the tag
 
 </div>
 
