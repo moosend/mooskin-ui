@@ -42,7 +42,17 @@ config.module.rules.push(
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [ 
-          'babel-loader'
+          'babel-loader',
+          {
+            loader: 'ts-loader',
+            options: {
+              compilerOptions: {
+                declaration: true,
+                declarationDir: './'+distFolder,
+              }
+            }
+            
+          }
         ]
       },
       {

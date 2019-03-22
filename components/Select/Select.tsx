@@ -32,9 +32,6 @@ export interface ISelectProps {
     /** className for the main element */
     className?: string;
 
-    /** placeholder shown when no results exist */
-    noResultsText?: string;
-
     /** loading indicator */
     isLoading?: boolean;
 
@@ -49,9 +46,6 @@ export interface ISelectProps {
 
     /** text to be shown when there are no options available */
     emptySelectText?: string;
-
-    /** filter placeholder text */
-    filterPlaceholder?: string;
 
     /** prevent duplicate options to the Select */
     noDuplicates?: boolean;
@@ -89,6 +83,9 @@ export interface IOptionProps {
 
     /** label to be used when children are of type other than string */
     label?: string;
+
+    /** filters according to this when available (so Option children can be elements) */
+    searchLabel?: string;
 
     /** children must be a string */
     children?: string | JSX.Element;
@@ -131,6 +128,9 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
         const options = this.assignCbToChildren();
 
+        const hasVisibleOptions = this.props.alternate && options && this.hasVisibleChildren(options);
+        const border = this.props.alternate && !hasVisibleOptions ? {border: 'none'} : {};
+
         const selected = this.getSelectedChildLabel();
 
         const status = this.getStatus();
@@ -142,7 +142,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const shouldOpen = this.props.children ? this.onOpenList : undefined;
         const shouldToggle = this.props.children ? this.onToggleList : undefined;
 
-        const labelContainerDisplay = (!this.props.alternate && !this.props.noFilter) && this.state.list ? 'none' : 'block';
+        const labelContainerDisplay = !this.props.noFilter && this.state.list ? 'none' : 'block';
 
         const alternateLabelContainer = this.props.alternate ? {padding: 11} : {};
         const alternateLabel = this.props.alternate ? {paddingTop: 11} : {};
@@ -166,7 +166,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 />
                 <div style={{flex: 1}}>
                     <div className={`${styles.selectContainer} ${styles.labelContainer} ${status} ${alternateContainer}`} style={{zIndex}}>
-                        {(!this.props.alternate && !this.props.noFilter) && this.renderSearchInput()}
+                        {!this.props.noFilter && this.renderSearchInput()}
                         {this.props.isLoading && <img src={spinner} className={spinnerClass} />}
                         <div
                             onClick={shouldOpen}
@@ -183,7 +183,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                         />
                         <div
                             className={`options-container ${alternateOptions} ${styles.optionsContainer}`}
-                            style={{display: displayList}}
+                            style={{...border, display: displayList}}
                         >
                             <ul>
                                 {options}
@@ -198,13 +198,15 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     }
 
     renderSearchInput = () => {
+
+        const alternateInput = this.props.alternate ? {padding: 11} : {};
+
         return (
             <input
                 type="text"
                 className={styles.innerInput}
-                style={{display: this.state.list ? 'block' : 'none'}}
+                style={{...alternateInput, display: this.state.list ? 'block' : 'none'}}
                 value={this.state.filter}
-                placeholder={this.props.filterPlaceholder}
                 onChange={this.onChangeFilter}
                 ref={(input) => (input && this.state.list && input.focus())}
                 onBlur={this.validateOnBlur}
@@ -239,6 +241,17 @@ class Select extends React.Component<ISelectProps, ISelectState>{
             }
             !selectedAsArray && this.setState({list: false, filter: ''});
         };
+    }
+
+    hasVisibleChildren = (options: Array<React.ReactElement<HTMLDivElement>>) => {
+        const visible = options.findIndex((item) => {
+            return item.props.style.display === 'flex';
+        });
+
+        if (visible === -1){
+            return false;
+        }
+        return true;
     }
 
     removeOption(option: string){
@@ -277,7 +290,12 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
                 let visible = 'flex';
                 // hide options when filtering
-                if (!this.props.alternate && typeof child.props.children === 'string'){
+                if (!this.props.noFilter && child.props.searchLabel){
+                    visible = child.props.children &&
+                        child.props.searchLabel.toLowerCase().includes(this.state.filter.toLowerCase())
+                        ? 'flex'
+                        : 'none';
+                } else if (!this.props.noFilter && typeof child.props.children === 'string'){
                     visible = child.props.children &&
                         child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
                         ? 'flex'

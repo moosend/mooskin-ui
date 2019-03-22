@@ -18,7 +18,6 @@ describe('Select', () => {
                 placeholder="placeholder"
                 className="myClass"
                 style={{color: 'blue'}}
-                noResultsText="no results found"
                 description="with description"
                 isLoading
             />

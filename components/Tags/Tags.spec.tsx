@@ -790,4 +790,29 @@ describe('Tags', () => {
 
     });
 
+    test('calls onTagClick function when a tag is clicked', () => {
+
+        const tags = ['doni', 'gent', 'shkumbin'];
+
+        const onTagClick = jest.fn();
+
+        const component = mount(
+            <Tags
+                tags={tags}
+                deletable
+                onTagClick={onTagClick}
+                delimiters={[',', 'Enter', ' ']}
+                validateTag="email"
+                alternate
+            />
+        );
+
+        expect(component.find('.tag').length).toEqual(3);
+
+        component.find('.tag').first().simulate('click');
+
+        expect(onTagClick).toHaveBeenCalled();
+
+    });
+
 });
