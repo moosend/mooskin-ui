@@ -39,7 +39,7 @@
     margin: 2px;
     cursor: unset;
     font-size: 0.875rem;
-    animation: opa 0.2s;
+    /* animation: opa 0.2s; */
 }
 
 .close{
@@ -208,6 +208,10 @@
     cursor: pointer;
     user-select: none;
     color: #bbb;
+}
+
+.clickableTag {
+    cursor: pointer;
 }
 
 @keyframes opa {

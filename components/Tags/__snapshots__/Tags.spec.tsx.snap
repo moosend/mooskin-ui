@@ -28,9 +28,10 @@ exports[`Tags renders Tags correctly 1`] = `
       className="tags  undefined"
     >
       <Tag
-        className="tagClasses"
+        className=" tagClasses"
         key="0"
-        onClick={[Function]}
+        onClickRemove={[Function]}
+        onClickTag={[Function]}
         style={
           Object {
             "width": "50px",
@@ -39,9 +40,10 @@ exports[`Tags renders Tags correctly 1`] = `
         tag="Prishtina"
       />
       <Tag
-        className="tagClasses"
+        className=" tagClasses"
         key="1"
-        onClick={[Function]}
+        onClickRemove={[Function]}
+        onClickTag={[Function]}
         style={
           Object {
             "width": "50px",

@@ -107,7 +107,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
     static Header: React.StatelessComponent<IHeaderProps>;
     static Content: React.StatelessComponent<IContentProps>;
 
-    static getActiveTab = (children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
+    static getActiveTab = (children: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
         let activeTab = 0;
         const childrenArray = React.Children.toArray(children);
 
@@ -120,7 +120,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         return activeTab;
     }
 
-    static activeChildren = (children?: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
+    static activeChildren = (children: Array<React.ReactElement<IContentProps>> | React.ReactElement<IContentProps>) => {
 
         const childrenArray = React.Children.toArray(children);
 
@@ -139,21 +139,23 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
     }
 
     static getDerivedStateFromProps(nextProps: ITabbedContentProps) {
-        const {activeCount, count} = TabbedContent.activeChildren(nextProps.children);
-        if (count === 0){
-            return null;
+        if (nextProps.children){
+            const {activeCount, count} = TabbedContent.activeChildren(nextProps.children);
+            if (count === 0){
+                return null;
+            }
+            if (activeCount > 1){
+                throw new Error(`There can't be more than one active tab content`);
+            }
+            return {activeTab: TabbedContent.getActiveTab(nextProps.children)};
         }
-        if (activeCount > 1){
-            throw new Error(`There can't be more than one active tab content`);
-        }
-        return {activeTab: TabbedContent.getActiveTab(nextProps.children)};
     }
 
     constructor(props: ITabbedContentProps){
         super(props);
 
         this.state = {
-            activeTab: TabbedContent.getActiveTab(this.props.children)
+            activeTab: this.props.children ? TabbedContent.getActiveTab(this.props.children) : undefined
         };
     }
 
@@ -243,7 +245,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
     onClickHeader = (tabIndex: number, header: React.ReactElement<IHeaderProps>) => {
         return (e: React.MouseEvent<HTMLElement>) => {
             header.props.onClick && header.props.onClick(e);
-            const {count} = TabbedContent.activeChildren(this.props.children);
+            const {count} = this.props.children ? TabbedContent.activeChildren(this.props.children) : {count: 0};
             if (count === 0){
                 this.setState({activeTab: tabIndex});
             }
