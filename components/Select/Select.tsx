@@ -84,6 +84,9 @@ export interface IOptionProps {
     /** label to be used when children are of type other than string */
     label?: string;
 
+    /** filters according to this when available (so Option children can be elements) */
+    searchLabel?: string;
+
     /** children must be a string */
     children?: string | JSX.Element;
 }
@@ -287,7 +290,12 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
                 let visible = 'flex';
                 // hide options when filtering
-                if (!this.props.noFilter && typeof child.props.children === 'string'){
+                if (!this.props.noFilter && child.props.searchLabel){
+                    visible = child.props.children &&
+                        child.props.searchLabel.toLowerCase().includes(this.state.filter.toLowerCase())
+                        ? 'flex'
+                        : 'none';
+                } else if (!this.props.noFilter && typeof child.props.children === 'string'){
                     visible = child.props.children &&
                         child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
                         ? 'flex'
