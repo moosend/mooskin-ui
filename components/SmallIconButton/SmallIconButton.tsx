@@ -21,6 +21,8 @@ export interface ISmallIconButtonProps {
     /** override button styles */
     style?: React.CSSProperties;
 
+    title?: string;
+
     /** callback that is called when the button is clicked */
     onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
 }
@@ -55,6 +57,7 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
                 onClick={this.onClick}
                 disabled={disabled}
                 className={classes}
+                title={this.props.title}
                 style={style}
             >
                 <i className={iconStyle} >{iconFont}</i>
