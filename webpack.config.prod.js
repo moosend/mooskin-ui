@@ -31,7 +31,8 @@ config.output = {
   filename: '[name]/index.js',
   library: 'mooskin',
   libraryTarget: 'umd',
-  umdNamedDefine: true
+  umdNamedDefine: true,
+  globalObject: 'this'
 };
 
 
