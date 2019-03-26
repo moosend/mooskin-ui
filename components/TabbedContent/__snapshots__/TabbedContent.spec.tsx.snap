@@ -40,7 +40,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
   vertical={true}
 >
   <div
-    className="tabbed-content-component container containerV"
+    className="tabbed-content-component container containerV mySwitch"
     id="5"
     style={
       Object {
@@ -182,7 +182,7 @@ exports[`TabbedContent renders TabbedContent properly according to snapshot 1`] 
 
 exports[`TabbedContent renders TabbedContent vertically with radio styles 1`] = `
 <div
-  className="tabbed-content-component container containerV"
+  className="tabbed-content-component container containerV "
   style={Object {}}
 >
   <div
