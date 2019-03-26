@@ -93,7 +93,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
 
     render(){
 
-        const {disabled, description, accept, style, id, label, buttonLabel, required, multiple} = this.props;
+        const {disabled, description, accept, style, className, id, label, buttonLabel, required, multiple} = this.props;
         const disabledFile = this.props.disabled ? styles.disabledFile : '';
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
         const status = this.getStatus();
@@ -102,7 +102,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
         return (
             <div
                 id={id}
-                className={`file-upload-component ${styles.fileContainer} ${disabledFile}`}
+                className={`file-upload-component ${styles.fileContainer} ${disabledFile} ${className}`}
                 style={style}
             >
                 {label && <label className={styles.label} style={spacing}>{label}</label>}

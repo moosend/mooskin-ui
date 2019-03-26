@@ -176,7 +176,7 @@ export default class TabbedContent extends React.Component<ITabbedContentProps, 
         return(
             <div
                 id={this.props.id}
-                className={`tabbed-content-component ${style.container} ${containerStyles}`}
+                className={`tabbed-content-component ${style.container} ${containerStyles} ${this.props.className}`}
                 style={this.props.style}
             >
                 <div className={`${style.heading} ${headingStyles} ${separator} ${align} ${verticalAlign}`}>
