@@ -57,6 +57,12 @@ exports[`DatePicker renders correctly 1`] = `
       />
     </div>
   </div>
+  <i
+    className="material-icons icon"
+    onClick={[Function]}
+  >
+    event_available
+  </i>
 </div>
 `;
 

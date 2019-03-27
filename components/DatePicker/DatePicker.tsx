@@ -59,9 +59,6 @@ export interface IDateProps{
     /** allow manual date input */
     allowInput?: boolean;
 
-    /** adds icon to the datepicker input */
-    withIcon?: boolean;
-
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -185,7 +182,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         <div className={styles.cover} onClick={this.toggle}/>
                     </div>
                 </div>
-                {this.props.withIcon && <i onClick={this.toggle} className={`material-icons ${styles.icon}`} >calendar_today</i>}
+                <i onClick={this.toggle} className={`material-icons ${styles.icon}`} >event_available</i>
             </div>
         );
     }
