@@ -113,6 +113,12 @@ export interface IProps {
     /** callback that is called when the input changes */
     onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 
+    /** callback that is called when the input is focused */
+    onFocus?: (e: React.FocusEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+
+    /** callback that is called when the input is blured */
+    onBlur?: (e: React.SyntheticEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+
 }
 
 export interface ICustomDropdown {
@@ -215,7 +221,7 @@ class Input extends React.Component<IProps, IInputState> {
         const inputPaddingLeft = icon ? iconPosition === 'left' ? 0 : 15 : '';
         const inputPaddingRight = icon ? iconPosition === 'left' ? 15 : 0 : '';
         return (
-            <div style={{flexShrink: 1, flexGrow: 1}}>
+            <div style={{flexShrink: 1, flexGrow: 1, position: 'relative'}}>
                 <div style={{display: 'flex', flex: 1}}>
                     <div className={`${styles.innerDiv} ${status} ${disabledInput}`}>
                         <input
@@ -233,6 +239,7 @@ class Input extends React.Component<IProps, IInputState> {
                             disabled={disabled}
                             className={styles.input}
                             autoFocus={autofocus}
+                            onFocus={this.onFocus}
                             autoComplete={autocomplete}
                             onBlur={this.validateOnBlur}
                         />
@@ -244,6 +251,11 @@ class Input extends React.Component<IProps, IInputState> {
                 {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
             </div>
         );
+    }
+
+    onFocus = (e: React.FocusEvent<HTMLInputElement>) => {
+        !this.props.disabled &&
+        this.props.onFocus && this.props.onFocus(e, {dataLabel: this.props.dataLabel, value: this.props.value});
     }
 
     onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -280,10 +292,12 @@ class Input extends React.Component<IProps, IInputState> {
         }
     }
 
-    validateOnBlur = () => {
+    validateOnBlur = (e: React.SyntheticEvent<HTMLInputElement>) => {
         this.setMinMaxValues();
         this.props.validate &&
         this.props.validate({value: this.props.value, dataLabel: this.props.dataLabel, required: this.props.required});
+        this.props.onBlur &&
+        this.props.onBlur(e, {dataLabel: this.props.dataLabel, value: this.props.value});
     }
 
     getStatus = () => {

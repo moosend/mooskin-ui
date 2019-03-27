@@ -87,6 +87,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
     static defaultProps = {
         className: '',
         format: 'DD MM YYYY, HH:mm',
+        placeholder: 'Please select date...',
         style: {}
     };
 
@@ -168,7 +169,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 style={this.props.style}
             >
                 {this.props.label && <label className={styles.label} style={spacing} >{this.props.label}</label>}
-                <div className={styles.wrapper}>
+                <div className={styles.wrapper} style={{position: 'relative'}}>
                     {this.renderInputs()}
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                     <div className={styles.calendar} style={{display: displayPicker}} ref={this.datepickerRef}>
@@ -181,6 +182,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         <div className={styles.cover} onClick={this.toggle}/>
                     </div>
                 </div>
+                <i onClick={this.toggle} className={`material-icons ${styles.icon}`} >event_available</i>
             </div>
         );
     }
@@ -244,7 +246,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         return (
             <input
                 readOnly
-                value={moment(this.props.date || moment()).format(this.props.format)}
+                value={this.props.date ? moment(this.props.date).format(this.props.format) : this.props.placeholder}
                 onClick={this.toggle}
                 className={`${styles.dateInput} ${disabledClasses} ${status}`}
                 required={this.props.required}

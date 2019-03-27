@@ -186,7 +186,7 @@
     margin: 0 4px;
     background: #fff;
     border-radius: 12px;
-    border: 1px solid #bbb;
+    border: 1px solid #ebebeb;
     padding: 2px 8px;
 }
 
@@ -207,7 +207,7 @@
     top: 1px;
     cursor: pointer;
     user-select: none;
-    color: #bbb;
+    color: #ebebeb;
 }
 
 .clickableTag {

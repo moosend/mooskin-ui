@@ -25,6 +25,7 @@ exports[`Input renders correctly 1`] = `
       Object {
         "flexGrow": 1,
         "flexShrink": 1,
+        "position": "relative",
       }
     }
   >
@@ -50,6 +51,7 @@ exports[`Input renders correctly 1`] = `
           name="input name"
           onBlur={[Function]}
           onChange={[Function]}
+          onFocus={[Function]}
           placeholder="input placeholder"
           required={true}
           style={
