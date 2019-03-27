@@ -33,6 +33,7 @@ exports[`Input renders correctly 1`] = `
         Object {
           "display": "flex",
           "flex": 1,
+          "position": "relative",
         }
       }
     >
