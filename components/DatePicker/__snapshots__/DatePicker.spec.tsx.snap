@@ -18,12 +18,18 @@ exports[`DatePicker renders correctly 1`] = `
   </label>
   <div
     className="wrapper"
+    style={
+      Object {
+        "position": "relative",
+      }
+    }
   >
     <input
       className="dateInput disabled undefined"
       disabled={true}
       onBlur={[Function]}
       onClick={[Function]}
+      placeholder="Please select date..."
       readOnly={true}
       required={true}
       value="01 01 2013, 00:00"
