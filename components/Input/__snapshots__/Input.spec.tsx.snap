@@ -25,6 +25,7 @@ exports[`Input renders correctly 1`] = `
       Object {
         "flexGrow": 1,
         "flexShrink": 1,
+        "position": "relative",
       }
     }
   >
@@ -33,7 +34,6 @@ exports[`Input renders correctly 1`] = `
         Object {
           "display": "flex",
           "flex": 1,
-          "position": "relative",
         }
       }
     >

@@ -221,8 +221,8 @@ class Input extends React.Component<IProps, IInputState> {
         const inputPaddingLeft = icon ? iconPosition === 'left' ? 0 : 15 : '';
         const inputPaddingRight = icon ? iconPosition === 'left' ? 15 : 0 : '';
         return (
-            <div style={{flexShrink: 1, flexGrow: 1}}>
-                <div style={{display: 'flex', flex: 1, position: 'relative'}}>
+            <div style={{flexShrink: 1, flexGrow: 1, position: 'relative'}}>
+                <div style={{display: 'flex', flex: 1}}>
                     <div className={`${styles.innerDiv} ${status} ${disabledInput}`}>
                         <input
                             style={{order: iconPosition === 'left' ? 2 : 1, paddingLeft: inputPaddingLeft, paddingRight: inputPaddingRight}}
