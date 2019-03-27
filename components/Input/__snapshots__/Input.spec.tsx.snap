@@ -50,6 +50,7 @@ exports[`Input renders correctly 1`] = `
           name="input name"
           onBlur={[Function]}
           onChange={[Function]}
+          onFocus={[Function]}
           placeholder="input placeholder"
           required={true}
           style={
