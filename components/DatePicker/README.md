@@ -165,6 +165,7 @@ The callback works the same as with the DatePicker component, where it returns a
 * `nowButton` - adds a button that selects current date when clicked
 * `style` - input field style
 * `onChange` - callback to be triggered on input change
+* `withIcon` - adds calendar icon to the date picker input
 
 ## DateSelect attributes
 

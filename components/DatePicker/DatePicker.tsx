@@ -59,6 +59,9 @@ export interface IDateProps{
     /** allow manual date input */
     allowInput?: boolean;
 
+    /** adds icon to the datepicker input */
+    withIcon?: boolean;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -169,7 +172,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                 style={this.props.style}
             >
                 {this.props.label && <label className={styles.label} style={spacing} >{this.props.label}</label>}
-                <div className={styles.wrapper}>
+                <div className={styles.wrapper} style={{position: 'relative'}}>
                     {this.renderInputs()}
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                     <div className={styles.calendar} style={{display: displayPicker}} ref={this.datepickerRef}>
@@ -182,6 +185,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         <div className={styles.cover} onClick={this.toggle}/>
                     </div>
                 </div>
+                {this.props.withIcon && <i onClick={this.toggle} className={`material-icons ${styles.icon}`} >calendar_today</i>}
             </div>
         );
     }
