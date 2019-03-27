@@ -49,6 +49,9 @@ export interface ICheckBoxGroupProps {
     /** inverse styles for checkboxes */
     inverseStyle?: boolean;
 
+    /** alternate styles for checkboxes */
+    alternateStyle?: boolean;
+
     /** Callback that fires when Checkbox Group state changes */
     onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
@@ -94,6 +97,9 @@ export interface ICheckBoxProps {
 
     /** inverse styles for checkboxes */
     inverseStyle?: boolean;
+
+    /** alternate styles for checkboxes */
+    alternateStyle?: boolean;
 
     /** Checkbox description */
     description?: string;
@@ -332,6 +338,9 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
     const checkmarkDisplay = props.checked ? props.inverseStyle ? styles.inverseCheckbox : styles.transparentCheckmark : '';
     const inverseTick = props.inverseStyle ? styles.inverseTick : '';
 
+    const alternate = props.alternateStyle ? styles.alternateCheckbox : '';
+    const alternateTick = props.alternateStyle ? styles.inverseTick : '';
+
     return (
         <div
             // htmlFor={props.id}
@@ -349,8 +358,8 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 className={`material-icons`}
             />
             <label htmlFor={props.id || genId}>
-                <span className={`${styles.checkmark} ${checkmarkDisplay}`} />
-                {props.checked && <span className={`${styles.checkboxTick} ${inverseTick}`} />}
+                <span className={`${styles.checkmark} ${checkmarkDisplay} ${alternate}`} />
+                {props.checked && <span className={`${styles.checkboxTick} ${inverseTick} ${alternateTick}`} />}
                 <span className={styles.label}>{label}</span>
             </label>
             <br/>
