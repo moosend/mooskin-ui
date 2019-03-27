@@ -9,7 +9,7 @@ class DatePickerExample extends React.Component {
         this.state = {
             date: moment().add(24, 'days'),
             date2: moment(),
-            date3: moment(),
+            date3: undefined,
             dateSelect1: 0,
             dateSelect2: 0,
             dateSelect3: 0,
@@ -30,7 +30,7 @@ class DatePickerExample extends React.Component {
                 <br/>
                 <DatePicker preventPast description="some description" onChange={this.onChange} format={'DD MMM YYYY'} label={'Date only:'} dateOnly dataLabel={'date2'} date={this.state.date2}/>
                 <br/>
-                <DatePicker nowButton label="Allowed Input: " allowInput date={this.state.date3} format={'D / M / Y'} onChange={this.onChange} dataLabel={'date3'}/>
+                <DatePicker nowButton label="With Placeholder: " date={this.state.date3} format={'D / M / Y'} onChange={this.onChange} dataLabel={'date3'}/>
                 <br/>
                 <DateSelect dataLabel={'dateSelect1'} onChange={this.onSelectChange} format="12-Hour" value={this.state.dateSelect1} type="hour" label="Hour (12H)" />
                 <br/>
