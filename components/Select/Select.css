@@ -299,6 +299,14 @@
     box-shadow: 0 0 1px #888888;
 }
 
+.alternateContainer .innerInput {
+    font-size: 14px;
+}
+
+.alternateContainer .innerDiv {
+    font-size: 14px;
+}
+
 @keyframes spin {
     100% {
         transform: rotate(360deg);
