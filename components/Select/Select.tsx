@@ -62,6 +62,8 @@ export interface ISelectProps {
     /** locks select when a value is selected */
     lockSelected?: boolean;
 
+    allowSelectOnLocked?: boolean;
+
     /** validate function */
     validate?: (data: IValidationCallbackData) => boolean;
 
@@ -157,6 +159,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const selectValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : this.props.selected;
         const spinnerClass = this.props.alternate ? styles.alternateSpinner : styles.spinner;
 
+        const {list} = this.state;
+
         return (
             <div
                 className={`select-component ${styles.componentContainer} ${labelPos} ${this.props.className}`}
@@ -193,7 +197,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                                 {options}
                             </ul>
                         </div>
-                        {this.props.lockSelected && this.props.selected && !this.props.isLoading && this.renderLockContainer(selected)}
+                        {this.props.lockSelected && this.props.selected && !this.props.isLoading && !list && this.renderLockContainer(selected)}
                     </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
@@ -406,6 +410,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 <div className={styles.lockText}>
                     {selected}
                 </div>
+                {this.props.allowSelectOnLocked && <div className={styles.arrowDownLocked} onClick={this.onOpenList} />}
                 <i onClick={this.onClick('')} className={`material-icons ${styles.close}`}>
                     close
                 </i>
