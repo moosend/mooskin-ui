@@ -5,7 +5,7 @@ exports[`Switch renders correctly 1`] = `
   className="switchContainer"
 >
   <div
-    className="switch-component onSwitch onSlider disabledSwitch switch myClass"
+    className="switch-component onSlider disabledSwitch switch myClass"
     id="switch1"
     onClick={[Function]}
     style={

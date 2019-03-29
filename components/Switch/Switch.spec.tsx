@@ -38,7 +38,7 @@ describe('Switch', () => {
 
         const component = shallow(<Switch on/>);
 
-        expect(component.find('label').text()).toEqual('ACTIVE');
+        expect(component.find('label').first().text()).toEqual('ACTIVE');
     });
 
     test('onClick is not called when a disabled Switch is clicked', () => {
@@ -46,7 +46,7 @@ describe('Switch', () => {
 
         const component = shallow(<Switch onClick={func} disabled/>);
 
-        component.find('div').last().simulate('click');
+        component.find('div').at(1).simulate('click');
         expect(func).not.toHaveBeenCalled();
     });
 
@@ -55,7 +55,7 @@ describe('Switch', () => {
 
         const component = shallow(<Switch onClick={func}/>);
 
-        component.find('div').last().simulate('click');
+        component.find('div').at(1).simulate('click');
         expect(func).toHaveBeenCalled();
     });
 
