@@ -56,6 +56,9 @@ export interface ISelectProps {
     /** adds alternate styles for select */
     alternate?: boolean;
 
+    /** alternate style colors */
+    alternateStyleColor?: boolean;
+
     /** locks select when a value is selected */
     lockSelected?: boolean;
 
@@ -147,7 +150,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const alternateLabelContainer = this.props.alternate ? {padding: 11} : {};
         const alternateLabel = this.props.alternate ? {paddingTop: 11} : {};
         const alternateOptions = this.props.alternate ? styles.alternateOptions : '';
-        const alternateContainer = this.props.alternate ? styles.alternateContainer : '';
+        const alternateContainer = this.props.alternate ? this.props.alternateStyleColor ?
+        `${styles.alternateContainerColor} ${styles.alternateContainer}` : styles.alternateContainer : '';
         const valueColor = this.props.alternate && this.props.selected ? {color: '#5ccdde'} : {};
 
         const selectValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : this.props.selected;

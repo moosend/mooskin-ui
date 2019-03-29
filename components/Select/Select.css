@@ -299,6 +299,22 @@
     box-shadow: 0 0 1px #888888;
 }
 
+.alternateContainerColor {
+    box-shadow: 0 0 1px 1px #5ccdde;
+}
+
+.alternateContainerColor .innerDiv {
+    color: #5ccdde;
+}
+
+.alternateContainerColor .arrowUp {
+    border-color: transparent transparent #5ccdde;
+}
+
+.alternateContainerColor .arrowDown {
+    border-color: #5ccdde transparent transparent;
+}
+
 .alternateContainer .innerInput {
     font-size: 14px;
 }
