@@ -3,7 +3,7 @@
 exports[`CheckBox renders CheckBox correctly 1`] = `
 <div
   className="checkbox-component checkbox
-                    disabledCheckbox myClass checkboxChecked undefined"
+                    disabledCheckbox myClass  undefined"
   style={
     Object {
       "color": "blue",
@@ -112,7 +112,7 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
       >
         <div
           className="checkbox-component checkbox
-                      checkboxChecked undefined"
+                       undefined"
           style={
             Object {
               "marginRight": "10px",

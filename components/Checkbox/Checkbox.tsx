@@ -319,13 +319,12 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
     const disabledStyles = props.disabled ? styles.disabledCheckbox : '';
     const label = props.label || '';
     const checked = props.checked ? true : false;
-    const checkedStyles = !props.checked ? '' : styles.checkboxChecked;
     const spacing = props.spacing ?
                     props.horizontal ?
                     {marginRight: `${props.spacing}px`} :
                     {marginBottom: `${props.spacing}px`} : {};
     const classes = `checkbox-component ${styles.checkbox}
-                    ${disabledStyles} ${props.className} ${checkedStyles} ${status}`;
+                    ${disabledStyles} ${props.className}  ${status}`;
 
     const genId = generateId();
 
@@ -335,10 +334,12 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
         };
     };
 
-    const checkmarkDisplay = props.checked ? props.inverseStyle ? styles.inverseCheckbox : styles.transparentCheckmark : '';
+    const checkmarkDisplay = props.checked ? props.inverseStyle ?
+        styles.inverseCheckbox :
+        props.alternateStyle ? '' : styles.transparentCheckmark : '';
     const inverseTick = props.inverseStyle ? styles.inverseTick : '';
 
-    const alternate = props.alternateStyle ? styles.alternateCheckbox : '';
+    const alternateCheckmark = props.alternateStyle ? props.checked ? styles.alternateChecked : styles.alternateCheckbox : '';
     const alternateTick = props.alternateStyle ? styles.inverseTick : '';
 
     return (
@@ -358,7 +359,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 className={`material-icons`}
             />
             <label htmlFor={props.id || genId}>
-                <span className={`${styles.checkmark} ${checkmarkDisplay} ${alternate}`} />
+                <span className={`${styles.checkmark} ${checkmarkDisplay} ${alternateCheckmark}`} />
                 {props.checked && <span className={`${styles.checkboxTick} ${inverseTick} ${alternateTick}`} />}
                 <span className={styles.label}>{label}</span>
             </label>

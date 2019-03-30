@@ -52,6 +52,10 @@
     border: 1px solid #5ccdde;
 }
 
+.alternateChecked{
+    background-color: #5ccdde;
+}
+
 .inverseTick {
     border: solid #fff;
     border-width: 0 3px 3px 0;
@@ -65,16 +69,12 @@
     background-color: #3F3F3F;
 }
 
-.checkbox input:checked ~ label > .alternateCheckbox {
+.checkbox label:hover > .alternateChecked {
     background-color: #5ccdde;
 }
 
-.checkbox input:checked ~ label:hover > .alternateCheckbox {
+.checkbox input:checked ~ label:hover > .alternateChecked {
     background-color: #5ccdde;
-}
-
-.transparentCheckmark {
-    background: transparent;
 }
 
 .label {
