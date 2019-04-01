@@ -60,13 +60,11 @@ class Switch extends React.Component<ISwitchProps, {}> {
 
         const {id, style, className, disabled, label} = this.props;
 
-        const toggleClasses = this.props.on ? `${styles.onSwitch} ${styles.onSlider}` : styles.offSwitch;
+        const toggleClasses = this.props.on ? styles.onSlider : '';
 
         const disabledSwitch = disabled ? styles.disabledSwitch : '';
 
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
-
-        const text = this.switchLabel();
 
         return (
 
@@ -79,10 +77,28 @@ class Switch extends React.Component<ISwitchProps, {}> {
                     className={`switch-component ${toggleClasses} ${disabledSwitch} ${styles.switch} ${className}`}
                 >
                     <span className={`switch-component ${styles.slider}`}/>
-                    <label className={`switch-component ${styles.text}`}>{text}</label>
+                    {this.props.disabled ? this.renderDisabledContent() : this.renderSwitchContent()}
                 </div>
             </div>
 
+        );
+    }
+
+    renderDisabledContent = () => {
+        return (
+            <label className={`switch-component ${styles.text}`}>{this.props.disabledLabel}</label>
+        );
+    }
+
+    renderSwitchContent = () => {
+
+        const { onLabel, offLabel, on} = this.props;
+
+        return (
+            <div style={{display: 'flex', height: '100%'}} className={on ? styles.onContainer : styles.offContainer}>
+                <label className={`switch-component ${styles.text} ${styles.onSwitch}`}>{onLabel}</label>
+                <label className={`switch-component ${styles.text} ${styles.offSwitch}`}>{offLabel}</label>
+            </div>
         );
     }
 
@@ -90,16 +106,6 @@ class Switch extends React.Component<ISwitchProps, {}> {
         !this.props.disabled &&
         this.props.onClick &&
         this.props.onClick(e, {value: !this.props.on && !this.props.disabled, dataLabel: this.props.dataLabel});
-    }
-
-    switchLabel = () => {
-        if (this.props.disabled){
-            return this.props.disabledLabel;
-        } else if (!this.props.disabled && this.props.on) {
-            return this.props.onLabel;
-        } else {
-            return this.props.offLabel;
-        }
     }
 }
 

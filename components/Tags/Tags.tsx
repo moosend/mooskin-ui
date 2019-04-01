@@ -12,6 +12,9 @@ export interface ITagsProps{
     /** tagged data */
     tags: string[];
 
+    /** tags that are active e.g. used in filters */
+    activeTags?: string[];
+
     /** validate input wether it should accept emails or add a custom validation */
     validateTag?: 'email' | ((tag: string) => boolean);
 
@@ -97,6 +100,9 @@ export interface ITagProps{
 
     /** override tags class */
     className?: string;
+
+    /** applies active classes to tag */
+    active?: boolean;
 
     onClickTag?: (e: React.MouseEvent<HTMLElement>) => void;
 
@@ -231,11 +237,15 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         const clickableTag = this.props.onTagClick ? styles.clickableTag : '';
 
         return tags.map((value, i) => {
+
+            const active = this.props.activeTags && this.props.activeTags.includes(value);
+
             return (
                 <Tag
                     alternate={this.props.alternate}
                     tag={value}
                     key={i}
+                    active={active}
                     onClickTag={(e) => onClickTag(e, value, i)}
                     onClickRemove={this.removeTag(i)}
                     className={`${clickableTag} ${this.props.tagClasses}`}
@@ -699,18 +709,22 @@ export const Tag: React.StatelessComponent<ITagProps> = (props) => {
         props.onClickRemove && props.onClickRemove(e);
     };
 
+    const activeTag = props.active ? styles.activeTag : '';
+
     return (
         <div
-            className={`${styles.tag} ${alternateTag} ${props.className}`}
+            className={`${styles.tag} ${alternateTag} ${props.className} ${activeTag}`}
             style={props.style}
             onClick={onClickTag}
         >
-            <div>
+            <div className={styles.tagText}>
                 {props.tag}
             </div>
-            <i onClick={onClickRemove} className={`material-icons ${styles.close}`}>
-                close
-            </i>
+            <div onClick={onClickRemove} className={styles.closeContainer}>
+                <i className={`material-icons ${styles.close}`}>
+                    close
+                </i>
+            </div>
         </div>
     );
 };

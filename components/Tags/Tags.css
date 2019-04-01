@@ -42,11 +42,19 @@
     /* animation: opa 0.2s; */
 }
 
+.closeContainer {
+    padding: 3px 8px 3px 5px !important;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .close{
     width: 10px;
     height: 10px;
     font-size: 10px !important;
-    margin-left: 10px;
     cursor: pointer;
     user-select: none;
 }
@@ -162,19 +170,29 @@
     color: #00cc44;
 }
 
+.tagText {
+    padding: 3px 5px 3px 8px !important;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
 .alternateContainer {
     background: transparent;
     padding: 0;
+}
+
+.activeTag {
+    background: #5ccdde !important;
 }
 
 .alternateTag {
     transition: all 400ms;
     border-radius: 12px;
     background: #bbb;
-    padding: 4px 8px;
+    padding: 0 !important;
     margin: 0 4px;
-    font-size: 10px;
-    font-weight: 600;
+    font-size: 10px !important;
+    font-weight: 600 !important;
 }
 
 .alternateTag:hover{

@@ -39,7 +39,14 @@ class SelectExample extends React.Component {
                     <Option value="option4">Some value 4</Option>
                 </Select>
                 <br/>
-                <Select noFilter placeholder="Sort by..." isLoading alternate onChange={this.onChange} selected={this.state.selected2} dataLabel="selected2">
+                <Select placeholder="Locked with allowed dropdown" allowSelectOnLocked alternate lockSelected onChange={this.onChange} selected={this.state.selected2} dataLabel="selected2">
+                    <Option value="option1">Some value 1</Option>
+                    <Option value="option2">Some Loooong value Some Loooong value Some Loooong value Some Loooong value 2</Option>
+                    <Option value="option3">Some value 3</Option>
+                    <Option value="option4">Some value 4</Option>
+                </Select>
+                <br/>
+                <Select noFilter placeholder="Sort by..." isLoading alternateStyleColor alternate onChange={this.onChange} selected={this.state.selected2} dataLabel="selected2">
                     <Option value="option1">Some value 1</Option>
                     <Option value="option2">Some value 2</Option>
                     <Option value="option3">Some value 3</Option>
