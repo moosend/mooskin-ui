@@ -219,6 +219,9 @@
 .lockText {
     flex-grow: 1;
     flex-shrink: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .close {
@@ -260,6 +263,7 @@
     cursor: pointer;
     height: 0px;
     margin-top: 3px;
+    margin-left: 5px;
     width: 0px;
     /* position: absolute; */
     border-color: #fff transparent transparent;
