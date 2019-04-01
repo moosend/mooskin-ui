@@ -155,7 +155,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const alternateContainer = this.props.alternate ? this.props.alternateStyleColor ?
         `${styles.alternateContainerColor} ${styles.alternateContainer}` : styles.alternateContainer : '';
 
-        const selectValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : this.props.selected;
+        const inputValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : this.props.selected;
+        const lockedValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : selected;
         const spinnerClass = this.props.alternate ? styles.alternateSpinner : styles.spinner;
 
         const {list} = this.state;
@@ -184,7 +185,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                         </div>
                         {this.props.alternate ? this.renderArrow() : <div className={styles.selectIcon} onClick={shouldToggle}/>}
                         <input
-                            value={selectValue}
+                            value={inputValue}
                             readOnly
                             style={{display: 'none'}}
                         />
@@ -196,7 +197,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                                 {options}
                             </ul>
                         </div>
-                        {this.props.lockSelected && this.props.selected && !this.props.isLoading && !list && this.renderLockContainer(selected)}
+                        {this.props.lockSelected && this.props.selected && !this.props.isLoading && !list && this.renderLockContainer(lockedValue)}
                     </div>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
@@ -232,7 +233,9 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const selected = this.props.selected as any;
         return (e: React.MouseEvent<HTMLElement>) => {
             if (selectedAsArray){
-                if (selected.includes(option)){
+                if (!option) {
+                    returnValue = [];
+                } else if (selected.includes(option)){
                     returnValue = this.removeOption(option);
                 } else {
                     returnValue = [...selected];
@@ -404,17 +407,23 @@ class Select extends React.Component<ISelectProps, ISelectState>{
     }
 
     renderLockContainer = (selected: string | Element | JSX.Element) => {
-        return (
-            <div className={styles.lockContainer}>
-                <div className={styles.lockText}>
-                    {selected}
+        let shouldReturn = true;
+        if (Array.isArray(this.props.selected) && !this.props.selected.length){
+            shouldReturn = false;
+        }
+        if (shouldReturn){
+            return (
+                <div className={styles.lockContainer}>
+                    <div className={styles.lockText}>
+                        {selected}
+                    </div>
+                    {this.props.allowSelectOnLocked && <div className={styles.arrowDownLocked} onClick={this.onOpenList} />}
+                    <i onClick={this.onClick('')} className={`material-icons ${styles.close}`}>
+                        close
+                    </i>
                 </div>
-                {this.props.allowSelectOnLocked && <div className={styles.arrowDownLocked} onClick={this.onOpenList} />}
-                <i onClick={this.onClick('')} className={`material-icons ${styles.close}`}>
-                    close
-                </i>
-            </div>
-        );
+            );
+        }
     }
 
     renderArrow = () => {
