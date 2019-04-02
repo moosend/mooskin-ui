@@ -134,6 +134,8 @@ class InputExample extends React.Component {
                 <Input iconPosition="left" customDropdowns={multipleDropdowns} label={'Multiple Custom Dropdowns'} labelTop value={this.state.value} onClipboardButtonClick={this.onClipboardButtonClick} clipboardButton="Copy Value" validate={this.validate} icon={this.state.icon} status={this.state.status} description={'Random stuff'} onChange={this.onChange} placeholder="placeholder" className=".input-field" autocomplete/>
                 <br/>
                 <Input icon="search" onChange={this.onChange} disabled value="disabled" description="This input is disabled"/>
+                <br/>
+                <Input icon="search" onChange={this.onChange} value={this.state.value} dataLabel='value' onChange={this.onChange} placeholder="Alternate styles" alternateStyle/>
             </div>
         );
     }

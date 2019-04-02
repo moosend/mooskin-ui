@@ -29,6 +29,9 @@ export interface IProps {
     /** override input name */
     name?: string;
 
+    /** apply alternate styles */
+    alternateStyle?: boolean;
+
     /** override input value */
     value: string | number;
 
@@ -182,8 +185,10 @@ class Input extends React.Component<IProps, IInputState> {
         const topLabel = labelTop ? styles.topLabel : '';
         const inputClasses = `${styles.inputLabel} ${topLabel}`;
 
+        const alternateStyle = this.props.alternateStyle ? styles.alternate : '';
+
         return (
-            <div className={`input-component ${styles.inputContainer} ${labelPos} ${className}`} style={style}>
+            <div className={`input-component ${styles.inputContainer} ${labelPos} ${alternateStyle} ${className}`} style={style}>
                 {label && <label className={inputClasses} style={spacing} htmlFor={this.id}>{label}</label>}
                 {this.renderInput()}
                 {this.state.activeDropDown !== -1 && <div onClick={this.removeDropDown} className={styles.overlay} />}
