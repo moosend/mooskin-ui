@@ -224,6 +224,31 @@
     cursor: pointer;
 }
 
+.alternate div[class*=innerDiv]{
+    background: #fff;
+    box-shadow: 0 0 1px #888;
+}
+
+.alternate input[class*=input]{
+    width: 100%;
+    font-size: 14px !important;
+    color: #bebebe !important;
+}
+
+.alternate input[class*=input]::placeholder{
+    color: #bebebe !important;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.alternate div[class*=icon] {
+    padding-left: 0px !important;
+}
+
+.alternate > div > div{
+    height: 40px;
+}
+
 :global(.emoji-dialog .emoji-row .emoji){
     width: 35px;
     height: 35px;
