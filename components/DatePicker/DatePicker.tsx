@@ -35,6 +35,9 @@ export interface IDateProps{
     /** wether the datepicker should be for date only */
     dateOnly?: boolean;
 
+    /** changes the component into a date range component */
+    dateRange?: boolean;
+
     /** with of the label within the datepicker container */
     labelWidth?: number;
 
@@ -158,7 +161,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
         const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
         // const value = this.props.date ? moment(this.props.date).format(this.props.format) : undefined;
         const descStatus = this.getDescStatus();
-        const description = this.props.description;
+        const {description} = this.props;
 
         this.toggleButtons();
 
@@ -170,20 +173,28 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
             >
                 {this.props.label && <label className={styles.label} style={spacing} >{this.props.label}</label>}
                 <div className={styles.wrapper} style={{position: 'relative'}}>
-                    {this.renderInputs()}
-                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
-                    <div className={styles.calendar} style={{display: displayPicker}} ref={this.datepickerRef}>
-                        <InputMoment
-                            moment={this.props.date || moment()}
-                            onChange={this.onChange}
-                            onSave={this.toggle}
-                        />
-                        {this.props.nowButton && this.renderNowButton()}
-                        <div className={styles.cover} onClick={this.toggle}/>
-                    </div>
+                    {this.renderByType({displayPicker, descStatus, description})}
                 </div>
                 <i onClick={this.toggle} className={`material-icons ${styles.icon}`} >event_available</i>
             </div>
+        );
+    }
+
+    renderByType = ({displayPicker, descStatus, description}: {displayPicker: string, descStatus: string, description?: string}) => {
+        return (
+            <>
+                {this.renderInputs()}
+                {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
+                <div className={styles.calendar} style={{display: displayPicker}} ref={this.datepickerRef}>
+                    <InputMoment
+                        moment={this.props.date || moment()}
+                        onChange={this.onChange}
+                        onSave={this.toggle}
+                    />
+                    {this.props.nowButton && this.renderNowButton()}
+                    <div className={styles.cover} onClick={this.toggle}/>
+                </div>
+            </>
         );
     }
 
