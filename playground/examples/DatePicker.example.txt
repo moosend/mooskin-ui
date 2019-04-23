@@ -10,10 +10,6 @@ class DatePickerExample extends React.Component {
             date: moment().add(24, 'days'),
             date2: moment(),
             date3: undefined,
-            dateRange: {
-                start: moment(),
-                end: moment().add(2, 'days')
-            }
             dateSelect1: 0,
             dateSelect2: 0,
             dateSelect3: 0,
@@ -49,13 +45,12 @@ class DatePickerExample extends React.Component {
                 <DateSelect dataLabel={'dateSelect6'} onChange={this.onSelectChange} value={this.state.dateSelect6} type="ordinal" />
                 <br/>
                 <DatePicker disabled/>
-                <br/>
-                <DatePicker dateRange onChange={this.onChange} value={this.state.dateRange}/>
             </div>
         );
     }
 
     onChange(data){
+        console.log(moment(data.value).format('DD / MM / YYYY - HH:mm'));
         this.setState({[data.dataLabel]: data.value});
     }
 
