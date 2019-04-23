@@ -11,7 +11,6 @@ import { renderEditableExample } from './tools/ReactLiveEditor/ReactLiveEditor';
 
 import {
     ABSlider,
-    Bar,
     Button,
     Carousel,
     Checkbox,
@@ -20,8 +19,8 @@ import {
     Col,
     Content,
     DatePicker,
+    DateRange,
     DateSelect,
-    Doughnut,
     ExpandedSection,
     // Fieldset,
     FileUpload,
@@ -34,7 +33,6 @@ import {
     Input,
     ItemContent,
     Label,
-    Line,
     List,
     ListItem,
     Loader,
@@ -42,7 +40,6 @@ import {
     Modal,
     Option,
     Pagination,
-    Pie,
     Radio,
     RadioAccordion,
     RadioAccordionContent,
@@ -139,7 +136,7 @@ export const App = (props: any) => {
                     {renderEditableExample('LoadingBar', { LoadingBar, Button })}
                 </Col>
                 <Col lg={6} md={6}>
-                    {renderEditableExample('Loader', { Grid, Row, Col, Button, Pie, Loader, H3 })}
+                    {renderEditableExample('Loader', { Grid, Row, Col, Button, Loader, H3 })}
                 </Col>
             </Row>
             <Row id="buttons">
@@ -175,11 +172,14 @@ export const App = (props: any) => {
                 <Col lg={6} md={6}>
                     {renderEditableExample('Select', { Select, Option })}
                 </Col>
+                <Col lg={6}>
+                    {renderEditableExample('File', { FileUpload })}
+                </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('DatePicker', { DatePicker, DateSelect, moment, Button })}
                 </Col>
-                <Col lg={12}>
-                    {renderEditableExample('File', { FileUpload })}
+                <Col lg={6} md={6}>
+                    {renderEditableExample('DateRange', { DateRange, moment })}
                 </Col>
             </Row>
             <Row id="forms">
@@ -274,19 +274,6 @@ export const App = (props: any) => {
                     {renderEditableExample('Grid', { Col, Grid, Row })}
                 </Col>
             </Row>
-            <Row id="charts">
-                <Col lg={12}>
-                    <H1>Charts</H1>
-                </Col>
-                <Col lg={6} md={6} sm={6}>
-                    {renderEditableExample('Charts/Pie', { Pie, Col, Grid, Row })}
-                </Col>
-                <Col lg={6} md={6} sm={6}>
-                    {renderEditableExample('Charts/Doughnut', { Doughnut, Col, Grid, Row })}
-                </Col>
-            </Row>
-            {renderEditableExample('Charts/Bar', { Bar, Col, Grid, Row })}
-            {renderEditableExample('Charts/Line', { Line, Col, Grid, Row })}
         </Grid>
     );
 };

@@ -185,12 +185,6 @@ import {Input} from '@moosend/mooskin'
 * [Topbar](https://github.com/moosend/mooskin-ui/tree/master/components/Topbar)
 * [TopNotification](https://github.com/moosend/mooskin-ui/tree/master/components/TopNotification)
 
-#### Charts
-* [Pie](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Pie)
-* [Doughnut](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Doughnut)
-* [Bar](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Bar)
-* [Line](https://github.com/moosend/mooskin-ui/tree/master/components/Charts/Line)
-
 ## Playground (development)
 
 Clone the [Mooskin](https://github.com/moosend/mooskin-ui) repository first. Then install dependencies with
