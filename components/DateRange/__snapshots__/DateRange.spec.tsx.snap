@@ -159,6 +159,37 @@ exports[`DateRange renders correctly 1`] = `
       <div
         style={
           Object {
+            "background": "#fff",
+            "borderTop": "1px solid #bebebe",
+            "display": "flex",
+            "justifyContent": "space-around",
+          }
+        }
+      >
+        <H5
+          className=""
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          Start
+        </H5>
+        <H5
+          className=""
+          style={
+            Object {
+              "margin": 5,
+            }
+          }
+        >
+          End
+        </H5>
+      </div>
+      <div
+        style={
+          Object {
             "display": "flex",
           }
         }

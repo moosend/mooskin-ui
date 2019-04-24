@@ -7,11 +7,11 @@ import 'input-moment/dist/input-moment.css';
 import InputMoment from 'input-moment';
 import moment from 'moment';
 
+import Button from '../Button';
+import {H5} from '../Headings';
 import Select, {Option} from '../Select';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
-
-import Button from '../Button';
 
 export const rangeOptions = [
     {
@@ -166,7 +166,7 @@ export interface IDateRangeProps{
     id?: string;
 
     /** date passed will be the selected date */
-    date: {start: moment.Moment, end: moment.Moment};
+    date: {start: moment.Moment | null, end: moment.Moment | null};
 
     /** format the labeled date */
     format?: string;
@@ -202,7 +202,7 @@ export interface IDateRangeProps{
 export interface IDateRangeState{
     displayPicker: boolean;
     option: string;
-    date: {start: moment.Moment, end: moment.Moment};
+    date: {start: moment.Moment | null, end: moment.Moment | null};
 }
 
 export default class DateRange extends React.Component<IDateRangeProps, IDateRangeState>{
@@ -233,8 +233,14 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         if ((prevState.option !== this.state.option) && (this.state.option !== 'fixed')){
             this.setNewRange();
         }
-        if (prevState.displayPicker === false && this.state.displayPicker === true){
-            this.setState({date: this.setInitialDate()});
+        if (
+            prevState.displayPicker === true &&
+            this.state.displayPicker === false &&
+            this.props.date &&
+            this.props.date.end !== null &&
+            this.props.date.start !== null
+        ){
+            this.setState({date: this.props.date});
         }
     }
 
@@ -269,14 +275,18 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
                         >
                             {this.renderOptions()}
                         </Select>
+                        <div style={{display: 'flex', background: '#fff', justifyContent: 'space-around', borderTop: '1px solid #bebebe'}}>
+                            <H5 style={{margin: 5}}>Start</H5>
+                            <H5 style={{margin: 5}}>End</H5>
+                        </div>
                         <div style={{display: 'flex'}}>
                             <InputMoment
-                                moment={this.state.date.start || moment()}
+                                moment={moment(this.state.date.start || '') || moment()}
                                 onChange={(date: moment.Moment) => this.onChange(date, 'start')}
                             />
                             <div style={{width: 1, background: '#bebebe'}} />
                             <InputMoment
-                                moment={this.state.date.end || moment()}
+                                moment={moment(this.state.date.end || '') || moment()}
                                 onChange={(date: moment.Moment) => this.onChange(date, 'end')}
                             />
                         </div>
@@ -284,7 +294,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
                             <Button inverseStyle onClick={this.onRemove}>Remove</Button>
                             <Button style={{marginLeft: 10}} onClick={this.onApply}>Apply</Button>
                         </div>
-                        <div className={styles.cover} onClick={this.onRemove}/>
+                        <div className={styles.cover} onClick={this.toggle}/>
                     </div>
                 </div>
                 <i onClick={this.toggle} className={`material-icons ${styles.icon}`} >event_available</i>
@@ -324,7 +334,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value: {start: null, end: null}, dataLabel: this.props.dataLabel});
-        this.setState({displayPicker: false});
+        this.setState({displayPicker: false, date: {start: moment(), end: moment()}});
     }
 
     toggle = () => {
