@@ -40,7 +40,12 @@ describe('DateRange', () => {
     test('onChange callback is called when date is changed', () => {
         const func = jest.fn();
 
-        const component = mount(<DateRange date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}} onChange={func}/>);
+        const component = mount(
+            <DateRange
+                date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}}
+                onChange={func}
+            />
+        );
 
         component.find('InputMoment').first().find('td').at(15).simulate('click');
         expect(func).toHaveBeenCalled();
@@ -49,7 +54,12 @@ describe('DateRange', () => {
     test('datepicker shows when input is clicked and disappears when anywhere except dateRange is clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(<DateRange date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}} onChange={func}/>);
+        const component = shallow(
+            <DateRange
+                date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}}
+                onChange={func}
+            />
+        );
 
         component.find('input').simulate('click');
         expect(component.find('div').at(2).prop('style')).toEqual({display: 'block'});
@@ -57,15 +67,5 @@ describe('DateRange', () => {
         component.find('div').last().simulate('click');
         expect(component.find('div').at(2).prop('style')).toEqual({display: 'none'});
     });
-
-    // test('calls onChange function when date select is clicked', () => {
-    //     const func = jest.fn();
-
-    //     const component = shallow(<DateRange onChange={func} date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}} />);
-
-    //     component.find('Option').first().simulate('click');
-    //     expect(func).toHaveBeenCalled();
-
-    // });
 
 });
