@@ -165,10 +165,10 @@ export const Col: React.StatelessComponent<IColProps> = (props) => {
 
     const assembleAvengers = () => {
         if (props.lg || props.md || props.sm || props.xs){
-            const lgClass = choosePath(large, 'large') || styles['large-12'];
-            const mdClass = choosePath(medium, 'medium') || styles['medium-12'];
-            const smClass = choosePath(small, 'small') || styles['small-12'];
-            const xsClass = choosePath(xSmall, 'xSmall') || styles['xSmall-12'];
+            const lgClass = choosePath(large, 'large') || /* styles['large-12'] */ styles.default;
+            const mdClass = choosePath(medium, 'medium') || /* styles['medium-12'] */ styles.default;
+            const smClass = choosePath(small, 'small') || /* styles['small-12'] */ styles.default;
+            const xsClass = choosePath(xSmall, 'xSmall') || /* styles['xSmall-12'] */ styles.default;
             return `${lgClass} ${mdClass} ${smClass} ${xsClass} ${props.className}`;
         } else{
             const defaultClass = !props.lg && !props.md && !props.sm && !props.xs ? styles.default : '';

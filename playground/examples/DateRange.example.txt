@@ -1,0 +1,28 @@
+class DateRangeExample extends React.Component {
+    
+    constructor(){
+        super();
+        this.onChange = this.onChange.bind(this);
+
+        this.state = {
+            date: {
+                start: null,
+                end: null
+            }
+        }
+    }
+    
+    render(){
+
+        return(
+            <div>
+                <DateRange description="Date range" onChange={this.onChange} label={'Select Dates:'} dataLabel={'date'} date={this.state.date}/>
+            </div>
+        );
+    }
+
+    onChange(data){
+        this.setState({[data.dataLabel]: data.value});
+    }
+
+}

@@ -6,6 +6,7 @@ export {default as CheckListItem} from '../CheckListItem';
 export {default as CheckboxGroup, Checkbox} from '../Checkbox';
 export {default as ClipboardButton} from '../ClipboardButton';
 export {default as DatePicker, DateSelect} from '../DatePicker';
+export {default as DateRange} from '../DateRange';
 export {default as Form, FormGroup} from '../Form';
 export {default as FileUpload} from '../File';
 export {default as Fieldset} from '../Fieldset';
@@ -35,7 +36,5 @@ export {default as Tags} from '../Tags';
 export {default as TopNotification} from '../TopNotification';
 export {default as Table, TableHeader} from '../Table';
 export {default as Topbar} from '../Topbar';
-
-export {Bar, Doughnut, Pie, Line} from '../Charts';
 
 export {default as IInputCallbackData, IValidationCallbackData} from '../_utils';
