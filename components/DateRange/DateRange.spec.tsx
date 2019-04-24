@@ -48,6 +48,9 @@ describe('DateRange', () => {
         );
 
         component.find('InputMoment').first().find('td').at(15).simulate('click');
+        expect(func).not.toHaveBeenCalled();
+
+        component.find('Button').last().simulate('click');
         expect(func).toHaveBeenCalled();
     });
 

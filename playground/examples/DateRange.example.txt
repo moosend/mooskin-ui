@@ -6,8 +6,8 @@ class DateRangeExample extends React.Component {
 
         this.state = {
             date: {
-                start: moment(),
-                end: moment().add(2, 'days')
+                start: null,
+                end: null
             }
         }
     }

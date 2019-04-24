@@ -11,7 +11,7 @@ import Select, {Option} from '../Select';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
-// import Button from '../Button';
+import Button from '../Button';
 
 export const rangeOptions = [
     {
@@ -202,12 +202,14 @@ export interface IDateRangeProps{
 export interface IDateRangeState{
     displayPicker: boolean;
     option: string;
+    date: {start: moment.Moment, end: moment.Moment};
 }
 
 export default class DateRange extends React.Component<IDateRangeProps, IDateRangeState>{
 
     static defaultProps = {
         className: '',
+        date: {start: moment(), end: moment()},
         format: 'DD MMM YYYY',
         placeholder: 'Please select date...',
         style: {}
@@ -221,6 +223,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         super(props);
 
         this.state = {
+            date: this.setInitialDate(),
             displayPicker: false,
             option: ''
         };
@@ -229,6 +232,9 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
     componentDidUpdate(prevProps: IDateRangeProps, prevState: IDateRangeState){
         if ((prevState.option !== this.state.option) && (this.state.option !== 'fixed')){
             this.setNewRange();
+        }
+        if (prevState.displayPicker === false && this.state.displayPicker === true){
+            this.setState({date: this.setInitialDate()});
         }
     }
 
@@ -265,18 +271,20 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
                         </Select>
                         <div style={{display: 'flex'}}>
                             <InputMoment
-                                moment={this.props.date.start || moment()}
+                                moment={this.state.date.start || moment()}
                                 onChange={(date: moment.Moment) => this.onChange(date, 'start')}
-                                onSave={this.toggle}
                             />
                             <div style={{width: 1, background: '#bebebe'}} />
                             <InputMoment
-                                moment={this.props.date.end || moment()}
+                                moment={this.state.date.end || moment()}
                                 onChange={(date: moment.Moment) => this.onChange(date, 'end')}
-                                onSave={this.toggle}
                             />
                         </div>
-                        <div className={styles.cover} onClick={this.toggle}/>
+                        <div className={styles.buttonContainer}>
+                            <Button inverseStyle onClick={this.onRemove}>Remove</Button>
+                            <Button style={{marginLeft: 10}} onClick={this.onApply}>Apply</Button>
+                        </div>
+                        <div className={styles.cover} onClick={this.onRemove}/>
                     </div>
                 </div>
                 <i onClick={this.toggle} className={`material-icons ${styles.icon}`} >event_available</i>
@@ -289,10 +297,11 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         const {date, format} = this.props;
         const start = date && date.start && moment(date.start).format(format);
         const end = date && date.end && moment(date.end).format(format);
+        const value = start === null || end === null ? 'No Dates Selected' : `${start} - ${end}`;
         return (
             <input
                 readOnly
-                value={`${start} - ${end}`}
+                value={value}
                 onClick={this.toggle}
                 className={`${styles.dateInput} ${disabledClasses}`}
                 disabled={this.props.disabled}
@@ -301,10 +310,21 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
     }
 
     onChange = (date: moment.Moment, type: string) => {
+        this.setState({date: {...this.state.date, [type]: date}, option: 'fixed'});
+    }
+
+    onApply = () => {
         !this.props.disabled &&
         this.props.onChange &&
-        this.props.onChange({value: {...this.props.date, [type]: date}, dataLabel: this.props.dataLabel});
-        this.setState({option: 'fixed'});
+        this.props.onChange({value: this.state.date, dataLabel: this.props.dataLabel});
+        this.setState({displayPicker: false});
+    }
+
+    onRemove = () => {
+        !this.props.disabled &&
+        this.props.onChange &&
+        this.props.onChange({value: {start: null, end: null}, dataLabel: this.props.dataLabel});
+        this.setState({displayPicker: false});
     }
 
     toggle = () => {
@@ -330,8 +350,17 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
             return item.value === this.state.option;
         });
         option && option.setDate && !this.props.disabled &&
-        this.props.onChange &&
-        this.props.onChange({value: option.setDate, dataLabel: this.props.dataLabel});
+        this.setState({date: option.setDate});
+    }
+
+    setInitialDate = () => {
+        if (this.props.date && this.props.date.end && this.props.date.start){
+            return {
+                end: this.props.date.end,
+                start: this.props.date.start
+            };
+        }
+        return {start: moment(), end: moment()};
     }
 
 }

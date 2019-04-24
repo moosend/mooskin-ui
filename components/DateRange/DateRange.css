@@ -97,6 +97,14 @@
     border-radius: 0px;
 }
 
+.buttonContainer {
+    padding: 10px;
+    background: #fff;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #bebebe;
+}
+
 :global(.daterange-component .m-input-moment){
     background-color: #ffffff;
     user-select: none;

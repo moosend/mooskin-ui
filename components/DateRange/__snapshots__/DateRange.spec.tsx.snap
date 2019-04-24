@@ -169,7 +169,6 @@ exports[`DateRange renders correctly 1`] = `
           moment={"2013-01-01T13:00:00.000Z"}
           nextMonthIcon="ion-ios-arrow-right"
           onChange={[Function]}
-          onSave={[Function]}
           prevMonthIcon="ion-ios-arrow-left"
         />
         <div
@@ -186,9 +185,33 @@ exports[`DateRange renders correctly 1`] = `
           moment={"2013-01-01T13:00:00.000Z"}
           nextMonthIcon="ion-ios-arrow-right"
           onChange={[Function]}
-          onSave={[Function]}
           prevMonthIcon="ion-ios-arrow-left"
         />
+      </div>
+      <div
+        className="buttonContainer"
+      >
+        <Button
+          className=""
+          inverseStyle={true}
+          onClick={[Function]}
+          style={Object {}}
+          type="button"
+        >
+          Remove
+        </Button>
+        <Button
+          className=""
+          onClick={[Function]}
+          style={
+            Object {
+              "marginLeft": 10,
+            }
+          }
+          type="button"
+        >
+          Apply
+        </Button>
       </div>
       <div
         className="cover"
