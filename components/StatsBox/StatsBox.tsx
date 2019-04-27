@@ -6,13 +6,14 @@ export interface IStatsBoxProps {
     /** css class */
     className?: string;
 
-    /** main element style */
-    style?: React.CSSProperties;
-}
+    /** stast box side title */
+    sideTitle: string;
 
-export interface IStatsBoxChildProps {
-    /** css class */
-    className?: string;
+    /** stast box side color */
+    sideColor: string;
+
+    /** stast box side text color */
+    sideTextColor: string;
 
     /** main element style */
     style?: React.CSSProperties;
@@ -22,56 +23,25 @@ export default class StatsBox extends React.Component<IStatsBoxProps, {}>{
 
     static defaultProps: Partial<IStatsBoxProps> = {
         className: '',
+        sideTextColor: '#fff',
         style: {}
     };
 
     static displayName = 'StatsBox';
 
-    static StatsTitle: React.StatelessComponent<IStatsBoxChildProps>;
-    static StatsNumber: React.StatelessComponent<IStatsBoxChildProps>;
-    static StatsResult: React.StatelessComponent<IStatsBoxChildProps>;
-
     render(){
 
-        const {className, style} = this.props;
+        const {className, style, sideColor, sideTextColor, sideTitle} = this.props;
 
         return (
             <div style={style} className={`${styles.statsBox} ${className}`}>
-                {this.props.children}
+                <div className={styles.statsTitle} style={{background: sideColor, color: sideTextColor}}>
+                    {sideTitle}
+                </div>
+                <div className={styles.statsContent}>
+                    {this.props.children}
+                </div>
             </div>
         );
     }
 }
-
-export const StatsTitle: React.StatelessComponent<IStatsBoxChildProps> = (props) => {
-    return <div style={props.style} className={`${styles.statsTitle} ${props.className}`}>{props.children}</div>;
-};
-
-StatsTitle.defaultProps = {
-    className: '',
-    style: {}
-};
-
-StatsTitle.displayName = 'StatsTitle';
-
-export const StatsNumber: React.StatelessComponent<IStatsBoxChildProps> = (props) => {
-    return <div style={props.style} className={`${styles.statsNumber} ${props.className}`}>{props.children}</div>;
-};
-
-StatsNumber.defaultProps = {
-    className: '',
-    style: {}
-};
-
-StatsNumber.displayName = 'StatsNumber';
-
-export const StatsResult: React.StatelessComponent<IStatsBoxChildProps> = (props) => {
-    return <div style={props.style} className={`${styles.statsResult} ${props.className}`}>{props.children}</div>;
-};
-
-StatsResult.defaultProps = {
-    className: '',
-    style: {}
-};
-
-StatsResult.displayName = 'StatsResult';

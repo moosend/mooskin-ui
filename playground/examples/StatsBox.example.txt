@@ -1,29 +1,23 @@
 class StatsBoxExample extends React.Component {
     render(){
 
-        const styles = {
-            marginRight: 10
+        const style = {
+            margin: 10
         };
 
         return(
-            <div>
-                <StatsBox style={styles}>
-                    <StatsTitle>Unique Opens</StatsTitle>
-                    <StatsNumber>100%</StatsNumber>
-                    <StatsResult>1 unique</StatsResult>
-                    <StatsResult>5 total</StatsResult>
+            <div style={{background: '#F5F5F5', padding: 20, display: 'flex', flexWrap: 'wrap'}}>
+                <StatsBox style={style} sideColor="#2D2D2D" sideTitle="Recipients">
+                    <div>Content 1</div>
                 </StatsBox>
-                <StatsBox style={styles}>
-                    <StatsTitle>Link Clicks</StatsTitle>
-                    <StatsNumber>100%</StatsNumber>
-                    <StatsResult>1 unique</StatsResult>
-                    <StatsResult>5 total</StatsResult>
+                <StatsBox style={style} sideColor="#3AC4D7" sideTitle="Opens">
+                    <div>Content 2</div>
                 </StatsBox>
-                <StatsBox style={styles}>
-                    <StatsTitle>Unsubscribed</StatsTitle>
-                    <StatsNumber>100%</StatsNumber>
-                    <StatsResult>1 unique</StatsResult>
-                    <StatsResult>5 total</StatsResult>
+                <StatsBox style={style} sideColor="#F0B941" sideTitle="Clicks">
+                    <div>Content 2</div>
+                </StatsBox>
+                <StatsBox style={style} sideColor="#E16053" sideTitle="Unsubscribes">
+                    <div>Content 2</div>
                 </StatsBox>
             </div>
         );
