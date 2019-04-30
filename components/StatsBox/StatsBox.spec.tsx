@@ -1,5 +1,5 @@
 import * as React from 'react';
-import StatsBox, {StatsNumber, StatsResult, StatsTitle} from './StatsBox';
+import StatsBox from './StatsBox';
 
 import { shallow } from 'enzyme';
 
@@ -8,40 +8,24 @@ describe('StatsBox', () => {
     test('renders correctly', () => {
 
         const tree = shallow(
-            <StatsBox>
-                <StatsTitle>Unique Opens</StatsTitle>
-                <StatsNumber>100%</StatsNumber>
-                <StatsResult>5 total</StatsResult>
+            <StatsBox style={{width: 200}} sideColor="#2D2D2D" sideTitle="Recipients">
+                <div>Content 1</div>
             </StatsBox>
         );
 
         expect(tree).toMatchSnapshot();
     });
 
-    test('StatsTitle renders correctly', () => {
+    test('applies props correctly correctly', () => {
 
-        const tree = shallow(
-            <StatsTitle>Unique Opens</StatsTitle>
+        const component = shallow(
+            <StatsBox sideColor="#FEFEFE" sideTitle="Recipients" sideTextColor="blue">
+                <div>Content 1</div>
+            </StatsBox>
         );
 
-        expect(tree).toMatchSnapshot();
+        expect(component.find('.statsTitle').prop('style')).toEqual({background: '#FEFEFE', color: 'blue'});
+        expect(component.find('.statsTitle').text()).toEqual('Recipients');
     });
 
-    test('StatsNumber renders correctly', () => {
-
-        const tree = shallow(
-            <StatsNumber>100%</StatsNumber>
-        );
-
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('StatsResult renders correctly', () => {
-
-        const tree = shallow(
-            <StatsResult>5 total</StatsResult>
-        );
-
-        expect(tree).toMatchSnapshot();
-    });
 });

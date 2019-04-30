@@ -1,54 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StatsBox StatsNumber renders correctly 1`] = `
-<div
-  className="statsNumber "
-  style={Object {}}
->
-  100%
-</div>
-`;
-
-exports[`StatsBox StatsResult renders correctly 1`] = `
-<div
-  className="statsResult "
-  style={Object {}}
->
-  5 total
-</div>
-`;
-
-exports[`StatsBox StatsTitle renders correctly 1`] = `
-<div
-  className="statsTitle "
-  style={Object {}}
->
-  Unique Opens
-</div>
-`;
-
 exports[`StatsBox renders correctly 1`] = `
 <div
   className="statsBox "
-  style={Object {}}
+  style={
+    Object {
+      "width": 200,
+    }
+  }
 >
-  <StatsTitle
-    className=""
-    style={Object {}}
+  <div
+    className="statsTitle"
+    style={
+      Object {
+        "background": "#2D2D2D",
+        "color": "#fff",
+      }
+    }
   >
-    Unique Opens
-  </StatsTitle>
-  <StatsNumber
-    className=""
-    style={Object {}}
+    Recipients
+  </div>
+  <div
+    className="statsContent"
   >
-    100%
-  </StatsNumber>
-  <StatsResult
-    className=""
-    style={Object {}}
-  >
-    5 total
-  </StatsResult>
+    <div>
+      Content 1
+    </div>
+  </div>
 </div>
 `;
