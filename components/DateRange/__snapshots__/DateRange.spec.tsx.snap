@@ -36,6 +36,7 @@ exports[`DateRange renders correctly 1`] = `
       style={
         Object {
           "display": "none",
+          "left": 0,
         }
       }
     >
