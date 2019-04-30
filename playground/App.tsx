@@ -51,9 +51,6 @@ import {
     Slider,
     SmallIconButton,
     StatsBox,
-    StatsNumber,
-    StatsResult,
-    StatsTitle,
     Step,
     Steps,
     Switch,
@@ -257,7 +254,7 @@ export const App = (props: any) => {
                     {renderEditableExample('HorizontalRangeBar', { HorizontalRangeBar, Button })}
                 </Col>
                 <Col lg={6} md={6}>
-                    {renderEditableExample('StatsBox', { StatsBox, StatsNumber, StatsResult, StatsTitle })}
+                    {renderEditableExample('StatsBox', { StatsBox })}
                 </Col>
                 <Col lg={6} md={6}>
                     {renderEditableExample('Slider', { H3, Slider, ABSlider })}
