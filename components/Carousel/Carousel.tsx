@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import * as CarouselComponent from 'react-slick';
+import CarouselComponent from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
@@ -144,6 +144,12 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
         this.props.keySlide && window.removeEventListener('keydown', (e) => this.keyPressChangeSlide(e));
     }
 
+    componentDidUpdate(prevProps: ICarouselProps){
+        if (prevProps.goTo && (prevProps.goTo !== this.props.goTo)){
+            this.sliderRef.current.slickGoTo(this.props.goTo);
+        }
+    }
+
     render(){
 
         const {containerStyle, dynamicWidth} = this.props;
@@ -158,7 +164,7 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
                 id={this.props.id}
                 ref={this.carouselRef}
             >
-                <CarouselComponent.default
+                <CarouselComponent
                     ref={this.sliderRef}
                     slidesToShow={this.props.slidesToShow}
                     className={`${styles.carousel} ${this.props.className}`}
@@ -174,13 +180,12 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
                     autoplaySpeed={this.props.autoplaySpeed}
                     draggable={this.props.draggable}
                     infinite={this.props.infinite}
-                    slickGoTo={this.props.goTo}
                     pauseOnHover={this.props.pauseOnHover}
                     afterChange={this.props.onChange}
                     responsive={this.props.responsive}
                 >
                     {this.props.children}
-                </CarouselComponent.default>
+                </CarouselComponent>
             </div>
         );
 
