@@ -203,6 +203,7 @@ export interface IDateRangeState{
     displayPicker: boolean;
     option: string;
     date: {start: moment.Moment | null, end: moment.Moment | null};
+    alteredLeft: number;
 }
 
 export default class DateRange extends React.Component<IDateRangeProps, IDateRangeState>{
@@ -223,6 +224,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         super(props);
 
         this.state = {
+            alteredLeft: 0,
             date: this.setInitialDate(),
             displayPicker: false,
             option: ''
@@ -233,6 +235,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         if ((prevState.option !== this.state.option) && (this.state.option !== 'fixed')){
             this.setNewRange();
         }
+
         if (
             prevState.displayPicker === true &&
             this.state.displayPicker === false &&
@@ -241,6 +244,15 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
             this.props.date.start !== null
         ){
             this.setState({date: this.props.date});
+        }
+
+        if (prevState.displayPicker === false && this.state.displayPicker === true){
+            const elemBounding = this.daterangeRef.current.getBoundingClientRect();
+            const boundingRight = elemBounding.right;
+            const windowWidth = (window.innerWidth || document.documentElement.clientWidth) - 30;
+            if (boundingRight >= windowWidth) {
+                this.setState({alteredLeft: boundingRight - windowWidth});
+            }
         }
     }
 
@@ -265,7 +277,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
                 <div className={styles.wrapper} style={{position: 'relative'}}>
                     {this.renderInput()}
                     {description && <i className={`${styles.description}`}>{description}</i>}
-                    <div className={styles.rangeCalendar} style={{display: displayPicker}} ref={this.daterangeRef}>
+                    <div className={styles.rangeCalendar} style={{display: displayPicker, left: 0 - this.state.alteredLeft}} ref={this.daterangeRef}>
                         <Select
                             selected={this.state.option}
                             alternate
@@ -327,18 +339,18 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value: this.state.date, dataLabel: this.props.dataLabel});
-        this.setState({displayPicker: false});
+        this.setState({displayPicker: false, alteredLeft: 0});
     }
 
     onRemove = () => {
         !this.props.disabled &&
         this.props.onChange &&
         this.props.onChange({value: {start: null, end: null}, dataLabel: this.props.dataLabel});
-        this.setState({displayPicker: false, date: {start: moment(), end: moment()}});
+        this.setState({displayPicker: false, date: {start: moment(), end: moment()}, alteredLeft: 0});
     }
 
     toggle = () => {
-        this.setState({displayPicker: !this.state.displayPicker});
+        this.setState({displayPicker: !this.state.displayPicker, alteredLeft: 0});
     }
 
     renderOptions = () => {

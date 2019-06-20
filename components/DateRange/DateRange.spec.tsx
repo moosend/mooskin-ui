@@ -54,21 +54,21 @@ describe('DateRange', () => {
         expect(func).toHaveBeenCalled();
     });
 
-    test('datepicker shows when input is clicked and disappears when anywhere except dateRange is clicked', () => {
+    test('dateRange shows when input is clicked and disappears when anywhere except dateRange is clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(
+        const component = mount(
             <DateRange
                 date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}}
                 onChange={func}
             />
         );
 
-        component.find('input').simulate('click');
-        expect(component.find('div').at(2).prop('style')).toEqual({display: 'block'});
+        component.find('input').first().simulate('click');
+        expect(component.find('div').at(2).prop('style')).toEqual({display: 'block', left: 0});
 
         component.find('div').last().simulate('click');
-        expect(component.find('div').at(2).prop('style')).toEqual({display: 'none'});
+        expect(component.find('div').at(2).prop('style')).toEqual({display: 'none', left: 0});
     });
 
 });

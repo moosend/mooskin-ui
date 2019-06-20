@@ -1,11 +1,11 @@
 
-export interface IInputCallbackData {
+export interface IInputCallbackData<T = any> {
     dataLabel: string | undefined | null;
-    value: any;
+    value: T;
 }
 
-export interface IValidationCallbackData {
+export interface IValidationCallbackData<T = any> {
     dataLabel: string | undefined | null;
-    value?: any;
+    value?: T;
     required?: boolean;
 }
