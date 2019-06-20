@@ -144,9 +144,9 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
         this.props.keySlide && window.removeEventListener('keydown', (e) => this.keyPressChangeSlide(e));
     }
 
-    componentDidUpdate(prevProps: ICarouselProps){
-        if (prevProps.goTo && (prevProps.goTo !== this.props.goTo)){
-            this.sliderRef.current.slickGoTo(this.props.goTo);
+    componentWillReceiveProps(nextProps: ICarouselProps){
+        if (nextProps.goTo && (nextProps.goTo !== this.props.goTo)){
+            this.sliderRef && this.carouselGoTo(nextProps.goTo);
         }
     }
 
@@ -232,6 +232,10 @@ export default class Carousel extends React.Component<ICarouselProps, ICarouselS
             // right
             this.sliderRef.current.slickNext();
         }
+    }
+
+    carouselGoTo = (index: number) => {
+        this.sliderRef.current.slickGoTo(index);
     }
 
 }
