@@ -18,6 +18,7 @@
 .statsContent {
     /* flex-shrink: 1;
     flex-grow: 1; */
+    flex-grow: 1;
     padding: 20px;
     background: #fff;
     display: flex;
