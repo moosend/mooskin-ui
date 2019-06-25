@@ -1,6 +1,7 @@
 .statsBox{
     display: flex;
     border-radius: 8px;
+    flex-grow: 1;
 }
 
 .statsTitle{
