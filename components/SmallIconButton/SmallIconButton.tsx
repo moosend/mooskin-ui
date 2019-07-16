@@ -21,6 +21,9 @@ export interface ISmallIconButtonProps {
     /** override button styles */
     style?: React.CSSProperties;
 
+    /** type of the material icon */
+    type?: 'outlined' | 'two-tone' | 'round' | 'sharp';
+
     title?: string;
 
     /** callback that is called when the button is clicked */
@@ -32,17 +35,18 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
     static defaultProps = {
         className: '',
         style: {},
+        type: ''
     };
 
     static displayName = 'SmallIconButton';
 
     render(){
 
-        const {style, transparent, disabled, className, id, icon} = this.props;
+        const {style, transparent, disabled, className, id, icon, type} = this.props;
 
         const buttonStyles = transparent ? styles.transparent : styles.normalButton;
         const disabledStyles = disabled ? styles.disabledButton : '';
-        const iconStyle = icon ? `material-icons ${styles.icon}` : '';
+        const iconStyle = icon ? `material-icons${type ? `-${type}` : ''} ${styles.icon}` : '';
         const iconFont = this.getIcon();
 
         const classes = `button-icon-component
