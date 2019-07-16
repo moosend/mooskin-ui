@@ -41,6 +41,7 @@ class SmallIconButtonExample extends React.Component {
                 <SmallIconButton onClick={this.onClick} icon={'keyboard arrow right'} transparent/>
                 <SmallIconButton onClick={this.onClick} icon={'arrow drop down'} disabled/>
                 <SmallIconButton onClick={this.onClick} icon={'refresh'} transparent/>
+                <SmallIconButton onClick={this.onClick} icon={'file copy'} type="outlined" transparent/>
                 <SmallIconButton onClick={this.onClick} icon={'sync'}/>
                 <SmallIconButton onClick={this.onClick} icon={'group'}/>
                 <SmallIconButton onClick={this.onClick} icon={'person add'} transparent disabled/>
