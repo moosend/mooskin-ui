@@ -245,7 +245,7 @@ export const CustomArrow: React.StatelessComponent<ICustomArrowProps> = (props) 
     const {direction, className, style, onClick} = props;
 
     const arrow = direction === 'right' ? <div className={styles.arrowRight} /> : <div className={styles.arrowLeft} />;
-    const spacing = direction === 'right' ? {right: -45} : {left: -45};
+    const spacing = direction === 'right' ? {right: -25} : {left: -25};
 
     return (
         <div
