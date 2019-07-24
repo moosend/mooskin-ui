@@ -19,6 +19,7 @@
     height: 25px;
     transition: .5s;
     box-shadow: -2px 2px 0 #5ccdde;
+    border-radius: 0px;
 }
 
 .arrowLeft {
