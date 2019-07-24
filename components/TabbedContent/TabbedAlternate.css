@@ -17,7 +17,7 @@
     flex-grow: 1;
     flex-shrink: 1; 
     border-radius: 8px;
-    background: #fff;
+    background: #fff !important;
     /* border-right: 1px solid var(--moosendBlue); */
 }
 
@@ -27,7 +27,7 @@
     flex-shrink: 1;
     flex-direction: row;
     border-radius: 8px;
-    background: #fff;
+    background: #fff !important;
     /* border-bottom: 1px solid var(--moosendBlue); */
 }
 
