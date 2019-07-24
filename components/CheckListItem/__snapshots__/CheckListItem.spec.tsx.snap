@@ -39,6 +39,7 @@ exports[`CheckListItem renders correctly 1`] = `
       icon="close"
       onClick={[Function]}
       style={Object {}}
+      type=""
     />
   </div>
 </div>

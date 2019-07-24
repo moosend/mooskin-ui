@@ -232,6 +232,7 @@ exports[`Table renders correctly 1`] = `
                     onClick={[Function]}
                     style={Object {}}
                     transparent={true}
+                    type=""
                   >
                     <button
                       className="button-icon-component
@@ -568,6 +569,7 @@ exports[`Table renders correctly 1`] = `
                     onClick={[Function]}
                     style={Object {}}
                     transparent={true}
+                    type=""
                   >
                     <button
                       className="button-icon-component
@@ -904,6 +906,7 @@ exports[`Table renders correctly 1`] = `
                     onClick={[Function]}
                     style={Object {}}
                     transparent={true}
+                    type=""
                   >
                     <button
                       className="button-icon-component
