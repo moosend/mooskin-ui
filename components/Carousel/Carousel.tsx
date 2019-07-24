@@ -250,7 +250,7 @@ export const CustomArrow: React.StatelessComponent<ICustomArrowProps> = (props) 
     return (
         <div
             className={`${styles.arrowContainer} ${className}`}
-            style={{...{height: '100%', width: 45}, ...spacing, ...style}}
+            style={{...{height: '100%', width: 40}, ...spacing, ...style}}
             onClick={onClick}
         >
             {arrow}
