@@ -43,7 +43,7 @@
     "@types/draft-js": "0.10.29",
     "@types/react-slick": "^0.23.3",
     "@types/showdown": "1.9.2",
-    "draft-js": "0.10.5",
+    "draft-js": "0.10.4",
     "draftjs-to-html": "https://github.com/HsuTing/draftjs-to-html.git#fix-emoji",
     "emojione-picker": "^2.2.2",
     "html-to-draftjs": "^1.3.0",
