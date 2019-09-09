@@ -1,6 +1,6 @@
 {
   "name": "@moosend/mooskin",
-  "version": "0.8.88",
+  "version": "0.8.89",
   "description": "A collection of React components for Moosend UI",
   "main": "lib/index/index.js",
   "types": "lib/index/index.d.ts",
