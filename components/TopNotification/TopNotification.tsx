@@ -42,7 +42,7 @@ export interface ITopNotificationProps {
 
     /** callback called when cancel button is clicked */
     onClickCancel?: () => void;
-    
+
     /** callback called when X button is clicked */
     onClickX?: () => void;
 
