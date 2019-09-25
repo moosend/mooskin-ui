@@ -42,6 +42,9 @@ export interface ITopNotificationProps {
 
     /** callback called when cancel button is clicked */
     onClickCancel?: () => void;
+    
+    /** callback called when X button is clicked */
+    onClickX?: () => void;
 
     /** indicates if notification is shown or not */
     visible?: boolean;
@@ -84,7 +87,7 @@ export default class TopNotification extends React.Component<ITopNotificationPro
                     </div>
                     {this.renderButtons()}
                 </div>
-                <div className={`close-notification ${styles.close}`} onClick={this.onClickCancel}>
+                <div className={`close-notification ${styles.close}`} onClick={this.onClickX}>
                     <img src={closeIcon} alt=""/>
                 </div>
             </div>
