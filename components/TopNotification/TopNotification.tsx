@@ -87,7 +87,7 @@ export default class TopNotification extends React.Component<ITopNotificationPro
                     </div>
                     {this.renderButtons()}
                 </div>
-                <div className={`close-notification ${styles.close}`} onClick={this.onClickX}>
+                <div className={`close-notification ${styles.close}`} onClick={this.props.onClickX}>
                     <img src={closeIcon} alt=""/>
                 </div>
             </div>
