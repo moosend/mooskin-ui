@@ -50,7 +50,6 @@ exports[`TopNotification renders correctly 1`] = `
   </div>
   <div
     className="close-notification close"
-    onClick={[Function]}
   >
     <img
       alt=""
