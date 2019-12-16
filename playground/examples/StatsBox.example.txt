@@ -10,8 +10,8 @@ class StatsBoxExample extends React.Component {
                 <StatsBox style={style} sideColor="#2D2D2D" sideTitle="Recipients">
                     <div>Content 1</div>
                 </StatsBox>
-                <StatsBox style={style} sideColor="#3AC4D7" sideTitle="Opens">
-                    <div>Content 2</div>
+                <StatsBox style={style} sideColor="#3AC4D7" sideTitle="Opens" sideTitleHref="https://www.moosend.com">
+                    <div>Content 2 with href title</div>
                 </StatsBox>
                 <StatsBox style={style} sideColor="#F0B941" sideTitle="Clicks">
                     <div>Content 2</div>

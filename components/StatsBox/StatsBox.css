@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans:500|Convergence');
+
 .statsBox{
     display: flex;
     border-radius: 8px;
@@ -5,6 +7,7 @@
 }
 
 .statsTitle{
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
     padding: 15px 10px;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
@@ -27,4 +30,25 @@
     align-items: center;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+.titleAnchor {
+    cursor: pointer;
+    display: flex;
+}
+
+.titleAnchor:link {
+    text-decoration: none;
+}
+
+.titleAnchor:visited {
+    text-decoration: none;
+}
+
+.titleAnchor:hover {
+    text-decoration: none;
+}
+
+.titleAnchor:active {
+    text-decoration: none;
 }
