@@ -42,8 +42,10 @@ export default class StatsBox extends React.Component<IStatsBoxProps, {}>{
             </div>
         );
 
-        const sideTitleAnchor = sideTitleHref ? (
-            <a href={sideTitleHref} className={styles.titleAnchor} target="_blank">
+        const hrefUrl = sideTitleHref ? new URL(sideTitleHref) : '';
+
+        const sideTitleAnchor = hrefUrl ? (
+            <a href={hrefUrl.href} className={styles.titleAnchor} target={hrefUrl.protocol !== 'https:' ? '_blank' : ''}>
                 {sideTitleComponent}
             </a>
         ) : sideTitleComponent;
