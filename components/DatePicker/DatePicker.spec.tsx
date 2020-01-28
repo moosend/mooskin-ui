@@ -160,11 +160,11 @@ describe('DatePicker', () => {
 
         const component = shallow(<DateSelect onChange={func} format="2" type="month" label="Day" />);
 
-        expect(component.find('Option').length).toBe(28);
+        expect(component.find('Option').length).toBe(29);
         expect(component.find('Option').first().prop('value')).toEqual('1');
-        expect(component.find('Option').last().prop('value')).toEqual('28');
+        expect(component.find('Option').last().prop('value')).toEqual('29');
         expect(component.find('Option').first().children().text()).toEqual('1st');
-        expect(component.find('Option').last().children().text()).toEqual('28th');
+        expect(component.find('Option').last().children().text()).toEqual('29th');
 
     });
 

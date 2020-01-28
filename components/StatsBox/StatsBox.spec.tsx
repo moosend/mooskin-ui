@@ -28,4 +28,18 @@ describe('StatsBox', () => {
         expect(component.find('.statsTitle').text()).toEqual('Recipients');
     });
 
+    test('calls onclick correctly', () => {
+
+        const func = jest.fn();
+
+        const component = shallow(
+            <StatsBox sideColor="#FEFEFE" sideTitle="Recipients" sideTextColor="blue" onClickSideTitle={func}>
+                <div>Content 1</div>
+            </StatsBox>
+        );
+
+        component.find('.statsTitle').simulate('click');
+        expect(func).toHaveBeenCalled();
+    });
+
 });
