@@ -18,6 +18,9 @@ export interface IStatsBoxProps {
     /** adds href to side title */
     sideTitleHref?: string;
 
+    /** adds on click to side title */
+    onClickSideTitle?: (e: React.MouseEvent<HTMLElement>) => void;
+
     /** main element style */
     style?: React.CSSProperties;
 }
@@ -37,7 +40,7 @@ export default class StatsBox extends React.Component<IStatsBoxProps, {}>{
         const {className, sideColor, sideTextColor, sideTitle, style, sideTitleHref} = this.props;
 
         const sideTitleComponent = (
-            <div className={styles.statsTitle} style={{background: sideColor, color: sideTextColor}}>
+            <div className={styles.statsTitle} style={{background: sideColor, color: sideTextColor}} onClick={this.onClickSideTitle}>
                 {sideTitle}
             </div>
         );
@@ -60,6 +63,10 @@ export default class StatsBox extends React.Component<IStatsBoxProps, {}>{
                 </div>
             </div>
         );
+    }
+
+    onClickSideTitle = (e: React.MouseEvent<HTMLElement>) => {
+        this.props.onClickSideTitle && this.props.onClickSideTitle(e);
     }
 
 }

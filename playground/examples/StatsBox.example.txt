@@ -7,7 +7,7 @@ class StatsBoxExample extends React.Component {
 
         return(
             <div style={{background: '#F5F5F5', padding: 20, display: 'flex', flexWrap: 'wrap'}}>
-                <StatsBox style={style} sideColor="#2D2D2D" sideTitle="Recipients">
+                <StatsBox style={style} sideColor="#2D2D2D" sideTitle="Recipients" onClickSideTitle={(e) => console.log(e)}>
                     <div>Content 1</div>
                 </StatsBox>
                 <StatsBox style={style} sideColor="#3AC4D7" sideTitle="Opens" sideTitleHref="https://www.moosend.com">
