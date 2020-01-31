@@ -37,6 +37,12 @@ export interface ITopNotificationProps {
     /** override input class */
     className?: string;
 
+    /** link on ok button click */
+    okButtonLink?: string;
+
+    /** link on cancel button click */
+    cancelButtonLink?: string;
+
     /** callback called when ok button is clicked */
     onClickOk?: () => void;
 
@@ -114,12 +120,35 @@ export default class TopNotification extends React.Component<ITopNotificationPro
 
     renderButtons = () => {
 
-        const {okButton, cancelButton, okButtonLabel, cancelButtonLabel} = this.props;
+        const {okButton, cancelButton, okButtonLabel, cancelButtonLabel, okButtonLink, cancelButtonLink} = this.props;
+
+        const okButtonComponent = <Button style={{margin: 6}} onClick={this.onClickOk}>{okButtonLabel}</Button>;
+        const cancelButtonComponent = <Button style={{margin: 6}} onClick={this.onClickCancel}>{cancelButtonLabel}</Button>;
+
+        const okButtonAnchor = okButtonLink ? (
+            <a
+                href={okButtonLink}
+                className={styles.titleAnchor}
+                target={okButtonLink.includes('http:') || okButtonLink.includes('https:') ? '_blank' : ''}
+            >
+                {okButtonComponent}
+            </a>
+        ) : okButtonComponent;
+
+        const cancelButtonAnchor = cancelButtonLink ? (
+            <a
+                href={cancelButtonLink}
+                className={styles.titleAnchor}
+                target={cancelButtonLink.includes('http:') || cancelButtonLink.includes('https:') ? '_blank' : ''}
+            >
+                {cancelButtonComponent}
+            </a>
+        ) : cancelButtonComponent;
 
         return okButton || cancelButton ? (
             <div className={styles.buttonContainer}>
-                {okButton && <Button style={{margin: 6}} onClick={this.onClickOk}>{okButtonLabel}</Button>}
-                {cancelButton && <Button style={{margin: 6}} onClick={this.onClickCancel}>{cancelButtonLabel}</Button>}
+                {okButton && okButtonAnchor}
+                {cancelButton && cancelButtonAnchor}
             </div>
         ) : null;
     }
