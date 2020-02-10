@@ -24,7 +24,7 @@ class ModalExample extends React.Component {
         return(
             <div>
                 <Button onClick={this.onClick}>Show Modal</Button>
-                <Modal active={this.state.active} onClickOverlay={this.closeModal} onClickClose={this.closeModal} title="Modal With Title" >
+                {this.state.active && <Modal active={this.state.active} onClickOverlay={this.closeModal} onClickClose={this.closeModal} title="Modal With Title" >
                     <div style={{padding: 10}} >
                         <TabbedContent>
                             <Tab>
@@ -53,7 +53,7 @@ class ModalExample extends React.Component {
                             </Tab>
                         </TabbedContent>
                     </div>
-                </Modal>
+                </Modal>}
             </div>
         );
     }

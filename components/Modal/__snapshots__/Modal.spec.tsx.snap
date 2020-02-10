@@ -2,11 +2,11 @@
 
 exports[`Modal renders correctly 1`] = `
 <div
-  className="modal-component container on myClass"
+  className="modal-component container myClass"
   id="button1"
 >
   <div
-    className="modal modalOn"
+    className="modal"
     style={
       Object {
         "color": "blue",
@@ -35,7 +35,7 @@ exports[`Modal renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="cover coverOn"
+    className="cover"
     onClick={[MockFunction]}
   />
 </div>

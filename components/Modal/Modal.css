@@ -14,16 +14,6 @@
     display: flex;
 }
 
-.on{
-    opacity: 1;
-    visibility: visible;
-}
-
-.off{
-    opacity: 0;
-    visibility: hidden;
-}
-
 .modal {
     position: relative;
     margin: auto;
@@ -37,14 +27,6 @@
     /* z-index: 5; */
 }
 
-.modalOn{
-    top: 0px;
-}
-
-.modalOff{
-    top: -600px;
-}
-
 .cover{
     position: fixed;
     width: 100%;
@@ -52,14 +34,6 @@
     top: 0px;
     left: 0px;
     z-index: -1;
-}
-
-.coverOff{
-    visibility: hidden;
-}
-
-.coverOn{
-    visibility: visible;
 }
 
 .header {

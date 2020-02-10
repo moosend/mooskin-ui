@@ -13,9 +13,6 @@ export interface IModalProps{
     /** modal title */
     title?: string;
 
-    /** wether the modal is active or not */
-    active?: boolean;
-
     /** override modal styles */
     style?: React.CSSProperties;
 
@@ -41,19 +38,13 @@ export default class Modal extends React.Component<IModalProps, {}>{
 
     render() {
 
-        const display = this.props.active ? styles.on : styles.off;
-
-        const modalDisplay = this.props.active ? styles.modalOn : styles.modalOff;
-
-        const classes = `${styles.modal} ${modalDisplay}`;
-
         return(
             <div
-                className={`modal-component ${styles.container} ${display} ${this.props.className}`}
+                className={`modal-component ${styles.container} ${this.props.className}`}
                 id={this.props.id}
             >
                 <div
-                    className={classes}
+                    className={styles.modal}
                     style={this.props.style}
                 >
                     {this.getHeader()}
@@ -87,8 +78,7 @@ export default class Modal extends React.Component<IModalProps, {}>{
     }
 
     getOverlay = () => {
-        const covStyles = this.props.active ? styles.coverOn : styles.coverOff;
-        return <div className={`${styles.cover} ${covStyles}`} onClick={this.props.onClickOverlay} />;
+        return <div className={styles.cover} onClick={this.props.onClickOverlay} />;
     }
 
 }
