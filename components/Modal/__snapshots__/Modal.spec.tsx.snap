@@ -13,6 +13,23 @@ exports[`Modal renders correctly 1`] = `
       }
     }
   >
+    <div
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
+    >
+      <SmallIconButton
+        className=""
+        icon="close"
+        style={Object {}}
+        transparent={true}
+        type=""
+      />
+    </div>
     <div>
       Mooskin
     </div>

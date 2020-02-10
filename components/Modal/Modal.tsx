@@ -2,10 +2,16 @@ import * as React from 'react';
 
 import styles from './Modal.css';
 
+import {H2} from '../Headings';
+import SmallIconButton from '../SmallIconButton';
+
 export interface IModalProps{
 
     /** id of the modal */
     id?: string;
+
+    /** modal title */
+    title?: string;
 
     /** wether the modal is active or not */
     active?: boolean;
@@ -18,6 +24,9 @@ export interface IModalProps{
 
     /** onClick callback function when the background cover is clicked */
     onClickOverlay?: (e: React.MouseEvent<HTMLDivElement>) => void;
+
+    /** onClick callback function when the cloes icon is clicked */
+    onClickClose?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
 }
 
@@ -47,9 +56,32 @@ export default class Modal extends React.Component<IModalProps, {}>{
                     className={classes}
                     style={this.props.style}
                 >
+                    {this.getHeader()}
                     {this.props.children}
                 </div>
                 {this.getOverlay()}
+            </div>
+        );
+    }
+
+    getHeader = () => {
+
+        const closeIcon = <SmallIconButton transparent icon="close" onClick={this.props.onClickClose} />;
+
+        if (this.props.title){
+            return (
+                <div className={styles.header}>
+                    <H2 style={{margin: 'auto'}} >{this.props.title}</H2>
+                    <div className={styles.iconWrapper}>
+                        {closeIcon}
+                    </div>
+                </div>
+            );
+        }
+
+        return (
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
+                {closeIcon}
             </div>
         );
     }

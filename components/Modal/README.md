@@ -49,7 +49,9 @@ or just give it a custom style
 
 * `id` - id of the element
 * `active` - wether the modal is active or not.
+* `title` - adds a header to the modal.
 * `onClickCover` - callback function when the cover behind the modal is clicked, can be used to toggle the modal off.
+* `onClickclose` - callback function when the close icon is clicked, can be used to toggle the modal off.
 * `className` - css class
 * `style` - Modal style
 
