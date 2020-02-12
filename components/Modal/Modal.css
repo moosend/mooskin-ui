@@ -1,7 +1,7 @@
 @import '../_utils/globals/screens.css';
 
 .container{
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.5);
     transition: all 0.4s;
     overflow-x: hidden;
     overflow-y: auto;
@@ -11,34 +11,20 @@
     bottom: 0;
     left: 0;
     z-index: 1040;
-}
-
-.on{
-    opacity: 1;
-    visibility: visible;
-}
-
-.off{
-    opacity: 0;
-    visibility: hidden;
+    display: flex;
 }
 
 .modal {
     position: relative;
-    margin: 30px auto;
+    margin: auto;
     background: #fff;
     border-radius: 8px;
     width: 60%;
     transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 9px -5px rgba(60,60,60,1);
     /* z-index: 5; */
-}
-
-.modalOn{
-    top: 0px;
-}
-
-.modalOff{
-    top: -600px;
 }
 
 .cover{
@@ -50,12 +36,21 @@
     z-index: -1;
 }
 
-.coverOff{
-    visibility: hidden;
+.header {
+    background: #F3F3F3;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    position: relative;
+    height: 80px;
+    border-bottom: 1px solid #DDDDDD;
 }
 
-.coverOn{
-    visibility: visible;
+.iconWrapper {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -15px;
 }
 
 @media (--small){
