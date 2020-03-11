@@ -255,7 +255,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
                                     key={colKey}
                                     onClick={onCellClick}
                                 >
-                                    <span className={styles.heading}>{setting.heading}</span>
+                                    {/* <span className={styles.heading}>{setting.heading}</span> */}
                                     <div className={styles.contentContainer}>
                                         {content}
                                     </div>

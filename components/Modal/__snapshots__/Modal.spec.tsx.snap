@@ -2,23 +2,40 @@
 
 exports[`Modal renders correctly 1`] = `
 <div
-  className="modal-component container on myClass"
+  className="modal-component container myClass"
   id="button1"
 >
   <div
-    className="modal modalOn"
+    className="modal"
     style={
       Object {
         "color": "blue",
       }
     }
   >
+    <div
+      style={
+        Object {
+          "alignItems": "flex-end",
+          "display": "flex",
+          "flexDirection": "column",
+        }
+      }
+    >
+      <SmallIconButton
+        className=""
+        icon="close"
+        style={Object {}}
+        transparent={true}
+        type=""
+      />
+    </div>
     <div>
       Mooskin
     </div>
   </div>
   <div
-    className="cover coverOn"
+    className="cover"
     onClick={[MockFunction]}
   />
 </div>

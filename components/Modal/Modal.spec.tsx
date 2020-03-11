@@ -15,7 +15,6 @@ describe('Modal', () => {
                 style={{color: 'blue'}}
                 id={'button1'}
                 onClickOverlay={func}
-                active
             >
                 <div>
                     Mooskin
@@ -33,29 +32,6 @@ describe('Modal', () => {
         component.find('.cover').simulate('click');
 
         expect(func).toHaveBeenCalled();
-
-    });
-
-    test('modal toggles on and off', () => {
-
-        let active = false;
-
-        const on = () => {
-            active = false;
-        };
-
-        const off = () => {
-            active = false;
-        };
-
-        const button = shallow(<Button onClick={on}>asd</Button>);
-        const component = shallow(<Modal active={active} onClickOverlay={off}>asd</Modal>);
-
-        expect(component.find('.modalOn')).toBeFalsy;
-
-        button.simulate('click');
-
-        expect(component.find('.modalOn')).toBeTruthy;
 
     });
 
