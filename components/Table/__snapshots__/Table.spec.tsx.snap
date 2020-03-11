@@ -377,11 +377,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent  undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Delivered
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -402,11 +397,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent  undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Campaign
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -427,11 +417,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Mailing List / Segment
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -452,11 +437,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Status
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -477,11 +457,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Open %
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -502,11 +477,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Click
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -527,11 +497,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Subscribers
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -714,11 +679,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent  undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Delivered
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -739,11 +699,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent  undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Campaign
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -764,11 +719,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Mailing List / Segment
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -789,11 +739,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Status
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -814,11 +759,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Open %
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -839,11 +779,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Click
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -864,11 +799,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Subscribers
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -1051,11 +981,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent  undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Delivered
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -1076,11 +1001,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent  undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Campaign
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -1101,11 +1021,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Mailing List / Segment
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -1126,11 +1041,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Status
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -1151,11 +1061,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Open %
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -1176,11 +1081,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Click
-                  </span>
                   <div
                     className="contentContainer"
                   >
@@ -1201,11 +1101,6 @@ exports[`Table renders correctly 1`] = `
                   className="column col colComponent hide undefined"
                   style={Object {}}
                 >
-                  <span
-                    className="heading"
-                  >
-                    Subscribers
-                  </span>
                   <div
                     className="contentContainer"
                   >
