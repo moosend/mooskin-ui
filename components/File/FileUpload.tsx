@@ -116,6 +116,7 @@ export default class FileUpload extends React.Component<IFileProps, IFileState>{
                             disabled={disabled}
                             onChange={this.onChange}
                             type="file"
+                            title="Click to select file"
                             className={styles.input}
                             multiple={multiple}
                         />
