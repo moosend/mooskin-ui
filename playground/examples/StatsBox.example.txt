@@ -2,7 +2,8 @@ class StatsBoxExample extends React.Component {
     render(){
 
         const style = {
-            margin: 10
+            margin: 10,
+            height: 110
         };
 
         return(

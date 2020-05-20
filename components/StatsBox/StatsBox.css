@@ -3,20 +3,28 @@
 .statsBox{
     display: flex;
     border-radius: 8px;
+    overflow: hidden;
     flex-grow: 1;
+}
+
+.statsTitleContainer {
+    width: 36px;
+    position: relative;
 }
 
 .statsTitle{
     font-family: 'Convergence', 'Alegreya Sans', sans-serif;
-    padding: 15px 10px;
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px;
-    transform: rotate(-180deg);
-    writing-mode: vertical-lr;
+    padding: 0 10px;
     font-size: 14px;
     justify-content: center;
     align-items: center;
     display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotate(270deg);
 }
 
 .statsContent {
@@ -28,8 +36,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px;
 }
 
 .titleAnchor {

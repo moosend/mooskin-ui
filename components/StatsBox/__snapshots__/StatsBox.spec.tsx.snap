@@ -10,7 +10,7 @@ exports[`StatsBox renders correctly 1`] = `
   }
 >
   <div
-    className="statsTitle"
+    className="statsTitleContainer"
     onClick={[Function]}
     style={
       Object {
@@ -19,7 +19,11 @@ exports[`StatsBox renders correctly 1`] = `
       }
     }
   >
-    Recipients
+    <div
+      className="statsTitle"
+    >
+      Recipients
+    </div>
   </div>
   <div
     className="statsContent"

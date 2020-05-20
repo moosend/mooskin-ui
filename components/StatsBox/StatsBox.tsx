@@ -39,9 +39,20 @@ export default class StatsBox extends React.Component<IStatsBoxProps, {}>{
 
         const {className, sideColor, sideTextColor, sideTitle, style, sideTitleHref} = this.props;
 
+        const titleStyles = {
+            background: sideColor,
+            color: sideTextColor
+        };
+
         const sideTitleComponent = (
-            <div className={styles.statsTitle} style={{background: sideColor, color: sideTextColor}} onClick={this.onClickSideTitle}>
-                {sideTitle}
+            <div
+                className={styles.statsTitleContainer}
+                style={titleStyles}
+                onClick={this.onClickSideTitle}
+            >
+                <div className={styles.statsTitle} >
+                    {sideTitle}
+                </div>
             </div>
         );
 
