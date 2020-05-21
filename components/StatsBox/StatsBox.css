@@ -7,24 +7,24 @@
     flex-grow: 1;
 }
 
-.statsTitleContainer {
-    width: 36px;
-    position: relative;
-}
-
 .statsTitle{
-    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
+    width: 36px;
     padding: 0 10px;
-    font-size: 14px;
     justify-content: center;
     align-items: center;
     display: flex;
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
+    /* right: 0; */
     bottom: 0;
-    transform: rotate(270deg);
+    /* transform: rotate(270deg); */
+}
+
+.rotateText {
+    font-size: 14px;
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
+    transform: rotate(270deg)
 }
 
 .statsContent {

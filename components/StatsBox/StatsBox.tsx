@@ -46,11 +46,11 @@ export default class StatsBox extends React.Component<IStatsBoxProps, {}>{
 
         const sideTitleComponent = (
             <div
-                className={styles.statsTitleContainer}
+                className={styles.statsTitle}
                 style={titleStyles}
                 onClick={this.onClickSideTitle}
             >
-                <div className={styles.statsTitle} >
+                <div className={styles.rotateText}>
                     {sideTitle}
                 </div>
             </div>
@@ -68,9 +68,11 @@ export default class StatsBox extends React.Component<IStatsBoxProps, {}>{
 
         return (
             <div style={style} className={`${styles.statsBox} ${className}`}>
-                {sideTitleAnchor}
-                <div className={styles.statsContent}>
-                    {this.props.children}
+                <div style={{paddingLeft: 36, position: 'relative', flex: 1, display: 'flex'}}>
+                    {sideTitleAnchor}
+                    <div className={styles.statsContent}>
+                        {this.props.children}
+                    </div>
                 </div>
             </div>
         );

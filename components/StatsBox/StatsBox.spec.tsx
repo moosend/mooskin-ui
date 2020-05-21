@@ -24,8 +24,8 @@ describe('StatsBox', () => {
             </StatsBox>
         );
 
-        expect(component.find('.statsTitleContainer').prop('style')).toEqual({background: '#FEFEFE', color: 'blue'});
-        expect(component.find('.statsTitle').text()).toEqual('Recipients');
+        expect(component.find('.statsTitle').prop('style')).toEqual({background: '#FEFEFE', color: 'blue'});
+        expect(component.find('.rotateText').text()).toEqual('Recipients');
     });
 
     test('calls onclick correctly', () => {
@@ -38,7 +38,7 @@ describe('StatsBox', () => {
             </StatsBox>
         );
 
-        component.find('.statsTitleContainer').simulate('click');
+        component.find('.statsTitle').simulate('click');
         expect(func).toHaveBeenCalled();
     });
 
