@@ -25,7 +25,7 @@ describe('StatsBox', () => {
         );
 
         expect(component.find('.statsTitle').prop('style')).toEqual({background: '#FEFEFE', color: 'blue'});
-        expect(component.find('.statsTitle').text()).toEqual('Recipients');
+        expect(component.find('.rotateText').text()).toEqual('Recipients');
     });
 
     test('calls onclick correctly', () => {

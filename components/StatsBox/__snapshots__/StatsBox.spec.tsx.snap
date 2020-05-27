@@ -10,22 +10,37 @@ exports[`StatsBox renders correctly 1`] = `
   }
 >
   <div
-    className="statsTitle"
-    onClick={[Function]}
     style={
       Object {
-        "background": "#2D2D2D",
-        "color": "#fff",
+        "display": "flex",
+        "flex": 1,
+        "paddingLeft": 36,
+        "position": "relative",
       }
     }
   >
-    Recipients
-  </div>
-  <div
-    className="statsContent"
-  >
-    <div>
-      Content 1
+    <div
+      className="statsTitle"
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#2D2D2D",
+          "color": "#fff",
+        }
+      }
+    >
+      <div
+        className="rotateText"
+      >
+        Recipients
+      </div>
+    </div>
+    <div
+      className="statsContent"
+    >
+      <div>
+        Content 1
+      </div>
     </div>
   </div>
 </div>

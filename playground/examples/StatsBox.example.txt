@@ -2,7 +2,8 @@ class StatsBoxExample extends React.Component {
     render(){
 
         const style = {
-            margin: 10
+            margin: 10,
+            height: 110
         };
 
         return(
@@ -11,13 +12,13 @@ class StatsBoxExample extends React.Component {
                     <div>Content 1</div>
                 </StatsBox>
                 <StatsBox style={style} sideColor="#3AC4D7" sideTitle="Opens" sideTitleHref="https://www.moosend.com">
-                    <div>Content 2 with href title</div>
+                    <div>Content 2</div>
                 </StatsBox>
                 <StatsBox style={style} sideColor="#F0B941" sideTitle="Clicks">
-                    <div>Content 2</div>
+                    <div>Content 3</div>
                 </StatsBox>
                 <StatsBox style={style} sideColor="#E16053" sideTitle="Unsubscribes">
-                    <div>Content 2</div>
+                    <div>Content 4</div>
                 </StatsBox>
             </div>
         );
