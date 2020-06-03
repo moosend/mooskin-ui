@@ -22,13 +22,20 @@ export interface ISmallIconButtonProps {
     style?: React.CSSProperties;
 
     /** type of the material icon */
-    type?: 'outlined' | 'two-tone' | 'round' | 'sharp';
+    type?: 'outlined' | 'twotone' | 'round' | 'sharp';
 
     title?: string;
 
     /** callback that is called when the button is clicked */
     onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
 }
+
+const TypeStyles = {
+    outlined: styles.outlined,
+    round: styles.round,
+    sharp: styles.sharp,
+    twotone: styles.twoTone
+};
 
 export default class SmallIconButton extends React.Component<ISmallIconButtonProps, {}> {
 
@@ -42,12 +49,12 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
 
     render(){
 
-        const {style, transparent, disabled, className, id, icon, type} = this.props;
+        const {style, transparent, disabled, className, id, type} = this.props;
 
         const buttonStyles = transparent ? styles.transparent : styles.normalButton;
         const disabledStyles = disabled ? styles.disabledButton : '';
-        const iconStyle = icon ? `material-icons${type ? `-${type}` : ''} ${styles.icon}` : '';
         const iconFont = this.getIcon();
+        const iconType = type && TypeStyles[type] ? TypeStyles[type] : '';
 
         const classes = `button-icon-component
                          ${styles.button}
@@ -64,7 +71,7 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
                 title={this.props.title}
                 style={style}
             >
-                <i className={iconStyle} >{iconFont}</i>
+                <i className={`material-icons ${styles.icon} ${iconType}`} >{iconFont}</i>
             </button>
         );
     }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+@import '../../assets/material-icons/material-icons.css';
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
  
@@ -53,4 +53,20 @@
 
 .icon {
     font-size: 21px;
+}
+
+.outlined {
+    font-family: 'Material Icons Outlined'
+}
+
+.round {
+    font-family: 'Material Icons Round'
+}
+
+.sharp {
+    font-family: 'Material Icons Sharp'
+}
+
+.twotone {
+    font-family: 'Material Icons Two Tone'
 }
