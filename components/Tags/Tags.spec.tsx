@@ -3,11 +3,12 @@ import Tags from './Tags';
 
 import {mount, render, shallow} from 'enzyme';
 
+const func1 = jest.fn();
+const func2 = jest.fn();
+
 describe('Tags', () => {
 
     test('renders Tags correctly', () => {
-        const func1 = jest.fn();
-        const func2 = jest.fn();
 
         const tags = [
             'Prishtina',
@@ -55,7 +56,7 @@ describe('Tags', () => {
         ];
 
         const component = shallow(
-            <Tags tags={tags} />,
+            <Tags tags={tags} onAdd={func1} onRemove={func2} />,
         );
 
         expect(component.find('Tag').length).toEqual(tags.length);
@@ -636,6 +637,8 @@ describe('Tags', () => {
         const component = shallow(
             <Tags
                 tags={tags}
+                onAdd={func1}
+                onRemove={func2}
             />
         );
 
@@ -692,7 +695,6 @@ describe('Tags', () => {
         };
 
         const validate = (data) => {
-            console.log(data.value);
             if (data.value.length < 2){
                 status = 'error';
                 return false;
@@ -780,6 +782,8 @@ describe('Tags', () => {
                 delimiters={[',', 'Enter', ' ']}
                 validateTag="email"
                 alternate
+                onAdd={func1}
+                onRemove={func2}
             />
         );
 
@@ -804,6 +808,8 @@ describe('Tags', () => {
                 delimiters={[',', 'Enter', ' ']}
                 validateTag="email"
                 alternate
+                onAdd={func1}
+                onRemove={func2}
             />
         );
 

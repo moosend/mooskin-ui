@@ -106,7 +106,7 @@ export interface ITagProps{
 
     onClickTag?: (e: React.MouseEvent<HTMLElement>) => void;
 
-    onClickRemove: (e: React.MouseEvent<HTMLElement>) => void;
+    onClickRemove?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface ITagsState{
@@ -173,14 +173,10 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
         const tags = this.getTags();
 
-        const source = this.state.value !== '' ? this.sourceList() : null;
-
         const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
 
         const status = this.getStatus();
         const descStatus = this.getDescStatus();
-
-        const message = this.getMessage();
 
         const description = this.props.description;
 
@@ -188,8 +184,6 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         const labelClasses = this.props.labelLeft ? styles.labelLeft : '';
 
         const alternateContainer = this.props.alternate ? styles.alternateContainer : '';
-        const alternateInput = this.props.alternate ? styles.alternateInput : '';
-        const alternateInputContainer = this.props.alternate ? styles.alternateInputContainer : '';
 
         return(
             <div
@@ -201,27 +195,40 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                 <div style={{display: 'flex', flexDirection: 'column', flexGrow: 1, flexShrink: 1}}>
                     <label className={`${styles.tags} ${alternateContainer} ${status}`}>
                         {tags}
-                        <div className={`${styles.inputContainer} ${alternateInputContainer}`}>
-                            <input
-                                ref={this.myInpRef}
-                                value={this.state.value}
-                                className={`${styles.input} ${alternateInput}`}
-                                placeholder={this.props.placeholder}
-                                onChange={this.onHandleChange}
-                                onKeyDown={this.onKeyDown}
-                                onClick={this.removeSource}
-                                onPaste={this.onPaste}
-                                onBlur={this.onBlur()}
-                                maxLength={this.props.maxLength}
-                            />
-                            {message}
-                            {source}
-                            {this.props.alternate && this.renderAddIcon()}
-                        </div>
+                        {this.props.onAdd && this.renderInput()}
                         {cover}
                     </label>
                     {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
                 </div>
+            </div>
+        );
+    }
+
+    renderInput = () => {
+
+        const source = this.state.value !== '' ? this.sourceList() : null;
+        const message = this.getMessage();
+
+        const alternateInput = this.props.alternate ? styles.alternateInput : '';
+        const alternateInputContainer = this.props.alternate ? styles.alternateInputContainer : '';
+
+        return (
+            <div className={`${styles.inputContainer} ${alternateInputContainer}`}>
+                <input
+                    ref={this.myInpRef}
+                    value={this.state.value}
+                    className={`${styles.input} ${alternateInput}`}
+                    placeholder={this.props.placeholder}
+                    onChange={this.onHandleChange}
+                    onKeyDown={this.onKeyDown}
+                    onClick={this.removeSource}
+                    onPaste={this.onPaste}
+                    onBlur={this.onBlur()}
+                    maxLength={this.props.maxLength}
+                />
+                {message}
+                {source}
+                {this.props.alternate && this.renderAddIcon()}
             </div>
         );
     }
@@ -247,7 +254,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
                     key={i}
                     active={active}
                     onClickTag={(e) => onClickTag(e, value, i)}
-                    onClickRemove={this.removeTag(i)}
+                    onClickRemove={this.props.onRemove ? this.removeTag(i) : undefined}
                     className={`${clickableTag} ${this.props.tagClasses}`}
                     style={this.props.tagStyles}
                 />
@@ -709,6 +716,16 @@ export const Tag: React.StatelessComponent<ITagProps> = (props) => {
         props.onClickRemove && props.onClickRemove(e);
     };
 
+    const renderRemoveIcon = () => {
+        return (
+            <div onClick={onClickRemove} className={styles.closeContainer}>
+                <i className={`material-icons ${styles.close}`}>
+                    close
+                </i>
+            </div>
+        );
+    };
+
     const activeTag = props.active ? styles.activeTag : '';
 
     return (
@@ -720,11 +737,7 @@ export const Tag: React.StatelessComponent<ITagProps> = (props) => {
             <div className={styles.tagText}>
                 {props.tag}
             </div>
-            <div onClick={onClickRemove} className={styles.closeContainer}>
-                <i className={`material-icons ${styles.close}`}>
-                    close
-                </i>
-            </div>
+            {props.onClickRemove && renderRemoveIcon()}
         </div>
     );
 };

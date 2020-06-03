@@ -63,6 +63,7 @@ class TagsExample extends React.Component {
                 <Tags labelLeft validate={this.validate} delimiters={['Enter', ',']} status={this.state.status} description={this.state.message} source={emails} errorMessage={'Tags accepts only emails'} validateTag="email" submitOnBlur={false} label="Email only tags" tags={this.state.tags4} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags4"/>
                 <br/>
                 <Tags onTagClick={this.onTagClick} preventSubmit source={countries} alternate delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validateTag={this.validation} tags={this.state.tags} onAdd={this.onAdd} onRemove={this.onRemove} deletable dataLabel="tags"/>
+                <Tags onTagClick={this.onTagClick} preventSubmit source={countries} alternate delimiters={['.', 'Enter', 'space', ',']} errorMessage={'You cannot tag Doni'} validateTag={this.validation} tags={this.state.tags} deletable dataLabel="tags"/>
             </div>
         );
     }
