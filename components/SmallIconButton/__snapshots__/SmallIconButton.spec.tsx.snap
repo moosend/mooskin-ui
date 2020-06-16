@@ -17,7 +17,7 @@ exports[`SmallIconButton renders correctly 1`] = `
   }
 >
   <i
-    className="material-icons icon "
+    className="materialIcons icon "
   >
     check
   </i>

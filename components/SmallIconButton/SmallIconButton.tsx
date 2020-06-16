@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import icons from '../../assets/material-icons/material-icons.css';
 import styles from './SmallIconButton.css';
 
 export interface ISmallIconButtonProps {
@@ -71,7 +72,7 @@ export default class SmallIconButton extends React.Component<ISmallIconButtonPro
                 title={this.props.title}
                 style={style}
             >
-                <i className={`material-icons ${styles.icon} ${iconType}`} >{iconFont}</i>
+                <i className={`${icons.materialIcons} ${styles.icon} ${iconType}`} >{iconFont}</i>
             </button>
         );
     }

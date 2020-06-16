@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import icons from '../../assets/material-icons/material-icons.css';
 import styles from './Tags.css';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
@@ -695,7 +696,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         const onClick = this.state.value !== '' && this.props.preventSubmit ? this.addTag(this.state.value) : undefined;
 
         return (
-            <i onClick={onClick} className={`material-icons ${styles.add}`}>
+            <i onClick={onClick} className={`${icons.materialIcons} ${styles.add}`}>
                 add
             </i>
         );
