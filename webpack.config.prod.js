@@ -65,10 +65,11 @@ config.module.rules.push(
             options: {
               importLoaders: 1,
               localIdentName: '[local]___[hash:base64:5]',
-              modules: true
+              modules: true,
             }
           },
-          'postcss-loader'
+ 
+          'postcss-loader',
         ]
       },
       {
@@ -80,10 +81,10 @@ config.module.rules.push(
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1,
+              // importLoaders: 1,
             }
           },
-          'postcss-loader'
+          // 'postcss-loader'
         ]
     }
 );

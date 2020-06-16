@@ -41,8 +41,8 @@ module.exports = {
           loader: "url-loader",
           options: {
               limit: 10000,
-              //name: '[path][name].[ext]',
-              mimetype: 'application/font-woff'
+              name: '[path][name].[ext]',
+              // mimetype: 'application/font-woff'
           }
       },
       {
@@ -50,7 +50,7 @@ module.exports = {
           loader: "url-loader",
           options: {
               limit: 10000,
-             // name: '[path][name].[ext]'
+              name: '[path][name].[ext]'
           }
       },
       {
@@ -58,7 +58,7 @@ module.exports = {
           loader: 'url-loader',
           options: {
               limit: 10000,
-             // name: '[path][name].[ext]',
+              name: '[path][name].[ext]',
               mimetype: 'image/png'
           }
       }
