@@ -3,7 +3,7 @@ var config = require('./webpack.config.common'),
   MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 var distFolder = 'lib';
-var extractCSS = new MiniCssExtractPlugin({fallback: "style-loader", filename: "[name]/style.css", allChunks: true});
+var extractCSS = new MiniCssExtractPlugin({fallback: "style-loader" , filename: "[name]/style.css", allChunks: true});
 
 var entries = glob.sync("./components/*/index.ts", {ignore: ['**/*.spec.tsx', '**/*.spec.ts']}).map(function(entry){ //gets the module paths in components containing index.ts and assigns them to an object
   var obj = {};
@@ -32,7 +32,8 @@ config.output = {
   library: 'mooskin',
   libraryTarget: 'umd',
   umdNamedDefine: true,
-  globalObject: 'this'
+  globalObject: 'this',
+  publicPath: '../'
 };
 
 

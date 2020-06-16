@@ -41,6 +41,7 @@ module.exports = {
           loader: "url-loader",
           options: {
               limit: 10000,
+              // outputPath: 'fonts/',
               name: '[path][name].[ext]',
               // mimetype: 'application/font-woff'
           }
