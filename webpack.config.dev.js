@@ -61,7 +61,7 @@ config.module.rules.push(
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              localIdentName: '[local]___[hash:base64:5]___' + Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5).toUpperCase(),
+              localIdentName: '[local]___[hash:base64:5]',
               modules: true
             }
           },
