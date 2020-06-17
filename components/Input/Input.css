@@ -1,6 +1,6 @@
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
-@import url('https://cdn.moostaging.com/assets/fonts/material-icons/material-icons.css');
+@import url('https://cdn.moosend.com/assets/fonts/material-icons/material-icons.css');
 
 .inputContainer{
     display: flex;
