@@ -1,7 +1,7 @@
-@import '../../assets/material-icons/material-icons.css';
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
- 
+@import url('https://cdn.moosend.com/assets/fonts/material-icons/material-icons.css');
+
 .button {
     font-family: 'Material Icons';
     cursor: pointer;
