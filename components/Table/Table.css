@@ -1,4 +1,5 @@
 @import '../_utils/globals/screens.css';
+@import url('https://cdn.moosend.com/assets/fonts/material-icons/material-icons.css');
 
 .tableWrapper{
     display: flex;

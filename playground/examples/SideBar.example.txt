@@ -4,13 +4,13 @@ class SideBarExample extends React.Component {
         return (
             <SideBar button hideClick style={{top: 80}}>
                 <SidebarItem
-                    image="https://cdn.moostaging.com/assets/images/icons/icon-dashboard.png"
-                    imageOn="https://cdn.moostaging.com/assets/images/icons/icon-dashboard-on.png"
+                    image="https://cdn.moosend.com/assets/images/icons/icon-dashboard.png"
+                    imageOn="https://cdn.moosend.com/assets/images/icons/icon-dashboard-on.png"
                     label="React"
                 />
                 <SidebarItem
-                    image="https://cdn.moostaging.com/assets/images/icons/icon-campaigns.png"
-                    imageOn="https://cdn.moostaging.com/assets/images/icons/icon-campaigns-on.png"
+                    image="https://cdn.moosend.com/assets/images/icons/icon-campaigns.png"
+                    imageOn="https://cdn.moosend.com/assets/images/icons/icon-campaigns-on.png"
                     label="JavaScript"
                 />
                 <SidebarItem
