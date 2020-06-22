@@ -57,7 +57,7 @@ class SelectExample extends React.Component {
                     <Option value="option8">Some value 8</Option>
                 </Select>
                 <br/>
-                <Select onChange={this.onChange} selected={this.state.selected3} dataLabel="selected3">
+                <Select onFilterChange={(e, data) => console.log('Filter Change: ', data)} onChange={this.onChange} selected={this.state.selected3} dataLabel="selected3">
                     <Option value="option1">Some value 1</Option>
                     <Option value="option2">Some value 2</Option>
                     <Option value="option3">Some value 3</Option>

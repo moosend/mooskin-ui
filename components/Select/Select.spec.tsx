@@ -187,4 +187,22 @@ describe('Select', () => {
         expect(component.prop('selected')).toEqual(options);
         expect(component.find('i').length).toBe(3);
     });
+
+    test('should call the onFilterChange callback when changing the filter input value', () => {
+
+        const onFilterChange = jest.fn();
+
+        const component = mount(
+            <Select selected={'option1'} onFilterChange={onFilterChange} dataLabel="plan">
+                <Option value="option1">Option1</Option>
+                <Option value="option2">Option2</Option>
+                <Option value="option3">Option3</Option>
+                <Option value="option4">Option4</Option>
+            </Select>
+        );
+
+        component.find('input').first().simulate('change', { target: { value: 'filter' }});
+
+        expect(onFilterChange).toHaveBeenCalled();
+    });
 });
