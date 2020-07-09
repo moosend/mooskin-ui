@@ -6,6 +6,8 @@ import H2 from '../Headings/H2/H2';
 import SmallIconButton from '../SmallIconButton/SmallIconButton';
 import styles from './CheckListItem.css';
 
+import icons from '../../assets/mooskin-icons/mooskin-icons.css';
+
 export interface ICheckListItemProps {
 
     /** check list item id attribute */
@@ -61,7 +63,7 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
             >
                 {title && <H2 style={{marginLeft: '5px'}}>{title}</H2>}
                 <div className={checkitem} id={id}>
-                    <i style={iconStyles} className={`material-icons ${iconStyle}`} >{icon}</i>
+                    <i style={iconStyles} className={`${icons.mooskinIcons} ${iconStyle}`} >{icon}</i>
                     <div className={styles.content}>
                         {content}
                     </div>

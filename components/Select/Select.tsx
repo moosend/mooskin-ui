@@ -4,12 +4,15 @@ import {arrayHasDupes} from '../_utils/helper';
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
 import spinner from '../../assets/images/loader/spinner.png';
+import icons from '../../assets/mooskin-icons/mooskin-icons.css';
 import styles from './Select.css';
 
 export interface ISelectProps {
 
     /** Callback that fires when you click on an item on the list */
     onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+
+    onFilterChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -224,6 +227,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     onChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({filter: e.target.value});
+        this.props.onFilterChange && this.props.onFilterChange(e, {dataLabel: this.props.dataLabel, value: e.target.value});
     }
 
     onClick = (option: string) => {
@@ -320,7 +324,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                         style={{display: visible, flex: 1, position: 'relative'}}
                     >
                         {React.cloneElement(child, extraProps)}
-                        {active && <i onClick={this.onClick(child.props.value)} className={`material-icons ${styles.checkIcon}`} >check</i>}
+                        {active && <i onClick={this.onClick(child.props.value)} className={`${icons.mooskinIcons} ${styles.checkIcon}`} >check</i>}
                     </div>
                 );
             }else{
@@ -418,7 +422,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                         {selected}
                     </div>
                     {this.props.allowSelectOnLocked && <div className={styles.arrowDownLocked} onClick={this.onOpenList} />}
-                    <i onClick={this.onClick('')} className={`material-icons ${styles.close}`}>
+                    <i onClick={this.onClick('')} className={`${icons.mooskinIcons} ${styles.close}`}>
                         close
                     </i>
                 </div>

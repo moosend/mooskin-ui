@@ -58,7 +58,7 @@ exports[`DatePicker renders correctly 1`] = `
     </div>
   </div>
   <i
-    className="material-icons icon"
+    className="mooskinIcons icon"
     onClick={[Function]}
   >
     event_available

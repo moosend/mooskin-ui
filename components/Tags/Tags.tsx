@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import icons from '../../assets/mooskin-icons/mooskin-icons.css';
 import styles from './Tags.css';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
@@ -695,7 +696,7 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
         const onClick = this.state.value !== '' && this.props.preventSubmit ? this.addTag(this.state.value) : undefined;
 
         return (
-            <i onClick={onClick} className={`material-icons ${styles.add}`}>
+            <i onClick={onClick} className={`${icons.mooskinIcons} ${styles.add}`}>
                 add
             </i>
         );
@@ -719,7 +720,7 @@ export const Tag: React.StatelessComponent<ITagProps> = (props) => {
     const renderRemoveIcon = () => {
         return (
             <div onClick={onClickRemove} className={styles.closeContainer}>
-                <i className={`material-icons ${styles.close}`}>
+                <i className={`${icons.mooskinIcons} ${styles.close}`}>
                     close
                 </i>
             </div>

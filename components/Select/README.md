@@ -121,6 +121,7 @@ The Input Component can be validated using the `status` and `validate` props. Th
 * `alternate` - renders select with alternate styles
 * `lockSelected` - locks the select when a value is selected
 * `noFilter` - disables option filtering
+* `onFilterChange` - change event fired when changing the filter input value
 
 ## Supported attributes for Option 
 
