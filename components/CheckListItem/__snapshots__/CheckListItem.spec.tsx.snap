@@ -24,7 +24,7 @@ exports[`CheckListItem renders correctly 1`] = `
     id="check1"
   >
     <i
-      className="materialIcons iconStyle"
+      className="material-icons iconStyle"
       style={Object {}}
     >
       check

@@ -31,7 +31,7 @@ describe('CheckListItem', () => {
 
         expect(component.find(H2).prop('children')).toBe('One Ring');
         expect(component.find('.content').text()).toBe('Toss the One Ring into Mt. Doom');
-        expect(component.find('i').hasClass('materialIcons')).toBe(true);
+        expect(component.find('i').hasClass('material-icons')).toBe(true);
         expect(component.find('i').text()).toBe('close');
     });
 

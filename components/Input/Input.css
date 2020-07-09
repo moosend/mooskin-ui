@@ -1,6 +1,6 @@
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
-@import '../../assets/material-icons/material-icons.css';
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 .inputContainer{
     display: flex;
