@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
+import icons from '../../assets/material-icons/material-icons.css';
 import H2 from '../Headings/H2/H2';
 import SmallIconButton from '../SmallIconButton/SmallIconButton';
 import styles from './CheckListItem.css';
@@ -61,7 +62,7 @@ export default class CheckListItem extends React.Component<ICheckListItemProps, 
             >
                 {title && <H2 style={{marginLeft: '5px'}}>{title}</H2>}
                 <div className={checkitem} id={id}>
-                    <i style={iconStyles} className={`material-icons ${iconStyle}`} >{icon}</i>
+                    <i style={iconStyles} className={`${icons.materialIcons} ${iconStyle}`} >{icon}</i>
                     <div className={styles.content}>
                         {content}
                     </div>

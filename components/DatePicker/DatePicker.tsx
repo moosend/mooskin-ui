@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import icons from '../../assets/material-icons/material-icons.css';
 import styles from './DatePicker.css';
 
 import 'input-moment/dist/input-moment.css';
@@ -182,7 +183,7 @@ export default class DatePicker extends React.Component<IDateProps, IDateState>{
                         <div className={styles.cover} onClick={this.toggle}/>
                     </div>
                 </div>
-                <i onClick={this.toggle} className={`material-icons ${styles.icon}`} >event_available</i>
+                <i onClick={this.toggle} className={`${icons.materialIcons} ${styles.icon}`} >event_available</i>
             </div>
         );
     }
