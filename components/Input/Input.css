@@ -1,6 +1,5 @@
 @import '../_utils/globals/variables.css';
 @import '../_utils/globals/screens.css';
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 .inputContainer{
     display: flex;
@@ -88,7 +87,7 @@
 .icon{
     color: var(--inputPlaceholder);
     font-size: 18px;
-    font-family: 'Material Icons';
+    font-family: 'Mooskin Icons';
     background: transparent;
 }
 
