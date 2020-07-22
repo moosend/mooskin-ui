@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import icons from '../../assets/mooskin-icons/mooskin-icons.css';
 import styles from './Checkbox.css';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
@@ -356,7 +357,7 @@ export const Checkbox: React.StatelessComponent<ICheckBoxProps> = (props) => {
                 onClick={onCheckBoxClick({checked: !checked, value: props.value, label})}
                 disabled={props.disabled}
                 defaultChecked={checked}
-                className="material-icons"
+                className={`${icons.mooskinIcons}`}
             />
             <label htmlFor={props.id || genId}>
                 <span className={`${styles.checkmark} ${checkmarkDisplay} ${alternateCheckmark}`} />

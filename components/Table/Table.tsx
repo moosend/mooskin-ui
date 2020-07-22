@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import icons from '../../assets/mooskin-icons/mooskin-icons.css';
 import Pagination from '../Pagination';
 import SmallIconButton from '../SmallIconButton';
 import styles from './Table.css';
@@ -476,10 +477,10 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
     getArrow = (dataField: string, arrowDirection?: 'asc' | 'desc') => {
         if ((this.state.sortBy === dataField && this.state.order === 'desc') || arrowDirection === 'asc'){
-            return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_up</i>;
+            return <i className={`${icons.mooskinIcons} ${styles.arrow}`}>keyboard_arrow_up</i>;
         }
         if ((this.state.sortBy === dataField && this.state.order === 'asc') || arrowDirection === 'desc'){
-            return <i className={`material-icons ${styles.arrow}`}>keyboard_arrow_down</i>;
+            return <i className={`${icons.mooskinIcons} ${styles.arrow}`}>keyboard_arrow_down</i>;
         }
     }
 

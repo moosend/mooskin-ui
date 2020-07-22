@@ -3,6 +3,7 @@ import * as React from 'react';
 import styles from './DateRange.css';
 
 import 'input-moment/dist/input-moment.css';
+import icons from '../../assets/mooskin-icons/mooskin-icons.css';
 
 import InputMoment from 'input-moment';
 import moment from 'moment';
@@ -309,7 +310,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
                         <div className={styles.cover} onClick={this.toggle}/>
                     </div>
                 </div>
-                <i onClick={this.toggle} className={`material-icons ${styles.icon}`} >event_available</i>
+                <i onClick={this.toggle} className={`${icons.mooskinIcons} ${styles.icon}`} >event_available</i>
             </div>
         );
     }

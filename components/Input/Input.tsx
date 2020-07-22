@@ -3,6 +3,7 @@ import * as React from 'react';
 import EmojiPicker from 'emojione-picker';
 import 'emojione-picker/css/picker.css';
 
+import icons from '../../assets/mooskin-icons/mooskin-icons.css';
 import styles from './Input.css';
 
 import ClipboardButton from '../ClipboardButton';
@@ -387,7 +388,7 @@ class Input extends React.Component<IProps, IInputState> {
         return (
             <div
                 onClick={onClick}
-                className={`${styles.icon} ${iconStatus} ${this.props.iconClass}`}
+                className={`${icons.mooskinIcons} ${styles.icon} ${iconStatus} ${this.props.iconClass}`}
                 style={{...iconPadding, ...style, ...paddingForDropDownIcon, ...this.props.iconStyle}}
                 title={title}
             >
