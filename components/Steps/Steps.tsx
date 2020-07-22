@@ -60,16 +60,21 @@ export default class Steps extends React.Component<IStepsProps, {}>{
         );
     }
 
-    renderBodies = () => {
-        return React.Children.map(this.props.children, (child, index) => {
+    renderBodies = () =>
+    {
+        const steps: Array<React.ReactElement<IStepProps>> = [];
+
+        React.Children.forEach(this.props.children, (child, index) => {
             if (React.isValidElement<IStepProps>(child)){
-
-                return <StepBody content={child.props.children} active={child.props.active}/>;
-
+                if (child.props.active){
+                    steps.push(<StepBody content={child.props.children} active={child.props.active}/>);
+                }
             }else{
                 throw new Error('<Steps> element only accepts Step elements as children');
             }
         });
+
+        return steps;
     }
 }
 
@@ -95,11 +100,8 @@ Step.defaultProps = {
 Step.displayName = 'Step';
 
 export const StepBody: React.StatelessComponent<IStepBodyProps> = (props) => {
-
-    const display = props.active ? 'block' : 'none';
-
     return (
-        <div className={styles.stepBody} style={{display}}>
+        <div className={styles.stepBody}>
             {props.content}
         </div>
     );

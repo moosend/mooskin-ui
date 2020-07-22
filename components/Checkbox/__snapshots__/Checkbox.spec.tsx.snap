@@ -11,7 +11,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
   }
 >
   <input
-    className="mooskin-icons"
+    className="mooskinIcons"
     defaultChecked={true}
     disabled={true}
     id="checkbox1"
@@ -120,7 +120,7 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
           }
         >
           <input
-            className="mooskin-icons"
+            className="mooskinIcons"
             defaultChecked={true}
             id="4zlbrf"
             name="1482363367071"
@@ -171,7 +171,7 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
           }
         >
           <input
-            className="mooskin-icons"
+            className="mooskinIcons"
             defaultChecked={false}
             id="4zlbrf"
             name="1482363367071"
@@ -219,7 +219,7 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
           }
         >
           <input
-            className="mooskin-icons"
+            className="mooskinIcons"
             defaultChecked={false}
             id="4zlbrf"
             name="1482363367071"
