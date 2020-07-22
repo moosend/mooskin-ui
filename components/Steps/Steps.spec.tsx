@@ -55,10 +55,7 @@ describe('Steps', () => {
             </Steps>
         );
 
-        expect(tree.find('.stepBody').length).toBe(3);
-        expect(tree.find('.stepBody').first().text()).toContain('Content 1');
-        expect(tree.find('.stepBody').eq(1).text()).toContain('Content 2');
-        expect(tree.find('.stepBody').last().text()).toContain('Content 3');
+        expect(tree.find('.stepBody').length).toBe(1);
     });
 
     test('onClick is called correctly when one of the Steps is clicked', () => {
