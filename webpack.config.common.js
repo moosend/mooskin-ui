@@ -40,7 +40,7 @@ module.exports = {
           test: /\.woff$|\.woff2$/,
           loader: "url-loader",
           options: {
-              limit: 65000,
+              limit: 650000,
               // outputPath: 'fonts/',
               name: '[path][name].[ext]',
               // mimetype: 'application/font-woff'
@@ -50,7 +50,7 @@ module.exports = {
           test: /\.ttf$|\.eot$|\.svg$/,
           loader: "url-loader",
           options: {
-              limit: 65000,
+              limit: 650000,
               name: '[path][name].[ext]'
           }
       },
@@ -58,7 +58,7 @@ module.exports = {
           test: /\.(png|jpg|gif)$/,
           loader: 'url-loader',
           options: {
-              limit: 65000,
+              limit: 650000,
               name: '[path][name].[ext]',
               mimetype: 'image/png'
           }
