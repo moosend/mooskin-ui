@@ -19,7 +19,7 @@ class SelectExample extends React.Component {
                 <Select noDuplicates onChange={this.onChange} dataLabel="plan" selected={this.state.selected} dataLabel="selected" label="Some label" filterPlaceholder="Type to filter">
                     <Option value="option1">Option1</Option>
                     <Option value="option2">Option2</Option>
-                    <Option value="option3">Option3</Option>
+                    <Option value="option3" disabled>Option3 Disabled</Option>
                     <Option value={4}>Option4</Option>
                     <Option value={5}>Option5</Option>
                 </Select>
