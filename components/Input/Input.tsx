@@ -588,7 +588,7 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     getEmojis = () => {
-        return <Picker onSelect={this.onEmojiChange} />;
+        return <Picker onSelect={this.onEmojiChange} exclude={['flags']} showPreview={false} showSkinTones={false}/>;
     }
 
     onEmojiChange = (data: any) => {
