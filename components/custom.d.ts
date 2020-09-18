@@ -66,8 +66,10 @@ declare module 'html-to-draftjs' {
   export default content;
 }
 
-declare module 'emojione-picker' {
+declare module 'emoji-mart' {
   const content: any;
+  const Picker: any;
+  export {Picker};
   export default content;
 }
 

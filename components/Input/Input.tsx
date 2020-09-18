@@ -1,7 +1,6 @@
 import * as React from 'react';
 
-import EmojiPicker from 'emojione-picker';
-import 'emojione-picker/css/picker.css';
+import 'emoji-mart/css/emoji-mart.css';
 
 import icons from '../../assets/mooskin-icons/mooskin-icons.css';
 import styles from './Input.css';
@@ -12,6 +11,8 @@ import emojiIcon from '../../assets/images/editor/emoji.png';
 import hashtag from '../../assets/images/editor/hashtag.png';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
+
+import {Picker} from 'emoji-mart';
 
 export interface IProps {
 
@@ -587,11 +588,11 @@ class Input extends React.Component<IProps, IInputState> {
     }
 
     getEmojis = () => {
-        return <EmojiPicker onChange={this.onEmojiChange} />;
+        return <Picker onSelect={this.onEmojiChange} />;
     }
 
     onEmojiChange = (data: any) => {
-        const emoji = String.fromCodePoint(parseInt('0x' + data.unicode, 16));
+        const emoji = String.fromCodePoint(parseInt('0x' + data.unified, 16));
         const finalValue = this.props.value ? this.props.value + emoji :  emoji;
         this.props.onChange &&
         this.props.onChange({} as any, {value: finalValue, dataLabel: this.props.dataLabel});
