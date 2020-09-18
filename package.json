@@ -89,7 +89,7 @@
     "postcss-url": "^8.0.0",
     "raw-loader": "2.0.0",
     "react-live": "1.12.0",
-    "showdown": "1.9.0",
+    "showdown": "1.9.1",
     "source-map-loader": "0.2.4",
     "style-loader": "0.23.1",
     "ts-jest": "^24.0.0",
