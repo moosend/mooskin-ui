@@ -50,6 +50,10 @@
     padding: 10px;
 }
 
+.disabledStep {
+    opacity: 0.5;
+}
+
 @media (--xSmall){
 
     .step{

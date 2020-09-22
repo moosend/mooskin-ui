@@ -23,7 +23,7 @@ class StepsExample extends React.Component {
                     <Step id="1" title="Step 1" active={this.state.activeStep === 1}>
                         <div style={style}>Some Content 1</div>
                     </Step>
-                    <Step id="2" title="Step 2" active={this.state.activeStep === 2} onClick={this.onClick}>
+                    <Step disabled id="2" title="Step 2" active={this.state.activeStep === 2} onClick={this.onClick}>
                         <div style={style}>Some Content 2</div>
                     </Step>
                     <Step id="3" title="Step 3" active={this.state.activeStep === 3}>
