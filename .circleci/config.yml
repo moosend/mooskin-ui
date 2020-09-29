@@ -8,7 +8,7 @@ defaults: &defaults
   docker:
     - image: circleci/node:latest
 
-install: 
+defaults: &install
   - restore_cache:
     keys:
       - v1-dependencies-{{ checksum "package.json" }}
