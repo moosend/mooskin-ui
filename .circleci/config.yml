@@ -8,31 +8,36 @@ defaults: &defaults
   docker:
     - image: circleci/node:latest
 
-defaults: &install
-  - restore_cache:
-    keys:
-      - v1-dependencies-{{ checksum "package.json" }}
-      - v1-dependencies-
-  - run: yarn install
-  - save_cache:
-    paths:
-      - node_modules
-    key: v1-dependencies-{{ checksum "package.json" }}
-
 jobs:
-  build:
+  test:
     <<: *defaults  
     steps:
       - checkout
-      <<: *install  
+      - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn test
 
-  build:
+  publish:
     build:
     <<: *defaults  
     steps:
       - checkout
-      <<: *install  
+      - restore_cache:
+        keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn lint
       - run: yarn test
       - run: yarn prepare
@@ -52,4 +57,4 @@ jobs:
 workflows:
   run-build:
     jobs:
-      - build
+      - test
