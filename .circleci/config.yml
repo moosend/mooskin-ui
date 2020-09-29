@@ -66,4 +66,6 @@ workflows:
   run-build:
     jobs:
       - test
-      - build
+      - build:
+          requires:
+            - test
