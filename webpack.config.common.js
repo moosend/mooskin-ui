@@ -1,7 +1,7 @@
 var fs = require('fs');
-var gracefulFs = require('graceful-fs');
+// var gracefulFs = require('graceful-fs');
 
-gracefulFs.gracefulify(fs);
+// gracefulFs.gracefulify(fs);
 
 var webpack = require('webpack'),
     path = require("path");
