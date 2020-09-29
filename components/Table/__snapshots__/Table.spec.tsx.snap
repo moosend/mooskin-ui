@@ -210,12 +210,17 @@ exports[`Table renders correctly 1`] = `
         >
           <Row
             className=" undefined"
+            id={0}
             key="0"
             style={Object {}}
           >
             <tr
               className="row row  undefined"
-              style={Object {}}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
             >
               <Col
                 className="buttonCol "
@@ -512,12 +517,17 @@ exports[`Table renders correctly 1`] = `
           </Row>
           <Row
             className=" undefined"
+            id={1}
             key="1"
             style={Object {}}
           >
             <tr
               className="row row  undefined"
-              style={Object {}}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
             >
               <Col
                 className="buttonCol "
@@ -814,12 +824,17 @@ exports[`Table renders correctly 1`] = `
           </Row>
           <Row
             className=" undefined"
+            id={2}
             key="2"
             style={Object {}}
           >
             <tr
               className="row row  undefined"
-              style={Object {}}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
             >
               <Col
                 className="buttonCol "

@@ -2,6 +2,7 @@ import * as React from 'react';
 import Table, {TableHeader} from './Table';
 
 import { mount, shallow } from 'enzyme';
+import { DndProvider } from 'react-dnd';
 
 describe('Table', () => {
 
@@ -888,4 +889,43 @@ describe('Table', () => {
 
     });
 
+    test('Renders draggable rows if prop is given.', () => {
+        const data = [
+            {
+                country: 'Kosovo',
+                id: 5,
+                lastname: 'Behrami',
+                name: 'Doni'
+            },
+            {
+                country: 'Kaedwen',
+                id: 1,
+                lastname: 'Rivia',
+                name: 'Geralt'
+            },
+            {
+                country: 'Citadel',
+                id: 2,
+                lastname: 'Shepard',
+                name: 'John'
+            },
+            {
+                country: 'Tatooine',
+                id: 4,
+                lastname: 'Skywalker',
+                name: 'Luke'
+            }
+        ];
+
+        const component = mount(
+            <Table data={data} dragAndDrop={(dragIndex, hoverIndex) => {  }}>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
+            </Table>
+        );
+      
+        expect(component.find('tbody').first().find('tr').first().html()).toContain('draggable');
+    });
 });

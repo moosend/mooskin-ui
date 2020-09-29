@@ -239,6 +239,7 @@ const data = [
 * `containerStyle` - styling applied to the div containing the table
 * `paginate` - paginate table, with the number of rows passed to this prop
 * `paginationProps` - an object describing table pagination props
+* `dragAndDrop` - a function that enables react-dnd and returns dragIndex and hoverIndex while dragging a table row
 
 ## Supported attributes for TableHeader
 
