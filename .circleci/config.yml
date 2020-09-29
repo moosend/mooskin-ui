@@ -51,7 +51,7 @@ jobs:
           command: npm publish
 
 workflows:
-  run-build: 
+  run: 
     jobs:
       - test
       - build:
