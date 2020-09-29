@@ -1,25 +1,53 @@
 version: 2.1
+
 orbs:
   node: circleci/node@3.0.0
 
+defaults:
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:latest
+
+install: 
+  - restore_cache:
+    keys:
+      - v1-dependencies-{{ checksum "package.json" }}
+      - v1-dependencies-
+  - run: yarn install
+  - save_cache:
+    paths:
+      - node_modules
+    key: v1-dependencies-{{ checksum "package.json" }}
+
 jobs:
   build:
-    docker:
-      - image: circleci/node:latest
+    <<: *defaults  
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run: yarn install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+      <<: *install  
+      - run: yarn test
+
+  build:
+    build:
+    <<: *defaults  
+    steps:
+      - checkout
+      <<: *install  
       - run: yarn lint
       - run: yarn test
       - run: yarn prepare
+
+  # deploy:
+  #   <<: *defaults
+  #   steps:
+  #     - attach_workspace:
+  #         at: ~/repo
+  #     - run:
+  #         name: Authenticate with NPM
+  #         command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+  #     - run:
+  #         name: Publish package
+  #         command: npm publish --access public
 
 workflows:
   run-build:
