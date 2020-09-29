@@ -2,6 +2,7 @@
 
 exports[`Select renders Option correctly 1`] = `
 <li
+  className=""
   onClick={[MockFunction]}
 >
   Option1
