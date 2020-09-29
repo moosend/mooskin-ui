@@ -57,9 +57,9 @@ describe('Input', () => {
 
     test('renders an input with id and type', () => {
 
-        const component = shallow(<Input value="value" type="text" id="1234"/>);
+        const component = shallow(<Input value="value" type="text" id="11234"/>);
 
-        expect(component.find('input').prop('id')).toEqual('1234');
+        expect(component.find('input').prop('id')).toEqual('11234');
         expect(component.find('input').prop('type')).toEqual('text');
     });
 
