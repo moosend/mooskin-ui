@@ -24,4 +24,4 @@ jobs:
 workflows:
   run-build:
     jobs:
-      -build
+      - build
