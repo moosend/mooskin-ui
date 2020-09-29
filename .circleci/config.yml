@@ -50,22 +50,18 @@ jobs:
           name: Publish package
           command: npm publish
 
-  # deploy:
-  #   <<: *defaults
-  #   steps:
-  #     - attach_workspace:
-  #         at: ~/repo
-  #     - run:
-  #         name: Authenticate with NPM
-  #         command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
-  #     - run:
-  #         name: Publish package
-  #         command: npm publish --access public
-
 workflows:
-  run-build:
+  run-build: 
     jobs:
       - test
       - build:
           requires:
             - test
+      - publish:
+          filters:
+            tags:
+              only: /^v.*/
+            branches:
+              ignore: /.*/
+          requires:
+            - build
