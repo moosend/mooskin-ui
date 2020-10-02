@@ -26,6 +26,9 @@ export interface IStepProps{
     /** children here can be any elements */
     children?: any;
 
+    /** disable step */
+    disabled?: boolean;
+
     /** callback when clicking on a step */
     onClick?: (id: string) => void;
 }
@@ -81,14 +84,15 @@ export default class Steps extends React.Component<IStepsProps, {}>{
 export const Step: React.StatelessComponent<IStepProps> = (props) => {
 
     const active = props.active ? styles.activeStep : '';
+    const disabledStyles = props.disabled ? styles.disabledStep : '';
 
     const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClick && props.onClick(props.id);
     };
 
     return (
-        <div id={props.id} className={`${styles.step} ${props.className} ${active}`} onClick={onClick}>
-            <a href="javascript:void(0)">{props.title}</a>
+        <div id={props.id} className={`${styles.step} ${props.className} ${active}`} onClick={!props.disabled ? onClick : undefined}>
+            <a className={disabledStyles} href="javascript:void(0)">{props.title}</a>
         </div>
     );
 };

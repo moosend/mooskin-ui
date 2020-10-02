@@ -337,6 +337,10 @@
     font-size: 14px;
 }
 
+.disabledOptions {
+    opacity: 0.5;
+}
+
 @keyframes spin {
     100% {
         transform: rotate(360deg);

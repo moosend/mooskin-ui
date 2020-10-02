@@ -282,6 +282,11 @@
     height: 285px;
 }
 
+:global(.emoji-mart-search){
+    display:none;
+}
+
+
 @media (--xSmall){
     .inputContainer{
         flex-direction: column;
