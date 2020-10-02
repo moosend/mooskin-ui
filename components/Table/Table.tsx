@@ -728,7 +728,7 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
     }
 
     return (
-        <tr ref={ref as any} className={`row ${styles.row} ${props.className}`} style={{ ...props.style, opacity: dnd ? dnd.drag.isDragging ? 0.5 : 1 : 1 }}>
+        <tr ref={ref as any} className={`row ${styles.row} ${props.className}`} style={{ ...props.style, opacity: dnd ? dnd.drag.isDragging ? 0.8 : 1 : 1 }}>
             {props.children}
         </tr>
     );
