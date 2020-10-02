@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Table, {TableHeader} from './Table';
+import Table, { TableHeader } from './Table';
 
 import { mount, shallow } from 'enzyme';
 import { DndProvider } from 'react-dnd';
@@ -41,13 +41,13 @@ describe('Table', () => {
         ];
 
         const tree = mount(
-            <Table data={data} id={'5'} className={'myStyle'} style={{background: 'red'}} smallCollapse>
+            <Table data={data} id={'5'} className={'myStyle'} style={{ background: 'red' }} smallCollapse>
                 <TableHeader
                     className={'myStyle'}
-                    style={{background: 'red'}}
+                    style={{ background: 'red' }}
                     dataField="delivered"
-                    // sortable
-                    // sortfn={func}
+                // sortable
+                // sortfn={func}
                 >
                     Delivered
                 </TableHeader>
@@ -507,7 +507,7 @@ describe('Table', () => {
         const component = mount(
             <Table
                 collapseHeaderClassName="myClass"
-                collapseHeaderStyle={{color: 'blue'}}
+                collapseHeaderStyle={{ color: 'blue' }}
                 data={data}
                 alternate
                 smallCollapse
@@ -520,7 +520,7 @@ describe('Table', () => {
         );
 
         expect(component.find('TableHeader').first().prop('className').includes('myClass')).toEqual(true);
-        expect(component.find('TableHeader').first().prop('style')).toEqual({color: 'blue'});
+        expect(component.find('TableHeader').first().prop('style')).toEqual({ color: 'blue' });
 
     });
 
@@ -581,7 +581,7 @@ describe('Table', () => {
                 id: 1,
                 lastname: 'Rivia',
                 name: 'Geralt',
-                style: {background: '#5ccdde'}
+                style: { background: '#5ccdde' }
             }
         ];
 
@@ -594,7 +594,7 @@ describe('Table', () => {
             </Table>
         );
 
-        expect(component.find('Col').last().prop('style')).toEqual({background: '#5ccdde'});
+        expect(component.find('Col').last().prop('style')).toEqual({ background: '#5ccdde' });
 
     });
 
@@ -615,7 +615,7 @@ describe('Table', () => {
                 id: 1,
                 lastname: 'Rivia',
                 name: 'Geralt',
-                style: {background: '#5ccdde'}
+                style: { background: '#5ccdde' }
             }
         ];
 
@@ -718,7 +718,7 @@ describe('Table', () => {
             maxButtons: 10,
             nextBtn: true,
             prevBtn: true,
-            style: {color: 'blue'}
+            style: { color: 'blue' }
 
         };
 
@@ -738,7 +738,7 @@ describe('Table', () => {
         expect(component.find('Pagination').prop('lastBtn')).toEqual(false);
         expect(component.find('Pagination').prop('className')).toEqual('myClass');
         expect(component.find('Pagination').prop('maxButtons')).toEqual(10);
-        expect(component.find('Pagination').prop('style')).toEqual({color: 'blue'});
+        expect(component.find('Pagination').prop('style')).toEqual({ color: 'blue' });
 
     });
 
@@ -777,7 +777,7 @@ describe('Table', () => {
             maxButtons: 10,
             nextBtn: true,
             prevBtn: true,
-            style: {color: 'blue'}
+            style: { color: 'blue' }
         };
 
         const component = mount(
@@ -845,7 +845,7 @@ describe('Table', () => {
             {
                 country: 'Kosovo',
                 expandable: {
-                    content: [<td key={0} style={{color: 'red'}}>Hello There!</td>, <td key={1}>General Kenobi</td>],
+                    content: [<td key={0} style={{ color: 'red' }}>Hello There!</td>, <td key={1}>General Kenobi</td>],
                     expanded: true
                 },
                 id: 5,
@@ -883,7 +883,7 @@ describe('Table', () => {
 
         expect(component.find('tr').length).toEqual(6); // 5 + 1 expandable section row
         expect(component.find('tr').at(2).find('td').length).toEqual(2);
-        expect(component.find('tr').at(2).find('td').first().prop('style')).toEqual({color: 'red', position: 'relative'});
+        expect(component.find('tr').at(2).find('td').first().prop('style')).toEqual({ color: 'red', position: 'relative' });
         expect(component.find('tr').at(2).find('td').first().find('.arrow').length).toEqual(1);
         expect(component.find('tr').at(2).find('td').last().prop('children')).toEqual('General Kenobi');
 
@@ -918,14 +918,14 @@ describe('Table', () => {
         ];
 
         const component = mount(
-            <Table data={data} dragAndDrop={(dragIndex, hoverIndex) => {  }}>
+            <Table data={data} dragAndDrop={(dragIndex, hoverIndex) => { console.log('e'); }}>
                 <TableHeader dataField="id">ID</TableHeader>
                 <TableHeader dataField="name">Name</TableHeader>
                 <TableHeader dataField="lastname">Lastname</TableHeader>
                 <TableHeader dataField="country">Country</TableHeader>
             </Table>
         );
-      
+
         expect(component.find('tbody').first().find('tr').first().html()).toContain('draggable');
     });
 });

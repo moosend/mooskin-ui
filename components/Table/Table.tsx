@@ -8,12 +8,12 @@ import styles from './Table.css';
 import { arrow } from '../List/List';
 import listStyles from '../List/List.css';
 
-import { DndProvider, useDrag, useDrop, DropTargetMonitor } from 'react-dnd'
-import { HTML5Backend } from 'react-dnd-html5-backend'
+import { DndProvider, DropTargetMonitor, useDrag, useDrop } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
 
 export const ItemTypes = {
     ROW: 'row'
-}
+};
 
 export interface ITableProps {
 
@@ -57,7 +57,7 @@ export interface ITableProps {
 
     children?: any;
 
-    dragAndDrop?: (dragIndex: number, hoverIndex: number) => void
+    dragAndDrop?: (dragIndex: number, hoverIndex: number) => void;
 }
 
 export interface IHeaderProps {
@@ -118,7 +118,7 @@ export interface IRowProps {
 
     id: number;
 
-    dragAndDrop?: (dragIndex: number, hoverIndex: number) => void
+    dragAndDrop?: (dragIndex: number, hoverIndex: number) => void;
 
 }
 
@@ -143,10 +143,10 @@ export interface ITableState {
     page: number;
 }
 
-interface DragItem {
-    index: number
-    id: string
-    type: string
+interface IDragItem {
+    index: number;
+    id: string;
+    type: string;
 }
 
 export default class Table extends React.Component<ITableProps, ITableState> {
@@ -201,7 +201,7 @@ export default class Table extends React.Component<ITableProps, ITableState> {
         const tableStyles = !this.props.alternate ? styles.table : styles.alternate;
         const { paginate } = this.props;
         const pagination = paginate ? true : false;
-        
+
         return (
             <div>
                 <div className={styles.tableWrapper} style={this.props.containerStyle}>
@@ -653,16 +653,16 @@ TableHeader.displayName = 'TableHeader';
 
 // Custom hook to check if we need to call DND hooks
 const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverIndex: number) => void) | undefined) => {
-    if(dragAndDrop === undefined) {
+    if (dragAndDrop === undefined) {
         return;
     }
-    
+
     const [, drop] = useDrop({
         accept: ItemTypes.ROW,
-        hover(item: DragItem, monitor: DropTargetMonitor) {
+        hover(item: IDragItem, monitor: DropTargetMonitor) {
 
             if (!ref.current) {
-                return
+                return;
             }
 
             const dragIndex = item.index;
@@ -670,7 +670,7 @@ const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverInd
 
             // Don't replace items with themselves
             if (dragIndex === hoverIndex) {
-                return
+                return;
             }
 
             // Determine rectangle on screen
@@ -688,12 +688,12 @@ const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverInd
 
             // Dragging downwards
             if (dragIndex < hoverIndex! && hoverClientY < hoverMiddleY) {
-                return
+                return;
             }
 
             // Dragging upwards
             if (dragIndex > hoverIndex! && hoverClientY > hoverMiddleY) {
-                return
+                return;
             }
 
             // Time to actually perform the action
@@ -708,19 +708,19 @@ const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverInd
     });
 
     const [{ isDragging }, drag] = useDrag({
-        item: { type: ItemTypes.ROW, index: id },
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging()
-        })
+        }),
+        item: { type: ItemTypes.ROW, index: id }
     });
 
-    return { drop, drag: {isDragging, drag} };
-}
+    return { drop, drag: { isDragging, drag } };
+};
 
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
-    
+
     const ref = React.useRef<HTMLDivElement>(null);
-    
+
     const dnd = useDnd(ref, props.id, props.dragAndDrop);
 
     if (props.dragAndDrop) {
@@ -728,7 +728,11 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
     }
 
     return (
-        <tr ref={ref as any} className={`row ${styles.row} ${props.className}`} style={{ ...props.style, opacity: dnd ? dnd.drag.isDragging ? 0.8 : 1 : 1 }}>
+        <tr
+            ref={ref as any}
+            className={`row ${styles.row} ${props.className}`}
+            style={{ ...props.style, opacity: dnd ? dnd.drag.isDragging ? 0.8 : 1 : 1 }}
+        >
             {props.children}
         </tr>
     );

@@ -102,7 +102,7 @@ export interface IOptionProps {
     children?: string | JSX.Element;
 
     /** adds additional class */
-    className?: string
+    className?: string;
 }
 
 class Select extends React.Component<ISelectProps, ISelectState>{
