@@ -100,6 +100,9 @@ export interface IOptionProps {
 
     /** children must be a string */
     children?: string | JSX.Element;
+
+    /** adds additional class */
+    className?: string
 }
 
 class Select extends React.Component<ISelectProps, ISelectState>{
@@ -305,6 +308,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 const selectedClass = this.props.selected === child.props.value ?
                 this.props.alternate ? styles.alternateSelectedOption : styles.selectedOption : '';
 
+                const className = child.props.className || '';
+
                 let visible = 'flex';
                 // hide options when filtering
                 if (!this.props.noFilter && child.props.searchLabel){
@@ -323,7 +328,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
                 return (
                     <div
-                        className={`select-option-container ${selectedClass}`}
+                        className={`select-option-container ${selectedClass} ${className}`}
                         style={{display: visible, flex: 1, position: 'relative'}}
                     >
                         {React.cloneElement(child, extraProps)}

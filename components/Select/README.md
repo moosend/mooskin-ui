@@ -126,6 +126,7 @@ The Input Component can be validated using the `status` and `validate` props. Th
 ## Supported attributes for Option 
 
 * `value` - value for the option
+* `className` - class value for the option
 
 </div>
 
