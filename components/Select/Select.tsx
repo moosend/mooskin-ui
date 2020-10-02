@@ -95,6 +95,9 @@ export interface IOptionProps {
     /** filters according to this when available (so Option children can be elements) */
     searchLabel?: string;
 
+    /** disables this option */
+    disabled?: boolean;
+
     /** children must be a string */
     children?: string | JSX.Element;
 }
@@ -442,7 +445,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 }
 
 export const Option: React.StatelessComponent<IOptionProps> = (props) => {
-    return <li onClick={props.onClick}>{props.children}</li>;
+    const disabledStyles = props.disabled ? styles.disabledOptions : '';
+    return <li className={disabledStyles} onClick={!props.disabled ? props.onClick : undefined}>{props.children}</li>;
 };
 
 Option.displayName = 'Option';
