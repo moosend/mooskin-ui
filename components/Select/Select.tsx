@@ -60,7 +60,7 @@ export interface ISelectProps {
     alternate?: boolean;
 
     /** alternate style colors */
-    alternateStyleColor?: boolean;
+    alternateStyleColor?: boolean | string;
 
     /** locks select when a value is selected */
     lockSelected?: boolean;
@@ -161,8 +161,8 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         const alternateLabelContainer = this.props.alternate ? {padding: 11} : {};
         const alternateLabel = this.props.alternate ? {paddingTop: 11} : {};
         const alternateOptions = this.props.alternate ? styles.alternateOptions : '';
-        const alternateContainer = this.props.alternate ? this.props.alternateStyleColor ?
-        `${styles.alternateContainerColor} ${styles.alternateContainer}` : styles.alternateContainer : '';
+        const alternateContainer = this.props.alternate ? styles.alternateContainer : '';
+        const alternateColors = this.getAlternateColors();
 
         const inputValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : this.props.selected;
         const lockedValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : selected;
@@ -182,17 +182,20 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                     style={{display: !this.state.list ? 'none' : 'block'}}
                 />
                 <div style={{flex: 1}}>
-                    <div className={`${styles.selectContainer} ${styles.labelContainer} ${status} ${alternateContainer}`} style={{zIndex}}>
+                    <div
+                        className={`${styles.selectContainer} ${styles.labelContainer} ${status} ${alternateContainer}`}
+                        style={{zIndex, ...alternateColors.container}}
+                    >
                         {!this.props.noFilter && this.renderSearchInput()}
                         {this.props.isLoading && <img src={spinner} className={spinnerClass} />}
                         <div
                             onClick={shouldOpen}
                             className={`label-container ${styles.innerDiv}`}
-                            style={{...alternateLabelContainer, display: labelContainerDisplay }}
+                            style={{...alternateLabelContainer, ...alternateColors.innerDiv, display: labelContainerDisplay }}
                         >
                             {selected}
                         </div>
-                        {this.props.alternate ? this.renderArrow() : <div className={styles.selectIcon} onClick={shouldToggle}/>}
+                        {this.props.alternate ? this.renderArrow(alternateColors) : <div className={styles.selectIcon} onClick={shouldToggle}/>}
                         <input
                             value={inputValue}
                             readOnly
@@ -438,14 +441,33 @@ class Select extends React.Component<ISelectProps, ISelectState>{
         }
     }
 
-    renderArrow = () => {
+    renderArrow = (arrowStyles: {[key: string]: React.CSSProperties}) => {
         const shouldToggle = this.props.children ? this.onToggleList : undefined;
         const arrow = this.state.list ? styles.arrowUp : styles.arrowDown;
+        const alternateColor = this.state.list ? arrowStyles.arrowUp : arrowStyles.arrowDown;
         return (
             <div onClick={shouldToggle} className={styles.arrowContainer}>
-                <div className={arrow}/>
+                <div className={arrow} style={alternateColor}/>
             </div>
         );
+    }
+
+    getAlternateColors = () => {
+        const customColor = typeof this.props.alternateStyleColor === 'string' ? this.props.alternateStyleColor : '#5ccdde';
+        return this.props.alternate && this.props.alternateStyleColor ? {
+            arrowDown: {
+                borderColor: `${customColor} transparent transparent`
+            },
+            arrowUp: {
+                borderColor: `transparent transparent ${customColor}`
+            },
+            container: {
+                boxShadow: `0 0 1px 1px ${customColor}`
+            },
+            innerDiv: {
+                color: `${customColor}`
+            },
+        } : {arrowDown: {}, arrowUp: {}, container: {}, innerDiv: {}};
     }
 }
 
