@@ -6,6 +6,7 @@
     border-radius: 8px;
     color: var(--checkRadioGrey);
     transition: 0.3s;
+    align-items: center;
 }
 
 .radio label{
@@ -39,7 +40,7 @@
     appearance: none;
     margin: 0;
     cursor: pointer;
-    width: 22px;
+    min-width: 22px;
     height: 22px;
     background: #fff;
     border-radius: 50%;
