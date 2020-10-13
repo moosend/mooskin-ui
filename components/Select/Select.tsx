@@ -467,7 +467,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
             innerDiv: {
                 color: `${customColor}`
             },
-        } : {arrowDown: {}, arrowUp: {}, container: {}, innerDiv: {}}
+        } : {arrowDown: {}, arrowUp: {}, container: {}, innerDiv: {}};
     }
 }
 
