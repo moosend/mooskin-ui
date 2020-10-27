@@ -1,6 +1,6 @@
 import '../_utils/globals/global.css';
 
-export {default as Button} from '../Button';
+export {default as Button} from '../Button/Button';
 export {default as Carousel} from '../Carousel';
 export {default as CheckListItem} from '../CheckListItem';
 export {default as CheckboxGroup, Checkbox} from '../Checkbox';

@@ -4,6 +4,9 @@
 //   ensure: (paths: string[], callback: (require: <T>(path: string) => T) => void) => void;
 // };
 
+declare module '*.woff';
+declare module '*.woff2';
+
 declare module '*.css' {
   const content: any;
   export default content;

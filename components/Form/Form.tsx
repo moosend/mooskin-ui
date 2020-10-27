@@ -4,7 +4,7 @@ import styles from './Form.css';
 
 import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
-import {IButtonProps} from '../Button/Button';
+import {IButtonComponentProps} from '../Button/model';
 
 export interface IFormProps{
 
@@ -92,15 +92,15 @@ export default class Form extends React.Component<IFormProps, {}>{
 
     assignPropsToChildren = () => {
         const formElements: Array<React.ReactElement<any>> = [];
-        const buttonProps: Partial<IButtonProps> = {
+        const buttonProps: Partial<IButtonComponentProps> = {
             onClick: this.onSubmit(this.getChildren())
         };
         React.Children.map(this.props.children, (child, index) => {
             const keyProp: Partial<any & {key: number}> = {
                 key: index,
             };
-            if (React.isValidElement<IButtonProps>(child)) {
-                if ((child.type as React.ComponentClass<IButtonProps>).displayName === 'Button' && child.props.type === 'submit'){
+            if (React.isValidElement<IButtonComponentProps>(child)) {
+                if ((child.type as React.ComponentClass<IButtonComponentProps>).displayName === 'Button' && child.props.type === 'submit'){
                     formElements.push(
                         React.cloneElement(child, {...keyProp, ...buttonProps})
                     );
@@ -134,7 +134,7 @@ export default class Form extends React.Component<IFormProps, {}>{
 
         const elements: any = [];
 
-        const buttonProps: Partial<IButtonProps> = {
+        const buttonProps: Partial<IButtonComponentProps> = {
             onClick: this.onSubmit(this.getChildren())
         };
 

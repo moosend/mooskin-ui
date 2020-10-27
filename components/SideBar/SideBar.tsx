@@ -4,7 +4,7 @@ import styles from './SideBar.css';
 
 import SmallIconButton from '../SmallIconButton';
 
-import {IButtonProps} from '../Button/Button';
+import {IButtonComponentProps} from '../Button/model';
 
 export interface ISideBarProps{
 
@@ -28,7 +28,7 @@ export interface ISideBarProps{
 
     /** sidebar children */
     children?: Array<React.ReactElement<ISideBarItemProps>> | React.ReactElement<ISideBarItemProps> |
-                Array<React.ReactElement<IButtonProps>> | React.ReactElement<IButtonProps>;
+                Array<React.ReactElement<IButtonComponentProps>> | React.ReactElement<IButtonComponentProps>;
 }
 
 export interface ISideBarItemProps{

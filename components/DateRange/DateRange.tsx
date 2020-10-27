@@ -8,7 +8,7 @@ import icons from '../../assets/mooskin-icons/mooskin-icons.css';
 import InputMoment from 'input-moment';
 import moment from 'moment';
 
-import Button from '../Button';
+import Button from '../Button/Button';
 import {H5} from '../Headings';
 import Select, {Option} from '../Select';
 

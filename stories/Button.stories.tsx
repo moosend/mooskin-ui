@@ -2,34 +2,38 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Button, {IButtonProps} from '../components/Button/Button';
+import Button from '../components/Button/Button';
+import {IButtonComponentProps} from '../components/Button/model';
+
+import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default {
-  component: Button,
-  title: 'Example/Button',
+    component: Button,
+    title: 'Example/Button',
 } as any as Meta;
 
-const Template: Story<IButtonProps> = (args: any) => <Button {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  children: 'Button',
+const Template: Story<IButtonComponentProps> = (args) => {
+    return (
+        <>
+            <GlobalStyle />
+            <Button {...args} />
+        </>
+    );
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  children: 'Button',
-  inverseStyle: true
+export const Normal = Template.bind({});
+Normal.args = {
+    children: 'VIEW CAMPAIGN'
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  children: 'Button',
-  style: {backgroundColor: 'black'},
+export const Inversed = Template.bind({});
+Inversed.args = {
+    children: 'VIEW CAMPAIGN',
+    inverseStyle: true
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  children: 'Button',
-  disabled: true,
+export const Icon = Template.bind({});
+Icon.args = {
+    children: 'VIEW CAMPAIGN',
+    icon: 'file_copy'
 };

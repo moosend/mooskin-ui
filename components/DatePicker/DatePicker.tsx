@@ -10,7 +10,7 @@ import moment from 'moment';
 
 import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
 
-import Button from '../Button';
+import Button from '../Button/Button';
 import Select, {Option} from '../Select';
 
 export interface IDateProps{
