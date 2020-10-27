@@ -37,3 +37,9 @@ Icon.args = {
     children: 'VIEW CAMPAIGN',
     icon: 'file_copy'
 };
+
+export const Href = Template.bind({});
+Href.args = {
+    children: 'VIEW CAMPAIGN',
+    href: 'https://www.moosend.com'
+};

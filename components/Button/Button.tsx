@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { IButtonComponentProps } from './model';
 
-import {ButtonIcon, InversedButton, NormalButton} from './styles';
+import {ButtonIcon, InverseButton, NormalButton} from './styles';
 
 export const Button: React.FC<IButtonComponentProps> = (props) => {
 
@@ -10,21 +10,25 @@ export const Button: React.FC<IButtonComponentProps> = (props) => {
         !props.disabled && props.onClick && props.onClick(e);
     };
 
-    const ButtonComponent = props.inverseStyle ? InversedButton : NormalButton;
+    const ButtonComponent = props.inverseStyle ? InverseButton : NormalButton;
 
     return (
         <ButtonComponent
-            id={props.id}
-            type={props.type}
-            disabled={props.disabled}
-            className={props.className}
-            style={props.style}
+            {...props}
             onClick={onClick}
+            as={props.href ? 'a' : 'button'}
         >
             {props.icon && <ButtonIcon>{props.icon}</ButtonIcon>}
             {props.children}
         </ButtonComponent>
     );
+};
+
+Button.defaultProps = {
+    className: '',
+    size: 'md',
+    style: {},
+    type: 'button'
 };
 
 export default Button;

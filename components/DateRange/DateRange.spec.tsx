@@ -37,7 +37,7 @@ describe('DateRange', () => {
         .toEqual(moment.parseZone('2013-01-01T00:00:00-13:00'));
     });
 
-    test('onChange callback is called when date is changed', () => {
+    test.skip('onChange callback is called when date is changed', () => {
         const func = jest.fn();
 
         const component = mount(

@@ -1,53 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders correctly 1`] = `
+exports[`Anchor renders correctly 1`] = `
 <Component
   className="myClass"
   disabled={true}
   href="www.moosend.com"
-  id="button1"
-  inverseStyle={true}
+  id="Anchor1"
   onClick={[MockFunction]}
-  size="md"
   style={
     Object {
       "color": "blue",
     }
   }
-  type="submit"
+  target="_blank"
 >
-  <Styled(styled.button)
-    as="a"
+  <styled.a
     className="myClass"
     disabled={true}
     href="www.moosend.com"
-    id="button1"
-    inverseStyle={true}
+    id="Anchor1"
     onClick={[Function]}
-    size="md"
     style={
       Object {
         "color": "blue",
       }
     }
-    type="submit"
   >
     <a
-      className="sc-bdnylx sc-dlnjPT dfWOFb hbWhZw myClass"
+      className="sc-bdnylx fEafof myClass"
       disabled={true}
       href="www.moosend.com"
-      id="button1"
+      id="Anchor1"
       onClick={[Function]}
-      size="md"
       style={
         Object {
           "color": "blue",
         }
       }
-      type="submit"
     >
       Mooskin
     </a>
-  </Styled(styled.button)>
+  </styled.a>
 </Component>
 `;

@@ -34,9 +34,10 @@ exports[`TopNotification renders correctly 1`] = `
     <div
       className="buttonContainer"
     >
-      <Button
+      <Component
         className=""
         onClick={[Function]}
+        size="md"
         style={
           Object {
             "margin": 6,
@@ -45,7 +46,7 @@ exports[`TopNotification renders correctly 1`] = `
         type="button"
       >
         click ok
-      </Button>
+      </Component>
     </div>
   </div>
   <div

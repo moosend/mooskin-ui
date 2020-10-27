@@ -223,18 +223,20 @@ exports[`DateRange renders correctly 1`] = `
       <div
         className="buttonContainer"
       >
-        <Button
+        <Component
           className=""
           inverseStyle={true}
           onClick={[Function]}
+          size="md"
           style={Object {}}
           type="button"
         >
           Remove
-        </Button>
-        <Button
+        </Component>
+        <Component
           className=""
           onClick={[Function]}
+          size="md"
           style={
             Object {
               "marginLeft": 10,
@@ -243,7 +245,7 @@ exports[`DateRange renders correctly 1`] = `
           type="button"
         >
           Apply
-        </Button>
+        </Component>
       </div>
       <div
         className="cover"

@@ -1,5 +1,4 @@
 export interface IButtonComponentProps {
-
     /** Provide to inverse the Button styles */
     inverseStyle?: boolean;
 
@@ -12,9 +11,6 @@ export interface IButtonComponentProps {
     /** Override Button styles */
     style?: React.CSSProperties;
 
-    /** children can be a string or JSX element */
-    children?: Element | JSX.Element | string;
-
     /** Provide to make the Button disabled */
     disabled?: boolean;
 
@@ -26,6 +22,9 @@ export interface IButtonComponentProps {
 
     /** See Material Icons for icon type */
     icon?: string;
+
+    /** Button size */
+    size?: 'lg' | 'md' | 'sm';
 
     /** Callback that's called when the button is clicked */
     onClick?: (e?: React.MouseEvent<HTMLElement>) => void;

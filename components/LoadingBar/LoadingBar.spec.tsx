@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Button from '../Button';
+import Button from '../Button/Button';
 import LoadingBar from './LoadingBar';
 
 import {mount, render, shallow} from 'enzyme';
