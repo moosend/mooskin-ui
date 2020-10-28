@@ -1,5 +1,4 @@
 export interface IAnchorComponentProps {
-
     /** Anchor id attribute */
     id?: string;
 

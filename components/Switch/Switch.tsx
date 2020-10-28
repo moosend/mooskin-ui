@@ -1,112 +1,53 @@
 import * as React from 'react';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import variables from '../_utils/globals/variables';
+import Label from '../Label/Label';
 
-import styles from './Switch.css';
+import { ISwitchComponentProps } from './model';
 
-export interface ISwitchProps {
+import { SwitchContainer, SwitchHandle, SwitchLabelDisabled, SwitchLabelNormal, SwitchStyled } from './styles';
 
-    /** override switch id */
-    id?: string;
-
-    /** override switch active label */
-    onLabel?: string;
-
-    /** override switch inactive label */
-    offLabel?: string;
-
-    /** override switch disabled label */
-    disabledLabel?: string;
-
-    /** provide to make the switch disabled */
-    disabled?: boolean;
-
-    /** wether the switch is on or off */
-    on?: boolean;
-
-    /** switch label */
-    label?: string;
-
-    /** switch label width */
-    labelWidth?: number;
-
-    /** switch class */
-    className?: string;
-
-    /** what data is being used, you know on what field changes are made */
-    dataLabel?: string;
-
-    /** override switch styles */
-    style?: React.CSSProperties;
-
-    /** callback that is called when the switch changes */
-    onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
-
-}
-
-class Switch extends React.Component<ISwitchProps, {}> {
-
-    static defaultProps = {
-        className: '',
-        disabledLabel: 'INCOMPLETE',
-        offLabel: 'INACTIVE',
-        onLabel: 'ACTIVE',
-        style: {},
+export const Switch: React.FC<ISwitchComponentProps> = (props) => {
+    const renderDisabledContent = () => {
+        return <SwitchLabelDisabled>{props.disabledLabel}</SwitchLabelDisabled>;
     };
 
-    static displayName = 'Switch';
+    const renderSwitchContent = () => {
+        return <SwitchLabelNormal on={props.on}>{props.on ? props.onLabel : props.offLabel}</SwitchLabelNormal>;
+    };
 
-    render(){
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
+        !props.disabled && props.onClick && props.onClick(e, { value: !props.on, dataLabel: props.dataLabel });
+    };
 
-        const {id, style, className, disabled, label} = this.props;
+    return (
+        <SwitchContainer onClick={onClick}>
+            {props.label && <Label width={props.labelWidth}>{props.label}</Label>}
+            <SwitchStyled
+                width={props.width}
+                primaryColor={props.primaryColor}
+                secondaryColor={props.secondaryColor}
+                on={props.on}
+                disabled={props.disabled}
+            >
+                {!props.disabled && <SwitchHandle on={props.on} width={props.width} />}
+                {props.disabled ? renderDisabledContent() : renderSwitchContent()}
+            </SwitchStyled>
+        </SwitchContainer>
+    );
+};
 
-        const toggleClasses = this.props.on ? styles.onSlider : '';
+Switch.defaultProps = {
+    className: '',
+    disabledLabel: 'INCOMPLETE',
+    offLabel: 'INACTIVE',
+    onLabel: 'ACTIVE',
+    primaryColor: variables.backgroundPrimary,
+    secondaryColor: variables.backgroundOff,
+    style: {},
+    width: 90,
+};
 
-        const disabledSwitch = disabled ? styles.disabledSwitch : '';
-
-        const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
-
-        return (
-
-            <div className={styles.switchContainer}>
-                {label && <span className={styles.label} style={spacing}>{label}</span>}
-                <div
-                    id={id}
-                    style={style}
-                    onClick={this.onClick}
-                    className={`switch-component ${toggleClasses} ${disabledSwitch} ${styles.switch} ${className}`}
-                >
-                    <span className={`switch-component ${styles.slider}`}/>
-                    {this.props.disabled ? this.renderDisabledContent() : this.renderSwitchContent()}
-                </div>
-            </div>
-
-        );
-    }
-
-    renderDisabledContent = () => {
-        return (
-            <label className={`switch-component ${styles.text}`}>{this.props.disabledLabel}</label>
-        );
-    }
-
-    renderSwitchContent = () => {
-
-        const { onLabel, offLabel, on} = this.props;
-
-        return (
-            <div style={{display: 'flex', height: '100%'}} className={on ? styles.onContainer : styles.offContainer}>
-                <label className={`switch-component ${styles.text} ${styles.onSwitch}`}>{onLabel}</label>
-                <label className={`switch-component ${styles.text} ${styles.offSwitch}`}>{offLabel}</label>
-            </div>
-        );
-    }
-
-    onClick = (e: React.MouseEvent<HTMLElement>, data?: IInputCallbackData) => {
-        !this.props.disabled &&
-        this.props.onClick &&
-        this.props.onClick(e, {value: !this.props.on && !this.props.disabled, dataLabel: this.props.dataLabel});
-    }
-}
+Switch.displayName = 'Switch';
 
 export default Switch;

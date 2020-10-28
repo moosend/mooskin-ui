@@ -2,11 +2,10 @@ import * as React from 'react';
 
 import styles from './Modal.css';
 
-import {H2} from '../Headings';
+import { H2 } from '../Headings';
 import SmallIconButton from '../SmallIconButton';
 
-export interface IModalProps{
-
+export interface IModalProps {
     /** id of the modal */
     id?: string;
 
@@ -24,29 +23,20 @@ export interface IModalProps{
 
     /** onClick callback function when the cloes icon is clicked */
     onClickClose?: (e: React.MouseEvent<HTMLDivElement>) => void;
-
 }
 
-export default class Modal extends React.Component<IModalProps, {}>{
-
+export default class Modal extends React.Component<IModalProps, {}> {
     static defaultProps = {
         className: '',
-        style: {}
+        style: {},
     };
 
     static displayName = 'Modal';
 
     render() {
-
-        return(
-            <div
-                className={`modal-component ${styles.container} ${this.props.className}`}
-                id={this.props.id}
-            >
-                <div
-                    className={styles.modal}
-                    style={this.props.style}
-                >
+        return (
+            <div className={`modal-component ${styles.container} ${this.props.className}`} id={this.props.id}>
+                <div className={styles.modal} style={this.props.style}>
                     {this.getHeader()}
                     {this.props.children}
                 </div>
@@ -56,29 +46,21 @@ export default class Modal extends React.Component<IModalProps, {}>{
     }
 
     getHeader = () => {
-
         const closeIcon = <SmallIconButton transparent icon="close" onClick={this.props.onClickClose} />;
 
-        if (this.props.title){
+        if (this.props.title) {
             return (
                 <div className={styles.header}>
-                    <H2 style={{margin: 'auto'}} >{this.props.title}</H2>
-                    <div className={styles.iconWrapper}>
-                        {closeIcon}
-                    </div>
+                    <H2 style={{ margin: 'auto' }}>{this.props.title}</H2>
+                    <div className={styles.iconWrapper}>{closeIcon}</div>
                 </div>
             );
         }
 
-        return (
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
-                {closeIcon}
-            </div>
-        );
-    }
+        return <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>{closeIcon}</div>;
+    };
 
     getOverlay = () => {
         return <div className={styles.cover} onClick={this.props.onClickOverlay} />;
-    }
-
+    };
 }

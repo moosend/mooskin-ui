@@ -3,14 +3,14 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import Button from '../components/Button/Button';
-import {IButtonComponentProps} from '../components/Button/model';
+import { IButtonComponentProps } from '../components/Button/model';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
-export default {
+export default ({
     component: Button,
     title: 'Example/Button',
-} as any as Meta;
+} as any) as Meta;
 
 const Template: Story<IButtonComponentProps> = (args) => {
     return (
@@ -23,23 +23,25 @@ const Template: Story<IButtonComponentProps> = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-    children: 'VIEW CAMPAIGN'
+    children: 'VIEW CAMPAIGN',
 };
 
 export const Inversed = Template.bind({});
 Inversed.args = {
     children: 'VIEW CAMPAIGN',
-    inverseStyle: true
+    inverseStyle: true,
 };
 
 export const Icon = Template.bind({});
 Icon.args = {
     children: 'VIEW CAMPAIGN',
-    icon: 'file_copy'
+    icon: 'file_copy',
+    primaryColor: '#293346',
 };
 
 export const Href = Template.bind({});
 Href.args = {
     children: 'VIEW CAMPAIGN',
-    href: 'https://www.moosend.com'
+    href: 'https://www.moosend.com',
+    primaryColor: '#37a037',
 };
