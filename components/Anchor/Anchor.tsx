@@ -8,7 +8,7 @@ export const Anchor: React.FC<IAnchorComponentProps> = (props) => {
 
     const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         props.disabled && e.preventDefault();
-        props.onClick && props.onClick(e);
+        !props.disabled && props.onClick && props.onClick(e);
     };
 
     return (

@@ -1,3 +1,4 @@
+import * as React from 'react';
 import styled from 'styled-components';
 
 import variables from '../_utils/globals/variables';
@@ -16,7 +17,11 @@ const inverseButtonSizes = {
     sm: '7px 9px'
 };
 
-export const DefaultButton = styled.button<IButtonComponentProps>`
+const Button: React.FC<IButtonComponentProps> = (props) => {
+    return <button>{props.children}</button>;
+};
+
+export const DefaultButton = styled(Button)<IButtonComponentProps>`
     min-width: 135px;
     width: fit-content;
     border-radius: 3px;
