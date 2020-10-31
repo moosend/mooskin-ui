@@ -25,7 +25,7 @@ Button.defaultProps = {
     primaryColor: variables.backgroundPrimary,
     size: 'md',
     style: {},
-    type: 'button',
+    type: 'button'
 };
 
 Button.displayName = 'Button';

@@ -16,6 +16,7 @@ Label.defaultProps = {
     className: '',
     primaryColor: variables.label,
     style: {},
+    width: 150,
 };
 
 Label.displayName = 'Label';
