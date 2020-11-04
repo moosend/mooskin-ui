@@ -315,12 +315,12 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
                 let visible = 'flex';
                 // hide options when filtering
-                if (!this.props.noFilter && child.props.searchLabel){
+                if (!this.props.onFilterChange && !this.props.noFilter && child.props.searchLabel){
                     visible = child.props.children &&
                         child.props.searchLabel.toLowerCase().includes(this.state.filter.toLowerCase())
                         ? 'flex'
                         : 'none';
-                } else if (!this.props.noFilter && typeof child.props.children === 'string'){
+                } else if (!this.props.onFilterChange && !this.props.noFilter && typeof child.props.children === 'string'){
                     visible = child.props.children &&
                         child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
                         ? 'flex'
