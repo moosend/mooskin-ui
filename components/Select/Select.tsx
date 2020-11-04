@@ -12,7 +12,7 @@ export interface ISelectProps {
     /** Callback that fires when you click on an item on the list */
     onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 
-    onFilterChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+    onFilterChange?: (data: IInputCallbackData) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -236,7 +236,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     onChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({filter: e.target.value});
-        this.props.onFilterChange && this.props.onFilterChange(e, {dataLabel: this.props.dataLabel, value: e.target.value});
+        this.props.onFilterChange && this.props.onFilterChange({dataLabel: this.props.dataLabel, value: e.target.value});
     }
 
     onClick = (option: string) => {
@@ -295,6 +295,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     onCloseList = () => {
         this.setState({list: false, filter: ''});
+        this.props.onFilterChange && this.props.onFilterChange({dataLabel: this.props.dataLabel, value: ''});
     }
 
     assignCbToChildren(){
