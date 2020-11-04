@@ -262,7 +262,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 this.props.validate &&
                 this.props.validate({value: returnValue, dataLabel, required});
             }
-            !selectedAsArray && this.setState({list: false, filter: ''});
+            !selectedAsArray && this.onCloseList();
         };
     }
 
