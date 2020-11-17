@@ -12,7 +12,7 @@ export interface ISelectProps {
     /** Callback that fires when you click on an item on the list */
     onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 
-    onFilterChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+    onFilterChange?: (data: IInputCallbackData) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -236,7 +236,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     onChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({filter: e.target.value});
-        this.props.onFilterChange && this.props.onFilterChange(e, {dataLabel: this.props.dataLabel, value: e.target.value});
+        this.props.onFilterChange && this.props.onFilterChange({dataLabel: this.props.dataLabel, value: e.target.value});
     }
 
     onClick = (option: string) => {
@@ -262,7 +262,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 this.props.validate &&
                 this.props.validate({value: returnValue, dataLabel, required});
             }
-            !selectedAsArray && this.setState({list: false, filter: ''});
+            !selectedAsArray && this.onCloseList();
         };
     }
 
@@ -295,6 +295,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
     onCloseList = () => {
         this.setState({list: false, filter: ''});
+        this.props.onFilterChange && this.props.onFilterChange({dataLabel: this.props.dataLabel, value: ''});
     }
 
     assignCbToChildren(){
@@ -315,12 +316,12 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
                 let visible = 'flex';
                 // hide options when filtering
-                if (!this.props.noFilter && child.props.searchLabel){
+                if (!this.props.onFilterChange && !this.props.noFilter && child.props.searchLabel){
                     visible = child.props.children &&
                         child.props.searchLabel.toLowerCase().includes(this.state.filter.toLowerCase())
                         ? 'flex'
                         : 'none';
-                } else if (!this.props.noFilter && typeof child.props.children === 'string'){
+                } else if (!this.props.onFilterChange && !this.props.noFilter && typeof child.props.children === 'string'){
                     visible = child.props.children &&
                         child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
                         ? 'flex'

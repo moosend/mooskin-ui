@@ -24,12 +24,12 @@ exports[`TopNotification renders correctly 1`] = `
           }
         }
       />
-      <span
+      <div
         className="text"
         style={Object {}}
       >
         notification for you
-      </span>
+      </div>
     </div>
     <div
       className="buttonContainer"
