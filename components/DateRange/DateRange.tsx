@@ -333,13 +333,20 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
     }
 
     onStartDateChange = (date: moment.Moment) => {
-        const start = this.state.date.end && date.isAfter(this.state.date.end) ? this.state.date.end : date;
-        this.setState({date: {...this.state.date, start}, option: 'fixed'});
+        if (this.state.date.end && date.isAfter(this.state.date.end)){
+            this.setState({date: { end: date, start: this.state.date.end}, option: 'fixed'});
+        } else {
+            this.setState({date: {...this.state.date, start: date}, option: 'fixed'});
+        }
     }
 
     onEndDateChange = (date: moment.Moment) => {
         const end = this.state.date.start && date.isBefore(this.state.date.start) ? this.state.date.start : date;
-        this.setState({date: {...this.state.date, end}, option: 'fixed'});
+        if (this.state.date.start && date.isBefore(this.state.date.start)){
+            this.setState({date: { end: this.state.date.start, start: date}, option: 'fixed'});
+        } else {
+            this.setState({date: {...this.state.date, end: date}, option: 'fixed'});
+        }
     }
 
     onApply = () => {
