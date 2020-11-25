@@ -295,12 +295,12 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
                         <div style={{display: 'flex'}}>
                             <InputMoment
                                 moment={moment(this.state.date.start || '') || moment()}
-                                onChange={(date: moment.Moment) => this.onChange(date, 'start')}
+                                onChange={(date: moment.Moment) => this.onStartDateChange(date)}
                             />
                             <div style={{width: 1, background: '#bebebe'}} />
                             <InputMoment
                                 moment={moment(this.state.date.end || '') || moment()}
-                                onChange={(date: moment.Moment) => this.onChange(date, 'end')}
+                                onChange={(date: moment.Moment) => this.onEndDateChange(date)}
                             />
                         </div>
                         <div className={styles.buttonContainer}>
@@ -332,8 +332,20 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         );
     }
 
-    onChange = (date: moment.Moment, type: string) => {
-        this.setState({date: {...this.state.date, [type]: date}, option: 'fixed'});
+    onStartDateChange = (date: moment.Moment) => {
+        if (this.state.date.end && date.isAfter(this.state.date.end)){
+            this.setState({date: { end: date, start: this.state.date.end}, option: 'fixed'});
+        } else {
+            this.setState({date: {...this.state.date, start: date}, option: 'fixed'});
+        }
+    }
+
+    onEndDateChange = (date: moment.Moment) => {
+        if (this.state.date.start && date.isBefore(this.state.date.start)){
+            this.setState({date: { end: this.state.date.start, start: date}, option: 'fixed'});
+        } else {
+            this.setState({date: {...this.state.date, end: date}, option: 'fixed'});
+        }
     }
 
     onApply = () => {
