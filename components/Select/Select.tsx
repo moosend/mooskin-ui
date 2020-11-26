@@ -179,7 +179,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
                 <div
                     onClick={this.onCloseList}
                     className={styles.overlay}
-                    style={{display: !this.state.list ? 'none' : 'block'}}
+                    style={{display: !this.state.list ? 'none' : 'flex'}}
                 />
                 <div style={{flex: 1}}>
                     <div

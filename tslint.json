@@ -1,9 +1,8 @@
 {
   "extends": ["tslint:latest", "tslint-react"],
   "rules": {
-    // override tslint-react rules here
     "jsx-use-translation-function": false,
-    "jsx-boolean-value":[true, "never"],
+    "jsx-boolean-value": [true, "never"],
     "one-line": [true, "check-catch", "check-finally", "check-else"],
     "no-debugger": false,
     "no-console": [false],
@@ -16,6 +15,5 @@
     "no-submodule-imports": false,
     "no-implicit-dependencies": [true, "dev"],
     "max-line-length": [true, 150]
-    // "no-shadowed-variable": false
   }
 }
