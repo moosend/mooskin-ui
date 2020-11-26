@@ -97,7 +97,7 @@ describe('Select', () => {
 
         component.find('.label-container').simulate('click', {button: 0});
 
-        expect(component.find('.options-container').prop('style')).toEqual({display: 'flex'});
+        expect(component.find('.options-container').prop('style')).toEqual({display: 'block'});
     });
 
     test('applies correct classes when the related status is passed', () => {

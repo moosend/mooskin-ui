@@ -137,7 +137,7 @@ class Select extends React.Component<ISelectProps, ISelectState>{
 
         const description = this.props.description;
 
-        const displayList = this.state.list ? 'flex' : 'none';
+        const displayList = this.state.list ? 'block' : 'none';
         const zIndex = this.state.list ? 6 : 0;
 
         const options = this.assignCbToChildren();
