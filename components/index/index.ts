@@ -20,7 +20,7 @@ export { default as Loader } from '../Loader';
 export { default as LoadingBar } from '../LoadingBar';
 export { default as Modal } from '../Modal';
 export { default as Pagination } from '../Pagination';
-export { default as RadioGroup, Radio } from '../Radio';
+export { default as Radio } from '../Radio/Radio';
 export { default as RadioAccordion, RadioAccordionContent } from '../RadioAccordion';
 export { default as Steps, Step } from '../Steps';
 export { default as SideBar, SidebarItem } from '../SideBar';

@@ -6,12 +6,12 @@ export interface ILabelComponentProps {
     children: string;
 
     /** Make Label disabled */
-    disabled?: string;
+    disabled?: boolean;
 
     /** Label width */
     width?: number;
 
-    /** Switch primary color */
+    /** Label primary color */
     primaryColor?: string;
 
     /** Label class */
