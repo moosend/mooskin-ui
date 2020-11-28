@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { IRadioComponentProps } from './model';
 
-export const StyledRadioContainer = styled.div<Partial<IRadioComponentProps>>`
+export const StyledRadioContainer = styled.div`
     display: flex;
     flex-direction: column;
 `;
@@ -17,14 +17,11 @@ export const StyledRadioWrapper = styled.div<Partial<IRadioComponentProps>>`
     align-items: center;
 `;
 
-export const StyledRadio = styled.div`
-    width: 18px;
-    height: 18px;
-    margin: 0 10px 0 0;
-    padding: 4px;
-    border: solid 1px #293346;
-    background-color: #ffffff;
-    border-radius: 50%;
+export const StyledRadio = styled.div<Partial<IRadioComponentProps>>`
+    margin-right: 10px;
+    font-size: 23px;
+    color: ${(props) => (props.selected ? '#293346' : '#425579')};
+    font-family: 'Mooskin Icons';
 `;
 
 export const StyledDot = styled.div`

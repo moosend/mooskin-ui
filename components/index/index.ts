@@ -3,7 +3,7 @@ import '../_utils/globals/global.css';
 export { default as Button } from '../Button/Button';
 export { default as Carousel } from '../Carousel';
 export { default as CheckListItem } from '../CheckListItem';
-export { default as CheckboxGroup, Checkbox } from '../Checkbox';
+export { default as Checkbox } from '../Checkbox/Checkbox';
 export { default as ClipboardButton } from '../ClipboardButton';
 export { default as DatePicker, DateSelect } from '../DatePicker';
 export { default as DateRange } from '../DateRange';
