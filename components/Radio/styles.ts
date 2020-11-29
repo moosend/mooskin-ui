@@ -23,10 +23,3 @@ export const StyledRadio = styled.div<Partial<IRadioComponentProps>>`
     color: ${(props) => (props.selected ? '#293346' : '#425579')};
     font-family: 'Mooskin Icons';
 `;
-
-export const StyledDot = styled.div`
-    width: 9px;
-    height: 9px;
-    background-color: #293346;
-    border-radius: 50%;
-`;

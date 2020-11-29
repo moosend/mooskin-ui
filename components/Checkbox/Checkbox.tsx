@@ -14,7 +14,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
     };
 
     return (
-        <StyledCheckboxContainer id={props.id} className={props.className}>
+        <StyledCheckboxContainer id={props.id} className={props.className} style={props.style}>
             <StyledCheckboxWrapper disabled={props.disabled} onClick={onClick}>
                 <StyledCheckbox children={props.checked ? 'check_box' : 'check_box_outline_blank'} checked={props.checked}/>
                 <Label style={{minWidth: 'unset'}} disabled={props.disabled}>

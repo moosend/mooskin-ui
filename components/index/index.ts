@@ -29,7 +29,7 @@ export { default as Select, Option } from '../Select';
 export { default as Slider, ABSlider } from '../Slider';
 export { default as Switch } from '../Switch/Switch';
 export { default as StatsBox } from '../StatsBox';
-export { default as TextArea } from '../TextArea';
+export { default as TextArea } from '../TextArea/TextArea';
 export { default as TextEditor } from '../TextEditor';
 export { default as TabbedContent, Content, Header, Tab } from '../TabbedContent';
 export { default as Tags } from '../Tags';
