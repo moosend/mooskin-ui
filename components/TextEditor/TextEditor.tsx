@@ -751,7 +751,7 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
 
     const listClass = props.active ? '' : styles.disabled;
 
-    const arrow = !props.active ? styles.arrowDown : styles.arrowUp;
+    // const arrow = !props.active ? styles.arrowDown : styles.arrowUp;
 
     return (
         <div
@@ -760,8 +760,8 @@ export const CustomDropDown: React.StatelessComponent<IDropDownProps> = (props) 
             title="Personalization Tags"
         >
             <div className={styles.tagsLabel}>
-                <img src={hashtag} style={{verticalAlign: 'text-top'}} alt=""/>
-                <div className={arrow} />
+                <img src={hashtag} style={{verticalAlign: 'text-top', display: 'inline-block'}} alt=""/>
+                <div className={styles.arrowDown} style={{display: 'inline-block', paddingBottom: 2}} />
             </div>
             <div className={`${styles.tagsList} ${listClass}`}>
                 {popullateTags()}

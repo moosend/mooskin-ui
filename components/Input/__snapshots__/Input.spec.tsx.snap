@@ -52,6 +52,7 @@ exports[`Input renders correctly 1`] = `
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          onKeyDown={[Function]}
           placeholder="input placeholder"
           required={true}
           style={

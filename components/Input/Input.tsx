@@ -118,6 +118,9 @@ export interface IProps {
     /** callback that is called when the input changes */
     onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 
+    /** callback that is called when a key is pressed */
+    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+
     /** callback that is called when the input is focused */
     onFocus?: (e: React.FocusEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 
@@ -248,6 +251,7 @@ class Input extends React.Component<IProps, IInputState> {
                             autoFocus={autofocus}
                             onFocus={this.onFocus}
                             autoComplete={autocomplete}
+                            onKeyDown={this.onKeyDown}
                             onBlur={this.validateOnBlur}
                         />
                         {(personalizationTags || emoji || customDropdowns) && this.getDropDownContainer()}
@@ -263,6 +267,11 @@ class Input extends React.Component<IProps, IInputState> {
     onFocus = (e: React.FocusEvent<HTMLInputElement>) => {
         !this.props.disabled &&
         this.props.onFocus && this.props.onFocus(e, {dataLabel: this.props.dataLabel, value: this.props.value});
+    }
+
+    onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        !this.props.disabled &&
+        this.props.onKeyDown && this.props.onKeyDown(e, {dataLabel: this.props.dataLabel, value: this.props.value});
     }
 
     onChange = (e: React.ChangeEvent<HTMLInputElement>) => {

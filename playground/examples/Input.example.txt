@@ -135,7 +135,7 @@ class InputExample extends React.Component {
                 <br/>
                 <Input icon="search" onChange={this.onChange} disabled value="disabled" description="This input is disabled"/>
                 <br/>
-                <Input icon="search" onChange={this.onChange} value={this.state.value} dataLabel='value' onChange={this.onChange} placeholder="Alternate styles" alternateStyle/>
+                <Input onKeyDown={(e, data) => console.log(e, data)} icon="search" onChange={this.onChange} value={this.state.value} dataLabel='value' onChange={this.onChange} placeholder="Alternate styles" alternateStyle/>
             </div>
         );
     }
