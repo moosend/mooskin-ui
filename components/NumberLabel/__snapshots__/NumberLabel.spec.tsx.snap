@@ -2,7 +2,7 @@
 
 exports[`Button renders correctly 1`] = `
 <span
-  className="label-component label myClass"
+  className="number-label-component label myClass"
   style={
     Object {
       "color": "blue",

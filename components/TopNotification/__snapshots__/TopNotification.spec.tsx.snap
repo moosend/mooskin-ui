@@ -34,9 +34,10 @@ exports[`TopNotification renders correctly 1`] = `
     <div
       className="buttonContainer"
     >
-      <Component
+      <Button
         className=""
         onClick={[Function]}
+        primaryColor="#3fbaca"
         size="md"
         style={
           Object {
@@ -46,7 +47,7 @@ exports[`TopNotification renders correctly 1`] = `
         type="button"
       >
         click ok
-      </Component>
+      </Button>
     </div>
   </div>
   <div

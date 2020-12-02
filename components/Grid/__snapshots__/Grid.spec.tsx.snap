@@ -1,19 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid renders Col correctly 1`] = `
-<div
-  className="col-component col large-8 medium-6 small-4 hidden-xs myClass "
+<styled.div
+  className="myClass"
+  lg={8}
+  md={6}
+  sm={4}
   style={
     Object {
       "width": "50px",
     }
   }
+  xs="hidden"
 />
 `;
 
 exports[`Grid renders Grid correctly 1`] = `
-<div
-  className="grid-component grid  myClass"
+<styled.div
+  className="myClass"
   style={
     Object {
       "width": "50px",
@@ -31,62 +35,93 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
     }
   }
 >
-  <div
-    className="grid-component grid  myClass"
+  <styled.div
+    className="myClass"
     style={
       Object {
         "width": "50px",
       }
     }
   >
-    <Row
-      className="myClass"
+    <div
+      className="sc-eCApGN iMMBxK myClass"
       style={
         Object {
           "width": "50px",
         }
       }
     >
-      <div
-        className="row-component row  myClass"
+      <Row
+        className="myClass"
         style={
           Object {
             "width": "50px",
           }
         }
       >
-        <Col
+        <styled.div
           className="myClass"
-          lg={8}
-          md={6}
-          sm={4}
           style={
             Object {
               "width": "50px",
             }
           }
-          xs="hidden"
         >
           <div
-            className="col-component col large-8 medium-6 small-4 hidden-xs myClass "
+            className="sc-jSFkmK llyqsH myClass"
             style={
               Object {
                 "width": "50px",
               }
             }
           >
-            Col
+            <Col
+              className="myClass"
+              lg={8}
+              md={6}
+              sm={4}
+              style={
+                Object {
+                  "width": "50px",
+                }
+              }
+              xs="hidden"
+            >
+              <styled.div
+                className="myClass"
+                lg={8}
+                md={6}
+                sm={4}
+                style={
+                  Object {
+                    "width": "50px",
+                  }
+                }
+                xs="hidden"
+              >
+                <div
+                  className="sc-gKAblj gucgaE myClass"
+                  style={
+                    Object {
+                      "width": "50px",
+                    }
+                  }
+                >
+                  Col
+                </div>
+              </styled.div>
+            </Col>
           </div>
-        </Col>
-      </div>
-    </Row>
-  </div>
+        </styled.div>
+      </Row>
+    </div>
+  </styled.div>
 </Grid>
 `;
 
 exports[`Grid renders Row correctly 1`] = `
-<div
-  className="row-component row  myClass"
+<styled.div
+  className="myClass"
   style={
     Object {
       "width": "50px",

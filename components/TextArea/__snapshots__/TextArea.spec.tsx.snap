@@ -23,49 +23,106 @@ exports[`TextArea renders correctly 1`] = `
   }
   value="textarea value"
 >
-  <div
-    className="textarea-component areaContainer myClass"
+  <styled.div
+    className="myClass"
+    id="textarea"
     style={
       Object {
         "color": "blue",
       }
     }
   >
-    <label
-      className="textareaLabel"
-      htmlFor="textarea"
+    <div
+      className="sc-dlnjPT dlnjEZ myClass"
+      id="textarea"
       style={
         Object {
-          "flexBasis": "30px",
+          "color": "blue",
         }
       }
     >
-      with a label ofc
-    </label>
-    <div
-      className="textAreaDiv"
-    >
-      <textarea
-        className="textarea textarea disabledTextArea undefined"
-        cols={40}
-        disabled={true}
-        id="textarea"
-        maxLength={50}
-        minLength={10}
-        name="nodejs"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder="textarea placeholder"
-        required={true}
-        rows={10}
-        value="textarea value"
-      />
-      <i
-        className="description undefined"
+      <Label
+        className=""
+        primaryColor="#2d2d2d"
+        style={
+          Object {
+            "alignSelf": "flex-start",
+          }
+        }
+        width={30}
       >
-        just some textarea
-      </i>
+        <styled.div
+          className=""
+          onClick={[Function]}
+          primaryColor="#2d2d2d"
+          style={
+            Object {
+              "alignSelf": "flex-start",
+            }
+          }
+          width={30}
+        >
+          <div
+            className="sc-gtssRu leoGSM"
+            onClick={[Function]}
+            style={
+              Object {
+                "alignSelf": "flex-start",
+              }
+            }
+            width={30}
+          >
+            with a label ofc
+          </div>
+        </styled.div>
+      </Label>
+      <styled.div>
+        <div
+          className="sc-hKFyIo dNyRkZ"
+        >
+          <styled.textarea
+            cols={40}
+            disabled={true}
+            maxLength={50}
+            minLength={10}
+            onChange={[Function]}
+            placeholder="textarea placeholder"
+            required={true}
+            rows={10}
+            value="textarea value"
+          >
+            <textarea
+              className="sc-eCApGN iKDJUI"
+              cols={40}
+              disabled={true}
+              maxLength={50}
+              minLength={10}
+              onChange={[Function]}
+              placeholder="textarea placeholder"
+              required={true}
+              rows={10}
+              value="textarea value"
+            />
+          </styled.textarea>
+          <Description
+            className=""
+            style={Object {}}
+          >
+            <styled.div
+              className=""
+              style={Object {}}
+            >
+              <div
+                className="sc-bdnylx cvsSBh"
+                style={Object {}}
+              >
+                just some textarea
+              </div>
+            </styled.div>
+          </Description>
+        </div>
+      </styled.div>
     </div>
-  </div>
+  </styled.div>
 </TextArea>
 `;

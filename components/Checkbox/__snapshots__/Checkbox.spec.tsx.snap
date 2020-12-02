@@ -1,48 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckBox renders CheckBox correctly 1`] = `
-<div
-  className="checkbox-component checkbox
-                    disabledCheckbox myClass  undefined"
+<styled.div
+  className="myClass"
+  id="checkbox1"
   style={
     Object {
       "color": "blue",
     }
   }
 >
-  <input
-    className="mooskinIcons"
-    defaultChecked={true}
+  <styled.div
     disabled={true}
-    id="checkbox1"
     onClick={[Function]}
-    type="checkbox"
-    value="CheckBox1"
-  />
-  <label
-    htmlFor="checkbox1"
   >
-    <span
-      className="checkmark transparentCheckmark "
-    />
-    <span
-      className="checkboxTick  "
-    />
-    <span
-      className="label"
+    <styled.div
+      checked={true}
+    >
+      check_box
+    </styled.div>
+    <Label
+      className=""
+      disabled={true}
+      primaryColor="#2d2d2d"
+      style={
+        Object {
+          "minWidth": "unset",
+        }
+      }
+      width={150}
     >
       This is CheckBox 1
-    </span>
-  </label>
-  <br />
-  <i
-    className="description"
-  />
-</div>
+    </Label>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`CheckBox renders CheckboxGroup correctly 1`] = `
-<CheckboxGroup
+<Checkbox
   className="myClass"
   dataLabel="plan"
   horizontal={true}
@@ -75,8 +70,8 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
   }
   title="Select a plan"
 >
-  <div
-    className="checkboxgroup-component myClass"
+  <styled.div
+    className="myClass"
     id="checkbox1"
     style={
       Object {
@@ -84,168 +79,65 @@ exports[`CheckBox renders CheckboxGroup correctly 1`] = `
       }
     }
   >
-    <H2
-      className=""
-      style={Object {}}
-    >
-      <div
-        className="h2-component h2 "
-        style={Object {}}
-      >
-        Select a plan
-      </div>
-    </H2>
     <div
-      className="horizontal"
+      className="sc-dlnjPT duxSQX myClass"
+      id="checkbox1"
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
     >
-      <Checkbox
-        checked={true}
-        className=""
-        horizontal={true}
-        key="0"
-        label="Checkbox1"
-        name="1482363367071"
+      <styled.div
         onClick={[Function]}
-        spacing={10}
-        style={Object {}}
-        value="Checkbox1"
       >
         <div
-          className="checkbox-component checkbox
-                       undefined"
-          style={
-            Object {
-              "marginRight": "10px",
-            }
-          }
+          className="sc-hKFyIo bmgVpe"
+          onClick={[Function]}
         >
-          <input
-            className="mooskinIcons"
-            defaultChecked={true}
-            id="4zlbrf"
-            name="1482363367071"
-            onClick={[Function]}
-            type="checkbox"
-            value="Checkbox1"
-          />
-          <label
-            htmlFor="4zlbrf"
-          >
-            <span
-              className="checkmark transparentCheckmark "
-            />
-            <span
-              className="checkboxTick  "
-            />
-            <span
-              className="label"
+          <styled.div>
+            <div
+              className="sc-eCApGN jEwlHW"
             >
-              Checkbox1
-            </span>
-          </label>
-          <br />
-          <i
-            className="description"
-          />
-        </div>
-      </Checkbox>
-      <Checkbox
-        checked={false}
-        className=""
-        horizontal={true}
-        key="1"
-        label="Checkbox2"
-        name="1482363367071"
-        onClick={[Function]}
-        spacing={10}
-        style={Object {}}
-        value="Checkbox2"
-      >
-        <div
-          className="checkbox-component checkbox
-                       undefined"
-          style={
-            Object {
-              "marginRight": "10px",
+              check_box_outline_blank
+            </div>
+          </styled.div>
+          <Label
+            className=""
+            primaryColor="#2d2d2d"
+            style={
+              Object {
+                "minWidth": "unset",
+              }
             }
-          }
-        >
-          <input
-            className="mooskinIcons"
-            defaultChecked={false}
-            id="4zlbrf"
-            name="1482363367071"
-            onClick={[Function]}
-            type="checkbox"
-            value="Checkbox2"
-          />
-          <label
-            htmlFor="4zlbrf"
+            width={150}
           >
-            <span
-              className="checkmark  "
-            />
-            <span
-              className="label"
+            <styled.div
+              className=""
+              onClick={[Function]}
+              primaryColor="#2d2d2d"
+              style={
+                Object {
+                  "minWidth": "unset",
+                }
+              }
+              width={150}
             >
-              Checkbox2
-            </span>
-          </label>
-          <br />
-          <i
-            className="description"
-          />
+              <div
+                className="sc-gtssRu HIKRA"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "minWidth": "unset",
+                  }
+                }
+                width={150}
+              />
+            </styled.div>
+          </Label>
         </div>
-      </Checkbox>
-      <Checkbox
-        checked={false}
-        className=""
-        horizontal={true}
-        key="2"
-        label="Checkbox3"
-        name="1482363367071"
-        onClick={[Function]}
-        spacing={10}
-        style={Object {}}
-        value="Checkbox3"
-      >
-        <div
-          className="checkbox-component checkbox
-                       undefined"
-          style={
-            Object {
-              "marginRight": "10px",
-            }
-          }
-        >
-          <input
-            className="mooskinIcons"
-            defaultChecked={false}
-            id="4zlbrf"
-            name="1482363367071"
-            onClick={[Function]}
-            type="checkbox"
-            value="Checkbox3"
-          />
-          <label
-            htmlFor="4zlbrf"
-          >
-            <span
-              className="checkmark  "
-            />
-            <span
-              className="label"
-            >
-              Checkbox3
-            </span>
-          </label>
-          <br />
-          <i
-            className="description"
-          />
-        </div>
-      </Checkbox>
+      </styled.div>
     </div>
-  </div>
-</CheckboxGroup>
+  </styled.div>
+</Checkbox>
 `;

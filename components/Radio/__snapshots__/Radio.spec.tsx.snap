@@ -1,35 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio renders Radio correctly 1`] = `
-<div
-  className="radio-component radio disabledRadio radioChecked   myClass"
+<styled.div
+  className="myClass"
+  id="radio1"
   style={
     Object {
       "color": "blue",
     }
   }
 >
-  <input
-    checked={true}
+  <styled.div
     disabled={true}
-    id="4zlbrf"
     onClick={[Function]}
-    readOnly={true}
-    type="radio"
-    value="radio1"
-  />
-  <label
-    htmlFor="4zlbrf"
   >
-    <span>
+    <styled.div
+      selected={true}
+    >
+      radio_button_checked
+    </styled.div>
+    <Label
+      className=""
+      disabled={true}
+      primaryColor="#2d2d2d"
+      style={
+        Object {
+          "minWidth": "unset",
+        }
+      }
+      width={150}
+    >
       This is radio 1
-    </span>
-  </label>
-</div>
+    </Label>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`Radio renders RadioGroup correctly 1`] = `
-<RadioGroup
+<Radio
   className="myClass"
   dataLabel="plan"
   id="radio1"
@@ -62,8 +70,8 @@ exports[`Radio renders RadioGroup correctly 1`] = `
   title="Select a plan"
   vertical={true}
 >
-  <div
-    className="radiogroup-component myClass"
+  <styled.div
+    className="myClass"
     id="radio1"
     style={
       Object {
@@ -71,135 +79,65 @@ exports[`Radio renders RadioGroup correctly 1`] = `
       }
     }
   >
-    <H2
-      className=""
-      style={Object {}}
-    >
-      <div
-        className="h2-component h2 "
-        style={Object {}}
-      >
-        Select a plan
-      </div>
-    </H2>
     <div
-      className=""
+      className="sc-dlnjPT duxSQX myClass"
+      id="radio1"
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
     >
-      <Radio
-        className=""
-        key="0"
-        label="Radio1"
-        name="1482363367071"
+      <styled.div
         onClick={[Function]}
-        selected={true}
-        spacing={10}
-        style={Object {}}
-        value="Radio1"
-        vertical={true}
       >
         <div
-          className="radio-component radio  radioChecked   "
-          style={
-            Object {
-              "marginBottom": "10px",
-            }
-          }
+          className="sc-hKFyIo bmgVpe"
+          onClick={[Function]}
         >
-          <input
-            checked={true}
-            id="4zlbrf"
-            name="1482363367071"
-            onClick={[Function]}
-            readOnly={true}
-            type="radio"
-            value="Radio1"
-          />
-          <label
-            htmlFor="4zlbrf"
-          >
-            <span>
-              Radio1
-            </span>
-          </label>
-        </div>
-      </Radio>
-      <Radio
-        className=""
-        key="1"
-        label="Radio2"
-        name="1482363367071"
-        onClick={[Function]}
-        selected={false}
-        spacing={10}
-        style={Object {}}
-        value="Radio2"
-        vertical={true}
-      >
-        <div
-          className="radio-component radio     "
-          style={
-            Object {
-              "marginBottom": "10px",
+          <styled.div>
+            <div
+              className="sc-eCApGN jEwlHW"
+            >
+              radio_button_unchecked
+            </div>
+          </styled.div>
+          <Label
+            className=""
+            primaryColor="#2d2d2d"
+            style={
+              Object {
+                "minWidth": "unset",
+              }
             }
-          }
-        >
-          <input
-            checked={false}
-            id="4zlbrf"
-            name="1482363367071"
-            onClick={[Function]}
-            readOnly={true}
-            type="radio"
-            value="Radio2"
-          />
-          <label
-            htmlFor="4zlbrf"
+            width={150}
           >
-            <span>
-              Radio2
-            </span>
-          </label>
+            <styled.div
+              className=""
+              onClick={[Function]}
+              primaryColor="#2d2d2d"
+              style={
+                Object {
+                  "minWidth": "unset",
+                }
+              }
+              width={150}
+            >
+              <div
+                className="sc-gtssRu HIKRA"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "minWidth": "unset",
+                  }
+                }
+                width={150}
+              />
+            </styled.div>
+          </Label>
         </div>
-      </Radio>
-      <Radio
-        className=""
-        key="2"
-        label="Radio3"
-        name="1482363367071"
-        onClick={[Function]}
-        selected={false}
-        spacing={10}
-        style={Object {}}
-        value="Radio3"
-        vertical={true}
-      >
-        <div
-          className="radio-component radio     "
-          style={
-            Object {
-              "marginBottom": "10px",
-            }
-          }
-        >
-          <input
-            checked={false}
-            id="4zlbrf"
-            name="1482363367071"
-            onClick={[Function]}
-            readOnly={true}
-            type="radio"
-            value="Radio3"
-          />
-          <label
-            htmlFor="4zlbrf"
-          >
-            <span>
-              Radio3
-            </span>
-          </label>
-        </div>
-      </Radio>
+      </styled.div>
     </div>
-  </div>
-</RadioGroup>
+  </styled.div>
+</Radio>
 `;
