@@ -1,10 +1,6 @@
-export interface ICommonSkeletonComponentProps {
-    /** Classname applied to the Skeleton */
-    className?: string;
+import { IBoxComponentProps } from '../Box/model';
 
-    /** Styles applied to the Skeleton */
-    style?: React.CSSProperties;
-
+export interface ICommonSkeletonComponentProps extends IBoxComponentProps {
     /** The color at the animation start */
     startColor?: string;
 

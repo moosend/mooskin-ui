@@ -1,4 +1,5 @@
 import styled, {keyframes} from 'styled-components';
+import Box from '../Box/Box';
 
 // import variables from '../_utils/globals/variables';
 
@@ -25,7 +26,7 @@ const fadeIn = keyframes`
     }
 `;
 
-export const StyledCommonSkeleton = styled.div<ICommonSkeletonComponentProps>`
+export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
     opacity: 0.7;
     border-radius: 2px;
     border-color: ${(props) => props.startColor};
@@ -67,7 +68,6 @@ export const StyledSkeletonCircle = styled(StyledCommonSkeleton)<ISkeletonCircle
 `;
 
 export const StyledSkeletonText = styled(StyledCommonSkeleton)<ISkeletonTextComponentProps>`
-    width: ${(props) => props.width};
     height: 0.5rem;
     :not(:last-child){
         margin-bottom: 1rem;

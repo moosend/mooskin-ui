@@ -2,12 +2,27 @@
 export type DefaultOptionsType = 'inherit' | 'initial' | 'unset';
 export type BorderStyleType = 'none' | 'hidden' | 'dotted' | 'dashed' | 'solid' | 'double' | 'groove' | 'ridge' | 'inset' | 'outset';
 export type OverflowOptionsType = 'visible' | 'hidden' | 'scroll' | 'auto' | 'initial' | 'inherit';
-export type FlexAlignOptions = 'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'initial' | 'inherit';
-export type FlexJustifyOptions = 'space-between' | 'space-around' | 'flex-start' | 'flex-end' | 'center' | 'initial' | 'inherit' | 'space-evenly';
+export type FlexAlignOptionsType = 'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'initial' | 'inherit';
+export type FlexJustifyOptionsType = 'space-between' | 'space-around' | 'flex-start' | 'flex-end' | 'center' | 'initial' | 'inherit' | 'space-evenly';
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 export type BoxShadowIntensityType = IntensityType | 'inner' | 'outline';
 
+export const boxComponentProps = [
+    'id', 'className', 'style', 'm', 'mt', 'mr', 'mb', 'ml', 'mx', 'my', 'boxShadow', 'color', 'round', 'p', 'pt', 'pr', 'pb', 'pl', 'px', 'py',
+    'opacity', 'fontFamily', 'fontSize', 'fontWeight', 'lineHeight', 'textAlign', 'fontStyle', 'textTransform', 'textDecoration', 'w', 'h',
+    'minW', 'maxW', 'minH', 'maxH', 'd', 'overflow', 'overflowX', 'overflowY', 'align', 'alignContent', 'alignSelf', 'justifyItems', 'justify',
+    'justifySelf', 'wrap', 'direction', 'flex', 'flexGrow', 'flexShrink', 'flexBasis', 'order', 'bg', 'bgImage', 'bgColor', 'bgSize', 'bgPosition',
+    'bgRepeat', 'border', 'borderWidth', 'borderStyle', 'borderColor', 'borderTop', 'borderTopWidth', 'borderTopStyle', 'borderTopColor',
+    'borderRight', 'borderRightWidth', 'borderRightStyle', 'borderRightColor', 'borderBottom', 'borderBottomWidth', 'borderBottomStyle',
+    'borderBottomColor', 'borderLeft', 'borderLeftWidth', 'borderLeftStyle', 'borderLeftColor', 'borderRadius', 'borderTopLeftRadius',
+    'borderTopRightRadius', 'borderBottomRightRadius', 'borderBottomLeftRadius', 'position', 'zIndex', 'top', 'right', 'bottom', 'left',
+    'animation', 'visibility', 'cursor'
+];
+
 export interface IBoxComponentProps {
+    /** id of the element */
+    id?: string;
+
     /** Box class */
     className?: string;
 
@@ -119,22 +134,22 @@ export interface IBoxComponentProps {
     overflowY?: OverflowOptionsType;
 
     /** align items */
-    align?: FlexAlignOptions;
+    align?: FlexAlignOptionsType;
 
     /** align content */
-    alignContent?: 'stretch' | FlexJustifyOptions;
+    alignContent?: 'stretch' | FlexJustifyOptionsType;
 
     /** align self */
-    alignSelf?: FlexAlignOptions;
+    alignSelf?: FlexAlignOptionsType;
 
     /** justify items */
-    justifyItems?: FlexAlignOptions;
+    justifyItems?: FlexAlignOptionsType;
 
     /** justify content */
-    justify?: FlexJustifyOptions;
+    justify?: FlexJustifyOptionsType;
 
     /** justify self */
-    justifySelf?: FlexJustifyOptions;
+    justifySelf?: FlexJustifyOptionsType;
 
     /** flex wrap */
     wrap?: 'nowrap' | 'wrap' | 'wrap-reverse' | 'initial' | 'inherit';

@@ -1,6 +1,7 @@
+import { IBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index';
 
-export interface IRadioComponentProps {
+export interface IRadioComponentProps extends IBoxComponentProps {
     onClick?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
@@ -17,12 +18,6 @@ export interface IRadioComponentProps {
 
     /** value for this radio */
     value: string | number;
-
-    /** Radio class */
-    className?: string;
-
-    /** override Radio styles */
-    style?: React.CSSProperties;
 
     /** radio label */
     label: string;

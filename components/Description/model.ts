@@ -1,10 +1,6 @@
-export interface IDescriptionComponentProps {
+import { IBoxComponentProps } from '../Box/model';
+
+export interface IDescriptionComponentProps extends IBoxComponentProps {
     /** Description children */
     children: string;
-
-    /** Description class */
-    className?: string;
-
-    /** override Description styles */
-    style?: React.CSSProperties;
 }

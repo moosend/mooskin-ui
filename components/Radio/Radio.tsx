@@ -4,6 +4,8 @@ import Description from '../Description/Description';
 import Label from '../Label/Label';
 import {StyledRadio, StyledRadioContainer, StyledRadioWrapper} from './styles';
 
+import { getBoxProps } from '../_utils/helper';
+
 import { IRadioComponentProps } from './model';
 
 export const Radio: React.FC<IRadioComponentProps> = (props) => {
@@ -14,10 +16,10 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
     };
 
     return (
-        <StyledRadioContainer id={props.id} className={props.className} style={props.style}>
+        <StyledRadioContainer {...getBoxProps(props)}>
             <StyledRadioWrapper disabled={props.disabled} onClick={onClick}>
                 <StyledRadio children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'} selected={props.selected}/>
-                <Label style={{minWidth: 'unset'}} disabled={props.disabled}>
+                <Label minW="unset" disabled={props.disabled}>
                     {props.label}
                 </Label>
             </StyledRadioWrapper>

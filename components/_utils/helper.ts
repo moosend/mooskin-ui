@@ -1,3 +1,4 @@
+import { boxComponentProps } from '../Box/model';
 
 export const arrayHasDupes = (array: any[]): boolean => {
     const n = array.length;
@@ -36,4 +37,14 @@ export const debounce = (func: (...args: any[]) => any, wait: number, immediate:
             func.apply(this, args);
         }
     };
+};
+
+export const getBoxProps = (componentProps: any) => {
+    const boxProps: any = {};
+    Object.keys(componentProps).map((key) => {
+        if (boxComponentProps.includes(key)){
+            boxProps[key] = (componentProps as any)[key];
+        }
+    });
+    return boxProps;
 };

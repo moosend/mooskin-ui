@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Box from '../Box/Box';
+
 import variables from '../_utils/globals/variables';
 
 import { IButtonComponentProps } from './model';
@@ -16,7 +18,7 @@ const inverseButtonSizes = {
     sm: '6px 7px',
 };
 
-export const ButtonDefault = styled.button<IButtonComponentProps>`
+export const ButtonDefault = styled(Box)<IButtonComponentProps>`
     min-width: 135px;
     width: fit-content;
     border-radius: 3px;
@@ -53,7 +55,7 @@ export const ButtonInverse = styled(ButtonDefault)<IButtonComponentProps>`
                 : props.theme.backgroundDisabled || variables.backgroundDisabled};
 `;
 
-export const ButtonIcon = styled.i`
+export const ButtonIcon = styled(Box)`
     font-family: 'Mooskin Icons Round';
     font-size: 15px;
     font-style: normal;

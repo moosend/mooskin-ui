@@ -1,10 +1,7 @@
+import { IBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index';
 
-export interface ITextAreaComponentProps {
-
-    /** override textarea id */
-    id?: string;
-
+export interface ITextAreaComponentProps extends IBoxComponentProps {
     /** provide to make the textarea field disabled */
     disabled?: boolean;
 
@@ -40,12 +37,6 @@ export interface ITextAreaComponentProps {
 
     /** toggle readonly textarea */
     readonly?: boolean;
-
-    /** override textarea styles */
-    style?: React.CSSProperties;
-
-    /** override textarea class */
-    className?: string;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;

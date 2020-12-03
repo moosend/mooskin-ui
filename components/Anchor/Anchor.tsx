@@ -11,7 +11,7 @@ export const Anchor: React.FC<IAnchorComponentProps> = (props) => {
     };
 
     return (
-        <StyledAnchor {...props} onClick={onClick}>
+        <StyledAnchor {...props} onClick={onClick} as="a">
             {props.children}
         </StyledAnchor>
     );

@@ -1,13 +1,6 @@
-export interface IAnchorComponentProps {
-    /** Anchor id attribute */
-    id?: string;
+import { IBoxComponentProps } from '../Box/model';
 
-    /** Anchor className */
-    className?: string;
-
-    /** Override Anchor styles */
-    style?: React.CSSProperties;
-
+export interface IAnchorComponentProps extends IBoxComponentProps {
     /** Provide to make the Anchor disabled */
     disabled?: boolean;
 

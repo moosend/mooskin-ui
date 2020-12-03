@@ -1,7 +1,6 @@
-export interface IButtonComponentProps {
-    /** Button id attribute */
-    id?: string;
+import { IBoxComponentProps } from '../Box/model';
 
+export interface IButtonComponentProps extends IBoxComponentProps {
     /** Provide to inverse the Button styles */
     inverseStyle?: boolean;
 
@@ -22,12 +21,6 @@ export interface IButtonComponentProps {
 
     /** Button size */
     size?: 'lg' | 'md' | 'sm';
-
-    /** Button className */
-    className?: string;
-
-    /** Override Button styles */
-    style?: React.CSSProperties;
 
     /** Callback that's called when the button is clicked */
     onClick?: (e?: React.MouseEvent<HTMLElement>) => void;

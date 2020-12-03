@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Box from '../Box/Box';
 
 import { IStackComponentProps } from './model';
 
@@ -10,11 +11,11 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
         switch (props.direction) {
             case 'row':
             case 'row-reverse':
-                return {margin: `0 ${props.spacing}px`, alignSelf: 'stretch'};
+                return {mx: props.spacing, alignSelf: 'stretch' as 'stretch'};
 
             case 'column':
             case 'column-reverse':
-                return {margin: `${props.spacing}px 0`};
+                return {my: props.spacing};
 
             default:
                 return {};
@@ -41,9 +42,9 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
     const dividerSpacingHandler = (element: JSX.Element | React.ReactElement) => {
         const spacingStyles = props.spacing ? getDividerSpacing() : {};
         return (
-            <div style={spacingStyles} className="stack-divider-wrapper">
+            <Box {...spacingStyles} className="stack-divider-wrapper">
                 {React.cloneElement(element, {key: Math.random()})}
-            </div>
+            </Box>
         );
     };
 
@@ -69,6 +70,8 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
             return <div />;
         });
     };
+
+    console.log(props);
 
     return (
         <StyledStack {...props} children={renderChildren()} />

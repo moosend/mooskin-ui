@@ -1,26 +1,10 @@
-export interface IGridProps {
-    /** id of the Grid container */
-    id?: string;
+import { IBoxComponentProps } from '../Box/model';
 
-    /** custom classes for Grid */
-    className?: string;
-
-    /** custom styles for Grid */
-    style?: React.CSSProperties;
-
+export interface IGridProps extends IBoxComponentProps {
     children?: Array<React.ReactElement<IRowProps>> | React.ReactElement<IRowProps>;
 }
 
-export interface IRowProps {
-    /** id of the Row container */
-    id?: string;
-
-    /** custom classes for Row */
-    className?: string;
-
-    /** custom styles for Row */
-    style?: React.CSSProperties;
-
+export interface IRowProps extends IBoxComponentProps {
     children?: Array<React.ReactElement<IColProps>> | React.ReactElement<IColProps>;
 }
 
@@ -33,15 +17,6 @@ export interface IColWidths {
     xs?: ColWidth | 'hidden';
 }
 
-export interface IColProps extends IColWidths {
-    /** id of the Col container */
-    id?: string;
-
-    /** custom classes for Col */
-    className?: string;
-
-    /** custom styles for Col */
-    style?: React.CSSProperties;
-
+export interface IColProps extends IColWidths, IBoxComponentProps {
     children?: any;
 }

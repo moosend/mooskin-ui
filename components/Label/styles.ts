@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
+import Box from '../Box/Box';
+
 import { ILabelComponentProps } from './model';
 
-export const StyledLabel = styled.div<ILabelComponentProps>`
+export const StyledLabel = styled(Box)<ILabelComponentProps>`
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 500;

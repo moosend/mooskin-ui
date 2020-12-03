@@ -6,6 +6,8 @@ import Description from '../Description/Description';
 import Label from '../Label/Label';
 import {StyledTextArea, StyledTextAreaContainer, StyledTextAreaWrapper} from './styles';
 
+import { getBoxProps } from '../_utils/helper';
+
 export const TextArea: React.FC<ITextAreaComponentProps> = (props) => {
 
     const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -15,11 +17,7 @@ export const TextArea: React.FC<ITextAreaComponentProps> = (props) => {
     };
 
     return (
-        <StyledTextAreaContainer
-            className={props.className}
-            style={props.style}
-            id={props.id}
-        >
+        <StyledTextAreaContainer {...getBoxProps(props)} >
             {props.label && <Label style={{alignSelf: 'flex-start'}} width={props.labelWidth}>{props.label}</Label>}
             <StyledTextAreaWrapper>
                 <StyledTextArea

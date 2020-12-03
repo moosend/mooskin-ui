@@ -42,22 +42,29 @@ const secondaryBoxStyle = {
 
 export const Horizontal = HTemplate.bind({});
 Horizontal.args = {
+    align: 'stretch',
     children: [
         <div key={0} style={{...boxStyle, backgroundColor: 'red'}} />,
         <div key={1} style={{...secondaryBoxStyle, backgroundColor: 'green'}} />,
         <div key={2} style={{...boxStyle, backgroundColor: 'blue'}} />
     ],
+    direction: 'row',
+    justify: 'initial',
     spacing: 20,
 };
 
 export const HorizontalWithDivider = HTemplate.bind({});
 HorizontalWithDivider.args = {
+    align: 'stretch',
     children: [
         <div key={0} style={{...boxStyle, backgroundColor: 'red'}} />,
         <div key={1} style={{...secondaryBoxStyle, backgroundColor: 'green'}} />,
         <div key={2} style={{...boxStyle, backgroundColor: 'blue'}} />
     ],
+    direction: 'row',
     divider: <div style={{backgroundColor: 'grey', width: 1, height: '100%'}} />,
+    justify: 'initial',
+    p: 50,
     spacing: 20,
 };
 

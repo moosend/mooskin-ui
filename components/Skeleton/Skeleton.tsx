@@ -61,7 +61,7 @@ export const SkeletonText: React.FC<ISkeletonTextComponentProps> = (props) => {
             <>
                 {
                     lines.map((line, i) => {
-                        return <EnhancedComponent {...props} key={i} width={i === lines.length - 1 ? '80%' : '100%'} />;
+                        return <EnhancedComponent {...props} key={i} w={i === lines.length - 1 ? '80%' : '100%'} />;
                     })
                 }
             </>

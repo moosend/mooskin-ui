@@ -1,7 +1,6 @@
-export interface ILabelComponentProps {
-    /** Override Label id */
-    id?: string;
+import { IBoxComponentProps } from '../Box/model';
 
+export interface ILabelComponentProps extends IBoxComponentProps {
     /** Label children */
     children: string;
 
@@ -13,12 +12,6 @@ export interface ILabelComponentProps {
 
     /** Label primary color */
     primaryColor?: string;
-
-    /** Label class */
-    className?: string;
-
-    /** override Label styles */
-    style?: React.CSSProperties;
 
     /** callback that is called when the Label is clicked */
     onClick?: (e: React.MouseEvent<HTMLElement>) => void;

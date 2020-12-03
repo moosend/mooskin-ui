@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
+import Box from '../Box/Box';
+
 // import variables from '../_utils/globals/variables';
 
 import { ITextAreaComponentProps } from './model';
 
-export const StyledTextAreaContainer = styled.div`
+export const StyledTextAreaContainer = styled(Box)`
     display: flex;
 `;
 
-export const StyledTextAreaWrapper = styled.div<Partial<ITextAreaComponentProps>>`
+export const StyledTextAreaWrapper = styled(Box)<Partial<ITextAreaComponentProps>>`
     display: flex;
     flex-direction: column;
 `;

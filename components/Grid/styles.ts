@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Box from '../Box/Box';
+
 import screens from '../_utils/globals/screens';
 
 import { ColWidth, IColProps, IColWidths, IGridProps, IRowProps } from './model';
@@ -62,7 +64,7 @@ const assembleAvengers = (data: IColWidths) => {
     `;
 };
 
-export const StyledGrid = styled.div<IGridProps>`
+export const StyledGrid = styled(Box)<IGridProps>`
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -70,14 +72,14 @@ export const StyledGrid = styled.div<IGridProps>`
     box-sizing: border-box;
 `;
 
-export const StyledRow = styled.div<IRowProps>`
+export const StyledRow = styled(Box)<IRowProps>`
     display: flex;
     flex-flow: row wrap;
     box-sizing: border-box;
     min-width: 0px;
 `;
 
-export const StyledCol = styled.div<IColProps>`
+export const StyledCol = styled(Box)<IColProps>`
     box-sizing: border-box;
     min-width: 0px;
     ${(props) => assembleAvengers({ lg: props.lg, md: props.md, sm: props.sm, xs: props.xs })}

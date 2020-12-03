@@ -7,6 +7,8 @@ import { ISwitchComponentProps } from './model';
 
 import { SwitchContainer, SwitchHandle, SwitchLabelDisabled, SwitchLabelNormal, SwitchStyled } from './styles';
 
+import { getBoxProps } from '../_utils/helper';
+
 export const Switch: React.FC<ISwitchComponentProps> = (props) => {
     const renderDisabledContent = () => {
         return <SwitchLabelDisabled>{props.disabledLabel}</SwitchLabelDisabled>;
@@ -21,10 +23,10 @@ export const Switch: React.FC<ISwitchComponentProps> = (props) => {
     };
 
     return (
-        <SwitchContainer onClick={onClick}>
+        <SwitchContainer {...getBoxProps(props)} onClick={onClick}>
             {props.label && <Label width={props.labelWidth}>{props.label}</Label>}
             <SwitchStyled
-                width={props.width}
+                w={props.width}
                 primaryColor={props.primaryColor}
                 secondaryColor={props.secondaryColor}
                 on={props.on}

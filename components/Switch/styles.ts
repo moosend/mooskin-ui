@@ -1,19 +1,21 @@
 import styled from 'styled-components';
+
 import variables from '../_utils/globals/variables';
+
+import Box from '../Box/Box';
 
 import { ISwitchComponentProps } from './model';
 
-export const SwitchContainer = styled.div<ISwitchComponentProps>`
+export const SwitchContainer = styled(Box)<ISwitchComponentProps>`
     display: flex;
 `;
 
-export const SwitchStyled = styled.div<ISwitchComponentProps>`
+export const SwitchStyled = styled(Box)<ISwitchComponentProps>`
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: ${(props) => props.width}px;
     height: 27px;
     padding: 0 8px;
     cursor: ${(props) => (!props.disabled ? 'pointer' : 'not-allowed')};
@@ -28,7 +30,7 @@ export const SwitchStyled = styled.div<ISwitchComponentProps>`
     }};
 `;
 
-export const SwitchHandle = styled.div<ISwitchComponentProps>`
+export const SwitchHandle = styled(Box)<ISwitchComponentProps>`
     position: absolute;
     content: '';
     top: 4px;
@@ -42,7 +44,7 @@ export const SwitchHandle = styled.div<ISwitchComponentProps>`
     transform: ${(props) => (props.on ? `translate(${props.width ? props.width - 27 : 63}px)` : '')};
 `;
 
-export const SwitchLabel = styled.div<ISwitchComponentProps>`
+export const SwitchLabel = styled(Box)<ISwitchComponentProps>`
     font-family: Hind;
     font-size: 12px;
     font-weight: 500;

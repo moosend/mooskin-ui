@@ -6,6 +6,8 @@ import {StyledCheckbox, StyledCheckboxContainer, StyledCheckboxWrapper} from './
 
 import { ICheckboxComponentProps } from './model';
 
+import { getBoxProps } from '../_utils/helper';
+
 export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
 
     const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -14,10 +16,10 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
     };
 
     return (
-        <StyledCheckboxContainer id={props.id} className={props.className} style={props.style}>
+        <StyledCheckboxContainer {...getBoxProps(props)}>
             <StyledCheckboxWrapper disabled={props.disabled} onClick={onClick}>
                 <StyledCheckbox children={props.checked ? 'check_box' : 'check_box_outline_blank'} checked={props.checked}/>
-                <Label style={{minWidth: 'unset'}} disabled={props.disabled}>
+                <Label minW="unset" disabled={props.disabled}>
                     {props.label}
                 </Label>
             </StyledCheckboxWrapper>
