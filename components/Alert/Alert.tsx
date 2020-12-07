@@ -23,12 +23,18 @@ export const Alert: React.FC<IAlertComponentProps> = (props) => {
                     child.type === AlertCloseButton
                 )
             ){
-                return React.cloneElement(child, {key: i, status: props.status, variant: props.variant});
+                return React.cloneElement(child, {
+                    children: recurseChildren((child.props as any).children),
+                    key: i,
+                    status: child.props.status ? child.props.status : props.status,
+                    variant: child.props.variant ? child.props.variant : props.variant
+                } as any);
             }
 
             if (React.isValidElement(child) && (child.props as any).children){
                 return React.cloneElement(child, {children: recurseChildren((child.props as any).children)} as any);
             }
+
             return child;
         });
     };

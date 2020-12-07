@@ -8,11 +8,11 @@ import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeleton
 const breatheAnimation = (startColor?: string, endColor?: string) => keyframes`
     0% {
         border-color: ${startColor || '#EDF2F7'};
-        background: ${startColor || '#EDF2F7'};
+        background-color: ${startColor || '#EDF2F7'};
     }
     100% {
         border-color: ${endColor || '#A0AEC0'};
-        background: ${endColor || '#A0AEC0'};
+        background-color: ${endColor || '#A0AEC0'};
     }
 `;
 
@@ -30,7 +30,7 @@ export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
     opacity: 0.7;
     border-radius: 2px;
     border-color: ${(props) => props.startColor};
-    background: ${(props) => props.endColor};
+    background-color: ${(props) => props.endColor};
     animation: ${(props) => `${props.speed}s`} linear infinite alternate ${(props) => breatheAnimation(props.startColor, props.endColor)};
     box-shadow: none;
     background-clip: padding-box;
