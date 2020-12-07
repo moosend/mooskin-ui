@@ -4,7 +4,7 @@ import { IBoxComponentProps } from './model';
 import {StyledBox} from './styles';
 
 export const Box: React.FC<IBoxComponentProps> = (props) => {
-    return <StyledBox {...props} />;
+    return <StyledBox {...props} as={props.boxAs} />;
 };
 
 Box.defaultProps = {

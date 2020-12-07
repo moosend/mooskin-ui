@@ -1,13 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button renders correctly 1`] = `
-<Component
+<Button
   className="myClass"
   disabled={true}
   href="www.moosend.com"
   id="button1"
   inverseStyle={true}
   onClick={[MockFunction]}
+  primaryColor="#3fbaca"
   size="md"
   style={
     Object {
@@ -16,14 +17,15 @@ exports[`Button renders correctly 1`] = `
   }
   type="submit"
 >
-  <Styled(styled.button)
-    as="a"
+  <Styled(Styled(Box))
+    boxAs="a"
     className="myClass"
     disabled={true}
     href="www.moosend.com"
     id="button1"
     inverseStyle={true}
     onClick={[Function]}
+    primaryColor="#3fbaca"
     size="md"
     style={
       Object {
@@ -32,12 +34,15 @@ exports[`Button renders correctly 1`] = `
     }
     type="submit"
   >
-    <a
-      className="sc-bdnylx sc-dlnjPT dfWOFb hbWhZw myClass"
+    <Box
+      boxAs="a"
+      className="sc-gtssRu sc-hKFyIo hVNtby iYbqsp myClass"
       disabled={true}
       href="www.moosend.com"
       id="button1"
+      inverseStyle={true}
       onClick={[Function]}
+      primaryColor="#3fbaca"
       size="md"
       style={
         Object {
@@ -45,9 +50,45 @@ exports[`Button renders correctly 1`] = `
         }
       }
       type="submit"
+      w="fit-content"
     >
-      Mooskin
-    </a>
-  </Styled(styled.button)>
-</Component>
+      <styled.div
+        as="a"
+        boxAs="a"
+        className="sc-gtssRu sc-hKFyIo hVNtby iYbqsp myClass"
+        disabled={true}
+        href="www.moosend.com"
+        id="button1"
+        inverseStyle={true}
+        onClick={[Function]}
+        primaryColor="#3fbaca"
+        size="md"
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+        type="submit"
+        w="fit-content"
+      >
+        <a
+          className="sc-bdnylx eraKfX sc-gtssRu sc-hKFyIo hVNtby iYbqsp myClass"
+          disabled={true}
+          href="www.moosend.com"
+          id="button1"
+          onClick={[Function]}
+          size="md"
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+          type="submit"
+        >
+          Mooskin
+        </a>
+      </styled.div>
+    </Box>
+  </Styled(Styled(Box))>
+</Button>
 `;

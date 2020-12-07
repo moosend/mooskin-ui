@@ -56,18 +56,6 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
 />
 `;
 
-exports[`Skeleton renders SkeletonCircle with size correctly 1`] = `
-<Component
-  className=""
-  endColor="#A0AEC0"
-  isLoaded={false}
-  size="100px"
-  speed={0.8}
-  startColor="#EDF2F7"
-  style={Object {}}
-/>
-`;
-
 exports[`Skeleton renders SkeletonText correctly 1`] = `
 <Fragment>
   <Component
@@ -79,7 +67,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
     speed={0.8}
     startColor="#EDF2F7"
     style={Object {}}
-    width="100%"
+    w="100%"
   />
   <Component
     className=""
@@ -90,7 +78,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
     speed={0.8}
     startColor="#EDF2F7"
     style={Object {}}
-    width="100%"
+    w="100%"
   />
   <Component
     className=""
@@ -101,7 +89,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
     speed={0.8}
     startColor="#EDF2F7"
     style={Object {}}
-    width="100%"
+    w="100%"
   />
   <Component
     className=""
@@ -112,7 +100,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
     speed={0.8}
     startColor="#EDF2F7"
     style={Object {}}
-    width="80%"
+    w="80%"
   />
 </Fragment>
 `;

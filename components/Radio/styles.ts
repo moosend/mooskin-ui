@@ -20,8 +20,8 @@ export const StyledRadioWrapper = styled(Box)<Partial<IRadioComponentProps>>`
 `;
 
 export const StyledRadio = styled(Box)<Partial<IRadioComponentProps>>`
+    font-family: 'Mooskin Icons';
     margin-right: 10px;
     font-size: 23px;
     color: ${(props) => (props.selected ? '#293346' : '#425579')};
-    font-family: 'Mooskin Icons';
 `;

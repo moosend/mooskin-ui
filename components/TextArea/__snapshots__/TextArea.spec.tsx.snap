@@ -23,7 +23,7 @@ exports[`TextArea renders correctly 1`] = `
   }
   value="textarea value"
 >
-  <styled.div
+  <Styled(Box)
     className="myClass"
     id="textarea"
     style={
@@ -32,39 +32,38 @@ exports[`TextArea renders correctly 1`] = `
       }
     }
   >
-    <div
-      className="sc-dlnjPT dlnjEZ myClass"
+    <Box
+      className="sc-hKFyIo exwCyP myClass"
       id="textarea"
       style={
         Object {
           "color": "blue",
         }
       }
+      w="fit-content"
     >
-      <Label
-        className=""
-        primaryColor="#2d2d2d"
+      <styled.div
+        className="sc-hKFyIo exwCyP myClass"
+        id="textarea"
         style={
           Object {
-            "alignSelf": "flex-start",
+            "color": "blue",
           }
         }
-        width={30}
+        w="fit-content"
       >
-        <styled.div
-          className=""
-          onClick={[Function]}
-          primaryColor="#2d2d2d"
+        <div
+          className="sc-bdnylx eraKfX sc-hKFyIo exwCyP myClass"
+          id="textarea"
           style={
             Object {
-              "alignSelf": "flex-start",
+              "color": "blue",
             }
           }
-          width={30}
         >
-          <div
-            className="sc-gtssRu leoGSM"
-            onClick={[Function]}
+          <Label
+            className=""
+            primaryColor="#2d2d2d"
             style={
               Object {
                 "alignSelf": "flex-start",
@@ -72,57 +71,131 @@ exports[`TextArea renders correctly 1`] = `
             }
             width={30}
           >
-            with a label ofc
-          </div>
-        </styled.div>
-      </Label>
-      <styled.div>
-        <div
-          className="sc-hKFyIo dNyRkZ"
-        >
-          <styled.textarea
-            cols={40}
-            disabled={true}
-            maxLength={50}
-            minLength={10}
-            onChange={[Function]}
-            placeholder="textarea placeholder"
-            required={true}
-            rows={10}
-            value="textarea value"
-          >
-            <textarea
-              className="sc-eCApGN iKDJUI"
-              cols={40}
-              disabled={true}
-              maxLength={50}
-              minLength={10}
-              onChange={[Function]}
-              placeholder="textarea placeholder"
-              required={true}
-              rows={10}
-              value="textarea value"
-            />
-          </styled.textarea>
-          <Description
-            className=""
-            style={Object {}}
-          >
-            <styled.div
+            <Styled(Box)
               className=""
-              style={Object {}}
+              onClick={[Function]}
+              primaryColor="#2d2d2d"
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                }
+              }
+              width={30}
             >
-              <div
-                className="sc-bdnylx cvsSBh"
-                style={Object {}}
+              <Box
+                className="sc-dlnjPT dvTtDw"
+                onClick={[Function]}
+                primaryColor="#2d2d2d"
+                style={
+                  Object {
+                    "alignSelf": "flex-start",
+                  }
+                }
+                w="fit-content"
+                width={30}
               >
-                just some textarea
-              </div>
-            </styled.div>
-          </Description>
+                <styled.div
+                  className="sc-dlnjPT dvTtDw"
+                  onClick={[Function]}
+                  primaryColor="#2d2d2d"
+                  style={
+                    Object {
+                      "alignSelf": "flex-start",
+                    }
+                  }
+                  w="fit-content"
+                  width={30}
+                >
+                  <div
+                    className="sc-bdnylx eraKfX sc-dlnjPT dvTtDw"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "alignSelf": "flex-start",
+                      }
+                    }
+                    width={30}
+                  >
+                    with a label ofc
+                  </div>
+                </styled.div>
+              </Box>
+            </Styled(Box)>
+          </Label>
+          <Styled(Box)>
+            <Box
+              className="sc-eCApGN ednuwx"
+              style={Object {}}
+              w="fit-content"
+            >
+              <styled.div
+                className="sc-eCApGN ednuwx"
+                style={Object {}}
+                w="fit-content"
+              >
+                <div
+                  className="sc-bdnylx eraKfX sc-eCApGN ednuwx"
+                  style={Object {}}
+                >
+                  <styled.textarea
+                    cols={40}
+                    disabled={true}
+                    maxLength={50}
+                    minLength={10}
+                    onChange={[Function]}
+                    placeholder="textarea placeholder"
+                    required={true}
+                    rows={10}
+                    value="textarea value"
+                  >
+                    <textarea
+                      className="sc-jSFkmK kuOaYE"
+                      cols={40}
+                      disabled={true}
+                      maxLength={50}
+                      minLength={10}
+                      onChange={[Function]}
+                      placeholder="textarea placeholder"
+                      required={true}
+                      rows={10}
+                      value="textarea value"
+                    />
+                  </styled.textarea>
+                  <Description
+                    className=""
+                    style={Object {}}
+                  >
+                    <Styled(Box)
+                      className=""
+                      style={Object {}}
+                    >
+                      <Box
+                        className="sc-gtssRu bGVxcA"
+                        style={Object {}}
+                        w="fit-content"
+                      >
+                        <styled.div
+                          className="sc-gtssRu bGVxcA"
+                          style={Object {}}
+                          w="fit-content"
+                        >
+                          <div
+                            className="sc-bdnylx eraKfX sc-gtssRu bGVxcA"
+                            style={Object {}}
+                          >
+                            just some textarea
+                          </div>
+                        </styled.div>
+                      </Box>
+                    </Styled(Box)>
+                  </Description>
+                </div>
+              </styled.div>
+            </Box>
+          </Styled(Box)>
         </div>
       </styled.div>
-    </div>
-  </styled.div>
+    </Box>
+  </Styled(Box)>
 </TextArea>
 `;

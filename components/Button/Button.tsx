@@ -13,7 +13,7 @@ export const Button: React.FC<IButtonComponentProps> = (props) => {
     const ButtonComponent = props.inverseStyle ? ButtonInverse : ButtonNormal;
 
     return (
-        <ButtonComponent {...props} onClick={onClick} as={props.href ? 'a' : 'button'}>
+        <ButtonComponent {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'}>
             {props.icon && <ButtonIcon>{props.icon}</ButtonIcon>}
             {props.children}
         </ButtonComponent>

@@ -19,6 +19,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         margin: 0;
         padding: 0;
+        color: rgb(45, 55, 72);
     }
 
     /* Mooskin Icons */

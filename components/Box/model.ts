@@ -16,10 +16,14 @@ export const boxComponentProps = [
     'borderRight', 'borderRightWidth', 'borderRightStyle', 'borderRightColor', 'borderBottom', 'borderBottomWidth', 'borderBottomStyle',
     'borderBottomColor', 'borderLeft', 'borderLeftWidth', 'borderLeftStyle', 'borderLeftColor', 'borderRadius', 'borderTopLeftRadius',
     'borderTopRightRadius', 'borderBottomRightRadius', 'borderBottomLeftRadius', 'position', 'zIndex', 'top', 'right', 'bottom', 'left',
-    'animation', 'visibility', 'cursor'
+    'animation', 'visibility', 'cursor', 'boxAs'
 ];
 
 export interface IBoxComponentProps {
+
+    /** render box as a different html element */
+    boxAs?: any;
+
     /** id of the element */
     id?: string;
 

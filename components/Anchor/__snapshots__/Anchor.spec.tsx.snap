@@ -14,7 +14,8 @@ exports[`Anchor renders correctly 1`] = `
   }
   target="_blank"
 >
-  <styled.a
+  <Styled(Box)
+    boxAs="a"
     className="myClass"
     disabled={true}
     href="www.moosend.com"
@@ -27,8 +28,9 @@ exports[`Anchor renders correctly 1`] = `
     }
     target="_blank"
   >
-    <a
-      className="sc-bdnylx fEafof myClass"
+    <Box
+      boxAs="a"
+      className="sc-gtssRu FXejt myClass"
       disabled={true}
       href="www.moosend.com"
       id="Anchor1"
@@ -39,9 +41,41 @@ exports[`Anchor renders correctly 1`] = `
         }
       }
       target="_blank"
+      w="fit-content"
     >
-      Mooskin
-    </a>
-  </styled.a>
+      <styled.div
+        as="a"
+        boxAs="a"
+        className="sc-gtssRu FXejt myClass"
+        disabled={true}
+        href="www.moosend.com"
+        id="Anchor1"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+        target="_blank"
+        w="fit-content"
+      >
+        <a
+          className="sc-bdnylx eraKfX sc-gtssRu FXejt myClass"
+          disabled={true}
+          href="www.moosend.com"
+          id="Anchor1"
+          onClick={[Function]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+          target="_blank"
+        >
+          Mooskin
+        </a>
+      </styled.div>
+    </Box>
+  </Styled(Box)>
 </Component>
 `;

@@ -223,19 +223,21 @@ exports[`DateRange renders correctly 1`] = `
       <div
         className="buttonContainer"
       >
-        <Component
+        <Button
           className=""
           inverseStyle={true}
           onClick={[Function]}
+          primaryColor="#3fbaca"
           size="md"
           style={Object {}}
           type="button"
         >
           Remove
-        </Component>
-        <Component
+        </Button>
+        <Button
           className=""
           onClick={[Function]}
+          primaryColor="#3fbaca"
           size="md"
           style={
             Object {
@@ -245,7 +247,7 @@ exports[`DateRange renders correctly 1`] = `
           type="button"
         >
           Apply
-        </Component>
+        </Button>
       </div>
       <div
         className="cover"

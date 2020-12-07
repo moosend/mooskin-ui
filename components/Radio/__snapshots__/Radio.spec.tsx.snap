@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Radio renders Radio correctly 1`] = `
-<styled.div
+<Styled(Box)
   className="myClass"
   id="radio1"
   style={
@@ -10,30 +10,27 @@ exports[`Radio renders Radio correctly 1`] = `
     }
   }
 >
-  <styled.div
+  <Styled(Box)
     disabled={true}
     onClick={[Function]}
   >
-    <styled.div
+    <Styled(Box)
       selected={true}
     >
       radio_button_checked
-    </styled.div>
+    </Styled(Box)>
     <Label
       className=""
       disabled={true}
+      minW="unset"
       primaryColor="#2d2d2d"
-      style={
-        Object {
-          "minWidth": "unset",
-        }
-      }
+      style={Object {}}
       width={150}
     >
       This is radio 1
     </Label>
-  </styled.div>
-</styled.div>
+  </Styled(Box)>
+</Styled(Box)>
 `;
 
 exports[`Radio renders RadioGroup correctly 1`] = `
@@ -70,7 +67,7 @@ exports[`Radio renders RadioGroup correctly 1`] = `
   title="Select a plan"
   vertical={true}
 >
-  <styled.div
+  <Styled(Box)
     className="myClass"
     id="radio1"
     style={
@@ -79,65 +76,125 @@ exports[`Radio renders RadioGroup correctly 1`] = `
       }
     }
   >
-    <div
-      className="sc-dlnjPT duxSQX myClass"
+    <Box
+      className="sc-hKFyIo dNyRkZ myClass"
       id="radio1"
       style={
         Object {
           "color": "blue",
         }
       }
+      w="fit-content"
     >
       <styled.div
-        onClick={[Function]}
+        className="sc-hKFyIo dNyRkZ myClass"
+        id="radio1"
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+        w="fit-content"
       >
         <div
-          className="sc-hKFyIo bmgVpe"
-          onClick={[Function]}
-        >
-          <styled.div>
-            <div
-              className="sc-eCApGN jEwlHW"
-            >
-              radio_button_unchecked
-            </div>
-          </styled.div>
-          <Label
-            className=""
-            primaryColor="#2d2d2d"
-            style={
-              Object {
-                "minWidth": "unset",
-              }
+          className="sc-bdnylx eraKfX sc-hKFyIo dNyRkZ myClass"
+          id="radio1"
+          style={
+            Object {
+              "color": "blue",
             }
-            width={150}
+          }
+        >
+          <Styled(Box)
+            onClick={[Function]}
           >
-            <styled.div
-              className=""
+            <Box
+              className="sc-eCApGN klelTq"
               onClick={[Function]}
-              primaryColor="#2d2d2d"
-              style={
-                Object {
-                  "minWidth": "unset",
-                }
-              }
-              width={150}
+              style={Object {}}
+              w="fit-content"
             >
-              <div
-                className="sc-gtssRu HIKRA"
+              <styled.div
+                className="sc-eCApGN klelTq"
                 onClick={[Function]}
-                style={
-                  Object {
-                    "minWidth": "unset",
-                  }
-                }
-                width={150}
-              />
-            </styled.div>
-          </Label>
+                style={Object {}}
+                w="fit-content"
+              >
+                <div
+                  className="sc-bdnylx eraKfX sc-eCApGN klelTq"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Styled(Box)>
+                    <Box
+                      className="sc-jSFkmK iJmLqO"
+                      style={Object {}}
+                      w="fit-content"
+                    >
+                      <styled.div
+                        className="sc-jSFkmK iJmLqO"
+                        style={Object {}}
+                        w="fit-content"
+                      >
+                        <div
+                          className="sc-bdnylx eraKfX sc-jSFkmK iJmLqO"
+                          style={Object {}}
+                        >
+                          radio_button_unchecked
+                        </div>
+                      </styled.div>
+                    </Box>
+                  </Styled(Box)>
+                  <Label
+                    className=""
+                    minW="unset"
+                    primaryColor="#2d2d2d"
+                    style={Object {}}
+                    width={150}
+                  >
+                    <Styled(Box)
+                      className=""
+                      minW="unset"
+                      onClick={[Function]}
+                      primaryColor="#2d2d2d"
+                      style={Object {}}
+                      width={150}
+                    >
+                      <Box
+                        className="sc-dlnjPT iBFDsY"
+                        minW="unset"
+                        onClick={[Function]}
+                        primaryColor="#2d2d2d"
+                        style={Object {}}
+                        w="fit-content"
+                        width={150}
+                      >
+                        <styled.div
+                          className="sc-dlnjPT iBFDsY"
+                          minW="unset"
+                          onClick={[Function]}
+                          primaryColor="#2d2d2d"
+                          style={Object {}}
+                          w="fit-content"
+                          width={150}
+                        >
+                          <div
+                            className="sc-bdnylx dPtRAu sc-dlnjPT iBFDsY"
+                            onClick={[Function]}
+                            style={Object {}}
+                            width={150}
+                          />
+                        </styled.div>
+                      </Box>
+                    </Styled(Box)>
+                  </Label>
+                </div>
+              </styled.div>
+            </Box>
+          </Styled(Box)>
         </div>
       </styled.div>
-    </div>
-  </styled.div>
+    </Box>
+  </Styled(Box)>
 </Radio>
 `;
