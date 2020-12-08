@@ -24,7 +24,7 @@ const Template: Story<IDrawerComponentProps> = (args) => {
 export const Normal = Template.bind({});
 Normal.args = {
     children: (
-        <DrawerOverlay>
+        <DrawerOverlay onClick={() => console.log('Overlay Clicked!')}>
           <DrawerContent>
             <DrawerCloseButton position="absolute" top={10} right={10} />
             <DrawerHeader>Create your account</DrawerHeader>

@@ -1,223 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SideBar renders SideBar correctly 1`] = `
-<div
-  className="sidebar-component"
+<Styled(Box)
+  className=""
+  style={Object {}}
 >
-  <div>
-    <SmallIconButton
-      className="button buttonOn undefined"
-      icon="view headline"
-      onClick={[Function]}
-      style={Object {}}
-      type=""
-    />
-  </div>
-  <div
-    className="sidebar sidebarOff smallOff myClass"
-    style={
-      Object {
-        "color": "blue",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`SideBar renders SideBar with Items and secondary SideBar correctly 1`] = `
-<div
-  className="sidebar-component"
->
-  <div>
-    <SmallIconButton
-      className="button buttonOn undefined"
-      icon="view headline"
-      onClick={[Function]}
-      style={Object {}}
-      type=""
-    />
-  </div>
-  <div
-    className="sidebar sidebarOff smallOff myClass"
-    style={
-      Object {
-        "color": "blue",
-      }
-    }
+  <Component
+    active={true}
+    className=""
+    dataLabel="settings"
+    key="0/.0"
+    onClick={[Function]}
+    style={Object {}}
+    value="/settings"
   >
-    <SidebarItem
-      active={true}
-      className="myClass"
-      image="imagePath"
-      key="0"
-      label="Item"
-      onClick={[Function]}
-      style={
-        Object {
-          "color": "blue",
-        }
-      }
-    />
-    <SidebarItem
-      active={false}
-      activeSubMenu={false}
-      className="myClass"
-      image="imagePath"
-      key="1"
-      label="Item"
-      onClick={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      style={
-        Object {
-          "color": "blue",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`SideBar renders SideBar with Items correctly 1`] = `
-<SideBar
-  button={true}
-  className="myClass"
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
->
-  <div
-    className="sidebar-component"
+    Settings
+  </Component>
+  <Component
+    active={false}
+    className=""
+    dataLabel="template"
+    key="1/.1"
+    onClick={[Function]}
+    style={Object {}}
+    value="/template"
   >
-    <div>
-      <SmallIconButton
-        className="button buttonOn undefined"
-        icon="view headline"
-        onClick={[Function]}
-        style={Object {}}
-        type=""
-      >
-        <button
-          className="button-icon-component
-                         button
-                         normalButton
-                         
-                         button buttonOn undefined"
-          onClick={[Function]}
-          style={Object {}}
-        >
-          <i
-            className="mooskinIcons icon "
-          >
-            view_headline
-          </i>
-        </button>
-      </SmallIconButton>
-    </div>
-    <div
-      className="sidebar sidebarOff smallOff myClass"
-      style={
-        Object {
-          "color": "blue",
-        }
-      }
-    >
-      <SidebarItem
-        active={true}
-        className="myClass"
-        image="imagePath"
-        key="0"
-        label="Item"
-        onClick={[Function]}
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
-      >
-        <div
-          className="item-component itemContainer myClass activeItem"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "blue",
-            }
-          }
-        >
-          <div
-            className=""
-          />
-          <img
-            className="image"
-            src="imagePath"
-          />
-          <span>
-            Item
-          </span>
-        </div>
-      </SidebarItem>
-      <SidebarItem
-        active={false}
-        className="myClass"
-        image="imagePath"
-        key="1"
-        label="Item"
-        onClick={[Function]}
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
-      >
-        <div
-          className="item-component itemContainer myClass "
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "blue",
-            }
-          }
-        >
-          <div
-            className=""
-          />
-          <img
-            className="image"
-            src="imagePath"
-          />
-          <span>
-            Item
-          </span>
-        </div>
-      </SidebarItem>
-    </div>
-  </div>
-</SideBar>
+    Template
+  </Component>
+  <Component
+    active={false}
+    className=""
+    dataLabel="preview"
+    key="2/.2"
+    onClick={[Function]}
+    style={Object {}}
+    value="/preview"
+  >
+    Preview
+  </Component>
+</Styled(Box)>
 `;
 
 exports[`SideBar renders SidebarItem correctly 1`] = `
-<div
-  className="item-component itemContainer myClass activeItem"
+<Styled(Box)
+  active={true}
+  className="myClass"
   onClick={[MockFunction]}
-  onMouseEnter={[MockFunction]}
-  onMouseLeave={[MockFunction]}
   style={
     Object {
       "color": "blue",
     }
   }
->
-  <div
-    className=""
-  />
-  <img
-    className="image"
-    src="imageOnPath"
-  />
-  <span>
-    Item
-  </span>
-</div>
+/>
 `;

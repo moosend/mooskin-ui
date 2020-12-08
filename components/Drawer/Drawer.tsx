@@ -42,34 +42,45 @@ const ContentByPosition = {
 
 export const Drawer: React.FC<IDrawerComponentProps> = (props) => {
 
+    const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
+        props.onClose && props.onClose(e);
+        callback && callback(e);
+    };
+
     const recurseChildren = (children: any): any => {
+        if (!children){
+            return null;
+        }
+
         return React.Children.map(children, (child, i) => {
             if (React.isValidElement<IDrawerCloseButtonComponentProps>(child) && child.type === DrawerCloseButton){
                 return React.cloneElement(child, {
-                    children: recurseChildren((child.props as any).children),
+                    children: recurseChildren(child.props.children),
                     key: i,
-                    onClick: child.props.onClick ? child.props.onClick : props.onClose
-                } as any);
+                    onClick: (e) => batchClickHandler(e, child.props.onClick)
+                } as IDrawerCloseButtonComponentProps);
             }
 
             if (React.isValidElement<IDrawerOverlayComponentProps>(child) && child.type === DrawerOverlay){
                 return React.cloneElement(child, {
-                    children: recurseChildren((child.props as any).children),
+                    children: recurseChildren(child.props.children),
                     isOpen: child.props.isOpen ? child.props.isOpen : props.isOpen,
                     key: i,
-                    onClick: props.closeOnOverlayClick ? child.props.onClick ? child.props.onClick : props.onClose : undefined
-                } as any);
+                    onClick: props.closeOnOverlayClick ?
+                                (e) => batchClickHandler(e, child.props.onClick) :
+                                undefined
+                } as IDrawerOverlayComponentProps);
             }
 
             if (React.isValidElement<IDrawerContentComponentProps>(child) && child.type === DrawerContent){
                 return React.cloneElement(child, {
-                    children: recurseChildren((child.props as any).children),
+                    children: recurseChildren(child.props.children),
                     isOpen: child.props.isOpen ? child.props.isOpen : props.isOpen,
                     key: i,
                     onClick: (e: React.MouseEvent<HTMLElement>) => e.stopPropagation(),
                     placement: props.placement,
                     size: child.props.size ? child.props.size : props.size,
-                } as any);
+                } as IDrawerContentComponentProps);
             }
 
             if (React.isValidElement(child) && (child.props as any).children){

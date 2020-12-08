@@ -1,6 +1,10 @@
 import '../_utils/globals/global.css';
 
-export { default as Button } from '../Button/Button';
+export { default as Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../Alert/Alert';
+export { default as Skeleton, SkeletonCircle, SkeletonText } from '../Skeleton/Skeleton';
+export { default as Drawer } from '../Drawer/Drawer';
+export { default as Stack, HStack, VStack } from '../Stack/Stack';
+export { default as Box } from '../Box/Box';
 export { default as Carousel } from '../Carousel';
 export { default as CheckListItem } from '../CheckListItem';
 export { default as Checkbox } from '../Checkbox/Checkbox';
@@ -23,7 +27,7 @@ export { default as Pagination } from '../Pagination';
 export { default as Radio } from '../Radio/Radio';
 export { default as RadioAccordion, RadioAccordionContent } from '../RadioAccordion';
 export { default as Steps, Step } from '../Steps';
-export { default as SideBar, SidebarItem } from '../SideBar';
+export { default as Sidebar, SidebarItem } from '../Sidebar/Sidebar';
 export { default as SmallIconButton } from '../SmallIconButton';
 export { default as Select, Option } from '../Select';
 export { default as Slider, ABSlider } from '../Slider';

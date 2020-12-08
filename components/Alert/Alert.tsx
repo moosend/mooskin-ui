@@ -14,6 +14,10 @@ const AlertIcons = {
 export const Alert: React.FC<IAlertComponentProps> = (props) => {
 
     const recurseChildren = (children: any): any => {
+        if (!children){
+            return null;
+        }
+
         return React.Children.map(children, (child, i) => {
             if (
                 React.isValidElement<IAlertComponentProps>(child) && (
@@ -24,11 +28,11 @@ export const Alert: React.FC<IAlertComponentProps> = (props) => {
                 )
             ){
                 return React.cloneElement(child, {
-                    children: recurseChildren((child.props as any).children),
+                    children: recurseChildren(child.props.children),
                     key: i,
                     status: child.props.status ? child.props.status : props.status,
                     variant: child.props.variant ? child.props.variant : props.variant
-                } as any);
+                } as IAlertComponentProps);
             }
 
             if (React.isValidElement(child) && (child.props as any).children){

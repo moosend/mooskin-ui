@@ -15,6 +15,7 @@
     "no-submodule-imports": false,
     "no-implicit-dependencies": [true, "dev"],
     "jsx-no-multiline-js": false,
+    "no-object-literal-type-assertion": false,
     "max-line-length": [true, 150]
   }
 }

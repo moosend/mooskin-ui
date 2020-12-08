@@ -10,8 +10,7 @@ export const Grid: React.FC<IGridProps> = (props) => {
 
 Grid.defaultProps = {
     className: '',
-    style: {},
-    w: 'unset'
+    style: {}
 };
 
 Grid.displayName = 'Grid';
@@ -22,8 +21,7 @@ export const Row: React.FC<IRowProps> = (props) => {
 
 Row.defaultProps = {
     className: '',
-    style: {},
-    w: 'unset'
+    style: {}
 };
 
 Row.displayName = 'Row';
@@ -34,8 +32,7 @@ export const Col: React.FC<IColProps> = (props) => {
 
 Col.defaultProps = {
     className: '',
-    style: {},
-    w: 'unset'
+    style: {}
 };
 
 Col.displayName = 'Col';

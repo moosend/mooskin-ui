@@ -82,3 +82,5 @@ SkeletonText.defaultProps = {
 };
 
 SkeletonText.displayName = 'Skeleton';
+
+export default Skeleton;

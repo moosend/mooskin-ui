@@ -9,8 +9,7 @@ export const Box: React.FC<IBoxComponentProps> = (props) => {
 
 Box.defaultProps = {
     className: '',
-    style: {},
-    w: 'fit-content'
+    style: {}
 };
 
 Box.displayName = 'Box';

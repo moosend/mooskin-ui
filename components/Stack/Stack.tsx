@@ -113,3 +113,5 @@ VStack.defaultProps = {
 };
 
 VStack.displayName = 'VStack';
+
+export default Stack;
