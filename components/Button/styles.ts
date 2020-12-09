@@ -64,6 +64,5 @@ export const StyledButtonIcon = styled(Box)`
     font-size: 15px;
     font-style: normal;
     color: inherit;
-    margin-right: 5px;
     text-decoration: none;
 `;

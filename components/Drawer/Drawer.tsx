@@ -106,6 +106,8 @@ Drawer.defaultProps = {
     style: {}
 };
 
+Drawer.displayName = 'Drawer';
+
 /**
  * DrawerContent
  */
@@ -130,12 +132,14 @@ DrawerContent.defaultProps = {
     style: {}
 };
 
+DrawerContent.displayName = 'DrawerContent';
+
 /**
  * DrawerHeader
  */
 export const DrawerHeader: React.FC<IBoxComponentProps> = (props) => {
     return (
-        <StyledDrawerHeader {...props} boxAs="header">
+        <StyledDrawerHeader boxAs="header" {...props}>
             {props.children}
         </StyledDrawerHeader>
     );
@@ -145,6 +149,8 @@ DrawerHeader.defaultProps = {
     className: '',
     style: {}
 };
+
+DrawerHeader.displayName = 'DrawerHeader';
 
 /**
  * DrawerBody
@@ -162,12 +168,14 @@ DrawerBody.defaultProps = {
     style: {}
 };
 
+DrawerBody.displayName = 'DrawerBody';
+
 /**
  * DrawerFooter
  */
 export const DrawerFooter: React.FC<IBoxComponentProps> = (props) => {
     return (
-        <StyledDrawerFooter {...props} boxAs="footer">
+        <StyledDrawerFooter boxAs="footer" {...props}>
             {props.children}
         </StyledDrawerFooter >
     );
@@ -177,6 +185,8 @@ DrawerFooter .defaultProps = {
     className: '',
     style: {}
 };
+
+DrawerFooter.displayName = 'DrawerFooter';
 
 /**
  * DrawerCloseButton
@@ -191,6 +201,8 @@ DrawerCloseButton .defaultProps = {
     className: '',
     style: {}
 };
+
+DrawerCloseButton.displayName = 'DrawerCloseButton';
 
 /**
  * DrawerOverlay
@@ -225,5 +237,7 @@ DrawerOverlay.defaultProps = {
     className: '',
     style: {}
 };
+
+DrawerOverlay.displayName = 'DrawerOverlay';
 
 export default Drawer;

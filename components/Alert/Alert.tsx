@@ -57,6 +57,8 @@ Alert.defaultProps = {
     variant: 'subtle'
 };
 
+Alert.displayName = 'Alert';
+
 export const AlertIcon: React.FC<IAlertComponentProps> = (props) => {
     return (
         <StyledAlertIcon {...props}>
@@ -69,6 +71,8 @@ AlertIcon.defaultProps = {
     className: '',
     style: {}
 };
+
+AlertIcon.displayName = 'AlertIcon';
 
 export const AlertTitle: React.FC<IAlertComponentProps> = (props) => {
     return (
@@ -83,6 +87,8 @@ AlertTitle.defaultProps = {
     style: {}
 };
 
+AlertTitle.displayName = 'AlertTitle';
+
 export const AlertDescription: React.FC<IAlertComponentProps> = (props) => {
     return (
         <StyledAlertDescription {...props}>
@@ -96,6 +102,8 @@ AlertDescription.defaultProps = {
     style: {}
 };
 
+AlertDescription.displayName = 'AlertDescription';
+
 export const AlertCloseButton: React.FC<IAlertCloseButtonComponentProps> = (props) => {
     return (
         <StyledAlertCloseButton {...props} children="close" />
@@ -106,5 +114,7 @@ AlertCloseButton.defaultProps = {
     className: '',
     style: {}
 };
+
+AlertCloseButton.displayName = 'AlertCloseButton';
 
 export default Alert;
