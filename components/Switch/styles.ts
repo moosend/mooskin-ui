@@ -40,18 +40,18 @@ export const SwitchHandle = styled(Box)<ISwitchComponentProps>`
     transform: ${(props) => (props.on ? `translate(${props.width ? props.width - 27 : 63}px)` : '')};
 `;
 
-export const SwitchLabel = styled(Box)<ISwitchComponentProps>`
+export const SwitchLabel = styled(Box)<Partial<ISwitchComponentProps>>`
     font-family: Hind;
     font-size: 12px;
     font-weight: 500;
     color: #ffffff;
 `;
 
-export const SwitchLabelNormal = styled(SwitchLabel)<ISwitchComponentProps>`
+export const SwitchLabelNormal = styled(SwitchLabel)`
     align-self: ${(props) => (props.on ? 'flex-start' : 'flex-end')};
 `;
 
-export const SwitchLabelDisabled = styled(SwitchLabel)<ISwitchComponentProps>`
+export const SwitchLabelDisabled = styled(SwitchLabel)`
     color: ${(props) => props.theme.disabledfont || variables.disabledfont};
     align-self: center;
 `;

@@ -18,7 +18,10 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
     return (
         <StyledRadioContainer {...getBoxProps(props)}>
             <StyledRadioWrapper disabled={props.disabled} onClick={onClick}>
-                <StyledRadio children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'} selected={props.selected}/>
+                <StyledRadio
+                    children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
+                    selected={props.selected}
+                />
                 <Label minW="unset" disabled={props.disabled}>
                     {props.label}
                 </Label>

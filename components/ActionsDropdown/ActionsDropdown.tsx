@@ -59,6 +59,8 @@ ActionsDropdown.defaultProps = {
     style: {}
 };
 
+ActionsDropdown.displayName = 'ActionsDropdown';
+
 /**
  * ActionsDropdownItem
  */
@@ -74,6 +76,8 @@ ActionsDropdownItem.defaultProps = {
     className: '',
     style: {}
 };
+
+ActionsDropdownItem.displayName = 'ActionsDropdownItem';
 
 /**
  * ActionsDropdownArrow
@@ -92,5 +96,7 @@ ActionsDropdownArrow.defaultProps = {
     className: '',
     style: {}
 };
+
+ActionsDropdownArrow.displayName = 'ActionsDropdownArrow';
 
 export default ActionsDropdown;

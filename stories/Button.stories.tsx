@@ -49,3 +49,9 @@ Href.args = {
     children: 'VIEW CAMPAIGN',
     href: 'https://www.moosend.com'
 };
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: 'VIEW CAMPAIGN',
+    disabled: true
+};

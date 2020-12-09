@@ -19,15 +19,15 @@ export const StyledFooterCommon = styled(Box)<IBoxComponentProps>`
     align-items: center;
 `;
 
-export const StyledFooterHeader = styled(StyledFooterCommon)<IBoxComponentProps>`
+export const StyledFooterHeader = styled(StyledFooterCommon)`
     justify-content: center;
     flex: 3;
 `;
 
-export const StyledFooterBody = styled(StyledFooterCommon)<IBoxComponentProps>`
+export const StyledFooterBody = styled(StyledFooterCommon)`
     flex: 7;
 `;
 
-export const StyledFooterEnd = styled(StyledFooterCommon)<IBoxComponentProps>`
+export const StyledFooterEnd = styled(StyledFooterCommon)`
     flex: 2;
 `;

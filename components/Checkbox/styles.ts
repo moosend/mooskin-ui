@@ -13,7 +13,6 @@ export const StyledCheckboxContainer = styled(Box)`
 
 export const StyledCheckboxWrapper = styled(Box)<Partial<ICheckboxComponentProps>>`
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
     width: fit-content;
     display: flex;
     align-items: center;
@@ -23,5 +22,5 @@ export const StyledCheckbox = styled(Box)<Partial<ICheckboxComponentProps>>`
     font-family: 'Mooskin Icons';
     margin-right: 10px;
     font-size: 23px;
-    color: ${(props) => props.theme.secondary || variables.secondary};
+    color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
 `;

@@ -26,7 +26,7 @@ export const Normal = Template.bind({});
 Normal.args = {
     children: (
         <>
-            <FooterHeader>SAVE AS DRAFT</FooterHeader>
+            <FooterHeader fontSize={12} fontWeight={800}>SAVE AS DRAFT</FooterHeader>
             <FooterBody>
                 <Button mr={10} minW="unset">
                     <ButtonIcon>

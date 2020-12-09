@@ -16,6 +16,5 @@ export const StyledAnchor = styled(Box)<IAnchorComponentProps>`
     &:hover {
         text-decoration: none;
     }
-    opacity: ${(props) => props.disabled ? 0.6 : 1};
-    color: ${(props) => props.theme.primary || variables.primary};
+    color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.primary || variables.primary};
 `;

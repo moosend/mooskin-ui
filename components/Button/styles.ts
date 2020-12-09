@@ -34,11 +34,11 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
     align-items: center;
     justify-content: center;
     &:hover {
-        text-decoration: underline;
+        text-decoration: ${(props) => !props.disabled ? 'underline' : ''};
     }
 `;
 
-export const StyledButtonNormal = styled(ButtonDefault)<IButtonComponentProps>`
+export const StyledButtonNormal = styled(ButtonDefault)`
     background-color: ${(props) =>
         !props.disabled ? props.theme.primary || variables.primary : props.theme.disabledBackground || variables.disabledBackground};
     color: #ffffff;
@@ -47,7 +47,7 @@ export const StyledButtonNormal = styled(ButtonDefault)<IButtonComponentProps>`
     outline: 0;
 `;
 
-export const StyledButtonInverse = styled(ButtonDefault)<IButtonComponentProps>`
+export const StyledButtonInverse = styled(ButtonDefault)`
     color: ${(props) =>
         !props.disabled ? props.theme.primary || variables.primary : props.theme.disabledBackground || variables.disabledBackground};
     padding: ${(props) => inverseButtonSizes[props.size || 'md']};

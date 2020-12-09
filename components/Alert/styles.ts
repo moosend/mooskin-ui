@@ -64,7 +64,7 @@ const StyledAlertCommonIcon = styled(Box)<IAlertComponentProps>`
     color: ${(props) => props.variant === 'solid' ? '#FFFFFF' : props.status && FontColors[props.status]};
 `;
 
-export const StyledAlertIcon = styled(StyledAlertCommonIcon)<IAlertComponentProps>`
+export const StyledAlertIcon = styled(StyledAlertCommonIcon)`
     flex-shrink: 0;
     margin-right: 0.75rem;
     width: 1.5rem;
@@ -73,7 +73,7 @@ export const StyledAlertIcon = styled(StyledAlertCommonIcon)<IAlertComponentProp
     display: inherit;
 `;
 
-export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IAlertComponentProps>`
+export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)`
     outline: 0;
     display: flex;
     align-items: center;
