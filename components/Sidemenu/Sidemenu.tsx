@@ -1,15 +1,15 @@
 import * as React from 'react';
-import { IInputCallbackData } from '../index/index';
 import { getBoxProps } from '../_utils/helper';
+import { IInputCallbackData } from '../index/index';
 
-import { ISidebarComponentProps, ISidebarItemComponentProps } from './model';
+import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
 import {
-    StyledSidebar,
-    StyledSidebarItem
+    StyledSidemenu,
+    StyledSidemenuItem
 } from './styles';
 
-export const Sidebar: React.FC<ISidebarComponentProps> = (props) => {
+export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
 
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
@@ -22,13 +22,13 @@ export const Sidebar: React.FC<ISidebarComponentProps> = (props) => {
 
     const recurseChildren = (children: any): any => {
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<ISidebarItemComponentProps>(child) && child.type === SidebarItem){
+            if (React.isValidElement<ISidemenuItemComponentProps>(child) && child.type === SidemenuItem){
                 return React.cloneElement(child, {
                     active: child.props.value === props.activeItem,
                     children: recurseChildren((child.props as any).children),
                     key: i,
                     onClick: (e) => batchClickHandler(e, {dataLabel: child.props.dataLabel, value: child.props.value}, child.props.onClick)
-                } as ISidebarItemComponentProps);
+                } as ISidemenuItemComponentProps);
             }
 
             if (React.isValidElement(child) && (child.props as any).children){
@@ -40,31 +40,31 @@ export const Sidebar: React.FC<ISidebarComponentProps> = (props) => {
     };
 
     return (
-        <StyledSidebar {...getBoxProps(props)}>
+        <StyledSidemenu {...getBoxProps(props)}>
             {props.children && recurseChildren(props.children)}
-        </StyledSidebar>
+        </StyledSidemenu>
     );
 };
 
-Sidebar.defaultProps = {
+Sidemenu.defaultProps = {
     className: '',
     style: {}
 };
 
 /**
- * SidebarItem
+ * SidemenuItem
  */
-export const SidebarItem: React.FC<ISidebarItemComponentProps> = (props) => {
+export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = (props) => {
     return (
-        <StyledSidebarItem {...props}>
+        <StyledSidemenuItem {...props}>
             {props.children}
-        </StyledSidebarItem>
+        </StyledSidemenuItem>
     );
 };
 
-SidebarItem.defaultProps = {
+SidemenuItem.defaultProps = {
     className: '',
     style: {}
 };
 
-export default Sidebar;
+export default Sidemenu;

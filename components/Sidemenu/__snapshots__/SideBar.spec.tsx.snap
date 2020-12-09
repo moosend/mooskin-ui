@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar renders SideBar correctly 1`] = `
+<Styled(Box)
+  className=""
+  style={Object {}}
+>
+  <Component
+    active={true}
+    className=""
+    dataLabel="settings"
+    key="0/.0"
+    onClick={[Function]}
+    style={Object {}}
+    value="/settings"
+  >
+    Settings
+  </Component>
+  <Component
+    active={false}
+    className=""
+    dataLabel="template"
+    key="1/.1"
+    onClick={[Function]}
+    style={Object {}}
+    value="/template"
+  >
+    Template
+  </Component>
+  <Component
+    active={false}
+    className=""
+    dataLabel="preview"
+    key="2/.2"
+    onClick={[Function]}
+    style={Object {}}
+    value="/preview"
+  >
+    Preview
+  </Component>
+</Styled(Box)>
+`;
+
+exports[`SideBar renders SidebarItem correctly 1`] = `
+<Styled(Box)
+  active={true}
+  className="myClass"
+  onClick={[MockFunction]}
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+/>
+`;

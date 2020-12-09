@@ -27,7 +27,7 @@ export { default as Pagination } from '../Pagination';
 export { default as Radio } from '../Radio/Radio';
 export { default as RadioAccordion, RadioAccordionContent } from '../RadioAccordion';
 export { default as Steps, Step } from '../Steps';
-export { default as Sidebar, SidebarItem } from '../Sidebar/Sidebar';
+export { default as Sidemenu, SidemenuItem } from '../Sidemenu/Sidemenu';
 export { default as SmallIconButton } from '../SmallIconButton';
 export { default as Select, Option } from '../Select';
 export { default as Slider, ABSlider } from '../Slider';

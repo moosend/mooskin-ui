@@ -4,15 +4,15 @@ import Box from '../Box/Box';
 
 // import variables from '../_utils/globals/variables';
 
-import { ISidebarComponentProps, ISidebarItemComponentProps } from './model';
+import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
-export const StyledSidebar = styled(Box)<ISidebarComponentProps>`
+export const StyledSidemenu = styled(Box)<ISidemenuComponentProps>`
     border-left: 1px solid #e2e2e2;
     display: flex;
     flex-direction: column;
 `;
 
-export const StyledSidebarItem = styled(Box)<ISidebarItemComponentProps>`
+export const StyledSidemenuItem = styled(Box)<ISidemenuItemComponentProps>`
     font-family: Montserrat;
     font-size: 14px;
     font-weight: ${(props) => props.active ? 'bold' : '500'};
