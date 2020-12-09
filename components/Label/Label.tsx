@@ -1,5 +1,4 @@
 import * as React from 'react';
-import variables from '../_utils/globals/variables';
 
 import { ILabelComponentProps } from './model';
 import { StyledLabel } from './styles';
@@ -14,9 +13,8 @@ export const Label: React.FC<ILabelComponentProps> = (props) => {
 
 Label.defaultProps = {
     className: '',
-    primaryColor: variables.label,
     style: {},
-    width: 150,
+    width: 150
 };
 
 Label.displayName = 'Label';

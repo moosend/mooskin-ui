@@ -4,107 +4,110 @@ import { BoxShadowIntensityType, IBoxComponentProps, IntensityType } from './mod
 
 export const StyledBox = styled.div<IBoxComponentProps>`
 
-    margin: ${(props) => getNumberOrStringValue(props.m)};
-    margin-top: ${(props) => getNumberOrStringValue(props.mt || props.my)};
-    margin-right: ${(props) => getNumberOrStringValue(props.mr || props.mx)};
-    margin-bottom: ${(props) => getNumberOrStringValue(props.mb || props.my)};
-    margin-left: ${(props) => getNumberOrStringValue(props.ml || props.mx)};
+    &&& {
+        margin: ${(props) => getNumberOrStringValue(props.m)};
+        margin-top: ${(props) => getNumberOrStringValue(props.mt || props.my)};
+        margin-right: ${(props) => getNumberOrStringValue(props.mr || props.mx)};
+        margin-bottom: ${(props) => getNumberOrStringValue(props.mb || props.my)};
+        margin-left: ${(props) => getNumberOrStringValue(props.ml || props.mx)};
 
-    padding: ${(props) => getNumberOrStringValue(props.p)};
-    padding-top: ${(props) => getNumberOrStringValue(props.pt || props.py)};
-    padding-right: ${(props) => getNumberOrStringValue(props.pr || props.px)};
-    padding-bottom: ${(props) => getNumberOrStringValue(props.pb || props.py)};
-    padding-left: ${(props) => getNumberOrStringValue(props.pl || props.px)};
+        padding: ${(props) => getNumberOrStringValue(props.p)};
+        padding-top: ${(props) => getNumberOrStringValue(props.pt || props.py)};
+        padding-right: ${(props) => getNumberOrStringValue(props.pr || props.px)};
+        padding-bottom: ${(props) => getNumberOrStringValue(props.pb || props.py)};
+        padding-left: ${(props) => getNumberOrStringValue(props.pl || props.px)};
 
-    color: ${(props) => props.color};
-    font-family: ${(props) => props.fontFamily};
-    font-size: ${(props) => getNumberOrStringValue(props.fontSize)};
-    font-weight: ${(props) => getNumberOrStringValue(props.fontWeight)};
-    line-height: ${(props) => props.lineHeight};
-    text-align: ${(props) => props.textAlign};
-    font-style: ${(props) => props.fontStyle};
-    text-transform: ${(props) => props.textTransform};
-    text-decoration: ${(props) => props.textDecoration};
+        color: ${(props) => props.color};
+        font-family: ${(props) => props.fontFamily};
+        font-size: ${(props) => getNumberOrStringValue(props.fontSize)};
+        font-weight: ${(props) => getNumberOrStringValue(props.fontWeight)};
+        line-height: ${(props) => props.lineHeight};
+        text-align: ${(props) => props.textAlign};
+        font-style: ${(props) => props.fontStyle};
+        text-transform: ${(props) => props.textTransform};
+        text-decoration: ${(props) => props.textDecoration};
 
-    width: ${(props) => getNumberOrStringValue(props.w)};
-    height: ${(props) => getNumberOrStringValue(props.h)};
-    min-width: ${(props) => getNumberOrStringValue(props.minW)};
-    max-width: ${(props) => getNumberOrStringValue(props.maxW)};
-    min-height: ${(props) => getNumberOrStringValue(props.minH)};
-    max-height: ${(props) => getNumberOrStringValue(props.maxH)};
+        width: ${(props) => getNumberOrStringValue(props.w)};
+        height: ${(props) => getNumberOrStringValue(props.h)};
+        min-width: ${(props) => getNumberOrStringValue(props.minW)};
+        max-width: ${(props) => getNumberOrStringValue(props.maxW)};
+        min-height: ${(props) => getNumberOrStringValue(props.minH)};
+        max-height: ${(props) => getNumberOrStringValue(props.maxH)};
 
-    display: ${(props) => props.d};
+        display: ${(props) => props.d};
 
-    overflow: ${(props) => props.overflow};
-    overflow-y: ${(props) => props.overflowY};
-    overflow-x: ${(props) => props.overflowX};
+        overflow: ${(props) => props.overflow};
+        overflow-y: ${(props) => props.overflowY};
+        overflow-x: ${(props) => props.overflowX};
 
-    align-items: ${(props) => props.align};
-    align-content: ${(props) => props.alignContent};
-    align-self: ${(props) => props.alignSelf};
-    justify-content: ${(props) => props.justify};
-    justify-items: ${(props) => props.justifyItems};
-    justify-self: ${(props) => props.justifySelf};
-    flex-wrap: ${(props) => props.wrap};
-    flex-direction: ${(props) => props.direction};
-    flex: ${(props) => getNumberOrStringValue(props.flex)};
-    flex-grow: ${(props) => props.flexGrow};
-    flex-shrink: ${(props) => props.flexShrink};
-    flex-basis: ${(props) => getNumberOrStringValue(props.flexBasis)};
-    order: ${(props) => getNumberOrStringValue(props.order)};
+        align-items: ${(props) => props.align};
+        align-content: ${(props) => props.alignContent};
+        align-self: ${(props) => props.alignSelf};
+        justify-content: ${(props) => props.justify};
+        justify-items: ${(props) => props.justifyItems};
+        justify-self: ${(props) => props.justifySelf};
+        flex-wrap: ${(props) => props.wrap};
+        flex-direction: ${(props) => props.direction};
+        flex: ${(props) => getNumberOrStringValue(props.flex)};
+        flex-grow: ${(props) => props.flexGrow};
+        flex-shrink: ${(props) => props.flexShrink};
+        flex-basis: ${(props) => getNumberOrStringValue(props.flexBasis)};
+        order: ${(props) => getNumberOrStringValue(props.order)};
 
-    background: ${(props) => props.bg};
-    background-image: ${(props) => props.bgImage};
-    background-color: ${(props) => props.bgColor};
-    background-size: ${(props) => props.bgSize};
-    background-position: ${(props) => props.bgPosition};
-    background-repeat: ${(props) => props.bgRepeat};
+        background: ${(props) => props.bg};
+        background-image: ${(props) => props.bgImage};
+        background-color: ${(props) => props.bgColor};
+        background-size: ${(props) => props.bgSize};
+        background-position: ${(props) => props.bgPosition};
+        background-repeat: ${(props) => props.bgRepeat};
 
-    border: ${(props) => props.border};
-    border-style: ${(props) => props.borderStyle};
-    border-color: ${(props) => props.borderColor};
-    border-width: ${(props) => getNumberOrStringValue(props.borderWidth)};
+        border: ${(props) => props.border};
+        border-style: ${(props) => props.borderStyle};
+        border-color: ${(props) => props.borderColor};
+        border-width: ${(props) => getNumberOrStringValue(props.borderWidth)};
 
-    border-top: ${(props) => props.borderTop};
-    border-top-style: ${(props) => props.borderTopStyle};
-    border-top-color: ${(props) => props.borderTopColor};
-    border-top-width: ${(props) => getNumberOrStringValue(props.borderTopWidth)};
+        border-top: ${(props) => props.borderTop};
+        border-top-style: ${(props) => props.borderTopStyle};
+        border-top-color: ${(props) => props.borderTopColor};
+        border-top-width: ${(props) => getNumberOrStringValue(props.borderTopWidth)};
 
-    border-right: ${(props) => props.borderRight};
-    border-right-style: ${(props) => props.borderRightStyle};
-    border-right-color: ${(props) => props.borderRightColor};
-    border-right-width: ${(props) => getNumberOrStringValue(props.borderRightWidth)};
+        border-right: ${(props) => props.borderRight};
+        border-right-style: ${(props) => props.borderRightStyle};
+        border-right-color: ${(props) => props.borderRightColor};
+        border-right-width: ${(props) => getNumberOrStringValue(props.borderRightWidth)};
 
-    border-bottom: ${(props) => props.borderBottom};
-    border-bottom-style: ${(props) => props.borderBottomStyle};
-    border-bottom-color: ${(props) => props.borderBottomColor};
-    border-bottom-width: ${(props) => getNumberOrStringValue(props.borderBottomWidth)};
+        border-bottom: ${(props) => props.borderBottom};
+        border-bottom-style: ${(props) => props.borderBottomStyle};
+        border-bottom-color: ${(props) => props.borderBottomColor};
+        border-bottom-width: ${(props) => getNumberOrStringValue(props.borderBottomWidth)};
 
-    border-left: ${(props) => props.borderLeft};
-    border-left-style: ${(props) => props.borderLeftStyle};
-    border-left-color: ${(props) => props.borderLeftColor};
-    border-left-width: ${(props) => getNumberOrStringValue(props.borderLeftWidth)};
+        border-left: ${(props) => props.borderLeft};
+        border-left-style: ${(props) => props.borderLeftStyle};
+        border-left-color: ${(props) => props.borderLeftColor};
+        border-left-width: ${(props) => getNumberOrStringValue(props.borderLeftWidth)};
 
-    border-radius: ${(props) => props.borderRadius ? getNumberOrStringValue(props.borderRadius) : getRoundness(props.round)};
-    border-top-left-radius: ${(props) => getNumberOrStringValue(props.borderTopLeftRadius)};
-    border-top-right-radius: ${(props) => getNumberOrStringValue(props.borderTopRightRadius)};
-    border-bottom-right-radius: ${(props) => getNumberOrStringValue(props.borderBottomRightRadius)};
-    border-bottom-left-radius: ${(props) => getNumberOrStringValue(props.borderBottomLeftRadius)};
+        border-radius: ${(props) => props.borderRadius ? getNumberOrStringValue(props.borderRadius) : getRoundness(props.round)};
+        border-top-left-radius: ${(props) => getNumberOrStringValue(props.borderTopLeftRadius)};
+        border-top-right-radius: ${(props) => getNumberOrStringValue(props.borderTopRightRadius)};
+        border-bottom-right-radius: ${(props) => getNumberOrStringValue(props.borderBottomRightRadius)};
+        border-bottom-left-radius: ${(props) => getNumberOrStringValue(props.borderBottomLeftRadius)};
 
-    position: ${(props) => props.position};
-    z-index: ${(props) => props.zIndex};
-    top: ${(props) => getNumberOrStringValue(props.top)};
-    right: ${(props) => getNumberOrStringValue(props.right)};
-    bottom: ${(props) => getNumberOrStringValue(props.bottom)};
-    left: ${(props) => getNumberOrStringValue(props.left)};
+        position: ${(props) => props.position};
+        z-index: ${(props) => props.zIndex};
+        top: ${(props) => getNumberOrStringValue(props.top)};
+        right: ${(props) => getNumberOrStringValue(props.right)};
+        bottom: ${(props) => getNumberOrStringValue(props.bottom)};
+        left: ${(props) => getNumberOrStringValue(props.left)};
 
-    box-shadow: ${(props) => getBoxShadow(props.boxShadow)};
+        box-shadow: ${(props) => getBoxShadow(props.boxShadow)};
 
-    animation: ${(props) => props.animation};
+        animation: ${(props) => props.animation};
 
-    visibility: ${(props) => props.visibility};
+        visibility: ${(props) => props.visibility};
 
-    cursor: ${(props) => props.cursor};
+        cursor: ${(props) => props.cursor};
+    }
+
 `;
 
 export const getNumberOrStringValue = (value?: number | string) => {

@@ -24,7 +24,6 @@ const Template: Story<IActionsDropdownComponentProps> = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-    bgColor: '#232c3d',
     children: (
         <>
             <ActionsDropdownArrow />
@@ -44,6 +43,7 @@ Normal.args = {
 
 export const BottomArrow = Template.bind({});
 BottomArrow.args = {
+    bgColor: '#232c3d',
     children: (
         <>
             <ActionsDropdownArrow arrowColor="#232c3d" arrowDirection="down" right={'unset !important'} left={22} />

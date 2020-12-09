@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
+import variables from '../_utils/globals/variables';
 
 import { IRadioComponentProps } from './model';
 
@@ -23,5 +23,5 @@ export const StyledRadio = styled(Box)<Partial<IRadioComponentProps>>`
     font-family: 'Mooskin Icons';
     margin-right: 10px;
     font-size: 23px;
-    color: ${(props) => (props.selected ? '#293346' : '#425579')};
+    color: ${(props) => props.theme.secondary || variables.secondary};
 `;

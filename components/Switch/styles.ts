@@ -6,10 +6,6 @@ import Box from '../Box/Box';
 
 import { ISwitchComponentProps } from './model';
 
-export const SwitchContainer = styled(Box)<ISwitchComponentProps>`
-    display: flex;
-`;
-
 export const SwitchStyled = styled(Box)<ISwitchComponentProps>`
     overflow: hidden;
     position: relative;
@@ -24,9 +20,9 @@ export const SwitchStyled = styled(Box)<ISwitchComponentProps>`
     background-color: ${(props) => {
         return !props.disabled
             ? props.on
-                ? props.theme.primaryColor || props.primaryColor
-                : props.theme.secondaryColor || props.secondaryColor
-            : props.theme.backgroundDisabled || variables.backgroundDisabled;
+                ? props.theme.primary || variables.primary
+                : props.theme.inputBorder || variables.inputBorder
+            : props.theme.disabledBackground || variables.disabledBackground;
     }};
 `;
 
@@ -56,6 +52,6 @@ export const SwitchLabelNormal = styled(SwitchLabel)<ISwitchComponentProps>`
 `;
 
 export const SwitchLabelDisabled = styled(SwitchLabel)<ISwitchComponentProps>`
-    color: #9d9d9d;
+    color: ${(props) => props.theme.disabledfont || variables.disabledfont};
     align-self: center;
 `;

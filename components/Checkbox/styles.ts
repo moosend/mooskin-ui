@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
+import variables from '../_utils/globals/variables';
 
 import { ICheckboxComponentProps } from './model';
 
@@ -20,8 +20,8 @@ export const StyledCheckboxWrapper = styled(Box)<Partial<ICheckboxComponentProps
 `;
 
 export const StyledCheckbox = styled(Box)<Partial<ICheckboxComponentProps>>`
+    font-family: 'Mooskin Icons';
     margin-right: 10px;
     font-size: 23px;
-    color: ${(props) => (props.checked ? '#293346' : '#425579')};
-    font-family: 'Mooskin Icons';
+    color: ${(props) => props.theme.secondary || variables.secondary};
 `;

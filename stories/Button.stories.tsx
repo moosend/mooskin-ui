@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Button from '../components/Button/Button';
+import {Button, ButtonIcon} from '../components/Button/Button';
 import { IButtonComponentProps } from '../components/Button/model';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
@@ -34,14 +34,18 @@ Inversed.args = {
 
 export const Icon = Template.bind({});
 Icon.args = {
-    children: 'VIEW CAMPAIGN',
-    icon: 'file_copy',
-    primaryColor: '#293346',
+    bgColor: '#293346',
+    children: (
+        <>
+            <ButtonIcon>file_copy</ButtonIcon>
+            VIEW CAMPAIGN
+        </>
+    )
 };
 
 export const Href = Template.bind({});
 Href.args = {
+    bgColor: '#37a037',
     children: 'VIEW CAMPAIGN',
-    href: 'https://www.moosend.com',
-    primaryColor: '#37a037',
+    href: 'https://www.moosend.com'
 };

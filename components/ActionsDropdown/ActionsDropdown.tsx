@@ -31,6 +31,14 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
                 } as IActionsDropdownItemComponentProps);
             }
 
+            if (React.isValidElement<IActionsDropdownArrowComponentProps>(child) && child.type === ActionsDropdownArrow){
+                return React.cloneElement(child, {
+                    arrowColor: child.props.arrowColor ? child.props.arrowColor : props.bgColor,
+                    children: recurseChildren((child.props as any).children),
+                    key: i
+                } as IActionsDropdownArrowComponentProps);
+            }
+
             if (React.isValidElement(child) && (child.props as any).children){
                 return React.cloneElement(child, {children: recurseChildren((child.props as any).children)} as any);
             }

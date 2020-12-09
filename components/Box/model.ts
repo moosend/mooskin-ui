@@ -1,3 +1,4 @@
+import { IStyledTheme } from '../Styled/model';
 
 export type DefaultOptionsType = 'inherit' | 'initial' | 'unset';
 export type BorderStyleType = 'none' | 'hidden' | 'dotted' | 'dashed' | 'solid' | 'double' | 'groove' | 'ridge' | 'inset' | 'outset';
@@ -20,6 +21,9 @@ export const boxComponentProps = [
 ];
 
 export interface IBoxComponentProps {
+    /** Theme */
+    theme?: IStyledTheme;
+
     /** Box children */
     children?: any;
 

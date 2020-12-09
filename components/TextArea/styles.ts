@@ -1,26 +1,13 @@
 import styled from 'styled-components';
 
-import Box from '../Box/Box';
-
-// import variables from '../_utils/globals/variables';
-
-import { ITextAreaComponentProps } from './model';
-
-export const StyledTextAreaContainer = styled(Box)`
-    display: flex;
-`;
-
-export const StyledTextAreaWrapper = styled(Box)<Partial<ITextAreaComponentProps>>`
-    display: flex;
-    flex-direction: column;
-`;
+import variables from '../_utils/globals/variables';
 
 export const StyledTextArea = styled.textarea`
     padding: 11px;
     border-radius: 3px;
-    border: solid 1px #e2e2e2;
-    background-color: #ffffff;
+    border: solid 1px ${(props) => props.theme.inputBorder || variables.inputBorder};
+    background-color: ${(props) => props.theme.inputBackground || variables.inputBackground};
     font-family: Hind;
     font-size: 12px;
-    color: #9d9d9d;
+    color: ${(props) => props.theme.inputFont || variables.inputFont};
 `;

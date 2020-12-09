@@ -26,12 +26,6 @@ export interface ISwitchComponentProps extends IBoxComponentProps {
     /** what data is being used, you know on what field changes are made */
     dataLabel?: string;
 
-    /** Switch primary color */
-    primaryColor?: string;
-
-    /** Switch secondary color */
-    secondaryColor?: string;
-
     /** Switch width */
     width?: number;
 

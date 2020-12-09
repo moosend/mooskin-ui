@@ -10,9 +10,6 @@ export interface ILabelComponentProps extends IBoxComponentProps {
     /** Label width */
     width?: number;
 
-    /** Label primary color */
-    primaryColor?: string;
-
     /** callback that is called when the Label is clicked */
     onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 }

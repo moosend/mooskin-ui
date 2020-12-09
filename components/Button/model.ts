@@ -13,12 +13,6 @@ export interface IButtonComponentProps extends IBoxComponentProps {
     /** Button href */
     href?: string;
 
-    /** See Material Icons for icon type */
-    icon?: string;
-
-    /** Button primary color */
-    primaryColor?: string;
-
     /** Button size */
     size?: 'lg' | 'md' | 'sm';
 

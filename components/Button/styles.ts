@@ -26,6 +26,10 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
     outline: 0;
     font-family: Montserrat;
     font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,30 +38,32 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
     }
 `;
 
-export const ButtonNormal = styled(ButtonDefault)<IButtonComponentProps>`
+export const StyledButtonNormal = styled(ButtonDefault)<IButtonComponentProps>`
     background-color: ${(props) =>
-        !props.disabled ? props.theme.primaryColor || props.primaryColor : props.theme.backgroundDisabled || variables.backgroundDisabled};
+        !props.disabled ? props.theme.primary || variables.primary : props.theme.disabledBackground || variables.disabledBackground};
     color: #ffffff;
     padding: ${(props) => normalButtonSizes[props.size || 'md']};
     border: none;
     outline: 0;
 `;
 
-export const ButtonInverse = styled(ButtonDefault)<IButtonComponentProps>`
+export const StyledButtonInverse = styled(ButtonDefault)<IButtonComponentProps>`
     color: ${(props) =>
-        !props.disabled ? props.theme.primaryColor || props.primaryColor : props.theme.backgroundDisabled || variables.backgroundDisabled};
-    background-color: #ffffff;
+        !props.disabled ? props.theme.primary || variables.primary : props.theme.disabledBackground || variables.disabledBackground};
     padding: ${(props) => inverseButtonSizes[props.size || 'md']};
+    background-color: transparent;
     border: 2px solid
         ${(props) =>
             !props.disabled
-                ? props.theme.primaryColor || props.primaryColor
-                : props.theme.backgroundDisabled || variables.backgroundDisabled};
+                ? props.theme.primary || variables.primary
+                : props.theme.disabledBackground || variables.disabledBackground};
 `;
 
-export const ButtonIcon = styled(Box)`
+export const StyledButtonIcon = styled(Box)`
     font-family: 'Mooskin Icons Round';
     font-size: 15px;
     font-style: normal;
+    color: inherit;
     margin-right: 5px;
+    text-decoration: none;
 `;
