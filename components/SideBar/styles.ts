@@ -22,9 +22,11 @@ export const StyledSidebarItem = styled(Box)<ISidebarItemComponentProps>`
     letter-spacing: normal;
     text-align: left;
     color: #293346;
-    margin-left: ${(props) => props.active ? '-2px' : ''};
+    margin-left: ${(props) => props.active ? '-2px' : '0'};
     padding-left: 9px;
     border-left: ${(props) => props.active ? '3px solid #3fbaca' : ''};
+    transition: 0.3s all ease;
+    cursor: pointer;
     :not(:last-child){
         margin-bottom: 32px;
     }

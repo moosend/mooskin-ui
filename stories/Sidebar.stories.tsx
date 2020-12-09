@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Box from '../components/Box/Box';
 import {ISidebarComponentProps} from '../components/Sidebar/model';
 import Sidebar, {SidebarItem} from '../components/Sidebar/Sidebar';
 
@@ -27,7 +26,7 @@ export const Normal = Template.bind({});
 Normal.args = {
     activeItem: '/settings',
     children: (
-        <Box>
+        <>
             <SidebarItem dataLabel="settings" value="/settings">
                 Settings
             </SidebarItem>
@@ -37,7 +36,7 @@ Normal.args = {
             <SidebarItem dataLabel="preview" value="/preview">
                 Preview
             </SidebarItem>
-        </Box>
+        </>
     ),
     onClickItem: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)
 };
