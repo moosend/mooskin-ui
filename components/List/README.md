@@ -1,135 +1,74 @@
-# MooSkin UI - List & ListItem Component
+# MooSkin UI - Button Component
 
-The MooSkin List & ListItem Component works similar to the normal HTML `<ol/>`, `<ul/>`, `<li/>` elements, but with pre-defined styling and attributes.
+The MooSkin Button Component works similar to the normal HTML `<button/>` element, but with pre-defined styling and attributes.
 
-___
+---
 
 ### Usage
 
-To start using the List & ListItem Component first you have to Import it
+To start using the Button Component first you have to Import it
 
 ```
-Import {List, ListItem, ItemContent} from '@moosend/mooskin';
+Import {Button} from '@moosend/mooskin';
 ```
+
 or modular import
+
 ```
 // JS
-import List, {ListItem} from '@moosend/mooskin/lib/List';
+import Button from '@moosend/mooskin/lib/Button';
 
 // CSS
-import '@moosend/mooskin/lib/List/style.css';
+import '@moosend/mooskin/lib/Button/style.css';
 ```
 
 And then you can simply start using it by typing
 
 ```
-<List attribute1="atr" attribute2="asd" >
-    <ListItem>
-        <ItemContent>
-            content 1
-        <ItemContent/>
-    </ListItem>
-    <ListItem>
-        <ItemContent>
-            content 2
-        <ItemContent/>
-    </ListItem>
-    <ListItem>
-        <ItemContent>
-            content 3
-        <ItemContent/>
-    </ListItem>
-</List>
+<Button attribute1="atr" attribute2="asd" >button1</Button>
 ```
 
-Like normal html elements, it will accept given attributes and render differently based on the given attributes
+For easy use, the components are named similar to normal HTML components but with a capital first letter.
+
+Like the `<button/>` element it will accept given attributes and render differently based on the given attributes
 
 ### Examples
 
-Give it a custom class or style
+Making it disabled, in this case the proper disabled class will be loaded (ex. disabling cursor)
 
 ```
-<List style={yourStyle} className={yourClass} >...</List>
+<Button disabled >button1</Button>
 ```
 
-or pass props to the LinkItem component
+or pass it a function for event handling
 
 ```
-<List>
-    <ListItem style={yourStyle} className={yourClass}>...</ListItem>
-</List>
+<Button onClick={yourFunc} >button1</Button>
 ```
 
-### ExpandedSection content
-
-A list item can have an expandable hidden content which will reveal when the `ListItem` prop of `expanded` is true, example:
+or just give it a custom style
 
 ```
-Import {List, ListItem, ItemContent, ExpandedSection} from '@moosend/mooskin';
-
-<List attribute1="atr" attribute2="asd" >
-    <ListItem>
-        <ItemContent>
-            content 1
-        <ItemContent/>
-        <ExpandedSection expanded={true || false}>
-            expandable content 1
-        <ExpandedSection/>
-    </ListItem>
-    <ListItem>
-        <ItemContent>
-            content 2
-        <ItemContent/>
-        <ExpandedSection expanded={true || false}>
-            expandable content 2
-        <ExpandedSection/>
-    </ListItem>
-    <ListItem expanded>
-        <ItemContent>
-            content 3
-        <ItemContent/>
-        <ExpandedSection expanded={true || false}>
-            expandable content 3
-        <ExpandedSection/>
-    </ListItem>
-</List>
+<Button style={yourStyle} >button1</Button>
 ```
-so in the above example, the third and last list item will have the hidden section expanded, the others will have the section hidden.
 
 <div class="playground-doc">
 
-## Supported List attributes
+## Supported attributes
 
-* `id` - id of the element
-* `style` - listitem style
-* `className` - css class
-
-## Supported ListItem attributes
-
-* `className` - css class
-* `style` - listitem style
-
-## Supported ListContent attributes
-
-* `id` - id of the element
-* `style` - listitem style
-* `className` - css class
-
-## Supported ExpandedSection attributes
-
-* `id` - id of the element
-* `style` - listitem style
-* `className` - css class
-* `expanded` - if true, displays hidden content
-* `arrow` - boolean value wether to display expanded section arrow, defaults to true
+-   `id` - id of the element
+-   `disabled` - button should be disabled
+-   `className` - css class
+-   `inverseStyle` - a style variaton of the button
+-   `style` - button style
+-   `onClick` - callback to be triggered on button click
 
 </div>
 
 Allthough these attributes are supported, all of them are optional.
 
-
 #### For more
 
-___
+---
 
 [MooSkin-UI](https://github.com/moosend/mooskin-ui)

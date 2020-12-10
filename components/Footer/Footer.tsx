@@ -5,18 +5,14 @@ import {
     StyledFooter,
     StyledFooterBody,
     StyledFooterEnd,
-    StyledFooterHeader
+    StyledFooterHead
 } from './styles';
 
 /**
  * Footer
  */
 export const Footer: React.FC<IBoxComponentProps> = (props) => {
-    return (
-        <StyledFooter boxShadow="inner" {...props}>
-            {props.children}
-        </StyledFooter>
-    );
+    return <StyledFooter boxShadow="inner" {...props} />;
 };
 
 Footer.defaultProps = {
@@ -27,32 +23,24 @@ Footer.defaultProps = {
 Footer.displayName = 'Footer';
 
 /**
- * FooterHeader
+ * FooterHead
  */
-export const FooterHeader: React.FC<IBoxComponentProps> = (props) => {
-    return (
-        <StyledFooterHeader {...props}>
-            {props.children}
-        </StyledFooterHeader>
-    );
+export const FooterHead: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledFooterHead {...props} />;
 };
 
-FooterHeader.defaultProps = {
+FooterHead.defaultProps = {
     className: '',
     style: {}
 };
 
-FooterHeader.displayName = 'FooterHeader';
+FooterHead.displayName = 'FooterHead';
 
 /**
  * FooterBody
  */
 export const FooterBody: React.FC<IBoxComponentProps> = (props) => {
-    return (
-        <StyledFooterBody {...props}>
-            {props.children}
-        </StyledFooterBody>
-    );
+    return <StyledFooterBody {...props} />;
 };
 
 FooterBody.defaultProps = {
@@ -66,11 +54,7 @@ FooterBody.displayName = 'FooterBody';
  * FooterEnd
  */
 export const FooterEnd: React.FC<IBoxComponentProps> = (props) => {
-    return (
-        <StyledFooterEnd {...props}>
-            {props.children}
-        </StyledFooterEnd >
-    );
+    return <StyledFooterEnd {...props} />;
 };
 
 FooterEnd .defaultProps = {

@@ -50,11 +50,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
         });
     };
 
-    return (
-        <StyledActionsDropdown boxShadow="lg" {...getBoxProps(props)}>
-            {props.children && recurseChildren(props.children)}
-        </StyledActionsDropdown>
-    );
+    return <StyledActionsDropdown boxShadow="lg" {...getBoxProps(props)} children={recurseChildren(props.children)} />;
 };
 
 ActionsDropdown.defaultProps = {
@@ -68,11 +64,7 @@ ActionsDropdown.displayName = 'ActionsDropdown';
  * ActionsDropdownItem
  */
 export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = (props) => {
-    return (
-        <StyledActionsDropdownItem {...props}>
-            {props.children}
-        </StyledActionsDropdownItem>
-    );
+    return <StyledActionsDropdownItem {...props} />;
 };
 
 ActionsDropdownItem.defaultProps = {
@@ -86,11 +78,7 @@ ActionsDropdownItem.displayName = 'ActionsDropdownItem';
  * ActionsDropdownArrow
  */
 export const ActionsDropdownArrow: React.FC<IActionsDropdownArrowComponentProps> = (props) => {
-    return (
-        <StyledActionsDropdownArrow {...props}>
-            {props.children}
-        </StyledActionsDropdownArrow>
-    );
+    return <StyledActionsDropdownArrow {...props} />;
 };
 
 ActionsDropdownArrow.defaultProps = {

@@ -42,11 +42,7 @@ export const Selector: React.FC<ISelectorComponentProps> = (props) => {
         });
     };
 
-    return (
-        <StyledSelector {...getBoxProps(props)}>
-            {props.children && recurseChildren(props.children)}
-        </StyledSelector>
-    );
+    return <StyledSelector {...getBoxProps(props)} children={recurseChildren(props.children)} />;
 };
 
 Selector.defaultProps = {
@@ -58,11 +54,7 @@ Selector.defaultProps = {
  * SelectorItem
  */
 export const SelectorItem: React.FC<ISelectorItemComponentProps> = (props) => {
-    return (
-        <StyledSelectorItem {...props}>
-            {props.children}
-        </StyledSelectorItem>
-    );
+    return <StyledSelectorItem {...props} />;
 };
 
 SelectorItem.defaultProps = {

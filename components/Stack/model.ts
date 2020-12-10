@@ -9,5 +9,5 @@ export interface IStackComponentProps extends IBoxComponentProps {
 
     /** Stack children */
     // children: JSX.Element | React.ReactElement<any> | JSX.Element[] | React.ReactElement[];
-    children: any;
+    children?: any;
 }

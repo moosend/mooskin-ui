@@ -5,8 +5,8 @@ import Pagination from '../Pagination';
 import SmallIconButton from '../SmallIconButton';
 import styles from './Table.css';
 
-import { arrow } from '../List/List';
-import listStyles from '../List/List.css';
+import listStyles from '../ListOld/List.css';
+import { arrow } from '../ListOld/List';
 
 import { DndProvider, DropTargetMonitor, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';

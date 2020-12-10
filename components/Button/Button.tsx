@@ -15,11 +15,7 @@ export const Button: React.FC<IButtonComponentProps> = (props) => {
 
     const ButtonComponent = props.inverseStyle ? StyledButtonInverse : StyledButtonNormal;
 
-    return (
-        <ButtonComponent {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'}>
-            {props.children}
-        </ButtonComponent>
-    );
+    return <ButtonComponent {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
 };
 
 Button.defaultProps = {
@@ -35,7 +31,7 @@ Button.displayName = 'Button';
  * ButtonIcon
  */
 export const ButtonIcon: React.FC<IBoxComponentProps> = (props) => {
-    return <StyledButtonIcon>{props.children}</StyledButtonIcon>;
+    return <StyledButtonIcon {...props} />;
 };
 
 ButtonIcon.defaultProps = {

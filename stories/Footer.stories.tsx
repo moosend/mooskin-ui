@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import {Footer, FooterBody, FooterEnd, FooterHeader} from '../components/Footer/Footer';
+import {Footer, FooterBody, FooterEnd, FooterHead} from '../components/Footer/Footer';
 
 import { IBoxComponentProps } from '../components/Box/model';
 import Button, { ButtonIcon } from '../components/Button/Button';
@@ -26,7 +26,7 @@ export const Normal = Template.bind({});
 Normal.args = {
     children: (
         <>
-            <FooterHeader fontSize={12} fontWeight={800}>SAVE AS DRAFT</FooterHeader>
+            <FooterHead fontSize={12} fontWeight={800}>SAVE AS DRAFT</FooterHead>
             <FooterBody>
                 <Button mr={10} minW="unset">
                     <ButtonIcon>

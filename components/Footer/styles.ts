@@ -17,7 +17,7 @@ export const StyledFooterCommon = styled(Box)<IBoxComponentProps>`
     align-items: center;
 `;
 
-export const StyledFooterHeader = styled(StyledFooterCommon)`
+export const StyledFooterHead = styled(StyledFooterCommon)`
     justify-content: center;
     flex: 3;
 `;

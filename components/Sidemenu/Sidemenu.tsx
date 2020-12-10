@@ -42,11 +42,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
         });
     };
 
-    return (
-        <StyledSidemenu {...getBoxProps(props)}>
-            {props.children && recurseChildren(props.children)}
-        </StyledSidemenu>
-    );
+    return <StyledSidemenu {...getBoxProps(props)} children={recurseChildren(props.children)} />;
 };
 
 Sidemenu.defaultProps = {
@@ -58,11 +54,7 @@ Sidemenu.defaultProps = {
  * SidemenuItem
  */
 export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = (props) => {
-    return (
-        <StyledSidemenuItem {...props}>
-            {props.children}
-        </StyledSidemenuItem>
-    );
+    return <StyledSidemenuItem {...props} />;
 };
 
 SidemenuItem.defaultProps = {

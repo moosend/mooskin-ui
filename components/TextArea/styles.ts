@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Box } from '../index';
+import { Box } from '../Box/Box';
 
 import variables from '../_utils/globals/variables';
 

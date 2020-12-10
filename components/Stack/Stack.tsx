@@ -73,18 +73,14 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
         });
     };
 
-    return (
-        <StyledStack {...props} children={renderChildren()} />
-    );
+    return <StyledStack {...props} children={renderChildren()} />;
 };
 
 /**
  * HStack
  */
 export const HStack: React.FC<IStackComponentProps> = (props) => {
-    return (
-        <Stack {...props} />
-    );
+    return <Stack {...props} />;
 };
 
 HStack.defaultProps = {
@@ -103,9 +99,7 @@ HStack.displayName = 'HStack';
  * VStack
  */
 export const VStack: React.FC<IStackComponentProps> = (props) => {
-    return (
-        <Stack {...props} />
-    );
+    return <Stack {...props} />;
 };
 
 VStack.defaultProps = {

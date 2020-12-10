@@ -46,11 +46,7 @@ export const Alert: React.FC<IAlertComponentProps> = (props) => {
         });
     };
 
-    return (
-        <StyledAlert {...props}>
-            {props.children && recurseChildren(props.children)}
-        </StyledAlert>
-    );
+    return <StyledAlert {...props} children={recurseChildren(props.children)} />;
 };
 
 Alert.defaultProps = {
@@ -66,11 +62,7 @@ Alert.displayName = 'Alert';
  * AlertIcon
  */
 export const AlertIcon: React.FC<IAlertComponentProps> = (props) => {
-    return (
-        <StyledAlertIcon {...props}>
-            {props.status && AlertIcons[props.status]}
-        </StyledAlertIcon>
-    );
+    return <StyledAlertIcon {...props} children={props.status && AlertIcons[props.status]} />;
 };
 
 AlertIcon.defaultProps = {
@@ -84,11 +76,7 @@ AlertIcon.displayName = 'AlertIcon';
  * AlertTitle
  */
 export const AlertTitle: React.FC<IAlertComponentProps> = (props) => {
-    return (
-        <StyledAlertTitle {...props}>
-            {props.children}
-        </StyledAlertTitle>
-    );
+    return <StyledAlertTitle {...props} />;
 };
 
 AlertTitle.defaultProps = {
@@ -102,11 +90,7 @@ AlertTitle.displayName = 'AlertTitle';
  * AlertDescription
  */
 export const AlertDescription: React.FC<IAlertComponentProps> = (props) => {
-    return (
-        <StyledAlertDescription {...props}>
-            {props.children}
-        </StyledAlertDescription>
-    );
+    return <StyledAlertDescription {...props} />;
 };
 
 AlertDescription.defaultProps = {
@@ -120,9 +104,7 @@ AlertDescription.displayName = 'AlertDescription';
  * AlertCloseButton
  */
 export const AlertCloseButton: React.FC<IAlertCloseButtonComponentProps> = (props) => {
-    return (
-        <StyledAlertCloseButton {...props} children="close" />
-    );
+    return <StyledAlertCloseButton {...props} children="close" />;
 };
 
 AlertCloseButton.defaultProps = {

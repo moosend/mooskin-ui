@@ -10,11 +10,7 @@ export const Anchor: React.FC<IAnchorComponentProps> = (props) => {
         !props.disabled && props.onClick && props.onClick(e);
     };
 
-    return (
-        <StyledAnchor {...props} onClick={onClick} boxAs="a">
-            {props.children}
-        </StyledAnchor>
-    );
+    return <StyledAnchor {...props} onClick={onClick} boxAs="a" />;
 };
 
 Anchor.defaultProps = {

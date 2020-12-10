@@ -91,11 +91,7 @@ export const Drawer: React.FC<IDrawerComponentProps> = (props) => {
         });
     };
 
-    return (
-        <StyledDrawer {...props}>
-            {props.children && recurseChildren(props.children)}
-        </StyledDrawer>
-    );
+    return <StyledDrawer {...props} children={recurseChildren(props.children)} />;
 };
 
 Drawer.defaultProps = {
@@ -120,11 +116,7 @@ export const DrawerContent: React.FC<IDrawerContentComponentProps> = (props) => 
 
     const DrawerContentComponent = props.isOpen ? DrawerByPlacement.in : DrawerByPlacement.out;
 
-    return (
-        <DrawerContentComponent {...props}>
-            {props.children}
-        </DrawerContentComponent>
-    );
+    return <DrawerContentComponent {...props} />;
 };
 
 DrawerContent.defaultProps = {
@@ -138,11 +130,7 @@ DrawerContent.displayName = 'DrawerContent';
  * DrawerHeader
  */
 export const DrawerHeader: React.FC<IBoxComponentProps> = (props) => {
-    return (
-        <StyledDrawerHeader boxAs="header" {...props}>
-            {props.children}
-        </StyledDrawerHeader>
-    );
+    return <StyledDrawerHeader boxAs="header" {...props} />;
 };
 
 DrawerHeader.defaultProps = {
@@ -156,11 +144,7 @@ DrawerHeader.displayName = 'DrawerHeader';
  * DrawerBody
  */
 export const DrawerBody: React.FC<IBoxComponentProps> = (props) => {
-    return (
-        <StyledDrawerBody {...props}>
-            {props.children}
-        </StyledDrawerBody>
-    );
+    return <StyledDrawerBody {...props} />;
 };
 
 DrawerBody.defaultProps = {
@@ -174,11 +158,7 @@ DrawerBody.displayName = 'DrawerBody';
  * DrawerFooter
  */
 export const DrawerFooter: React.FC<IBoxComponentProps> = (props) => {
-    return (
-        <StyledDrawerFooter boxAs="footer" {...props}>
-            {props.children}
-        </StyledDrawerFooter >
-    );
+    return <StyledDrawerFooter boxAs="footer" {...props} />;
 };
 
 DrawerFooter .defaultProps = {
@@ -192,9 +172,7 @@ DrawerFooter.displayName = 'DrawerFooter';
  * DrawerCloseButton
  */
 export const DrawerCloseButton: React.FC<IDrawerCloseButtonComponentProps> = (props) => {
-    return (
-        <StyledDrawerCloseButton {...props} children="close" />
-    );
+    return <StyledDrawerCloseButton {...props} children="close" />;
 };
 
 DrawerCloseButton .defaultProps = {
@@ -224,9 +202,7 @@ export const DrawerOverlay: React.FC<IDrawerOverlayComponentProps> = (props) => 
     const DrawerOverlayComponent = props.isOpen ? StyledDrawerOverlayFadeIn : StyledDrawerOverlayFadeOut;
 
     if (show){
-        return (
-            <DrawerOverlayComponent {...props} />
-        );
+        return <DrawerOverlayComponent {...props} />;
     }
 
     return null;
