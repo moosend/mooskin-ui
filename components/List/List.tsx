@@ -1,10 +1,11 @@
 import * as React from 'react';
 
 import { IBoxComponentProps } from '../Box/model';
-import { IListComponentProps } from './model';
+import { ILayoutComponentProps } from '../Layout/model';
+
+import { Layout } from '../Layout/Layout';
 
 import {
-    StyledList,
     StyledListItem,
     StyledListItemBody,
     StyledListItemEnd,
@@ -14,9 +15,9 @@ import {
 /**
  * List
  */
-export const List: React.FC<IListComponentProps> = (props) => {
+export const List: React.FC<ILayoutComponentProps> = (props) => {
     return (
-        <StyledList {...props} />
+        <Layout {...props} />
     );
 };
 
@@ -92,4 +93,4 @@ ListItemEnd.defaultProps = {
 
 ListItemEnd.displayName = 'ListItemEnd';
 
-export default ListItem;
+export default List;
