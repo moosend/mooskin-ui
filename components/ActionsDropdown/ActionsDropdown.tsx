@@ -1,9 +1,13 @@
 import * as React from 'react';
 
+// Helpers
 import { getBoxProps } from '../_utils/helper';
-import { IInputCallbackData } from '../index/index';
+
+// Models
+import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IActionsDropdownArrowComponentProps, IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
+// Styled Components
 import {
     StyledActionsDropdown,
     StyledActionsDropdownArrow,

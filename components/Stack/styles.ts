@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
+// Models
+import { IStackComponentProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 
 // import variables from '../_utils/globals/variables';
-
-import { IStackComponentProps } from './model';
 
 export const StyledStack = styled(Box)<IStackComponentProps>`
     display: flex;

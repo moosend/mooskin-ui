@@ -1,9 +1,12 @@
 import styled, {keyframes} from 'styled-components';
+
+// Models
+import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonComponentProps, ISkeletonTextComponentProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 
 // import variables from '../_utils/globals/variables';
-
-import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonComponentProps, ISkeletonTextComponentProps } from './model';
 
 const breatheAnimation = (startColor?: string, endColor?: string) => keyframes`
     0% {

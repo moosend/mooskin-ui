@@ -1,13 +1,18 @@
 import * as React from 'react';
 
+// Helpers
+import { getBoxProps } from '../_utils/helper';
+
+// Models
 import { ITextAreaComponentProps } from './model';
 
-import Description from '../Description/Description';
-import Label from '../Label/Label';
-import {StyledTextArea} from './styles';
-
-import { getBoxProps } from '../_utils/helper';
+// Components
 import { Box } from '../Box/Box';
+import { Description } from '../Description/Description';
+import { Label } from '../Label/Label';
+
+// Styled Components
+import {StyledTextArea} from './styles';
 
 export const TextArea: React.FC<ITextAreaComponentProps> = (props) => {
 

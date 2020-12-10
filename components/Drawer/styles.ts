@@ -1,10 +1,12 @@
 import styled, {keyframes} from 'styled-components';
 
+// Models
+import { IContentSize, IDrawerComponentProps, IDrawerContentComponentProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 
 // import variables from '../_utils/globals/variables';
-
-import { IContentSize, IDrawerComponentProps, IDrawerContentComponentProps } from './model';
 
 const overlayFadeIn = keyframes`
     0% {

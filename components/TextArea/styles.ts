@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
+// Components
 import { Box } from '../Box/Box';
 
+// "CSS" variables
 import variables from '../_utils/globals/variables';
 
 export const StyledTextArea = styled(Box)<React.HTMLProps<HTMLTextAreaElement>>`

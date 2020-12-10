@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
+// Models
+import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 
 // import variables from '../_utils/globals/variables';
-
-import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
 export const StyledSidemenu = styled(Box)<ISidemenuComponentProps>`
     border-left: 1px solid #e2e2e2;

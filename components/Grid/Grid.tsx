@@ -1,7 +1,9 @@
 import * as React from 'react';
 
+// Models
 import { IColProps, IGridProps, IRowProps } from './model';
 
+// Styled Components
 import { StyledCol, StyledGrid, StyledRow } from './styles';
 
 /**

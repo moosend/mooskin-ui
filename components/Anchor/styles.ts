@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
+// Models
+import { IAnchorComponentProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 
+// "CSS" Variables
 import variables from '../_utils/globals/variables';
-
-import { IAnchorComponentProps } from './model';
 
 export const StyledAnchor = styled(Box)<IAnchorComponentProps>`
     border-radius: 3px;

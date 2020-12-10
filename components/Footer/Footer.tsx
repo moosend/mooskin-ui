@@ -1,6 +1,9 @@
 import * as React from 'react';
+
+// Models
 import { IBoxComponentProps } from '../Box/model';
 
+// Styled Components
 import {
     StyledFooter,
     StyledFooterBody,

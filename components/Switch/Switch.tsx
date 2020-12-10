@@ -1,13 +1,17 @@
 import * as React from 'react';
 
-import Label from '../Label/Label';
+// Helpers
+import { getBoxProps } from '../_utils/helper';
 
+// Models
 import { ISwitchComponentProps } from './model';
 
-import { SwitchHandle, SwitchLabelDisabled, SwitchLabelNormal, SwitchStyled } from './styles';
-
-import { getBoxProps } from '../_utils/helper';
+// Components
 import { Box } from '../Box/Box';
+import { Label } from '../Label/Label';
+
+// Styled Components
+import { SwitchHandle, SwitchLabelDisabled, SwitchLabelNormal, SwitchStyled } from './styles';
 
 /**
  * Switch

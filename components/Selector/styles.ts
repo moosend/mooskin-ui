@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
+// Models
+import { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 
 // import variables from '../_utils/globals/variables';
-
-import { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
 
 export const StyledSelector = styled(Box)<ISelectorComponentProps>`
     padding: 6px;

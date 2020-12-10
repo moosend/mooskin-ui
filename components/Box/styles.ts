@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+// Models
 import { BoxShadowIntensityType, IBoxComponentProps, IntensityType } from './model';
 
 export const StyledBox = styled.div<IBoxComponentProps>`

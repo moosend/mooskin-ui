@@ -1,7 +1,9 @@
 import * as React from 'react';
 
+// Models
 import { IAlertCloseButtonComponentProps, IAlertComponentProps } from './model';
 
+// Styled Components
 import { StyledAlert, StyledAlertCloseButton, StyledAlertDescription, StyledAlertIcon, StyledAlertTitle } from './styles';
 
 const AlertIcons = {

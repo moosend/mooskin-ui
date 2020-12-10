@@ -1,7 +1,9 @@
 import * as React from 'react';
 
+// Models
 import { IAnchorComponentProps } from './model';
 
+// Styled Components
 import { StyledAnchor } from './styles';
 
 export const Anchor: React.FC<IAnchorComponentProps> = (props) => {

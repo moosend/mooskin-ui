@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
+// Models
 import { IBoxComponentProps } from '../Box/model';
 
+// Components
 import Box from '../Box/Box';
 
 export const StyledListItem = styled(Box)<IBoxComponentProps>`

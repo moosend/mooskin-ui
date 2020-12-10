@@ -1,8 +1,12 @@
 import * as React from 'react';
-import Box from '../Box/Box';
 
+// Models
 import { IStackComponentProps } from './model';
 
+// Components
+import Box from '../Box/Box';
+
+// Styled Components
 import {StyledStack} from './styles';
 
 /**

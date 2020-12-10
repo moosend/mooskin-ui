@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
+// Models
+import { ColWidth, IColProps, IColWidths, IGridProps, IRowProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 
+// Screens for media queries
 import screens from '../_utils/globals/screens';
-
-import { ColWidth, IColProps, IColWidths, IGridProps, IRowProps } from './model';
 
 const colWidths = {
     1: 8.33333333,

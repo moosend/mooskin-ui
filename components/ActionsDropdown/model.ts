@@ -1,5 +1,5 @@
+import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
-import { IInputCallbackData } from '../index/index';
 
 export interface IActionsDropdownComponentProps extends IBoxComponentProps{
     /** callback called when clicking a ActionsDropdown item */

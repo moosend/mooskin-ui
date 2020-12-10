@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
+// Models
+import { IRadioComponentProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 
+// "CSS" variables
 import variables from '../_utils/globals/variables';
-
-import { IRadioComponentProps } from './model';
 
 export const StyledRadioContainer = styled(Box)`
     display: flex;

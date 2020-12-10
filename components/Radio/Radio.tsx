@@ -1,12 +1,17 @@
 import * as React from 'react';
 
-import Description from '../Description/Description';
-import Label from '../Label/Label';
-import {StyledRadio, StyledRadioContainer, StyledRadioWrapper} from './styles';
-
+// Helpers
 import { getBoxProps } from '../_utils/helper';
 
+// Models
 import { IRadioComponentProps } from './model';
+
+// Components
+import Description from '../Description/Description';
+import Label from '../Label/Label';
+
+// Styled Components
+import {StyledRadio, StyledRadioContainer, StyledRadioWrapper} from './styles';
 
 export const Radio: React.FC<IRadioComponentProps> = (props) => {
 

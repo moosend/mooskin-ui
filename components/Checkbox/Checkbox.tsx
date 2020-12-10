@@ -1,12 +1,17 @@
 import * as React from 'react';
 
-import Description from '../Description/Description';
-import Label from '../Label/Label';
-import {StyledCheckbox, StyledCheckboxContainer, StyledCheckboxWrapper} from './styles';
+// Helper
+import { getBoxProps } from '../_utils/helper';
 
+// Models
 import { ICheckboxComponentProps } from './model';
 
-import { getBoxProps } from '../_utils/helper';
+// Styled Components
+import {StyledCheckbox, StyledCheckboxContainer, StyledCheckboxWrapper} from './styles';
+
+// Components
+import Description from '../Description/Description';
+import Label from '../Label/Label';
 
 export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
 

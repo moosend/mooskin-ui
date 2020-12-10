@@ -1,10 +1,13 @@
 import * as React from 'react';
 
+// Models
 import { IBoxComponentProps } from '../Box/model';
 import { ILayoutComponentProps } from '../Layout/model';
 
+// Components
 import { Layout } from '../Layout/Layout';
 
+// Styled Components
 import {
     StyledListItem,
     StyledListItemBody,

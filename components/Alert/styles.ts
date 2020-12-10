@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-import Box from '../Box/Box';
-
+// Models
 import { IAlertCloseButtonComponentProps, IAlertComponentProps } from './model';
+
+// Components
+import Box from '../Box/Box';
 
 const BackgroundColors = {
     error: '#FED7D7',

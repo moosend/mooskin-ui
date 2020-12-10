@@ -1,8 +1,12 @@
 import * as React from 'react';
-import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
+// Models
 import { IBoxComponentProps } from './model';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
+// Styled Components
 import {StyledBox} from './styles';
 
 export const Box: React.FC<IBoxComponentProps> = withMooskinContext((props) => {

@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { IBoxComponentProps } from '../Box/model';
 
+// Models
+import { IBoxComponentProps } from '../Box/model';
 import { IDrawerCloseButtonComponentProps, IDrawerComponentProps, IDrawerContentComponentProps, IDrawerOverlayComponentProps } from './model';
 
+// Styled Components
 import {
     StyledDrawer,
     StyledDrawerBody,

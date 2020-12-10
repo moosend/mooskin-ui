@@ -1,7 +1,9 @@
 import * as React from 'react';
 
+// Models
 import { ISkeletonCircleComponentProps, ISkeletonComponentProps, ISkeletonTextComponentProps } from './model';
 
+// Styled Components
 import {checkLoaded, StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText} from './styles';
 
 /**

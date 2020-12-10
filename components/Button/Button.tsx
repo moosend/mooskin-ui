@@ -1,8 +1,10 @@
 import * as React from 'react';
 
+// Models
 import { IBoxComponentProps } from '../Box/model';
 import { IButtonComponentProps } from './model';
 
+// Styled Components
 import { StyledButtonIcon, StyledButtonInverse, StyledButtonNormal } from './styles';
 
 /**

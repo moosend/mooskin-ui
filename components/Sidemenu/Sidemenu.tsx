@@ -1,9 +1,13 @@
 import * as React from 'react';
-import { getBoxProps } from '../_utils/helper';
-import { IInputCallbackData } from '../index/index';
 
+// Helpers
+import { getBoxProps } from '../_utils/helper';
+
+// Models
+import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
+// Styled Components
 import {
     StyledSidemenu,
     StyledSidemenuItem

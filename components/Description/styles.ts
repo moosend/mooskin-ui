@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
+// Models
+import { IDescriptionComponentProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 
+// "CSS" variables
 import variables from '../_utils/globals/variables';
-
-import { IDescriptionComponentProps } from './model';
 
 export const StyledDescription = styled(Box)<IDescriptionComponentProps>`
     margin-top: 10px;

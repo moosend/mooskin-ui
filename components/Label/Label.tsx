@@ -1,6 +1,9 @@
 import * as React from 'react';
 
+// Models
 import { ILabelComponentProps } from './model';
+
+// Styled Components
 import { StyledLabel } from './styles';
 
 export const Label: React.FC<ILabelComponentProps> = (props) => {

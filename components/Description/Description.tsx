@@ -1,6 +1,9 @@
 import * as React from 'react';
 
+// Models
 import { IDescriptionComponentProps } from './model';
+
+// Styled Components
 import { StyledDescription } from './styles';
 
 export const Description: React.FC<IDescriptionComponentProps> = (props) => {

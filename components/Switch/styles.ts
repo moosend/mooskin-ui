@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
-import variables from '../_utils/globals/variables';
+// Models
+import { ISwitchComponentProps } from './model';
 
+// Components
 import Box from '../Box/Box';
 
-import { ISwitchComponentProps } from './model';
+// "CSS" variables
+import variables from '../_utils/globals/variables';
 
 export const SwitchStyled = styled(Box)<ISwitchComponentProps>`
     overflow: hidden;
