@@ -11,6 +11,9 @@ const AlertIcons = {
     warning: 'warning'
 };
 
+/**
+ * Alert
+ */
 export const Alert: React.FC<IAlertComponentProps> = (props) => {
 
     const recurseChildren = (children: any): any => {
@@ -59,6 +62,9 @@ Alert.defaultProps = {
 
 Alert.displayName = 'Alert';
 
+/**
+ * AlertIcon
+ */
 export const AlertIcon: React.FC<IAlertComponentProps> = (props) => {
     return (
         <StyledAlertIcon {...props}>
@@ -74,6 +80,9 @@ AlertIcon.defaultProps = {
 
 AlertIcon.displayName = 'AlertIcon';
 
+/**
+ * AlertTitle
+ */
 export const AlertTitle: React.FC<IAlertComponentProps> = (props) => {
     return (
         <StyledAlertTitle {...props}>
@@ -89,6 +98,9 @@ AlertTitle.defaultProps = {
 
 AlertTitle.displayName = 'AlertTitle';
 
+/**
+ * AlertDescription
+ */
 export const AlertDescription: React.FC<IAlertComponentProps> = (props) => {
     return (
         <StyledAlertDescription {...props}>
@@ -104,6 +116,9 @@ AlertDescription.defaultProps = {
 
 AlertDescription.displayName = 'AlertDescription';
 
+/**
+ * AlertCloseButton
+ */
 export const AlertCloseButton: React.FC<IAlertCloseButtonComponentProps> = (props) => {
     return (
         <StyledAlertCloseButton {...props} children="close" />

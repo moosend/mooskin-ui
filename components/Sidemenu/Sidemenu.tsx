@@ -9,6 +9,9 @@ import {
     StyledSidemenuItem
 } from './styles';
 
+/**
+ * Sidemenu
+ */
 export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
 
     const batchClickHandler = (

@@ -1,10 +1,13 @@
 import * as React from 'react';
-import { IBoxComponentProps } from '../Box/model';
 
+import { IBoxComponentProps } from '../Box/model';
 import { IButtonComponentProps } from './model';
 
 import { StyledButtonIcon, StyledButtonInverse, StyledButtonNormal } from './styles';
 
+/**
+ * Button
+ */
 export const Button: React.FC<IButtonComponentProps> = (props) => {
     const onClick = (e: React.MouseEvent<HTMLElement>) => {
         !props.disabled && props.onClick && props.onClick(e);
@@ -28,6 +31,9 @@ Button.defaultProps = {
 
 Button.displayName = 'Button';
 
+/**
+ * ButtonIcon
+ */
 export const ButtonIcon: React.FC<IBoxComponentProps> = (props) => {
     return <StyledButtonIcon>{props.children}</StyledButtonIcon>;
 };

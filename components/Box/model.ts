@@ -1,4 +1,4 @@
-import { IStyledTheme } from '../Styled/model';
+import { IMooskinContext } from '../Styled/model';
 
 export type DefaultOptionsType = 'inherit' | 'initial' | 'unset';
 export type BorderStyleType = 'none' | 'hidden' | 'dotted' | 'dashed' | 'solid' | 'double' | 'groove' | 'ridge' | 'inset' | 'outset';
@@ -17,13 +17,10 @@ export const boxComponentProps = [
     'borderRight', 'borderRightWidth', 'borderRightStyle', 'borderRightColor', 'borderBottom', 'borderBottomWidth', 'borderBottomStyle',
     'borderBottomColor', 'borderLeft', 'borderLeftWidth', 'borderLeftStyle', 'borderLeftColor', 'borderRadius', 'borderTopLeftRadius',
     'borderTopRightRadius', 'borderBottomRightRadius', 'borderBottomLeftRadius', 'position', 'zIndex', 'top', 'right', 'bottom', 'left',
-    'animation', 'visibility', 'cursor', 'boxAs', 'children'
+    'animation', 'visibility', 'cursor', 'boxAs', 'children', 'theme'
 ];
 
-export interface IBoxComponentProps {
-    /** Theme */
-    theme?: IStyledTheme;
-
+export interface IBoxComponentProps extends IMooskinContext {
     /** Box children */
     children?: any;
 

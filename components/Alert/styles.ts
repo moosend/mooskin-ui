@@ -2,9 +2,7 @@ import styled from 'styled-components';
 
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
-
-import { IAlertComponentProps } from './model';
+import { IAlertCloseButtonComponentProps, IAlertComponentProps } from './model';
 
 const BackgroundColors = {
     error: '#FED7D7',
@@ -73,7 +71,7 @@ export const StyledAlertIcon = styled(StyledAlertCommonIcon)`
     display: inherit;
 `;
 
-export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)`
+export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IAlertCloseButtonComponentProps>`
     outline: 0;
     display: flex;
     align-items: center;

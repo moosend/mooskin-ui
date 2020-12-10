@@ -9,6 +9,9 @@ import { SwitchHandle, SwitchLabelDisabled, SwitchLabelNormal, SwitchStyled } fr
 import { getBoxProps } from '../_utils/helper';
 import { Box } from '../Box/Box';
 
+/**
+ * Switch
+ */
 export const Switch: React.FC<ISwitchComponentProps> = (props) => {
     const renderDisabledContent = () => {
         return <SwitchLabelDisabled>{props.disabledLabel}</SwitchLabelDisabled>;

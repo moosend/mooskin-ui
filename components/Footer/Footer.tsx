@@ -8,6 +8,9 @@ import {
     StyledFooterHeader
 } from './styles';
 
+/**
+ * Footer
+ */
 export const Footer: React.FC<IBoxComponentProps> = (props) => {
     return (
         <StyledFooter boxShadow="inner" {...props}>

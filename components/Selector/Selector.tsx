@@ -9,6 +9,9 @@ import {
     StyledSelectorItem
 } from './styles';
 
+/**
+ * Selector
+ */
 export const Selector: React.FC<ISelectorComponentProps> = (props) => {
 
     const batchClickHandler = (

@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Box from '../Box/Box';
 import { IBoxComponentProps } from '../Box/model';
 
-// import variables from '../_utils/globals/variables';
-
 export const StyledFooter = styled(Box)<IBoxComponentProps>`
     position: fixed;
     bottom: 0px;

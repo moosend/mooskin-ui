@@ -5,6 +5,9 @@ import { IStackComponentProps } from './model';
 
 import {StyledStack} from './styles';
 
+/**
+ * Stack
+ */
 export const Stack: React.FC<IStackComponentProps> = (props) => {
 
     const getDividerSpacing = () => {
@@ -65,19 +68,19 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
                     );
                 }
                 return childSpacingHandler(child, key);
-                // return React.cloneElement(child, {key});
             }
             return <div />;
         });
     };
-
-    console.log(props);
 
     return (
         <StyledStack {...props} children={renderChildren()} />
     );
 };
 
+/**
+ * HStack
+ */
 export const HStack: React.FC<IStackComponentProps> = (props) => {
     return (
         <Stack {...props} />
@@ -96,6 +99,9 @@ HStack.defaultProps = {
 
 HStack.displayName = 'HStack';
 
+/**
+ * VStack
+ */
 export const VStack: React.FC<IStackComponentProps> = (props) => {
     return (
         <Stack {...props} />

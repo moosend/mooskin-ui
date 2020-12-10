@@ -26,7 +26,7 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
     outline: 0;
     font-family: Montserrat;
     font-size: 12px;
-    font-weight: bold;
+    font-weight: 600;
     font-stretch: normal;
     font-style: normal;
     letter-spacing: normal;

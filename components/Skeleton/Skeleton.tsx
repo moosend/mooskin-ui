@@ -4,14 +4,9 @@ import { ISkeletonCircleComponentProps, ISkeletonComponentProps, ISkeletonTextCo
 
 import {checkLoaded, StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText} from './styles';
 
-export const withLoader = (
-    Component: React.ComponentType<ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps>
-) => (props: ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps) => {
-    return (
-        <Component {...props} />
-    );
-};
-
+/**
+ * Skeleton
+ */
 export const Skeleton: React.FC<ISkeletonComponentProps> = (props) => {
     const EnhancedComponent = withLoader(checkLoaded(StyledSkeleton, props.isLoaded));
     return <EnhancedComponent {...props} />;
@@ -29,6 +24,9 @@ Skeleton.defaultProps = {
 
 Skeleton.displayName = 'Skeleton';
 
+/**
+ * SkeletonCircle
+ */
 export const SkeletonCircle: React.FC<ISkeletonCircleComponentProps> = (props) => {
     const EnhancedComponent = withLoader(checkLoaded(StyledSkeletonCircle, props.isLoaded));
     return <EnhancedComponent {...props} />;
@@ -47,6 +45,9 @@ SkeletonCircle.defaultProps = {
 
 SkeletonCircle.displayName = 'Skeleton';
 
+/**
+ * SkeletonText
+ */
 export const SkeletonText: React.FC<ISkeletonTextComponentProps> = (props) => {
     const EnhancedComponent = withLoader(checkLoaded(StyledSkeletonText, props.isLoaded));
 
@@ -82,5 +83,16 @@ SkeletonText.defaultProps = {
 };
 
 SkeletonText.displayName = 'Skeleton';
+
+/**
+ * HoC for slow loading content
+ */
+export const withLoader = (
+    Component: React.ComponentType<ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps>
+) => (props: ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps) => {
+    return (
+        <Component {...props} />
+    );
+};
 
 export default Skeleton;

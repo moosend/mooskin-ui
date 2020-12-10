@@ -22,6 +22,7 @@ export const TextArea: React.FC<ITextAreaComponentProps> = (props) => {
             {props.label && <Label style={{alignSelf: 'flex-start'}} width={props.labelWidth}>{props.label}</Label>}
             <Box d="flex" direction="column">
                 <StyledTextArea
+                    boxAs="textarea"
                     onChange={onChange}
                     value={props.value}
                     placeholder={props.placeholder}

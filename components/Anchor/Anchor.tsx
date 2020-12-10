@@ -23,4 +23,6 @@ Anchor.defaultProps = {
     target: '_blank',
 };
 
+Anchor.displayName = 'Anchor';
+
 export default Anchor;

@@ -4,6 +4,9 @@ import { IColProps, IGridProps, IRowProps } from './model';
 
 import { StyledCol, StyledGrid, StyledRow } from './styles';
 
+/**
+ * Grid
+ */
 export const Grid: React.FC<IGridProps> = (props) => {
     return <StyledGrid {...props} />;
 };
@@ -15,6 +18,9 @@ Grid.defaultProps = {
 
 Grid.displayName = 'Grid';
 
+/**
+ * Row
+ */
 export const Row: React.FC<IRowProps> = (props) => {
     return <StyledRow {...props} />;
 };
@@ -26,6 +32,9 @@ Row.defaultProps = {
 
 Row.displayName = 'Row';
 
+/**
+ * Col
+ */
 export const Col: React.FC<IColProps> = (props) => {
     return <StyledCol {...props} />;
 };

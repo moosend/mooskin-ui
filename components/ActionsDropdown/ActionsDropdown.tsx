@@ -1,7 +1,7 @@
 import * as React from 'react';
+
 import { getBoxProps } from '../_utils/helper';
 import { IInputCallbackData } from '../index/index';
-
 import { IActionsDropdownArrowComponentProps, IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 import {
@@ -10,6 +10,9 @@ import {
     StyledActionsDropdownItem
 } from './styles';
 
+/**
+ * ActionsDropdown
+ */
 export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props) => {
 
     const batchClickHandler = (

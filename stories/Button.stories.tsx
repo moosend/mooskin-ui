@@ -7,6 +7,9 @@ import { IButtonComponentProps } from '../components/Button/model';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
+import variables from '../components/_utils/globals/variables';
+import { MooskinContextProvider } from '../components/Styled/MooskinContextProvider';
+
 export default ({
     component: Button,
     title: 'Example/Button',
@@ -16,7 +19,9 @@ const Template: Story<IButtonComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <Button {...args} />
+            <MooskinContextProvider value={{theme: variables}}>
+                <Button {...args} />
+            </MooskinContextProvider>
         </>
     );
 };
