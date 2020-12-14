@@ -106,6 +106,8 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
         visibility: ${(props) => props.visibility};
 
+        opacity: ${(props) => props.opacity};
+
         cursor: ${(props) => props.cursor};
     }
 

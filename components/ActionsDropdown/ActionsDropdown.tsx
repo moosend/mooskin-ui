@@ -29,6 +29,10 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
     };
 
     const recurseChildren = (children: any): any => {
+        if (!children){
+            return null;
+        }
+
         return React.Children.map(children, (child, i) => {
             if (React.isValidElement<IActionsDropdownItemComponentProps>(child) && child.type === ActionsDropdownItem){
                 return React.cloneElement(child, {

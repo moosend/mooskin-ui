@@ -80,6 +80,8 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
     return <StyledStack {...props} children={renderChildren()} />;
 };
 
+Stack.displayName = 'Stack';
+
 /**
  * HStack
  */

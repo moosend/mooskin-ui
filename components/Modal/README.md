@@ -1,59 +1,67 @@
-# MooSkin UI - Modal Component
+# MooSkin UI - Button Component
 
-___
+The MooSkin Button Component works similar to the normal HTML `<button/>` element, but with pre-defined styling and attributes.
+
+---
 
 ### Usage
 
-To start using the Modal Component first you have to Import it
+To start using the Button Component first you have to Import it
 
 ```
-Import {Modal} from '@moosend/mooskin';
+Import {Button} from '@moosend/mooskin';
 ```
+
 or modular import
+
 ```
 // JS
-import Modal from '@moosend/mooskin/lib/Modal';
+import Button from '@moosend/mooskin/lib/Button';
 
 // CSS
-import '@moosend/mooskin/lib/Modal/style.css';
+import '@moosend/mooskin/lib/Button/style.css';
 ```
-
 
 And then you can simply start using it by typing
 
 ```
-<Modal active>
-    <whatever/>....
-</Modal>
+<Button attribute1="atr" attribute2="asd" >button1</Button>
 ```
 
-Anything can go inside the Modal component.
+For easy use, the components are named similar to normal HTML components but with a capital first letter.
+
+Like the `<button/>` element it will accept given attributes and render differently based on the given attributes
 
 ### Examples
 
-Give it a class 
+Making it disabled, in this case the proper disabled class will be loaded (ex. disabling cursor)
 
 ```
-<Modal className={myStyle} />
+<Button disabled >button1</Button>
+```
+
+or pass it a function for event handling
+
+```
+<Button onClick={yourFunc} >button1</Button>
 ```
 
 or just give it a custom style
 
 ```
-<Modal style={yourStyle} />
+<Button style={yourStyle} >button1</Button>
 ```
 
 <div class="playground-doc">
 
-## Supported attributes 
+## Supported attributes
 
-* `id` - id of the element
-* `active` - wether the modal is active or not.
-* `title` - adds a header to the modal.
-* `onClickCover` - callback function when the cover behind the modal is clicked, can be used to toggle the modal off.
-* `onClickclose` - callback function when the close icon is clicked, can be used to toggle the modal off.
-* `className` - css class
-* `style` - Modal style
+-   `id` - id of the element
+-   `disabled` - button should be disabled
+-   `className` - css class
+-   `inverseStyle` - a style variaton of the button
+-   `style` - button style
+-   `onClick` - callback to be triggered on button click
 
 </div>
 
@@ -61,6 +69,6 @@ Allthough these attributes are supported, all of them are optional.
 
 #### For more
 
-___
+---
 
 [MooSkin-UI](https://github.com/moosend/mooskin-ui)
