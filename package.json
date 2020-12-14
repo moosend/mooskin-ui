@@ -19,7 +19,8 @@
     "lint": "tslint -c tslint.json ./components/**/*.{ts,tsx}",
     "heroku-postbuild": "webpack -p --config ./webpack.config.dev.js --progress",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token 3pepa9baz12"
   },
   "repository": {
     "type": "git",
@@ -83,6 +84,7 @@
     "babel-preset-es2015": "6.24.1",
     "babel-preset-react": "6.24.1",
     "babel-preset-stage-0": "6.24.1",
+    "chromatic": "^5.4.0",
     "css-loader": "2.1.1",
     "cssnano": "4.1.10",
     "enzyme": "3.9.0",

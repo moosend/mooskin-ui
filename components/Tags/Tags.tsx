@@ -1,114 +1,17 @@
 import * as React from 'react';
 
+// Helpers
+import { getBoxProps } from '../_utils/helper';
+
+// Models
+import { ITagComponentProps } from './model';
+
+// StyledComponents
+import {StyledTag, StyledTagIcon} from './styles';
+
 import icons from '../../assets/mooskin-icons/mooskin-icons.css';
+import { Box } from '../index';
 import styles from './Tags.css';
-
-import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
-
-export interface ITagsProps{
-
-    /** id of the component */
-    id?: string;
-
-    /** tagged data */
-    tags: string[];
-
-    /** tags that are active e.g. used in filters */
-    activeTags?: string[];
-
-    /** validate input wether it should accept emails or add a custom validation */
-    validateTag?: 'email' | ((tag: string) => boolean);
-
-    /** input description (small italic bottom) */
-    description?: string;
-
-    /** status of the input, error or success */
-    status?: 'error' | 'success';
-
-    /** this is for validating the whole component within a Form */
-    validate?: (data: IValidationCallbackData) => boolean;
-
-    /** provide to make the tags component required within a Form */
-    required?: boolean;
-
-    /** source of data for type ahead completion */
-    source?: (() => Promise<string[]>) | (() => string[]) | string[];
-
-    /** limit number of items available on the source list */
-    sourceLimit?: number;
-
-    /** wether the tags should be deletable by backspace */
-    deletable?: boolean;
-
-    /** override tags styles */
-    style?: React.CSSProperties;
-
-    /** override tags class */
-    className?: string;
-
-    /** override single tag styles */
-    tagStyles?: React.CSSProperties;
-
-    /** override single tag classes */
-    tagClasses?: string;
-
-    /** tags input label */
-    label?: string;
-
-    /** place label on top of Input */
-    labelLeft?: boolean;
-
-    /** prevent submit on input blur */
-    preventSubmit?: boolean;
-
-    /** error message when invalid input type is passed */
-    errorMessage?: string;
-
-    /** input field placehonder */
-    placeholder?: string;
-
-    /** renders with different styles */
-    alternate?: boolean;
-
-    /** what data is being used, helps whn extracting user input, you know on what field changes are made */
-    dataLabel?: string;
-
-    /** an array of possible delimiters, enter key is the default delimiter */
-    delimiters?: Array<string | number>;
-
-    /** maximum number of characters allowed */
-    maxLength?: number;
-
-    onAdd?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => string [] | void;
-
-    onRemove?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData, index: number) => string [] | void;
-
-    onTagClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData, index: number) => void;
-
-    // onChange?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
-}
-
-export interface ITagProps{
-
-    /** data to be tagged */
-    tag?: string;
-
-    /** renders with different styles */
-    alternate?: boolean;
-
-    /** override tags styles */
-    style?: React.CSSProperties;
-
-    /** override tags class */
-    className?: string;
-
-    /** applies active classes to tag */
-    active?: boolean;
-
-    onClickTag?: (e: React.MouseEvent<HTMLElement>) => void;
-
-    onClickRemove?: (e: React.MouseEvent<HTMLElement>) => void;
-}
 
 export interface ITagsState{
     value: string;
@@ -704,12 +607,10 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
 
 }
 
-export const Tag: React.StatelessComponent<ITagProps> = (props) => {
-
-    const alternateTag = props.alternate ? styles.alternateTag : '';
+export const Tag: React.FC<ITagComponentProps> = (props) => {
 
     const onClickTag = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickTag && props.onClickTag(e);
+        props.onClick && props.onClick(e);
     };
 
     const onClickRemove = (e: React.MouseEvent<HTMLElement>) => {
@@ -719,27 +620,15 @@ export const Tag: React.StatelessComponent<ITagProps> = (props) => {
 
     const renderRemoveIcon = () => {
         return (
-            <div onClick={onClickRemove} className={styles.closeContainer}>
-                <i className={`${icons.mooskinIcons} ${styles.close}`}>
-                    close
-                </i>
-            </div>
+            <StyledTagIcon onClick={onClickRemove}>highlight_off</StyledTagIcon>
         );
     };
 
-    const activeTag = props.active ? styles.activeTag : '';
-
     return (
-        <div
-            className={`${styles.tag} ${alternateTag} ${props.className} ${activeTag}`}
-            style={props.style}
-            onClick={onClickTag}
-        >
-            <div className={styles.tagText}>
-                {props.tag}
-            </div>
+        <StyledTag {...getBoxProps(props)} onClick={onClickTag} >
+            <Box>{props.children}</Box>
             {props.onClickRemove && renderRemoveIcon()}
-        </div>
+        </StyledTag>
     );
 };
 

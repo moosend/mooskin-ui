@@ -21,6 +21,10 @@ export const boxComponentProps = [
 ];
 
 export interface IBoxComponentProps extends IMooskinContext {
+
+    /** onClick event handler */
+    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+
     /** Box children */
     children?: any;
 
