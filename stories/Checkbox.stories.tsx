@@ -2,10 +2,12 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Checkbox from '../components/Checkbox/Checkbox';
+import Checkbox, {CheckboxButton, CheckboxDescription, CheckboxLabel} from '../components/Checkbox/Checkbox';
 import { ICheckboxComponentProps } from '../components/Checkbox/model';
 
-import { IInputCallbackData } from '../components/index';
+import { IInputCallbackData } from '../components/_utils/types/commonTypes';
+import { Box } from '../components/Box/Box';
+
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
@@ -17,7 +19,7 @@ const Template: Story<ICheckboxComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <Checkbox {...args} />
+            <Checkbox  {...args} />
         </>
     );
 };
@@ -25,33 +27,55 @@ const Template: Story<ICheckboxComponentProps> = (args) => {
 export const Normal = Template.bind({});
 Normal.args = {
     checked: false,
-    label: 'Normal Checkbox',
-    onClick: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => console.log(e, data),
+    children: (
+        <>
+            <CheckboxButton />
+            <CheckboxLabel>Normal Checkbox</CheckboxLabel>
+        </>
+    ),
+    onClickCheckbox: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
-};
+} as ICheckboxComponentProps;
 
-export const Checked = Template.bind({});
-Checked.args = {
+export const Selected = Template.bind({});
+Selected.args = {
     checked: true,
-    label: 'Checked Checkbox',
-    onClick: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => console.log(e, data),
+    children: (
+        <>
+            <CheckboxButton />
+            <CheckboxLabel>Selected Checkbox</CheckboxLabel>
+        </>
+    ),
+    onClickCheckbox: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
     checked: false,
+    children: (
+        <>
+            <CheckboxButton />
+            <CheckboxLabel>Disabled Checkbox</CheckboxLabel>
+        </>
+    ),
     disabled: true,
-    label: 'Disabled Checkbox',
-    onClick: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => console.log(e, data),
+    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
 };
 
 export const Description = Template.bind({});
 Description.args = {
     checked: false,
-    description: 'Checkbox description goes here',
-    label: 'With description',
-    onClick: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => console.log(e, data),
+    children: (
+        <>
+            <CheckboxButton />
+            <Box>
+                <CheckboxLabel>Disabled Checkbox</CheckboxLabel>
+                <CheckboxDescription>Checkbox description goes here</CheckboxDescription>
+            </Box>
+        </>
+    ),
+    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
 };

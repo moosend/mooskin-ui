@@ -4,37 +4,57 @@ import * as React from 'react';
 import { getBoxProps } from '../_utils/helper';
 
 // Models
-import { IRadioComponentProps } from './model';
+import { IDescriptionComponentProps } from '../Description/model';
+import { ILabelComponentProps } from '../Label/model';
+import { IRadioButtonComponentProps, IRadioComponentProps } from './model';
 
 // Components
 import Description from '../Description/Description';
-import Label from '../Label/Label';
 
 // Styled Components
-import {StyledRadio, StyledRadioContainer, StyledRadioWrapper} from './styles';
+import {StyledRadio, StyledRadioButton, StyledRadioLabel} from './styles';
 
 export const Radio: React.FC<IRadioComponentProps> = (props) => {
 
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        const value = {label: props.label, value: props.value, selected: props.selected || false};
-        !props.disabled && props.onClick && props.onClick(e, {value, dataLabel: props.dataLabel});
+    const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
+        props.onClickRadio && props.onClickRadio(e, {dataLabel: props.dataLabel, value: !props.selected});
+        callback && callback(e);
     };
 
-    return (
-        <StyledRadioContainer {...getBoxProps(props)}>
-            <StyledRadioWrapper disabled={props.disabled} onClick={onClick}>
-                <StyledRadio
-                    children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
-                    selected={props.selected}
-                    disabled={props.disabled}
-                />
-                <Label minW="unset" disabled={props.disabled}>
-                    {props.label}
-                </Label>
-            </StyledRadioWrapper>
-            {props.description && <Description children={props.description} />}
-        </StyledRadioContainer>
-    );
+    const recurseChildren = (children: any): any => {
+        if (!children){
+            return null;
+        }
+
+        return React.Children.map(children, (child, i) => {
+            if (React.isValidElement<ILabelComponentProps>(child) && child.type === RadioLabel){
+                return React.cloneElement(child, {
+                    children: recurseChildren(child.props.children),
+                    disabled: props.disabled,
+                    key: i,
+                    onClick: (e) => batchClickHandler(e, child.props.onClick)
+                } as ILabelComponentProps);
+            }
+
+            if (React.isValidElement<IRadioButtonComponentProps>(child) && child.type === RadioButton){
+                return React.cloneElement(child, {
+                    children: props.selected ? 'radio_button_checked' : 'radio_button_unchecked',
+                    disabled: props.disabled,
+                    key: i,
+                    onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick)
+                } as IRadioButtonComponentProps);
+            }
+
+            if (React.isValidElement(child) && (child.props as any).children){
+                return React.cloneElement(child, {children: recurseChildren((child.props as any).children)} as any);
+            }
+
+            return child;
+        });
+    };
+
+    // children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
+    return <StyledRadio {...getBoxProps(props)} children={recurseChildren(props.children)} />;
 };
 
 Radio.defaultProps = {
@@ -43,5 +63,47 @@ Radio.defaultProps = {
 };
 
 Radio.displayName = 'Radio';
+
+/**
+ * RadioButton
+ */
+export const RadioButton: React.FC<IRadioButtonComponentProps> = (props) => {
+    return <StyledRadioButton {...props}/>;
+};
+
+RadioButton.defaultProps = {
+    className: '',
+    style: {}
+};
+
+RadioButton.displayName = 'RadioButton';
+
+/**
+ * RadioLabel
+ */
+export const RadioLabel: React.FC<ILabelComponentProps> = (props) => {
+    return <StyledRadioLabel disabled={props.disabled} {...props} />;
+};
+
+RadioLabel.defaultProps = {
+    className: '',
+    style: {}
+};
+
+RadioLabel.displayName = 'RadioLabel';
+
+/**
+ * RadioDescription
+ */
+export const RadioDescription: React.FC<IDescriptionComponentProps> = (props) => {
+    return <Description {...props} />;
+};
+
+RadioDescription.defaultProps = {
+    className: '',
+    style: {}
+};
+
+RadioDescription.displayName = 'RadioDescription';
 
 export default Radio;

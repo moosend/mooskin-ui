@@ -15,4 +15,5 @@ export const StyledDescription = styled(Box)<IDescriptionComponentProps>`
     font-size: 12px;
     color: ${(props) => props.theme.inputFont || variables.inputFont};
     width: fit-content;
+    line-height: 1;
 `;

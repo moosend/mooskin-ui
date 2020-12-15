@@ -1,17 +1,19 @@
 import styled from 'styled-components';
 
 // Models
+import { ILabelComponentProps } from '../Label/model';
 import { IRadioComponentProps } from './model';
 
 // Components
 import Box from '../Box/Box';
+import Label from '../Label/Label';
 
 // "CSS" variables
 import variables from '../_utils/globals/variables';
 
-export const StyledRadioContainer = styled(Box)`
+export const StyledRadio = styled(Box)`
     display: flex;
-    flex-direction: column;
+    width: fit-content;
 `;
 
 export const StyledRadioWrapper = styled(Box)<Partial<IRadioComponentProps>>`
@@ -21,9 +23,21 @@ export const StyledRadioWrapper = styled(Box)<Partial<IRadioComponentProps>>`
     align-items: center;
 `;
 
-export const StyledRadio = styled(Box)<Partial<IRadioComponentProps>>`
+export const StyledRadioButton = styled(Box)<Partial<IRadioComponentProps>>`
     font-family: 'Mooskin Icons';
-    margin-right: 10px;
+    padding-right: 10px;
     font-size: 23px;
+    color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
+`;
+
+export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.65;
+    letter-spacing: normal;
+    min-width: unset;
     color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
 `;
