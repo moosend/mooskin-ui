@@ -15,6 +15,7 @@ exports[`Radio renders Radio correctly 1`] = `
     onClick={[Function]}
   >
     <Styled(Box)
+      disabled={true}
       selected={true}
     >
       radio_button_checked
@@ -23,7 +24,6 @@ exports[`Radio renders Radio correctly 1`] = `
       className=""
       disabled={true}
       minW="unset"
-      primaryColor="#2d2d2d"
       style={Object {}}
       width={150}
     >
@@ -84,9 +84,8 @@ exports[`Radio renders RadioGroup correctly 1`] = `
           "color": "blue",
         }
       }
-      w="fit-content"
     >
-      <styled.div
+      <Component
         className="sc-hKFyIo dNyRkZ myClass"
         id="radio1"
         style={
@@ -94,106 +93,220 @@ exports[`Radio renders RadioGroup correctly 1`] = `
             "color": "blue",
           }
         }
-        w="fit-content"
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
       >
-        <div
-          className="sc-bdnylx eraKfX sc-hKFyIo dNyRkZ myClass"
+        <styled.div
+          className="sc-hKFyIo dNyRkZ myClass"
           id="radio1"
           style={
             Object {
               "color": "blue",
             }
           }
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
         >
-          <Styled(Box)
-            onClick={[Function]}
+          <div
+            className="sc-bdnylx dOPKTt sc-hKFyIo dNyRkZ myClass"
+            id="radio1"
+            style={
+              Object {
+                "color": "blue",
+              }
+            }
           >
-            <Box
-              className="sc-eCApGN klelTq"
+            <Styled(Box)
               onClick={[Function]}
-              style={Object {}}
-              w="fit-content"
             >
-              <styled.div
-                className="sc-eCApGN klelTq"
+              <Box
+                className="sc-eCApGN PjpKa"
                 onClick={[Function]}
                 style={Object {}}
-                w="fit-content"
               >
-                <div
-                  className="sc-bdnylx eraKfX sc-eCApGN klelTq"
+                <Component
+                  className="sc-eCApGN PjpKa"
                   onClick={[Function]}
                   style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
                 >
-                  <Styled(Box)>
-                    <Box
-                      className="sc-jSFkmK iJmLqO"
+                  <styled.div
+                    className="sc-eCApGN PjpKa"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <div
+                      className="sc-bdnylx dOPKTt sc-eCApGN PjpKa"
+                      onClick={[Function]}
                       style={Object {}}
-                      w="fit-content"
                     >
-                      <styled.div
-                        className="sc-jSFkmK iJmLqO"
-                        style={Object {}}
-                        w="fit-content"
-                      >
-                        <div
-                          className="sc-bdnylx eraKfX sc-jSFkmK iJmLqO"
+                      <Styled(Box)>
+                        <Box
+                          className="sc-jSFkmK ehNQaz"
                           style={Object {}}
                         >
-                          radio_button_unchecked
-                        </div>
-                      </styled.div>
-                    </Box>
-                  </Styled(Box)>
-                  <Label
-                    className=""
-                    minW="unset"
-                    primaryColor="#2d2d2d"
-                    style={Object {}}
-                    width={150}
-                  >
-                    <Styled(Box)
-                      className=""
-                      minW="unset"
-                      onClick={[Function]}
-                      primaryColor="#2d2d2d"
-                      style={Object {}}
-                      width={150}
-                    >
-                      <Box
-                        className="sc-dlnjPT iBFDsY"
+                          <Component
+                            className="sc-jSFkmK ehNQaz"
+                            style={Object {}}
+                            theme={
+                              Object {
+                                "disabledBackground": "#e2e2e2",
+                                "disabledfont": "#9d9d9d",
+                                "inputBackground": "#ffffff",
+                                "inputBorder": "#e2e2e2",
+                                "inputFont": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "primary": "#3fbaca",
+                                "secondary": "#293346",
+                              }
+                            }
+                          >
+                            <styled.div
+                              className="sc-jSFkmK ehNQaz"
+                              style={Object {}}
+                              theme={
+                                Object {
+                                  "disabledBackground": "#e2e2e2",
+                                  "disabledfont": "#9d9d9d",
+                                  "inputBackground": "#ffffff",
+                                  "inputBorder": "#e2e2e2",
+                                  "inputFont": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "primary": "#3fbaca",
+                                  "secondary": "#293346",
+                                }
+                              }
+                            >
+                              <div
+                                className="sc-bdnylx dOPKTt sc-jSFkmK ehNQaz"
+                                style={Object {}}
+                              >
+                                radio_button_unchecked
+                              </div>
+                            </styled.div>
+                          </Component>
+                        </Box>
+                      </Styled(Box)>
+                      <Label
+                        className=""
                         minW="unset"
-                        onClick={[Function]}
-                        primaryColor="#2d2d2d"
                         style={Object {}}
-                        w="fit-content"
                         width={150}
                       >
-                        <styled.div
-                          className="sc-dlnjPT iBFDsY"
+                        <Styled(Box)
+                          className=""
                           minW="unset"
                           onClick={[Function]}
-                          primaryColor="#2d2d2d"
                           style={Object {}}
-                          w="fit-content"
                           width={150}
                         >
-                          <div
-                            className="sc-bdnylx dPtRAu sc-dlnjPT iBFDsY"
+                          <Box
+                            className="sc-dlnjPT zWEWQ"
+                            minW="unset"
                             onClick={[Function]}
                             style={Object {}}
                             width={150}
-                          />
-                        </styled.div>
-                      </Box>
-                    </Styled(Box)>
-                  </Label>
-                </div>
-              </styled.div>
-            </Box>
-          </Styled(Box)>
-        </div>
-      </styled.div>
+                          >
+                            <Component
+                              className="sc-dlnjPT zWEWQ"
+                              minW="unset"
+                              onClick={[Function]}
+                              style={Object {}}
+                              theme={
+                                Object {
+                                  "disabledBackground": "#e2e2e2",
+                                  "disabledfont": "#9d9d9d",
+                                  "inputBackground": "#ffffff",
+                                  "inputBorder": "#e2e2e2",
+                                  "inputFont": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "primary": "#3fbaca",
+                                  "secondary": "#293346",
+                                }
+                              }
+                              width={150}
+                            >
+                              <styled.div
+                                className="sc-dlnjPT zWEWQ"
+                                minW="unset"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                                width={150}
+                              >
+                                <div
+                                  className="sc-bdnylx iiFGhc sc-dlnjPT zWEWQ"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  width={150}
+                                />
+                              </styled.div>
+                            </Component>
+                          </Box>
+                        </Styled(Box)>
+                      </Label>
+                    </div>
+                  </styled.div>
+                </Component>
+              </Box>
+            </Styled(Box)>
+          </div>
+        </styled.div>
+      </Component>
     </Box>
   </Styled(Box)>
 </Radio>

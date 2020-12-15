@@ -35,7 +35,6 @@ export const TextArea: React.FC<ITextAreaComponentProps> = (props) => {
                     rows={props.rows}
                     minLength={props.minlength}
                     maxLength={props.maxlength}
-                    required={props.required}
                     disabled={props.disabled}
                     readOnly={props.readonly}
                 />

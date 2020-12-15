@@ -16,6 +16,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
   >
     <Styled(Box)
       checked={true}
+      disabled={true}
     >
       check_box
     </Styled(Box)>
@@ -23,7 +24,6 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
       className=""
       disabled={true}
       minW="unset"
-      primaryColor="#2d2d2d"
       style={Object {}}
       width={150}
     >
@@ -31,170 +31,4 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
     </Label>
   </Styled(Box)>
 </Styled(Box)>
-`;
-
-exports[`CheckBox renders CheckboxGroup correctly 1`] = `
-<Checkbox
-  className="myClass"
-  dataLabel="plan"
-  horizontal={true}
-  id="checkbox1"
-  onChange={[MockFunction]}
-  selectedChecks={
-    Array [
-      Object {
-        "checked": true,
-        "label": "Checkbox1",
-        "value": "Checkbox1",
-      },
-      Object {
-        "checked": false,
-        "label": "Checkbox2",
-        "value": "Checkbox2",
-      },
-      Object {
-        "checked": false,
-        "label": "Checkbox3",
-        "value": "Checkbox3",
-      },
-    ]
-  }
-  spacing={10}
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
-  title="Select a plan"
->
-  <Styled(Box)
-    className="myClass"
-    id="checkbox1"
-    style={
-      Object {
-        "color": "blue",
-      }
-    }
-  >
-    <Box
-      className="sc-hKFyIo dNyRkZ myClass"
-      id="checkbox1"
-      style={
-        Object {
-          "color": "blue",
-        }
-      }
-      w="fit-content"
-    >
-      <styled.div
-        className="sc-hKFyIo dNyRkZ myClass"
-        id="checkbox1"
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
-        w="fit-content"
-      >
-        <div
-          className="sc-bdnylx eraKfX sc-hKFyIo dNyRkZ myClass"
-          id="checkbox1"
-          style={
-            Object {
-              "color": "blue",
-            }
-          }
-        >
-          <Styled(Box)
-            onClick={[Function]}
-          >
-            <Box
-              className="sc-eCApGN klelTq"
-              onClick={[Function]}
-              style={Object {}}
-              w="fit-content"
-            >
-              <styled.div
-                className="sc-eCApGN klelTq"
-                onClick={[Function]}
-                style={Object {}}
-                w="fit-content"
-              >
-                <div
-                  className="sc-bdnylx eraKfX sc-eCApGN klelTq"
-                  onClick={[Function]}
-                  style={Object {}}
-                >
-                  <Styled(Box)>
-                    <Box
-                      className="sc-jSFkmK eLnJGi"
-                      style={Object {}}
-                      w="fit-content"
-                    >
-                      <styled.div
-                        className="sc-jSFkmK eLnJGi"
-                        style={Object {}}
-                        w="fit-content"
-                      >
-                        <div
-                          className="sc-bdnylx eraKfX sc-jSFkmK eLnJGi"
-                          style={Object {}}
-                        >
-                          check_box_outline_blank
-                        </div>
-                      </styled.div>
-                    </Box>
-                  </Styled(Box)>
-                  <Label
-                    className=""
-                    minW="unset"
-                    primaryColor="#2d2d2d"
-                    style={Object {}}
-                    width={150}
-                  >
-                    <Styled(Box)
-                      className=""
-                      minW="unset"
-                      onClick={[Function]}
-                      primaryColor="#2d2d2d"
-                      style={Object {}}
-                      width={150}
-                    >
-                      <Box
-                        className="sc-dlnjPT iBFDsY"
-                        minW="unset"
-                        onClick={[Function]}
-                        primaryColor="#2d2d2d"
-                        style={Object {}}
-                        w="fit-content"
-                        width={150}
-                      >
-                        <styled.div
-                          className="sc-dlnjPT iBFDsY"
-                          minW="unset"
-                          onClick={[Function]}
-                          primaryColor="#2d2d2d"
-                          style={Object {}}
-                          w="fit-content"
-                          width={150}
-                        >
-                          <div
-                            className="sc-bdnylx dPtRAu sc-dlnjPT iBFDsY"
-                            onClick={[Function]}
-                            style={Object {}}
-                            width={150}
-                          />
-                        </styled.div>
-                      </Box>
-                    </Styled(Box)>
-                  </Label>
-                </div>
-              </styled.div>
-            </Box>
-          </Styled(Box)>
-        </div>
-      </styled.div>
-    </Box>
-  </Styled(Box)>
-</Checkbox>
 `;

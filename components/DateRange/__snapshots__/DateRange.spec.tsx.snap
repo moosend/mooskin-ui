@@ -227,7 +227,6 @@ exports[`DateRange renders correctly 1`] = `
           className=""
           inverseStyle={true}
           onClick={[Function]}
-          primaryColor="#3fbaca"
           size="md"
           style={Object {}}
           type="button"
@@ -237,7 +236,6 @@ exports[`DateRange renders correctly 1`] = `
         <Button
           className=""
           onClick={[Function]}
-          primaryColor="#3fbaca"
           size="md"
           style={
             Object {

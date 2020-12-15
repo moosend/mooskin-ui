@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Alert renders correctly 1`] = `
-<Component
+<Alert
   className=""
   status="info"
   style={Object {}}
@@ -18,143 +18,248 @@ exports[`Alert renders correctly 1`] = `
       status="info"
       style={Object {}}
       variant="left-accent"
-      w="fit-content"
     >
-      <styled.div
+      <Component
         className="sc-gtssRu iBQAVu"
         status="info"
         style={Object {}}
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
         variant="left-accent"
-        w="fit-content"
       >
-        <div
-          className="sc-bdnylx eraKfX sc-gtssRu iBQAVu"
+        <styled.div
+          className="sc-gtssRu iBQAVu"
+          status="info"
           style={Object {}}
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+          variant="left-accent"
         >
-          <Component
-            className=""
-            key="0/.0"
-            status="info"
+          <div
+            className="sc-bdnylx dOPKTt sc-gtssRu iBQAVu"
             style={Object {}}
-            variant="left-accent"
           >
-            <Styled(Styled(Box))
+            <AlertIcon
               className=""
+              key="0/.0"
               status="info"
               style={Object {}}
               variant="left-accent"
             >
-              <Box
-                className="sc-jSFkmK sc-gKAblj fTKErc gkdvVV"
+              <Styled(Styled(Box))
+                className=""
                 status="info"
                 style={Object {}}
                 variant="left-accent"
-                w="fit-content"
               >
-                <styled.div
+                <Box
                   className="sc-jSFkmK sc-gKAblj fTKErc gkdvVV"
                   status="info"
                   style={Object {}}
                   variant="left-accent"
-                  w="fit-content"
                 >
-                  <div
-                    className="sc-bdnylx eraKfX sc-jSFkmK sc-gKAblj fTKErc gkdvVV"
+                  <Component
+                    className="sc-jSFkmK sc-gKAblj fTKErc gkdvVV"
+                    status="info"
                     style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                    variant="left-accent"
                   >
-                    announcement
-                  </div>
-                </styled.div>
-              </Box>
-            </Styled(Styled(Box))>
-          </Component>
-          <Component
-            className=""
-            key="1/.1"
-            status="info"
-            style={Object {}}
-            variant="left-accent"
-          >
-            <Styled(Styled(Box))
+                    <styled.div
+                      className="sc-jSFkmK sc-gKAblj fTKErc gkdvVV"
+                      status="info"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                      variant="left-accent"
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-jSFkmK sc-gKAblj fTKErc gkdvVV"
+                        style={Object {}}
+                      >
+                        announcement
+                      </div>
+                    </styled.div>
+                  </Component>
+                </Box>
+              </Styled(Styled(Box))>
+            </AlertIcon>
+            <AlertTitle
               className=""
+              key="1/.1"
               status="info"
               style={Object {}}
               variant="left-accent"
             >
-              <Box
-                className="sc-dlnjPT sc-hKFyIo hDmCqp fLpFAm"
+              <Styled(Styled(Box))
+                className=""
                 status="info"
                 style={Object {}}
                 variant="left-accent"
-                w="fit-content"
               >
-                <styled.div
+                <Box
                   className="sc-dlnjPT sc-hKFyIo hDmCqp fLpFAm"
                   status="info"
                   style={Object {}}
                   variant="left-accent"
-                  w="fit-content"
                 >
-                  <div
-                    className="sc-bdnylx eraKfX sc-dlnjPT sc-hKFyIo hDmCqp fLpFAm"
+                  <Component
+                    className="sc-dlnjPT sc-hKFyIo hDmCqp fLpFAm"
+                    status="info"
                     style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                    variant="left-accent"
                   >
-                    Your browser is outdated!
-                  </div>
-                </styled.div>
-              </Box>
-            </Styled(Styled(Box))>
-          </Component>
-          <Component
-            className=""
-            key="2/.2"
-            status="info"
-            style={Object {}}
-            variant="left-accent"
-          >
-            <Styled(Styled(Box))
+                    <styled.div
+                      className="sc-dlnjPT sc-hKFyIo hDmCqp fLpFAm"
+                      status="info"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                      variant="left-accent"
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT sc-hKFyIo hDmCqp fLpFAm"
+                        style={Object {}}
+                      >
+                        Your browser is outdated!
+                      </div>
+                    </styled.div>
+                  </Component>
+                </Box>
+              </Styled(Styled(Box))>
+            </AlertTitle>
+            <AlertDescription
               className=""
+              key="2/.2"
               status="info"
               style={Object {}}
               variant="left-accent"
             >
-              <Box
-                className="sc-dlnjPT sc-eCApGN hDmCqp cCbRZN"
+              <Styled(Styled(Box))
+                className=""
                 status="info"
                 style={Object {}}
                 variant="left-accent"
-                w="fit-content"
               >
-                <styled.div
+                <Box
                   className="sc-dlnjPT sc-eCApGN hDmCqp cCbRZN"
                   status="info"
                   style={Object {}}
                   variant="left-accent"
-                  w="fit-content"
                 >
-                  <div
-                    className="sc-bdnylx eraKfX sc-dlnjPT sc-eCApGN hDmCqp cCbRZN"
+                  <Component
+                    className="sc-dlnjPT sc-eCApGN hDmCqp cCbRZN"
+                    status="info"
                     style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                    variant="left-accent"
                   >
-                    Your Mooskin experience may be degraded.
-                  </div>
-                </styled.div>
-              </Box>
-            </Styled(Styled(Box))>
-          </Component>
-          <Component
-            className=""
-            key="3/.3"
-            onClick={[MockFunction]}
-            position="absolute"
-            right="8px"
-            status="info"
-            style={Object {}}
-            top="8px"
-            variant="left-accent"
-          >
-            <Styled(Styled(Box))
+                    <styled.div
+                      className="sc-dlnjPT sc-eCApGN hDmCqp cCbRZN"
+                      status="info"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                      variant="left-accent"
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT sc-eCApGN hDmCqp cCbRZN"
+                        style={Object {}}
+                      >
+                        Your Mooskin experience may be degraded.
+                      </div>
+                    </styled.div>
+                  </Component>
+                </Box>
+              </Styled(Styled(Box))>
+            </AlertDescription>
+            <AlertCloseButton
               className=""
+              key="3/.3"
               onClick={[MockFunction]}
               position="absolute"
               right="8px"
@@ -163,8 +268,8 @@ exports[`Alert renders correctly 1`] = `
               top="8px"
               variant="left-accent"
             >
-              <Box
-                className="sc-jSFkmK sc-iCoHVE fTKErc dpbeEz"
+              <Styled(Styled(Box))
+                className=""
                 onClick={[MockFunction]}
                 position="absolute"
                 right="8px"
@@ -172,9 +277,8 @@ exports[`Alert renders correctly 1`] = `
                 style={Object {}}
                 top="8px"
                 variant="left-accent"
-                w="fit-content"
               >
-                <styled.div
+                <Box
                   className="sc-jSFkmK sc-iCoHVE fTKErc dpbeEz"
                   onClick={[MockFunction]}
                   position="absolute"
@@ -183,22 +287,67 @@ exports[`Alert renders correctly 1`] = `
                   style={Object {}}
                   top="8px"
                   variant="left-accent"
-                  w="fit-content"
                 >
-                  <div
-                    className="sc-bdnylx izbzuc sc-jSFkmK sc-iCoHVE fTKErc dpbeEz"
+                  <Component
+                    className="sc-jSFkmK sc-iCoHVE fTKErc dpbeEz"
                     onClick={[MockFunction]}
+                    position="absolute"
+                    right="8px"
+                    status="info"
                     style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                    top="8px"
+                    variant="left-accent"
                   >
-                    close
-                  </div>
-                </styled.div>
-              </Box>
-            </Styled(Styled(Box))>
-          </Component>
-        </div>
-      </styled.div>
+                    <styled.div
+                      className="sc-jSFkmK sc-iCoHVE fTKErc dpbeEz"
+                      onClick={[MockFunction]}
+                      position="absolute"
+                      right="8px"
+                      status="info"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                      top="8px"
+                      variant="left-accent"
+                    >
+                      <div
+                        className="sc-bdnylx iOddrC sc-jSFkmK sc-iCoHVE fTKErc dpbeEz"
+                        onClick={[MockFunction]}
+                        style={Object {}}
+                      >
+                        close
+                      </div>
+                    </styled.div>
+                  </Component>
+                </Box>
+              </Styled(Styled(Box))>
+            </AlertCloseButton>
+          </div>
+        </styled.div>
+      </Component>
     </Box>
   </Styled(Box)>
-</Component>
+</Alert>
 `;

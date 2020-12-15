@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SideBar renders SideBar correctly 1`] = `
+exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
 <Styled(Box)
+  boxShadow="lg"
   className=""
   style={Object {}}
 >
-  <Component
-    active={true}
+  <ActionsDropdownItem
     className=""
     dataLabel="settings"
     key="0/.0"
@@ -15,9 +15,8 @@ exports[`SideBar renders SideBar correctly 1`] = `
     value="/settings"
   >
     Settings
-  </Component>
-  <Component
-    active={false}
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
     className=""
     dataLabel="template"
     key="1/.1"
@@ -26,9 +25,8 @@ exports[`SideBar renders SideBar correctly 1`] = `
     value="/template"
   >
     Template
-  </Component>
-  <Component
-    active={false}
+  </ActionsDropdownItem>
+  <ActionsDropdownItem
     className=""
     dataLabel="preview"
     key="2/.2"
@@ -37,13 +35,12 @@ exports[`SideBar renders SideBar correctly 1`] = `
     value="/preview"
   >
     Preview
-  </Component>
+  </ActionsDropdownItem>
 </Styled(Box)>
 `;
 
-exports[`SideBar renders SidebarItem correctly 1`] = `
+exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
 <Styled(Box)
-  active={true}
   className="myClass"
   onClick={[MockFunction]}
   style={

@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal renders correctly 1`] = `
+<Modal
+  className=""
+  closeOnOverlayClick={true}
+  onClose={[MockFunction]}
+  style={Object {}}
+>
+  <Styled(Box)
+    className=""
+    closeOnOverlayClick={true}
+    onClose={[MockFunction]}
+    style={Object {}}
+  >
+    <Box
+      className="sc-gtssRu"
+      closeOnOverlayClick={true}
+      onClose={[MockFunction]}
+      style={Object {}}
+    >
+      <Component
+        className="sc-gtssRu"
+        closeOnOverlayClick={true}
+        onClose={[MockFunction]}
+        style={Object {}}
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
+      >
+        <styled.div
+          className="sc-gtssRu"
+          closeOnOverlayClick={true}
+          onClose={[MockFunction]}
+          style={Object {}}
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+        >
+          <div
+            className="sc-bdnylx dOPKTt sc-gtssRu"
+            onClose={[MockFunction]}
+            style={Object {}}
+          >
+            <ModalOverlay
+              className=""
+              key="0/.0"
+              onClick={[Function]}
+              style={Object {}}
+            />
+          </div>
+        </styled.div>
+      </Component>
+    </Box>
+  </Styled(Box)>
+</Modal>
+`;

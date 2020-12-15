@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid renders Col correctly 1`] = `
-<styled.div
+<Styled(Box)
   className="myClass"
   lg={8}
   md={6}
@@ -16,7 +16,7 @@ exports[`Grid renders Col correctly 1`] = `
 `;
 
 exports[`Grid renders Grid correctly 1`] = `
-<styled.div
+<Styled(Box)
   className="myClass"
   style={
     Object {
@@ -35,7 +35,7 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
     }
   }
 >
-  <styled.div
+  <Styled(Box)
     className="myClass"
     style={
       Object {
@@ -43,84 +43,249 @@ exports[`Grid renders Grid with Row & Col correctly 1`] = `
       }
     }
   >
-    <div
-      className="sc-eCApGN iMMBxK myClass"
+    <Box
+      className="sc-jSFkmK ccghuS myClass"
       style={
         Object {
           "width": "50px",
         }
       }
     >
-      <Row
-        className="myClass"
+      <Component
+        className="sc-jSFkmK ccghuS myClass"
         style={
           Object {
             "width": "50px",
           }
         }
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
       >
         <styled.div
-          className="myClass"
+          className="sc-jSFkmK ccghuS myClass"
           style={
             Object {
               "width": "50px",
             }
           }
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
         >
           <div
-            className="sc-jSFkmK llyqsH myClass"
+            className="sc-bdnylx dOPKTt sc-jSFkmK ccghuS myClass"
             style={
               Object {
                 "width": "50px",
               }
             }
           >
-            <Col
+            <Row
               className="myClass"
-              lg={8}
-              md={6}
-              sm={4}
               style={
                 Object {
                   "width": "50px",
                 }
               }
-              xs="hidden"
             >
-              <styled.div
+              <Styled(Box)
                 className="myClass"
-                lg={8}
-                md={6}
-                sm={4}
                 style={
                   Object {
                     "width": "50px",
                   }
                 }
-                xs="hidden"
               >
-                <div
-                  className="sc-gKAblj gucgaE myClass"
+                <Box
+                  className="sc-gKAblj ghkgCc myClass"
                   style={
                     Object {
                       "width": "50px",
                     }
                   }
                 >
-                  Col
-                </div>
-              </styled.div>
-            </Col>
+                  <Component
+                    className="sc-gKAblj ghkgCc myClass"
+                    style={
+                      Object {
+                        "width": "50px",
+                      }
+                    }
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <styled.div
+                      className="sc-gKAblj ghkgCc myClass"
+                      style={
+                        Object {
+                          "width": "50px",
+                        }
+                      }
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-gKAblj ghkgCc myClass"
+                        style={
+                          Object {
+                            "width": "50px",
+                          }
+                        }
+                      >
+                        <Col
+                          className="myClass"
+                          lg={8}
+                          md={6}
+                          sm={4}
+                          style={
+                            Object {
+                              "width": "50px",
+                            }
+                          }
+                          xs="hidden"
+                        >
+                          <Styled(Box)
+                            className="myClass"
+                            lg={8}
+                            md={6}
+                            sm={4}
+                            style={
+                              Object {
+                                "width": "50px",
+                              }
+                            }
+                            xs="hidden"
+                          >
+                            <Box
+                              className="sc-iCoHVE fpJUgX myClass"
+                              lg={8}
+                              md={6}
+                              sm={4}
+                              style={
+                                Object {
+                                  "width": "50px",
+                                }
+                              }
+                              xs="hidden"
+                            >
+                              <Component
+                                className="sc-iCoHVE fpJUgX myClass"
+                                lg={8}
+                                md={6}
+                                sm={4}
+                                style={
+                                  Object {
+                                    "width": "50px",
+                                  }
+                                }
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                                xs="hidden"
+                              >
+                                <styled.div
+                                  className="sc-iCoHVE fpJUgX myClass"
+                                  lg={8}
+                                  md={6}
+                                  sm={4}
+                                  style={
+                                    Object {
+                                      "width": "50px",
+                                    }
+                                  }
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                  xs="hidden"
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-iCoHVE fpJUgX myClass"
+                                    style={
+                                      Object {
+                                        "width": "50px",
+                                      }
+                                    }
+                                  >
+                                    Col
+                                  </div>
+                                </styled.div>
+                              </Component>
+                            </Box>
+                          </Styled(Box)>
+                        </Col>
+                      </div>
+                    </styled.div>
+                  </Component>
+                </Box>
+              </Styled(Box)>
+            </Row>
           </div>
         </styled.div>
-      </Row>
-    </div>
-  </styled.div>
+      </Component>
+    </Box>
+  </Styled(Box)>
 </Grid>
 `;
 
 exports[`Grid renders Row correctly 1`] = `
-<styled.div
+<Styled(Box)
   className="myClass"
   style={
     Object {

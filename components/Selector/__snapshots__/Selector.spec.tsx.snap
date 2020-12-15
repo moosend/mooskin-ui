@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SideBar renders SideBar correctly 1`] = `
+exports[`Selector renders Selector correctly 1`] = `
 <Styled(Box)
   className=""
   style={Object {}}
@@ -41,7 +41,7 @@ exports[`SideBar renders SideBar correctly 1`] = `
 </Styled(Box)>
 `;
 
-exports[`SideBar renders SidebarItem correctly 1`] = `
+exports[`Selector renders SelectorItem correctly 1`] = `
 <Styled(Box)
   active={true}
   className="myClass"

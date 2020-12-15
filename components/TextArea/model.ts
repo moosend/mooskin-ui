@@ -5,9 +5,6 @@ export interface ITextAreaComponentProps extends IBoxComponentProps {
     /** provide to make the textarea field disabled */
     disabled?: boolean;
 
-    /** provide to make the textarea field required */
-    required?: boolean;
-
     /** specify textarea columns */
     cols?: number;
 

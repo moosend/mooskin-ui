@@ -1,59 +1,34 @@
-// import * as React from 'react';
-// import Alert, {AlertCloseButton, AlertDescription, AlertIcon, AlertTitle} from './Alert';
+import * as React from 'react';
+import Modal, {ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay} from './Modal';
 
-// import { mount } from 'enzyme';
-// import Box from '../Box/Box';
+import { mount } from 'enzyme';
 
-// const fn = jest.fn();
+describe('Modal', () => {
 
-// describe('Alert', () => {
+    test('renders correctly', () => {
+        const fn = jest.fn();
+        const fn2 = jest.fn();
 
-//     test('renders correctly', () => {
-//         const tree = mount(
-//             <Alert variant="left-accent">
-//                 <AlertIcon />
-//                 <AlertTitle>Your browser is outdated!</AlertTitle>
-//                 <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-//                 <AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-//             </Alert>
-//         );
-//         expect(tree).toMatchSnapshot();
-//     });
+        const tree = mount(
+            <Modal onClose={fn}>
+                <ModalOverlay onClick={fn2}>
+                    <ModalContent w="50%" h="50%">
+                        <ModalCloseButton position="absolute" top={10} right={10} />
+                        <ModalHeader>Create your account</ModalHeader>
 
-//     test('Status and Variant are inherited by alert children', () => {
-//         const tree = mount(
-//             <Alert variant="left-accent" status="success">
-//                 <AlertIcon />
-//                 <Box>
-//                     <AlertTitle>Your browser is outdated!</AlertTitle>
-//                     <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-//                     <AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-//                 </Box>
-//             </Alert>
-//         );
+                        <ModalBody>
+                            Modal Content Body
+                        </ModalBody>
 
-//         expect(tree.find(AlertTitle).prop('status')).toEqual('success');
-//         expect(tree.find(AlertTitle).prop('variant')).toEqual('left-accent');
+                        <ModalFooter>
+                            Modal Footer goes here!
+                        </ModalFooter>
+                    </ModalContent>
+                </ModalOverlay>
+            </Modal>
+        );
 
-//         expect(tree.find(AlertDescription).prop('status')).toEqual('success');
-//         expect(tree.find(AlertDescription).prop('variant')).toEqual('left-accent');
+        expect(tree).toMatchSnapshot();
+    });
 
-//         expect(tree.find(AlertCloseButton).prop('status')).toEqual('success');
-//         expect(tree.find(AlertCloseButton).prop('variant')).toEqual('left-accent');
-//     });
-
-//     test('calls callback on close click', () => {
-//         const tree = mount(
-//             <Alert variant="left-accent">
-//                 <AlertIcon />
-//                 <AlertTitle>Your browser is outdated!</AlertTitle>
-//                 <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-//                 <AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-//             </Alert>
-//         );
-
-//         tree.find(AlertCloseButton).simulate('click');
-//         expect(fn).toHaveBeenCalled();
-//     });
-
-// });
+});

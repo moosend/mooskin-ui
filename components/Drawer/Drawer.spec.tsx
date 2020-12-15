@@ -1,59 +1,34 @@
-// import * as React from 'react';
-// import Alert, {AlertCloseButton, AlertDescription, AlertIcon, AlertTitle} from './Alert';
+import * as React from 'react';
+import Drawer, {DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay} from './Drawer';
 
-// import { mount } from 'enzyme';
-// import Box from '../Box/Box';
+import { mount } from 'enzyme';
 
-// const fn = jest.fn();
+describe('Drawer', () => {
 
-// describe('Alert', () => {
+    test('renders correctly', () => {
+        const fn = jest.fn();
+        const fn2 = jest.fn();
 
-//     test('renders correctly', () => {
-//         const tree = mount(
-//             <Alert variant="left-accent">
-//                 <AlertIcon />
-//                 <AlertTitle>Your browser is outdated!</AlertTitle>
-//                 <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-//                 <AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-//             </Alert>
-//         );
-//         expect(tree).toMatchSnapshot();
-//     });
+        const tree = mount(
+            <Drawer onClose={fn}>
+                <DrawerOverlay onClick={fn2}>
+                    <DrawerContent w="50%" h="50%">
+                        <DrawerCloseButton position="absolute" top={10} right={10} />
+                        <DrawerHeader>Create your account</DrawerHeader>
 
-//     test('Status and Variant are inherited by alert children', () => {
-//         const tree = mount(
-//             <Alert variant="left-accent" status="success">
-//                 <AlertIcon />
-//                 <Box>
-//                     <AlertTitle>Your browser is outdated!</AlertTitle>
-//                     <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-//                     <AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-//                 </Box>
-//             </Alert>
-//         );
+                        <DrawerBody>
+                            Drawer Content Body
+                        </DrawerBody>
 
-//         expect(tree.find(AlertTitle).prop('status')).toEqual('success');
-//         expect(tree.find(AlertTitle).prop('variant')).toEqual('left-accent');
+                        <DrawerFooter>
+                            Drawer Footer goes here!
+                        </DrawerFooter>
+                    </DrawerContent>
+                </DrawerOverlay>
+            </Drawer>
+        );
 
-//         expect(tree.find(AlertDescription).prop('status')).toEqual('success');
-//         expect(tree.find(AlertDescription).prop('variant')).toEqual('left-accent');
+        expect(tree).toMatchSnapshot();
+    });
 
-//         expect(tree.find(AlertCloseButton).prop('status')).toEqual('success');
-//         expect(tree.find(AlertCloseButton).prop('variant')).toEqual('left-accent');
-//     });
-
-//     test('calls callback on close click', () => {
-//         const tree = mount(
-//             <Alert variant="left-accent">
-//                 <AlertIcon />
-//                 <AlertTitle>Your browser is outdated!</AlertTitle>
-//                 <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-//                 <AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-//             </Alert>
-//         );
-
-//         tree.find(AlertCloseButton).simulate('click');
-//         expect(fn).toHaveBeenCalled();
-//     });
-
-// });
+});

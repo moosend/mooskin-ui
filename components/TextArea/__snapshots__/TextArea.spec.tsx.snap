@@ -11,10 +11,8 @@ exports[`TextArea renders correctly 1`] = `
   labelWidth={30}
   maxlength={50}
   minlength={10}
-  name="textarea name"
   onChange={[MockFunction]}
   placeholder="textarea placeholder"
-  required={true}
   rows={10}
   style={
     Object {
@@ -23,8 +21,9 @@ exports[`TextArea renders correctly 1`] = `
   }
   value="textarea value"
 >
-  <Styled(Box)
+  <Box
     className="myClass"
+    d="flex"
     id="textarea"
     style={
       Object {
@@ -32,28 +31,53 @@ exports[`TextArea renders correctly 1`] = `
       }
     }
   >
-    <Box
-      className="sc-hKFyIo exwCyP myClass"
+    <Component
+      className="myClass"
+      d="flex"
       id="textarea"
       style={
         Object {
           "color": "blue",
         }
       }
-      w="fit-content"
+      theme={
+        Object {
+          "disabledBackground": "#e2e2e2",
+          "disabledfont": "#9d9d9d",
+          "inputBackground": "#ffffff",
+          "inputBorder": "#e2e2e2",
+          "inputFont": "#9d9d9d",
+          "label": "#2d2d2d",
+          "primary": "#3fbaca",
+          "secondary": "#293346",
+        }
+      }
     >
       <styled.div
-        className="sc-hKFyIo exwCyP myClass"
+        className="myClass"
+        d="flex"
         id="textarea"
         style={
           Object {
             "color": "blue",
           }
         }
-        w="fit-content"
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
       >
         <div
-          className="sc-bdnylx eraKfX sc-hKFyIo exwCyP myClass"
+          className="sc-bdnylx fpacDC myClass"
+          d="flex"
           id="textarea"
           style={
             Object {
@@ -63,7 +87,6 @@ exports[`TextArea renders correctly 1`] = `
         >
           <Label
             className=""
-            primaryColor="#2d2d2d"
             style={
               Object {
                 "alignSelf": "flex-start",
@@ -74,7 +97,6 @@ exports[`TextArea renders correctly 1`] = `
             <Styled(Box)
               className=""
               onClick={[Function]}
-              primaryColor="#2d2d2d"
               style={
                 Object {
                   "alignSelf": "flex-start",
@@ -83,84 +105,215 @@ exports[`TextArea renders correctly 1`] = `
               width={30}
             >
               <Box
-                className="sc-dlnjPT dvTtDw"
+                className="sc-dlnjPT keeban"
                 onClick={[Function]}
-                primaryColor="#2d2d2d"
                 style={
                   Object {
                     "alignSelf": "flex-start",
                   }
                 }
-                w="fit-content"
                 width={30}
               >
-                <styled.div
-                  className="sc-dlnjPT dvTtDw"
+                <Component
+                  className="sc-dlnjPT keeban"
                   onClick={[Function]}
-                  primaryColor="#2d2d2d"
                   style={
                     Object {
                       "alignSelf": "flex-start",
                     }
                   }
-                  w="fit-content"
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
                   width={30}
                 >
-                  <div
-                    className="sc-bdnylx eraKfX sc-dlnjPT dvTtDw"
+                  <styled.div
+                    className="sc-dlnjPT keeban"
                     onClick={[Function]}
                     style={
                       Object {
                         "alignSelf": "flex-start",
                       }
                     }
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
                     width={30}
                   >
-                    with a label ofc
-                  </div>
-                </styled.div>
+                    <div
+                      className="sc-bdnylx dOPKTt sc-dlnjPT keeban"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "alignSelf": "flex-start",
+                        }
+                      }
+                      width={30}
+                    >
+                      with a label ofc
+                    </div>
+                  </styled.div>
+                </Component>
               </Box>
             </Styled(Box)>
           </Label>
-          <Styled(Box)>
-            <Box
-              className="sc-eCApGN ednuwx"
+          <Box
+            className=""
+            d="flex"
+            direction="column"
+            style={Object {}}
+          >
+            <Component
+              className=""
+              d="flex"
+              direction="column"
               style={Object {}}
-              w="fit-content"
+              theme={
+                Object {
+                  "disabledBackground": "#e2e2e2",
+                  "disabledfont": "#9d9d9d",
+                  "inputBackground": "#ffffff",
+                  "inputBorder": "#e2e2e2",
+                  "inputFont": "#9d9d9d",
+                  "label": "#2d2d2d",
+                  "primary": "#3fbaca",
+                  "secondary": "#293346",
+                }
+              }
             >
               <styled.div
-                className="sc-eCApGN ednuwx"
+                className=""
+                d="flex"
+                direction="column"
                 style={Object {}}
-                w="fit-content"
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
               >
                 <div
-                  className="sc-bdnylx eraKfX sc-eCApGN ednuwx"
+                  className="sc-bdnylx dRmyvY"
+                  d="flex"
+                  direction="column"
                   style={Object {}}
                 >
-                  <styled.textarea
+                  <Styled(Box)
+                    boxAs="textarea"
                     cols={40}
                     disabled={true}
                     maxLength={50}
                     minLength={10}
                     onChange={[Function]}
                     placeholder="textarea placeholder"
-                    required={true}
                     rows={10}
                     value="textarea value"
                   >
-                    <textarea
-                      className="sc-jSFkmK kuOaYE"
+                    <Box
+                      boxAs="textarea"
+                      className="sc-hKFyIo dPgEez"
                       cols={40}
                       disabled={true}
                       maxLength={50}
                       minLength={10}
                       onChange={[Function]}
                       placeholder="textarea placeholder"
-                      required={true}
                       rows={10}
+                      style={Object {}}
                       value="textarea value"
-                    />
-                  </styled.textarea>
+                    >
+                      <Component
+                        boxAs="textarea"
+                        className="sc-hKFyIo dPgEez"
+                        cols={40}
+                        disabled={true}
+                        maxLength={50}
+                        minLength={10}
+                        onChange={[Function]}
+                        placeholder="textarea placeholder"
+                        rows={10}
+                        style={Object {}}
+                        theme={
+                          Object {
+                            "disabledBackground": "#e2e2e2",
+                            "disabledfont": "#9d9d9d",
+                            "inputBackground": "#ffffff",
+                            "inputBorder": "#e2e2e2",
+                            "inputFont": "#9d9d9d",
+                            "label": "#2d2d2d",
+                            "primary": "#3fbaca",
+                            "secondary": "#293346",
+                          }
+                        }
+                        value="textarea value"
+                      >
+                        <styled.div
+                          as="textarea"
+                          boxAs="textarea"
+                          className="sc-hKFyIo dPgEez"
+                          cols={40}
+                          disabled={true}
+                          maxLength={50}
+                          minLength={10}
+                          onChange={[Function]}
+                          placeholder="textarea placeholder"
+                          rows={10}
+                          style={Object {}}
+                          theme={
+                            Object {
+                              "disabledBackground": "#e2e2e2",
+                              "disabledfont": "#9d9d9d",
+                              "inputBackground": "#ffffff",
+                              "inputBorder": "#e2e2e2",
+                              "inputFont": "#9d9d9d",
+                              "label": "#2d2d2d",
+                              "primary": "#3fbaca",
+                              "secondary": "#293346",
+                            }
+                          }
+                          value="textarea value"
+                        >
+                          <textarea
+                            className="sc-bdnylx dOPKTt sc-hKFyIo dPgEez"
+                            cols={40}
+                            disabled={true}
+                            maxLength={50}
+                            minLength={10}
+                            onChange={[Function]}
+                            placeholder="textarea placeholder"
+                            rows={10}
+                            style={Object {}}
+                            value="textarea value"
+                          />
+                        </styled.div>
+                      </Component>
+                    </Box>
+                  </Styled(Box)>
                   <Description
                     className=""
                     style={Object {}}
@@ -170,32 +323,59 @@ exports[`TextArea renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Box
-                        className="sc-gtssRu bGVxcA"
+                        className="sc-gtssRu djMgpL"
                         style={Object {}}
-                        w="fit-content"
                       >
-                        <styled.div
-                          className="sc-gtssRu bGVxcA"
+                        <Component
+                          className="sc-gtssRu djMgpL"
                           style={Object {}}
-                          w="fit-content"
+                          theme={
+                            Object {
+                              "disabledBackground": "#e2e2e2",
+                              "disabledfont": "#9d9d9d",
+                              "inputBackground": "#ffffff",
+                              "inputBorder": "#e2e2e2",
+                              "inputFont": "#9d9d9d",
+                              "label": "#2d2d2d",
+                              "primary": "#3fbaca",
+                              "secondary": "#293346",
+                            }
+                          }
                         >
-                          <div
-                            className="sc-bdnylx eraKfX sc-gtssRu bGVxcA"
+                          <styled.div
+                            className="sc-gtssRu djMgpL"
                             style={Object {}}
+                            theme={
+                              Object {
+                                "disabledBackground": "#e2e2e2",
+                                "disabledfont": "#9d9d9d",
+                                "inputBackground": "#ffffff",
+                                "inputBorder": "#e2e2e2",
+                                "inputFont": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "primary": "#3fbaca",
+                                "secondary": "#293346",
+                              }
+                            }
                           >
-                            just some textarea
-                          </div>
-                        </styled.div>
+                            <div
+                              className="sc-bdnylx dOPKTt sc-gtssRu djMgpL"
+                              style={Object {}}
+                            >
+                              just some textarea
+                            </div>
+                          </styled.div>
+                        </Component>
                       </Box>
                     </Styled(Box)>
                   </Description>
                 </div>
               </styled.div>
-            </Box>
-          </Styled(Box)>
+            </Component>
+          </Box>
         </div>
       </styled.div>
-    </Box>
-  </Styled(Box)>
+    </Component>
+  </Box>
 </TextArea>
 `;
