@@ -153,6 +153,25 @@ td.alternateCol:last-child{
     margin-top: 20px;
 }
 
+.menuIcon {
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	margin-right: 10px;
+	cursor: move;
+	margin-top: 3px;
+}
+
+.menuIcon > .line {
+	background-color: rgb(187 187 187);
+	height: 2px;
+	display: block;
+}
+
+.menuIcon > .line + .line {
+	margin-top: 5px;
+}
+
 @media (--xSmall){
     .hide{
         display: none;
