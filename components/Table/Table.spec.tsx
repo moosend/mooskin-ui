@@ -918,7 +918,7 @@ describe('Table', () => {
         ];
 
         const component = mount(
-            <Table data={data} dragAndDrop={(dragIndex, hoverIndex) => { console.log('e'); }}>
+            <Table data={data} dragAndDrop={{ pos: 3, hoverCb: (dragIndex, hoverIndex) => { console.log('e') }, dropCb: (dragIndex) => {}}}>
                 <TableHeader dataField="id">ID</TableHeader>
                 <TableHeader dataField="name">Name</TableHeader>
                 <TableHeader dataField="lastname">Lastname</TableHeader>
