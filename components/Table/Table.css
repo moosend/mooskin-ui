@@ -157,9 +157,7 @@ td.alternateCol:last-child{
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
-	margin-right: 10px;
 	cursor: move;
-	margin-top: 3px;
 }
 
 .menuIcon > .line {
@@ -170,6 +168,10 @@ td.alternateCol:last-child{
 
 .menuIcon > .line + .line {
 	margin-top: 5px;
+}
+
+.dragItem div[class*='contentContainer'] {
+    justify-content: center;
 }
 
 @media (--xSmall){

@@ -57,7 +57,7 @@ export interface ITableProps {
 
     children?: any;
 
-    dragAndDrop?: { pos: number, dndCb: (dragIndex: number, hoverIndex: number) => void };
+    dragAndDrop?: { pos: number, hoverCb: (dragIndex: number, hoverIndex: number) => void, dropCb: (dragIndex: number) => void };
 }
 
 export interface IHeaderProps {
@@ -118,7 +118,7 @@ export interface IRowProps {
 
     id: number;
 
-    dragAndDrop?: { pos: number, dndCb: (dragIndex: number, hoverIndex: number) => void };
+    dragAndDrop?: { pos: number, hoverCb: (dragIndex: number, hoverIndex: number) => void, dropCb: (dragIndex: number) => void };
 
 }
 
@@ -678,8 +678,11 @@ TableHeader.defaultProps = {
 TableHeader.displayName = 'TableHeader';
 
 // Custom hook to check if we need to call DND hooks
-const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverIndex: number) => void) | undefined) => {
-    if (dragAndDrop === undefined) {
+const useDnd = (ref: any, id: number, 
+    hoverCb: ((dragIndex: number, hoverIndex: number) => void) | undefined,
+    dropCb: ((dropIndex: number) => void)
+    ) => {
+    if (hoverCb === undefined) {
         return;
     }
 
@@ -723,7 +726,7 @@ const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverInd
             }
 
             // Time to actually perform the action
-            dragAndDrop && dragAndDrop(dragIndex, hoverIndex);
+            hoverCb && hoverCb(dragIndex, hoverIndex);
 
             // Note: we're mutating the monitor item here!
             // Generally it's better to avoid mutations,
@@ -731,6 +734,9 @@ const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverInd
             // to avoid expensive index searches.
             item.index = hoverIndex;
         },
+        drop(item: IDragItem, monitor: DropTargetMonitor) {
+            dropCb && dropCb(item.index);
+        }
     });
 
     const [{ isDragging }, drag, preview] = useDrag({
@@ -747,23 +753,22 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
     const refParent = React.useRef(null);
     const ref = React.useRef(null);
-    const dnd = props.dragAndDrop ? useDnd(ref, props.id, props.dragAndDrop.dndCb) : undefined;
+    const dnd = props.dragAndDrop ? useDnd(ref, props.id, props.dragAndDrop.hoverCb, props.dragAndDrop.dropCb) : undefined;
 
     if (props.dragAndDrop) {
 
         dnd && dnd.drop(refParent);
         dnd && dnd.drag.drag(ref);
+
         if (Array.isArray(props.children) && !props.children.find((item: { key: string }) => item && item.key === '9920z')) {
             props.children.splice(props.dragAndDrop.pos, 0, (<Col
-                //style={{ ...setting.styles, ...obj.style }}
-                className={`${styles.colComponent}`}
+                className={styles.dragItem}
                 key='9920z'
             >
-                {/* <span className={styles.heading}>{setting.heading}</span> */}
                 <div className={styles.contentContainer}>
                     {<DragIcon
                         id={props.id}
-                        dragAndDrop={props.dragAndDrop && props.dragAndDrop.dndCb}
+                        dragAndDrop={props.dragAndDrop && props.dragAndDrop.hoverCb}
                         ref={ref} />}
                 </div>
             </Col>));
@@ -774,7 +779,7 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
         refParent.current = el;
         dnd && dnd.drag.preview(el);
     }
-    
+
     return (
         <tr
             ref={el => handleRefs(el)}
