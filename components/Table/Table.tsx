@@ -398,13 +398,15 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         });
 
-        if (this.props.dragAndDrop && this.props.dragAndDrop.pos) settings.splice(this.props.dragAndDrop.pos, 0, {
-            classes: undefined,
-            dataField: 'dndCol',
-            heading: 'dndCol',
-            hide: undefined,
-            styles: undefined
-        });
+        if (this.props.dragAndDrop && this.props.dragAndDrop.pos) {
+            settings.splice(this.props.dragAndDrop.pos, 0, {
+                classes: undefined,
+                dataField: 'dndCol',
+                heading: 'dndCol',
+                hide: undefined,
+                styles: undefined
+            });
+        }
 
         return { settings, sortable };
     }
@@ -521,11 +523,11 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             headers.splice(this.props.smallCollapse ? this.props.dragAndDrop.pos + 1 : this.props.dragAndDrop.pos, 0, (
                 <TableHeader
                     dataField="dndCol"
-                    key='99ssww'
+                    key="99ssww"
                     className={`${headerStyles}`}
                     style={this.props.collapseHeaderStyle}
                 >
-                    <span></span>
+                    <span />
                 </TableHeader>
             ));
         }
@@ -678,10 +680,9 @@ TableHeader.defaultProps = {
 TableHeader.displayName = 'TableHeader';
 
 // Custom hook to check if we need to call DND hooks
-const useDnd = (ref: any, id: number, 
-    hoverCb: ((dragIndex: number, hoverIndex: number) => void) | undefined,
-    dropCb: ((dropIndex: number) => void)
-    ) => {
+const useDnd = (ref: any, id: number,
+                hoverCb: ((dragIndex: number, hoverIndex: number) => void) | undefined,
+                dropCb: ((dropIndex: number) => void)) => {
     if (hoverCb === undefined) {
         return;
     }
@@ -761,28 +762,31 @@ export const Row: React.StatelessComponent<IRowProps> = (props) => {
         dnd && dnd.drag.drag(ref);
 
         if (Array.isArray(props.children) && !props.children.find((item: { key: string }) => item && item.key === '9920z')) {
-            props.children.splice(props.dragAndDrop.pos, 0, (<Col
-                className={styles.dragItem}
-                key='9920z'
-            >
-                <div className={styles.contentContainer}>
-                    {<DragIcon
-                        id={props.id}
-                        dragAndDrop={props.dragAndDrop && props.dragAndDrop.hoverCb}
-                        ref={ref} />}
-                </div>
-            </Col>));
+            props.children.splice(props.dragAndDrop.pos, 0, (
+                <Col
+                    className={styles.dragItem}
+                    key="9920z"
+                >
+                    <div className={styles.contentContainer}>
+                        <DragIcon
+                            id={props.id}
+                            dragAndDrop={props.dragAndDrop && props.dragAndDrop.hoverCb}
+                            ref={ref}
+                        />
+                    </div>
+                </Col>
+            ));
         }
     }
 
     const handleRefs = (el: any) => {
         refParent.current = el;
         dnd && dnd.drag.preview(el);
-    }
+    };
 
     return (
         <tr
-            ref={el => handleRefs(el)}
+            ref={(el) => handleRefs(el)}
             className={`row ${styles.row} ${props.className}`}
             style={{ ...props.style, opacity: dnd ? dnd.drag.isDragging ? 0.8 : 1 : 1 }}
         >
@@ -835,13 +839,13 @@ Popover.displayName = 'Popover';
 
 const DragIcon = React.forwardRef<any, any>((props, ref) => {
 
-    return (<div className={styles.menuIcon} ref={ref as any}>
-        <span className={styles.line} />
-        <span className={styles.line} />
-        <span className={styles.line} />
-    </div>);
+    return (
+        <div className={styles.menuIcon} ref={ref as any}>
+            <span className={styles.line} />
+            <span className={styles.line} />
+            <span className={styles.line} />
+        </div>
+    );
 });
 
 DragIcon.displayName = 'DragIcon';
-
-

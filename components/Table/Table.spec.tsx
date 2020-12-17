@@ -2,7 +2,6 @@ import * as React from 'react';
 import Table, { TableHeader } from './Table';
 
 import { mount, shallow } from 'enzyme';
-import { DndProvider } from 'react-dnd';
 
 describe('Table', () => {
 
@@ -918,11 +917,16 @@ describe('Table', () => {
         ];
 
         const component = mount(
-            <Table data={data} dragAndDrop={{ pos: 3, hoverCb: (dragIndex, hoverIndex) => { console.log('e') }, dropCb: (dragIndex) => {}}}>
-                <TableHeader dataField="id">ID</TableHeader>
-                <TableHeader dataField="name">Name</TableHeader>
-                <TableHeader dataField="lastname">Lastname</TableHeader>
-                <TableHeader dataField="country">Country</TableHeader>
+            <Table
+                data={data}
+                dragAndDrop={{pos: 3, hoverCb: () => { console.log('e'); }, dropCb: () => { console.log('e'); } }}
+            >
+                <>
+                    <TableHeader dataField="id">ID</TableHeader>
+                    <TableHeader dataField="name">Name</TableHeader>
+                    <TableHeader dataField="lastname">Lastname</TableHeader>
+                    <TableHeader dataField="country">Country</TableHeader>
+                </>
             </Table>
         );
 
