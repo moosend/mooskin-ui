@@ -919,14 +919,12 @@ describe('Table', () => {
         const component = mount(
             <Table
                 data={data}
-                dragAndDrop={{pos: 3, hoverCb: () => { console.log('e'); }, dropCb: () => { console.log('e'); } }}
+                dragAndDrop={{ pos: 3, hoverCb: () => { console.log('e'); }, dropCb: () => { console.log('e'); } }}
             >
-                <>
-                    <TableHeader dataField="id">ID</TableHeader>
-                    <TableHeader dataField="name">Name</TableHeader>
-                    <TableHeader dataField="lastname">Lastname</TableHeader>
-                    <TableHeader dataField="country">Country</TableHeader>
-                </>
+                <TableHeader dataField="id">ID</TableHeader>
+                <TableHeader dataField="name">Name</TableHeader>
+                <TableHeader dataField="lastname">Lastname</TableHeader>
+                <TableHeader dataField="country">Country</TableHeader>
             </Table>
         );
 
