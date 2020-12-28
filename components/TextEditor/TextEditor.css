@@ -326,7 +326,7 @@
 .tagsLabel {
     align-self: center;
     margin: 0 4px;
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     align-items: center;
     justify-content: center;

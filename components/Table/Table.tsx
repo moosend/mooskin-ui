@@ -57,7 +57,7 @@ export interface ITableProps {
 
     children?: any;
 
-    dragAndDrop?: (dragIndex: number, hoverIndex: number) => void;
+    dragAndDrop?: { pos: number, hoverCb: (dragIndex: number, hoverIndex: number) => void, dropCb: (dragIndex: number) => void };
 }
 
 export interface IHeaderProps {
@@ -118,7 +118,7 @@ export interface IRowProps {
 
     id: number;
 
-    dragAndDrop?: (dragIndex: number, hoverIndex: number) => void;
+    dragAndDrop?: { pos: number, hoverCb: (dragIndex: number, hoverIndex: number) => void, dropCb: (dragIndex: number) => void };
 
 }
 
@@ -141,6 +141,11 @@ export interface ITableState {
     order: string;
     data: object[];
     page: number;
+}
+
+export interface IDragIconProps {
+    id: number;
+    dragAndDrop?: (dragIndex: number, hoverIndex: number) => void;
 }
 
 interface IDragItem {
@@ -393,6 +398,16 @@ export default class Table extends React.Component<ITableProps, ITableState> {
 
         });
 
+        if (this.props.dragAndDrop && this.props.dragAndDrop.pos) {
+            settings.splice(this.props.dragAndDrop.pos, 0, {
+                classes: undefined,
+                dataField: 'dndCol',
+                heading: 'dndCol',
+                hide: undefined,
+                styles: undefined
+            });
+        }
+
         return { settings, sortable };
     }
 
@@ -502,6 +517,19 @@ export default class Table extends React.Component<ITableProps, ITableState> {
             );
 
             headers.splice(0, 0, buttonHeader);
+        }
+
+        if (this.props.dragAndDrop && this.props.dragAndDrop.pos) {
+            headers.splice(this.props.smallCollapse ? this.props.dragAndDrop.pos + 1 : this.props.dragAndDrop.pos, 0, (
+                <TableHeader
+                    dataField="dndCol"
+                    key="99ssww"
+                    className={`${headerStyles}`}
+                    style={this.props.collapseHeaderStyle}
+                >
+                    <span />
+                </TableHeader>
+            ));
         }
 
         return headers;
@@ -652,8 +680,10 @@ TableHeader.defaultProps = {
 TableHeader.displayName = 'TableHeader';
 
 // Custom hook to check if we need to call DND hooks
-const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverIndex: number) => void) | undefined) => {
-    if (dragAndDrop === undefined) {
+const useDnd = (ref: any, id: number,
+                hoverCb: ((dragIndex: number, hoverIndex: number) => void) | undefined,
+                dropCb: ((dropIndex: number) => void)) => {
+    if (hoverCb === undefined) {
         return;
     }
 
@@ -697,7 +727,7 @@ const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverInd
             }
 
             // Time to actually perform the action
-            dragAndDrop && dragAndDrop(dragIndex, hoverIndex);
+            hoverCb && hoverCb(dragIndex, hoverIndex);
 
             // Note: we're mutating the monitor item here!
             // Generally it's better to avoid mutations,
@@ -705,31 +735,58 @@ const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverInd
             // to avoid expensive index searches.
             item.index = hoverIndex;
         },
+        drop(item: IDragItem, monitor: DropTargetMonitor) {
+            dropCb && dropCb(item.index);
+        }
     });
 
-    const [{ isDragging }, drag] = useDrag({
+    const [{ isDragging }, drag, preview] = useDrag({
         collect: (monitor) => ({
             isDragging: !!monitor.isDragging()
         }),
         item: { type: ItemTypes.ROW, index: id }
     });
 
-    return { drop, drag: { isDragging, drag } };
+    return { drop, drag: { isDragging, drag, preview } };
 };
 
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
-    const ref = React.useRef<HTMLDivElement>(null);
-
-    const dnd = useDnd(ref, props.id, props.dragAndDrop);
+    const refParent = React.useRef(null);
+    const ref = React.useRef(null);
+    const dnd = props.dragAndDrop ? useDnd(ref, props.id, props.dragAndDrop.hoverCb, props.dragAndDrop.dropCb) : undefined;
 
     if (props.dragAndDrop) {
-        dnd && dnd.drag.drag(dnd.drop(ref));
+
+        dnd && dnd.drop(refParent);
+        dnd && dnd.drag.drag(ref);
+
+        if (Array.isArray(props.children) && !props.children.find((item: { key: string }) => item && item.key === '9920z')) {
+            props.children.splice(props.dragAndDrop.pos, 0, (
+                <Col
+                    className={styles.dragItem}
+                    key="9920z"
+                >
+                    <div className={styles.contentContainer}>
+                        <DragIcon
+                            id={props.id}
+                            dragAndDrop={props.dragAndDrop && props.dragAndDrop.hoverCb}
+                            ref={ref}
+                        />
+                    </div>
+                </Col>
+            ));
+        }
     }
+
+    const handleRefs = (el: any) => {
+        refParent.current = el;
+        dnd && dnd.drag.preview(el);
+    };
 
     return (
         <tr
-            ref={ref as any}
+            ref={(el) => handleRefs(el)}
             className={`row ${styles.row} ${props.className}`}
             style={{ ...props.style, opacity: dnd ? dnd.drag.isDragging ? 0.8 : 1 : 1 }}
         >
@@ -779,3 +836,16 @@ Popover.defaultProps = {
 };
 
 Popover.displayName = 'Popover';
+
+const DragIcon = React.forwardRef<any, any>((props, ref) => {
+
+    return (
+        <div className={styles.menuIcon} ref={ref as any}>
+            <span className={styles.line} />
+            <span className={styles.line} />
+            <span className={styles.line} />
+        </div>
+    );
+});
+
+DragIcon.displayName = 'DragIcon';
