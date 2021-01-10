@@ -9,7 +9,7 @@ export { default as Carousel } from '../Carousel';
 export { default as CheckListItem } from '../CheckListItem';
 export { default as Checkbox } from '../Checkbox/Checkbox';
 export { default as ClipboardButton } from '../ClipboardButton';
-export { default as DatePicker, DateSelect } from '../DatePicker';
+// export { default as DatePicker, DateSelect } from '../DatePicker';
 export { default as DateRange } from '../DateRange';
 export { default as Form, FormGroup } from '../Form';
 export { default as FileUpload } from '../File';
@@ -29,7 +29,7 @@ export { default as RadioAccordion, RadioAccordionContent } from '../RadioAccord
 export { default as Steps, Step } from '../Steps';
 export { default as Sidemenu, SidemenuItem } from '../Sidemenu/Sidemenu';
 export { default as SmallIconButton } from '../SmallIconButton';
-export { default as Select, Option } from '../Select';
+// export { default as Select, Option } from '../Select';
 export { default as Slider, ABSlider } from '../Slider';
 export { default as Switch } from '../Switch/Switch';
 export { default as StatsBox } from '../StatsBox';

@@ -1,481 +1,322 @@
 import * as React from 'react';
+import { IBoxComponentProps } from '../Box/model';
+import Description from '../Description/Description';
+import { IDescriptionComponentProps } from '../Description/model';
+import Label from '../Label/Label';
+import { ILabelComponentProps } from '../Label/model';
 
-import {arrayHasDupes} from '../_utils/helper';
-import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
+import {getBoxProps} from '../_utils/helper';
+import {IInputCallbackData} from '../_utils/types/commonTypes';
+import { ISelectComponentProps, ISelectFilterComponentProps, ISelectOptionComponentProps } from './model';
 
-import spinner from '../../assets/images/loader/spinner.png';
-import icons from '../../assets/mooskin-icons/mooskin-icons.css';
-import styles from './Select.css';
+import {
+    StyledSelect,
+    StyledSelectContainer,
+    StyledSelectFilter,
+    StyledSelectIcon,
+    StyledSelectLoader,
+    StyledSelectOption,
+    StyledSelectOptionList,
+    StyledSelectOverlay,
+    StyledSelectPlaceholder
+} from './styles';
 
-export interface ISelectProps {
+/**
+ * Select
+ */
+export const Select: React.FC<ISelectComponentProps> = (props) => {
 
-    /** Callback that fires when you click on an item on the list */
-    onChange?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+    const [showList, setShowList] = React.useState(props.showList);
+    const [filterValue, setFilterValue] = React.useState('');
 
-    onFilterChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+    const batchClickHandler = (
+        e: React.MouseEvent<HTMLElement>,
+        value: string,
+        callback?: (e: React.MouseEvent<HTMLElement>, value: string) => void,
+    ) => {
 
-    /** what data is being used, helps whn extracting user input, you know on what field changes are made */
-    dataLabel?: string;
+        let returnValue;
+        const selectedAsArray = Array.isArray(props.selected);
+        const selected = props.selected as any;
 
-    /** to specify which value is selected, has to be one of the option values */
-    selected?: string | number | Array<string | number>;
-
-    /** select box label */
-    label?: string;
-
-    /** place label on top of Select */
-    labelTop?: boolean;
-
-    /** select box placeholder */
-    placeholder?: string;
-
-    /** id for the main element */
-    id?: string;
-
-    /** className for the main element */
-    className?: string;
-
-    /** loading indicator */
-    isLoading?: boolean;
-
-    /** select description (small italic bottom) */
-    description?: string;
-
-    /** status of the select, error or success */
-    status?: 'error' | 'success';
-
-    /** wether the select is required (used within forms) */
-    required?: boolean;
-
-    /** text to be shown when there are no options available */
-    emptySelectText?: string;
-
-    /** prevent duplicate options to the Select */
-    noDuplicates?: boolean;
-
-    /** disables option filtering */
-    noFilter?: boolean;
-
-    /** adds alternate styles for select */
-    alternate?: boolean;
-
-    /** alternate style colors */
-    alternateStyleColor?: boolean | string;
-
-    /** locks select when a value is selected */
-    lockSelected?: boolean;
-
-    allowSelectOnLocked?: boolean;
-
-    /** validate function */
-    validate?: (data: IValidationCallbackData) => boolean;
-
-    /** override button styles */
-    style?: React.CSSProperties;
-
-    /** children here can only be Option elements */
-    children?: Array<React.ReactElement<IOptionProps>> | React.ReactElement<IOptionProps> | JSX.Element[];
-}
-
-export interface ISelectState {
-    list: boolean;
-    // selected?: string | number;
-    filter: string;
-}
-
-export interface IOptionProps {
-    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
-
-    /** value for this option */
-    value: string;
-
-    /** label to be used when children are of type other than string */
-    label?: string;
-
-    /** filters according to this when available (so Option children can be elements) */
-    searchLabel?: string;
-
-    /** disables this option */
-    disabled?: boolean;
-
-    /** children must be a string */
-    children?: string | JSX.Element;
-
-    /** adds additional class */
-    className?: string;
-}
-
-class Select extends React.Component<ISelectProps, ISelectState>{
-
-    static defaultProps = {
-        className: '',
-        filterPlaceholder: ''
-    };
-
-    static displayName = 'Select';
-
-    static Option: React.StatelessComponent<IOptionProps>;
-
-    static getDerivedStateFromProps(nextProps: ISelectProps){
-        return {selected: nextProps.selected};
-    }
-
-    constructor(props: ISelectProps){
-        super(props);
-        this.state = {
-            filter: '',
-            list: false,
-            // selected: this.props.selected,
-        };
-    }
-
-    render(){
-
-        if (this.props.noDuplicates && !this.validateChildren()){
-            throw new Error('Can not have two options with same values!');
-        }
-
-        const description = this.props.description;
-
-        const displayList = this.state.list ? 'block' : 'none';
-        const zIndex = this.state.list ? 6 : 0;
-
-        const options = this.assignCbToChildren();
-
-        const hasVisibleOptions = this.props.alternate && options && this.hasVisibleChildren(options);
-        const border = this.props.alternate && !hasVisibleOptions ? {border: 'none'} : {};
-
-        const selected = this.getSelectedChildLabel();
-
-        const status = this.getStatus();
-        const descStatus = this.getDescStatus();
-
-        const labelPos = this.props.labelTop ? styles.column : '';
-        const topLabel = this.props.labelTop ? styles.topLabel : '';
-
-        const shouldOpen = this.props.children ? this.onOpenList : undefined;
-        const shouldToggle = this.props.children ? this.onToggleList : undefined;
-
-        const labelContainerDisplay = !this.props.noFilter && this.state.list ? 'none' : 'block';
-
-        const alternateLabelContainer = this.props.alternate ? {padding: 11} : {};
-        const alternateLabel = this.props.alternate ? {paddingTop: 11} : {};
-        const alternateOptions = this.props.alternate ? styles.alternateOptions : '';
-        const alternateContainer = this.props.alternate ? styles.alternateContainer : '';
-        const alternateColors = this.getAlternateColors();
-
-        const inputValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : this.props.selected;
-        const lockedValue = Array.isArray(this.props.selected) ? this.props.selected.join(', ') : selected;
-        const spinnerClass = this.props.alternate ? styles.alternateSpinner : styles.spinner;
-
-        const {list} = this.state;
-
-        return (
-            <div
-                className={`select-component ${styles.componentContainer} ${labelPos} ${this.props.className}`}
-                style={this.props.style}
-            >
-                {this.props.label && <label style={alternateLabel} className={`${styles.label} ${topLabel}`}>{this.props.label}</label>}
-                <div
-                    onClick={this.onCloseList}
-                    className={styles.overlay}
-                    style={{display: !this.state.list ? 'none' : 'block'}}
-                />
-                <div style={{flex: 1}}>
-                    <div
-                        className={`${styles.selectContainer} ${styles.labelContainer} ${status} ${alternateContainer}`}
-                        style={{zIndex, ...alternateColors.container}}
-                    >
-                        {!this.props.noFilter && this.renderSearchInput()}
-                        {this.props.isLoading && <img src={spinner} className={spinnerClass} />}
-                        <div
-                            onClick={shouldOpen}
-                            className={`label-container ${styles.innerDiv}`}
-                            style={{...alternateLabelContainer, ...alternateColors.innerDiv, display: labelContainerDisplay }}
-                        >
-                            {selected}
-                        </div>
-                        {this.props.alternate ? this.renderArrow(alternateColors) : <div className={styles.selectIcon} onClick={shouldToggle}/>}
-                        <input
-                            value={inputValue}
-                            readOnly
-                            style={{display: 'none'}}
-                        />
-                        <div
-                            className={`options-container ${alternateOptions} ${styles.optionsContainer}`}
-                            style={{...border, display: displayList}}
-                        >
-                            <ul>
-                                {options}
-                            </ul>
-                        </div>
-                        {this.props.lockSelected && this.props.selected && !this.props.isLoading && !list && this.renderLockContainer(lockedValue)}
-                    </div>
-                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
-                </div>
-            </div>
-        );
-    }
-
-    renderSearchInput = () => {
-
-        const alternateInput = this.props.alternate ? {padding: 11} : {};
-
-        return (
-            <input
-                type="text"
-                className={styles.innerInput}
-                style={{...alternateInput, display: this.state.list ? 'block' : 'none'}}
-                value={this.state.filter}
-                onChange={this.onChangeFilter}
-                ref={(input) => (input && this.state.list && input.focus())}
-                onBlur={this.validateOnBlur}
-            />
-        );
-    }
-
-    onChangeFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
-        this.setState({filter: e.target.value});
-        this.props.onFilterChange && this.props.onFilterChange(e, {dataLabel: this.props.dataLabel, value: e.target.value});
-    }
-
-    onClick = (option: string) => {
-        const {dataLabel, required} = this.props;
-        const selectedAsArray = Array.isArray(this.props.selected);
-        let returnValue: any = '';
-        const selected = this.props.selected as any;
-        return (e: React.MouseEvent<HTMLElement>) => {
-            if (selectedAsArray){
-                if (!option) {
-                    returnValue = [];
-                } else if (selected.includes(option)){
-                    returnValue = this.removeOption(option);
-                } else {
-                    returnValue = [...selected];
-                    returnValue.push(option);
-                }
+        if (selectedAsArray){
+            if (!value) {
+                returnValue = [];
+            } else if (selected.includes(value)){
+                returnValue = selected.filter((item: any) => item !== value);
             } else {
-                returnValue = option;
-            }
-            this.props.onChange && this.props.onChange(e, {value: returnValue, dataLabel});
-            if (this.props.status){
-                this.props.validate &&
-                this.props.validate({value: returnValue, dataLabel, required});
-            }
-            !selectedAsArray && this.setState({list: false, filter: ''});
-        };
-    }
-
-    hasVisibleChildren = (options: Array<React.ReactElement<HTMLDivElement>>) => {
-        const visible = options.findIndex((item) => {
-            return item.props.style.display === 'flex';
-        });
-
-        if (visible === -1){
-            return false;
-        }
-        return true;
-    }
-
-    removeOption(option: string){
-        const selected = this.props.selected as any;
-        const returnArray = [...selected];
-        const index = selected.indexOf(option);
-        returnArray.splice(index, 1);
-        return returnArray;
-    }
-
-    onToggleList = (e: React.MouseEvent<HTMLElement>) => {
-        this.state.list ? this.onCloseList() : this.onOpenList();
-    }
-
-    onOpenList = () => {
-        this.setState({list: true});
-    }
-
-    onCloseList = () => {
-        this.setState({list: false, filter: ''});
-    }
-
-    assignCbToChildren(){
-
-        // map through the Option children in order to assign them the onClick cb
-        return React.Children.map(this.props.children, (child) => {
-            if (React.isValidElement<IOptionProps>(child)){
-
-                // determine selected option by passing a selected boolean
-                const extraProps: Partial<IOptionProps> = {
-                    onClick: this.onClick(child.props.value)
-                };
-
-                const selectedClass = this.props.selected === child.props.value ?
-                this.props.alternate ? styles.alternateSelectedOption : styles.selectedOption : '';
-
-                const className = child.props.className || '';
-
-                let visible = 'flex';
-                // hide options when filtering
-                if (!this.props.noFilter && child.props.searchLabel){
-                    visible = child.props.children &&
-                        child.props.searchLabel.toLowerCase().includes(this.state.filter.toLowerCase())
-                        ? 'flex'
-                        : 'none';
-                } else if (!this.props.noFilter && typeof child.props.children === 'string'){
-                    visible = child.props.children &&
-                        child.props.children.toLowerCase().includes(this.state.filter.toLowerCase())
-                        ? 'flex'
-                        : 'none';
-                }
-
-                const active = Array.isArray(this.props.selected) && this.props.selected.includes(child.props.value);
-
-                return (
-                    <div
-                        className={`select-option-container ${selectedClass} ${className}`}
-                        style={{display: visible, flex: 1, position: 'relative'}}
-                    >
-                        {React.cloneElement(child, extraProps)}
-                        {active && <i onClick={this.onClick(child.props.value)} className={`${icons.mooskinIcons} ${styles.checkIcon}`} >check</i>}
-                    </div>
-                );
-            }else{
-                throw new Error('<Select> element only accepts <Option> elements as children');
-            }
-        });
-    }
-
-    getSelectedChildLabel(){
-        if (Array.isArray(this.props.selected)){
-            const selectedArray: Array<number | string> = [];
-
-            React.Children.toArray(this.props.children)
-                    .forEach((child: React.ReactElement<IOptionProps>) => {
-                        if (this.props.selected && (this.props.selected as any).includes(child.props.value)){
-                            if (typeof child.props.children === 'string'){
-                                selectedArray.push(child.props.children);
-                            } else {
-                                child.props.label && selectedArray.push(child.props.label);
-                            }
-                        }
-                    });
-
-            if (this.props.children){
-                    return selectedArray.join(', ') ||
-                        this.props.placeholder ||
-                        'Select an option';
+                returnValue = [...selected];
+                returnValue.push(value);
             }
         } else {
-            const selectedChild = React.Children.toArray(this.props.children)
-                    .find((child: React.ReactElement<IOptionProps>) => {
-                        return child.props.value === (this.props.selected && this.props.selected);
-                    });
-
-            if (this.props.children){
-                return selectedChild &&
-                        React.isValidElement<IOptionProps>(selectedChild) &&
-                        selectedChild.props.children ||
-                        this.props.placeholder ||
-                        'Select an option';
-            }
+            returnValue = value;
         }
 
-        return this.props.emptySelectText || 'No options available';
+        !props.disabled &&
+        props.onChange && props.onChange(e, {dataLabel: props.dataLabel, value: returnValue});
+        callback && callback(e, value);
+        toggleList();
+    };
 
-    }
+    const batchFilterHandler = (
+        e: React.ChangeEvent<HTMLInputElement>,
+        callback?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void
+    ) => {
+        setFilterValue(e.target.value);
+        callback && callback(e, {dataLabel: props.dataLabel, value: e.target.value});
+    };
 
-    validateChildren(){
-        const values = React.Children.toArray(this.props.children)
-            .map((child: React.ReactElement<IOptionProps>) => {
-                return child.props.value;
+    const toggleList = () => {
+        setShowList(!showList);
+        setFilterValue('');
+    };
+
+    React.useEffect(() => {
+        setShowList(props.showList);
+    }, [props.showList]);
+
+    const recurseChildren = (children: any): any => {
+        if (!children){
+            return null;
+        }
+
+        return React.Children.map(children, (child, i) => {
+            if (React.isValidElement<ISelectOptionComponentProps>(child) && child.type === SelectOption){
+
+                const active = Array.isArray(props.selected) && props.selected.includes(child.props.value);
+
+                const option = React.cloneElement(child, {
+                    children: (
+                        <>
+                            {recurseChildren(child.props.children)}
+                            {active && <SelectIcon children="check" />}
+                        </>
+                    ),
+                    key: i,
+                    onClick: !child.props.disabled ? (e) => batchClickHandler(e, child.props.value, child.props.onClick) : undefined,
+                    value: child.props.value
+                } as ISelectOptionComponentProps);
+
+                if (filterValue){
+                    if (child.props.searchLabel){
+                        return child.props.searchLabel.toLowerCase().includes(filterValue.toLowerCase()) ? option : null;
+                    }
+                    if (typeof child.props.children === 'string'){
+                        return child.props.children.toLowerCase().includes(filterValue.toLowerCase()) ? option : null;
+                    }
+                }
+                return option;
+            }
+
+            if (React.isValidElement<ISelectFilterComponentProps>(child) && child.type === SelectFilter){
+                if (showList){
+                    return React.cloneElement(child, {
+                        key: i,
+                        onChange: (e) => batchFilterHandler(e, child.props.onChange),
+                        onClick: (e: React.MouseEvent<HTMLElement>) => e.stopPropagation()
+                    } as ISelectFilterComponentProps);
+                }
+                return null;
+            }
+
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectOptionList){
+                if (showList){
+                    return React.cloneElement(child, {
+                        children: recurseChildren(child.props.children),
+                        key: i
+                    } as IBoxComponentProps);
+                }
+                return null;
+            }
+
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder){
+                if (!showList){
+                    return React.cloneElement(child, {
+                        key: i,
+                    } as IBoxComponentProps);
+                }
+                return null;
+            }
+
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectContainer){
+                return React.cloneElement(child, {
+                    children: recurseChildren(child.props.children),
+                    key: i,
+                    onClick: toggleList
+                } as IBoxComponentProps);
+            }
+
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectIcon){
+                return React.cloneElement(child, {
+                    children: !showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up',
+                    key: i,
+                    onClick: toggleList
+                } as IBoxComponentProps);
+            }
+
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectOverlay){
+                return React.cloneElement(child, {
+                    key: i,
+                    onClick: toggleList
+                } as IBoxComponentProps);
+            }
+
+            if (React.isValidElement(child) && (child.props as any).children){
+                return React.cloneElement(child, {children: recurseChildren((child.props as any).children)} as any);
+            }
+
+            return child;
         });
+    };
 
-        return !arrayHasDupes(values);
-    }
-
-    getStatus = () => {
-        const selectStatus = this.props.status && this.props.status;
-        if (selectStatus){
-            if (selectStatus === 'error'){
-                return styles.error;
-            } else if (selectStatus === 'success'){
-                return styles.success;
-            }
-        }
-    }
-
-    getDescStatus = () => {
-        const selectStatus = this.props.status && this.props.status;
-        if (selectStatus){
-            if (selectStatus === 'error'){
-                return styles.descError;
-            } else if (selectStatus === 'success'){
-                return styles.descSuccess;
-            }
-        }
-    }
-
-    validateOnBlur = () => {
-        this.props.validate &&
-        this.props.validate(
-            {value: this.props.selected, dataLabel: this.props.dataLabel, required: this.props.required}
-        );
-    }
-
-    renderLockContainer = (selected: string | Element | JSX.Element) => {
-        let shouldReturn = true;
-        if (Array.isArray(this.props.selected) && !this.props.selected.length){
-            shouldReturn = false;
-        }
-        if (shouldReturn){
-            return (
-                <div className={styles.lockContainer}>
-                    <div className={styles.lockText}>
-                        {selected}
-                    </div>
-                    {this.props.allowSelectOnLocked && <div className={styles.arrowDownLocked} onClick={this.onOpenList} />}
-                    <i onClick={this.onClick('')} className={`${icons.mooskinIcons} ${styles.close}`}>
-                        close
-                    </i>
-                </div>
-            );
-        }
-    }
-
-    renderArrow = (arrowStyles: {[key: string]: React.CSSProperties}) => {
-        const shouldToggle = this.props.children ? this.onToggleList : undefined;
-        const arrow = this.state.list ? styles.arrowUp : styles.arrowDown;
-        const alternateColor = this.state.list ? arrowStyles.arrowUp : arrowStyles.arrowDown;
-        return (
-            <div onClick={shouldToggle} className={styles.arrowContainer}>
-                <div className={arrow} style={alternateColor}/>
-            </div>
-        );
-    }
-
-    getAlternateColors = () => {
-        const customColor = typeof this.props.alternateStyleColor === 'string' ? this.props.alternateStyleColor : '#5ccdde';
-        return this.props.alternate && this.props.alternateStyleColor ? {
-            arrowDown: {
-                borderColor: `${customColor} transparent transparent`
-            },
-            arrowUp: {
-                borderColor: `transparent transparent ${customColor}`
-            },
-            container: {
-                boxShadow: `0 0 1px 1px ${customColor}`
-            },
-            innerDiv: {
-                color: `${customColor}`
-            },
-        } : {arrowDown: {}, arrowUp: {}, container: {}, innerDiv: {}};
-    }
-}
-
-export const Option: React.StatelessComponent<IOptionProps> = (props) => {
-    const disabledStyles = props.disabled ? styles.disabledOptions : '';
-    return <li className={disabledStyles} onClick={!props.disabled ? props.onClick : undefined}>{props.children}</li>;
+    return <StyledSelect {...getBoxProps(props)} children={recurseChildren(props.children)} />;
 };
 
-Option.displayName = 'Option';
+Select.defaultProps = {
+    className: '',
+    style: {}
+};
+
+Select.displayName = 'Checkbox';
+
+/**
+ * SelectContainer
+ */
+export const SelectContainer: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledSelectContainer {...props} />;
+};
+
+SelectContainer.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectContainer.displayName = 'SelectContainer';
+
+/**
+ * SelectPlaceholder
+ */
+export const SelectPlaceholder: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledSelectPlaceholder {...props} />;
+};
+
+SelectPlaceholder.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectPlaceholder.displayName = 'SelectPlaceholder';
+
+/**
+ * SelectOptionList
+ */
+export const SelectOptionList: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledSelectOptionList {...props} />;
+};
+
+SelectOptionList.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectOptionList.displayName = 'SelectOptionList';
+
+/**
+ * SelectOption
+ */
+export const SelectOption: React.FC<ISelectOptionComponentProps> = (props) => {
+    return <StyledSelectOption {...props} />;
+};
+
+SelectOption.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectOption.displayName = 'SelectOption';
+
+/**
+ * SelectFilter
+ */
+export const SelectFilter: React.FC<ISelectFilterComponentProps> = (props) => {
+    return <StyledSelectFilter {...props} boxAs="input"/>;
+};
+
+SelectFilter.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectFilter.displayName = 'SelectFilter';
+
+/**
+ * SelectLoader
+ */
+export const SelectLoader: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledSelectLoader {...props} />;
+};
+
+SelectLoader.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectLoader.displayName = 'SelectLoader';
+
+/**
+ * SelectLabel
+ */
+export const SelectLabel: React.FC<ILabelComponentProps> = (props) => {
+    return <Label disabled={props.disabled} {...props} />;
+};
+
+SelectLabel.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectLabel.displayName = 'SelectLabel';
+
+/**
+ * SelectDescription
+ */
+export const SelectDescription: React.FC<IDescriptionComponentProps> = (props) => {
+    return <Description {...props} />;
+};
+
+SelectDescription.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectDescription.displayName = 'SelectDescription';
+
+/**
+ * SelectIcon
+ */
+export const SelectIcon: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledSelectIcon {...props} />;
+};
+
+SelectIcon.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectIcon.displayName = 'SelectIcon';
+
+/**
+ * SelectOverlay
+ */
+export const SelectOverlay: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledSelectOverlay {...props} />;
+};
+
+SelectOverlay.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectOverlay.displayName = 'SelectOverlay';
 
 export default Select;

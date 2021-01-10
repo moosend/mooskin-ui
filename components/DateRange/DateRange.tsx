@@ -10,7 +10,7 @@ import moment from 'moment';
 
 import Button from '../Button/Button';
 import {H5} from '../Headings';
-import Select, {Option} from '../Select';
+// import Select, {Option} from '../Select';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';
 
@@ -279,7 +279,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
                     {this.renderInput()}
                     {description && <i className={`${styles.description}`}>{description}</i>}
                     <div className={styles.rangeCalendar} style={{display: displayPicker, left: 0 - this.state.alteredLeft}} ref={this.daterangeRef}>
-                        <Select
+                        {/* <Select
                             selected={this.state.option}
                             alternate
                             alternateStyleColor
@@ -287,7 +287,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
                             onChange={this.onSelectChange}
                         >
                             {this.renderOptions()}
-                        </Select>
+                        </Select> */}
                         <div style={{display: 'flex', background: '#fff', justifyContent: 'space-around', borderTop: '1px solid #bebebe'}}>
                             <H5 style={{margin: 5}}>Start</H5>
                             <H5 style={{margin: 5}}>End</H5>
@@ -354,14 +354,14 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         this.setState({displayPicker: !this.state.displayPicker, alteredLeft: 0});
     }
 
-    renderOptions = () => {
-        const options = this.props.customOptions ? rangeOptions.concat(this.props.customOptions) : rangeOptions;
-        return options.map((option) => {
-            return (
-                <Option key={option.value} value={option.value}>{option.label}</Option>
-            );
-        });
-    }
+    // renderOptions = () => {
+    //     const options = this.props.customOptions ? rangeOptions.concat(this.props.customOptions) : rangeOptions;
+    //     return options.map((option) => {
+    //         return (
+    //             <Option key={option.value} value={option.value}>{option.label}</Option>
+    //         );
+    //     });
+    // }
 
     onSelectChange = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
         this.setState({option: data.value});
