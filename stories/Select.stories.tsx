@@ -54,48 +54,29 @@ Normal.args = {
     ),
     dataLabel: 'Select',
     onChange: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    value: '2'
+    selected: '2'
 } as ISelectComponentProps;
 
-// export const Selected = Template.bind({});
-// Selected.args = {
-//     checked: true,
-//     children: (
-//         <>
-//             <SelectButton />
-//             <SelectLabel>Selected Select</SelectLabel>
-//         </>
-//     ),
-//     onClickSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-//     value: 'test'
-// };
-
-// export const Disabled = Template.bind({});
-// Disabled.args = {
-//     checked: false,
-//     children: (
-//         <>
-//             <SelectButton />
-//             <SelectLabel>Disabled Select</SelectLabel>
-//         </>
-//     ),
-//     disabled: true,
-//     onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-//     value: 'test'
-// };
-
-// export const Description = Template.bind({});
-// Description.args = {
-//     checked: false,
-//     children: (
-//         <>
-//             <SelectButton />
-//             <Box>
-//                 <SelectLabel>Disabled Select</SelectLabel>
-//                 <SelectDescription>Select description goes here</SelectDescription>
-//             </Box>
-//         </>
-//     ),
-//     onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-//     value: 'test'
-// };;
+export const Multi = Template.bind({});
+Multi.args = {
+    children: (
+        <>
+            <SelectContainer>
+                <SelectPlaceholder>Select multiple options</SelectPlaceholder>
+                <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
+                <SelectIcon />
+            </SelectContainer>
+            <SelectOptionList>
+                <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
+                <SelectOption value="2">Option 2</SelectOption>
+                <SelectOption value="3">Option 3</SelectOption>
+                <SelectOption value="4">Option 4</SelectOption>
+                <SelectOption value="5">Option 5</SelectOption>
+            </SelectOptionList>
+            <SelectOverlay />
+        </>
+    ),
+    dataLabel: 'Select',
+    onChange: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
+    selected: ['2', '4']
+} as ISelectComponentProps;

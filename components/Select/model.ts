@@ -34,7 +34,7 @@ export interface ISelectComponentProps extends IBoxComponentProps {
 
 export interface ISelectFilterComponentProps extends IBoxComponentProps {
     /** onchange event handler when the filter value changes */
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export interface ISelectOptionComponentProps extends IBoxComponentProps {

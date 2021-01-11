@@ -1,14 +1,20 @@
 import * as React from 'react';
-import { IBoxComponentProps } from '../Box/model';
-import Description from '../Description/Description';
-import { IDescriptionComponentProps } from '../Description/model';
-import Label from '../Label/Label';
-import { ILabelComponentProps } from '../Label/model';
 
+// Helpers
 import {getBoxProps} from '../_utils/helper';
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+
+// Models
+import { IInputCallbackData } from '../_utils/types/commonTypes';
+import { IBoxComponentProps } from '../Box/model';
+import { IDescriptionComponentProps } from '../Description/model';
+import { ILabelComponentProps } from '../Label/model';
 import { ISelectComponentProps, ISelectFilterComponentProps, ISelectOptionComponentProps } from './model';
 
+// Components
+import Description from '../Description/Description';
+import Label from '../Label/Label';
+
+// Styled Components
 import {
     StyledSelect,
     StyledSelectContainer,
@@ -89,11 +95,11 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                     children: (
                         <>
                             {recurseChildren(child.props.children)}
-                            {active && <SelectIcon children="check" />}
+                            {active && <SelectIcon children="check" p="0" fontSize={15} />}
                         </>
                     ),
                     key: i,
-                    onClick: !child.props.disabled ? (e) => batchClickHandler(e, child.props.value, child.props.onClick) : undefined,
+                    onClick: !child.props.disabled ? (e, value) => batchClickHandler(e, value, child.props.onClick) : undefined,
                     value: child.props.value
                 } as ISelectOptionComponentProps);
 
@@ -225,7 +231,10 @@ SelectOptionList.displayName = 'SelectOptionList';
  * SelectOption
  */
 export const SelectOption: React.FC<ISelectOptionComponentProps> = (props) => {
-    return <StyledSelectOption {...props} />;
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        props.onClick && props.onClick(e, props.value);
+    };
+    return <StyledSelectOption {...props} onClick={onClick} />;
 };
 
 SelectOption.defaultProps = {
@@ -239,7 +248,10 @@ SelectOption.displayName = 'SelectOption';
  * SelectFilter
  */
 export const SelectFilter: React.FC<ISelectFilterComponentProps> = (props) => {
-    return <StyledSelectFilter {...props} boxAs="input"/>;
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        props.onChange && props.onChange(e);
+    };
+    return <StyledSelectFilter {...props} boxAs="input" autoFocus onChange={onChange}/>;
 };
 
 SelectFilter.defaultProps = {

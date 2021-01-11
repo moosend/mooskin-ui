@@ -20,6 +20,11 @@ export const boxComponentProps = [
     'animation', 'visibility', 'cursor', 'boxAs', 'children', 'theme'
 ];
 
+export type IDivBoxComponentProps = IBoxComponentProps & React.HTMLProps<HTMLDivElement>;
+export type IInputBoxComponentProps = IBoxComponentProps & React.HTMLProps<HTMLInputElement>;
+export type IAnchorBoxComponentProps = IBoxComponentProps & React.HTMLProps<HTMLAnchorElement>;
+export type ITextAreaBoxComponentProps = IBoxComponentProps & React.HTMLProps<HTMLTextAreaElement>;
+
 export interface IBoxComponentProps extends IMooskinContext {
 
     /** onClick event handler */

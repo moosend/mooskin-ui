@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IAnchorComponentProps } from './model';
+import { IAnchorBoxComponentProps } from '../Box/model';
 
 // Components
 import Box from '../Box/Box';
@@ -9,7 +9,7 @@ import Box from '../Box/Box';
 // "CSS" Variables
 import variables from '../_utils/globals/variables';
 
-export const StyledAnchor = styled(Box)<IAnchorComponentProps>`
+export const StyledAnchor = styled(Box)<IAnchorBoxComponentProps>`
     border-radius: 3px;
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     outline: 0;
