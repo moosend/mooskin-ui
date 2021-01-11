@@ -61,7 +61,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
         !props.disabled &&
         props.onChange && props.onChange(e, {dataLabel: props.dataLabel, value: returnValue});
         callback && callback(e, value);
-        toggleList();
+        !selectedAsArray && toggleList();
     };
 
     const batchFilterHandler = (
@@ -161,10 +161,12 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
             }
 
             if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectOverlay){
-                return React.cloneElement(child, {
-                    key: i,
-                    onClick: toggleList
-                } as IBoxComponentProps);
+                if (showList){
+                    return React.cloneElement(child, {
+                        key: i,
+                        onClick: toggleList
+                    } as IBoxComponentProps);
+                }
             }
 
             if (React.isValidElement(child) && (child.props as any).children){
