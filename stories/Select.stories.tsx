@@ -8,6 +8,7 @@ import {
     SelectContainer,
     SelectFilter,
     SelectIcon,
+    SelectLoader,
     SelectOption,
     SelectOptionList,
     SelectOverlay,
@@ -89,7 +90,12 @@ WithPagination.args = {
                 <SelectOption value="3">Option 3</SelectOption>
                 <SelectOption value="4">Option 4</SelectOption>
                 <SelectOption value="5">Option 5</SelectOption>
-                <SelectPagination page={2} onClick={(e, page) => console.log('Pagination Clicked: ', page)} />
+                <SelectOption value="6">Option 6</SelectOption>
+                <SelectOption value="7">Option 7</SelectOption>
+                <SelectOption value="8">Option 8</SelectOption>
+                <SelectOption value="9">Option 9</SelectOption>
+                <SelectOption value="10">Option 10</SelectOption>
+            <SelectPagination page={2} onClick={(e, page) => console.log('Pagination Clicked: ', page)} />
             </SelectOptionList>
         </>
     ),
@@ -105,6 +111,7 @@ CustomElements.args = {
             <SelectContainer>
                 <SelectPlaceholder>Select multiple options</SelectPlaceholder>
                 <SelectFilter color="red" onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
+                <SelectLoader />
                 <SelectIcon color="red" />
             </SelectContainer>
             <SelectOptionList>

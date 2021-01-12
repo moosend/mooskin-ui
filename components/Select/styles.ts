@@ -40,6 +40,7 @@ export const StyledSelectContainer = styled(Box)<IDivBoxComponentProps>`
     background-color: #ffffff;
     cursor: pointer;
     color: inherit;
+    align-items: center;
 `;
 
 export const StyledSelectPlaceholder = styled(Box)<IDivBoxComponentProps>`
@@ -66,6 +67,23 @@ export const StyledSelectOptionList = styled(Box)<IDivBoxComponentProps>`
     border-top: none;
     color: inherit;
     background-color: #ffffff;
+    max-height: 160px;
+    overflow-y: auto;
+
+    /** Scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 `;
 
 export const StyledSelectOverlay = styled(Box)<IDivBoxComponentProps>`
@@ -107,10 +125,10 @@ export const StyledSelectIcon = styled(Box)<IDivBoxComponentProps>`
 `;
 
 export const StyledSelectLoader = styled(Box)<IDivBoxComponentProps>`
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #5ccdde;
-    border-top: 16px solid #5ccdde;
-    border-top: 16px solid #5ccdde;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #5ccdde;
+    border-top: 2px solid #5ccdde;
+    border-top: 2px solid #5ccdde;
     border-radius: 50%;
     width: 20px;
     height: 20px;

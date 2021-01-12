@@ -164,7 +164,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                     children: (
                         <>
                             {recurseChildren(child.props.children)}
-                            {!hasFilter && <SelectFilter onChange={(e) => setFilterValue(e.target.value)}/>}
+                            {!hasFilter && showList && <SelectFilter onChange={(e) => setFilterValue(e.target.value)}/>}
                             {!hasDropdownIcon && (
                                 <SelectIcon onClick={toggleList}>
                                     {!showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}
