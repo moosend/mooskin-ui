@@ -41,7 +41,6 @@ Normal.args = {
             <SelectContainer>
                 <SelectPlaceholder>Select an option</SelectPlaceholder>
                 <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
-                <SelectIcon />
             </SelectContainer>
             <SelectOptionList>
                 <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
@@ -50,7 +49,6 @@ Normal.args = {
                 <SelectOption value="4">Option 4</SelectOption>
                 <SelectOption value="5">Option 5</SelectOption>
             </SelectOptionList>
-            <SelectOverlay />
         </>
     ),
     dataLabel: 'Select',
@@ -65,7 +63,6 @@ Multi.args = {
             <SelectContainer>
                 <SelectPlaceholder>Select multiple options</SelectPlaceholder>
                 <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
-                <SelectIcon />
             </SelectContainer>
             <SelectOptionList>
                 <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
@@ -74,7 +71,6 @@ Multi.args = {
                 <SelectOption value="4">Option 4</SelectOption>
                 <SelectOption value="5">Option 5</SelectOption>
             </SelectOptionList>
-            <SelectOverlay />
         </>
     ),
     dataLabel: 'Select',
@@ -89,7 +85,6 @@ WithPagination.args = {
             <SelectContainer>
                 <SelectPlaceholder>Select multiple options</SelectPlaceholder>
                 <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
-                <SelectIcon />
             </SelectContainer>
             <SelectOptionList>
                 <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
@@ -99,7 +94,31 @@ WithPagination.args = {
                 <SelectOption value="5">Option 5</SelectOption>
                 <SelectPagination page={2} onClick={(e, page) => console.log('Pagination Clicked: ', page)} />
             </SelectOptionList>
-            <SelectOverlay />
+        </>
+    ),
+    dataLabel: 'Select',
+    onChange: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
+    selected: '2'
+} as ISelectComponentProps;
+
+export const CustomElements = Template.bind({});
+CustomElements.args = {
+    children: (
+        <>
+            <SelectContainer>
+                <SelectPlaceholder>Select multiple options</SelectPlaceholder>
+                <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
+                <SelectIcon color="red" />
+            </SelectContainer>
+            <SelectOptionList>
+                <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
+                <SelectOption value="2">Option 2</SelectOption>
+                <SelectOption value="3">Option 3</SelectOption>
+                <SelectOption value="4">Option 4</SelectOption>
+                <SelectOption value="5">Option 5</SelectOption>
+                <SelectPagination page={2} onClick={(e, page) => console.log('Pagination Clicked: ', page)} />
+            </SelectOptionList>
+            <SelectOverlay bgColor="rgba(0, 0, 0, 0.1)" />
         </>
     ),
     dataLabel: 'Select',

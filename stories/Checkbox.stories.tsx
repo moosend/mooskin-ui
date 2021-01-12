@@ -29,7 +29,6 @@ Normal.args = {
     checked: false,
     children: (
         <>
-            <CheckboxButton />
             <CheckboxLabel>Normal Checkbox</CheckboxLabel>
         </>
     ),
@@ -42,7 +41,6 @@ Selected.args = {
     checked: true,
     children: (
         <>
-            <CheckboxButton />
             <CheckboxLabel>Selected Checkbox</CheckboxLabel>
         </>
     ),
@@ -55,7 +53,6 @@ Disabled.args = {
     checked: false,
     children: (
         <>
-            <CheckboxButton />
             <CheckboxLabel>Disabled Checkbox</CheckboxLabel>
         </>
     ),
@@ -69,7 +66,22 @@ Description.args = {
     checked: false,
     children: (
         <>
-            <CheckboxButton />
+            <Box>
+                <CheckboxLabel>Disabled Checkbox</CheckboxLabel>
+                <CheckboxDescription>Checkbox description goes here</CheckboxDescription>
+            </Box>
+        </>
+    ),
+    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
+    value: 'test'
+};
+
+export const CustomButton = Template.bind({});
+CustomButton.args = {
+    checked: false,
+    children: (
+        <>
+            <CheckboxButton color="red" />
             <Box>
                 <CheckboxLabel>Disabled Checkbox</CheckboxLabel>
                 <CheckboxDescription>Checkbox description goes here</CheckboxDescription>

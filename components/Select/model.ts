@@ -59,6 +59,11 @@ export interface ISelectIconComponentProps extends IBoxComponentProps {
     onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
+export interface ISelectOverlayComponentProps extends IBoxComponentProps {
+    /** onclick event handler when clicking on the icon */
+    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+}
+
 export interface ISelectPaginationComponentProps extends IBoxComponentProps {
     /** current page value */
     page: number;

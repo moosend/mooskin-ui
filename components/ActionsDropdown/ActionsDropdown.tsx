@@ -19,6 +19,8 @@ import {
  */
 export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props) => {
 
+    const [hasArrow, setHasArrow] = React.useState(false);
+
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         data: IInputCallbackData,
@@ -43,6 +45,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
             }
 
             if (React.isValidElement<IActionsDropdownArrowComponentProps>(child) && child.type === ActionsDropdownArrow){
+                !hasArrow && setHasArrow(true);
                 return React.cloneElement(child, {
                     arrowColor: child.props.arrowColor ? child.props.arrowColor : props.bgColor,
                     children: recurseChildren((child.props as any).children),
@@ -58,7 +61,12 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
         });
     };
 
-    return <StyledActionsDropdown boxShadow="lg" {...getBoxProps(props)} children={recurseChildren(props.children)} />;
+    return (
+        <StyledActionsDropdown boxShadow="lg" {...getBoxProps(props)}>
+            {recurseChildren(props.children)}
+            {!hasArrow && <ActionsDropdownArrow />}
+        </StyledActionsDropdown>
+    );
 };
 
 ActionsDropdown.defaultProps = {

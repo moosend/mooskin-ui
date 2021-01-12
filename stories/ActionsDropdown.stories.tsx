@@ -26,7 +26,6 @@ export const Normal = Template.bind({});
 Normal.args = {
     children: (
         <>
-            <ActionsDropdownArrow />
             <ActionsDropdownItem dataLabel="settings" value="settings">
                 Settings
             </ActionsDropdownItem>

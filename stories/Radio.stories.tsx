@@ -28,7 +28,6 @@ export const Normal = Template.bind({});
 Normal.args = {
     children: (
         <>
-            <RadioButton />
             <RadioLabel>Normal Radio</RadioLabel>
         </>
     ),
@@ -79,3 +78,16 @@ Description.args = {
     selected: false,
     value: 'test'
 };
+
+export const CustomButton = Template.bind({});
+CustomButton.args = {
+    children: (
+        <>
+            <RadioButton color="red" />
+            <RadioLabel>Normal Radio</RadioLabel>
+        </>
+    ),
+    onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
+    selected: false,
+    value: 'test'
+} as IRadioComponentProps;

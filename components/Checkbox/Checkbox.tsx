@@ -16,8 +16,14 @@ import {StyledCheckbox, StyledCheckboxButton, StyledCheckboxLabel} from './style
 
 export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
 
-    const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
+    const [hasCheckbox, setHasCheckbox] = React.useState(false);
+
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
         props.onClickCheckbox && props.onClickCheckbox(e, {dataLabel: props.dataLabel, value: !props.checked});
+    };
+
+    const batchClickHandler = (e: React.MouseEvent<HTMLDivElement>, callback?: (e: React.MouseEvent<HTMLDivElement>) => void) => {
+        onClick(e);
         callback && callback(e);
     };
 
@@ -32,16 +38,17 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
                     children: recurseChildren(child.props.children),
                     disabled: props.disabled,
                     key: i,
-                    onClick: (e) => batchClickHandler(e, child.props.onClick)
+                    onClick: (e: React.MouseEvent<HTMLDivElement>) => batchClickHandler(e, child.props.onClick)
                 } as ILabelComponentProps);
             }
 
             if (React.isValidElement<ICheckboxButtonComponentProps>(child) && child.type === CheckboxButton){
+                !hasCheckbox && setHasCheckbox(true);
                 return React.cloneElement(child, {
                     children: props.checked ? 'check_box' : 'check_box_outline_blank',
                     disabled: props.disabled,
                     key: i,
-                    onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick)
+                    onClick: (e: React.MouseEvent<HTMLDivElement>) => batchClickHandler(e, child.props.onClick)
                 } as ICheckboxButtonComponentProps);
             }
 
@@ -54,7 +61,12 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
     };
 
     // children={props.selected ? 'Checkbox_button_checked' : 'Checkbox_button_unchecked'}
-    return <StyledCheckbox {...getBoxProps(props)} children={recurseChildren(props.children)} />;
+    return (
+        <StyledCheckbox {...getBoxProps(props)} >
+            {!hasCheckbox && <CheckboxButton disabled={props.disabled} onClick={onClick} />}
+            {recurseChildren(props.children)}
+        </StyledCheckbox>
+    );
 };
 
 Checkbox.defaultProps = {

@@ -13,6 +13,7 @@ import {
     ISelectFilterComponentProps,
     ISelectIconComponentProps,
     ISelectOptionComponentProps,
+    ISelectOverlayComponentProps,
     ISelectPaginationComponentProps
 } from './model';
 
@@ -42,6 +43,12 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
 
     const [showList, setShowList] = React.useState(props.showList);
     const [filterValue, setFilterValue] = React.useState('');
+
+    // non mandatory elements
+    const [hasOverlay, setHasOverlay] = React.useState(false);
+    const [hasDropdownIcon, setHasDropdownIcon] = React.useState(false);
+
+    console.log('render');
 
     const batchClickHandler = (
         e: React.MouseEvent<HTMLDivElement>,
@@ -145,6 +152,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
             if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder){
                 if (!showList){
                     return React.cloneElement(child, {
+                        children: recurseChildren(child.props.children),
                         key: i,
                     } as IBoxComponentProps);
                 }
@@ -153,13 +161,23 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
 
             if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectContainer){
                 return React.cloneElement(child, {
-                    children: recurseChildren(child.props.children),
+                    children: (
+                        <>
+                            {recurseChildren(child.props.children)}
+                            {!hasDropdownIcon && (
+                                <SelectIcon onClick={toggleList}>
+                                    {!showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}
+                                </SelectIcon>
+                            )}
+                        </>
+                    ),
                     key: i,
                     onClick: toggleList
                 } as IBoxComponentProps);
             }
 
             if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectIcon){
+                !hasDropdownIcon && setHasDropdownIcon(true);
                 return React.cloneElement(child, {
                     children: !showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up',
                     key: i,
@@ -168,12 +186,14 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
             }
 
             if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectOverlay){
+                !hasOverlay && setHasOverlay(true);
                 if (showList){
                     return React.cloneElement(child, {
                         key: i,
                         onClick: toggleList
                     } as IBoxComponentProps);
                 }
+                return null;
             }
 
             if (React.isValidElement(child) && (child.props as any).children){
@@ -184,7 +204,12 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
         });
     };
 
-    return <StyledSelect {...getBoxProps(props)} children={recurseChildren(props.children)} />;
+    return (
+        <StyledSelect {...getBoxProps(props)} >
+            {recurseChildren(props.children)}
+            {!hasOverlay && showList && <SelectOverlay onClick={toggleList} />}
+        </StyledSelect>
+    );
 };
 
 Select.defaultProps = {
@@ -332,7 +357,7 @@ SelectIcon.displayName = 'SelectIcon';
 /**
  * SelectOverlay
  */
-export const SelectOverlay: React.FC<IBoxComponentProps> = (props) => {
+export const SelectOverlay: React.FC<ISelectOverlayComponentProps> = (props) => {
     return <StyledSelectOverlay {...props} />;
 };
 

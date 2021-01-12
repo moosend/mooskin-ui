@@ -23,10 +23,11 @@ export const StyledRadioWrapper = styled(Box)<Partial<IRadioComponentProps>>`
     align-items: center;
 `;
 
-export const StyledRadioButton = styled(Box)<Partial<IRadioComponentProps>>`
+export const StyledRadioButton = styled(Box)<Partial<IRadioComponentProps & React.HTMLProps<HTMLDivElement>>>`
     font-family: 'Mooskin Icons';
     padding-right: 10px;
     font-size: 23px;
+    cursor: pointer;
     color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
 `;
 

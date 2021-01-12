@@ -60,10 +60,12 @@ export const StyledSelectOptionList = styled(Box)<IDivBoxComponentProps>`
     top: 35px;
     left: 0;
     right: 0;
-    border-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
     border: solid 1px #e2e2e2;
     border-top: none;
-color: inherit;
+    color: inherit;
+    background-color: #ffffff;
 `;
 
 export const StyledSelectOverlay = styled(Box)<IDivBoxComponentProps>`
