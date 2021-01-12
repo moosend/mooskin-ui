@@ -37,7 +37,6 @@ exports[`TopNotification renders correctly 1`] = `
       <Button
         className=""
         onClick={[Function]}
-        primaryColor="#3fbaca"
         size="md"
         style={
           Object {

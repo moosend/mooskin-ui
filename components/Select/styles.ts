@@ -14,6 +14,11 @@ const spin = keyframes`
     100% { transform: rotate(360deg); }
 `;
 
+export const StyledSelect = styled(Box)<IDivBoxComponentProps>`
+    position: relative;
+    color: #2d2d2d;
+`;
+
 export const StyledSelectFilter = styled(Box)<IInputBoxComponentProps>`
     padding: 7px 15px 7px;
     font-family: Hind;
@@ -23,13 +28,9 @@ export const StyledSelectFilter = styled(Box)<IInputBoxComponentProps>`
     font-style: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #2d2d2d;
+    color: inherit;
     border: none;
     flex: 1;
-`;
-
-export const StyledSelect = styled(Box)<IDivBoxComponentProps>`
-    position: relative;
 `;
 
 export const StyledSelectContainer = styled(Box)<IDivBoxComponentProps>`
@@ -38,6 +39,7 @@ export const StyledSelectContainer = styled(Box)<IDivBoxComponentProps>`
     border: solid 1px #e2e2e2;
     background-color: #ffffff;
     cursor: pointer;
+    color: inherit;
 `;
 
 export const StyledSelectPlaceholder = styled(Box)<IDivBoxComponentProps>`
@@ -49,7 +51,7 @@ export const StyledSelectPlaceholder = styled(Box)<IDivBoxComponentProps>`
     font-style: normal;
     letter-spacing: normal;
     text-align: left;
-    color: #2d2d2d;
+    color: inherit;
     flex: 1;
 `;
 
@@ -61,6 +63,7 @@ export const StyledSelectOptionList = styled(Box)<IDivBoxComponentProps>`
     border-radius: 3px;
     border: solid 1px #e2e2e2;
     border-top: none;
+color: inherit;
 `;
 
 export const StyledSelectOverlay = styled(Box)<IDivBoxComponentProps>`
@@ -79,6 +82,7 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps & Reac
     font-family: Hind;
     display: flex;
     justify-content: space-between;
+    color: inherit;
     :first-child{
         padding-top: 13px;
     }
@@ -96,6 +100,8 @@ export const StyledSelectIcon = styled(Box)<IDivBoxComponentProps>`
     display: flex;
     align-items: center;
     padding: 0 15px;
+    cursor: pointer;
+    color: inherit;
 `;
 
 export const StyledSelectLoader = styled(Box)<IDivBoxComponentProps>`
@@ -107,4 +113,19 @@ export const StyledSelectLoader = styled(Box)<IDivBoxComponentProps>`
     width: 20px;
     height: 20px;
     animation: ${spin} 2s linear infinite;
+`;
+
+export const StyledSelectPagination = styled(Box)<IDivBoxComponentProps>`
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #e2e2e2;
+    margin: 8px 10px 0px;
+    padding: 5px 0;
+`;
+
+export const StyledPaginationPage = styled(Box)<IDivBoxComponentProps>`
+    font-size: 12px;
+    font-family: Hind;
+    align-items: center;
+    color: inherit;
 `;

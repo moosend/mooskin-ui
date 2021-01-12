@@ -8,7 +8,13 @@ import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
 import { IDescriptionComponentProps } from '../Description/model';
 import { ILabelComponentProps } from '../Label/model';
-import { ISelectComponentProps, ISelectFilterComponentProps, ISelectOptionComponentProps } from './model';
+import {
+    ISelectComponentProps,
+    ISelectFilterComponentProps,
+    ISelectIconComponentProps,
+    ISelectOptionComponentProps,
+    ISelectPaginationComponentProps
+} from './model';
 
 // Components
 import Description from '../Description/Description';
@@ -16,6 +22,7 @@ import Label from '../Label/Label';
 
 // Styled Components
 import {
+    StyledPaginationPage,
     StyledSelect,
     StyledSelectContainer,
     StyledSelectFilter,
@@ -24,6 +31,7 @@ import {
     StyledSelectOption,
     StyledSelectOptionList,
     StyledSelectOverlay,
+    StyledSelectPagination,
     StyledSelectPlaceholder
 } from './styles';
 
@@ -36,9 +44,9 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
     const [filterValue, setFilterValue] = React.useState('');
 
     const batchClickHandler = (
-        e: React.MouseEvent<HTMLElement>,
+        e: React.MouseEvent<HTMLDivElement>,
         value: string,
-        callback?: (e: React.MouseEvent<HTMLElement>, value: string) => void,
+        callback?: (e: React.MouseEvent<HTMLDivElement>, value: string) => void,
     ) => {
 
         let returnValue;
@@ -58,8 +66,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
             returnValue = value;
         }
 
-        !props.disabled &&
-        props.onChange && props.onChange(e, {dataLabel: props.dataLabel, value: returnValue});
+        !props.disabled && props.onChange && props.onChange(e, {dataLabel: props.dataLabel, value: returnValue});
         callback && callback(e, value);
         !selectedAsArray && toggleList();
     };
@@ -308,8 +315,11 @@ SelectDescription.displayName = 'SelectDescription';
 /**
  * SelectIcon
  */
-export const SelectIcon: React.FC<IBoxComponentProps> = (props) => {
-    return <StyledSelectIcon {...props} />;
+export const SelectIcon: React.FC<ISelectIconComponentProps> = (props) => {
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        props.onClick && props.onClick(e);
+    };
+    return <StyledSelectIcon {...props} onClick={onClick} />;
 };
 
 SelectIcon.defaultProps = {
@@ -332,5 +342,42 @@ SelectOverlay.defaultProps = {
 };
 
 SelectOverlay.displayName = 'SelectOverlay';
+
+/**
+ * SelectPagination
+ */
+export const SelectPagination: React.FC<ISelectPaginationComponentProps> = (props) => {
+    const onClick = (e: React.MouseEvent<HTMLDivElement>, direction: 'left' | 'right') => {
+        let page;
+
+        switch (direction) {
+            case 'left':
+                page = props.page - 1 < 1 ? undefined : props.page - 1;
+                break;
+
+            case 'right':
+                page = props.page + 1;
+                break;
+
+            default:
+                break;
+        }
+        page && props.onClick && props.onClick(e, page);
+    };
+    return (
+        <StyledSelectPagination {...getBoxProps(props)}>
+            <SelectIcon onClick={(e) => onClick(e, 'left')} >keyboard_arrow_left</SelectIcon>
+            <StyledPaginationPage>{props.page}</StyledPaginationPage>
+            <SelectIcon onClick={(e) => onClick(e, 'right')} >keyboard_arrow_right</SelectIcon>
+        </StyledSelectPagination>
+    );
+};
+
+SelectPagination.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SelectPagination.displayName = 'SelectPagination';
 
 export default Select;

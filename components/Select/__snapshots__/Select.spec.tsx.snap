@@ -1,107 +1,909 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select renders Option correctly 1`] = `
-<li
+exports[`Select renders Filter correctly and calls callback on change 1`] = `
+<Styled(Box)
+  autoFocus={true}
+  boxAs="input"
   className=""
-  onClick={[MockFunction]}
+  onChange={[Function]}
+  style={Object {}}
+/>
+`;
+
+exports[`Select renders Option correctly and calls callback on click 1`] = `
+<Styled(Box)
+  className=""
+  onClick={[Function]}
+  style={Object {}}
+  value="1"
 >
   Option1
-</li>
+</Styled(Box)>
 `;
 
 exports[`Select renders Select correctly 1`] = `
-<div
-  className="select-component componentContainer  myClass"
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
+<Styled(Box)
+  className=""
+  style={Object {}}
 >
-  <label
-    className="label "
+  <SelectContainer
+    className=""
+    key="0/.0"
+    onClick={[Function]}
     style={Object {}}
   >
-    Select something
-  </label>
-  <div
-    className="overlay"
-    onClick={[Function]}
-    style={
-      Object {
-        "display": "none",
-      }
-    }
+    <SelectPlaceholder
+      className=""
+      key="0/.0"
+      style={Object {}}
+    >
+      Select an option
+    </SelectPlaceholder>
+    <SelectIcon
+      className=""
+      key="2/.2"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      keyboard_arrow_down
+    </SelectIcon>
+  </SelectContainer>
+  <SelectOverlay
+    className=""
+    key=".2"
+    style={Object {}}
   />
-  <div
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
+</Styled(Box)>
+`;
+
+exports[`Select should be rendered as a multi select if the selected prop is an array 1`] = `
+<Checkbox
+  className=""
+  dataLabel="select"
+  onChange={[MockFunction]}
+  selected={
+    Array [
+      "2",
+      "4",
+    ]
+  }
+  showList={true}
+  style={Object {}}
+>
+  <Styled(Box)
+    className=""
+    style={Object {}}
   >
-    <div
-      className="selectContainer labelContainer undefined "
-      style={
-        Object {
-          "zIndex": 0,
-        }
-      }
+    <Box
+      className="sc-eCApGN cgueqn"
+      style={Object {}}
     >
-      <input
-        className="innerInput"
-        onBlur={[Function]}
-        onChange={[Function]}
-        style={
+      <Component
+        className="sc-eCApGN cgueqn"
+        style={Object {}}
+        theme={
           Object {
-            "display": "none",
-          }
-        }
-        type="text"
-        value=""
-      />
-      <img
-        className="spinner"
-        src=""
-      />
-      <div
-        className="label-container innerDiv"
-        style={
-          Object {
-            "display": "block",
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
           }
         }
       >
-        No options available
-      </div>
-      <div
-        className="selectIcon"
-      />
-      <input
-        readOnly={true}
-        style={
-          Object {
-            "display": "none",
+        <styled.div
+          className="sc-eCApGN cgueqn"
+          style={Object {}}
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
           }
-        }
-        value="option1"
-      />
-      <div
-        className="options-container  optionsContainer"
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <ul />
-      </div>
-    </div>
-    <i
-      className="description undefined"
-    >
-      with description
-    </i>
-  </div>
-</div>
+        >
+          <div
+            className="sc-bdnylx dOPKTt sc-eCApGN cgueqn"
+            style={Object {}}
+          >
+            <SelectContainer
+              className=""
+              key="0/.0"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Styled(Box)
+                className=""
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Box
+                  className="sc-jSFkmK fNZKXF"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Component
+                    className="sc-jSFkmK fNZKXF"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <styled.div
+                      className="sc-jSFkmK fNZKXF"
+                      onClick={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-jSFkmK fNZKXF"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        <SelectFilter
+                          className=""
+                          key="1/.1"
+                          onChange={[Function]}
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <Styled(Box)
+                            autoFocus={true}
+                            boxAs="input"
+                            className=""
+                            onChange={[Function]}
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            <Box
+                              autoFocus={true}
+                              boxAs="input"
+                              className="sc-hKFyIo cavxwU"
+                              onChange={[Function]}
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              <Component
+                                autoFocus={true}
+                                boxAs="input"
+                                className="sc-hKFyIo cavxwU"
+                                onChange={[Function]}
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                              >
+                                <styled.div
+                                  as="input"
+                                  autoFocus={true}
+                                  boxAs="input"
+                                  className="sc-hKFyIo cavxwU"
+                                  onChange={[Function]}
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <input
+                                    autoFocus={true}
+                                    className="sc-bdnylx dOPKTt sc-hKFyIo cavxwU"
+                                    onChange={[Function]}
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  />
+                                </styled.div>
+                              </Component>
+                            </Box>
+                          </Styled(Box)>
+                        </SelectFilter>
+                        <SelectIcon
+                          className=""
+                          key="2/.2"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <Styled(Box)
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            <Box
+                              className="sc-jrsJCI demPJF"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              <Component
+                                className="sc-jrsJCI demPJF"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                              >
+                                <styled.div
+                                  className="sc-jrsJCI demPJF"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-jrsJCI demPJF"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    keyboard_arrow_up
+                                  </div>
+                                </styled.div>
+                              </Component>
+                            </Box>
+                          </Styled(Box)>
+                        </SelectIcon>
+                      </div>
+                    </styled.div>
+                  </Component>
+                </Box>
+              </Styled(Box)>
+            </SelectContainer>
+            <SelectOptionList
+              className=""
+              key="1/.1"
+              style={Object {}}
+            >
+              <Styled(Box)
+                className=""
+                style={Object {}}
+              >
+                <Box
+                  className="sc-iCoHVE dpUXMM"
+                  style={Object {}}
+                >
+                  <Component
+                    className="sc-iCoHVE dpUXMM"
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <styled.div
+                      className="sc-iCoHVE dpUXMM"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-iCoHVE dpUXMM"
+                        style={Object {}}
+                      >
+                        <SelectOption
+                          className=""
+                          key="0/.0"
+                          onClick={[Function]}
+                          style={Object {}}
+                          value="1"
+                        >
+                          <Styled(Box)
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                            value="1"
+                          >
+                            <Box
+                              className="sc-pNWxx dIlylR"
+                              onClick={[Function]}
+                              style={Object {}}
+                              value="1"
+                            >
+                              <Component
+                                className="sc-pNWxx dIlylR"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                                value="1"
+                              >
+                                <styled.div
+                                  className="sc-pNWxx dIlylR"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                  value="1"
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-pNWxx dIlylR"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                    value="1"
+                                  >
+                                    Option 1
+                                  </div>
+                                </styled.div>
+                              </Component>
+                            </Box>
+                          </Styled(Box)>
+                        </SelectOption>
+                        <SelectOption
+                          className=""
+                          key="1/.1"
+                          onClick={[Function]}
+                          style={Object {}}
+                          value="2"
+                        >
+                          <Styled(Box)
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                            value="2"
+                          >
+                            <Box
+                              className="sc-pNWxx dIlylR"
+                              onClick={[Function]}
+                              style={Object {}}
+                              value="2"
+                            >
+                              <Component
+                                className="sc-pNWxx dIlylR"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                                value="2"
+                              >
+                                <styled.div
+                                  className="sc-pNWxx dIlylR"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                  value="2"
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-pNWxx dIlylR"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                    value="2"
+                                  >
+                                    Option 2
+                                    <SelectIcon
+                                      className=""
+                                      fontSize={15}
+                                      p="0"
+                                      style={Object {}}
+                                    >
+                                      <Styled(Box)
+                                        className=""
+                                        fontSize={15}
+                                        p="0"
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          className="sc-jrsJCI demPJF"
+                                          fontSize={15}
+                                          p="0"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            className="sc-jrsJCI demPJF"
+                                            fontSize={15}
+                                            p="0"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <styled.div
+                                              className="sc-jrsJCI demPJF"
+                                              fontSize={15}
+                                              p="0"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx ditJkZ sc-jrsJCI demPJF"
+                                                fontSize={15}
+                                                style={Object {}}
+                                              >
+                                                check
+                                              </div>
+                                            </styled.div>
+                                          </Component>
+                                        </Box>
+                                      </Styled(Box)>
+                                    </SelectIcon>
+                                  </div>
+                                </styled.div>
+                              </Component>
+                            </Box>
+                          </Styled(Box)>
+                        </SelectOption>
+                        <SelectOption
+                          className=""
+                          key="2/.2"
+                          onClick={[Function]}
+                          style={Object {}}
+                          value="3"
+                        >
+                          <Styled(Box)
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                            value="3"
+                          >
+                            <Box
+                              className="sc-pNWxx dIlylR"
+                              onClick={[Function]}
+                              style={Object {}}
+                              value="3"
+                            >
+                              <Component
+                                className="sc-pNWxx dIlylR"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                                value="3"
+                              >
+                                <styled.div
+                                  className="sc-pNWxx dIlylR"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                  value="3"
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-pNWxx dIlylR"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                    value="3"
+                                  >
+                                    Option 3
+                                  </div>
+                                </styled.div>
+                              </Component>
+                            </Box>
+                          </Styled(Box)>
+                        </SelectOption>
+                        <SelectOption
+                          className=""
+                          key="3/.3"
+                          onClick={[Function]}
+                          style={Object {}}
+                          value="4"
+                        >
+                          <Styled(Box)
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                            value="4"
+                          >
+                            <Box
+                              className="sc-pNWxx dIlylR"
+                              onClick={[Function]}
+                              style={Object {}}
+                              value="4"
+                            >
+                              <Component
+                                className="sc-pNWxx dIlylR"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                                value="4"
+                              >
+                                <styled.div
+                                  className="sc-pNWxx dIlylR"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                  value="4"
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-pNWxx dIlylR"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                    value="4"
+                                  >
+                                    Option 4
+                                    <SelectIcon
+                                      className=""
+                                      fontSize={15}
+                                      p="0"
+                                      style={Object {}}
+                                    >
+                                      <Styled(Box)
+                                        className=""
+                                        fontSize={15}
+                                        p="0"
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          className="sc-jrsJCI demPJF"
+                                          fontSize={15}
+                                          p="0"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            className="sc-jrsJCI demPJF"
+                                            fontSize={15}
+                                            p="0"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <styled.div
+                                              className="sc-jrsJCI demPJF"
+                                              fontSize={15}
+                                              p="0"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx ditJkZ sc-jrsJCI demPJF"
+                                                fontSize={15}
+                                                style={Object {}}
+                                              >
+                                                check
+                                              </div>
+                                            </styled.div>
+                                          </Component>
+                                        </Box>
+                                      </Styled(Box)>
+                                    </SelectIcon>
+                                  </div>
+                                </styled.div>
+                              </Component>
+                            </Box>
+                          </Styled(Box)>
+                        </SelectOption>
+                        <SelectOption
+                          className=""
+                          key="4/.4"
+                          onClick={[Function]}
+                          style={Object {}}
+                          value="5"
+                        >
+                          <Styled(Box)
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                            value="5"
+                          >
+                            <Box
+                              className="sc-pNWxx dIlylR"
+                              onClick={[Function]}
+                              style={Object {}}
+                              value="5"
+                            >
+                              <Component
+                                className="sc-pNWxx dIlylR"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                                value="5"
+                              >
+                                <styled.div
+                                  className="sc-pNWxx dIlylR"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                  value="5"
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-pNWxx dIlylR"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                    value="5"
+                                  >
+                                    Option 5
+                                  </div>
+                                </styled.div>
+                              </Component>
+                            </Box>
+                          </Styled(Box)>
+                        </SelectOption>
+                      </div>
+                    </styled.div>
+                  </Component>
+                </Box>
+              </Styled(Box)>
+            </SelectOptionList>
+            <SelectOverlay
+              className=""
+              key="2/.2"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <Styled(Box)
+                className=""
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Box
+                  className="sc-fujyUd eULePn"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Component
+                    className="sc-fujyUd eULePn"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <styled.div
+                      className="sc-fujyUd eULePn"
+                      onClick={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-fujyUd eULePn"
+                        onClick={[Function]}
+                        style={Object {}}
+                      />
+                    </styled.div>
+                  </Component>
+                </Box>
+              </Styled(Box)>
+            </SelectOverlay>
+          </div>
+        </styled.div>
+      </Component>
+    </Box>
+  </Styled(Box)>
+</Checkbox>
 `;

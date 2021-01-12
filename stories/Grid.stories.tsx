@@ -116,6 +116,3 @@ const Template: Story<IGridProps> = (args) => {
 };
 
 export const Normal = Template.bind({});
-Normal.args = {
-    children: 'VIEW CAMPAIGN'
-};
