@@ -40,7 +40,6 @@ Normal.args = {
         <>
             <SelectContainer>
                 <SelectPlaceholder>Select an option</SelectPlaceholder>
-                <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
             </SelectContainer>
             <SelectOptionList>
                 <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
@@ -62,7 +61,6 @@ Multi.args = {
         <>
             <SelectContainer>
                 <SelectPlaceholder>Select multiple options</SelectPlaceholder>
-                <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
             </SelectContainer>
             <SelectOptionList>
                 <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
@@ -84,7 +82,6 @@ WithPagination.args = {
         <>
             <SelectContainer>
                 <SelectPlaceholder>Select multiple options</SelectPlaceholder>
-                <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
             </SelectContainer>
             <SelectOptionList>
                 <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
@@ -107,7 +104,7 @@ CustomElements.args = {
         <>
             <SelectContainer>
                 <SelectPlaceholder>Select multiple options</SelectPlaceholder>
-                <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
+                <SelectFilter color="red" onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
                 <SelectIcon color="red" />
             </SelectContainer>
             <SelectOptionList>

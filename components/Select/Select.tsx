@@ -47,8 +47,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
     // non mandatory elements
     const [hasOverlay, setHasOverlay] = React.useState(false);
     const [hasDropdownIcon, setHasDropdownIcon] = React.useState(false);
-
-    console.log('render');
+    const [hasFilter, setHasFilter] = React.useState(false);
 
     const batchClickHandler = (
         e: React.MouseEvent<HTMLDivElement>,
@@ -129,6 +128,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
             }
 
             if (React.isValidElement<ISelectFilterComponentProps>(child) && child.type === SelectFilter){
+                !hasFilter && setHasFilter(true);
                 if (showList){
                     return React.cloneElement(child, {
                         key: i,
@@ -164,6 +164,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                     children: (
                         <>
                             {recurseChildren(child.props.children)}
+                            {!hasFilter && <SelectFilter onChange={(e) => setFilterValue(e.target.value)}/>}
                             {!hasDropdownIcon && (
                                 <SelectIcon onClick={toggleList}>
                                     {!showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}
@@ -285,7 +286,10 @@ export const SelectFilter: React.FC<ISelectFilterComponentProps> = (props) => {
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         props.onChange && props.onChange(e);
     };
-    return <StyledSelectFilter {...props} boxAs="input" autoFocus onChange={onChange}/>;
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        e.stopPropagation();
+    };
+    return <StyledSelectFilter {...props} boxAs="input" autoFocus onChange={onChange} onClick={onClick}/>;
 };
 
 SelectFilter.defaultProps = {
