@@ -63,8 +63,8 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
 
     return (
         <StyledActionsDropdown boxShadow="lg" {...getBoxProps(props)}>
-            {recurseChildren(props.children)}
             {!hasArrow && <ActionsDropdownArrow />}
+            {recurseChildren(props.children)}
         </StyledActionsDropdown>
     );
 };
