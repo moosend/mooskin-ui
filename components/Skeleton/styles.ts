@@ -72,7 +72,7 @@ export const StyledSkeletonCircle = styled(StyledCommonSkeleton)<ISkeletonCircle
 
 export const StyledSkeletonText = styled(StyledCommonSkeleton)<ISkeletonTextComponentProps>`
     height: 0.5rem;
-    :not(:last-child){
+    &:not(:last-child){
         margin-bottom: 1rem;
     }
 `;

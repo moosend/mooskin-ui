@@ -88,10 +88,10 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps & Reac
     :first-child{
         padding-top: 13px;
     }
-    :not(:last-child){
+    &:not(:last-child){
         padding: 10px 15px 0;
     }
-    :last-child{
+    &:last-child{
         padding: 10px 15px;
     }
 `;

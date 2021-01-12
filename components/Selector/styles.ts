@@ -34,7 +34,7 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
     transition: 0.3s ease all;
     opacity: ${(props) => props.active ? 1 : 0.5};
     cursor: pointer;
-    :not(:last-child){
+    &:not(:last-child){
         margin-right: 4px;
     }
 `;

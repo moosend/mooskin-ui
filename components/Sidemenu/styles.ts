@@ -29,7 +29,7 @@ export const StyledSidemenuItem = styled(Box)<ISidemenuItemComponentProps>`
     border-left: ${(props) => props.active ? '3px solid #3fbaca' : ''};
     transition: 0.3s all ease;
     cursor: pointer;
-    :not(:last-child){
+    &:not(:last-child){
         margin-bottom: 32px;
     }
 `;

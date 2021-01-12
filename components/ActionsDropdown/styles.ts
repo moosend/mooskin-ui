@@ -27,10 +27,10 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
     text-align: left;
     color: #ffffff;
     cursor: pointer;
-    :not(:last-child){
+    &:not(:last-child){
         padding: 10px 10px 0;
     }
-    :last-child{
+    &:last-child{
         padding: 10px;
     }
 `;
