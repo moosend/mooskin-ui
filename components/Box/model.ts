@@ -26,6 +26,12 @@ export type IInputBoxComponentProps = IBaseBoxComponentProps & React.InputHTMLAt
 export type IAnchorBoxComponentProps = IBaseBoxComponentProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
 export type ITextAreaBoxComponentProps = IBaseBoxComponentProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
+export type IBoxComponentProps = IDivBoxComponentProps |
+                                IButtonBoxComponentProps |
+                                IInputBoxComponentProps |
+                                IAnchorBoxComponentProps |
+                                ITextAreaBoxComponentProps;
+
 export interface IBaseBoxComponentProps extends IMooskinContext {
 
     /** Box children */
