@@ -1,10 +1,10 @@
-import { IBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps } from '../Box/model';
 
-export interface IGridProps extends IBoxComponentProps {
+export interface IGridProps extends IDivBoxComponentProps {
     children?: Array<React.ReactElement<IRowProps>> | React.ReactElement<IRowProps>;
 }
 
-export interface IRowProps extends IBoxComponentProps {
+export interface IRowProps extends IDivBoxComponentProps {
     children?: Array<React.ReactElement<IColProps>> | React.ReactElement<IColProps>;
 }
 
@@ -17,6 +17,6 @@ export interface IColWidths {
     xs?: ColWidth | 'hidden';
 }
 
-export interface IColProps extends IColWidths, IBoxComponentProps {
+export interface IColProps extends IColWidths, IDivBoxComponentProps {
     children?: any;
 }

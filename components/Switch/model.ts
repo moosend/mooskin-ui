@@ -1,7 +1,7 @@
 import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps } from '../Box/model';
 
-export interface ISwitchComponentProps extends IBoxComponentProps {
+export interface ISwitchComponentProps extends IDivBoxComponentProps {
     /** Override Switch active label */
     onLabel?: string;
 
@@ -30,5 +30,5 @@ export interface ISwitchComponentProps extends IBoxComponentProps {
     width?: number;
 
     /** callback that is called when the switch changes */
-    onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onClickSwitch?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }

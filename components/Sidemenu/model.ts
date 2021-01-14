@@ -1,25 +1,20 @@
-import { IBoxComponentProps } from '../Box/model';
-import { IInputCallbackData } from '../index';
+import { IDivBoxComponentProps } from '../Box/model';
 
-export interface ISidemenuComponentProps extends IBoxComponentProps{
+export interface ISidemenuComponentProps extends IDivBoxComponentProps{
     /** active Sidemenu item */
-    activeItem?: any;
+    activeItem?: string;
 
     /** callback called when clicking a Sidemenu item */
-    onClickItem?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void;
 }
 
-export interface ISidemenuItemComponentProps extends IBoxComponentProps{
-
-    /** data label returned in callback fn */
-    dataLabel?: any;
-
+export interface ISidemenuItemComponentProps extends IDivBoxComponentProps{
     /** value returned in callback fn */
-    value?: any;
+    value?: string;
 
     /** whether the item is active */
     active?: boolean;
 
     /** callback called when clicking a Sidemenu item */
-    onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void;
 }

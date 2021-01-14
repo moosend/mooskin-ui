@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IAlertCloseButtonComponentProps, IAlertComponentProps } from './model';
+import { IBaseAlertComponentProps } from './model';
 
 // Components
 import Box from '../Box/Box';
@@ -27,7 +27,7 @@ const FontColors = {
     warning: '#DD6B20'
 };
 
-export const StyledAlert = styled(Box)<IAlertComponentProps>`
+export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
     width: 100%;
     display: flex;
     align-items: center;
@@ -45,21 +45,21 @@ export const StyledAlert = styled(Box)<IAlertComponentProps>`
     }};
 `;
 
-const StyledAlertCommonText = styled(Box)<IAlertComponentProps>`
+const StyledAlertCommonText = styled(Box)<IBaseAlertComponentProps>`
     line-height: 1.5rem;
     color: ${(props) => props.variant === 'solid' ? '#FFFFFF' : ''};
 `;
 
-export const StyledAlertTitle = styled(StyledAlertCommonText)<IAlertComponentProps>`
+export const StyledAlertTitle = styled(StyledAlertCommonText)<IBaseAlertComponentProps>`
     font-weight: 700;
     margin-right: 0.5rem;
 `;
 
-export const StyledAlertDescription = styled(StyledAlertCommonText)<IAlertComponentProps>`
+export const StyledAlertDescription = styled(StyledAlertCommonText)<IBaseAlertComponentProps>`
     display: inline;
 `;
 
-const StyledAlertCommonIcon = styled(Box)<IAlertComponentProps>`
+const StyledAlertCommonIcon = styled(Box)<IBaseAlertComponentProps>`
     font-family: 'Mooskin Icons';
     color: ${(props) => props.variant === 'solid' ? '#FFFFFF' : props.status && FontColors[props.status]};
 `;
@@ -73,7 +73,7 @@ export const StyledAlertIcon = styled(StyledAlertCommonIcon)`
     display: inherit;
 `;
 
-export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IAlertCloseButtonComponentProps>`
+export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IBaseAlertComponentProps>`
     outline: 0;
     display: flex;
     align-items: center;

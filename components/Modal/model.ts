@@ -1,6 +1,6 @@
-import { IBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps } from '../Box/model';
 
-export interface IModalComponentProps extends IBoxComponentProps {
+export interface IModalComponentProps extends IDivBoxComponentProps {
     /** whether the Modal is open or not */
     isOpen?: boolean;
 
@@ -11,23 +11,23 @@ export interface IModalComponentProps extends IBoxComponentProps {
     closeOnOverlayClick?: boolean;
 
     /** close callback */
-    onClose?: (e: React.MouseEvent<HTMLElement>) => void;
+    onClose?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-export interface IModalContentComponentProps extends IBoxComponentProps {
+export interface IModalContentComponentProps extends IDivBoxComponentProps {
     /** whether the Modal is open or not */
     isOpen?: boolean;
 }
 
-export interface IModalOverlayComponentProps extends IBoxComponentProps {
+export interface IModalOverlayComponentProps extends IDivBoxComponentProps {
     /** whether the Modal is open or not */
     isOpen?: boolean;
 
     /** callback when clicking the Modal overlay */
-    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+    onClickOverlay?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-export interface IModalCloseButtonComponentProps extends IBoxComponentProps {
+export interface IModalCloseButtonComponentProps extends IDivBoxComponentProps {
     /** callback when clicking the Modal overlay */
-    onClick?: (e: React.MouseEvent<HTMLElement>) => void;
+    onClickButton?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }

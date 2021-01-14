@@ -1,6 +1,6 @@
-import { IBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps } from '../Box/model';
 
-export interface ICommonSkeletonComponentProps extends IBoxComponentProps {
+export interface ICommonSkeletonComponentProps extends IDivBoxComponentProps {
     /** The color at the animation start */
     startColor?: string;
 

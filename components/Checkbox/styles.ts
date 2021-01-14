@@ -23,7 +23,7 @@ export const StyledCheckboxWrapper = styled(Box)<Partial<ICheckboxComponentProps
     align-items: center;
 `;
 
-export const StyledCheckboxButton = styled(Box)<Partial<ICheckboxComponentProps>>`
+export const StyledCheckboxIcon = styled(Box)<Partial<ICheckboxComponentProps>>`
     font-family: 'Mooskin Icons';
     padding-right: 10px;
     font-size: 23px;

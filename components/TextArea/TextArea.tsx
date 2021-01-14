@@ -18,8 +18,12 @@ export const TextArea: React.FC<ITextAreaComponentProps> = (props) => {
 
     const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         !props.disabled &&
+        props.onChangeTextarea &&
+        props.onChangeTextarea(e, {value: e.target.value, dataLabel: props.dataLabel});
+
+        !props.disabled &&
         props.onChange &&
-        props.onChange(e, {value: e.target.value, dataLabel: props.dataLabel});
+        props.onChange(e);
     };
 
     return (

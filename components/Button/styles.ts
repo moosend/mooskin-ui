@@ -45,7 +45,7 @@ export const StyledButtonNormal = styled(ButtonDefault)`
     background-color: ${(props) =>
         !props.disabled ? props.theme.primary || variables.primary : props.theme.disabledBackground || variables.disabledBackground};
     color: #ffffff;
-    padding: ${(props) => normalButtonSizes[props.size || 'md']};
+    padding: ${(props) => normalButtonSizes[props.buttonSize || 'md']};
     border: none;
     outline: 0;
 `;
@@ -53,7 +53,7 @@ export const StyledButtonNormal = styled(ButtonDefault)`
 export const StyledButtonInverse = styled(ButtonDefault)`
     color: ${(props) =>
         !props.disabled ? props.theme.primary || variables.primary : props.theme.disabledBackground || variables.disabledBackground};
-    padding: ${(props) => inverseButtonSizes[props.size || 'md']};
+    padding: ${(props) => inverseButtonSizes[props.buttonSize || 'md']};
     background-color: transparent;
     border: 2px solid
         ${(props) =>

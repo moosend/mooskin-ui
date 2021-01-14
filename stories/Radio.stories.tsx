@@ -3,7 +3,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import { IRadioComponentProps } from '../components/Radio/model';
-import Radio, {RadioButton, RadioDescription, RadioLabel} from '../components/Radio/Radio';
+import Radio, {RadioDescription, RadioIcon, RadioLabel} from '../components/Radio/Radio';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 import { Box } from '../components/Box/Box';
@@ -40,7 +40,6 @@ export const Selected = Template.bind({});
 Selected.args = {
     children: (
         <>
-            <RadioButton />
             <RadioLabel>Selected Radio</RadioLabel>
         </>
     ),
@@ -53,7 +52,6 @@ export const Disabled = Template.bind({});
 Disabled.args = {
     children: (
         <>
-            <RadioButton />
             <RadioLabel>Disabled Radio</RadioLabel>
         </>
     ),
@@ -66,13 +64,10 @@ Disabled.args = {
 export const Description = Template.bind({});
 Description.args = {
     children: (
-        <>
-            <RadioButton />
-            <Box>
-                <RadioLabel>Disabled Radio</RadioLabel>
-                <RadioDescription>Radio description goes here</RadioDescription>
-            </Box>
-        </>
+        <Box>
+            <RadioLabel>Disabled Radio</RadioLabel>
+            <RadioDescription>Radio description goes here</RadioDescription>
+        </Box>
     ),
     onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     selected: false,
@@ -83,7 +78,7 @@ export const CustomButton = Template.bind({});
 CustomButton.args = {
     children: (
         <>
-            <RadioButton color="red" />
+            <RadioIcon color="red" />
             <RadioLabel>Normal Radio</RadioLabel>
         </>
     ),

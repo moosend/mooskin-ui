@@ -1,6 +1,6 @@
-import { IBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps } from '../Box/model';
 
-export interface IStackComponentProps extends IBoxComponentProps {
+export interface IStackComponentProps extends IDivBoxComponentProps {
     /** Divider element added between children */
     divider?: React.ReactElement;
 

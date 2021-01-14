@@ -22,9 +22,9 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
     const [hasArrow, setHasArrow] = React.useState(false);
 
     const batchClickHandler = (
-        e: React.MouseEvent<HTMLElement>,
+        e: React.MouseEvent<HTMLDivElement>,
         data: IInputCallbackData,
-        callback?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void
+        callback?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void
     ) => {
         props.onClickItem && props.onClickItem(e, data);
         callback && callback(e, data);
@@ -40,7 +40,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
                 return React.cloneElement(child, {
                     children: recurseChildren((child.props as any).children),
                     key: i,
-                    onClick: (e) => batchClickHandler(e, {dataLabel: child.props.dataLabel, value: child.props.value}, child.props.onClick)
+                    onClickItem: (e) => batchClickHandler(e, {dataLabel: child.props.dataLabel, value: child.props.value}, child.props.onClickItem)
                 } as IActionsDropdownItemComponentProps);
             }
 
@@ -80,7 +80,11 @@ ActionsDropdown.displayName = 'ActionsDropdown';
  * ActionsDropdownItem
  */
 export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = (props) => {
-    return <StyledActionsDropdownItem {...props} />;
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        props.onClickItem && props.onClickItem(e, props.value);
+        props.onClick && props.onClick(e);
+    };
+    return <StyledActionsDropdownItem {...props} onClick={onClick} />;
 };
 
 ActionsDropdownItem.defaultProps = {

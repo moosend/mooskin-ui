@@ -93,10 +93,10 @@ HStack.defaultProps = {
     align: 'stretch',
     className: '',
     direction: 'row',
+    flexWrap: 'wrap',
     justify: 'initial',
     spacing: 0,
-    style: {},
-    wrap: 'wrap'
+    style: {}
 };
 
 HStack.displayName = 'HStack';
@@ -112,10 +112,10 @@ VStack.defaultProps = {
     align: 'initial',
     className: '',
     direction: 'column',
+    flexWrap: 'wrap',
     justify: 'center',
     spacing: 0,
-    style: {},
-    wrap: 'wrap'
+    style: {}
 };
 
 VStack.displayName = 'VStack';

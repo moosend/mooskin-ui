@@ -26,7 +26,7 @@ export const Switch: React.FC<ISwitchComponentProps> = (props) => {
     };
 
     const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        !props.disabled && props.onClick && props.onClick(e, { value: !props.on, dataLabel: props.dataLabel });
+        !props.disabled && props.onClickSwitch && props.onClickSwitch(e, { value: !props.on, dataLabel: props.dataLabel });
     };
 
     return (

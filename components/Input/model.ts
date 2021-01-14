@@ -1,7 +1,7 @@
-import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index';
 
-export interface IInputComponentProps extends IBoxComponentProps {
+export interface IInputComponentProps extends IDivBoxComponentProps {
     /** override input value */
     value: string | number;
 
@@ -9,7 +9,7 @@ export interface IInputComponentProps extends IBoxComponentProps {
     dataLabel?: string;
 
     /** callback that is called when the input changes */
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
+    onChangeasd?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 }
 
 export interface IInputElementComponentProps extends IInputBoxComponentProps {
@@ -18,12 +18,4 @@ export interface IInputElementComponentProps extends IInputBoxComponentProps {
 
     /** numberType */
     numberType?: 'integer' | 'float';
-}
-
-export interface ICustomDropdown {
-    icon: string;
-    title: string;
-    content: JSX.Element | Element | JSX.Element[] | Element[];
-    open?: boolean;
-    onClick?: () => boolean | void;
 }

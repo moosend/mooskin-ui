@@ -1,15 +1,9 @@
-import { IBoxComponentProps } from '../Box/model';
+import { IAnchorBoxComponentProps } from '../Box/model';
 
-export interface IAnchorComponentProps extends IBoxComponentProps {
+export interface IAnchorComponentProps extends IAnchorBoxComponentProps {
     /** Provide to make the Anchor disabled */
     disabled?: boolean;
 
-    /** Anchor href */
-    href: string;
-
-    /** Anchor target */
-    target?: string;
-
     /** Callback that's called when the Anchor is clicked */
-    onClick?: (e?: React.MouseEvent<HTMLAnchorElement>) => void;
+    onClickAnchor?: (e?: React.MouseEvent<HTMLAnchorElement>) => void;
 }

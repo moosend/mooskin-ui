@@ -1,21 +1,15 @@
-import { IBoxComponentProps } from '../Box/model';
+import { IButtonBoxComponentProps } from '../Box/model';
 
-export interface IButtonComponentProps extends IBoxComponentProps {
+export interface IButtonComponentProps extends IButtonBoxComponentProps {
     /** Provide to inverse the Button styles */
     inverseStyle?: boolean;
-
-    /** Provide to make the Button disabled */
-    disabled?: boolean;
-
-    /** Button type */
-    type?: string;
 
     /** Button href */
     href?: string;
 
     /** Button size */
-    size?: 'lg' | 'md' | 'sm';
+    buttonSize?: 'lg' | 'md' | 'sm';
 
     /** Callback that's called when the button is clicked */
-    onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
+    onClickButton?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
 }

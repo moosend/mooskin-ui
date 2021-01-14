@@ -134,8 +134,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                 if (showList){
                     return React.cloneElement(child, {
                         key: i,
-                        onChangeFilter: (e) => batchFilterHandler(e, child.props.onChange),
-                        onClick: (e: React.MouseEvent<HTMLElement>) => e.stopPropagation()
+                        onChangeFilter: (e) => batchFilterHandler(e, child.props.onChange)
                     } as ISelectFilterComponentProps);
                 }
                 return null;
@@ -287,9 +286,11 @@ SelectOption.displayName = 'SelectOption';
 export const SelectFilter: React.FC<ISelectFilterComponentProps> = (props) => {
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         props.onChangeFilter && props.onChangeFilter(e);
+        props.onChange && props.onChange(e);
     };
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLInputElement>) => {
         e.stopPropagation();
+        props.onClick && props.onClick(e);
     };
     return <StyledSelectFilter {...props} boxAs="input" onChange={onChange} onClick={onClick}/>;
 };
@@ -348,7 +349,7 @@ SelectDescription.displayName = 'SelectDescription';
  */
 export const SelectIcon: React.FC<ISelectIconComponentProps> = (props) => {
     const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        props.onClick && props.onClick(e);
+        props.onClickIcon && props.onClickIcon(e);
     };
     return <StyledSelectIcon {...props} onClick={onClick} />;
 };

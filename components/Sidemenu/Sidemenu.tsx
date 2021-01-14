@@ -4,7 +4,6 @@ import * as React from 'react';
 import { getBoxProps } from '../_utils/helper';
 
 // Models
-import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
 // Styled Components
@@ -19,12 +18,12 @@ import {
 export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
 
     const batchClickHandler = (
-        e: React.MouseEvent<HTMLElement>,
-        data: IInputCallbackData,
-        callback?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void
+        e: React.MouseEvent<HTMLDivElement>,
+        value?: string,
+        callback?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void
     ) => {
-        props.onClickItem && props.onClickItem(e, data);
-        callback && callback(e, data);
+        props.onClickItem && props.onClickItem(e, value);
+        callback && callback(e, value);
     };
 
     const recurseChildren = (children: any): any => {
@@ -34,7 +33,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
                     active: child.props.value === props.activeItem,
                     children: recurseChildren((child.props as any).children),
                     key: i,
-                    onClick: (e) => batchClickHandler(e, {dataLabel: child.props.dataLabel, value: child.props.value}, child.props.onClick)
+                    onClickItem: (e, value) => batchClickHandler(e, value, child.props.onClick)
                 } as ISidemenuItemComponentProps);
             }
 
@@ -58,7 +57,11 @@ Sidemenu.defaultProps = {
  * SidemenuItem
  */
 export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = (props) => {
-    return <StyledSidemenuItem {...props} />;
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        props.onClickItem && props.onClickItem(e, props.value);
+        props.onClick && props.onClick(e);
+    };
+    return <StyledSidemenuItem {...props} onClick={onClick} />;
 };
 
 SidemenuItem.defaultProps = {

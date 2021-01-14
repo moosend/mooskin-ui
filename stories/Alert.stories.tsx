@@ -3,7 +3,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import Alert, {AlertCloseButton, AlertDescription, AlertIcon, AlertTitle} from '../components/Alert/Alert';
-import {IAlertComponentProps} from '../components/Alert/model';
+import {IBaseAlertComponentProps} from '../components/Alert/model';
 import Box from '../components/Box/Box';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
@@ -13,7 +13,7 @@ export default {
     title: 'Example/Alert',
 } as any as Meta;
 
-const Template: Story<IAlertComponentProps> = (args) => {
+const Template: Story<IBaseAlertComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />

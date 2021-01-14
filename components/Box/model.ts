@@ -21,14 +21,12 @@ export const boxComponentProps = [
 ];
 
 export type IDivBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLDivElement>;
-export type IInputBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLInputElement>;
-export type IAnchorBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLAnchorElement>;
-export type ITextAreaBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLTextAreaElement>;
+export type IButtonBoxComponentProps = IBaseBoxComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type IInputBoxComponentProps = IBaseBoxComponentProps & React.InputHTMLAttributes<HTMLInputElement>;
+export type IAnchorBoxComponentProps = IBaseBoxComponentProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
+export type ITextAreaBoxComponentProps = IBaseBoxComponentProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export interface IBaseBoxComponentProps extends IMooskinContext {
-
-    /** onClick event handler */
-    // onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 
     /** Box children */
     // children?: any;

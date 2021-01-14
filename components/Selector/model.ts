@@ -1,25 +1,20 @@
-import { IBoxComponentProps } from '../Box/model';
-import { IInputCallbackData } from '../index/index';
+import { IDivBoxComponentProps } from '../Box/model';
 
-export interface ISelectorComponentProps extends IBoxComponentProps{
+export interface ISelectorComponentProps extends IDivBoxComponentProps{
     /** active Selector item */
-    activeItem?: any;
+    activeItem?: string;
 
     /** callback called when clicking a Selector item */
-    onClickItem?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void;
 }
 
-export interface ISelectorItemComponentProps extends IBoxComponentProps{
-
-    /** data label returned in callback fn */
-    dataLabel?: any;
-
+export interface ISelectorItemComponentProps extends IDivBoxComponentProps{
     /** value returned in callback fn */
-    value?: any;
+    value?: string;
 
     /** whether the item is active */
     active?: boolean;
 
     /** callback called when clicking a Selector item */
-    onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void;
 }

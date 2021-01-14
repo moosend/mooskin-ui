@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Checkbox, {CheckboxButton, CheckboxDescription, CheckboxLabel} from '../components/Checkbox/Checkbox';
+import Checkbox, {CheckboxDescription, CheckboxIcon, CheckboxLabel} from '../components/Checkbox/Checkbox';
 import { ICheckboxComponentProps } from '../components/Checkbox/model';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
@@ -65,12 +65,10 @@ export const Description = Template.bind({});
 Description.args = {
     checked: false,
     children: (
-        <>
-            <Box>
-                <CheckboxLabel>Disabled Checkbox</CheckboxLabel>
-                <CheckboxDescription>Checkbox description goes here</CheckboxDescription>
-            </Box>
-        </>
+        <Box>
+            <CheckboxLabel onClick={() => alert('Label Clicked!')}>Checkbox</CheckboxLabel>
+            <CheckboxDescription>Checkbox description goes here</CheckboxDescription>
+        </Box>
     ),
     onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
@@ -81,9 +79,9 @@ CustomButton.args = {
     checked: false,
     children: (
         <>
-            <CheckboxButton color="red" />
+            <CheckboxIcon color="red" />
             <Box>
-                <CheckboxLabel>Disabled Checkbox</CheckboxLabel>
+                <CheckboxLabel>Checkbox</CheckboxLabel>
                 <CheckboxDescription>Checkbox description goes here</CheckboxDescription>
             </Box>
         </>

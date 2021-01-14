@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Models
-import { IAlertCloseButtonComponentProps, IAlertComponentProps } from './model';
+import { IBaseAlertComponentProps } from './model';
 
 // Styled Components
 import { StyledAlert, StyledAlertCloseButton, StyledAlertDescription, StyledAlertIcon, StyledAlertTitle } from './styles';
@@ -16,7 +16,7 @@ const AlertIcons = {
 /**
  * Alert
  */
-export const Alert: React.FC<IAlertComponentProps> = (props) => {
+export const Alert: React.FC<IBaseAlertComponentProps> = (props) => {
 
     const recurseChildren = (children: any): any => {
         if (!children){
@@ -25,7 +25,7 @@ export const Alert: React.FC<IAlertComponentProps> = (props) => {
 
         return React.Children.map(children, (child, i) => {
             if (
-                React.isValidElement<IAlertComponentProps>(child) && (
+                React.isValidElement<IBaseAlertComponentProps>(child) && (
                     child.type === AlertIcon ||
                     child.type === AlertTitle ||
                     child.type === AlertDescription ||
@@ -37,7 +37,7 @@ export const Alert: React.FC<IAlertComponentProps> = (props) => {
                     key: i,
                     status: child.props.status ? child.props.status : props.status,
                     variant: child.props.variant ? child.props.variant : props.variant
-                } as IAlertComponentProps);
+                } as IBaseAlertComponentProps);
             }
 
             if (React.isValidElement(child) && (child.props as any).children){
@@ -63,7 +63,7 @@ Alert.displayName = 'Alert';
 /**
  * AlertIcon
  */
-export const AlertIcon: React.FC<IAlertComponentProps> = (props) => {
+export const AlertIcon: React.FC<IBaseAlertComponentProps> = (props) => {
     return <StyledAlertIcon {...props} children={props.status && AlertIcons[props.status]} />;
 };
 
@@ -77,7 +77,7 @@ AlertIcon.displayName = 'AlertIcon';
 /**
  * AlertTitle
  */
-export const AlertTitle: React.FC<IAlertComponentProps> = (props) => {
+export const AlertTitle: React.FC<IBaseAlertComponentProps> = (props) => {
     return <StyledAlertTitle {...props} />;
 };
 
@@ -91,7 +91,7 @@ AlertTitle.displayName = 'AlertTitle';
 /**
  * AlertDescription
  */
-export const AlertDescription: React.FC<IAlertComponentProps> = (props) => {
+export const AlertDescription: React.FC<IBaseAlertComponentProps> = (props) => {
     return <StyledAlertDescription {...props} />;
 };
 
@@ -105,7 +105,7 @@ AlertDescription.displayName = 'AlertDescription';
 /**
  * AlertCloseButton
  */
-export const AlertCloseButton: React.FC<IAlertCloseButtonComponentProps> = (props) => {
+export const AlertCloseButton: React.FC<IBaseAlertComponentProps> = (props) => {
     return <StyledAlertCloseButton {...props} children="close" />;
 };
 

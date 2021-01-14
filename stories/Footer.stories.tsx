@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import {Footer, FooterBody, FooterEnd, FooterHead} from '../components/Footer/Footer';
 
-import { IBoxComponentProps } from '../components/Box/model';
+import { IDivBoxComponentProps } from '../components/Box/model';
 import Button, { ButtonIcon } from '../components/Button/Button';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
@@ -13,7 +13,7 @@ export default {
     title: 'Example/Footer',
 } as any as Meta;
 
-const Template: Story<IBoxComponentProps> = (args) => {
+const Template: Story<IDivBoxComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />

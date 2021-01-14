@@ -6,13 +6,13 @@ import { getBoxProps } from '../_utils/helper';
 // Models
 import { IDescriptionComponentProps } from '../Description/model';
 import { ILabelComponentProps } from '../Label/model';
-import { IRadioButtonComponentProps, IRadioComponentProps } from './model';
+import { IRadioComponentProps, IRadioIconComponentProps } from './model';
 
 // Components
 import Description from '../Description/Description';
 
 // Styled Components
-import {StyledRadio, StyledRadioButton, StyledRadioLabel} from './styles';
+import {StyledRadio, StyledRadioIcon, StyledRadioLabel} from './styles';
 
 export const Radio: React.FC<IRadioComponentProps> = (props) => {
 
@@ -34,7 +34,6 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
 
         return React.Children.map(children, (child, i) => {
             if (React.isValidElement<ILabelComponentProps>(child) && child.type === RadioLabel){
-                !hasRadio && setHasRadio(true);
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     disabled: props.disabled,
@@ -43,13 +42,14 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
                 } as ILabelComponentProps);
             }
 
-            if (React.isValidElement<IRadioButtonComponentProps>(child) && child.type === RadioButton){
+            if (React.isValidElement<IRadioIconComponentProps>(child) && child.type === RadioIcon){
+                !hasRadio && setHasRadio(true);
                 return React.cloneElement(child, {
                     children: props.selected ? 'radio_button_checked' : 'radio_button_unchecked',
                     disabled: props.disabled,
                     key: i,
                     onClick: (e: React.MouseEvent<HTMLDivElement>) => batchClickHandler(e, child.props.onClick)
-                } as IRadioButtonComponentProps);
+                } as IRadioIconComponentProps);
             }
 
             if (React.isValidElement(child) && (child.props as any).children){
@@ -63,7 +63,13 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
     // children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
     return (
         <StyledRadio {...getBoxProps(props)}>
-            {!hasRadio && <RadioButton disabled={props.disabled} onClick={onClick} />}
+            {!hasRadio && (
+                <RadioIcon
+                    disabled={props.disabled}
+                    onClick={onClick}
+                    children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
+                />
+            )}
             {recurseChildren(props.children)}
         </StyledRadio>
     );
@@ -77,18 +83,22 @@ Radio.defaultProps = {
 Radio.displayName = 'Radio';
 
 /**
- * RadioButton
+ * RadioIcon
  */
-export const RadioButton: React.FC<IRadioButtonComponentProps> = (props) => {
-    return <StyledRadioButton {...props} />;
+export const RadioIcon: React.FC<IRadioIconComponentProps> = (props) => {
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        props.onClickIcon && props.onClickIcon(e);
+        props.onClick && props.onClick(e);
+    };
+    return <StyledRadioIcon {...props} onClick={onClick} />;
 };
 
-RadioButton.defaultProps = {
+RadioIcon.defaultProps = {
     className: '',
     style: {}
 };
 
-RadioButton.displayName = 'RadioButton';
+RadioIcon.displayName = 'RadioIcon';
 
 /**
  * RadioLabel

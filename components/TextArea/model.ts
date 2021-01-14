@@ -1,7 +1,7 @@
-import { IBoxComponentProps } from '../Box/model';
+import { ITextAreaBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index';
 
-export interface ITextAreaComponentProps extends IBoxComponentProps {
+export interface ITextAreaComponentProps extends ITextAreaBoxComponentProps {
     /** provide to make the textarea field disabled */
     disabled?: boolean;
 
@@ -39,6 +39,6 @@ export interface ITextAreaComponentProps extends IBoxComponentProps {
     dataLabel?: string;
 
     /** callback that is called when the textarea changes */
-    onChange: (e: React.ChangeEvent<HTMLTextAreaElement>, data: IInputCallbackData) => void;
+    onChangeTextarea: (e: React.ChangeEvent<HTMLTextAreaElement>, data: IInputCallbackData) => void;
 
 }

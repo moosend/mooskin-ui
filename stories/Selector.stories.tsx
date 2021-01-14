@@ -5,7 +5,6 @@ import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 import {ISelectorComponentProps} from '../components/Selector/model';
 import Selector, {SelectorItem} from '../components/Selector/Selector';
 
-import { IInputCallbackData } from '../components/index';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default {
@@ -27,16 +26,16 @@ Normal.args = {
     activeItem: 1,
     children: (
         <>
-            <SelectorItem value={1}>
+            <SelectorItem value={'1'}>
                 HTML
             </SelectorItem>
-            <SelectorItem value={2} onClick={(e, data) => console.log('Plain Text Clicked')}>
+            <SelectorItem value={'2'} onClickItem={(e, value) => console.log('Plain Text Clicked')}>
                 PLAIN TEXT
             </SelectorItem>
-            <SelectorItem value={3}>
+            <SelectorItem value={'3'}>
                 IMPORT
             </SelectorItem>
         </>
     ),
-    onClickItem: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)
+    onClickItem: (e: React.MouseEvent<HTMLElement>, value?: string) => alert(value)
 };

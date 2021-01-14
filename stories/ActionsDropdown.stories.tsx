@@ -26,10 +26,10 @@ export const Normal = Template.bind({});
 Normal.args = {
     children: (
         <>
-            <ActionsDropdownItem dataLabel="settings" value="settings">
+            <ActionsDropdownItem dataLabel="settings" value="settings" onClick={() => alert('Random on Click!')}>
                 Settings
             </ActionsDropdownItem>
-            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e, data) => console.log('Duplicate Clicked')}>
+            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClickItem={(e, data) => console.log('Duplicate Clicked')}>
                 Duplicate
             </ActionsDropdownItem>
             <ActionsDropdownItem dataLabel="preview" value="preview">
@@ -49,7 +49,7 @@ BottomArrow.args = {
             <ActionsDropdownItem dataLabel="settings" value="settings">
                 Settings
             </ActionsDropdownItem>
-            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e, data) => console.log('Duplicate Clicked')}>
+            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClickItem={(e, data) => console.log('Duplicate Clicked')}>
                 Duplicate
             </ActionsDropdownItem>
             <ActionsDropdownItem dataLabel="preview" value="preview">

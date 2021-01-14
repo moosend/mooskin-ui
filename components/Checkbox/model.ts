@@ -1,7 +1,7 @@
-import { IBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index';
 
-export interface ICheckboxComponentProps extends IBoxComponentProps {
+export interface ICheckboxComponentProps extends IDivBoxComponentProps {
     /** onClick event handler when a checkbox is clicked */
     onClickCheckbox?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
 
@@ -18,9 +18,9 @@ export interface ICheckboxComponentProps extends IBoxComponentProps {
     value: string | number;
 }
 
-export interface ICheckboxButtonComponentProps extends IBoxComponentProps {
+export interface ICheckboxIconComponentProps extends IDivBoxComponentProps {
     /** onClick event handler when a checkbox is clicked */
-    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
+    onClickIcon?: (e: React.MouseEvent<HTMLDivElement>) => void;
 
     /** provide to make the Checkbox disabled */
     disabled?: boolean;

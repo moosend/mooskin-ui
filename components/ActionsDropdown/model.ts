@@ -1,13 +1,12 @@
 import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps } from '../Box/model';
 
-export interface IActionsDropdownComponentProps extends IBoxComponentProps{
+export interface IActionsDropdownComponentProps extends IDivBoxComponentProps{
     /** callback called when clicking a ActionsDropdown item */
-    onClickItem?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
 }
 
-export interface IActionsDropdownItemComponentProps extends IBoxComponentProps{
-
+export interface IActionsDropdownItemComponentProps extends IDivBoxComponentProps{
     /** data label returned in callback fn */
     dataLabel?: any;
 
@@ -15,10 +14,10 @@ export interface IActionsDropdownItemComponentProps extends IBoxComponentProps{
     value?: any;
 
     /** callback called when clicking a ActionsDropdown item */
-    onClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
 }
 
-export interface IActionsDropdownArrowComponentProps extends IBoxComponentProps{
+export interface IActionsDropdownArrowComponentProps extends IDivBoxComponentProps{
     /** direction of the Arrow */
     arrowDirection?: 'up' | 'down';
 
