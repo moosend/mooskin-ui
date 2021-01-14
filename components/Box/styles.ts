@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 // Models
-import { BoxShadowIntensityType, IBoxComponentProps, IntensityType } from './model';
+import { BoxShadowIntensityType, IDivBoxComponentProps, IntensityType } from './model';
 
-export const StyledBox = styled.div<IBoxComponentProps>`
+export const StyledBox = styled.div<IDivBoxComponentProps>`
 
     &&& {
         margin: ${(props) => getNumberOrStringValue(props.m)};
@@ -47,7 +47,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
         justify-content: ${(props) => props.justify};
         justify-items: ${(props) => props.justifyItems};
         justify-self: ${(props) => props.justifySelf};
-        flex-wrap: ${(props) => props.wrap};
+        flex-wrap: ${(props) => props.flexWrap};
         flex-direction: ${(props) => props.direction};
         flex: ${(props) => getNumberOrStringValue(props.flex)};
         flex-grow: ${(props) => props.flexGrow};

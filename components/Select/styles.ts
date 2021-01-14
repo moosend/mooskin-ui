@@ -2,7 +2,7 @@ import styled, {keyframes} from 'styled-components';
 
 // Models
 import { IDivBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
-import { ISelectOptionComponentProps } from './model';
+import { ISelectComponentProps, ISelectOptionComponentProps, ISelectOverlayComponentProps } from './model';
 
 // Components
 import Box from '../Box/Box';
@@ -14,9 +14,11 @@ const spin = keyframes`
     100% { transform: rotate(360deg); }
 `;
 
-export const StyledSelect = styled(Box)<IDivBoxComponentProps>`
+export const StyledSelect = styled(Box)<ISelectComponentProps>`
     position: relative;
     color: #2d2d2d;
+    opacity: ${(props) => props.disabled ? 0.7 : 1};
+    cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
 `;
 
 export const StyledSelectFilter = styled(Box)<IInputBoxComponentProps>`
@@ -38,7 +40,6 @@ export const StyledSelectContainer = styled(Box)<IDivBoxComponentProps>`
     border-radius: 3px;
     border: solid 1px #e2e2e2;
     background-color: #ffffff;
-    cursor: pointer;
     color: inherit;
     align-items: center;
 `;
@@ -86,7 +87,7 @@ export const StyledSelectOptionList = styled(Box)<IDivBoxComponentProps>`
     }
 `;
 
-export const StyledSelectOverlay = styled(Box)<IDivBoxComponentProps>`
+export const StyledSelectOverlay = styled(Box)<ISelectOverlayComponentProps>`
     position: fixed;
     top: 0;
     left: 0;
@@ -96,7 +97,6 @@ export const StyledSelectOverlay = styled(Box)<IDivBoxComponentProps>`
 `;
 
 export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps & React.HTMLProps<HTMLDivElement>>`
-    cursor: pointer;
     font-size: 12px;
     padding: 10px 15px;
     font-family: Hind;
@@ -120,7 +120,6 @@ export const StyledSelectIcon = styled(Box)<IDivBoxComponentProps>`
     display: flex;
     align-items: center;
     padding: 0 15px;
-    cursor: pointer;
     color: inherit;
 `;
 

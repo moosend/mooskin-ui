@@ -20,30 +20,21 @@ export const boxComponentProps = [
     'animation', 'visibility', 'cursor', 'boxAs', 'children', 'theme'
 ];
 
-export type IDivBoxComponentProps = IBoxComponentProps & React.HTMLProps<HTMLDivElement>;
-export type IInputBoxComponentProps = IBoxComponentProps & React.HTMLProps<HTMLInputElement>;
-export type IAnchorBoxComponentProps = IBoxComponentProps & React.HTMLProps<HTMLAnchorElement>;
-export type ITextAreaBoxComponentProps = IBoxComponentProps & React.HTMLProps<HTMLTextAreaElement>;
+export type IDivBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLDivElement>;
+export type IInputBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLInputElement>;
+export type IAnchorBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLAnchorElement>;
+export type ITextAreaBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLTextAreaElement>;
 
-export interface IBoxComponentProps extends IMooskinContext {
+export interface IBaseBoxComponentProps extends IMooskinContext {
 
     /** onClick event handler */
     // onClick?: (e: React.MouseEvent<HTMLElement>) => void;
 
     /** Box children */
-    children?: any;
+    // children?: any;
 
     /** render Box as a different html element */
     boxAs?: any;
-
-    /** Id of the element */
-    id?: string;
-
-    /** Box class */
-    className?: string;
-
-    /** override Box styles */
-    style?: React.CSSProperties;
 
     /** margin */
     m?: number | string;
@@ -168,7 +159,7 @@ export interface IBoxComponentProps extends IMooskinContext {
     justifySelf?: FlexJustifyOptionsType;
 
     /** flex wrap */
-    wrap?: 'nowrap' | 'wrap' | 'wrap-reverse' | 'initial' | 'inherit';
+    flexWrap?: 'nowrap' | 'wrap' | 'wrap-reverse' | 'initial' | 'inherit';
 
     /** flex direction */
     direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse' | 'initial' | 'inherit';
