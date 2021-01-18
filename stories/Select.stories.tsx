@@ -82,7 +82,7 @@ WithPagination.args = {
     children: (
         <>
             <SelectContainer>
-                <SelectPlaceholder>Select multiple options</SelectPlaceholder>
+                <SelectPlaceholder>Select an option</SelectPlaceholder>
             </SelectContainer>
             <SelectOptionList>
                 <SelectOption onClickOption={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
@@ -109,7 +109,7 @@ CustomElements.args = {
     children: (
         <>
             <SelectContainer>
-                <SelectPlaceholder>Select multiple options</SelectPlaceholder>
+                <SelectPlaceholder>Select an option</SelectPlaceholder>
                 <SelectFilter color="red" onChangeFilter={(e) => console.log('On Filter Change: ', e.target.value)} />
                 <SelectLoader />
                 <SelectIcon color="red" />

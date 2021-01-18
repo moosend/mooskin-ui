@@ -5,7 +5,7 @@ import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 import {Footer, FooterBody, FooterEnd, FooterHead} from '../components/Footer/Footer';
 
 import { IDivBoxComponentProps } from '../components/Box/model';
-import Button, { ButtonIcon } from '../components/Button/Button';
+// import Button, { ButtonIcon } from '../components/Button/Button';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default {
@@ -28,7 +28,7 @@ Normal.args = {
         <>
             <FooterHead fontSize={12} fontWeight={800}>SAVE AS DRAFT</FooterHead>
             <FooterBody>
-                <Button mr={10} minW="unset">
+                {/* <Button mr={10} minW="unset">
                     <ButtonIcon>
                         chevron_left
                     </ButtonIcon>
@@ -39,12 +39,12 @@ Normal.args = {
                     <ButtonIcon>
                         chevron_right
                     </ButtonIcon>
-                </Button>
+                </Button> */}
             </FooterBody>
             <FooterEnd>
-                <Button inverseStyle borderColor="#37a037" color="#37a037">
+                {/* <Button inverseStyle borderColor="#37a037" color="#37a037"> */}
                     DESIGN & DELIVERY TEST
-                </Button>
+                {/* </Button> */}
             </FooterEnd>
         </>
     )

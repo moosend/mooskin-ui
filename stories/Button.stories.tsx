@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import {Button, ButtonIcon} from '../components/Button/Button';
+// import {Button, ButtonIcon} from '../components/Button/Button';
 import { IButtonComponentProps } from '../components/Button/model';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
@@ -11,7 +11,7 @@ import variables from '../components/_utils/globals/variables';
 import { MooskinContextProvider } from '../components/Styled/MooskinContextProvider';
 
 export default ({
-    component: Button,
+    // component: Button,
     title: 'Example/Button',
 } as any) as Meta;
 
@@ -20,7 +20,7 @@ const Template: Story<IButtonComponentProps> = (args) => {
         <>
             <GlobalStyle />
             <MooskinContextProvider value={{theme: variables}}>
-                <Button {...args} />
+                {/* <Button {...args} /> */}
             </MooskinContextProvider>
         </>
     );
@@ -42,7 +42,7 @@ Icon.args = {
     bgColor: '#293346',
     children: (
         <>
-            <ButtonIcon>file_copy</ButtonIcon>
+            {/* <ButtonIcon>file_copy</ButtonIcon> */}
             VIEW CAMPAIGN
         </>
     )

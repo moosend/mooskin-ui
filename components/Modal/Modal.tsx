@@ -62,7 +62,7 @@ export const Modal: React.FC<IModalComponentProps> = (props) => {
             }
 
             if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {children: recurseChildren((child.props as any).children)} as any);
+                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
             }
 
             return child;

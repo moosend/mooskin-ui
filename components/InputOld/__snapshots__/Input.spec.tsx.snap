@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<div
+  className="input-component inputContainer   myClass"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+>
+  <label
+    className="inputLabel "
+    htmlFor="input1"
+    style={
+      Object {
+        "flexBasis": "30px",
+      }
+    }
+  >
+    with a label ofc
+  </label>
+  <div
+    style={
+      Object {
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "position": "relative",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "flex",
+          "flex": 1,
+        }
+      }
+    >
+      <div
+        className="innerDiv undefined disabledInput"
+      >
+        <input
+          autoComplete="on"
+          autoFocus={true}
+          className="input"
+          disabled={true}
+          id="input1"
+          maxLength={50}
+          minLength={10}
+          name="input name"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          placeholder="input placeholder"
+          required={true}
+          style={
+            Object {
+              "order": 1,
+              "paddingLeft": "",
+              "paddingRight": "",
+            }
+          }
+          type="text"
+          value="input value"
+        />
+      </div>
+    </div>
+    <i
+      className="description undefined"
+    >
+      just some input
+    </i>
+  </div>
+</div>
+`;

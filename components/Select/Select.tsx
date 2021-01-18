@@ -72,7 +72,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
             returnValue = value;
         }
 
-        !props.disabled && props.onChangeSelect && props.onChangeSelect(e, {dataLabel: props.dataLabel, value: returnValue});
+        props.onChangeSelect && props.onChangeSelect(e, {dataLabel: props.dataLabel, value: returnValue});
         callback && callback(e, value);
         !selectedAsArray && toggleList();
     };
@@ -86,10 +86,8 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
     };
 
     const toggleList = () => {
-        if (!props.disabled){
-            setShowList(!showList);
-            setFilterValue('');
-        }
+        setShowList(!showList);
+        setFilterValue('');
     };
 
     React.useEffect(() => {
@@ -114,7 +112,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                         </>
                     ),
                     key: i,
-                    onClickOption: !child.props.disabled ? (e, value) => batchClickHandler(e, value, child.props.onClickOption) : undefined,
+                    onClickOption: (e, value) => batchClickHandler(e, value, child.props.onClickOption),
                     value: child.props.value
                 } as ISelectOptionComponentProps);
 
@@ -167,14 +165,14 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                             {recurseChildren(child.props.children)}
                             {!hasFilter && showList && <SelectFilter onChangeFilter={(e) => setFilterValue(e.target.value)}/>}
                             {!hasDropdownIcon && (
-                                <SelectIcon onClickIcon={toggleList}>
+                                <SelectIcon>
                                     {!showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}
                                 </SelectIcon>
                             )}
                         </>
                     ),
                     key: i,
-                    onClick: toggleList
+                    onClick: !props.disabled ? toggleList : undefined
                 } as IDivBoxComponentProps);
             }
 
@@ -199,7 +197,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
             }
 
             if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {children: recurseChildren((child.props as any).children)} as any);
+                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
             }
 
             return child;
@@ -207,7 +205,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
     };
 
     return (
-        <StyledSelect {...getBoxProps(props)} >
+        <StyledSelect {...props} >
             {recurseChildren(props.children)}
             {!hasOverlay && showList && <SelectOverlay onClickOverlay={toggleList} />}
         </StyledSelect>
@@ -219,7 +217,7 @@ Select.defaultProps = {
     style: {}
 };
 
-Select.displayName = 'Checkbox';
+Select.displayName = 'Select';
 
 /**
  * SelectContainer
@@ -269,6 +267,7 @@ SelectOptionList.displayName = 'SelectOptionList';
 export const SelectOption: React.FC<ISelectOptionComponentProps> = (props) => {
     const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
         props.onClickOption && props.onClickOption(e, props.value);
+        props.onClick && props.onClick(e);
     };
     return <StyledSelectOption {...props} onClick={onClick} />;
 };
@@ -397,6 +396,7 @@ export const SelectPagination: React.FC<ISelectPaginationComponentProps> = (prop
             default:
                 break;
         }
+
         page && props.onClickPagination && props.onClickPagination(e, page);
     };
     return (

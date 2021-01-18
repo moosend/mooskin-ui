@@ -17,7 +17,7 @@ export { default as Fieldset } from '../Fieldset';
 export { default as Grid, Row, Col } from '../Grid/Grid';
 export { default as HorizontalRangeBar } from '../HorizontalRangeBar';
 export { H1, H2, H3, H4, H5, H6 } from '../Headings';
-export { default as Input } from '../Input';
+export { default as Input } from '../InputOld';
 export { default as NumberLabel } from '../NumberLabel';
 export { default as List, ListItem, ExpandedSection, ItemContent } from '../ListOld';
 export { default as Loader } from '../Loader';

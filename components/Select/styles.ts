@@ -2,7 +2,7 @@ import styled, {keyframes} from 'styled-components';
 
 // Models
 import { IDivBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
-import { ISelectComponentProps, ISelectOptionComponentProps, ISelectOverlayComponentProps } from './model';
+import { ISelectComponentProps, ISelectIconComponentProps, ISelectOptionComponentProps, ISelectOverlayComponentProps } from './model';
 
 // Components
 import Box from '../Box/Box';
@@ -114,7 +114,7 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps & Reac
     }
 `;
 
-export const StyledSelectIcon = styled(Box)<IDivBoxComponentProps>`
+export const StyledSelectIcon = styled(Box)<ISelectIconComponentProps>`
     font-family: 'Mooskin Icons';
     font-size: 20px;
     display: flex;
