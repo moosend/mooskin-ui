@@ -24,6 +24,7 @@ export const StyledCheckboxWrapper = styled(Box)<Partial<ICheckboxComponentProps
 `;
 
 export const StyledCheckboxIcon = styled(Box)<Partial<ICheckboxComponentProps>>`
+    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     font-family: 'Mooskin Icons';
     padding-right: 10px;
     font-size: 23px;
