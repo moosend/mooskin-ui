@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 // Models
 import { IDivBoxComponentProps } from '../Box/model';
-import { ITableComponentProps } from './model';
 
 // Components
 import Box from '../Box/Box';
 
-export const StyledTable = styled(Box)<ITableComponentProps>`
+export const StyledTable = styled(Box)<IDivBoxComponentProps>`
     border: solid 1px #e2e2e2;
     background-color: #ffffff;
     display: flex;

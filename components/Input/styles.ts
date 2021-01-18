@@ -55,36 +55,6 @@ export const StyledInputWrapped = styled(StyledInputBase)<IInputComponentProps>`
     background-color: #ffffff;
 `;
 
-// export const StyledInputOptionList = styled(Box)<IDivBoxComponentProps>`
-//     position: absolute;
-//     top: 35px;
-//     left: 0;
-//     right: 0;
-//     border-bottom-left-radius: 3px;
-//     border-bottom-right-radius: 3px;
-//     border: solid 1px #e2e2e2;
-//     border-top: none;
-//     color: inherit;
-//     background-color: #ffffff;
-//     max-height: 160px;
-//     overflow-y: auto;
-
-//     /** Scrollbar */
-//     ::-webkit-scrollbar {
-//         width: 10px;
-//         height: 10px;
-//     }
-//     ::-webkit-scrollbar-track {
-//         background: #f1f1f1;
-//     }
-//     ::-webkit-scrollbar-thumb {
-//         background: #888;
-//     }
-//     ::-webkit-scrollbar-thumb:hover {
-//         background: #555;
-//     }
-// `;
-
 export const StyledInputOverlay = styled(Box)<IInputOverlayComponentProps>`
     position: fixed;
     top: 0;
@@ -93,24 +63,6 @@ export const StyledInputOverlay = styled(Box)<IInputOverlayComponentProps>`
     bottom: 0;
     z-index: -1;
 `;
-
-// export const StyledInputOption = styled(Box)<IInputOptionComponentProps & React.HTMLProps<HTMLDivElement>>`
-//     font-size: 12px;
-//     padding: 10px 15px;
-//     font-family: Hind;
-//     display: flex;
-//     justify-content: space-between;
-//     color: inherit;
-//     :first-child{
-//         padding-top: 13px;
-//     }
-//     &:not(:last-child){
-//         padding: 10px 15px 0;
-//     }
-//     &:last-child{
-//         padding: 10px 15px;
-//     }
-// `;
 
 export const StyledInputIcon = styled(Box)<IInputIconComponentProps>`
     font-family: 'Mooskin Icons';

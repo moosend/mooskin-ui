@@ -2,12 +2,11 @@ import * as React from 'react';
 
 // Models
 import { IDivBoxComponentProps } from '../Box/model';
-import { ITableComponentProps } from './model';
 
 // Styled Components
 import { StyledTable, StyledTableHeader, StyledTableHeaderItem, StyledTableRow, StyledTableRowItem } from './styles';
 
-export const Table: React.FC<ITableComponentProps> = (props) => {
+export const Table: React.FC<IDivBoxComponentProps> = (props) => {
     return <StyledTable {...props} />;
 };
 
