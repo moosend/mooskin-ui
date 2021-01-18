@@ -17,7 +17,7 @@ export interface ITopNotificationProps {
     type?: 'error' | 'success' | 'warning' | 'custom';
 
     /** override input value */
-    text?: string;
+    text?: string | JSX.Element;
 
      /** override input value */
     okButtonLabel?: string;
@@ -89,7 +89,7 @@ export default class TopNotification extends React.Component<ITopNotificationPro
                 <div className={styles.content}>
                     <div className={styles.message}>
                         <img src={icon} alt="" style={{marginRight: 10}}/>
-                        <span style={fontSize} className={styles.text}>{text}</span>
+                        <div style={fontSize} className={styles.text}>{text}</div>
                     </div>
                     {this.renderButtons()}
                 </div>

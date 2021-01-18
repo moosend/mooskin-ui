@@ -153,27 +153,6 @@ td.alternateCol:last-child{
     margin-top: 20px;
 }
 
-.menuIcon {
-	width: 20px;
-	height: 20px;
-	cursor: pointer;
-	cursor: move;
-}
-
-.menuIcon > .line {
-	background-color: rgb(187 187 187);
-	height: 2px;
-	display: block;
-}
-
-.menuIcon > .line + .line {
-	margin-top: 5px;
-}
-
-.dragItem div[class*='contentContainer'] {
-    justify-content: center;
-}
-
 @media (--xSmall){
     .hide{
         display: none;
