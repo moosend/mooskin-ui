@@ -91,6 +91,7 @@ export const StyledInputOverlay = styled(Box)<IInputOverlayComponentProps>`
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: -1;
 `;
 
 // export const StyledInputOption = styled(Box)<IInputOptionComponentProps & React.HTMLProps<HTMLDivElement>>`
