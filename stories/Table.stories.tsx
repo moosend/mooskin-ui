@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import { ITableComponentProps } from '../components/Table/model';
 import {
     Table,
     TableHeader,
@@ -11,6 +10,7 @@ import {
     TableRowItem
 } from '../components/Table/Table';
 
+import { IDivBoxComponentProps } from '../components/Box/model';
 import { Checkbox } from '../components/Checkbox/Checkbox';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
@@ -19,7 +19,7 @@ export default ({
     title: 'Example/Table',
 } as any) as Meta;
 
-const Template: Story<ITableComponentProps> = (args) => {
+const Template: Story<IDivBoxComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
@@ -101,4 +101,4 @@ Normal.args = {
             </TableRow>
         </>
     )
-} as ITableComponentProps;
+} as IDivBoxComponentProps;
