@@ -124,6 +124,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                         return child.props.children.toLowerCase().includes(filterValue.toLowerCase()) ? option : null;
                     }
                 }
+
                 return option;
             }
 
