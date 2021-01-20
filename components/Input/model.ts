@@ -1,4 +1,4 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index/index';
 
 export interface IInputContainerComponentProps extends IDivBoxComponentProps {
@@ -6,7 +6,7 @@ export interface IInputContainerComponentProps extends IDivBoxComponentProps {
     disabled?: boolean;
 
     /** value to be passed down to the input */
-    value: string;
+    value: any;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -15,7 +15,7 @@ export interface IInputContainerComponentProps extends IDivBoxComponentProps {
     onChangeInput?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 }
 
-export interface IInputComponentProps extends IDivBoxComponentProps {
+export interface IInputComponentProps extends IInputBoxComponentProps {
     /** provide to make the input field disabled */
     disabled?: boolean;
 

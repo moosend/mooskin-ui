@@ -2,10 +2,12 @@ import * as React from 'react';
 
 import moment from 'moment';
 
-import {Select, SelectContainer, SelectOption, SelectOptionList, SelectPlaceholder} from '../Select/Select';
-
+// Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IDateSelectComponentProps } from './model';
+
+// Components
+import {Select, SelectContainer, SelectOption, SelectOptionList, SelectPlaceholder} from '../Select/Select';
 
 export const DateSelect: React.FC<IDateSelectComponentProps> = (props) => {
 

@@ -27,7 +27,7 @@ const Template: Story<IInputComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <InputContainer value="" {...args} />
+            <InputContainer value="asd" {...args} />
         </>
     );
 };
