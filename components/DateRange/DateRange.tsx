@@ -16,7 +16,7 @@ import {IInputCallbackData} from '../_utils/types/commonTypes';
 
 export const rangeOptions = [
     {
-        label: 'Fixed',
+        label: 'Specific Dates',
         setDate: {
             end: moment(),
             start: moment()

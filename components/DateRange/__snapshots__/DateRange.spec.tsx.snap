@@ -52,7 +52,7 @@ exports[`DateRange renders correctly 1`] = `
           key="fixed"
           value="fixed"
         >
-          Fixed
+          Specific Dates
         </Option>
         <Option
           key="7-days"

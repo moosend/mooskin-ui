@@ -155,16 +155,16 @@ describe('DatePicker', () => {
 
     });
 
-    test('creates select component for day of the month (february) selection', () => {
+    test('creates select component for day of the month (March) selection', () => {
         const func = jest.fn();
 
-        const component = shallow(<DateSelect onChange={func} format="2" type="month" label="Day" />);
+        const component = shallow(<DateSelect onChange={func} format="3" type="month" label="Day" />);
 
-        expect(component.find('Option').length).toBe(29);
+        expect(component.find('Option').length).toBe(31);
         expect(component.find('Option').first().prop('value')).toEqual('1');
-        expect(component.find('Option').last().prop('value')).toEqual('29');
+        expect(component.find('Option').last().prop('value')).toEqual('31');
         expect(component.find('Option').first().children().text()).toEqual('1st');
-        expect(component.find('Option').last().children().text()).toEqual('29th');
+        expect(component.find('Option').last().children().text()).toEqual('31st');
 
     });
 
