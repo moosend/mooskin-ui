@@ -94,7 +94,7 @@ export const StyledBox = styled.div<IDivBoxComponentProps>`
         border-bottom-left-radius: ${(props) => getNumberOrStringValue(props.borderBottomLeftRadius)};
 
         position: ${(props) => props.position};
-        z-index: ${(props) => props.zIndex};
+        z-index: ${(props) => getNumberOrStringValue(props.zIndex)};
         top: ${(props) => getNumberOrStringValue(props.top)};
         right: ${(props) => getNumberOrStringValue(props.right)};
         bottom: ${(props) => getNumberOrStringValue(props.bottom)};

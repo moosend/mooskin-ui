@@ -10,7 +10,7 @@ export { default as CheckListItem } from '../CheckListItem';
 export { default as Checkbox } from '../Checkbox/Checkbox';
 export { default as ClipboardButton } from '../ClipboardButton';
 // export { default as DatePicker, DateSelect } from '../DatePicker';
-export { default as DateRange } from '../DateRange';
+export { default as DateRange } from '../DateRangeOld';
 export { default as Form, FormGroup } from '../Form';
 export { default as FileUpload } from '../File';
 export { default as Fieldset } from '../Fieldset';

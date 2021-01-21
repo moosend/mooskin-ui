@@ -2,25 +2,23 @@ import * as React from 'react';
 
 import DateFnsUtils from '@date-io/date-fns';
 import {
-    DatePicker as DatePickerUI,
-    KeyboardDatePicker,
+    DateTimePicker,
+    KeyboardDateTimePicker,
     MuiPickersUtilsProvider
 } from '@material-ui/pickers';
 
 import {Input} from '../Input/Input';
 
-import { IDatePickerComponentProps, IDatePickerKeyboardComponentProps } from './model';
+import { IDateTimePickerComponentProps, IDateTimePickerKeyboardComponentProps } from './model';
 
 const ComponentByType = {
-    'date': DatePickerUI,
-    'date-keyboard': KeyboardDatePicker
+    'date-time': DateTimePicker,
+    'date-time-keyboard': KeyboardDateTimePicker
 };
 
-export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboardComponentProps> = (props) => {
+export const DatePicker: React.FC<IDateTimePickerComponentProps | IDateTimePickerKeyboardComponentProps> = (props) => {
 
-    const {inputProps} = props;
-
-    const renderInput = (dateInputProps: any) => <Input style={{width: '100%'}} {...dateInputProps} {...inputProps}/>;
+    const renderInput = (dateInputProps: any) => <Input style={{width: '100%'}} {...dateInputProps} {...props.inputComponentProps}/>;
 
     const PickerComponent = ComponentByType[props.pickerType];
 
@@ -32,9 +30,10 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 };
 
 DatePicker.defaultProps = {
+    ampm: false,
     format: 'dd/MM/yyyy HH:ss',
-    pickerType: 'date',
-    variant: 'inline',
+    pickerType: 'date-time',
+    variant: 'inline'
 };
 
 DatePicker.displayName = 'DatePicker';

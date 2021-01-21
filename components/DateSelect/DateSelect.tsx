@@ -1,6 +1,9 @@
 import * as React from 'react';
 
-import moment from 'moment';
+import format from 'date-fns/format';
+import getDaysInMonth from 'date-fns/getDaysInMonth';
+import setDate from 'date-fns/setDate';
+import setMonth from 'date-fns/setMonth';
 
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
@@ -44,13 +47,12 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = (props) => {
     };
 
     const renderHourOption = () => {
-        const {format} = props;
         const options = [];
-        if (format && format === '24-Hour'){
+        if (props.format && props.format === '24-Hour'){
             while (options.length < 24){
                 options.push(renderHoursClockBased(options.length));
             }
-        } else if (format && format === '12-Hour') {
+        } else if (props.format && props.format === '12-Hour') {
             while (options.length < 12){
                 options.push(renderHoursClockBased(options.length, 'AM'));
             }
@@ -91,10 +93,10 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = (props) => {
 
     const renderDayOptions = () => {
         const options = [];
-        const format = getDayFormat() || 31;
-        const days = moment(format.toString(), 'M').daysInMonth();
+        const month = getDayFormat() || 31;
+        const days = getDaysInMonth(month);
         for (let i = 1 ; i <= days ; i++) {
-            const text = moment({ month: format - 1, day: i }).format('Do');
+            const text = format(setDate(setMonth(new Date(), month - 1), i), 'Do');
             options.push(
                 <SelectOption key={i} value={i.toString()}>{text}</SelectOption>
             );
@@ -103,9 +105,8 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = (props) => {
     };
 
     const getDayFormat = () => {
-        const {format} = props;
-        if (format && parseInt(format, 10)){
-            return parseInt(format, 10);
+        if (props.format && parseInt(props.format, 10)){
+            return parseInt(props.format, 10);
         } else {
             throw new Error('Day format not valid!');
         }

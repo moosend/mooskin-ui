@@ -282,7 +282,7 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
     position?: 'static' | 'absolute' | 'fixed' | 'relative' | 'sticky' | 'initial' | 'inherit';
 
     /** z index */
-    zIndex?: number;
+    zIndex?: number | string;
 
     /** top */
     top?: number | string;
