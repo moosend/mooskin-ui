@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 import icons from '../../assets/mooskin-icons/mooskin-icons.css';
-import Pagination from '../Pagination';
+import Pagination from '../PaginationOld';
 import SmallIconButton from '../SmallIconButton';
 import styles from './Table.css';
 
-import listStyles from '../ListOld/List.css';
 import { arrow } from '../ListOld/List';
+import listStyles from '../ListOld/List.css';
 
 import { DndProvider, DropTargetMonitor, useDrag, useDrop } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';

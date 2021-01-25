@@ -6,6 +6,9 @@ import { IDivBoxComponentProps } from '../Box/model';
 // Styled Components
 import { StyledTable, StyledTableHeader, StyledTableHeaderItem, StyledTableRow, StyledTableRowItem } from './styles';
 
+/**
+ * Table
+ */
 export const Table: React.FC<IDivBoxComponentProps> = (props) => {
     return <StyledTable {...props} />;
 };
@@ -17,6 +20,9 @@ Table.defaultProps = {
 
 Table.displayName = 'Table';
 
+/**
+ * TableHeader
+ */
 export const TableHeader: React.FC<IDivBoxComponentProps> = (props) => {
     return <StyledTableHeader {...props} />;
 };
@@ -28,6 +34,9 @@ TableHeader.defaultProps = {
 
 TableHeader.displayName = 'TableHeader';
 
+/**
+ * TableHeaderItem
+ */
 export const TableHeaderItem: React.FC<IDivBoxComponentProps> = (props) => {
     return <StyledTableHeaderItem {...props} />;
 };
@@ -39,6 +48,9 @@ TableHeaderItem.defaultProps = {
 
 TableHeaderItem.displayName = 'TableHeaderItem';
 
+/**
+ * TableRow
+ */
 export const TableRow: React.FC<IDivBoxComponentProps> = (props) => {
     return <StyledTableRow {...props} />;
 };
@@ -50,6 +62,9 @@ TableRow.defaultProps = {
 
 TableRow.displayName = 'TableRow';
 
+/**
+ * TableRowItem
+ */
 export const TableRowItem: React.FC<IDivBoxComponentProps> = (props) => {
     return <StyledTableRowItem {...props} />;
 };
