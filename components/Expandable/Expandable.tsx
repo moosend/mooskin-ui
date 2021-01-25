@@ -68,6 +68,9 @@ export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
             }
 
             if (React.isValidElement<IExpandableCommonComponentProps>(child) && child.type === ExpandableItemContent){
+                if (!active){
+                    return null;
+                }
                 return React.cloneElement(child, {
                     active,
                     children: recurseChildren(child.props.children, activeId, active),

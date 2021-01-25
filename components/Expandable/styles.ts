@@ -47,6 +47,4 @@ export const StyledExpandableItemText = styled(Box)<IDivBoxComponentProps>`
     color: #2d2d2d;
 `;
 
-export const StyledExpandableItemContent = styled(Box)<any>`
-    display: ${(props) => props.active ? 'block' : 'none'};
-`;
+export const StyledExpandableItemContent = styled(Box)<IExpandableCommonComponentProps>``;
