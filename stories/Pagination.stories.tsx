@@ -24,16 +24,8 @@ const Template: Story<IPaginationComponentProps> = (args) => {
 export const Normal = Template.bind({});
 Normal.args = {
     activePage: 1,
-    children: [
-        <PaginationButton value={1} key={1} />,
-        <PaginationButton value={2} key={2} />,
-        <PaginationButton value={3} key={3} />,
-        <PaginationButton value={4} key={4} />,
-        <PaginationButton value={5} key={5} />,
-        <PaginationButton value={6} key={6} />,
-        <PaginationButton value={7} key={7} />,
-        <PaginationButton value={8} key={8} />,
-        <PaginationButton value={9} key={9} />
-    ],
+    children: [...Array(9)].map((item, i) => {
+        return <PaginationButton key={i} />;
+    }),
     onClickButton: (e: React.MouseEvent<HTMLElement>, value: number) => console.log(e, value)
 } as IPaginationComponentProps;

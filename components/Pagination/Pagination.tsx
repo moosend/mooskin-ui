@@ -21,17 +21,19 @@ export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
         return React.Children.map(children, (child, i) => {
 
             if (React.isValidElement<IPaginationButtonComponentProps>(child) && child.type === PaginationButton){
+
+                const page = i + 1;
+
                 const condition = props.activePage >= 4 ?
-                    (child.props.value - 2 <= props.activePage && child.props.value + 2 >= props.activePage) :
-                    child.props.value <= 5;
+                    (page - 2 <= props.activePage && page + 2 >= props.activePage) :
+                    page <= 5;
 
                 if (showAll || condition){
                     return React.cloneElement(child, {
-                        active: child.props.value === props.activePage,
-                        children: recurseChildren(child.props.children),
+                        active: page === props.activePage,
+                        children: page,
                         key: i,
-                        onClickButton: (e, value) => props.onClickButton && props.onClickButton(e, value),
-                        value: child.props.value
+                        onClick: (e) => props.onClickButton && props.onClickButton(e, page)
                     } as IPaginationButtonComponentProps);
                 }
                 return null;
@@ -68,15 +70,7 @@ Pagination.displayName = 'Pagination';
  * PaginationButton
  */
 export const PaginationButton: React.FC<IPaginationButtonComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        props.onClickButton && props.onClickButton(e, props.value);
-        props.onClick && props.onClick(e);
-    };
-    return (
-        <StyledPaginationButton {...props} onClick={onClick} >
-            {props.children || props.value}
-        </StyledPaginationButton>
-    );
+    return <StyledPaginationButton {...props} />;
 };
 
 PaginationButton.defaultProps = {
