@@ -33,27 +33,21 @@ export const Tabs: React.FC<ITabsComponentProps> = (props) => {
         active?: boolean
     ) => {
 
-        let header: React.ReactElement<ITabCommonComponentProps> | null = null;
-        let content: React.ReactElement<ITabCommonComponentProps> | null = null;
+        let header: React.ReactElement<ITabCommonComponentProps> | undefined;
+        let content: React.ReactElement<ITabCommonComponentProps> | undefined;
 
         React.Children.forEach(children, (child, i) => {
             if (React.isValidElement<ITabCommonComponentProps>(child) && child.type === TabHeader){
                 header = (
                     React.cloneElement(child, {
                         active,
-                        key: i,
                         onClick: (e) => props.onClickTab && props.onClickTab(e, activeId)
                     } as IDivBoxComponentProps)
                 );
             }
 
             if (React.isValidElement<ITabCommonComponentProps>(child) && child.type === TabContent){
-                content = (
-                    React.cloneElement(child, {
-                        active,
-                        key: i
-                    } as ITabCommonComponentProps)
-                );
+                content = React.cloneElement(child, {active} as ITabCommonComponentProps);
             }
         });
 
@@ -73,8 +67,8 @@ export const Tabs: React.FC<ITabsComponentProps> = (props) => {
             if (React.isValidElement<ITabComponentProps>(child) && child.type === Tab){
                 const active = child.props.active ? child.props.active : getActiveItem(child.props.activeId);
                 const {content, header} = riteOfRakshir(child.props.children, child.props.activeId, active);
-                headers.push(header);
-                contents.push(content);
+                header && headers.push(React.cloneElement(header, {key: i}));
+                content && contents.push(React.cloneElement(content, {key: i}));
             }
         });
 
