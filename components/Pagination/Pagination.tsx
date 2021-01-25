@@ -21,13 +21,9 @@ export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
         return React.Children.map(children, (child, i) => {
 
             if (React.isValidElement<IPaginationButtonComponentProps>(child) && child.type === PaginationButton){
-                let condition = (child.props.value - 2 <= props.activePage && child.props.value + 2 >= props.activePage);
-
-                if (props.activePage >= 4){
-                    condition = (child.props.value - 2 <= props.activePage && child.props.value + 2 >= props.activePage);
-                } else {
-                    condition = child.props.value <= 5;
-                }
+                const condition = props.activePage >= 4 ?
+                    (child.props.value - 2 <= props.activePage && child.props.value + 2 >= props.activePage) :
+                    child.props.value <= 5;
 
                 if (showAll || condition){
                     return React.cloneElement(child, {
