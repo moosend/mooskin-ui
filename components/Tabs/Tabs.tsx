@@ -28,7 +28,7 @@ export const Tabs: React.FC<ITabsComponentProps> = (props) => {
     };
 
     const riteOfRakshir = (
-        children: any,
+        children?: Array<React.ReactElement<ITabCommonComponentProps>>,
         activeId?: string | number,
         active?: boolean
     ) => {
