@@ -36,7 +36,7 @@ export const Tabs: React.FC<ITabsComponentProps> = (props) => {
         let header: React.ReactElement<ITabCommonComponentProps> | undefined;
         let content: React.ReactElement<ITabCommonComponentProps> | undefined;
 
-        React.Children.forEach(children, (child, i) => {
+        React.Children.forEach(children, (child: any) => {
             if (React.isValidElement<ITabCommonComponentProps>(child) && child.type === TabHeader){
                 header = (
                     React.cloneElement(child, {

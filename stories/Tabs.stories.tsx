@@ -13,8 +13,8 @@ import {
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
-    component: Tab,
-    title: 'Example/Tab',
+    component: Tabs,
+    title: 'Example/Tabs',
 } as any) as Meta;
 
 const Template: Story<ITabsComponentProps> = (args) => {

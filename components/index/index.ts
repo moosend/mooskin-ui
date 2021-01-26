@@ -5,7 +5,7 @@ export { default as Skeleton, SkeletonCircle, SkeletonText } from '../Skeleton/S
 export { default as Drawer } from '../Drawer/Drawer';
 export { default as Stack, HStack, VStack } from '../Stack/Stack';
 export { default as Box } from '../Box/Box';
-export { default as Carousel } from '../Carousel';
+export { default as Carousel } from '../CarouselOld';
 export { default as CheckListItem } from '../CheckListItem';
 export { default as Checkbox } from '../Checkbox/Checkbox';
 export { default as ClipboardButton } from '../ClipboardButton';
