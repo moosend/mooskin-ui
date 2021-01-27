@@ -3,19 +3,25 @@ import styled from 'styled-components';
 
 // Models
 import { IDivBoxComponentProps } from '../Box/model';
-import { ITagComponentProps } from './model';
+import { ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Components
 import Box from '../Box/Box';
 
 // "CSS" variables
-import variables from '../_utils/globals/variables';
+// import variables from '../_utils/globals/variables';
 
-export const StyledTag = styled(Box)<ITagComponentProps>`
+export const StyledTags = styled(Box)<ITagsComponentProps>`
     display: flex;
-    padding: 0 5px 0 10px;
+    align-items: center;
+    flex-wrap: wrap;
+`;
+
+export const StyledTag = styled(Box)<IDivBoxComponentProps>`
+    display: flex;
+    padding: 0 10px;
     border-radius: 13px;
-    background-color: ${(props) => props.active ? props.theme.primary || variables.primary : props.theme.secondary || variables.secondary};
+    background-color: #293346;
     font-family: Hind;
     font-size: 12px;
     font-weight: normal;
@@ -24,9 +30,15 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
     line-height: 1.83;
     letter-spacing: normal;
     color: #ffffff;
+    cursor: pointer;
+    align-items: center;
+    white-space: nowrap;
+    :not(:last-child){
+        margin-right: 5px;
+    };
 `;
 
-export const StyledTagIcon = styled(Box)<IDivBoxComponentProps>`
+export const StyledTagClose = styled(Box)<IDivBoxComponentProps>`
     opacity: 0.5;
     font-family: 'Mooskin Icons Round';
     font-size: 10px;
@@ -37,4 +49,15 @@ export const StyledTagIcon = styled(Box)<IDivBoxComponentProps>`
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
+    padding-left: 10px;
+`;
+
+export const StyledTagInput = styled(Box)<ITagsInputComponentProps>`
+    color: #2d2d2d;
+    background-color: transparent;
+    font-family: Hind;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    flex: 1;
 `;

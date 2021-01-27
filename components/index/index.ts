@@ -36,7 +36,7 @@ export { default as StatsBox } from '../StatsBox';
 export { default as TextArea } from '../TextArea/TextArea';
 export { default as TextEditor } from '../TextEditor';
 export { default as TabbedContent, Content, Header, Tab } from '../TabbedContent';
-export { default as Tags } from '../Tags/Tags';
+export { default as Tags } from '../TagsOld/Tags';
 export { default as TopNotification } from '../TopNotification';
 export { default as Table, TableHeader } from '../TableOld';
 export { default as Topbar } from '../Topbar';

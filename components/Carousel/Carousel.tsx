@@ -5,16 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
 // Models
-// import {  } from '../Box/model';
 import { ICarouselComponentProps } from './model';
-
-// Components
-// import { Box } from '../Box/Box';
-
-// Styled Components
-// import {
-
-// } from './styles';
 
 /**
  * Carousel
@@ -43,19 +34,5 @@ Carousel.defaultProps = {
 };
 
 Carousel.displayName = 'Carousel';
-
-/**
- * Tab
- */
-// export const Tab: React.FC<ITabComponentProps> = (props) => {
-//     return <StyledTab {...props} />;
-// };
-
-// Tab.defaultProps = {
-//     className: '',
-//     style: {}
-// };
-
-// Tab.displayName = 'Tab';
 
 export default Carousel;
