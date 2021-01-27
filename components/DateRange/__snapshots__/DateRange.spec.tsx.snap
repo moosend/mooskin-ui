@@ -40,6 +40,126 @@ exports[`DateRange renders correctly 1`] = `
         }
       }
     >
+<<<<<<< HEAD
+=======
+      <Select
+        alternate={true}
+        alternateStyleColor={true}
+        className="dateRangeSelect"
+        filterPlaceholder=""
+        onChange={[Function]}
+        selected=""
+      >
+        <Option
+          key="fixed"
+          value="fixed"
+        >
+          Specific Dates
+        </Option>
+        <Option
+          key="7-days"
+          value="7-days"
+        >
+          Last 7 Days
+        </Option>
+        <Option
+          key="14-days"
+          value="14-days"
+        >
+          Last 14 Days
+        </Option>
+        <Option
+          key="28-days"
+          value="28-days"
+        >
+          Last 28 Days
+        </Option>
+        <Option
+          key="30-days"
+          value="30-days"
+        >
+          Last 30 Days
+        </Option>
+        <Option
+          key="yesterday"
+          value="yesterday"
+        >
+          Yesterday
+        </Option>
+        <Option
+          key="this-week"
+          value="this-week"
+        >
+          This week
+        </Option>
+        <Option
+          key="this-week-to-date"
+          value="this-week-to-date"
+        >
+          This week to date
+        </Option>
+        <Option
+          key="last-week"
+          value="last-week"
+        >
+          Last week
+        </Option>
+        <Option
+          key="this-month"
+          value="this-month"
+        >
+          This month
+        </Option>
+        <Option
+          key="this-month-to-date"
+          value="this-month-to-date"
+        >
+          This month to date
+        </Option>
+        <Option
+          key="last-month"
+          value="last-month"
+        >
+          Last month
+        </Option>
+        <Option
+          key="this-quarter"
+          value="this-quarter"
+        >
+          This quarter
+        </Option>
+        <Option
+          key="this-quarter-to-date"
+          value="this-quarter-to-date"
+        >
+          This quarter to date
+        </Option>
+        <Option
+          key="last-quarter"
+          value="last-quarter"
+        >
+          Last quarter
+        </Option>
+        <Option
+          key="this-year"
+          value="this-year"
+        >
+          This year
+        </Option>
+        <Option
+          key="this-year-to-date"
+          value="this-year-to-date"
+        >
+          This year to date
+        </Option>
+        <Option
+          key="last-year"
+          value="last-year"
+        >
+          Last year
+        </Option>
+      </Select>
+>>>>>>> 86dfe26287938961764371769e04c58101ad7d69
       <div
         style={
           Object {
