@@ -75,3 +75,5 @@ TableRowItem.defaultProps = {
 };
 
 TableRowItem.displayName = 'TableRowItem';
+
+export default Table;
