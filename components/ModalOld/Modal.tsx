@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Modal.css';
 
-import { H2 } from '../Headings';
+import { H2 } from '../HeadingsOld';
 import SmallIconButton from '../SmallIconButton';
 
 export interface IModalProps {
@@ -58,9 +58,9 @@ export default class Modal extends React.Component<IModalProps, {}> {
         }
 
         return <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>{closeIcon}</div>;
-    };
+    }
 
     getOverlay = () => {
         return <div className={styles.cover} onClick={this.props.onClickOverlay} />;
-    };
+    }
 }

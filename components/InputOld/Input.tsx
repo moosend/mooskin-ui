@@ -5,7 +5,7 @@ import 'emoji-mart/css/emoji-mart.css';
 import icons from '../../assets/mooskin-icons/mooskin-icons.css';
 import styles from './Input.css';
 
-import ClipboardButton from '../ClipboardButton';
+import ClipboardButton from '../ClipboardButtonOld';
 
 import emojiIcon from '../../assets/images/editor/emoji.png';
 import hashtag from '../../assets/images/editor/hashtag.png';

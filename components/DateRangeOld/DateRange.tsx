@@ -9,7 +9,7 @@ import InputMoment from 'input-moment';
 import moment from 'moment';
 
 import Button from '../Button/Button';
-import {H5} from '../Headings';
+import {H5} from '../HeadingsOld';
 // import Select, {Option} from '../Select';
 
 import {IInputCallbackData} from '../_utils/types/commonTypes';

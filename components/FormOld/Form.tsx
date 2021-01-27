@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import styles from './Form.css';
 
-import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
+import {IInputCallbackData} from '../_utils/types/commonTypes';
 
 import {IButtonComponentProps} from '../Button/model';
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {H2} from '../Headings';
+import {H2} from '../HeadingsOld';
 import SmallIconButton from '../SmallIconButton';
 import CheckListItem from './CheckListItem';
 
