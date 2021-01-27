@@ -2,14 +2,14 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IDivBoxComponentProps } from '../../components/Box/model';
 import { ITagComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import Box from '../../components/Box/Box';
 
 // "CSS" variables
-import variables from '../_utils/globals/variables';
+import variables from '../../components/_utils/globals/variables';
 
 export const StyledTag = styled(Box)<ITagComponentProps>`
     display: flex;

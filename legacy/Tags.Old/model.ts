@@ -1,5 +1,5 @@
-import { IDivBoxComponentProps } from '../Box/model';
-import { IInputCallbackData } from '../index/index';
+import { IDivBoxComponentProps } from '../../components/Box/model';
+import { IInputCallbackData } from '../../components/index/index';
 
 export interface ITagsComponentProps extends IDivBoxComponentProps{
     /** tagged data */

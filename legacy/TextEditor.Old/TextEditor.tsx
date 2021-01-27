@@ -7,7 +7,7 @@ import htmlToDraft from 'html-to-draftjs';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-import Button from '../Button/Button';
+import Button from '../../components/Button/Button';
 
 import boldIcon from '../../assets/images/editor/Bold.png';
 import centerIcon from '../../assets/images/editor/center.png';
@@ -32,7 +32,7 @@ import unorderedIcon from '../../assets/images/editor/unorderedList.png';
 
 import styles from './TextEditor.css';
 
-import {IInputCallbackData} from '../_utils/types/commonTypes';
+import {IInputCallbackData} from '../../components/_utils/types/commonTypes';
 
 export interface ITextEditorProps {
 

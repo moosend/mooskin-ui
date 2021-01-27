@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Button from '../Button/Button';
+import Button from '../../components/Button/Button';
 
 import closeIcon from '../../assets/images/icons/notifications/icon-close.png';
 import errorIcon from '../../assets/images/icons/notifications/icon-error.png';
