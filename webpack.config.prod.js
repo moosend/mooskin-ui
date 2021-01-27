@@ -5,7 +5,7 @@ var config = require('./webpack.config.common'),
 var distFolder = 'lib';
 var extractCSS = new MiniCssExtractPlugin({fallback: "style-loader" , filename: "[name]/style.css", allChunks: true});
 
-var entries = glob.sync("./components/*/index.ts", {ignore: ['**/*.spec.tsx', '**/*.spec.ts']}).map(function(entry){ //gets the module paths in components containing index.ts and assigns them to an object
+var entries = glob.sync("./components/*/index.ts", {ignore: ['./legacy/*.tsx', '**/*.spec.tsx', '**/*.spec.ts']}).map(function(entry){ //gets the module paths in components containing index.ts and assigns them to an object
   var obj = {};
   var key = entry.split('/');
   key = key[key.length-2];

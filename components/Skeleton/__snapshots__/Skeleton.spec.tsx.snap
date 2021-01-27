@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Skeleton renders Skeleton correctly 1`] = `
+<Component
+  className=""
+  endColor="#A0AEC0"
+  isLoaded={false}
+  speed={0.8}
+  startColor="#EDF2F7"
+  style={Object {}}
+>
+  <div
+    key="0"
+    style={
+      Object {
+        "backgroundColor": "red",
+        "height": 40,
+        "width": 40,
+      }
+    }
+  />
+  ,
+  <div
+    key="1"
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 40,
+        "width": 40,
+      }
+    }
+  />
+  ,
+  <div
+    key="2"
+    style={
+      Object {
+        "backgroundColor": "blue",
+        "height": 40,
+        "width": 40,
+      }
+    }
+  />
+</Component>
+`;
+
+exports[`Skeleton renders SkeletonCircle correctly 1`] = `
+<Component
+  className=""
+  endColor="#A0AEC0"
+  isLoaded={false}
+  size="20px"
+  speed={0.8}
+  startColor="#EDF2F7"
+  style={Object {}}
+/>
+`;
+
+exports[`Skeleton renders SkeletonText correctly 1`] = `
+<Fragment>
+  <Component
+    className=""
+    endColor="#A0AEC0"
+    isLoaded={false}
+    key="0"
+    lines={4}
+    speed={0.8}
+    startColor="#EDF2F7"
+    style={Object {}}
+    w="100%"
+  />
+  <Component
+    className=""
+    endColor="#A0AEC0"
+    isLoaded={false}
+    key="1"
+    lines={4}
+    speed={0.8}
+    startColor="#EDF2F7"
+    style={Object {}}
+    w="100%"
+  />
+  <Component
+    className=""
+    endColor="#A0AEC0"
+    isLoaded={false}
+    key="2"
+    lines={4}
+    speed={0.8}
+    startColor="#EDF2F7"
+    style={Object {}}
+    w="100%"
+  />
+  <Component
+    className=""
+    endColor="#A0AEC0"
+    isLoaded={false}
+    key="3"
+    lines={4}
+    speed={0.8}
+    startColor="#EDF2F7"
+    style={Object {}}
+    w="80%"
+  />
+</Fragment>
+`;

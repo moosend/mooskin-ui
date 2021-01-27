@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stack renders Stack correctly 1`] = `
+<Stack
+  align="initial"
+  className=""
+  direction="column"
+  divider={
+    <span
+      style={
+        Object {
+          "width": 1,
+        }
+      }
+    />
+  }
+  justify="center"
+  spacing={20}
+  style={Object {}}
+  wrap="wrap"
+>
+  <div
+    key="0"
+    style={
+      Object {
+        "backgroundColor": "red",
+        "height": 40,
+        "width": 40,
+      }
+    }
+  />
+  ,
+  <div
+    key="1"
+    style={
+      Object {
+        "backgroundColor": "green",
+        "height": 40,
+        "width": 40,
+      }
+    }
+  />
+  ,
+  <div
+    key="2"
+    style={
+      Object {
+        "backgroundColor": "blue",
+        "height": 40,
+        "width": 40,
+      }
+    }
+  />
+</Stack>
+`;

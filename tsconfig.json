@@ -18,7 +18,8 @@
     "lib":["dom", "es6", "es7" , "dom.iterable", "scripthost"]
   },
   "include": [
-    "components"
+    "components",
+    "stories"
   ],
   "exclude": [
       "node_modules",

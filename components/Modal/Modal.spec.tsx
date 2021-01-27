@@ -1,38 +1,34 @@
 import * as React from 'react';
-import Button from '../Button';
-import Modal from './Modal';
+import Modal, {ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay} from './Modal';
 
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Modal', () => {
 
     test('renders correctly', () => {
-        const func = jest.fn();
+        const fn = jest.fn();
+        const fn2 = jest.fn();
 
-        const tree = shallow(
-            <Modal
-                className="myClass"
-                style={{color: 'blue'}}
-                id={'button1'}
-                onClickOverlay={func}
-            >
-                <div>
-                    Mooskin
-                </div>
+        const tree = mount(
+            <Modal onClose={fn}>
+                <ModalOverlay onClick={fn2}>
+                    <ModalContent w="50%" h="50%">
+                        <ModalCloseButton position="absolute" top={10} right={10} />
+                        <ModalHeader>Create your account</ModalHeader>
+
+                        <ModalBody>
+                            Modal Content Body
+                        </ModalBody>
+
+                        <ModalFooter>
+                            Modal Footer goes here!
+                        </ModalFooter>
+                    </ModalContent>
+                </ModalOverlay>
             </Modal>
         );
+
         expect(tree).toMatchSnapshot();
-    });
-
-    test('onOverlayClick callback is called when cover is clicked', () => {
-        const func = jest.fn();
-
-        const component = shallow(<Modal onClickOverlay={func}>asd</Modal>);
-
-        component.find('.cover').simulate('click');
-
-        expect(func).toHaveBeenCalled();
-
     });
 
 });

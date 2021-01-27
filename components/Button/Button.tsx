@@ -1,92 +1,48 @@
 import * as React from 'react';
 
-import styles from './Button.css';
+// Models
+// import { IDivBoxComponentProps } from '../Box/model';
+import { IButtonComponentProps } from './model';
 
-export interface IButtonProps {
-    /** provide to make the button disabled */
-    disabled?: boolean;
+// Styled Components
+// import { StyledButtonIcon, StyledButtonInverse, StyledButtonNormal } from './styles';
 
-    /** provide to inverse the button's styles */
-    inverseStyle?: boolean;
+/**
+ * Button
+ */
+export const Button: React.FC<IButtonComponentProps> = (props) => {
+    // const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    //     !props.disabled && props.onClickButton && props.onClickButton(e);
+    //     !props.disabled && props.onClick && props.onClick(e);
+    // };
 
-    /** button id attribute */
-    id?: string;
+    // const ButtonComponent = props.inverseStyle ? StyledButtonInverse : StyledButtonNormal;
 
-    /** button href */
-    href?: string;
+    // return <ButtonComponent {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+    return null;
+};
 
-    /** button type */
-    type?: string;
+Button.defaultProps = {
+    buttonSize: 'md',
+    className: '',
+    style: {},
+    type: 'button'
+};
 
-    /** button class */
-    className?: string;
+Button.displayName = 'Button';
 
-    /** override button styles */
-    style?: React.CSSProperties;
+/**
+ * ButtonIcon
+ */
+// export const ButtonIcon: React.FC<IDivBoxComponentProps> = (props) => {
+//     return <StyledButtonIcon {...props} />;
+// };
 
-    /** callback that is called when the button is clicked */
-    onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
+// ButtonIcon.defaultProps = {
+//     className: '',
+//     style: {}
+// };
 
-    /** children can only be a string */
-    children?: Element | JSX.Element | string;
-}
+// ButtonIcon.displayName = 'ButtonIcon';
 
-export default class Button extends React.Component<IButtonProps, {}> {
-
-    static defaultProps = {
-        className: '',
-        style: {},
-        type: 'button'
-    };
-
-    static displayName = 'Button';
-
-    render(){
-
-        const button = this.getButton();
-
-        return button;
-
-    }
-
-    getButton = () => {
-
-        const {style, inverseStyle, disabled, children, className, id, href, type} = this.props;
-
-        const buttonStyles = inverseStyle ? styles.inverseButton : styles.normalButton;
-        const disabledStyles = disabled ? styles.disabledButton : '';
-
-        const classes = `button-component ${styles.button} ${buttonStyles} ${disabledStyles} ${className}`;
-
-        if (href){
-            return (
-                <a
-                    id={id}
-                    href={href}
-                    className={`button-component-link ${classes}`}
-                    style={style}
-                    onClick={this.onClick}
-                >
-                    {children}
-                </a>
-            );
-        } else {
-            return (
-                <button
-                    id={id}
-                    type={type}
-                    onClick={this.onClick}
-                    disabled={disabled}
-                    className={classes}
-                    style={style}
-                >
-                    {children}
-                </button>
-            );
-        }
-    }
-
-    onClick = (e: React.MouseEvent<HTMLElement>) => {
-        !this.props.disabled && this.props.onClick && this.props.onClick(e);
-    }
-}
+export default Button;

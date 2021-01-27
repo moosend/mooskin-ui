@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClipboardButton.spec renders correctly 1`] = `
+<Component
+  className="myClass"
+  onClick={[Function]}
+  size="md"
+  style={
+    Object {
+      "color": "blue",
+    }
+  }
+  type="button"
+>
+  some label
+</Component>
+`;

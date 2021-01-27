@@ -11,10 +11,8 @@ exports[`TextArea renders correctly 1`] = `
   labelWidth={30}
   maxlength={50}
   minlength={10}
-  name="textarea name"
   onChange={[MockFunction]}
   placeholder="textarea placeholder"
-  required={true}
   rows={10}
   style={
     Object {
@@ -23,49 +21,361 @@ exports[`TextArea renders correctly 1`] = `
   }
   value="textarea value"
 >
-  <div
-    className="textarea-component areaContainer myClass"
+  <Box
+    className="myClass"
+    d="flex"
+    id="textarea"
     style={
       Object {
         "color": "blue",
       }
     }
   >
-    <label
-      className="textareaLabel"
-      htmlFor="textarea"
+    <Component
+      className="myClass"
+      d="flex"
+      id="textarea"
       style={
         Object {
-          "flexBasis": "30px",
+          "color": "blue",
+        }
+      }
+      theme={
+        Object {
+          "disabledBackground": "#e2e2e2",
+          "disabledfont": "#9d9d9d",
+          "inputBackground": "#ffffff",
+          "inputBorder": "#e2e2e2",
+          "inputFont": "#9d9d9d",
+          "label": "#2d2d2d",
+          "primary": "#3fbaca",
+          "secondary": "#293346",
         }
       }
     >
-      with a label ofc
-    </label>
-    <div
-      className="textAreaDiv"
-    >
-      <textarea
-        className="textarea textarea disabledTextArea undefined"
-        cols={40}
-        disabled={true}
+      <styled.div
+        className="myClass"
+        d="flex"
         id="textarea"
-        maxLength={50}
-        minLength={10}
-        name="nodejs"
-        onBlur={[Function]}
-        onChange={[Function]}
-        placeholder="textarea placeholder"
-        required={true}
-        rows={10}
-        value="textarea value"
-      />
-      <i
-        className="description undefined"
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
       >
-        just some textarea
-      </i>
-    </div>
-  </div>
+        <div
+          className="sc-bdnylx fpacDC myClass"
+          d="flex"
+          id="textarea"
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+        >
+          <Label
+            className=""
+            style={
+              Object {
+                "alignSelf": "flex-start",
+              }
+            }
+            width={30}
+          >
+            <Styled(Box)
+              className=""
+              onClick={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                }
+              }
+              width={30}
+            >
+              <Box
+                className="sc-dlnjPT keeban"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "alignSelf": "flex-start",
+                  }
+                }
+                width={30}
+              >
+                <Component
+                  className="sc-dlnjPT keeban"
+                  onClick={[Function]}
+                  style={
+                    Object {
+                      "alignSelf": "flex-start",
+                    }
+                  }
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                  width={30}
+                >
+                  <styled.div
+                    className="sc-dlnjPT keeban"
+                    onClick={[Function]}
+                    style={
+                      Object {
+                        "alignSelf": "flex-start",
+                      }
+                    }
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                    width={30}
+                  >
+                    <div
+                      className="sc-bdnylx dOPKTt sc-dlnjPT keeban"
+                      onClick={[Function]}
+                      style={
+                        Object {
+                          "alignSelf": "flex-start",
+                        }
+                      }
+                      width={30}
+                    >
+                      with a label ofc
+                    </div>
+                  </styled.div>
+                </Component>
+              </Box>
+            </Styled(Box)>
+          </Label>
+          <Box
+            className=""
+            d="flex"
+            direction="column"
+            style={Object {}}
+          >
+            <Component
+              className=""
+              d="flex"
+              direction="column"
+              style={Object {}}
+              theme={
+                Object {
+                  "disabledBackground": "#e2e2e2",
+                  "disabledfont": "#9d9d9d",
+                  "inputBackground": "#ffffff",
+                  "inputBorder": "#e2e2e2",
+                  "inputFont": "#9d9d9d",
+                  "label": "#2d2d2d",
+                  "primary": "#3fbaca",
+                  "secondary": "#293346",
+                }
+              }
+            >
+              <styled.div
+                className=""
+                d="flex"
+                direction="column"
+                style={Object {}}
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
+              >
+                <div
+                  className="sc-bdnylx dRmyvY"
+                  d="flex"
+                  direction="column"
+                  style={Object {}}
+                >
+                  <Styled(Box)
+                    boxAs="textarea"
+                    cols={40}
+                    disabled={true}
+                    maxLength={50}
+                    minLength={10}
+                    onChange={[Function]}
+                    placeholder="textarea placeholder"
+                    rows={10}
+                    value="textarea value"
+                  >
+                    <Box
+                      boxAs="textarea"
+                      className="sc-hKFyIo dPgEez"
+                      cols={40}
+                      disabled={true}
+                      maxLength={50}
+                      minLength={10}
+                      onChange={[Function]}
+                      placeholder="textarea placeholder"
+                      rows={10}
+                      style={Object {}}
+                      value="textarea value"
+                    >
+                      <Component
+                        boxAs="textarea"
+                        className="sc-hKFyIo dPgEez"
+                        cols={40}
+                        disabled={true}
+                        maxLength={50}
+                        minLength={10}
+                        onChange={[Function]}
+                        placeholder="textarea placeholder"
+                        rows={10}
+                        style={Object {}}
+                        theme={
+                          Object {
+                            "disabledBackground": "#e2e2e2",
+                            "disabledfont": "#9d9d9d",
+                            "inputBackground": "#ffffff",
+                            "inputBorder": "#e2e2e2",
+                            "inputFont": "#9d9d9d",
+                            "label": "#2d2d2d",
+                            "primary": "#3fbaca",
+                            "secondary": "#293346",
+                          }
+                        }
+                        value="textarea value"
+                      >
+                        <styled.div
+                          as="textarea"
+                          boxAs="textarea"
+                          className="sc-hKFyIo dPgEez"
+                          cols={40}
+                          disabled={true}
+                          maxLength={50}
+                          minLength={10}
+                          onChange={[Function]}
+                          placeholder="textarea placeholder"
+                          rows={10}
+                          style={Object {}}
+                          theme={
+                            Object {
+                              "disabledBackground": "#e2e2e2",
+                              "disabledfont": "#9d9d9d",
+                              "inputBackground": "#ffffff",
+                              "inputBorder": "#e2e2e2",
+                              "inputFont": "#9d9d9d",
+                              "label": "#2d2d2d",
+                              "primary": "#3fbaca",
+                              "secondary": "#293346",
+                            }
+                          }
+                          value="textarea value"
+                        >
+                          <textarea
+                            className="sc-bdnylx dOPKTt sc-hKFyIo dPgEez"
+                            cols={40}
+                            disabled={true}
+                            maxLength={50}
+                            minLength={10}
+                            onChange={[Function]}
+                            placeholder="textarea placeholder"
+                            rows={10}
+                            style={Object {}}
+                            value="textarea value"
+                          />
+                        </styled.div>
+                      </Component>
+                    </Box>
+                  </Styled(Box)>
+                  <Description
+                    className=""
+                    style={Object {}}
+                  >
+                    <Styled(Box)
+                      className=""
+                      style={Object {}}
+                    >
+                      <Box
+                        className="sc-gtssRu djMgpL"
+                        style={Object {}}
+                      >
+                        <Component
+                          className="sc-gtssRu djMgpL"
+                          style={Object {}}
+                          theme={
+                            Object {
+                              "disabledBackground": "#e2e2e2",
+                              "disabledfont": "#9d9d9d",
+                              "inputBackground": "#ffffff",
+                              "inputBorder": "#e2e2e2",
+                              "inputFont": "#9d9d9d",
+                              "label": "#2d2d2d",
+                              "primary": "#3fbaca",
+                              "secondary": "#293346",
+                            }
+                          }
+                        >
+                          <styled.div
+                            className="sc-gtssRu djMgpL"
+                            style={Object {}}
+                            theme={
+                              Object {
+                                "disabledBackground": "#e2e2e2",
+                                "disabledfont": "#9d9d9d",
+                                "inputBackground": "#ffffff",
+                                "inputBorder": "#e2e2e2",
+                                "inputFont": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "primary": "#3fbaca",
+                                "secondary": "#293346",
+                              }
+                            }
+                          >
+                            <div
+                              className="sc-bdnylx dOPKTt sc-gtssRu djMgpL"
+                              style={Object {}}
+                            >
+                              just some textarea
+                            </div>
+                          </styled.div>
+                        </Component>
+                      </Box>
+                    </Styled(Box)>
+                  </Description>
+                </div>
+              </styled.div>
+            </Component>
+          </Box>
+        </div>
+      </styled.div>
+    </Component>
+  </Box>
 </TextArea>
 `;

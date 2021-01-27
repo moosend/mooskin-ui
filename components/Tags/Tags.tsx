@@ -1,434 +1,123 @@
 import * as React from 'react';
 
-import icons from '../../assets/mooskin-icons/mooskin-icons.css';
-import styles from './Tags.css';
+// Models
+import { IInputCallbackData } from '../_utils/types/commonTypes';
+import { IDivBoxComponentProps } from '../Box/model';
+import { ITagsComponentProps, ITagsInputComponentProps } from './model';
 
-import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
+// Components
+// import { Box } from '../Box/Box';
 
-export interface ITagsProps{
+// Styled Components
+import {
+    StyledTag,
+    StyledTagClose,
+    StyledTagInput,
+    StyledTags
+} from './styles';
 
-    /** id of the component */
-    id?: string;
+/**
+ * Tags
+ */
+export const Tags: React.FC<ITagsComponentProps> = (props) => {
 
-    /** tagged data */
-    tags: string[];
-
-    /** tags that are active e.g. used in filters */
-    activeTags?: string[];
-
-    /** validate input wether it should accept emails or add a custom validation */
-    validateTag?: 'email' | ((tag: string) => boolean);
-
-    /** input description (small italic bottom) */
-    description?: string;
-
-    /** status of the input, error or success */
-    status?: 'error' | 'success';
-
-    /** this is for validating the whole component within a Form */
-    validate?: (data: IValidationCallbackData) => boolean;
-
-    /** provide to make the tags component required within a Form */
-    required?: boolean;
-
-    /** source of data for type ahead completion */
-    source?: (() => Promise<string[]>) | (() => string[]) | string[];
-
-    /** limit number of items available on the source list */
-    sourceLimit?: number;
-
-    /** wether the tags should be deletable by backspace */
-    deletable?: boolean;
-
-    /** override tags styles */
-    style?: React.CSSProperties;
-
-    /** override tags class */
-    className?: string;
-
-    /** override single tag styles */
-    tagStyles?: React.CSSProperties;
-
-    /** override single tag classes */
-    tagClasses?: string;
-
-    /** tags input label */
-    label?: string;
-
-    /** place label on top of Input */
-    labelLeft?: boolean;
-
-    /** prevent submit on input blur */
-    preventSubmit?: boolean;
-
-    /** error message when invalid input type is passed */
-    errorMessage?: string;
-
-    /** input field placehonder */
-    placeholder?: string;
-
-    /** renders with different styles */
-    alternate?: boolean;
-
-    /** what data is being used, helps whn extracting user input, you know on what field changes are made */
-    dataLabel?: string;
-
-    /** an array of possible delimiters, enter key is the default delimiter */
-    delimiters?: Array<string | number>;
-
-    /** maximum number of characters allowed */
-    maxLength?: number;
-
-    onAdd?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => string [] | void;
-
-    onRemove?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData, index: number) => string [] | void;
-
-    onTagClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData, index: number) => void;
-
-    // onChange?: (e: React.SyntheticEvent<HTMLElement>, data: IInputCallbackData) => void;
-}
-
-export interface ITagProps{
-
-    /** data to be tagged */
-    tag?: string;
-
-    /** renders with different styles */
-    alternate?: boolean;
-
-    /** override tags styles */
-    style?: React.CSSProperties;
-
-    /** override tags class */
-    className?: string;
-
-    /** applies active classes to tag */
-    active?: boolean;
-
-    onClickTag?: (e: React.MouseEvent<HTMLElement>) => void;
-
-    onClickRemove?: (e: React.MouseEvent<HTMLElement>) => void;
-}
-
-export interface ITagsState{
-    value: string;
-    activeItem: number;
-    sourceList: string[];
-    rawSourceList: string[];
-    message: string;
-}
-
-export default class Tags extends React.Component<ITagsProps, ITagsState>{
-
-    static defaultProps: Partial<ITagsProps> = {
-        className: '',
-        delimiters: ['Enter', 13], // 13 is the keyCode for Enter
-        style: {},
-        tags: []
+    const batchClickHandler = (
+        e: React.MouseEvent<HTMLDivElement>,
+        data: IInputCallbackData,
+        callback?: (e: React.MouseEvent<HTMLDivElement>) => void
+    ) => {
+        props.onClickTag && props.onClickTag(e, data);
+        callback && callback(e);
     };
 
-    static displayName = 'Tags';
+    const onRemoveTag = (e: React.MouseEvent<HTMLDivElement>, i: number) => {
+        e.stopPropagation();
+        props.onRemoveTag && props.onRemoveTag(e, {dataLabel: props.dataLabel, value: i});
+    };
 
-    id: string;
-    myInpRef = React.createRef<any>();
+    const onAddTag = (value: string) => {
+        props.onAddTag && props.onAddTag({dataLabel: props.dataLabel, value});
+    };
 
-    constructor(props: ITagsProps){
-        super(props);
+    const recurseChildren = (children: any): any => {
+        if (!children){
+            return null;
+        }
 
-        this.state = {
-            activeItem: 0,
-            message: '',
-            rawSourceList: [],
-            sourceList: [],
-            value: ''
-        };
-    }
-
-    componentDidMount(){
-
-        const {source} = this.props;
-
-        if (typeof source === 'function'){
-            const result = source();
-
-            if (!(result instanceof Array) && result.then){
-                result.then((stringArray) => {
-                    this.setState({rawSourceList: stringArray});
-                });
-            }else if (result instanceof Array && result.length){
-                this.setState({rawSourceList: result});
-            }else{
-                throw new Error(
-                    `source must either be an array of strings,
-                    a function that returns an array of strings or
-                    a function that returns a Promise that resolves into an array of strings!`
-                );
+        return React.Children.map(children, (child, i) => {
+            if (React.isValidElement<IDivBoxComponentProps>(child) && child.type === Tag){
+                return React.cloneElement(child, {
+                    children: (
+                        <>
+                            {recurseChildren((child.props as any).children)}
+                            {props.onRemoveTag && (
+                                <TagClose
+                                    onClick={(e) => onRemoveTag(e, i)}
+                                >
+                                    highlight_off
+                                </TagClose>
+                            )}
+                        </>
+                    ),
+                    key: i,
+                    onClick: (e: React.MouseEvent<HTMLDivElement>) =>
+                        batchClickHandler(e, {dataLabel: props.dataLabel, value: i}, child.props.onClick)
+                } as IDivBoxComponentProps);
             }
 
-        }else if (source && source instanceof Array && source.length){
-            this.setState({rawSourceList: source});
-        }
-    }
+            if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput){
+                return React.cloneElement(child, {
+                    key: i,
+                    onAddTag
+                } as ITagsInputComponentProps);
+            }
 
-    render(){
+            if (React.isValidElement(child) && (child.props as any).children){
+                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            }
 
-        const tags = this.getTags();
-
-        const cover = this.state.sourceList.length > 0 && this.state.value !== '' ? this.getCover() : null;
-
-        const status = this.getStatus();
-        const descStatus = this.getDescStatus();
-
-        const description = this.props.description;
-
-        const containerClasses = this.props.labelLeft ? styles.rowContainer : '';
-        const labelClasses = this.props.labelLeft ? styles.labelLeft : '';
-
-        const alternateContainer = this.props.alternate ? styles.alternateContainer : '';
-
-        return(
-            <div
-                id={this.id}
-                className={`${styles.container} ${containerClasses} ${this.props.className}`}
-                style={this.props.style}
-            >
-                {this.props.label && <div className={`${styles.label} ${labelClasses}`}>{this.props.label}</div>}
-                <div style={{display: 'flex', flexDirection: 'column', flexGrow: 1, flexShrink: 1}}>
-                    <label className={`${styles.tags} ${alternateContainer} ${status}`}>
-                        {tags}
-                        {this.props.onAdd && this.renderInput()}
-                        {cover}
-                    </label>
-                    {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
-                </div>
-            </div>
-        );
-    }
-
-    renderInput = () => {
-
-        const source = this.state.value !== '' ? this.sourceList() : null;
-        const message = this.getMessage();
-
-        const alternateInput = this.props.alternate ? styles.alternateInput : '';
-        const alternateInputContainer = this.props.alternate ? styles.alternateInputContainer : '';
-
-        return (
-            <div className={`${styles.inputContainer} ${alternateInputContainer}`}>
-                <input
-                    ref={this.myInpRef}
-                    value={this.state.value}
-                    className={`${styles.input} ${alternateInput}`}
-                    placeholder={this.props.placeholder}
-                    onChange={this.onHandleChange}
-                    onKeyDown={this.onKeyDown}
-                    onClick={this.removeSource}
-                    onPaste={this.onPaste}
-                    onBlur={this.onBlur()}
-                    maxLength={this.props.maxLength}
-                />
-                {message}
-                {source}
-                {this.props.alternate && this.renderAddIcon()}
-            </div>
-        );
-    }
-
-    getTags = () => {
-
-        const tags = this.removeDuplicates();
-
-        const onClickTag = (e: React.MouseEvent<HTMLElement>, value: string, index: number) => {
-            this.props.onTagClick && this.props.onTagClick(e, {dataLabel: this.props.dataLabel, value}, index);
-        };
-
-        const clickableTag = this.props.onTagClick ? styles.clickableTag : '';
-
-        return tags.map((value, i) => {
-
-            const active = this.props.activeTags && this.props.activeTags.includes(value);
-
-            return (
-                <Tag
-                    alternate={this.props.alternate}
-                    tag={value}
-                    key={i}
-                    active={active}
-                    onClickTag={(e) => onClickTag(e, value, i)}
-                    onClickRemove={this.props.onRemove ? this.removeTag(i) : undefined}
-                    className={`${clickableTag} ${this.props.tagClasses}`}
-                    style={this.props.tagStyles}
-                />
-            );
+            return child;
         });
-    }
+    };
 
-    removeDuplicates = (tags?: string []) => {
-        if (tags){
-            return Array.from(new Set(tags));
-        }
-        return Array.from(new Set(this.props.tags));
-    }
+    return <StyledTags {...props} children={recurseChildren(props.children)} />;
+};
 
-    onHandleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+Tags.defaultProps = {
+    className: '',
+    style: {}
+};
 
-        const value = e.target.value;
+Tags.displayName = 'Tags';
 
-        if (this.shouldSubmitPaste(value)){
-            this.setState({value: ''});
-        } else {
-            this.setState({value});
-        }
+/**
+ * Tag
+ */
+export const Tag: React.FC<IDivBoxComponentProps> = (props) => {
+    return <StyledTag {...props} />;
+};
 
-        const {rawSourceList} = this.state;
+Tag.defaultProps = {
+    className: '',
+    style: {}
+};
 
-        if (rawSourceList && rawSourceList.length){
+Tag.displayName = 'Tag';
 
-            this.updateSourceList(value, rawSourceList);
-        }
-    }
+/**
+ * TagInput
+ */
+export const TagInput: React.FC<ITagsInputComponentProps> = (props) => {
 
-    updateSourceList = (value: string, source: string[]) => {
-        const sourceList: string[] = [];
+    const [value, setValue] = React.useState(props.value || '');
 
-        const limit = this.props.sourceLimit || 10;
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
-        source.map((text, i) => {
+        const text = e.target.value;
 
-            const sourceText = text.toLowerCase();
+        const delimiters = props.delimiters;
 
-            const stateValue = value.toLowerCase();
-
-            if (sourceText.startsWith(stateValue) && !this.props.tags.includes(text)){
-
-                sourceList.push(text);
-            }
-
-        });
-
-        this.setState({sourceList: sourceList.slice(0, limit), activeItem: 0});
-    }
-
-    onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-
-        const delimiters = this.props.delimiters && this.getConvertedDelimiters(this.props.delimiters);
-
-        const tags: string[] = this.removeDuplicates(this.props.tags); // always copy here
-
-        const key = e.key;
-        const keyCode = e.keyCode;
-
-        // console.log('Key: ' + e.key + ', KeyCode:' + e.keyCode);
-
-        if (this.props.deletable && (key === 'Backspace' || keyCode === 8) && this.state.value === ''){
-
-            e.preventDefault();
-
-            const tag = tags[tags.length - 1];
-
-            const validationTags =
-            this.props.onRemove &&
-            this.props.onRemove(e, {value: tag, dataLabel: this.props.dataLabel}, tags.length - 1);
-
-            tags.pop();
-
-            this.props.validate &&
-            this.props.validate(
-                {
-                    dataLabel: this.props.dataLabel,
-                    required: this.props.required,
-                    value: validationTags || tags
-                }
-            );
-
-        } else if (key === 'ArrowDown' || keyCode === 40){
-
-            e.preventDefault();
-
-            if (this.state.activeItem < this.state.sourceList.length - 1){
-                this.setState({activeItem: this.state.activeItem + 1});
-            }
-
-        } else if (key === 'ArrowUp' || keyCode === 38){
-
-            e.preventDefault();
-
-            if (this.state.activeItem > 0){
-                this.setState({activeItem: this.state.activeItem - 1});
-            }
-
-        } else if (delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))){
-
-            e.preventDefault();
-
-            if (!tags.includes(this.state.value) && this.state.value !== ''){
-
-                const tag = this.props.source && this.state.sourceList.length > 0 ?
-                this.state.sourceList[this.state.activeItem] : this.state.value;
-
-                const validity = this.checkValidity(tag);
-
-                if (validity){
-                    this.setState({value: '', sourceList: [], activeItem: 0});
-
-                    const validationTags = this.props.onAdd &&
-                    this.props.onAdd(e, {value: tag, dataLabel: this.props.dataLabel});
-
-                    tags.push(tag);
-
-                    if (this.props.status){
-                        this.props.validate &&
-                        this.props.validate(
-                            {
-                                dataLabel: this.props.dataLabel,
-                                required: this.props.required,
-                                value: validationTags || tags
-                            }
-                        );
-                    }
-                } else {
-                    this.setState({message: this.props.errorMessage || 'Input type is invalid'});
-                    setTimeout(() => {
-                        this.setState({message: ''});
-                    }, 3000);
-                }
-
-            } else {
-                // const pos = tags.indexOf(this.state.value);
-                // tags.splice(pos, 1, this.state.value);
-                this.setState({value: ''});
-                // this.props.onChange && this.props.onChange(e, {value: tags, dataLabel: this.props.dataLabel});
-            }
-        }
-
-    }
-
-    checkValidity = (tag: string) => {
-        const validation = this.props.validateTag;
-        if (validation){
-            if (typeof validation === 'string' && validation === 'email'){
-                return this.checkIfEmail(tag);
-            } else if (typeof validation === 'function' && typeof validation !== 'string'){
-                return validation(tag);
-            }
-            return false;
-        }
-        return true;
-    }
-
-    checkIfEmail = (tag: string) => {
-        // tslint:disable-next-line
-        const re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
-        return re.test(tag);
-    }
-
-    onPaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
-
-        const text = e.clipboardData.getData('Text');
-
-        const delimiters = this.props.delimiters;
-
-        if (delimiters && this.shouldSubmitPaste(text)){
+        if (delimiters && shouldSubmitPaste(text, props.delimiters)){
 
             let newTag: string[] = [];
             const tags: string[] = [];
@@ -438,314 +127,144 @@ export default class Tags extends React.Component<ITagsProps, ITagsState>{
             for (let i = 0 ; i < charArray.length ; i++){
                 delimiters && delimiters.map((delimiter) => {
                     if (charArray[i] === delimiter && newTag.join('') !== ''){
-                        // tags.push(newTag.join(''));
-                        // newTag = [];
-                        if (this.checkValidity(newTag.join('')) && !this.props.tags.includes(newTag.join(''))){
-                            tags.push(newTag.join('').trim());
-                            newTag = [];
-                        } else {
-                            newTag = [];
-                        }
+                        tags.push(newTag.join('').trim());
+                        newTag = [];
                     }
                 });
                 if (!(delimiters.includes(charArray[i])) && !(delimiters.includes(charArray[i].charCodeAt(0)))){
                     newTag.push(charArray[i]);
                 }
                 if (i === charArray.length - 1 && newTag.join('') !== '' && !delimiters.includes(charArray[i])){
-                    if (this.checkValidity(newTag.join('')) && !this.props.tags.includes(newTag.join('').trim())){
-                        tags.push(newTag.join('').trim());
-                    }
+                    tags.push(newTag.join('').trim());
                 }
 
             }
 
-            // if (tags.length === 0){
-            const validationTags = this.props.onAdd &&
-            this.props.onAdd(e, {value: this.removeDuplicates(tags), dataLabel: this.props.dataLabel});
-
-            this.props.validate &&
-            this.props.validate(
-                {
-                    dataLabel: this.props.dataLabel,
-                    required: this.props.required,
-                    value: validationTags || this.removeDuplicates(this.props.tags.concat(tags))
-                }
-            );
-            // }
-
+            props.onAddTag && props.onAddTag(tags);
+            setValue('');
+        } else {
+            setValue(e.target.value);
         }
 
-    }
-
-    shouldSubmitPaste = (value: string) => {
-
-        const delimiters = this.props.delimiters;
-
-        if (delimiters){
-
-            const text = value.split('');
-
-            for (const char of text) {
-                for (const delimiter of delimiters) {
-                    if (typeof delimiter === 'string' && char === delimiter){
-                        return true;
-                    } else if (typeof delimiter === 'number' && char.charCodeAt(0) === delimiter){
-                        return true;
-                    }
-                }
-            }
-        }
-
-        return false;
-    }
-
-    removeTag = (index: number) => {
-        return (e: React.MouseEvent<HTMLElement>) => {
-
-            const tag = this.removeDuplicates(this.props.tags)[index];
-
-            const validationTags =
-            this.props.onRemove &&
-            this.props.onRemove(e, {value: tag, dataLabel: this.props.dataLabel}, index);
-
-            const tags = this.removeDuplicates(this.props.tags);
-            tags.splice(index, 1);
-
-            this.props.validate &&
-            this.props.validate(
-                {
-                    dataLabel: this.props.dataLabel,
-                    required: this.props.required,
-                    value: validationTags || tags
-                }
-            );
-        };
-    }
-
-    sourceList = () => {
-
-        const source = this.state.sourceList ? this.state.sourceList : [];
-
-        const sourceList = source.map((text, i) => {
-
-            const active = this.state.activeItem === i ? styles.active : '';
-
-            return (
-                <div
-                    onClick={this.addTag(text)}
-                    className={`${styles.sourceItem} ${active}`}
-                    key={i}
-                >
-                    {text}
-                </div>
-            );
-        });
-
-        const alternateStyles = this.props.alternate ? styles.alternateSourceList : '';
-
-        return (
-            <div className={`${styles.sourceList} ${alternateStyles}`}>
-                {sourceList}
-            </div>
-        );
-
-    }
-
-    addTag = (tag: string) => {
-
-        return (e: React.MouseEvent<HTMLElement>) => {
-
-            this.setState({value: ''});
-
-            const validationTags =
-            this.props.onAdd &&
-            this.props.onAdd(e, {value: tag, dataLabel: this.props.dataLabel});
-
-            if (this.props.status){
-                this.props.validate &&
-                this.props.validate(
-                    {
-                        dataLabel: this.props.dataLabel,
-                        required: this.props.required,
-                        value: validationTags || this.removeDuplicates(this.props.tags).concat(tag)
-                    }
-                );
-            }
-
-        };
-
-    }
-
-    getCover = () => {
-        return <div onClick={this.removeSource} className={styles.cover} />;
-    }
-
-    onBlur = () => {
-        if (!this.props.preventSubmit && !(this.state.sourceList.length > 0 && this.state.value !== '')){
-            return(e: React.SyntheticEvent<HTMLElement>) => {
-
-                const tags: string[] = this.removeDuplicates(this.props.tags);
-
-                if (!tags.includes(this.state.value) && this.state.value !== ''){
-
-                    const tag = this.props.source && this.state.sourceList.length > 0 ?
-                    this.state.sourceList[this.state.activeItem] : this.state.value;
-
-                    const validity = this.checkValidity(tag);
-
-                    if (validity){
-                        this.setState({value: '', sourceList: [], activeItem: 0});
-
-                        const validationTags = this.props.onAdd &&
-                        this.props.onAdd(e, {value: tag, dataLabel: this.props.dataLabel});
-                        if (this.props.validate){
-                            this.validateOnBlur(e, validationTags || this.removeDuplicates().concat(tag));
-                        }
-                    } else {
-                        this.setState({message: this.props.errorMessage || 'Input type is invalid'});
-                        setTimeout(() => {
-                            this.setState({message: ''});
-                        }, 3000);
-                    }
-
-                } else if (this.props.validate){
-                    this.validateOnBlur(e);
-                }
-            };
-        }
-    }
-
-    validateOnBlur = (e: React.SyntheticEvent<HTMLElement>, tags?: string[] | void) => {
-
-        this.props.validate &&
-        this.props.validate(
-            {
-                dataLabel: this.props.dataLabel,
-                required: this.props.required,
-                value: tags ? tags : this.removeDuplicates(this.props.tags)
-            }
-        );
-    }
-
-    getMessage = () => {
-        const message = this.state.message;
-        if (message !== ''){
-            return <span className={styles.message}>{message}</span>;
-        }
-        return null;
-    }
-
-    removeSource = () => {
-        this.myInpRef.current.focus();
-        this.setState({sourceList: [], activeItem: -1});
-    }
-
-    getConvertedDelimiters = (delimiters: any) => {
-        const newDelimiters: Array<string | number> = delimiters.map((delimiter: any) => {
-            if (delimiter === ' ') {
-                return delimiter;
-            } else if (!isNaN(delimiter)) {
-                return parseInt(delimiter, 10);
-            } else if (typeof delimiter === 'string'){
-                return delimiter.toLocaleLowerCase();
-            } else {
-                return delimiter;
-            }
-        });
-
-        if (newDelimiters.includes('space') || newDelimiters.includes('spacebar') || newDelimiters.includes(' ')){
-            !newDelimiters.includes(32) &&  newDelimiters.push(32);
-        }
-        if (newDelimiters.includes('enter')){
-            !newDelimiters.includes(13) && newDelimiters.push(13);
-        }
-        if (newDelimiters.includes(',')){
-            !newDelimiters.includes(188) && newDelimiters.push(188);
-        }
-        if (newDelimiters.includes('.')){
-            !newDelimiters.includes(190) && newDelimiters.push(190);
-        }
-
-        return newDelimiters;
-    }
-
-    getStatus = () => {
-        const tagsStatus = this.props.status && this.props.status;
-        if (tagsStatus){
-            if (tagsStatus === 'error'){
-                return styles.error;
-            } else if (tagsStatus === 'success'){
-                return styles.success;
-            }
-        }
-    }
-
-    getDescStatus = () => {
-        const tagsStatus = this.props.status && this.props.status;
-        if (tagsStatus){
-            if (tagsStatus === 'error'){
-                return styles.descError;
-            } else if (tagsStatus === 'success'){
-                return styles.descSuccess;
-            }
-        }
-    }
-
-    renderAddIcon = () => {
-
-        const onClick = this.state.value !== '' && this.props.preventSubmit ? this.addTag(this.state.value) : undefined;
-
-        return (
-            <i onClick={onClick} className={`${icons.mooskinIcons} ${styles.add}`}>
-                add
-            </i>
-        );
-    }
-
-}
-
-export const Tag: React.StatelessComponent<ITagProps> = (props) => {
-
-    const alternateTag = props.alternate ? styles.alternateTag : '';
-
-    const onClickTag = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickTag && props.onClickTag(e);
+        props.onChange && props.onChange(e);
     };
 
-    const onClickRemove = (e: React.MouseEvent<HTMLElement>) => {
-        e.stopPropagation();
-        props.onClickRemove && props.onClickRemove(e);
-    };
+    const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
 
-    const renderRemoveIcon = () => {
-        return (
-            <div onClick={onClickRemove} className={styles.closeContainer}>
-                <i className={`${icons.mooskinIcons} ${styles.close}`}>
-                    close
-                </i>
-            </div>
-        );
-    };
+        const delimiters = props.delimiters && getConvertedDelimiters(props.delimiters);
 
-    const activeTag = props.active ? styles.activeTag : '';
+        const key = e.key;
+        const keyCode = e.keyCode;
+
+        if (delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))){
+            e.preventDefault();
+            props.onAddTag && props.onAddTag(value.toString());
+            setValue('');
+        }
+
+        props.onKeyDown && props.onKeyDown(e);
+    };
 
     return (
-        <div
-            className={`${styles.tag} ${alternateTag} ${props.className} ${activeTag}`}
-            style={props.style}
-            onClick={onClickTag}
-        >
-            <div className={styles.tagText}>
-                {props.tag}
-            </div>
-            {props.onClickRemove && renderRemoveIcon()}
-        </div>
+        <StyledTagInput
+            boxAs="input"
+            value={value}
+            onChange={onChange}
+            // onPaste={onPaste}
+            onKeyDown={onKeyDown}
+            autoFocus
+            {...props}
+        />
     );
 };
 
-Tag.defaultProps = {
+TagInput.defaultProps = {
+    className: '',
+    delimiters: ['Enter', 13],
+    style: {}
+};
+
+TagInput.displayName = 'TagInput';
+
+/**
+ * TagClose
+ */
+export const TagClose: React.FC<IDivBoxComponentProps> = (props) => {
+    return <StyledTagClose {...props} />;
+};
+
+TagClose.defaultProps = {
     className: '',
     style: {}
 };
 
-Tag.displayName = 'Tag';
+TagClose.displayName = 'TagClose';
+
+const shouldSubmitPaste = (value: string, delimiters?: Array<string | number>) => {
+
+    if (delimiters){
+
+        const text = value.split('');
+
+        for (const char of text) {
+            for (const delimiter of delimiters) {
+                if (typeof delimiter === 'string' && char === delimiter){
+                    return true;
+                } else if (typeof delimiter === 'number' && char.charCodeAt(0) === delimiter){
+                    return true;
+                }
+            }
+        }
+    }
+
+    return false;
+};
+
+const getConvertedDelimiters = (delimiters: any) => {
+    const newDelimiters: Array<string | number> = delimiters.map((delimiter: any) => {
+        if (delimiter === ' ') {
+            return delimiter;
+        } else if (!isNaN(delimiter)) {
+            return parseInt(delimiter, 10);
+        } else if (typeof delimiter === 'string'){
+            return delimiter.toLocaleLowerCase();
+        } else {
+            return delimiter;
+        }
+    });
+
+    if (newDelimiters.includes('space') || newDelimiters.includes('spacebar') || newDelimiters.includes(' ')){
+        !newDelimiters.includes(32) &&  newDelimiters.push(32);
+    }
+    if (newDelimiters.includes('enter')){
+        !newDelimiters.includes(13) && newDelimiters.push(13);
+    }
+    if (newDelimiters.includes(',')){
+        !newDelimiters.includes(188) && newDelimiters.push(188);
+    }
+    if (newDelimiters.includes('.')){
+        !newDelimiters.includes(190) && newDelimiters.push(190);
+    }
+
+    return newDelimiters;
+};
+
+// const checkValidity = (tag: string, validateTag?: 'email' | ((tag: string) => boolean)) => {
+//     if (validateTag){
+//         if (typeof validateTag === 'string' && validateTag === 'email'){
+//             return checkIfEmail(tag);
+//         } else if (typeof validateTag === 'function' && typeof validateTag !== 'string'){
+//             return validateTag(tag);
+//         }
+//         return false;
+//     }
+//     return true;
+// };
+
+// const checkIfEmail = (tag: string) => {
+//     // tslint:disable-next-line
+//     const re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
+//     return re.test(tag);
+// };
+
+export default Tags;

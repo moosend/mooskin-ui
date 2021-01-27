@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Box renders Box correctly 1`] = `
+<Component
+  className=""
+  style={Object {}}
+  theme={
+    Object {
+      "disabledBackground": "#e2e2e2",
+      "disabledfont": "#9d9d9d",
+      "inputBackground": "#ffffff",
+      "inputBorder": "#e2e2e2",
+      "inputFont": "#9d9d9d",
+      "label": "#2d2d2d",
+      "primary": "#3fbaca",
+      "secondary": "#293346",
+    }
+  }
+>
+  Box
+</Component>
+`;

@@ -1,618 +1,293 @@
 import * as React from 'react';
 
+import {Picker} from 'emoji-mart';
 import 'emoji-mart/css/emoji-mart.css';
 
-import icons from '../../assets/mooskin-icons/mooskin-icons.css';
-import styles from './Input.css';
+// Helpers
+import {getBoxProps} from '../_utils/helper';
 
-import ClipboardButton from '../ClipboardButton';
+// Models
+import { IInputCallbackData } from '../_utils/types/commonTypes';
+import { IDivBoxComponentProps } from '../Box/model';
+import { IDescriptionComponentProps } from '../Description/model';
+import { ILabelComponentProps } from '../Label/model';
+import {
+    IInputComponentProps,
+    IInputContainerComponentProps,
+    IInputEmojiComponentProps,
+    IInputIconComponentProps,
+    IInputListComponentProps,
+    IInputOptionComponentProps,
+    IInputOverlayComponentProps
+} from './model';
 
-import emojiIcon from '../../assets/images/editor/emoji.png';
-import hashtag from '../../assets/images/editor/hashtag.png';
+// Components
+import Box from '../Box/Box';
+import Description from '../Description/Description';
+import Label from '../Label/Label';
 
-import {IInputCallbackData, IValidationCallbackData} from '../_utils/types/commonTypes';
+// Styled Components
+import {
+    StyledInputContainer,
+    StyledInputIcon,
+    StyledInputOption,
+    StyledInputOptionList,
+    StyledInputOptionListTitle,
+    StyledInputOverlay,
+    StyledInputSolo,
+    StyledInputWrapped
+} from './styles';
 
-import {Picker} from 'emoji-mart';
-
-export interface IProps {
-
-    /** override input id */
-    id?: string;
-
-    /** provide to make the input field disabled */
-    disabled?: boolean;
-
-    /** provide to make the input field required */
-    required?: boolean;
-
-    /** override input type */
-    type?: string;
-
-    /** override input name */
-    name?: string;
-
-    /** apply alternate styles */
-    alternateStyle?: boolean;
-
-    /** override input value */
-    value: string | number;
-
-    /** min and max values for number values */
-    minmax?: number[];
-
-    /** override input placeholder */
-    placeholder?: string;
-
-    /** override input minlength */
-    minlength?: number;
-
-    /** override input maxlength */
-    maxlength?: number;
-
-    /** input label */
-    label?: string;
-
-    /** sets emoji dropdown to the input for adding emojis */
-    emoji?: boolean;
-
-    /** add personalization tags dropdown */
-    personalizationTags?: Array<{value: string, label: string}>;
-
-    /** close personalization tags dropdown when a tag is added */
-    closeOnTagAdd?: boolean;
-
-    /** spacing between label and input */
-    labelWidth?: number;
-
-    /** place label on top of Input */
-    labelTop?: boolean;
-
-    /** toggle autocomplete specified input */
-    autocomplete?: boolean;
-
-    /** autofocus specified input */
-    autofocus?: boolean;
-
-    /** icon to be placed near input */
-    icon?: string;
-
-    /** position of the icon */
-    iconPosition?: string;
-
-    /** override icon styles */
-    iconStyle?: React.CSSProperties;
-
-    /** override icon class */
-    iconClass?: string;
-
-    /** override input styles */
-    style?: React.CSSProperties;
-
-    /** override input class */
-    className?: string;
-
-    /** numberType */
-    numberType?: 'integer' | 'float';
-
-    /** input description (small italic bottom) */
-    description?: string;
-
-    /** status of the input, error or success */
-    status?: 'error' | 'success';
-
-    /** add custom dropdown */
-    customDropdowns?: ICustomDropdown | ICustomDropdown[];
-
-    /** adds clipboardButton to the input component and assigns a label */
-    clipboardButton?: string;
-
-    /** clipboardButton callback function when clicked */
-    onClipboardButtonClick?: (e: React.MouseEvent<HTMLButtonElement>, data: IInputCallbackData) => void;
-
-    /** validate function */
-    validate?: (data: IValidationCallbackData) => boolean;
-
-    /** what data is being used, helps whn extracting user input, you know on what field changes are made */
-    dataLabel?: string;
-
-    /** callback that is called when the input changes */
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
-
-    /** callback that is called when a key is pressed */
-    onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>, data: IInputCallbackData) => void;
-
-    /** callback that is called when the input is focused */
-    onFocus?: (e: React.FocusEvent<HTMLInputElement>, data: IInputCallbackData) => void;
-
-    /** callback that is called when the input is blured */
-    onBlur?: (e: React.SyntheticEvent<HTMLInputElement>, data: IInputCallbackData) => void;
-
-}
-
-export interface ICustomDropdown {
-    icon: string;
-    title: string;
-    content: JSX.Element | Element | JSX.Element[] | Element[];
-    open?: boolean;
-    onClick?: () => boolean | void;
-}
-
-export interface IInputState{
-    activeDropDown: number;
-}
-
-class Input extends React.Component<IProps, IInputState> {
-
-    static defaultProps = {
-        className: '',
-        closeOnTagAdd: true,
-        iconPosition: 'right',
-        numberType: 'float',
-        style: {}
+/**
+ * InputContainer
+ */
+export const InputContainer: React.FC<IInputContainerComponentProps> = (props) => {
+    const batchChangeHandler = (
+        e: React.ChangeEvent<HTMLInputElement>,
+        data: IInputCallbackData,
+        callback?: (e: React.ChangeEvent<HTMLInputElement>) => void
+    ) => {
+        props.onChangeInput && props.onChangeInput(e, data);
+        callback && callback(e);
     };
 
-    static displayName = 'Input';
+    const onDropdownOptionClick = (value: string) => {
+        const newValue = props.value ? props.value + value :  value;
+        props.onChangeInput && props.onChangeInput({} as any, {dataLabel: props.dataLabel, value: newValue});
+    };
 
-    id: string;
-
-    inputRef = React.createRef<any>();
-
-    constructor(props: IProps){
-        super(props);
-
-        this.id = this.props.id || this.generateId();
-
-        this.state = {
-            activeDropDown: -1
-        };
-
-    }
-
-    componentDidMount(){
-        this.setMinMaxValues();
-        // this.input.addEventListener('input', () => {
-        //     this.input.value = this.props.value;
-        // });
-    }
-
-    render(){
-
-        const {
-            style,
-            className,
-            label,
-            labelTop,
-        } = this.props;
-
-        const spacing = !this.props.labelWidth ? {} : {flexBasis: `${this.props.labelWidth}px`};
-
-        const labelPos = labelTop ? styles.column : '';
-        const topLabel = labelTop ? styles.topLabel : '';
-        const inputClasses = `${styles.inputLabel} ${topLabel}`;
-
-        const alternateStyle = this.props.alternateStyle ? styles.alternate : '';
-
-        return (
-            <div className={`input-component ${styles.inputContainer} ${labelPos} ${alternateStyle} ${className}`} style={style}>
-                {label && <label className={inputClasses} style={spacing} htmlFor={this.id}>{label}</label>}
-                {this.renderInput()}
-                {this.state.activeDropDown !== -1 && <div onClick={this.removeDropDown} className={styles.overlay} />}
-            </div>
-        );
-    }
-
-    renderInput = () => {
-        const {
-            autofocus,
-            clipboardButton,
-            disabled,
-            maxlength,
-            minlength,
-            placeholder,
-            required,
-            iconPosition,
-            personalizationTags,
-            emoji,
-            customDropdowns,
-            description,
-            icon,
-            type
-        } = this.props;
-
-        const autocomplete = !this.props.autocomplete ? 'off' : 'on';
-        const disabledInput = disabled ? styles.disabledInput : '';
-
-        const value = type === 'number' ? this.props.value as number : this.props.value;
-        const inputType = type === 'number' ? 'text' : type;
-
-        const status = this.getStatus();
-        const descStatus = this.getDescStatus();
-
-        const inputPaddingLeft = icon ? iconPosition === 'left' ? 0 : 15 : '';
-        const inputPaddingRight = icon ? iconPosition === 'left' ? 15 : 0 : '';
-        return (
-            <div style={{flexShrink: 1, flexGrow: 1, position: 'relative'}}>
-                <div style={{display: 'flex', flex: 1}}>
-                    <div className={`${styles.innerDiv} ${status} ${disabledInput}`}>
-                        <input
-                            style={{order: iconPosition === 'left' ? 2 : 1, paddingLeft: inputPaddingLeft, paddingRight: inputPaddingRight}}
-                            ref={this.inputRef}
-                            onChange={this.onChange}
-                            id={this.id}
-                            type={inputType}
-                            name={this.props.name}
-                            value={value}
-                            placeholder={placeholder}
-                            minLength={minlength}
-                            maxLength={maxlength}
-                            required={required}
-                            disabled={disabled}
-                            className={styles.input}
-                            autoFocus={autofocus}
-                            onFocus={this.onFocus}
-                            autoComplete={autocomplete}
-                            onKeyDown={this.onKeyDown}
-                            onBlur={this.validateOnBlur}
-                        />
-                        {(personalizationTags || emoji || customDropdowns) && this.getDropDownContainer()}
-                        {icon && this.getIconContainer()}
-                    </div>
-                    {clipboardButton && this.getClipboardButton()}
-                </div>
-                {description && <i className={`${styles.description} ${descStatus}`}>{description}</i>}
-            </div>
-        );
-    }
-
-    onFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-        !this.props.disabled &&
-        this.props.onFocus && this.props.onFocus(e, {dataLabel: this.props.dataLabel, value: this.props.value});
-    }
-
-    onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        !this.props.disabled &&
-        this.props.onKeyDown && this.props.onKeyDown(e, {dataLabel: this.props.dataLabel, value: this.props.value});
-    }
-
-    onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        let returnValue: string | number = e.target.value;
-        if (this.props.numberType === 'integer'){
-            returnValue = returnValue.replace(/\./g, '');
+    const recurseChildren = (children: any): any => {
+        if (!children){
+            return null;
         }
-        if (this.props.type === 'number' && returnValue.charAt(returnValue.length - 1) !== '.'){
-            returnValue = parseFloat(returnValue);
-            if (this.props.minmax){
-                const {max} = this.getMinMaxConfig();
-                if (max && parseFloat(e.target.value) > max){
-                    returnValue = this.getNumberValue(parseFloat(returnValue.toString()));
-                }
+
+        return React.Children.map(children, (child, i) => {
+            if (React.isValidElement<IInputComponentProps>(child) && child.type === Input){
+                return React.cloneElement(child, {
+                    dataLabel: props.dataLabel,
+                    disabled: props.disabled,
+                    key: i,
+                    onChangeInput: (e, data) => batchChangeHandler(e, data, child.props.onChange),
+                    value: props.value,
+                    wrapped: true
+                } as IInputComponentProps);
             }
-            if (isNaN(returnValue)){
-                // this.input.value = this.props.value;
-                returnValue = '';
-                // return;
+
+            if (React.isValidElement<IInputEmojiComponentProps>(child) && child.type === InputEmoji){
+                return React.cloneElement(child, {
+                    key: i,
+                    onChangeEmoji: onDropdownOptionClick
+                } as IInputEmojiComponentProps);
             }
-        }
-        this.callItBack(e, returnValue);
-    }
 
-    callItBack = (e: React.ChangeEvent<HTMLInputElement>, value: string | number) => {
-        !this.props.disabled &&
-        this.props.onChange &&
-        this.props.onChange(e, {value, dataLabel: this.props.dataLabel});
-        if (this.props.status){
-            this.props.validate &&
-            this.props.validate(
-                {value, dataLabel: this.props.dataLabel, required: this.props.required}
-            );
-        }
-    }
-
-    validateOnBlur = (e: React.SyntheticEvent<HTMLInputElement>) => {
-        this.setMinMaxValues();
-        this.props.validate &&
-        this.props.validate({value: this.props.value, dataLabel: this.props.dataLabel, required: this.props.required});
-        this.props.onBlur &&
-        this.props.onBlur(e, {dataLabel: this.props.dataLabel, value: this.props.value});
-    }
-
-    getStatus = () => {
-        const inputStatus = this.props.status && this.props.status;
-        if (inputStatus){
-            if (inputStatus === 'error'){
-                return styles.error;
-            } else if (inputStatus === 'success'){
-                return styles.success;
+            if (React.isValidElement<IInputListComponentProps>(child) && child.type === InputOptionList){
+                return React.cloneElement(child, {
+                    children: recurseChildren(child.props.children),
+                    icon: 'check',
+                    key: i
+                } as IInputListComponentProps);
             }
-        }
-    }
 
-    getDescStatus = () => {
-        const inputStatus = this.props.status && this.props.status;
-        if (inputStatus){
-            if (inputStatus === 'error'){
-                return styles.descError;
-            } else if (inputStatus === 'success'){
-                return styles.descSuccess;
+            if (React.isValidElement<IInputOptionComponentProps>(child) && child.type === InputOption){
+                return React.cloneElement(child, {
+                    children: recurseChildren(child.props.children),
+                    key: i,
+                    onClickOption: (value) => onDropdownOptionClick(value),
+                    value: child.props.value
+                } as IInputOptionComponentProps);
             }
-        }
-    }
 
-    setMinMaxValues = () => {
-        if (this.props.type === 'number' && this.props.minmax){
-            let returnValue: string | number = this.getNumberValue(parseFloat(this.props.value.toString()));
-            if (isNaN(returnValue)){
-                returnValue = this.getNumberValue(0);
+            if (React.isValidElement(child) && (child.props as any).children){
+                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
             }
-            !this.props.disabled &&
-            this.props.onChange &&
-            this.props.onChange({} as any, {value: returnValue, dataLabel: this.props.dataLabel});
-        }
-    }
 
-    getMinMaxConfig = () => {
-        let min;
-        let max;
-        if (this.props.minmax){
-            if (this.props.minmax.length > 2) {
-                throw new Error(`Prop 'minmax' has more values than expected!`);
-            } else if (this.props.minmax.length === 0) {
-                throw new Error(`Prop 'minmax' has no values!`);
-            } else if (this.props.minmax.length === 1) {
-                max = this.props.minmax && this.props.minmax[0];
-            } else if (this.props.minmax.length === 2){
-                min = this.props.minmax && this.props.minmax[0];
-                max = this.props.minmax && this.props.minmax[1];
-            }
-        }
-        return {min, max};
-    }
-
-    getNumberValue = (value: number) => {
-        if (this.props.minmax){
-            const {min, max} = this.getMinMaxConfig();
-            if (min && value < min){
-                return min;
-            } else if (max && value > max) {
-                return max;
-            } else {
-                return value;
-            }
-        }
-        return value;
-    }
-
-    generateId = () => {
-        return Math.random().toString(36).substr(2, 10);
-    }
-
-    getIcon = (icon: string, args?: {custom: ICustomDropdown, i: number}) => {
-        const iconFont = icon && this.getIconContent(icon);
-        const iconStatus = !args || !args.custom ? this.getIconStatus() : '';
-        const iconPadding = this.props.iconPosition === 'left' ? {paddingRight: 10} : {paddingLeft: 10};
-        const style = args && args.custom ? {fontSize: 16, cursor: 'pointer', color: '#6b6b6b', paddingLeft: 10} : {};
-        const title = args && args.custom && args.custom.title;
-        const onClick = () => args && args.custom ? args.custom.onClick ?
-        this.onDropDownIconClick(args.i, args.custom.onClick) : this.onDropDownIconClick(args.i) : undefined;
-        const paddingForDropDownIcon = args && args.custom ? {padding: 0} : {};
-        return (
-            <div
-                onClick={onClick}
-                className={`${icons.mooskinIcons} ${styles.icon} ${iconStatus} ${this.props.iconClass}`}
-                style={{...iconPadding, ...style, ...paddingForDropDownIcon, ...this.props.iconStyle}}
-                title={title}
-            >
-                {iconFont}
-            </div>
-        );
-    }
-
-    getIconStatus = () => {
-        const inputStatus = this.props.status && this.props.status;
-        if (inputStatus){
-            if (inputStatus === 'error'){
-                return styles.iconError;
-            } else if (inputStatus === 'success'){
-                return styles.iconSuccess;
-            }
-        }
-    }
-
-    getIconContent = (icon: string) => {
-        return icon ? icon.replace(/\s/g, '_') : '';
-    }
-
-    onIconClick = () => {
-        this.inputRef.current.focus();
-    }
-
-    getClipboardButton = () => {
-        return (
-            <ClipboardButton
-                label={this.props.clipboardButton}
-                value={this.props.value}
-                className={styles.copyButton}
-                style={{alignSelf: 'center'}}
-                onClick={this.onClipboardButtonClick}
-            />
-        );
-    }
-
-    onClipboardButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        this.props.onClipboardButtonClick &&
-        this.props.onClipboardButtonClick(e, {value: this.props.value, dataLabel: this.props.dataLabel});
-    }
-
-    getIconContainer = () => {
-        const {icon, iconPosition} = this.props;
-        const reverse = iconPosition === 'left' ? styles.reverse : '';
-        return (
-            <div
-                className={`${styles.iconContainer} ${reverse}`}
-                style={{order: iconPosition === 'left' ? 1 : 3, cursor: 'text'}}
-                onClick={() => this.onIconClick()}
-            >
-                {icon && this.getIcon(icon)}
-            </div>
-        );
-    }
-
-    getDropDownContainer = () => {
-        const {iconPosition} = this.props;
-        return (
-            <div
-                className={styles.dropDownContainer}
-                style={{order: iconPosition === 'left' ? 3 : 2}}
-            >
-                {this.getDropDown()}
-            </div>
-        );
-    }
-
-    getDropDown = () => {
-        let dropdowns = [];
-        let i = 0;
-        if (this.props.customDropdowns){
-            const {newDropdowns, newIndex} = this.props.customDropdowns && this.getCustomDropdowns(i);
-            dropdowns = newDropdowns;
-            i = i + newIndex;
-            // dropdowns.concat(customDropdowns) && (i = i + newIndex);
-        }
-        this.props.personalizationTags &&
-        dropdowns.push(this.getDropDownIcon(hashtag, i, 'personalization')) && (i = i + 1);
-        this.props.emoji && dropdowns.push(this.getDropDownIcon(emojiIcon, i, 'emoji'));
-        return dropdowns;
-    }
-
-    getDropDownIcon = (icon: string, i: number, type: string, custom?: ICustomDropdown) => {
-        const display = this.state.activeDropDown === i ? {display: 'block'} : {display: 'none'};
-        const title = custom ? custom.title : type === 'emoji' ? 'Emoji' : type === 'personalization' ? 'Personalization tags' : '';
-        const onClick = () => custom && custom.onClick ? this.onDropDownIconClick(i, custom.onClick) : this.onDropDownIconClick(i);
-        /* tslint:disable */
-        return (
-            <div
-                className={`dropdown-icon ${styles.dropDownIconWrapper}`}
-                key={i}
-                style={{position: 'relative', display: 'flex', alignItems: 'center'}}
-            >
-                {custom && custom.icon.includes('mooskin') && this.getIcon(custom.icon.split('-').pop() || '', {custom, i}) || <img title={title} onClick={onClick} className={styles.dropDownIcon} src={icon}/>}
-                {this.renderDropDown(display, type, custom)}
-            </div>
-            /* tslint:enable */
-        );
-    }
-
-    getCustomDropdowns = (index: number) => {
-        let newIndex: number = index;
-        const newDropdowns: any[] = [];
-        if (this.props.customDropdowns){
-            if (Array.isArray(this.props.customDropdowns)){
-                this.props.customDropdowns.forEach((dropdown, i) => {
-                    newDropdowns.push(this.getDropDownIcon(dropdown.icon, newIndex + i, dropdown.title, dropdown));
-                    newIndex = index + i;
-                });
-            } else {
-                newDropdowns.push(this.getDropDownIcon(
-                    this.props.customDropdowns.icon, newIndex, this.props.customDropdowns.title, this.props.customDropdowns
-                ));
-                newIndex = index + 1;
-            }
-        }
-        return {newDropdowns, newIndex};
-    }
-
-    onDropDownIconClick = (i: number, onClick?: () => boolean | void) => {
-        if (onClick){
-            const proceed = onClick();
-            if (typeof proceed === 'boolean' && proceed === false){
-                return;
-            }
-            this.setState({activeDropDown: i});
-        } else {
-            this.setState({activeDropDown: i});
-        }
-    }
-
-    removeDropDown = () => {
-        this.setState({activeDropDown: -1});
-    }
-
-    renderDropDown = (display: React.CSSProperties, type: string, custom?: ICustomDropdown) => {
-        const displayStyle = custom && custom.open ? {display: 'block'} : display;
-        return (
-            <div style={displayStyle} className={styles.dropDown}>
-                <div className={styles.dropDownArrow} />
-                {type === 'personalization' && this.getPersDropDown()}
-                {type === 'emoji' && this.getEmojis()}
-                {custom && this.renderCustom(custom)}
-            </div>
-        );
-    }
-
-    renderCustom = (custom: ICustomDropdown) => {
-        return (
-            <>
-                <div className={styles.dropDownLabel}>{custom.title}</div>
-                <div className={styles.dropDownContent} style={{width: 'auto'}}>
-                    {custom.content}
-                </div>
-            </>
-        );
-    }
-
-    getPersDropDown = () => {
-        return (
-            <>
-                <div className={styles.dropDownLabel}>Personalization Tags</div>
-                <div className={styles.dropDownContent}>
-                    {this.getPersonalizationTags()}
-                </div>
-            </>
-        );
-    }
-
-    getPersonalizationTags = () => {
-        return this.props.personalizationTags && this.props.personalizationTags.map((tag, i) => {
-            return (
-                <div key={i} onClick={(e) => this.addTag(e, tag.value)} className={styles.tag}>
-                    {tag.label}
-                </div>
-            );
+            return child;
         });
-    }
+    };
 
-    addTag = (e: any, value: string) => {
-        const finalValue = this.props.value ? this.props.value + value : value;
-        this.props.onChange &&
-        this.props.onChange(e, {value: finalValue, dataLabel: this.props.dataLabel});
-        if (this.props.status){
-            this.props.validate &&
-            this.props.validate(
-                {value: finalValue, dataLabel: this.props.dataLabel, required: this.props.required}
-            );
-        }
-        setTimeout(() => {
-            this.props.closeOnTagAdd && this.removeDropDown();
-        }, 1);
-    }
+    return (
+        <StyledInputContainer {...props} >
+            {recurseChildren(props.children)}
+        </StyledInputContainer>
+    );
+};
 
-    getEmojis = () => {
-        return <Picker onSelect={this.onEmojiChange} exclude={['flags']} showPreview={false} showSkinTones={false}/>;
-    }
+InputContainer.defaultProps = {
+    className: '',
+    style: {}
+};
 
-    onEmojiChange = (data: any) => {
-        const emoji = String.fromCodePoint(parseInt('0x' + data.unified, 16));
-        const finalValue = this.props.value ? this.props.value + emoji :  emoji;
-        this.props.onChange &&
-        this.props.onChange({} as any, {value: finalValue, dataLabel: this.props.dataLabel});
-        if (this.props.status){
-            this.props.validate &&
-            this.props.validate(
-                {value: finalValue, dataLabel: this.props.dataLabel, required: this.props.required}
-            );
-        }
-    }
+InputContainer.displayName = 'InputContainer';
 
-}
+/**
+ * InputOptionList
+ */
+export const InputOptionList: React.FC<IInputListComponentProps> = (props) => {
+    const [showList, setShowList] = React.useState(false);
+    return (
+        <Box position="relative" {...getBoxProps(props)}>
+            <InputIcon onClickIcon={() => setShowList(!showList)}>{props.icon}</InputIcon>
+            {showList && (
+                <>
+                    <StyledInputOptionList w={300}>
+                        {props.children}
+                    </StyledInputOptionList>
+                    <InputOverlay onClickOverlay={() => setShowList(!showList)} />
+                </>
+            )}
+        </Box>
+    );
+};
+
+InputOptionList.defaultProps = {
+    className: '',
+    style: {}
+};
+
+InputOptionList.displayName = 'InputOptionList';
+
+/**
+ * InputOptionListTitle
+ */
+export const InputOptionListTitle: React.FC<IDivBoxComponentProps> = (props) => {
+    return <StyledInputOptionListTitle {...props} />;
+};
+
+InputOptionListTitle.defaultProps = {
+    className: '',
+    style: {}
+};
+
+InputOptionListTitle.displayName = 'InputOptionListTitle';
+
+/**
+ * InputOption
+ */
+export const InputOption: React.FC<IInputOptionComponentProps> = (props) => {
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        props.onClickOption && props.onClickOption(props.value);
+        props.onClick && props.onClick(e);
+    };
+    return <StyledInputOption {...props} onClick={onClick} />;
+};
+
+InputOption.defaultProps = {
+    className: '',
+    style: {}
+};
+
+InputOption.displayName = 'InputOption';
+
+/**
+ * Input
+ */
+export const Input: React.FC<IInputComponentProps> = (props) => {
+    const InputComponent = props.wrapped ? StyledInputWrapped : StyledInputSolo;
+    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        props.onChangeInput && props.onChangeInput(e, {dataLabel: props.dataLabel, value: e.target.value});
+        props.onChange && props.onChange(e);
+    };
+    return <InputComponent {...props} boxAs="input" onChange={onChange} />;
+};
+
+Input.defaultProps = {
+    className: '',
+    style: {}
+};
+
+Input.displayName = 'Input';
+
+/**
+ * InputLabel
+ */
+export const InputLabel: React.FC<ILabelComponentProps> = (props) => {
+    return <Label disabled={props.disabled} {...props} />;
+};
+
+InputLabel.defaultProps = {
+    className: '',
+    style: {}
+};
+
+InputLabel.displayName = 'InputLabel';
+
+/**
+ * InputDescription
+ */
+export const InputDescription: React.FC<IDescriptionComponentProps> = (props) => {
+    return <Description {...props} />;
+};
+
+InputDescription.defaultProps = {
+    className: '',
+    style: {}
+};
+
+InputDescription.displayName = 'InputDescription';
+
+/**
+ * InputIcon
+ */
+export const InputIcon: React.FC<IInputIconComponentProps> = (props) => {
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        props.onClickIcon && props.onClickIcon(e);
+    };
+    return <StyledInputIcon {...props} onClick={onClick} />;
+};
+
+InputIcon.defaultProps = {
+    className: '',
+    style: {}
+};
+
+InputIcon.displayName = 'InputIcon';
+
+/**
+ * InputOverlay
+ */
+export const InputOverlay: React.FC<IInputOverlayComponentProps> = (props) => {
+    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        props.onClickOverlay && props.onClickOverlay(e);
+    };
+    return <StyledInputOverlay {...props} onClick={onClick} />;
+};
+
+InputOverlay.defaultProps = {
+    className: '',
+    style: {}
+};
+
+InputOverlay.displayName = 'InputOverlay';
+
+/**
+ * InputEmoji
+ */
+export const InputEmoji: React.FC<IInputEmojiComponentProps> = (props) => {
+
+    const [showEmoji, setShowEmoji] = React.useState(false);
+
+    const onChangeEmoji = (data: any) => {
+        props.onChangeEmoji && props.onChangeEmoji(data.native);
+    };
+
+    return (
+        <Box position="relative" {...getBoxProps(props)}>
+            <InputIcon onClickIcon={() => setShowEmoji(!showEmoji)}>emoji_emotions</InputIcon>
+            {showEmoji && (
+                <Box position="absolute" right="0">
+                    <Picker onSelect={onChangeEmoji} exclude={['flags']} showPreview={false} showSkinTones={false} />
+                    <InputOverlay onClickOverlay={() => setShowEmoji(!showEmoji)} />
+                </Box>
+            )}
+        </Box>
+    );
+};
+
+InputEmoji.defaultProps = {
+    className: '',
+    style: {}
+};
+
+InputEmoji.displayName = 'InputEmoji';
 
 export default Input;

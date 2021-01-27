@@ -1,17 +1,129 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button renders correctly 1`] = `
-<a
-  className="button-component-link button-component button inverseButton disabledButton myClass"
+<Button
+  className="myClass"
+  disabled={true}
   href="www.moosend.com"
   id="button1"
-  onClick={[Function]}
+  inverseStyle={true}
+  onClick={[MockFunction]}
+  size="md"
   style={
     Object {
       "color": "blue",
     }
   }
+  type="submit"
 >
-  Mooskin
-</a>
+  <Styled(Styled(Box))
+    boxAs="a"
+    className="myClass"
+    disabled={true}
+    href="www.moosend.com"
+    id="button1"
+    inverseStyle={true}
+    onClick={[Function]}
+    size="md"
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+    type="submit"
+  >
+    <Box
+      boxAs="a"
+      className="sc-gtssRu sc-hKFyIo elDsFG laAlOc myClass"
+      disabled={true}
+      href="www.moosend.com"
+      id="button1"
+      inverseStyle={true}
+      onClick={[Function]}
+      size="md"
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
+      type="submit"
+    >
+      <Component
+        boxAs="a"
+        className="sc-gtssRu sc-hKFyIo elDsFG laAlOc myClass"
+        disabled={true}
+        href="www.moosend.com"
+        id="button1"
+        inverseStyle={true}
+        onClick={[Function]}
+        size="md"
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
+        type="submit"
+      >
+        <styled.div
+          as="a"
+          boxAs="a"
+          className="sc-gtssRu sc-hKFyIo elDsFG laAlOc myClass"
+          disabled={true}
+          href="www.moosend.com"
+          id="button1"
+          inverseStyle={true}
+          onClick={[Function]}
+          size="md"
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+          type="submit"
+        >
+          <a
+            className="sc-bdnylx dOPKTt sc-gtssRu sc-hKFyIo elDsFG laAlOc myClass"
+            disabled={true}
+            href="www.moosend.com"
+            id="button1"
+            onClick={[Function]}
+            size="md"
+            style={
+              Object {
+                "color": "blue",
+              }
+            }
+            type="submit"
+          >
+            Mooskin
+          </a>
+        </styled.div>
+      </Component>
+    </Box>
+  </Styled(Styled(Box))>
+</Button>
 `;
