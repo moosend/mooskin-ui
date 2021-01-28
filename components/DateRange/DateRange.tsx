@@ -72,7 +72,7 @@ export const rangeOptions = [
         value: 'this-week'
     },
     {
-        label: 'This week to date',
+        label: 'Week to date',
         setDate: {
             end: moment(),
             start: moment().startOf('isoWeek')
@@ -96,7 +96,7 @@ export const rangeOptions = [
         value: 'this-month'
     },
     {
-        label: 'This month to date',
+        label: 'Month to date',
         setDate: {
             end: moment(),
             start: moment().startOf('month')
@@ -120,7 +120,7 @@ export const rangeOptions = [
         value: 'this-quarter'
     },
     {
-        label: 'This quarter to date',
+        label: 'Quarter to date',
         setDate: {
             end: moment(),
             start: moment().startOf('quarter')
@@ -144,7 +144,7 @@ export const rangeOptions = [
         value: 'this-year'
     },
     {
-        label: 'This year to date',
+        label: 'Year to date',
         setDate: {
             end: moment(),
             start: moment().startOf('year')

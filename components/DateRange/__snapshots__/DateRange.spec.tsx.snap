@@ -94,7 +94,7 @@ exports[`DateRange renders correctly 1`] = `
           key="this-week-to-date"
           value="this-week-to-date"
         >
-          This week to date
+          Week to date
         </Option>
         <Option
           key="last-week"
@@ -112,7 +112,7 @@ exports[`DateRange renders correctly 1`] = `
           key="this-month-to-date"
           value="this-month-to-date"
         >
-          This month to date
+          Month to date
         </Option>
         <Option
           key="last-month"
@@ -130,7 +130,7 @@ exports[`DateRange renders correctly 1`] = `
           key="this-quarter-to-date"
           value="this-quarter-to-date"
         >
-          This quarter to date
+          Quarter to date
         </Option>
         <Option
           key="last-quarter"
@@ -148,7 +148,7 @@ exports[`DateRange renders correctly 1`] = `
           key="this-year-to-date"
           value="this-year-to-date"
         >
-          This year to date
+          Year to date
         </Option>
         <Option
           key="last-year"
