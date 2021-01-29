@@ -31,6 +31,4 @@ export const StyledTabHeader = styled(Box)<ITabCommonComponentProps>`
     }
 `;
 
-export const StyledTabContent = styled(Box)<ITabCommonComponentProps>`
-    display: ${(props) => props.active ? 'block' : 'none'};
-`;
+export const StyledTabContent = styled(Box)<ITabCommonComponentProps>``;
