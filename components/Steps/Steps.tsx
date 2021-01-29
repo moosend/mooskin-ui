@@ -58,7 +58,7 @@ export const Steps: React.FC<IStepsComponentProps> = (props) => {
             }
 
             if (React.isValidElement<IStepCommonComponentProps>(child) && child.type === StepContent){
-                content = React.cloneElement(child, {active} as IStepCommonComponentProps);
+                content = active ? React.cloneElement(child, {active} as IStepCommonComponentProps) : undefined;
             }
         });
 

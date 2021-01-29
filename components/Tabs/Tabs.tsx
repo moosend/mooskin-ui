@@ -47,7 +47,7 @@ export const Tabs: React.FC<ITabsComponentProps> = (props) => {
             }
 
             if (React.isValidElement<ITabCommonComponentProps>(child) && child.type === TabContent){
-                content = React.cloneElement(child, {active} as ITabCommonComponentProps);
+                content = active ? React.cloneElement(child, {active} as ITabCommonComponentProps) : undefined;
             }
         });
 
