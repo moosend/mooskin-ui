@@ -5,7 +5,7 @@ export interface ISidemenuComponentProps extends IDivBoxComponentProps{
     activeItem?: string;
 
     /** callback called when clicking a Sidemenu item */
-    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string) => void;
 }
 
 export interface ISidemenuItemComponentProps extends IDivBoxComponentProps{
@@ -16,5 +16,5 @@ export interface ISidemenuItemComponentProps extends IDivBoxComponentProps{
     active?: boolean;
 
     /** callback called when clicking a Sidemenu item */
-    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string) => void;
 }

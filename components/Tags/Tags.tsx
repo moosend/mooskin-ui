@@ -22,15 +22,15 @@ import {
 export const Tags: React.FC<ITagsComponentProps> = (props) => {
 
     const batchClickHandler = (
-        e: React.MouseEvent<HTMLDivElement>,
+        e: React.MouseEvent<HTMLElement>,
         data: IInputCallbackData,
-        callback?: (e: React.MouseEvent<HTMLDivElement>) => void
+        callback?: (e: React.MouseEvent<HTMLElement>) => void
     ) => {
         props.onClickTag && props.onClickTag(e, data);
         callback && callback(e);
     };
 
-    const onRemoveTag = (e: React.MouseEvent<HTMLDivElement>, i: number) => {
+    const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
         e.stopPropagation();
         props.onRemoveTag && props.onRemoveTag(e, {dataLabel: props.dataLabel, value: i});
     };
@@ -60,7 +60,7 @@ export const Tags: React.FC<ITagsComponentProps> = (props) => {
                         </>
                     ),
                     key: i,
-                    onClick: (e: React.MouseEvent<HTMLDivElement>) =>
+                    onClick: (e: React.MouseEvent<HTMLElement>) =>
                         batchClickHandler(e, {dataLabel: props.dataLabel, value: i}, child.props.onClick)
                 } as IDivBoxComponentProps);
             }

@@ -5,7 +5,7 @@ export interface ISelectorComponentProps extends IDivBoxComponentProps{
     activeItem?: string;
 
     /** callback called when clicking a Selector item */
-    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string) => void;
 }
 
 export interface ISelectorItemComponentProps extends IDivBoxComponentProps{
@@ -16,5 +16,5 @@ export interface ISelectorItemComponentProps extends IDivBoxComponentProps{
     active?: boolean;
 
     /** callback called when clicking a Selector item */
-    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string) => void;
 }

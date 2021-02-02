@@ -15,11 +15,11 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
 
     const [hasCheckbox, setHasCheckbox] = React.useState(false);
 
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickCheckbox && props.onClickCheckbox(e, {dataLabel: props.dataLabel, value: !props.checked});
     };
 
-    const batchClickHandler = (e: React.MouseEvent<HTMLDivElement>, callback?: (e: React.MouseEvent<HTMLDivElement>) => void) => {
+    const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
         if (!props.disabled){
             onClick(e);
             callback && callback(e);
@@ -37,7 +37,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
                     children: recurseChildren(child.props.children),
                     disabled: props.disabled,
                     key: i,
-                    onClick: (e: React.MouseEvent<HTMLDivElement>) => batchClickHandler(e, child.props.onClick)
+                    onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick)
                 } as ILabelComponentProps);
             }
 
@@ -47,7 +47,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
                     children: props.checked ? 'check_box' : 'check_box_outline_blank',
                     disabled: props.disabled,
                     key: i,
-                    onClickIcon: (e: React.MouseEvent<HTMLDivElement>) => batchClickHandler(e, child.props.onClickIcon)
+                    onClickIcon: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClickIcon)
                 } as ICheckboxIconComponentProps);
             }
 
@@ -85,7 +85,7 @@ Checkbox.displayName = 'Checkbox';
  * CheckboxIcon
  */
 export const CheckboxIcon: React.FC<ICheckboxIconComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickIcon && props.onClickIcon(e);
         props.onClick && props.onClick(e);
     };

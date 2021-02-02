@@ -37,7 +37,7 @@ export type IBoxComponentProps = IDivBoxComponentProps;
 export interface IBaseBoxComponentProps extends IMooskinContext {
 
     /** render Box as a different html element */
-    boxAs?: string;
+    boxAs?: any;
 
     /** margin */
     m?: number | string;

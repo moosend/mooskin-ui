@@ -37,12 +37,12 @@ export interface IInputComponentProps extends IInputBoxComponentProps {
 
 export interface IInputIconComponentProps extends IDivBoxComponentProps {
     /** onclick event handler when clicking on the icon */
-    onClickIcon?: (e: React.MouseEvent<HTMLDivElement>) => void;
+    onClickIcon?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface IInputOverlayComponentProps extends IDivBoxComponentProps {
     /** onclick event handler when clicking on the icon */
-    onClickOverlay?: (e: React.MouseEvent<HTMLDivElement>) => void;
+    onClickOverlay?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface IInputEmojiComponentProps extends IDivBoxComponentProps {
@@ -55,7 +55,7 @@ export interface IInputListComponentProps extends IDivBoxComponentProps {
     icon: string;
 
     /** onclick event handler when clicking on the component */
-    onClickOption?: (e: React.MouseEvent<HTMLDivElement>, value: string) => void;
+    onClickOption?: (e: React.MouseEvent<HTMLElement>, value: string) => void;
 }
 
 export interface IInputOptionComponentProps extends IDivBoxComponentProps {

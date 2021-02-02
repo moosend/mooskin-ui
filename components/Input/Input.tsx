@@ -161,7 +161,7 @@ InputOptionListTitle.displayName = 'InputOptionListTitle';
  * InputOption
  */
 export const InputOption: React.FC<IInputOptionComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickOption && props.onClickOption(props.value);
         props.onClick && props.onClick(e);
     };
@@ -226,7 +226,7 @@ InputDescription.displayName = 'InputDescription';
  * InputIcon
  */
 export const InputIcon: React.FC<IInputIconComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickIcon && props.onClickIcon(e);
     };
     return <StyledInputIcon {...props} onClick={onClick} />;
@@ -243,7 +243,7 @@ InputIcon.displayName = 'InputIcon';
  * InputOverlay
  */
 export const InputOverlay: React.FC<IInputOverlayComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickOverlay && props.onClickOverlay(e);
     };
     return <StyledInputOverlay {...props} onClick={onClick} />;

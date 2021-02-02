@@ -5,7 +5,7 @@ export interface IExpandableComponentProps extends IDivBoxComponentProps {
     activeItem?: number | number[] | string | string[];
 
     /** onclick callback when the item is clicked */
-    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, value?: number | string) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: number | string) => void;
 
     children?: React.ReactElement<IExpandableItemComponentProps> | Array<React.ReactElement<IExpandableItemComponentProps>>;
 }

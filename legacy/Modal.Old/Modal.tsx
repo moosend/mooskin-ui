@@ -19,10 +19,10 @@ export interface IModalProps {
     className?: string;
 
     /** onClick callback function when the background cover is clicked */
-    onClickOverlay?: (e: React.MouseEvent<HTMLDivElement>) => void;
+    onClickOverlay?: (e: React.MouseEvent<HTMLElement>) => void;
 
     /** onClick callback function when the cloes icon is clicked */
-    onClickClose?: (e: React.MouseEvent<HTMLDivElement>) => void;
+    onClickClose?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
 export default class Modal extends React.Component<IModalProps, {}> {

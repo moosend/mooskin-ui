@@ -3,7 +3,7 @@ import { IDivBoxComponentProps } from '../Box/model';
 
 export interface IActionsDropdownComponentProps extends IDivBoxComponentProps{
     /** callback called when clicking a ActionsDropdown item */
-    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
 
 export interface IActionsDropdownItemComponentProps extends IDivBoxComponentProps{
@@ -14,7 +14,7 @@ export interface IActionsDropdownItemComponentProps extends IDivBoxComponentProp
     value?: any;
 
     /** callback called when clicking a ActionsDropdown item */
-    onClickItem?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
 
 export interface IActionsDropdownArrowComponentProps extends IDivBoxComponentProps{

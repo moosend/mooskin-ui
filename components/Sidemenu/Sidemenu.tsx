@@ -15,9 +15,9 @@ import {
 export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
 
     const batchClickHandler = (
-        e: React.MouseEvent<HTMLDivElement>,
+        e: React.MouseEvent<HTMLElement>,
         value?: string,
-        callback?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void
+        callback?: (e: React.MouseEvent<HTMLElement>, value?: string) => void
     ) => {
         props.onClickItem && props.onClickItem(e, value);
         callback && callback(e, value);
@@ -54,7 +54,7 @@ Sidemenu.defaultProps = {
  * SidemenuItem
  */
 export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickItem && props.onClickItem(e, props.value);
         props.onClick && props.onClick(e);
     };

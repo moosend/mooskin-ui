@@ -40,3 +40,19 @@ export const Disabled = Template.bind({});
 Disabled.args = {
     disabled: true
 } as ITextEditorComponentProps;
+
+export const WithPersonalizationTags = Template.bind({});
+WithPersonalizationTags.args = {
+    personalizationTags: {
+        buttonLabel: 'My Tags',
+        id: 'personalizationTags',
+        tags: [
+            {label: 'Tag 1', value: '#tag1#'},
+            {label: 'Tag 2', value: '#tag2#'},
+            {label: 'Tag 3', value: '#tag3#'},
+            {label: 'Tag 4', value: '#tag4#'},
+            {label: 'Tag 5', value: '#tag5#'},
+            {label: 'Tag 6', value: '#tag6#'}
+        ]
+    }
+} as ITextEditorComponentProps;

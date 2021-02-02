@@ -19,9 +19,9 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
     const [hasArrow, setHasArrow] = React.useState(false);
 
     const batchClickHandler = (
-        e: React.MouseEvent<HTMLDivElement>,
+        e: React.MouseEvent<HTMLElement>,
         data: IInputCallbackData,
-        callback?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void
+        callback?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void
     ) => {
         props.onClickItem && props.onClickItem(e, data);
         callback && callback(e, data);
@@ -77,7 +77,7 @@ ActionsDropdown.displayName = 'ActionsDropdown';
  * ActionsDropdownItem
  */
 export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickItem && props.onClickItem(e, props.value);
         props.onClick && props.onClick(e);
     };

@@ -96,7 +96,7 @@ export const StyledSelectOverlay = styled(Box)<ISelectOverlayComponentProps>`
     z-index: -1;
 `;
 
-export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps & React.HTMLProps<HTMLDivElement>>`
+export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps & React.HTMLProps<HTMLElement>>`
     font-size: 12px;
     padding: 10px 15px;
     font-family: Hind;

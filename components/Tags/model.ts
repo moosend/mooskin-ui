@@ -7,9 +7,9 @@ export interface ITagsComponentProps extends IDivBoxComponentProps{
 
     onAddTag?: (data: IInputCallbackData) => void;
 
-    onRemoveTag?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
+    onRemoveTag?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 
-    onClickTag?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
+    onClickTag?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
 
 export interface ITagsInputComponentProps extends IInputBoxComponentProps{

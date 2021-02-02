@@ -5,7 +5,7 @@ export interface IStepsComponentProps extends IDivBoxComponentProps {
     activeItem?: number | string;
 
     /** onclick callback when the item is clicked */
-    onClickStep?: (e: React.MouseEvent<HTMLDivElement>, value?: number | string) => void;
+    onClickStep?: (e: React.MouseEvent<HTMLElement>, value?: number | string) => void;
 
     children?: React.ReactElement<IStepCommonComponentProps> | Array<React.ReactElement<IStepCommonComponentProps>>;
 }

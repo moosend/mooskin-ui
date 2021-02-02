@@ -5,7 +5,7 @@ export interface ITabsComponentProps extends IDivBoxComponentProps {
     activeItem?: number | string;
 
     /** onclick callback when the item is clicked */
-    onClickTab?: (e: React.MouseEvent<HTMLDivElement>, value?: number | string) => void;
+    onClickTab?: (e: React.MouseEvent<HTMLElement>, value?: number | string) => void;
 
     children?: React.ReactElement<ITabCommonComponentProps> | Array<React.ReactElement<ITabCommonComponentProps>>;
 }

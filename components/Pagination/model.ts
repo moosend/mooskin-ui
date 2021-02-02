@@ -5,7 +5,7 @@ export interface IPaginationComponentProps extends IDivBoxComponentProps {
     activePage: number;
 
     /** onclick callback when the button is clicked */
-    onClickButton?: (e: React.MouseEvent<HTMLDivElement>, value: number) => void;
+    onClickButton?: (e: React.MouseEvent<HTMLElement>, value: number) => void;
 
     children?: React.ReactElement<IPaginationButtonComponentProps> | Array<React.ReactElement<IPaginationButtonComponentProps>>;
 }

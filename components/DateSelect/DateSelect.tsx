@@ -153,7 +153,7 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = (props) => {
         return options;
     };
 
-    const onSelectChange = (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => {
+    const onSelectChange = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
         props.onChangeSelect && props.onChangeSelect(e, {value: parseInt(data.value, 10), dataLabel: props.dataLabel});
         props.onChange && props.onChange(e);
     };

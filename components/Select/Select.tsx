@@ -47,9 +47,9 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
     const [hasFilter, setHasFilter] = React.useState(false);
 
     const batchClickHandler = (
-        e: React.MouseEvent<HTMLDivElement>,
+        e: React.MouseEvent<HTMLElement>,
         value: string,
-        callback?: (e: React.MouseEvent<HTMLDivElement>, value: string) => void,
+        callback?: (e: React.MouseEvent<HTMLElement>, value: string) => void,
     ) => {
 
         let returnValue;
@@ -263,7 +263,7 @@ SelectOptionList.displayName = 'SelectOptionList';
  * SelectOption
  */
 export const SelectOption: React.FC<ISelectOptionComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickOption && props.onClickOption(e, props.value);
         props.onClick && props.onClick(e);
     };
@@ -345,7 +345,7 @@ SelectDescription.displayName = 'SelectDescription';
  * SelectIcon
  */
 export const SelectIcon: React.FC<ISelectIconComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickIcon && props.onClickIcon(e);
         props.onClick && props.onClick(e);
     };
@@ -363,7 +363,7 @@ SelectIcon.displayName = 'SelectIcon';
  * SelectOverlay
  */
 export const SelectOverlay: React.FC<ISelectOverlayComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickOverlay && props.onClickOverlay(e);
     };
     return <StyledSelectOverlay {...props} onClick={onClick} />;
@@ -380,7 +380,7 @@ SelectOverlay.displayName = 'SelectOverlay';
  * SelectPagination
  */
 export const SelectPagination: React.FC<ISelectPaginationComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>, direction: 'left' | 'right') => {
+    const onClick = (e: React.MouseEvent<HTMLElement>, direction: 'left' | 'right') => {
         let page;
 
         switch (direction) {

@@ -15,11 +15,11 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
 
     const [hasRadio, setHasRadio] = React.useState(false);
 
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickRadio && props.onClickRadio(e, {dataLabel: props.dataLabel, value: !props.selected});
     };
 
-    const batchClickHandler = (e: React.MouseEvent<HTMLDivElement>, callback?: (e: React.MouseEvent<HTMLDivElement>) => void) => {
+    const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
         onClick(e);
         callback && callback(e);
     };
@@ -35,7 +35,7 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
                     children: recurseChildren(child.props.children),
                     disabled: props.disabled,
                     key: i,
-                    onClick: (e: React.MouseEvent<HTMLDivElement>) => batchClickHandler(e, child.props.onClick)
+                    onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick)
                 } as ILabelComponentProps);
             }
 
@@ -45,7 +45,7 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
                     children: props.selected ? 'radio_button_checked' : 'radio_button_unchecked',
                     disabled: props.disabled,
                     key: i,
-                    onClick: (e: React.MouseEvent<HTMLDivElement>) => batchClickHandler(e, child.props.onClick)
+                    onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick)
                 } as IRadioIconComponentProps);
             }
 
@@ -83,7 +83,7 @@ Radio.displayName = 'Radio';
  * RadioIcon
  */
 export const RadioIcon: React.FC<IRadioIconComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const onClick = (e: React.MouseEvent<HTMLElement>) => {
         props.onClickIcon && props.onClickIcon(e);
         props.onClick && props.onClick(e);
     };
