@@ -1,0 +1,1137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table renders correctly 1`] = `
+<Table
+  className="myStyle"
+  data={
+    Array [
+      Object {
+        "campaign": "NewsLetters for everybody",
+        "click": "50 %",
+        "delivered": "13-06-2017 10:59 AM",
+        "mailingList": "Mailing list for me",
+        "open": "75 %",
+        "status": "Sent",
+        "subscribers": 2947,
+      },
+      Object {
+        "campaign": "Another campaign",
+        "click": "25 %",
+        "delivered": "17-02-2017 10:51 AM",
+        "mailingList": "Mailing list for me",
+        "open": "60 %",
+        "status": "Sent",
+        "subscribers": 1628,
+      },
+      Object {
+        "campaign": "Airship ready campaign",
+        "click": "80 %",
+        "delivered": "31-12-2016 04:39 PM",
+        "mailingList": "Mailing list for me",
+        "open": "93 %",
+        "status": "Draft",
+        "subscribers": 4244,
+      },
+    ]
+  }
+  id="5"
+  paginationProps={
+    Object {
+      "firstBtn": true,
+      "lastBtn": true,
+      "nextBtn": true,
+      "prevBtn": true,
+    }
+  }
+  smallCollapse={true}
+  style={
+    Object {
+      "background": "red",
+    }
+  }
+>
+  <div>
+    <div
+      className="tableWrapper"
+    >
+      <table
+        className="table-component table myStyle"
+        style={
+          Object {
+            "background": "red",
+          }
+        }
+      >
+        <thead>
+          <tr>
+            <TableHeader
+              className="header buttonHeader undefined"
+              dataField="collapse-button"
+              key="0"
+              style={Object {}}
+            >
+              <th
+                className="table-header  header buttonHeader undefined"
+                style={Object {}}
+              >
+                <div
+                  style={
+                    Object {
+                      "visibility": "hidden",
+                    }
+                  }
+                >
+                  X
+                </div>
+              </th>
+            </TableHeader>
+            <TableHeader
+              className="header myStyle "
+              dataField="delivered"
+              key="1"
+              style={
+                Object {
+                  "background": "red",
+                }
+              }
+            >
+              <th
+                className="table-header  header myStyle "
+                style={
+                  Object {
+                    "background": "red",
+                  }
+                }
+              >
+                <div>
+                  Delivered
+                </div>
+              </th>
+            </TableHeader>
+            <TableHeader
+              className="header  "
+              dataField="campaign"
+              key="2"
+              style={Object {}}
+            >
+              <th
+                className="table-header  header  "
+                style={Object {}}
+              >
+                <div>
+                  Campaign
+                </div>
+              </th>
+            </TableHeader>
+            <TableHeader
+              className="header  "
+              dataField="mailingList"
+              hideSmall={true}
+              key="3"
+              style={Object {}}
+            >
+              <th
+                className="table-header hide header  "
+                style={Object {}}
+              >
+                <div>
+                  Mailing List / Segment
+                </div>
+              </th>
+            </TableHeader>
+            <TableHeader
+              className="header  "
+              dataField="status"
+              hideSmall={true}
+              key="4"
+              style={Object {}}
+            >
+              <th
+                className="table-header hide header  "
+                style={Object {}}
+              >
+                <div>
+                  Status
+                </div>
+              </th>
+            </TableHeader>
+            <TableHeader
+              className="header  "
+              dataField="open"
+              hideSmall={true}
+              key="5"
+              style={Object {}}
+            >
+              <th
+                className="table-header hide header  "
+                style={Object {}}
+              >
+                <div>
+                  Open %
+                </div>
+              </th>
+            </TableHeader>
+            <TableHeader
+              className="header  "
+              dataField="click"
+              hideSmall={true}
+              key="6"
+              style={Object {}}
+            >
+              <th
+                className="table-header hide header  "
+                style={Object {}}
+              >
+                <div>
+                  Click
+                </div>
+              </th>
+            </TableHeader>
+            <TableHeader
+              className="header  "
+              dataField="subscribers"
+              hideSmall={true}
+              key="7"
+              style={Object {}}
+            >
+              <th
+                className="table-header hide header  "
+                style={Object {}}
+              >
+                <div>
+                  Subscribers
+                </div>
+              </th>
+            </TableHeader>
+          </tr>
+        </thead>
+        <tbody
+          className="body"
+        >
+          <Row
+            className=" undefined"
+            id={0}
+            key="0"
+            style={Object {}}
+          >
+            <tr
+              className="row row  undefined"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Col
+                className="buttonCol "
+                key="0"
+                style={Object {}}
+              >
+                <td
+                  className="column buttonCol "
+                  style={Object {}}
+                >
+                  <SmallIconButton
+                    className="toggle"
+                    icon="list"
+                    onClick={[Function]}
+                    style={Object {}}
+                    transparent={true}
+                    type=""
+                  >
+                    <button
+                      className="button-icon-component
+                         button
+                         transparent
+                         
+                         toggle"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <i
+                        className="mooskinIcons icon "
+                      >
+                        list
+                      </i>
+                    </button>
+                  </SmallIconButton>
+                  <Popover
+                    active={false}
+                    className=""
+                    style={Object {}}
+                  >
+                    <div
+                      className="popover inactive"
+                      style={Object {}}
+                    >
+                      <div
+                        className="popoverCol"
+                        key="0"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Delivered
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          13-06-2017 10:59 AM
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="1"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Campaign
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          NewsLetters for everybody
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="2"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Mailing List / Segment
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          Mailing list for me
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="3"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Status
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          Sent
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="4"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Open %
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          75 %
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="5"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Click
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          50 %
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="6"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Subscribers
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          2947
+                        </span>
+                      </div>
+                    </div>
+                  </Popover>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent  undefined"
+                key="1"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent  undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      13-06-2017 10:59 AM
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent  undefined"
+                key="2"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent  undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      NewsLetters for everybody
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="3"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      Mailing list for me
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="4"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      Sent
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="5"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      75 %
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="6"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      50 %
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="7"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      2947
+                    </span>
+                  </div>
+                </td>
+              </Col>
+            </tr>
+          </Row>
+          <Row
+            className=" undefined"
+            id={1}
+            key="1"
+            style={Object {}}
+          >
+            <tr
+              className="row row  undefined"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Col
+                className="buttonCol "
+                key="0"
+                style={Object {}}
+              >
+                <td
+                  className="column buttonCol "
+                  style={Object {}}
+                >
+                  <SmallIconButton
+                    className="toggle"
+                    icon="list"
+                    onClick={[Function]}
+                    style={Object {}}
+                    transparent={true}
+                    type=""
+                  >
+                    <button
+                      className="button-icon-component
+                         button
+                         transparent
+                         
+                         toggle"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <i
+                        className="mooskinIcons icon "
+                      >
+                        list
+                      </i>
+                    </button>
+                  </SmallIconButton>
+                  <Popover
+                    active={false}
+                    className=""
+                    style={Object {}}
+                  >
+                    <div
+                      className="popover inactive"
+                      style={Object {}}
+                    >
+                      <div
+                        className="popoverCol"
+                        key="0"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Delivered
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          17-02-2017 10:51 AM
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="1"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Campaign
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          Another campaign
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="2"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Mailing List / Segment
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          Mailing list for me
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="3"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Status
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          Sent
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="4"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Open %
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          60 %
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="5"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Click
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          25 %
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="6"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Subscribers
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          1628
+                        </span>
+                      </div>
+                    </div>
+                  </Popover>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent  undefined"
+                key="1"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent  undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      17-02-2017 10:51 AM
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent  undefined"
+                key="2"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent  undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      Another campaign
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="3"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      Mailing list for me
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="4"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      Sent
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="5"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      60 %
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="6"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      25 %
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="7"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      1628
+                    </span>
+                  </div>
+                </td>
+              </Col>
+            </tr>
+          </Row>
+          <Row
+            className=" undefined"
+            id={2}
+            key="2"
+            style={Object {}}
+          >
+            <tr
+              className="row row  undefined"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Col
+                className="buttonCol "
+                key="0"
+                style={Object {}}
+              >
+                <td
+                  className="column buttonCol "
+                  style={Object {}}
+                >
+                  <SmallIconButton
+                    className="toggle"
+                    icon="list"
+                    onClick={[Function]}
+                    style={Object {}}
+                    transparent={true}
+                    type=""
+                  >
+                    <button
+                      className="button-icon-component
+                         button
+                         transparent
+                         
+                         toggle"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <i
+                        className="mooskinIcons icon "
+                      >
+                        list
+                      </i>
+                    </button>
+                  </SmallIconButton>
+                  <Popover
+                    active={false}
+                    className=""
+                    style={Object {}}
+                  >
+                    <div
+                      className="popover inactive"
+                      style={Object {}}
+                    >
+                      <div
+                        className="popoverCol"
+                        key="0"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Delivered
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          31-12-2016 04:39 PM
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="1"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Campaign
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          Airship ready campaign
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="2"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Mailing List / Segment
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          Mailing list for me
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="3"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Status
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          Draft
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="4"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Open %
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          93 %
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="5"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Click
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          80 %
+                        </span>
+                      </div>
+                      <div
+                        className="popoverCol"
+                        key="6"
+                      >
+                        <span
+                          className="heading"
+                        >
+                          Subscribers
+                        </span>
+                        <span
+                          className="content"
+                        >
+                          4244
+                        </span>
+                      </div>
+                    </div>
+                  </Popover>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent  undefined"
+                key="1"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent  undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      31-12-2016 04:39 PM
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent  undefined"
+                key="2"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent  undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      Airship ready campaign
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="3"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      Mailing list for me
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="4"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      Draft
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="5"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      93 %
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="6"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      80 %
+                    </span>
+                  </div>
+                </td>
+              </Col>
+              <Col
+                className="col colComponent hide undefined"
+                key="7"
+                style={Object {}}
+              >
+                <td
+                  className="column col colComponent hide undefined"
+                  style={Object {}}
+                >
+                  <div
+                    className="contentContainer"
+                  >
+                    <span
+                      className="content"
+                    >
+                      4244
+                    </span>
+                  </div>
+                </td>
+              </Col>
+            </tr>
+          </Row>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</Table>
+`;

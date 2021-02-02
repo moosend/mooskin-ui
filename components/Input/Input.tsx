@@ -3,9 +3,6 @@ import * as React from 'react';
 import {Picker} from 'emoji-mart';
 import 'emoji-mart/css/emoji-mart.css';
 
-// Helpers
-import {getBoxProps} from '../_utils/helper';
-
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IDivBoxComponentProps } from '../Box/model';
@@ -125,7 +122,7 @@ InputContainer.displayName = 'InputContainer';
 export const InputOptionList: React.FC<IInputListComponentProps> = (props) => {
     const [showList, setShowList] = React.useState(false);
     return (
-        <Box position="relative" {...getBoxProps(props)}>
+        <Box position="relative" {...props}>
             <InputIcon onClickIcon={() => setShowList(!showList)}>{props.icon}</InputIcon>
             {showList && (
                 <>
@@ -271,7 +268,7 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = (props) => {
     };
 
     return (
-        <Box position="relative" {...getBoxProps(props)}>
+        <Box position="relative" {...props}>
             <InputIcon onClickIcon={() => setShowEmoji(!showEmoji)}>emoji_emotions</InputIcon>
             {showEmoji && (
                 <Box position="absolute" right="0">

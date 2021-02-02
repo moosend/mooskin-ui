@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-// Helpers
-import { getBoxProps } from '../_utils/helper';
-
 // Models
 import { IDescriptionComponentProps } from '../Description/model';
 import { ILabelComponentProps } from '../Label/model';
@@ -64,7 +61,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
 
     // children={props.selected ? 'Checkbox_button_checked' : 'Checkbox_button_unchecked'}
     return (
-        <StyledCheckbox {...getBoxProps(props)} >
+        <StyledCheckbox {...props} >
             {!hasCheckbox && (
                 <CheckboxIcon
                     disabled={props.disabled}

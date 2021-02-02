@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-// Helpers
-import { getBoxProps } from '../_utils/helper';
-
 // Models
 import { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
 
@@ -47,7 +44,7 @@ export const Selector: React.FC<ISelectorComponentProps> = (props) => {
         });
     };
 
-    return <StyledSelector {...getBoxProps(props)} children={recurseChildren(props.children)} />;
+    return <StyledSelector {...props} children={recurseChildren(props.children)} />;
 };
 
 Selector.defaultProps = {

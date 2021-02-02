@@ -58,7 +58,7 @@ export {
     SelectPlaceholder
 } from '../Select/Select';
 export { default as Switch } from '../Switch/Switch';
-export { default as TextArea, TextareaDescription, TextareaLabel } from '../TextArea/TextArea';
+export { default as TextArea, TextAreaDescription, TextAreaLabel } from '../TextArea/TextArea';
 export { default as Tabs, TabContent, TabHeader, Tab } from '../Tabs/Tabs';
 export { default as Tags, TagClose, TagInput, Tag } from '../Tags/Tags';
 export { default as Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from '../Table/Table';

@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-// Helpers
-import { getBoxProps } from '../_utils/helper';
-
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IActionsDropdownArrowComponentProps, IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
@@ -62,7 +59,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
     };
 
     return (
-        <StyledActionsDropdown boxShadow="lg" {...getBoxProps(props)}>
+        <StyledActionsDropdown boxShadow="lg" {...props}>
             {!hasArrow && <ActionsDropdownArrow />}
             {recurseChildren(props.children)}
         </StyledActionsDropdown>

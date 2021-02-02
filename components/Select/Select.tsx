@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-// Helpers
-import {getBoxProps} from '../_utils/helper';
-
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IDivBoxComponentProps } from '../Box/model';
@@ -350,6 +347,7 @@ SelectDescription.displayName = 'SelectDescription';
 export const SelectIcon: React.FC<ISelectIconComponentProps> = (props) => {
     const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
         props.onClickIcon && props.onClickIcon(e);
+        props.onClick && props.onClick(e);
     };
     return <StyledSelectIcon {...props} onClick={onClick} />;
 };
@@ -401,10 +399,10 @@ export const SelectPagination: React.FC<ISelectPaginationComponentProps> = (prop
         page && props.onClickPagination && props.onClickPagination(e, page);
     };
     return (
-        <StyledSelectPagination {...getBoxProps(props)}>
-            <SelectIcon onClick={(e) => onClick(e, 'left')} >keyboard_arrow_left</SelectIcon>
+        <StyledSelectPagination {...props}>
+            <SelectIcon onClickIcon={(e) => onClick(e, 'left')} >keyboard_arrow_left</SelectIcon>
             <StyledPaginationPage>{props.page}</StyledPaginationPage>
-            <SelectIcon onClick={(e) => onClick(e, 'right')} >keyboard_arrow_right</SelectIcon>
+            <SelectIcon onClickIcon={(e) => onClick(e, 'right')} >keyboard_arrow_right</SelectIcon>
         </StyledSelectPagination>
     );
 };

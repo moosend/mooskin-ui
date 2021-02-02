@@ -20,11 +20,11 @@ export const boxComponentProps = [
     'animation', 'visibility', 'cursor', 'boxAs', 'children', 'theme'
 ];
 
-export type IDivBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLDivElement>;
-export type IButtonBoxComponentProps = IBaseBoxComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
+export type IDivBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLElement>;
+export type IButtonBoxComponentProps = IDivBoxComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
 export type IInputBoxComponentProps = IBaseBoxComponentProps & React.InputHTMLAttributes<HTMLInputElement>;
 export type IAnchorBoxComponentProps = IBaseBoxComponentProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;
-export type ITextAreaBoxComponentProps = IBaseBoxComponentProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
+export type ITextAreaBoxComponentProps = IDivBoxComponentProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 // export type IBoxComponentProps = IDivBoxComponentProps |
 //                                 IButtonBoxComponentProps |
@@ -36,11 +36,8 @@ export type IBoxComponentProps = IDivBoxComponentProps;
 
 export interface IBaseBoxComponentProps extends IMooskinContext {
 
-    /** Box children */
-    // children?: any;
-
     /** render Box as a different html element */
-    boxAs?: any;
+    boxAs?: string;
 
     /** margin */
     m?: number | string;

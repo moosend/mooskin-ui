@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-// Helpers
-import { getBoxProps } from '../_utils/helper';
-
 // Models
 import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
@@ -45,7 +42,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
         });
     };
 
-    return <StyledSidemenu {...getBoxProps(props)} children={recurseChildren(props.children)} />;
+    return <StyledSidemenu {...props} children={recurseChildren(props.children)} />;
 };
 
 Sidemenu.defaultProps = {

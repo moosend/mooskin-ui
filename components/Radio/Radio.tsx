@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-// Helpers
-import { getBoxProps } from '../_utils/helper';
-
 // Models
 import { IDescriptionComponentProps } from '../Description/model';
 import { ILabelComponentProps } from '../Label/model';
@@ -62,7 +59,7 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
 
     // children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
     return (
-        <StyledRadio {...getBoxProps(props)}>
+        <StyledRadio {...props}>
             {!hasRadio && (
                 <RadioIcon
                     disabled={props.disabled}

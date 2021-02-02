@@ -1,8 +1,5 @@
 import * as React from 'react';
 
-// Helpers
-import { getBoxProps } from '../_utils/helper';
-
 // Models
 import { ISwitchComponentProps } from './model';
 
@@ -30,7 +27,7 @@ export const Switch: React.FC<ISwitchComponentProps> = (props) => {
     };
 
     return (
-        <Box d="flex" {...getBoxProps(props)} onClick={onClick}>
+        <Box d="flex" {...props} onClick={onClick}>
             {props.label && <Label width={props.labelWidth}>{props.label}</Label>}
             <SwitchStyled
                 w={props.width}
