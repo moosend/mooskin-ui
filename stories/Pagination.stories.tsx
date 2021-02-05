@@ -25,7 +25,7 @@ export const Normal = Template.bind({});
 Normal.args = {
     activePage: 1,
     children: [...Array(9)].map((item, i) => {
-        return <PaginationButton key={i} />;
+        return <PaginationButton key={i} onClick={() => console.log('Button Clicked!')} />;
     }),
     onClickButton: (e: React.MouseEvent<HTMLElement>, value: number) => console.log(e, value)
 } as IPaginationComponentProps;

@@ -1,8 +1,8 @@
-import { IDivBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 
 import { IInputCallbackData } from '../index';
 
-export interface ISelectComponentProps extends IDivBoxComponentProps {
+export interface ISelectComponentProps extends IBoxComponentProps {
 
     /** Callback that fires when you click on an option on the list */
     onChangeSelect?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
@@ -25,10 +25,7 @@ export interface ISelectFilterComponentProps extends IInputBoxComponentProps {
     onChangeFilter?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export interface ISelectOptionComponentProps extends IDivBoxComponentProps {
-    /** onclick event handler when clicking on the component */
-    onClickOption?: (e: React.MouseEvent<HTMLElement>, value: string) => void;
-
+export interface ISelectOptionComponentProps extends IBoxComponentProps {
     /** value for this option */
     value: string;
 
@@ -39,17 +36,7 @@ export interface ISelectOptionComponentProps extends IDivBoxComponentProps {
     disabled?: boolean;
 }
 
-export interface ISelectIconComponentProps extends IDivBoxComponentProps {
-    /** onclick event handler when clicking on the icon */
-    onClickIcon?: (e: React.MouseEvent<HTMLElement>) => void;
-}
-
-export interface ISelectOverlayComponentProps extends IDivBoxComponentProps {
-    /** onclick event handler when clicking on the icon */
-    onClickOverlay?: (e: React.MouseEvent<HTMLElement>) => void;
-}
-
-export interface ISelectPaginationComponentProps extends IDivBoxComponentProps {
+export interface ISelectPaginationComponentProps extends IBoxComponentProps {
     /** current page value */
     page: number;
 

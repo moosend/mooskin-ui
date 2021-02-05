@@ -8,12 +8,19 @@ import 'react-date-range/dist/theme/default.css';
 // Helpers
 import format from 'date-fns/format';
 
+// Models
+import { IBoxComponentProps } from '../Box/model';
+import { IDateRangePickerComponentProps } from './model';
+
+// Components
 import Box from '../Box/Box';
 import Input from '../Input/Input';
 
-import { IDivBoxComponentProps } from '../Box/model';
-import { IDateRangePickerComponentProps } from './model';
+const defaultFormat = 'dd MMM yyyy';
 
+/**
+ * DateRange
+ */
 export const DateRange: React.FC<IDateRangePickerComponentProps> = (props) => {
 
     const [showPicker, setShowPicker] = React.useState(false);
@@ -24,7 +31,9 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = (props) => {
         props.ranges && props.ranges.length && props.ranges.forEach((item, i) => {
             if (item.startDate && item.endDate){
                 const separator = i > 0 ? ', ' : '';
-                inputValue = inputValue + separator + `${format(item.startDate, 'dd MMM yyyy')} - ${format(item.endDate, 'dd MMM yyyy')}`;
+                inputValue = inputValue +
+                    separator +
+                    `${format(item.startDate, props.format || defaultFormat)} - ${format(item.endDate, props.format || defaultFormat)}`;
             }
         });
 
@@ -51,6 +60,7 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = (props) => {
 DateRange.defaultProps = {
     className: '',
     direction: 'horizontal',
+    format: defaultFormat
     // months: 2
 };
 
@@ -59,7 +69,7 @@ DateRange.displayName = 'DateRange';
 /**
  * DateRangeOverlay
  */
-export const DateRangeOverlay: React.FC<IDivBoxComponentProps> = (props) => {
+const DateRangeOverlay: React.FC<IBoxComponentProps> = (props) => {
     return <Box position="fixed" top="0px" left="0px" right="0px" bottom="0px" zIndex="-1" {...props} />;
 };
 

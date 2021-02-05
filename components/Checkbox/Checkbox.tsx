@@ -37,7 +37,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
                     children: recurseChildren(child.props.children),
                     disabled: props.disabled,
                     key: i,
-                    onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick)
+                    onClick: (e) => batchClickHandler(e, child.props.onClick)
                 } as ILabelComponentProps);
             }
 
@@ -47,7 +47,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
                     children: props.checked ? 'check_box' : 'check_box_outline_blank',
                     disabled: props.disabled,
                     key: i,
-                    onClickIcon: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClickIcon)
+                    onClickIcon: (e) => batchClickHandler(e, child.props.onClick)
                 } as ICheckboxIconComponentProps);
             }
 
@@ -59,7 +59,6 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
         });
     };
 
-    // children={props.selected ? 'Checkbox_button_checked' : 'Checkbox_button_unchecked'}
     return (
         <StyledCheckbox {...props} >
             {!hasCheckbox && (
@@ -85,11 +84,7 @@ Checkbox.displayName = 'Checkbox';
  * CheckboxIcon
  */
 export const CheckboxIcon: React.FC<ICheckboxIconComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickIcon && props.onClickIcon(e);
-        props.onClick && props.onClick(e);
-    };
-    return <StyledCheckboxIcon {...props} onClick={onClick} />;
+    return <StyledCheckboxIcon {...props} />;
 };
 
 CheckboxIcon.defaultProps = {

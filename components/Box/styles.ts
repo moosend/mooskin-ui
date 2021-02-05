@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 // Models
-import { BoxShadowIntensityType, IDivBoxComponentProps, IntensityType } from './model';
+import { BoxShadowIntensityType, IBoxComponentProps, IntensityType } from './model';
 
-export const StyledBox = styled.div<IDivBoxComponentProps>`
+export const StyledBox = styled.div<IBoxComponentProps>`
 
     &&& {
         margin: ${(props) => getNumberOrStringValue(props.m)};
@@ -21,7 +21,7 @@ export const StyledBox = styled.div<IDivBoxComponentProps>`
         color: ${(props) => props.color};
         font-family: ${(props) => props.fontFamily};
         font-size: ${(props) => getNumberOrStringValue(props.fontSize)};
-        font-weight: ${(props) => getNumberOrStringValue(props.fontWeight)};
+        font-weight: ${(props) => props.fontWeight};
         line-height: ${(props) => props.lineHeight};
         text-align: ${(props) => props.textAlign};
         font-style: ${(props) => props.fontStyle};
@@ -53,7 +53,7 @@ export const StyledBox = styled.div<IDivBoxComponentProps>`
         flex-grow: ${(props) => props.flexGrow};
         flex-shrink: ${(props) => props.flexShrink};
         flex-basis: ${(props) => getNumberOrStringValue(props.flexBasis)};
-        order: ${(props) => getNumberOrStringValue(props.order)};
+        order: ${(props) => props.order};
 
         background: ${(props) => props.bg};
         background-image: ${(props) => props.bgImage};
@@ -94,7 +94,7 @@ export const StyledBox = styled.div<IDivBoxComponentProps>`
         border-bottom-left-radius: ${(props) => getNumberOrStringValue(props.borderBottomLeftRadius)};
 
         position: ${(props) => props.position};
-        z-index: ${(props) => getNumberOrStringValue(props.zIndex)};
+        z-index: ${(props) => props.zIndex};
         top: ${(props) => getNumberOrStringValue(props.top)};
         right: ${(props) => getNumberOrStringValue(props.right)};
         bottom: ${(props) => getNumberOrStringValue(props.bottom)};

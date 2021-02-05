@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
 // Styled Components
 import {
@@ -14,7 +14,7 @@ import {
 /**
  * Footer
  */
-export const Footer: React.FC<IDivBoxComponentProps> = (props) => {
+export const Footer: React.FC<IBoxComponentProps> = (props) => {
     return <StyledFooter boxShadow="inner" {...props} />;
 };
 
@@ -28,7 +28,7 @@ Footer.displayName = 'Footer';
 /**
  * FooterHead
  */
-export const FooterHead: React.FC<IDivBoxComponentProps> = (props) => {
+export const FooterHead: React.FC<IBoxComponentProps> = (props) => {
     return <StyledFooterHead {...props} />;
 };
 
@@ -42,7 +42,7 @@ FooterHead.displayName = 'FooterHead';
 /**
  * FooterBody
  */
-export const FooterBody: React.FC<IDivBoxComponentProps> = (props) => {
+export const FooterBody: React.FC<IBoxComponentProps> = (props) => {
     return <StyledFooterBody {...props} />;
 };
 
@@ -56,7 +56,7 @@ FooterBody.displayName = 'FooterBody';
 /**
  * FooterEnd
  */
-export const FooterEnd: React.FC<IDivBoxComponentProps> = (props) => {
+export const FooterEnd: React.FC<IBoxComponentProps> = (props) => {
     return <StyledFooterEnd {...props} />;
 };
 

@@ -1,8 +1,8 @@
 import styled, {keyframes} from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
-import { ISelectComponentProps, ISelectIconComponentProps, ISelectOptionComponentProps, ISelectOverlayComponentProps } from './model';
+import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
+import { ISelectComponentProps, ISelectOptionComponentProps } from './model';
 
 // Components
 import Box from '../Box/Box';
@@ -35,7 +35,7 @@ export const StyledSelectFilter = styled(Box)<IInputBoxComponentProps>`
     flex: 1;
 `;
 
-export const StyledSelectContainer = styled(Box)<IDivBoxComponentProps>`
+export const StyledSelectContainer = styled(Box)<IBoxComponentProps>`
     display: flex;
     border-radius: 3px;
     border: solid 1px #e2e2e2;
@@ -44,7 +44,7 @@ export const StyledSelectContainer = styled(Box)<IDivBoxComponentProps>`
     align-items: center;
 `;
 
-export const StyledSelectPlaceholder = styled(Box)<IDivBoxComponentProps>`
+export const StyledSelectPlaceholder = styled(Box)<IBoxComponentProps>`
     padding: 7px 15px 7px;
     font-family: Hind;
     font-size: 14px;
@@ -57,7 +57,7 @@ export const StyledSelectPlaceholder = styled(Box)<IDivBoxComponentProps>`
     flex: 1;
 `;
 
-export const StyledSelectOptionList = styled(Box)<IDivBoxComponentProps>`
+export const StyledSelectOptionList = styled(Box)<IBoxComponentProps>`
     position: absolute;
     top: 35px;
     left: 0;
@@ -87,7 +87,7 @@ export const StyledSelectOptionList = styled(Box)<IDivBoxComponentProps>`
     }
 `;
 
-export const StyledSelectOverlay = styled(Box)<ISelectOverlayComponentProps>`
+export const StyledSelectOverlay = styled(Box)<IBoxComponentProps>`
     position: fixed;
     top: 0;
     left: 0;
@@ -96,7 +96,7 @@ export const StyledSelectOverlay = styled(Box)<ISelectOverlayComponentProps>`
     z-index: -1;
 `;
 
-export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps & React.HTMLProps<HTMLElement>>`
+export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
     font-size: 12px;
     padding: 10px 15px;
     font-family: Hind;
@@ -114,7 +114,7 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps & Reac
     }
 `;
 
-export const StyledSelectIcon = styled(Box)<ISelectIconComponentProps>`
+export const StyledSelectIcon = styled(Box)<IBoxComponentProps>`
     font-family: 'Mooskin Icons';
     font-size: 20px;
     display: flex;
@@ -123,10 +123,8 @@ export const StyledSelectIcon = styled(Box)<ISelectIconComponentProps>`
     color: inherit;
 `;
 
-export const StyledSelectLoader = styled(Box)<IDivBoxComponentProps>`
+export const StyledSelectLoader = styled(Box)<IBoxComponentProps>`
     border: 2px solid #f3f3f3;
-    border-top: 2px solid #5ccdde;
-    border-top: 2px solid #5ccdde;
     border-top: 2px solid #5ccdde;
     border-radius: 50%;
     width: 20px;
@@ -134,7 +132,7 @@ export const StyledSelectLoader = styled(Box)<IDivBoxComponentProps>`
     animation: ${spin} 2s linear infinite;
 `;
 
-export const StyledSelectPagination = styled(Box)<IDivBoxComponentProps>`
+export const StyledSelectPagination = styled(Box)<IBoxComponentProps>`
     display: flex;
     justify-content: space-around;
     border-top: 1px solid #e2e2e2;
@@ -142,7 +140,7 @@ export const StyledSelectPagination = styled(Box)<IDivBoxComponentProps>`
     padding: 5px 0;
 `;
 
-export const StyledPaginationPage = styled(Box)<IDivBoxComponentProps>`
+export const StyledPaginationPage = styled(Box)<IBoxComponentProps>`
     font-size: 12px;
     font-family: Hind;
     align-items: center;

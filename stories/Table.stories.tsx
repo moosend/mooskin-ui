@@ -10,7 +10,7 @@ import {
     TableRowItem
 } from '../components/Table/Table';
 
-import { IDivBoxComponentProps } from '../components/Box/model';
+import { IBoxComponentProps } from '../components/Box/model';
 import { Checkbox } from '../components/Checkbox/Checkbox';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
@@ -19,7 +19,7 @@ export default ({
     title: 'Example/Table',
 } as any) as Meta;
 
-const Template: Story<IDivBoxComponentProps> = (args) => {
+const Template: Story<IBoxComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
@@ -101,4 +101,4 @@ Normal.args = {
             </TableRow>
         </>
     )
-} as IDivBoxComponentProps;
+} as IBoxComponentProps;

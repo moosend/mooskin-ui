@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Components
@@ -17,7 +17,7 @@ export const StyledTags = styled(Box)<ITagsComponentProps>`
     flex-wrap: wrap;
 `;
 
-export const StyledTag = styled(Box)<IDivBoxComponentProps>`
+export const StyledTag = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 0 10px;
     border-radius: 13px;
@@ -38,7 +38,7 @@ export const StyledTag = styled(Box)<IDivBoxComponentProps>`
     };
 `;
 
-export const StyledTagClose = styled(Box)<IDivBoxComponentProps>`
+export const StyledTagClose = styled(Box)<IBoxComponentProps>`
     opacity: 0.5;
     font-family: 'Mooskin Icons Round';
     font-size: 10px;

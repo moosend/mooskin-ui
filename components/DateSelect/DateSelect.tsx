@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+// Date-FNS
 import format from 'date-fns/format';
 import getDaysInMonth from 'date-fns/getDaysInMonth';
 import setDate from 'date-fns/setDate';
@@ -12,6 +13,9 @@ import { IDateSelectComponentProps } from './model';
 // Components
 import {Select, SelectContainer, SelectOption, SelectOptionList, SelectPlaceholder} from '../Select/Select';
 
+/**
+ * DateSelect
+ */
 export const DateSelect: React.FC<IDateSelectComponentProps> = (props) => {
 
     const renderDateSelect = () => {

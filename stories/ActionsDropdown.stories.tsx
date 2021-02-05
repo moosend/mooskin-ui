@@ -29,7 +29,7 @@ Normal.args = {
             <ActionsDropdownItem dataLabel="settings" value="settings" onClick={() => alert('Random on Click!')}>
                 Settings
             </ActionsDropdownItem>
-            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClickItem={(e, data) => console.log('Duplicate Clicked')}>
+            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e) => console.log('Duplicate Clicked')}>
                 Duplicate
             </ActionsDropdownItem>
             <ActionsDropdownItem dataLabel="preview" value="preview">
@@ -38,18 +38,18 @@ Normal.args = {
         </>
     ),
     onClickItem: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)
-};
+} as IActionsDropdownComponentProps;
 
 export const BottomArrow = Template.bind({});
 BottomArrow.args = {
     bgColor: '#232c3d',
     children: (
         <>
-            <ActionsDropdownArrow arrowColor="#232c3d" arrowDirection="down" right={'unset !important'} left={22} />
+            <ActionsDropdownArrow arrowDirection="down" right={'unset !important'} left={22} />
             <ActionsDropdownItem dataLabel="settings" value="settings">
                 Settings
             </ActionsDropdownItem>
-            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClickItem={(e, data) => console.log('Duplicate Clicked')}>
+            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e) => console.log('Duplicate Clicked')}>
                 Duplicate
             </ActionsDropdownItem>
             <ActionsDropdownItem dataLabel="preview" value="preview">
@@ -58,4 +58,4 @@ BottomArrow.args = {
         </>
     ),
     onClickItem: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)
-};
+} as IActionsDropdownComponentProps;

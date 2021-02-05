@@ -1,24 +1,24 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
 // Components
 import Box from '../Box/Box';
 
-export const StyledTable = styled(Box)<IDivBoxComponentProps>`
+export const StyledTable = styled(Box)<IBoxComponentProps>`
     border: solid 1px #e2e2e2;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
 `;
 
-export const StyledTableHeader = styled(Box)<IDivBoxComponentProps>`
+export const StyledTableHeader = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 10px 0;
 `;
 
-export const StyledTableHeaderItem = styled(Box)<IDivBoxComponentProps>`
+export const StyledTableHeaderItem = styled(Box)<IBoxComponentProps>`
     font-family: Montserrat;
     font-size: 11px;
     font-weight: bold;
@@ -32,7 +32,7 @@ export const StyledTableHeaderItem = styled(Box)<IDivBoxComponentProps>`
     align-items: center;
 `;
 
-export const StyledTableRow = styled(Box)<IDivBoxComponentProps>`
+export const StyledTableRow = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 35px 0;
     align-items: center;
@@ -43,7 +43,7 @@ export const StyledTableRow = styled(Box)<IDivBoxComponentProps>`
     }
 `;
 
-export const StyledTableRowItem = styled(Box)<IDivBoxComponentProps>`
+export const StyledTableRowItem = styled(Box)<IBoxComponentProps>`
     font-family: Hind;
     font-size: 16px;
     font-weight: 500;

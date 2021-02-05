@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { IStepCommonComponentProps, IStepComponentProps, IStepsComponentProps } from './model';
 
 // Components
@@ -20,6 +20,15 @@ import {
  * Steps
  */
 export const Steps: React.FC<IStepsComponentProps> = (props) => {
+
+    const batchClickHandler = (
+        e: React.MouseEvent<HTMLElement>,
+        activeId?: string | number,
+        callback?: (e: React.MouseEvent<HTMLElement>) => void
+    ) => {
+        props.onClickStep && props.onClickStep(e, activeId);
+        callback && callback(e);
+    };
 
     const getActiveItem = (activeId?: string | number) => {
         if (props.activeItem && Array.isArray(props.activeItem)){
@@ -52,8 +61,8 @@ export const Steps: React.FC<IStepsComponentProps> = (props) => {
                                 {hasArrow && <StepArrow children="keyboard_arrow_right" />}
                             </>
                         ),
-                        onClick: (e) => props.onClickStep && props.onClickStep(e, activeId)
-                    } as IDivBoxComponentProps)
+                        onClick: (e) => batchClickHandler(e, activeId, child.props.onClick)
+                    } as IBoxComponentProps)
                 );
             }
 
@@ -145,7 +154,7 @@ StepContent.displayName = 'StepContent';
 /**
  * StepArrow
  */
-export const StepArrow: React.FC<IStepCommonComponentProps> = (props) => {
+const StepArrow: React.FC<IStepCommonComponentProps> = (props) => {
     return <StyledStepArrow {...props} />;
 };
 

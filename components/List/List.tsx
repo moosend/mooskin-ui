@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { ILayoutComponentProps } from '../Layout/model';
 
 // Components
@@ -35,7 +35,7 @@ List.displayName = 'List';
 /**
  * ListItem
  */
-export const ListItem: React.FC<IDivBoxComponentProps> = (props) => {
+export const ListItem: React.FC<IBoxComponentProps> = (props) => {
     return (
         <StyledListItem boxShadow="xs" round="xs" {...props} />
     );
@@ -51,7 +51,7 @@ ListItem.displayName = 'ListItem';
 /**
  * ListItemHead
  */
-export const ListItemHead: React.FC<IDivBoxComponentProps> = (props) => {
+export const ListItemHead: React.FC<IBoxComponentProps> = (props) => {
     return (
         <StyledListItemHead {...props} />
     );
@@ -67,7 +67,7 @@ ListItemHead.displayName = 'ListItemHead';
 /**
  * ListItemBody
  */
-export const ListItemBody: React.FC<IDivBoxComponentProps> = (props) => {
+export const ListItemBody: React.FC<IBoxComponentProps> = (props) => {
     return (
         <StyledListItemBody {...props} />
     );
@@ -83,7 +83,7 @@ ListItemBody.displayName = 'ListItemBody';
 /**
  * ListItemEnd
  */
-export const ListItemEnd: React.FC<IDivBoxComponentProps> = (props) => {
+export const ListItemEnd: React.FC<IBoxComponentProps> = (props) => {
     return (
         <StyledListItemEnd {...props} />
     );

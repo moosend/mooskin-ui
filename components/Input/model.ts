@@ -1,7 +1,7 @@
-import { IDivBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index/index';
 
-export interface IInputContainerComponentProps extends IDivBoxComponentProps {
+export interface IInputContainerComponentProps extends IBoxComponentProps {
     /** provide to make the input field disabled */
     disabled?: boolean;
 
@@ -30,38 +30,19 @@ export interface IInputComponentProps extends IInputBoxComponentProps {
 
     /** whether its wrapped by its container */
     wrapped?: boolean;
-
-    /** callback that is called when the input changes */
-    onChangeInput?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void;
 }
 
-export interface IInputIconComponentProps extends IDivBoxComponentProps {
-    /** onclick event handler when clicking on the icon */
-    onClickIcon?: (e: React.MouseEvent<HTMLElement>) => void;
-}
-
-export interface IInputOverlayComponentProps extends IDivBoxComponentProps {
-    /** onclick event handler when clicking on the icon */
-    onClickOverlay?: (e: React.MouseEvent<HTMLElement>) => void;
-}
-
-export interface IInputEmojiComponentProps extends IDivBoxComponentProps {
+export interface IInputEmojiComponentProps extends IBoxComponentProps {
     /** onclick event handler when clicking on the emoji */
     onChangeEmoji?: (value: string) => void;
 }
 
-export interface IInputListComponentProps extends IDivBoxComponentProps {
+export interface IInputListComponentProps extends IBoxComponentProps {
     /** icon to be shown for toggling the dropdown */
     icon: string;
-
-    /** onclick event handler when clicking on the component */
-    onClickOption?: (e: React.MouseEvent<HTMLElement>, value: string) => void;
 }
 
-export interface IInputOptionComponentProps extends IDivBoxComponentProps {
+export interface IInputOptionComponentProps extends IBoxComponentProps {
     /** value of the clicked element */
     value: string;
-
-    /** onclick event handler when clicking on the component */
-    onClickOption?: (value: string) => void;
 }

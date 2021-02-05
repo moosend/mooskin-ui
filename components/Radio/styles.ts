@@ -23,7 +23,7 @@ export const StyledRadioWrapper = styled(Box)<Partial<IRadioComponentProps>>`
     align-items: center;
 `;
 
-export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps & React.HTMLProps<HTMLElement>>>`
+export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
     font-family: 'Mooskin Icons';
     padding-right: 10px;
     font-size: 23px;

@@ -2,7 +2,7 @@ import * as React from 'react';
 
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Components
@@ -45,7 +45,7 @@ export const Tags: React.FC<ITagsComponentProps> = (props) => {
         }
 
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<IDivBoxComponentProps>(child) && child.type === Tag){
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === Tag){
                 return React.cloneElement(child, {
                     children: (
                         <>
@@ -62,7 +62,7 @@ export const Tags: React.FC<ITagsComponentProps> = (props) => {
                     key: i,
                     onClick: (e: React.MouseEvent<HTMLElement>) =>
                         batchClickHandler(e, {dataLabel: props.dataLabel, value: i}, child.props.onClick)
-                } as IDivBoxComponentProps);
+                } as IBoxComponentProps);
             }
 
             if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput){
@@ -93,7 +93,7 @@ Tags.displayName = 'Tags';
 /**
  * Tag
  */
-export const Tag: React.FC<IDivBoxComponentProps> = (props) => {
+export const Tag: React.FC<IBoxComponentProps> = (props) => {
     return <StyledTag {...props} />;
 };
 
@@ -189,7 +189,7 @@ TagInput.displayName = 'TagInput';
 /**
  * TagClose
  */
-export const TagClose: React.FC<IDivBoxComponentProps> = (props) => {
+export const TagClose: React.FC<IBoxComponentProps> = (props) => {
     return <StyledTagClose {...props} />;
 };
 

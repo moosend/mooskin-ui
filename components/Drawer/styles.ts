@@ -1,7 +1,13 @@
 import styled, {keyframes} from 'styled-components';
 
 // Models
-import { IContentSize, IDrawerComponentProps, IDrawerContentComponentProps } from './model';
+import { IBoxComponentProps } from '../Box/model';
+import {
+    IContentSize,
+    IDrawerComponentProps,
+    IDrawerContentComponentProps,
+    IDrawerOverlayComponentProps
+} from './model';
 
 // Components
 import Box from '../Box/Box';
@@ -160,7 +166,7 @@ export const StyledDrawerContentBottomOut = styled(StyledDrawerContentBottom)`
     animation: ${contentBottomFadeIn} 0.3s reverse;
 `;
 
-export const StyledDrawerHeader = styled(Box)<IDrawerComponentProps>`
+export const StyledDrawerHeader = styled(Box)<IBoxComponentProps>`
     flex: 0 1 0%;
     padding: 1rem 1.5rem;
     font-size: 1.25rem;
@@ -168,14 +174,14 @@ export const StyledDrawerHeader = styled(Box)<IDrawerComponentProps>`
     width: 100%;
 `;
 
-export const StyledDrawerBody = styled(Box)<IDrawerComponentProps>`
+export const StyledDrawerBody = styled(Box)<IBoxComponentProps>`
     padding: 0.5rem 1.5rem;
     flex: 1 1 0%;
     overflow: auto;
     width: 100%;
 `;
 
-export const StyledDrawerFooter = styled(Box)<IDrawerComponentProps>`
+export const StyledDrawerFooter = styled(Box)<IBoxComponentProps>`
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -183,7 +189,7 @@ export const StyledDrawerFooter = styled(Box)<IDrawerComponentProps>`
     width: 100%;
 `;
 
-export const StyledDrawerCloseButton = styled(Box)<IDrawerComponentProps>`
+export const StyledDrawerCloseButton = styled(Box)<IBoxComponentProps>`
     font-family: 'Mooskin Icons';
     width: 32px;
     height: 32px;
@@ -195,7 +201,7 @@ export const StyledDrawerCloseButton = styled(Box)<IDrawerComponentProps>`
     }
 `;
 
-export const StyledDrawerOverlay = styled(Box)<IDrawerComponentProps>`
+export const StyledDrawerOverlay = styled(Box)<IDrawerOverlayComponentProps>`
     display: flex;
     width: 100vw;
     height: 100vh;

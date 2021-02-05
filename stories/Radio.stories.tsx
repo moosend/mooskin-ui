@@ -46,7 +46,7 @@ Selected.args = {
     onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     selected: true,
     value: 'test'
-};
+} as IRadioComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -59,7 +59,7 @@ Disabled.args = {
     onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     selected: false,
     value: 'test'
-};
+} as IRadioComponentProps;
 
 export const Description = Template.bind({});
 Description.args = {
@@ -72,7 +72,7 @@ Description.args = {
     onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     selected: false,
     value: 'test'
-};
+} as IRadioComponentProps;
 
 export const CustomButton = Template.bind({});
 CustomButton.args = {

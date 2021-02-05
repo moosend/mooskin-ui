@@ -6,10 +6,12 @@ import { IAnchorComponentProps } from './model';
 // Styled Components
 import { StyledAnchor } from './styles';
 
+/**
+ * Anchor
+ */
 export const Anchor: React.FC<IAnchorComponentProps> = (props) => {
     const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
         props.disabled && e.preventDefault();
-        !props.disabled && props.onClickAnchor && props.onClickAnchor(e);
         !props.disabled && props.onClick && props.onClick(e);
     };
     return <StyledAnchor {...props} onClick={onClick} boxAs="a" />;

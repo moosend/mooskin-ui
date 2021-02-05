@@ -39,5 +39,6 @@ Normal.args = {
           </ModalContent>
         </ModalOverlay>
     ),
+    isOpen: true,
     onClose: () => alert('Close!')
-};
+} as IModalComponentProps;

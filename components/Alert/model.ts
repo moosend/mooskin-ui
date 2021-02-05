@@ -1,6 +1,6 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
-export interface IBaseAlertComponentProps extends IDivBoxComponentProps {
+export interface IBaseAlertComponentProps extends IBoxComponentProps {
     /** status of the Alert */
     status?: 'info' | 'warning' | 'success' | 'error';
 

@@ -25,11 +25,11 @@ export const Normal = Template.bind({});
 Normal.args = {
     children: 'check',
     onClick: (e: React.MouseEvent<HTMLElement>) => console.log(e)
-};
+} as IIconButtonComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
     children: 'close',
     disabled: true,
     onClick: (e: React.MouseEvent<HTMLElement>) => console.log(e)
-};
+} as IIconButtonComponentProps;

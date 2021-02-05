@@ -1,6 +1,6 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
-export interface ISidemenuComponentProps extends IDivBoxComponentProps{
+export interface ISidemenuComponentProps extends IBoxComponentProps{
     /** active Sidemenu item */
     activeItem?: string;
 
@@ -8,13 +8,10 @@ export interface ISidemenuComponentProps extends IDivBoxComponentProps{
     onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string) => void;
 }
 
-export interface ISidemenuItemComponentProps extends IDivBoxComponentProps{
+export interface ISidemenuItemComponentProps extends IBoxComponentProps{
     /** value returned in callback fn */
     value?: string;
 
     /** whether the item is active */
     active?: boolean;
-
-    /** callback called when clicking a Sidemenu item */
-    onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string) => void;
 }

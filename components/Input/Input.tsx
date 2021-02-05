@@ -5,17 +5,15 @@ import 'emoji-mart/css/emoji-mart.css';
 
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { IDescriptionComponentProps } from '../Description/model';
 import { ILabelComponentProps } from '../Label/model';
 import {
     IInputComponentProps,
     IInputContainerComponentProps,
     IInputEmojiComponentProps,
-    IInputIconComponentProps,
     IInputListComponentProps,
-    IInputOptionComponentProps,
-    IInputOverlayComponentProps
+    IInputOptionComponentProps
 } from './model';
 
 // Components
@@ -64,7 +62,8 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = (props) =
                     dataLabel: props.dataLabel,
                     disabled: props.disabled,
                     key: i,
-                    onChangeInput: (e, data) => batchChangeHandler(e, data, child.props.onChange),
+                    onChange: (e: React.ChangeEvent<HTMLInputElement>) =>
+                        batchChangeHandler(e, {dataLabel: props.dataLabel, value: e.target.value}, child.props.onChange),
                     value: props.value,
                     wrapped: true
                 } as IInputComponentProps);
@@ -89,7 +88,7 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = (props) =
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     key: i,
-                    onClickOption: (value) => onDropdownOptionClick(value),
+                    onClick: (e) => onDropdownOptionClick(child.props.value),
                     value: child.props.value
                 } as IInputOptionComponentProps);
             }
@@ -123,13 +122,13 @@ export const InputOptionList: React.FC<IInputListComponentProps> = (props) => {
     const [showList, setShowList] = React.useState(false);
     return (
         <Box position="relative" {...props}>
-            <InputIcon onClickIcon={() => setShowList(!showList)}>{props.icon}</InputIcon>
+            <InputIcon onClick={() => setShowList(!showList)}>{props.icon}</InputIcon>
             {showList && (
                 <>
                     <StyledInputOptionList w={300}>
                         {props.children}
                     </StyledInputOptionList>
-                    <InputOverlay onClickOverlay={() => setShowList(!showList)} />
+                    <InputOverlay onClick={() => setShowList(!showList)} />
                 </>
             )}
         </Box>
@@ -146,7 +145,7 @@ InputOptionList.displayName = 'InputOptionList';
 /**
  * InputOptionListTitle
  */
-export const InputOptionListTitle: React.FC<IDivBoxComponentProps> = (props) => {
+export const InputOptionListTitle: React.FC<IBoxComponentProps> = (props) => {
     return <StyledInputOptionListTitle {...props} />;
 };
 
@@ -161,11 +160,7 @@ InputOptionListTitle.displayName = 'InputOptionListTitle';
  * InputOption
  */
 export const InputOption: React.FC<IInputOptionComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickOption && props.onClickOption(props.value);
-        props.onClick && props.onClick(e);
-    };
-    return <StyledInputOption {...props} onClick={onClick} />;
+    return <StyledInputOption {...props} />;
 };
 
 InputOption.defaultProps = {
@@ -180,11 +175,7 @@ InputOption.displayName = 'InputOption';
  */
 export const Input: React.FC<IInputComponentProps> = (props) => {
     const InputComponent = props.wrapped ? StyledInputWrapped : StyledInputSolo;
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        props.onChangeInput && props.onChangeInput(e, {dataLabel: props.dataLabel, value: e.target.value});
-        props.onChange && props.onChange(e);
-    };
-    return <InputComponent {...props} boxAs="input" onChange={onChange} />;
+    return <InputComponent {...props} boxAs="input" />;
 };
 
 Input.defaultProps = {
@@ -225,11 +216,8 @@ InputDescription.displayName = 'InputDescription';
 /**
  * InputIcon
  */
-export const InputIcon: React.FC<IInputIconComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickIcon && props.onClickIcon(e);
-    };
-    return <StyledInputIcon {...props} onClick={onClick} />;
+export const InputIcon: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledInputIcon {...props} />;
 };
 
 InputIcon.defaultProps = {
@@ -242,11 +230,8 @@ InputIcon.displayName = 'InputIcon';
 /**
  * InputOverlay
  */
-export const InputOverlay: React.FC<IInputOverlayComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickOverlay && props.onClickOverlay(e);
-    };
-    return <StyledInputOverlay {...props} onClick={onClick} />;
+export const InputOverlay: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledInputOverlay {...props} />;
 };
 
 InputOverlay.defaultProps = {
@@ -269,11 +254,11 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = (props) => {
 
     return (
         <Box position="relative" {...props}>
-            <InputIcon onClickIcon={() => setShowEmoji(!showEmoji)}>emoji_emotions</InputIcon>
+            <InputIcon onClick={() => setShowEmoji(!showEmoji)}>emoji_emotions</InputIcon>
             {showEmoji && (
                 <Box position="absolute" right="0">
                     <Picker onSelect={onChangeEmoji} exclude={['flags']} showPreview={false} showSkinTones={false} />
-                    <InputOverlay onClickOverlay={() => setShowEmoji(!showEmoji)} />
+                    <InputOverlay onClick={() => setShowEmoji(!showEmoji)} />
                 </Box>
             )}
         </Box>

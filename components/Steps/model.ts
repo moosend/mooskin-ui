@@ -1,6 +1,6 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
-export interface IStepsComponentProps extends IDivBoxComponentProps {
+export interface IStepsComponentProps extends IBoxComponentProps {
     /** number of the active item or items */
     activeItem?: number | string;
 
@@ -10,7 +10,7 @@ export interface IStepsComponentProps extends IDivBoxComponentProps {
     children?: React.ReactElement<IStepCommonComponentProps> | Array<React.ReactElement<IStepCommonComponentProps>>;
 }
 
-export interface IStepCommonComponentProps extends IDivBoxComponentProps {
+export interface IStepCommonComponentProps extends IBoxComponentProps {
     /** whether the current item is active */
     active?: boolean;
 }

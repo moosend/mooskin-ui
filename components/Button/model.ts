@@ -9,7 +9,4 @@ export interface IButtonComponentProps extends IButtonBoxComponentProps {
 
     /** Button size */
     buttonSize?: 'lg' | 'md' | 'sm';
-
-    /** Callback that's called when the button is clicked */
-    onClickButton?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
 }

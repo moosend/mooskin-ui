@@ -17,5 +17,4 @@ export const StyledLabel = styled(Box)<ILabelComponentProps>`
     display: flex;
     align-self: center;
     cursor: ${(props) => (!props.disabled ? (props.onClick ? 'pointer' : 'unset') : 'not-allowed')};
-    min-width: ${(props) => props.width || 150}px;
 `;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { ITabCommonComponentProps, ITabComponentProps, ITabsComponentProps } from './model';
 
 // Components
@@ -19,6 +19,15 @@ import {
  * Tabs
  */
 export const Tabs: React.FC<ITabsComponentProps> = (props) => {
+
+    const batchClickHandler = (
+        e: React.MouseEvent<HTMLElement>,
+        activeId?: string | number,
+        callback?: (e: React.MouseEvent<HTMLElement>) => void
+    ) => {
+        props.onClickTab && props.onClickTab(e, activeId);
+        callback && callback(e);
+    };
 
     const getActiveItem = (activeId?: string | number) => {
         if (props.activeItem && Array.isArray(props.activeItem)){
@@ -41,8 +50,8 @@ export const Tabs: React.FC<ITabsComponentProps> = (props) => {
                 header = (
                     React.cloneElement(child, {
                         active,
-                        onClick: (e) => props.onClickTab && props.onClickTab(e, activeId)
-                    } as IDivBoxComponentProps)
+                        onClick: (e) => batchClickHandler(e, activeId, child.props.onClick)
+                    } as IBoxComponentProps)
                 );
             }
 

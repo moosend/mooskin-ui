@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
 // Components
 import Box from '../Box/Box';
 
-export const StyledFooter = styled(Box)<IDivBoxComponentProps>`
+export const StyledFooter = styled(Box)<IBoxComponentProps>`
     position: fixed;
     bottom: 0px;
     left: 0px;
@@ -15,7 +15,7 @@ export const StyledFooter = styled(Box)<IDivBoxComponentProps>`
     display: flex;
 `;
 
-export const StyledFooterCommon = styled(Box)<IDivBoxComponentProps>`
+export const StyledFooterCommon = styled(Box)<IBoxComponentProps>`
     display: flex;
     align-items: center;
 `;

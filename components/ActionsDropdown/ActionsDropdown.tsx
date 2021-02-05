@@ -37,7 +37,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
                 return React.cloneElement(child, {
                     children: recurseChildren((child.props as any).children),
                     key: i,
-                    onClickItem: (e) => batchClickHandler(e, {dataLabel: child.props.dataLabel, value: child.props.value}, child.props.onClickItem)
+                    onClick: (e) => batchClickHandler(e, {dataLabel: child.props.dataLabel, value: child.props.value}, child.props.onClick)
                 } as IActionsDropdownItemComponentProps);
             }
 
@@ -77,11 +77,7 @@ ActionsDropdown.displayName = 'ActionsDropdown';
  * ActionsDropdownItem
  */
 export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickItem && props.onClickItem(e, props.value);
-        props.onClick && props.onClick(e);
-    };
-    return <StyledActionsDropdownItem {...props} onClick={onClick} />;
+    return <StyledActionsDropdownItem {...props} />;
 };
 
 ActionsDropdownItem.defaultProps = {
@@ -99,7 +95,6 @@ export const ActionsDropdownArrow: React.FC<IActionsDropdownArrowComponentProps>
 };
 
 ActionsDropdownArrow.defaultProps = {
-    arrowColor: '#3fbaca',
     arrowDirection: 'up',
     className: '',
     style: {}

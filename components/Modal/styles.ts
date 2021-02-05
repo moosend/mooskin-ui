@@ -1,6 +1,7 @@
 import styled, {keyframes} from 'styled-components';
 
 // Models
+import { IBoxComponentProps } from '../Box/model';
 import { IModalComponentProps, IModalContentComponentProps } from './model';
 
 // Components
@@ -54,7 +55,7 @@ export const StyledModalContentFadeOut = styled(StyledModalContent)`
     animation: ${contentFadeIn} 0.15s reverse;
 `;
 
-export const StyledModalHeader = styled(Box)<IModalComponentProps>`
+export const StyledModalHeader = styled(Box)<IBoxComponentProps>`
     flex: 0 1 0%;
     padding: 1rem 1.5rem;
     font-size: 1.25rem;
@@ -62,14 +63,14 @@ export const StyledModalHeader = styled(Box)<IModalComponentProps>`
     width: 100%;
 `;
 
-export const StyledModalBody = styled(Box)<IModalComponentProps>`
+export const StyledModalBody = styled(Box)<IBoxComponentProps>`
     padding: 0.5rem 1.5rem;
     flex: 1 1 0%;
     overflow: auto;
     width: 100%;
 `;
 
-export const StyledModalFooter = styled(Box)<IModalComponentProps>`
+export const StyledModalFooter = styled(Box)<IBoxComponentProps>`
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -77,7 +78,7 @@ export const StyledModalFooter = styled(Box)<IModalComponentProps>`
     width: 100%;
 `;
 
-export const StyledModalCloseButton = styled(Box)<IModalComponentProps>`
+export const StyledModalCloseButton = styled(Box)<IBoxComponentProps>`
     font-family: 'Mooskin Icons';
     width: 32px;
     height: 32px;
@@ -89,7 +90,7 @@ export const StyledModalCloseButton = styled(Box)<IModalComponentProps>`
     }
 `;
 
-export const StyledModalOverlay = styled(Box)<IModalComponentProps>`
+export const StyledModalOverlay = styled(Box)<IBoxComponentProps>`
     display: flex;
     width: 100vw;
     height: 100vh;

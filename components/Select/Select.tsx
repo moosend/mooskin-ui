@@ -2,15 +2,12 @@ import * as React from 'react';
 
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { IDescriptionComponentProps } from '../Description/model';
 import { ILabelComponentProps } from '../Label/model';
 import {
     ISelectComponentProps,
-    ISelectFilterComponentProps,
-    ISelectIconComponentProps,
     ISelectOptionComponentProps,
-    ISelectOverlayComponentProps,
     ISelectPaginationComponentProps
 } from './model';
 
@@ -49,7 +46,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         value: string,
-        callback?: (e: React.MouseEvent<HTMLElement>, value: string) => void,
+        callback?: (e: React.MouseEvent<HTMLElement>) => void,
     ) => {
 
         let returnValue;
@@ -70,7 +67,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
         }
 
         props.onChangeSelect && props.onChangeSelect(e, {dataLabel: props.dataLabel, value: returnValue});
-        callback && callback(e, value);
+        callback && callback(e);
         !selectedAsArray && toggleList();
     };
 
@@ -109,7 +106,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                         </>
                     ),
                     key: i,
-                    onClickOption: (e, value) => batchClickHandler(e, value, child.props.onClickOption),
+                    onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
                     value: child.props.value
                 } as ISelectOptionComponentProps);
 
@@ -125,43 +122,49 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                 return option;
             }
 
-            if (React.isValidElement<ISelectFilterComponentProps>(child) && child.type === SelectFilter){
+            if (React.isValidElement<IInputBoxComponentProps>(child) && child.type === SelectFilter){
                 !hasFilter && setHasFilter(true);
                 if (showList){
                     return React.cloneElement(child, {
                         key: i,
-                        onChangeFilter: (e) => batchFilterHandler(e, child.props.onChange)
-                    } as ISelectFilterComponentProps);
+                        onChange: (e: React.ChangeEvent<HTMLInputElement>) => batchFilterHandler(e, child.props.onChange),
+                        onClick: (e: React.MouseEvent<HTMLInputElement>) => {
+                            e.stopPropagation();
+                            child.props.onClick && child.props.onClick(e);
+                        }
+                    } as IInputBoxComponentProps);
                 }
                 return null;
             }
 
-            if (React.isValidElement<IDivBoxComponentProps>(child) && child.type === SelectOptionList){
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectOptionList){
                 if (showList){
                     return React.cloneElement(child, {
                         children: recurseChildren(child.props.children),
                         key: i
-                    } as IDivBoxComponentProps);
+                    } as IBoxComponentProps);
                 }
                 return null;
             }
 
-            if (React.isValidElement<IDivBoxComponentProps>(child) && child.type === SelectPlaceholder){
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder){
                 if (!showList){
                     return React.cloneElement(child, {
                         children: recurseChildren(child.props.children),
                         key: i,
-                    } as IDivBoxComponentProps);
+                    } as IBoxComponentProps);
                 }
                 return null;
             }
 
-            if (React.isValidElement<IDivBoxComponentProps>(child) && child.type === SelectContainer){
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectContainer){
                 return React.cloneElement(child, {
                     children: (
                         <>
                             {recurseChildren(child.props.children)}
-                            {!hasFilter && showList && <SelectFilter onChangeFilter={(e) => setFilterValue(e.target.value)}/>}
+                            {!hasFilter && showList && (
+                                <SelectFilter onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}/>
+                            )}
                             {!hasDropdownIcon && (
                                 <SelectIcon>
                                     {!showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}
@@ -171,25 +174,25 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                     ),
                     key: i,
                     onClick: !props.disabled ? toggleList : undefined
-                } as IDivBoxComponentProps);
+                } as IBoxComponentProps);
             }
 
-            if (React.isValidElement<IDivBoxComponentProps>(child) && child.type === SelectIcon){
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectIcon){
                 !hasDropdownIcon && setHasDropdownIcon(true);
                 return React.cloneElement(child, {
                     children: !showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up',
                     key: i,
                     onClick: toggleList
-                } as IDivBoxComponentProps);
+                } as IBoxComponentProps);
             }
 
-            if (React.isValidElement<IDivBoxComponentProps>(child) && child.type === SelectOverlay){
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectOverlay){
                 !hasOverlay && setHasOverlay(true);
                 if (showList){
                     return React.cloneElement(child, {
                         key: i,
                         onClick: toggleList
-                    } as IDivBoxComponentProps);
+                    } as IBoxComponentProps);
                 }
                 return null;
             }
@@ -205,7 +208,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
     return (
         <StyledSelect {...props} >
             {recurseChildren(props.children)}
-            {!hasOverlay && showList && <SelectOverlay onClickOverlay={toggleList} />}
+            {!hasOverlay && showList && <SelectOverlay onClick={toggleList} />}
         </StyledSelect>
     );
 };
@@ -220,7 +223,7 @@ Select.displayName = 'Select';
 /**
  * SelectContainer
  */
-export const SelectContainer: React.FC<IDivBoxComponentProps> = (props) => {
+export const SelectContainer: React.FC<IBoxComponentProps> = (props) => {
     return <StyledSelectContainer {...props} />;
 };
 
@@ -234,7 +237,7 @@ SelectContainer.displayName = 'SelectContainer';
 /**
  * SelectPlaceholder
  */
-export const SelectPlaceholder: React.FC<IDivBoxComponentProps> = (props) => {
+export const SelectPlaceholder: React.FC<IBoxComponentProps> = (props) => {
     return <StyledSelectPlaceholder {...props} />;
 };
 
@@ -248,7 +251,7 @@ SelectPlaceholder.displayName = 'SelectPlaceholder';
 /**
  * SelectOptionList
  */
-export const SelectOptionList: React.FC<IDivBoxComponentProps> = (props) => {
+export const SelectOptionList: React.FC<IBoxComponentProps> = (props) => {
     return <StyledSelectOptionList {...props} />;
 };
 
@@ -263,11 +266,7 @@ SelectOptionList.displayName = 'SelectOptionList';
  * SelectOption
  */
 export const SelectOption: React.FC<ISelectOptionComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickOption && props.onClickOption(e, props.value);
-        props.onClick && props.onClick(e);
-    };
-    return <StyledSelectOption {...props} onClick={onClick} />;
+    return <StyledSelectOption {...props} />;
 };
 
 SelectOption.defaultProps = {
@@ -280,16 +279,8 @@ SelectOption.displayName = 'SelectOption';
 /**
  * SelectFilter
  */
-export const SelectFilter: React.FC<ISelectFilterComponentProps> = (props) => {
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        props.onChangeFilter && props.onChangeFilter(e);
-        props.onChange && props.onChange(e);
-    };
-    const onClick = (e: React.MouseEvent<HTMLInputElement>) => {
-        e.stopPropagation();
-        props.onClick && props.onClick(e);
-    };
-    return <StyledSelectFilter {...props} boxAs="input" onChange={onChange} onClick={onClick}/>;
+export const SelectFilter: React.FC<IInputBoxComponentProps> = (props) => {
+    return <StyledSelectFilter {...props} boxAs="input" />;
 };
 
 SelectFilter.defaultProps = {
@@ -302,7 +293,7 @@ SelectFilter.displayName = 'SelectFilter';
 /**
  * SelectLoader
  */
-export const SelectLoader: React.FC<IDivBoxComponentProps> = (props) => {
+export const SelectLoader: React.FC<IBoxComponentProps> = (props) => {
     return <StyledSelectLoader {...props} />;
 };
 
@@ -344,12 +335,8 @@ SelectDescription.displayName = 'SelectDescription';
 /**
  * SelectIcon
  */
-export const SelectIcon: React.FC<ISelectIconComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickIcon && props.onClickIcon(e);
-        props.onClick && props.onClick(e);
-    };
-    return <StyledSelectIcon {...props} onClick={onClick} />;
+export const SelectIcon: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledSelectIcon {...props} />;
 };
 
 SelectIcon.defaultProps = {
@@ -362,11 +349,8 @@ SelectIcon.displayName = 'SelectIcon';
 /**
  * SelectOverlay
  */
-export const SelectOverlay: React.FC<ISelectOverlayComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickOverlay && props.onClickOverlay(e);
-    };
-    return <StyledSelectOverlay {...props} onClick={onClick} />;
+export const SelectOverlay: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledSelectOverlay {...props} />;
 };
 
 SelectOverlay.defaultProps = {
@@ -400,9 +384,9 @@ export const SelectPagination: React.FC<ISelectPaginationComponentProps> = (prop
     };
     return (
         <StyledSelectPagination {...props}>
-            <SelectIcon onClickIcon={(e) => onClick(e, 'left')} >keyboard_arrow_left</SelectIcon>
+            <SelectIcon onClick={(e) => onClick(e, 'left')} >keyboard_arrow_left</SelectIcon>
             <StyledPaginationPage>{props.page}</StyledPaginationPage>
-            <SelectIcon onClickIcon={(e) => onClick(e, 'right')} >keyboard_arrow_right</SelectIcon>
+            <SelectIcon onClick={(e) => onClick(e, 'right')} >keyboard_arrow_right</SelectIcon>
         </StyledSelectPagination>
     );
 };

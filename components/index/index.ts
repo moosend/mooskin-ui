@@ -1,5 +1,6 @@
 import '../_utils/globals/global.css';
 
+export { default as ActionsDropdown, ActionsDropdownItem, ActionsDropdownArrow } from '../ActionsDropdown/ActionsDropdown';
 export { default as Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../Alert/Alert';
 export { default as Button } from '../Button/Button';
 export { default as Skeleton, SkeletonCircle, SkeletonText } from '../Skeleton/Skeleton';
@@ -43,6 +44,7 @@ export { default as Pagination, PaginationButton } from '../Pagination/Paginatio
 export { default as Radio, RadioDescription, RadioIcon, RadioLabel } from '../Radio/Radio';
 export { default as Sidemenu, SidemenuItem } from '../Sidemenu/Sidemenu';
 export { default as IconButton } from '../IconButton/IconButton';
+export { default as Steps, StepContent, StepHeader, Step } from '../Steps/Steps';
 export {
     default as Select,
     SelectContainer,

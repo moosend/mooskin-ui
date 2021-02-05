@@ -1,7 +1,7 @@
-import { IDivBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index/index';
 
-export interface ITagsComponentProps extends IDivBoxComponentProps{
+export interface ITagsComponentProps extends IBoxComponentProps{
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
 

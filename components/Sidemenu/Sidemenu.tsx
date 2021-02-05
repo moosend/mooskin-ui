@@ -30,7 +30,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
                     active: child.props.value === props.activeItem,
                     children: recurseChildren((child.props as any).children),
                     key: i,
-                    onClickItem: (e, value) => batchClickHandler(e, value, child.props.onClick)
+                    onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick)
                 } as ISidemenuItemComponentProps);
             }
 
@@ -54,11 +54,7 @@ Sidemenu.defaultProps = {
  * SidemenuItem
  */
 export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickItem && props.onClickItem(e, props.value);
-        props.onClick && props.onClick(e);
-    };
-    return <StyledSidemenuItem {...props} onClick={onClick} />;
+    return <StyledSidemenuItem {...props} />;
 };
 
 SidemenuItem.defaultProps = {

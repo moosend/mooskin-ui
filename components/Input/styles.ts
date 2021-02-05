@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import {
     IInputComponentProps,
     IInputContainerComponentProps,
-    IInputIconComponentProps,
     IInputListComponentProps,
-    IInputOptionComponentProps,
-    IInputOverlayComponentProps
+    IInputOptionComponentProps
 } from './model';
 
 // Components
@@ -55,7 +53,7 @@ export const StyledInputWrapped = styled(StyledInputBase)<IInputComponentProps>`
     background-color: #ffffff;
 `;
 
-export const StyledInputOverlay = styled(Box)<IInputOverlayComponentProps>`
+export const StyledInputOverlay = styled(Box)<IBoxComponentProps>`
     position: fixed;
     top: 0;
     left: 0;
@@ -64,7 +62,7 @@ export const StyledInputOverlay = styled(Box)<IInputOverlayComponentProps>`
     z-index: -1;
 `;
 
-export const StyledInputIcon = styled(Box)<IInputIconComponentProps>`
+export const StyledInputIcon = styled(Box)<IBoxComponentProps>`
     font-family: 'Mooskin Icons';
     font-size: 20px;
     display: flex;
@@ -82,7 +80,7 @@ export const StyledInputOptionList = styled(Box)<Partial<IInputListComponentProp
     box-shadow: 0 1px 5px rgba(0,0,0,.32);
 `;
 
-export const StyledInputOptionListTitle = styled(Box)<IDivBoxComponentProps>`
+export const StyledInputOptionListTitle = styled(Box)<IBoxComponentProps>`
     padding: 5px;
     color: #bebebe;
     border-bottom: 1px solid #f1f1f1;

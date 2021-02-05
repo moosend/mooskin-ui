@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
 // Components
 import Box from '../Box/Box';
 
-export const StyledListItem = styled(Box)<IDivBoxComponentProps>`
+export const StyledListItem = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 15px;
 `;
 
-export const StyledListItemCommon = styled(Box)<IDivBoxComponentProps>`
+export const StyledListItemCommon = styled(Box)<IBoxComponentProps>`
     display: flex;
 `;
 

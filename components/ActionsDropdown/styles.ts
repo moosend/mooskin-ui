@@ -42,6 +42,6 @@ export const StyledActionsDropdownArrow = styled(Box)<IActionsDropdownArrowCompo
     right: 22px;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-bottom: ${(props) => props.arrowDirection === 'up' ? `7px solid ${props.arrowColor}` : 0};
-    border-top: ${(props) => props.arrowDirection === 'down' ? `7px solid ${props.arrowColor}` : 0};
+    border-bottom: ${(props) => props.arrowDirection === 'up' ? `7px solid ${props.arrowColor || '#3fbaca'}` : 0};
+    border-top: ${(props) => props.arrowDirection === 'down' ? `7px solid ${props.arrowColor || '#3fbaca'}` : 0};
 `;

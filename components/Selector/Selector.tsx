@@ -30,8 +30,8 @@ export const Selector: React.FC<ISelectorComponentProps> = (props) => {
                     active: child.props.value === props.activeItem,
                     children: recurseChildren((child.props as any).children),
                     key: i,
-                    onClickItem: (e, value) => {
-                        batchClickHandler(e, value, child.props.onClickItem);
+                    onClick: (e) => {
+                        batchClickHandler(e, child.props.value, child.props.onClick);
                     }
                 } as ISelectorItemComponentProps);
             }
@@ -56,11 +56,7 @@ Selector.defaultProps = {
  * SelectorItem
  */
 export const SelectorItem: React.FC<ISelectorItemComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickItem && props.onClickItem(e, props.value);
-        props.onClick && props.onClick(e);
-    };
-    return <StyledSelectorItem {...props} onClick={onClick} />;
+    return <StyledSelectorItem {...props} />;
 };
 
 SelectorItem.defaultProps = {

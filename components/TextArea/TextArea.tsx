@@ -12,17 +12,14 @@ import { Label } from '../Label/Label';
 // Styled Components
 import {StyledTextArea} from './styles';
 
+/**
+ * TextArea
+ */
 export const TextArea: React.FC<ITextAreaComponentProps> = (props) => {
-
     const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        !props.disabled && props.onChangeTextArea &&
-        props.onChangeTextArea(e, {value: e.target.value, dataLabel: props.dataLabel});
-
         !props.disabled && props.onChange && props.onChange(e);
     };
-
     return <StyledTextArea {...props as any} boxAs="textarea" onChange={onChange as any} />;
-    // return null;
 };
 
 TextArea.defaultProps = {

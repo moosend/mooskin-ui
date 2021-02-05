@@ -83,11 +83,7 @@ Radio.displayName = 'Radio';
  * RadioIcon
  */
 export const RadioIcon: React.FC<IRadioIconComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickIcon && props.onClickIcon(e);
-        props.onClick && props.onClick(e);
-    };
-    return <StyledRadioIcon {...props} onClick={onClick} />;
+    return <StyledRadioIcon {...props} />;
 };
 
 RadioIcon.defaultProps = {

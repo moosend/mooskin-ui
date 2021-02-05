@@ -46,7 +46,7 @@ Selected.args = {
     ),
     onClickCheckbox: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
-};
+} as ICheckboxComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
@@ -59,7 +59,7 @@ Disabled.args = {
     disabled: true,
     onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
-};
+} as ICheckboxComponentProps;
 
 export const Description = Template.bind({});
 Description.args = {
@@ -72,7 +72,7 @@ Description.args = {
     ),
     onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
-};
+} as ICheckboxComponentProps;
 
 export const CustomButton = Template.bind({});
 CustomButton.args = {
@@ -88,4 +88,4 @@ CustomButton.args = {
     ),
     onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
-};
+} as ICheckboxComponentProps;

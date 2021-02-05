@@ -54,12 +54,12 @@ NormalSkeleton.args = {
         </div>
     ),
     spacing: 20
-};
+} as ISkeletonComponentProps;
 
 export const CircleSkeleton = CircleTemplate.bind({});
 CircleSkeleton.args = {
     size: '40px'
-};
+} as ISkeletonCircleComponentProps;
 
 export const TextSkeleton = TextTemplate.bind({});
 TextSkeleton.args = {
@@ -75,4 +75,4 @@ TextSkeleton.args = {
         </div>
     ),
     lines: 5
-};
+} as ISkeletonTextComponentProps;

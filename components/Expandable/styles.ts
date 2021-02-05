@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { IExpandableCommonComponentProps, IExpandableComponentProps, IExpandableItemComponentProps } from './model';
 
 // Components
@@ -21,7 +21,7 @@ export const StyledExpandableItem = styled(Box)<IExpandableItemComponentProps>`
     }
 `;
 
-export const StyledExpandableItemContainer = styled(Box)<IDivBoxComponentProps>`
+export const StyledExpandableItemContainer = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 17px;
     cursor: pointer;
@@ -34,7 +34,7 @@ export const StyledExpandableItemButton = styled(Box)<IExpandableCommonComponent
     transform: ${(props) => props.active ? 'rotate(180deg)' : 'rotate(0deg)'};
 `;
 
-export const StyledExpandableItemText = styled(Box)<IDivBoxComponentProps>`
+export const StyledExpandableItemText = styled(Box)<IBoxComponentProps>`
     flex: 1;
     font-family: Montserrat;
     font-size: 14px;

@@ -13,6 +13,11 @@ export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
 
     const [showAll, setShowAll] = React.useState(false);
 
+    const batchClickHandler = (e: React.MouseEvent<HTMLElement>, page: number, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
+        props.onClickButton && props.onClickButton(e, page);
+        callback && callback(e);
+    };
+
     const recurseChildren = (children: any): any => {
         if (!children){
             return null;
@@ -33,7 +38,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
                         active: page === props.activePage,
                         children: page,
                         key: i,
-                        onClick: (e) => props.onClickButton && props.onClickButton(e, page)
+                        onClick: (e) => batchClickHandler(e, page, child.props.onClick)
                     } as IPaginationButtonComponentProps);
                 }
                 return null;

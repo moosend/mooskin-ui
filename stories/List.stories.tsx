@@ -5,7 +5,7 @@ import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 import {List, ListItem, ListItemBody, ListItemEnd, ListItemHead} from '../components/List/List';
 
 import { Box } from '../components/Box/Box';
-import { IDivBoxComponentProps } from '../components/Box/model';
+import { IBoxComponentProps } from '../components/Box/model';
 import Button from '../components/Button/Button';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
@@ -14,7 +14,7 @@ export default {
     title: 'Example/List',
 } as any as Meta;
 
-const Template: Story<IDivBoxComponentProps> = (args) => {
+const Template: Story<IBoxComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
@@ -102,7 +102,7 @@ Normal.args = {
             </ListItem>
         )
     ]
-};
+} as IBoxComponentProps;
 
 export const WithCols = Template.bind({});
 WithCols.args = {
@@ -234,4 +234,4 @@ WithCols.args = {
         )
     ],
     cols: 3
-};
+} as IBoxComponentProps;

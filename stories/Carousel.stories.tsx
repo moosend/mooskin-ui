@@ -3,7 +3,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import Carousel from '../components/Carousel/Carousel';
-// import {IDivCarouselComponentProps} from '../components/Carousel/model';
+import {ICarouselComponentProps} from '../components/Carousel/model';
 
 import { Box } from '../components/Box/Box';
 import GlobalStyle from '../components/Styled/GlobalStyles';
@@ -13,7 +13,7 @@ export default {
     title: 'Example/Carousel',
 } as any as Meta;
 
-const Template: Story<any> = (args) => {
+const Template: Story<ICarouselComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
@@ -31,4 +31,4 @@ Normal.args = {
             </div>
         );
     })
-};
+} as ICarouselComponentProps;

@@ -1,6 +1,6 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
-export interface IDescriptionComponentProps extends IDivBoxComponentProps {
+export interface IDescriptionComponentProps extends IBoxComponentProps {
     /** Description children */
     children: string;
 }

@@ -1,7 +1,7 @@
-import { IDivBoxComponentProps } from '../../components/Box/model';
+import { IBoxComponentProps } from '../../components/Box/model';
 import { IInputCallbackData } from '../../components/index/index';
 
-export interface ITagsComponentProps extends IDivBoxComponentProps{
+export interface ITagsComponentProps extends IBoxComponentProps{
     /** tagged data */
     tags: string[];
 
@@ -33,7 +33,7 @@ export interface ITagsComponentProps extends IDivBoxComponentProps{
     onTagClick?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData, index: number) => void;
 }
 
-export interface ITagComponentProps extends IDivBoxComponentProps {
+export interface ITagComponentProps extends IBoxComponentProps {
     /** children */
     children?: string;
 
@@ -45,7 +45,7 @@ export interface ITagComponentProps extends IDivBoxComponentProps {
     onClickRemove?: (e: React.MouseEvent<HTMLElement>) => void;
 }
 
-export interface ITagsInputComponentProps extends IDivBoxComponentProps {
+export interface ITagsInputComponentProps extends IBoxComponentProps {
     /** input field placehonder */
     placeholder?: string;
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { IPaginationButtonComponentProps, IPaginationComponentProps } from './model';
 
 // Components
@@ -32,7 +32,7 @@ export const StyledPaginationButton = styled(Box)<IPaginationButtonComponentProp
     }
 `;
 
-export const StyledPaginationShowAll = styled(Box)<IDivBoxComponentProps>`
+export const StyledPaginationShowAll = styled(Box)<IBoxComponentProps>`
     font-family: Hind;
     font-size: 14px;
     font-weight: 500;
