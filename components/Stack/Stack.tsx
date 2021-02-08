@@ -49,7 +49,7 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
     const dividerSpacingHandler = (element: JSX.Element | React.ReactElement) => {
         const spacingStyles = props.spacing ? getDividerSpacing() : {};
         return (
-            <Box {...spacingStyles} className="stack-divider-wrapper">
+            <Box {...spacingStyles}>
                 {React.cloneElement(element, {key: Math.random()})}
             </Box>
         );
