@@ -1,296 +1,507 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Grid renders Col correctly 1`] = `
-<Styled(Box)
-  className="myClass"
-  lg={8}
-  md={6}
-  sm={4}
-  style={
-    Object {
-      "width": "50px",
-    }
-  }
-  xs="hidden"
-/>
-`;
-
 exports[`Grid renders Grid correctly 1`] = `
-<Styled(Box)
-  className="myClass"
+<StyledGrid
+  className=""
   style={
     Object {
-      "width": "50px",
-    }
-  }
-/>
-`;
-
-exports[`Grid renders Grid with Row & Col correctly 1`] = `
-<Grid
-  className="myClass"
-  style={
-    Object {
-      "width": "50px",
+      "textAlign": "center",
     }
   }
 >
-  <Styled(Box)
-    className="myClass"
+  <Row
+    className=""
     style={
       Object {
-        "width": "50px",
+        "border": "3px solid #F48770",
+        "padding": 10,
       }
     }
   >
-    <Box
-      className="sc-jSFkmK ccghuS myClass"
+    <Col
+      className=""
+      lg={12}
+      md={8}
+      sm={6}
       style={
         Object {
-          "width": "50px",
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={3}
+    >
+      Col lg-12 md-8 sm-6 xs-3
+    </Col>
+  </Row>
+  <Row
+    className=""
+    style={
+      Object {
+        "border": "3px solid #F48770",
+        "padding": 10,
+      }
+    }
+  >
+    <Col
+      className=""
+      lg={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
         }
       }
     >
-      <Component
-        className="sc-jSFkmK ccghuS myClass"
+      Col lg-6
+    </Col>
+    <Col
+      className=""
+      lg={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+    >
+      Col lg-6
+    </Col>
+  </Row>
+  <Row
+    className=""
+    style={
+      Object {
+        "border": "3px solid #F48770",
+        "padding": 10,
+      }
+    }
+  >
+    <Col
+      className=""
+      md={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+    >
+      Col md-6
+    </Col>
+    <Col
+      className=""
+      md={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+    >
+      Col md-6
+    </Col>
+  </Row>
+  <Row
+    className=""
+    style={
+      Object {
+        "border": "3px solid #F48770",
+        "padding": 10,
+      }
+    }
+  >
+    <Col
+      className=""
+      md={4}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Chart 1
+    </Col>
+    <Col
+      className=""
+      md={4}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Chart 2
+    </Col>
+    <Col
+      className=""
+      md={4}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Chart 3
+    </Col>
+    <Col
+      className=""
+      md={4}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Chart 4
+    </Col>
+    <Col
+      className=""
+      md={4}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Chart 5
+    </Col>
+    <Col
+      className=""
+      md={4}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Chart 6
+    </Col>
+    <Col
+      className=""
+      md={6}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Chart 7
+    </Col>
+    <Col
+      className=""
+      md={6}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Chart 8
+    </Col>
+  </Row>
+  <Row
+    className=""
+    style={
+      Object {
+        "border": "3px solid #F48770",
+        "padding": 10,
+      }
+    }
+  >
+    <Col
+      className=""
+      lg={6}
+      md={12}
+      sm={8}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={4}
+    >
+      Col lg-6 md-12 sm-8 xs-4
+    </Col>
+    <Col
+      className=""
+      lg={6}
+      md={12}
+      sm={4}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={8}
+    >
+      Col lg-6 md-12 sm-4 xs-8
+    </Col>
+  </Row>
+  <Row
+    className=""
+    style={
+      Object {
+        "border": "3px solid #F48770",
+        "padding": 10,
+      }
+    }
+  >
+    <Col
+      className=""
+      lg={4}
+      md={10}
+      sm={1}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={2}
+    >
+      Col lg-4 md-10 sm-1 xs-1
+    </Col>
+    <Col
+      className=""
+      lg={4}
+      md={1}
+      sm={10}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={2}
+    >
+      Col lg-4 md-1 sm-10 xs-1
+    </Col>
+    <Col
+      className=""
+      lg={4}
+      md={1}
+      sm={1}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={8}
+    >
+      Col lg-4 md-1 sm-1 xs-10
+    </Col>
+  </Row>
+  <Row
+    className=""
+    style={
+      Object {
+        "border": "3px solid #F48770",
+        "padding": 10,
+      }
+    }
+  >
+    <Col
+      className=""
+      lg={8}
+      md={4}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Col lg-8 md-4 sm-6 xs-12
+    </Col>
+    <Col
+      className=""
+      lg={4}
+      md={8}
+      sm={6}
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+      xs={12}
+    >
+      Col lg-4 md-8 sm-6 xs-12
+    </Col>
+  </Row>
+  <Row
+    className=""
+    style={
+      Object {
+        "border": "3px solid #F48770",
+        "padding": 10,
+      }
+    }
+  >
+    <Col
+      className=""
+      style={Object {}}
+    >
+      <Row
+        className=""
         style={
           Object {
-            "width": "50px",
-          }
-        }
-        theme={
-          Object {
-            "disabledBackground": "#e2e2e2",
-            "disabledfont": "#9d9d9d",
-            "inputBackground": "#ffffff",
-            "inputBorder": "#e2e2e2",
-            "inputFont": "#9d9d9d",
-            "label": "#2d2d2d",
-            "primary": "#3fbaca",
-            "secondary": "#293346",
+            "border": "3px solid #F48770",
+            "padding": 10,
           }
         }
       >
-        <styled.div
-          className="sc-jSFkmK ccghuS myClass"
+        <Col
+          className=""
           style={
             Object {
-              "width": "50px",
-            }
-          }
-          theme={
-            Object {
-              "disabledBackground": "#e2e2e2",
-              "disabledfont": "#9d9d9d",
-              "inputBackground": "#ffffff",
-              "inputBorder": "#e2e2e2",
-              "inputFont": "#9d9d9d",
-              "label": "#2d2d2d",
-              "primary": "#3fbaca",
-              "secondary": "#293346",
+              "border": "3px solid #5ccdde",
+              "padding": 10,
             }
           }
         >
-          <div
-            className="sc-bdnylx dOPKTt sc-jSFkmK ccghuS myClass"
-            style={
-              Object {
-                "width": "50px",
-              }
+          Col
+        </Col>
+        <Col
+          className=""
+          style={
+            Object {
+              "border": "3px solid #5ccdde",
+              "padding": 10,
             }
-          >
-            <Row
-              className="myClass"
-              style={
-                Object {
-                  "width": "50px",
-                }
-              }
-            >
-              <Styled(Box)
-                className="myClass"
-                style={
-                  Object {
-                    "width": "50px",
-                  }
-                }
-              >
-                <Box
-                  className="sc-gKAblj ghkgCc myClass"
-                  style={
-                    Object {
-                      "width": "50px",
-                    }
-                  }
-                >
-                  <Component
-                    className="sc-gKAblj ghkgCc myClass"
-                    style={
-                      Object {
-                        "width": "50px",
-                      }
-                    }
-                    theme={
-                      Object {
-                        "disabledBackground": "#e2e2e2",
-                        "disabledfont": "#9d9d9d",
-                        "inputBackground": "#ffffff",
-                        "inputBorder": "#e2e2e2",
-                        "inputFont": "#9d9d9d",
-                        "label": "#2d2d2d",
-                        "primary": "#3fbaca",
-                        "secondary": "#293346",
-                      }
-                    }
-                  >
-                    <styled.div
-                      className="sc-gKAblj ghkgCc myClass"
-                      style={
-                        Object {
-                          "width": "50px",
-                        }
-                      }
-                      theme={
-                        Object {
-                          "disabledBackground": "#e2e2e2",
-                          "disabledfont": "#9d9d9d",
-                          "inputBackground": "#ffffff",
-                          "inputBorder": "#e2e2e2",
-                          "inputFont": "#9d9d9d",
-                          "label": "#2d2d2d",
-                          "primary": "#3fbaca",
-                          "secondary": "#293346",
-                        }
-                      }
-                    >
-                      <div
-                        className="sc-bdnylx dOPKTt sc-gKAblj ghkgCc myClass"
-                        style={
-                          Object {
-                            "width": "50px",
-                          }
-                        }
-                      >
-                        <Col
-                          className="myClass"
-                          lg={8}
-                          md={6}
-                          sm={4}
-                          style={
-                            Object {
-                              "width": "50px",
-                            }
-                          }
-                          xs="hidden"
-                        >
-                          <Styled(Box)
-                            className="myClass"
-                            lg={8}
-                            md={6}
-                            sm={4}
-                            style={
-                              Object {
-                                "width": "50px",
-                              }
-                            }
-                            xs="hidden"
-                          >
-                            <Box
-                              className="sc-iCoHVE fpJUgX myClass"
-                              lg={8}
-                              md={6}
-                              sm={4}
-                              style={
-                                Object {
-                                  "width": "50px",
-                                }
-                              }
-                              xs="hidden"
-                            >
-                              <Component
-                                className="sc-iCoHVE fpJUgX myClass"
-                                lg={8}
-                                md={6}
-                                sm={4}
-                                style={
-                                  Object {
-                                    "width": "50px",
-                                  }
-                                }
-                                theme={
-                                  Object {
-                                    "disabledBackground": "#e2e2e2",
-                                    "disabledfont": "#9d9d9d",
-                                    "inputBackground": "#ffffff",
-                                    "inputBorder": "#e2e2e2",
-                                    "inputFont": "#9d9d9d",
-                                    "label": "#2d2d2d",
-                                    "primary": "#3fbaca",
-                                    "secondary": "#293346",
-                                  }
-                                }
-                                xs="hidden"
-                              >
-                                <styled.div
-                                  className="sc-iCoHVE fpJUgX myClass"
-                                  lg={8}
-                                  md={6}
-                                  sm={4}
-                                  style={
-                                    Object {
-                                      "width": "50px",
-                                    }
-                                  }
-                                  theme={
-                                    Object {
-                                      "disabledBackground": "#e2e2e2",
-                                      "disabledfont": "#9d9d9d",
-                                      "inputBackground": "#ffffff",
-                                      "inputBorder": "#e2e2e2",
-                                      "inputFont": "#9d9d9d",
-                                      "label": "#2d2d2d",
-                                      "primary": "#3fbaca",
-                                      "secondary": "#293346",
-                                    }
-                                  }
-                                  xs="hidden"
-                                >
-                                  <div
-                                    className="sc-bdnylx dOPKTt sc-iCoHVE fpJUgX myClass"
-                                    style={
-                                      Object {
-                                        "width": "50px",
-                                      }
-                                    }
-                                  >
-                                    Col
-                                  </div>
-                                </styled.div>
-                              </Component>
-                            </Box>
-                          </Styled(Box)>
-                        </Col>
-                      </div>
-                    </styled.div>
-                  </Component>
-                </Box>
-              </Styled(Box)>
-            </Row>
-          </div>
-        </styled.div>
-      </Component>
-    </Box>
-  </Styled(Box)>
-</Grid>
-`;
-
-exports[`Grid renders Row correctly 1`] = `
-<Styled(Box)
-  className="myClass"
-  style={
-    Object {
-      "width": "50px",
-    }
-  }
-/>
+          }
+        >
+          Col
+        </Col>
+        <Col
+          className=""
+          style={
+            Object {
+              "border": "3px solid #5ccdde",
+              "padding": 10,
+            }
+          }
+        >
+          Col
+        </Col>
+      </Row>
+      <Row
+        className=""
+        style={
+          Object {
+            "border": "3px solid #F48770",
+            "padding": 10,
+          }
+        }
+      >
+        <Col
+          className=""
+          style={
+            Object {
+              "border": "3px solid #5ccdde",
+              "padding": 10,
+            }
+          }
+        >
+          Col
+        </Col>
+        <Col
+          className=""
+          style={
+            Object {
+              "border": "3px solid #5ccdde",
+              "padding": 10,
+            }
+          }
+        >
+          Col
+        </Col>
+      </Row>
+      <Row
+        className=""
+        style={
+          Object {
+            "border": "3px solid #F48770",
+            "padding": 10,
+          }
+        }
+      >
+        <Col
+          className=""
+          style={
+            Object {
+              "border": "3px solid #5ccdde",
+              "padding": 10,
+            }
+          }
+        >
+          Col
+        </Col>
+      </Row>
+    </Col>
+    <Col
+      className=""
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+    >
+      Col
+    </Col>
+    <Col
+      className=""
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+    >
+      Col
+    </Col>
+    <Col
+      className=""
+      style={
+        Object {
+          "border": "3px solid #5ccdde",
+          "padding": 10,
+        }
+      }
+    >
+      Col
+    </Col>
+  </Row>
+</StyledGrid>
 `;

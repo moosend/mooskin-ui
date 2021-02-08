@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<Layout
+  className=""
+  spacing={15}
+  style={Object {}}
+>
+  <StyledLayout
+    className=""
+    spacing={15}
+    style={Object {}}
+  >
+    <Box
+      className="sc-gtssRu djyfGL"
+      spacing={15}
+      style={Object {}}
+    >
+      <Component
+        className="sc-gtssRu djyfGL"
+        spacing={15}
+        style={Object {}}
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
+      >
+        <StyledBox
+          className="sc-gtssRu djyfGL"
+          spacing={15}
+          style={Object {}}
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+        >
+          <div
+            className="sc-bdnylx dOPKTt sc-gtssRu djyfGL"
+            spacing={15}
+            style={Object {}}
+          >
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                round="sm"
+                style={Object {}}
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  round="sm"
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <div
+                    className="sc-bdnylx fcasMO"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                round="sm"
+                style={Object {}}
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  round="sm"
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <div
+                    className="sc-bdnylx fcasMO"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                round="sm"
+                style={Object {}}
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  round="sm"
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <div
+                    className="sc-bdnylx fcasMO"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                round="sm"
+                style={Object {}}
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  round="sm"
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <div
+                    className="sc-bdnylx fcasMO"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                round="sm"
+                style={Object {}}
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  round="sm"
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <div
+                    className="sc-bdnylx fcasMO"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                round="sm"
+                style={Object {}}
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  round="sm"
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <div
+                    className="sc-bdnylx fcasMO"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                round="sm"
+                style={Object {}}
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  round="sm"
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <div
+                    className="sc-bdnylx fcasMO"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                round="sm"
+                style={Object {}}
+                theme={
+                  Object {
+                    "disabledBackground": "#e2e2e2",
+                    "disabledfont": "#9d9d9d",
+                    "inputBackground": "#ffffff",
+                    "inputBorder": "#e2e2e2",
+                    "inputFont": "#9d9d9d",
+                    "label": "#2d2d2d",
+                    "primary": "#3fbaca",
+                    "secondary": "#293346",
+                  }
+                }
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  round="sm"
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <div
+                    className="sc-bdnylx fcasMO"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledLayout>
+</Layout>
+`;

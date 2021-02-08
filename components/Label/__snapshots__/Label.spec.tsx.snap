@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label renders correctly 1`] = `
+<Label
+  className=""
+  minW={150}
+  style={Object {}}
+>
+  <StyledLabel
+    className=""
+    minW={150}
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <Box
+      className="sc-gtssRu iFLTYl"
+      minW={150}
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <Component
+        className="sc-gtssRu iFLTYl"
+        minW={150}
+        onClick={[Function]}
+        style={Object {}}
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
+      >
+        <StyledBox
+          className="sc-gtssRu iFLTYl"
+          minW={150}
+          onClick={[Function]}
+          style={Object {}}
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+        >
+          <div
+            className="sc-bdnylx eLauql sc-gtssRu iFLTYl"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Label here!
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledLabel>
+</Label>
+`;

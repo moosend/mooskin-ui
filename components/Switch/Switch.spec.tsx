@@ -1,25 +1,19 @@
 import * as React from 'react';
 import Switch from './Switch';
 
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Switch', () => {
 
     test('renders correctly', () => {
         const func = jest.fn();
 
-        const tree = shallow(
+        const tree = mount(
             <Switch
-                className="myClass"
                 style={{color: 'blue'}}
-                id={'switch1'}
-                disabled
-                disabledLabel="this is disabled"
-                offLabel="off"
-                onLabel="on"
-                labelWidth={70}
-                on
-                onClick={func}
+                onClickSwitch={func}
+                active
+                text="Switch"
             />
         );
         expect(tree).toMatchSnapshot();
@@ -27,35 +21,26 @@ describe('Switch', () => {
 
     test('renders a disabled Switch with custom css class and id', () => {
 
-        const component = shallow(<Switch id="5" className="mySwitch" disabled/>);
+        const component = shallow(<Switch text="INCOMPLETE" disabled/>);
 
-        expect(component.find('div').last().hasClass('mySwitch')).toBe(true);
-        expect(component.find('div').last().prop('id')).toEqual('5');
-        expect(component.find('div').last().prop('disabled')).toBeTruthy;
-    });
-
-    test('renders an active Switch when a related task is already running', () => {
-
-        const component = shallow(<Switch on/>);
-
-        expect(component.find('label').first().text()).toEqual('ACTIVE');
+        expect(component.find('StyledSwitchLabelDisabled').length).toEqual(1);
     });
 
     test('onClick is not called when a disabled Switch is clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(<Switch onClick={func} disabled/>);
+        const component = shallow(<Switch text="INCOMPLETE" disabled onClickSwitch={func} />);
 
-        component.find('div').at(1).simulate('click');
+        component.find('StyledSwitch').simulate('click');
         expect(func).not.toHaveBeenCalled();
     });
 
     test('onClick prop callback is called when the Switch is clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(<Switch onClick={func}/>);
+        const component = shallow(<Switch text="Inactive" onClickSwitch={func}/>);
 
-        component.find('div').at(1).simulate('click');
+        component.find('StyledSwitch').simulate('click');
         expect(func).toHaveBeenCalled();
     });
 

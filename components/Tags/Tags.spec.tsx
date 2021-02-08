@@ -6,7 +6,7 @@ import {mount, render, shallow} from 'enzyme';
 const func1 = jest.fn();
 const func2 = jest.fn();
 
-describe('Tags', () => {
+describe.skip('Tags', () => {
 
     test('renders Tags correctly', () => {
 

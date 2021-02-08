@@ -41,6 +41,8 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
     }
 `;
 
+ButtonDefault.displayName = 'ButtonDefault';
+
 export const StyledButtonNormal = styled(ButtonDefault)`
     background-color: ${(props) =>
         !props.disabled ? props.theme.primary || variables.primary : props.theme.disabledBackground || variables.disabledBackground};
@@ -49,6 +51,8 @@ export const StyledButtonNormal = styled(ButtonDefault)`
     border: none;
     outline: 0;
 `;
+
+StyledButtonNormal.displayName = 'StyledButtonNormal';
 
 export const StyledButtonInverse = styled(ButtonDefault)`
     color: ${(props) =>
@@ -62,6 +66,8 @@ export const StyledButtonInverse = styled(ButtonDefault)`
                 : props.theme.disabledBackground || variables.disabledBackground};
 `;
 
+StyledButtonInverse.displayName = 'StyledButtonInverse';
+
 export const StyledButtonIcon = styled(Box)`
     font-family: 'Mooskin Icons Round';
     font-size: 15px;
@@ -69,3 +75,5 @@ export const StyledButtonIcon = styled(Box)`
     color: inherit;
     text-decoration: none;
 `;
+
+StyledButtonIcon.displayName = 'StyledButtonIcon';

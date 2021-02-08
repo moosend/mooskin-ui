@@ -1,45 +1,457 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pagination renders correctly 1`] = `
-<div
-  className="pagination undefined"
+<Pagination
+  activePage={3}
+  className=""
+  onClickButton={[MockFunction]}
+  style={Object {}}
 >
-  <div
-    className="paginationInner"
+  <StyledPagination
+    activePage={3}
+    className=""
+    onClickButton={[MockFunction]}
+    style={Object {}}
   >
-    <PaginationButton
-      active={true}
-      className="pagination-normal-btn itemButton"
-      item={1}
-      key="1"
-      label="1"
-      onClick={[Function]}
-    />
-    <PaginationButton
-      active={false}
-      className="pagination-normal-btn itemButton"
-      item={2}
-      key="2"
-      label="2"
-      onClick={[Function]}
-    />
-    <PaginationButton
-      active={false}
-      className="pagination-normal-btn itemButton"
-      item={3}
-      key="3"
-      label="3"
-      onClick={[Function]}
-    />
-    <PaginationButton
-      active={false}
-      className="pagination-ellipsis"
-      disabled={true}
-      item={1}
-      key="asdd3"
-      label="..."
-      onClick={[Function]}
-    />
-  </div>
-</div>
+    <Box
+      activePage={3}
+      className="sc-gtssRu bnocXT"
+      onClickButton={[MockFunction]}
+      style={Object {}}
+    >
+      <Component
+        activePage={3}
+        className="sc-gtssRu bnocXT"
+        onClickButton={[MockFunction]}
+        style={Object {}}
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
+      >
+        <StyledBox
+          activePage={3}
+          className="sc-gtssRu bnocXT"
+          onClickButton={[MockFunction]}
+          style={Object {}}
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+        >
+          <div
+            className="sc-bdnylx dOPKTt sc-gtssRu bnocXT"
+            onClickButton={[MockFunction]}
+            style={Object {}}
+          >
+            <PaginationButton
+              active={false}
+              className=""
+              key="0/.0"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <StyledPaginationButton
+                active={false}
+                className=""
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Box
+                  active={false}
+                  className="sc-dlnjPT gKiNcx"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Component
+                    active={false}
+                    className="sc-dlnjPT gKiNcx"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={false}
+                      className="sc-dlnjPT gKiNcx"
+                      onClick={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT gKiNcx"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        1
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledPaginationButton>
+            </PaginationButton>
+            <PaginationButton
+              active={false}
+              className=""
+              key="1/.1"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <StyledPaginationButton
+                active={false}
+                className=""
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Box
+                  active={false}
+                  className="sc-dlnjPT gKiNcx"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Component
+                    active={false}
+                    className="sc-dlnjPT gKiNcx"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={false}
+                      className="sc-dlnjPT gKiNcx"
+                      onClick={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT gKiNcx"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        2
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledPaginationButton>
+            </PaginationButton>
+            <PaginationButton
+              active={true}
+              className=""
+              key="2/.2"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <StyledPaginationButton
+                active={true}
+                className=""
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Box
+                  active={true}
+                  className="sc-dlnjPT cUoMmY"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Component
+                    active={true}
+                    className="sc-dlnjPT cUoMmY"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={true}
+                      className="sc-dlnjPT cUoMmY"
+                      onClick={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT cUoMmY"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        3
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledPaginationButton>
+            </PaginationButton>
+            <PaginationButton
+              active={false}
+              className=""
+              key="3/.3"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <StyledPaginationButton
+                active={false}
+                className=""
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Box
+                  active={false}
+                  className="sc-dlnjPT gKiNcx"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Component
+                    active={false}
+                    className="sc-dlnjPT gKiNcx"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={false}
+                      className="sc-dlnjPT gKiNcx"
+                      onClick={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT gKiNcx"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        4
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledPaginationButton>
+            </PaginationButton>
+            <PaginationButton
+              active={false}
+              className=""
+              key="4/.4"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <StyledPaginationButton
+                active={false}
+                className=""
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Box
+                  active={false}
+                  className="sc-dlnjPT gKiNcx"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Component
+                    active={false}
+                    className="sc-dlnjPT gKiNcx"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={false}
+                      className="sc-dlnjPT gKiNcx"
+                      onClick={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT gKiNcx"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        5
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledPaginationButton>
+            </PaginationButton>
+            <StyledPaginationShowAll
+              onClick={[Function]}
+            >
+              <Box
+                className="sc-hKFyIo dDdERR"
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Component
+                  className="sc-hKFyIo dDdERR"
+                  onClick={[Function]}
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <StyledBox
+                    className="sc-hKFyIo dDdERR"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <div
+                      className="sc-bdnylx dOPKTt sc-hKFyIo dDdERR"
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      Show all
+                    </div>
+                  </StyledBox>
+                </Component>
+              </Box>
+            </StyledPaginationShowAll>
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledPagination>
+</Pagination>
 `;

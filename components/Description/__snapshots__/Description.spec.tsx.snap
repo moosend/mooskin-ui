@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Description renders correctly 1`] = `
+<StyledDescription
+  className=""
+  style={Object {}}
+>
+  Description here!
+</StyledDescription>
+`;

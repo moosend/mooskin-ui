@@ -1,59 +1,37 @@
-// import * as React from 'react';
-// import Alert, {AlertCloseButton, AlertDescription, AlertIcon, AlertTitle} from './Alert';
+import * as React from 'react';
+import {Footer, FooterBody, FooterEnd, FooterHead} from './Footer';
 
-// import { mount } from 'enzyme';
-// import Box from '../Box/Box';
+import { mount } from 'enzyme';
+import { Button, ButtonIcon } from '../Button/Button';
 
-// const fn = jest.fn();
+describe('Alert', () => {
 
-// describe('Alert', () => {
+    test('renders correctly', () => {
+        const tree = mount(
+            <Footer>
+                <FooterHead fontSize={12} fontWeight={800}>SAVE AS DRAFT</FooterHead>
+                <FooterBody>
+                    <Button mr={10} minW="unset">
+                        <ButtonIcon>
+                            chevron_left
+                        </ButtonIcon>
+                        BACK
+                    </Button>
+                    <Button minW="unset">
+                        NEXT
+                        <ButtonIcon>
+                            chevron_right
+                        </ButtonIcon>
+                    </Button>
+                </FooterBody>
+                <FooterEnd>
+                    <Button inverseStyle borderColor="#37a037" color="#37a037">
+                        DESIGN & DELIVERY TEST
+                    </Button>
+                </FooterEnd>
+            </Footer>
+        );
+        expect(tree).toMatchSnapshot();
+    });
 
-//     test('renders correctly', () => {
-//         const tree = mount(
-//             <Alert variant="left-accent">
-//                 <AlertIcon />
-//                 <AlertTitle>Your browser is outdated!</AlertTitle>
-//                 <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-//                 <AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-//             </Alert>
-//         );
-//         expect(tree).toMatchSnapshot();
-//     });
-
-//     test('Status and Variant are inherited by alert children', () => {
-//         const tree = mount(
-//             <Alert variant="left-accent" status="success">
-//                 <AlertIcon />
-//                 <Box>
-//                     <AlertTitle>Your browser is outdated!</AlertTitle>
-//                     <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-//                     <AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-//                 </Box>
-//             </Alert>
-//         );
-
-//         expect(tree.find(AlertTitle).prop('status')).toEqual('success');
-//         expect(tree.find(AlertTitle).prop('variant')).toEqual('left-accent');
-
-//         expect(tree.find(AlertDescription).prop('status')).toEqual('success');
-//         expect(tree.find(AlertDescription).prop('variant')).toEqual('left-accent');
-
-//         expect(tree.find(AlertCloseButton).prop('status')).toEqual('success');
-//         expect(tree.find(AlertCloseButton).prop('variant')).toEqual('left-accent');
-//     });
-
-//     test('calls callback on close click', () => {
-//         const tree = mount(
-//             <Alert variant="left-accent">
-//                 <AlertIcon />
-//                 <AlertTitle>Your browser is outdated!</AlertTitle>
-//                 <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-//                 <AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-//             </Alert>
-//         );
-
-//         tree.find(AlertCloseButton).simulate('click');
-//         expect(fn).toHaveBeenCalled();
-//     });
-
-// });
+});

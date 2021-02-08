@@ -4,24 +4,28 @@ exports[`Modal renders correctly 1`] = `
 <Modal
   className=""
   closeOnOverlayClick={true}
+  isOpen={true}
   onClose={[MockFunction]}
   style={Object {}}
 >
-  <Styled(Box)
+  <StyledModal
     className=""
     closeOnOverlayClick={true}
+    isOpen={true}
     onClose={[MockFunction]}
     style={Object {}}
   >
     <Box
       className="sc-gtssRu"
       closeOnOverlayClick={true}
+      isOpen={true}
       onClose={[MockFunction]}
       style={Object {}}
     >
       <Component
         className="sc-gtssRu"
         closeOnOverlayClick={true}
+        isOpen={true}
         onClose={[MockFunction]}
         style={Object {}}
         theme={
@@ -37,9 +41,10 @@ exports[`Modal renders correctly 1`] = `
           }
         }
       >
-        <styled.div
+        <StyledBox
           className="sc-gtssRu"
           closeOnOverlayClick={true}
+          isOpen={true}
           onClose={[MockFunction]}
           style={Object {}}
           theme={
@@ -62,14 +67,405 @@ exports[`Modal renders correctly 1`] = `
           >
             <ModalOverlay
               className=""
+              isOpen={true}
               key="0/.0"
               onClick={[Function]}
               style={Object {}}
-            />
+            >
+              <StyledModalOverlayFadeIn
+                className=""
+                isOpen={true}
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Box
+                  className="sc-pNWxx sc-jrsJCI dvKPFh FOVMT"
+                  isOpen={true}
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Component
+                    className="sc-pNWxx sc-jrsJCI dvKPFh FOVMT"
+                    isOpen={true}
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      className="sc-pNWxx sc-jrsJCI dvKPFh FOVMT"
+                      isOpen={true}
+                      onClick={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-pNWxx sc-jrsJCI dvKPFh FOVMT"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        <ModalContent
+                          className=""
+                          h="50%"
+                          isOpen={true}
+                          key="0/.0"
+                          onClick={[Function]}
+                          style={Object {}}
+                          w="50%"
+                        >
+                          <StyledModalContentFadeIn
+                            className=""
+                            h="50%"
+                            isOpen={true}
+                            onClick={[Function]}
+                            style={Object {}}
+                            w="50%"
+                          >
+                            <Box
+                              className="sc-dlnjPT sc-hKFyIo bTtToR cvZmlF"
+                              h="50%"
+                              isOpen={true}
+                              onClick={[Function]}
+                              style={Object {}}
+                              w="50%"
+                            >
+                              <Component
+                                className="sc-dlnjPT sc-hKFyIo bTtToR cvZmlF"
+                                h="50%"
+                                isOpen={true}
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                                w="50%"
+                              >
+                                <StyledBox
+                                  className="sc-dlnjPT sc-hKFyIo bTtToR cvZmlF"
+                                  h="50%"
+                                  isOpen={true}
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                  w="50%"
+                                >
+                                  <div
+                                    className="sc-bdnylx dRhlPt sc-dlnjPT sc-hKFyIo bTtToR cvZmlF"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    <ModalCloseButton
+                                      className=""
+                                      key="0/.0"
+                                      onClick={[Function]}
+                                      position="absolute"
+                                      right={10}
+                                      style={Object {}}
+                                      top={10}
+                                    >
+                                      <StyledModalCloseButton
+                                        className=""
+                                        onClick={[Function]}
+                                        position="absolute"
+                                        right={10}
+                                        style={Object {}}
+                                        top={10}
+                                      >
+                                        <Box
+                                          className="sc-fujyUd eOyweS"
+                                          onClick={[Function]}
+                                          position="absolute"
+                                          right={10}
+                                          style={Object {}}
+                                          top={10}
+                                        >
+                                          <Component
+                                            className="sc-fujyUd eOyweS"
+                                            onClick={[Function]}
+                                            position="absolute"
+                                            right={10}
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                            top={10}
+                                          >
+                                            <StyledBox
+                                              className="sc-fujyUd eOyweS"
+                                              onClick={[Function]}
+                                              position="absolute"
+                                              right={10}
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                              top={10}
+                                            >
+                                              <div
+                                                className="sc-bdnylx byViQy sc-fujyUd eOyweS"
+                                                onClick={[Function]}
+                                                style={Object {}}
+                                              >
+                                                close
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledModalCloseButton>
+                                    </ModalCloseButton>
+                                    <ModalHeader
+                                      className=""
+                                      key="1/.1"
+                                      style={Object {}}
+                                    >
+                                      <StyledModalHeader
+                                        boxAs="header"
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          boxAs="header"
+                                          className="sc-jSFkmK hKwQzs"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            boxAs="header"
+                                            className="sc-jSFkmK hKwQzs"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              as="header"
+                                              boxAs="header"
+                                              className="sc-jSFkmK hKwQzs"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <header
+                                                className="sc-bdnylx dOPKTt sc-jSFkmK hKwQzs"
+                                                style={Object {}}
+                                              >
+                                                Create your account
+                                              </header>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledModalHeader>
+                                    </ModalHeader>
+                                    <ModalBody
+                                      className=""
+                                      key="2/.2"
+                                      style={Object {}}
+                                    >
+                                      <StyledModalBody
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          className="sc-gKAblj ekOcvR"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            className="sc-gKAblj ekOcvR"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              className="sc-gKAblj ekOcvR"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx dOPKTt sc-gKAblj ekOcvR"
+                                                style={Object {}}
+                                              >
+                                                Modal Content Body
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledModalBody>
+                                    </ModalBody>
+                                    <ModalFooter
+                                      className=""
+                                      key="3/.3"
+                                      style={Object {}}
+                                    >
+                                      <StyledModalFooter
+                                        boxAs="footer"
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          boxAs="footer"
+                                          className="sc-iCoHVE dOmjsV"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            boxAs="footer"
+                                            className="sc-iCoHVE dOmjsV"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              as="footer"
+                                              boxAs="footer"
+                                              className="sc-iCoHVE dOmjsV"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <footer
+                                                className="sc-bdnylx dOPKTt sc-iCoHVE dOmjsV"
+                                                style={Object {}}
+                                              >
+                                                Modal Footer goes here!
+                                              </footer>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledModalFooter>
+                                    </ModalFooter>
+                                  </div>
+                                </StyledBox>
+                              </Component>
+                            </Box>
+                          </StyledModalContentFadeIn>
+                        </ModalContent>
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledModalOverlayFadeIn>
+            </ModalOverlay>
           </div>
-        </styled.div>
+        </StyledBox>
       </Component>
     </Box>
-  </Styled(Box)>
+  </StyledModal>
 </Modal>
 `;

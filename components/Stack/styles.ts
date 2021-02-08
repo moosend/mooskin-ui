@@ -16,3 +16,5 @@ export const StyledStack = styled(Box)<IStackComponentProps>`
     flex-direction: ${(props) => props.direction};
     flex-wrap: ${(props) => props.flexWrap};
 `;
+
+StyledStack.displayName = 'StyledStack';;

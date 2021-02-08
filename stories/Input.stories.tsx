@@ -11,7 +11,7 @@ import {
     InputOptionList,
     InputOptionListTitle
 } from '../components/Input/Input';
-import { IInputComponentProps, IInputContainerComponentProps } from '../components/Input/model';
+import { IInputContainerComponentProps } from '../components/Input/model';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 // import { Box } from '../components/Box/Box';
@@ -23,11 +23,11 @@ export default ({
     title: 'Example/Input',
 } as any) as Meta;
 
-const Template: Story<IInputComponentProps> = (args) => {
+const Template: Story<IInputContainerComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <InputContainer value="asd" {...args} />
+            <InputContainer {...args} />
         </>
     );
 };

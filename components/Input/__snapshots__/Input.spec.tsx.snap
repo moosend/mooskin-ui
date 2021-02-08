@@ -1,77 +1,435 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Input renders correctly 1`] = `
-<div
-  className="input-component inputContainer   myClass"
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
+<InputContainer
+  className=""
+  onChangeInput={[MockFunction]}
+  style={Object {}}
 >
-  <label
-    className="inputLabel "
-    htmlFor="input1"
-    style={
-      Object {
-        "flexBasis": "30px",
-      }
-    }
+  <StyledInputContainer
+    className=""
+    onChangeInput={[MockFunction]}
+    style={Object {}}
   >
-    with a label ofc
-  </label>
-  <div
-    style={
-      Object {
-        "flexGrow": 1,
-        "flexShrink": 1,
-        "position": "relative",
-      }
-    }
-  >
-    <div
-      style={
-        Object {
-          "display": "flex",
-          "flex": 1,
-        }
-      }
+    <Box
+      className="sc-hKFyIo ctkGbW"
+      onChangeInput={[MockFunction]}
+      style={Object {}}
     >
-      <div
-        className="innerDiv undefined disabledInput"
+      <Component
+        className="sc-hKFyIo ctkGbW"
+        onChangeInput={[MockFunction]}
+        style={Object {}}
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
       >
-        <input
-          autoComplete="on"
-          autoFocus={true}
-          className="input"
-          disabled={true}
-          id="input1"
-          maxLength={50}
-          minLength={10}
-          name="input name"
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          placeholder="input placeholder"
-          required={true}
-          style={
+        <StyledBox
+          className="sc-hKFyIo ctkGbW"
+          onChangeInput={[MockFunction]}
+          style={Object {}}
+          theme={
             Object {
-              "order": 1,
-              "paddingLeft": "",
-              "paddingRight": "",
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
             }
           }
-          type="text"
-          value="input value"
-        />
-      </div>
-    </div>
-    <i
-      className="description undefined"
-    >
-      just some input
-    </i>
-  </div>
-</div>
+        >
+          <div
+            className="sc-bdnylx dOPKTt sc-hKFyIo ctkGbW"
+            onChangeInput={[MockFunction]}
+            style={Object {}}
+          >
+            <Input
+              className=""
+              key="0/.0"
+              onChange={[Function]}
+              style={Object {}}
+              wrapped={true}
+            >
+              <StyledInputWrapped
+                boxAs="input"
+                className=""
+                onChange={[Function]}
+                style={Object {}}
+                wrapped={true}
+              >
+                <Box
+                  boxAs="input"
+                  className="sc-eCApGN sc-gKAblj jctrjg leNGue"
+                  onChange={[Function]}
+                  style={Object {}}
+                  wrapped={true}
+                >
+                  <Component
+                    boxAs="input"
+                    className="sc-eCApGN sc-gKAblj jctrjg leNGue"
+                    onChange={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                    wrapped={true}
+                  >
+                    <StyledBox
+                      as="input"
+                      boxAs="input"
+                      className="sc-eCApGN sc-gKAblj jctrjg leNGue"
+                      onChange={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                      wrapped={true}
+                    >
+                      <input
+                        className="sc-bdnylx dOPKTt sc-eCApGN sc-gKAblj jctrjg leNGue"
+                        onChange={[Function]}
+                        style={Object {}}
+                      />
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledInputWrapped>
+            </Input>
+            <InputOptionList
+              className=""
+              icon="check"
+              key="1/.1"
+              pr={5}
+              style={Object {}}
+            >
+              <Box
+                className=""
+                icon="check"
+                position="relative"
+                pr={5}
+                style={Object {}}
+              >
+                <Component
+                  className=""
+                  icon="check"
+                  position="relative"
+                  pr={5}
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <StyledBox
+                    className=""
+                    icon="check"
+                    position="relative"
+                    pr={5}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <div
+                      className="sc-bdnylx eSstxc"
+                      style={Object {}}
+                    >
+                      <InputIcon
+                        className=""
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        <StyledInputIcon
+                          className=""
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <Box
+                            className="sc-fujyUd jBwyYC"
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            <Component
+                              className="sc-fujyUd jBwyYC"
+                              onClick={[Function]}
+                              style={Object {}}
+                              theme={
+                                Object {
+                                  "disabledBackground": "#e2e2e2",
+                                  "disabledfont": "#9d9d9d",
+                                  "inputBackground": "#ffffff",
+                                  "inputBorder": "#e2e2e2",
+                                  "inputFont": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "primary": "#3fbaca",
+                                  "secondary": "#293346",
+                                }
+                              }
+                            >
+                              <StyledBox
+                                className="sc-fujyUd jBwyYC"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="sc-bdnylx dOPKTt sc-fujyUd jBwyYC"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                >
+                                  check
+                                </div>
+                              </StyledBox>
+                            </Component>
+                          </Box>
+                        </StyledInputIcon>
+                      </InputIcon>
+                    </div>
+                  </StyledBox>
+                </Component>
+              </Box>
+            </InputOptionList>
+            <InputEmoji
+              className=""
+              key="2/.2"
+              onChangeEmoji={[Function]}
+              pr={5}
+              style={Object {}}
+            >
+              <Box
+                className=""
+                onChangeEmoji={[Function]}
+                position="relative"
+                pr={5}
+                style={Object {}}
+              >
+                <Component
+                  className=""
+                  onChangeEmoji={[Function]}
+                  position="relative"
+                  pr={5}
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <StyledBox
+                    className=""
+                    onChangeEmoji={[Function]}
+                    position="relative"
+                    pr={5}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <div
+                      className="sc-bdnylx eSstxc"
+                      onChangeEmoji={[Function]}
+                      style={Object {}}
+                    >
+                      <InputIcon
+                        className=""
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        <StyledInputIcon
+                          className=""
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <Box
+                            className="sc-fujyUd jBwyYC"
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            <Component
+                              className="sc-fujyUd jBwyYC"
+                              onClick={[Function]}
+                              style={Object {}}
+                              theme={
+                                Object {
+                                  "disabledBackground": "#e2e2e2",
+                                  "disabledfont": "#9d9d9d",
+                                  "inputBackground": "#ffffff",
+                                  "inputBorder": "#e2e2e2",
+                                  "inputFont": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "primary": "#3fbaca",
+                                  "secondary": "#293346",
+                                }
+                              }
+                            >
+                              <StyledBox
+                                className="sc-fujyUd jBwyYC"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="sc-bdnylx dOPKTt sc-fujyUd jBwyYC"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                >
+                                  emoji_emotions
+                                </div>
+                              </StyledBox>
+                            </Component>
+                          </Box>
+                        </StyledInputIcon>
+                      </InputIcon>
+                    </div>
+                  </StyledBox>
+                </Component>
+              </Box>
+            </InputEmoji>
+            <InputIcon
+              className=""
+              key="3/.3"
+              style={Object {}}
+            >
+              <StyledInputIcon
+                className=""
+                style={Object {}}
+              >
+                <Box
+                  className="sc-fujyUd jBwyYC"
+                  style={Object {}}
+                >
+                  <Component
+                    className="sc-fujyUd jBwyYC"
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      className="sc-fujyUd jBwyYC"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-fujyUd jBwyYC"
+                        style={Object {}}
+                      >
+                        search
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledInputIcon>
+            </InputIcon>
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledInputContainer>
+</InputContainer>
 `;

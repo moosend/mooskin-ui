@@ -2,7 +2,7 @@ import { IBoxComponentProps } from '../Box/model';
 
 export interface ILabelComponentProps extends IBoxComponentProps {
     /** Label children */
-    children: string;
+    children: string | number;
 
     /** Make Label disabled */
     disabled?: boolean;

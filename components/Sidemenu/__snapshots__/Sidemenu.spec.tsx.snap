@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidemenu renders Sidemenu correctly 1`] = `
-<Styled(Box)
+<StyledSidemenu
+  activeItem="/settings"
   className=""
+  onClickItem={[MockFunction]}
   style={Object {}}
 >
   <Component
@@ -38,11 +40,11 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
   >
     Preview
   </Component>
-</Styled(Box)>
+</StyledSidemenu>
 `;
 
 exports[`Sidemenu renders SidemenuItem correctly 1`] = `
-<Styled(Box)
+<StyledSidemenuItem
   active={true}
   className="myClass"
   onClick={[MockFunction]}

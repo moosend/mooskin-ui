@@ -16,12 +16,16 @@ export const StyledRadio = styled(Box)`
     width: fit-content;
 `;
 
+StyledRadio.displayName = 'StyledRadio';
+
 export const StyledRadioWrapper = styled(Box)<Partial<IRadioComponentProps>>`
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     width: fit-content;
     display: flex;
     align-items: center;
 `;
+
+StyledRadioWrapper.displayName = 'StyledRadioWrapper';
 
 export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
     font-family: 'Mooskin Icons';
@@ -30,6 +34,8 @@ export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
     cursor: pointer;
     color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
 `;
+
+StyledRadioIcon.displayName = 'StyledRadioIcon';
 
 export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
     font-family: Montserrat;
@@ -42,3 +48,5 @@ export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
     min-width: unset;
     color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
 `;
+
+StyledRadioLabel.displayName = 'StyledRadioLabel';

@@ -28,6 +28,8 @@ export const StyledInputContainer = styled(Box)<IInputContainerComponentProps>`
     padding: 7px 15px 7px;
 `;
 
+StyledInputContainer.displayName = 'StyledInputContainer';
+
 export const StyledInputBase = styled(Box)<IInputComponentProps>`
     font-family: Hind;
     font-size: 14px;
@@ -39,6 +41,8 @@ export const StyledInputBase = styled(Box)<IInputComponentProps>`
     flex: 1;
 `;
 
+StyledInputBase.displayName = 'StyledInputBase';
+
 export const StyledInputSolo = styled(StyledInputBase)<IInputComponentProps>`
     color: #2d2d2d;
     border-radius: 3px;
@@ -47,11 +51,15 @@ export const StyledInputSolo = styled(StyledInputBase)<IInputComponentProps>`
     padding: 7px 15px 7px;
 `;
 
+StyledInputSolo.displayName = 'StyledInputSolo';
+
 export const StyledInputWrapped = styled(StyledInputBase)<IInputComponentProps>`
     color: inherit;
     border: none;
     background-color: #ffffff;
 `;
+
+StyledInputWrapped.displayName = 'StyledInputWrapped';
 
 export const StyledInputOverlay = styled(Box)<IBoxComponentProps>`
     position: fixed;
@@ -62,6 +70,8 @@ export const StyledInputOverlay = styled(Box)<IBoxComponentProps>`
     z-index: -1;
 `;
 
+StyledInputOverlay.displayName = 'StyledInputOverlay';
+
 export const StyledInputIcon = styled(Box)<IBoxComponentProps>`
     font-family: 'Mooskin Icons';
     font-size: 20px;
@@ -69,6 +79,8 @@ export const StyledInputIcon = styled(Box)<IBoxComponentProps>`
     align-items: center;
     color: inherit;
 `;
+
+StyledInputIcon.displayName = 'StyledInputIcon';
 
 export const StyledInputOptionList = styled(Box)<Partial<IInputListComponentProps>>`
     position: absolute;
@@ -80,6 +92,8 @@ export const StyledInputOptionList = styled(Box)<Partial<IInputListComponentProp
     box-shadow: 0 1px 5px rgba(0,0,0,.32);
 `;
 
+StyledInputOptionList.displayName = 'StyledInputOptionList';
+
 export const StyledInputOptionListTitle = styled(Box)<IBoxComponentProps>`
     padding: 5px;
     color: #bebebe;
@@ -90,9 +104,13 @@ export const StyledInputOptionListTitle = styled(Box)<IBoxComponentProps>`
     border-top-right-radius: 5px;
 `;
 
+StyledInputOptionListTitle.displayName = 'StyledInputOptionListTitle';
+
 export const StyledInputOption = styled(Box)<IInputOptionComponentProps>`
     padding: 3px 5px;
     :not(:last-child) {
         border-bottom: 1px solid #f1f1f1;
     }
 `;
+
+StyledInputOption.displayName = 'StyledInputOption';

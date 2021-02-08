@@ -6,7 +6,7 @@ export interface IInputContainerComponentProps extends IBoxComponentProps {
     disabled?: boolean;
 
     /** value to be passed down to the input */
-    value: any;
+    value?: string | number;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;

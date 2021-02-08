@@ -1,0 +1,1303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Alert renders correctly 1`] = `
+<List
+  className=""
+  spacing={15}
+  style={Object {}}
+>
+  <Layout
+    className=""
+    spacing={15}
+    style={Object {}}
+  >
+    <StyledLayout
+      className=""
+      spacing={15}
+      style={Object {}}
+    >
+      <Box
+        className="sc-jSFkmK geKWcR"
+        spacing={15}
+        style={Object {}}
+      >
+        <Component
+          className="sc-jSFkmK geKWcR"
+          spacing={15}
+          style={Object {}}
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+        >
+          <StyledBox
+            className="sc-jSFkmK geKWcR"
+            spacing={15}
+            style={Object {}}
+            theme={
+              Object {
+                "disabledBackground": "#e2e2e2",
+                "disabledfont": "#9d9d9d",
+                "inputBackground": "#ffffff",
+                "inputBorder": "#e2e2e2",
+                "inputFont": "#9d9d9d",
+                "label": "#2d2d2d",
+                "primary": "#3fbaca",
+                "secondary": "#293346",
+              }
+            }
+          >
+            <div
+              className="sc-bdnylx dOPKTt sc-jSFkmK geKWcR"
+              spacing={15}
+              style={Object {}}
+            >
+              <ListItem
+                className=""
+                style={Object {}}
+              >
+                <StyledListItem
+                  boxShadow="xs"
+                  className=""
+                  round="xs"
+                  style={Object {}}
+                >
+                  <Box
+                    boxShadow="xs"
+                    className="sc-gKAblj ByCry"
+                    round="xs"
+                    style={Object {}}
+                  >
+                    <Component
+                      boxShadow="xs"
+                      className="sc-gKAblj ByCry"
+                      round="xs"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <StyledBox
+                        boxShadow="xs"
+                        className="sc-gKAblj ByCry"
+                        round="xs"
+                        style={Object {}}
+                        theme={
+                          Object {
+                            "disabledBackground": "#e2e2e2",
+                            "disabledfont": "#9d9d9d",
+                            "inputBackground": "#ffffff",
+                            "inputBorder": "#e2e2e2",
+                            "inputFont": "#9d9d9d",
+                            "label": "#2d2d2d",
+                            "primary": "#3fbaca",
+                            "secondary": "#293346",
+                          }
+                        }
+                      >
+                        <div
+                          className="sc-bdnylx eUEpQe sc-gKAblj ByCry"
+                          style={Object {}}
+                        >
+                          <ListItemHead
+                            className=""
+                            style={Object {}}
+                          >
+                            <StyledListItemHead
+                              className=""
+                              style={Object {}}
+                            >
+                              <Box
+                                className="sc-fujyUd"
+                                style={Object {}}
+                              >
+                                <Component
+                                  className="sc-fujyUd"
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <StyledBox
+                                    className="sc-fujyUd"
+                                    style={Object {}}
+                                    theme={
+                                      Object {
+                                        "disabledBackground": "#e2e2e2",
+                                        "disabledfont": "#9d9d9d",
+                                        "inputBackground": "#ffffff",
+                                        "inputBorder": "#e2e2e2",
+                                        "inputFont": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "primary": "#3fbaca",
+                                        "secondary": "#293346",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="sc-bdnylx dOPKTt sc-fujyUd"
+                                      style={Object {}}
+                                    >
+                                      <img
+                                        src="https://camo.githubusercontent.com/059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        width={50}
+                                      />
+                                    </div>
+                                  </StyledBox>
+                                </Component>
+                              </Box>
+                            </StyledListItemHead>
+                          </ListItemHead>
+                          <ListItemBody
+                            className=""
+                            style={Object {}}
+                          >
+                            <StyledListItemBody
+                              className=""
+                              style={Object {}}
+                            >
+                              <Box
+                                className="sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                style={Object {}}
+                              >
+                                <Component
+                                  className="sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <StyledBox
+                                    className="sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                    style={Object {}}
+                                    theme={
+                                      Object {
+                                        "disabledBackground": "#e2e2e2",
+                                        "disabledfont": "#9d9d9d",
+                                        "inputBackground": "#ffffff",
+                                        "inputBorder": "#e2e2e2",
+                                        "inputFont": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "primary": "#3fbaca",
+                                        "secondary": "#293346",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                      style={Object {}}
+                                    >
+                                      <Box
+                                        className=""
+                                        fontSize={16}
+                                        fontWeight="600"
+                                        style={Object {}}
+                                      >
+                                        <Component
+                                          className=""
+                                          fontSize={16}
+                                          fontWeight="600"
+                                          style={Object {}}
+                                          theme={
+                                            Object {
+                                              "disabledBackground": "#e2e2e2",
+                                              "disabledfont": "#9d9d9d",
+                                              "inputBackground": "#ffffff",
+                                              "inputBorder": "#e2e2e2",
+                                              "inputFont": "#9d9d9d",
+                                              "label": "#2d2d2d",
+                                              "primary": "#3fbaca",
+                                              "secondary": "#293346",
+                                            }
+                                          }
+                                        >
+                                          <StyledBox
+                                            className=""
+                                            fontSize={16}
+                                            fontWeight="600"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <div
+                                              className="sc-bdnylx drikOU"
+                                              fontSize={16}
+                                              fontWeight="600"
+                                              style={Object {}}
+                                            >
+                                              Some Bold Text
+                                            </div>
+                                          </StyledBox>
+                                        </Component>
+                                      </Box>
+                                      <Box
+                                        className=""
+                                        fontSize={12}
+                                        style={Object {}}
+                                      >
+                                        <Component
+                                          className=""
+                                          fontSize={12}
+                                          style={Object {}}
+                                          theme={
+                                            Object {
+                                              "disabledBackground": "#e2e2e2",
+                                              "disabledfont": "#9d9d9d",
+                                              "inputBackground": "#ffffff",
+                                              "inputBorder": "#e2e2e2",
+                                              "inputFont": "#9d9d9d",
+                                              "label": "#2d2d2d",
+                                              "primary": "#3fbaca",
+                                              "secondary": "#293346",
+                                            }
+                                          }
+                                        >
+                                          <StyledBox
+                                            className=""
+                                            fontSize={12}
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <div
+                                              className="sc-bdnylx dwDiEe"
+                                              fontSize={12}
+                                              style={Object {}}
+                                            >
+                                              Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test.
+                                            </div>
+                                          </StyledBox>
+                                        </Component>
+                                      </Box>
+                                    </div>
+                                  </StyledBox>
+                                </Component>
+                              </Box>
+                            </StyledListItemBody>
+                          </ListItemBody>
+                          <ListItemEnd
+                            className=""
+                            style={Object {}}
+                          >
+                            <StyledListItemEnd
+                              className=""
+                              style={Object {}}
+                            >
+                              <Box
+                                className="sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                style={Object {}}
+                              >
+                                <Component
+                                  className="sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <StyledBox
+                                    className="sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                    style={Object {}}
+                                    theme={
+                                      Object {
+                                        "disabledBackground": "#e2e2e2",
+                                        "disabledfont": "#9d9d9d",
+                                        "inputBackground": "#ffffff",
+                                        "inputBorder": "#e2e2e2",
+                                        "inputFont": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "primary": "#3fbaca",
+                                        "secondary": "#293346",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                      style={Object {}}
+                                    >
+                                      <Button
+                                        buttonSize="md"
+                                        className=""
+                                        style={Object {}}
+                                        type="button"
+                                      >
+                                        <StyledButtonNormal
+                                          boxAs="button"
+                                          buttonSize="md"
+                                          className=""
+                                          onClick={[Function]}
+                                          style={Object {}}
+                                          type="button"
+                                        >
+                                          <Box
+                                            boxAs="button"
+                                            buttonSize="md"
+                                            className="sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                            onClick={[Function]}
+                                            style={Object {}}
+                                            type="button"
+                                          >
+                                            <Component
+                                              boxAs="button"
+                                              buttonSize="md"
+                                              className="sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                              onClick={[Function]}
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                              type="button"
+                                            >
+                                              <StyledBox
+                                                as="button"
+                                                boxAs="button"
+                                                buttonSize="md"
+                                                className="sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                                onClick={[Function]}
+                                                style={Object {}}
+                                                theme={
+                                                  Object {
+                                                    "disabledBackground": "#e2e2e2",
+                                                    "disabledfont": "#9d9d9d",
+                                                    "inputBackground": "#ffffff",
+                                                    "inputBorder": "#e2e2e2",
+                                                    "inputFont": "#9d9d9d",
+                                                    "label": "#2d2d2d",
+                                                    "primary": "#3fbaca",
+                                                    "secondary": "#293346",
+                                                  }
+                                                }
+                                                type="button"
+                                              >
+                                                <button
+                                                  className="sc-bdnylx dOPKTt sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                                  onClick={[Function]}
+                                                  style={Object {}}
+                                                  type="button"
+                                                >
+                                                  Button
+                                                </button>
+                                              </StyledBox>
+                                            </Component>
+                                          </Box>
+                                        </StyledButtonNormal>
+                                      </Button>
+                                    </div>
+                                  </StyledBox>
+                                </Component>
+                              </Box>
+                            </StyledListItemEnd>
+                          </ListItemEnd>
+                        </div>
+                      </StyledBox>
+                    </Component>
+                  </Box>
+                </StyledListItem>
+              </ListItem>
+              <ListItem
+                className=""
+                style={Object {}}
+              >
+                <StyledListItem
+                  boxShadow="xs"
+                  className=""
+                  round="xs"
+                  style={Object {}}
+                >
+                  <Box
+                    boxShadow="xs"
+                    className="sc-gKAblj ByCry"
+                    round="xs"
+                    style={Object {}}
+                  >
+                    <Component
+                      boxShadow="xs"
+                      className="sc-gKAblj ByCry"
+                      round="xs"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <StyledBox
+                        boxShadow="xs"
+                        className="sc-gKAblj ByCry"
+                        round="xs"
+                        style={Object {}}
+                        theme={
+                          Object {
+                            "disabledBackground": "#e2e2e2",
+                            "disabledfont": "#9d9d9d",
+                            "inputBackground": "#ffffff",
+                            "inputBorder": "#e2e2e2",
+                            "inputFont": "#9d9d9d",
+                            "label": "#2d2d2d",
+                            "primary": "#3fbaca",
+                            "secondary": "#293346",
+                          }
+                        }
+                      >
+                        <div
+                          className="sc-bdnylx eUEpQe sc-gKAblj ByCry"
+                          style={Object {}}
+                        >
+                          <ListItemHead
+                            className=""
+                            style={Object {}}
+                          >
+                            <StyledListItemHead
+                              className=""
+                              style={Object {}}
+                            >
+                              <Box
+                                className="sc-fujyUd"
+                                style={Object {}}
+                              >
+                                <Component
+                                  className="sc-fujyUd"
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <StyledBox
+                                    className="sc-fujyUd"
+                                    style={Object {}}
+                                    theme={
+                                      Object {
+                                        "disabledBackground": "#e2e2e2",
+                                        "disabledfont": "#9d9d9d",
+                                        "inputBackground": "#ffffff",
+                                        "inputBorder": "#e2e2e2",
+                                        "inputFont": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "primary": "#3fbaca",
+                                        "secondary": "#293346",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="sc-bdnylx dOPKTt sc-fujyUd"
+                                      style={Object {}}
+                                    >
+                                      <img
+                                        src="https://camo.githubusercontent.com/059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        width={50}
+                                      />
+                                    </div>
+                                  </StyledBox>
+                                </Component>
+                              </Box>
+                            </StyledListItemHead>
+                          </ListItemHead>
+                          <ListItemBody
+                            className=""
+                            style={Object {}}
+                          >
+                            <StyledListItemBody
+                              className=""
+                              style={Object {}}
+                            >
+                              <Box
+                                className="sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                style={Object {}}
+                              >
+                                <Component
+                                  className="sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <StyledBox
+                                    className="sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                    style={Object {}}
+                                    theme={
+                                      Object {
+                                        "disabledBackground": "#e2e2e2",
+                                        "disabledfont": "#9d9d9d",
+                                        "inputBackground": "#ffffff",
+                                        "inputBorder": "#e2e2e2",
+                                        "inputFont": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "primary": "#3fbaca",
+                                        "secondary": "#293346",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                      style={Object {}}
+                                    >
+                                      <Box
+                                        className=""
+                                        fontSize={16}
+                                        fontWeight="600"
+                                        style={Object {}}
+                                      >
+                                        <Component
+                                          className=""
+                                          fontSize={16}
+                                          fontWeight="600"
+                                          style={Object {}}
+                                          theme={
+                                            Object {
+                                              "disabledBackground": "#e2e2e2",
+                                              "disabledfont": "#9d9d9d",
+                                              "inputBackground": "#ffffff",
+                                              "inputBorder": "#e2e2e2",
+                                              "inputFont": "#9d9d9d",
+                                              "label": "#2d2d2d",
+                                              "primary": "#3fbaca",
+                                              "secondary": "#293346",
+                                            }
+                                          }
+                                        >
+                                          <StyledBox
+                                            className=""
+                                            fontSize={16}
+                                            fontWeight="600"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <div
+                                              className="sc-bdnylx drikOU"
+                                              fontSize={16}
+                                              fontWeight="600"
+                                              style={Object {}}
+                                            >
+                                              Some Bold Text
+                                            </div>
+                                          </StyledBox>
+                                        </Component>
+                                      </Box>
+                                      <Box
+                                        className=""
+                                        fontSize={12}
+                                        style={Object {}}
+                                      >
+                                        <Component
+                                          className=""
+                                          fontSize={12}
+                                          style={Object {}}
+                                          theme={
+                                            Object {
+                                              "disabledBackground": "#e2e2e2",
+                                              "disabledfont": "#9d9d9d",
+                                              "inputBackground": "#ffffff",
+                                              "inputBorder": "#e2e2e2",
+                                              "inputFont": "#9d9d9d",
+                                              "label": "#2d2d2d",
+                                              "primary": "#3fbaca",
+                                              "secondary": "#293346",
+                                            }
+                                          }
+                                        >
+                                          <StyledBox
+                                            className=""
+                                            fontSize={12}
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <div
+                                              className="sc-bdnylx dwDiEe"
+                                              fontSize={12}
+                                              style={Object {}}
+                                            >
+                                              Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test.
+                                            </div>
+                                          </StyledBox>
+                                        </Component>
+                                      </Box>
+                                    </div>
+                                  </StyledBox>
+                                </Component>
+                              </Box>
+                            </StyledListItemBody>
+                          </ListItemBody>
+                          <ListItemEnd
+                            className=""
+                            style={Object {}}
+                          >
+                            <StyledListItemEnd
+                              className=""
+                              style={Object {}}
+                            >
+                              <Box
+                                className="sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                style={Object {}}
+                              >
+                                <Component
+                                  className="sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <StyledBox
+                                    className="sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                    style={Object {}}
+                                    theme={
+                                      Object {
+                                        "disabledBackground": "#e2e2e2",
+                                        "disabledfont": "#9d9d9d",
+                                        "inputBackground": "#ffffff",
+                                        "inputBorder": "#e2e2e2",
+                                        "inputFont": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "primary": "#3fbaca",
+                                        "secondary": "#293346",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                      style={Object {}}
+                                    >
+                                      <Button
+                                        buttonSize="md"
+                                        className=""
+                                        style={Object {}}
+                                        type="button"
+                                      >
+                                        <StyledButtonNormal
+                                          boxAs="button"
+                                          buttonSize="md"
+                                          className=""
+                                          onClick={[Function]}
+                                          style={Object {}}
+                                          type="button"
+                                        >
+                                          <Box
+                                            boxAs="button"
+                                            buttonSize="md"
+                                            className="sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                            onClick={[Function]}
+                                            style={Object {}}
+                                            type="button"
+                                          >
+                                            <Component
+                                              boxAs="button"
+                                              buttonSize="md"
+                                              className="sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                              onClick={[Function]}
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                              type="button"
+                                            >
+                                              <StyledBox
+                                                as="button"
+                                                boxAs="button"
+                                                buttonSize="md"
+                                                className="sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                                onClick={[Function]}
+                                                style={Object {}}
+                                                theme={
+                                                  Object {
+                                                    "disabledBackground": "#e2e2e2",
+                                                    "disabledfont": "#9d9d9d",
+                                                    "inputBackground": "#ffffff",
+                                                    "inputBorder": "#e2e2e2",
+                                                    "inputFont": "#9d9d9d",
+                                                    "label": "#2d2d2d",
+                                                    "primary": "#3fbaca",
+                                                    "secondary": "#293346",
+                                                  }
+                                                }
+                                                type="button"
+                                              >
+                                                <button
+                                                  className="sc-bdnylx dOPKTt sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                                  onClick={[Function]}
+                                                  style={Object {}}
+                                                  type="button"
+                                                >
+                                                  Button
+                                                </button>
+                                              </StyledBox>
+                                            </Component>
+                                          </Box>
+                                        </StyledButtonNormal>
+                                      </Button>
+                                    </div>
+                                  </StyledBox>
+                                </Component>
+                              </Box>
+                            </StyledListItemEnd>
+                          </ListItemEnd>
+                        </div>
+                      </StyledBox>
+                    </Component>
+                  </Box>
+                </StyledListItem>
+              </ListItem>
+              <ListItem
+                className=""
+                style={Object {}}
+              >
+                <StyledListItem
+                  boxShadow="xs"
+                  className=""
+                  round="xs"
+                  style={Object {}}
+                >
+                  <Box
+                    boxShadow="xs"
+                    className="sc-gKAblj ByCry"
+                    round="xs"
+                    style={Object {}}
+                  >
+                    <Component
+                      boxShadow="xs"
+                      className="sc-gKAblj ByCry"
+                      round="xs"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <StyledBox
+                        boxShadow="xs"
+                        className="sc-gKAblj ByCry"
+                        round="xs"
+                        style={Object {}}
+                        theme={
+                          Object {
+                            "disabledBackground": "#e2e2e2",
+                            "disabledfont": "#9d9d9d",
+                            "inputBackground": "#ffffff",
+                            "inputBorder": "#e2e2e2",
+                            "inputFont": "#9d9d9d",
+                            "label": "#2d2d2d",
+                            "primary": "#3fbaca",
+                            "secondary": "#293346",
+                          }
+                        }
+                      >
+                        <div
+                          className="sc-bdnylx eUEpQe sc-gKAblj ByCry"
+                          style={Object {}}
+                        >
+                          <ListItemHead
+                            className=""
+                            style={Object {}}
+                          >
+                            <StyledListItemHead
+                              className=""
+                              style={Object {}}
+                            >
+                              <Box
+                                className="sc-fujyUd"
+                                style={Object {}}
+                              >
+                                <Component
+                                  className="sc-fujyUd"
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <StyledBox
+                                    className="sc-fujyUd"
+                                    style={Object {}}
+                                    theme={
+                                      Object {
+                                        "disabledBackground": "#e2e2e2",
+                                        "disabledfont": "#9d9d9d",
+                                        "inputBackground": "#ffffff",
+                                        "inputBorder": "#e2e2e2",
+                                        "inputFont": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "primary": "#3fbaca",
+                                        "secondary": "#293346",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="sc-bdnylx dOPKTt sc-fujyUd"
+                                      style={Object {}}
+                                    >
+                                      <img
+                                        src="https://camo.githubusercontent.com/059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
+                                        style={
+                                          Object {
+                                            "display": "block",
+                                          }
+                                        }
+                                        width={50}
+                                      />
+                                    </div>
+                                  </StyledBox>
+                                </Component>
+                              </Box>
+                            </StyledListItemHead>
+                          </ListItemHead>
+                          <ListItemBody
+                            className=""
+                            style={Object {}}
+                          >
+                            <StyledListItemBody
+                              className=""
+                              style={Object {}}
+                            >
+                              <Box
+                                className="sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                style={Object {}}
+                              >
+                                <Component
+                                  className="sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <StyledBox
+                                    className="sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                    style={Object {}}
+                                    theme={
+                                      Object {
+                                        "disabledBackground": "#e2e2e2",
+                                        "disabledfont": "#9d9d9d",
+                                        "inputBackground": "#ffffff",
+                                        "inputBorder": "#e2e2e2",
+                                        "inputFont": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "primary": "#3fbaca",
+                                        "secondary": "#293346",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-pNWxx cjqOJX ddgxfF"
+                                      style={Object {}}
+                                    >
+                                      <Box
+                                        className=""
+                                        fontSize={16}
+                                        fontWeight="600"
+                                        style={Object {}}
+                                      >
+                                        <Component
+                                          className=""
+                                          fontSize={16}
+                                          fontWeight="600"
+                                          style={Object {}}
+                                          theme={
+                                            Object {
+                                              "disabledBackground": "#e2e2e2",
+                                              "disabledfont": "#9d9d9d",
+                                              "inputBackground": "#ffffff",
+                                              "inputBorder": "#e2e2e2",
+                                              "inputFont": "#9d9d9d",
+                                              "label": "#2d2d2d",
+                                              "primary": "#3fbaca",
+                                              "secondary": "#293346",
+                                            }
+                                          }
+                                        >
+                                          <StyledBox
+                                            className=""
+                                            fontSize={16}
+                                            fontWeight="600"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <div
+                                              className="sc-bdnylx drikOU"
+                                              fontSize={16}
+                                              fontWeight="600"
+                                              style={Object {}}
+                                            >
+                                              Some Bold Text
+                                            </div>
+                                          </StyledBox>
+                                        </Component>
+                                      </Box>
+                                      <Box
+                                        className=""
+                                        fontSize={12}
+                                        style={Object {}}
+                                      >
+                                        <Component
+                                          className=""
+                                          fontSize={12}
+                                          style={Object {}}
+                                          theme={
+                                            Object {
+                                              "disabledBackground": "#e2e2e2",
+                                              "disabledfont": "#9d9d9d",
+                                              "inputBackground": "#ffffff",
+                                              "inputBorder": "#e2e2e2",
+                                              "inputFont": "#9d9d9d",
+                                              "label": "#2d2d2d",
+                                              "primary": "#3fbaca",
+                                              "secondary": "#293346",
+                                            }
+                                          }
+                                        >
+                                          <StyledBox
+                                            className=""
+                                            fontSize={12}
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <div
+                                              className="sc-bdnylx dwDiEe"
+                                              fontSize={12}
+                                              style={Object {}}
+                                            >
+                                              Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test.
+                                            </div>
+                                          </StyledBox>
+                                        </Component>
+                                      </Box>
+                                    </div>
+                                  </StyledBox>
+                                </Component>
+                              </Box>
+                            </StyledListItemBody>
+                          </ListItemBody>
+                          <ListItemEnd
+                            className=""
+                            style={Object {}}
+                          >
+                            <StyledListItemEnd
+                              className=""
+                              style={Object {}}
+                            >
+                              <Box
+                                className="sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                style={Object {}}
+                              >
+                                <Component
+                                  className="sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <StyledBox
+                                    className="sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                    style={Object {}}
+                                    theme={
+                                      Object {
+                                        "disabledBackground": "#e2e2e2",
+                                        "disabledfont": "#9d9d9d",
+                                        "inputBackground": "#ffffff",
+                                        "inputBorder": "#e2e2e2",
+                                        "inputFont": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "primary": "#3fbaca",
+                                        "secondary": "#293346",
+                                      }
+                                    }
+                                  >
+                                    <div
+                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-jrsJCI cjqOJX UBpJm"
+                                      style={Object {}}
+                                    >
+                                      <Button
+                                        buttonSize="md"
+                                        className=""
+                                        style={Object {}}
+                                        type="button"
+                                      >
+                                        <StyledButtonNormal
+                                          boxAs="button"
+                                          buttonSize="md"
+                                          className=""
+                                          onClick={[Function]}
+                                          style={Object {}}
+                                          type="button"
+                                        >
+                                          <Box
+                                            boxAs="button"
+                                            buttonSize="md"
+                                            className="sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                            onClick={[Function]}
+                                            style={Object {}}
+                                            type="button"
+                                          >
+                                            <Component
+                                              boxAs="button"
+                                              buttonSize="md"
+                                              className="sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                              onClick={[Function]}
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                              type="button"
+                                            >
+                                              <StyledBox
+                                                as="button"
+                                                boxAs="button"
+                                                buttonSize="md"
+                                                className="sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                                onClick={[Function]}
+                                                style={Object {}}
+                                                theme={
+                                                  Object {
+                                                    "disabledBackground": "#e2e2e2",
+                                                    "disabledfont": "#9d9d9d",
+                                                    "inputBackground": "#ffffff",
+                                                    "inputBorder": "#e2e2e2",
+                                                    "inputFont": "#9d9d9d",
+                                                    "label": "#2d2d2d",
+                                                    "primary": "#3fbaca",
+                                                    "secondary": "#293346",
+                                                  }
+                                                }
+                                                type="button"
+                                              >
+                                                <button
+                                                  className="sc-bdnylx dOPKTt sc-gtssRu sc-dlnjPT bQfMAP hrubxE"
+                                                  onClick={[Function]}
+                                                  style={Object {}}
+                                                  type="button"
+                                                >
+                                                  Button
+                                                </button>
+                                              </StyledBox>
+                                            </Component>
+                                          </Box>
+                                        </StyledButtonNormal>
+                                      </Button>
+                                    </div>
+                                  </StyledBox>
+                                </Component>
+                              </Box>
+                            </StyledListItemEnd>
+                          </ListItemEnd>
+                        </div>
+                      </StyledBox>
+                    </Component>
+                  </Box>
+                </StyledListItem>
+              </ListItem>
+            </div>
+          </StyledBox>
+        </Component>
+      </Box>
+    </StyledLayout>
+  </Layout>
+</List>
+`;

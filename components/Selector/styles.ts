@@ -15,6 +15,8 @@ export const StyledSelector = styled(Box)<ISelectorComponentProps>`
     display: flex;
 `;
 
+StyledSelector.displayName = 'StyledSelector';
+
 export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
     display: flex;
     align-items: center;
@@ -38,3 +40,5 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
         margin-right: 4px;
     }
 `;
+
+StyledSelectorItem.displayName = 'StyledSelectorItem';;

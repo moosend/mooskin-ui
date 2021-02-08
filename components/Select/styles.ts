@@ -21,6 +21,8 @@ export const StyledSelect = styled(Box)<ISelectComponentProps>`
     cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
 `;
 
+StyledSelect.displayName = 'StyledSelect';
+
 export const StyledSelectFilter = styled(Box)<IInputBoxComponentProps>`
     padding: 7px 15px 7px;
     font-family: Hind;
@@ -35,6 +37,8 @@ export const StyledSelectFilter = styled(Box)<IInputBoxComponentProps>`
     flex: 1;
 `;
 
+StyledSelectFilter.displayName = 'StyledSelectFilter';
+
 export const StyledSelectContainer = styled(Box)<IBoxComponentProps>`
     display: flex;
     border-radius: 3px;
@@ -43,6 +47,8 @@ export const StyledSelectContainer = styled(Box)<IBoxComponentProps>`
     color: inherit;
     align-items: center;
 `;
+
+StyledSelectContainer.displayName = 'StyledSelectContainer';
 
 export const StyledSelectPlaceholder = styled(Box)<IBoxComponentProps>`
     padding: 7px 15px 7px;
@@ -57,15 +63,13 @@ export const StyledSelectPlaceholder = styled(Box)<IBoxComponentProps>`
     flex: 1;
 `;
 
+StyledSelectPlaceholder.displayName = 'StyledSelectPlaceholder';
+
 export const StyledSelectOptionList = styled(Box)<IBoxComponentProps>`
     position: absolute;
-    top: 35px;
+    top: 40px;
     left: 0;
     right: 0;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border: solid 1px #e2e2e2;
-    border-top: none;
     color: inherit;
     background-color: #ffffff;
     max-height: 160px;
@@ -87,6 +91,8 @@ export const StyledSelectOptionList = styled(Box)<IBoxComponentProps>`
     }
 `;
 
+StyledSelectOptionList.displayName = 'StyledSelectOptionList';
+
 export const StyledSelectOverlay = styled(Box)<IBoxComponentProps>`
     position: fixed;
     top: 0;
@@ -96,13 +102,15 @@ export const StyledSelectOverlay = styled(Box)<IBoxComponentProps>`
     z-index: -1;
 `;
 
+StyledSelectOverlay.displayName = 'StyledSelectOverlay';
+
 export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
     font-size: 12px;
     padding: 10px 15px;
     font-family: Hind;
     display: flex;
     justify-content: space-between;
-    color: inherit;
+    color: #425579;
     :first-child{
         padding-top: 13px;
     }
@@ -114,6 +122,8 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
     }
 `;
 
+StyledSelectOption.displayName = 'StyledSelectOption';
+
 export const StyledSelectIcon = styled(Box)<IBoxComponentProps>`
     font-family: 'Mooskin Icons';
     font-size: 20px;
@@ -122,6 +132,8 @@ export const StyledSelectIcon = styled(Box)<IBoxComponentProps>`
     padding: 0 15px;
     color: inherit;
 `;
+
+StyledSelectIcon.displayName = 'StyledSelectIcon';
 
 export const StyledSelectLoader = styled(Box)<IBoxComponentProps>`
     border: 2px solid #f3f3f3;
@@ -132,6 +144,8 @@ export const StyledSelectLoader = styled(Box)<IBoxComponentProps>`
     animation: ${spin} 2s linear infinite;
 `;
 
+StyledSelectLoader.displayName = 'StyledSelectLoader';
+
 export const StyledSelectPagination = styled(Box)<IBoxComponentProps>`
     display: flex;
     justify-content: space-around;
@@ -140,9 +154,13 @@ export const StyledSelectPagination = styled(Box)<IBoxComponentProps>`
     padding: 5px 0;
 `;
 
+StyledSelectPagination.displayName = 'StyledSelectPagination';
+
 export const StyledPaginationPage = styled(Box)<IBoxComponentProps>`
     font-size: 12px;
     font-family: Hind;
     align-items: center;
-    color: inherit;
+    color: #425579;
 `;
+
+StyledPaginationPage.displayName = 'StyledPaginationPage';

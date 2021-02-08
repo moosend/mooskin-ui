@@ -11,13 +11,13 @@ describe('Selector', () => {
 
         const tree = shallow(
             <Selector activeItem="/settings" onClickItem={func}>
-                <SelectorItem dataLabel="settings" value="/settings">
+                <SelectorItem value="/settings">
                     Settings
                 </SelectorItem>
-                <SelectorItem dataLabel="template" value="/template">
+                <SelectorItem value="/template">
                     Template
                 </SelectorItem>
-                <SelectorItem dataLabel="preview" value="/preview">
+                <SelectorItem value="/preview">
                     Preview
                 </SelectorItem>
             </Selector>

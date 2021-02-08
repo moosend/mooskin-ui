@@ -17,6 +17,8 @@ export const StyledTags = styled(Box)<ITagsComponentProps>`
     flex-wrap: wrap;
 `;
 
+StyledTags.displayName = 'StyledTags';
+
 export const StyledTag = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 0 10px;
@@ -38,6 +40,8 @@ export const StyledTag = styled(Box)<IBoxComponentProps>`
     };
 `;
 
+StyledTag.displayName = 'StyledTag';
+
 export const StyledTagClose = styled(Box)<IBoxComponentProps>`
     opacity: 0.5;
     font-family: 'Mooskin Icons Round';
@@ -52,6 +56,8 @@ export const StyledTagClose = styled(Box)<IBoxComponentProps>`
     padding-left: 10px;
 `;
 
+StyledTagClose.displayName = 'StyledTagClose';
+
 export const StyledTagInput = styled(Box)<ITagsInputComponentProps>`
     color: #2d2d2d;
     background-color: transparent;
@@ -61,3 +67,5 @@ export const StyledTagInput = styled(Box)<ITagsInputComponentProps>`
     border: none;
     flex: 1;
 `;
+
+StyledTagInput.displayName = 'StyledTagInput';

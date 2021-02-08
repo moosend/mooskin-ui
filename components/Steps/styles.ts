@@ -11,7 +11,11 @@ export const StyledSteps = styled(Box)<IStepsComponentProps>`
     flex-direction: column;
 `;
 
+StyledSteps.displayName = 'StyledSteps';
+
 export const StyledStep = styled(Box)<IStepComponentProps>``;
+
+StyledStep.displayName = 'StyledStep';
 
 export const StyledStepHeader = styled(Box)<IStepCommonComponentProps>`
     border-bottom: ${(props) => props.active ? 'solid 2px #293346' : 'solid 2px #9d9d9d'};
@@ -32,7 +36,11 @@ export const StyledStepHeader = styled(Box)<IStepCommonComponentProps>`
     position: relative;
 `;
 
+StyledStepHeader.displayName = 'StyledStepHeader';
+
 export const StyledStepContent = styled(Box)<IStepCommonComponentProps>``;
+
+StyledStepContent.displayName = 'StyledStepContent';
 
 export const StyledStepArrow = styled(Box)<IStepCommonComponentProps>`
     font-family: 'Mooskin Icons';
@@ -42,3 +50,5 @@ export const StyledStepArrow = styled(Box)<IStepCommonComponentProps>`
     color: inherit;
     font-size: 12px;
 `;
+
+StyledStepArrow.displayName = 'StyledStepArrow';

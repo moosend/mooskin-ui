@@ -2,7 +2,10 @@
 
 exports[`Box renders Box correctly 1`] = `
 <Component
+  align="baseline"
   className=""
+  m={5}
+  p={5}
   style={Object {}}
   theme={
     Object {

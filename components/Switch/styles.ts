@@ -29,6 +29,8 @@ export const StyledSwitch = styled(Box)<ISwitchComponentProps>`
     }};
 `;
 
+StyledSwitch.displayName = 'StyledSwitch';
+
 export const StyledSwitchHandle = styled(Box)<ISwitchHandleComponentProps>`
     position: absolute;
     content: '';
@@ -45,6 +47,8 @@ export const StyledSwitchHandle = styled(Box)<ISwitchHandleComponentProps>`
             (typeof props.switchWidth === 'string' ? parseInt(props.switchWidth, 10) : props.switchWidth) - 27 : 63}px)` : '')};
 `;
 
+StyledSwitchHandle.displayName = 'StyledSwitchHandle';
+
 export const StyledSwitchLabel = styled(Box)<Partial<ISwitchComponentProps>>`
     font-family: Hind;
     font-size: 12px;
@@ -52,11 +56,17 @@ export const StyledSwitchLabel = styled(Box)<Partial<ISwitchComponentProps>>`
     color: #ffffff;
 `;
 
+StyledSwitchLabel.displayName = 'StyledSwitchLabel';
+
 export const StyledSwitchLabelNormal = styled(StyledSwitchLabel)`
     align-self: ${(props) => (props.active ? 'flex-start' : 'flex-end')};
 `;
+
+StyledSwitchLabelNormal.displayName = 'StyledSwitchLabelNormal';
 
 export const StyledSwitchLabelDisabled = styled(StyledSwitchLabel)`
     color: ${(props) => props.theme.disabledfont || variables.disabledfont};
     align-self: center;
 `;
+
+StyledSwitchLabelDisabled.displayName = 'StyledSwitchLabelDisabled';

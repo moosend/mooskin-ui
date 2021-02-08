@@ -12,6 +12,8 @@ export const StyledPagination = styled(Box)<IPaginationComponentProps>`
     align-items: center;
 `;
 
+StyledPagination.displayName = 'StyledPagination';
+
 export const StyledPaginationButton = styled(Box)<IPaginationButtonComponentProps>`
     border-radius: 3px;
     font-family: Montserrat;
@@ -32,6 +34,8 @@ export const StyledPaginationButton = styled(Box)<IPaginationButtonComponentProp
     }
 `;
 
+StyledPaginationButton.displayName = 'StyledPaginationButton';
+
 export const StyledPaginationShowAll = styled(Box)<IBoxComponentProps>`
     font-family: Hind;
     font-size: 14px;
@@ -45,3 +49,5 @@ export const StyledPaginationShowAll = styled(Box)<IBoxComponentProps>`
     border-bottom: 1px solid #3fbaca;
     cursor: pointer;
 `;
+
+StyledPaginationShowAll.displayName = 'StyledPaginationShowAll';

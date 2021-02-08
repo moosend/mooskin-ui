@@ -11,11 +11,17 @@ export const StyledListItem = styled(Box)<IBoxComponentProps>`
     padding: 15px;
 `;
 
+StyledListItem.displayName = 'StyledListItem';
+
 export const StyledListItemCommon = styled(Box)<IBoxComponentProps>`
     display: flex;
 `;
 
+StyledListItemCommon.displayName = 'StyledListItemCommon';
+
 export const StyledListItemHead = styled(Box)``;
+
+StyledListItemHead.displayName = 'StyledListItemHead';
 
 export const StyledListItemBody = styled(StyledListItemCommon)`
     flex: 1;
@@ -23,6 +29,10 @@ export const StyledListItemBody = styled(StyledListItemCommon)`
     padding: 0 20px;
 `;
 
+StyledListItemBody.displayName = 'StyledListItemBody';
+
 export const StyledListItemEnd = styled(StyledListItemCommon)`
     align-items: center;
 `;
+
+StyledListItemEnd.displayName = 'StyledListItemEnd';

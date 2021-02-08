@@ -1,0 +1,1036 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Expandable renders correctly 1`] = `
+<Expandable
+  className=""
+  onClickItem={[MockFunction]}
+  style={Object {}}
+>
+  <StyledExpandable
+    className=""
+    onClickItem={[MockFunction]}
+    style={Object {}}
+  >
+    <Box
+      className="sc-gtssRu dFFniv"
+      onClickItem={[MockFunction]}
+      style={Object {}}
+    >
+      <Component
+        className="sc-gtssRu dFFniv"
+        onClickItem={[MockFunction]}
+        style={Object {}}
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
+      >
+        <StyledBox
+          className="sc-gtssRu dFFniv"
+          onClickItem={[MockFunction]}
+          style={Object {}}
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+        >
+          <div
+            className="sc-bdnylx dOPKTt sc-gtssRu dFFniv"
+            onClickItem={[MockFunction]}
+            style={Object {}}
+          >
+            <ExpandableItem
+              active={false}
+              activeId={1}
+              className=""
+              key="0/.0"
+              style={Object {}}
+            >
+              <StyledExpandableItem
+                active={false}
+                activeId={1}
+                className=""
+                style={Object {}}
+              >
+                <Box
+                  active={false}
+                  activeId={1}
+                  className="sc-dlnjPT iVlUhf"
+                  style={Object {}}
+                >
+                  <Component
+                    active={false}
+                    activeId={1}
+                    className="sc-dlnjPT iVlUhf"
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={false}
+                      activeId={1}
+                      className="sc-dlnjPT iVlUhf"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT iVlUhf"
+                        style={Object {}}
+                      >
+                        <ExpandableItemContainer
+                          className=""
+                          key="0/.0"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <StyledExpandableItemContainer
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            <Box
+                              className="sc-hKFyIo hrjkMV"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              <Component
+                                className="sc-hKFyIo hrjkMV"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                              >
+                                <StyledBox
+                                  className="sc-hKFyIo hrjkMV"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-hKFyIo hrjkMV"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    <ExpandableItemText
+                                      className=""
+                                      key="0/.0"
+                                      style={Object {}}
+                                    >
+                                      <StyledExpandableItemText
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          className="sc-jSFkmK kHupvC"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            className="sc-jSFkmK kHupvC"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              className="sc-jSFkmK kHupvC"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx dOPKTt sc-jSFkmK kHupvC"
+                                                style={Object {}}
+                                              >
+                                                Title for item with index 1
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledExpandableItemText>
+                                    </ExpandableItemText>
+                                    <ExpandableItemButton
+                                      active={false}
+                                      className=""
+                                      key="1/.1"
+                                      style={Object {}}
+                                    >
+                                      <StyledExpandableItemButton
+                                        active={false}
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          active={false}
+                                          className="sc-eCApGN iWbfni"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            active={false}
+                                            className="sc-eCApGN iWbfni"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              active={false}
+                                              className="sc-eCApGN iWbfni"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx dOPKTt sc-eCApGN iWbfni"
+                                                style={Object {}}
+                                              >
+                                                keyboard_arrow_down
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledExpandableItemButton>
+                                    </ExpandableItemButton>
+                                  </div>
+                                </StyledBox>
+                              </Component>
+                            </Box>
+                          </StyledExpandableItemContainer>
+                        </ExpandableItemContainer>
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledExpandableItem>
+            </ExpandableItem>
+            <ExpandableItem
+              active={false}
+              activeId={2}
+              className=""
+              key="1/.1"
+              style={Object {}}
+            >
+              <StyledExpandableItem
+                active={false}
+                activeId={2}
+                className=""
+                style={Object {}}
+              >
+                <Box
+                  active={false}
+                  activeId={2}
+                  className="sc-dlnjPT iVlUhf"
+                  style={Object {}}
+                >
+                  <Component
+                    active={false}
+                    activeId={2}
+                    className="sc-dlnjPT iVlUhf"
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={false}
+                      activeId={2}
+                      className="sc-dlnjPT iVlUhf"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT iVlUhf"
+                        style={Object {}}
+                      >
+                        <ExpandableItemContainer
+                          className=""
+                          key="0/.0"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <StyledExpandableItemContainer
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            <Box
+                              className="sc-hKFyIo hrjkMV"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              <Component
+                                className="sc-hKFyIo hrjkMV"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                              >
+                                <StyledBox
+                                  className="sc-hKFyIo hrjkMV"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-hKFyIo hrjkMV"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    <ExpandableItemText
+                                      className=""
+                                      key="0/.0"
+                                      style={Object {}}
+                                    >
+                                      <StyledExpandableItemText
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          className="sc-jSFkmK kHupvC"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            className="sc-jSFkmK kHupvC"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              className="sc-jSFkmK kHupvC"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx dOPKTt sc-jSFkmK kHupvC"
+                                                style={Object {}}
+                                              >
+                                                Title for item with index 2
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledExpandableItemText>
+                                    </ExpandableItemText>
+                                    <ExpandableItemButton
+                                      active={false}
+                                      className=""
+                                      key="1/.1"
+                                      style={Object {}}
+                                    >
+                                      <StyledExpandableItemButton
+                                        active={false}
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          active={false}
+                                          className="sc-eCApGN iWbfni"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            active={false}
+                                            className="sc-eCApGN iWbfni"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              active={false}
+                                              className="sc-eCApGN iWbfni"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx dOPKTt sc-eCApGN iWbfni"
+                                                style={Object {}}
+                                              >
+                                                keyboard_arrow_down
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledExpandableItemButton>
+                                    </ExpandableItemButton>
+                                  </div>
+                                </StyledBox>
+                              </Component>
+                            </Box>
+                          </StyledExpandableItemContainer>
+                        </ExpandableItemContainer>
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledExpandableItem>
+            </ExpandableItem>
+            <ExpandableItem
+              active={false}
+              activeId={3}
+              className=""
+              key="2/.2"
+              style={Object {}}
+            >
+              <StyledExpandableItem
+                active={false}
+                activeId={3}
+                className=""
+                style={Object {}}
+              >
+                <Box
+                  active={false}
+                  activeId={3}
+                  className="sc-dlnjPT iVlUhf"
+                  style={Object {}}
+                >
+                  <Component
+                    active={false}
+                    activeId={3}
+                    className="sc-dlnjPT iVlUhf"
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={false}
+                      activeId={3}
+                      className="sc-dlnjPT iVlUhf"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT iVlUhf"
+                        style={Object {}}
+                      >
+                        <ExpandableItemContainer
+                          className=""
+                          key="0/.0"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <StyledExpandableItemContainer
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            <Box
+                              className="sc-hKFyIo hrjkMV"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              <Component
+                                className="sc-hKFyIo hrjkMV"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                              >
+                                <StyledBox
+                                  className="sc-hKFyIo hrjkMV"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-hKFyIo hrjkMV"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    <ExpandableItemText
+                                      className=""
+                                      key="0/.0"
+                                      style={Object {}}
+                                    >
+                                      <StyledExpandableItemText
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          className="sc-jSFkmK kHupvC"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            className="sc-jSFkmK kHupvC"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              className="sc-jSFkmK kHupvC"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx dOPKTt sc-jSFkmK kHupvC"
+                                                style={Object {}}
+                                              >
+                                                Title for item with index 3
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledExpandableItemText>
+                                    </ExpandableItemText>
+                                    <ExpandableItemButton
+                                      active={false}
+                                      className=""
+                                      key="1/.1"
+                                      style={Object {}}
+                                    >
+                                      <StyledExpandableItemButton
+                                        active={false}
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          active={false}
+                                          className="sc-eCApGN iWbfni"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            active={false}
+                                            className="sc-eCApGN iWbfni"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              active={false}
+                                              className="sc-eCApGN iWbfni"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx dOPKTt sc-eCApGN iWbfni"
+                                                style={Object {}}
+                                              >
+                                                keyboard_arrow_down
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledExpandableItemButton>
+                                    </ExpandableItemButton>
+                                  </div>
+                                </StyledBox>
+                              </Component>
+                            </Box>
+                          </StyledExpandableItemContainer>
+                        </ExpandableItemContainer>
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledExpandableItem>
+            </ExpandableItem>
+            <ExpandableItem
+              active={false}
+              activeId={4}
+              className=""
+              key="3/.3"
+              style={Object {}}
+            >
+              <StyledExpandableItem
+                active={false}
+                activeId={4}
+                className=""
+                style={Object {}}
+              >
+                <Box
+                  active={false}
+                  activeId={4}
+                  className="sc-dlnjPT iVlUhf"
+                  style={Object {}}
+                >
+                  <Component
+                    active={false}
+                    activeId={4}
+                    className="sc-dlnjPT iVlUhf"
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={false}
+                      activeId={4}
+                      className="sc-dlnjPT iVlUhf"
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT iVlUhf"
+                        style={Object {}}
+                      >
+                        <ExpandableItemContainer
+                          className=""
+                          key="0/.0"
+                          onClick={[Function]}
+                          style={Object {}}
+                        >
+                          <StyledExpandableItemContainer
+                            className=""
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            <Box
+                              className="sc-hKFyIo hrjkMV"
+                              onClick={[Function]}
+                              style={Object {}}
+                            >
+                              <Component
+                                className="sc-hKFyIo hrjkMV"
+                                onClick={[Function]}
+                                style={Object {}}
+                                theme={
+                                  Object {
+                                    "disabledBackground": "#e2e2e2",
+                                    "disabledfont": "#9d9d9d",
+                                    "inputBackground": "#ffffff",
+                                    "inputBorder": "#e2e2e2",
+                                    "inputFont": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "primary": "#3fbaca",
+                                    "secondary": "#293346",
+                                  }
+                                }
+                              >
+                                <StyledBox
+                                  className="sc-hKFyIo hrjkMV"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                  theme={
+                                    Object {
+                                      "disabledBackground": "#e2e2e2",
+                                      "disabledfont": "#9d9d9d",
+                                      "inputBackground": "#ffffff",
+                                      "inputBorder": "#e2e2e2",
+                                      "inputFont": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "primary": "#3fbaca",
+                                      "secondary": "#293346",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="sc-bdnylx dOPKTt sc-hKFyIo hrjkMV"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    <ExpandableItemText
+                                      className=""
+                                      key="0/.0"
+                                      style={Object {}}
+                                    >
+                                      <StyledExpandableItemText
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          className="sc-jSFkmK kHupvC"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            className="sc-jSFkmK kHupvC"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              className="sc-jSFkmK kHupvC"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx dOPKTt sc-jSFkmK kHupvC"
+                                                style={Object {}}
+                                              >
+                                                Title for item with index 4
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledExpandableItemText>
+                                    </ExpandableItemText>
+                                    <ExpandableItemButton
+                                      active={false}
+                                      className=""
+                                      key="1/.1"
+                                      style={Object {}}
+                                    >
+                                      <StyledExpandableItemButton
+                                        active={false}
+                                        className=""
+                                        style={Object {}}
+                                      >
+                                        <Box
+                                          active={false}
+                                          className="sc-eCApGN iWbfni"
+                                          style={Object {}}
+                                        >
+                                          <Component
+                                            active={false}
+                                            className="sc-eCApGN iWbfni"
+                                            style={Object {}}
+                                            theme={
+                                              Object {
+                                                "disabledBackground": "#e2e2e2",
+                                                "disabledfont": "#9d9d9d",
+                                                "inputBackground": "#ffffff",
+                                                "inputBorder": "#e2e2e2",
+                                                "inputFont": "#9d9d9d",
+                                                "label": "#2d2d2d",
+                                                "primary": "#3fbaca",
+                                                "secondary": "#293346",
+                                              }
+                                            }
+                                          >
+                                            <StyledBox
+                                              active={false}
+                                              className="sc-eCApGN iWbfni"
+                                              style={Object {}}
+                                              theme={
+                                                Object {
+                                                  "disabledBackground": "#e2e2e2",
+                                                  "disabledfont": "#9d9d9d",
+                                                  "inputBackground": "#ffffff",
+                                                  "inputBorder": "#e2e2e2",
+                                                  "inputFont": "#9d9d9d",
+                                                  "label": "#2d2d2d",
+                                                  "primary": "#3fbaca",
+                                                  "secondary": "#293346",
+                                                }
+                                              }
+                                            >
+                                              <div
+                                                className="sc-bdnylx dOPKTt sc-eCApGN iWbfni"
+                                                style={Object {}}
+                                              >
+                                                keyboard_arrow_down
+                                              </div>
+                                            </StyledBox>
+                                          </Component>
+                                        </Box>
+                                      </StyledExpandableItemButton>
+                                    </ExpandableItemButton>
+                                  </div>
+                                </StyledBox>
+                              </Component>
+                            </Box>
+                          </StyledExpandableItemContainer>
+                        </ExpandableItemContainer>
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledExpandableItem>
+            </ExpandableItem>
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledExpandable>
+</Expandable>
+`;

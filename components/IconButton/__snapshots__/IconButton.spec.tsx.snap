@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmallIconButton renders correctly 1`] = `
+<StyledIconButton
+  onClick={[Function]}
+>
+  close
+</StyledIconButton>
+`;

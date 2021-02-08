@@ -21,3 +21,5 @@ export const StyledAnchor = styled(Box)<IAnchorComponentProps>`
     }
     color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.primary || variables.primary};
 `;
+
+StyledAnchor.displayName = 'StyledAnchor';

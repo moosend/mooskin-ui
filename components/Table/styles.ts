@@ -13,10 +13,14 @@ export const StyledTable = styled(Box)<IBoxComponentProps>`
     flex-direction: column;
 `;
 
+StyledTable.displayName = 'StyledTable';
+
 export const StyledTableHeader = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 10px 0;
 `;
+
+StyledTableHeader.displayName = 'StyledTableHeader';
 
 export const StyledTableHeaderItem = styled(Box)<IBoxComponentProps>`
     font-family: Montserrat;
@@ -32,6 +36,8 @@ export const StyledTableHeaderItem = styled(Box)<IBoxComponentProps>`
     align-items: center;
 `;
 
+StyledTableHeaderItem.displayName = 'StyledTableHeaderItem';
+
 export const StyledTableRow = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 35px 0;
@@ -42,6 +48,8 @@ export const StyledTableRow = styled(Box)<IBoxComponentProps>`
         border: none;
     }
 `;
+
+StyledTableRow.displayName = 'StyledTableRow';
 
 export const StyledTableRowItem = styled(Box)<IBoxComponentProps>`
     font-family: Hind;
@@ -56,3 +64,5 @@ export const StyledTableRowItem = styled(Box)<IBoxComponentProps>`
     display: flex;
     align-items: center;
 `;
+
+StyledTableRowItem.displayName = 'StyledTableRowItem';

@@ -7,7 +7,7 @@ exports[`Alert renders correctly 1`] = `
   style={Object {}}
   variant="left-accent"
 >
-  <Styled(Box)
+  <StyledAlert
     className=""
     status="info"
     style={Object {}}
@@ -37,7 +37,7 @@ exports[`Alert renders correctly 1`] = `
         }
         variant="left-accent"
       >
-        <styled.div
+        <StyledBox
           className="sc-gtssRu iBQAVu"
           status="info"
           style={Object {}}
@@ -66,7 +66,7 @@ exports[`Alert renders correctly 1`] = `
               style={Object {}}
               variant="left-accent"
             >
-              <Styled(Styled(Box))
+              <StyledAlertIcon
                 className=""
                 status="info"
                 style={Object {}}
@@ -96,7 +96,7 @@ exports[`Alert renders correctly 1`] = `
                     }
                     variant="left-accent"
                   >
-                    <styled.div
+                    <StyledBox
                       className="sc-jSFkmK sc-gKAblj fTKErc gkdvVV"
                       status="info"
                       style={Object {}}
@@ -120,10 +120,10 @@ exports[`Alert renders correctly 1`] = `
                       >
                         announcement
                       </div>
-                    </styled.div>
+                    </StyledBox>
                   </Component>
                 </Box>
-              </Styled(Styled(Box))>
+              </StyledAlertIcon>
             </AlertIcon>
             <AlertTitle
               className=""
@@ -132,7 +132,7 @@ exports[`Alert renders correctly 1`] = `
               style={Object {}}
               variant="left-accent"
             >
-              <Styled(Styled(Box))
+              <StyledAlertTitle
                 className=""
                 status="info"
                 style={Object {}}
@@ -162,7 +162,7 @@ exports[`Alert renders correctly 1`] = `
                     }
                     variant="left-accent"
                   >
-                    <styled.div
+                    <StyledBox
                       className="sc-dlnjPT sc-hKFyIo hDmCqp fLpFAm"
                       status="info"
                       style={Object {}}
@@ -186,10 +186,10 @@ exports[`Alert renders correctly 1`] = `
                       >
                         Your browser is outdated!
                       </div>
-                    </styled.div>
+                    </StyledBox>
                   </Component>
                 </Box>
-              </Styled(Styled(Box))>
+              </StyledAlertTitle>
             </AlertTitle>
             <AlertDescription
               className=""
@@ -198,7 +198,7 @@ exports[`Alert renders correctly 1`] = `
               style={Object {}}
               variant="left-accent"
             >
-              <Styled(Styled(Box))
+              <StyledAlertDescription
                 className=""
                 status="info"
                 style={Object {}}
@@ -228,7 +228,7 @@ exports[`Alert renders correctly 1`] = `
                     }
                     variant="left-accent"
                   >
-                    <styled.div
+                    <StyledBox
                       className="sc-dlnjPT sc-eCApGN hDmCqp cCbRZN"
                       status="info"
                       style={Object {}}
@@ -252,10 +252,10 @@ exports[`Alert renders correctly 1`] = `
                       >
                         Your Mooskin experience may be degraded.
                       </div>
-                    </styled.div>
+                    </StyledBox>
                   </Component>
                 </Box>
-              </Styled(Styled(Box))>
+              </StyledAlertDescription>
             </AlertDescription>
             <AlertCloseButton
               className=""
@@ -268,7 +268,7 @@ exports[`Alert renders correctly 1`] = `
               top="8px"
               variant="left-accent"
             >
-              <Styled(Styled(Box))
+              <StyledAlertCloseButton
                 className=""
                 onClick={[MockFunction]}
                 position="absolute"
@@ -310,7 +310,7 @@ exports[`Alert renders correctly 1`] = `
                     top="8px"
                     variant="left-accent"
                   >
-                    <styled.div
+                    <StyledBox
                       className="sc-jSFkmK sc-iCoHVE fTKErc dpbeEz"
                       onClick={[MockFunction]}
                       position="absolute"
@@ -339,15 +339,15 @@ exports[`Alert renders correctly 1`] = `
                       >
                         close
                       </div>
-                    </styled.div>
+                    </StyledBox>
                   </Component>
                 </Box>
-              </Styled(Styled(Box))>
+              </StyledAlertCloseButton>
             </AlertCloseButton>
           </div>
-        </styled.div>
+        </StyledBox>
       </Component>
     </Box>
-  </Styled(Box)>
+  </StyledAlert>
 </Alert>
 `;

@@ -25,3 +25,5 @@ export const StyledLoader = styled(Box)<ILoaderComponentProps>`
     height: ${(props) => getNumberOrStringValue(props.size)};
     animation: ${spin} 2s linear infinite;
 `;
+
+StyledLoader.displayName = 'StyledLoader';

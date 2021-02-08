@@ -1,14 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Selector renders Selector correctly 1`] = `
-<Styled(Box)
+<StyledSelector
+  activeItem="/settings"
   className=""
+  onClickItem={[MockFunction]}
   style={Object {}}
 >
   <Component
     active={true}
     className=""
-    dataLabel="settings"
     key="0/.0"
     onClick={[Function]}
     style={Object {}}
@@ -19,7 +20,6 @@ exports[`Selector renders Selector correctly 1`] = `
   <Component
     active={false}
     className=""
-    dataLabel="template"
     key="1/.1"
     onClick={[Function]}
     style={Object {}}
@@ -30,7 +30,6 @@ exports[`Selector renders Selector correctly 1`] = `
   <Component
     active={false}
     className=""
-    dataLabel="preview"
     key="2/.2"
     onClick={[Function]}
     style={Object {}}
@@ -38,11 +37,11 @@ exports[`Selector renders Selector correctly 1`] = `
   >
     Preview
   </Component>
-</Styled(Box)>
+</StyledSelector>
 `;
 
 exports[`Selector renders SelectorItem correctly 1`] = `
-<Styled(Box)
+<StyledSelectorItem
   active={true}
   className="myClass"
   onClick={[MockFunction]}

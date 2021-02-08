@@ -47,7 +47,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
                     children: props.checked ? 'check_box' : 'check_box_outline_blank',
                     disabled: props.disabled,
                     key: i,
-                    onClickIcon: (e) => batchClickHandler(e, child.props.onClick)
+                    onClick: (e) => batchClickHandler(e, child.props.onClick)
                 } as ICheckboxIconComponentProps);
             }
 

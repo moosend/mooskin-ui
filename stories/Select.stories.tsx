@@ -127,5 +127,6 @@ CustomElements.args = {
     ),
     dataLabel: 'Select',
     onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: '2'
+    selectedValue: '2',
+    showList: true
 } as ISelectComponentProps;

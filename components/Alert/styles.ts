@@ -45,24 +45,34 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
     }};
 `;
 
+StyledAlert.displayName = 'StyledAlert';
+
 const StyledAlertCommonText = styled(Box)<IBaseAlertComponentProps>`
     line-height: 1.5rem;
     color: ${(props) => props.variant === 'solid' ? '#FFFFFF' : ''};
 `;
+
+StyledAlertCommonText.displayName = 'StyledAlertCommonText';
 
 export const StyledAlertTitle = styled(StyledAlertCommonText)<IBaseAlertComponentProps>`
     font-weight: 700;
     margin-right: 0.5rem;
 `;
 
+StyledAlertTitle.displayName = 'StyledAlertTitle';
+
 export const StyledAlertDescription = styled(StyledAlertCommonText)<IBaseAlertComponentProps>`
     display: inline;
 `;
+
+StyledAlertDescription.displayName = 'StyledAlertDescription';
 
 const StyledAlertCommonIcon = styled(Box)<IBaseAlertComponentProps>`
     font-family: 'Mooskin Icons';
     color: ${(props) => props.variant === 'solid' ? '#FFFFFF' : props.status && FontColors[props.status]};
 `;
+
+StyledAlertCommonIcon.displayName = 'StyledAlertCommonIcon';
 
 export const StyledAlertIcon = styled(StyledAlertCommonIcon)`
     flex-shrink: 0;
@@ -72,6 +82,8 @@ export const StyledAlertIcon = styled(StyledAlertCommonIcon)`
     font-size: 1.5rem;
     display: inherit;
 `;
+
+StyledAlertIcon.displayName = 'StyledAlertIcon';
 
 export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IBaseAlertComponentProps>`
     outline: 0;
@@ -90,3 +102,5 @@ export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IBaseAlertCo
         background: rgba(30, 30, 30, 0.1);
     }
 `;
+
+StyledAlertCloseButton.displayName = 'StyledAlertCloseButton';

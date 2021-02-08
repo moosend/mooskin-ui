@@ -1,34 +1,223 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CheckBox renders CheckBox correctly 1`] = `
-<Styled(Box)
-  className="myClass"
-  id="checkbox1"
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
+<Checkbox
+  checked={true}
+  className=""
+  onClickCheckbox={[MockFunction]}
+  style={Object {}}
+  value="asd"
 >
-  <Styled(Box)
-    disabled={true}
-    onClick={[Function]}
+  <StyledCheckbox
+    checked={true}
+    className=""
+    onClickCheckbox={[MockFunction]}
+    style={Object {}}
+    value="asd"
   >
-    <Styled(Box)
+    <Box
       checked={true}
-      disabled={true}
-    >
-      check_box
-    </Styled(Box)>
-    <Label
-      className=""
-      disabled={true}
-      minW="unset"
+      className="sc-hKFyIo clHRaR"
+      onClickCheckbox={[MockFunction]}
       style={Object {}}
-      width={150}
+      value="asd"
     >
-      This is CheckBox 1
-    </Label>
-  </Styled(Box)>
-</Styled(Box)>
+      <Component
+        checked={true}
+        className="sc-hKFyIo clHRaR"
+        onClickCheckbox={[MockFunction]}
+        style={Object {}}
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
+        value="asd"
+      >
+        <StyledBox
+          checked={true}
+          className="sc-hKFyIo clHRaR"
+          onClickCheckbox={[MockFunction]}
+          style={Object {}}
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+          value="asd"
+        >
+          <div
+            checked={true}
+            className="sc-bdnylx dOPKTt sc-hKFyIo clHRaR"
+            onClickCheckbox={[MockFunction]}
+            style={Object {}}
+            value="asd"
+          >
+            <CheckboxIcon
+              className=""
+              color="red"
+              key="0/.0"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <StyledCheckboxIcon
+                className=""
+                color="red"
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Box
+                  className="sc-jSFkmK fYoNzN"
+                  color="red"
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <Component
+                    className="sc-jSFkmK fYoNzN"
+                    color="red"
+                    onClick={[Function]}
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      className="sc-jSFkmK fYoNzN"
+                      color="red"
+                      onClick={[Function]}
+                      style={Object {}}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx oYaUS sc-jSFkmK fYoNzN"
+                        color="red"
+                        onClick={[Function]}
+                        style={Object {}}
+                      >
+                        check_box
+                      </div>
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledCheckboxIcon>
+            </CheckboxIcon>
+            <CheckboxLabel
+              className=""
+              key="1/.1"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <StyledCheckboxLabel
+                className=""
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <Label
+                  className="sc-gKAblj jmrOim"
+                  minW={150}
+                  onClick={[Function]}
+                  style={Object {}}
+                >
+                  <StyledLabel
+                    className="sc-gKAblj jmrOim"
+                    minW={150}
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    <Box
+                      className="sc-dlnjPT uYxwx sc-gKAblj jmrOim"
+                      minW={150}
+                      onClick={[Function]}
+                      style={Object {}}
+                    >
+                      <Component
+                        className="sc-dlnjPT uYxwx sc-gKAblj jmrOim"
+                        minW={150}
+                        onClick={[Function]}
+                        style={Object {}}
+                        theme={
+                          Object {
+                            "disabledBackground": "#e2e2e2",
+                            "disabledfont": "#9d9d9d",
+                            "inputBackground": "#ffffff",
+                            "inputBorder": "#e2e2e2",
+                            "inputFont": "#9d9d9d",
+                            "label": "#2d2d2d",
+                            "primary": "#3fbaca",
+                            "secondary": "#293346",
+                          }
+                        }
+                      >
+                        <StyledBox
+                          className="sc-dlnjPT uYxwx sc-gKAblj jmrOim"
+                          minW={150}
+                          onClick={[Function]}
+                          style={Object {}}
+                          theme={
+                            Object {
+                              "disabledBackground": "#e2e2e2",
+                              "disabledfont": "#9d9d9d",
+                              "inputBackground": "#ffffff",
+                              "inputBorder": "#e2e2e2",
+                              "inputFont": "#9d9d9d",
+                              "label": "#2d2d2d",
+                              "primary": "#3fbaca",
+                              "secondary": "#293346",
+                            }
+                          }
+                        >
+                          <div
+                            className="sc-bdnylx eLauql sc-dlnjPT uYxwx sc-gKAblj jmrOim"
+                            onClick={[Function]}
+                            style={Object {}}
+                          >
+                            Normal Checkbox
+                          </div>
+                        </StyledBox>
+                      </Component>
+                    </Box>
+                  </StyledLabel>
+                </Label>
+              </StyledCheckboxLabel>
+            </CheckboxLabel>
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledCheckbox>
+</Checkbox>
 `;

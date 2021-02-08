@@ -14,6 +14,8 @@ export const StyledSidemenu = styled(Box)<ISidemenuComponentProps>`
     flex-direction: column;
 `;
 
+StyledSidemenu.displayName = 'StyledSidemenu';
+
 export const StyledSidemenuItem = styled(Box)<ISidemenuItemComponentProps>`
     font-family: Montserrat;
     font-size: 14px;
@@ -33,3 +35,5 @@ export const StyledSidemenuItem = styled(Box)<ISidemenuItemComponentProps>`
         margin-bottom: 32px;
     }
 `;
+
+StyledSidemenuItem.displayName = 'StyledSidemenuItem';;

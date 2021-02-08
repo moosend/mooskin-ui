@@ -18,3 +18,5 @@ export const StyledLabel = styled(Box)<ILabelComponentProps>`
     align-self: center;
     cursor: ${(props) => (!props.disabled ? (props.onClick ? 'pointer' : 'unset') : 'not-allowed')};
 `;
+
+StyledLabel.displayName = 'StyledLabel';;

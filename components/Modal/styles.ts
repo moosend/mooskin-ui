@@ -31,6 +31,8 @@ const contentFadeIn = keyframes`
 
 export const StyledModal = styled(Box)<IModalComponentProps>``;
 
+StyledModal.displayName = 'StyledModal';
+
 export const StyledModalContent = styled(Box)<IModalContentComponentProps>`
     position: fixed;
     width: 100%;
@@ -47,13 +49,19 @@ export const StyledModalContent = styled(Box)<IModalContentComponentProps>`
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 `;
 
+StyledModalContent.displayName = 'StyledModalContent';
+
 export const StyledModalContentFadeIn = styled(StyledModalContent)`
     animation: ${contentFadeIn} 0.15s;
 `;
 
+StyledModalContentFadeIn.displayName = 'StyledModalContentFadeIn';
+
 export const StyledModalContentFadeOut = styled(StyledModalContent)`
     animation: ${contentFadeIn} 0.15s reverse;
 `;
+
+StyledModalContentFadeOut.displayName = 'StyledModalContentFadeOut';
 
 export const StyledModalHeader = styled(Box)<IBoxComponentProps>`
     flex: 0 1 0%;
@@ -63,12 +71,16 @@ export const StyledModalHeader = styled(Box)<IBoxComponentProps>`
     width: 100%;
 `;
 
+StyledModalHeader.displayName = 'StyledModalHeader';
+
 export const StyledModalBody = styled(Box)<IBoxComponentProps>`
     padding: 0.5rem 1.5rem;
     flex: 1 1 0%;
     overflow: auto;
     width: 100%;
 `;
+
+StyledModalBody.displayName = 'StyledModalBody';
 
 export const StyledModalFooter = styled(Box)<IBoxComponentProps>`
     display: flex;
@@ -77,6 +89,8 @@ export const StyledModalFooter = styled(Box)<IBoxComponentProps>`
     padding: 1rem 1.5rem;
     width: 100%;
 `;
+
+StyledModalFooter.displayName = 'StyledModalFooter';
 
 export const StyledModalCloseButton = styled(Box)<IBoxComponentProps>`
     font-family: 'Mooskin Icons';
@@ -90,6 +104,8 @@ export const StyledModalCloseButton = styled(Box)<IBoxComponentProps>`
     }
 `;
 
+StyledModalCloseButton.displayName = 'StyledModalCloseButton';
+
 export const StyledModalOverlay = styled(Box)<IBoxComponentProps>`
     display: flex;
     width: 100vw;
@@ -102,12 +118,18 @@ export const StyledModalOverlay = styled(Box)<IBoxComponentProps>`
     align-items: center;
 `;
 
+StyledModalOverlay.displayName = 'StyledModalOverlay';
+
 export const StyledModalOverlayFadeIn = styled(StyledModalOverlay)`
     background-color: rgba(0, 0, 0, 0.48);
     animation: ${overlayFadeIn} 0.15s;
 `;
 
+StyledModalOverlayFadeIn.displayName = 'StyledModalOverlayFadeIn';
+
 export const StyledModalOverlayFadeOut = styled(StyledModalOverlay)`
     background-color: rgba(0, 0, 0, 0);
     animation: ${overlayFadeIn} 0.15s reverse;
 `;
+
+StyledModalOverlayFadeOut.displayName = 'StyledModalOverlayFadeOut';

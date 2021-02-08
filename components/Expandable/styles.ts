@@ -12,6 +12,8 @@ export const StyledExpandable = styled(Box)<IExpandableComponentProps>`
     flex-direction: column;
 `;
 
+StyledExpandable.displayName = 'StyledExpandable';
+
 export const StyledExpandableItem = styled(Box)<IExpandableItemComponentProps>`
     border-radius: 3px;
     border: solid 1px #e2e2e2;
@@ -21,11 +23,15 @@ export const StyledExpandableItem = styled(Box)<IExpandableItemComponentProps>`
     }
 `;
 
+StyledExpandableItem.displayName = 'StyledExpandableItem';
+
 export const StyledExpandableItemContainer = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 17px;
     cursor: pointer;
 `;
+
+StyledExpandableItemContainer.displayName = 'StyledExpandableItemContainer';
 
 export const StyledExpandableItemButton = styled(Box)<IExpandableCommonComponentProps>`
     font-family: 'Mooskin Icons';
@@ -33,6 +39,8 @@ export const StyledExpandableItemButton = styled(Box)<IExpandableCommonComponent
     transition: all ease 0.4s;
     transform: ${(props) => props.active ? 'rotate(180deg)' : 'rotate(0deg)'};
 `;
+
+StyledExpandableItemButton.displayName = 'StyledExpandableItemButton';
 
 export const StyledExpandableItemText = styled(Box)<IBoxComponentProps>`
     flex: 1;
@@ -47,4 +55,8 @@ export const StyledExpandableItemText = styled(Box)<IBoxComponentProps>`
     color: #2d2d2d;
 `;
 
+StyledExpandableItemText.displayName = 'StyledExpandableItemText';
+
 export const StyledExpandableItemContent = styled(Box)<IExpandableCommonComponentProps>``;
+
+StyledExpandableItemContent.displayName = 'StyledExpandableItemContent';

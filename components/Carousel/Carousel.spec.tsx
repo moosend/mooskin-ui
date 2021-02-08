@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Carousel from './Carousel';
 import Box from '../Box/Box';
+import Carousel from './Carousel';
 
 import { mount } from 'enzyme';
 

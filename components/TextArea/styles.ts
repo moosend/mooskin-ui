@@ -18,3 +18,5 @@ export const StyledTextArea = styled(Box)<ITextAreaBoxComponentProps>`
     font-size: 12px;
     color: ${(props) => props.theme.inputFont || variables.inputFont};
 `;
+
+StyledTextArea.displayName = 'StyledTextArea';

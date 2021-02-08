@@ -19,9 +19,6 @@ export interface ICheckboxComponentProps extends IBoxComponentProps {
 }
 
 export interface ICheckboxIconComponentProps extends IBoxComponentProps {
-    /** onClick event handler when a checkbox is clicked */
-    onClickIcon?: (e: React.MouseEvent<HTMLElement>) => void;
-
     /** provide to make the Checkbox disabled */
     disabled?: boolean;
 }

@@ -10,3 +10,5 @@ export const StyledLayout = styled(Box)<ILayoutComponentProps>`
     grid-row-gap: ${(props) => props.spacing}px;
     grid-template-columns: ${(props) => props.cols && `repeat(${props.cols}, auto)`};
 `;
+
+StyledLayout.displayName = 'StyledLayout';;

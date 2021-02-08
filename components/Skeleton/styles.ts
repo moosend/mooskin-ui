@@ -46,6 +46,8 @@ export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
     }
 `;
 
+StyledCommonSkeleton.displayName = 'StyledCommonSkeleton';
+
 export const checkLoaded = (
     component: any,
     isLoaded?: boolean
@@ -64,11 +66,15 @@ export const StyledSkeleton = styled(StyledCommonSkeleton)<ISkeletonComponentPro
     width: ${(props) => props.width};
 `;
 
+StyledSkeleton.displayName = 'StyledSkeleton';
+
 export const StyledSkeletonCircle = styled(StyledCommonSkeleton)<ISkeletonCircleComponentProps>`
     border-radius: 50%;
     height: ${(props) => props.size};
     width: ${(props) => props.size};
 `;
+
+StyledSkeletonCircle.displayName = 'StyledSkeletonCircle';
 
 export const StyledSkeletonText = styled(StyledCommonSkeleton)<ISkeletonTextComponentProps>`
     height: 0.5rem;
@@ -76,3 +82,5 @@ export const StyledSkeletonText = styled(StyledCommonSkeleton)<ISkeletonTextComp
         margin-bottom: 1rem;
     }
 `;
+
+StyledSkeletonText.displayName = 'StyledSkeletonText';

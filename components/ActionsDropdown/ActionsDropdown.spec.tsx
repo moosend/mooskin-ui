@@ -9,7 +9,7 @@ describe('ActionsDropdown', () => {
     test('renders ActionsDropdown correctly', () => {
         const func = jest.fn();
 
-        const tree = shallow(
+        const tree = mount(
             <ActionsDropdown onClickItem={func}>
                 <ActionsDropdownItem dataLabel="settings" value="/settings">
                     Settings

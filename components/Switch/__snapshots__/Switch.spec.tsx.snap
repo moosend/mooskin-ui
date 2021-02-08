@@ -1,25 +1,223 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Switch renders correctly 1`] = `
-<Box
-  className="myClass"
-  d="flex"
-  id="switch1"
-  onClick={[Function]}
+<Switch
+  active={true}
+  className=""
+  onClickSwitch={[MockFunction]}
   style={
     Object {
       "color": "blue",
     }
   }
+  text="Switch"
+  w={90}
 >
-  <Styled(Box)
-    disabled={true}
-    on={true}
+  <StyledSwitch
+    active={true}
+    className=""
+    onClick={[Function]}
+    onClickSwitch={[MockFunction]}
+    style={
+      Object {
+        "color": "blue",
+      }
+    }
+    text="Switch"
     w={90}
   >
-    <Styled(Styled(Box))>
-      this is disabled
-    </Styled(Styled(Box))>
-  </Styled(Box)>
-</Box>
+    <Box
+      active={true}
+      className="sc-gtssRu enpOTS"
+      onClick={[Function]}
+      onClickSwitch={[MockFunction]}
+      style={
+        Object {
+          "color": "blue",
+        }
+      }
+      text="Switch"
+      w={90}
+    >
+      <Component
+        active={true}
+        className="sc-gtssRu enpOTS"
+        onClick={[Function]}
+        onClickSwitch={[MockFunction]}
+        style={
+          Object {
+            "color": "blue",
+          }
+        }
+        text="Switch"
+        theme={
+          Object {
+            "disabledBackground": "#e2e2e2",
+            "disabledfont": "#9d9d9d",
+            "inputBackground": "#ffffff",
+            "inputBorder": "#e2e2e2",
+            "inputFont": "#9d9d9d",
+            "label": "#2d2d2d",
+            "primary": "#3fbaca",
+            "secondary": "#293346",
+          }
+        }
+        w={90}
+      >
+        <StyledBox
+          active={true}
+          className="sc-gtssRu enpOTS"
+          onClick={[Function]}
+          onClickSwitch={[MockFunction]}
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+          text="Switch"
+          theme={
+            Object {
+              "disabledBackground": "#e2e2e2",
+              "disabledfont": "#9d9d9d",
+              "inputBackground": "#ffffff",
+              "inputBorder": "#e2e2e2",
+              "inputFont": "#9d9d9d",
+              "label": "#2d2d2d",
+              "primary": "#3fbaca",
+              "secondary": "#293346",
+            }
+          }
+          w={90}
+        >
+          <div
+            className="sc-bdnylx eQAXfI sc-gtssRu enpOTS"
+            onClick={[Function]}
+            onClickSwitch={[MockFunction]}
+            style={
+              Object {
+                "color": "blue",
+              }
+            }
+          >
+            <SwitchHandle
+              active={true}
+              className=""
+              style={Object {}}
+              switchWidth={90}
+            >
+              <StyledSwitchHandle
+                active={true}
+                className=""
+                style={Object {}}
+                switchWidth={90}
+              >
+                <Box
+                  active={true}
+                  className="sc-dlnjPT ipMhxa"
+                  style={Object {}}
+                  switchWidth={90}
+                >
+                  <Component
+                    active={true}
+                    className="sc-dlnjPT ipMhxa"
+                    style={Object {}}
+                    switchWidth={90}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <StyledBox
+                      active={true}
+                      className="sc-dlnjPT ipMhxa"
+                      style={Object {}}
+                      switchWidth={90}
+                      theme={
+                        Object {
+                          "disabledBackground": "#e2e2e2",
+                          "disabledfont": "#9d9d9d",
+                          "inputBackground": "#ffffff",
+                          "inputBorder": "#e2e2e2",
+                          "inputFont": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "primary": "#3fbaca",
+                          "secondary": "#293346",
+                        }
+                      }
+                    >
+                      <div
+                        className="sc-bdnylx dOPKTt sc-dlnjPT ipMhxa"
+                        style={Object {}}
+                      />
+                    </StyledBox>
+                  </Component>
+                </Box>
+              </StyledSwitchHandle>
+            </SwitchHandle>
+            <StyledSwitchLabelNormal
+              active={true}
+            >
+              <Box
+                active={true}
+                className="sc-hKFyIo sc-eCApGN cvbQhD dbRqJj"
+                style={Object {}}
+              >
+                <Component
+                  active={true}
+                  className="sc-hKFyIo sc-eCApGN cvbQhD dbRqJj"
+                  style={Object {}}
+                  theme={
+                    Object {
+                      "disabledBackground": "#e2e2e2",
+                      "disabledfont": "#9d9d9d",
+                      "inputBackground": "#ffffff",
+                      "inputBorder": "#e2e2e2",
+                      "inputFont": "#9d9d9d",
+                      "label": "#2d2d2d",
+                      "primary": "#3fbaca",
+                      "secondary": "#293346",
+                    }
+                  }
+                >
+                  <StyledBox
+                    active={true}
+                    className="sc-hKFyIo sc-eCApGN cvbQhD dbRqJj"
+                    style={Object {}}
+                    theme={
+                      Object {
+                        "disabledBackground": "#e2e2e2",
+                        "disabledfont": "#9d9d9d",
+                        "inputBackground": "#ffffff",
+                        "inputBorder": "#e2e2e2",
+                        "inputFont": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "primary": "#3fbaca",
+                        "secondary": "#293346",
+                      }
+                    }
+                  >
+                    <div
+                      className="sc-bdnylx dOPKTt sc-hKFyIo sc-eCApGN cvbQhD dbRqJj"
+                      style={Object {}}
+                    >
+                      Switch
+                    </div>
+                  </StyledBox>
+                </Component>
+              </Box>
+            </StyledSwitchLabelNormal>
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledSwitch>
+</Switch>
 `;

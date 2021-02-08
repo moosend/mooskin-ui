@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 // Models
-import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { IDescriptionComponentProps } from '../Description/model';
 import { ILabelComponentProps } from '../Label/model';
@@ -73,10 +72,10 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
 
     const batchFilterHandler = (
         e: React.ChangeEvent<HTMLInputElement>,
-        callback?: (e: React.ChangeEvent<HTMLInputElement>, data: IInputCallbackData) => void
+        callback?: (e: React.ChangeEvent<HTMLInputElement>) => void
     ) => {
         setFilterValue(e.target.value);
-        callback && callback(e, {dataLabel: props.dataLabel, value: e.target.value});
+        callback && callback(e);
     };
 
     const toggleList = () => {
@@ -252,7 +251,7 @@ SelectPlaceholder.displayName = 'SelectPlaceholder';
  * SelectOptionList
  */
 export const SelectOptionList: React.FC<IBoxComponentProps> = (props) => {
-    return <StyledSelectOptionList {...props} />;
+    return <StyledSelectOptionList boxShadow="base" round="xs" {...props} />;
 };
 
 SelectOptionList.defaultProps = {

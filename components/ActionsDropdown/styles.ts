@@ -16,6 +16,8 @@ export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>
     position: relative;
 `;
 
+StyledActionsDropdown.displayName = 'StyledActionsDropdown';
+
 export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemComponentProps>`
     font-family: Montserrat;
     font-size: 12px;
@@ -35,6 +37,8 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
     }
 `;
 
+StyledActionsDropdownItem.displayName = 'StyledActionsDropdownItem';
+
 export const StyledActionsDropdownArrow = styled(Box)<IActionsDropdownArrowComponentProps>`
     position: absolute;
     top: ${(props) => props.arrowDirection === 'up' ? '-7px' : ''};
@@ -45,3 +49,5 @@ export const StyledActionsDropdownArrow = styled(Box)<IActionsDropdownArrowCompo
     border-bottom: ${(props) => props.arrowDirection === 'up' ? `7px solid ${props.arrowColor || '#3fbaca'}` : 0};
     border-top: ${(props) => props.arrowDirection === 'down' ? `7px solid ${props.arrowColor || '#3fbaca'}` : 0};
 `;
+
+StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';

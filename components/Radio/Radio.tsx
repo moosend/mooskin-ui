@@ -20,8 +20,10 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
     };
 
     const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
-        onClick(e);
-        callback && callback(e);
+        if (!props.disabled){
+            onClick(e);
+            callback && callback(e);
+        }
     };
 
     const recurseChildren = (children: any): any => {

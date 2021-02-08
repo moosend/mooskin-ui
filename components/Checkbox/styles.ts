@@ -16,12 +16,16 @@ export const StyledCheckbox = styled(Box)`
     width: fit-content;
 `;
 
+StyledCheckbox.displayName = 'StyledCheckbox';
+
 export const StyledCheckboxWrapper = styled(Box)<Partial<ICheckboxComponentProps>>`
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     width: fit-content;
     display: flex;
     align-items: center;
 `;
+
+StyledCheckboxWrapper.displayName = 'StyledCheckboxWrapper';
 
 export const StyledCheckboxIcon = styled(Box)<Partial<ICheckboxComponentProps>>`
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
@@ -30,6 +34,8 @@ export const StyledCheckboxIcon = styled(Box)<Partial<ICheckboxComponentProps>>`
     font-size: 23px;
     color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
 `;
+
+StyledCheckboxIcon.displayName = 'StyledCheckboxIcon';
 
 export const StyledCheckboxLabel = styled(Label)<ILabelComponentProps>`
     font-family: Montserrat;
@@ -42,3 +48,5 @@ export const StyledCheckboxLabel = styled(Label)<ILabelComponentProps>`
     min-width: unset;
     color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
 `;
+
+StyledCheckboxLabel.displayName = 'StyledCheckboxLabel';;

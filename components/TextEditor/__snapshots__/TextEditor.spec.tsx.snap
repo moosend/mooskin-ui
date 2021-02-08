@@ -1,0 +1,472 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextEditor renders correctly 1`] = `
+<TextEditor
+  disabled={false}
+  init={Object {}}
+  inline={false}
+  menubar={false}
+  onEditorChange={[MockFunction]}
+  plugins={
+    Array [
+      "lists advlist",
+      "anchor",
+      "autolink",
+      "autoresize",
+      "charmap",
+      "code codesample",
+      "directionality",
+      "emoticons",
+      "fullscreen",
+      "help",
+      "hr",
+      "image imagetools",
+      "insertdatetime",
+      "link",
+      "nonbreaking",
+      "paste",
+      "preview",
+      "print",
+      "quickbars",
+      "searchreplace",
+      "table",
+      "toc",
+      "visualblocks",
+      "wordcount",
+    ]
+  }
+  toolbar="newdocument |
+            undo redo |
+            cut copy paste pastetext |
+            link unlink openlink anchor |
+            numlist bullist |
+            outdent indent |
+            blockquote |
+            alignleft alignright aligncenter alignjustify |
+            bold italic strikethrough underline removeformat |
+            formatselect |
+            fontselect fontsizeselect forecolor backcolor |
+            visualblocks |
+            code |"
+  value="<p>TextEditor</p>"
+>
+  <Editor
+    apiKey="f3vo81k6z7efry5af62a1l5nm882r1dyrqn2df1cugtsofwq"
+    cloudChannel="5"
+    disabled={false}
+    init={
+      Object {
+        "menubar": false,
+        "selector": undefined,
+        "setup": undefined,
+      }
+    }
+    inline={false}
+    menubar={false}
+    onEditorChange={[MockFunction]}
+    plugins={
+      Array [
+        "lists advlist",
+        "anchor",
+        "autolink",
+        "autoresize",
+        "charmap",
+        "code codesample",
+        "directionality",
+        "emoticons",
+        "fullscreen",
+        "help",
+        "hr",
+        "image imagetools",
+        "insertdatetime",
+        "link",
+        "nonbreaking",
+        "paste",
+        "preview",
+        "print",
+        "quickbars",
+        "searchreplace",
+        "table",
+        "toc",
+        "visualblocks",
+        "wordcount",
+      ]
+    }
+    toolbar="newdocument |
+            undo redo |
+            cut copy paste pastetext |
+            link unlink openlink anchor |
+            numlist bullist |
+            outdent indent |
+            blockquote |
+            alignleft alignright aligncenter alignjustify |
+            bold italic strikethrough underline removeformat |
+            formatselect |
+            fontselect fontsizeselect forecolor backcolor |
+            visualblocks |
+            code |"
+    value="<p>TextEditor</p>"
+  >
+    <textarea
+      id="tiny-react_79065548421612809717342"
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
+    />
+  </Editor>
+</TextEditor>
+`;
+
+exports[`TextEditor renders disabled correctly 1`] = `
+<TextEditor
+  disabled={true}
+  init={Object {}}
+  inline={false}
+  menubar={false}
+  onEditorChange={[MockFunction]}
+  plugins={
+    Array [
+      "lists advlist",
+      "anchor",
+      "autolink",
+      "autoresize",
+      "charmap",
+      "code codesample",
+      "directionality",
+      "emoticons",
+      "fullscreen",
+      "help",
+      "hr",
+      "image imagetools",
+      "insertdatetime",
+      "link",
+      "nonbreaking",
+      "paste",
+      "preview",
+      "print",
+      "quickbars",
+      "searchreplace",
+      "table",
+      "toc",
+      "visualblocks",
+      "wordcount",
+    ]
+  }
+  toolbar="newdocument |
+            undo redo |
+            cut copy paste pastetext |
+            link unlink openlink anchor |
+            numlist bullist |
+            outdent indent |
+            blockquote |
+            alignleft alignright aligncenter alignjustify |
+            bold italic strikethrough underline removeformat |
+            formatselect |
+            fontselect fontsizeselect forecolor backcolor |
+            visualblocks |
+            code |"
+  value="<p>TextEditor</p>"
+>
+  <Editor
+    apiKey="f3vo81k6z7efry5af62a1l5nm882r1dyrqn2df1cugtsofwq"
+    cloudChannel="5"
+    disabled={true}
+    init={
+      Object {
+        "menubar": false,
+        "selector": undefined,
+        "setup": undefined,
+      }
+    }
+    inline={false}
+    menubar={false}
+    onEditorChange={[MockFunction]}
+    plugins={
+      Array [
+        "lists advlist",
+        "anchor",
+        "autolink",
+        "autoresize",
+        "charmap",
+        "code codesample",
+        "directionality",
+        "emoticons",
+        "fullscreen",
+        "help",
+        "hr",
+        "image imagetools",
+        "insertdatetime",
+        "link",
+        "nonbreaking",
+        "paste",
+        "preview",
+        "print",
+        "quickbars",
+        "searchreplace",
+        "table",
+        "toc",
+        "visualblocks",
+        "wordcount",
+      ]
+    }
+    toolbar="newdocument |
+            undo redo |
+            cut copy paste pastetext |
+            link unlink openlink anchor |
+            numlist bullist |
+            outdent indent |
+            blockquote |
+            alignleft alignright aligncenter alignjustify |
+            bold italic strikethrough underline removeformat |
+            formatselect |
+            fontselect fontsizeselect forecolor backcolor |
+            visualblocks |
+            code |"
+    value="<p>TextEditor</p>"
+  >
+    <textarea
+      id="tiny-react_130432841612809717359"
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
+    />
+  </Editor>
+</TextEditor>
+`;
+
+exports[`TextEditor renders inline correctly 1`] = `
+<TextEditor
+  disabled={false}
+  init={Object {}}
+  inline={true}
+  menubar={false}
+  onEditorChange={[MockFunction]}
+  plugins={
+    Array [
+      "lists advlist",
+      "anchor",
+      "autolink",
+      "autoresize",
+      "charmap",
+      "code codesample",
+      "directionality",
+      "emoticons",
+      "fullscreen",
+      "help",
+      "hr",
+      "image imagetools",
+      "insertdatetime",
+      "link",
+      "nonbreaking",
+      "paste",
+      "preview",
+      "print",
+      "quickbars",
+      "searchreplace",
+      "table",
+      "toc",
+      "visualblocks",
+      "wordcount",
+    ]
+  }
+  toolbar="newdocument |
+            undo redo |
+            cut copy paste pastetext |
+            link unlink openlink anchor |
+            numlist bullist |
+            outdent indent |
+            blockquote |
+            alignleft alignright aligncenter alignjustify |
+            bold italic strikethrough underline removeformat |
+            formatselect |
+            fontselect fontsizeselect forecolor backcolor |
+            visualblocks |
+            code |"
+  value="<p>TextEditor</p>"
+>
+  <Editor
+    apiKey="f3vo81k6z7efry5af62a1l5nm882r1dyrqn2df1cugtsofwq"
+    cloudChannel="5"
+    disabled={false}
+    init={
+      Object {
+        "menubar": false,
+        "selector": undefined,
+        "setup": undefined,
+      }
+    }
+    inline={true}
+    menubar={false}
+    onEditorChange={[MockFunction]}
+    plugins={
+      Array [
+        "lists advlist",
+        "anchor",
+        "autolink",
+        "autoresize",
+        "charmap",
+        "code codesample",
+        "directionality",
+        "emoticons",
+        "fullscreen",
+        "help",
+        "hr",
+        "image imagetools",
+        "insertdatetime",
+        "link",
+        "nonbreaking",
+        "paste",
+        "preview",
+        "print",
+        "quickbars",
+        "searchreplace",
+        "table",
+        "toc",
+        "visualblocks",
+        "wordcount",
+      ]
+    }
+    toolbar="newdocument |
+            undo redo |
+            cut copy paste pastetext |
+            link unlink openlink anchor |
+            numlist bullist |
+            outdent indent |
+            blockquote |
+            alignleft alignright aligncenter alignjustify |
+            bold italic strikethrough underline removeformat |
+            formatselect |
+            fontselect fontsizeselect forecolor backcolor |
+            visualblocks |
+            code |"
+    value="<p>TextEditor</p>"
+  >
+    <div
+      id="tiny-react_29179180131612809717357"
+    />
+  </Editor>
+</TextEditor>
+`;
+
+exports[`TextEditor renders with menubar correctly 1`] = `
+<TextEditor
+  disabled={false}
+  init={Object {}}
+  inline={false}
+  menubar={true}
+  onEditorChange={[MockFunction]}
+  plugins={
+    Array [
+      "lists advlist",
+      "anchor",
+      "autolink",
+      "autoresize",
+      "charmap",
+      "code codesample",
+      "directionality",
+      "emoticons",
+      "fullscreen",
+      "help",
+      "hr",
+      "image imagetools",
+      "insertdatetime",
+      "link",
+      "nonbreaking",
+      "paste",
+      "preview",
+      "print",
+      "quickbars",
+      "searchreplace",
+      "table",
+      "toc",
+      "visualblocks",
+      "wordcount",
+    ]
+  }
+  toolbar="newdocument |
+            undo redo |
+            cut copy paste pastetext |
+            link unlink openlink anchor |
+            numlist bullist |
+            outdent indent |
+            blockquote |
+            alignleft alignright aligncenter alignjustify |
+            bold italic strikethrough underline removeformat |
+            formatselect |
+            fontselect fontsizeselect forecolor backcolor |
+            visualblocks |
+            code |"
+  value="<p>TextEditor</p>"
+>
+  <Editor
+    apiKey="f3vo81k6z7efry5af62a1l5nm882r1dyrqn2df1cugtsofwq"
+    cloudChannel="5"
+    disabled={false}
+    init={
+      Object {
+        "menubar": true,
+        "selector": undefined,
+        "setup": undefined,
+      }
+    }
+    inline={false}
+    menubar={true}
+    onEditorChange={[MockFunction]}
+    plugins={
+      Array [
+        "lists advlist",
+        "anchor",
+        "autolink",
+        "autoresize",
+        "charmap",
+        "code codesample",
+        "directionality",
+        "emoticons",
+        "fullscreen",
+        "help",
+        "hr",
+        "image imagetools",
+        "insertdatetime",
+        "link",
+        "nonbreaking",
+        "paste",
+        "preview",
+        "print",
+        "quickbars",
+        "searchreplace",
+        "table",
+        "toc",
+        "visualblocks",
+        "wordcount",
+      ]
+    }
+    toolbar="newdocument |
+            undo redo |
+            cut copy paste pastetext |
+            link unlink openlink anchor |
+            numlist bullist |
+            outdent indent |
+            blockquote |
+            alignleft alignright aligncenter alignjustify |
+            bold italic strikethrough underline removeformat |
+            formatselect |
+            fontselect fontsizeselect forecolor backcolor |
+            visualblocks |
+            code |"
+    value="<p>TextEditor</p>"
+  >
+    <textarea
+      id="tiny-react_40041711051612809717362"
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
+    />
+  </Editor>
+</TextEditor>
+`;

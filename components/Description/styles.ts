@@ -17,3 +17,5 @@ export const StyledDescription = styled(Box)<IDescriptionComponentProps>`
     width: fit-content;
     line-height: 1;
 `;
+
+StyledDescription.displayName = 'StyledDescription';

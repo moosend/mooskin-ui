@@ -11,7 +11,11 @@ export const StyledTabs = styled(Box)<ITabsComponentProps>`
     flex-direction: column;
 `;
 
+StyledTabs.displayName = 'StyledTabs';
+
 export const StyledTab = styled(Box)<ITabComponentProps>``;
+
+StyledTab.displayName = 'StyledTab';
 
 export const StyledTabHeader = styled(Box)<ITabCommonComponentProps>`
     font-family: Montserrat;
@@ -31,4 +35,8 @@ export const StyledTabHeader = styled(Box)<ITabCommonComponentProps>`
     }
 `;
 
+StyledTabHeader.displayName = 'StyledTabHeader';
+
 export const StyledTabContent = styled(Box)<ITabCommonComponentProps>``;
+
+StyledTabContent.displayName = 'StyledTabContent';
