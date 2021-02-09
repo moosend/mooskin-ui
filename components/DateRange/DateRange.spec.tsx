@@ -7,15 +7,15 @@ const fn = jest.fn();
 
 describe('DateRange', () => {
     test('renders correctly', () => {
-        Date.now = jest.fn(() => 1482363367071);
+        const mockDate = new Date(1466424490000);
         const tree = mount(
             <DateRange
                 onChange={fn}
                 ranges={[
                     {
-                        endDate: new Date(),
+                        endDate: mockDate,
                         key: 'selection',
-                        startDate: new Date()
+                        startDate: mockDate
                     }
                 ]}
             />

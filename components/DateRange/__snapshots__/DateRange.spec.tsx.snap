@@ -9,9 +9,9 @@ exports[`DateRange renders correctly 1`] = `
   ranges={
     Array [
       Object {
-        "endDate": 2021-02-09T21:03:04.730Z,
+        "endDate": 2016-06-20T12:08:10.000Z,
         "key": "selection",
-        "startDate": 2021-02-09T21:03:04.730Z,
+        "startDate": 2016-06-20T12:08:10.000Z,
       },
     ]
   }
@@ -129,21 +129,21 @@ exports[`DateRange renders correctly 1`] = `
             className=""
             onFocus={[Function]}
             style={Object {}}
-            value="09 Feb 2021 - 09 Feb 2021"
+            value="20 Jun 2016 - 20 Jun 2016"
           >
             <StyledInputSolo
               boxAs="input"
               className=""
               onFocus={[Function]}
               style={Object {}}
-              value="09 Feb 2021 - 09 Feb 2021"
+              value="20 Jun 2016 - 20 Jun 2016"
             >
               <Box
                 boxAs="input"
                 className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
                 onFocus={[Function]}
                 style={Object {}}
-                value="09 Feb 2021 - 09 Feb 2021"
+                value="20 Jun 2016 - 20 Jun 2016"
               >
                 <Component
                   boxAs="input"
@@ -193,7 +193,7 @@ exports[`DateRange renders correctly 1`] = `
                     }
                   }
                   style={Object {}}
-                  value="09 Feb 2021 - 09 Feb 2021"
+                  value="20 Jun 2016 - 20 Jun 2016"
                 >
                   <StyledBox
                     as="input"
@@ -244,13 +244,13 @@ exports[`DateRange renders correctly 1`] = `
                       }
                     }
                     style={Object {}}
-                    value="09 Feb 2021 - 09 Feb 2021"
+                    value="20 Jun 2016 - 20 Jun 2016"
                   >
                     <input
                       className="sc-bdnylx kBsmpR sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
                       onFocus={[Function]}
                       style={Object {}}
-                      value="09 Feb 2021 - 09 Feb 2021"
+                      value="20 Jun 2016 - 20 Jun 2016"
                     />
                   </StyledBox>
                 </Component>
