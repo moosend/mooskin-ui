@@ -30,10 +30,10 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
     text-align: left;
     color: ${(props) => props.palette?.actionsDropdown.fontColor || variables.actionsDropdown.fontColor};
     cursor: pointer;
-    &:not(:last-child){
+    &:not(:last-child) {
         padding: 10px 10px 0;
     }
-    &:last-child{
+    &:last-child {
         padding: 10px;
     }
 `;
@@ -42,13 +42,15 @@ StyledActionsDropdownItem.displayName = 'StyledActionsDropdownItem';
 
 export const StyledActionsDropdownArrow = styled(Box)<IActionsDropdownArrowComponentProps>`
     position: absolute;
-    top: ${(props) => props.arrowDirection === 'up' ? '-7px' : ''};
-    bottom: ${(props) => props.arrowDirection === 'down' ? '-7px' : ''};
+    top: ${(props) => (props.arrowDirection === 'up' ? '-7px' : '')};
+    bottom: ${(props) => (props.arrowDirection === 'down' ? '-7px' : '')};
     right: 22px;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-bottom: ${(props) => props.arrowDirection === 'up' ? `7px solid ${props.arrowColor || variables.actionsDropdown.backgroundColor}` : ''};
-    border-top: ${(props) => props.arrowDirection === 'down' ? `7px solid ${props.arrowColor || variables.actionsDropdown.backgroundColor}` : ''};
+    border-bottom: ${(props) =>
+        props.arrowDirection === 'up' ? `7px solid ${props.arrowColor || variables.actionsDropdown.backgroundColor}` : ''};
+    border-top: ${(props) =>
+        props.arrowDirection === 'down' ? `7px solid ${props.arrowColor || variables.actionsDropdown.backgroundColor}` : ''};
 `;
 
 StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';

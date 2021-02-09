@@ -4,7 +4,6 @@ import Button from './Button';
 import { shallow } from 'enzyme';
 
 describe('Button', () => {
-
     test('renders correctly', () => {
         const func = jest.fn();
 
@@ -13,7 +12,7 @@ describe('Button', () => {
                 onClick={func}
                 disabled
                 className="myClass"
-                style={{color: 'blue'}}
+                style={{ color: 'blue' }}
                 inverseStyle
                 id={'button1'}
                 href={'www.moosend.com'}
@@ -37,7 +36,11 @@ describe('Button', () => {
     test('renders a disabled button if disabled prop is passed', () => {
         const func = jest.fn();
 
-        const component = shallow(<Button onClick={func} disabled>asd</Button>);
+        const component = shallow(
+            <Button onClick={func} disabled>
+                asd
+            </Button>
+        );
 
         expect(component.find('[disabled=true]').length).not.toEqual(0);
     });

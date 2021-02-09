@@ -19,9 +19,10 @@ export const StyledAnchor = styled(Box)<IAnchorComponentProps>`
     &:hover {
         text-decoration: none;
     }
-    color: ${(props) => props.disabled ?
-                        props.palette?.anchor.disabledFontColor || variables.anchor.disabledFontColor :
-                        props.palette?.anchor.fontColor || variables.anchor.fontColor};
+    color: ${(props) =>
+        props.disabled
+            ? props.palette?.anchor.disabledFontColor || variables.anchor.disabledFontColor
+            : props.palette?.anchor.fontColor || variables.anchor.fontColor};
 `;
 
 StyledAnchor.displayName = 'StyledAnchor';

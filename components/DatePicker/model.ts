@@ -1,4 +1,4 @@
-import {DatePickerProps, KeyboardDatePickerProps} from '@material-ui/pickers';
+import { DatePickerProps, KeyboardDatePickerProps } from '@material-ui/pickers';
 import { IInputComponentProps } from '../Input/model';
 
 export type PickerType = 'date' | 'date-keyboard';

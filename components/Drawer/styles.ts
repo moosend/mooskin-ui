@@ -1,13 +1,8 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
-import {
-    IContentSize,
-    IDrawerComponentProps,
-    IDrawerContentComponentProps,
-    IDrawerOverlayComponentProps
-} from './model';
+import { IContentSize, IDrawerComponentProps, IDrawerContentComponentProps, IDrawerOverlayComponentProps } from './model';
 
 // Components
 import Box from '../Box/Box';

@@ -1,25 +1,24 @@
 import * as React from 'react';
-import Pagination, {PaginationButton} from './Pagination';
+import Pagination, { PaginationButton } from './Pagination';
 
-import {mount, shallow} from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Pagination', () => {
-
     test('renders correctly', () => {
         const func = jest.fn();
 
         const tree = mount(
             <Pagination onClickButton={func} activePage={3}>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
             </Pagination>
         );
 
@@ -31,16 +30,16 @@ describe('Pagination', () => {
 
         const tree = mount(
             <Pagination onClickButton={func} activePage={3}>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
             </Pagination>
         );
 
@@ -53,16 +52,16 @@ describe('Pagination', () => {
 
         const tree = mount(
             <Pagination onClickButton={func} activePage={3}>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
-                <PaginationButton/>
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
+                <PaginationButton />
             </Pagination>
         );
 
@@ -72,5 +71,4 @@ describe('Pagination', () => {
 
         expect(tree.find(PaginationButton).length).toEqual(10);
     });
-
 });

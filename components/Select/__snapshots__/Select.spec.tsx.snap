@@ -234,7 +234,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
           style={Object {}}
         >
           <div
-            className="sc-bdnylx dOPKTt sc-hKFyIo bUzjaB"
+            className="sc-bdnylx kBsmpR sc-hKFyIo bUzjaB"
             onChange={[MockFunction]}
             style={Object {}}
           >
@@ -351,7 +351,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-jSFkmK hlJPoq"
+                        className="sc-bdnylx kBsmpR sc-jSFkmK hlJPoq"
                         onClick={[Function]}
                         style={Object {}}
                       >
@@ -478,7 +478,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                   style={Object {}}
                                 >
                                   <input
-                                    className="sc-bdnylx dOPKTt sc-eCApGN dHiqAA"
+                                    className="sc-bdnylx kBsmpR sc-eCApGN dHiqAA"
                                     onChange={[Function]}
                                     onClick={[Function]}
                                     style={Object {}}
@@ -601,7 +601,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-jrsJCI gAmfKy"
+                                    className="sc-bdnylx kBsmpR sc-jrsJCI gAmfKy"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -734,7 +734,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dMmcRJ sc-iCoHVE kdEXbi"
+                        className="sc-bdnylx dnqUMN sc-iCoHVE kdEXbi"
                         style={Object {}}
                       >
                         <SelectOption
@@ -751,13 +751,13 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                             value="1"
                           >
                             <Box
-                              className="sc-pNWxx bjAJvo"
+                              className="sc-pNWxx bufOkA"
                               onClick={[Function]}
                               style={Object {}}
                               value="1"
                             >
                               <Component
-                                className="sc-pNWxx bjAJvo"
+                                className="sc-pNWxx bufOkA"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -806,7 +806,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                 value="1"
                               >
                                 <StyledBox
-                                  className="sc-pNWxx bjAJvo"
+                                  className="sc-pNWxx bufOkA"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -855,7 +855,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                   value="1"
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-pNWxx bjAJvo"
+                                    className="sc-bdnylx kBsmpR sc-pNWxx bufOkA"
                                     onClick={[Function]}
                                     style={Object {}}
                                     value="1"
@@ -881,13 +881,13 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                             value="2"
                           >
                             <Box
-                              className="sc-pNWxx bjAJvo"
+                              className="sc-pNWxx bufOkA"
                               onClick={[Function]}
                               style={Object {}}
                               value="2"
                             >
                               <Component
-                                className="sc-pNWxx bjAJvo"
+                                className="sc-pNWxx bufOkA"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -936,7 +936,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                 value="2"
                               >
                                 <StyledBox
-                                  className="sc-pNWxx bjAJvo"
+                                  className="sc-pNWxx bufOkA"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -985,7 +985,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                   value="2"
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-pNWxx bjAJvo"
+                                    className="sc-bdnylx kBsmpR sc-pNWxx bufOkA"
                                     onClick={[Function]}
                                     style={Object {}}
                                     value="2"
@@ -1108,7 +1108,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx ditJkZ sc-jrsJCI gAmfKy"
+                                                className="sc-bdnylx kHejKl sc-jrsJCI gAmfKy"
                                                 fontSize={15}
                                                 style={Object {}}
                                               >
@@ -1139,13 +1139,13 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                             value="3"
                           >
                             <Box
-                              className="sc-pNWxx bjAJvo"
+                              className="sc-pNWxx bufOkA"
                               onClick={[Function]}
                               style={Object {}}
                               value="3"
                             >
                               <Component
-                                className="sc-pNWxx bjAJvo"
+                                className="sc-pNWxx bufOkA"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -1194,7 +1194,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                 value="3"
                               >
                                 <StyledBox
-                                  className="sc-pNWxx bjAJvo"
+                                  className="sc-pNWxx bufOkA"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -1243,7 +1243,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                   value="3"
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-pNWxx bjAJvo"
+                                    className="sc-bdnylx kBsmpR sc-pNWxx bufOkA"
                                     onClick={[Function]}
                                     style={Object {}}
                                     value="3"
@@ -1269,13 +1269,13 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                             value="4"
                           >
                             <Box
-                              className="sc-pNWxx bjAJvo"
+                              className="sc-pNWxx bufOkA"
                               onClick={[Function]}
                               style={Object {}}
                               value="4"
                             >
                               <Component
-                                className="sc-pNWxx bjAJvo"
+                                className="sc-pNWxx bufOkA"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -1324,7 +1324,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                 value="4"
                               >
                                 <StyledBox
-                                  className="sc-pNWxx bjAJvo"
+                                  className="sc-pNWxx bufOkA"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -1373,7 +1373,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                   value="4"
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-pNWxx bjAJvo"
+                                    className="sc-bdnylx kBsmpR sc-pNWxx bufOkA"
                                     onClick={[Function]}
                                     style={Object {}}
                                     value="4"
@@ -1496,7 +1496,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx ditJkZ sc-jrsJCI gAmfKy"
+                                                className="sc-bdnylx kHejKl sc-jrsJCI gAmfKy"
                                                 fontSize={15}
                                                 style={Object {}}
                                               >
@@ -1527,13 +1527,13 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                             value="5"
                           >
                             <Box
-                              className="sc-pNWxx bjAJvo"
+                              className="sc-pNWxx bufOkA"
                               onClick={[Function]}
                               style={Object {}}
                               value="5"
                             >
                               <Component
-                                className="sc-pNWxx bjAJvo"
+                                className="sc-pNWxx bufOkA"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -1582,7 +1582,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                 value="5"
                               >
                                 <StyledBox
-                                  className="sc-pNWxx bjAJvo"
+                                  className="sc-pNWxx bufOkA"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -1631,7 +1631,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                                   value="5"
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-pNWxx bjAJvo"
+                                    className="sc-bdnylx kBsmpR sc-pNWxx bufOkA"
                                     onClick={[Function]}
                                     style={Object {}}
                                     value="5"
@@ -1762,7 +1762,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-fujyUd eULePn"
+                        className="sc-bdnylx kBsmpR sc-fujyUd eULePn"
                         onClick={[Function]}
                         style={Object {}}
                       />

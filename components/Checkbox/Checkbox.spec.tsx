@@ -1,10 +1,9 @@
 import * as React from 'react';
-import {Checkbox, CheckboxIcon, CheckboxLabel} from './Checkbox';
+import { Checkbox, CheckboxIcon, CheckboxLabel } from './Checkbox';
 
-import {mount, shallow} from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('CheckBox', () => {
-
     test('renders CheckBox correctly', () => {
         const func = jest.fn();
 

@@ -21,19 +21,18 @@ import {
  * Modal
  */
 export const Modal: React.FC<IModalComponentProps> = (props) => {
-
     const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
         props.onClose && props.onClose(e);
         callback && callback(e);
     };
 
     const recurseChildren = (children: any): any => {
-        if (!children){
+        if (!children) {
             return null;
         }
 
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<IBoxComponentProps>(child) && child.type === ModalCloseButton){
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === ModalCloseButton) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     key: i,
@@ -41,18 +40,16 @@ export const Modal: React.FC<IModalComponentProps> = (props) => {
                 } as IBoxComponentProps);
             }
 
-            if (React.isValidElement<IModalOverlayComponentProps>(child) && child.type === ModalOverlay){
+            if (React.isValidElement<IModalOverlayComponentProps>(child) && child.type === ModalOverlay) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     isOpen: child.props.isOpen ? child.props.isOpen : props.isOpen,
                     key: i,
-                    onClick: props.closeOnOverlayClick ?
-                                (e) => batchClickHandler(e, child.props.onClick) :
-                                child.props.onClick
+                    onClick: props.closeOnOverlayClick ? (e) => batchClickHandler(e, child.props.onClick) : child.props.onClick
                 } as IModalOverlayComponentProps);
             }
 
-            if (React.isValidElement<IModalContentComponentProps>(child) && child.type === ModalContent){
+            if (React.isValidElement<IModalContentComponentProps>(child) && child.type === ModalContent) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     isOpen: child.props.isOpen ? child.props.isOpen : props.isOpen,
@@ -64,8 +61,8 @@ export const Modal: React.FC<IModalComponentProps> = (props) => {
                 } as IModalContentComponentProps);
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;
@@ -133,7 +130,7 @@ export const ModalFooter: React.FC<IBoxComponentProps> = (props) => {
     return <StyledModalFooter boxAs="footer" {...props} />;
 };
 
-ModalFooter .defaultProps = {
+ModalFooter.defaultProps = {
     className: '',
     style: {}
 };
@@ -147,7 +144,7 @@ export const ModalCloseButton: React.FC<IBoxComponentProps> = (props) => {
     return <StyledModalCloseButton {...props} children="close" />;
 };
 
-ModalCloseButton .defaultProps = {
+ModalCloseButton.defaultProps = {
     className: '',
     style: {}
 };
@@ -158,11 +155,10 @@ ModalCloseButton.displayName = 'ModalCloseButton';
  * ModalOverlay
  */
 export const ModalOverlay: React.FC<IModalOverlayComponentProps> = (props) => {
-
     const [show, setShow] = React.useState(props.isOpen);
 
     React.useEffect(() => {
-        if (props.isOpen){
+        if (props.isOpen) {
             setShow(true);
             props.onOpen && props.onOpen();
         } else {
@@ -174,12 +170,11 @@ export const ModalOverlay: React.FC<IModalOverlayComponentProps> = (props) => {
 
     const ModalOverlayComponent = props.isOpen ? StyledModalOverlayFadeIn : StyledModalOverlayFadeOut;
 
-    if (show){
+    if (show) {
         return <ModalOverlayComponent {...props} />;
     }
 
     return null;
-
 };
 
 ModalOverlay.defaultProps = {

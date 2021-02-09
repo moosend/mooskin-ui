@@ -5,9 +5,7 @@ import { shallow } from 'enzyme';
 
 describe('Description', () => {
     test('renders correctly', () => {
-        const tree = shallow(
-            <Description>Description here!</Description>
-        );
+        const tree = shallow(<Description>Description here!</Description>);
         expect(tree).toMatchSnapshot();
     });
 });

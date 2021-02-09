@@ -7,22 +7,21 @@ import { IStackComponentProps } from './model';
 import Box from '../Box/Box';
 
 // Styled Components
-import {StyledStack} from './styles';
+import { StyledStack } from './styles';
 
 /**
  * Stack
  */
 export const Stack: React.FC<IStackComponentProps> = (props) => {
-
     const getDividerSpacing = () => {
         switch (props.direction) {
             case 'row':
             case 'row-reverse':
-                return {mx: props.spacing, alignSelf: 'stretch' as 'stretch'};
+                return { mx: props.spacing, alignSelf: 'stretch' as 'stretch' };
 
             case 'column':
             case 'column-reverse':
-                return {my: props.spacing};
+                return { my: props.spacing };
 
             default:
                 return {};
@@ -32,14 +31,14 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
     const getChildSpacing = (index: number) => {
         switch (props.direction) {
             case 'row':
-                return index ? {marginLeft: props.spacing} : {};
+                return index ? { marginLeft: props.spacing } : {};
             case 'row-reverse':
-                return index ? {marginRight: props.spacing} : {};
+                return index ? { marginRight: props.spacing } : {};
 
             case 'column':
-                return index ? {marginTop: props.spacing} : {};
+                return index ? { marginTop: props.spacing } : {};
             case 'column-reverse':
-                return index ? {marginBottom: props.spacing} : {};
+                return index ? { marginBottom: props.spacing } : {};
 
             default:
                 return {};
@@ -48,26 +47,22 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
 
     const dividerSpacingHandler = (element: JSX.Element | React.ReactElement) => {
         const spacingStyles = props.spacing ? getDividerSpacing() : {};
-        return (
-            <Box {...spacingStyles}>
-                {React.cloneElement(element, {key: Math.random()})}
-            </Box>
-        );
+        return <Box {...spacingStyles}>{React.cloneElement(element, { key: Math.random() })}</Box>;
     };
 
     const childSpacingHandler = (element: JSX.Element | React.ReactElement, index: number) => {
         const margin = props.spacing ? getChildSpacing(index) : {};
-        return React.cloneElement(element, {key: Math.random(), style: {...element.props.style, ...margin}});
+        return React.cloneElement(element, { key: Math.random(), style: { ...element.props.style, ...margin } });
     };
 
     const renderChildren = () => {
         return React.Children.map(props.children, (child, key) => {
-            if (React.isValidElement(child)){
+            if (React.isValidElement(child)) {
                 if (props.divider) {
                     return (
                         <>
                             {key !== 0 && dividerSpacingHandler(props.divider)}
-                            {React.cloneElement(child, {key})}
+                            {React.cloneElement(child, { key })}
                         </>
                     );
                 }

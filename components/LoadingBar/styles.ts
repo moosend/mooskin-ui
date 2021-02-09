@@ -25,4 +25,4 @@ export const StyledLoadingBar = styled(Box)<ILoadingBarComponentProps>`
 
 StyledLoadingBar.displayName = 'StyledLoadingBar';
 
-const getBgColor = (error?: boolean) => error ? '#F11949' : '#2998FF';
+const getBgColor = (error?: boolean) => (error ? '#F11949' : '#2998FF');

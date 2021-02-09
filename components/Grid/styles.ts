@@ -92,4 +92,4 @@ export const StyledCol = styled(Box)<IColProps>`
     ${(props) => assembleAvengers({ lg: props.lg, md: props.md, sm: props.sm, xs: props.xs })}
 `;
 
-StyledCol.displayName = 'StyledCol';;
+StyledCol.displayName = 'StyledCol';

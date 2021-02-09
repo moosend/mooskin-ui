@@ -112,7 +112,7 @@ exports[`Alert renders correctly 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-bdnylx dzFrDZ sc-gtssRu eZdsYe"
+            className="sc-bdnylx ktcOEp sc-gtssRu eZdsYe"
             style={Object {}}
           >
             <FooterHead
@@ -232,7 +232,7 @@ exports[`Alert renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx iugieu sc-dlnjPT sc-hKFyIo cNmolY fhLqqk"
+                        className="sc-bdnylx ejTvAS sc-dlnjPT sc-hKFyIo cNmolY fhLqqk"
                         fontSize={12}
                         fontWeight={800}
                         style={Object {}}
@@ -351,7 +351,7 @@ exports[`Alert renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT sc-eCApGN cNmolY cEvnIO"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT sc-eCApGN cNmolY cEvnIO"
                         style={Object {}}
                       >
                         <Button
@@ -490,7 +490,7 @@ exports[`Alert renders correctly 1`] = `
                                   type="button"
                                 >
                                   <button
-                                    className="sc-bdnylx iXmHQp sc-gKAblj sc-iCoHVE ghAUBq qOQlZ"
+                                    className="sc-bdnylx ckwXTZ sc-gKAblj sc-iCoHVE ghAUBq qOQlZ"
                                     onClick={[Function]}
                                     style={Object {}}
                                     type="button"
@@ -602,7 +602,7 @@ exports[`Alert renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-pNWxx fNyAXg"
+                                                className="sc-bdnylx kBsmpR sc-pNWxx fNyAXg"
                                                 style={Object {}}
                                               >
                                                 chevron_left
@@ -750,7 +750,7 @@ exports[`Alert renders correctly 1`] = `
                                   type="button"
                                 >
                                   <button
-                                    className="sc-bdnylx iiFGhc sc-gKAblj sc-iCoHVE ghAUBq qOQlZ"
+                                    className="sc-bdnylx hlFZps sc-gKAblj sc-iCoHVE ghAUBq qOQlZ"
                                     onClick={[Function]}
                                     style={Object {}}
                                     type="button"
@@ -863,7 +863,7 @@ exports[`Alert renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-pNWxx fNyAXg"
+                                                className="sc-bdnylx kBsmpR sc-pNWxx fNyAXg"
                                                 style={Object {}}
                                               >
                                                 chevron_right
@@ -992,7 +992,7 @@ exports[`Alert renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT sc-jSFkmK cNmolY jnbBNn"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT sc-jSFkmK cNmolY jnbBNn"
                         style={Object {}}
                       >
                         <Button
@@ -1136,7 +1136,7 @@ exports[`Alert renders correctly 1`] = `
                                   type="button"
                                 >
                                   <button
-                                    className="sc-bdnylx bzOXVB sc-gKAblj sc-fujyUd ghAUBq bmmJJn"
+                                    className="sc-bdnylx Osvux sc-gKAblj sc-fujyUd ghAUBq bmmJJn"
                                     color="#37a037"
                                     onClick={[Function]}
                                     style={Object {}}

@@ -1,12 +1,10 @@
 import * as React from 'react';
-import Grid, {Col, Row} from './Grid';
+import Grid, { Col, Row } from './Grid';
 
-import {mount, shallow} from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Grid', () => {
-
     test('renders Grid correctly', () => {
-
         const tree = shallow(
             <Grid style={{ textAlign: 'center' }}>
                 <Row style={{ padding: 10, border: '3px solid #F48770' }}>
@@ -107,5 +105,4 @@ describe('Grid', () => {
 
         expect(tree).toMatchSnapshot();
     });
-
 });

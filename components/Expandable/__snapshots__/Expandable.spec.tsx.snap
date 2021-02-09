@@ -113,7 +113,7 @@ exports[`Expandable renders correctly 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-bdnylx dOPKTt sc-gtssRu dFFniv"
+            className="sc-bdnylx kBsmpR sc-gtssRu dFFniv"
             onClickItem={[MockFunction]}
             style={Object {}}
           >
@@ -133,13 +133,13 @@ exports[`Expandable renders correctly 1`] = `
                 <Box
                   active={false}
                   activeId={1}
-                  className="sc-dlnjPT fqvemI"
+                  className="sc-dlnjPT hCtGqY"
                   style={Object {}}
                 >
                   <Component
                     active={false}
                     activeId={1}
-                    className="sc-dlnjPT fqvemI"
+                    className="sc-dlnjPT hCtGqY"
                     palette={
                       Object {
                         "actionsDropdown": Object {
@@ -188,7 +188,7 @@ exports[`Expandable renders correctly 1`] = `
                     <StyledBox
                       active={false}
                       activeId={1}
-                      className="sc-dlnjPT fqvemI"
+                      className="sc-dlnjPT hCtGqY"
                       palette={
                         Object {
                           "actionsDropdown": Object {
@@ -235,7 +235,7 @@ exports[`Expandable renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT fqvemI"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT hCtGqY"
                         style={Object {}}
                       >
                         <ExpandableItemContainer
@@ -351,7 +351,7 @@ exports[`Expandable renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-hKFyIo hrjkMV"
+                                    className="sc-bdnylx kBsmpR sc-hKFyIo hrjkMV"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -463,7 +463,7 @@ exports[`Expandable renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-jSFkmK kBBXBG"
+                                                className="sc-bdnylx kBsmpR sc-jSFkmK kBBXBG"
                                                 style={Object {}}
                                               >
                                                 Title for item with index 1
@@ -586,7 +586,7 @@ exports[`Expandable renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-eCApGN iWbfni"
+                                                className="sc-bdnylx kBsmpR sc-eCApGN iWbfni"
                                                 style={Object {}}
                                               >
                                                 keyboard_arrow_down
@@ -624,13 +624,13 @@ exports[`Expandable renders correctly 1`] = `
                 <Box
                   active={false}
                   activeId={2}
-                  className="sc-dlnjPT fqvemI"
+                  className="sc-dlnjPT hCtGqY"
                   style={Object {}}
                 >
                   <Component
                     active={false}
                     activeId={2}
-                    className="sc-dlnjPT fqvemI"
+                    className="sc-dlnjPT hCtGqY"
                     palette={
                       Object {
                         "actionsDropdown": Object {
@@ -679,7 +679,7 @@ exports[`Expandable renders correctly 1`] = `
                     <StyledBox
                       active={false}
                       activeId={2}
-                      className="sc-dlnjPT fqvemI"
+                      className="sc-dlnjPT hCtGqY"
                       palette={
                         Object {
                           "actionsDropdown": Object {
@@ -726,7 +726,7 @@ exports[`Expandable renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT fqvemI"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT hCtGqY"
                         style={Object {}}
                       >
                         <ExpandableItemContainer
@@ -842,7 +842,7 @@ exports[`Expandable renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-hKFyIo hrjkMV"
+                                    className="sc-bdnylx kBsmpR sc-hKFyIo hrjkMV"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -954,7 +954,7 @@ exports[`Expandable renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-jSFkmK kBBXBG"
+                                                className="sc-bdnylx kBsmpR sc-jSFkmK kBBXBG"
                                                 style={Object {}}
                                               >
                                                 Title for item with index 2
@@ -1077,7 +1077,7 @@ exports[`Expandable renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-eCApGN iWbfni"
+                                                className="sc-bdnylx kBsmpR sc-eCApGN iWbfni"
                                                 style={Object {}}
                                               >
                                                 keyboard_arrow_down
@@ -1115,13 +1115,13 @@ exports[`Expandable renders correctly 1`] = `
                 <Box
                   active={false}
                   activeId={3}
-                  className="sc-dlnjPT fqvemI"
+                  className="sc-dlnjPT hCtGqY"
                   style={Object {}}
                 >
                   <Component
                     active={false}
                     activeId={3}
-                    className="sc-dlnjPT fqvemI"
+                    className="sc-dlnjPT hCtGqY"
                     palette={
                       Object {
                         "actionsDropdown": Object {
@@ -1170,7 +1170,7 @@ exports[`Expandable renders correctly 1`] = `
                     <StyledBox
                       active={false}
                       activeId={3}
-                      className="sc-dlnjPT fqvemI"
+                      className="sc-dlnjPT hCtGqY"
                       palette={
                         Object {
                           "actionsDropdown": Object {
@@ -1217,7 +1217,7 @@ exports[`Expandable renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT fqvemI"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT hCtGqY"
                         style={Object {}}
                       >
                         <ExpandableItemContainer
@@ -1333,7 +1333,7 @@ exports[`Expandable renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-hKFyIo hrjkMV"
+                                    className="sc-bdnylx kBsmpR sc-hKFyIo hrjkMV"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1445,7 +1445,7 @@ exports[`Expandable renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-jSFkmK kBBXBG"
+                                                className="sc-bdnylx kBsmpR sc-jSFkmK kBBXBG"
                                                 style={Object {}}
                                               >
                                                 Title for item with index 3
@@ -1568,7 +1568,7 @@ exports[`Expandable renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-eCApGN iWbfni"
+                                                className="sc-bdnylx kBsmpR sc-eCApGN iWbfni"
                                                 style={Object {}}
                                               >
                                                 keyboard_arrow_down
@@ -1606,13 +1606,13 @@ exports[`Expandable renders correctly 1`] = `
                 <Box
                   active={false}
                   activeId={4}
-                  className="sc-dlnjPT fqvemI"
+                  className="sc-dlnjPT hCtGqY"
                   style={Object {}}
                 >
                   <Component
                     active={false}
                     activeId={4}
-                    className="sc-dlnjPT fqvemI"
+                    className="sc-dlnjPT hCtGqY"
                     palette={
                       Object {
                         "actionsDropdown": Object {
@@ -1661,7 +1661,7 @@ exports[`Expandable renders correctly 1`] = `
                     <StyledBox
                       active={false}
                       activeId={4}
-                      className="sc-dlnjPT fqvemI"
+                      className="sc-dlnjPT hCtGqY"
                       palette={
                         Object {
                           "actionsDropdown": Object {
@@ -1708,7 +1708,7 @@ exports[`Expandable renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT fqvemI"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT hCtGqY"
                         style={Object {}}
                       >
                         <ExpandableItemContainer
@@ -1824,7 +1824,7 @@ exports[`Expandable renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dOPKTt sc-hKFyIo hrjkMV"
+                                    className="sc-bdnylx kBsmpR sc-hKFyIo hrjkMV"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1936,7 +1936,7 @@ exports[`Expandable renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-jSFkmK kBBXBG"
+                                                className="sc-bdnylx kBsmpR sc-jSFkmK kBBXBG"
                                                 style={Object {}}
                                               >
                                                 Title for item with index 4
@@ -2059,7 +2059,7 @@ exports[`Expandable renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <div
-                                                className="sc-bdnylx dOPKTt sc-eCApGN iWbfni"
+                                                className="sc-bdnylx kBsmpR sc-eCApGN iWbfni"
                                                 style={Object {}}
                                               >
                                                 keyboard_arrow_down

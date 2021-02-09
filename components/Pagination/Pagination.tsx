@@ -10,7 +10,6 @@ import { StyledPagination, StyledPaginationButton, StyledPaginationShowAll } fro
  * Pagination
  */
 export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
-
     const [showAll, setShowAll] = React.useState(false);
 
     const batchClickHandler = (e: React.MouseEvent<HTMLElement>, page: number, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
@@ -19,21 +18,17 @@ export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
     };
 
     const recurseChildren = (children: any): any => {
-        if (!children){
+        if (!children) {
             return null;
         }
 
         return React.Children.map(children, (child, i) => {
-
-            if (React.isValidElement<IPaginationButtonComponentProps>(child) && child.type === PaginationButton){
-
+            if (React.isValidElement<IPaginationButtonComponentProps>(child) && child.type === PaginationButton) {
                 const page = i + 1;
 
-                const condition = props.activePage >= 4 ?
-                    (page - 2 <= props.activePage && page + 2 >= props.activePage) :
-                    page <= 5;
+                const condition = props.activePage >= 4 ? page - 2 <= props.activePage && page + 2 >= props.activePage : page <= 5;
 
-                if (showAll || condition){
+                if (showAll || condition) {
                     return React.cloneElement(child, {
                         active: page === props.activePage,
                         children: page,
@@ -44,8 +39,8 @@ export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
                 return null;
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;
@@ -53,12 +48,10 @@ export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
     };
 
     return (
-        <StyledPagination {...props} >
+        <StyledPagination {...props}>
             {recurseChildren(props.children)}
             {props.children && Array.isArray(props.children) && props.children.length > 5 && (
-                <StyledPaginationShowAll onClick={() => setShowAll(!showAll)}>
-                    {showAll ? 'Hide' : 'Show all'}
-                </StyledPaginationShowAll>
+                <StyledPaginationShowAll onClick={() => setShowAll(!showAll)}>{showAll ? 'Hide' : 'Show all'}</StyledPaginationShowAll>
             )}
         </StyledPagination>
     );

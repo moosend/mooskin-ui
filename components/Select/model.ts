@@ -3,7 +3,6 @@ import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index';
 
 export interface ISelectComponentProps extends IBoxComponentProps {
-
     /** Callback that fires when you click on an option on the list */
     onChangeSelect?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 

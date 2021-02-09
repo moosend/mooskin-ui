@@ -1,10 +1,9 @@
 import * as React from 'react';
-import {Radio, RadioIcon, RadioLabel} from './Radio';
+import { Radio, RadioIcon, RadioLabel } from './Radio';
 
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('Radio', () => {
-
     test('renders Radio correctly', () => {
         const func = jest.fn();
 

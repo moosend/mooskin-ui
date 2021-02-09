@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { Box } from '../Box/Box';
-import {Layout} from './Layout';
+import { Layout } from './Layout';
 
 import { mount } from 'enzyme';
 
 describe('Layout', () => {
-
     test('renders correctly', () => {
         const tree = mount(
             <Layout>
@@ -37,5 +36,4 @@ describe('Layout', () => {
         );
         expect(tree).toMatchSnapshot();
     });
-
 });

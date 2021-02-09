@@ -4,16 +4,12 @@ import * as React from 'react';
 import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
 // Styled Components
-import {
-    StyledSidemenu,
-    StyledSidemenuItem
-} from './styles';
+import { StyledSidemenu, StyledSidemenuItem } from './styles';
 
 /**
  * Sidemenu
  */
 export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
-
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         value?: string,
@@ -25,7 +21,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
 
     const recurseChildren = (children: any): any => {
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<ISidemenuItemComponentProps>(child) && child.type === SidemenuItem){
+            if (React.isValidElement<ISidemenuItemComponentProps>(child) && child.type === SidemenuItem) {
                 return React.cloneElement(child, {
                     active: child.props.value === props.activeItem,
                     children: recurseChildren((child.props as any).children),
@@ -34,8 +30,8 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
                 } as ISidemenuItemComponentProps);
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;

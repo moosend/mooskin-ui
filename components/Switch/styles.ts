@@ -42,9 +42,14 @@ export const StyledSwitchHandle = styled(Box)<ISwitchHandleComponentProps>`
     transition: transform 0.3s;
     border-radius: 50%;
     z-index: 1;
-    transform: ${(props) => (props.active ?
-        `translate(${props.switchWidth ?
-            (typeof props.switchWidth === 'string' ? parseInt(props.switchWidth, 10) : props.switchWidth) - 27 : 63}px)` : '')};
+    transform: ${(props) =>
+        props.active
+            ? `translate(${
+                  props.switchWidth
+                      ? (typeof props.switchWidth === 'string' ? parseInt(props.switchWidth, 10) : props.switchWidth) - 27
+                      : 63
+              }px)`
+            : ''};
 `;
 
 StyledSwitchHandle.displayName = 'StyledSwitchHandle';

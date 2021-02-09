@@ -10,27 +10,29 @@ import { IPersonalizationTag, ITextEditorComponentProps } from './model';
  * TextEditor
  */
 export const TextEditor: React.FC<ITextEditorComponentProps> = (props) => {
-
     const getSetup = (editor: TinyMCEEditor) => {
-        props.personalizationTags && editor.ui.registry.addMenuButton(props.personalizationTags.id, {
-            fetch: (callback) => {
-                const items: any = props.personalizationTags && props.personalizationTags.tags.map((item: IPersonalizationTag) => {
-                    return {
-                        onAction: () => {
-                            editor.insertContent(item.value);
-                        },
-                        text: item.label,
-                        type: 'menuitem'
-                    };
-                });
-                callback(items);
-            },
-            text: props.personalizationTags.buttonLabel,
-        });
+        props.personalizationTags &&
+            editor.ui.registry.addMenuButton(props.personalizationTags.id, {
+                fetch: (callback) => {
+                    const items: any =
+                        props.personalizationTags &&
+                        props.personalizationTags.tags.map((item: IPersonalizationTag) => {
+                            return {
+                                onAction: () => {
+                                    editor.insertContent(item.value);
+                                },
+                                text: item.label,
+                                type: 'menuitem'
+                            };
+                        });
+                    callback(items);
+                },
+                text: props.personalizationTags.buttonLabel
+            });
     };
 
     const getToolbar = () => {
-        if (props.personalizationTags){
+        if (props.personalizationTags) {
             return `${props.toolbar} | ${props.personalizationTags.id}`;
         }
         return props.toolbar;

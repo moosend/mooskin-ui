@@ -27,13 +27,13 @@ export interface IButtonInterface extends IBaseThemeInterface {
 }
 
 export interface IStyledTheme {
-    main: {backgroundColor: string};
+    main: { backgroundColor: string };
     layout: ILayoutInterface;
     actionsDropdown: IBaseThemeInterface;
     button: IButtonInterface;
     anchor: IAnchorInterface;
-    label: {fontColor: string};
-    description: {fontColor: string};
+    label: { fontColor: string };
+    description: { fontColor: string };
     commonElement: ICommonElementInterface;
     toggleElement: IUiElementInterface;
 }

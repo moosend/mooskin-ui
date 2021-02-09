@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import { BoxShadowIntensityType, IBoxComponentProps, IntensityType } from './model';
 
 export const StyledBox = styled.div<IBoxComponentProps>`
-
     &&& {
         margin: ${(props) => getNumberOrStringValue(props.m)};
         margin-top: ${(props) => getNumberOrStringValue(props.mt || props.my)};
@@ -87,7 +86,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
         border-left-color: ${(props) => props.borderLeftColor};
         border-left-width: ${(props) => getNumberOrStringValue(props.borderLeftWidth)};
 
-        border-radius: ${(props) => props.borderRadius ? getNumberOrStringValue(props.borderRadius) : getRoundness(props.round)};
+        border-radius: ${(props) => (props.borderRadius ? getNumberOrStringValue(props.borderRadius) : getRoundness(props.round))};
         border-top-left-radius: ${(props) => getNumberOrStringValue(props.borderTopLeftRadius)};
         border-top-right-radius: ${(props) => getNumberOrStringValue(props.borderTopRightRadius)};
         border-bottom-right-radius: ${(props) => getNumberOrStringValue(props.borderBottomRightRadius)};
@@ -110,13 +109,12 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
         cursor: ${(props) => props.cursor};
     }
-
 `;
 
 StyledBox.displayName = 'StyledBox';
 
 export const getNumberOrStringValue = (value?: number | string) => {
-    if (value){
+    if (value) {
         return typeof value === 'number' ? `${value}px` : value;
     }
 };

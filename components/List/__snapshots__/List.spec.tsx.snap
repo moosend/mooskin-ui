@@ -118,7 +118,7 @@ exports[`Alert renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx dOPKTt sc-jSFkmK geKWcR"
+              className="sc-bdnylx kBsmpR sc-jSFkmK geKWcR"
               spacing={15}
               style={Object {}}
             >
@@ -237,7 +237,7 @@ exports[`Alert renders correctly 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="sc-bdnylx eUEpQe sc-gKAblj iJiSHU"
+                          className="sc-bdnylx dAHerO sc-gKAblj iJiSHU"
                           style={Object {}}
                         >
                           <ListItemHead
@@ -347,11 +347,15 @@ exports[`Alert renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-fujyUd hNimCU"
+                                      className="sc-bdnylx kBsmpR sc-iCoHVE sc-fujyUd hNimCU"
                                       style={Object {}}
                                     >
                                       <img
-                                        src="https://camo.githubusercontent.com/059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
+                                        src="https://camo.githubusercontent.com/
+                                059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/
+                                68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303
+                                830332d323031372d3038303332303137303830332f6361356164393234396432383434333539353562373
+                                5653161323261613135636d6f6f736b696e4c6f676f2e706e67"
                                         style={
                                           Object {
                                             "display": "block",
@@ -472,7 +476,7 @@ exports[`Alert renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-pNWxx hNimCU ddgxfF"
+                                      className="sc-bdnylx kBsmpR sc-iCoHVE sc-pNWxx hNimCU ddgxfF"
                                       style={Object {}}
                                     >
                                       <Box
@@ -580,7 +584,7 @@ exports[`Alert renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx drikOU"
+                                              className="sc-bdnylx gNLOVc"
                                               fontSize={16}
                                               fontWeight="600"
                                               style={Object {}}
@@ -692,7 +696,7 @@ exports[`Alert renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx dwDiEe"
+                                              className="sc-bdnylx eBSgzi"
                                               fontSize={12}
                                               style={Object {}}
                                             >
@@ -814,7 +818,7 @@ exports[`Alert renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-jrsJCI hNimCU UBpJm"
+                                      className="sc-bdnylx kBsmpR sc-iCoHVE sc-jrsJCI hNimCU UBpJm"
                                       style={Object {}}
                                     >
                                       <Button
@@ -943,7 +947,7 @@ exports[`Alert renders correctly 1`] = `
                                                 type="button"
                                               >
                                                 <button
-                                                  className="sc-bdnylx dOPKTt sc-gtssRu sc-dlnjPT bQfMAP kFXwoH"
+                                                  className="sc-bdnylx kBsmpR sc-gtssRu sc-dlnjPT bQfMAP kFXwoH"
                                                   onClick={[Function]}
                                                   style={Object {}}
                                                   type="button"
@@ -1082,7 +1086,7 @@ exports[`Alert renders correctly 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="sc-bdnylx eUEpQe sc-gKAblj iJiSHU"
+                          className="sc-bdnylx dAHerO sc-gKAblj iJiSHU"
                           style={Object {}}
                         >
                           <ListItemHead
@@ -1192,11 +1196,15 @@ exports[`Alert renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-fujyUd hNimCU"
+                                      className="sc-bdnylx kBsmpR sc-iCoHVE sc-fujyUd hNimCU"
                                       style={Object {}}
                                     >
                                       <img
-                                        src="https://camo.githubusercontent.com/059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
+                                        src="https://camo.githubusercontent.com/
+                                059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/
+                                68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303
+                                830332d323031372d3038303332303137303830332f6361356164393234396432383434333539353562373
+                                5653161323261613135636d6f6f736b696e4c6f676f2e706e67"
                                         style={
                                           Object {
                                             "display": "block",
@@ -1317,7 +1325,7 @@ exports[`Alert renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-pNWxx hNimCU ddgxfF"
+                                      className="sc-bdnylx kBsmpR sc-iCoHVE sc-pNWxx hNimCU ddgxfF"
                                       style={Object {}}
                                     >
                                       <Box
@@ -1425,7 +1433,7 @@ exports[`Alert renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx drikOU"
+                                              className="sc-bdnylx gNLOVc"
                                               fontSize={16}
                                               fontWeight="600"
                                               style={Object {}}
@@ -1537,7 +1545,7 @@ exports[`Alert renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx dwDiEe"
+                                              className="sc-bdnylx eBSgzi"
                                               fontSize={12}
                                               style={Object {}}
                                             >
@@ -1659,7 +1667,7 @@ exports[`Alert renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-jrsJCI hNimCU UBpJm"
+                                      className="sc-bdnylx kBsmpR sc-iCoHVE sc-jrsJCI hNimCU UBpJm"
                                       style={Object {}}
                                     >
                                       <Button
@@ -1788,7 +1796,7 @@ exports[`Alert renders correctly 1`] = `
                                                 type="button"
                                               >
                                                 <button
-                                                  className="sc-bdnylx dOPKTt sc-gtssRu sc-dlnjPT bQfMAP kFXwoH"
+                                                  className="sc-bdnylx kBsmpR sc-gtssRu sc-dlnjPT bQfMAP kFXwoH"
                                                   onClick={[Function]}
                                                   style={Object {}}
                                                   type="button"
@@ -1927,7 +1935,7 @@ exports[`Alert renders correctly 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="sc-bdnylx eUEpQe sc-gKAblj iJiSHU"
+                          className="sc-bdnylx dAHerO sc-gKAblj iJiSHU"
                           style={Object {}}
                         >
                           <ListItemHead
@@ -2037,11 +2045,15 @@ exports[`Alert renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-fujyUd hNimCU"
+                                      className="sc-bdnylx kBsmpR sc-iCoHVE sc-fujyUd hNimCU"
                                       style={Object {}}
                                     >
                                       <img
-                                        src="https://camo.githubusercontent.com/059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303830332d323031372d3038303332303137303830332f63613561643932343964323834343335393535623735653161323261613135636d6f6f736b696e4c6f676f2e706e67"
+                                        src="https://camo.githubusercontent.com/
+                                059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/
+                                68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303
+                                830332d323031372d3038303332303137303830332f6361356164393234396432383434333539353562373
+                                5653161323261613135636d6f6f736b696e4c6f676f2e706e67"
                                         style={
                                           Object {
                                             "display": "block",
@@ -2162,7 +2174,7 @@ exports[`Alert renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-pNWxx hNimCU ddgxfF"
+                                      className="sc-bdnylx kBsmpR sc-iCoHVE sc-pNWxx hNimCU ddgxfF"
                                       style={Object {}}
                                     >
                                       <Box
@@ -2270,7 +2282,7 @@ exports[`Alert renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx drikOU"
+                                              className="sc-bdnylx gNLOVc"
                                               fontSize={16}
                                               fontWeight="600"
                                               style={Object {}}
@@ -2382,7 +2394,7 @@ exports[`Alert renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx dwDiEe"
+                                              className="sc-bdnylx eBSgzi"
                                               fontSize={12}
                                               style={Object {}}
                                             >
@@ -2504,7 +2516,7 @@ exports[`Alert renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-iCoHVE sc-jrsJCI hNimCU UBpJm"
+                                      className="sc-bdnylx kBsmpR sc-iCoHVE sc-jrsJCI hNimCU UBpJm"
                                       style={Object {}}
                                     >
                                       <Button
@@ -2633,7 +2645,7 @@ exports[`Alert renders correctly 1`] = `
                                                 type="button"
                                               >
                                                 <button
-                                                  className="sc-bdnylx dOPKTt sc-gtssRu sc-dlnjPT bQfMAP kFXwoH"
+                                                  className="sc-bdnylx kBsmpR sc-gtssRu sc-dlnjPT bQfMAP kFXwoH"
                                                   onClick={[Function]}
                                                   style={Object {}}
                                                   type="button"

@@ -10,7 +10,6 @@ import { StyledSwitch, StyledSwitchHandle, StyledSwitchLabelDisabled, StyledSwit
  * Switch
  */
 export const Switch: React.FC<ISwitchComponentProps> = (props) => {
-
     const [hasHandle, setHasHandle] = React.useState(false);
 
     const renderDisabledContent = () => {
@@ -27,7 +26,7 @@ export const Switch: React.FC<ISwitchComponentProps> = (props) => {
 
     const recurseChildren = (children: any): any => {
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<ISwitchHandleComponentProps>(child) && child.type === SwitchHandle){
+            if (React.isValidElement<ISwitchHandleComponentProps>(child) && child.type === SwitchHandle) {
                 !hasHandle && setHasHandle(true);
                 if (!props.disabled) {
                     return React.cloneElement(child, {
@@ -40,8 +39,8 @@ export const Switch: React.FC<ISwitchComponentProps> = (props) => {
                 return null;
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;

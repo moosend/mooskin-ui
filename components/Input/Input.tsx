@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {Picker} from 'emoji-mart';
+import { Picker } from 'emoji-mart';
 import 'emoji-mart/css/emoji-mart.css';
 
 // Models
@@ -47,36 +47,36 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = (props) =
     };
 
     const onDropdownOptionClick = (value: string) => {
-        const newValue = props.value ? props.value + value :  value;
-        props.onChangeInput && props.onChangeInput({} as any, {dataLabel: props.dataLabel, value: newValue});
+        const newValue = props.value ? props.value + value : value;
+        props.onChangeInput && props.onChangeInput({} as any, { dataLabel: props.dataLabel, value: newValue });
     };
 
     const recurseChildren = (children: any): any => {
-        if (!children){
+        if (!children) {
             return null;
         }
 
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<IInputComponentProps>(child) && child.type === Input){
+            if (React.isValidElement<IInputComponentProps>(child) && child.type === Input) {
                 return React.cloneElement(child, {
                     dataLabel: props.dataLabel,
                     disabled: props.disabled,
                     key: i,
                     onChange: (e: React.ChangeEvent<HTMLInputElement>) =>
-                        batchChangeHandler(e, {dataLabel: props.dataLabel, value: e.target.value}, child.props.onChange),
+                        batchChangeHandler(e, { dataLabel: props.dataLabel, value: e.target.value }, child.props.onChange),
                     value: props.value,
                     wrapped: true
                 } as IInputComponentProps);
             }
 
-            if (React.isValidElement<IInputEmojiComponentProps>(child) && child.type === InputEmoji){
+            if (React.isValidElement<IInputEmojiComponentProps>(child) && child.type === InputEmoji) {
                 return React.cloneElement(child, {
                     key: i,
                     onChangeEmoji: onDropdownOptionClick
                 } as IInputEmojiComponentProps);
             }
 
-            if (React.isValidElement<IInputListComponentProps>(child) && child.type === InputOptionList){
+            if (React.isValidElement<IInputListComponentProps>(child) && child.type === InputOptionList) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     icon: 'check',
@@ -84,7 +84,7 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = (props) =
                 } as IInputListComponentProps);
             }
 
-            if (React.isValidElement<IInputOptionComponentProps>(child) && child.type === InputOption){
+            if (React.isValidElement<IInputOptionComponentProps>(child) && child.type === InputOption) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     key: i,
@@ -93,19 +93,15 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = (props) =
                 } as IInputOptionComponentProps);
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;
         });
     };
 
-    return (
-        <StyledInputContainer {...props} >
-            {recurseChildren(props.children)}
-        </StyledInputContainer>
-    );
+    return <StyledInputContainer {...props}>{recurseChildren(props.children)}</StyledInputContainer>;
 };
 
 InputContainer.defaultProps = {
@@ -125,9 +121,7 @@ export const InputOptionList: React.FC<IInputListComponentProps> = (props) => {
             <InputIcon onClick={() => setShowList(!showList)}>{props.icon}</InputIcon>
             {showList && (
                 <>
-                    <StyledInputOptionList w={300}>
-                        {props.children}
-                    </StyledInputOptionList>
+                    <StyledInputOptionList w={300}>{props.children}</StyledInputOptionList>
                     <InputOverlay onClick={() => setShowList(!showList)} />
                 </>
             )}
@@ -245,7 +239,6 @@ InputOverlay.displayName = 'InputOverlay';
  * InputEmoji
  */
 export const InputEmoji: React.FC<IInputEmojiComponentProps> = (props) => {
-
     const [showEmoji, setShowEmoji] = React.useState(false);
 
     const onChangeEmoji = (data: any) => {

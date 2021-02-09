@@ -118,7 +118,7 @@ exports[`Alert renders correctly 1`] = `
           variant="left-accent"
         >
           <div
-            className="sc-bdnylx dOPKTt sc-gtssRu khuOUr"
+            className="sc-bdnylx kBsmpR sc-gtssRu khuOUr"
             style={Object {}}
           >
             <AlertIcon
@@ -239,7 +239,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-jSFkmK sc-gKAblj fTKErc gkdvVV"
+                        className="sc-bdnylx kBsmpR sc-jSFkmK sc-gKAblj fTKErc gkdvVV"
                         style={Object {}}
                       >
                         announcement
@@ -367,7 +367,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT sc-hKFyIo hDmCqp fLpFAm"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT sc-hKFyIo hDmCqp fLpFAm"
                         style={Object {}}
                       >
                         Your browser is outdated!
@@ -495,7 +495,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT sc-eCApGN hDmCqp cCbRZN"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT sc-eCApGN hDmCqp cCbRZN"
                         style={Object {}}
                       >
                         Your Mooskin experience may be degraded.
@@ -643,7 +643,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <div
-                        className="sc-bdnylx iOddrC sc-jSFkmK sc-iCoHVE fTKErc gfRFpA"
+                        className="sc-bdnylx VAvbC sc-jSFkmK sc-iCoHVE fTKErc gfRFpA"
                         onClick={[MockFunction]}
                         style={Object {}}
                       >

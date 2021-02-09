@@ -10,7 +10,6 @@ import { Label } from '../Label/Label';
  * NumberLabel
  */
 export const NumberLabel: React.FC<INumberLabelComponentProps> = (props) => {
-
     const getContent = () => {
         const { children, abbreviate, roundNumber } = props;
         if ((abbreviate || roundNumber) && !isNaN(children as any)) {
@@ -27,7 +26,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = (props) => {
             billion: 1000000000,
             million: 1000000,
             thousand: 1000,
-            trillion: 1000000000000,
+            trillion: 1000000000000
         };
 
         if (value < digits.thousand) {
@@ -162,7 +161,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = (props) => {
         return value;
     };
 
-    return <Label {...props} >{getContent()}</Label>;
+    return <Label {...props}>{getContent()}</Label>;
 };
 
 NumberLabel.defaultProps = {

@@ -4,7 +4,15 @@ export { default as ActionsDropdown, ActionsDropdownItem, ActionsDropdownArrow }
 export { default as Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../Alert/Alert';
 export { default as Button } from '../Button/Button';
 export { default as Skeleton, SkeletonCircle, SkeletonText } from '../Skeleton/Skeleton';
-export { default as Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay } from '../Drawer/Drawer';
+export {
+    default as Drawer,
+    DrawerBody,
+    DrawerCloseButton,
+    DrawerContent,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay
+} from '../Drawer/Drawer';
 export { default as Stack, HStack, VStack } from '../Stack/Stack';
 export { default as Box } from '../Box/Box';
 export { default as Carousel } from '../Carousel/Carousel';

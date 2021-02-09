@@ -7,14 +7,10 @@ import DateFnsUtils from '@date-io/date-fns';
 import { IDateTimePickerComponentProps, IDateTimePickerKeyboardComponentProps, PickerType } from './model';
 
 // Material-UI Date Time Picker
-import {
-    DateTimePicker as DateTimePickerUI,
-    KeyboardDateTimePicker,
-    MuiPickersUtilsProvider
-} from '@material-ui/pickers';
+import { DateTimePicker as DateTimePickerUI, KeyboardDateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 // Components
-import {Input} from '../Input/Input';
+import { Input } from '../Input/Input';
 
 const ComponentByType = {
     'date-time': DateTimePickerUI,
@@ -25,8 +21,7 @@ const ComponentByType = {
  * DateTimePicker
  */
 export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimePickerKeyboardComponentProps> = (props) => {
-
-    const renderInput = (dateInputProps: any) => <Input style={{width: '100%'}} {...dateInputProps} {...props.inputComponentProps}/>;
+    const renderInput = (dateInputProps: any) => <Input style={{ width: '100%' }} {...dateInputProps} {...props.inputComponentProps} />;
 
     const type: PickerType = props.pickerType ? props.pickerType : 'date-time';
 

@@ -4,19 +4,11 @@ import Anchor from './Anchor';
 import { shallow } from 'enzyme';
 
 describe('Anchor', () => {
-
     test('renders correctly', () => {
         const func = jest.fn();
 
         const tree = shallow(
-            <Anchor
-                onClick={func}
-                disabled
-                className="myClass"
-                style={{color: 'blue'}}
-                id={'Anchor1'}
-                href={'www.moosend.com'}
-            >
+            <Anchor onClick={func} disabled className="myClass" style={{ color: 'blue' }} id={'Anchor1'} href={'www.moosend.com'}>
                 Mooskin
             </Anchor>
         );
@@ -26,7 +18,11 @@ describe('Anchor', () => {
     test('renders properly into dom with color and label', () => {
         const func = jest.fn();
 
-        const component = shallow(<Anchor href="https://www.moosend.com" onClick={func}>asd</Anchor>);
+        const component = shallow(
+            <Anchor href="https://www.moosend.com" onClick={func}>
+                asd
+            </Anchor>
+        );
 
         expect(component.find('StyledAnchor').text()).toBe('asd');
     });
@@ -34,7 +30,11 @@ describe('Anchor', () => {
     test('renders a an Anchor with href', () => {
         const func = jest.fn();
 
-        const component = shallow(<Anchor onClick={func} href={'https://www.moosend.com'}>asd</Anchor>);
+        const component = shallow(
+            <Anchor onClick={func} href={'https://www.moosend.com'}>
+                asd
+            </Anchor>
+        );
 
         expect(component.find('StyledAnchor').prop('href')).toBe('https://www.moosend.com');
     });
@@ -42,7 +42,11 @@ describe('Anchor', () => {
     test('onClick prop callback is called when clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(<Anchor href="https://www.moosend.com" onClick={func}>asd</Anchor>);
+        const component = shallow(
+            <Anchor href="https://www.moosend.com" onClick={func}>
+                asd
+            </Anchor>
+        );
         component.find('StyledAnchor').simulate('click');
         expect(func).toHaveBeenCalled();
     });

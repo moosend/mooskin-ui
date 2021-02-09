@@ -1,10 +1,16 @@
 import * as React from 'react';
-import {Expandable, ExpandableItem, ExpandableItemButton, ExpandableItemContainer, ExpandableItemContent, ExpandableItemText} from './Expandable';
+import {
+    Expandable,
+    ExpandableItem,
+    ExpandableItemButton,
+    ExpandableItemContainer,
+    ExpandableItemContent,
+    ExpandableItemText
+} from './Expandable';
 
-import {mount, shallow} from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Expandable', () => {
-
     test('renders correctly', () => {
         const func = jest.fn();
 
@@ -15,28 +21,36 @@ describe('Expandable', () => {
                         <ExpandableItemText>{`Title for item with index 1`}</ExpandableItemText>
                         <ExpandableItemButton />
                     </ExpandableItemContainer>
-                    <ExpandableItemContent p={15}><div>{`Content for item with index 1`}</div></ExpandableItemContent>
+                    <ExpandableItemContent p={15}>
+                        <div>{`Content for item with index 1`}</div>
+                    </ExpandableItemContent>
                 </ExpandableItem>
                 <ExpandableItem activeId={2}>
                     <ExpandableItemContainer>
                         <ExpandableItemText>{`Title for item with index 2`}</ExpandableItemText>
                         <ExpandableItemButton />
                     </ExpandableItemContainer>
-                    <ExpandableItemContent p={15}><div>{`Content for item with index 2`}</div></ExpandableItemContent>
+                    <ExpandableItemContent p={15}>
+                        <div>{`Content for item with index 2`}</div>
+                    </ExpandableItemContent>
                 </ExpandableItem>
                 <ExpandableItem activeId={3}>
                     <ExpandableItemContainer>
                         <ExpandableItemText>{`Title for item with index 3`}</ExpandableItemText>
                         <ExpandableItemButton />
                     </ExpandableItemContainer>
-                    <ExpandableItemContent p={15}><div>{`Content for item with index 3`}</div></ExpandableItemContent>
+                    <ExpandableItemContent p={15}>
+                        <div>{`Content for item with index 3`}</div>
+                    </ExpandableItemContent>
                 </ExpandableItem>
                 <ExpandableItem activeId={4}>
                     <ExpandableItemContainer>
                         <ExpandableItemText>{`Title for item with index 4`}</ExpandableItemText>
                         <ExpandableItemButton />
                     </ExpandableItemContainer>
-                    <ExpandableItemContent p={15}><div>{`Content for item with index 4`}</div></ExpandableItemContent>
+                    <ExpandableItemContent p={15}>
+                        <div>{`Content for item with index 4`}</div>
+                    </ExpandableItemContent>
                 </ExpandableItem>
             </Expandable>
         );
@@ -95,5 +109,4 @@ describe('Expandable', () => {
         tree.find(ExpandableItemContainer).first().simulate('click');
         expect(func).toHaveBeenCalled();
     });
-
 });

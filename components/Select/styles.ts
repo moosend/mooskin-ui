@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Models
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
@@ -17,8 +17,8 @@ const spin = keyframes`
 export const StyledSelect = styled(Box)<ISelectComponentProps>`
     position: relative;
     color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
-    opacity: ${(props) => props.disabled ? 0.7 : 1};
-    cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
+    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
 StyledSelect.displayName = 'StyledSelect';
@@ -111,13 +111,13 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
     display: flex;
     justify-content: space-between;
     color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
-    :first-child{
+    :first-child {
         padding-top: 13px;
     }
-    &:not(:last-child){
+    &:not(:last-child) {
         padding: 10px 15px 0;
     }
-    &:last-child{
+    &:last-child {
         padding: 10px 15px;
     }
 `;

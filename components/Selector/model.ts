@@ -1,6 +1,6 @@
 import { IBoxComponentProps } from '../Box/model';
 
-export interface ISelectorComponentProps extends IBoxComponentProps{
+export interface ISelectorComponentProps extends IBoxComponentProps {
     /** active Selector item */
     activeItem?: string | number;
 
@@ -8,7 +8,7 @@ export interface ISelectorComponentProps extends IBoxComponentProps{
     onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string | number) => void;
 }
 
-export interface ISelectorItemComponentProps extends IBoxComponentProps{
+export interface ISelectorItemComponentProps extends IBoxComponentProps {
     /** value returned in callback fn */
     value?: string | number;
 

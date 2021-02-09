@@ -20,7 +20,7 @@ export const StyledExpandableItem = styled(Box)<IExpandableItemComponentProps>`
     border-radius: 3px;
     border: solid 1px #e2e2e2;
     background-color: ${(props) => props.palette?.layout.backgroundColor || variables.layout.backgroundColor};
-    :not(:last-child){
+    :not(:last-child) {
         margin-bottom: 15px;
     }
 `;
@@ -39,7 +39,7 @@ export const StyledExpandableItemButton = styled(Box)<IExpandableCommonComponent
     font-family: 'Mooskin Icons';
     font-size: 20px;
     transition: all ease 0.4s;
-    transform: ${(props) => props.active ? 'rotate(180deg)' : 'rotate(0deg)'};
+    transform: ${(props) => (props.active ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 
 StyledExpandableItemButton.displayName = 'StyledExpandableItemButton';

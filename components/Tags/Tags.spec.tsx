@@ -1,27 +1,16 @@
 import * as React from 'react';
 import Tags from './Tags';
 
-import {mount, render, shallow} from 'enzyme';
+import { mount, render, shallow } from 'enzyme';
 
 const func1 = jest.fn();
 const func2 = jest.fn();
 
 describe.skip('Tags', () => {
-
     test('renders Tags correctly', () => {
+        const tags = ['Prishtina', 'Athens'];
 
-        const tags = [
-            'Prishtina',
-            'Athens'
-        ];
-
-        const source = [
-            'Prishtina',
-            'Athens',
-            'London',
-            'New York',
-            'Beijing'
-        ];
+        const source = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
 
         const tree = shallow(
             <Tags
@@ -30,10 +19,10 @@ describe.skip('Tags', () => {
                 tags={tags}
                 className="myClass"
                 dataLabel="SomeForm"
-                style={{width: '50px'}}
+                style={{ width: '50px' }}
                 deletable
                 delimiters={['space', 13]}
-                tagStyles={{width: '50px'}}
+                tagStyles={{ width: '50px' }}
                 tagClasses="tagClasses"
                 placeholder="olala"
                 sourceLimit={15}
@@ -46,32 +35,15 @@ describe.skip('Tags', () => {
     });
 
     test('renders children correctly', () => {
+        const tags = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
 
-        const tags = [
-            'Prishtina',
-            'Athens',
-            'London',
-            'New York',
-            'Beijing'
-        ];
-
-        const component = shallow(
-            <Tags tags={tags} onAdd={func1} onRemove={func2} />,
-        );
+        const component = shallow(<Tags tags={tags} onAdd={func1} onRemove={func2} />);
 
         expect(component.find('Tag').length).toEqual(tags.length);
-
     });
 
     test('deletes tag on backspace when deletable prop is passed, and adds tag on enter click', () => {
-
-        let tags = [
-            'Prishtina',
-            'Athens',
-            'London',
-            'New York',
-            'Beijing'
-        ];
+        let tags = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
 
         const onAdd = (e, data) => {
             tags = tags.concat(data.value);
@@ -85,48 +57,34 @@ describe.skip('Tags', () => {
             tags = data.value;
         };
 
-        const component = shallow(
-            <Tags tags={tags} deletable onAdd={onAdd} onRemove={onRemove} />
-        );
+        const component = shallow(<Tags tags={tags} deletable onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.state('value')).toBe('');
 
         expect(component.find('Tag').length).toBe(5);
         expect(component.find('Tag').last().prop('tag')).toEqual('Beijing');
 
-        component.find('input').simulate('keyDown',
-            { keyCode: 8, key: 'Backspace', preventDefault: () => undefined }
-        );
+        component.find('input').simulate('keyDown', { keyCode: 8, key: 'Backspace', preventDefault: () => undefined });
 
-        component.setProps({tags});
+        component.setProps({ tags });
 
         expect(component.find('Tag').length).toBe(4);
         expect(component.find('Tag').last().prop('tag')).toEqual('New York');
 
-        component.find('input').simulate('change', { target: { value: 'Tokyo' }});
+        component.find('input').simulate('change', { target: { value: 'Tokyo' } });
 
         expect(component.state('value')).toBe('Tokyo');
 
-        component.find('input').simulate('keyDown',
-            { keyCode: 13, key: 'Enter', preventDefault: () => undefined }
-        );
+        component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        component.setProps({tags});
+        component.setProps({ tags });
 
         expect(component.find('Tag').length).toBe(5);
         expect(component.find('Tag').last().prop('tag')).toEqual('Tokyo');
-
     });
 
     test('deletes tag on X click', () => {
-
-        let tags = [
-            'Prishtina',
-            'Athens',
-            'London',
-            'New York',
-            'Beijing'
-        ];
+        let tags = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
 
         const onAdd = (e, data) => {
             tags = tags.concat(data.value);
@@ -136,9 +94,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = mount(
-            <Tags tags={tags} onAdd={onAdd} onRemove={onRemove}  />
-        );
+        const component = mount(<Tags tags={tags} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('i').length).toEqual(tags.length);
 
@@ -146,21 +102,13 @@ describe.skip('Tags', () => {
 
         component.find('i').at(2).simulate('click');
 
-        component.setProps({tags});
+        component.setProps({ tags });
 
         expect(component.find('Tag').at(2).prop('tag')).toEqual('New York');
-
     });
 
     test('adds tags on keypress one of custom delimiters', () => {
-
-        let tags = [
-            'Prishtina',
-            'Athens',
-            'London',
-            'New York',
-            'Beijing'
-        ];
+        let tags = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
 
         const onAdd = (e, data) => {
             tags = tags.concat(data.value);
@@ -179,33 +127,25 @@ describe.skip('Tags', () => {
         expect(component.find('Tag').at(2).prop('tag')).toEqual('London');
         expect(component.find('Tag').last().prop('tag')).toEqual('Beijing');
 
-        component.find('input').simulate('change', { target: { value: 'Tokyo' }});
+        component.find('input').simulate('change', { target: { value: 'Tokyo' } });
         expect(component.state('value')).toBe('Tokyo');
 
         component.find('input').simulate('keyDown', { keyCode: 32, key: 'Space', preventDefault: () => undefined });
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toEqual(6);
         expect(component.find('Tag').last().prop('tag')).toEqual('Tokyo');
 
-        component.find('input').simulate('change', { target: { value: 'Berlin' }});
+        component.find('input').simulate('change', { target: { value: 'Berlin' } });
         expect(component.state('value')).toBe('Berlin');
 
         component.find('input').simulate('keyDown', { keyCode: 188, key: ',', preventDefault: () => undefined });
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toEqual(7);
         expect(component.find('Tag').last().prop('tag')).toEqual('Berlin');
-
     });
 
     test('creates selectable source list when source prop is passed, and a value is given', () => {
-
-        let tags = [
-            'Prishtina',
-            'Athens',
-            'London',
-            'New York',
-            'Beijing'
-        ];
+        let tags = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
 
         const onAdd = (e, data) => {
             tags = tags.concat(data.value);
@@ -215,54 +155,229 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla',
-        'Antigua &amp; Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas'
-        , 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
-        'Bosnia &amp; Herzegovina', 'Botswana', 'Brazil', 'British Virgin Islands'
-        , 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon',
-        'Canada', 'Cape Verde', 'Cayman Islands'
-        , 'Chad', 'Chile', 'China', 'Colombia', 'Congo', 'Cook Islands', 'Costa Rica'
-        , 'Cote D Ivoire', 'Croatia', 'Cruise Ship', 'Cuba', 'Cyprus', 'Czech Republic',
-        'Denmark', 'Djibouti', 'Dominica',
-        'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea'
-        , 'Estonia', 'Ethiopia', 'Falkland Islands', 'Faroe Islands', 'Fiji', 'Finland', 'France', 'French Polynesia',
-        'French West Indies', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana'
-        , 'Gibraltar', 'Greece', 'Greenland', 'Grenada', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea Bissau',
-        'Guyana', 'Haiti', 'Honduras', 'Hong Kong', 'Hungary', 'Iceland', 'India'
-        , 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey',
-        'Jordan', 'Kazakhstan', 'Kenya', 'Kuwait', 'Kyrgyz Republic', 'Laos', 'Latvia'
-        , 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Macau', 'Macedonia',
-        'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Mauritania'
-        , 'Mauritius', 'Mexico', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique',
-        'Namibia', 'Nepal', 'Netherlands', 'Netherlands Antilles', 'New Caledonia'
-        , 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama',
-        'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal'
-        , 'Puerto Rico', 'Qatar', 'Reunion', 'Romania', 'Russia', 'Rwanda', 'Saint Pierre &amp; Miquelon',
-        'Samoa', 'San Marino', 'Satellite', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles'
-        , 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'South Africa', 'South Korea', 'Spain',
-        'Sri Lanka', 'St Kitts &amp; Nevis', 'St Lucia', 'St Vincent', 'St. Lucia', 'Sudan'
-        , 'Suriname', 'Swaziland', 'Sweden', 'Switzerland', 'Syria', 'Taiwan', 'Tajikistan', 'Tanzania'
-        , 'Thailand', 'Togo', 'Tonga', 'Trinidad &amp; Tobago', 'Tunisia'
-        , 'Turkey', 'Turkmenistan', 'Turks &amp; Caicos', 'Uganda', 'Ukraine', 'United Arab Emirates',
-        'United Kingdom', 'United States', 'United States Minor Outlying Islands', 'Uruguay', 'Uzbekistan',
-        'Venezuela', 'Vietnam', 'Virgin Islands (US)'
-        , 'Yemen', 'Zambia', 'Zimbabwe'];
+        const countries = [
+            'Afghanistan',
+            'Albania',
+            'Algeria',
+            'Andorra',
+            'Angola',
+            'Anguilla',
+            'Antigua &amp; Barbuda',
+            'Argentina',
+            'Armenia',
+            'Aruba',
+            'Australia',
+            'Austria',
+            'Azerbaijan',
+            'Bahamas',
+            'Bahrain',
+            'Bangladesh',
+            'Barbados',
+            'Belarus',
+            'Belgium',
+            'Belize',
+            'Benin',
+            'Bermuda',
+            'Bhutan',
+            'Bolivia',
+            'Bosnia &amp; Herzegovina',
+            'Botswana',
+            'Brazil',
+            'British Virgin Islands',
+            'Brunei',
+            'Bulgaria',
+            'Burkina Faso',
+            'Burundi',
+            'Cambodia',
+            'Cameroon',
+            'Canada',
+            'Cape Verde',
+            'Cayman Islands',
+            'Chad',
+            'Chile',
+            'China',
+            'Colombia',
+            'Congo',
+            'Cook Islands',
+            'Costa Rica',
+            'Cote D Ivoire',
+            'Croatia',
+            'Cruise Ship',
+            'Cuba',
+            'Cyprus',
+            'Czech Republic',
+            'Denmark',
+            'Djibouti',
+            'Dominica',
+            'Dominican Republic',
+            'Ecuador',
+            'Egypt',
+            'El Salvador',
+            'Equatorial Guinea',
+            'Estonia',
+            'Ethiopia',
+            'Falkland Islands',
+            'Faroe Islands',
+            'Fiji',
+            'Finland',
+            'France',
+            'French Polynesia',
+            'French West Indies',
+            'Gabon',
+            'Gambia',
+            'Georgia',
+            'Germany',
+            'Ghana',
+            'Gibraltar',
+            'Greece',
+            'Greenland',
+            'Grenada',
+            'Guam',
+            'Guatemala',
+            'Guernsey',
+            'Guinea',
+            'Guinea Bissau',
+            'Guyana',
+            'Haiti',
+            'Honduras',
+            'Hong Kong',
+            'Hungary',
+            'Iceland',
+            'India',
+            'Indonesia',
+            'Iran',
+            'Iraq',
+            'Ireland',
+            'Isle of Man',
+            'Israel',
+            'Italy',
+            'Jamaica',
+            'Japan',
+            'Jersey',
+            'Jordan',
+            'Kazakhstan',
+            'Kenya',
+            'Kuwait',
+            'Kyrgyz Republic',
+            'Laos',
+            'Latvia',
+            'Lebanon',
+            'Lesotho',
+            'Liberia',
+            'Libya',
+            'Liechtenstein',
+            'Lithuania',
+            'Luxembourg',
+            'Macau',
+            'Macedonia',
+            'Madagascar',
+            'Malawi',
+            'Malaysia',
+            'Maldives',
+            'Mali',
+            'Malta',
+            'Mauritania',
+            'Mauritius',
+            'Mexico',
+            'Moldova',
+            'Monaco',
+            'Mongolia',
+            'Montenegro',
+            'Montserrat',
+            'Morocco',
+            'Mozambique',
+            'Namibia',
+            'Nepal',
+            'Netherlands',
+            'Netherlands Antilles',
+            'New Caledonia',
+            'New Zealand',
+            'Nicaragua',
+            'Niger',
+            'Nigeria',
+            'Norway',
+            'Oman',
+            'Pakistan',
+            'Palestine',
+            'Panama',
+            'Papua New Guinea',
+            'Paraguay',
+            'Peru',
+            'Philippines',
+            'Poland',
+            'Portugal',
+            'Puerto Rico',
+            'Qatar',
+            'Reunion',
+            'Romania',
+            'Russia',
+            'Rwanda',
+            'Saint Pierre &amp; Miquelon',
+            'Samoa',
+            'San Marino',
+            'Satellite',
+            'Saudi Arabia',
+            'Senegal',
+            'Serbia',
+            'Seychelles',
+            'Sierra Leone',
+            'Singapore',
+            'Slovakia',
+            'Slovenia',
+            'South Africa',
+            'South Korea',
+            'Spain',
+            'Sri Lanka',
+            'St Kitts &amp; Nevis',
+            'St Lucia',
+            'St Vincent',
+            'St. Lucia',
+            'Sudan',
+            'Suriname',
+            'Swaziland',
+            'Sweden',
+            'Switzerland',
+            'Syria',
+            'Taiwan',
+            'Tajikistan',
+            'Tanzania',
+            'Thailand',
+            'Togo',
+            'Tonga',
+            'Trinidad &amp; Tobago',
+            'Tunisia',
+            'Turkey',
+            'Turkmenistan',
+            'Turks &amp; Caicos',
+            'Uganda',
+            'Ukraine',
+            'United Arab Emirates',
+            'United Kingdom',
+            'United States',
+            'United States Minor Outlying Islands',
+            'Uruguay',
+            'Uzbekistan',
+            'Venezuela',
+            'Vietnam',
+            'Virgin Islands (US)',
+            'Yemen',
+            'Zambia',
+            'Zimbabwe'
+        ];
 
-        const component = mount(
-            <Tags source={countries} tags={tags} onAdd={onAdd} onRemove={onRemove} />
-        );
+        const component = mount(<Tags source={countries} tags={tags} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('.sourceList').length).toEqual(0);
         expect(component.find('.sourceItem').length).toEqual(0);
 
-        component.find('input').simulate('change', { target: { value: 'a' }});
+        component.find('input').simulate('change', { target: { value: 'a' } });
 
         expect(component.state('value')).toBe('a');
 
         expect(component.find('.sourceList').length).toEqual(1);
         expect(component.find('.sourceItem').length).toEqual(10);
 
-        component.find('input').simulate('change', { target: { value: 'al' }});
+        component.find('input').simulate('change', { target: { value: 'al' } });
 
         expect(component.state('value')).toBe('al');
 
@@ -281,11 +396,11 @@ describe.skip('Tags', () => {
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toEqual(6);
         expect(component.find('Tag').last().prop('tag')).toEqual('Algeria');
 
-        component.find('input').simulate('change', { target: { value: 'uni' }});
+        component.find('input').simulate('change', { target: { value: 'uni' } });
 
         expect(component.state('value')).toBe('uni');
 
@@ -305,76 +420,243 @@ describe.skip('Tags', () => {
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toEqual(7);
         expect(component.find('Tag').last().prop('tag')).toEqual('United Kingdom');
 
-        component.find('input').simulate('change', { target: { value: 'Doni' }});
+        component.find('input').simulate('change', { target: { value: 'Doni' } });
 
         expect(component.find('.sourceItem').length).toEqual(0);
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toEqual(8);
         expect(component.find('Tag').last().prop('tag')).toEqual('Doni');
-
     });
 
     test('searchable source is limited by props, and callback function is called on Tags change', () => {
-
-        const countries = ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Anguilla',
-        'Antigua &amp; Barbuda', 'Argentina', 'Armenia', 'Aruba', 'Australia', 'Austria', 'Azerbaijan', 'Bahamas'
-        , 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bermuda', 'Bhutan', 'Bolivia',
-        'Bosnia &amp; Herzegovina', 'Botswana', 'Brazil', 'British Virgin Islands'
-        , 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi', 'Cambodia', 'Cameroon',
-        'Canada', 'Cape Verde', 'Cayman Islands'
-        , 'Chad', 'Chile', 'China', 'Colombia', 'Congo', 'Cook Islands', 'Costa Rica'
-        , 'Cote D Ivoire', 'Croatia', 'Cruise Ship', 'Cuba', 'Cyprus', 'Czech Republic',
-        'Denmark', 'Djibouti', 'Dominica',
-        'Dominican Republic', 'Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea'
-        , 'Estonia', 'Ethiopia', 'Falkland Islands', 'Faroe Islands', 'Fiji', 'Finland', 'France', 'French Polynesia',
-        'French West Indies', 'Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana'
-        , 'Gibraltar', 'Greece', 'Greenland', 'Grenada', 'Guam', 'Guatemala', 'Guernsey', 'Guinea', 'Guinea Bissau',
-        'Guyana', 'Haiti', 'Honduras', 'Hong Kong', 'Hungary', 'Iceland', 'India'
-        , 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Isle of Man', 'Israel', 'Italy', 'Jamaica', 'Japan', 'Jersey',
-        'Jordan', 'Kazakhstan', 'Kenya', 'Kuwait', 'Kyrgyz Republic', 'Laos', 'Latvia'
-        , 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg', 'Macau', 'Macedonia',
-        'Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Mauritania'
-        , 'Mauritius', 'Mexico', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Montserrat', 'Morocco', 'Mozambique',
-        'Namibia', 'Nepal', 'Netherlands', 'Netherlands Antilles', 'New Caledonia'
-        , 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'Norway', 'Oman', 'Pakistan', 'Palestine', 'Panama',
-        'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal'
-        , 'Puerto Rico', 'Qatar', 'Reunion', 'Romania', 'Russia', 'Rwanda', 'Saint Pierre &amp; Miquelon',
-        'Samoa', 'San Marino', 'Satellite', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles'
-        , 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'South Africa', 'South Korea', 'Spain',
-        'Sri Lanka', 'St Kitts &amp; Nevis', 'St Lucia', 'St Vincent', 'St. Lucia', 'Sudan'
-        , 'Suriname', 'Swaziland', 'Sweden', 'Switzerland', 'Syria', 'Taiwan', 'Tajikistan', 'Tanzania'
-        , 'Thailand', 'Togo', 'Tonga', 'Trinidad &amp; Tobago', 'Tunisia'
-        , 'Turkey', 'Turkmenistan', 'Turks &amp; Caicos', 'Uganda', 'Ukraine', 'United Arab Emirates',
-        'United Kingdom', 'United States', 'United States Minor Outlying Islands', 'Uruguay', 'Uzbekistan',
-        'Venezuela', 'Vietnam', 'Virgin Islands (US)'
-        , 'Yemen', 'Zambia', 'Zimbabwe'];
-
-        const tags = [
-            'Prishtina',
-            'Athens',
-            'London',
-            'New York',
-            'Beijing'
+        const countries = [
+            'Afghanistan',
+            'Albania',
+            'Algeria',
+            'Andorra',
+            'Angola',
+            'Anguilla',
+            'Antigua &amp; Barbuda',
+            'Argentina',
+            'Armenia',
+            'Aruba',
+            'Australia',
+            'Austria',
+            'Azerbaijan',
+            'Bahamas',
+            'Bahrain',
+            'Bangladesh',
+            'Barbados',
+            'Belarus',
+            'Belgium',
+            'Belize',
+            'Benin',
+            'Bermuda',
+            'Bhutan',
+            'Bolivia',
+            'Bosnia &amp; Herzegovina',
+            'Botswana',
+            'Brazil',
+            'British Virgin Islands',
+            'Brunei',
+            'Bulgaria',
+            'Burkina Faso',
+            'Burundi',
+            'Cambodia',
+            'Cameroon',
+            'Canada',
+            'Cape Verde',
+            'Cayman Islands',
+            'Chad',
+            'Chile',
+            'China',
+            'Colombia',
+            'Congo',
+            'Cook Islands',
+            'Costa Rica',
+            'Cote D Ivoire',
+            'Croatia',
+            'Cruise Ship',
+            'Cuba',
+            'Cyprus',
+            'Czech Republic',
+            'Denmark',
+            'Djibouti',
+            'Dominica',
+            'Dominican Republic',
+            'Ecuador',
+            'Egypt',
+            'El Salvador',
+            'Equatorial Guinea',
+            'Estonia',
+            'Ethiopia',
+            'Falkland Islands',
+            'Faroe Islands',
+            'Fiji',
+            'Finland',
+            'France',
+            'French Polynesia',
+            'French West Indies',
+            'Gabon',
+            'Gambia',
+            'Georgia',
+            'Germany',
+            'Ghana',
+            'Gibraltar',
+            'Greece',
+            'Greenland',
+            'Grenada',
+            'Guam',
+            'Guatemala',
+            'Guernsey',
+            'Guinea',
+            'Guinea Bissau',
+            'Guyana',
+            'Haiti',
+            'Honduras',
+            'Hong Kong',
+            'Hungary',
+            'Iceland',
+            'India',
+            'Indonesia',
+            'Iran',
+            'Iraq',
+            'Ireland',
+            'Isle of Man',
+            'Israel',
+            'Italy',
+            'Jamaica',
+            'Japan',
+            'Jersey',
+            'Jordan',
+            'Kazakhstan',
+            'Kenya',
+            'Kuwait',
+            'Kyrgyz Republic',
+            'Laos',
+            'Latvia',
+            'Lebanon',
+            'Lesotho',
+            'Liberia',
+            'Libya',
+            'Liechtenstein',
+            'Lithuania',
+            'Luxembourg',
+            'Macau',
+            'Macedonia',
+            'Madagascar',
+            'Malawi',
+            'Malaysia',
+            'Maldives',
+            'Mali',
+            'Malta',
+            'Mauritania',
+            'Mauritius',
+            'Mexico',
+            'Moldova',
+            'Monaco',
+            'Mongolia',
+            'Montenegro',
+            'Montserrat',
+            'Morocco',
+            'Mozambique',
+            'Namibia',
+            'Nepal',
+            'Netherlands',
+            'Netherlands Antilles',
+            'New Caledonia',
+            'New Zealand',
+            'Nicaragua',
+            'Niger',
+            'Nigeria',
+            'Norway',
+            'Oman',
+            'Pakistan',
+            'Palestine',
+            'Panama',
+            'Papua New Guinea',
+            'Paraguay',
+            'Peru',
+            'Philippines',
+            'Poland',
+            'Portugal',
+            'Puerto Rico',
+            'Qatar',
+            'Reunion',
+            'Romania',
+            'Russia',
+            'Rwanda',
+            'Saint Pierre &amp; Miquelon',
+            'Samoa',
+            'San Marino',
+            'Satellite',
+            'Saudi Arabia',
+            'Senegal',
+            'Serbia',
+            'Seychelles',
+            'Sierra Leone',
+            'Singapore',
+            'Slovakia',
+            'Slovenia',
+            'South Africa',
+            'South Korea',
+            'Spain',
+            'Sri Lanka',
+            'St Kitts &amp; Nevis',
+            'St Lucia',
+            'St Vincent',
+            'St. Lucia',
+            'Sudan',
+            'Suriname',
+            'Swaziland',
+            'Sweden',
+            'Switzerland',
+            'Syria',
+            'Taiwan',
+            'Tajikistan',
+            'Tanzania',
+            'Thailand',
+            'Togo',
+            'Tonga',
+            'Trinidad &amp; Tobago',
+            'Tunisia',
+            'Turkey',
+            'Turkmenistan',
+            'Turks &amp; Caicos',
+            'Uganda',
+            'Ukraine',
+            'United Arab Emirates',
+            'United Kingdom',
+            'United States',
+            'United States Minor Outlying Islands',
+            'Uruguay',
+            'Uzbekistan',
+            'Venezuela',
+            'Vietnam',
+            'Virgin Islands (US)',
+            'Yemen',
+            'Zambia',
+            'Zimbabwe'
         ];
+
+        const tags = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
 
         const onRemove = jest.fn();
         const onAdd = jest.fn();
 
-        const component = mount(
-            <Tags tags={tags} sourceLimit={5} source={countries} onAdd={onAdd} onRemove={onRemove} deletable />
-        );
+        const component = mount(<Tags tags={tags} sourceLimit={5} source={countries} onAdd={onAdd} onRemove={onRemove} deletable />);
 
         expect(component.find('.sourceList').length).toEqual(0);
         expect(component.find('.sourceItem').length).toEqual(0);
 
-        component.find('input').simulate('change', { target: { value: 'a' }});
+        component.find('input').simulate('change', { target: { value: 'a' } });
 
         expect(component.state('value')).toBe('a');
 
@@ -392,11 +674,9 @@ describe.skip('Tags', () => {
         component.find('i').first().simulate('click');
 
         expect(onRemove).toHaveBeenCalled();
-
     });
 
     test('seperates pasted string into tags depending on the passed delimiters', () => {
-
         let tags = [];
 
         const onAdd = (e, data) => {
@@ -408,50 +688,46 @@ describe.skip('Tags', () => {
         };
 
         const component = shallow(
-            <Tags
-                tags={tags}
-                deletable
-                delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]}
-                onAdd={onAdd}
-                onRemove={onRemove}
-            />
+            <Tags tags={tags} deletable delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} onAdd={onAdd} onRemove={onRemove} />
         );
 
         expect(component.find('Tag').length).toBe(0);
 
-        component.find('input').simulate('paste', {clipboardData: {getData: () => 'Doni wow'}});
-        component.setProps({tags});
+        component.find('input').simulate('paste', { clipboardData: { getData: () => 'Doni wow' } });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(2);
 
         tags = [];
-        component.setProps({tags});
+        component.setProps({ tags });
 
-        component.find('input').simulate('paste', {clipboardData: {getData: () => ',Doni..Genti , Shkumba'}});
-        component.setProps({tags});
+        component.find('input').simulate('paste', { clipboardData: { getData: () => ',Doni..Genti , Shkumba' } });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(3);
 
         tags = [];
-        component.setProps({tags});
+        component.setProps({ tags });
 
-        component.find('input').simulate('paste', {clipboardData: {
-            getData: () => '  D, o. n ,i.,. Gen,,ti.Sh . k ,um. .ba , . '
-        }});
-        component.setProps({tags});
+        component.find('input').simulate('paste', {
+            clipboardData: {
+                getData: () => '  D, o. n ,i.,. Gen,,ti.Sh . k ,um. .ba , . '
+            }
+        });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(10);
 
         tags = [];
-        component.setProps({tags});
+        component.setProps({ tags });
 
-        component.find('input').simulate('paste', {clipboardData: {
-            getData: () => ', Doni .G.E,N T , i .      doni@moosend.com       '
-        }});
-        component.setProps({tags});
+        component.find('input').simulate('paste', {
+            clipboardData: {
+                getData: () => ', Doni .G.E,N T , i .      doni@moosend.com       '
+            }
+        });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(8);
-
     });
 
     test('seperates pasted string into tags depending on the different passed delimiters', () => {
-
         let tags = [];
 
         const onAdd = (e, data) => {
@@ -463,50 +739,46 @@ describe.skip('Tags', () => {
         };
 
         const component = shallow(
-            <Tags
-                tags={tags}
-                deletable
-                delimiters={[65, 71, 76, 'a', 'g', 'l']}
-                onAdd={onAdd}
-                onRemove={onRemove}
-            />
+            <Tags tags={tags} deletable delimiters={[65, 71, 76, 'a', 'g', 'l']} onAdd={onAdd} onRemove={onRemove} />
         );
 
         expect(component.find('Tag').length).toBe(0);
 
-        component.find('input').simulate('paste', {clipboardData: {getData: () => 'hey, its me again'}});
-        component.setProps({tags});
+        component.find('input').simulate('paste', { clipboardData: { getData: () => 'hey, its me again' } });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(2);
 
         tags = [];
-        component.setProps({tags});
+        component.setProps({ tags });
 
-        component.find('input').simulate('paste', {clipboardData: {getData: () => 'Hope of deliverance'}});
-        component.setProps({tags});
+        component.find('input').simulate('paste', { clipboardData: { getData: () => 'Hope of deliverance' } });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(3);
 
         tags = [];
-        component.setProps({tags});
+        component.setProps({ tags });
 
-        component.find('input').simulate('paste', {clipboardData: {
-            getData: () => 'here I go again on my own, with a bucket full of gold'
-        }});
-        component.setProps({tags});
+        component.find('input').simulate('paste', {
+            clipboardData: {
+                getData: () => 'here I go again on my own, with a bucket full of gold'
+            }
+        });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(6);
 
         tags = [];
-        component.setProps({tags});
+        component.setProps({ tags });
 
-        component.find('input').simulate('paste', {clipboardData: {
-            getData: () => 'weird seperators are garanteed to be weird, seriously'
-        }});
-        component.setProps({tags});
+        component.find('input').simulate('paste', {
+            clipboardData: {
+                getData: () => 'weird seperators are garanteed to be weird, seriously'
+            }
+        });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(6);
-
     });
 
     test('paste event doesnt trigger when no delimiter is present on the string', () => {
-
         let tags = [];
 
         const onAdd = (e, data) => {
@@ -517,26 +789,16 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(
-            <Tags
-                tags={tags}
-                deletable
-                delimiters={[188, ',']}
-                onAdd={onAdd}
-                onRemove={onRemove}
-            />
-        );
+        const component = shallow(<Tags tags={tags} deletable delimiters={[188, ',']} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(0);
 
-        component.find('input').simulate('paste', {clipboardData: {getData: () => 'Hope of deliverance'}});
-        component.setProps({tags});
+        component.find('input').simulate('paste', { clipboardData: { getData: () => 'Hope of deliverance' } });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(0);
-
     });
 
     test('submits input value when submitOnBlur prop is passed', () => {
-
         let tags = ['doni'];
 
         const onAdd = (e, data) => {
@@ -547,52 +809,38 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(
-            <Tags
-                tags={tags}
-                onAdd={onAdd}
-                onRemove={onRemove}
-            />
-        );
+        const component = shallow(<Tags tags={tags} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(1);
 
-        component.find('input').simulate('change', { target: { value: 'text' }});
+        component.find('input').simulate('change', { target: { value: 'text' } });
         component.find('input').simulate('blur');
 
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(2);
     });
 
     test('prevents submission on input blur when preventSubmit is passed', () => {
+        let tags = ['doni'];
 
-                let tags = ['doni'];
+        const onAdd = (e, data) => {
+            tags = tags.concat(data.value);
+        };
 
-                const onAdd = (e, data) => {
-                    tags = tags.concat(data.value);
-                };
+        const onRemove = (e, data, index) => {
+            tags.splice(index, 1);
+        };
 
-                const onRemove = (e, data, index) => {
-                    tags.splice(index, 1);
-                };
+        const component = shallow(<Tags preventSubmit tags={tags} onAdd={onAdd} onRemove={onRemove} />);
 
-                const component = shallow(
-                    <Tags
-                        preventSubmit
-                        tags={tags}
-                        onAdd={onAdd}
-                        onRemove={onRemove}
-                    />
-                );
+        expect(component.find('Tag').length).toBe(1);
 
-                expect(component.find('Tag').length).toBe(1);
+        component.find('input').simulate('change', { target: { value: 'text' } });
+        component.find('input').simulate('blur');
 
-                component.find('input').simulate('change', { target: { value: 'text' }});
-                component.find('input').simulate('blur');
-
-                component.setProps({tags});
-                expect(component.find('Tag').length).toBe(1);
-            });
+        component.setProps({ tags });
+        expect(component.find('Tag').length).toBe(1);
+    });
 
     test('submission is refused if type of email is passed and no email is in input', () => {
         let tags = ['doni'];
@@ -605,49 +853,34 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(
-            <Tags
-                validateTag="email"
-                tags={tags}
-                onAdd={onAdd}
-                onRemove={onRemove}
-            />
-        );
+        const component = shallow(<Tags validateTag="email" tags={tags} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(1);
 
-        component.find('input').simulate('change', { target: { value: 'text' }});
+        component.find('input').simulate('change', { target: { value: 'text' } });
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(1);
 
-        component.find('input').simulate('change', { target: { value: 'doni@moosend.com' }});
+        component.find('input').simulate('change', { target: { value: 'doni@moosend.com' } });
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(2);
     });
 
     test('checks and removes duplicate values when duplicave tags are passed as props', () => {
         const tags = ['doni', 'gent', 'shkumbin', 'doni'];
 
-        const component = shallow(
-            <Tags
-                tags={tags}
-                onAdd={func1}
-                onRemove={func2}
-            />
-        );
+        const component = shallow(<Tags tags={tags} onAdd={func1} onRemove={func2} />);
 
         expect(component.find('Tag').length).toBe(tags.length - 1);
-
     });
 
     test('converts delimiters to keyCodes', () => {
-
         const delimiters = ['.', 'Enter', 'space', ','];
         let tags = ['doni', 'gent', 'shkumbin'];
 
@@ -659,28 +892,19 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(
-            <Tags
-                tags={tags}
-                delimiters={delimiters}
-                onAdd={onAdd}
-                onRemove={onRemove}
-            />
-        );
+        const component = shallow(<Tags tags={tags} delimiters={delimiters} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(3);
 
-        component.find('input').simulate('change', { target: { value: 'text' }});
+        component.find('input').simulate('change', { target: { value: 'text' } });
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(4);
-
     });
 
     test('validates the Tags component if there are less than two tags', () => {
-
         let status = null;
 
         const delimiters = ['.', 'Enter', 'space', ','];
@@ -695,7 +919,7 @@ describe.skip('Tags', () => {
         };
 
         const validate = (data) => {
-            if (data.value.length < 2){
+            if (data.value.length < 2) {
                 status = 'error';
                 return false;
             } else {
@@ -705,14 +929,7 @@ describe.skip('Tags', () => {
         };
 
         const component = shallow(
-            <Tags
-                validate={validate}
-                tags={tags}
-                delimiters={delimiters}
-                onAdd={onAdd}
-                onRemove={onRemove}
-                status={status}
-            />
+            <Tags validate={validate} tags={tags} delimiters={delimiters} onAdd={onAdd} onRemove={onRemove} status={status} />
         );
 
         expect(component.find('Tag').length).toBe(1);
@@ -721,19 +938,17 @@ describe.skip('Tags', () => {
 
         expect(component.find('.error')).toBeTruthy;
 
-        component.find('input').simulate('change', { target: { value: 'text' }});
+        component.find('input').simulate('change', { target: { value: 'text' } });
 
         component.find('input').simulate('keyDown', { keyCode: 13, key: 'Enter', preventDefault: () => undefined });
 
-        component.setProps({tags});
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(2);
 
         expect(component.find('.error')).toBeFalsy;
-
     });
 
     test('validates individual tags when a text with delimiters is pasted, removes duplicates', () => {
-
         let tags = [];
 
         const onAdd = (e, data) => {
@@ -745,57 +960,38 @@ describe.skip('Tags', () => {
         };
 
         const component = shallow(
-            <Tags
-                tags={tags}
-                deletable
-                delimiters={[',', 'Enter', ' ']}
-                onAdd={onAdd}
-                onRemove={onRemove}
-                validateTag="email"
-            />
+            <Tags tags={tags} deletable delimiters={[',', 'Enter', ' ']} onAdd={onAdd} onRemove={onRemove} validateTag="email" />
         );
 
         expect(component.find('Tag').length).toBe(0);
 
-        component.find('input').simulate('paste', {clipboardData: {getData: () => 'doni@moosend.com, wow'}});
-        component.setProps({tags});
+        component.find('input').simulate('paste', { clipboardData: { getData: () => 'doni@moosend.com, wow' } });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(1);
 
         // tags = [];
         // component.setProps({tags});
 
         // tslint:disable-next-line
-        component.find('input').simulate('paste', {clipboardData: {getData: () => 'doni@moosend.com, genti@moosend.com, olala'}});
-        component.setProps({tags});
+        component.find('input').simulate('paste', { clipboardData: { getData: () => 'doni@moosend.com, genti@moosend.com, olala' } });
+        component.setProps({ tags });
         expect(component.find('Tag').length).toBe(2);
-
     });
 
     test('adds alternate styles when the related prop is passed', () => {
-
         const tags = ['doni', 'gent', 'shkumbin'];
 
         const component = mount(
-            <Tags
-                tags={tags}
-                deletable
-                delimiters={[',', 'Enter', ' ']}
-                validateTag="email"
-                alternate
-                onAdd={func1}
-                onRemove={func2}
-            />
+            <Tags tags={tags} deletable delimiters={[',', 'Enter', ' ']} validateTag="email" alternate onAdd={func1} onRemove={func2} />
         );
 
         expect(component.find('.tags').first().hasClass('alternateContainer')).toBe(true);
         expect(component.find('.inputContainer').first().hasClass('alternateInputContainer')).toBe(true);
         expect(component.find('.input').first().hasClass('alternateInput')).toBe(true);
         expect(component.find('.tag').first().hasClass('alternateTag')).toBe(true);
-
     });
 
     test('calls onTagClick function when a tag is clicked', () => {
-
         const tags = ['doni', 'gent', 'shkumbin'];
 
         const onTagClick = jest.fn();
@@ -818,7 +1014,5 @@ describe.skip('Tags', () => {
         component.find('.tag').first().simulate('click');
 
         expect(onTagClick).toHaveBeenCalled();
-
     });
-
 });

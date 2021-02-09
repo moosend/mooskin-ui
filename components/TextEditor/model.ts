@@ -1,6 +1,6 @@
-import {IAllProps} from '@tinymce/tinymce-react';
+import { IAllProps } from '@tinymce/tinymce-react';
 
-export interface ITextEditorComponentProps extends Partial<IAllProps>{
+export interface ITextEditorComponentProps extends Partial<IAllProps> {
     /** selects different element to attach the editor to */
     selector?: any;
 
@@ -9,8 +9,8 @@ export interface ITextEditorComponentProps extends Partial<IAllProps>{
 
     /** personalization tags custom dropdown */
     personalizationTags?: {
-        buttonLabel: string,
-        id: string,
+        buttonLabel: string;
+        id: string;
         tags: IPersonalizationTag[];
     };
 }

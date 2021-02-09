@@ -7,7 +7,6 @@ import { ILoadingBarComponentProps } from './model';
 import { StyledLoadingBar } from './styles';
 
 export const LoadingBar: React.FC<ILoadingBarComponentProps> = (props) => {
-
     const [progress, setProgress] = React.useState(props.progress);
     const [opacity, setOpacity] = React.useState(1);
 
@@ -16,14 +15,14 @@ export const LoadingBar: React.FC<ILoadingBarComponentProps> = (props) => {
     }, [props.progress]);
 
     React.useEffect(() => {
-        if (props.error){
+        if (props.error) {
             props.onLoaderError && props.onLoaderError();
             setProgress(100);
         }
     }, [props.error]);
 
     React.useEffect(() => {
-        if (progress >= 100){
+        if (progress >= 100) {
             !props.error && props.onLoaderDone && props.onLoaderDone();
             setTimeout(() => {
                 setOpacity(0);
@@ -38,7 +37,6 @@ export const LoadingBar: React.FC<ILoadingBarComponentProps> = (props) => {
     }, [progress]);
 
     return <StyledLoadingBar {...props} progress={progress} opacity={opacity} />;
-
 };
 
 LoadingBar.defaultProps = {

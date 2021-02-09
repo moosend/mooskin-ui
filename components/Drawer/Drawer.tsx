@@ -20,7 +20,7 @@ import {
     StyledDrawerFooter,
     StyledDrawerHeader,
     StyledDrawerOverlayFadeIn,
-    StyledDrawerOverlayFadeOut,
+    StyledDrawerOverlayFadeOut
 } from './styles';
 
 const ContentByPosition = {
@@ -43,19 +43,18 @@ const ContentByPosition = {
 };
 
 export const Drawer: React.FC<IDrawerComponentProps> = (props) => {
-
     const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
         props.onClose && props.onClose(e);
         callback && callback(e);
     };
 
     const recurseChildren = (children: any): any => {
-        if (!children){
+        if (!children) {
             return null;
         }
 
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<IBoxComponentProps>(child) && child.type === DrawerCloseButton){
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === DrawerCloseButton) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     key: i,
@@ -63,18 +62,16 @@ export const Drawer: React.FC<IDrawerComponentProps> = (props) => {
                 } as IBoxComponentProps);
             }
 
-            if (React.isValidElement<IDrawerOverlayComponentProps>(child) && child.type === DrawerOverlay){
+            if (React.isValidElement<IDrawerOverlayComponentProps>(child) && child.type === DrawerOverlay) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     isOpen: child.props.isOpen ? child.props.isOpen : props.isOpen,
                     key: i,
-                    onClick: props.closeOnOverlayClick ?
-                                (e) => batchClickHandler(e, child.props.onClick) :
-                                child.props.onClick
+                    onClick: props.closeOnOverlayClick ? (e) => batchClickHandler(e, child.props.onClick) : child.props.onClick
                 } as IDrawerOverlayComponentProps);
             }
 
-            if (React.isValidElement<IDrawerContentComponentProps>(child) && child.type === DrawerContent){
+            if (React.isValidElement<IDrawerContentComponentProps>(child) && child.type === DrawerContent) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     isOpen: child.props.isOpen ? child.props.isOpen : props.isOpen,
@@ -84,12 +81,12 @@ export const Drawer: React.FC<IDrawerComponentProps> = (props) => {
                         child.props.onClick && child.props.onClick(e);
                     },
                     placement: child.props.placement ? child.props.placement : props.placement,
-                    size: child.props.size ? child.props.size : props.size,
+                    size: child.props.size ? child.props.size : props.size
                 } as IDrawerContentComponentProps);
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;
@@ -115,7 +112,7 @@ Drawer.displayName = 'Drawer';
 export const DrawerContent: React.FC<IDrawerContentComponentProps> = (props) => {
     const DrawerByPlacement = props.placement && ContentByPosition[props.placement];
 
-    if (!DrawerByPlacement){
+    if (!DrawerByPlacement) {
         return null;
     }
 
@@ -166,7 +163,7 @@ export const DrawerFooter: React.FC<IBoxComponentProps> = (props) => {
     return <StyledDrawerFooter boxAs="footer" {...props} />;
 };
 
-DrawerFooter .defaultProps = {
+DrawerFooter.defaultProps = {
     className: '',
     style: {}
 };
@@ -180,7 +177,7 @@ export const DrawerCloseButton: React.FC<IBoxComponentProps> = (props) => {
     return <StyledDrawerCloseButton {...props} children="close" />;
 };
 
-DrawerCloseButton .defaultProps = {
+DrawerCloseButton.defaultProps = {
     className: '',
     style: {}
 };
@@ -191,11 +188,10 @@ DrawerCloseButton.displayName = 'DrawerCloseButton';
  * DrawerOverlay
  */
 export const DrawerOverlay: React.FC<IDrawerOverlayComponentProps> = (props) => {
-
     const [show, setShow] = React.useState(props.isOpen);
 
     React.useEffect(() => {
-        if (props.isOpen){
+        if (props.isOpen) {
             props.onOpen && props.onOpen();
             setShow(true);
         } else {
@@ -207,12 +203,11 @@ export const DrawerOverlay: React.FC<IDrawerOverlayComponentProps> = (props) => 
 
     const DrawerOverlayComponent = props.isOpen ? StyledDrawerOverlayFadeIn : StyledDrawerOverlayFadeOut;
 
-    if (show){
+    if (show) {
         return <DrawerOverlayComponent {...props} />;
     }
 
     return null;
-
 };
 
 DrawerOverlay.defaultProps = {

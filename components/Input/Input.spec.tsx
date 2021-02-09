@@ -1,10 +1,9 @@
 import * as React from 'react';
-import {Input, InputContainer, InputEmoji, InputIcon, InputOption, InputOptionList, InputOptionListTitle, InputOverlay} from './Input';
+import { Input, InputContainer, InputEmoji, InputIcon, InputOption, InputOptionList, InputOptionListTitle, InputOverlay } from './Input';
 
 import { mount, shallow } from 'enzyme';
 
 describe('Input', () => {
-
     test('renders correctly', () => {
         const func = jest.fn();
 
@@ -26,47 +25,45 @@ describe('Input', () => {
     });
 
     test('renders properly into dom and has Placeholder prop', () => {
-
-        const component = shallow(<Input value="value" placeholder="username"/>);
+        const component = shallow(<Input value="value" placeholder="username" />);
 
         expect(component.find('StyledInputSolo').prop('placeholder')).toContain('username');
     });
 
     test('renders an input with a "required" prop and minlength', () => {
-        const component = shallow(<Input value="value" minLength={5} required/>);
+        const component = shallow(<Input value="value" minLength={5} required />);
 
         expect(component.find('StyledInputSolo').prop('required')).toEqual(true);
         expect(component.find('StyledInputSolo').prop('minLength')).toEqual(5);
     });
 
     test('renders an input with a passed value and maxlength', () => {
-        const component = shallow(<Input value="random" maxLength={50}/>);
+        const component = shallow(<Input value="random" maxLength={50} />);
 
         expect(component.find('StyledInputSolo').prop('value')).toEqual('random');
         expect(component.find('StyledInputSolo').prop('maxLength')).toEqual(50);
     });
 
     test('renders an input with id and type', () => {
-
-        const component = shallow(<Input value="value" type="text" id="1234"/>);
+        const component = shallow(<Input value="value" type="text" id="1234" />);
 
         expect(component.find('StyledInputSolo').prop('id')).toEqual('1234');
         expect(component.find('StyledInputSolo').prop('type')).toEqual('text');
     });
 
     test('renders an input with custom css class and style', () => {
-        const component = shallow(<Input value="value" style={{color: 'blue'}} className="input-group"/>);
+        const component = shallow(<Input value="value" style={{ color: 'blue' }} className="input-group" />);
 
         expect(component.find('StyledInputSolo').hasClass('input-group')).toBe(true);
-        expect(component.find('StyledInputSolo').prop('style')).toEqual({color: 'blue'});
+        expect(component.find('StyledInputSolo').prop('style')).toEqual({ color: 'blue' });
     });
 
     test('onChange prop callback is called when a key is pressed', () => {
         const func = jest.fn();
 
-        const component = shallow(<Input value="value" onChange={func}/>);
+        const component = shallow(<Input value="value" onChange={func} />);
 
-        component.find('StyledInputSolo').simulate('change', { target: { value: 'text' }});
+        component.find('StyledInputSolo').simulate('change', { target: { value: 'text' } });
         expect(func).toHaveBeenCalled();
     });
 
@@ -80,7 +77,7 @@ describe('Input', () => {
             </InputContainer>
         );
 
-        component.find(Input).simulate('change', { target: { value: 'text' }});
+        component.find(Input).simulate('change', { target: { value: 'text' } });
         expect(func).toHaveBeenCalled();
     });
 
@@ -110,7 +107,5 @@ describe('Input', () => {
         );
 
         expect(component.find(InputOptionList).length).toBe(1);
-
     });
-
 });

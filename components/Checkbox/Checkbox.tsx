@@ -9,30 +9,29 @@ import { ICheckboxComponentProps, ICheckboxIconComponentProps } from './model';
 import Description from '../Description/Description';
 
 // Styled Components
-import {StyledCheckbox, StyledCheckboxIcon, StyledCheckboxLabel} from './styles';
+import { StyledCheckbox, StyledCheckboxIcon, StyledCheckboxLabel } from './styles';
 
 export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
-
     const [hasCheckbox, setHasCheckbox] = React.useState(false);
 
     const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        props.onClickCheckbox && props.onClickCheckbox(e, {dataLabel: props.dataLabel, value: !props.checked});
+        props.onClickCheckbox && props.onClickCheckbox(e, { dataLabel: props.dataLabel, value: !props.checked });
     };
 
     const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
-        if (!props.disabled){
+        if (!props.disabled) {
             onClick(e);
             callback && callback(e);
         }
     };
 
     const recurseChildren = (children: any): any => {
-        if (!children){
+        if (!children) {
             return null;
         }
 
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<ILabelComponentProps>(child) && child.type === CheckboxLabel){
+            if (React.isValidElement<ILabelComponentProps>(child) && child.type === CheckboxLabel) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     disabled: props.disabled,
@@ -41,7 +40,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
                 } as ILabelComponentProps);
             }
 
-            if (React.isValidElement<ICheckboxIconComponentProps>(child) && child.type === CheckboxIcon){
+            if (React.isValidElement<ICheckboxIconComponentProps>(child) && child.type === CheckboxIcon) {
                 !hasCheckbox && setHasCheckbox(true);
                 return React.cloneElement(child, {
                     children: props.checked ? 'check_box' : 'check_box_outline_blank',
@@ -51,8 +50,8 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
                 } as ICheckboxIconComponentProps);
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;
@@ -60,7 +59,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
     };
 
     return (
-        <StyledCheckbox {...props} >
+        <StyledCheckbox {...props}>
             {!hasCheckbox && (
                 <CheckboxIcon
                     disabled={props.disabled}

@@ -17,21 +17,19 @@ const AlertIcons = {
  * Alert
  */
 export const Alert: React.FC<IBaseAlertComponentProps> = (props) => {
-
     const recurseChildren = (children: any): any => {
-        if (!children){
+        if (!children) {
             return null;
         }
 
         return React.Children.map(children, (child, i) => {
             if (
-                React.isValidElement<IBaseAlertComponentProps>(child) && (
-                    child.type === AlertIcon ||
+                React.isValidElement<IBaseAlertComponentProps>(child) &&
+                (child.type === AlertIcon ||
                     child.type === AlertTitle ||
                     child.type === AlertDescription ||
-                    child.type === AlertCloseButton
-                )
-            ){
+                    child.type === AlertCloseButton)
+            ) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children),
                     key: i,
@@ -40,8 +38,8 @@ export const Alert: React.FC<IBaseAlertComponentProps> = (props) => {
                 } as IBaseAlertComponentProps);
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;

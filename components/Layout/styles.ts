@@ -11,4 +11,4 @@ export const StyledLayout = styled(Box)<ILayoutComponentProps>`
     grid-template-columns: ${(props) => props.cols && `repeat(${props.cols}, auto)`};
 `;
 
-StyledLayout.displayName = 'StyledLayout';;
+StyledLayout.displayName = 'StyledLayout';

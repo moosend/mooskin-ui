@@ -4,7 +4,7 @@ import * as React from 'react';
 import { ISkeletonCircleComponentProps, ISkeletonComponentProps, ISkeletonTextComponentProps } from './model';
 
 // Styled Components
-import {checkLoaded, StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText} from './styles';
+import { checkLoaded, StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText } from './styles';
 
 /**
  * Skeleton
@@ -53,20 +53,18 @@ SkeletonCircle.displayName = 'Skeleton';
 export const SkeletonText: React.FC<ISkeletonTextComponentProps> = (props) => {
     const EnhancedComponent = withLoader(checkLoaded(StyledSkeletonText, props.isLoaded));
 
-    if (props.isLoaded){
+    if (props.isLoaded) {
         return <EnhancedComponent {...props} />;
     }
 
     const lines = [...Array(props.lines)];
 
-    if (lines.length){
+    if (lines.length) {
         return (
             <>
-                {
-                    lines.map((line, i) => {
-                        return <EnhancedComponent {...props} key={i} w={i === lines.length - 1 ? '80%' : '100%'} />;
-                    })
-                }
+                {lines.map((line, i) => {
+                    return <EnhancedComponent {...props} key={i} w={i === lines.length - 1 ? '80%' : '100%'} />;
+                })}
             </>
         );
     }
@@ -92,9 +90,7 @@ SkeletonText.displayName = 'Skeleton';
 export const withLoader = (
     Component: React.ComponentType<ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps>
 ) => (props: ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps) => {
-    return (
-        <Component {...props} />
-    );
+    return <Component {...props} />;
 };
 
 export default Skeleton;

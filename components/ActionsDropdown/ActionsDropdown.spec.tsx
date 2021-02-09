@@ -1,11 +1,10 @@
 import * as React from 'react';
 
-import ActionsDropdown, {ActionsDropdownItem} from './ActionsDropdown';
+import ActionsDropdown, { ActionsDropdownItem } from './ActionsDropdown';
 
 import { mount, shallow } from 'enzyme';
 
 describe('ActionsDropdown', () => {
-
     test('renders ActionsDropdown correctly', () => {
         const func = jest.fn();
 
@@ -28,13 +27,7 @@ describe('ActionsDropdown', () => {
     test('renders ActionsDropdownItem correctly', () => {
         const func = jest.fn();
 
-        const tree = shallow(
-            <ActionsDropdownItem
-                onClick={func}
-                className="myClass"
-                style={{color: 'blue'}}
-            />
-        );
+        const tree = shallow(<ActionsDropdownItem onClick={func} className="myClass" style={{ color: 'blue' }} />);
         expect(tree).toMatchSnapshot();
     });
 
@@ -43,20 +36,13 @@ describe('ActionsDropdown', () => {
 
         const tree = mount(
             <ActionsDropdown onClickItem={func}>
-                <ActionsDropdownItem value="/settings">
-                    Settings
-                </ActionsDropdownItem>
-                <ActionsDropdownItem value="/template">
-                    Template
-                </ActionsDropdownItem>
-                <ActionsDropdownItem value="/preview">
-                    Preview
-                </ActionsDropdownItem>
+                <ActionsDropdownItem value="/settings">Settings</ActionsDropdownItem>
+                <ActionsDropdownItem value="/template">Template</ActionsDropdownItem>
+                <ActionsDropdownItem value="/preview">Preview</ActionsDropdownItem>
             </ActionsDropdown>
         );
 
         tree.find('div').at(2).simulate('click');
         expect(func).toHaveBeenCalled();
     });
-
 });

@@ -22,34 +22,32 @@ const defaultFormat = 'dd MMM yyyy';
  * DateRange
  */
 export const DateRange: React.FC<IDateRangePickerComponentProps> = (props) => {
-
     const [showPicker, setShowPicker] = React.useState(false);
 
     const getInputValue = () => {
         let inputValue = '';
 
-        props.ranges && props.ranges.length && props.ranges.forEach((item, i) => {
-            if (item.startDate && item.endDate){
-                const separator = i > 0 ? ', ' : '';
-                inputValue = inputValue +
-                    separator +
-                    `${format(item.startDate, props.format || defaultFormat)} - ${format(item.endDate, props.format || defaultFormat)}`;
-            }
-        });
+        props.ranges &&
+            props.ranges.length &&
+            props.ranges.forEach((item, i) => {
+                if (item.startDate && item.endDate) {
+                    const separator = i > 0 ? ', ' : '';
+                    inputValue =
+                        inputValue +
+                        separator +
+                        `${format(item.startDate, props.format || defaultFormat)} - ${format(item.endDate, props.format || defaultFormat)}`;
+                }
+            });
 
         return inputValue ? inputValue : 'N/A';
     };
 
     return (
         <Box position="relative" d="flex" {...props.wrapperProps}>
-            <Input onFocus={() => setShowPicker(true)} value={getInputValue()} {...props.inputProps}/>
+            <Input onFocus={() => setShowPicker(true)} value={getInputValue()} {...props.inputProps} />
             {showPicker && (
                 <Box boxShadow="md" position="absolute" top={40} left={0} {...props.pickerWrapperProps}>
-                    <DateRangePicker
-                        ranges={props.ranges}
-                        onChange={props.onChange}
-                        {...props}
-                    />
+                    <DateRangePicker ranges={props.ranges} onChange={props.onChange} {...props} />
                     <DateRangeOverlay onClick={() => setShowPicker(false)} />
                 </Box>
             )}

@@ -117,7 +117,7 @@ exports[`Label renders correctly 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-bdnylx eLauql sc-gtssRu iFLTYl"
+            className="sc-bdnylx bEzLzN sc-gtssRu iFLTYl"
             onClick={[Function]}
             style={Object {}}
           >

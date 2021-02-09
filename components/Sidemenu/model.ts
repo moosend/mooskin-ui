@@ -1,6 +1,6 @@
 import { IBoxComponentProps } from '../Box/model';
 
-export interface ISidemenuComponentProps extends IBoxComponentProps{
+export interface ISidemenuComponentProps extends IBoxComponentProps {
     /** active Sidemenu item */
     activeItem?: string;
 
@@ -8,7 +8,7 @@ export interface ISidemenuComponentProps extends IBoxComponentProps{
     onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string) => void;
 }
 
-export interface ISidemenuItemComponentProps extends IBoxComponentProps{
+export interface ISidemenuItemComponentProps extends IBoxComponentProps {
     /** value returned in callback fn */
     value?: string;
 

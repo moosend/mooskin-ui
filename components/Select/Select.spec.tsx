@@ -1,10 +1,17 @@
 import * as React from 'react';
-import Select, {SelectContainer, SelectFilter, SelectIcon, SelectPlaceholder, SelectOptionList, SelectOption, SelectOverlay} from './Select';
+import Select, {
+    SelectContainer,
+    SelectFilter,
+    SelectIcon,
+    SelectOption,
+    SelectOptionList,
+    SelectOverlay,
+    SelectPlaceholder
+} from './Select';
 
-import {mount, shallow} from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Select', () => {
-
     test('renders Select correctly', () => {
         const func = jest.fn();
 
@@ -32,7 +39,9 @@ describe('Select', () => {
         const func = jest.fn();
 
         const tree = shallow(
-            <SelectOption value="1" onClick={func} >Option1</SelectOption>
+            <SelectOption value="1" onClick={func}>
+                Option1
+            </SelectOption>
         );
 
         tree.find('StyledSelectOption').simulate('click');
@@ -44,28 +53,23 @@ describe('Select', () => {
     test('renders Filter correctly and calls callback on change', () => {
         const func = jest.fn();
 
-        const tree = shallow(
-            <SelectFilter onChange={func} />
+        const tree = shallow(<SelectFilter onChange={func} />);
 
-        );
-        
-        tree.find('StyledSelectFilter').first().simulate('change', { target: { value: 'filter' }});
+        tree.find('StyledSelectFilter')
+            .first()
+            .simulate('change', { target: { value: 'filter' } });
 
         expect(func).toHaveBeenCalled();
         expect(tree).toMatchSnapshot();
     });
 
     test('should be rendered as a multi select if the selected prop is an array', () => {
-
-        let options = [
-            '2',
-            '4'
-        ];
+        const options = ['2', '4'];
 
         const func = jest.fn();
 
         const component = mount(
-            <Select onChange={func} showList selectedValue={options} dataLabel="select" >
+            <Select onChange={func} showList selectedValue={options} dataLabel="select">
                 <SelectContainer>
                     <SelectPlaceholder>Select an option</SelectPlaceholder>
                     <SelectFilter />

@@ -18,7 +18,6 @@ import {
  * Expandable
  */
 export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
-
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         activeId?: string | number,
@@ -29,20 +28,19 @@ export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
     };
 
     const getActiveItem = (activeId?: string | number) => {
-        if (props.activeItem && Array.isArray(props.activeItem)){
+        if (props.activeItem && Array.isArray(props.activeItem)) {
             return (props.activeItem as any).includes(activeId);
         }
         return props.activeItem === activeId;
     };
 
     const recurseChildren = (children: any, activeId?: string | number, active?: boolean): any => {
-        if (!children){
+        if (!children) {
             return null;
         }
 
         return React.Children.map(children, (child, i) => {
-
-            if (React.isValidElement<IExpandableItemComponentProps>(child) && child.type === ExpandableItem){
+            if (React.isValidElement<IExpandableItemComponentProps>(child) && child.type === ExpandableItem) {
                 const isActive = child.props.active ? child.props.active : getActiveItem(child.props.activeId);
                 return React.cloneElement(child, {
                     active: active ? active : isActive,
@@ -52,7 +50,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
                 } as IExpandableItemComponentProps);
             }
 
-            if (React.isValidElement<IBoxComponentProps>(child) && child.type === ExpandableItemContainer){
+            if (React.isValidElement<IBoxComponentProps>(child) && child.type === ExpandableItemContainer) {
                 return React.cloneElement(child, {
                     children: recurseChildren(child.props.children, activeId, active),
                     key: i,
@@ -60,7 +58,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
                 } as IBoxComponentProps);
             }
 
-            if (React.isValidElement<IExpandableCommonComponentProps>(child) && child.type === ExpandableItemButton){
+            if (React.isValidElement<IExpandableCommonComponentProps>(child) && child.type === ExpandableItemButton) {
                 return React.cloneElement(child, {
                     active,
                     children: child.props.children ? recurseChildren(child.props.children, activeId, active) : 'keyboard_arrow_down',
@@ -68,7 +66,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
                 } as IExpandableCommonComponentProps);
             }
 
-            if (React.isValidElement<IExpandableCommonComponentProps>(child) && child.type === ExpandableItem){
+            if (React.isValidElement<IExpandableCommonComponentProps>(child) && child.type === ExpandableItem) {
                 return React.cloneElement(child, {
                     active,
                     children: recurseChildren(child.props.children, activeId, active),
@@ -76,8 +74,8 @@ export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
                 } as IExpandableCommonComponentProps);
             }
 
-            if (React.isValidElement<IExpandableCommonComponentProps>(child) && child.type === ExpandableItemContent){
-                if (!active){
+            if (React.isValidElement<IExpandableCommonComponentProps>(child) && child.type === ExpandableItemContent) {
+                if (!active) {
                     return null;
                 }
                 return React.cloneElement(child, {
@@ -87,8 +85,8 @@ export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
                 } as IExpandableCommonComponentProps);
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;

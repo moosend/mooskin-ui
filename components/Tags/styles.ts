@@ -1,4 +1,3 @@
-
 import styled from 'styled-components';
 
 // Models
@@ -35,9 +34,9 @@ export const StyledTag = styled(Box)<IBoxComponentProps>`
     cursor: pointer;
     align-items: center;
     white-space: nowrap;
-    :not(:last-child){
+    :not(:last-child) {
         margin-right: 5px;
-    };
+    }
 `;
 
 StyledTag.displayName = 'StyledTag';

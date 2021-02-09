@@ -33,16 +33,18 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: ${(props) => props.variant === 'top-accent' ? '0.5rem' : '0.75rem'};
+    padding-top: ${(props) => (props.variant === 'top-accent' ? '0.5rem' : '0.75rem')};
     padding-right: 1rem;
     padding-bottom: 0.75rem;
-    padding-left: ${(props) => props.variant === 'left-accent' ? '0.75rem' : '1rem'};
-    border-left: ${(props) => props.variant === 'left-accent' ? '4px solid' : ''};
-    border-top: ${(props) => props.variant === 'top-accent' ? '4px solid' : ''};
+    padding-left: ${(props) => (props.variant === 'left-accent' ? '0.75rem' : '1rem')};
+    border-left: ${(props) => (props.variant === 'left-accent' ? '4px solid' : '')};
+    border-top: ${(props) => (props.variant === 'top-accent' ? '4px solid' : '')};
     border-color: ${(props) => props.status && SolidBackgroundColors[props.status]};
     border-radius: 3px;
     background-color: ${(props) => {
-        return props.variant === 'solid' ? props.status && SolidBackgroundColors[props.status] : props.status && BackgroundColors[props.status];
+        return props.variant === 'solid'
+            ? props.status && SolidBackgroundColors[props.status]
+            : props.status && BackgroundColors[props.status];
     }};
 `;
 
@@ -50,7 +52,7 @@ StyledAlert.displayName = 'StyledAlert';
 
 const StyledAlertCommonText = styled(Box)<IBaseAlertComponentProps>`
     line-height: 1.5rem;
-    color: ${(props) => props.variant === 'solid' ? '#FFFFFF' : ''};
+    color: ${(props) => (props.variant === 'solid' ? '#FFFFFF' : '')};
 `;
 
 StyledAlertCommonText.displayName = 'StyledAlertCommonText';
@@ -70,7 +72,7 @@ StyledAlertDescription.displayName = 'StyledAlertDescription';
 
 const StyledAlertCommonIcon = styled(Box)<IBaseAlertComponentProps>`
     font-family: 'Mooskin Icons';
-    color: ${(props) => props.variant === 'solid' ? '#FFFFFF' : props.status && FontColors[props.status]};
+    color: ${(props) => (props.variant === 'solid' ? '#FFFFFF' : props.status && FontColors[props.status])};
 `;
 
 StyledAlertCommonIcon.displayName = 'StyledAlertCommonIcon';

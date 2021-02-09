@@ -10,7 +10,7 @@ import { Description } from '../Description/Description';
 import { Label } from '../Label/Label';
 
 // Styled Components
-import {StyledTextArea} from './styles';
+import { StyledTextArea } from './styles';
 
 /**
  * TextArea
@@ -19,7 +19,7 @@ export const TextArea: React.FC<ITextAreaComponentProps> = (props) => {
     const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         !props.disabled && props.onChange && props.onChange(e);
     };
-    return <StyledTextArea {...props as any} boxAs="textarea" onChange={onChange as any} />;
+    return <StyledTextArea {...(props as any)} boxAs="textarea" onChange={onChange as any} />;
 };
 
 TextArea.defaultProps = {

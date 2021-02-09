@@ -4,12 +4,7 @@ import * as React from 'react';
 import { IBoxComponentProps } from '../Box/model';
 
 // Styled Components
-import {
-    StyledFooter,
-    StyledFooterBody,
-    StyledFooterEnd,
-    StyledFooterHead
-} from './styles';
+import { StyledFooter, StyledFooterBody, StyledFooterEnd, StyledFooterHead } from './styles';
 
 /**
  * Footer
@@ -60,7 +55,7 @@ export const FooterEnd: React.FC<IBoxComponentProps> = (props) => {
     return <StyledFooterEnd {...props} />;
 };
 
-FooterEnd .defaultProps = {
+FooterEnd.defaultProps = {
     className: '',
     style: {}
 };

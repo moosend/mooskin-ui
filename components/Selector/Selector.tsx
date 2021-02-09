@@ -4,16 +4,12 @@ import * as React from 'react';
 import { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
 
 // Styled Components
-import {
-    StyledSelector,
-    StyledSelectorItem
-} from './styles';
+import { StyledSelector, StyledSelectorItem } from './styles';
 
 /**
  * Selector
  */
 export const Selector: React.FC<ISelectorComponentProps> = (props) => {
-
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         value?: string | number,
@@ -25,7 +21,7 @@ export const Selector: React.FC<ISelectorComponentProps> = (props) => {
 
     const recurseChildren = (children: any): any => {
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<ISelectorItemComponentProps>(child) && child.type === SelectorItem){
+            if (React.isValidElement<ISelectorItemComponentProps>(child) && child.type === SelectorItem) {
                 return React.cloneElement(child, {
                     active: child.props.value === props.activeItem,
                     children: recurseChildren((child.props as any).children),
@@ -36,8 +32,8 @@ export const Selector: React.FC<ISelectorComponentProps> = (props) => {
                 } as ISelectorItemComponentProps);
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;

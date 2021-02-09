@@ -12,13 +12,13 @@ import variables from '../_utils/globals/variables';
 const normalButtonSizes = {
     lg: '10px',
     md: '9px 10px',
-    sm: '8px 10px',
+    sm: '8px 10px'
 };
 
 const inverseButtonSizes = {
     lg: '8px',
     md: '7px 8px',
-    sm: '6px 7px',
+    sm: '6px 7px'
 };
 
 export const ButtonDefault = styled(Box)<IButtonComponentProps>`
@@ -37,7 +37,7 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
     align-items: center;
     justify-content: center;
     &:hover {
-        text-decoration: ${(props) => !props.disabled ? 'underline' : ''};
+        text-decoration: ${(props) => (!props.disabled ? 'underline' : '')};
     }
 `;
 
@@ -45,8 +45,9 @@ ButtonDefault.displayName = 'ButtonDefault';
 
 export const StyledButtonNormal = styled(ButtonDefault)`
     background-color: ${(props) =>
-        !props.disabled ? props.palette?.button.backgroundColor || variables.button.backgroundColor :
-        props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
+        !props.disabled
+            ? props.palette?.button.backgroundColor || variables.button.backgroundColor
+            : props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
     color: ${(props) => props.palette?.button.fontColor || variables.button.fontColor};
     padding: ${(props) => normalButtonSizes[props.buttonSize || 'md']};
     border: none;
@@ -57,8 +58,9 @@ StyledButtonNormal.displayName = 'StyledButtonNormal';
 
 export const StyledButtonInverse = styled(ButtonDefault)`
     color: ${(props) =>
-        !props.disabled ? props.palette?.button.backgroundColor || variables.button.backgroundColor :
-        props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
+        !props.disabled
+            ? props.palette?.button.backgroundColor || variables.button.backgroundColor
+            : props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
     padding: ${(props) => inverseButtonSizes[props.buttonSize || 'md']};
     background-color: transparent;
     border: 2px solid

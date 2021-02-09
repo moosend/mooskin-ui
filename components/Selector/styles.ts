@@ -24,12 +24,14 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
     flex: 1;
     height: 32px;
     border-radius: 22px;
-    color: ${(props) => props.active ?
-                    `${props.palette?.layout.fontColor || variables.layout.fontColor}` :
-                    `${props.palette?.layout.borderColor || variables.layout.borderColor}`};
-    background-color: ${(props) => props.active ?
-                    `${props.palette?.layout.backgroundColor || variables.layout.backgroundColor}` :
-                    `${props.palette?.layout.fontColor || variables.layout.fontColor}`};
+    color: ${(props) =>
+        props.active
+            ? `${props.palette?.layout.fontColor || variables.layout.fontColor}`
+            : `${props.palette?.layout.borderColor || variables.layout.borderColor}`};
+    background-color: ${(props) =>
+        props.active
+            ? `${props.palette?.layout.backgroundColor || variables.layout.backgroundColor}`
+            : `${props.palette?.layout.fontColor || variables.layout.fontColor}`};
     font-family: Hind;
     font-size: 12px;
     font-weight: 500;
@@ -38,9 +40,9 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
     line-height: 1.25;
     letter-spacing: normal;
     transition: 0.3s ease all;
-    opacity: ${(props) => props.active ? 1 : 0.5};
+    opacity: ${(props) => (props.active ? 1 : 0.5)};
     cursor: pointer;
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-right: 4px;
     }
 `;

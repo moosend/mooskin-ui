@@ -5,9 +5,7 @@ import { mount } from 'enzyme';
 
 describe('Label', () => {
     test('renders correctly', () => {
-        const tree = mount(
-            <Label>Label here!</Label>
-        );
+        const tree = mount(<Label>Label here!</Label>);
         expect(tree).toMatchSnapshot();
     });
 });

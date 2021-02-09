@@ -4,20 +4,114 @@ export type DefaultOptionsType = 'inherit' | 'initial' | 'unset';
 export type BorderStyleType = 'none' | 'hidden' | 'dotted' | 'dashed' | 'solid' | 'double' | 'groove' | 'ridge' | 'inset' | 'outset';
 export type OverflowOptionsType = 'visible' | 'hidden' | 'scroll' | 'auto' | 'initial' | 'inherit';
 export type FlexAlignOptionsType = 'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'initial' | 'inherit';
-export type FlexJustifyOptionsType = 'space-between' | 'space-around' | 'flex-start' | 'flex-end' | 'center' | 'initial' | 'inherit' | 'space-evenly';
+export type FlexJustifyOptionsType =
+    | 'space-between'
+    | 'space-around'
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'initial'
+    | 'inherit'
+    | 'space-evenly';
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 export type BoxShadowIntensityType = IntensityType | 'inner' | 'outline';
 
 export const boxComponentProps = [
-    'id', 'className', 'style', 'm', 'mt', 'mr', 'mb', 'ml', 'mx', 'my', 'boxShadow', 'color', 'round', 'p', 'pt', 'pr', 'pb', 'pl', 'px', 'py',
-    'opacity', 'fontFamily', 'fontSize', 'fontWeight', 'lineHeight', 'textAlign', 'fontStyle', 'textTransform', 'textDecoration', 'w', 'h',
-    'minW', 'maxW', 'minH', 'maxH', 'd', 'overflow', 'overflowX', 'overflowY', 'align', 'alignContent', 'alignSelf', 'justifyItems', 'justify',
-    'justifySelf', 'wrap', 'direction', 'flex', 'flexGrow', 'flexShrink', 'flexBasis', 'order', 'bg', 'bgImage', 'bgColor', 'bgSize', 'bgPosition',
-    'bgRepeat', 'border', 'borderWidth', 'borderStyle', 'borderColor', 'borderTop', 'borderTopWidth', 'borderTopStyle', 'borderTopColor',
-    'borderRight', 'borderRightWidth', 'borderRightStyle', 'borderRightColor', 'borderBottom', 'borderBottomWidth', 'borderBottomStyle',
-    'borderBottomColor', 'borderLeft', 'borderLeftWidth', 'borderLeftStyle', 'borderLeftColor', 'borderRadius', 'borderTopLeftRadius',
-    'borderTopRightRadius', 'borderBottomRightRadius', 'borderBottomLeftRadius', 'position', 'zIndex', 'top', 'right', 'bottom', 'left',
-    'animation', 'visibility', 'cursor', 'boxAs', 'children', 'theme'
+    'id',
+    'className',
+    'style',
+    'm',
+    'mt',
+    'mr',
+    'mb',
+    'ml',
+    'mx',
+    'my',
+    'boxShadow',
+    'color',
+    'round',
+    'p',
+    'pt',
+    'pr',
+    'pb',
+    'pl',
+    'px',
+    'py',
+    'opacity',
+    'fontFamily',
+    'fontSize',
+    'fontWeight',
+    'lineHeight',
+    'textAlign',
+    'fontStyle',
+    'textTransform',
+    'textDecoration',
+    'w',
+    'h',
+    'minW',
+    'maxW',
+    'minH',
+    'maxH',
+    'd',
+    'overflow',
+    'overflowX',
+    'overflowY',
+    'align',
+    'alignContent',
+    'alignSelf',
+    'justifyItems',
+    'justify',
+    'justifySelf',
+    'wrap',
+    'direction',
+    'flex',
+    'flexGrow',
+    'flexShrink',
+    'flexBasis',
+    'order',
+    'bg',
+    'bgImage',
+    'bgColor',
+    'bgSize',
+    'bgPosition',
+    'bgRepeat',
+    'border',
+    'borderWidth',
+    'borderStyle',
+    'borderColor',
+    'borderTop',
+    'borderTopWidth',
+    'borderTopStyle',
+    'borderTopColor',
+    'borderRight',
+    'borderRightWidth',
+    'borderRightStyle',
+    'borderRightColor',
+    'borderBottom',
+    'borderBottomWidth',
+    'borderBottomStyle',
+    'borderBottomColor',
+    'borderLeft',
+    'borderLeftWidth',
+    'borderLeftStyle',
+    'borderLeftColor',
+    'borderRadius',
+    'borderTopLeftRadius',
+    'borderTopRightRadius',
+    'borderBottomRightRadius',
+    'borderBottomLeftRadius',
+    'position',
+    'zIndex',
+    'top',
+    'right',
+    'bottom',
+    'left',
+    'animation',
+    'visibility',
+    'cursor',
+    'boxAs',
+    'children',
+    'theme'
 ];
 
 export type IBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLElement>;
@@ -27,7 +121,6 @@ export type IAnchorBoxComponentProps = IBoxComponentProps & React.AnchorHTMLAttr
 export type ITextAreaBoxComponentProps = IBoxComponentProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export interface IBaseBoxComponentProps extends IMooskinContext {
-
     /** render Box as a different html element */
     boxAs?: any;
 
@@ -122,9 +215,30 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
     maxH?: number | string;
 
     /** display */
-    d?: 'inline' | 'block' | 'contents' | 'flex' | 'grid' | 'inline-block' | 'inline-flex' | 'inline-grid' | 'inline-table' |
-        'list-item' | 'run-in' | 'table' | 'table-caption' | 'table-column-group' | 'table-header-group' | 'table-footer-group' |
-        'table-row-group' | 'table-cell' | 'table-column' | 'table-row' | 'none' | 'initial' | 'inherit';
+    d?:
+        | 'inline'
+        | 'block'
+        | 'contents'
+        | 'flex'
+        | 'grid'
+        | 'inline-block'
+        | 'inline-flex'
+        | 'inline-grid'
+        | 'inline-table'
+        | 'list-item'
+        | 'run-in'
+        | 'table'
+        | 'table-caption'
+        | 'table-column-group'
+        | 'table-header-group'
+        | 'table-footer-group'
+        | 'table-row-group'
+        | 'table-cell'
+        | 'table-column'
+        | 'table-row'
+        | 'none'
+        | 'initial'
+        | 'inherit';
 
     /** overflow */
     overflow?: OverflowOptionsType;

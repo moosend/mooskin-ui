@@ -135,7 +135,7 @@ exports[`DatePicker renders other type of the component correctly 1`] = `
             type="hour"
           >
             <div
-              className="sc-bdnylx dOPKTt sc-hKFyIo bUzjaB"
+              className="sc-bdnylx kBsmpR sc-hKFyIo bUzjaB"
               format="12-Hour"
               onChangeSelect={[Function]}
               style={Object {}}
@@ -254,7 +254,7 @@ exports[`DatePicker renders other type of the component correctly 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="sc-bdnylx dOPKTt sc-jSFkmK hlJPoq"
+                          className="sc-bdnylx kBsmpR sc-jSFkmK hlJPoq"
                           onClick={[Function]}
                           style={Object {}}
                         >
@@ -366,7 +366,7 @@ exports[`DatePicker renders other type of the component correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-gKAblj iIHrlm"
+                                      className="sc-bdnylx kBsmpR sc-gKAblj iIHrlm"
                                       style={Object {}}
                                     >
                                       Select an option
@@ -483,7 +483,7 @@ exports[`DatePicker renders other type of the component correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <div
-                                      className="sc-bdnylx dOPKTt sc-jrsJCI gAmfKy"
+                                      className="sc-bdnylx kBsmpR sc-jrsJCI gAmfKy"
                                       style={Object {}}
                                     >
                                       keyboard_arrow_down

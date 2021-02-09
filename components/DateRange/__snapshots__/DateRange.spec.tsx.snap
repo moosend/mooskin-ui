@@ -9,9 +9,9 @@ exports[`DateRange renders correctly 1`] = `
   ranges={
     Array [
       Object {
-        "endDate": 2021-02-09T20:33:34.196Z,
+        "endDate": 2021-02-09T21:03:04.730Z,
         "key": "selection",
-        "startDate": 2021-02-09T20:33:34.196Z,
+        "startDate": 2021-02-09T21:03:04.730Z,
       },
     ]
   }
@@ -121,7 +121,7 @@ exports[`DateRange renders correctly 1`] = `
         style={Object {}}
       >
         <div
-          className="sc-bdnylx fVLYsS"
+          className="sc-bdnylx hEAZVy"
           d="flex"
           style={Object {}}
         >
@@ -247,7 +247,7 @@ exports[`DateRange renders correctly 1`] = `
                     value="09 Feb 2021 - 09 Feb 2021"
                   >
                     <input
-                      className="sc-bdnylx dOPKTt sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                      className="sc-bdnylx kBsmpR sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
                       onFocus={[Function]}
                       style={Object {}}
                       value="09 Feb 2021 - 09 Feb 2021"

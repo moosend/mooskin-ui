@@ -7,7 +7,7 @@ import { IBoxComponentProps } from './model';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Styled Components
-import {StyledBox} from './styles';
+import { StyledBox } from './styles';
 
 /**
  * Box

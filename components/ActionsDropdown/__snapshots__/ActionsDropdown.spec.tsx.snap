@@ -117,7 +117,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-bdnylx jDqbCj sc-gtssRu dXbfhS"
+            className="sc-bdnylx RMbHf sc-gtssRu dXbfhS"
             onClickItem={[MockFunction]}
             style={Object {}}
           >
@@ -233,7 +233,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-hKFyIo btUBRX"
+                        className="sc-bdnylx kBsmpR sc-hKFyIo btUBRX"
                         style={Object {}}
                       />
                     </StyledBox>
@@ -257,14 +257,14 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                 value="/settings"
               >
                 <Box
-                  className="sc-dlnjPT WRMgT"
+                  className="sc-dlnjPT ioRfPb"
                   dataLabel="settings"
                   onClick={[Function]}
                   style={Object {}}
                   value="/settings"
                 >
                   <Component
-                    className="sc-dlnjPT WRMgT"
+                    className="sc-dlnjPT ioRfPb"
                     dataLabel="settings"
                     onClick={[Function]}
                     palette={
@@ -314,7 +314,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                     value="/settings"
                   >
                     <StyledBox
-                      className="sc-dlnjPT WRMgT"
+                      className="sc-dlnjPT ioRfPb"
                       dataLabel="settings"
                       onClick={[Function]}
                       palette={
@@ -364,7 +364,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                       value="/settings"
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT WRMgT"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT ioRfPb"
                         onClick={[Function]}
                         style={Object {}}
                         value="/settings"
@@ -392,14 +392,14 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                 value="/template"
               >
                 <Box
-                  className="sc-dlnjPT WRMgT"
+                  className="sc-dlnjPT ioRfPb"
                   dataLabel="template"
                   onClick={[Function]}
                   style={Object {}}
                   value="/template"
                 >
                   <Component
-                    className="sc-dlnjPT WRMgT"
+                    className="sc-dlnjPT ioRfPb"
                     dataLabel="template"
                     onClick={[Function]}
                     palette={
@@ -449,7 +449,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                     value="/template"
                   >
                     <StyledBox
-                      className="sc-dlnjPT WRMgT"
+                      className="sc-dlnjPT ioRfPb"
                       dataLabel="template"
                       onClick={[Function]}
                       palette={
@@ -499,7 +499,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                       value="/template"
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT WRMgT"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT ioRfPb"
                         onClick={[Function]}
                         style={Object {}}
                         value="/template"
@@ -527,14 +527,14 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                 value="/preview"
               >
                 <Box
-                  className="sc-dlnjPT WRMgT"
+                  className="sc-dlnjPT ioRfPb"
                   dataLabel="preview"
                   onClick={[Function]}
                   style={Object {}}
                   value="/preview"
                 >
                   <Component
-                    className="sc-dlnjPT WRMgT"
+                    className="sc-dlnjPT ioRfPb"
                     dataLabel="preview"
                     onClick={[Function]}
                     palette={
@@ -584,7 +584,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                     value="/preview"
                   >
                     <StyledBox
-                      className="sc-dlnjPT WRMgT"
+                      className="sc-dlnjPT ioRfPb"
                       dataLabel="preview"
                       onClick={[Function]}
                       palette={
@@ -634,7 +634,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                       value="/preview"
                     >
                       <div
-                        className="sc-bdnylx dOPKTt sc-dlnjPT WRMgT"
+                        className="sc-bdnylx kBsmpR sc-dlnjPT ioRfPb"
                         onClick={[Function]}
                         style={Object {}}
                         value="/preview"

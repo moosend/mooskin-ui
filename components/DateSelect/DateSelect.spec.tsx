@@ -5,17 +5,10 @@ import DateSelect from './DateSelect';
 import { mount, shallow } from 'enzyme';
 
 describe('DatePicker', () => {
-
     test('renders other type of the component correctly', () => {
         const func = jest.fn();
 
-        const tree = mount(
-            <DateSelect
-                onChangeSelect={func}
-                format="12-Hour"
-                type="hour"
-            />
-        );
+        const tree = mount(<DateSelect onChangeSelect={func} format="12-Hour" type="hour" />);
 
         expect(tree).toMatchSnapshot();
     });
@@ -30,7 +23,6 @@ describe('DatePicker', () => {
         expect(component.find('SelectOption').last().prop('value')).toEqual('23');
         expect(component.find('SelectOption').first().children().text()).toEqual('00');
         expect(component.find('SelectOption').last().children().text()).toEqual('23');
-
     });
 
     test('creates select component for date related hours (12-Hours)', () => {
@@ -43,7 +35,6 @@ describe('DatePicker', () => {
         expect(component.find('SelectOption').last().prop('value')).toEqual('23');
         expect(component.find('SelectOption').first().children().text()).toEqual('00 AM');
         expect(component.find('SelectOption').last().children().text()).toEqual('11 PM');
-
     });
 
     test('creates select component for minute selection', () => {
@@ -56,7 +47,6 @@ describe('DatePicker', () => {
         expect(component.find('SelectOption').last().prop('value')).toEqual('59');
         expect(component.find('SelectOption').first().children().text()).toEqual('00');
         expect(component.find('SelectOption').last().children().text()).toEqual('59');
-
     });
 
     test('creates select component for day of the month selection', () => {
@@ -69,7 +59,6 @@ describe('DatePicker', () => {
         expect(component.find('SelectOption').last().prop('value')).toEqual('31');
         expect(component.find('SelectOption').first().children().text()).toEqual('1st');
         expect(component.find('SelectOption').last().children().text()).toEqual('31st');
-
     });
 
     test.skip('creates select component for day of the month (february) selection', () => {
@@ -82,7 +71,6 @@ describe('DatePicker', () => {
         expect(component.find('SelectOption').last().prop('value')).toEqual('31');
         expect(component.find('SelectOption').first().children().text()).toEqual('1st');
         expect(component.find('SelectOption').last().children().text()).toEqual('31st');
-
     });
 
     test('creates select component for day of the week selection', () => {
@@ -95,7 +83,6 @@ describe('DatePicker', () => {
         expect(component.find('SelectOption').last().prop('value')).toEqual('7');
         expect(component.find('SelectOption').first().children().text()).toEqual('Sunday');
         expect(component.find('SelectOption').last().children().text()).toEqual('Saturday');
-
     });
 
     test('creates select component for ordinal selection of days of the month', () => {
@@ -108,7 +95,5 @@ describe('DatePicker', () => {
         expect(component.find('SelectOption').last().prop('value')).toEqual('-1');
         expect(component.find('SelectOption').first().children().text()).toEqual('First');
         expect(component.find('SelectOption').last().children().text()).toEqual('Last');
-
     });
-
 });

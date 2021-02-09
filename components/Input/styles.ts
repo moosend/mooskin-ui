@@ -2,12 +2,7 @@ import styled from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
-import {
-    IInputComponentProps,
-    IInputContainerComponentProps,
-    IInputListComponentProps,
-    IInputOptionComponentProps
-} from './model';
+import { IInputComponentProps, IInputContainerComponentProps, IInputListComponentProps, IInputOptionComponentProps } from './model';
 
 // Components
 import Box from '../Box/Box';
@@ -20,8 +15,8 @@ export const StyledInputContainer = styled(Box)<IInputContainerComponentProps>`
     display: flex;
     flex: 1;
     align-items: center;
-    opacity: ${(props) => props.disabled ? 0.7 : 1};
-    cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
+    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     border-radius: 3px;
     border: solid 1px ${(props) => props.palette?.commonElement.borderColor || variables.commonElement.borderColor};
     background-color: ${(props) => props.palette?.commonElement.backgroundColor || variables.commonElement.backgroundColor};
@@ -89,7 +84,7 @@ export const StyledInputOptionList = styled(Box)<Partial<IInputListComponentProp
     background: #fff;
     border-radius: 3px;
     z-index: 4;
-    box-shadow: 0 1px 5px rgba(0,0,0,.32);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.32);
 `;
 
 StyledInputOptionList.displayName = 'StyledInputOptionList';
