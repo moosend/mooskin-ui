@@ -7,6 +7,8 @@ import { IExpandableCommonComponentProps, IExpandableComponentProps, IExpandable
 // Components
 import Box from '../Box/Box';
 
+import variables from '../_utils/globals/variables';
+
 export const StyledExpandable = styled(Box)<IExpandableComponentProps>`
     display: flex;
     flex-direction: column;
@@ -17,7 +19,7 @@ StyledExpandable.displayName = 'StyledExpandable';
 export const StyledExpandableItem = styled(Box)<IExpandableItemComponentProps>`
     border-radius: 3px;
     border: solid 1px #e2e2e2;
-    background-color: #ffffff;
+    background-color: ${(props) => props.palette?.layout.backgroundColor || variables.layout.backgroundColor};
     :not(:last-child){
         margin-bottom: 15px;
     }
@@ -52,7 +54,7 @@ export const StyledExpandableItemText = styled(Box)<IBoxComponentProps>`
     line-height: 1.29;
     letter-spacing: normal;
     text-align: left;
-    color: #2d2d2d;
+    color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
 `;
 
 StyledExpandableItemText.displayName = 'StyledExpandableItemText';

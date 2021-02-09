@@ -121,7 +121,7 @@ InputContainer.displayName = 'InputContainer';
 export const InputOptionList: React.FC<IInputListComponentProps> = (props) => {
     const [showList, setShowList] = React.useState(false);
     return (
-        <Box position="relative" {...props}>
+        <Box position="relative" color="inherit" {...props}>
             <InputIcon onClick={() => setShowList(!showList)}>{props.icon}</InputIcon>
             {showList && (
                 <>
@@ -253,7 +253,7 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = (props) => {
     };
 
     return (
-        <Box position="relative" {...props}>
+        <Box position="relative" color="inherit" {...props}>
             <InputIcon onClick={() => setShowEmoji(!showEmoji)}>emoji_emotions</InputIcon>
             {showEmoji && (
                 <Box position="absolute" right="0">

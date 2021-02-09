@@ -108,7 +108,7 @@ exports[`TextEditor renders correctly 1`] = `
     value="<p>TextEditor</p>"
   >
     <textarea
-      id="tiny-react_48607454521612866135840"
+      id="tiny-react_19562642121612902815294"
       style={
         Object {
           "visibility": "hidden",
@@ -227,7 +227,7 @@ exports[`TextEditor renders disabled correctly 1`] = `
     value="<p>TextEditor</p>"
   >
     <textarea
-      id="tiny-react_42246730641612866135852"
+      id="tiny-react_82113953141612902815306"
       style={
         Object {
           "visibility": "hidden",
@@ -346,7 +346,7 @@ exports[`TextEditor renders inline correctly 1`] = `
     value="<p>TextEditor</p>"
   >
     <div
-      id="tiny-react_68995769531612866135850"
+      id="tiny-react_27148627831612902815304"
     />
   </Editor>
 </TextEditor>
@@ -460,7 +460,7 @@ exports[`TextEditor renders with menubar correctly 1`] = `
     value="<p>TextEditor</p>"
   >
     <textarea
-      id="tiny-react_80209279851612866135854"
+      id="tiny-react_21880253351612902815308"
       style={
         Object {
           "visibility": "hidden",

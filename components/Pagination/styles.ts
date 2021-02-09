@@ -7,6 +7,8 @@ import { IPaginationButtonComponentProps, IPaginationComponentProps } from './mo
 // Components
 import Box from '../Box/Box';
 
+import variables from '../_utils/globals/variables';
+
 export const StyledPagination = styled(Box)<IPaginationComponentProps>`
     display: flex;
     align-items: center;
@@ -26,9 +28,13 @@ export const StyledPaginationButton = styled(Box)<IPaginationButtonComponentProp
     text-align: center;
     cursor: pointer;
     padding: ${(props) => props.active ? '9px 12px' : '8px 11px'};
-    color: ${(props) => props.active ? '#ffffff' : '#9d9d9d'};
-    background-color: ${(props) => props.active ? '#425579' : '#ffffff'};
-    border: ${(props) => props.active ? 'none' : 'solid 1px #e2e2e2'};
+    color: ${(props) => props.active ?
+                    `${props.palette?.toggleElement.fontColor || variables.toggleElement.fontColor}` :
+                    `${props.palette?.toggleElement.secondaryFontColor || variables.toggleElement.secondaryFontColor}`};
+    background-color: ${(props) => props.active ?
+                    `${props.palette?.toggleElement.backgroundColor || variables.toggleElement.backgroundColor}` :
+                    `${props.palette?.toggleElement.secondaryBackgroundColor || variables.toggleElement.secondaryBackgroundColor}`};
+    border: ${(props) => props.active ? 'none' : `solid 1px ${props.palette?.toggleElement.borderColor || variables.toggleElement.borderColor}`};
     :not(:last-child){
         margin-right: 10px;
     }

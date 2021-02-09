@@ -7,7 +7,7 @@ import { IModalComponentProps, IModalContentComponentProps } from './model';
 // Components
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
+import variables from '../_utils/globals/variables';
 
 const overlayFadeIn = keyframes`
     0% {
@@ -42,9 +42,9 @@ export const StyledModalContent = styled(Box)<IModalContentComponentProps>`
     display: flex;
     flex-direction: column;
     z-index: 1400;
-    color: inherit;
+    color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
+    background: ${(props) => props.palette?.layout.backgroundColor || variables.layout.backgroundColor};
     outline: 0px;
-    background: rgb(255, 255, 255);
     opacity: 1;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 `;
@@ -69,6 +69,7 @@ export const StyledModalHeader = styled(Box)<IBoxComponentProps>`
     font-size: 1.25rem;
     font-weight: 600;
     width: 100%;
+    color: inherit;
 `;
 
 StyledModalHeader.displayName = 'StyledModalHeader';
@@ -78,6 +79,7 @@ export const StyledModalBody = styled(Box)<IBoxComponentProps>`
     flex: 1 1 0%;
     overflow: auto;
     width: 100%;
+    color: inherit;
 `;
 
 StyledModalBody.displayName = 'StyledModalBody';
@@ -88,6 +90,7 @@ export const StyledModalFooter = styled(Box)<IBoxComponentProps>`
     justify-content: flex-end;
     padding: 1rem 1.5rem;
     width: 100%;
+    color: inherit;
 `;
 
 StyledModalFooter.displayName = 'StyledModalFooter';
@@ -97,6 +100,7 @@ export const StyledModalCloseButton = styled(Box)<IBoxComponentProps>`
     width: 32px;
     height: 32px;
     font-size: 32px;
+    color: inherit;
     cursor: pointer;
     border-radius: 9px;
     :hover {

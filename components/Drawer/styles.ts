@@ -12,7 +12,7 @@ import {
 // Components
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
+import variables from '../_utils/globals/variables';
 
 const overlayFadeIn = keyframes`
     0% {
@@ -107,8 +107,9 @@ export const StyledDrawerContent = styled(Box)<IDrawerContentComponentProps>`
     z-index: 1400;
     color: inherit;
     outline: 0px;
-    background: rgb(255, 255, 255);
     opacity: 1;
+    background-color: ${(props) => props.palette?.layout.backgroundColor || variables.layout.backgroundColor};
+    color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 `;
 
@@ -200,6 +201,7 @@ export const StyledDrawerHeader = styled(Box)<IBoxComponentProps>`
     font-size: 1.25rem;
     font-weight: 600;
     width: 100%;
+    color: inherit;
 `;
 
 StyledDrawerHeader.displayName = 'StyledDrawerHeader';
@@ -209,6 +211,7 @@ export const StyledDrawerBody = styled(Box)<IBoxComponentProps>`
     flex: 1 1 0%;
     overflow: auto;
     width: 100%;
+    color: inherit;
 `;
 
 StyledDrawerBody.displayName = 'StyledDrawerBody';
@@ -219,6 +222,7 @@ export const StyledDrawerFooter = styled(Box)<IBoxComponentProps>`
     justify-content: flex-end;
     padding: 1rem 1.5rem;
     width: 100%;
+    color: inherit;
 `;
 
 StyledDrawerFooter.displayName = 'StyledDrawerFooter';
@@ -230,6 +234,7 @@ export const StyledDrawerCloseButton = styled(Box)<IBoxComponentProps>`
     font-size: 32px;
     cursor: pointer;
     border-radius: 9px;
+    color: inherit;
     :hover {
         background: rgba(30, 30, 30, 0.1);
     }

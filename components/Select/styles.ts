@@ -7,7 +7,7 @@ import { ISelectComponentProps, ISelectOptionComponentProps } from './model';
 // Components
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
+import variables from '../_utils/globals/variables';
 
 const spin = keyframes`
     0% { transform: rotate(0deg); }
@@ -16,7 +16,7 @@ const spin = keyframes`
 
 export const StyledSelect = styled(Box)<ISelectComponentProps>`
     position: relative;
-    color: #2d2d2d;
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
     opacity: ${(props) => props.disabled ? 0.7 : 1};
     cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
 `;
@@ -42,8 +42,8 @@ StyledSelectFilter.displayName = 'StyledSelectFilter';
 export const StyledSelectContainer = styled(Box)<IBoxComponentProps>`
     display: flex;
     border-radius: 3px;
-    border: solid 1px #e2e2e2;
-    background-color: #ffffff;
+    border: solid 1px ${(props) => props.palette?.commonElement.borderColor || variables.commonElement.borderColor};
+    background-color: ${(props) => props.palette?.commonElement.backgroundColor || variables.commonElement.backgroundColor};
     color: inherit;
     align-items: center;
 `;
@@ -71,7 +71,7 @@ export const StyledSelectOptionList = styled(Box)<IBoxComponentProps>`
     left: 0;
     right: 0;
     color: inherit;
-    background-color: #ffffff;
+    background-color: ${(props) => props.palette?.commonElement.backgroundColor || variables.commonElement.backgroundColor};
     max-height: 160px;
     overflow-y: auto;
 
@@ -110,7 +110,7 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
     font-family: Hind;
     display: flex;
     justify-content: space-between;
-    color: #425579;
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
     :first-child{
         padding-top: 13px;
     }
@@ -160,7 +160,7 @@ export const StyledPaginationPage = styled(Box)<IBoxComponentProps>`
     font-size: 12px;
     font-family: Hind;
     align-items: center;
-    color: #425579;
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
 `;
 
 StyledPaginationPage.displayName = 'StyledPaginationPage';

@@ -45,8 +45,9 @@ ButtonDefault.displayName = 'ButtonDefault';
 
 export const StyledButtonNormal = styled(ButtonDefault)`
     background-color: ${(props) =>
-        !props.disabled ? props.theme.primary || variables.primary : props.theme.disabledBackground || variables.disabledBackground};
-    color: #ffffff;
+        !props.disabled ? props.palette?.button.backgroundColor || variables.button.backgroundColor :
+        props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
+    color: ${(props) => props.palette?.button.fontColor || variables.button.fontColor};
     padding: ${(props) => normalButtonSizes[props.buttonSize || 'md']};
     border: none;
     outline: 0;
@@ -56,14 +57,15 @@ StyledButtonNormal.displayName = 'StyledButtonNormal';
 
 export const StyledButtonInverse = styled(ButtonDefault)`
     color: ${(props) =>
-        !props.disabled ? props.theme.primary || variables.primary : props.theme.disabledBackground || variables.disabledBackground};
+        !props.disabled ? props.palette?.button.backgroundColor || variables.button.backgroundColor :
+        props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
     padding: ${(props) => inverseButtonSizes[props.buttonSize || 'md']};
     background-color: transparent;
     border: 2px solid
         ${(props) =>
             !props.disabled
-                ? props.theme.primary || variables.primary
-                : props.theme.disabledBackground || variables.disabledBackground};
+                ? props.palette?.button.backgroundColor || variables.button.backgroundColor
+                : props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
 `;
 
 StyledButtonInverse.displayName = 'StyledButtonInverse';

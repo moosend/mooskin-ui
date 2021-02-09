@@ -19,7 +19,7 @@ const Template: Story<IButtonComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <MooskinContextProvider value={{theme: variables}}>
+            <MooskinContextProvider value={{palette: variables}}>
                 <Button {...args} />
             </MooskinContextProvider>
         </>

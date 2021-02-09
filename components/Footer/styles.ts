@@ -6,6 +6,8 @@ import { IBoxComponentProps } from '../Box/model';
 // Components
 import Box from '../Box/Box';
 
+import variables from '../_utils/globals/variables';
+
 export const StyledFooter = styled(Box)<IBoxComponentProps>`
     position: fixed;
     bottom: 0px;
@@ -13,6 +15,8 @@ export const StyledFooter = styled(Box)<IBoxComponentProps>`
     right: 0px;
     padding: 15px 0;
     display: flex;
+    background-color: ${(props) => props.palette?.layout.backgroundColor || variables.layout.backgroundColor};
+    color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
 `;
 
 StyledFooter.displayName = 'StyledFooter';
@@ -20,6 +24,7 @@ StyledFooter.displayName = 'StyledFooter';
 export const StyledFooterCommon = styled(Box)<IBoxComponentProps>`
     display: flex;
     align-items: center;
+    color: inherit;
 `;
 
 StyledFooterCommon.displayName = 'StyledFooterCommon';

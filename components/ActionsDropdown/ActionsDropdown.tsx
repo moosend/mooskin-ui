@@ -44,7 +44,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
             if (React.isValidElement<IActionsDropdownArrowComponentProps>(child) && child.type === ActionsDropdownArrow){
                 !hasArrow && setHasArrow(true);
                 return React.cloneElement(child, {
-                    arrowColor: child.props.arrowColor ? child.props.arrowColor : props.bgColor,
+                    arrowColor: child.props.arrowColor ? child.props.arrowColor : props.bgColor || props.palette?.actionsDropdown.backgroundColor,
                     children: recurseChildren((child.props as any).children),
                     key: i
                 } as IActionsDropdownArrowComponentProps);

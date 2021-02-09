@@ -6,7 +6,7 @@ import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 // Components
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
+import variables from '../_utils/globals/variables';
 
 export const StyledSidemenu = styled(Box)<ISidemenuComponentProps>`
     border-left: 1px solid #e2e2e2;
@@ -25,7 +25,7 @@ export const StyledSidemenuItem = styled(Box)<ISidemenuItemComponentProps>`
     line-height: 1.29;
     letter-spacing: normal;
     text-align: left;
-    color: #293346;
+    color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
     margin-left: ${(props) => props.active ? '-2px' : '0'};
     padding-left: 9px;
     border-left: ${(props) => props.active ? '3px solid #3fbaca' : ''};
@@ -36,4 +36,4 @@ export const StyledSidemenuItem = styled(Box)<ISidemenuItemComponentProps>`
     }
 `;
 
-StyledSidemenuItem.displayName = 'StyledSidemenuItem';;
+StyledSidemenuItem.displayName = 'StyledSidemenuItem'; ;

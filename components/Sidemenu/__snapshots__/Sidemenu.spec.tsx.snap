@@ -7,7 +7,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
   onClickItem={[MockFunction]}
   style={Object {}}
 >
-  <Component
+  <SidemenuItem
     active={true}
     className=""
     dataLabel="settings"
@@ -17,8 +17,8 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
     value="/settings"
   >
     Settings
-  </Component>
-  <Component
+  </SidemenuItem>
+  <SidemenuItem
     active={false}
     className=""
     dataLabel="template"
@@ -28,8 +28,8 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
     value="/template"
   >
     Template
-  </Component>
-  <Component
+  </SidemenuItem>
+  <SidemenuItem
     active={false}
     className=""
     dataLabel="preview"
@@ -39,7 +39,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
     value="/preview"
   >
     Preview
-  </Component>
+  </SidemenuItem>
 </StyledSidemenu>
 `;
 

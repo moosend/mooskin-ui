@@ -6,7 +6,8 @@ import { IActionsDropdownArrowComponentProps, IActionsDropdownComponentProps, IA
 // Components
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
+// "CSS" variables
+import variables from '../_utils/globals/variables';
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
     border-radius: 3px;
@@ -27,7 +28,7 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
     line-height: 1.25;
     letter-spacing: normal;
     text-align: left;
-    color: #ffffff;
+    color: ${(props) => props.palette?.actionsDropdown.fontColor || variables.actionsDropdown.fontColor};
     cursor: pointer;
     &:not(:last-child){
         padding: 10px 10px 0;
@@ -46,8 +47,8 @@ export const StyledActionsDropdownArrow = styled(Box)<IActionsDropdownArrowCompo
     right: 22px;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-bottom: ${(props) => props.arrowDirection === 'up' ? `7px solid ${props.arrowColor || '#3fbaca'}` : 0};
-    border-top: ${(props) => props.arrowDirection === 'down' ? `7px solid ${props.arrowColor || '#3fbaca'}` : 0};
+    border-bottom: ${(props) => props.arrowDirection === 'up' ? `7px solid ${props.arrowColor || variables.actionsDropdown.backgroundColor}` : ''};
+    border-top: ${(props) => props.arrowDirection === 'down' ? `7px solid ${props.arrowColor || variables.actionsDropdown.backgroundColor}` : ''};
 `;
 
 StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';

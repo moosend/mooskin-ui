@@ -159,7 +159,7 @@ exports[`DatePicker renders correctly 1`] = `
                       }
                     }
                     boxAs="input"
-                    className="sc-eCApGN sc-jSFkmK jctrjg cxYigc"
+                    className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
                     error={false}
                     format="dd/MM/yyyy"
                     helperText=""
@@ -185,7 +185,7 @@ exports[`DatePicker renders correctly 1`] = `
                         }
                       }
                       boxAs="input"
-                      className="sc-eCApGN sc-jSFkmK jctrjg cxYigc"
+                      className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
                       error={false}
                       format="dd/MM/yyyy"
                       helperText=""
@@ -196,22 +196,53 @@ exports[`DatePicker renders correctly 1`] = `
                       }
                       onClick={[Function]}
                       onKeyDown={[Function]}
+                      palette={
+                        Object {
+                          "actionsDropdown": Object {
+                            "backgroundColor": "#3fbaca",
+                            "fontColor": "#ffffff",
+                          },
+                          "anchor": Object {
+                            "disabledFontColor": "#9d9d9d",
+                            "fontColor": "#3fbaca",
+                          },
+                          "button": Object {
+                            "backgroundColor": "#3fbaca",
+                            "disabledBackgroundColor": "#e2e2e2",
+                            "fontColor": "#ffffff",
+                          },
+                          "commonElement": Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#e2e2e2",
+                            "fontColor": "#293346",
+                          },
+                          "description": Object {
+                            "fontColor": "#9d9d9d",
+                          },
+                          "label": Object {
+                            "fontColor": "#2d2d2d",
+                          },
+                          "layout": Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#e2e2e2",
+                            "fontColor": "#293346",
+                          },
+                          "main": Object {
+                            "backgroundColor": "#f7f7f7",
+                          },
+                          "toggleElement": Object {
+                            "backgroundColor": "#425579",
+                            "borderColor": "#e2e2e2",
+                            "fontColor": "#ffffff",
+                            "secondaryBackgroundColor": "#ffffff",
+                            "secondaryFontColor": "#9d9d9d",
+                          },
+                        }
+                      }
                       pickerType="date"
                       style={
                         Object {
                           "width": "100%",
-                        }
-                      }
-                      theme={
-                        Object {
-                          "disabledBackground": "#e2e2e2",
-                          "disabledfont": "#9d9d9d",
-                          "inputBackground": "#ffffff",
-                          "inputBorder": "#e2e2e2",
-                          "inputFont": "#9d9d9d",
-                          "label": "#2d2d2d",
-                          "primary": "#3fbaca",
-                          "secondary": "#293346",
                         }
                       }
                       value="02/01/2021"
@@ -224,7 +255,7 @@ exports[`DatePicker renders correctly 1`] = `
                         }
                         as="input"
                         boxAs="input"
-                        className="sc-eCApGN sc-jSFkmK jctrjg cxYigc"
+                        className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
                         error={false}
                         format="dd/MM/yyyy"
                         helperText=""
@@ -235,28 +266,59 @@ exports[`DatePicker renders correctly 1`] = `
                         }
                         onClick={[Function]}
                         onKeyDown={[Function]}
+                        palette={
+                          Object {
+                            "actionsDropdown": Object {
+                              "backgroundColor": "#3fbaca",
+                              "fontColor": "#ffffff",
+                            },
+                            "anchor": Object {
+                              "disabledFontColor": "#9d9d9d",
+                              "fontColor": "#3fbaca",
+                            },
+                            "button": Object {
+                              "backgroundColor": "#3fbaca",
+                              "disabledBackgroundColor": "#e2e2e2",
+                              "fontColor": "#ffffff",
+                            },
+                            "commonElement": Object {
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#e2e2e2",
+                              "fontColor": "#293346",
+                            },
+                            "description": Object {
+                              "fontColor": "#9d9d9d",
+                            },
+                            "label": Object {
+                              "fontColor": "#2d2d2d",
+                            },
+                            "layout": Object {
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#e2e2e2",
+                              "fontColor": "#293346",
+                            },
+                            "main": Object {
+                              "backgroundColor": "#f7f7f7",
+                            },
+                            "toggleElement": Object {
+                              "backgroundColor": "#425579",
+                              "borderColor": "#e2e2e2",
+                              "fontColor": "#ffffff",
+                              "secondaryBackgroundColor": "#ffffff",
+                              "secondaryFontColor": "#9d9d9d",
+                            },
+                          }
+                        }
                         pickerType="date"
                         style={
                           Object {
                             "width": "100%",
                           }
                         }
-                        theme={
-                          Object {
-                            "disabledBackground": "#e2e2e2",
-                            "disabledfont": "#9d9d9d",
-                            "inputBackground": "#ffffff",
-                            "inputBorder": "#e2e2e2",
-                            "inputFont": "#9d9d9d",
-                            "label": "#2d2d2d",
-                            "primary": "#3fbaca",
-                            "secondary": "#293346",
-                          }
-                        }
                         value="02/01/2021"
                       >
                         <input
-                          className="sc-bdnylx dOPKTt sc-eCApGN sc-jSFkmK jctrjg cxYigc"
+                          className="sc-bdnylx dOPKTt sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
                           format="dd/MM/yyyy"
                           onClick={[Function]}
                           onKeyDown={[Function]}

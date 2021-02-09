@@ -40,6 +40,7 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
     border-left: ${(props) => props.variant === 'left-accent' ? '4px solid' : ''};
     border-top: ${(props) => props.variant === 'top-accent' ? '4px solid' : ''};
     border-color: ${(props) => props.status && SolidBackgroundColors[props.status]};
+    border-radius: 3px;
     background-color: ${(props) => {
         return props.variant === 'solid' ? props.status && SolidBackgroundColors[props.status] : props.status && BackgroundColors[props.status];
     }};
@@ -91,7 +92,6 @@ export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IBaseAlertCo
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    border-radius: 0.375rem;
     transition: all 0.2s;
     width: 32px;
     height: 32px;

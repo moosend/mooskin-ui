@@ -12,19 +12,19 @@ import {
 // Components
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
+import variables from '../_utils/globals/variables';
 
 export const StyledInputContainer = styled(Box)<IInputContainerComponentProps>`
     position: relative;
-    color: #2d2d2d;
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
     display: flex;
     flex: 1;
     align-items: center;
     opacity: ${(props) => props.disabled ? 0.7 : 1};
     cursor: ${(props) => props.disabled ? 'not-allowed' : 'pointer'};
     border-radius: 3px;
-    border: solid 1px #e2e2e2;
-    background-color: #ffffff;
+    border: solid 1px ${(props) => props.palette?.commonElement.borderColor || variables.commonElement.borderColor};
+    background-color: ${(props) => props.palette?.commonElement.backgroundColor || variables.commonElement.backgroundColor};
     padding: 7px 15px 7px;
 `;
 
@@ -44,10 +44,10 @@ export const StyledInputBase = styled(Box)<IInputComponentProps>`
 StyledInputBase.displayName = 'StyledInputBase';
 
 export const StyledInputSolo = styled(StyledInputBase)<IInputComponentProps>`
-    color: #2d2d2d;
     border-radius: 3px;
-    border: solid 1px #e2e2e2;
-    background-color: #ffffff;
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
+    border: solid 1px ${(props) => props.palette?.commonElement.borderColor || variables.commonElement.borderColor};
+    background-color: ${(props) => props.palette?.commonElement.backgroundColor || variables.commonElement.backgroundColor};
     padding: 7px 15px 7px;
 `;
 

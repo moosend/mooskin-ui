@@ -6,12 +6,12 @@ import { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
 // Components
 import Box from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
+import variables from '../_utils/globals/variables';
 
 export const StyledSelector = styled(Box)<ISelectorComponentProps>`
     padding: 6px;
     border-radius: 22px;
-    background-color: #293346;
+    background-color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
     display: flex;
 `;
 
@@ -24,8 +24,12 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
     flex: 1;
     height: 32px;
     border-radius: 22px;
-    background-color: ${(props) => props.active ? '#ffffff' : '#293346'};
-    color: ${(props) => props.active ? '#293346' : ' #ffffff'};
+    color: ${(props) => props.active ?
+                    `${props.palette?.layout.fontColor || variables.layout.fontColor}` :
+                    `${props.palette?.layout.borderColor || variables.layout.borderColor}`};
+    background-color: ${(props) => props.active ?
+                    `${props.palette?.layout.backgroundColor || variables.layout.backgroundColor}` :
+                    `${props.palette?.layout.fontColor || variables.layout.fontColor}`};
     font-family: Hind;
     font-size: 12px;
     font-weight: 500;
@@ -41,4 +45,4 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
     }
 `;
 
-StyledSelectorItem.displayName = 'StyledSelectorItem';;
+StyledSelectorItem.displayName = 'StyledSelectorItem';

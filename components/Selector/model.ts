@@ -5,12 +5,12 @@ export interface ISelectorComponentProps extends IBoxComponentProps{
     activeItem?: string | number;
 
     /** callback called when clicking a Selector item */
-    onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string) => void;
+    onClickItem?: (e: React.MouseEvent<HTMLElement>, value?: string | number) => void;
 }
 
 export interface ISelectorItemComponentProps extends IBoxComponentProps{
     /** value returned in callback fn */
-    value?: string;
+    value?: string | number;
 
     /** whether the item is active */
     active?: boolean;
