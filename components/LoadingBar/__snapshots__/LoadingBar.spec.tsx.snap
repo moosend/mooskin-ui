@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingBar LoadingBar renders correctly 1`] = `
+<StyledLoadingBar
+  className=""
+  error={false}
+  onLoaderDone={[MockFunction]}
+  onLoaderError={[MockFunction]}
+  opacity={1}
+  progress={10}
+  style={Object {}}
+/>
+`;
