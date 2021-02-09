@@ -1,12 +1,17 @@
 import * as React from 'react';
-import Select, {SelectContainer, SelectFilter, SelectIcon, SelectPlaceholder, SelectOptionList, SelectOption, SelectOverlay} from './Select';
+import Select, {
+    SelectContainer,
+    SelectFilter,
+    SelectIcon,
+    SelectOption,
+    SelectOptionList,
+    SelectOverlay,
+    SelectPlaceholder
+} from './Select';
 
-import {mount, shallow} from 'enzyme';
-
-import { StyledSelectFilter, StyledSelectOption } from './styles';
+import { mount, shallow } from 'enzyme';
 
 describe('Select', () => {
-
     test('renders Select correctly', () => {
         const func = jest.fn();
 
@@ -14,11 +19,11 @@ describe('Select', () => {
             <Select onChange={func}>
                 <SelectContainer>
                     <SelectPlaceholder>Select an option</SelectPlaceholder>
-                    <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
+                    <SelectFilter />
                     <SelectIcon />
                 </SelectContainer>
                 <SelectOptionList>
-                    <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
+                    <SelectOption value="1">Option 1</SelectOption>
                     <SelectOption value="2">Option 2</SelectOption>
                     <SelectOption value="3">Option 3</SelectOption>
                     <SelectOption value="4">Option 4</SelectOption>
@@ -34,10 +39,12 @@ describe('Select', () => {
         const func = jest.fn();
 
         const tree = shallow(
-            <SelectOption value="1" onClick={func} >Option1</SelectOption>
+            <SelectOption value="1" onClick={func}>
+                Option1
+            </SelectOption>
         );
 
-        tree.find(StyledSelectOption).simulate('click');
+        tree.find('StyledSelectOption').simulate('click');
 
         expect(func).toHaveBeenCalled();
         expect(tree).toMatchSnapshot();
@@ -46,35 +53,30 @@ describe('Select', () => {
     test('renders Filter correctly and calls callback on change', () => {
         const func = jest.fn();
 
-        const tree = shallow(
-            <SelectFilter onChange={func} />
+        const tree = shallow(<SelectFilter onChange={func} />);
 
-        );
-        
-        tree.find(StyledSelectFilter).first().simulate('change', { target: { value: 'filter' }});
+        tree.find('StyledSelectFilter')
+            .first()
+            .simulate('change', { target: { value: 'filter' } });
 
         expect(func).toHaveBeenCalled();
         expect(tree).toMatchSnapshot();
     });
 
     test('should be rendered as a multi select if the selected prop is an array', () => {
-
-        let options = [
-            '2',
-            '4'
-        ];
+        const options = ['2', '4'];
 
         const func = jest.fn();
 
         const component = mount(
-            <Select onChange={func} showList selected={options} dataLabel="select" >
+            <Select onChange={func} showList selectedValue={options} dataLabel="select">
                 <SelectContainer>
                     <SelectPlaceholder>Select an option</SelectPlaceholder>
-                    <SelectFilter onChange={(e) => console.log('On Filter Change: ', e.target.value)} />
+                    <SelectFilter />
                     <SelectIcon />
                 </SelectContainer>
                 <SelectOptionList>
-                    <SelectOption onClick={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
+                    <SelectOption value="1">Option 1</SelectOption>
                     <SelectOption value="2">Option 2</SelectOption>
                     <SelectOption value="3">Option 3</SelectOption>
                     <SelectOption value="4">Option 4</SelectOption>
@@ -84,7 +86,7 @@ describe('Select', () => {
             </Select>
         );
 
-        // component.find(StyledSelectOption).first().simulate('click');
+        // component.find('StyledSelectOption').first().simulate('click');
         // expect(func).toHaveBeenCalledWith({dataLabel: 'select', value: ['2', '4', '1']});
         expect(component).toMatchSnapshot();
     });

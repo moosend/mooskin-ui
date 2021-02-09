@@ -1,53 +1,46 @@
 import * as React from 'react';
 
-// Helpers
-import { getBoxProps } from '../_utils/helper';
-
 // Models
 import { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
 
 // Styled Components
-import {
-    StyledSelector,
-    StyledSelectorItem
-} from './styles';
+import { StyledSelector, StyledSelectorItem } from './styles';
 
 /**
  * Selector
  */
 export const Selector: React.FC<ISelectorComponentProps> = (props) => {
-
     const batchClickHandler = (
-        e: React.MouseEvent<HTMLDivElement>,
-        value?: string,
-        callback?: (e: React.MouseEvent<HTMLDivElement>, value?: string) => void
+        e: React.MouseEvent<HTMLElement>,
+        value?: string | number,
+        callback?: (e: React.MouseEvent<HTMLElement>) => void
     ) => {
         props.onClickItem && props.onClickItem(e, value);
-        callback && callback(e, value);
+        callback && callback(e);
     };
 
     const recurseChildren = (children: any): any => {
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<ISelectorItemComponentProps>(child) && child.type === SelectorItem){
+            if (React.isValidElement<ISelectorItemComponentProps>(child) && child.type === SelectorItem) {
                 return React.cloneElement(child, {
                     active: child.props.value === props.activeItem,
                     children: recurseChildren((child.props as any).children),
                     key: i,
-                    onClickItem: (e, value) => {
-                        batchClickHandler(e, value, child.props.onClickItem);
+                    onClick: (e) => {
+                        batchClickHandler(e, child.props.value, child.props.onClick);
                     }
                 } as ISelectorItemComponentProps);
             }
 
-            if (React.isValidElement(child) && (child.props as any).children){
-                return React.cloneElement(child, {key: i, children: recurseChildren((child.props as any).children)} as any);
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
             }
 
             return child;
         });
     };
 
-    return <StyledSelector {...getBoxProps(props)} children={recurseChildren(props.children)} />;
+    return <StyledSelector {...props} children={recurseChildren(props.children)} />;
 };
 
 Selector.defaultProps = {
@@ -59,11 +52,8 @@ Selector.defaultProps = {
  * SelectorItem
  */
 export const SelectorItem: React.FC<ISelectorItemComponentProps> = (props) => {
-    const onClick = (e: React.MouseEvent<HTMLDivElement>) => {
-        props.onClickItem && props.onClickItem(e, props.value);
-        props.onClick && props.onClick(e);
-    };
-    return <StyledSelectorItem {...props} onClick={onClick} />;
+    console.log(props.active);
+    return <StyledSelectorItem {...props} />;
 };
 
 SelectorItem.defaultProps = {

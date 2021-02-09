@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../../components/Box/model';
+import { IBoxComponentProps } from '../../components/Box/model';
 import { ITagComponentProps } from './model';
 
 // Components
@@ -26,7 +26,7 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
     color: #ffffff;
 `;
 
-export const StyledTagIcon = styled(Box)<IDivBoxComponentProps>`
+export const StyledTagIcon = styled(Box)<IBoxComponentProps>`
     opacity: 0.5;
     font-family: 'Mooskin Icons Round';
     font-size: 10px;

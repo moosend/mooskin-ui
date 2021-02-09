@@ -16,20 +16,26 @@ export const StyledCheckbox = styled(Box)`
     width: fit-content;
 `;
 
+StyledCheckbox.displayName = 'StyledCheckbox';
+
 export const StyledCheckboxWrapper = styled(Box)<Partial<ICheckboxComponentProps>>`
-    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     width: fit-content;
     display: flex;
     align-items: center;
 `;
+
+StyledCheckboxWrapper.displayName = 'StyledCheckboxWrapper';
 
 export const StyledCheckboxIcon = styled(Box)<Partial<ICheckboxComponentProps>>`
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     font-family: 'Mooskin Icons';
     padding-right: 10px;
     font-size: 23px;
-    color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
+    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
 `;
+
+StyledCheckboxIcon.displayName = 'StyledCheckboxIcon';
 
 export const StyledCheckboxLabel = styled(Label)<ILabelComponentProps>`
     font-family: Montserrat;
@@ -40,5 +46,9 @@ export const StyledCheckboxLabel = styled(Label)<ILabelComponentProps>`
     line-height: 1.65;
     letter-spacing: normal;
     min-width: unset;
-    color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
+    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
 `;
+
+StyledCheckboxLabel.displayName = 'StyledCheckboxLabel';

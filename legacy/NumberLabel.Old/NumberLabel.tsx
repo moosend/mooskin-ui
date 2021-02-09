@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import styles from './NumberLabel.css';
-
 export interface INumberLabelProps {
     /** id of the component */
     id?: string;

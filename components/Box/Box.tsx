@@ -7,8 +7,11 @@ import { IBoxComponentProps } from './model';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Styled Components
-import {StyledBox} from './styles';
+import { StyledBox } from './styles';
 
+/**
+ * Box
+ */
 export const Box: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledBox {...props} as={props.boxAs} />;
 });

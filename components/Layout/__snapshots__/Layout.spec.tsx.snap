@@ -1,0 +1,1054 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout renders correctly 1`] = `
+<Layout
+  className=""
+  spacing={15}
+  style={Object {}}
+>
+  <StyledLayout
+    className=""
+    spacing={15}
+    style={Object {}}
+  >
+    <Box
+      className="sc-gtssRu djyfGL"
+      spacing={15}
+      style={Object {}}
+    >
+      <Component
+        className="sc-gtssRu djyfGL"
+        palette={
+          Object {
+            "actionsDropdown": Object {
+              "backgroundColor": "#3fbaca",
+              "fontColor": "#ffffff",
+            },
+            "anchor": Object {
+              "disabledFontColor": "#9d9d9d",
+              "fontColor": "#3fbaca",
+            },
+            "button": Object {
+              "backgroundColor": "#3fbaca",
+              "disabledBackgroundColor": "#e2e2e2",
+              "fontColor": "#ffffff",
+            },
+            "commonElement": Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#293346",
+            },
+            "description": Object {
+              "fontColor": "#9d9d9d",
+            },
+            "label": Object {
+              "fontColor": "#2d2d2d",
+            },
+            "layout": Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#293346",
+            },
+            "main": Object {
+              "backgroundColor": "#f7f7f7",
+            },
+            "toggleElement": Object {
+              "backgroundColor": "#425579",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#ffffff",
+              "secondaryBackgroundColor": "#ffffff",
+              "secondaryFontColor": "#9d9d9d",
+            },
+          }
+        }
+        spacing={15}
+        style={Object {}}
+      >
+        <StyledBox
+          className="sc-gtssRu djyfGL"
+          palette={
+            Object {
+              "actionsDropdown": Object {
+                "backgroundColor": "#3fbaca",
+                "fontColor": "#ffffff",
+              },
+              "anchor": Object {
+                "disabledFontColor": "#9d9d9d",
+                "fontColor": "#3fbaca",
+              },
+              "button": Object {
+                "backgroundColor": "#3fbaca",
+                "disabledBackgroundColor": "#e2e2e2",
+                "fontColor": "#ffffff",
+              },
+              "commonElement": Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#293346",
+              },
+              "description": Object {
+                "fontColor": "#9d9d9d",
+              },
+              "label": Object {
+                "fontColor": "#2d2d2d",
+              },
+              "layout": Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#293346",
+              },
+              "main": Object {
+                "backgroundColor": "#f7f7f7",
+              },
+              "toggleElement": Object {
+                "backgroundColor": "#425579",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#ffffff",
+                "secondaryBackgroundColor": "#ffffff",
+                "secondaryFontColor": "#9d9d9d",
+              },
+            }
+          }
+          spacing={15}
+          style={Object {}}
+        >
+          <div
+            className="sc-bdnylx kBsmpR sc-gtssRu djyfGL"
+            spacing={15}
+            style={Object {}}
+          >
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                palette={
+                  Object {
+                    "actionsDropdown": Object {
+                      "backgroundColor": "#3fbaca",
+                      "fontColor": "#ffffff",
+                    },
+                    "anchor": Object {
+                      "disabledFontColor": "#9d9d9d",
+                      "fontColor": "#3fbaca",
+                    },
+                    "button": Object {
+                      "backgroundColor": "#3fbaca",
+                      "disabledBackgroundColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                    },
+                    "commonElement": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "description": Object {
+                      "fontColor": "#9d9d9d",
+                    },
+                    "label": Object {
+                      "fontColor": "#2d2d2d",
+                    },
+                    "layout": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "main": Object {
+                      "backgroundColor": "#f7f7f7",
+                    },
+                    "toggleElement": Object {
+                      "backgroundColor": "#425579",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                      "secondaryBackgroundColor": "#ffffff",
+                      "secondaryFontColor": "#9d9d9d",
+                    },
+                  }
+                }
+                round="sm"
+                style={Object {}}
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
+                  round="sm"
+                  style={Object {}}
+                >
+                  <div
+                    className="sc-bdnylx fUeWEi"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                palette={
+                  Object {
+                    "actionsDropdown": Object {
+                      "backgroundColor": "#3fbaca",
+                      "fontColor": "#ffffff",
+                    },
+                    "anchor": Object {
+                      "disabledFontColor": "#9d9d9d",
+                      "fontColor": "#3fbaca",
+                    },
+                    "button": Object {
+                      "backgroundColor": "#3fbaca",
+                      "disabledBackgroundColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                    },
+                    "commonElement": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "description": Object {
+                      "fontColor": "#9d9d9d",
+                    },
+                    "label": Object {
+                      "fontColor": "#2d2d2d",
+                    },
+                    "layout": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "main": Object {
+                      "backgroundColor": "#f7f7f7",
+                    },
+                    "toggleElement": Object {
+                      "backgroundColor": "#425579",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                      "secondaryBackgroundColor": "#ffffff",
+                      "secondaryFontColor": "#9d9d9d",
+                    },
+                  }
+                }
+                round="sm"
+                style={Object {}}
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
+                  round="sm"
+                  style={Object {}}
+                >
+                  <div
+                    className="sc-bdnylx fUeWEi"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                palette={
+                  Object {
+                    "actionsDropdown": Object {
+                      "backgroundColor": "#3fbaca",
+                      "fontColor": "#ffffff",
+                    },
+                    "anchor": Object {
+                      "disabledFontColor": "#9d9d9d",
+                      "fontColor": "#3fbaca",
+                    },
+                    "button": Object {
+                      "backgroundColor": "#3fbaca",
+                      "disabledBackgroundColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                    },
+                    "commonElement": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "description": Object {
+                      "fontColor": "#9d9d9d",
+                    },
+                    "label": Object {
+                      "fontColor": "#2d2d2d",
+                    },
+                    "layout": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "main": Object {
+                      "backgroundColor": "#f7f7f7",
+                    },
+                    "toggleElement": Object {
+                      "backgroundColor": "#425579",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                      "secondaryBackgroundColor": "#ffffff",
+                      "secondaryFontColor": "#9d9d9d",
+                    },
+                  }
+                }
+                round="sm"
+                style={Object {}}
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
+                  round="sm"
+                  style={Object {}}
+                >
+                  <div
+                    className="sc-bdnylx fUeWEi"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                palette={
+                  Object {
+                    "actionsDropdown": Object {
+                      "backgroundColor": "#3fbaca",
+                      "fontColor": "#ffffff",
+                    },
+                    "anchor": Object {
+                      "disabledFontColor": "#9d9d9d",
+                      "fontColor": "#3fbaca",
+                    },
+                    "button": Object {
+                      "backgroundColor": "#3fbaca",
+                      "disabledBackgroundColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                    },
+                    "commonElement": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "description": Object {
+                      "fontColor": "#9d9d9d",
+                    },
+                    "label": Object {
+                      "fontColor": "#2d2d2d",
+                    },
+                    "layout": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "main": Object {
+                      "backgroundColor": "#f7f7f7",
+                    },
+                    "toggleElement": Object {
+                      "backgroundColor": "#425579",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                      "secondaryBackgroundColor": "#ffffff",
+                      "secondaryFontColor": "#9d9d9d",
+                    },
+                  }
+                }
+                round="sm"
+                style={Object {}}
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
+                  round="sm"
+                  style={Object {}}
+                >
+                  <div
+                    className="sc-bdnylx fUeWEi"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                palette={
+                  Object {
+                    "actionsDropdown": Object {
+                      "backgroundColor": "#3fbaca",
+                      "fontColor": "#ffffff",
+                    },
+                    "anchor": Object {
+                      "disabledFontColor": "#9d9d9d",
+                      "fontColor": "#3fbaca",
+                    },
+                    "button": Object {
+                      "backgroundColor": "#3fbaca",
+                      "disabledBackgroundColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                    },
+                    "commonElement": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "description": Object {
+                      "fontColor": "#9d9d9d",
+                    },
+                    "label": Object {
+                      "fontColor": "#2d2d2d",
+                    },
+                    "layout": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "main": Object {
+                      "backgroundColor": "#f7f7f7",
+                    },
+                    "toggleElement": Object {
+                      "backgroundColor": "#425579",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                      "secondaryBackgroundColor": "#ffffff",
+                      "secondaryFontColor": "#9d9d9d",
+                    },
+                  }
+                }
+                round="sm"
+                style={Object {}}
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
+                  round="sm"
+                  style={Object {}}
+                >
+                  <div
+                    className="sc-bdnylx fUeWEi"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                palette={
+                  Object {
+                    "actionsDropdown": Object {
+                      "backgroundColor": "#3fbaca",
+                      "fontColor": "#ffffff",
+                    },
+                    "anchor": Object {
+                      "disabledFontColor": "#9d9d9d",
+                      "fontColor": "#3fbaca",
+                    },
+                    "button": Object {
+                      "backgroundColor": "#3fbaca",
+                      "disabledBackgroundColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                    },
+                    "commonElement": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "description": Object {
+                      "fontColor": "#9d9d9d",
+                    },
+                    "label": Object {
+                      "fontColor": "#2d2d2d",
+                    },
+                    "layout": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "main": Object {
+                      "backgroundColor": "#f7f7f7",
+                    },
+                    "toggleElement": Object {
+                      "backgroundColor": "#425579",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                      "secondaryBackgroundColor": "#ffffff",
+                      "secondaryFontColor": "#9d9d9d",
+                    },
+                  }
+                }
+                round="sm"
+                style={Object {}}
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
+                  round="sm"
+                  style={Object {}}
+                >
+                  <div
+                    className="sc-bdnylx fUeWEi"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                palette={
+                  Object {
+                    "actionsDropdown": Object {
+                      "backgroundColor": "#3fbaca",
+                      "fontColor": "#ffffff",
+                    },
+                    "anchor": Object {
+                      "disabledFontColor": "#9d9d9d",
+                      "fontColor": "#3fbaca",
+                    },
+                    "button": Object {
+                      "backgroundColor": "#3fbaca",
+                      "disabledBackgroundColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                    },
+                    "commonElement": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "description": Object {
+                      "fontColor": "#9d9d9d",
+                    },
+                    "label": Object {
+                      "fontColor": "#2d2d2d",
+                    },
+                    "layout": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "main": Object {
+                      "backgroundColor": "#f7f7f7",
+                    },
+                    "toggleElement": Object {
+                      "backgroundColor": "#425579",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                      "secondaryBackgroundColor": "#ffffff",
+                      "secondaryFontColor": "#9d9d9d",
+                    },
+                  }
+                }
+                round="sm"
+                style={Object {}}
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
+                  round="sm"
+                  style={Object {}}
+                >
+                  <div
+                    className="sc-bdnylx fUeWEi"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+            <Box
+              boxShadow="md"
+              className=""
+              p={30}
+              round="sm"
+              style={Object {}}
+            >
+              <Component
+                boxShadow="md"
+                className=""
+                p={30}
+                palette={
+                  Object {
+                    "actionsDropdown": Object {
+                      "backgroundColor": "#3fbaca",
+                      "fontColor": "#ffffff",
+                    },
+                    "anchor": Object {
+                      "disabledFontColor": "#9d9d9d",
+                      "fontColor": "#3fbaca",
+                    },
+                    "button": Object {
+                      "backgroundColor": "#3fbaca",
+                      "disabledBackgroundColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                    },
+                    "commonElement": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "description": Object {
+                      "fontColor": "#9d9d9d",
+                    },
+                    "label": Object {
+                      "fontColor": "#2d2d2d",
+                    },
+                    "layout": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "main": Object {
+                      "backgroundColor": "#f7f7f7",
+                    },
+                    "toggleElement": Object {
+                      "backgroundColor": "#425579",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                      "secondaryBackgroundColor": "#ffffff",
+                      "secondaryFontColor": "#9d9d9d",
+                    },
+                  }
+                }
+                round="sm"
+                style={Object {}}
+              >
+                <StyledBox
+                  boxShadow="md"
+                  className=""
+                  p={30}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
+                  round="sm"
+                  style={Object {}}
+                >
+                  <div
+                    className="sc-bdnylx fUeWEi"
+                    style={Object {}}
+                  >
+                    Box
+                  </div>
+                </StyledBox>
+              </Component>
+            </Box>
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledLayout>
+</Layout>
+`;

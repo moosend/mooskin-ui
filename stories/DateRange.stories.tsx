@@ -3,7 +3,6 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import DateRange from '../components/DateRange/DateRange';
-// import { IDateRangeComponentProps } from '../components/DateRange/model';
 
 import { IDateRangePickerComponentProps, IRangeSelection } from '../components/DateRange/model';
 import GlobalStyle from '../components/Styled/GlobalStyles';

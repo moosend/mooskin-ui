@@ -1,21 +1,33 @@
 import styled from 'styled-components';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
 // Components
 import Box from '../Box/Box';
 
-export const StyledListItem = styled(Box)<IDivBoxComponentProps>`
+// "CSS" variables
+import variables from '../_utils/globals/variables';
+
+export const StyledListItem = styled(Box)<IBoxComponentProps>`
     display: flex;
     padding: 15px;
+    background-color: ${(props) => props.palette?.layout.backgroundColor || variables.layout.backgroundColor};
+    color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
 `;
 
-export const StyledListItemCommon = styled(Box)<IDivBoxComponentProps>`
+StyledListItem.displayName = 'StyledListItem';
+
+export const StyledListItemCommon = styled(Box)<IBoxComponentProps>`
     display: flex;
+    color: inherit;
 `;
 
-export const StyledListItemHead = styled(Box)``;
+StyledListItemCommon.displayName = 'StyledListItemCommon';
+
+export const StyledListItemHead = styled(StyledListItemCommon)``;
+
+StyledListItemHead.displayName = 'StyledListItemHead';
 
 export const StyledListItemBody = styled(StyledListItemCommon)`
     flex: 1;
@@ -23,6 +35,10 @@ export const StyledListItemBody = styled(StyledListItemCommon)`
     padding: 0 20px;
 `;
 
+StyledListItemBody.displayName = 'StyledListItemBody';
+
 export const StyledListItemEnd = styled(StyledListItemCommon)`
     align-items: center;
 `;
+
+StyledListItemEnd.displayName = 'StyledListItemEnd';

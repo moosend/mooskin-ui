@@ -1,11 +1,10 @@
-import { IDivBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 
 import { IInputCallbackData } from '../index';
 
-export interface ISelectComponentProps extends IDivBoxComponentProps {
-
+export interface ISelectComponentProps extends IBoxComponentProps {
     /** Callback that fires when you click on an option on the list */
-    onChangeSelect?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
+    onChangeSelect?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -25,10 +24,7 @@ export interface ISelectFilterComponentProps extends IInputBoxComponentProps {
     onChangeFilter?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export interface ISelectOptionComponentProps extends IDivBoxComponentProps {
-    /** onclick event handler when clicking on the component */
-    onClickOption?: (e: React.MouseEvent<HTMLDivElement>, value: string) => void;
-
+export interface ISelectOptionComponentProps extends IBoxComponentProps {
     /** value for this option */
     value: string;
 
@@ -39,20 +35,10 @@ export interface ISelectOptionComponentProps extends IDivBoxComponentProps {
     disabled?: boolean;
 }
 
-export interface ISelectIconComponentProps extends IDivBoxComponentProps {
-    /** onclick event handler when clicking on the icon */
-    onClickIcon?: (e: React.MouseEvent<HTMLDivElement>) => void;
-}
-
-export interface ISelectOverlayComponentProps extends IDivBoxComponentProps {
-    /** onclick event handler when clicking on the icon */
-    onClickOverlay?: (e: React.MouseEvent<HTMLDivElement>) => void;
-}
-
-export interface ISelectPaginationComponentProps extends IDivBoxComponentProps {
+export interface ISelectPaginationComponentProps extends IBoxComponentProps {
     /** current page value */
     page: number;
 
     /** onclick event handler when clicking on a pagination icon */
-    onClickPagination?: (e: React.MouseEvent<HTMLDivElement>, page: number) => void;
+    onClickPagination?: (e: React.MouseEvent<HTMLElement>, page: number) => void;
 }

@@ -13,7 +13,8 @@
   ],
   "coverageDirectory": "./coverage",
   "testPathIgnorePatterns": [
-    "/node_modules/"
+    "/node_modules/",
+    "/legacy/"
   ],
   "coverageReporters": ["json", "lcov", "text", "teamcity"],
   "globals": {

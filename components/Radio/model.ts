@@ -1,8 +1,8 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../index';
 
-export interface IRadioComponentProps extends IDivBoxComponentProps {
-    onClickRadio?: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => void;
+export interface IRadioComponentProps extends IBoxComponentProps {
+    onClickRadio?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 
     /** what data is being used, helps whn extracting user input, you know on what field changes are made */
     dataLabel?: string;
@@ -17,10 +17,7 @@ export interface IRadioComponentProps extends IDivBoxComponentProps {
     value: string | number;
 }
 
-export interface IRadioIconComponentProps extends IDivBoxComponentProps {
-    /** onClick event handler when clicking the radio Icon */
-    onClickIcon?: (e: React.MouseEvent<HTMLDivElement>) => void;
-
+export interface IRadioIconComponentProps extends IBoxComponentProps {
     /** provide to make the radio disabled */
     disabled?: boolean;
 }

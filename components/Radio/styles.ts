@@ -16,20 +16,26 @@ export const StyledRadio = styled(Box)`
     width: fit-content;
 `;
 
+StyledRadio.displayName = 'StyledRadio';
+
 export const StyledRadioWrapper = styled(Box)<Partial<IRadioComponentProps>>`
-    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     width: fit-content;
     display: flex;
     align-items: center;
 `;
 
-export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps & React.HTMLProps<HTMLDivElement>>>`
+StyledRadioWrapper.displayName = 'StyledRadioWrapper';
+
+export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
+    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     font-family: 'Mooskin Icons';
     padding-right: 10px;
     font-size: 23px;
-    cursor: pointer;
-    color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
+    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
 `;
+
+StyledRadioIcon.displayName = 'StyledRadioIcon';
 
 export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
     font-family: Montserrat;
@@ -40,5 +46,9 @@ export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
     line-height: 1.65;
     letter-spacing: normal;
     min-width: unset;
-    color: ${(props) => props.disabled ? props.theme.disabledfont || variables.disabledfont : props.theme.secondary || variables.secondary};
+    cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
 `;
+
+StyledRadioLabel.displayName = 'StyledRadioLabel';

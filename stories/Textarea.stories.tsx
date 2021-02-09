@@ -24,7 +24,13 @@ const Template: Story<ITextAreaComponentProps> = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-    label: 'TextArea Label:',
-    onChange: (e: React.MouseEvent<HTMLDivElement>, data: IInputCallbackData) => console.log(e, data),
+    onChange: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     value: 'test'
-};
+} as ITextAreaComponentProps;
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    disabled: true,
+    onChange: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
+    value: 'test'
+} as ITextAreaComponentProps;

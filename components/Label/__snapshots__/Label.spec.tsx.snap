@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label renders correctly 1`] = `
+<Label
+  className=""
+  minW={150}
+  style={Object {}}
+>
+  <StyledLabel
+    className=""
+    minW={150}
+    onClick={[Function]}
+    style={Object {}}
+  >
+    <Box
+      className="sc-gtssRu iFLTYl"
+      minW={150}
+      onClick={[Function]}
+      style={Object {}}
+    >
+      <Component
+        className="sc-gtssRu iFLTYl"
+        minW={150}
+        onClick={[Function]}
+        palette={
+          Object {
+            "actionsDropdown": Object {
+              "backgroundColor": "#3fbaca",
+              "fontColor": "#ffffff",
+            },
+            "anchor": Object {
+              "disabledFontColor": "#9d9d9d",
+              "fontColor": "#3fbaca",
+            },
+            "button": Object {
+              "backgroundColor": "#3fbaca",
+              "disabledBackgroundColor": "#e2e2e2",
+              "fontColor": "#ffffff",
+            },
+            "commonElement": Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#293346",
+            },
+            "description": Object {
+              "fontColor": "#9d9d9d",
+            },
+            "label": Object {
+              "fontColor": "#2d2d2d",
+            },
+            "layout": Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#293346",
+            },
+            "main": Object {
+              "backgroundColor": "#f7f7f7",
+            },
+            "toggleElement": Object {
+              "backgroundColor": "#425579",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#ffffff",
+              "secondaryBackgroundColor": "#ffffff",
+              "secondaryFontColor": "#9d9d9d",
+            },
+          }
+        }
+        style={Object {}}
+      >
+        <StyledBox
+          className="sc-gtssRu iFLTYl"
+          minW={150}
+          onClick={[Function]}
+          palette={
+            Object {
+              "actionsDropdown": Object {
+                "backgroundColor": "#3fbaca",
+                "fontColor": "#ffffff",
+              },
+              "anchor": Object {
+                "disabledFontColor": "#9d9d9d",
+                "fontColor": "#3fbaca",
+              },
+              "button": Object {
+                "backgroundColor": "#3fbaca",
+                "disabledBackgroundColor": "#e2e2e2",
+                "fontColor": "#ffffff",
+              },
+              "commonElement": Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#293346",
+              },
+              "description": Object {
+                "fontColor": "#9d9d9d",
+              },
+              "label": Object {
+                "fontColor": "#2d2d2d",
+              },
+              "layout": Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#293346",
+              },
+              "main": Object {
+                "backgroundColor": "#f7f7f7",
+              },
+              "toggleElement": Object {
+                "backgroundColor": "#425579",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#ffffff",
+                "secondaryBackgroundColor": "#ffffff",
+                "secondaryFontColor": "#9d9d9d",
+              },
+            }
+          }
+          style={Object {}}
+        >
+          <div
+            className="sc-bdnylx bEzLzN sc-gtssRu iFLTYl"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Label here!
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledLabel>
+</Label>
+`;

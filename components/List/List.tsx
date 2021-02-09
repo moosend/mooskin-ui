@@ -1,27 +1,20 @@
 import * as React from 'react';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 import { ILayoutComponentProps } from '../Layout/model';
 
 // Components
 import { Layout } from '../Layout/Layout';
 
 // Styled Components
-import {
-    StyledListItem,
-    StyledListItemBody,
-    StyledListItemEnd,
-    StyledListItemHead
-} from './styles';
+import { StyledListItem, StyledListItemBody, StyledListItemEnd, StyledListItemHead } from './styles';
 
 /**
  * List
  */
 export const List: React.FC<ILayoutComponentProps> = (props) => {
-    return (
-        <Layout {...props} />
-    );
+    return <Layout {...props} />;
 };
 
 List.defaultProps = {
@@ -35,10 +28,8 @@ List.displayName = 'List';
 /**
  * ListItem
  */
-export const ListItem: React.FC<IDivBoxComponentProps> = (props) => {
-    return (
-        <StyledListItem boxShadow="xs" round="xs" {...props} />
-    );
+export const ListItem: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledListItem boxShadow="xs" round="xs" {...props} />;
 };
 
 ListItem.defaultProps = {
@@ -51,10 +42,8 @@ ListItem.displayName = 'ListItem';
 /**
  * ListItemHead
  */
-export const ListItemHead: React.FC<IDivBoxComponentProps> = (props) => {
-    return (
-        <StyledListItemHead {...props} />
-    );
+export const ListItemHead: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledListItemHead {...props} />;
 };
 
 ListItemHead.defaultProps = {
@@ -67,10 +56,8 @@ ListItemHead.displayName = 'ListItemHead';
 /**
  * ListItemBody
  */
-export const ListItemBody: React.FC<IDivBoxComponentProps> = (props) => {
-    return (
-        <StyledListItemBody {...props} />
-    );
+export const ListItemBody: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledListItemBody {...props} />;
 };
 
 ListItemBody.defaultProps = {
@@ -83,10 +70,8 @@ ListItemBody.displayName = 'ListItemBody';
 /**
  * ListItemEnd
  */
-export const ListItemEnd: React.FC<IDivBoxComponentProps> = (props) => {
-    return (
-        <StyledListItemEnd {...props} />
-    );
+export const ListItemEnd: React.FC<IBoxComponentProps> = (props) => {
+    return <StyledListItemEnd {...props} />;
 };
 
 ListItemEnd.defaultProps = {

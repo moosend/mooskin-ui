@@ -1,16 +1,16 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
-export interface IPaginationComponentProps extends IDivBoxComponentProps {
+export interface IPaginationComponentProps extends IBoxComponentProps {
     /** number of the active button page */
     activePage: number;
 
     /** onclick callback when the button is clicked */
-    onClickButton?: (e: React.MouseEvent<HTMLDivElement>, value: number) => void;
+    onClickButton?: (e: React.MouseEvent<HTMLElement>, value: number) => void;
 
     children?: React.ReactElement<IPaginationButtonComponentProps> | Array<React.ReactElement<IPaginationButtonComponentProps>>;
 }
 
-export interface IPaginationButtonComponentProps extends IDivBoxComponentProps {
+export interface IPaginationButtonComponentProps extends IBoxComponentProps {
     /** whether the current button is active */
     active?: boolean;
 }

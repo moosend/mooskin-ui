@@ -1,48 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Sidemenu renders Sidemenu correctly 1`] = `
-<Styled(Box)
+<StyledSidemenu
+  activeItem="/settings"
   className=""
+  onClickItem={[MockFunction]}
   style={Object {}}
 >
-  <Component
+  <SidemenuItem
     active={true}
     className=""
-    dataLabel="settings"
     key="0/.0"
     onClick={[Function]}
     style={Object {}}
     value="/settings"
   >
     Settings
-  </Component>
-  <Component
+  </SidemenuItem>
+  <SidemenuItem
     active={false}
     className=""
-    dataLabel="template"
     key="1/.1"
     onClick={[Function]}
     style={Object {}}
     value="/template"
   >
     Template
-  </Component>
-  <Component
+  </SidemenuItem>
+  <SidemenuItem
     active={false}
     className=""
-    dataLabel="preview"
     key="2/.2"
     onClick={[Function]}
     style={Object {}}
     value="/preview"
   >
     Preview
-  </Component>
-</Styled(Box)>
+  </SidemenuItem>
+</StyledSidemenu>
 `;
 
 exports[`Sidemenu renders SidemenuItem correctly 1`] = `
-<Styled(Box)
+<StyledSidemenuItem
   active={true}
   className="myClass"
   onClick={[MockFunction]}

@@ -1,6 +1,6 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
-export interface IIconButtonComponentProps extends IDivBoxComponentProps {
+export interface IIconButtonComponentProps extends IBoxComponentProps {
     /** provide to make the button disabled */
     disabled?: boolean;
 }

@@ -1,228 +1,394 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DatePicker renders correctly 1`] = `
-<div
-  className="datepicker-component myClass datePicker"
-  id="input1"
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
+<DatePicker
+  format="dd/MM/yyyy"
+  onChange={[MockFunction]}
+  pickerType="date"
+  value="01/02/2021"
+  variant="inline"
 >
-  <label
-    className="label"
-    style={Object {}}
+  <MuiPickersUtilsProvider
+    utils={[Function]}
   >
-    with a label ofc
-  </label>
-  <div
-    className="wrapper"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-  >
-    <input
-      className="dateInput disabled undefined"
-      disabled={true}
-      onBlur={[Function]}
-      onClick={[Function]}
-      placeholder="Please select date..."
-      readOnly={true}
-      required={true}
-      value="01 01 2013, 00:00"
-    />
-    <div
-      className="calendar"
-      style={
-        Object {
-          "display": "none",
-        }
+    <PickerWithState
+      TextFieldComponent={[Function]}
+      allowKeyboardControl={true}
+      format="dd/MM/yyyy"
+      invalidDateMessage="Invalid Date Format"
+      maxDate={2100-01-01T00:00:00.000Z}
+      maxDateMessage="Date should not be after maximal date"
+      minDate={1900-01-01T00:00:00.000Z}
+      minDateMessage="Date should not be before minimal date"
+      onChange={[MockFunction]}
+      openTo="date"
+      pickerType="date"
+      value="01/02/2021"
+      variant="inline"
+      views={
+        Array [
+          "year",
+          "date",
+        ]
       }
     >
-      <InputMoment
-        hourStep={1}
-        minStep={1}
-        moment={"2013-01-01T13:00:00.000Z"}
-        nextMonthIcon="ion-ios-arrow-right"
-        onChange={[Function]}
-        onSave={[Function]}
-        prevMonthIcon="ion-ios-arrow-left"
-      />
-      <div
-        className="cover"
-        onClick={[Function]}
-      />
-    </div>
-  </div>
-  <i
-    className="mooskinIcons icon"
-    onClick={[Function]}
-  >
-    event_available
-  </i>
-</div>
-`;
-
-exports[`DatePicker renders other type of the component correctly 1`] = `
-<Select
-  className="date-select-component myClass"
-  filterPlaceholder=""
-  id="input1"
-  label="Hour"
-  onChange={[Function]}
-  selected=""
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
->
-  <Option
-    key="0"
-    value="0"
-  >
-    00 AM
-  </Option>
-  <Option
-    key="1"
-    value="1"
-  >
-    01 AM
-  </Option>
-  <Option
-    key="2"
-    value="2"
-  >
-    02 AM
-  </Option>
-  <Option
-    key="3"
-    value="3"
-  >
-    03 AM
-  </Option>
-  <Option
-    key="4"
-    value="4"
-  >
-    04 AM
-  </Option>
-  <Option
-    key="5"
-    value="5"
-  >
-    05 AM
-  </Option>
-  <Option
-    key="6"
-    value="6"
-  >
-    06 AM
-  </Option>
-  <Option
-    key="7"
-    value="7"
-  >
-    07 AM
-  </Option>
-  <Option
-    key="8"
-    value="8"
-  >
-    08 AM
-  </Option>
-  <Option
-    key="9"
-    value="9"
-  >
-    09 AM
-  </Option>
-  <Option
-    key="10"
-    value="10"
-  >
-    10 AM
-  </Option>
-  <Option
-    key="11"
-    value="11"
-  >
-    11 AM
-  </Option>
-  <Option
-    key="12"
-    value="12"
-  >
-    00 PM
-  </Option>
-  <Option
-    key="13"
-    value="13"
-  >
-    01 PM
-  </Option>
-  <Option
-    key="14"
-    value="14"
-  >
-    02 PM
-  </Option>
-  <Option
-    key="15"
-    value="15"
-  >
-    03 PM
-  </Option>
-  <Option
-    key="16"
-    value="16"
-  >
-    04 PM
-  </Option>
-  <Option
-    key="17"
-    value="17"
-  >
-    05 PM
-  </Option>
-  <Option
-    key="18"
-    value="18"
-  >
-    06 PM
-  </Option>
-  <Option
-    key="19"
-    value="19"
-  >
-    07 PM
-  </Option>
-  <Option
-    key="20"
-    value="20"
-  >
-    08 PM
-  </Option>
-  <Option
-    key="21"
-    value="21"
-  >
-    09 PM
-  </Option>
-  <Option
-    key="22"
-    value="22"
-  >
-    10 PM
-  </Option>
-  <Option
-    key="23"
-    value="23"
-  >
-    11 PM
-  </Option>
-</Select>
+      <Wrapper
+        DateInputProps={
+          Object {
+            "inputValue": "02/01/2021",
+            "openPicker": [Function],
+            "validationError": "",
+          }
+        }
+        InputComponent={[Function]}
+        TextFieldComponent={[Function]}
+        format="dd/MM/yyyy"
+        onAccept={[Function]}
+        onClear={[Function]}
+        onDismiss={[Function]}
+        onSetToday={[Function]}
+        open={false}
+        pickerType="date"
+        variant="inline"
+      >
+        <InlineWrapper
+          DateInputProps={
+            Object {
+              "inputValue": "02/01/2021",
+              "openPicker": [Function],
+              "validationError": "",
+            }
+          }
+          InputComponent={[Function]}
+          TextFieldComponent={[Function]}
+          format="dd/MM/yyyy"
+          onAccept={[Function]}
+          onClear={[Function]}
+          onDismiss={[Function]}
+          onSetToday={[Function]}
+          open={false}
+          pickerType="date"
+        >
+          <PureDateInput
+            TextFieldComponent={[Function]}
+            format="dd/MM/yyyy"
+            inputRef={
+              Object {
+                "current": undefined,
+              }
+            }
+            inputValue="02/01/2021"
+            openPicker={[Function]}
+            pickerType="date"
+            validationError=""
+          >
+            <renderInput
+              InputProps={
+                Object {
+                  "readOnly": true,
+                }
+              }
+              error={false}
+              format="dd/MM/yyyy"
+              helperText=""
+              inputRef={
+                Object {
+                  "current": undefined,
+                }
+              }
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              pickerType="date"
+              value="02/01/2021"
+            >
+              <Input
+                InputProps={
+                  Object {
+                    "readOnly": true,
+                  }
+                }
+                className=""
+                error={false}
+                format="dd/MM/yyyy"
+                helperText=""
+                inputRef={
+                  Object {
+                    "current": undefined,
+                  }
+                }
+                onClick={[Function]}
+                onKeyDown={[Function]}
+                pickerType="date"
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+                value="02/01/2021"
+              >
+                <StyledInputSolo
+                  InputProps={
+                    Object {
+                      "readOnly": true,
+                    }
+                  }
+                  boxAs="input"
+                  className=""
+                  error={false}
+                  format="dd/MM/yyyy"
+                  helperText=""
+                  inputRef={
+                    Object {
+                      "current": undefined,
+                    }
+                  }
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  pickerType="date"
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
+                  value="02/01/2021"
+                >
+                  <Box
+                    InputProps={
+                      Object {
+                        "readOnly": true,
+                      }
+                    }
+                    boxAs="input"
+                    className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                    error={false}
+                    format="dd/MM/yyyy"
+                    helperText=""
+                    inputRef={
+                      Object {
+                        "current": undefined,
+                      }
+                    }
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    pickerType="date"
+                    style={
+                      Object {
+                        "width": "100%",
+                      }
+                    }
+                    value="02/01/2021"
+                  >
+                    <Component
+                      InputProps={
+                        Object {
+                          "readOnly": true,
+                        }
+                      }
+                      boxAs="input"
+                      className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                      error={false}
+                      format="dd/MM/yyyy"
+                      helperText=""
+                      inputRef={
+                        Object {
+                          "current": undefined,
+                        }
+                      }
+                      onClick={[Function]}
+                      onKeyDown={[Function]}
+                      palette={
+                        Object {
+                          "actionsDropdown": Object {
+                            "backgroundColor": "#3fbaca",
+                            "fontColor": "#ffffff",
+                          },
+                          "anchor": Object {
+                            "disabledFontColor": "#9d9d9d",
+                            "fontColor": "#3fbaca",
+                          },
+                          "button": Object {
+                            "backgroundColor": "#3fbaca",
+                            "disabledBackgroundColor": "#e2e2e2",
+                            "fontColor": "#ffffff",
+                          },
+                          "commonElement": Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#e2e2e2",
+                            "fontColor": "#293346",
+                          },
+                          "description": Object {
+                            "fontColor": "#9d9d9d",
+                          },
+                          "label": Object {
+                            "fontColor": "#2d2d2d",
+                          },
+                          "layout": Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#e2e2e2",
+                            "fontColor": "#293346",
+                          },
+                          "main": Object {
+                            "backgroundColor": "#f7f7f7",
+                          },
+                          "toggleElement": Object {
+                            "backgroundColor": "#425579",
+                            "borderColor": "#e2e2e2",
+                            "fontColor": "#ffffff",
+                            "secondaryBackgroundColor": "#ffffff",
+                            "secondaryFontColor": "#9d9d9d",
+                          },
+                        }
+                      }
+                      pickerType="date"
+                      style={
+                        Object {
+                          "width": "100%",
+                        }
+                      }
+                      value="02/01/2021"
+                    >
+                      <StyledBox
+                        InputProps={
+                          Object {
+                            "readOnly": true,
+                          }
+                        }
+                        as="input"
+                        boxAs="input"
+                        className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                        error={false}
+                        format="dd/MM/yyyy"
+                        helperText=""
+                        inputRef={
+                          Object {
+                            "current": undefined,
+                          }
+                        }
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        palette={
+                          Object {
+                            "actionsDropdown": Object {
+                              "backgroundColor": "#3fbaca",
+                              "fontColor": "#ffffff",
+                            },
+                            "anchor": Object {
+                              "disabledFontColor": "#9d9d9d",
+                              "fontColor": "#3fbaca",
+                            },
+                            "button": Object {
+                              "backgroundColor": "#3fbaca",
+                              "disabledBackgroundColor": "#e2e2e2",
+                              "fontColor": "#ffffff",
+                            },
+                            "commonElement": Object {
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#e2e2e2",
+                              "fontColor": "#293346",
+                            },
+                            "description": Object {
+                              "fontColor": "#9d9d9d",
+                            },
+                            "label": Object {
+                              "fontColor": "#2d2d2d",
+                            },
+                            "layout": Object {
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#e2e2e2",
+                              "fontColor": "#293346",
+                            },
+                            "main": Object {
+                              "backgroundColor": "#f7f7f7",
+                            },
+                            "toggleElement": Object {
+                              "backgroundColor": "#425579",
+                              "borderColor": "#e2e2e2",
+                              "fontColor": "#ffffff",
+                              "secondaryBackgroundColor": "#ffffff",
+                              "secondaryFontColor": "#9d9d9d",
+                            },
+                          }
+                        }
+                        pickerType="date"
+                        style={
+                          Object {
+                            "width": "100%",
+                          }
+                        }
+                        value="02/01/2021"
+                      >
+                        <input
+                          className="sc-bdnylx kBsmpR sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                          format="dd/MM/yyyy"
+                          onClick={[Function]}
+                          onKeyDown={[Function]}
+                          style={
+                            Object {
+                              "width": "100%",
+                            }
+                          }
+                          value="02/01/2021"
+                        />
+                      </StyledBox>
+                    </Component>
+                  </Box>
+                </StyledInputSolo>
+              </Input>
+            </renderInput>
+          </PureDateInput>
+          <WithStyles(ForwardRef(Popover))
+            anchorOrigin={
+              Object {
+                "horizontal": "center",
+                "vertical": "bottom",
+              }
+            }
+            onClose={[Function]}
+            open={false}
+            transformOrigin={
+              Object {
+                "horizontal": "center",
+                "vertical": "top",
+              }
+            }
+          >
+            <ForwardRef(Popover)
+              anchorOrigin={
+                Object {
+                  "horizontal": "center",
+                  "vertical": "bottom",
+                }
+              }
+              classes={
+                Object {
+                  "paper": "MuiPopover-paper",
+                  "root": "MuiPopover-root",
+                }
+              }
+              onClose={[Function]}
+              open={false}
+              transformOrigin={
+                Object {
+                  "horizontal": "center",
+                  "vertical": "top",
+                }
+              }
+            >
+              <ForwardRef(Modal)
+                BackdropProps={
+                  Object {
+                    "invisible": true,
+                  }
+                }
+                className="MuiPopover-root"
+                onClose={[Function]}
+                open={false}
+              />
+            </ForwardRef(Popover)>
+          </WithStyles(ForwardRef(Popover))>
+        </InlineWrapper>
+      </Wrapper>
+    </PickerWithState>
+  </MuiPickersUtilsProvider>
+</DatePicker>
 `;

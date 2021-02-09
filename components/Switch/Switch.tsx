@@ -1,58 +1,78 @@
 import * as React from 'react';
 
-// Helpers
-import { getBoxProps } from '../_utils/helper';
-
 // Models
-import { ISwitchComponentProps } from './model';
-
-// Components
-import { Box } from '../Box/Box';
-import { Label } from '../Label/Label';
+import { ISwitchComponentProps, ISwitchHandleComponentProps } from './model';
 
 // Styled Components
-import { SwitchHandle, SwitchLabelDisabled, SwitchLabelNormal, SwitchStyled } from './styles';
+import { StyledSwitch, StyledSwitchHandle, StyledSwitchLabelDisabled, StyledSwitchLabelNormal } from './styles';
 
 /**
  * Switch
  */
 export const Switch: React.FC<ISwitchComponentProps> = (props) => {
+    const [hasHandle, setHasHandle] = React.useState(false);
+
     const renderDisabledContent = () => {
-        return <SwitchLabelDisabled>{props.disabledLabel}</SwitchLabelDisabled>;
+        return <StyledSwitchLabelDisabled active={props.active}>{props.text}</StyledSwitchLabelDisabled>;
     };
 
     const renderSwitchContent = () => {
-        return <SwitchLabelNormal on={props.on}>{props.on ? props.onLabel : props.offLabel}</SwitchLabelNormal>;
+        return <StyledSwitchLabelNormal active={props.active}>{props.text}</StyledSwitchLabelNormal>;
     };
 
     const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        !props.disabled && props.onClickSwitch && props.onClickSwitch(e, { value: !props.on, dataLabel: props.dataLabel });
+        !props.disabled && props.onClickSwitch && props.onClickSwitch(e, { value: !props.active, dataLabel: props.dataLabel });
+    };
+
+    const recurseChildren = (children: any): any => {
+        return React.Children.map(children, (child, i) => {
+            if (React.isValidElement<ISwitchHandleComponentProps>(child) && child.type === SwitchHandle) {
+                !hasHandle && setHasHandle(true);
+                if (!props.disabled) {
+                    return React.cloneElement(child, {
+                        active: props.active,
+                        children: recurseChildren((child.props as any).children),
+                        key: i,
+                        switchWidth: props.w
+                    } as ISwitchHandleComponentProps);
+                }
+                return null;
+            }
+
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
+            }
+
+            return child;
+        });
     };
 
     return (
-        <Box d="flex" {...getBoxProps(props)} onClick={onClick}>
-            {props.label && <Label width={props.labelWidth}>{props.label}</Label>}
-            <SwitchStyled
-                w={props.width}
-                on={props.on}
-                disabled={props.disabled}
-            >
-                {!props.disabled && <SwitchHandle on={props.on} width={props.width} />}
-                {props.disabled ? renderDisabledContent() : renderSwitchContent()}
-            </SwitchStyled>
-        </Box>
+        <StyledSwitch {...props} onClick={onClick}>
+            {!hasHandle && !props.disabled && <SwitchHandle active={props.active} switchWidth={props.w} />}
+            {props.disabled ? renderDisabledContent() : renderSwitchContent()}
+            {recurseChildren(props.children)}
+        </StyledSwitch>
     );
 };
 
 Switch.defaultProps = {
     className: '',
-    disabledLabel: 'INCOMPLETE',
-    offLabel: 'INACTIVE',
-    onLabel: 'ACTIVE',
     style: {},
-    width: 90
+    w: 90
 };
 
 Switch.displayName = 'Switch';
+
+export const SwitchHandle: React.FC<ISwitchHandleComponentProps> = (props) => {
+    return <StyledSwitchHandle {...props} />;
+};
+
+SwitchHandle.defaultProps = {
+    className: '',
+    style: {}
+};
+
+SwitchHandle.displayName = 'SwitchHandle';
 
 export default Switch;

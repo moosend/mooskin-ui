@@ -51,7 +51,7 @@ Horizontal.args = {
     direction: 'row',
     justify: 'initial',
     spacing: 20,
-};
+} as IStackComponentProps;
 
 export const HorizontalWithDivider = HTemplate.bind({});
 HorizontalWithDivider.args = {
@@ -66,7 +66,7 @@ HorizontalWithDivider.args = {
     justify: 'initial',
     p: 50,
     spacing: 20,
-};
+} as IStackComponentProps;
 
 export const HorizontalReverse = HTemplate.bind({});
 HorizontalReverse.args = {
@@ -88,7 +88,7 @@ Vertical.args = {
         <div key={2} style={{...boxStyle, backgroundColor: 'blue'}} />
     ],
     spacing: 20
-};
+} as IStackComponentProps;
 
 export const VerticalWithDivider = HTemplate.bind({});
 VerticalWithDivider.args = {
@@ -99,7 +99,7 @@ VerticalWithDivider.args = {
     ],
     divider: <div style={{backgroundColor: 'grey', height: 1}} />,
     spacing: 20
-};
+} as IStackComponentProps;
 
 export const VerticalReverse = HTemplate.bind({});
 VerticalReverse.args = {
@@ -110,4 +110,4 @@ VerticalReverse.args = {
     ],
     direction: 'column-reverse',
     spacing: 20
-};
+} as IStackComponentProps;

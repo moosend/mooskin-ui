@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loader renders correctly 1`] = `
+<StyledLoader
+  className=""
+  size={50}
+  spinnerWidth={5}
+  style={Object {}}
+/>
+`;

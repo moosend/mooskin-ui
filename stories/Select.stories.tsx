@@ -43,7 +43,7 @@ Normal.args = {
                 <SelectPlaceholder>Select an option</SelectPlaceholder>
             </SelectContainer>
             <SelectOptionList>
-                <SelectOption onClickOption={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
+                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">Option 1</SelectOption>
                 <SelectOption value="2">Option 2</SelectOption>
                 <SelectOption value="3">Option 3</SelectOption>
                 <SelectOption value="4">Option 4</SelectOption>
@@ -64,7 +64,7 @@ Multi.args = {
                 <SelectPlaceholder>Select multiple options</SelectPlaceholder>
             </SelectContainer>
             <SelectOptionList>
-                <SelectOption onClickOption={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
+                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">Option 1</SelectOption>
                 <SelectOption value="2">Option 2</SelectOption>
                 <SelectOption value="3">Option 3</SelectOption>
                 <SelectOption value="4">Option 4</SelectOption>
@@ -85,7 +85,7 @@ WithPagination.args = {
                 <SelectPlaceholder>Select an option</SelectPlaceholder>
             </SelectContainer>
             <SelectOptionList>
-                <SelectOption onClickOption={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
+                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">Option 1</SelectOption>
                 <SelectOption value="2">Option 2</SelectOption>
                 <SelectOption value="3">Option 3</SelectOption>
                 <SelectOption value="4">Option 4</SelectOption>
@@ -110,12 +110,12 @@ CustomElements.args = {
         <>
             <SelectContainer>
                 <SelectPlaceholder>Select an option</SelectPlaceholder>
-                <SelectFilter color="red" onChangeFilter={(e) => console.log('On Filter Change: ', e.target.value)} />
+                <SelectFilter color="red" onChange={(e: React.ChangeEvent<HTMLInputElement>) => console.log('On Filter Change: ', e.target.value)} />
                 <SelectLoader />
                 <SelectIcon color="red" />
             </SelectContainer>
             <SelectOptionList>
-                <SelectOption onClickOption={(e, value) => console.log('Option clicked: ', value)} value="1">Option 1</SelectOption>
+                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">Option 1</SelectOption>
                 <SelectOption value="2">Option 2</SelectOption>
                 <SelectOption value="3">Option 3</SelectOption>
                 <SelectOption value="4">Option 4</SelectOption>
@@ -127,5 +127,6 @@ CustomElements.args = {
     ),
     dataLabel: 'Select',
     onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: '2'
+    selectedValue: '2',
+    showList: true
 } as ISelectComponentProps;

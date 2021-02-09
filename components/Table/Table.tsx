@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Models
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
 // Styled Components
 import { StyledTable, StyledTableHeader, StyledTableHeaderItem, StyledTableRow, StyledTableRowItem } from './styles';
@@ -9,7 +9,7 @@ import { StyledTable, StyledTableHeader, StyledTableHeaderItem, StyledTableRow, 
 /**
  * Table
  */
-export const Table: React.FC<IDivBoxComponentProps> = (props) => {
+export const Table: React.FC<IBoxComponentProps> = (props) => {
     return <StyledTable {...props} />;
 };
 
@@ -23,7 +23,7 @@ Table.displayName = 'Table';
 /**
  * TableHeader
  */
-export const TableHeader: React.FC<IDivBoxComponentProps> = (props) => {
+export const TableHeader: React.FC<IBoxComponentProps> = (props) => {
     return <StyledTableHeader {...props} />;
 };
 
@@ -37,7 +37,7 @@ TableHeader.displayName = 'TableHeader';
 /**
  * TableHeaderItem
  */
-export const TableHeaderItem: React.FC<IDivBoxComponentProps> = (props) => {
+export const TableHeaderItem: React.FC<IBoxComponentProps> = (props) => {
     return <StyledTableHeaderItem {...props} />;
 };
 
@@ -51,7 +51,7 @@ TableHeaderItem.displayName = 'TableHeaderItem';
 /**
  * TableRow
  */
-export const TableRow: React.FC<IDivBoxComponentProps> = (props) => {
+export const TableRow: React.FC<IBoxComponentProps> = (props) => {
     return <StyledTableRow {...props} />;
 };
 
@@ -65,7 +65,7 @@ TableRow.displayName = 'TableRow';
 /**
  * TableRowItem
  */
-export const TableRowItem: React.FC<IDivBoxComponentProps> = (props) => {
+export const TableRowItem: React.FC<IBoxComponentProps> = (props) => {
     return <StyledTableRowItem {...props} />;
 };
 

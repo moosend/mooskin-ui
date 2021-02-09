@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 // Models
-import { BoxShadowIntensityType, IDivBoxComponentProps, IntensityType } from './model';
+import { BoxShadowIntensityType, IBoxComponentProps, IntensityType } from './model';
 
-export const StyledBox = styled.div<IDivBoxComponentProps>`
-
+export const StyledBox = styled.div<IBoxComponentProps>`
     &&& {
         margin: ${(props) => getNumberOrStringValue(props.m)};
         margin-top: ${(props) => getNumberOrStringValue(props.mt || props.my)};
@@ -21,7 +20,7 @@ export const StyledBox = styled.div<IDivBoxComponentProps>`
         color: ${(props) => props.color};
         font-family: ${(props) => props.fontFamily};
         font-size: ${(props) => getNumberOrStringValue(props.fontSize)};
-        font-weight: ${(props) => getNumberOrStringValue(props.fontWeight)};
+        font-weight: ${(props) => props.fontWeight};
         line-height: ${(props) => props.lineHeight};
         text-align: ${(props) => props.textAlign};
         font-style: ${(props) => props.fontStyle};
@@ -53,7 +52,7 @@ export const StyledBox = styled.div<IDivBoxComponentProps>`
         flex-grow: ${(props) => props.flexGrow};
         flex-shrink: ${(props) => props.flexShrink};
         flex-basis: ${(props) => getNumberOrStringValue(props.flexBasis)};
-        order: ${(props) => getNumberOrStringValue(props.order)};
+        order: ${(props) => props.order};
 
         background: ${(props) => props.bg};
         background-image: ${(props) => props.bgImage};
@@ -87,14 +86,14 @@ export const StyledBox = styled.div<IDivBoxComponentProps>`
         border-left-color: ${(props) => props.borderLeftColor};
         border-left-width: ${(props) => getNumberOrStringValue(props.borderLeftWidth)};
 
-        border-radius: ${(props) => props.borderRadius ? getNumberOrStringValue(props.borderRadius) : getRoundness(props.round)};
+        border-radius: ${(props) => (props.borderRadius ? getNumberOrStringValue(props.borderRadius) : getRoundness(props.round))};
         border-top-left-radius: ${(props) => getNumberOrStringValue(props.borderTopLeftRadius)};
         border-top-right-radius: ${(props) => getNumberOrStringValue(props.borderTopRightRadius)};
         border-bottom-right-radius: ${(props) => getNumberOrStringValue(props.borderBottomRightRadius)};
         border-bottom-left-radius: ${(props) => getNumberOrStringValue(props.borderBottomLeftRadius)};
 
         position: ${(props) => props.position};
-        z-index: ${(props) => getNumberOrStringValue(props.zIndex)};
+        z-index: ${(props) => props.zIndex};
         top: ${(props) => getNumberOrStringValue(props.top)};
         right: ${(props) => getNumberOrStringValue(props.right)};
         bottom: ${(props) => getNumberOrStringValue(props.bottom)};
@@ -110,11 +109,12 @@ export const StyledBox = styled.div<IDivBoxComponentProps>`
 
         cursor: ${(props) => props.cursor};
     }
-
 `;
 
+StyledBox.displayName = 'StyledBox';
+
 export const getNumberOrStringValue = (value?: number | string) => {
-    if (value){
+    if (value) {
         return typeof value === 'number' ? `${value}px` : value;
     }
 };

@@ -1,8 +1,8 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
 export type IContentSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
 
-export interface IDrawerComponentProps extends IDivBoxComponentProps {
+export interface IDrawerComponentProps extends IBoxComponentProps {
     /** whether the Drawer is open or not */
     isOpen?: boolean;
 
@@ -19,10 +19,13 @@ export interface IDrawerComponentProps extends IDivBoxComponentProps {
     closeOnOverlayClick?: boolean;
 
     /** close callback */
-    onClose?: (e: React.MouseEvent<HTMLDivElement>) => void;
+    onClose?: (e: React.MouseEvent<HTMLElement>) => void;
+
+    /** open callback */
+    onOpen?: () => void;
 }
 
-export interface IDrawerContentComponentProps extends IDivBoxComponentProps {
+export interface IDrawerContentComponentProps extends IBoxComponentProps {
     /** whether the Drawer is open or not */
     isOpen?: boolean;
 
@@ -33,15 +36,10 @@ export interface IDrawerContentComponentProps extends IDivBoxComponentProps {
     placement?: 'bottom' | 'left' | 'right' | 'top';
 }
 
-export interface IDrawerOverlayComponentProps extends IDivBoxComponentProps {
+export interface IDrawerOverlayComponentProps extends IBoxComponentProps {
     /** whether the Drawer is open or not */
     isOpen?: boolean;
 
-    /** callback when clicking the drawer overlay */
-    onClickOverlay?: (e: React.MouseEvent<HTMLDivElement>) => void;
-}
-
-export interface IDrawerCloseButtonComponentProps extends IDivBoxComponentProps {
-    /** callback when clicking the drawer overlay */
-    onClickButton?: (e: React.MouseEvent<HTMLDivElement>) => void;
+    /** open callback */
+    onOpen?: () => void;
 }

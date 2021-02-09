@@ -719,7 +719,7 @@ const useDnd = (ref: any, id: number, dragAndDrop: ((dragIndex: number, hoverInd
 
 export const Row: React.StatelessComponent<IRowProps> = (props) => {
 
-    const ref = React.useRef<HTMLDivElement>(null);
+    const ref = React.useRef<HTMLElement>(null);
 
     const dnd = useDnd(ref, props.id, props.dragAndDrop);
 

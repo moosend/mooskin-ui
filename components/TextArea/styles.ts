@@ -12,9 +12,11 @@ import variables from '../_utils/globals/variables';
 export const StyledTextArea = styled(Box)<ITextAreaBoxComponentProps>`
     padding: 11px;
     border-radius: 3px;
-    border: solid 1px ${(props) => props.theme.inputBorder || variables.inputBorder};
-    background-color: ${(props) => props.theme.inputBackground || variables.inputBackground};
+    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
+    border: solid 1px ${(props) => props.palette?.commonElement.borderColor || variables.commonElement.borderColor};
+    background-color: ${(props) => props.palette?.commonElement.backgroundColor || variables.commonElement.backgroundColor};
     font-family: Hind;
     font-size: 12px;
-    color: ${(props) => props.theme.inputFont || variables.inputFont};
 `;
+
+StyledTextArea.displayName = 'StyledTextArea';

@@ -29,7 +29,7 @@ Normal.args = {
             <SidemenuItem value="/settings">
                 Settings
             </SidemenuItem>
-            <SidemenuItem value="/template" onClickItem={(e, data) => console.log('Template Clicked')}>
+            <SidemenuItem value="/template" onClick={(e) => console.log('Template Clicked')}>
                 Template
             </SidemenuItem>
             <SidemenuItem value="/preview">
@@ -38,4 +38,4 @@ Normal.args = {
         </>
     ),
     onClickItem: (e: React.MouseEvent<HTMLElement>, value?: string) => alert(value)
-};
+} as ISidemenuComponentProps;

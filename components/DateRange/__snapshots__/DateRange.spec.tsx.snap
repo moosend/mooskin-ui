@@ -1,146 +1,265 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DateRange renders correctly 1`] = `
-<div
-  className="daterange-component myClass dateRange"
-  id="input1"
-  style={
-    Object {
-      "color": "blue",
-    }
+<DateRange
+  className=""
+  direction="horizontal"
+  format="dd MMM yyyy"
+  onChange={[MockFunction]}
+  ranges={
+    Array [
+      Object {
+        "endDate": 2016-06-20T12:08:10.000Z,
+        "key": "selection",
+        "startDate": 2016-06-20T12:08:10.000Z,
+      },
+    ]
   }
 >
-  <label
-    className="label"
+  <Box
+    className=""
+    d="flex"
+    position="relative"
     style={Object {}}
   >
-    with a label ofc
-  </label>
-  <div
-    className="wrapper"
-    style={
-      Object {
-        "position": "relative",
-      }
-    }
-  >
-    <input
-      className="dateInput disabled"
-      disabled={true}
-      onClick={[Function]}
-      readOnly={true}
-      value="01 Jan 2013 - 01 Jan 2013"
-    />
-    <div
-      className="rangeCalendar"
-      style={
+    <Component
+      className=""
+      d="flex"
+      palette={
         Object {
-          "display": "none",
-          "left": 0,
+          "actionsDropdown": Object {
+            "backgroundColor": "#3fbaca",
+            "fontColor": "#ffffff",
+          },
+          "anchor": Object {
+            "disabledFontColor": "#9d9d9d",
+            "fontColor": "#3fbaca",
+          },
+          "button": Object {
+            "backgroundColor": "#3fbaca",
+            "disabledBackgroundColor": "#e2e2e2",
+            "fontColor": "#ffffff",
+          },
+          "commonElement": Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#e2e2e2",
+            "fontColor": "#293346",
+          },
+          "description": Object {
+            "fontColor": "#9d9d9d",
+          },
+          "label": Object {
+            "fontColor": "#2d2d2d",
+          },
+          "layout": Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#e2e2e2",
+            "fontColor": "#293346",
+          },
+          "main": Object {
+            "backgroundColor": "#f7f7f7",
+          },
+          "toggleElement": Object {
+            "backgroundColor": "#425579",
+            "borderColor": "#e2e2e2",
+            "fontColor": "#ffffff",
+            "secondaryBackgroundColor": "#ffffff",
+            "secondaryFontColor": "#9d9d9d",
+          },
         }
       }
+      position="relative"
+      style={Object {}}
     >
-      <div
-        style={
+      <StyledBox
+        className=""
+        d="flex"
+        palette={
           Object {
-            "background": "#fff",
-            "borderTop": "1px solid #bebebe",
-            "display": "flex",
-            "justifyContent": "space-around",
+            "actionsDropdown": Object {
+              "backgroundColor": "#3fbaca",
+              "fontColor": "#ffffff",
+            },
+            "anchor": Object {
+              "disabledFontColor": "#9d9d9d",
+              "fontColor": "#3fbaca",
+            },
+            "button": Object {
+              "backgroundColor": "#3fbaca",
+              "disabledBackgroundColor": "#e2e2e2",
+              "fontColor": "#ffffff",
+            },
+            "commonElement": Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#293346",
+            },
+            "description": Object {
+              "fontColor": "#9d9d9d",
+            },
+            "label": Object {
+              "fontColor": "#2d2d2d",
+            },
+            "layout": Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#293346",
+            },
+            "main": Object {
+              "backgroundColor": "#f7f7f7",
+            },
+            "toggleElement": Object {
+              "backgroundColor": "#425579",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#ffffff",
+              "secondaryBackgroundColor": "#ffffff",
+              "secondaryFontColor": "#9d9d9d",
+            },
           }
         }
+        position="relative"
+        style={Object {}}
       >
-        <H5
-          className=""
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
-        >
-          Start
-        </H5>
-        <H5
-          className=""
-          style={
-            Object {
-              "margin": 5,
-            }
-          }
-        >
-          End
-        </H5>
-      </div>
-      <div
-        style={
-          Object {
-            "display": "flex",
-          }
-        }
-      >
-        <InputMoment
-          hourStep={1}
-          minStep={1}
-          moment={"2013-01-01T13:00:00.000Z"}
-          nextMonthIcon="ion-ios-arrow-right"
-          onChange={[Function]}
-          prevMonthIcon="ion-ios-arrow-left"
-        />
         <div
-          style={
-            Object {
-              "background": "#bebebe",
-              "width": 1,
-            }
-          }
-        />
-        <InputMoment
-          hourStep={1}
-          minStep={1}
-          moment={"2013-01-01T13:00:00.000Z"}
-          nextMonthIcon="ion-ios-arrow-right"
-          onChange={[Function]}
-          prevMonthIcon="ion-ios-arrow-left"
-        />
-      </div>
-      <div
-        className="buttonContainer"
-      >
-        <Button
-          className=""
-          inverseStyle={true}
-          onClick={[Function]}
-          size="md"
+          className="sc-bdnylx hEAZVy"
+          d="flex"
           style={Object {}}
-          type="button"
         >
-          Remove
-        </Button>
-        <Button
-          className=""
-          onClick={[Function]}
-          size="md"
-          style={
-            Object {
-              "marginLeft": 10,
-            }
-          }
-          type="button"
-        >
-          Apply
-        </Button>
-      </div>
-      <div
-        className="cover"
-        onClick={[Function]}
-      />
-    </div>
-  </div>
-  <i
-    className="mooskinIcons icon"
-    onClick={[Function]}
-  >
-    event_available
-  </i>
-</div>
+          <Input
+            className=""
+            onFocus={[Function]}
+            style={Object {}}
+            value="20 Jun 2016 - 20 Jun 2016"
+          >
+            <StyledInputSolo
+              boxAs="input"
+              className=""
+              onFocus={[Function]}
+              style={Object {}}
+              value="20 Jun 2016 - 20 Jun 2016"
+            >
+              <Box
+                boxAs="input"
+                className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                onFocus={[Function]}
+                style={Object {}}
+                value="20 Jun 2016 - 20 Jun 2016"
+              >
+                <Component
+                  boxAs="input"
+                  className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                  onFocus={[Function]}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
+                  style={Object {}}
+                  value="20 Jun 2016 - 20 Jun 2016"
+                >
+                  <StyledBox
+                    as="input"
+                    boxAs="input"
+                    className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                    onFocus={[Function]}
+                    palette={
+                      Object {
+                        "actionsDropdown": Object {
+                          "backgroundColor": "#3fbaca",
+                          "fontColor": "#ffffff",
+                        },
+                        "anchor": Object {
+                          "disabledFontColor": "#9d9d9d",
+                          "fontColor": "#3fbaca",
+                        },
+                        "button": Object {
+                          "backgroundColor": "#3fbaca",
+                          "disabledBackgroundColor": "#e2e2e2",
+                          "fontColor": "#ffffff",
+                        },
+                        "commonElement": Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#e2e2e2",
+                          "fontColor": "#293346",
+                        },
+                        "description": Object {
+                          "fontColor": "#9d9d9d",
+                        },
+                        "label": Object {
+                          "fontColor": "#2d2d2d",
+                        },
+                        "layout": Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#e2e2e2",
+                          "fontColor": "#293346",
+                        },
+                        "main": Object {
+                          "backgroundColor": "#f7f7f7",
+                        },
+                        "toggleElement": Object {
+                          "backgroundColor": "#425579",
+                          "borderColor": "#e2e2e2",
+                          "fontColor": "#ffffff",
+                          "secondaryBackgroundColor": "#ffffff",
+                          "secondaryFontColor": "#9d9d9d",
+                        },
+                      }
+                    }
+                    style={Object {}}
+                    value="20 Jun 2016 - 20 Jun 2016"
+                  >
+                    <input
+                      className="sc-bdnylx kBsmpR sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                      onFocus={[Function]}
+                      style={Object {}}
+                      value="20 Jun 2016 - 20 Jun 2016"
+                    />
+                  </StyledBox>
+                </Component>
+              </Box>
+            </StyledInputSolo>
+          </Input>
+        </div>
+      </StyledBox>
+    </Component>
+  </Box>
+</DateRange>
 `;

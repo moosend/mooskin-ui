@@ -8,9 +8,7 @@ import { StyledLayout } from './styles';
  * Layout
  */
 export const Layout: React.FC<ILayoutComponentProps> = (props) => {
-    return (
-        <StyledLayout {...props} />
-    );
+    return <StyledLayout {...props} />;
 };
 
 Layout.defaultProps = {

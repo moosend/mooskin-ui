@@ -75,6 +75,8 @@ export const StyledGrid = styled(Box)<IGridProps>`
     box-sizing: border-box;
 `;
 
+StyledGrid.displayName = 'StyledGrid';
+
 export const StyledRow = styled(Box)<IRowProps>`
     display: flex;
     flex-flow: row wrap;
@@ -82,8 +84,12 @@ export const StyledRow = styled(Box)<IRowProps>`
     min-width: 0px;
 `;
 
+StyledRow.displayName = 'StyledRow';
+
 export const StyledCol = styled(Box)<IColProps>`
     box-sizing: border-box;
     min-width: 0px;
     ${(props) => assembleAvengers({ lg: props.lg, md: props.md, sm: props.sm, xs: props.xs })}
 `;
+
+StyledCol.displayName = 'StyledCol';

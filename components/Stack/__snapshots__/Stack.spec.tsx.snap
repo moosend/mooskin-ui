@@ -14,10 +14,10 @@ exports[`Stack renders Stack correctly 1`] = `
       }
     />
   }
+  flexWrap="wrap"
   justify="center"
   spacing={20}
   style={Object {}}
-  wrap="wrap"
 >
   <div
     key="0"

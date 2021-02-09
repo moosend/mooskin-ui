@@ -6,6 +6,9 @@ import { ILabelComponentProps } from './model';
 // Styled Components
 import { StyledLabel } from './styles';
 
+/**
+ * Label
+ */
 export const Label: React.FC<ILabelComponentProps> = (props) => {
     const onClick = (e: React.MouseEvent<HTMLElement>) => {
         !props.disabled && props.onClick && props.onClick(e);
@@ -16,8 +19,8 @@ export const Label: React.FC<ILabelComponentProps> = (props) => {
 
 Label.defaultProps = {
     className: '',
-    style: {},
-    width: 150
+    minW: 150,
+    style: {}
 };
 
 Label.displayName = 'Label';

@@ -1,7 +1,12 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Models
-import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonComponentProps, ISkeletonTextComponentProps } from './model';
+import {
+    ICommonSkeletonComponentProps,
+    ISkeletonCircleComponentProps,
+    ISkeletonComponentProps,
+    ISkeletonTextComponentProps
+} from './model';
 
 // Components
 import Box from '../Box/Box';
@@ -42,15 +47,14 @@ export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
     pointer-events: none;
     user-select: none;
     * {
-        visibility: ${(props) => props.isLoaded ? 'visible' : 'hidden'};
+        visibility: ${(props) => (props.isLoaded ? 'visible' : 'hidden')};
     }
 `;
 
-export const checkLoaded = (
-    component: any,
-    isLoaded?: boolean
-) => {
-    if (isLoaded){
+StyledCommonSkeleton.displayName = 'StyledCommonSkeleton';
+
+export const checkLoaded = (component: any, isLoaded?: boolean) => {
+    if (isLoaded) {
         return styled.div`
             animation: ${fadeIn} ${(props) => `0.6s`};
         `;
@@ -64,15 +68,21 @@ export const StyledSkeleton = styled(StyledCommonSkeleton)<ISkeletonComponentPro
     width: ${(props) => props.width};
 `;
 
+StyledSkeleton.displayName = 'StyledSkeleton';
+
 export const StyledSkeletonCircle = styled(StyledCommonSkeleton)<ISkeletonCircleComponentProps>`
     border-radius: 50%;
     height: ${(props) => props.size};
     width: ${(props) => props.size};
 `;
 
+StyledSkeletonCircle.displayName = 'StyledSkeletonCircle';
+
 export const StyledSkeletonText = styled(StyledCommonSkeleton)<ISkeletonTextComponentProps>`
     height: 0.5rem;
-    &:not(:last-child){
+    &:not(:last-child) {
         margin-bottom: 1rem;
     }
 `;
+
+StyledSkeletonText.displayName = 'StyledSkeletonText';

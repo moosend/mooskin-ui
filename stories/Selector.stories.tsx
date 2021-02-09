@@ -26,16 +26,16 @@ Normal.args = {
     activeItem: 1,
     children: (
         <>
-            <SelectorItem value={'1'}>
+            <SelectorItem value={1}>
                 HTML
             </SelectorItem>
-            <SelectorItem value={'2'} onClickItem={(e, value) => console.log('Plain Text Clicked')}>
+            <SelectorItem value={2} onClick={(e) => console.log('Plain Text Clicked')}>
                 PLAIN TEXT
             </SelectorItem>
-            <SelectorItem value={'3'}>
+            <SelectorItem value={3}>
                 IMPORT
             </SelectorItem>
         </>
     ),
     onClickItem: (e: React.MouseEvent<HTMLElement>, value?: string) => alert(value)
-};
+} as ISelectorComponentProps;

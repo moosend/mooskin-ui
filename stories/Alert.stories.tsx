@@ -30,7 +30,7 @@ Normal.args = {
         <AlertDescription key="2">Your Mooskin experience may be degraded.</AlertDescription>,
         <AlertCloseButton key="3" onClick={(e) => alert('close')} position="absolute" right="8px" top="8px" />
     ]
-};
+} as IBaseAlertComponentProps;
 
 export const WithBox = Template.bind({});
 WithBox.args = {
@@ -44,4 +44,4 @@ WithBox.args = {
             </Box>
         )
     ]
-};
+} as IBaseAlertComponentProps;

@@ -53,4 +53,4 @@ Normal.args = {
         </>
     ),
     cols: 3
-};
+} as ILayoutComponentProps;

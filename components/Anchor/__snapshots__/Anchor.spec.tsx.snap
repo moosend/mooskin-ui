@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Anchor renders correctly 1`] = `
-<Anchor
+<StyledAnchor
+  boxAs="a"
   className="myClass"
   disabled={true}
   href="www.moosend.com"
   id="Anchor1"
-  onClick={[MockFunction]}
+  onClick={[Function]}
   style={
     Object {
       "color": "blue",
@@ -14,105 +15,6 @@ exports[`Anchor renders correctly 1`] = `
   }
   target="_blank"
 >
-  <Styled(Box)
-    boxAs="a"
-    className="myClass"
-    disabled={true}
-    href="www.moosend.com"
-    id="Anchor1"
-    onClick={[Function]}
-    style={
-      Object {
-        "color": "blue",
-      }
-    }
-    target="_blank"
-  >
-    <Box
-      boxAs="a"
-      className="sc-gtssRu gIDqKD myClass"
-      disabled={true}
-      href="www.moosend.com"
-      id="Anchor1"
-      onClick={[Function]}
-      style={
-        Object {
-          "color": "blue",
-        }
-      }
-      target="_blank"
-    >
-      <Component
-        boxAs="a"
-        className="sc-gtssRu gIDqKD myClass"
-        disabled={true}
-        href="www.moosend.com"
-        id="Anchor1"
-        onClick={[Function]}
-        style={
-          Object {
-            "color": "blue",
-          }
-        }
-        target="_blank"
-        theme={
-          Object {
-            "disabledBackground": "#e2e2e2",
-            "disabledfont": "#9d9d9d",
-            "inputBackground": "#ffffff",
-            "inputBorder": "#e2e2e2",
-            "inputFont": "#9d9d9d",
-            "label": "#2d2d2d",
-            "primary": "#3fbaca",
-            "secondary": "#293346",
-          }
-        }
-      >
-        <styled.div
-          as="a"
-          boxAs="a"
-          className="sc-gtssRu gIDqKD myClass"
-          disabled={true}
-          href="www.moosend.com"
-          id="Anchor1"
-          onClick={[Function]}
-          style={
-            Object {
-              "color": "blue",
-            }
-          }
-          target="_blank"
-          theme={
-            Object {
-              "disabledBackground": "#e2e2e2",
-              "disabledfont": "#9d9d9d",
-              "inputBackground": "#ffffff",
-              "inputBorder": "#e2e2e2",
-              "inputFont": "#9d9d9d",
-              "label": "#2d2d2d",
-              "primary": "#3fbaca",
-              "secondary": "#293346",
-            }
-          }
-        >
-          <a
-            className="sc-bdnylx dOPKTt sc-gtssRu gIDqKD myClass"
-            disabled={true}
-            href="www.moosend.com"
-            id="Anchor1"
-            onClick={[Function]}
-            style={
-              Object {
-                "color": "blue",
-              }
-            }
-            target="_blank"
-          >
-            Mooskin
-          </a>
-        </styled.div>
-      </Component>
-    </Box>
-  </Styled(Box)>
-</Anchor>
+  Mooskin
+</StyledAnchor>
 `;

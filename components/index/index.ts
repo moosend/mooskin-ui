@@ -1,9 +1,18 @@
 import '../_utils/globals/global.css';
 
+export { default as ActionsDropdown, ActionsDropdownItem, ActionsDropdownArrow } from '../ActionsDropdown/ActionsDropdown';
 export { default as Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../Alert/Alert';
 export { default as Button } from '../Button/Button';
 export { default as Skeleton, SkeletonCircle, SkeletonText } from '../Skeleton/Skeleton';
-export { default as Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay } from '../Drawer/Drawer';
+export {
+    default as Drawer,
+    DrawerBody,
+    DrawerCloseButton,
+    DrawerContent,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay
+} from '../Drawer/Drawer';
 export { default as Stack, HStack, VStack } from '../Stack/Stack';
 export { default as Box } from '../Box/Box';
 export { default as Carousel } from '../Carousel/Carousel';
@@ -43,6 +52,7 @@ export { default as Pagination, PaginationButton } from '../Pagination/Paginatio
 export { default as Radio, RadioDescription, RadioIcon, RadioLabel } from '../Radio/Radio';
 export { default as Sidemenu, SidemenuItem } from '../Sidemenu/Sidemenu';
 export { default as IconButton } from '../IconButton/IconButton';
+export { default as Steps, StepContent, StepHeader, Step } from '../Steps/Steps';
 export {
     default as Select,
     SelectContainer,
@@ -58,7 +68,7 @@ export {
     SelectPlaceholder
 } from '../Select/Select';
 export { default as Switch } from '../Switch/Switch';
-export { default as TextArea, TextareaDescription, TextareaLabel } from '../TextArea/TextArea';
+export { default as TextArea, TextAreaDescription, TextAreaLabel } from '../TextArea/TextArea';
 export { default as Tabs, TabContent, TabHeader, Tab } from '../Tabs/Tabs';
 export { default as Tags, TagClose, TagInput, Tag } from '../Tags/Tags';
 export { default as Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from '../Table/Table';

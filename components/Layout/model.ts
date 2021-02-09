@@ -1,6 +1,6 @@
-import { IDivBoxComponentProps } from '../Box/model';
+import { IBoxComponentProps } from '../Box/model';
 
-export interface ILayoutComponentProps extends IDivBoxComponentProps {
+export interface ILayoutComponentProps extends IBoxComponentProps {
     /** number of cols in a Layout */
     cols?: number;
 
