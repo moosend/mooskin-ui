@@ -1,6 +1,6 @@
-import { IBoxComponentProps } from '../Box/model';
+import { IBoxLabelComponentProps } from '../Box/model';
 
-export interface ILabelComponentProps extends IBoxComponentProps {
+export interface ILabelComponentProps extends IBoxLabelComponentProps {
     /** Label children */
     children: string | number;
 

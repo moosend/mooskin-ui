@@ -115,6 +115,7 @@ export const boxComponentProps = [
 ];
 
 export type IBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLElement>;
+export type IBoxLabelComponentProps = IBaseBoxComponentProps & React.LabelHTMLAttributes<HTMLLabelElement>;
 export type IButtonBoxComponentProps = IBoxComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
 export type IInputBoxComponentProps = IBoxComponentProps & React.InputHTMLAttributes<HTMLInputElement>;
 export type IAnchorBoxComponentProps = IBoxComponentProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;

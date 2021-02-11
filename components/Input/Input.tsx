@@ -183,7 +183,7 @@ Input.displayName = 'Input';
  * InputLabel
  */
 export const InputLabel: React.FC<ILabelComponentProps> = (props) => {
-    return <Label disabled={props.disabled} {...props} />;
+    return <Label disabled={props.disabled} minW={150} pt={10} {...props} />;
 };
 
 InputLabel.defaultProps = {

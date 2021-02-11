@@ -15,7 +15,6 @@ export const StyledLabel = styled(Box)<ILabelComponentProps>`
     font-weight: 500;
     color: ${(props) => props.palette?.label.fontColor || variables.label.fontColor};
     display: flex;
-    align-self: center;
     cursor: ${(props) => (!props.disabled ? (props.onClick ? 'pointer' : 'unset') : 'not-allowed')};
 `;
 

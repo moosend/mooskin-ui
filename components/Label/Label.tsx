@@ -14,7 +14,7 @@ export const Label: React.FC<ILabelComponentProps> = (props) => {
         !props.disabled && props.onClick && props.onClick(e);
     };
 
-    return <StyledLabel {...props} onClick={onClick} />;
+    return <StyledLabel {...props} onClick={onClick} boxAs="label" />;
 };
 
 Label.defaultProps = {

@@ -2,22 +2,23 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import ActionsDropdown, {ActionsDropdownArrow, ActionsDropdownItem} from '../components/ActionsDropdown/ActionsDropdown';
-import {IActionsDropdownComponentProps} from '../components/ActionsDropdown/model';
+import ActionsDropdown, { ActionsDropdownArrow, ActionsDropdownItem } from '../components/ActionsDropdown/ActionsDropdown';
+import { IActionsDropdownComponentProps } from '../components/ActionsDropdown/model';
 
 import { IInputCallbackData } from '../components/index/index';
-import GlobalStyle from '../components/Styled/GlobalStyles';
+// import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/StorybookStyles.css';
 
-export default {
+export default ({
     component: ActionsDropdown,
-    title: 'Example/ActionsDropdown',
-} as any as Meta;
+    title: 'Example/ActionsDropdown'
+} as any) as Meta;
 
 const Template: Story<IActionsDropdownComponentProps> = (args) => {
     return (
         <>
-            <GlobalStyle />
             <ActionsDropdown {...args} />
+            {/* <GlobalStyle /> */}
         </>
     );
 };
