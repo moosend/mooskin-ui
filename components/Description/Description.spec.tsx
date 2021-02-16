@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Description from './Description';
+import { Description } from './Description';
 
 import { mount } from 'enzyme';
 

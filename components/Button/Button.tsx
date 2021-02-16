@@ -43,5 +43,3 @@ ButtonIcon.defaultProps = {
 };
 
 ButtonIcon.displayName = 'ButtonIcon';
-
-export default Button;

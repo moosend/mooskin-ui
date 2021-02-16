@@ -77,5 +77,3 @@ SwitchHandle.defaultProps = {
 };
 
 SwitchHandle.displayName = 'SwitchHandle';
-
-export default Switch;

@@ -105,5 +105,3 @@ TextEditor.defaultProps = {
 };
 
 TextEditor.displayName = 'TextEditor';
-
-export default TextEditor;

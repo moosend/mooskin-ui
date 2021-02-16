@@ -219,5 +219,3 @@ DrawerOverlay.defaultProps = {
 };
 
 DrawerOverlay.displayName = 'DrawerOverlay';
-
-export default Drawer;

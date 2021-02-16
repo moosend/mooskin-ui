@@ -102,5 +102,3 @@ ActionsDropdownArrow.defaultProps = {
 };
 
 ActionsDropdownArrow.displayName = 'ActionsDropdownArrow';
-
-export default ActionsDropdown;

@@ -3,13 +3,13 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import { ISwitchComponentProps } from '../components/Switch/model';
-import Switch, {SwitchHandle} from '../components/Switch/Switch';
+import { Switch, SwitchHandle } from '../components/Switch/Switch';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Switch,
-    title: 'Example/Switch',
+    title: 'Example/Switch'
 } as any) as Meta;
 
 const Template: Story<ISwitchComponentProps> = (args) => {
@@ -32,7 +32,7 @@ export const Inactive = Template.bind({});
 Inactive.args = {
     onClickSwitch: (e, data) => console.log(data),
     text: 'PUBLISHED',
-    w: 120,
+    w: 120
 } as ISwitchComponentProps;
 
 export const Disabled = Template.bind({});

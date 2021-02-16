@@ -174,5 +174,3 @@ NumberLabel.defaultProps = {
 };
 
 NumberLabel.displayName = 'NumberLabel';
-
-export default NumberLabel;

@@ -83,5 +83,3 @@ ListItemEnd.defaultProps = {
 };
 
 ListItemEnd.displayName = 'ListItemEnd';
-
-export default List;

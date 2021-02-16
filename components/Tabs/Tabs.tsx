@@ -133,5 +133,3 @@ TabContent.defaultProps = {
 };
 
 TabContent.displayName = 'TabContent';
-
-export default Tabs;

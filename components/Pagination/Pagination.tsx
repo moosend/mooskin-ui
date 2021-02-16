@@ -80,5 +80,3 @@ PaginationButton.defaultProps = {
 };
 
 PaginationButton.displayName = 'PaginationButton';
-
-export default Pagination;

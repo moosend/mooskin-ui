@@ -2,7 +2,7 @@ import * as React from 'react';
 import Alert, { AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from './Alert';
 
 import { mount } from 'enzyme';
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 const fn = jest.fn();
 

@@ -1,6 +1,5 @@
-import moment from 'moment';
 import * as React from 'react';
-import DateSelect from './DateSelect';
+import { DateSelect } from './DateSelect';
 
 import { mount } from 'enzyme';
 

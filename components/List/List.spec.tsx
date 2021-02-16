@@ -3,7 +3,7 @@ import { Button } from '../Button/Button';
 import { List, ListItem, ListItemBody, ListItemEnd, ListItemHead } from './List';
 
 import { mount } from 'enzyme';
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 describe('Alert', () => {
     test('renders correctly', () => {

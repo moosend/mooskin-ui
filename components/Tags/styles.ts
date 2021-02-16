@@ -5,7 +5,7 @@ import { IBoxComponentProps } from '../Box/model';
 import { ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 // "CSS" variables
 import variables from '../_utils/globals/variables';

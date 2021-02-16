@@ -175,5 +175,3 @@ ExpandableItemContent.defaultProps = {
 };
 
 ExpandableItemContent.displayName = 'ExpandableItemContent';
-
-export default Expandable;

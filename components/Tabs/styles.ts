@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { ITabCommonComponentProps, ITabComponentProps, ITabsComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 export const StyledTabs = styled(Box)<ITabsComponentProps>`
     display: flex;

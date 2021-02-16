@@ -3,20 +3,20 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import { IPaginationComponentProps } from '../components/Pagination/model';
-import Pagination, {PaginationButton} from '../components/Pagination/Pagination';
+import { Pagination, PaginationButton } from '../components/Pagination/Pagination';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Pagination,
-    title: 'Example/Pagination',
+    title: 'Example/Pagination'
 } as any) as Meta;
 
 const Template: Story<IPaginationComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <Pagination  {...args} />
+            <Pagination {...args} />
         </>
     );
 };

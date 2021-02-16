@@ -2,15 +2,15 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import {ITextEditorComponentProps} from '../components/TextEditor/model';
-import TextEditor from '../components/TextEditor/TextEditor';
+import { ITextEditorComponentProps } from '../components/TextEditor/model';
+import { TextEditor } from '../components/TextEditor/TextEditor';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
-export default {
+export default ({
     component: TextEditor,
-    title: 'Example/TextEditor',
-} as any as Meta;
+    title: 'Example/TextEditor'
+} as any) as Meta;
 
 const Template: Story<ITextEditorComponentProps> = (args) => {
     return (
@@ -47,12 +47,12 @@ WithPersonalizationTags.args = {
         buttonLabel: 'My Tags',
         id: 'personalizationTags',
         tags: [
-            {label: 'Tag 1', value: '#tag1#'},
-            {label: 'Tag 2', value: '#tag2#'},
-            {label: 'Tag 3', value: '#tag3#'},
-            {label: 'Tag 4', value: '#tag4#'},
-            {label: 'Tag 5', value: '#tag5#'},
-            {label: 'Tag 6', value: '#tag6#'}
+            { label: 'Tag 1', value: '#tag1#' },
+            { label: 'Tag 2', value: '#tag2#' },
+            { label: 'Tag 3', value: '#tag3#' },
+            { label: 'Tag 4', value: '#tag4#' },
+            { label: 'Tag 5', value: '#tag5#' },
+            { label: 'Tag 6', value: '#tag6#' }
         ]
     }
 } as ITextEditorComponentProps;

@@ -32,8 +32,6 @@ TextArea.defaultProps = {
 
 TextArea.displayName = 'TextArea';
 
-export default TextArea;
-
 /**
  * TextAreaLabel
  */

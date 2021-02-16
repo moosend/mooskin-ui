@@ -157,5 +157,3 @@ StepArrow.defaultProps = {
 };
 
 StepArrow.displayName = 'StepArrow';
-
-export default Steps;

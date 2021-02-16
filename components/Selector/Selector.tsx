@@ -62,5 +62,3 @@ SelectorItem.defaultProps = {
     className: '',
     style: {}
 };
-
-export default Selector;

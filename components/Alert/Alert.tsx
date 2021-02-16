@@ -116,5 +116,3 @@ AlertCloseButton.defaultProps = {
 };
 
 AlertCloseButton.displayName = 'AlertCloseButton';
-
-export default Alert;

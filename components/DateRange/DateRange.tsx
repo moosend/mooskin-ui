@@ -16,8 +16,8 @@ import { IBoxComponentProps } from '../Box/model';
 import { IDateRangePickerComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
-import Input from '../Input/Input';
+import { Box } from '../Box/Box';
+import { Input } from '../Input/Input';
 
 const defaultFormat = 'dd MMM yyyy';
 
@@ -80,5 +80,3 @@ DateRangeOverlay.defaultProps = {
 };
 
 DateRangeOverlay.displayName = 'DateRangeOverlay';
-
-export default DateRange;

@@ -24,5 +24,3 @@ Loader.defaultProps = {
 };
 
 Loader.displayName = 'Loader';
-
-export default Loader;

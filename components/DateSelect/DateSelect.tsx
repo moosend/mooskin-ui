@@ -192,5 +192,3 @@ DateSelect.defaultProps = {
 };
 
 DateSelect.displayName = 'DateSelect';
-
-export default DateSelect;

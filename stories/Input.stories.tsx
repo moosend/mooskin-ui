@@ -20,7 +20,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Input,
-    title: 'Example/Input',
+    title: 'Example/Input'
 } as any) as Meta;
 
 const Template: Story<IInputContainerComponentProps> = (args) => {

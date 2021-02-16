@@ -3,18 +3,14 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import { ITagsComponentProps } from '../components/Tags/model';
-import {
-    Tag,
-    TagInput,
-    Tags,
-} from '../components/Tags/Tags';
+import { Tag, TagInput, Tags } from '../components/Tags/Tags';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Tags,
-    title: 'Example/Tags',
+    title: 'Example/Tags'
 } as any) as Meta;
 
 const Template: Story<ITagsComponentProps> = (args) => {
@@ -60,15 +56,9 @@ WithInput.args = {
     borderRadius: 3,
     children: (
         <>
-            {
-                [...Array(4)].map((item, i) => {
-                    return (
-                        <Tag key={i} >
-                            {`Tag ${i + 1}`}
-                        </Tag>
-                    );
-                })
-            }
+            {[...Array(4)].map((item, i) => {
+                return <Tag key={i}>{`Tag ${i + 1}`}</Tag>;
+            })}
             <TagInput placeholder="Add a label" delimiters={[',', ' ', 'Enter', 13]} pl={10} />
         </>
     ),

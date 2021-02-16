@@ -18,5 +18,3 @@ export const IconButton: React.FC<IIconButtonComponentProps> = withMooskinContex
     };
     return <StyledIconButton {...props} onClick={onClick} />;
 });
-
-export default IconButton;

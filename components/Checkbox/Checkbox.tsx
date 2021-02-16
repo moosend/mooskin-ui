@@ -9,7 +9,7 @@ import { ILabelComponentProps } from '../Label/model';
 import { ICheckboxComponentProps, ICheckboxIconComponentProps } from './model';
 
 // Components
-import Description from '../Description/Description';
+import { Description } from '../Description/Description';
 
 // Styled Components
 import { StyledCheckbox, StyledCheckboxIcon, StyledCheckboxLabel } from './styles';
@@ -123,5 +123,3 @@ CheckboxDescription.defaultProps = {
 };
 
 CheckboxDescription.displayName = 'CheckboxDescription';
-
-export default Checkbox;

@@ -27,5 +27,3 @@ Anchor.defaultProps = {
 };
 
 Anchor.displayName = 'Anchor';
-
-export default Anchor;

@@ -186,5 +186,3 @@ ModalOverlay.defaultProps = {
 };
 
 ModalOverlay.displayName = 'ModalOverlay';
-
-export default Modal;

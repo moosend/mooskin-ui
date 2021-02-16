@@ -49,5 +49,3 @@ LoadingBar.defaultProps = {
 };
 
 LoadingBar.displayName = 'LoadingBar';
-
-export default LoadingBar;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Checkbox, {CheckboxDescription, CheckboxIcon, CheckboxLabel} from '../components/Checkbox/Checkbox';
+import { Checkbox, CheckboxDescription, CheckboxIcon, CheckboxLabel } from '../components/Checkbox/Checkbox';
 import { ICheckboxComponentProps } from '../components/Checkbox/model';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
@@ -12,14 +12,14 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Checkbox,
-    title: 'Example/Checkbox',
+    title: 'Example/Checkbox'
 } as any) as Meta;
 
 const Template: Story<ICheckboxComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <Checkbox  {...args} />
+            <Checkbox {...args} />
         </>
     );
 };

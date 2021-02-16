@@ -5,7 +5,7 @@ import { IBoxComponentProps } from '../Box/model';
 import { IInputComponentProps, IInputContainerComponentProps, IInputListComponentProps, IInputOptionComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 import variables from '../_utils/globals/variables';
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Label from './Label';
+import { Label } from './Label';
 
 import { mount } from 'enzyme';
 

@@ -5,7 +5,7 @@ import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { ISelectComponentProps, ISelectOptionComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 import variables from '../_utils/globals/variables';
 

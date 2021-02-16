@@ -96,5 +96,3 @@ export const withLoader = (
     withMooskinContext((props: ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps) => {
         return <Component {...props} />;
     });
-
-export default Skeleton;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import ActionsDropdown, { ActionsDropdownArrow, ActionsDropdownItem } from '../components/ActionsDropdown/ActionsDropdown';
+import { ActionsDropdown, ActionsDropdownArrow, ActionsDropdownItem } from '../components/ActionsDropdown/ActionsDropdown';
 import { IActionsDropdownComponentProps } from '../components/ActionsDropdown/model';
 
 import { IInputCallbackData } from '../components/index/index';
@@ -17,7 +17,7 @@ export default ({
 const Template: Story<IActionsDropdownComponentProps> = (args) => {
     return (
         <>
-            <ActionsDropdown {...args} />
+            <ActionsDropdown onClickItem={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)} {...args} />
             {/* <GlobalStyle /> */}
         </>
     );
@@ -37,8 +37,7 @@ Normal.args = {
                 Preview
             </ActionsDropdownItem>
         </>
-    ),
-    onClickItem: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)
+    )
 } as IActionsDropdownComponentProps;
 
 export const BottomArrow = Template.bind({});
@@ -57,6 +56,5 @@ BottomArrow.args = {
                 Preview
             </ActionsDropdownItem>
         </>
-    ),
-    onClickItem: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)
+    )
 } as IActionsDropdownComponentProps;

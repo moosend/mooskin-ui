@@ -10,8 +10,8 @@ import { ILabelComponentProps } from '../Label/model';
 import { ISelectComponentProps, ISelectOptionComponentProps, ISelectPaginationComponentProps } from './model';
 
 // Components
-import Description from '../Description/Description';
-import Label from '../Label/Label';
+import { Description } from '../Description/Description';
+import { Label } from '../Label/Label';
 
 // Styled Components
 import {
@@ -384,5 +384,3 @@ SelectPagination.defaultProps = {
 };
 
 SelectPagination.displayName = 'SelectPagination';
-
-export default Select;

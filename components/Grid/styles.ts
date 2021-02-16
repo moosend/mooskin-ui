@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { ColWidth, IColProps, IColWidths, IGridProps, IRowProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 // Screens for media queries
 import screens from '../_utils/globals/screens';

@@ -5,8 +5,8 @@ import { ILabelComponentProps } from '../Label/model';
 import { IRadioComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
-import Label from '../Label/Label';
+import { Box } from '../Box/Box';
+import { Label } from '../Label/Label';
 
 // "CSS" variables
 import variables from '../_utils/globals/variables';

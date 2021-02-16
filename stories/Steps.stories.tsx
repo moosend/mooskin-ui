@@ -3,18 +3,13 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import { IStepsComponentProps } from '../components/Steps/model';
-import {
-    Step,
-    StepContent,
-    StepHeader,
-    Steps
-} from '../components/Steps/Steps';
+import { Step, StepContent, StepHeader, Steps } from '../components/Steps/Steps';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Steps,
-    title: 'Example/Steps',
+    title: 'Example/Steps'
 } as any) as Meta;
 
 const Template: Story<IStepsComponentProps> = (args) => {
@@ -33,7 +28,9 @@ Normal.args = {
         return (
             <Step key={i} activeId={i}>
                 <StepHeader>{`Item: ${i}`}</StepHeader>
-                <StepContent p={15}><div>{`Content for item with index: ${i}`}</div></StepContent>
+                <StepContent p={15}>
+                    <div>{`Content for item with index: ${i}`}</div>
+                </StepContent>
             </Step>
         );
     }),

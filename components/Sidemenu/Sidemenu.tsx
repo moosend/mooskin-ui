@@ -60,5 +60,3 @@ SidemenuItem.defaultProps = {
     className: '',
     style: {}
 };
-
-export default Sidemenu;

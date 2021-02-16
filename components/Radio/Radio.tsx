@@ -9,7 +9,7 @@ import { ILabelComponentProps } from '../Label/model';
 import { IRadioComponentProps, IRadioIconComponentProps } from './model';
 
 // Components
-import Description from '../Description/Description';
+import { Description } from '../Description/Description';
 
 // Styled Components
 import { StyledRadio, StyledRadioIcon, StyledRadioLabel } from './styles';
@@ -124,5 +124,3 @@ RadioDescription.defaultProps = {
 };
 
 RadioDescription.displayName = 'RadioDescription';
-
-export default Radio;

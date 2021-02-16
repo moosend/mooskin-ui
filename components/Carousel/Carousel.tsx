@@ -34,5 +34,3 @@ Carousel.defaultProps = {
 };
 
 Carousel.displayName = 'Carousel';
-
-export default Carousel;

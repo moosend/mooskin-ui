@@ -20,9 +20,9 @@ import {
 } from './model';
 
 // Components
-import Box from '../Box/Box';
-import Description from '../Description/Description';
-import Label from '../Label/Label';
+import { Box } from '../Box/Box';
+import { Description } from '../Description/Description';
+import { Label } from '../Label/Label';
 
 // Styled Components
 import {
@@ -267,5 +267,3 @@ InputEmoji.defaultProps = {
 };
 
 InputEmoji.displayName = 'InputEmoji';
-
-export default Input;

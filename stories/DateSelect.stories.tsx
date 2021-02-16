@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import {DateSelect} from '../components/DateSelect/DateSelect';
+import { DateSelect } from '../components/DateSelect/DateSelect';
 import { IDateSelectComponentProps } from '../components/DateSelect/model';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
@@ -12,14 +12,14 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: DateSelect,
-    title: 'Example/DateSelect',
+    title: 'Example/DateSelect'
 } as any) as Meta;
 
 const Template: Story<IDateSelectComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <DateSelect  {...args} />
+            <DateSelect {...args} />
         </>
     );
 };

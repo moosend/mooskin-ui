@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { ILayoutComponentProps } from './model';
 
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 export const StyledLayout = styled(Box)<ILayoutComponentProps>`
     display: grid;

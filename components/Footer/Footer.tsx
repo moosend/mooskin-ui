@@ -64,5 +64,3 @@ FooterEnd.defaultProps = {
 };
 
 FooterEnd.displayName = 'FooterEnd';
-
-export default Footer;

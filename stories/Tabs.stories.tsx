@@ -3,18 +3,13 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import { ITabsComponentProps } from '../components/Tabs/model';
-import {
-    Tab,
-    TabContent,
-    TabHeader,
-    Tabs
-} from '../components/Tabs/Tabs';
+import { Tab, TabContent, TabHeader, Tabs } from '../components/Tabs/Tabs';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Tabs,
-    title: 'Example/Tabs',
+    title: 'Example/Tabs'
 } as any) as Meta;
 
 const Template: Story<ITabsComponentProps> = (args) => {
@@ -33,7 +28,9 @@ Normal.args = {
         return (
             <Tab key={i} activeId={i}>
                 <TabHeader>{`Item: ${i}`}</TabHeader>
-                <TabContent p={15}><div>{`Content for item with index: ${i}`}</div></TabContent>
+                <TabContent p={15}>
+                    <div>{`Content for item with index: ${i}`}</div>
+                </TabContent>
             </Tab>
         );
     }),

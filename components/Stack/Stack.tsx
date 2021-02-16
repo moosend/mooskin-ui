@@ -7,7 +7,7 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 import { IStackComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 // Styled Components
 import { StyledStack } from './styles';
@@ -117,5 +117,3 @@ VStack.defaultProps = {
 };
 
 VStack.displayName = 'VStack';
-
-export default Stack;

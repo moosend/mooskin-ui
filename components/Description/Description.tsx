@@ -22,5 +22,3 @@ Description.defaultProps = {
 };
 
 Description.displayName = 'Description';
-
-export default Description;

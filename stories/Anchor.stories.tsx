@@ -2,15 +2,15 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Anchor from '../components/Anchor/Anchor';
-import {IAnchorComponentProps} from '../components/Anchor/model';
+import { Anchor } from '../components/Anchor/Anchor';
+import { IAnchorComponentProps } from '../components/Anchor/model';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
-export default {
+export default ({
     component: Anchor,
-    title: 'Example/Anchor',
-} as any as Meta;
+    title: 'Example/Anchor'
+} as any) as Meta;
 
 const Template: Story<IAnchorComponentProps> = (args) => {
     return (

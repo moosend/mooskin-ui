@@ -3,7 +3,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import { IRadioComponentProps } from '../components/Radio/model';
-import Radio, {RadioDescription, RadioIcon, RadioLabel} from '../components/Radio/Radio';
+import { Radio, RadioDescription, RadioIcon, RadioLabel } from '../components/Radio/Radio';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 import { Box } from '../components/Box/Box';
@@ -12,14 +12,14 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Radio,
-    title: 'Example/Radio',
+    title: 'Example/Radio'
 } as any) as Meta;
 
 const Template: Story<IRadioComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <Radio  {...args} />
+            <Radio {...args} />
         </>
     );
 };

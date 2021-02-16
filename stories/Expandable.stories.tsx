@@ -16,14 +16,14 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Expandable,
-    title: 'Example/Expandable',
+    title: 'Example/Expandable'
 } as any) as Meta;
 
 const Template: Story<IExpandableComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <Expandable  {...args} />
+            <Expandable {...args} />
         </>
     );
 };
@@ -38,7 +38,9 @@ Normal.args = {
                     <ExpandableItemText>{`Title for item with index: ${i}`}</ExpandableItemText>
                     <ExpandableItemButton />
                 </ExpandableItemContainer>
-                <ExpandableItemContent p={15}><div>{`Content for item with index: ${i}`}</div></ExpandableItemContent>
+                <ExpandableItemContent p={15}>
+                    <div>{`Content for item with index: ${i}`}</div>
+                </ExpandableItemContent>
             </ExpandableItem>
         );
     }),

@@ -50,5 +50,3 @@ Col.defaultProps = {
 };
 
 Col.displayName = 'Col';
-
-export default Grid;
