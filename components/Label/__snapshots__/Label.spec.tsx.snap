@@ -7,19 +7,22 @@ exports[`Label renders correctly 1`] = `
   style={Object {}}
 >
   <StyledLabel
+    boxAs="label"
     className=""
     minW={150}
     onClick={[Function]}
     style={Object {}}
   >
     <Box
-      className="sc-gtssRu iFLTYl"
+      boxAs="label"
+      className="sc-gtssRu hKeutJ"
       minW={150}
       onClick={[Function]}
       style={Object {}}
     >
       <Component
-        className="sc-gtssRu iFLTYl"
+        boxAs="label"
+        className="sc-gtssRu hKeutJ"
         minW={150}
         onClick={[Function]}
         palette={
@@ -68,7 +71,9 @@ exports[`Label renders correctly 1`] = `
         style={Object {}}
       >
         <StyledBox
-          className="sc-gtssRu iFLTYl"
+          as="label"
+          boxAs="label"
+          className="sc-gtssRu hKeutJ"
           minW={150}
           onClick={[Function]}
           palette={
@@ -116,13 +121,13 @@ exports[`Label renders correctly 1`] = `
           }
           style={Object {}}
         >
-          <div
-            className="sc-bdnylx bEzLzN sc-gtssRu iFLTYl"
+          <label
+            className="sc-bdnylx bEzLzN sc-gtssRu hKeutJ"
             onClick={[Function]}
             style={Object {}}
           >
             Label here!
-          </div>
+          </label>
         </StyledBox>
       </Component>
     </Box>

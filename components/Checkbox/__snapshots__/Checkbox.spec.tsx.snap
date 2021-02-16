@@ -277,19 +277,22 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                   style={Object {}}
                 >
                   <StyledLabel
+                    boxAs="label"
                     className="sc-gKAblj bTYRkz"
                     minW={150}
                     onClick={[Function]}
                     style={Object {}}
                   >
                     <Box
-                      className="sc-dlnjPT uYxwx sc-gKAblj bTYRkz"
+                      boxAs="label"
+                      className="sc-dlnjPT inxxAl sc-gKAblj bTYRkz"
                       minW={150}
                       onClick={[Function]}
                       style={Object {}}
                     >
                       <Component
-                        className="sc-dlnjPT uYxwx sc-gKAblj bTYRkz"
+                        boxAs="label"
+                        className="sc-dlnjPT inxxAl sc-gKAblj bTYRkz"
                         minW={150}
                         onClick={[Function]}
                         palette={
@@ -338,7 +341,9 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-dlnjPT uYxwx sc-gKAblj bTYRkz"
+                          as="label"
+                          boxAs="label"
+                          className="sc-dlnjPT inxxAl sc-gKAblj bTYRkz"
                           minW={150}
                           onClick={[Function]}
                           palette={
@@ -386,13 +391,13 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           }
                           style={Object {}}
                         >
-                          <div
-                            className="sc-bdnylx bEzLzN sc-dlnjPT uYxwx sc-gKAblj bTYRkz"
+                          <label
+                            className="sc-bdnylx bEzLzN sc-dlnjPT inxxAl sc-gKAblj bTYRkz"
                             onClick={[Function]}
                             style={Object {}}
                           >
                             Normal Checkbox
-                          </div>
+                          </label>
                         </StyledBox>
                       </Component>
                     </Box>
