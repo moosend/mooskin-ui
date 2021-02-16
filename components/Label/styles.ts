@@ -13,8 +13,10 @@ export const StyledLabel = styled(Box)<ILabelComponentProps>`
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 500;
-    color: ${(props) => props.palette?.label.fontColor || variables.label.fontColor};
+    min-width: 150px;
+    align-self: center;
     display: flex;
+    color: ${(props) => props.palette?.label.fontColor || variables.label.fontColor};
     cursor: ${(props) => (!props.disabled ? (props.onClick ? 'pointer' : 'unset') : 'not-allowed')};
 `;
 

@@ -9,8 +9,6 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
-import { IDescriptionComponentProps } from '../Description/model';
-import { ILabelComponentProps } from '../Label/model';
 import {
     IInputComponentProps,
     IInputContainerComponentProps,
@@ -21,8 +19,6 @@ import {
 
 // Components
 import { Box } from '../Box/Box';
-import { Description } from '../Description/Description';
-import { Label } from '../Label/Label';
 
 // Styled Components
 import {
@@ -181,34 +177,6 @@ Input.defaultProps = {
 };
 
 Input.displayName = 'Input';
-
-/**
- * InputLabel
- */
-export const InputLabel: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
-    return <Label disabled={props.disabled} minW={150} pt={10} {...props} />;
-});
-
-InputLabel.defaultProps = {
-    className: '',
-    style: {}
-};
-
-InputLabel.displayName = 'InputLabel';
-
-/**
- * InputDescription
- */
-export const InputDescription: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
-    return <Description {...props} />;
-});
-
-InputDescription.defaultProps = {
-    className: '',
-    style: {}
-};
-
-InputDescription.displayName = 'InputDescription';
 
 /**
  * InputIcon

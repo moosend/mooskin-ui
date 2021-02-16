@@ -4,13 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IDescriptionComponentProps } from '../Description/model';
-import { ILabelComponentProps } from '../Label/model';
 import { ITextAreaComponentProps } from './model';
-
-// Components
-import { Description } from '../Description/Description';
-import { Label } from '../Label/Label';
 
 // Styled Components
 import { StyledTextArea } from './styles';
@@ -31,31 +25,3 @@ TextArea.defaultProps = {
 };
 
 TextArea.displayName = 'TextArea';
-
-/**
- * TextAreaLabel
- */
-export const TextAreaLabel: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
-    return <Label disabled={props.disabled} {...props} />;
-});
-
-TextAreaLabel.defaultProps = {
-    className: '',
-    style: {}
-};
-
-TextAreaLabel.displayName = 'TextAreaLabel';
-
-/**
- * TextAreaDescription
- */
-export const TextAreaDescription: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
-    return <Description {...props} />;
-});
-
-TextAreaDescription.defaultProps = {
-    className: '',
-    style: {}
-};
-
-TextAreaDescription.displayName = 'TextAreaDescription';

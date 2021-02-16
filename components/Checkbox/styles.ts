@@ -38,9 +38,6 @@ export const StyledCheckboxIcon = styled(Box)<Partial<ICheckboxComponentProps>>`
 StyledCheckboxIcon.displayName = 'StyledCheckboxIcon';
 
 export const StyledCheckboxLabel = styled(Label)<ILabelComponentProps>`
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 500;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.65;

@@ -29,10 +29,8 @@ export { Grid, Row, Col } from '../Grid/Grid';
 export {
     Input,
     InputContainer,
-    InputDescription,
     InputEmoji,
     InputIcon,
-    InputLabel,
     InputOption,
     InputOptionList,
     InputOptionListTitle,
@@ -48,10 +46,8 @@ export { Steps, StepContent, StepHeader, Step } from '../Steps/Steps';
 export {
     Select,
     SelectContainer,
-    SelectDescription,
     SelectFilter,
     SelectIcon,
-    SelectLabel,
     SelectLoader,
     SelectOption,
     SelectOptionList,
@@ -60,7 +56,7 @@ export {
     SelectPlaceholder
 } from '../Select/Select';
 export { Switch } from '../Switch/Switch';
-export { TextArea, TextAreaDescription, TextAreaLabel } from '../TextArea/TextArea';
+export { TextArea } from '../TextArea/TextArea';
 export { Tabs, TabContent, TabHeader, Tab } from '../Tabs/Tabs';
 export { Tags, TagClose, TagInput, Tag } from '../Tags/Tags';
 export { Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from '../Table/Table';

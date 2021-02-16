@@ -5,13 +5,7 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
-import { IDescriptionComponentProps } from '../Description/model';
-import { ILabelComponentProps } from '../Label/model';
 import { ISelectComponentProps, ISelectOptionComponentProps, ISelectPaginationComponentProps } from './model';
-
-// Components
-import { Description } from '../Description/Description';
-import { Label } from '../Label/Label';
 
 // Styled Components
 import {
@@ -290,34 +284,6 @@ SelectLoader.defaultProps = {
 };
 
 SelectLoader.displayName = 'SelectLoader';
-
-/**
- * SelectLabel
- */
-export const SelectLabel: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
-    return <Label disabled={props.disabled} {...props} />;
-});
-
-SelectLabel.defaultProps = {
-    className: '',
-    style: {}
-};
-
-SelectLabel.displayName = 'SelectLabel';
-
-/**
- * SelectDescription
- */
-export const SelectDescription: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
-    return <Description {...props} />;
-});
-
-SelectDescription.defaultProps = {
-    className: '',
-    style: {}
-};
-
-SelectDescription.displayName = 'SelectDescription';
 
 /**
  * SelectIcon
