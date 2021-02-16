@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IDescriptionComponentProps } from '../Description/model';
 import { ILabelComponentProps } from '../Label/model';
@@ -11,7 +14,7 @@ import Description from '../Description/Description';
 // Styled Components
 import { StyledRadio, StyledRadioIcon, StyledRadioLabel } from './styles';
 
-export const Radio: React.FC<IRadioComponentProps> = (props) => {
+export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) => {
     const [hasRadio, setHasRadio] = React.useState(false);
 
     const onClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -71,7 +74,7 @@ export const Radio: React.FC<IRadioComponentProps> = (props) => {
             {recurseChildren(props.children)}
         </StyledRadio>
     );
-};
+});
 
 Radio.defaultProps = {
     className: '',
@@ -83,9 +86,9 @@ Radio.displayName = 'Radio';
 /**
  * RadioIcon
  */
-export const RadioIcon: React.FC<IRadioIconComponentProps> = (props) => {
+export const RadioIcon: React.FC<IRadioIconComponentProps> = withMooskinContext((props) => {
     return <StyledRadioIcon {...props} />;
-};
+});
 
 RadioIcon.defaultProps = {
     className: '',
@@ -97,9 +100,9 @@ RadioIcon.displayName = 'RadioIcon';
 /**
  * RadioLabel
  */
-export const RadioLabel: React.FC<ILabelComponentProps> = (props) => {
+export const RadioLabel: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
     return <StyledRadioLabel disabled={props.disabled} {...props} />;
-};
+});
 
 RadioLabel.defaultProps = {
     className: '',
@@ -111,9 +114,9 @@ RadioLabel.displayName = 'RadioLabel';
 /**
  * RadioDescription
  */
-export const RadioDescription: React.FC<IDescriptionComponentProps> = (props) => {
+export const RadioDescription: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
     return <Description {...props} />;
-};
+});
 
 RadioDescription.defaultProps = {
     className: '',

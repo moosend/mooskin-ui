@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Date Range Component
 import { DateRangePicker } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
@@ -21,7 +24,7 @@ const defaultFormat = 'dd MMM yyyy';
 /**
  * DateRange
  */
-export const DateRange: React.FC<IDateRangePickerComponentProps> = (props) => {
+export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinContext((props) => {
     const [showPicker, setShowPicker] = React.useState(false);
 
     const getInputValue = () => {
@@ -53,7 +56,7 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = (props) => {
             )}
         </Box>
     );
-};
+});
 
 DateRange.defaultProps = {
     className: '',

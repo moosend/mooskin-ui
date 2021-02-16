@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IPaginationButtonComponentProps, IPaginationComponentProps } from './model';
 
@@ -9,7 +12,7 @@ import { StyledPagination, StyledPaginationButton, StyledPaginationShowAll } fro
 /**
  * Pagination
  */
-export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
+export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContext((props) => {
     const [showAll, setShowAll] = React.useState(false);
 
     const batchClickHandler = (e: React.MouseEvent<HTMLElement>, page: number, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
@@ -55,7 +58,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = (props) => {
             )}
         </StyledPagination>
     );
-};
+});
 
 Pagination.defaultProps = {
     className: '',
@@ -67,9 +70,9 @@ Pagination.displayName = 'Pagination';
 /**
  * PaginationButton
  */
-export const PaginationButton: React.FC<IPaginationButtonComponentProps> = (props) => {
+export const PaginationButton: React.FC<IPaginationButtonComponentProps> = withMooskinContext((props) => {
     return <StyledPaginationButton {...props} />;
-};
+});
 
 PaginationButton.defaultProps = {
     className: '',

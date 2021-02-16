@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Step, StepContent, StepHeader, Steps } from './Steps';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Pagination', () => {
     test('renders correctly', () => {

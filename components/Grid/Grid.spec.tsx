@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Grid, { Col, Row } from './Grid';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Grid', () => {
     test('renders Grid correctly', () => {
-        const tree = shallow(
+        const tree = mount(
             <Grid style={{ textAlign: 'center' }}>
                 <Row style={{ padding: 10, border: '3px solid #F48770' }}>
                     <Col lg={12} md={8} sm={6} xs={3} style={{ padding: 10, border: '3px solid #5ccdde' }}>

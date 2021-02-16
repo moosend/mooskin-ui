@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Anchor from './Anchor';
 
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Anchor', () => {
     test('renders correctly', () => {
         const func = jest.fn();
 
-        const tree = shallow(
+        const tree = mount(
             <Anchor onClick={func} disabled className="myClass" style={{ color: 'blue' }} id={'Anchor1'} href={'www.moosend.com'}>
                 Mooskin
             </Anchor>
@@ -18,7 +18,7 @@ describe('Anchor', () => {
     test('renders properly into dom with color and label', () => {
         const func = jest.fn();
 
-        const component = shallow(
+        const component = mount(
             <Anchor href="https://www.moosend.com" onClick={func}>
                 asd
             </Anchor>
@@ -30,7 +30,7 @@ describe('Anchor', () => {
     test('renders a an Anchor with href', () => {
         const func = jest.fn();
 
-        const component = shallow(
+        const component = mount(
             <Anchor onClick={func} href={'https://www.moosend.com'}>
                 asd
             </Anchor>
@@ -42,7 +42,7 @@ describe('Anchor', () => {
     test('onClick prop callback is called when clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(
+        const component = mount(
             <Anchor href="https://www.moosend.com" onClick={func}>
                 asd
             </Anchor>

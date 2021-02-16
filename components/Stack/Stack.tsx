@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IStackComponentProps } from './model';
 
@@ -12,7 +15,7 @@ import { StyledStack } from './styles';
 /**
  * Stack
  */
-export const Stack: React.FC<IStackComponentProps> = (props) => {
+export const Stack: React.FC<IStackComponentProps> = withMooskinContext((props) => {
     const getDividerSpacing = () => {
         switch (props.direction) {
             case 'row':
@@ -73,16 +76,16 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
     };
 
     return <StyledStack {...props} children={renderChildren()} />;
-};
+});
 
 Stack.displayName = 'Stack';
 
 /**
  * HStack
  */
-export const HStack: React.FC<IStackComponentProps> = (props) => {
+export const HStack: React.FC<IStackComponentProps> = withMooskinContext((props) => {
     return <Stack {...props} />;
-};
+});
 
 HStack.defaultProps = {
     align: 'stretch',
@@ -99,9 +102,9 @@ HStack.displayName = 'HStack';
 /**
  * VStack
  */
-export const VStack: React.FC<IStackComponentProps> = (props) => {
+export const VStack: React.FC<IStackComponentProps> = withMooskinContext((props) => {
     return <Stack {...props} />;
-};
+});
 
 VStack.defaultProps = {
     align: 'initial',

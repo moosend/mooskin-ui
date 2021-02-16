@@ -3,6 +3,9 @@ import * as React from 'react';
 import { Picker } from 'emoji-mart';
 import 'emoji-mart/css/emoji-mart.css';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
@@ -36,7 +39,7 @@ import {
 /**
  * InputContainer
  */
-export const InputContainer: React.FC<IInputContainerComponentProps> = (props) => {
+export const InputContainer: React.FC<IInputContainerComponentProps> = withMooskinContext((props) => {
     const batchChangeHandler = (
         e: React.ChangeEvent<HTMLInputElement>,
         data: IInputCallbackData,
@@ -102,7 +105,7 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = (props) =
     };
 
     return <StyledInputContainer {...props}>{recurseChildren(props.children)}</StyledInputContainer>;
-};
+});
 
 InputContainer.defaultProps = {
     className: '',
@@ -114,7 +117,7 @@ InputContainer.displayName = 'InputContainer';
 /**
  * InputOptionList
  */
-export const InputOptionList: React.FC<IInputListComponentProps> = (props) => {
+export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinContext((props) => {
     const [showList, setShowList] = React.useState(false);
     return (
         <Box position="relative" color="inherit" {...props}>
@@ -127,7 +130,7 @@ export const InputOptionList: React.FC<IInputListComponentProps> = (props) => {
             )}
         </Box>
     );
-};
+});
 
 InputOptionList.defaultProps = {
     className: '',
@@ -139,9 +142,9 @@ InputOptionList.displayName = 'InputOptionList';
 /**
  * InputOptionListTitle
  */
-export const InputOptionListTitle: React.FC<IBoxComponentProps> = (props) => {
+export const InputOptionListTitle: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledInputOptionListTitle {...props} />;
-};
+});
 
 InputOptionListTitle.defaultProps = {
     className: '',
@@ -153,9 +156,9 @@ InputOptionListTitle.displayName = 'InputOptionListTitle';
 /**
  * InputOption
  */
-export const InputOption: React.FC<IInputOptionComponentProps> = (props) => {
+export const InputOption: React.FC<IInputOptionComponentProps> = withMooskinContext((props) => {
     return <StyledInputOption {...props} />;
-};
+});
 
 InputOption.defaultProps = {
     className: '',
@@ -167,10 +170,10 @@ InputOption.displayName = 'InputOption';
 /**
  * Input
  */
-export const Input: React.FC<IInputComponentProps> = (props) => {
+export const Input: React.FC<IInputComponentProps> = withMooskinContext((props) => {
     const InputComponent = props.wrapped ? StyledInputWrapped : StyledInputSolo;
     return <InputComponent {...props} boxAs="input" />;
-};
+});
 
 Input.defaultProps = {
     className: '',
@@ -182,9 +185,9 @@ Input.displayName = 'Input';
 /**
  * InputLabel
  */
-export const InputLabel: React.FC<ILabelComponentProps> = (props) => {
+export const InputLabel: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
     return <Label disabled={props.disabled} minW={150} pt={10} {...props} />;
-};
+});
 
 InputLabel.defaultProps = {
     className: '',
@@ -196,9 +199,9 @@ InputLabel.displayName = 'InputLabel';
 /**
  * InputDescription
  */
-export const InputDescription: React.FC<IDescriptionComponentProps> = (props) => {
+export const InputDescription: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
     return <Description {...props} />;
-};
+});
 
 InputDescription.defaultProps = {
     className: '',
@@ -210,9 +213,9 @@ InputDescription.displayName = 'InputDescription';
 /**
  * InputIcon
  */
-export const InputIcon: React.FC<IBoxComponentProps> = (props) => {
+export const InputIcon: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledInputIcon {...props} />;
-};
+});
 
 InputIcon.defaultProps = {
     className: '',
@@ -224,9 +227,9 @@ InputIcon.displayName = 'InputIcon';
 /**
  * InputOverlay
  */
-export const InputOverlay: React.FC<IBoxComponentProps> = (props) => {
+export const InputOverlay: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledInputOverlay {...props} />;
-};
+});
 
 InputOverlay.defaultProps = {
     className: '',
@@ -238,7 +241,7 @@ InputOverlay.displayName = 'InputOverlay';
 /**
  * InputEmoji
  */
-export const InputEmoji: React.FC<IInputEmojiComponentProps> = (props) => {
+export const InputEmoji: React.FC<IInputEmojiComponentProps> = withMooskinContext((props) => {
     const [showEmoji, setShowEmoji] = React.useState(false);
 
     const onChangeEmoji = (data: any) => {
@@ -256,7 +259,7 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = (props) => {
             )}
         </Box>
     );
-};
+});
 
 InputEmoji.defaultProps = {
     className: '',

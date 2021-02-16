@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
 
@@ -9,7 +12,7 @@ import { StyledSelector, StyledSelectorItem } from './styles';
 /**
  * Selector
  */
-export const Selector: React.FC<ISelectorComponentProps> = (props) => {
+export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext((props) => {
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         value?: string | number,
@@ -41,7 +44,7 @@ export const Selector: React.FC<ISelectorComponentProps> = (props) => {
     };
 
     return <StyledSelector {...props} children={recurseChildren(props.children)} />;
-};
+});
 
 Selector.defaultProps = {
     className: '',
@@ -51,10 +54,9 @@ Selector.defaultProps = {
 /**
  * SelectorItem
  */
-export const SelectorItem: React.FC<ISelectorItemComponentProps> = (props) => {
-    console.log(props.active);
+export const SelectorItem: React.FC<ISelectorItemComponentProps> = withMooskinContext((props) => {
     return <StyledSelectorItem {...props} />;
-};
+});
 
 SelectorItem.defaultProps = {
     className: '',

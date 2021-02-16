@@ -9,13 +9,13 @@ import Select, {
     SelectPlaceholder
 } from './Select';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Select', () => {
     test('renders Select correctly', () => {
         const func = jest.fn();
 
-        const tree = shallow(
+        const tree = mount(
             <Select onChange={func}>
                 <SelectContainer>
                     <SelectPlaceholder>Select an option</SelectPlaceholder>
@@ -38,7 +38,7 @@ describe('Select', () => {
     test('renders Option correctly and calls callback on click', () => {
         const func = jest.fn();
 
-        const tree = shallow(
+        const tree = mount(
             <SelectOption value="1" onClick={func}>
                 Option1
             </SelectOption>
@@ -53,7 +53,7 @@ describe('Select', () => {
     test('renders Filter correctly and calls callback on change', () => {
         const func = jest.fn();
 
-        const tree = shallow(<SelectFilter onChange={func} />);
+        const tree = mount(<SelectFilter onChange={func} />);
 
         tree.find('StyledSelectFilter')
             .first()

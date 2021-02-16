@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Switch from './Switch';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Switch', () => {
     test('renders correctly', () => {
@@ -12,7 +12,7 @@ describe('Switch', () => {
     });
 
     test('renders a disabled Switch with custom css class and id', () => {
-        const component = shallow(<Switch text="INCOMPLETE" disabled />);
+        const component = mount(<Switch text="INCOMPLETE" disabled />);
 
         expect(component.find('StyledSwitchLabelDisabled').length).toEqual(1);
     });
@@ -20,7 +20,7 @@ describe('Switch', () => {
     test('onClick is not called when a disabled Switch is clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(<Switch text="INCOMPLETE" disabled onClickSwitch={func} />);
+        const component = mount(<Switch text="INCOMPLETE" disabled onClickSwitch={func} />);
 
         component.find('StyledSwitch').simulate('click');
         expect(func).not.toHaveBeenCalled();
@@ -29,7 +29,7 @@ describe('Switch', () => {
     test('onClick prop callback is called when the Switch is clicked', () => {
         const func = jest.fn();
 
-        const component = shallow(<Switch text="Inactive" onClickSwitch={func} />);
+        const component = mount(<Switch text="Inactive" onClickSwitch={func} />);
 
         component.find('StyledSwitch').simulate('click');
         expect(func).toHaveBeenCalled();

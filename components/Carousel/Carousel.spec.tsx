@@ -4,8 +4,6 @@ import Carousel from './Carousel';
 
 import { mount } from 'enzyme';
 
-const fn = jest.fn();
-
 describe('Carousel', () => {
     test('renders correctly', () => {
         const tree = mount(

@@ -2,9 +2,9 @@ import moment from 'moment';
 import * as React from 'react';
 import DateSelect from './DateSelect';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
-describe('DatePicker', () => {
+describe('DateSelect', () => {
     test('renders other type of the component correctly', () => {
         const func = jest.fn();
 
@@ -16,7 +16,7 @@ describe('DatePicker', () => {
     test('creates select component for date related hours', () => {
         const func = jest.fn();
 
-        const component = shallow(<DateSelect onChange={func} format="24-Hour" type="hour" />);
+        const component = mount(<DateSelect onChange={func} format="24-Hour" type="hour" showList />);
 
         expect(component.find('SelectOption').length).toBe(24);
         expect(component.find('SelectOption').first().prop('value')).toEqual('0');
@@ -28,7 +28,7 @@ describe('DatePicker', () => {
     test('creates select component for date related hours (12-Hours)', () => {
         const func = jest.fn();
 
-        const component = shallow(<DateSelect onChange={func} format="12-Hour" type="hour" />);
+        const component = mount(<DateSelect onChange={func} format="12-Hour" type="hour" showList />);
 
         expect(component.find('SelectOption').length).toBe(24);
         expect(component.find('SelectOption').first().prop('value')).toEqual('0');
@@ -40,7 +40,7 @@ describe('DatePicker', () => {
     test('creates select component for minute selection', () => {
         const func = jest.fn();
 
-        const component = shallow(<DateSelect onChange={func} type="minute" />);
+        const component = mount(<DateSelect onChange={func} type="minute" showList />);
 
         expect(component.find('SelectOption').length).toBe(60);
         expect(component.find('SelectOption').first().prop('value')).toEqual('0');
@@ -52,7 +52,7 @@ describe('DatePicker', () => {
     test('creates select component for day of the month selection', () => {
         const func = jest.fn();
 
-        const component = shallow(<DateSelect onChange={func} format="1" type="month" />);
+        const component = mount(<DateSelect onChange={func} format="1" type="month" showList />);
 
         expect(component.find('SelectOption').length).toBe(31);
         expect(component.find('SelectOption').first().prop('value')).toEqual('1');
@@ -64,7 +64,7 @@ describe('DatePicker', () => {
     test.skip('creates select component for day of the month (february) selection', () => {
         const func = jest.fn();
 
-        const component = shallow(<DateSelect onChange={func} format="2" type="month" />);
+        const component = mount(<DateSelect onChange={func} format="2" type="month" showList />);
 
         expect(component.find('SelectOption').length).toBe(31);
         expect(component.find('SelectOption').first().prop('value')).toEqual('1');
@@ -76,7 +76,7 @@ describe('DatePicker', () => {
     test('creates select component for day of the week selection', () => {
         const func = jest.fn();
 
-        const component = shallow(<DateSelect onChange={func} type="week" />);
+        const component = mount(<DateSelect onChange={func} type="week" showList />);
 
         expect(component.find('SelectOption').length).toBe(7);
         expect(component.find('SelectOption').first().prop('value')).toEqual('1');
@@ -88,7 +88,7 @@ describe('DatePicker', () => {
     test('creates select component for ordinal selection of days of the month', () => {
         const func = jest.fn();
 
-        const component = shallow(<DateSelect onChange={func} type="ordinal" />);
+        const component = mount(<DateSelect onChange={func} type="ordinal" showList />);
 
         expect(component.find('SelectOption').length).toBe(6);
         expect(component.find('SelectOption').first().prop('value')).toEqual('1');

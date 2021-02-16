@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IBoxComponentProps } from '../Box/model';
 
@@ -9,9 +12,9 @@ import { StyledTable, StyledTableHeader, StyledTableHeaderItem, StyledTableRow, 
 /**
  * Table
  */
-export const Table: React.FC<IBoxComponentProps> = (props) => {
+export const Table: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledTable {...props} />;
-};
+});
 
 Table.defaultProps = {
     className: '',
@@ -23,9 +26,9 @@ Table.displayName = 'Table';
 /**
  * TableHeader
  */
-export const TableHeader: React.FC<IBoxComponentProps> = (props) => {
+export const TableHeader: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledTableHeader {...props} />;
-};
+});
 
 TableHeader.defaultProps = {
     className: '',
@@ -37,9 +40,9 @@ TableHeader.displayName = 'TableHeader';
 /**
  * TableHeaderItem
  */
-export const TableHeaderItem: React.FC<IBoxComponentProps> = (props) => {
+export const TableHeaderItem: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledTableHeaderItem {...props} />;
-};
+});
 
 TableHeaderItem.defaultProps = {
     className: '',
@@ -51,9 +54,9 @@ TableHeaderItem.displayName = 'TableHeaderItem';
 /**
  * TableRow
  */
-export const TableRow: React.FC<IBoxComponentProps> = (props) => {
+export const TableRow: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledTableRow {...props} />;
-};
+});
 
 TableRow.defaultProps = {
     className: '',
@@ -65,9 +68,9 @@ TableRow.displayName = 'TableRow';
 /**
  * TableRowItem
  */
-export const TableRowItem: React.FC<IBoxComponentProps> = (props) => {
+export const TableRowItem: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledTableRowItem {...props} />;
-};
+});
 
 TableRowItem.defaultProps = {
     className: '',

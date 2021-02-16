@@ -1,6 +1,6 @@
 import '../_utils/globals/global.css';
 
-export { default as Actions } from '../Actions/Actions';
+export { default as ActionsDropdown, ActionsDropdownArrow, ActionsDropdownItem } from '../ActionsDropdown/ActionsDropdown';
 export { default as Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../Alert/Alert';
 export { default as Button } from '../Button/Button';
 export { default as Skeleton, SkeletonCircle, SkeletonText } from '../Skeleton/Skeleton';

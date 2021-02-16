@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import ActionsDropdown, { ActionsDropdownItem } from './ActionsDropdown';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('ActionsDropdown', () => {
     test('renders ActionsDropdown correctly', () => {
@@ -27,7 +27,7 @@ describe('ActionsDropdown', () => {
     test('renders ActionsDropdownItem correctly', () => {
         const func = jest.fn();
 
-        const tree = shallow(<ActionsDropdownItem onClick={func} className="myClass" style={{ color: 'blue' }} />);
+        const tree = mount(<ActionsDropdownItem onClick={func} className="myClass" style={{ color: 'blue' }} />);
         expect(tree).toMatchSnapshot();
     });
 

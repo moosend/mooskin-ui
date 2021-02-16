@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
@@ -9,7 +12,7 @@ import { StyledSidemenu, StyledSidemenuItem } from './styles';
 /**
  * Sidemenu
  */
-export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
+export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext((props) => {
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         value?: string,
@@ -39,7 +42,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = (props) => {
     };
 
     return <StyledSidemenu {...props} children={recurseChildren(props.children)} />;
-};
+});
 
 Sidemenu.defaultProps = {
     className: '',
@@ -49,9 +52,9 @@ Sidemenu.defaultProps = {
 /**
  * SidemenuItem
  */
-export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = (props) => {
+export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = withMooskinContext((props) => {
     return <StyledSidemenuItem {...props} />;
-};
+});
 
 SidemenuItem.defaultProps = {
     className: '',

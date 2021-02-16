@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { ISkeletonCircleComponentProps, ISkeletonComponentProps, ISkeletonTextComponentProps } from './model';
 
@@ -89,8 +92,9 @@ SkeletonText.displayName = 'Skeleton';
  */
 export const withLoader = (
     Component: React.ComponentType<ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps>
-) => (props: ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps) => {
-    return <Component {...props} />;
-};
+) =>
+    withMooskinContext((props: ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps) => {
+        return <Component {...props} />;
+    });
 
 export default Skeleton;

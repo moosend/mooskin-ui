@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IBoxComponentProps } from '../Box/model';
 import { IModalComponentProps, IModalContentComponentProps, IModalOverlayComponentProps } from './model';
@@ -20,7 +23,7 @@ import {
 /**
  * Modal
  */
-export const Modal: React.FC<IModalComponentProps> = (props) => {
+export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) => {
     const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
         props.onClose && props.onClose(e);
         callback && callback(e);
@@ -70,7 +73,7 @@ export const Modal: React.FC<IModalComponentProps> = (props) => {
     };
 
     return <StyledModal {...props} children={recurseChildren(props.children)} />;
-};
+});
 
 Modal.defaultProps = {
     className: '',
@@ -83,10 +86,10 @@ Modal.displayName = 'Modal';
 /**
  * ModalContent
  */
-export const ModalContent: React.FC<IModalContentComponentProps> = (props) => {
+export const ModalContent: React.FC<IModalContentComponentProps> = withMooskinContext((props) => {
     const ModalContentComponent = props.isOpen ? StyledModalContentFadeIn : StyledModalContentFadeOut;
     return <ModalContentComponent {...props} />;
-};
+});
 
 ModalContent.defaultProps = {
     className: '',
@@ -98,9 +101,9 @@ ModalContent.displayName = 'ModalContent';
 /**
  * ModalHeader
  */
-export const ModalHeader: React.FC<IBoxComponentProps> = (props) => {
+export const ModalHeader: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledModalHeader boxAs="header" {...props} />;
-};
+});
 
 ModalHeader.defaultProps = {
     className: '',
@@ -112,9 +115,9 @@ ModalHeader.displayName = 'ModalHeader';
 /**
  * ModalBody
  */
-export const ModalBody: React.FC<IBoxComponentProps> = (props) => {
+export const ModalBody: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledModalBody {...props} />;
-};
+});
 
 ModalBody.defaultProps = {
     className: '',
@@ -126,9 +129,9 @@ ModalBody.displayName = 'ModalBody';
 /**
  * ModalFooter
  */
-export const ModalFooter: React.FC<IBoxComponentProps> = (props) => {
+export const ModalFooter: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledModalFooter boxAs="footer" {...props} />;
-};
+});
 
 ModalFooter.defaultProps = {
     className: '',
@@ -140,9 +143,9 @@ ModalFooter.displayName = 'ModalFooter';
 /**
  * ModalCloseButton
  */
-export const ModalCloseButton: React.FC<IBoxComponentProps> = (props) => {
+export const ModalCloseButton: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledModalCloseButton {...props} children="close" />;
-};
+});
 
 ModalCloseButton.defaultProps = {
     className: '',
@@ -154,7 +157,7 @@ ModalCloseButton.displayName = 'ModalCloseButton';
 /**
  * ModalOverlay
  */
-export const ModalOverlay: React.FC<IModalOverlayComponentProps> = (props) => {
+export const ModalOverlay: React.FC<IModalOverlayComponentProps> = withMooskinContext((props) => {
     const [show, setShow] = React.useState(props.isOpen);
 
     React.useEffect(() => {
@@ -175,7 +178,7 @@ export const ModalOverlay: React.FC<IModalOverlayComponentProps> = (props) => {
     }
 
     return null;
-};
+});
 
 ModalOverlay.defaultProps = {
     className: '',
