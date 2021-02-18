@@ -7,6 +7,9 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { ISelectComponentProps, ISelectOptionComponentProps, ISelectPaginationComponentProps } from './model';
 
+// Components
+import { Loader } from '../Loader/Loader';
+
 // Styled Components
 import {
     StyledPaginationPage,
@@ -14,7 +17,6 @@ import {
     StyledSelectContainer,
     StyledSelectFilter,
     StyledSelectIcon,
-    StyledSelectLoader,
     StyledSelectOption,
     StyledSelectOptionList,
     StyledSelectOverlay,
@@ -71,6 +73,41 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
         setShowList(props.showList);
     }, [props.showList]);
 
+    const getPlaceholder = (children: any, passedPlaceholder: string[] = []) => {
+        if (!children) {
+            return null;
+        }
+
+        const placeholder: string[] = passedPlaceholder;
+        React.Children.forEach(children, (child, i) => {
+            if (React.isValidElement<ISelectOptionComponentProps>(child) && child.type === SelectOption) {
+                let label = '';
+
+                if (child.props.searchLabel) {
+                    label = child.props.searchLabel;
+                } else if (typeof child.props.children === 'string') {
+                    label = child.props.children;
+                }
+
+                if (Array.isArray(props.selectedValue)) {
+                    props.selectedValue.forEach((item) => {
+                        if (item.toString().includes(child.props.value)) {
+                            placeholder.push(label);
+                        }
+                    });
+                } else {
+                    props.selectedValue === child.props.value && placeholder.push(label);
+                }
+            }
+
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return getPlaceholder((child.props as any).children, placeholder);
+            }
+        });
+
+        return placeholder.join(', ');
+    };
+
     const recurseChildren = (children: any): any => {
         if (!children) {
             return null;
@@ -79,6 +116,14 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
         return React.Children.map(children, (child, i) => {
             if (React.isValidElement<ISelectOptionComponentProps>(child) && child.type === SelectOption) {
                 const active = Array.isArray(props.selectedValue) && props.selectedValue.includes(child.props.value);
+
+                let label = '';
+
+                if (child.props.searchLabel) {
+                    label = child.props.searchLabel;
+                } else if (typeof child.props.children === 'string') {
+                    label = child.props.children;
+                }
 
                 const option = React.cloneElement(child, {
                     children: (
@@ -92,13 +137,8 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
                     value: child.props.value
                 } as ISelectOptionComponentProps);
 
-                if (filterValue) {
-                    if (child.props.searchLabel) {
-                        return child.props.searchLabel.toLowerCase().includes(filterValue.toLowerCase()) ? option : null;
-                    }
-                    if (typeof child.props.children === 'string') {
-                        return child.props.children.toLowerCase().includes(filterValue.toLowerCase()) ? option : null;
-                    }
+                if (filterValue && label) {
+                    return label.toLowerCase().includes(filterValue.toLowerCase()) ? option : null;
                 }
 
                 return option;
@@ -132,7 +172,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
             if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder) {
                 if (!showList) {
                     return React.cloneElement(child, {
-                        children: recurseChildren(child.props.children),
+                        children: props.selectedValue ? getPlaceholder(props.children) : recurseChildren(child.props.children),
                         key: i
                     } as IBoxComponentProps);
                 }
@@ -275,7 +315,7 @@ SelectFilter.displayName = 'SelectFilter';
  * SelectLoader
  */
 export const SelectLoader: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledSelectLoader {...props} />;
+    return <Loader size={20} spinnerWidth={2} {...props} />;
 });
 
 SelectLoader.defaultProps = {

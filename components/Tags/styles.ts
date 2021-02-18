@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
-import { ITagsComponentProps, ITagsInputComponentProps } from './model';
+import { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -18,7 +18,7 @@ export const StyledTags = styled(Box)<ITagsComponentProps>`
 
 StyledTags.displayName = 'StyledTags';
 
-export const StyledTag = styled(Box)<IBoxComponentProps>`
+export const StyledTag = styled(Box)<ITagComponentProps>`
     display: flex;
     padding: 0 10px;
     border-radius: 13px;

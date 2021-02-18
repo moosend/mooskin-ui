@@ -16,7 +16,7 @@ const Template: Story<IAnchorComponentProps> = (args) => {
     return (
         <>
             <GlobalStyle />
-            <Anchor {...args} />
+            <Anchor {...args} onClick={(e: React.MouseEvent<HTMLElement>) => alert('Being redirected...')} />
         </>
     );
 };
@@ -24,14 +24,12 @@ const Template: Story<IAnchorComponentProps> = (args) => {
 export const Normal = Template.bind({});
 Normal.args = {
     children: 'VIEW CAMPAIGN',
-    href: 'https://www.moosend.com',
-    onClick: (e: React.MouseEvent<HTMLElement>) => alert('Being redirected...')
+    href: 'https://www.moosend.com'
 } as IAnchorComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
     children: 'VIEW CAMPAIGN',
     disabled: true,
-    href: 'https://www.moosend.com',
-    onClick: (e: React.MouseEvent<HTMLElement>) => alert('Being redirected...')
+    href: 'https://www.moosend.com'
 } as IAnchorComponentProps;

@@ -27,10 +27,15 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<ISelectComponentProps> = (args) => {
+    const [selected, setSelected] = React.useState('');
     return (
         <>
             <GlobalStyle />
-            <Select {...args} />
+            <Select
+                selectedValue={selected}
+                {...args}
+                onChangeSelect={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => setSelected(data.value)}
+            />
         </>
     );
 };
@@ -54,7 +59,6 @@ Normal.args = {
         </>
     ),
     dataLabel: 'Select',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
     selectedValue: '2'
 } as ISelectComponentProps;
 
@@ -77,7 +81,6 @@ Multi.args = {
         </>
     ),
     dataLabel: 'Select',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
     selectedValue: ['2', '4']
 } as ISelectComponentProps;
 
@@ -105,9 +108,7 @@ WithPagination.args = {
             </SelectOptionList>
         </>
     ),
-    dataLabel: 'Select',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: '2'
+    dataLabel: 'Select'
 } as ISelectComponentProps;
 
 export const CustomElements = Template.bind({});
@@ -137,7 +138,5 @@ CustomElements.args = {
         </>
     ),
     dataLabel: 'Select',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: '2',
     showList: true
 } as ISelectComponentProps;

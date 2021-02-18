@@ -15,7 +15,7 @@ export const StyledTextArea = styled(Box)<ITextAreaBoxComponentProps>`
     color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
     border: solid 1px ${(props) => props.palette?.commonElement.borderColor || variables.commonElement.borderColor};
     background-color: ${(props) => props.palette?.commonElement.backgroundColor || variables.commonElement.backgroundColor};
-    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
     font-family: Hind;
     font-size: 12px;
 `;

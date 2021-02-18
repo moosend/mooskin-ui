@@ -212,7 +212,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
           type="hour"
         >
           <Box
-            className="sc-hKFyIo bUzjaB"
+            className="sc-dlnjPT bUMykX"
             format="12-Hour"
             onChangeSelect={[Function]}
             palette={
@@ -263,7 +263,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
             type="hour"
           >
             <Component
-              className="sc-hKFyIo bUzjaB"
+              className="sc-dlnjPT bUMykX"
               format="12-Hour"
               onChangeSelect={[Function]}
               palette={
@@ -314,7 +314,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
               type="hour"
             >
               <StyledBox
-                className="sc-hKFyIo bUzjaB"
+                className="sc-dlnjPT bUMykX"
                 format="12-Hour"
                 onChangeSelect={[Function]}
                 palette={
@@ -365,7 +365,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                 type="hour"
               >
                 <div
-                  className="sc-bdnylx kBsmpR sc-hKFyIo bUzjaB"
+                  className="sc-bdnylx kBsmpR sc-dlnjPT bUMykX"
                   format="12-Hour"
                   onChangeSelect={[Function]}
                   style={Object {}}
@@ -474,7 +474,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                         style={Object {}}
                       >
                         <Box
-                          className="sc-jSFkmK hlJPoq"
+                          className="sc-eCApGN jeVLhy"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -522,7 +522,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                           style={Object {}}
                         >
                           <Component
-                            className="sc-jSFkmK hlJPoq"
+                            className="sc-eCApGN jeVLhy"
                             onClick={[Function]}
                             palette={
                               Object {
@@ -570,7 +570,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                             style={Object {}}
                           >
                             <StyledBox
-                              className="sc-jSFkmK hlJPoq"
+                              className="sc-eCApGN jeVLhy"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -618,7 +618,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                               style={Object {}}
                             >
                               <div
-                                className="sc-bdnylx kBsmpR sc-jSFkmK hlJPoq"
+                                className="sc-bdnylx kBsmpR sc-eCApGN jeVLhy"
                                 onClick={[Function]}
                                 style={Object {}}
                               >
@@ -722,7 +722,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-gKAblj iIHrlm"
+                                        className="sc-jSFkmK lgnlTp"
                                         palette={
                                           Object {
                                             "actionsDropdown": Object {
@@ -769,7 +769,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <Component
-                                          className="sc-gKAblj iIHrlm"
+                                          className="sc-jSFkmK lgnlTp"
                                           palette={
                                             Object {
                                               "actionsDropdown": Object {
@@ -816,7 +816,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <StyledBox
-                                            className="sc-gKAblj iIHrlm"
+                                            className="sc-jSFkmK lgnlTp"
                                             palette={
                                               Object {
                                                 "actionsDropdown": Object {
@@ -863,7 +863,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx kBsmpR sc-gKAblj iIHrlm"
+                                              className="sc-bdnylx kBsmpR sc-jSFkmK lgnlTp"
                                               style={Object {}}
                                             >
                                               Select an option
@@ -973,7 +973,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-jrsJCI gAmfKy"
+                                        className="sc-pNWxx eJPqsY"
                                         palette={
                                           Object {
                                             "actionsDropdown": Object {
@@ -1020,7 +1020,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <Component
-                                          className="sc-jrsJCI gAmfKy"
+                                          className="sc-pNWxx eJPqsY"
                                           palette={
                                             Object {
                                               "actionsDropdown": Object {
@@ -1067,7 +1067,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <StyledBox
-                                            className="sc-jrsJCI gAmfKy"
+                                            className="sc-pNWxx eJPqsY"
                                             palette={
                                               Object {
                                                 "actionsDropdown": Object {
@@ -1114,7 +1114,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx kBsmpR sc-jrsJCI gAmfKy"
+                                              className="sc-bdnylx kBsmpR sc-pNWxx eJPqsY"
                                               style={Object {}}
                                             >
                                               keyboard_arrow_down

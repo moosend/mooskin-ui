@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import LoadingBar from './LoadingBar';
+import { LoadingBar } from './LoadingBar';
 
 import { mount } from 'enzyme';
 

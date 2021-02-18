@@ -16,10 +16,15 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<IDateSelectComponentProps> = (args) => {
+    const [value, setValue] = React.useState('');
     return (
         <>
             <GlobalStyle />
-            <DateSelect {...args} />
+            <DateSelect
+                {...args}
+                selectedValue={value}
+                onChangeSelect={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => setValue(data.value)}
+            />
         </>
     );
 };
@@ -28,8 +33,7 @@ export const TwelveHour = Template.bind({});
 TwelveHour.args = {
     dataLabel: 'DateSelect',
     format: '12-Hour',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: 0,
+    // selectedValue: 0,
     type: 'hour'
 } as IDateSelectComponentProps;
 
@@ -37,16 +41,14 @@ export const TwentyFourHour = Template.bind({});
 TwentyFourHour.args = {
     dataLabel: 'DateSelect',
     format: '24-Hour',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: 0,
+    // selectedValue: 0,
     type: 'hour'
 } as IDateSelectComponentProps;
 
 export const Minute = Template.bind({});
 Minute.args = {
     dataLabel: 'DateSelect',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: 0,
+    // selectedValue: 0,
     type: 'minute'
 } as IDateSelectComponentProps;
 
@@ -54,23 +56,20 @@ export const DayOfMonth = Template.bind({});
 DayOfMonth.args = {
     dataLabel: 'DateSelect',
     format: '1',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: 0,
+    // selectedValue: 0,
     type: 'month'
 } as IDateSelectComponentProps;
 
 export const Week = Template.bind({});
 Week.args = {
     dataLabel: 'DateSelect',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: 0,
+    // selectedValue: 0,
     type: 'week'
 } as IDateSelectComponentProps;
 
 export const Ordinal = Template.bind({});
 Ordinal.args = {
     dataLabel: 'DateSelect',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: 0,
+    // selectedValue: 0,
     type: 'ordinal'
 } as IDateSelectComponentProps;

@@ -13,22 +13,18 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<IDateRangePickerComponentProps> = (args) => {
+    const [range, setRange] = React.useState({
+        endDate: new Date(),
+        key: 'selection',
+        startDate: new Date()
+    });
     return (
         <>
             <GlobalStyle />
-            <DateRange {...args} />
+            <DateRange {...args} ranges={[range]} onChange={(ranges: { [key: string]: IRangeSelection }) => setRange(ranges.selection)} />
         </>
     );
 };
 
 export const Normal = Template.bind({});
-Normal.args = {
-    onChange: (ranges: { [key: string]: IRangeSelection }) => console.log(ranges),
-    ranges: [
-        {
-            endDate: new Date(),
-            key: 'selection',
-            startDate: new Date()
-        }
-    ]
-} as IDateRangePickerComponentProps;
+Normal.args = {} as IDateRangePickerComponentProps;

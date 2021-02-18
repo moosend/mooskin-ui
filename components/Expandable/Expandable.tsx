@@ -26,7 +26,8 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
         activeId?: string | number,
         callback?: (e: React.MouseEvent<HTMLElement>) => void
     ) => {
-        props.onClickItem && props.onClickItem(e, activeId);
+        const value = props.activeItem === activeId ? '' : activeId;
+        props.onClickItem && props.onClickItem(e, value);
         callback && callback(e);
     };
 

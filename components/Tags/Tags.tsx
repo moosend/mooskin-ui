@@ -6,10 +6,7 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
-import { ITagsComponentProps, ITagsInputComponentProps } from './model';
-
-// Components
-// import { Box } from '../Box/Box';
+import { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Styled Components
 import { StyledTag, StyledTagClose, StyledTagInput, StyledTags } from './styles';
@@ -42,18 +39,20 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
         }
 
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<IBoxComponentProps>(child) && child.type === Tag) {
+            if (React.isValidElement<ITagComponentProps>(child) && child.type === Tag) {
                 return React.cloneElement(child, {
                     children: (
                         <>
                             {recurseChildren((child.props as any).children)}
-                            {props.onRemoveTag && <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>}
+                            {child.props.removeIcon && props.onRemoveTag && (
+                                <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>
+                            )}
                         </>
                     ),
                     key: i,
                     onClick: (e: React.MouseEvent<HTMLElement>) =>
                         batchClickHandler(e, { dataLabel: props.dataLabel, value: i }, child.props.onClick)
-                } as IBoxComponentProps);
+                } as ITagComponentProps);
             }
 
             if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput) {
@@ -84,12 +83,13 @@ Tags.displayName = 'Tags';
 /**
  * Tag
  */
-export const Tag: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const Tag: React.FC<ITagComponentProps> = withMooskinContext((props) => {
     return <StyledTag {...props} />;
 });
 
 Tag.defaultProps = {
     className: '',
+    removeIcon: true,
     style: {}
 };
 

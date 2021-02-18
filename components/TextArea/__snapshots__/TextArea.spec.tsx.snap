@@ -108,7 +108,7 @@ exports[`TextArea renders correctly 1`] = `
     >
       <Box
         boxAs="textarea"
-        className="sc-hKFyIo bOtIBH"
+        className="sc-gtssRu eSWYCV"
         onChange={[Function]}
         palette={
           Object {
@@ -158,7 +158,7 @@ exports[`TextArea renders correctly 1`] = `
       >
         <Component
           boxAs="textarea"
-          className="sc-hKFyIo bOtIBH"
+          className="sc-gtssRu eSWYCV"
           onChange={[Function]}
           palette={
             Object {
@@ -209,7 +209,7 @@ exports[`TextArea renders correctly 1`] = `
           <StyledBox
             as="textarea"
             boxAs="textarea"
-            className="sc-hKFyIo bOtIBH"
+            className="sc-gtssRu eSWYCV"
             onChange={[Function]}
             palette={
               Object {
@@ -258,7 +258,7 @@ exports[`TextArea renders correctly 1`] = `
             value="asd"
           >
             <textarea
-              className="sc-bdnylx kBsmpR sc-hKFyIo bOtIBH"
+              className="sc-bdnylx kBsmpR sc-gtssRu eSWYCV"
               onChange={[Function]}
               style={Object {}}
               value="asd"

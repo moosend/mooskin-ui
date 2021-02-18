@@ -8,7 +8,7 @@ describe('Radio', () => {
         const func = jest.fn();
 
         const tree = mount(
-            <Radio selected value="asd" onClickRadio={func}>
+            <Radio selected onClickRadio={func}>
                 <RadioIcon color="red" />
                 <RadioLabel>Normal Radio</RadioLabel>
             </Radio>
@@ -21,7 +21,7 @@ describe('Radio', () => {
         const func = jest.fn();
 
         const tree = mount(
-            <Radio selected value="asd" onClickRadio={func}>
+            <Radio selected onClickRadio={func}>
                 <RadioIcon color="red" />
                 <RadioLabel>Normal Radio</RadioLabel>
             </Radio>
@@ -36,7 +36,7 @@ describe('Radio', () => {
         const func = jest.fn();
 
         const tree = mount(
-            <Radio selected value="asd" onClickRadio={func} disabled>
+            <Radio selected onClickRadio={func} disabled>
                 <RadioIcon color="red" />
                 <RadioLabel>Normal Radio</RadioLabel>
             </Radio>

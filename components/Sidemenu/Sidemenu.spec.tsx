@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Sidemenu, { SidemenuItem } from './Sidemenu';
+import { Sidemenu, SidemenuItem } from './Sidemenu';
 
 import { mount } from 'enzyme';
 

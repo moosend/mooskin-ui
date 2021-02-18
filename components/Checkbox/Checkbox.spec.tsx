@@ -8,7 +8,7 @@ describe('CheckBox', () => {
         const func = jest.fn();
 
         const tree = mount(
-            <Checkbox checked value="asd" onClickCheckbox={func}>
+            <Checkbox checked onClickCheckbox={func}>
                 <CheckboxIcon color="red" />
                 <CheckboxLabel>Normal Checkbox</CheckboxLabel>
             </Checkbox>
@@ -21,7 +21,7 @@ describe('CheckBox', () => {
         const func = jest.fn();
 
         const tree = mount(
-            <Checkbox checked value="asd" onClickCheckbox={func}>
+            <Checkbox checked onClickCheckbox={func}>
                 <CheckboxIcon color="red" />
                 <CheckboxLabel>Normal Checkbox</CheckboxLabel>
             </Checkbox>
@@ -36,7 +36,7 @@ describe('CheckBox', () => {
         const func = jest.fn();
 
         const tree = mount(
-            <Checkbox checked value="asd" onClickCheckbox={func} disabled>
+            <Checkbox checked onClickCheckbox={func} disabled>
                 <CheckboxIcon color="red" />
                 <CheckboxLabel>Normal Checkbox</CheckboxLabel>
             </Checkbox>

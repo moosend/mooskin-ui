@@ -1,5 +1,6 @@
 import * as React from 'react';
-import Select, {
+import {
+    Select,
     SelectContainer,
     SelectFilter,
     SelectIcon,
@@ -9,13 +10,13 @@ import Select, {
     SelectPlaceholder
 } from './Select';
 
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Select', () => {
     test('renders Select correctly', () => {
         const func = jest.fn();
 
-        const tree = mount(
+        const tree = shallow(
             <Select onChange={func}>
                 <SelectContainer>
                     <SelectPlaceholder>Select an option</SelectPlaceholder>
@@ -47,7 +48,6 @@ describe('Select', () => {
         tree.find('StyledSelectOption').simulate('click');
 
         expect(func).toHaveBeenCalled();
-        expect(tree).toMatchSnapshot();
     });
 
     test('renders Filter correctly and calls callback on change', () => {
@@ -60,7 +60,6 @@ describe('Select', () => {
             .simulate('change', { target: { value: 'filter' } });
 
         expect(func).toHaveBeenCalled();
-        expect(tree).toMatchSnapshot();
     });
 
     test('should be rendered as a multi select if the selected prop is an array', () => {
@@ -68,7 +67,7 @@ describe('Select', () => {
 
         const func = jest.fn();
 
-        const component = mount(
+        const component = shallow(
             <Select onChange={func} showList selectedValue={options} dataLabel="select">
                 <SelectContainer>
                     <SelectPlaceholder>Select an option</SelectPlaceholder>

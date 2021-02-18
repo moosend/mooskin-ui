@@ -16,67 +16,48 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<ICheckboxComponentProps> = (args) => {
+    const [value, setValue] = React.useState(false);
     return (
         <>
             <GlobalStyle />
-            <Checkbox {...args} />
+            <Checkbox
+                checked={value}
+                {...args}
+                onClickCheckbox={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => setValue(data.value)}
+            />
         </>
     );
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    checked: false,
-    children: (
-        <>
-            <CheckboxLabel>Normal Checkbox</CheckboxLabel>
-        </>
-    ),
-    onClickCheckbox: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    value: 'test'
+    children: <CheckboxLabel>Normal Checkbox</CheckboxLabel>
 } as ICheckboxComponentProps;
 
-export const Selected = Template.bind({});
-Selected.args = {
+export const Checked = Template.bind({});
+Checked.args = {
     checked: true,
-    children: (
-        <>
-            <CheckboxLabel>Selected Checkbox</CheckboxLabel>
-        </>
-    ),
-    onClickCheckbox: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    value: 'test'
+    children: <CheckboxLabel>Checked Checkbox</CheckboxLabel>
 } as ICheckboxComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-    checked: false,
-    children: (
-        <>
-            <CheckboxLabel>Disabled Checkbox</CheckboxLabel>
-        </>
-    ),
-    disabled: true,
-    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    value: 'test'
+    children: <CheckboxLabel>Disabled Checkbox</CheckboxLabel>,
+    disabled: true
 } as ICheckboxComponentProps;
 
 export const Description = Template.bind({});
 Description.args = {
-    checked: false,
     children: (
         <Box>
             <CheckboxLabel onClick={() => alert('Label Clicked!')}>Checkbox</CheckboxLabel>
             <CheckboxDescription>Checkbox description goes here</CheckboxDescription>
         </Box>
-    ),
-    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    value: 'test'
+    )
 } as ICheckboxComponentProps;
 
 export const CustomButton = Template.bind({});
 CustomButton.args = {
-    checked: false,
     children: (
         <>
             <CheckboxIcon color="red" />
@@ -86,6 +67,5 @@ CustomButton.args = {
             </Box>
         </>
     ),
-    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    value: 'test'
+    onClick: (e: React.MouseEvent<HTMLElement>) => console.log(e)
 } as ICheckboxComponentProps;

@@ -13,17 +13,21 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<ISelectorComponentProps> = (args) => {
+    const [activeItem, setActiveItem] = React.useState(1);
     return (
         <>
             <GlobalStyle />
-            <Selector {...args} />
+            <Selector
+                activeItem={activeItem}
+                {...args}
+                onClickItem={(e: React.MouseEvent<HTMLElement>, value: number) => setActiveItem(value)}
+            />
         </>
     );
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    activeItem: 1,
     children: (
         <>
             <SelectorItem value={1}>HTML</SelectorItem>
@@ -32,6 +36,5 @@ Normal.args = {
             </SelectorItem>
             <SelectorItem value={3}>IMPORT</SelectorItem>
         </>
-    ),
-    onClickItem: (e: React.MouseEvent<HTMLElement>, value?: string) => alert(value)
+    )
 } as ISelectorComponentProps;

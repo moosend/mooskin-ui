@@ -103,7 +103,7 @@ exports[`Input renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-hKFyIo crVPpZ"
+        className="sc-gtssRu eHPvyX"
         onChangeInput={[MockFunction]}
         palette={
           Object {
@@ -151,7 +151,7 @@ exports[`Input renders correctly 1`] = `
         style={Object {}}
       >
         <Component
-          className="sc-hKFyIo crVPpZ"
+          className="sc-gtssRu eHPvyX"
           onChangeInput={[MockFunction]}
           palette={
             Object {
@@ -199,7 +199,7 @@ exports[`Input renders correctly 1`] = `
           style={Object {}}
         >
           <StyledBox
-            className="sc-hKFyIo crVPpZ"
+            className="sc-gtssRu eHPvyX"
             onChangeInput={[MockFunction]}
             palette={
               Object {
@@ -247,7 +247,7 @@ exports[`Input renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx kBsmpR sc-hKFyIo crVPpZ"
+              className="sc-bdnylx kBsmpR sc-gtssRu eHPvyX"
               onChangeInput={[MockFunction]}
               style={Object {}}
             >
@@ -359,7 +359,7 @@ exports[`Input renders correctly 1`] = `
                   >
                     <Box
                       boxAs="input"
-                      className="sc-eCApGN sc-gKAblj jctrjg leNGue"
+                      className="sc-dlnjPT sc-eCApGN kEWLYK djlcut"
                       onChange={[Function]}
                       palette={
                         Object {
@@ -409,7 +409,7 @@ exports[`Input renders correctly 1`] = `
                     >
                       <Component
                         boxAs="input"
-                        className="sc-eCApGN sc-gKAblj jctrjg leNGue"
+                        className="sc-dlnjPT sc-eCApGN kEWLYK djlcut"
                         onChange={[Function]}
                         palette={
                           Object {
@@ -460,7 +460,7 @@ exports[`Input renders correctly 1`] = `
                         <StyledBox
                           as="input"
                           boxAs="input"
-                          className="sc-eCApGN sc-gKAblj jctrjg leNGue"
+                          className="sc-dlnjPT sc-eCApGN kEWLYK djlcut"
                           onChange={[Function]}
                           palette={
                             Object {
@@ -509,7 +509,7 @@ exports[`Input renders correctly 1`] = `
                           wrapped={true}
                         >
                           <input
-                            className="sc-bdnylx kBsmpR sc-eCApGN sc-gKAblj jctrjg leNGue"
+                            className="sc-bdnylx kBsmpR sc-dlnjPT sc-eCApGN kEWLYK djlcut"
                             onChange={[Function]}
                             style={Object {}}
                           />
@@ -835,7 +835,7 @@ exports[`Input renders correctly 1`] = `
                                 style={Object {}}
                               >
                                 <Box
-                                  className="sc-fujyUd jBwyYC"
+                                  className="sc-gKAblj cMavam"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -883,7 +883,7 @@ exports[`Input renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <Component
-                                    className="sc-fujyUd jBwyYC"
+                                    className="sc-gKAblj cMavam"
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -931,7 +931,7 @@ exports[`Input renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <StyledBox
-                                      className="sc-fujyUd jBwyYC"
+                                      className="sc-gKAblj cMavam"
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -979,7 +979,7 @@ exports[`Input renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <div
-                                        className="sc-bdnylx kBsmpR sc-fujyUd jBwyYC"
+                                        className="sc-bdnylx kBsmpR sc-gKAblj cMavam"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -1314,7 +1314,7 @@ exports[`Input renders correctly 1`] = `
                                 style={Object {}}
                               >
                                 <Box
-                                  className="sc-fujyUd jBwyYC"
+                                  className="sc-gKAblj cMavam"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -1362,7 +1362,7 @@ exports[`Input renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <Component
-                                    className="sc-fujyUd jBwyYC"
+                                    className="sc-gKAblj cMavam"
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -1410,7 +1410,7 @@ exports[`Input renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <StyledBox
-                                      className="sc-fujyUd jBwyYC"
+                                      className="sc-gKAblj cMavam"
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -1458,7 +1458,7 @@ exports[`Input renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <div
-                                        className="sc-bdnylx kBsmpR sc-fujyUd jBwyYC"
+                                        className="sc-bdnylx kBsmpR sc-gKAblj cMavam"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -1576,7 +1576,7 @@ exports[`Input renders correctly 1`] = `
                     style={Object {}}
                   >
                     <Box
-                      className="sc-fujyUd jBwyYC"
+                      className="sc-gKAblj cMavam"
                       palette={
                         Object {
                           "actionsDropdown": Object {
@@ -1623,7 +1623,7 @@ exports[`Input renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-fujyUd jBwyYC"
+                        className="sc-gKAblj cMavam"
                         palette={
                           Object {
                             "actionsDropdown": Object {
@@ -1670,7 +1670,7 @@ exports[`Input renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-fujyUd jBwyYC"
+                          className="sc-gKAblj cMavam"
                           palette={
                             Object {
                               "actionsDropdown": Object {
@@ -1717,7 +1717,7 @@ exports[`Input renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx kBsmpR sc-fujyUd jBwyYC"
+                            className="sc-bdnylx kBsmpR sc-gKAblj cMavam"
                             style={Object {}}
                           >
                             search

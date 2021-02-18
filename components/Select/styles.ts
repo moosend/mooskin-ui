@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
 // Models
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
@@ -9,15 +9,10 @@ import { Box } from '../Box/Box';
 
 import variables from '../_utils/globals/variables';
 
-const spin = keyframes`
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-`;
-
 export const StyledSelect = styled(Box)<ISelectComponentProps>`
     position: relative;
     color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
-    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
@@ -134,17 +129,6 @@ export const StyledSelectIcon = styled(Box)<IBoxComponentProps>`
 `;
 
 StyledSelectIcon.displayName = 'StyledSelectIcon';
-
-export const StyledSelectLoader = styled(Box)<IBoxComponentProps>`
-    border: 2px solid #f3f3f3;
-    border-top: 2px solid #5ccdde;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    animation: ${spin} 2s linear infinite;
-`;
-
-StyledSelectLoader.displayName = 'StyledSelectLoader';
 
 export const StyledSelectPagination = styled(Box)<IBoxComponentProps>`
     display: flex;

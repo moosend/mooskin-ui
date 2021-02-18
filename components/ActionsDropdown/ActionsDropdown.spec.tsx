@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import ActionsDropdown, { ActionsDropdownItem } from './ActionsDropdown';
+import { ActionsDropdown, ActionsDropdownItem } from './ActionsDropdown';
 
 import { mount } from 'enzyme';
 

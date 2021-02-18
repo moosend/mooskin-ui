@@ -747,7 +747,6 @@ exports[`Table renders correctly 1`] = `
                                             className=""
                                             onClickCheckbox={[Function]}
                                             style={Object {}}
-                                            value="asd"
                                           >
                                             <Component
                                               checked={false}
@@ -797,7 +796,6 @@ exports[`Table renders correctly 1`] = `
                                                 }
                                               }
                                               style={Object {}}
-                                              value="asd"
                                             >
                                               <StyledCheckbox
                                                 checked={false}
@@ -847,7 +845,6 @@ exports[`Table renders correctly 1`] = `
                                                   }
                                                 }
                                                 style={Object {}}
-                                                value="asd"
                                               >
                                                 <Box
                                                   checked={false}
@@ -897,7 +894,6 @@ exports[`Table renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
-                                                  value="asd"
                                                 >
                                                   <Component
                                                     checked={false}
@@ -947,7 +943,6 @@ exports[`Table renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
-                                                    value="asd"
                                                   >
                                                     <StyledBox
                                                       checked={false}
@@ -997,14 +992,12 @@ exports[`Table renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
-                                                      value="asd"
                                                     >
                                                       <div
                                                         checked={false}
                                                         className="sc-bdnylx kBsmpR sc-hKFyIo clHRaR"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
-                                                        value="asd"
                                                       >
                                                         <CheckboxIcon
                                                           className=""
@@ -3329,7 +3322,6 @@ exports[`Table renders correctly 1`] = `
                                             color="grey"
                                             onClickCheckbox={[Function]}
                                             style={Object {}}
-                                            value="asd"
                                           >
                                             <Component
                                               checked={false}
@@ -3380,7 +3372,6 @@ exports[`Table renders correctly 1`] = `
                                                 }
                                               }
                                               style={Object {}}
-                                              value="asd"
                                             >
                                               <StyledCheckbox
                                                 checked={false}
@@ -3431,7 +3422,6 @@ exports[`Table renders correctly 1`] = `
                                                   }
                                                 }
                                                 style={Object {}}
-                                                value="asd"
                                               >
                                                 <Box
                                                   checked={false}
@@ -3482,7 +3472,6 @@ exports[`Table renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
-                                                  value="asd"
                                                 >
                                                   <Component
                                                     checked={false}
@@ -3533,7 +3522,6 @@ exports[`Table renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
-                                                    value="asd"
                                                   >
                                                     <StyledBox
                                                       checked={false}
@@ -3584,7 +3572,6 @@ exports[`Table renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
-                                                      value="asd"
                                                     >
                                                       <div
                                                         checked={false}
@@ -3592,7 +3579,6 @@ exports[`Table renders correctly 1`] = `
                                                         color="grey"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
-                                                        value="asd"
                                                       >
                                                         <CheckboxIcon
                                                           className=""
@@ -5919,7 +5905,6 @@ exports[`Table renders correctly 1`] = `
                                             color="grey"
                                             onClickCheckbox={[Function]}
                                             style={Object {}}
-                                            value="asd"
                                           >
                                             <Component
                                               checked={false}
@@ -5970,7 +5955,6 @@ exports[`Table renders correctly 1`] = `
                                                 }
                                               }
                                               style={Object {}}
-                                              value="asd"
                                             >
                                               <StyledCheckbox
                                                 checked={false}
@@ -6021,7 +6005,6 @@ exports[`Table renders correctly 1`] = `
                                                   }
                                                 }
                                                 style={Object {}}
-                                                value="asd"
                                               >
                                                 <Box
                                                   checked={false}
@@ -6072,7 +6055,6 @@ exports[`Table renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
-                                                  value="asd"
                                                 >
                                                   <Component
                                                     checked={false}
@@ -6123,7 +6105,6 @@ exports[`Table renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
-                                                    value="asd"
                                                   >
                                                     <StyledBox
                                                       checked={false}
@@ -6174,7 +6155,6 @@ exports[`Table renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
-                                                      value="asd"
                                                     >
                                                       <div
                                                         checked={false}
@@ -6182,7 +6162,6 @@ exports[`Table renders correctly 1`] = `
                                                         color="grey"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
-                                                        value="asd"
                                                       >
                                                         <CheckboxIcon
                                                           className=""

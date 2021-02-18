@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Loader from './Loader';
+import { Loader } from './Loader';
 
 import { mount } from 'enzyme';
 

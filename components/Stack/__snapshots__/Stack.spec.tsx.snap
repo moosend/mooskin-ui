@@ -571,7 +571,7 @@ exports[`Stack renders Stack correctly 1`] = `
                           style={Object {}}
                         >
                           <span
-                            key="0.10805770349858212"
+                            key="divider2"
                             style={
                               Object {
                                 "width": 1,
@@ -701,7 +701,7 @@ exports[`Stack renders Stack correctly 1`] = `
                           style={Object {}}
                         >
                           <span
-                            key="0.8721678627986384"
+                            key="divider4"
                             style={
                               Object {
                                 "width": 1,

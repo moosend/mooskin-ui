@@ -48,14 +48,14 @@ export const Stack: React.FC<IStackComponentProps> = withMooskinContext((props) 
         }
     };
 
-    const dividerSpacingHandler = (element: JSX.Element | React.ReactElement) => {
+    const dividerSpacingHandler = (element: JSX.Element | React.ReactElement, i: number) => {
         const spacingStyles = props.spacing ? getDividerSpacing() : {};
-        return <Box {...spacingStyles}>{React.cloneElement(element, { key: Math.random() })}</Box>;
+        return <Box {...spacingStyles}>{React.cloneElement(element, { key: `divider${i}` })}</Box>;
     };
 
-    const childSpacingHandler = (element: JSX.Element | React.ReactElement, index: number) => {
-        const margin = props.spacing ? getChildSpacing(index) : {};
-        return React.cloneElement(element, { key: Math.random(), style: { ...element.props.style, ...margin } });
+    const childSpacingHandler = (element: JSX.Element | React.ReactElement, i: number) => {
+        const margin = props.spacing ? getChildSpacing(i) : {};
+        return React.cloneElement(element, { key: `divider${i}`, style: { ...element.props.style, ...margin } });
     };
 
     const renderChildren = () => {
@@ -64,7 +64,7 @@ export const Stack: React.FC<IStackComponentProps> = withMooskinContext((props) 
                 if (props.divider) {
                     return (
                         <>
-                            {key !== 0 && dividerSpacingHandler(props.divider)}
+                            {key !== 0 && dividerSpacingHandler(props.divider, key)}
                             {React.cloneElement(child, { key })}
                         </>
                     );

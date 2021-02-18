@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DateTimePicker from './DateTimePicker';
+import { DateTimePicker } from './DateTimePicker';
 
 import { mount } from 'enzyme';
 

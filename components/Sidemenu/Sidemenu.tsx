@@ -15,11 +15,11 @@ import { StyledSidemenu, StyledSidemenuItem } from './styles';
 export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext((props) => {
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
-        value?: string,
-        callback?: (e: React.MouseEvent<HTMLElement>, value?: string) => void
+        value?: string | number,
+        callback?: (e: React.MouseEvent<HTMLElement>) => void
     ) => {
         props.onClickItem && props.onClickItem(e, value);
-        callback && callback(e, value);
+        callback && callback(e);
     };
 
     const recurseChildren = (children: any): any => {

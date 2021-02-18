@@ -1,5 +1,5 @@
 import * as React from 'react';
-import NumberLabel from './NumberLabel';
+import { NumberLabel } from './NumberLabel';
 
 import { mount } from 'enzyme';
 

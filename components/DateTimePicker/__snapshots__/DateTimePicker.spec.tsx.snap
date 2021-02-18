@@ -281,7 +281,7 @@ exports[`DateTimePicker renders correctly 1`] = `
                         }
                       }
                       boxAs="input"
-                      className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                      className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
                       error={false}
                       format="dd/MM/yyyy HH:ss"
                       helperText=""
@@ -350,7 +350,7 @@ exports[`DateTimePicker renders correctly 1`] = `
                           }
                         }
                         boxAs="input"
-                        className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                        className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
                         error={false}
                         format="dd/MM/yyyy HH:ss"
                         helperText=""
@@ -420,7 +420,7 @@ exports[`DateTimePicker renders correctly 1`] = `
                           }
                           as="input"
                           boxAs="input"
-                          className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                          className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
                           error={false}
                           format="dd/MM/yyyy HH:ss"
                           helperText=""
@@ -483,7 +483,7 @@ exports[`DateTimePicker renders correctly 1`] = `
                           value="02/01/2021 00:00"
                         >
                           <input
-                            className="sc-bdnylx kBsmpR sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                            className="sc-bdnylx kBsmpR sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
                             format="dd/MM/yyyy HH:ss"
                             onClick={[Function]}
                             onKeyDown={[Function]}

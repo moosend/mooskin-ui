@@ -26,11 +26,12 @@ export const Normal = Template.bind({});
 Normal.args = {
     children: [...Array(9)].map((item, i) => {
         return (
-            <Tag key={i} bgColor={i === 3 ? '#5ccdee' : ''}>
+            <Tag key={i} bgColor={i === 2 ? '#5ccdee' : ''}>
                 {`Tag ${i + 1}`}
             </Tag>
         );
     }),
+    limit: 4,
     onClickTag: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
     onRemoveTag: (e, data) => console.log(e, data)
 } as ITagsComponentProps;

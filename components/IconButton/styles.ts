@@ -16,7 +16,7 @@ export const StyledIconButton = styled(Box)<IIconButtonComponentProps>`
     color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
     text-decoration: none;
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
 `;
 
 StyledIconButton.displayName = 'StyledIconButton';

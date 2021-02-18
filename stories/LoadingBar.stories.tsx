@@ -25,5 +25,5 @@ export const Normal = Template.bind({});
 Normal.args = {
     onLoaderDone: () => console.log('Done'),
     onLoaderError: () => console.log('Error'),
-    progress: 0
+    progress: 70
 } as ILoadingBarComponentProps;

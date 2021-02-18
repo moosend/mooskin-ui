@@ -17,7 +17,7 @@ export default ({
 const Template: Story<IActionsDropdownComponentProps> = (args) => {
     return (
         <>
-            <ActionsDropdown onClickItem={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)} {...args} />
+            <ActionsDropdown {...args} onClickItem={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)} />
             {/* <GlobalStyle /> */}
         </>
     );

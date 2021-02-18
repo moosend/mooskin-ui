@@ -13,16 +13,14 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<IDatePickerComponentProps> = (args) => {
+    const [date, setDate] = React.useState(new Date());
     return (
         <>
             <GlobalStyle />
-            <DatePicker {...args} />
+            <DatePicker {...args} value={date} onChange={(value: any) => setDate(value)} />
         </>
     );
 };
 
 export const Normal = Template.bind({});
-Normal.args = {
-    onChange: (date: any) => console.log(date),
-    value: new Date()
-} as IDatePickerComponentProps;
+Normal.args = {} as IDatePickerComponentProps;

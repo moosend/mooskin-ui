@@ -16,49 +16,36 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<IRadioComponentProps> = (args) => {
+    const [value, setValue] = React.useState(false);
     return (
         <>
             <GlobalStyle />
-            <Radio {...args} />
+            <Radio
+                selected={value}
+                {...args}
+                onClickRadio={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => setValue(data.value)}
+            />
         </>
     );
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    children: (
-        <>
-            <RadioLabel>Normal Radio</RadioLabel>
-        </>
-    ),
-    onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    selected: false,
-    value: 'test'
+    children: <RadioLabel>Normal Radio</RadioLabel>,
+    onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;
 
 export const Selected = Template.bind({});
 Selected.args = {
-    children: (
-        <>
-            <RadioLabel>Selected Radio</RadioLabel>
-        </>
-    ),
-    onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    selected: true,
-    value: 'test'
+    children: <RadioLabel>Selected Radio</RadioLabel>,
+    onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-    children: (
-        <>
-            <RadioLabel>Disabled Radio</RadioLabel>
-        </>
-    ),
+    children: <RadioLabel>Disabled Radio</RadioLabel>,
     disabled: true,
-    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    selected: false,
-    value: 'test'
+    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;
 
 export const Description = Template.bind({});
@@ -69,9 +56,7 @@ Description.args = {
             <RadioDescription>Radio description goes here</RadioDescription>
         </Box>
     ),
-    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    selected: false,
-    value: 'test'
+    onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;
 
 export const CustomButton = Template.bind({});
@@ -82,7 +67,5 @@ CustomButton.args = {
             <RadioLabel>Normal Radio</RadioLabel>
         </>
     ),
-    onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-    selected: false,
-    value: 'test'
+    onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;

@@ -20,17 +20,21 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<IExpandableComponentProps> = (args) => {
+    const [activeItem, setActiveItem] = React.useState(4);
     return (
         <>
             <GlobalStyle />
-            <Expandable {...args} />
+            <Expandable
+                {...args}
+                activeItem={activeItem}
+                onClickItem={(e: React.MouseEvent<HTMLElement>, value: number) => setActiveItem(value)}
+            />
         </>
     );
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    activeItem: 4,
     children: [...Array(9)].map((item, i) => {
         return (
             <ExpandableItem key={i} activeId={i}>
@@ -43,6 +47,5 @@ Normal.args = {
                 </ExpandableItemContent>
             </ExpandableItem>
         );
-    }),
-    onClickItem: (e: React.MouseEvent<HTMLElement>, value: number) => console.log(e, value)
+    })
 } as IExpandableComponentProps;

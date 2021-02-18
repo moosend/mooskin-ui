@@ -237,7 +237,7 @@ exports[`Button renders correctly 1`] = `
             abbrAccuracy={1}
             abbreviate={true}
             boxAs="label"
-            className="sc-gtssRu hKeutJ myClass"
+            className="sc-gtssRu jerDaf myClass"
             id="label"
             minW={150}
             onClick={[Function]}
@@ -294,7 +294,7 @@ exports[`Button renders correctly 1`] = `
               abbrAccuracy={1}
               abbreviate={true}
               boxAs="label"
-              className="sc-gtssRu hKeutJ myClass"
+              className="sc-gtssRu jerDaf myClass"
               id="label"
               minW={150}
               onClick={[Function]}
@@ -352,7 +352,7 @@ exports[`Button renders correctly 1`] = `
                 abbreviate={true}
                 as="label"
                 boxAs="label"
-                className="sc-gtssRu hKeutJ myClass"
+                className="sc-gtssRu jerDaf myClass"
                 id="label"
                 minW={150}
                 onClick={[Function]}
@@ -406,7 +406,7 @@ exports[`Button renders correctly 1`] = `
                 }
               >
                 <label
-                  className="sc-bdnylx bEzLzN sc-gtssRu hKeutJ myClass"
+                  className="sc-bdnylx bEzLzN sc-gtssRu jerDaf myClass"
                   id="label"
                   onClick={[Function]}
                   style={

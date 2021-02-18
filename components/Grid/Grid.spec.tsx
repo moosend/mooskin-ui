@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Grid, { Col, Row } from './Grid';
+import { Grid, Col, Row } from './Grid';
 
 import { mount } from 'enzyme';
 

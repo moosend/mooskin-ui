@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Selector, { SelectorItem } from './Selector';
+import { Selector, SelectorItem } from './Selector';
 
 import { mount } from 'enzyme';
 

@@ -13,17 +13,21 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<ISidemenuComponentProps> = (args) => {
+    const [activeItem, setActiveItem] = React.useState<number | string>('/settings');
     return (
         <>
             <GlobalStyle />
-            <Sidemenu {...args} />
+            <Sidemenu
+                activeItem={activeItem}
+                {...args}
+                onClickItem={(e: React.MouseEvent<HTMLElement>, value: number | string) => setActiveItem(value)}
+            />
         </>
     );
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    activeItem: '/settings',
     children: (
         <>
             <SidemenuItem value="/settings">Settings</SidemenuItem>
@@ -32,6 +36,5 @@ Normal.args = {
             </SidemenuItem>
             <SidemenuItem value="/preview">Preview</SidemenuItem>
         </>
-    ),
-    onClickItem: (e: React.MouseEvent<HTMLElement>, value?: string) => alert(value)
+    )
 } as ISidemenuComponentProps;

@@ -13,39 +13,26 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<ISwitchComponentProps> = (args) => {
+    const [status, setStatus] = React.useState(false);
     return (
         <>
             <GlobalStyle />
-            <Switch {...args} />
+            <Switch active={status} {...args} onClickSwitch={(e, data) => setStatus(data.value)} text={status ? 'Active' : 'Inactive'} />
         </>
     );
 };
 
 export const Active = Template.bind({});
-Active.args = {
-    active: true,
-    onClickSwitch: (e, data) => console.log(data),
-    text: 'STATUS'
-} as ISwitchComponentProps;
-
-export const Inactive = Template.bind({});
-Inactive.args = {
-    onClickSwitch: (e, data) => console.log(data),
-    text: 'PUBLISHED',
-    w: 120
-} as ISwitchComponentProps;
+Active.args = {} as ISwitchComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-    disabled: true,
-    text: 'DISABLED'
+    disabled: true
 } as ISwitchComponentProps;
 
 export const Custom = Template.bind({});
 Custom.args = {
-    active: true,
     bgColor: 'red',
     children: <SwitchHandle bgColor="green" />,
-    onClickSwitch: (e, data) => console.log(data),
-    text: 'STATUS'
+    w: 120
 } as ISwitchComponentProps;

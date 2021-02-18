@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Anchor from './Anchor';
+import { Anchor } from './Anchor';
 
 import { mount } from 'enzyme';
 

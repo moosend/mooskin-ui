@@ -1,5 +1,5 @@
 import * as React from 'react';
-import TextArea from './TextArea';
+import { TextArea } from './TextArea';
 
 import { mount } from 'enzyme';
 

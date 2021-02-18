@@ -31,7 +31,7 @@ export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
     font-family: 'Mooskin Icons';
     padding-right: 10px;
     font-size: 23px;
-    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
     color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
 `;
 
@@ -47,7 +47,7 @@ export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
     letter-spacing: normal;
     min-width: unset;
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
     color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
 `;
 

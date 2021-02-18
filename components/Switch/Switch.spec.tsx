@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Switch from './Switch';
+import { Switch } from './Switch';
 
 import { mount } from 'enzyme';
 

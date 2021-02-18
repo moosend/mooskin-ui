@@ -13,26 +13,29 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<IStepsComponentProps> = (args) => {
+    const [activeItem, setActiveItem] = React.useState(2);
     return (
         <>
             <GlobalStyle />
-            <Steps {...args} />
+            <Steps
+                activeItem={activeItem}
+                {...args}
+                onClickStep={(e: React.MouseEvent<HTMLElement>, value: number) => setActiveItem(value)}
+            />
         </>
     );
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    activeItem: 2,
     children: [...Array(5)].map((item, i) => {
         return (
             <Step key={i} activeId={i}>
-                <StepHeader>{`Item: ${i}`}</StepHeader>
+                <StepHeader disabled={i === 0}>{`Item: ${i}`}</StepHeader>
                 <StepContent p={15}>
                     <div>{`Content for item with index: ${i}`}</div>
                 </StepContent>
             </Step>
         );
-    }),
-    onClickStep: (e: React.MouseEvent<HTMLElement>, value: number) => console.log(e, value)
+    })
 } as IStepsComponentProps;
