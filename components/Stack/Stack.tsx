@@ -1,10 +1,13 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IStackComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 // Styled Components
 import { StyledStack } from './styles';
@@ -12,7 +15,7 @@ import { StyledStack } from './styles';
 /**
  * Stack
  */
-export const Stack: React.FC<IStackComponentProps> = (props) => {
+export const Stack: React.FC<IStackComponentProps> = withMooskinContext((props) => {
     const getDividerSpacing = () => {
         switch (props.direction) {
             case 'row':
@@ -45,14 +48,14 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
         }
     };
 
-    const dividerSpacingHandler = (element: JSX.Element | React.ReactElement) => {
+    const dividerSpacingHandler = (element: JSX.Element | React.ReactElement, i: number) => {
         const spacingStyles = props.spacing ? getDividerSpacing() : {};
-        return <Box {...spacingStyles}>{React.cloneElement(element, { key: Math.random() })}</Box>;
+        return <Box {...spacingStyles}>{React.cloneElement(element, { key: `divider${i}` })}</Box>;
     };
 
-    const childSpacingHandler = (element: JSX.Element | React.ReactElement, index: number) => {
-        const margin = props.spacing ? getChildSpacing(index) : {};
-        return React.cloneElement(element, { key: Math.random(), style: { ...element.props.style, ...margin } });
+    const childSpacingHandler = (element: JSX.Element | React.ReactElement, i: number) => {
+        const margin = props.spacing ? getChildSpacing(i) : {};
+        return React.cloneElement(element, { key: `divider${i}`, style: { ...element.props.style, ...margin } });
     };
 
     const renderChildren = () => {
@@ -61,7 +64,7 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
                 if (props.divider) {
                     return (
                         <>
-                            {key !== 0 && dividerSpacingHandler(props.divider)}
+                            {key !== 0 && dividerSpacingHandler(props.divider, key)}
                             {React.cloneElement(child, { key })}
                         </>
                     );
@@ -73,16 +76,16 @@ export const Stack: React.FC<IStackComponentProps> = (props) => {
     };
 
     return <StyledStack {...props} children={renderChildren()} />;
-};
+});
 
 Stack.displayName = 'Stack';
 
 /**
  * HStack
  */
-export const HStack: React.FC<IStackComponentProps> = (props) => {
+export const HStack: React.FC<IStackComponentProps> = withMooskinContext((props) => {
     return <Stack {...props} />;
-};
+});
 
 HStack.defaultProps = {
     align: 'stretch',
@@ -99,9 +102,9 @@ HStack.displayName = 'HStack';
 /**
  * VStack
  */
-export const VStack: React.FC<IStackComponentProps> = (props) => {
+export const VStack: React.FC<IStackComponentProps> = withMooskinContext((props) => {
     return <Stack {...props} />;
-};
+});
 
 VStack.defaultProps = {
     align: 'initial',
@@ -114,5 +117,3 @@ VStack.defaultProps = {
 };
 
 VStack.displayName = 'VStack';
-
-export default Stack;

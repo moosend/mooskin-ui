@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IBaseAlertComponentProps } from './model';
 
@@ -16,7 +19,7 @@ const AlertIcons = {
 /**
  * Alert
  */
-export const Alert: React.FC<IBaseAlertComponentProps> = (props) => {
+export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext((props) => {
     const recurseChildren = (children: any): any => {
         if (!children) {
             return null;
@@ -47,7 +50,7 @@ export const Alert: React.FC<IBaseAlertComponentProps> = (props) => {
     };
 
     return <StyledAlert {...props} children={recurseChildren(props.children)} />;
-};
+});
 
 Alert.defaultProps = {
     className: '',
@@ -61,9 +64,9 @@ Alert.displayName = 'Alert';
 /**
  * AlertIcon
  */
-export const AlertIcon: React.FC<IBaseAlertComponentProps> = (props) => {
+export const AlertIcon: React.FC<IBaseAlertComponentProps> = withMooskinContext((props) => {
     return <StyledAlertIcon {...props} children={props.status && AlertIcons[props.status]} />;
-};
+});
 
 AlertIcon.defaultProps = {
     className: '',
@@ -75,9 +78,9 @@ AlertIcon.displayName = 'AlertIcon';
 /**
  * AlertTitle
  */
-export const AlertTitle: React.FC<IBaseAlertComponentProps> = (props) => {
+export const AlertTitle: React.FC<IBaseAlertComponentProps> = withMooskinContext((props) => {
     return <StyledAlertTitle {...props} />;
-};
+});
 
 AlertTitle.defaultProps = {
     className: '',
@@ -89,9 +92,9 @@ AlertTitle.displayName = 'AlertTitle';
 /**
  * AlertDescription
  */
-export const AlertDescription: React.FC<IBaseAlertComponentProps> = (props) => {
+export const AlertDescription: React.FC<IBaseAlertComponentProps> = withMooskinContext((props) => {
     return <StyledAlertDescription {...props} />;
-};
+});
 
 AlertDescription.defaultProps = {
     className: '',
@@ -103,9 +106,9 @@ AlertDescription.displayName = 'AlertDescription';
 /**
  * AlertCloseButton
  */
-export const AlertCloseButton: React.FC<IBaseAlertComponentProps> = (props) => {
+export const AlertCloseButton: React.FC<IBaseAlertComponentProps> = withMooskinContext((props) => {
     return <StyledAlertCloseButton {...props} children="close" />;
-};
+});
 
 AlertCloseButton.defaultProps = {
     className: '',
@@ -113,5 +116,3 @@ AlertCloseButton.defaultProps = {
 };
 
 AlertCloseButton.displayName = 'AlertCloseButton';
-
-export default Alert;

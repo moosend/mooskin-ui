@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Description from './Description';
+import { Description } from './Description';
 
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Description', () => {
     test('renders correctly', () => {
-        const tree = shallow(<Description>Description here!</Description>);
+        const tree = mount(<Description>Description here!</Description>);
         expect(tree).toMatchSnapshot();
     });
 });

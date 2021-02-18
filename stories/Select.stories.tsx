@@ -23,14 +23,19 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Select,
-    title: 'Example/Select',
+    title: 'Example/Select'
 } as any) as Meta;
 
 const Template: Story<ISelectComponentProps> = (args) => {
+    const [selected, setSelected] = React.useState('');
     return (
         <>
             <GlobalStyle />
-            <Select  {...args} />
+            <Select
+                selectedValue={selected}
+                {...args}
+                onChangeSelect={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => setSelected(data.value)}
+            />
         </>
     );
 };
@@ -43,7 +48,9 @@ Normal.args = {
                 <SelectPlaceholder>Select an option</SelectPlaceholder>
             </SelectContainer>
             <SelectOptionList>
-                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">Option 1</SelectOption>
+                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">
+                    Option 1
+                </SelectOption>
                 <SelectOption value="2">Option 2</SelectOption>
                 <SelectOption value="3">Option 3</SelectOption>
                 <SelectOption value="4">Option 4</SelectOption>
@@ -52,7 +59,6 @@ Normal.args = {
         </>
     ),
     dataLabel: 'Select',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
     selectedValue: '2'
 } as ISelectComponentProps;
 
@@ -64,7 +70,9 @@ Multi.args = {
                 <SelectPlaceholder>Select multiple options</SelectPlaceholder>
             </SelectContainer>
             <SelectOptionList>
-                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">Option 1</SelectOption>
+                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">
+                    Option 1
+                </SelectOption>
                 <SelectOption value="2">Option 2</SelectOption>
                 <SelectOption value="3">Option 3</SelectOption>
                 <SelectOption value="4">Option 4</SelectOption>
@@ -73,7 +81,6 @@ Multi.args = {
         </>
     ),
     dataLabel: 'Select',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
     selectedValue: ['2', '4']
 } as ISelectComponentProps;
 
@@ -85,7 +92,9 @@ WithPagination.args = {
                 <SelectPlaceholder>Select an option</SelectPlaceholder>
             </SelectContainer>
             <SelectOptionList>
-                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">Option 1</SelectOption>
+                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">
+                    Option 1
+                </SelectOption>
                 <SelectOption value="2">Option 2</SelectOption>
                 <SelectOption value="3">Option 3</SelectOption>
                 <SelectOption value="4">Option 4</SelectOption>
@@ -95,13 +104,11 @@ WithPagination.args = {
                 <SelectOption value="8">Option 8</SelectOption>
                 <SelectOption value="9">Option 9</SelectOption>
                 <SelectOption value="10">Option 10</SelectOption>
-            <SelectPagination page={2} onClickPagination={(e, page) => console.log('Pagination Clicked: ', page)} />
+                <SelectPagination page={2} onClickPagination={(e, page) => console.log('Pagination Clicked: ', page)} />
             </SelectOptionList>
         </>
     ),
-    dataLabel: 'Select',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: '2',
+    dataLabel: 'Select'
 } as ISelectComponentProps;
 
 export const CustomElements = Template.bind({});
@@ -110,12 +117,17 @@ CustomElements.args = {
         <>
             <SelectContainer>
                 <SelectPlaceholder>Select an option</SelectPlaceholder>
-                <SelectFilter color="red" onChange={(e: React.ChangeEvent<HTMLInputElement>) => console.log('On Filter Change: ', e.target.value)} />
+                <SelectFilter
+                    color="red"
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => console.log('On Filter Change: ', e.target.value)}
+                />
                 <SelectLoader />
                 <SelectIcon color="red" />
             </SelectContainer>
             <SelectOptionList>
-                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">Option 1</SelectOption>
+                <SelectOption onClick={(e) => console.log('Option clicked!')} value="1">
+                    Option 1
+                </SelectOption>
                 <SelectOption value="2">Option 2</SelectOption>
                 <SelectOption value="3">Option 3</SelectOption>
                 <SelectOption value="4">Option 4</SelectOption>
@@ -126,7 +138,5 @@ CustomElements.args = {
         </>
     ),
     dataLabel: 'Select',
-    onChangeSelect: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(data),
-    selectedValue: '2',
     showList: true
 } as ISelectComponentProps;

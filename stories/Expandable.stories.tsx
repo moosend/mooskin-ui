@@ -16,21 +16,25 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
     component: Expandable,
-    title: 'Example/Expandable',
+    title: 'Example/Expandable'
 } as any) as Meta;
 
 const Template: Story<IExpandableComponentProps> = (args) => {
+    const [activeItem, setActiveItem] = React.useState(4);
     return (
         <>
             <GlobalStyle />
-            <Expandable  {...args} />
+            <Expandable
+                {...args}
+                activeItem={activeItem}
+                onClickItem={(e: React.MouseEvent<HTMLElement>, value: number) => setActiveItem(value)}
+            />
         </>
     );
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    activeItem: 4,
     children: [...Array(9)].map((item, i) => {
         return (
             <ExpandableItem key={i} activeId={i}>
@@ -38,9 +42,10 @@ Normal.args = {
                     <ExpandableItemText>{`Title for item with index: ${i}`}</ExpandableItemText>
                     <ExpandableItemButton />
                 </ExpandableItemContainer>
-                <ExpandableItemContent p={15}><div>{`Content for item with index: ${i}`}</div></ExpandableItemContent>
+                <ExpandableItemContent p={15}>
+                    <div>{`Content for item with index: ${i}`}</div>
+                </ExpandableItemContent>
             </ExpandableItem>
         );
-    }),
-    onClickItem: (e: React.MouseEvent<HTMLElement>, value: number) => console.log(e, value)
+    })
 } as IExpandableComponentProps;

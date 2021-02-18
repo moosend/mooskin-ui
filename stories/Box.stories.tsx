@@ -2,15 +2,15 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Box from '../components/Box/Box';
-import {IBoxComponentProps} from '../components/Box/model';
+import { Box } from '../components/Box/Box';
+import { IBoxComponentProps } from '../components/Box/model';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
-export default {
+export default ({
     component: Box,
-    title: 'Example/Box',
-} as any as Meta;
+    title: 'Example/Box'
+} as any) as Meta;
 
 const Template: Story<IBoxComponentProps> = (args) => {
     return (
@@ -27,5 +27,5 @@ Normal.args = {
     children: 'Box',
     color: 'blue',
     p: 30,
-    round: 'md',
+    round: 'md'
 };

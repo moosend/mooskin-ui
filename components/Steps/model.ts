@@ -15,6 +15,11 @@ export interface IStepCommonComponentProps extends IBoxComponentProps {
     active?: boolean;
 }
 
+export interface IStepHeaderComponentProps extends IStepCommonComponentProps {
+    /** whether this step is disabled */
+    disabled?: boolean;
+}
+
 export interface IStepComponentProps extends IStepCommonComponentProps {
     /** identifier for togglin the Stepbed item */
     activeId?: string | number;

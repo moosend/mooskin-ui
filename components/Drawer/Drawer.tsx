@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IBoxComponentProps } from '../Box/model';
 import { IDrawerComponentProps, IDrawerContentComponentProps, IDrawerOverlayComponentProps } from './model';
@@ -42,7 +45,7 @@ const ContentByPosition = {
     }
 };
 
-export const Drawer: React.FC<IDrawerComponentProps> = (props) => {
+export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext((props) => {
     const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
         props.onClose && props.onClose(e);
         callback && callback(e);
@@ -94,7 +97,7 @@ export const Drawer: React.FC<IDrawerComponentProps> = (props) => {
     };
 
     return <StyledDrawer {...props} children={recurseChildren(props.children)} />;
-};
+});
 
 Drawer.defaultProps = {
     className: '',
@@ -109,7 +112,7 @@ Drawer.displayName = 'Drawer';
 /**
  * DrawerContent
  */
-export const DrawerContent: React.FC<IDrawerContentComponentProps> = (props) => {
+export const DrawerContent: React.FC<IDrawerContentComponentProps> = withMooskinContext((props) => {
     const DrawerByPlacement = props.placement && ContentByPosition[props.placement];
 
     if (!DrawerByPlacement) {
@@ -119,7 +122,7 @@ export const DrawerContent: React.FC<IDrawerContentComponentProps> = (props) => 
     const DrawerContentComponent = props.isOpen ? DrawerByPlacement.in : DrawerByPlacement.out;
 
     return <DrawerContentComponent {...props} />;
-};
+});
 
 DrawerContent.defaultProps = {
     className: '',
@@ -131,9 +134,9 @@ DrawerContent.displayName = 'DrawerContent';
 /**
  * DrawerHeader
  */
-export const DrawerHeader: React.FC<IBoxComponentProps> = (props) => {
+export const DrawerHeader: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledDrawerHeader boxAs="header" {...props} />;
-};
+});
 
 DrawerHeader.defaultProps = {
     className: '',
@@ -145,9 +148,9 @@ DrawerHeader.displayName = 'DrawerHeader';
 /**
  * DrawerBody
  */
-export const DrawerBody: React.FC<IBoxComponentProps> = (props) => {
+export const DrawerBody: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledDrawerBody {...props} />;
-};
+});
 
 DrawerBody.defaultProps = {
     className: '',
@@ -159,9 +162,9 @@ DrawerBody.displayName = 'DrawerBody';
 /**
  * DrawerFooter
  */
-export const DrawerFooter: React.FC<IBoxComponentProps> = (props) => {
+export const DrawerFooter: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledDrawerFooter boxAs="footer" {...props} />;
-};
+});
 
 DrawerFooter.defaultProps = {
     className: '',
@@ -173,9 +176,9 @@ DrawerFooter.displayName = 'DrawerFooter';
 /**
  * DrawerCloseButton
  */
-export const DrawerCloseButton: React.FC<IBoxComponentProps> = (props) => {
+export const DrawerCloseButton: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledDrawerCloseButton {...props} children="close" />;
-};
+});
 
 DrawerCloseButton.defaultProps = {
     className: '',
@@ -187,7 +190,7 @@ DrawerCloseButton.displayName = 'DrawerCloseButton';
 /**
  * DrawerOverlay
  */
-export const DrawerOverlay: React.FC<IDrawerOverlayComponentProps> = (props) => {
+export const DrawerOverlay: React.FC<IDrawerOverlayComponentProps> = withMooskinContext((props) => {
     const [show, setShow] = React.useState(props.isOpen);
 
     React.useEffect(() => {
@@ -208,7 +211,7 @@ export const DrawerOverlay: React.FC<IDrawerOverlayComponentProps> = (props) => 
     }
 
     return null;
-};
+});
 
 DrawerOverlay.defaultProps = {
     className: '',
@@ -216,5 +219,3 @@ DrawerOverlay.defaultProps = {
 };
 
 DrawerOverlay.displayName = 'DrawerOverlay';
-
-export default Drawer;

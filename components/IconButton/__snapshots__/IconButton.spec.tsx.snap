@@ -1,9 +1,256 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SmallIconButton renders correctly 1`] = `
-<StyledIconButton
-  onClick={[Function]}
+<WithMooskinContext
+  onClick={[MockFunction]}
 >
-  close
-</StyledIconButton>
+  <Component
+    onClick={[MockFunction]}
+    palette={
+      Object {
+        "actionsDropdown": Object {
+          "backgroundColor": "#3fbaca",
+          "fontColor": "#ffffff",
+        },
+        "anchor": Object {
+          "disabledFontColor": "#9d9d9d",
+          "fontColor": "#3fbaca",
+        },
+        "button": Object {
+          "backgroundColor": "#3fbaca",
+          "disabledBackgroundColor": "#e2e2e2",
+          "fontColor": "#ffffff",
+        },
+        "commonElement": Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#e2e2e2",
+          "fontColor": "#293346",
+        },
+        "description": Object {
+          "fontColor": "#9d9d9d",
+        },
+        "label": Object {
+          "fontColor": "#2d2d2d",
+        },
+        "layout": Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#e2e2e2",
+          "fontColor": "#293346",
+        },
+        "main": Object {
+          "backgroundColor": "#f7f7f7",
+        },
+        "toggleElement": Object {
+          "backgroundColor": "#425579",
+          "borderColor": "#e2e2e2",
+          "fontColor": "#ffffff",
+          "secondaryBackgroundColor": "#ffffff",
+          "secondaryFontColor": "#9d9d9d",
+        },
+      }
+    }
+  >
+    <StyledIconButton
+      onClick={[Function]}
+      palette={
+        Object {
+          "actionsDropdown": Object {
+            "backgroundColor": "#3fbaca",
+            "fontColor": "#ffffff",
+          },
+          "anchor": Object {
+            "disabledFontColor": "#9d9d9d",
+            "fontColor": "#3fbaca",
+          },
+          "button": Object {
+            "backgroundColor": "#3fbaca",
+            "disabledBackgroundColor": "#e2e2e2",
+            "fontColor": "#ffffff",
+          },
+          "commonElement": Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#e2e2e2",
+            "fontColor": "#293346",
+          },
+          "description": Object {
+            "fontColor": "#9d9d9d",
+          },
+          "label": Object {
+            "fontColor": "#2d2d2d",
+          },
+          "layout": Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#e2e2e2",
+            "fontColor": "#293346",
+          },
+          "main": Object {
+            "backgroundColor": "#f7f7f7",
+          },
+          "toggleElement": Object {
+            "backgroundColor": "#425579",
+            "borderColor": "#e2e2e2",
+            "fontColor": "#ffffff",
+            "secondaryBackgroundColor": "#ffffff",
+            "secondaryFontColor": "#9d9d9d",
+          },
+        }
+      }
+    >
+      <Box
+        className="sc-gtssRu iwkdgR"
+        onClick={[Function]}
+        palette={
+          Object {
+            "actionsDropdown": Object {
+              "backgroundColor": "#3fbaca",
+              "fontColor": "#ffffff",
+            },
+            "anchor": Object {
+              "disabledFontColor": "#9d9d9d",
+              "fontColor": "#3fbaca",
+            },
+            "button": Object {
+              "backgroundColor": "#3fbaca",
+              "disabledBackgroundColor": "#e2e2e2",
+              "fontColor": "#ffffff",
+            },
+            "commonElement": Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#293346",
+            },
+            "description": Object {
+              "fontColor": "#9d9d9d",
+            },
+            "label": Object {
+              "fontColor": "#2d2d2d",
+            },
+            "layout": Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#293346",
+            },
+            "main": Object {
+              "backgroundColor": "#f7f7f7",
+            },
+            "toggleElement": Object {
+              "backgroundColor": "#425579",
+              "borderColor": "#e2e2e2",
+              "fontColor": "#ffffff",
+              "secondaryBackgroundColor": "#ffffff",
+              "secondaryFontColor": "#9d9d9d",
+            },
+          }
+        }
+        style={Object {}}
+      >
+        <Component
+          className="sc-gtssRu iwkdgR"
+          onClick={[Function]}
+          palette={
+            Object {
+              "actionsDropdown": Object {
+                "backgroundColor": "#3fbaca",
+                "fontColor": "#ffffff",
+              },
+              "anchor": Object {
+                "disabledFontColor": "#9d9d9d",
+                "fontColor": "#3fbaca",
+              },
+              "button": Object {
+                "backgroundColor": "#3fbaca",
+                "disabledBackgroundColor": "#e2e2e2",
+                "fontColor": "#ffffff",
+              },
+              "commonElement": Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#293346",
+              },
+              "description": Object {
+                "fontColor": "#9d9d9d",
+              },
+              "label": Object {
+                "fontColor": "#2d2d2d",
+              },
+              "layout": Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#293346",
+              },
+              "main": Object {
+                "backgroundColor": "#f7f7f7",
+              },
+              "toggleElement": Object {
+                "backgroundColor": "#425579",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#ffffff",
+                "secondaryBackgroundColor": "#ffffff",
+                "secondaryFontColor": "#9d9d9d",
+              },
+            }
+          }
+          style={Object {}}
+        >
+          <StyledBox
+            className="sc-gtssRu iwkdgR"
+            onClick={[Function]}
+            palette={
+              Object {
+                "actionsDropdown": Object {
+                  "backgroundColor": "#3fbaca",
+                  "fontColor": "#ffffff",
+                },
+                "anchor": Object {
+                  "disabledFontColor": "#9d9d9d",
+                  "fontColor": "#3fbaca",
+                },
+                "button": Object {
+                  "backgroundColor": "#3fbaca",
+                  "disabledBackgroundColor": "#e2e2e2",
+                  "fontColor": "#ffffff",
+                },
+                "commonElement": Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#e2e2e2",
+                  "fontColor": "#293346",
+                },
+                "description": Object {
+                  "fontColor": "#9d9d9d",
+                },
+                "label": Object {
+                  "fontColor": "#2d2d2d",
+                },
+                "layout": Object {
+                  "backgroundColor": "#ffffff",
+                  "borderColor": "#e2e2e2",
+                  "fontColor": "#293346",
+                },
+                "main": Object {
+                  "backgroundColor": "#f7f7f7",
+                },
+                "toggleElement": Object {
+                  "backgroundColor": "#425579",
+                  "borderColor": "#e2e2e2",
+                  "fontColor": "#ffffff",
+                  "secondaryBackgroundColor": "#ffffff",
+                  "secondaryFontColor": "#9d9d9d",
+                },
+              }
+            }
+            style={Object {}}
+          >
+            <div
+              className="sc-bdnylx kBsmpR sc-gtssRu iwkdgR"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              close
+            </div>
+          </StyledBox>
+        </Component>
+      </Box>
+    </StyledIconButton>
+  </Component>
+</WithMooskinContext>
 `;

@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IBoxComponentProps } from '../Box/model';
 import { ITabCommonComponentProps, ITabComponentProps, ITabsComponentProps } from './model';
@@ -13,7 +16,7 @@ import { StyledTab, StyledTabContent, StyledTabHeader, StyledTabs } from './styl
 /**
  * Tabs
  */
-export const Tabs: React.FC<ITabsComponentProps> = (props) => {
+export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext((props) => {
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         activeId?: string | number,
@@ -80,7 +83,7 @@ export const Tabs: React.FC<ITabsComponentProps> = (props) => {
     };
 
     return <StyledTabs {...props} children={recurseChildren(props.children)} />;
-};
+});
 
 Tabs.defaultProps = {
     className: '',
@@ -92,9 +95,9 @@ Tabs.displayName = 'Tabs';
 /**
  * Tab
  */
-export const Tab: React.FC<ITabComponentProps> = (props) => {
+export const Tab: React.FC<ITabComponentProps> = withMooskinContext((props) => {
     return <StyledTab {...props} />;
-};
+});
 
 Tab.defaultProps = {
     className: '',
@@ -106,9 +109,9 @@ Tab.displayName = 'Tab';
 /**
  * TabHeader
  */
-export const TabHeader: React.FC<ITabCommonComponentProps> = (props) => {
+export const TabHeader: React.FC<ITabCommonComponentProps> = withMooskinContext((props) => {
     return <StyledTabHeader {...props} />;
-};
+});
 
 TabHeader.defaultProps = {
     className: '',
@@ -120,9 +123,9 @@ TabHeader.displayName = 'TabHeader';
 /**
  * TabContent
  */
-export const TabContent: React.FC<ITabCommonComponentProps> = (props) => {
+export const TabContent: React.FC<ITabCommonComponentProps> = withMooskinContext((props) => {
     return <StyledTabContent {...props} />;
-};
+});
 
 TabContent.defaultProps = {
     className: '',
@@ -130,5 +133,3 @@ TabContent.defaultProps = {
 };
 
 TabContent.displayName = 'TabContent';
-
-export default Tabs;

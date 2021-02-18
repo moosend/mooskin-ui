@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IBoxComponentProps } from '../Box/model';
 import { IExpandableCommonComponentProps, IExpandableComponentProps, IExpandableItemComponentProps } from './model';
@@ -17,13 +20,14 @@ import {
 /**
  * Expandable
  */
-export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
+export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContext((props) => {
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         activeId?: string | number,
         callback?: (e: React.MouseEvent<HTMLElement>) => void
     ) => {
-        props.onClickItem && props.onClickItem(e, activeId);
+        const value = props.activeItem === activeId ? '' : activeId;
+        props.onClickItem && props.onClickItem(e, value);
         callback && callback(e);
     };
 
@@ -94,7 +98,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = (props) => {
     };
 
     return <StyledExpandable {...props} children={recurseChildren(props.children)} />;
-};
+});
 
 Expandable.defaultProps = {
     className: '',
@@ -106,9 +110,9 @@ Expandable.displayName = 'Expandable';
 /**
  * ExpandableItem
  */
-export const ExpandableItem: React.FC<IExpandableItemComponentProps> = (props) => {
+export const ExpandableItem: React.FC<IExpandableItemComponentProps> = withMooskinContext((props) => {
     return <StyledExpandableItem {...props} />;
-};
+});
 
 ExpandableItem.defaultProps = {
     className: '',
@@ -120,9 +124,9 @@ ExpandableItem.displayName = 'ExpandableItem';
 /**
  * ExpandableItemContainer
  */
-export const ExpandableItemContainer: React.FC<IExpandableItemComponentProps> = (props) => {
+export const ExpandableItemContainer: React.FC<IExpandableItemComponentProps> = withMooskinContext((props) => {
     return <StyledExpandableItemContainer {...props} />;
-};
+});
 
 ExpandableItemContainer.defaultProps = {
     className: '',
@@ -134,9 +138,9 @@ ExpandableItemContainer.displayName = 'ExpandableItemContainer';
 /**
  * ExpandableItemText
  */
-export const ExpandableItemText: React.FC<IBoxComponentProps> = (props) => {
+export const ExpandableItemText: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledExpandableItemText {...props} />;
-};
+});
 
 ExpandableItemText.defaultProps = {
     className: '',
@@ -148,9 +152,9 @@ ExpandableItemText.displayName = 'ExpandableItemText';
 /**
  * ExpandableItemButton
  */
-export const ExpandableItemButton: React.FC<IExpandableCommonComponentProps> = (props) => {
+export const ExpandableItemButton: React.FC<IExpandableCommonComponentProps> = withMooskinContext((props) => {
     return <StyledExpandableItemButton {...props} />;
-};
+});
 
 ExpandableItemButton.defaultProps = {
     className: '',
@@ -162,9 +166,9 @@ ExpandableItemButton.displayName = 'ExpandableItemButton';
 /**
  * ExpandableItemContent
  */
-export const ExpandableItemContent: React.FC<IExpandableCommonComponentProps> = (props) => {
+export const ExpandableItemContent: React.FC<IExpandableCommonComponentProps> = withMooskinContext((props) => {
     return <StyledExpandableItemContent {...props} />;
-};
+});
 
 ExpandableItemContent.defaultProps = {
     className: '',
@@ -172,5 +176,3 @@ ExpandableItemContent.defaultProps = {
 };
 
 ExpandableItemContent.displayName = 'ExpandableItemContent';
-
-export default Expandable;

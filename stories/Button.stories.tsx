@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import {Button, ButtonIcon} from '../components/Button/Button';
+import { Button, ButtonIcon } from '../components/Button/Button';
 import { IButtonComponentProps } from '../components/Button/model';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
@@ -12,15 +12,25 @@ import { MooskinContextProvider } from '../components/Styled/MooskinContextProvi
 
 export default ({
     // component: Button,
-    title: 'Example/Button',
+    title: 'Example/Button'
 } as any) as Meta;
 
 const Template: Story<IButtonComponentProps> = (args) => {
+    const [buttonPalette, setButtonPalette] = React.useState(variables.button);
     return (
         <>
             <GlobalStyle />
-            <MooskinContextProvider value={{palette: variables}}>
-                <Button {...args} />
+            <MooskinContextProvider
+                value={{
+                    palette: { ...variables, button: buttonPalette }
+                }}
+            >
+                <Button
+                    {...args}
+                    onClick={() =>
+                        setButtonPalette({ backgroundColor: '#ffa700', disabledBackgroundColor: '#d84840', fontColor: '#37a037' })
+                    }
+                />
             </MooskinContextProvider>
         </>
     );
@@ -28,18 +38,17 @@ const Template: Story<IButtonComponentProps> = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-    children: 'VIEW CAMPAIGN',
+    children: 'VIEW CAMPAIGN'
 } as IButtonComponentProps;
 
 export const Inversed = Template.bind({});
 Inversed.args = {
     children: 'VIEW CAMPAIGN',
-    inverseStyle: true,
+    inverseStyle: true
 } as IButtonComponentProps;
 
 export const Icon = Template.bind({});
 Icon.args = {
-    bgColor: '#293346',
     children: (
         <>
             <ButtonIcon>file_copy</ButtonIcon>
@@ -50,7 +59,6 @@ Icon.args = {
 
 export const Href = Template.bind({});
 Href.args = {
-    bgColor: '#37a037',
     children: 'VIEW CAMPAIGN',
     href: 'https://www.moosend.com'
 } as IButtonComponentProps;

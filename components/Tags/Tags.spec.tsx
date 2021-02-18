@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Tags from './Tags';
+import { Tags } from './Tags';
 
-import { mount, render, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 const func1 = jest.fn();
 const func2 = jest.fn();
@@ -12,7 +12,7 @@ describe.skip('Tags', () => {
 
         const source = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
 
-        const tree = shallow(
+        const tree = mount(
             <Tags
                 onAdd={func1}
                 onRemove={func2}
@@ -37,7 +37,7 @@ describe.skip('Tags', () => {
     test('renders children correctly', () => {
         const tags = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
 
-        const component = shallow(<Tags tags={tags} onAdd={func1} onRemove={func2} />);
+        const component = mount(<Tags tags={tags} onAdd={func1} onRemove={func2} />);
 
         expect(component.find('Tag').length).toEqual(tags.length);
     });
@@ -57,7 +57,7 @@ describe.skip('Tags', () => {
             tags = data.value;
         };
 
-        const component = shallow(<Tags tags={tags} deletable onAdd={onAdd} onRemove={onRemove} />);
+        const component = mount(<Tags tags={tags} deletable onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.state('value')).toBe('');
 
@@ -118,9 +118,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(
-            <Tags tags={tags} deletable delimiters={['space', 32, 'enter', 188]} onAdd={onAdd} onRemove={onRemove} />
-        );
+        const component = mount(<Tags tags={tags} deletable delimiters={['space', 32, 'enter', 188]} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.state('value')).toBe('');
         expect(component.find('Tag').first().prop('tag')).toEqual('Prishtina');
@@ -687,7 +685,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(
+        const component = mount(
             <Tags tags={tags} deletable delimiters={[188, 32, 13, ',', '.', 'Enter', ' ', 190]} onAdd={onAdd} onRemove={onRemove} />
         );
 
@@ -738,9 +736,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(
-            <Tags tags={tags} deletable delimiters={[65, 71, 76, 'a', 'g', 'l']} onAdd={onAdd} onRemove={onRemove} />
-        );
+        const component = mount(<Tags tags={tags} deletable delimiters={[65, 71, 76, 'a', 'g', 'l']} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(0);
 
@@ -789,7 +785,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(<Tags tags={tags} deletable delimiters={[188, ',']} onAdd={onAdd} onRemove={onRemove} />);
+        const component = mount(<Tags tags={tags} deletable delimiters={[188, ',']} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(0);
 
@@ -809,7 +805,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(<Tags tags={tags} onAdd={onAdd} onRemove={onRemove} />);
+        const component = mount(<Tags tags={tags} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(1);
 
@@ -831,7 +827,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(<Tags preventSubmit tags={tags} onAdd={onAdd} onRemove={onRemove} />);
+        const component = mount(<Tags preventSubmit tags={tags} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(1);
 
@@ -853,7 +849,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(<Tags validateTag="email" tags={tags} onAdd={onAdd} onRemove={onRemove} />);
+        const component = mount(<Tags validateTag="email" tags={tags} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(1);
 
@@ -875,7 +871,7 @@ describe.skip('Tags', () => {
     test('checks and removes duplicate values when duplicave tags are passed as props', () => {
         const tags = ['doni', 'gent', 'shkumbin', 'doni'];
 
-        const component = shallow(<Tags tags={tags} onAdd={func1} onRemove={func2} />);
+        const component = mount(<Tags tags={tags} onAdd={func1} onRemove={func2} />);
 
         expect(component.find('Tag').length).toBe(tags.length - 1);
     });
@@ -892,7 +888,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(<Tags tags={tags} delimiters={delimiters} onAdd={onAdd} onRemove={onRemove} />);
+        const component = mount(<Tags tags={tags} delimiters={delimiters} onAdd={onAdd} onRemove={onRemove} />);
 
         expect(component.find('Tag').length).toBe(3);
 
@@ -928,7 +924,7 @@ describe.skip('Tags', () => {
             }
         };
 
-        const component = shallow(
+        const component = mount(
             <Tags validate={validate} tags={tags} delimiters={delimiters} onAdd={onAdd} onRemove={onRemove} status={status} />
         );
 
@@ -959,7 +955,7 @@ describe.skip('Tags', () => {
             tags.splice(index, 1);
         };
 
-        const component = shallow(
+        const component = mount(
             <Tags tags={tags} deletable delimiters={[',', 'Enter', ' ']} onAdd={onAdd} onRemove={onRemove} validateTag="email" />
         );
 

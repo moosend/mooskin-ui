@@ -22,5 +22,3 @@ Box.defaultProps = {
 };
 
 Box.displayName = 'Box';
-
-export default Box;

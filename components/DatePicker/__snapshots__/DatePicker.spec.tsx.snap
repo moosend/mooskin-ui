@@ -126,13 +126,12 @@ exports[`DatePicker renders correctly 1`] = `
                 }
                 value="02/01/2021"
               >
-                <StyledInputSolo
+                <Component
                   InputProps={
                     Object {
                       "readOnly": true,
                     }
                   }
-                  boxAs="input"
                   className=""
                   error={false}
                   format="dd/MM/yyyy"
@@ -144,6 +143,49 @@ exports[`DatePicker renders correctly 1`] = `
                   }
                   onClick={[Function]}
                   onKeyDown={[Function]}
+                  palette={
+                    Object {
+                      "actionsDropdown": Object {
+                        "backgroundColor": "#3fbaca",
+                        "fontColor": "#ffffff",
+                      },
+                      "anchor": Object {
+                        "disabledFontColor": "#9d9d9d",
+                        "fontColor": "#3fbaca",
+                      },
+                      "button": Object {
+                        "backgroundColor": "#3fbaca",
+                        "disabledBackgroundColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                      },
+                      "commonElement": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "description": Object {
+                        "fontColor": "#9d9d9d",
+                      },
+                      "label": Object {
+                        "fontColor": "#2d2d2d",
+                      },
+                      "layout": Object {
+                        "backgroundColor": "#ffffff",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#293346",
+                      },
+                      "main": Object {
+                        "backgroundColor": "#f7f7f7",
+                      },
+                      "toggleElement": Object {
+                        "backgroundColor": "#425579",
+                        "borderColor": "#e2e2e2",
+                        "fontColor": "#ffffff",
+                        "secondaryBackgroundColor": "#ffffff",
+                        "secondaryFontColor": "#9d9d9d",
+                      },
+                    }
+                  }
                   pickerType="date"
                   style={
                     Object {
@@ -152,14 +194,14 @@ exports[`DatePicker renders correctly 1`] = `
                   }
                   value="02/01/2021"
                 >
-                  <Box
+                  <StyledInputSolo
                     InputProps={
                       Object {
                         "readOnly": true,
                       }
                     }
                     boxAs="input"
-                    className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                    className=""
                     error={false}
                     format="dd/MM/yyyy"
                     helperText=""
@@ -170,6 +212,49 @@ exports[`DatePicker renders correctly 1`] = `
                     }
                     onClick={[Function]}
                     onKeyDown={[Function]}
+                    palette={
+                      Object {
+                        "actionsDropdown": Object {
+                          "backgroundColor": "#3fbaca",
+                          "fontColor": "#ffffff",
+                        },
+                        "anchor": Object {
+                          "disabledFontColor": "#9d9d9d",
+                          "fontColor": "#3fbaca",
+                        },
+                        "button": Object {
+                          "backgroundColor": "#3fbaca",
+                          "disabledBackgroundColor": "#e2e2e2",
+                          "fontColor": "#ffffff",
+                        },
+                        "commonElement": Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#e2e2e2",
+                          "fontColor": "#293346",
+                        },
+                        "description": Object {
+                          "fontColor": "#9d9d9d",
+                        },
+                        "label": Object {
+                          "fontColor": "#2d2d2d",
+                        },
+                        "layout": Object {
+                          "backgroundColor": "#ffffff",
+                          "borderColor": "#e2e2e2",
+                          "fontColor": "#293346",
+                        },
+                        "main": Object {
+                          "backgroundColor": "#f7f7f7",
+                        },
+                        "toggleElement": Object {
+                          "backgroundColor": "#425579",
+                          "borderColor": "#e2e2e2",
+                          "fontColor": "#ffffff",
+                          "secondaryBackgroundColor": "#ffffff",
+                          "secondaryFontColor": "#9d9d9d",
+                        },
+                      }
+                    }
                     pickerType="date"
                     style={
                       Object {
@@ -178,14 +263,14 @@ exports[`DatePicker renders correctly 1`] = `
                     }
                     value="02/01/2021"
                   >
-                    <Component
+                    <Box
                       InputProps={
                         Object {
                           "readOnly": true,
                         }
                       }
                       boxAs="input"
-                      className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                      className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
                       error={false}
                       format="dd/MM/yyyy"
                       helperText=""
@@ -247,15 +332,14 @@ exports[`DatePicker renders correctly 1`] = `
                       }
                       value="02/01/2021"
                     >
-                      <StyledBox
+                      <Component
                         InputProps={
                           Object {
                             "readOnly": true,
                           }
                         }
-                        as="input"
                         boxAs="input"
-                        className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                        className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
                         error={false}
                         format="dd/MM/yyyy"
                         helperText=""
@@ -317,22 +401,93 @@ exports[`DatePicker renders correctly 1`] = `
                         }
                         value="02/01/2021"
                       >
-                        <input
-                          className="sc-bdnylx kBsmpR sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                        <StyledBox
+                          InputProps={
+                            Object {
+                              "readOnly": true,
+                            }
+                          }
+                          as="input"
+                          boxAs="input"
+                          className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
+                          error={false}
                           format="dd/MM/yyyy"
+                          helperText=""
+                          inputRef={
+                            Object {
+                              "current": undefined,
+                            }
+                          }
                           onClick={[Function]}
                           onKeyDown={[Function]}
+                          palette={
+                            Object {
+                              "actionsDropdown": Object {
+                                "backgroundColor": "#3fbaca",
+                                "fontColor": "#ffffff",
+                              },
+                              "anchor": Object {
+                                "disabledFontColor": "#9d9d9d",
+                                "fontColor": "#3fbaca",
+                              },
+                              "button": Object {
+                                "backgroundColor": "#3fbaca",
+                                "disabledBackgroundColor": "#e2e2e2",
+                                "fontColor": "#ffffff",
+                              },
+                              "commonElement": Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#e2e2e2",
+                                "fontColor": "#293346",
+                              },
+                              "description": Object {
+                                "fontColor": "#9d9d9d",
+                              },
+                              "label": Object {
+                                "fontColor": "#2d2d2d",
+                              },
+                              "layout": Object {
+                                "backgroundColor": "#ffffff",
+                                "borderColor": "#e2e2e2",
+                                "fontColor": "#293346",
+                              },
+                              "main": Object {
+                                "backgroundColor": "#f7f7f7",
+                              },
+                              "toggleElement": Object {
+                                "backgroundColor": "#425579",
+                                "borderColor": "#e2e2e2",
+                                "fontColor": "#ffffff",
+                                "secondaryBackgroundColor": "#ffffff",
+                                "secondaryFontColor": "#9d9d9d",
+                              },
+                            }
+                          }
+                          pickerType="date"
                           style={
                             Object {
                               "width": "100%",
                             }
                           }
                           value="02/01/2021"
-                        />
-                      </StyledBox>
-                    </Component>
-                  </Box>
-                </StyledInputSolo>
+                        >
+                          <input
+                            className="sc-bdnylx kBsmpR sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
+                            format="dd/MM/yyyy"
+                            onClick={[Function]}
+                            onKeyDown={[Function]}
+                            style={
+                              Object {
+                                "width": "100%",
+                              }
+                            }
+                            value="02/01/2021"
+                          />
+                        </StyledBox>
+                      </Component>
+                    </Box>
+                  </StyledInputSolo>
+                </Component>
               </Input>
             </renderInput>
           </PureDateInput>

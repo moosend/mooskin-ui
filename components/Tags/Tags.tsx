@@ -1,12 +1,12 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
-import { ITagsComponentProps, ITagsInputComponentProps } from './model';
-
-// Components
-// import { Box } from '../Box/Box';
+import { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Styled Components
 import { StyledTag, StyledTagClose, StyledTagInput, StyledTags } from './styles';
@@ -14,7 +14,7 @@ import { StyledTag, StyledTagClose, StyledTagInput, StyledTags } from './styles'
 /**
  * Tags
  */
-export const Tags: React.FC<ITagsComponentProps> = (props) => {
+export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) => {
     const batchClickHandler = (
         e: React.MouseEvent<HTMLElement>,
         data: IInputCallbackData,
@@ -39,18 +39,20 @@ export const Tags: React.FC<ITagsComponentProps> = (props) => {
         }
 
         return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<IBoxComponentProps>(child) && child.type === Tag) {
+            if (React.isValidElement<ITagComponentProps>(child) && child.type === Tag) {
                 return React.cloneElement(child, {
                     children: (
                         <>
                             {recurseChildren((child.props as any).children)}
-                            {props.onRemoveTag && <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>}
+                            {child.props.removeIcon && props.onRemoveTag && (
+                                <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>
+                            )}
                         </>
                     ),
                     key: i,
                     onClick: (e: React.MouseEvent<HTMLElement>) =>
                         batchClickHandler(e, { dataLabel: props.dataLabel, value: i }, child.props.onClick)
-                } as IBoxComponentProps);
+                } as ITagComponentProps);
             }
 
             if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput) {
@@ -69,7 +71,7 @@ export const Tags: React.FC<ITagsComponentProps> = (props) => {
     };
 
     return <StyledTags {...props} children={recurseChildren(props.children)} />;
-};
+});
 
 Tags.defaultProps = {
     className: '',
@@ -81,12 +83,13 @@ Tags.displayName = 'Tags';
 /**
  * Tag
  */
-export const Tag: React.FC<IBoxComponentProps> = (props) => {
+export const Tag: React.FC<ITagComponentProps> = withMooskinContext((props) => {
     return <StyledTag {...props} />;
-};
+});
 
 Tag.defaultProps = {
     className: '',
+    removeIcon: true,
     style: {}
 };
 
@@ -95,7 +98,7 @@ Tag.displayName = 'Tag';
 /**
  * TagInput
  */
-export const TagInput: React.FC<ITagsInputComponentProps> = (props) => {
+export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext((props) => {
     const [value, setValue] = React.useState(props.value || '');
 
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -160,7 +163,7 @@ export const TagInput: React.FC<ITagsInputComponentProps> = (props) => {
             {...props}
         />
     );
-};
+});
 
 TagInput.defaultProps = {
     className: '',
@@ -173,9 +176,9 @@ TagInput.displayName = 'TagInput';
 /**
  * TagClose
  */
-export const TagClose: React.FC<IBoxComponentProps> = (props) => {
+export const TagClose: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledTagClose {...props} />;
-};
+});
 
 TagClose.defaultProps = {
     className: '',
@@ -184,6 +187,9 @@ TagClose.defaultProps = {
 
 TagClose.displayName = 'TagClose';
 
+/**
+ * Helpers
+ */
 const shouldSubmitPaste = (value: string, delimiters?: Array<string | number>) => {
     if (delimiters) {
         const text = value.split('');
@@ -249,5 +255,3 @@ const getConvertedDelimiters = (delimiters: any) => {
 //      @\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 //     return re.test(tag);
 // };
-
-export default Tags;

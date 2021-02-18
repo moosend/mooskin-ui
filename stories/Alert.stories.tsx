@@ -2,16 +2,16 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Alert, {AlertCloseButton, AlertDescription, AlertIcon, AlertTitle} from '../components/Alert/Alert';
-import {IBaseAlertComponentProps} from '../components/Alert/model';
-import Box from '../components/Box/Box';
+import { Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../components/Alert/Alert';
+import { IBaseAlertComponentProps } from '../components/Alert/model';
+import { Box } from '../components/Box/Box';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
-export default {
+export default ({
     component: Alert,
-    title: 'Example/Alert',
-} as any as Meta;
+    title: 'Example/Alert'
+} as any) as Meta;
 
 const Template: Story<IBaseAlertComponentProps> = (args) => {
     return (
@@ -36,12 +36,10 @@ export const WithBox = Template.bind({});
 WithBox.args = {
     children: [
         <AlertIcon key="0" />,
-        (
-            <Box key="1" d="flex" direction="column" justify="center">
-                <AlertTitle>Your browser is outdated!</AlertTitle>
-                <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-                <AlertCloseButton onClick={(e) => alert('close')} position="absolute" right="8px" top="8px" />
-            </Box>
-        )
+        <Box key="1" d="flex" direction="column" justify="center">
+            <AlertTitle>Your browser is outdated!</AlertTitle>
+            <AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
+            <AlertCloseButton onClick={(e) => alert('close')} position="absolute" right="8px" top="8px" />
+        </Box>
     ]
 } as IBaseAlertComponentProps;

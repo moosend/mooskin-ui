@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { HStack, VStack } from './Stack';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 const boxStyle = {
     height: 40,
@@ -10,7 +10,7 @@ const boxStyle = {
 
 describe('Stack', () => {
     test('renders Stack correctly', () => {
-        const tree = shallow(
+        const tree = mount(
             <VStack spacing={20} divider={<span style={{ width: 1 }} />}>
                 <div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
                 <div key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,

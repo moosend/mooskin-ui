@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IActionsDropdownArrowComponentProps, IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
@@ -10,7 +13,7 @@ import { StyledActionsDropdown, StyledActionsDropdownArrow, StyledActionsDropdow
 /**
  * ActionsDropdown
  */
-export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props) => {
+export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMooskinContext((props) => {
     const [hasArrow, setHasArrow] = React.useState(false);
 
     const batchClickHandler = (
@@ -62,7 +65,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = (props)
             {recurseChildren(props.children)}
         </StyledActionsDropdown>
     );
-};
+});
 
 ActionsDropdown.defaultProps = {
     className: '',
@@ -74,9 +77,9 @@ ActionsDropdown.displayName = 'ActionsDropdown';
 /**
  * ActionsDropdownItem
  */
-export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = (props) => {
+export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = withMooskinContext((props) => {
     return <StyledActionsDropdownItem {...props} />;
-};
+});
 
 ActionsDropdownItem.defaultProps = {
     className: '',
@@ -88,9 +91,9 @@ ActionsDropdownItem.displayName = 'ActionsDropdownItem';
 /**
  * ActionsDropdownArrow
  */
-export const ActionsDropdownArrow: React.FC<IActionsDropdownArrowComponentProps> = (props) => {
+export const ActionsDropdownArrow: React.FC<IActionsDropdownArrowComponentProps> = withMooskinContext((props) => {
     return <StyledActionsDropdownArrow {...props} />;
-};
+});
 
 ActionsDropdownArrow.defaultProps = {
     arrowDirection: 'up',
@@ -99,5 +102,3 @@ ActionsDropdownArrow.defaultProps = {
 };
 
 ActionsDropdownArrow.displayName = 'ActionsDropdownArrow';
-
-export default ActionsDropdown;

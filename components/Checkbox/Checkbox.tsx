@@ -1,17 +1,20 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IDescriptionComponentProps } from '../Description/model';
 import { ILabelComponentProps } from '../Label/model';
 import { ICheckboxComponentProps, ICheckboxIconComponentProps } from './model';
 
 // Components
-import Description from '../Description/Description';
+import { Description } from '../Description/Description';
 
 // Styled Components
 import { StyledCheckbox, StyledCheckboxIcon, StyledCheckboxLabel } from './styles';
 
-export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
+export const Checkbox: React.FC<ICheckboxComponentProps> = withMooskinContext((props) => {
     const [hasCheckbox, setHasCheckbox] = React.useState(false);
 
     const onClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -70,7 +73,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = (props) => {
             {recurseChildren(props.children)}
         </StyledCheckbox>
     );
-};
+});
 
 Checkbox.defaultProps = {
     className: '',
@@ -82,9 +85,9 @@ Checkbox.displayName = 'Checkbox';
 /**
  * CheckboxIcon
  */
-export const CheckboxIcon: React.FC<ICheckboxIconComponentProps> = (props) => {
+export const CheckboxIcon: React.FC<ICheckboxIconComponentProps> = withMooskinContext((props) => {
     return <StyledCheckboxIcon {...props} />;
-};
+});
 
 CheckboxIcon.defaultProps = {
     className: '',
@@ -96,9 +99,9 @@ CheckboxIcon.displayName = 'CheckboxIcon';
 /**
  * CheckboxLabel
  */
-export const CheckboxLabel: React.FC<ILabelComponentProps> = (props) => {
+export const CheckboxLabel: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
     return <StyledCheckboxLabel disabled={props.disabled} {...props} />;
-};
+});
 
 CheckboxLabel.defaultProps = {
     className: '',
@@ -110,9 +113,9 @@ CheckboxLabel.displayName = 'CheckboxLabel';
 /**
  * CheckboxDescription
  */
-export const CheckboxDescription: React.FC<IDescriptionComponentProps> = (props) => {
+export const CheckboxDescription: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
     return <Description {...props} />;
-};
+});
 
 CheckboxDescription.defaultProps = {
     className: '',
@@ -120,5 +123,3 @@ CheckboxDescription.defaultProps = {
 };
 
 CheckboxDescription.displayName = 'CheckboxDescription';
-
-export default Checkbox;

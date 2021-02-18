@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Skeleton, SkeletonCircle, SkeletonText } from './Skeleton';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 const boxStyle = {
     height: 40,
@@ -10,7 +10,7 @@ const boxStyle = {
 
 describe('Skeleton', () => {
     test('renders Skeleton correctly', () => {
-        const tree = shallow(
+        const tree = mount(
             <Skeleton>
                 <div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
                 <div key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
@@ -22,13 +22,13 @@ describe('Skeleton', () => {
     });
 
     test('renders SkeletonCircle correctly', () => {
-        const tree = shallow(<SkeletonCircle />);
+        const tree = mount(<SkeletonCircle />);
 
         expect(tree).toMatchSnapshot();
     });
 
     test('renders SkeletonText correctly', () => {
-        const tree = shallow(<SkeletonText />);
+        const tree = mount(<SkeletonText />);
 
         expect(tree).toMatchSnapshot();
     });

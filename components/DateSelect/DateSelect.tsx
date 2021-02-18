@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Date-FNS
 import format from 'date-fns/format';
 import getDaysInMonth from 'date-fns/getDaysInMonth';
@@ -16,7 +19,7 @@ import { Select, SelectContainer, SelectOption, SelectOptionList, SelectPlacehol
 /**
  * DateSelect
  */
-export const DateSelect: React.FC<IDateSelectComponentProps> = (props) => {
+export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContext((props) => {
     const renderDateSelect = () => {
         const options = renderOptions();
         const selected = props.selectedValue || props.selectedValue === 0 ? props.selectedValue.toString() : '';
@@ -181,7 +184,7 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = (props) => {
     };
 
     return renderDateSelect();
-};
+});
 
 DateSelect.defaultProps = {
     className: '',
@@ -189,5 +192,3 @@ DateSelect.defaultProps = {
 };
 
 DateSelect.displayName = 'DateSelect';
-
-export default DateSelect;

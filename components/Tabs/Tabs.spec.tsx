@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Tab, TabContent, TabHeader, Tabs } from './Tabs';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Pagination', () => {
     test('renders correctly', () => {

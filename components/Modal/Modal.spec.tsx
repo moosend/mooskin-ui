@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Modal, { ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from './Modal';
+import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from './Modal';
 
 import { mount } from 'enzyme';
 

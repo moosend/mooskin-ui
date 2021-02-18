@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { IBoxComponentProps } from '../Box/model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 export const StyledTable = styled(Box)<IBoxComponentProps>`
     border: solid 1px #e2e2e2;

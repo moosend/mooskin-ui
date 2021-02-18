@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Drawer, { DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay } from './Drawer';
+import { Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay } from './Drawer';
 
 import { mount } from 'enzyme';
 

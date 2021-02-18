@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import Grid, { Col, Row } from '../components/Grid/Grid';
+import { Col, Grid, Row } from '../components/Grid/Grid';
 import { IGridProps } from '../components/Grid/model';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';

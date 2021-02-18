@@ -1,5 +1,5 @@
 import * as React from 'react';
-import DateRange from './DateRange';
+import { DateRange } from './DateRange';
 
 import { mount } from 'enzyme';
 

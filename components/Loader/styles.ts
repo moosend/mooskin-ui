@@ -7,7 +7,7 @@ import { getNumberOrStringValue } from '../Box/styles';
 import { ILoaderComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 // "CSS" Variables
 // import variables from '../_utils/globals/variables';

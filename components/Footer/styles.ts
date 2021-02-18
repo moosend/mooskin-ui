@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { IBoxComponentProps } from '../Box/model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 import variables from '../_utils/globals/variables';
 

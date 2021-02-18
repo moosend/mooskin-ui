@@ -8,7 +8,7 @@ import {
     ExpandableItemText
 } from './Expandable';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Expandable', () => {
     test('renders correctly', () => {

@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { INumberLabelComponentProps } from './model';
 
@@ -9,7 +12,7 @@ import { Label } from '../Label/Label';
 /**
  * NumberLabel
  */
-export const NumberLabel: React.FC<INumberLabelComponentProps> = (props) => {
+export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinContext((props) => {
     const getContent = () => {
         const { children, abbreviate, roundNumber } = props;
         if ((abbreviate || roundNumber) && !isNaN(children as any)) {
@@ -162,7 +165,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = (props) => {
     };
 
     return <Label {...props}>{getContent()}</Label>;
-};
+});
 
 NumberLabel.defaultProps = {
     abbrAccuracy: 1,
@@ -171,5 +174,3 @@ NumberLabel.defaultProps = {
 };
 
 NumberLabel.displayName = 'NumberLabel';
-
-export default NumberLabel;

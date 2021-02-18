@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Loader from './Loader';
+import { Loader } from './Loader';
 
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Loader', () => {
     test('renders correctly', () => {
-        const tree = shallow(<Loader />);
+        const tree = mount(<Loader />);
         expect(tree).toMatchSnapshot();
     });
 });

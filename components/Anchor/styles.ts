@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { IAnchorComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 // "CSS" Variables
 import variables from '../_utils/globals/variables';

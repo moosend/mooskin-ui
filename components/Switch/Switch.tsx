@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { ISwitchComponentProps, ISwitchHandleComponentProps } from './model';
 
@@ -9,7 +12,7 @@ import { StyledSwitch, StyledSwitchHandle, StyledSwitchLabelDisabled, StyledSwit
 /**
  * Switch
  */
-export const Switch: React.FC<ISwitchComponentProps> = (props) => {
+export const Switch: React.FC<ISwitchComponentProps> = withMooskinContext((props) => {
     const [hasHandle, setHasHandle] = React.useState(false);
 
     const renderDisabledContent = () => {
@@ -54,7 +57,7 @@ export const Switch: React.FC<ISwitchComponentProps> = (props) => {
             {recurseChildren(props.children)}
         </StyledSwitch>
     );
-};
+});
 
 Switch.defaultProps = {
     className: '',
@@ -64,9 +67,9 @@ Switch.defaultProps = {
 
 Switch.displayName = 'Switch';
 
-export const SwitchHandle: React.FC<ISwitchHandleComponentProps> = (props) => {
+export const SwitchHandle: React.FC<ISwitchHandleComponentProps> = withMooskinContext((props) => {
     return <StyledSwitchHandle {...props} />;
-};
+});
 
 SwitchHandle.defaultProps = {
     className: '',
@@ -74,5 +77,3 @@ SwitchHandle.defaultProps = {
 };
 
 SwitchHandle.displayName = 'SwitchHandle';
-
-export default Switch;

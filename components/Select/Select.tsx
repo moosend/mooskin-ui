@@ -1,14 +1,14 @@
 import * as React from 'react';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
-import { IDescriptionComponentProps } from '../Description/model';
-import { ILabelComponentProps } from '../Label/model';
 import { ISelectComponentProps, ISelectOptionComponentProps, ISelectPaginationComponentProps } from './model';
 
 // Components
-import Description from '../Description/Description';
-import Label from '../Label/Label';
+import { Loader } from '../Loader/Loader';
 
 // Styled Components
 import {
@@ -17,7 +17,6 @@ import {
     StyledSelectContainer,
     StyledSelectFilter,
     StyledSelectIcon,
-    StyledSelectLoader,
     StyledSelectOption,
     StyledSelectOptionList,
     StyledSelectOverlay,
@@ -28,7 +27,7 @@ import {
 /**
  * Select
  */
-export const Select: React.FC<ISelectComponentProps> = (props) => {
+export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props) => {
     const [showList, setShowList] = React.useState(props.showList);
     const [filterValue, setFilterValue] = React.useState('');
 
@@ -74,6 +73,41 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
         setShowList(props.showList);
     }, [props.showList]);
 
+    const getPlaceholder = (children: any, passedPlaceholder: string[] = []) => {
+        if (!children) {
+            return null;
+        }
+
+        const placeholder: string[] = passedPlaceholder;
+        React.Children.forEach(children, (child, i) => {
+            if (React.isValidElement<ISelectOptionComponentProps>(child) && child.type === SelectOption) {
+                let label = '';
+
+                if (child.props.searchLabel) {
+                    label = child.props.searchLabel;
+                } else if (typeof child.props.children === 'string') {
+                    label = child.props.children;
+                }
+
+                if (Array.isArray(props.selectedValue)) {
+                    props.selectedValue.forEach((item) => {
+                        if (item.toString().includes(child.props.value)) {
+                            placeholder.push(label);
+                        }
+                    });
+                } else {
+                    props.selectedValue === child.props.value && placeholder.push(label);
+                }
+            }
+
+            if (React.isValidElement(child) && (child.props as any).children) {
+                return getPlaceholder((child.props as any).children, placeholder);
+            }
+        });
+
+        return placeholder.join(', ');
+    };
+
     const recurseChildren = (children: any): any => {
         if (!children) {
             return null;
@@ -82,6 +116,14 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
         return React.Children.map(children, (child, i) => {
             if (React.isValidElement<ISelectOptionComponentProps>(child) && child.type === SelectOption) {
                 const active = Array.isArray(props.selectedValue) && props.selectedValue.includes(child.props.value);
+
+                let label = '';
+
+                if (child.props.searchLabel) {
+                    label = child.props.searchLabel;
+                } else if (typeof child.props.children === 'string') {
+                    label = child.props.children;
+                }
 
                 const option = React.cloneElement(child, {
                     children: (
@@ -95,13 +137,8 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                     value: child.props.value
                 } as ISelectOptionComponentProps);
 
-                if (filterValue) {
-                    if (child.props.searchLabel) {
-                        return child.props.searchLabel.toLowerCase().includes(filterValue.toLowerCase()) ? option : null;
-                    }
-                    if (typeof child.props.children === 'string') {
-                        return child.props.children.toLowerCase().includes(filterValue.toLowerCase()) ? option : null;
-                    }
+                if (filterValue && label) {
+                    return label.toLowerCase().includes(filterValue.toLowerCase()) ? option : null;
                 }
 
                 return option;
@@ -135,7 +172,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
             if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder) {
                 if (!showList) {
                     return React.cloneElement(child, {
-                        children: recurseChildren(child.props.children),
+                        children: props.selectedValue ? getPlaceholder(props.children) : recurseChildren(child.props.children),
                         key: i
                     } as IBoxComponentProps);
                 }
@@ -148,7 +185,10 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
                         <>
                             {recurseChildren(child.props.children)}
                             {!hasFilter && showList && (
-                                <SelectFilter onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)} />
+                                <SelectFilter
+                                    onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
+                                />
                             )}
                             {!hasDropdownIcon && <SelectIcon>{!showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}</SelectIcon>}
                         </>
@@ -192,7 +232,7 @@ export const Select: React.FC<ISelectComponentProps> = (props) => {
             {!hasOverlay && showList && <SelectOverlay onClick={toggleList} />}
         </StyledSelect>
     );
-};
+});
 
 Select.defaultProps = {
     className: '',
@@ -204,9 +244,9 @@ Select.displayName = 'Select';
 /**
  * SelectContainer
  */
-export const SelectContainer: React.FC<IBoxComponentProps> = (props) => {
+export const SelectContainer: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledSelectContainer {...props} />;
-};
+});
 
 SelectContainer.defaultProps = {
     className: '',
@@ -218,9 +258,9 @@ SelectContainer.displayName = 'SelectContainer';
 /**
  * SelectPlaceholder
  */
-export const SelectPlaceholder: React.FC<IBoxComponentProps> = (props) => {
+export const SelectPlaceholder: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledSelectPlaceholder {...props} />;
-};
+});
 
 SelectPlaceholder.defaultProps = {
     className: '',
@@ -232,9 +272,9 @@ SelectPlaceholder.displayName = 'SelectPlaceholder';
 /**
  * SelectOptionList
  */
-export const SelectOptionList: React.FC<IBoxComponentProps> = (props) => {
+export const SelectOptionList: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledSelectOptionList boxShadow="base" round="xs" {...props} />;
-};
+});
 
 SelectOptionList.defaultProps = {
     className: '',
@@ -246,9 +286,9 @@ SelectOptionList.displayName = 'SelectOptionList';
 /**
  * SelectOption
  */
-export const SelectOption: React.FC<ISelectOptionComponentProps> = (props) => {
+export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinContext((props) => {
     return <StyledSelectOption {...props} />;
-};
+});
 
 SelectOption.defaultProps = {
     className: '',
@@ -260,9 +300,9 @@ SelectOption.displayName = 'SelectOption';
 /**
  * SelectFilter
  */
-export const SelectFilter: React.FC<IInputBoxComponentProps> = (props) => {
+export const SelectFilter: React.FC<IInputBoxComponentProps> = withMooskinContext((props) => {
     return <StyledSelectFilter {...props} boxAs="input" />;
-};
+});
 
 SelectFilter.defaultProps = {
     className: '',
@@ -274,9 +314,9 @@ SelectFilter.displayName = 'SelectFilter';
 /**
  * SelectLoader
  */
-export const SelectLoader: React.FC<IBoxComponentProps> = (props) => {
-    return <StyledSelectLoader {...props} />;
-};
+export const SelectLoader: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+    return <Loader size={20} spinnerWidth={2} {...props} />;
+});
 
 SelectLoader.defaultProps = {
     className: '',
@@ -286,39 +326,11 @@ SelectLoader.defaultProps = {
 SelectLoader.displayName = 'SelectLoader';
 
 /**
- * SelectLabel
- */
-export const SelectLabel: React.FC<ILabelComponentProps> = (props) => {
-    return <Label disabled={props.disabled} {...props} />;
-};
-
-SelectLabel.defaultProps = {
-    className: '',
-    style: {}
-};
-
-SelectLabel.displayName = 'SelectLabel';
-
-/**
- * SelectDescription
- */
-export const SelectDescription: React.FC<IDescriptionComponentProps> = (props) => {
-    return <Description {...props} />;
-};
-
-SelectDescription.defaultProps = {
-    className: '',
-    style: {}
-};
-
-SelectDescription.displayName = 'SelectDescription';
-
-/**
  * SelectIcon
  */
-export const SelectIcon: React.FC<IBoxComponentProps> = (props) => {
+export const SelectIcon: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledSelectIcon {...props} />;
-};
+});
 
 SelectIcon.defaultProps = {
     className: '',
@@ -330,9 +342,9 @@ SelectIcon.displayName = 'SelectIcon';
 /**
  * SelectOverlay
  */
-export const SelectOverlay: React.FC<IBoxComponentProps> = (props) => {
+export const SelectOverlay: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
     return <StyledSelectOverlay {...props} />;
-};
+});
 
 SelectOverlay.defaultProps = {
     className: '',
@@ -344,7 +356,7 @@ SelectOverlay.displayName = 'SelectOverlay';
 /**
  * SelectPagination
  */
-export const SelectPagination: React.FC<ISelectPaginationComponentProps> = (props) => {
+export const SelectPagination: React.FC<ISelectPaginationComponentProps> = withMooskinContext((props) => {
     const onClick = (e: React.MouseEvent<HTMLElement>, direction: 'left' | 'right') => {
         let page;
 
@@ -370,7 +382,7 @@ export const SelectPagination: React.FC<ISelectPaginationComponentProps> = (prop
             <SelectIcon onClick={(e) => onClick(e, 'right')}>keyboard_arrow_right</SelectIcon>
         </StyledSelectPagination>
     );
-};
+});
 
 SelectPagination.defaultProps = {
     className: '',
@@ -378,5 +390,3 @@ SelectPagination.defaultProps = {
 };
 
 SelectPagination.displayName = 'SelectPagination';
-
-export default Select;

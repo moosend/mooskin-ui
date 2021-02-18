@@ -42,5 +42,3 @@ DateTimePicker.defaultProps = {
 };
 
 DateTimePicker.displayName = 'DateTimePicker';
-
-export default DateTimePicker;

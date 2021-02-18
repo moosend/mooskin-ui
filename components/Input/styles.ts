@@ -5,7 +5,7 @@ import { IBoxComponentProps } from '../Box/model';
 import { IInputComponentProps, IInputContainerComponentProps, IInputListComponentProps, IInputOptionComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 import variables from '../_utils/globals/variables';
 
@@ -15,7 +15,7 @@ export const StyledInputContainer = styled(Box)<IInputContainerComponentProps>`
     display: flex;
     flex: 1;
     align-items: center;
-    opacity: ${(props) => (props.disabled ? 0.7 : 1)};
+    opacity: ${(props) => (props.disabled ? 0.5 : 1)};
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     border-radius: 3px;
     border: solid 1px ${(props) => props.palette?.commonElement.borderColor || variables.commonElement.borderColor};

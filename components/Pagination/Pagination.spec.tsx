@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Pagination, { PaginationButton } from './Pagination';
+import { Pagination, PaginationButton } from './Pagination';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Pagination', () => {
     test('renders correctly', () => {

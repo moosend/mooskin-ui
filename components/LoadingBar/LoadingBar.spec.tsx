@@ -1,16 +1,15 @@
 import * as React from 'react';
 
-import Button from '../Button/Button';
-import LoadingBar from './LoadingBar';
+import { LoadingBar } from './LoadingBar';
 
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('LoadingBar', () => {
     test(`LoadingBar renders correctly`, () => {
         const func1 = jest.fn();
         const func2 = jest.fn();
 
-        const tree = shallow(<LoadingBar progress={10} error={false} onLoaderError={func1} onLoaderDone={func2} />);
+        const tree = mount(<LoadingBar progress={10} error={false} onLoaderError={func1} onLoaderDone={func2} />);
 
         expect(tree).toMatchSnapshot();
     });
@@ -18,7 +17,7 @@ describe('LoadingBar', () => {
     test(`calls done callback function on complete`, () => {
         const func = jest.fn();
 
-        const component = shallow(<LoadingBar progress={80} error={false} onLoaderDone={func} />);
+        const component = mount(<LoadingBar progress={80} error={false} onLoaderDone={func} />);
 
         component.setProps({ progress: 100 });
 
@@ -30,7 +29,7 @@ describe('LoadingBar', () => {
     test(`onLoaderError callback is called when an error prop of true is passed`, () => {
         const func = jest.fn();
 
-        const component = shallow(<LoadingBar progress={10} onLoaderError={func} />);
+        const component = mount(<LoadingBar progress={10} onLoaderError={func} />);
 
         component.setProps({ error: true });
 

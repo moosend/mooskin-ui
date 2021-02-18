@@ -1,14 +1,14 @@
 import * as React from 'react';
 
-import Sidemenu, { SidemenuItem } from './Sidemenu';
+import { Sidemenu, SidemenuItem } from './Sidemenu';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Sidemenu', () => {
     test('renders Sidemenu correctly', () => {
         const func = jest.fn();
 
-        const tree = shallow(
+        const tree = mount(
             <Sidemenu activeItem="/settings" onClickItem={func}>
                 <SidemenuItem value="/settings">Settings</SidemenuItem>
                 <SidemenuItem value="/template">Template</SidemenuItem>
@@ -21,7 +21,7 @@ describe('Sidemenu', () => {
     test('renders SidemenuItem correctly', () => {
         const func = jest.fn();
 
-        const tree = shallow(<SidemenuItem onClick={func} className="myClass" style={{ color: 'blue' }} active />);
+        const tree = mount(<SidemenuItem onClick={func} className="myClass" style={{ color: 'blue' }} active />);
         expect(tree).toMatchSnapshot();
     });
 

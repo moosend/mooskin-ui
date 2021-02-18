@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { IBaseAlertComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 const BackgroundColors = {
     error: '#FED7D7',

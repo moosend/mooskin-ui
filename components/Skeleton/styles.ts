@@ -9,7 +9,7 @@ import {
 } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 // import variables from '../_utils/globals/variables';
 

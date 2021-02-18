@@ -16,62 +16,71 @@ exports[`DateRange renders correctly 1`] = `
     ]
   }
 >
-  <Box
+  <Component
     className=""
-    d="flex"
-    position="relative"
-    style={Object {}}
+    direction="horizontal"
+    format="dd MMM yyyy"
+    onChange={[MockFunction]}
+    palette={
+      Object {
+        "actionsDropdown": Object {
+          "backgroundColor": "#3fbaca",
+          "fontColor": "#ffffff",
+        },
+        "anchor": Object {
+          "disabledFontColor": "#9d9d9d",
+          "fontColor": "#3fbaca",
+        },
+        "button": Object {
+          "backgroundColor": "#3fbaca",
+          "disabledBackgroundColor": "#e2e2e2",
+          "fontColor": "#ffffff",
+        },
+        "commonElement": Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#e2e2e2",
+          "fontColor": "#293346",
+        },
+        "description": Object {
+          "fontColor": "#9d9d9d",
+        },
+        "label": Object {
+          "fontColor": "#2d2d2d",
+        },
+        "layout": Object {
+          "backgroundColor": "#ffffff",
+          "borderColor": "#e2e2e2",
+          "fontColor": "#293346",
+        },
+        "main": Object {
+          "backgroundColor": "#f7f7f7",
+        },
+        "toggleElement": Object {
+          "backgroundColor": "#425579",
+          "borderColor": "#e2e2e2",
+          "fontColor": "#ffffff",
+          "secondaryBackgroundColor": "#ffffff",
+          "secondaryFontColor": "#9d9d9d",
+        },
+      }
+    }
+    ranges={
+      Array [
+        Object {
+          "endDate": 2016-06-20T12:08:10.000Z,
+          "key": "selection",
+          "startDate": 2016-06-20T12:08:10.000Z,
+        },
+      ]
+    }
   >
-    <Component
+    <Box
       className=""
       d="flex"
-      palette={
-        Object {
-          "actionsDropdown": Object {
-            "backgroundColor": "#3fbaca",
-            "fontColor": "#ffffff",
-          },
-          "anchor": Object {
-            "disabledFontColor": "#9d9d9d",
-            "fontColor": "#3fbaca",
-          },
-          "button": Object {
-            "backgroundColor": "#3fbaca",
-            "disabledBackgroundColor": "#e2e2e2",
-            "fontColor": "#ffffff",
-          },
-          "commonElement": Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#e2e2e2",
-            "fontColor": "#293346",
-          },
-          "description": Object {
-            "fontColor": "#9d9d9d",
-          },
-          "label": Object {
-            "fontColor": "#2d2d2d",
-          },
-          "layout": Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#e2e2e2",
-            "fontColor": "#293346",
-          },
-          "main": Object {
-            "backgroundColor": "#f7f7f7",
-          },
-          "toggleElement": Object {
-            "backgroundColor": "#425579",
-            "borderColor": "#e2e2e2",
-            "fontColor": "#ffffff",
-            "secondaryBackgroundColor": "#ffffff",
-            "secondaryFontColor": "#9d9d9d",
-          },
-        }
-      }
       position="relative"
       style={Object {}}
     >
-      <StyledBox
+      <Component
         className=""
         d="flex"
         palette={
@@ -120,34 +129,118 @@ exports[`DateRange renders correctly 1`] = `
         position="relative"
         style={Object {}}
       >
-        <div
-          className="sc-bdnylx hEAZVy"
+        <StyledBox
+          className=""
           d="flex"
+          palette={
+            Object {
+              "actionsDropdown": Object {
+                "backgroundColor": "#3fbaca",
+                "fontColor": "#ffffff",
+              },
+              "anchor": Object {
+                "disabledFontColor": "#9d9d9d",
+                "fontColor": "#3fbaca",
+              },
+              "button": Object {
+                "backgroundColor": "#3fbaca",
+                "disabledBackgroundColor": "#e2e2e2",
+                "fontColor": "#ffffff",
+              },
+              "commonElement": Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#293346",
+              },
+              "description": Object {
+                "fontColor": "#9d9d9d",
+              },
+              "label": Object {
+                "fontColor": "#2d2d2d",
+              },
+              "layout": Object {
+                "backgroundColor": "#ffffff",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#293346",
+              },
+              "main": Object {
+                "backgroundColor": "#f7f7f7",
+              },
+              "toggleElement": Object {
+                "backgroundColor": "#425579",
+                "borderColor": "#e2e2e2",
+                "fontColor": "#ffffff",
+                "secondaryBackgroundColor": "#ffffff",
+                "secondaryFontColor": "#9d9d9d",
+              },
+            }
+          }
+          position="relative"
           style={Object {}}
         >
-          <Input
-            className=""
-            onFocus={[Function]}
+          <div
+            className="sc-bdnylx hEAZVy"
+            d="flex"
             style={Object {}}
-            value="20 Jun 2016 - 20 Jun 2016"
           >
-            <StyledInputSolo
-              boxAs="input"
+            <Input
               className=""
               onFocus={[Function]}
               style={Object {}}
               value="20 Jun 2016 - 20 Jun 2016"
             >
-              <Box
-                boxAs="input"
-                className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+              <Component
+                className=""
                 onFocus={[Function]}
+                palette={
+                  Object {
+                    "actionsDropdown": Object {
+                      "backgroundColor": "#3fbaca",
+                      "fontColor": "#ffffff",
+                    },
+                    "anchor": Object {
+                      "disabledFontColor": "#9d9d9d",
+                      "fontColor": "#3fbaca",
+                    },
+                    "button": Object {
+                      "backgroundColor": "#3fbaca",
+                      "disabledBackgroundColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                    },
+                    "commonElement": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "description": Object {
+                      "fontColor": "#9d9d9d",
+                    },
+                    "label": Object {
+                      "fontColor": "#2d2d2d",
+                    },
+                    "layout": Object {
+                      "backgroundColor": "#ffffff",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#293346",
+                    },
+                    "main": Object {
+                      "backgroundColor": "#f7f7f7",
+                    },
+                    "toggleElement": Object {
+                      "backgroundColor": "#425579",
+                      "borderColor": "#e2e2e2",
+                      "fontColor": "#ffffff",
+                      "secondaryBackgroundColor": "#ffffff",
+                      "secondaryFontColor": "#9d9d9d",
+                    },
+                  }
+                }
                 style={Object {}}
                 value="20 Jun 2016 - 20 Jun 2016"
               >
-                <Component
+                <StyledInputSolo
                   boxAs="input"
-                  className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                  className=""
                   onFocus={[Function]}
                   palette={
                     Object {
@@ -195,10 +288,9 @@ exports[`DateRange renders correctly 1`] = `
                   style={Object {}}
                   value="20 Jun 2016 - 20 Jun 2016"
                 >
-                  <StyledBox
-                    as="input"
+                  <Box
                     boxAs="input"
-                    className="sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                    className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
                     onFocus={[Function]}
                     palette={
                       Object {
@@ -246,20 +338,123 @@ exports[`DateRange renders correctly 1`] = `
                     style={Object {}}
                     value="20 Jun 2016 - 20 Jun 2016"
                   >
-                    <input
-                      className="sc-bdnylx kBsmpR sc-eCApGN sc-jSFkmK jctrjg fOAyQA"
+                    <Component
+                      boxAs="input"
+                      className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
                       onFocus={[Function]}
+                      palette={
+                        Object {
+                          "actionsDropdown": Object {
+                            "backgroundColor": "#3fbaca",
+                            "fontColor": "#ffffff",
+                          },
+                          "anchor": Object {
+                            "disabledFontColor": "#9d9d9d",
+                            "fontColor": "#3fbaca",
+                          },
+                          "button": Object {
+                            "backgroundColor": "#3fbaca",
+                            "disabledBackgroundColor": "#e2e2e2",
+                            "fontColor": "#ffffff",
+                          },
+                          "commonElement": Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#e2e2e2",
+                            "fontColor": "#293346",
+                          },
+                          "description": Object {
+                            "fontColor": "#9d9d9d",
+                          },
+                          "label": Object {
+                            "fontColor": "#2d2d2d",
+                          },
+                          "layout": Object {
+                            "backgroundColor": "#ffffff",
+                            "borderColor": "#e2e2e2",
+                            "fontColor": "#293346",
+                          },
+                          "main": Object {
+                            "backgroundColor": "#f7f7f7",
+                          },
+                          "toggleElement": Object {
+                            "backgroundColor": "#425579",
+                            "borderColor": "#e2e2e2",
+                            "fontColor": "#ffffff",
+                            "secondaryBackgroundColor": "#ffffff",
+                            "secondaryFontColor": "#9d9d9d",
+                          },
+                        }
+                      }
                       style={Object {}}
                       value="20 Jun 2016 - 20 Jun 2016"
-                    />
-                  </StyledBox>
-                </Component>
-              </Box>
-            </StyledInputSolo>
-          </Input>
-        </div>
-      </StyledBox>
-    </Component>
-  </Box>
+                    >
+                      <StyledBox
+                        as="input"
+                        boxAs="input"
+                        className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
+                        onFocus={[Function]}
+                        palette={
+                          Object {
+                            "actionsDropdown": Object {
+                              "backgroundColor": "#3fbaca",
+                              "fontColor": "#ffffff",
+                            },
+                            "anchor": Object {
+                              "disabledFontColor": "#9d9d9d",
+                              "fontColor": "#3fbaca",
+                            },
+                            "button": Object {
+                              "backgroundColor": "#3fbaca",
+                              "disabledBackgroundColor": "#e2e2e2",
+                              "fontColor": "#ffffff",
+                            },
+                            "commonElement": Object {
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#e2e2e2",
+                              "fontColor": "#293346",
+                            },
+                            "description": Object {
+                              "fontColor": "#9d9d9d",
+                            },
+                            "label": Object {
+                              "fontColor": "#2d2d2d",
+                            },
+                            "layout": Object {
+                              "backgroundColor": "#ffffff",
+                              "borderColor": "#e2e2e2",
+                              "fontColor": "#293346",
+                            },
+                            "main": Object {
+                              "backgroundColor": "#f7f7f7",
+                            },
+                            "toggleElement": Object {
+                              "backgroundColor": "#425579",
+                              "borderColor": "#e2e2e2",
+                              "fontColor": "#ffffff",
+                              "secondaryBackgroundColor": "#ffffff",
+                              "secondaryFontColor": "#9d9d9d",
+                            },
+                          }
+                        }
+                        style={Object {}}
+                        value="20 Jun 2016 - 20 Jun 2016"
+                      >
+                        <input
+                          className="sc-bdnylx kBsmpR sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
+                          onFocus={[Function]}
+                          style={Object {}}
+                          value="20 Jun 2016 - 20 Jun 2016"
+                        />
+                      </StyledBox>
+                    </Component>
+                  </Box>
+                </StyledInputSolo>
+              </Component>
+            </Input>
+          </div>
+        </StyledBox>
+      </Component>
+    </Box>
+  </Component>
 </DateRange>
 `;

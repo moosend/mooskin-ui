@@ -13,7 +13,7 @@ import { DatePicker as DatePickerUI, KeyboardDatePicker, MuiPickersUtilsProvider
 import { Input } from '../Input/Input';
 
 const ComponentByType = {
-    'date': DatePickerUI,
+    date: DatePickerUI,
     'date-keyboard': KeyboardDatePicker
 };
 
@@ -43,5 +43,3 @@ DatePicker.defaultProps = {
 };
 
 DatePicker.displayName = 'DatePicker';
-
-export default DatePicker;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { IDescriptionComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 // "CSS" variables
 import variables from '../_utils/globals/variables';

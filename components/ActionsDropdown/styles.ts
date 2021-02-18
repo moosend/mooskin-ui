@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { IActionsDropdownArrowComponentProps, IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Components
-import Box from '../Box/Box';
+import { Box } from '../Box/Box';
 
 // "CSS" variables
 import variables from '../_utils/globals/variables';
@@ -28,6 +28,7 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
     line-height: 1.25;
     letter-spacing: normal;
     text-align: left;
+    white-space: nowrap;
     color: ${(props) => props.palette?.actionsDropdown.fontColor || variables.actionsDropdown.fontColor};
     cursor: pointer;
     &:not(:last-child) {
