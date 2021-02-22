@@ -1,5 +1,5 @@
+import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
-import { IInputCallbackData } from '../index';
 
 export interface IRadioComponentProps extends IBoxComponentProps {
     onClickRadio?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;

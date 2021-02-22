@@ -5,7 +5,7 @@ import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 import { ITextAreaComponentProps } from '../components/TextArea/model';
 import { TextArea } from '../components/TextArea/TextArea';
 
-import { IInputCallbackData } from '../components/index';
+import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({

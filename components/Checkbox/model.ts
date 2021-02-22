@@ -1,5 +1,5 @@
+import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
-import { IInputCallbackData } from '../index';
 
 export interface ICheckboxComponentProps extends IBoxComponentProps {
     /** onClick event handler when a checkbox is clicked */

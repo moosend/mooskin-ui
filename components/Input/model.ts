@@ -1,5 +1,5 @@
+import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
-import { IInputCallbackData } from '../index/index';
 
 export interface IInputContainerComponentProps extends IBoxComponentProps {
     /** provide to make the input field disabled */
