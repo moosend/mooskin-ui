@@ -5,7 +5,7 @@ import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 import { ActionsDropdown, ActionsDropdownArrow, ActionsDropdownItem } from '../components/ActionsDropdown/ActionsDropdown';
 import { IActionsDropdownComponentProps } from '../components/ActionsDropdown/model';
 
-import { IInputCallbackData } from '../components/index/index';
+import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 // import GlobalStyle from '../components/Styled/GlobalStyles';
 import '../components/Styled/StorybookStyles.css';
 

@@ -1,31 +1,23 @@
 {
-  "compilerOptions": {
-    "outDir": "lib",
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "module": "es6",
-    "target": "es6",
-    "jsx": "react",
-    "sourceMap": true,
-    "removeComments": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "noFallthroughCasesInSwitch": true,
-    "pretty": true,
-    "noUnusedLocals": true,
-    "allowSyntheticDefaultImports": true,
-    "lib":["dom", "es6", "es7" , "dom.iterable", "scripthost"]
-  },
-  "include": [
-    "components",
-    "stories"
-  ],
-  "exclude": [
-      "node_modules",
-      "lib",
-      "playground-dist",
-      "components/**/*.spec.ts",
-      "components/**/*.spec.tsx"
-  ]
+    "compilerOptions": {
+        "outDir": "lib",
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "module": "es6",
+        "target": "es6",
+        "jsx": "react",
+        "sourceMap": true,
+        "removeComments": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "noFallthroughCasesInSwitch": true,
+        "declaration": true,
+        "pretty": true,
+        "noUnusedLocals": true,
+        "allowSyntheticDefaultImports": true,
+        "lib": ["dom", "es6", "es7", "dom.iterable", "scripthost"]
+    },
+    "include": ["components", "stories"],
+    "exclude": ["node_modules", "lib", "playground-dist", "components/**/*.spec.ts", "components/**/*.spec.tsx"]
 }
