@@ -19,5 +19,5 @@
         "lib": ["dom", "es6", "es7", "dom.iterable", "scripthost"]
     },
     "include": ["components"],
-    "exclude": ["node_modules", "lib", "playground-dist", "components/**/*.spec.ts", "components/**/*.spec.tsx", "stories"]
+    "exclude": ["node_modules", "lib", "components/**/*.spec.ts", "components/**/*.spec.tsx", "stories"]
 }

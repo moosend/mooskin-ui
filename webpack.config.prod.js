@@ -2,7 +2,7 @@ var config = require('./webpack.config.common'),
     // glob = require('glob'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-var distFolder = 'build';
+var distFolder = 'lib';
 var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 'index/style.css', allChunks: true });
 
 // var entries = glob
@@ -27,7 +27,7 @@ var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 
 
 // var entries['index'] = './index/index.ts';
 
-config.entry = './index/index.ts';
+config.entry = './components/index/index.ts';
 
 config.output = {
     path: __dirname + '/' + distFolder,

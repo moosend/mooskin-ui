@@ -6,7 +6,6 @@ npm-debug.log
 yarn-error.log
 docs/
 lib/
-build/
 dist/
 playground-dist/
 .DS_Store
