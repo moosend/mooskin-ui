@@ -18,6 +18,6 @@
         "allowSyntheticDefaultImports": true,
         "lib": ["dom", "es6", "es7", "dom.iterable", "scripthost"]
     },
-    "include": ["components", "stories"],
-    "exclude": ["node_modules", "lib", "playground-dist", "components/**/*.spec.ts", "components/**/*.spec.tsx"]
+    "include": ["components"],
+    "exclude": ["node_modules", "lib", "playground-dist", "components/**/*.spec.ts", "components/**/*.spec.tsx", "stories"]
 }

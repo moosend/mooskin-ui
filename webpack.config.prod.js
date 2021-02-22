@@ -1,14 +1,37 @@
 var config = require('./webpack.config.common'),
+    // glob = require('glob'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-var distFolder = 'lib';
-var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: '[name]/style.css', allChunks: true });
+var distFolder = 'build';
+var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 'index/style.css', allChunks: true });
+
+// var entries = glob
+//     .sync('./components/*/index.ts', { ignore: ['./stories/*.tsx', './legacy/*.tsx', '**/*.spec.tsx', '**/*.spec.ts'] })
+//     .map(function (entry) {
+//         //gets the module paths in components containing index.ts and assigns them to an object
+//         var obj = {};
+//         var key = entry.split('/');
+//         key = key[key.length - 2];
+
+//         obj[key] = entry;
+
+//         return obj;
+//     })
+//     .reduce(function (acc, curr) {
+//         for (var i in curr) {
+//             acc[i] = curr[i];
+//         }
+
+//         return acc;
+//     }, {});
+
+// var entries['index'] = './index/index.ts';
 
 config.entry = './index/index.ts';
 
 config.output = {
     path: __dirname + '/' + distFolder,
-    filename: '[name]/index.js',
+    filename: 'index/index.js',
     library: 'mooskin',
     libraryTarget: 'umd',
     umdNamedDefine: true,

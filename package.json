@@ -1,9 +1,9 @@
 {
     "name": "@moosend/mooskin",
-    "version": "1.0.0-alpha.2",
+    "version": "1.0.0-alpha.3",
     "description": "A collection of React components for Moosend UI",
-    "main": "lib/index/index.js",
-    "types": "lib/index/index.d.ts",
+    "main": "build/index/index.js",
+    "types": "build/index/index.d.ts",
     "publishConfig": {
         "access": "public"
     },
