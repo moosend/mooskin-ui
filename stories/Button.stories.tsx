@@ -16,21 +16,16 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<IButtonComponentProps> = (args) => {
-    const [buttonPalette, setButtonPalette] = React.useState(variables.button);
+    const [backgroundPalette, setBackgroundPalette] = React.useState({ ...variables.backgroundColors });
     return (
         <>
             <GlobalStyle />
             <MooskinContextProvider
                 value={{
-                    palette: { ...variables, button: buttonPalette }
+                    palette: { ...variables, backgroundColors: backgroundPalette }
                 }}
             >
-                <Button
-                    {...args}
-                    onClick={() =>
-                        setButtonPalette({ backgroundColor: '#ffa700', disabledBackgroundColor: '#d84840', fontColor: '#37a037' })
-                    }
-                />
+                <Button {...args} onClick={() => setBackgroundPalette({ ...variables.backgroundColors, button: 'red' })} />
             </MooskinContextProvider>
         </>
     );
@@ -54,7 +49,8 @@ Icon.args = {
             <ButtonIcon>file_copy</ButtonIcon>
             VIEW CAMPAIGN
         </>
-    )
+    ),
+    color: ['fontColors', 'common'] as any
 } as IButtonComponentProps;
 
 export const Href = Template.bind({});

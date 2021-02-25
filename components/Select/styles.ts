@@ -11,7 +11,7 @@ import variables from '../_utils/globals/variables';
 
 export const StyledSelect = styled(Box)<ISelectComponentProps>`
     position: relative;
-    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
+    color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
     opacity: ${(props) => (props.disabled ? 0.5 : 1)};
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
@@ -37,8 +37,8 @@ StyledSelectFilter.displayName = 'StyledSelectFilter';
 export const StyledSelectContainer = styled(Box)<IBoxComponentProps>`
     display: flex;
     border-radius: 3px;
-    border: solid 1px ${(props) => props.palette?.commonElement.borderColor || variables.commonElement.borderColor};
-    background-color: ${(props) => props.palette?.commonElement.backgroundColor || variables.commonElement.backgroundColor};
+    border: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
+    background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
     color: inherit;
     align-items: center;
 `;
@@ -66,7 +66,7 @@ export const StyledSelectOptionList = styled(Box)<IBoxComponentProps>`
     left: 0;
     right: 0;
     color: inherit;
-    background-color: ${(props) => props.palette?.commonElement.backgroundColor || variables.commonElement.backgroundColor};
+    background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
     max-height: 160px;
     overflow-y: auto;
 
@@ -105,7 +105,7 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
     font-family: Hind;
     display: flex;
     justify-content: space-between;
-    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
+    color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
     :first-child {
         padding-top: 13px;
     }
@@ -144,7 +144,7 @@ export const StyledPaginationPage = styled(Box)<IBoxComponentProps>`
     font-size: 12px;
     font-family: Hind;
     align-items: center;
-    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
+    color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
 `;
 
 StyledPaginationPage.displayName = 'StyledPaginationPage';

@@ -11,7 +11,7 @@ import variables from '../_utils/globals/variables';
 export const StyledSelector = styled(Box)<ISelectorComponentProps>`
     padding: 6px;
     border-radius: 22px;
-    background-color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
+    background-color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
     display: flex;
 `;
 
@@ -26,12 +26,12 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
     border-radius: 22px;
     color: ${(props) =>
         props.active
-            ? `${props.palette?.layout.fontColor || variables.layout.fontColor}`
-            : `${props.palette?.layout.borderColor || variables.layout.borderColor}`};
+            ? `${props.palette?.fontColors.common || variables.fontColors.common}`
+            : `${props.palette?.borderColors.common || variables.borderColors.common}`};
     background-color: ${(props) =>
         props.active
-            ? `${props.palette?.layout.backgroundColor || variables.layout.backgroundColor}`
-            : `${props.palette?.layout.fontColor || variables.layout.fontColor}`};
+            ? `${props.palette?.backgroundColors.common || variables.backgroundColors.common}`
+            : `${props.palette?.fontColors.common || variables.fontColors.common}`};
     font-family: Hind;
     font-size: 12px;
     font-weight: 500;

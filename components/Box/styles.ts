@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 // Models
-import { BoxShadowIntensityType, IBoxComponentProps, IntensityType } from './model';
+import { IStyledTheme } from '../Styled/model';
+import { BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
 
 export const StyledBox = styled.div<IBoxComponentProps>`
     &&& {
@@ -17,7 +18,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
         padding-bottom: ${(props) => getNumberOrStringValue(props.pb || props.py)};
         padding-left: ${(props) => getNumberOrStringValue(props.pl || props.px)};
 
-        color: ${(props) => props.color};
+        color: ${(props) => getNestedValue(props.color, props.palette)};
         font-family: ${(props) => props.fontFamily};
         font-size: ${(props) => getNumberOrStringValue(props.fontSize)};
         font-weight: ${(props) => props.fontWeight};
@@ -56,7 +57,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
         background: ${(props) => props.bg};
         background-image: ${(props) => props.bgImage};
-        background-color: ${(props) => props.bgColor};
+        background-color: ${(props) => getNestedValue(props.bgColor, props.palette)};
         background-size: ${(props) => props.bgSize};
         background-position: ${(props) => props.bgPosition};
         background-repeat: ${(props) => props.bgRepeat};
@@ -117,6 +118,13 @@ export const getNumberOrStringValue = (value?: number | string) => {
     if (value) {
         return typeof value === 'number' ? `${value}px` : value;
     }
+};
+
+export const getNestedValue = (value?: number | string | NestedThemeType, pallete?: IStyledTheme) => {
+    if (Array.isArray(value) && pallete) {
+        return pallete[value[0]][value[1]];
+    }
+    return value;
 };
 
 export const getRoundness = (round?: IntensityType) => {

@@ -25,7 +25,7 @@ export const StyledSidemenuItem = styled(Box)<ISidemenuItemComponentProps>`
     line-height: 1.29;
     letter-spacing: normal;
     text-align: left;
-    color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
+    color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
     margin-left: ${(props) => (props.active ? '-2px' : '0')};
     padding-left: 9px;
     border-left: ${(props) => (props.active ? '3px solid #3fbaca' : '')};

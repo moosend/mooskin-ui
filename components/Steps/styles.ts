@@ -23,8 +23,8 @@ export const StyledStepHeader = styled(Box)<IStepHeaderComponentProps>`
     border-bottom: ${(props) => (props.active ? 'solid 2px #293346' : 'solid 2px #9d9d9d')};
     color: ${(props) =>
         props.active
-            ? `${props.palette?.toggleElement.backgroundColor || variables.toggleElement.secondaryBackgroundColor}`
-            : `${props.palette?.toggleElement.secondaryFontColor || variables.toggleElement.secondaryFontColor}`};
+            ? `${props.palette?.backgroundColors.toggle || variables.backgroundColors.secondaryToggle}`
+            : `${props.palette?.fontColors.secondaryToggle || variables.fontColors.secondaryToggle}`};
     width: 200px;
     height: 40px;
     font-family: Montserrat;

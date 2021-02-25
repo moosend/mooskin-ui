@@ -15,8 +15,8 @@ export const StyledFooter = styled(Box)<IBoxComponentProps>`
     right: 0px;
     padding: 15px 0;
     display: flex;
-    background-color: ${(props) => props.palette?.layout.backgroundColor || variables.layout.backgroundColor};
-    color: ${(props) => props.palette?.layout.fontColor || variables.layout.fontColor};
+    background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
+    color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
 `;
 
 StyledFooter.displayName = 'StyledFooter';
