@@ -46,9 +46,9 @@ ButtonDefault.displayName = 'ButtonDefault';
 export const StyledButtonNormal = styled(ButtonDefault)`
     background-color: ${(props) =>
         !props.disabled
-            ? props.palette?.button.backgroundColor || variables.button.backgroundColor
-            : props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
-    color: ${(props) => props.palette?.button.fontColor || variables.button.fontColor};
+            ? props.palette?.backgroundColors.button || variables.backgroundColors.button
+            : props.palette?.backgroundColors.disabledButton || variables.backgroundColors.disabledButton};
+    color: ${(props) => props.palette?.fontColors.button || variables.fontColors.button};
     padding: ${(props) => normalButtonSizes[props.buttonSize || 'md']};
     border: none;
     outline: 0;
@@ -59,15 +59,15 @@ StyledButtonNormal.displayName = 'StyledButtonNormal';
 export const StyledButtonInverse = styled(ButtonDefault)`
     color: ${(props) =>
         !props.disabled
-            ? props.palette?.button.backgroundColor || variables.button.backgroundColor
-            : props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
+            ? props.palette?.backgroundColors.button || variables.backgroundColors.button
+            : props.palette?.backgroundColors.disabledButton || variables.backgroundColors.disabledButton};
     padding: ${(props) => inverseButtonSizes[props.buttonSize || 'md']};
     background-color: transparent;
     border: 2px solid
         ${(props) =>
             !props.disabled
-                ? props.palette?.button.backgroundColor || variables.button.backgroundColor
-                : props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor};
+                ? props.palette?.backgroundColors.button || variables.backgroundColors.button
+                : props.palette?.backgroundColors.disabledButton || variables.backgroundColors.disabledButton};
 `;
 
 StyledButtonInverse.displayName = 'StyledButtonInverse';

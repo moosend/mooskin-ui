@@ -22,7 +22,7 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
     display: flex;
     padding: 0 10px;
     border-radius: 13px;
-    background-color: ${(props) => props.palette?.toggleElement.backgroundColor || variables.toggleElement.backgroundColor};
+    background-color: ${(props) => props.palette?.backgroundColors.toggle || variables.backgroundColors.toggle};
     font-family: Hind;
     font-size: 12px;
     font-weight: normal;
@@ -30,7 +30,7 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
     font-style: normal;
     line-height: 1.83;
     letter-spacing: normal;
-    color: ${(props) => props.palette?.toggleElement.fontColor || variables.toggleElement.fontColor};
+    color: ${(props) => props.palette?.fontColors.toggle || variables.fontColors.toggle};
     cursor: pointer;
     align-items: center;
     white-space: nowrap;
@@ -51,14 +51,14 @@ export const StyledTagClose = styled(Box)<IBoxComponentProps>`
     line-height: 1.2;
     letter-spacing: normal;
     text-align: left;
-    color: ${(props) => props.palette?.toggleElement.fontColor || variables.toggleElement.fontColor};
+    color: ${(props) => props.palette?.fontColors.toggle || variables.fontColors.toggle};
     padding-left: 10px;
 `;
 
 StyledTagClose.displayName = 'StyledTagClose';
 
 export const StyledTagInput = styled(Box)<ITagsInputComponentProps>`
-    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
+    color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
     background-color: transparent;
     font-family: Hind;
     font-size: 14px;

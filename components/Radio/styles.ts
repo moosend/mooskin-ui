@@ -32,7 +32,7 @@ export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
     padding-right: 10px;
     font-size: 23px;
     opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
+    color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
 `;
 
 StyledRadioIcon.displayName = 'StyledRadioIcon';
@@ -48,7 +48,7 @@ export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
     min-width: unset;
     cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
     opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-    color: ${(props) => props.palette?.commonElement.fontColor || variables.commonElement.fontColor};
+    color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
 `;
 
 StyledRadioLabel.displayName = 'StyledRadioLabel';

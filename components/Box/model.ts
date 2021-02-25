@@ -1,4 +1,4 @@
-import { IMooskinContext } from '../Styled/model';
+import { IBackgroundColors, IBorderColors, IFontColors, IMooskinContext, IStyledTheme } from '../Styled/model';
 
 export type DefaultOptionsType = 'inherit' | 'initial' | 'unset';
 export type BorderStyleType = 'none' | 'hidden' | 'dotted' | 'dashed' | 'solid' | 'double' | 'groove' | 'ridge' | 'inset' | 'outset';
@@ -15,6 +15,7 @@ export type FlexJustifyOptionsType =
     | 'space-evenly';
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 export type BoxShadowIntensityType = IntensityType | 'inner' | 'outline';
+export type NestedThemeType = [keyof IStyledTheme, keyof IFontColors & keyof IBorderColors & keyof IBackgroundColors];
 
 export const boxComponentProps = [
     'id',
@@ -168,7 +169,7 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
     py?: number | string;
 
     /** color */
-    color?: string;
+    color?: string | NestedThemeType;
 
     /** opacity */
     opacity?: number;
@@ -296,7 +297,7 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
     bgImage?: string;
 
     /** background color */
-    bgColor?: string;
+    bgColor?: string | NestedThemeType;
 
     /** background size */
     bgSize?: string;

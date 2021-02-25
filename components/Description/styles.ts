@@ -13,7 +13,7 @@ export const StyledDescription = styled(Box)<IDescriptionComponentProps>`
     margin-top: 10px;
     font-family: Hind;
     font-size: 12px;
-    color: ${(props) => props.palette?.description.fontColor || variables.description.fontColor};
+    color: ${(props) => props.palette?.fontColors.description || variables.fontColors.description};
     width: fit-content;
     line-height: 1;
 `;

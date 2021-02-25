@@ -30,14 +30,13 @@ export const StyledPaginationButton = styled(Box)<IPaginationButtonComponentProp
     padding: ${(props) => (props.active ? '9px 12px' : '8px 11px')};
     color: ${(props) =>
         props.active
-            ? `${props.palette?.toggleElement.fontColor || variables.toggleElement.fontColor}`
-            : `${props.palette?.toggleElement.secondaryFontColor || variables.toggleElement.secondaryFontColor}`};
+            ? `${props.palette?.fontColors.toggle || variables.fontColors.toggle}`
+            : `${props.palette?.fontColors.secondaryToggle || variables.fontColors.secondaryToggle}`};
     background-color: ${(props) =>
         props.active
-            ? `${props.palette?.toggleElement.backgroundColor || variables.toggleElement.backgroundColor}`
-            : `${props.palette?.toggleElement.secondaryBackgroundColor || variables.toggleElement.secondaryBackgroundColor}`};
-    border: ${(props) =>
-        props.active ? 'none' : `solid 1px ${props.palette?.toggleElement.borderColor || variables.toggleElement.borderColor}`};
+            ? `${props.palette?.backgroundColors.toggle || variables.backgroundColors.toggle}`
+            : `${props.palette?.backgroundColors.secondaryToggle || variables.backgroundColors.secondaryToggle}`};
+    border: ${(props) => (props.active ? 'none' : `solid 1px ${props.palette?.borderColors.common || variables.borderColors.common}`)};
     :not(:last-child) {
         margin-right: 10px;
     }

@@ -23,9 +23,9 @@ export const StyledSwitch = styled(Box)<ISwitchComponentProps>`
     background-color: ${(props) => {
         return !props.disabled
             ? props.active
-                ? props.palette?.button.backgroundColor || variables.button.backgroundColor
-                : props.palette?.toggleElement.borderColor || variables.toggleElement.borderColor
-            : props.palette?.button.disabledBackgroundColor || variables.button.disabledBackgroundColor;
+                ? props.palette?.backgroundColors.button || variables.backgroundColors.button
+                : props.palette?.borderColors.common || variables.borderColors.common
+            : props.palette?.backgroundColors.disabledButton || variables.backgroundColors.disabledButton;
     }};
 `;
 
@@ -70,7 +70,7 @@ export const StyledSwitchLabelNormal = styled(StyledSwitchLabel)`
 StyledSwitchLabelNormal.displayName = 'StyledSwitchLabelNormal';
 
 export const StyledSwitchLabelDisabled = styled(StyledSwitchLabel)`
-    color: ${(props) => props.palette?.button.fontColor || variables.button.fontColor};
+    color: ${(props) => props.palette?.fontColors.button || variables.fontColors.button};
     align-self: center;
 `;
 

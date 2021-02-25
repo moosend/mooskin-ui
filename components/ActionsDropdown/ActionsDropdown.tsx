@@ -43,9 +43,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
             if (React.isValidElement<IActionsDropdownArrowComponentProps>(child) && child.type === ActionsDropdownArrow) {
                 !hasArrow && setHasArrow(true);
                 return React.cloneElement(child, {
-                    arrowColor: child.props.arrowColor
-                        ? child.props.arrowColor
-                        : props.bgColor || props.palette?.actionsDropdown.backgroundColor,
+                    arrowColor: child.props.arrowColor ? child.props.arrowColor : props.bgColor || props.palette?.backgroundColors.button,
                     children: recurseChildren((child.props as any).children),
                     key: i
                 } as IActionsDropdownArrowComponentProps);

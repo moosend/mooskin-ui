@@ -29,7 +29,7 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
     letter-spacing: normal;
     text-align: left;
     white-space: nowrap;
-    color: ${(props) => props.palette?.actionsDropdown.fontColor || variables.actionsDropdown.fontColor};
+    color: ${(props) => props.palette?.fontColors.button || variables.fontColors.button};
     cursor: pointer;
     &:not(:last-child) {
         padding: 10px 10px 0;
@@ -49,9 +49,8 @@ export const StyledActionsDropdownArrow = styled(Box)<IActionsDropdownArrowCompo
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-bottom: ${(props) =>
-        props.arrowDirection === 'up' ? `7px solid ${props.arrowColor || variables.actionsDropdown.backgroundColor}` : ''};
-    border-top: ${(props) =>
-        props.arrowDirection === 'down' ? `7px solid ${props.arrowColor || variables.actionsDropdown.backgroundColor}` : ''};
+        props.arrowDirection === 'up' ? `7px solid ${props.arrowColor || variables.backgroundColors.button}` : ''};
+    border-top: ${(props) => (props.arrowDirection === 'down' ? `7px solid ${props.arrowColor || variables.backgroundColors.button}` : '')};
 `;
 
 StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';
