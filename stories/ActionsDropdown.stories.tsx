@@ -10,51 +10,51 @@ import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 import '../components/Styled/StorybookStyles.css';
 
 export default ({
-    component: ActionsDropdown,
-    title: 'Example/ActionsDropdown'
+	component: ActionsDropdown,
+	title: 'Example/ActionsDropdown',
 } as any) as Meta;
 
 const Template: Story<IActionsDropdownComponentProps> = (args) => {
-    return (
-        <>
-            <ActionsDropdown {...args} onClickItem={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)} />
-            {/* <GlobalStyle /> */}
-        </>
-    );
+	return (
+		<>
+			<ActionsDropdown {...args} onClickItem={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)} />
+			{/* <GlobalStyle /> */}
+		</>
+	);
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    children: (
-        <>
-            <ActionsDropdownItem dataLabel="settings" value="settings" onClick={() => alert('Random on Click!')}>
-                Settings
-            </ActionsDropdownItem>
-            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e) => console.log('Duplicate Clicked')}>
-                Duplicate
-            </ActionsDropdownItem>
-            <ActionsDropdownItem dataLabel="preview" value="preview">
-                Preview
-            </ActionsDropdownItem>
-        </>
-    )
+	children: (
+		<>
+			<ActionsDropdownItem dataLabel="settings" value="settings" onClick={() => alert('Random on Click!')}>
+				Settings
+			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e) => console.log('Duplicate Clicked')}>
+				Duplicate
+			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="preview" value="preview">
+				Preview
+			</ActionsDropdownItem>
+		</>
+	),
 } as IActionsDropdownComponentProps;
 
 export const BottomArrow = Template.bind({});
 BottomArrow.args = {
-    bgColor: '#232c3d',
-    children: (
-        <>
-            <ActionsDropdownArrow arrowDirection="down" right={'unset !important'} left={22} />
-            <ActionsDropdownItem dataLabel="settings" value="settings">
-                Settings
-            </ActionsDropdownItem>
-            <ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e) => console.log('Duplicate Clicked')}>
-                Duplicate
-            </ActionsDropdownItem>
-            <ActionsDropdownItem dataLabel="preview" value="preview">
-                Preview
-            </ActionsDropdownItem>
-        </>
-    )
+	bgColor: '#232c3d',
+	children: (
+		<>
+			<ActionsDropdownArrow arrowDirection="down" right={'unset !important'} left={22} />
+			<ActionsDropdownItem dataLabel="settings" value="settings">
+				Settings
+			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e) => console.log('Duplicate Clicked')}>
+				Duplicate
+			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="preview" value="preview">
+				Preview
+			</ActionsDropdownItem>
+		</>
+	),
 } as IActionsDropdownComponentProps;

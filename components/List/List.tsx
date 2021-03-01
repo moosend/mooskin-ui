@@ -17,13 +17,13 @@ import { StyledListItem, StyledListItemBody, StyledListItemEnd, StyledListItemHe
  * List
  */
 export const List: React.FC<ILayoutComponentProps> = withMooskinContext((props) => {
-    return <Layout {...props} />;
+	return <Layout {...props} />;
 });
 
 List.defaultProps = {
-    className: '',
-    spacing: 15,
-    style: {}
+	className: '',
+	spacing: 15,
+	style: {},
 };
 
 List.displayName = 'List';
@@ -32,12 +32,12 @@ List.displayName = 'List';
  * ListItem
  */
 export const ListItem: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledListItem boxShadow="xs" round="xs" {...props} />;
+	return <StyledListItem boxShadow="xs" round="xs" {...props} />;
 });
 
 ListItem.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 ListItem.displayName = 'ListItem';
@@ -46,12 +46,12 @@ ListItem.displayName = 'ListItem';
  * ListItemHead
  */
 export const ListItemHead: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledListItemHead {...props} />;
+	return <StyledListItemHead {...props} />;
 });
 
 ListItemHead.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 ListItemHead.displayName = 'ListItemHead';
@@ -60,12 +60,12 @@ ListItemHead.displayName = 'ListItemHead';
  * ListItemBody
  */
 export const ListItemBody: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledListItemBody {...props} />;
+	return <StyledListItemBody {...props} />;
 });
 
 ListItemBody.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 ListItemBody.displayName = 'ListItemBody';
@@ -74,12 +74,12 @@ ListItemBody.displayName = 'ListItemBody';
  * ListItemEnd
  */
 export const ListItemEnd: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledListItemEnd {...props} />;
+	return <StyledListItemEnd {...props} />;
 });
 
 ListItemEnd.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 ListItemEnd.displayName = 'ListItemEnd';

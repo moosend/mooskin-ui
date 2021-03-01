@@ -4,8 +4,8 @@ import { IInputComponentProps } from '../Input/model';
 export type PickerType = 'date-time' | 'date-time-keyboard';
 
 export interface IDateTimePickerCommonProps {
-    inputComponentProps?: IInputComponentProps;
-    pickerType?: PickerType;
+	inputComponentProps?: IInputComponentProps;
+	pickerType?: PickerType;
 }
 
 export interface IDateTimePickerComponentProps extends IDateTimePickerCommonProps, DateTimePickerProps {}

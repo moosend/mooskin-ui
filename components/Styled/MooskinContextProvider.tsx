@@ -11,8 +11,8 @@ export const MooskinContext = React.createContext<IMooskinContext>({ palette: va
 export const MooskinContextProvider = MooskinContext.Provider;
 
 export const withMooskinContext = <P extends object>(Component: React.FC<P>) => {
-    return function WithMooskinContext(props: P) {
-        const context = useMooskinContext();
-        return <Component {...props} palette={context.palette} />;
-    };
+	return function WithMooskinContext(props: P) {
+		const context = useMooskinContext();
+		return <Component {...props} palette={context.palette} />;
+	};
 };

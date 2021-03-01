@@ -13,8 +13,8 @@ import { StyledIconButton } from './styles';
  * IconButton
  */
 export const IconButton: React.FC<IIconButtonComponentProps> = withMooskinContext((props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        !props.disabled && props.onClick && props.onClick(e);
-    };
-    return <StyledIconButton {...props} onClick={onClick} />;
+	const onClick = (e: React.MouseEvent<HTMLElement>) => {
+		!props.disabled && props.onClick && props.onClick(e);
+	};
+	return <StyledIconButton {...props} onClick={onClick} />;
 });

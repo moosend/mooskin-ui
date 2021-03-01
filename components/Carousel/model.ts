@@ -1,85 +1,85 @@
 export interface ICarouselComponentProps {
-    /** Enable tabbing and arrow key navigation */
-    accessibility?: boolean;
+	/** Enable tabbing and arrow key navigation */
+	accessibility?: boolean;
 
-    /** Adjust the slide's height automatically */
-    adaptiveHeight?: boolean;
+	/** Adjust the slide's height automatically */
+	adaptiveHeight?: boolean;
 
-    /** Index change callback. `index => ...` */
-    afterChange?: (index: number) => void;
+	/** Index change callback. `index => ...` */
+	afterChange?: (index: number) => void;
 
-    /** Custom dots templates. Works same as customPaging */
-    appendDots?: (dots: any) => any;
+	/** Custom dots templates. Works same as customPaging */
+	appendDots?: (dots: any) => any;
 
-    /** display arrows */
-    arrows?: boolean;
+	/** display arrows */
+	arrows?: boolean;
 
-    /** Delay between each auto scroll (in milliseconds) */
-    autoplaySpeed?: number;
+	/** Delay between each auto scroll (in milliseconds) */
+	autoplaySpeed?: number;
 
-    /** autoplays slides */
-    autoplay?: boolean;
+	/** autoplays slides */
+	autoplay?: boolean;
 
-    /** Index change callback. `(oldIndex, newIndex) => ...` */
-    beforeChange?: (oldIndex: number, newIndex: number) => void;
+	/** Index change callback. `(oldIndex, newIndex) => ...` */
+	beforeChange?: (oldIndex: number, newIndex: number) => void;
 
-    /** Center current slide */
-    centerMode?: boolean;
+	/** Center current slide */
+	centerMode?: boolean;
 
-    centerPadding?: string;
+	centerPadding?: string;
 
-    /** CSS class for inner slider div */
-    className?: string;
+	/** CSS class for inner slider div */
+	className?: string;
 
-    /** CSS class for dots */
-    dotsClass?: string;
+	/** CSS class for dots */
+	dotsClass?: string;
 
-    /** display dots */
-    dots?: boolean;
+	/** display dots */
+	dots?: boolean;
 
-    /** Enable scrollable via dragging on desktop */
-    draggable?: boolean;
+	/** Enable scrollable via dragging on desktop */
+	draggable?: boolean;
 
-    easing?: string;
+	easing?: string;
 
-    fade?: boolean;
+	fade?: boolean;
 
-    /** Go to slide on click */
-    focusOnSelect?: boolean;
+	/** Go to slide on click */
+	focusOnSelect?: boolean;
 
-    /** Infinitely wrap around contents */
-    infinite?: boolean;
+	/** Infinitely wrap around contents */
+	infinite?: boolean;
 
-    /** Index of first slide */
-    initialSlide?: number;
+	/** Index of first slide */
+	initialSlide?: number;
 
-    /** componentWillMount callback. */
-    onInit?: () => void;
+	/** componentWillMount callback. */
+	onInit?: () => void;
 
-    /** componentDidUpdate callback. */
-    onReInit?: () => void;
+	/** componentDidUpdate callback. */
+	onReInit?: () => void;
 
-    /** Prevents autoplay while hovering on dots */
-    pauseOnDotsHover?: boolean;
+	/** Prevents autoplay while hovering on dots */
+	pauseOnDotsHover?: boolean;
 
-    /** Prevents autoplay while focused on slides */
-    pauseOnFocus?: boolean;
+	/** Prevents autoplay while focused on slides */
+	pauseOnFocus?: boolean;
 
-    /** Prevents autoplay while hovering on track */
-    pauseOnHover?: boolean;
+	/** Prevents autoplay while hovering on track */
+	pauseOnHover?: boolean;
 
-    /** Slide container type */
-    slide?: string;
+	/** Slide container type */
+	slide?: string;
 
-    /** How many slides to scroll at once */
-    slidesToScroll?: number;
+	/** How many slides to scroll at once */
+	slidesToScroll?: number;
 
-    /** How many slides to show in one frame */
-    slidesToShow?: number;
+	/** How many slides to show in one frame */
+	slidesToShow?: number;
 
-    /** Animation speed in milliseconds */
-    speed?: number;
+	/** Animation speed in milliseconds */
+	speed?: number;
 
-    /** Enable/disable swiping to change slides */
-    swipe?: boolean;
+	/** Enable/disable swiping to change slides */
+	swipe?: boolean;
 }

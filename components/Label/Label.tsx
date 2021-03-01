@@ -13,17 +13,17 @@ import { StyledLabel } from './styles';
  * Label
  */
 export const Label: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        !props.disabled && props.onClick && props.onClick(e);
-    };
+	const onClick = (e: React.MouseEvent<HTMLElement>) => {
+		!props.disabled && props.onClick && props.onClick(e);
+	};
 
-    return <StyledLabel {...props} onClick={onClick} boxAs="label" />;
+	return <StyledLabel {...props} onClick={onClick} boxAs="label" />;
 });
 
 Label.defaultProps = {
-    className: '',
-    minW: 150,
-    style: {}
+	className: '',
+	minW: 150,
+	style: {},
 };
 
 Label.displayName = 'Label';

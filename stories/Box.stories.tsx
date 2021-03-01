@@ -8,24 +8,24 @@ import { IBoxComponentProps } from '../components/Box/model';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
-    component: Box,
-    title: 'Example/Box'
+	component: Box,
+	title: 'Example/Box',
 } as any) as Meta;
 
 const Template: Story<IBoxComponentProps> = (args) => {
-    return (
-        <>
-            <GlobalStyle />
-            <Box {...args} />
-        </>
-    );
+	return (
+		<>
+			<GlobalStyle />
+			<Box {...args} />
+		</>
+	);
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    boxShadow: 'md',
-    children: 'Box',
-    color: 'blue',
-    p: 30,
-    round: 'md'
+	boxShadow: 'md',
+	children: 'Box',
+	color: 'blue',
+	p: 30,
+	round: 'md',
 };

@@ -13,12 +13,12 @@ import { StyledTable, StyledTableHeader, StyledTableHeaderItem, StyledTableRow, 
  * Table
  */
 export const Table: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledTable {...props} />;
+	return <StyledTable {...props} />;
 });
 
 Table.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 Table.displayName = 'Table';
@@ -27,12 +27,12 @@ Table.displayName = 'Table';
  * TableHeader
  */
 export const TableHeader: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledTableHeader {...props} />;
+	return <StyledTableHeader {...props} />;
 });
 
 TableHeader.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 TableHeader.displayName = 'TableHeader';
@@ -41,12 +41,12 @@ TableHeader.displayName = 'TableHeader';
  * TableHeaderItem
  */
 export const TableHeaderItem: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledTableHeaderItem {...props} />;
+	return <StyledTableHeaderItem {...props} />;
 });
 
 TableHeaderItem.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 TableHeaderItem.displayName = 'TableHeaderItem';
@@ -55,12 +55,12 @@ TableHeaderItem.displayName = 'TableHeaderItem';
  * TableRow
  */
 export const TableRow: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledTableRow {...props} />;
+	return <StyledTableRow {...props} />;
 });
 
 TableRow.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 TableRow.displayName = 'TableRow';
@@ -69,12 +69,12 @@ TableRow.displayName = 'TableRow';
  * TableRowItem
  */
 export const TableRowItem: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledTableRowItem {...props} />;
+	return <StyledTableRowItem {...props} />;
 });
 
 TableRowItem.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 TableRowItem.displayName = 'TableRowItem';

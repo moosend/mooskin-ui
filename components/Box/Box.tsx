@@ -13,12 +13,12 @@ import { StyledBox } from './styles';
  * Box
  */
 export const Box: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledBox {...props} as={props.boxAs} />;
+	return <StyledBox {...props} as={props.boxAs} />;
 });
 
 Box.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 Box.displayName = 'Box';

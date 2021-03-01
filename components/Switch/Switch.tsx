@@ -13,67 +13,67 @@ import { StyledSwitch, StyledSwitchHandle, StyledSwitchLabelDisabled, StyledSwit
  * Switch
  */
 export const Switch: React.FC<ISwitchComponentProps> = withMooskinContext((props) => {
-    const [hasHandle, setHasHandle] = React.useState(false);
+	const [hasHandle, setHasHandle] = React.useState(false);
 
-    const renderDisabledContent = () => {
-        return <StyledSwitchLabelDisabled active={props.active}>{props.text}</StyledSwitchLabelDisabled>;
-    };
+	const renderDisabledContent = () => {
+		return <StyledSwitchLabelDisabled active={props.active}>{props.text}</StyledSwitchLabelDisabled>;
+	};
 
-    const renderSwitchContent = () => {
-        return <StyledSwitchLabelNormal active={props.active}>{props.text}</StyledSwitchLabelNormal>;
-    };
+	const renderSwitchContent = () => {
+		return <StyledSwitchLabelNormal active={props.active}>{props.text}</StyledSwitchLabelNormal>;
+	};
 
-    const onClick = (e: React.MouseEvent<HTMLElement>) => {
-        !props.disabled && props.onClickSwitch && props.onClickSwitch(e, { value: !props.active, dataLabel: props.dataLabel });
-    };
+	const onClick = (e: React.MouseEvent<HTMLElement>) => {
+		!props.disabled && props.onClickSwitch && props.onClickSwitch(e, { value: !props.active, dataLabel: props.dataLabel });
+	};
 
-    const recurseChildren = (children: any): any => {
-        return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<ISwitchHandleComponentProps>(child) && child.type === SwitchHandle) {
-                !hasHandle && setHasHandle(true);
-                if (!props.disabled) {
-                    return React.cloneElement(child, {
-                        active: props.active,
-                        children: recurseChildren((child.props as any).children),
-                        key: i,
-                        switchWidth: props.w
-                    } as ISwitchHandleComponentProps);
-                }
-                return null;
-            }
+	const recurseChildren = (children: any): any => {
+		return React.Children.map(children, (child, i) => {
+			if (React.isValidElement<ISwitchHandleComponentProps>(child) && child.type === SwitchHandle) {
+				!hasHandle && setHasHandle(true);
+				if (!props.disabled) {
+					return React.cloneElement(child, {
+						active: props.active,
+						children: recurseChildren((child.props as any).children),
+						key: i,
+						switchWidth: props.w,
+					} as ISwitchHandleComponentProps);
+				}
+				return null;
+			}
 
-            if (React.isValidElement(child) && (child.props as any).children) {
-                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
-            }
+			if (React.isValidElement(child) && (child.props as any).children) {
+				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
+			}
 
-            return child;
-        });
-    };
+			return child;
+		});
+	};
 
-    return (
-        <StyledSwitch {...props} onClick={onClick}>
-            {!hasHandle && !props.disabled && <SwitchHandle active={props.active} switchWidth={props.w} />}
-            {props.disabled ? renderDisabledContent() : renderSwitchContent()}
-            {recurseChildren(props.children)}
-        </StyledSwitch>
-    );
+	return (
+		<StyledSwitch {...props} onClick={onClick}>
+			{!hasHandle && !props.disabled && <SwitchHandle active={props.active} switchWidth={props.w} />}
+			{props.disabled ? renderDisabledContent() : renderSwitchContent()}
+			{recurseChildren(props.children)}
+		</StyledSwitch>
+	);
 });
 
 Switch.defaultProps = {
-    className: '',
-    style: {},
-    w: 90
+	className: '',
+	style: {},
+	w: 90,
 };
 
 Switch.displayName = 'Switch';
 
 export const SwitchHandle: React.FC<ISwitchHandleComponentProps> = withMooskinContext((props) => {
-    return <StyledSwitchHandle {...props} />;
+	return <StyledSwitchHandle {...props} />;
 });
 
 SwitchHandle.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 SwitchHandle.displayName = 'SwitchHandle';

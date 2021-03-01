@@ -15,67 +15,65 @@ import { StyledTag, StyledTagClose, StyledTagInput, StyledTags } from './styles'
  * Tags
  */
 export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) => {
-    const batchClickHandler = (
-        e: React.MouseEvent<HTMLElement>,
-        data: IInputCallbackData,
-        callback?: (e: React.MouseEvent<HTMLElement>) => void
-    ) => {
-        props.onClickTag && props.onClickTag(e, data);
-        callback && callback(e);
-    };
+	const batchClickHandler = (
+		e: React.MouseEvent<HTMLElement>,
+		data: IInputCallbackData,
+		callback?: (e: React.MouseEvent<HTMLElement>) => void
+	) => {
+		props.onClickTag && props.onClickTag(e, data);
+		callback && callback(e);
+	};
 
-    const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
-        e.stopPropagation();
-        props.onRemoveTag && props.onRemoveTag(e, { dataLabel: props.dataLabel, value: i });
-    };
+	const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
+		e.stopPropagation();
+		props.onRemoveTag && props.onRemoveTag(e, { dataLabel: props.dataLabel, value: i });
+	};
 
-    const onAddTag = (value: string) => {
-        props.onAddTag && props.onAddTag({ dataLabel: props.dataLabel, value });
-    };
+	const onAddTag = (value: string) => {
+		props.onAddTag && props.onAddTag({ dataLabel: props.dataLabel, value });
+	};
 
-    const recurseChildren = (children: any): any => {
-        if (!children) {
-            return null;
-        }
+	const recurseChildren = (children: any): any => {
+		if (!children) {
+			return null;
+		}
 
-        return React.Children.map(children, (child, i) => {
-            if (React.isValidElement<ITagComponentProps>(child) && child.type === Tag) {
-                return React.cloneElement(child, {
-                    children: (
-                        <>
-                            {recurseChildren((child.props as any).children)}
-                            {child.props.removeIcon && props.onRemoveTag && (
-                                <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>
-                            )}
-                        </>
-                    ),
-                    key: i,
-                    onClick: (e: React.MouseEvent<HTMLElement>) =>
-                        batchClickHandler(e, { dataLabel: props.dataLabel, value: i }, child.props.onClick)
-                } as ITagComponentProps);
-            }
+		return React.Children.map(children, (child, i) => {
+			if (React.isValidElement<ITagComponentProps>(child) && child.type === Tag) {
+				return React.cloneElement(child, {
+					children: (
+						<>
+							{recurseChildren((child.props as any).children)}
+							{child.props.removeIcon && props.onRemoveTag && <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>}
+						</>
+					),
+					key: i,
+					onClick: (e: React.MouseEvent<HTMLElement>) =>
+						batchClickHandler(e, { dataLabel: props.dataLabel, value: i }, child.props.onClick),
+				} as ITagComponentProps);
+			}
 
-            if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput) {
-                return React.cloneElement(child, {
-                    key: i,
-                    onAddTag
-                } as ITagsInputComponentProps);
-            }
+			if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput) {
+				return React.cloneElement(child, {
+					key: i,
+					onAddTag,
+				} as ITagsInputComponentProps);
+			}
 
-            if (React.isValidElement(child) && (child.props as any).children) {
-                return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
-            }
+			if (React.isValidElement(child) && (child.props as any).children) {
+				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
+			}
 
-            return child;
-        });
-    };
+			return child;
+		});
+	};
 
-    return <StyledTags {...props} children={recurseChildren(props.children)} />;
+	return <StyledTags {...props} children={recurseChildren(props.children)} />;
 });
 
 Tags.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 Tags.displayName = 'Tags';
@@ -84,13 +82,13 @@ Tags.displayName = 'Tags';
  * Tag
  */
 export const Tag: React.FC<ITagComponentProps> = withMooskinContext((props) => {
-    return <StyledTag {...props} />;
+	return <StyledTag {...props} />;
 });
 
 Tag.defaultProps = {
-    className: '',
-    removeIcon: true,
-    style: {}
+	className: '',
+	removeIcon: true,
+	style: {},
 };
 
 Tag.displayName = 'Tag';
@@ -99,76 +97,76 @@ Tag.displayName = 'Tag';
  * TagInput
  */
 export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext((props) => {
-    const [value, setValue] = React.useState(props.value || '');
+	const [value, setValue] = React.useState(props.value || '');
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const text = e.target.value;
+	const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const text = e.target.value;
 
-        const delimiters = props.delimiters;
+		const delimiters = props.delimiters;
 
-        if (delimiters && shouldSubmitPaste(text, props.delimiters)) {
-            let newTag: string[] = [];
-            const tags: string[] = [];
+		if (delimiters && shouldSubmitPaste(text, props.delimiters)) {
+			let newTag: string[] = [];
+			const tags: string[] = [];
 
-            const charArray = text.split('');
+			const charArray = text.split('');
 
-            for (let i = 0; i < charArray.length; i++) {
-                delimiters &&
-                    delimiters.map((delimiter) => {
-                        if (charArray[i] === delimiter && newTag.join('') !== '') {
-                            tags.push(newTag.join('').trim());
-                            newTag = [];
-                        }
-                    });
-                if (!delimiters.includes(charArray[i]) && !delimiters.includes(charArray[i].charCodeAt(0))) {
-                    newTag.push(charArray[i]);
-                }
-                if (i === charArray.length - 1 && newTag.join('') !== '' && !delimiters.includes(charArray[i])) {
-                    tags.push(newTag.join('').trim());
-                }
-            }
+			for (let i = 0; i < charArray.length; i++) {
+				delimiters &&
+					delimiters.map((delimiter) => {
+						if (charArray[i] === delimiter && newTag.join('') !== '') {
+							tags.push(newTag.join('').trim());
+							newTag = [];
+						}
+					});
+				if (!delimiters.includes(charArray[i]) && !delimiters.includes(charArray[i].charCodeAt(0))) {
+					newTag.push(charArray[i]);
+				}
+				if (i === charArray.length - 1 && newTag.join('') !== '' && !delimiters.includes(charArray[i])) {
+					tags.push(newTag.join('').trim());
+				}
+			}
 
-            props.onAddTag && props.onAddTag(tags);
-            setValue('');
-        } else {
-            setValue(e.target.value);
-        }
+			props.onAddTag && props.onAddTag(tags);
+			setValue('');
+		} else {
+			setValue(e.target.value);
+		}
 
-        props.onChange && props.onChange(e);
-    };
+		props.onChange && props.onChange(e);
+	};
 
-    const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        const delimiters = props.delimiters && getConvertedDelimiters(props.delimiters);
+	const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+		const delimiters = props.delimiters && getConvertedDelimiters(props.delimiters);
 
-        const key = e.key;
-        const keyCode = e.keyCode;
+		const key = e.key;
+		const keyCode = e.keyCode;
 
-        if (delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))) {
-            e.preventDefault();
-            props.onAddTag && props.onAddTag(value.toString());
-            setValue('');
-        }
+		if (delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))) {
+			e.preventDefault();
+			props.onAddTag && props.onAddTag(value.toString());
+			setValue('');
+		}
 
-        props.onKeyDown && props.onKeyDown(e);
-    };
+		props.onKeyDown && props.onKeyDown(e);
+	};
 
-    return (
-        <StyledTagInput
-            boxAs="input"
-            value={value}
-            onChange={onChange}
-            // onPaste={onPaste}
-            onKeyDown={onKeyDown}
-            autoFocus
-            {...props}
-        />
-    );
+	return (
+		<StyledTagInput
+			boxAs="input"
+			value={value}
+			onChange={onChange}
+			// onPaste={onPaste}
+			onKeyDown={onKeyDown}
+			autoFocus
+			{...props}
+		/>
+	);
 });
 
 TagInput.defaultProps = {
-    className: '',
-    delimiters: ['Enter', 13],
-    style: {}
+	className: '',
+	delimiters: ['Enter', 13],
+	style: {},
 };
 
 TagInput.displayName = 'TagInput';
@@ -177,12 +175,12 @@ TagInput.displayName = 'TagInput';
  * TagClose
  */
 export const TagClose: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledTagClose {...props} />;
+	return <StyledTagClose {...props} />;
 });
 
 TagClose.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 TagClose.displayName = 'TagClose';
@@ -191,50 +189,50 @@ TagClose.displayName = 'TagClose';
  * Helpers
  */
 const shouldSubmitPaste = (value: string, delimiters?: Array<string | number>) => {
-    if (delimiters) {
-        const text = value.split('');
+	if (delimiters) {
+		const text = value.split('');
 
-        for (const char of text) {
-            for (const delimiter of delimiters) {
-                if (typeof delimiter === 'string' && char === delimiter) {
-                    return true;
-                } else if (typeof delimiter === 'number' && char.charCodeAt(0) === delimiter) {
-                    return true;
-                }
-            }
-        }
-    }
+		for (const char of text) {
+			for (const delimiter of delimiters) {
+				if (typeof delimiter === 'string' && char === delimiter) {
+					return true;
+				} else if (typeof delimiter === 'number' && char.charCodeAt(0) === delimiter) {
+					return true;
+				}
+			}
+		}
+	}
 
-    return false;
+	return false;
 };
 
 const getConvertedDelimiters = (delimiters: any) => {
-    const newDelimiters: Array<string | number> = delimiters.map((delimiter: any) => {
-        if (delimiter === ' ') {
-            return delimiter;
-        } else if (!isNaN(delimiter)) {
-            return parseInt(delimiter, 10);
-        } else if (typeof delimiter === 'string') {
-            return delimiter.toLocaleLowerCase();
-        } else {
-            return delimiter;
-        }
-    });
+	const newDelimiters: Array<string | number> = delimiters.map((delimiter: any) => {
+		if (delimiter === ' ') {
+			return delimiter;
+		} else if (!isNaN(delimiter)) {
+			return parseInt(delimiter, 10);
+		} else if (typeof delimiter === 'string') {
+			return delimiter.toLocaleLowerCase();
+		} else {
+			return delimiter;
+		}
+	});
 
-    if (newDelimiters.includes('space') || newDelimiters.includes('spacebar') || newDelimiters.includes(' ')) {
-        !newDelimiters.includes(32) && newDelimiters.push(32);
-    }
-    if (newDelimiters.includes('enter')) {
-        !newDelimiters.includes(13) && newDelimiters.push(13);
-    }
-    if (newDelimiters.includes(',')) {
-        !newDelimiters.includes(188) && newDelimiters.push(188);
-    }
-    if (newDelimiters.includes('.')) {
-        !newDelimiters.includes(190) && newDelimiters.push(190);
-    }
+	if (newDelimiters.includes('space') || newDelimiters.includes('spacebar') || newDelimiters.includes(' ')) {
+		!newDelimiters.includes(32) && newDelimiters.push(32);
+	}
+	if (newDelimiters.includes('enter')) {
+		!newDelimiters.includes(13) && newDelimiters.push(13);
+	}
+	if (newDelimiters.includes(',')) {
+		!newDelimiters.includes(188) && newDelimiters.push(188);
+	}
+	if (newDelimiters.includes('.')) {
+		!newDelimiters.includes(190) && newDelimiters.push(190);
+	}
 
-    return newDelimiters;
+	return newDelimiters;
 };
 
 // const checkValidity = (tag: string, validateTag?: 'email' | ((tag: string) => boolean)) => {

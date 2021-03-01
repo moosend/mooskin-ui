@@ -8,17 +8,17 @@ import { ILoaderComponentProps } from '../components/Loader/model';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
-    component: Loader,
-    title: 'Example/Loader'
+	component: Loader,
+	title: 'Example/Loader',
 } as any) as Meta;
 
 const Template: Story<ILoaderComponentProps> = (args) => {
-    return (
-        <>
-            <GlobalStyle />
-            <Loader {...args} />
-        </>
-    );
+	return (
+		<>
+			<GlobalStyle />
+			<Loader {...args} />
+		</>
+	);
 };
 
 export const Normal = Template.bind({});

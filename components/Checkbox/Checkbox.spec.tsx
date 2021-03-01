@@ -4,46 +4,46 @@ import { Checkbox, CheckboxIcon, CheckboxLabel } from './Checkbox';
 import { mount } from 'enzyme';
 
 describe('CheckBox', () => {
-    test('renders CheckBox correctly', () => {
-        const func = jest.fn();
+	test('renders CheckBox correctly', () => {
+		const func = jest.fn();
 
-        const tree = mount(
-            <Checkbox checked onClickCheckbox={func}>
-                <CheckboxIcon color="red" />
-                <CheckboxLabel>Normal Checkbox</CheckboxLabel>
-            </Checkbox>
-        );
+		const tree = mount(
+			<Checkbox checked onClickCheckbox={func}>
+				<CheckboxIcon color="red" />
+				<CheckboxLabel>Normal Checkbox</CheckboxLabel>
+			</Checkbox>
+		);
 
-        expect(tree).toMatchSnapshot();
-    });
+		expect(tree).toMatchSnapshot();
+	});
 
-    test('callback func is called when checkbox is clicked', () => {
-        const func = jest.fn();
+	test('callback func is called when checkbox is clicked', () => {
+		const func = jest.fn();
 
-        const tree = mount(
-            <Checkbox checked onClickCheckbox={func}>
-                <CheckboxIcon color="red" />
-                <CheckboxLabel>Normal Checkbox</CheckboxLabel>
-            </Checkbox>
-        );
+		const tree = mount(
+			<Checkbox checked onClickCheckbox={func}>
+				<CheckboxIcon color="red" />
+				<CheckboxLabel>Normal Checkbox</CheckboxLabel>
+			</Checkbox>
+		);
 
-        expect(tree.find(CheckboxIcon).first().simulate('click'));
+		expect(tree.find(CheckboxIcon).first().simulate('click'));
 
-        expect(func).toHaveBeenCalled();
-    });
+		expect(func).toHaveBeenCalled();
+	});
 
-    test('callback func is not called when a disabled checkbox is clicked', () => {
-        const func = jest.fn();
+	test('callback func is not called when a disabled checkbox is clicked', () => {
+		const func = jest.fn();
 
-        const tree = mount(
-            <Checkbox checked onClickCheckbox={func} disabled>
-                <CheckboxIcon color="red" />
-                <CheckboxLabel>Normal Checkbox</CheckboxLabel>
-            </Checkbox>
-        );
+		const tree = mount(
+			<Checkbox checked onClickCheckbox={func} disabled>
+				<CheckboxIcon color="red" />
+				<CheckboxLabel>Normal Checkbox</CheckboxLabel>
+			</Checkbox>
+		);
 
-        tree.find(CheckboxIcon).first().simulate('click');
+		tree.find(CheckboxIcon).first().simulate('click');
 
-        expect(func).not.toHaveBeenCalled();
-    });
+		expect(func).not.toHaveBeenCalled();
+	});
 });

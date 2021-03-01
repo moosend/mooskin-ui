@@ -14,18 +14,18 @@ import { StyledButtonIcon, StyledButtonInverse, StyledButtonNormal } from './sty
  * Button
  */
 export const Button: React.FC<IButtonComponentProps> = withMooskinContext((props) => {
-    const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-        !props.disabled && props.onClick && props.onClick(e);
-    };
-    const ButtonComponent = props.inverseStyle ? StyledButtonInverse : StyledButtonNormal;
-    return <ButtonComponent {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		!props.disabled && props.onClick && props.onClick(e);
+	};
+	const ButtonComponent = props.inverseStyle ? StyledButtonInverse : StyledButtonNormal;
+	return <ButtonComponent {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
 });
 
 Button.defaultProps = {
-    buttonSize: 'md',
-    className: '',
-    style: {},
-    type: 'button'
+	buttonSize: 'md',
+	className: '',
+	style: {},
+	type: 'button',
 };
 
 Button.displayName = 'Button';
@@ -34,12 +34,12 @@ Button.displayName = 'Button';
  * ButtonIcon
  */
 export const ButtonIcon: React.FC<IBoxComponentProps> = (props) => {
-    return <StyledButtonIcon {...props} />;
+	return <StyledButtonIcon {...props} />;
 };
 
 ButtonIcon.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 ButtonIcon.displayName = 'ButtonIcon';
