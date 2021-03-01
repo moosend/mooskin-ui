@@ -145,44 +145,26 @@ exports[`DatePicker renders correctly 1`] = `
                   onKeyDown={[Function]}
                   palette={
                     Object {
-                      "actionsDropdown": Object {
-                        "backgroundColor": "#3fbaca",
-                        "fontColor": "#ffffff",
+                      "backgroundColors": Object {
+                        "button": "#3fbaca",
+                        "common": "#ffffff",
+                        "disabledButton": "#e2e2e2",
+                        "main": "#f7f7f7",
+                        "secondaryToggle": "#ffffff",
+                        "toggle": "#425579",
                       },
-                      "anchor": Object {
-                        "disabledFontColor": "#9d9d9d",
-                        "fontColor": "#3fbaca",
+                      "borderColors": Object {
+                        "common": "#e2e2e2",
                       },
-                      "button": Object {
-                        "backgroundColor": "#3fbaca",
-                        "disabledBackgroundColor": "#e2e2e2",
-                        "fontColor": "#ffffff",
-                      },
-                      "commonElement": Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#e2e2e2",
-                        "fontColor": "#293346",
-                      },
-                      "description": Object {
-                        "fontColor": "#9d9d9d",
-                      },
-                      "label": Object {
-                        "fontColor": "#2d2d2d",
-                      },
-                      "layout": Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#e2e2e2",
-                        "fontColor": "#293346",
-                      },
-                      "main": Object {
-                        "backgroundColor": "#f7f7f7",
-                      },
-                      "toggleElement": Object {
-                        "backgroundColor": "#425579",
-                        "borderColor": "#e2e2e2",
-                        "fontColor": "#ffffff",
-                        "secondaryBackgroundColor": "#ffffff",
-                        "secondaryFontColor": "#9d9d9d",
+                      "fontColors": Object {
+                        "anchor": "#3fbaca",
+                        "button": "#ffffff",
+                        "common": "#293346",
+                        "description": "#9d9d9d",
+                        "disabledAnchor": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "secondaryToggle": "#9d9d9d",
+                        "toggle": "#ffffff",
                       },
                     }
                   }
@@ -214,44 +196,26 @@ exports[`DatePicker renders correctly 1`] = `
                     onKeyDown={[Function]}
                     palette={
                       Object {
-                        "actionsDropdown": Object {
-                          "backgroundColor": "#3fbaca",
-                          "fontColor": "#ffffff",
+                        "backgroundColors": Object {
+                          "button": "#3fbaca",
+                          "common": "#ffffff",
+                          "disabledButton": "#e2e2e2",
+                          "main": "#f7f7f7",
+                          "secondaryToggle": "#ffffff",
+                          "toggle": "#425579",
                         },
-                        "anchor": Object {
-                          "disabledFontColor": "#9d9d9d",
-                          "fontColor": "#3fbaca",
+                        "borderColors": Object {
+                          "common": "#e2e2e2",
                         },
-                        "button": Object {
-                          "backgroundColor": "#3fbaca",
-                          "disabledBackgroundColor": "#e2e2e2",
-                          "fontColor": "#ffffff",
-                        },
-                        "commonElement": Object {
-                          "backgroundColor": "#ffffff",
-                          "borderColor": "#e2e2e2",
-                          "fontColor": "#293346",
-                        },
-                        "description": Object {
-                          "fontColor": "#9d9d9d",
-                        },
-                        "label": Object {
-                          "fontColor": "#2d2d2d",
-                        },
-                        "layout": Object {
-                          "backgroundColor": "#ffffff",
-                          "borderColor": "#e2e2e2",
-                          "fontColor": "#293346",
-                        },
-                        "main": Object {
-                          "backgroundColor": "#f7f7f7",
-                        },
-                        "toggleElement": Object {
-                          "backgroundColor": "#425579",
-                          "borderColor": "#e2e2e2",
-                          "fontColor": "#ffffff",
-                          "secondaryBackgroundColor": "#ffffff",
-                          "secondaryFontColor": "#9d9d9d",
+                        "fontColors": Object {
+                          "anchor": "#3fbaca",
+                          "button": "#ffffff",
+                          "common": "#293346",
+                          "description": "#9d9d9d",
+                          "disabledAnchor": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "secondaryToggle": "#9d9d9d",
+                          "toggle": "#ffffff",
                         },
                       }
                     }
@@ -270,7 +234,7 @@ exports[`DatePicker renders correctly 1`] = `
                         }
                       }
                       boxAs="input"
-                      className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
+                      className="sc-dlnjPT sc-hKFyIo iJHACm gAwrvV"
                       error={false}
                       format="dd/MM/yyyy"
                       helperText=""
@@ -283,44 +247,26 @@ exports[`DatePicker renders correctly 1`] = `
                       onKeyDown={[Function]}
                       palette={
                         Object {
-                          "actionsDropdown": Object {
-                            "backgroundColor": "#3fbaca",
-                            "fontColor": "#ffffff",
+                          "backgroundColors": Object {
+                            "button": "#3fbaca",
+                            "common": "#ffffff",
+                            "disabledButton": "#e2e2e2",
+                            "main": "#f7f7f7",
+                            "secondaryToggle": "#ffffff",
+                            "toggle": "#425579",
                           },
-                          "anchor": Object {
-                            "disabledFontColor": "#9d9d9d",
-                            "fontColor": "#3fbaca",
+                          "borderColors": Object {
+                            "common": "#e2e2e2",
                           },
-                          "button": Object {
-                            "backgroundColor": "#3fbaca",
-                            "disabledBackgroundColor": "#e2e2e2",
-                            "fontColor": "#ffffff",
-                          },
-                          "commonElement": Object {
-                            "backgroundColor": "#ffffff",
-                            "borderColor": "#e2e2e2",
-                            "fontColor": "#293346",
-                          },
-                          "description": Object {
-                            "fontColor": "#9d9d9d",
-                          },
-                          "label": Object {
-                            "fontColor": "#2d2d2d",
-                          },
-                          "layout": Object {
-                            "backgroundColor": "#ffffff",
-                            "borderColor": "#e2e2e2",
-                            "fontColor": "#293346",
-                          },
-                          "main": Object {
-                            "backgroundColor": "#f7f7f7",
-                          },
-                          "toggleElement": Object {
-                            "backgroundColor": "#425579",
-                            "borderColor": "#e2e2e2",
-                            "fontColor": "#ffffff",
-                            "secondaryBackgroundColor": "#ffffff",
-                            "secondaryFontColor": "#9d9d9d",
+                          "fontColors": Object {
+                            "anchor": "#3fbaca",
+                            "button": "#ffffff",
+                            "common": "#293346",
+                            "description": "#9d9d9d",
+                            "disabledAnchor": "#9d9d9d",
+                            "label": "#2d2d2d",
+                            "secondaryToggle": "#9d9d9d",
+                            "toggle": "#ffffff",
                           },
                         }
                       }
@@ -339,7 +285,7 @@ exports[`DatePicker renders correctly 1`] = `
                           }
                         }
                         boxAs="input"
-                        className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
+                        className="sc-dlnjPT sc-hKFyIo iJHACm gAwrvV"
                         error={false}
                         format="dd/MM/yyyy"
                         helperText=""
@@ -352,44 +298,26 @@ exports[`DatePicker renders correctly 1`] = `
                         onKeyDown={[Function]}
                         palette={
                           Object {
-                            "actionsDropdown": Object {
-                              "backgroundColor": "#3fbaca",
-                              "fontColor": "#ffffff",
+                            "backgroundColors": Object {
+                              "button": "#3fbaca",
+                              "common": "#ffffff",
+                              "disabledButton": "#e2e2e2",
+                              "main": "#f7f7f7",
+                              "secondaryToggle": "#ffffff",
+                              "toggle": "#425579",
                             },
-                            "anchor": Object {
-                              "disabledFontColor": "#9d9d9d",
-                              "fontColor": "#3fbaca",
+                            "borderColors": Object {
+                              "common": "#e2e2e2",
                             },
-                            "button": Object {
-                              "backgroundColor": "#3fbaca",
-                              "disabledBackgroundColor": "#e2e2e2",
-                              "fontColor": "#ffffff",
-                            },
-                            "commonElement": Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#e2e2e2",
-                              "fontColor": "#293346",
-                            },
-                            "description": Object {
-                              "fontColor": "#9d9d9d",
-                            },
-                            "label": Object {
-                              "fontColor": "#2d2d2d",
-                            },
-                            "layout": Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#e2e2e2",
-                              "fontColor": "#293346",
-                            },
-                            "main": Object {
-                              "backgroundColor": "#f7f7f7",
-                            },
-                            "toggleElement": Object {
-                              "backgroundColor": "#425579",
-                              "borderColor": "#e2e2e2",
-                              "fontColor": "#ffffff",
-                              "secondaryBackgroundColor": "#ffffff",
-                              "secondaryFontColor": "#9d9d9d",
+                            "fontColors": Object {
+                              "anchor": "#3fbaca",
+                              "button": "#ffffff",
+                              "common": "#293346",
+                              "description": "#9d9d9d",
+                              "disabledAnchor": "#9d9d9d",
+                              "label": "#2d2d2d",
+                              "secondaryToggle": "#9d9d9d",
+                              "toggle": "#ffffff",
                             },
                           }
                         }
@@ -409,7 +337,7 @@ exports[`DatePicker renders correctly 1`] = `
                           }
                           as="input"
                           boxAs="input"
-                          className="sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
+                          className="sc-dlnjPT sc-hKFyIo iJHACm gAwrvV"
                           error={false}
                           format="dd/MM/yyyy"
                           helperText=""
@@ -422,44 +350,26 @@ exports[`DatePicker renders correctly 1`] = `
                           onKeyDown={[Function]}
                           palette={
                             Object {
-                              "actionsDropdown": Object {
-                                "backgroundColor": "#3fbaca",
-                                "fontColor": "#ffffff",
+                              "backgroundColors": Object {
+                                "button": "#3fbaca",
+                                "common": "#ffffff",
+                                "disabledButton": "#e2e2e2",
+                                "main": "#f7f7f7",
+                                "secondaryToggle": "#ffffff",
+                                "toggle": "#425579",
                               },
-                              "anchor": Object {
-                                "disabledFontColor": "#9d9d9d",
-                                "fontColor": "#3fbaca",
+                              "borderColors": Object {
+                                "common": "#e2e2e2",
                               },
-                              "button": Object {
-                                "backgroundColor": "#3fbaca",
-                                "disabledBackgroundColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                              },
-                              "commonElement": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "description": Object {
-                                "fontColor": "#9d9d9d",
-                              },
-                              "label": Object {
-                                "fontColor": "#2d2d2d",
-                              },
-                              "layout": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "main": Object {
-                                "backgroundColor": "#f7f7f7",
-                              },
-                              "toggleElement": Object {
-                                "backgroundColor": "#425579",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                                "secondaryBackgroundColor": "#ffffff",
-                                "secondaryFontColor": "#9d9d9d",
+                              "fontColors": Object {
+                                "anchor": "#3fbaca",
+                                "button": "#ffffff",
+                                "common": "#293346",
+                                "description": "#9d9d9d",
+                                "disabledAnchor": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "secondaryToggle": "#9d9d9d",
+                                "toggle": "#ffffff",
                               },
                             }
                           }
@@ -472,7 +382,7 @@ exports[`DatePicker renders correctly 1`] = `
                           value="02/01/2021"
                         >
                           <input
-                            className="sc-bdnylx kBsmpR sc-dlnjPT sc-hKFyIo kEWLYK hTjPqA"
+                            className="sc-bdnylx sJSbd sc-dlnjPT sc-hKFyIo iJHACm gAwrvV"
                             format="dd/MM/yyyy"
                             onClick={[Function]}
                             onKeyDown={[Function]}
