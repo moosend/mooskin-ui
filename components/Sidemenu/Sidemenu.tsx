@@ -26,7 +26,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext((p
 		return React.Children.map(children, (child, i) => {
 			if (React.isValidElement<ISidemenuItemComponentProps>(child) && child.type === SidemenuItem) {
 				return React.cloneElement(child, {
-					active: child.props.value === props.activeItem,
+					active: child.props.active ? child.props.active : child.props.value === props.activeItem,
 					children: recurseChildren((child.props as any).children),
 					key: i,
 					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
