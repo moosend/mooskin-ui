@@ -13,32 +13,32 @@ import { DateTimePicker as DateTimePickerUI, KeyboardDateTimePicker, MuiPickersU
 import { Input } from '../Input/Input';
 
 const ComponentByType = {
-    'date-time': DateTimePickerUI,
-    'date-time-keyboard': KeyboardDateTimePicker
+	'date-time': DateTimePickerUI,
+	'date-time-keyboard': KeyboardDateTimePicker,
 };
 
 /**
  * DateTimePicker
  */
 export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimePickerKeyboardComponentProps> = (props) => {
-    const renderInput = (dateInputProps: any) => <Input style={{ width: '100%' }} {...dateInputProps} {...props.inputComponentProps} />;
+	const renderInput = (dateInputProps: any) => <Input style={{ width: '100%' }} {...dateInputProps} {...props.inputComponentProps} />;
 
-    const type: PickerType = props.pickerType ? props.pickerType : 'date-time';
+	const type: PickerType = props.pickerType ? props.pickerType : 'date-time';
 
-    const PickerComponent = ComponentByType[type];
+	const PickerComponent = ComponentByType[type];
 
-    return (
-        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-            <PickerComponent {...props} TextFieldComponent={renderInput} />
-        </MuiPickersUtilsProvider>
-    );
+	return (
+		<MuiPickersUtilsProvider utils={DateFnsUtils}>
+			<PickerComponent {...props} TextFieldComponent={renderInput} />
+		</MuiPickersUtilsProvider>
+	);
 };
 
 DateTimePicker.defaultProps = {
-    ampm: false,
-    format: 'dd/MM/yyyy HH:ss',
-    pickerType: 'date-time',
-    variant: 'inline'
+	ampm: false,
+	format: 'dd/MM/yyyy HH:ss',
+	pickerType: 'date-time',
+	variant: 'inline',
 };
 
 DateTimePicker.displayName = 'DateTimePicker';

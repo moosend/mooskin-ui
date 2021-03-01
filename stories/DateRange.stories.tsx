@@ -8,22 +8,22 @@ import { IDateRangePickerComponentProps, IRangeSelection } from '../components/D
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
-    component: DateRange,
-    title: 'Example/DateRange'
+	component: DateRange,
+	title: 'Example/DateRange',
 } as any) as Meta;
 
 const Template: Story<IDateRangePickerComponentProps> = (args) => {
-    const [range, setRange] = React.useState({
-        endDate: new Date(),
-        key: 'selection',
-        startDate: new Date()
-    });
-    return (
-        <>
-            <GlobalStyle />
-            <DateRange {...args} ranges={[range]} onChange={(ranges: { [key: string]: IRangeSelection }) => setRange(ranges.selection)} />
-        </>
-    );
+	const [range, setRange] = React.useState({
+		endDate: new Date(),
+		key: 'selection',
+		startDate: new Date(),
+	});
+	return (
+		<>
+			<GlobalStyle />
+			<DateRange {...args} ranges={[range]} onChange={(ranges: { [key: string]: IRangeSelection }) => setRange(ranges.selection)} />
+		</>
+	);
 };
 
 export const Normal = Template.bind({});

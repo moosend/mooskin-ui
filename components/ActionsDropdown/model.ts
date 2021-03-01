@@ -2,22 +2,22 @@ import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
 
 export interface IActionsDropdownComponentProps extends IBoxComponentProps {
-    /** callback called when clicking a ActionsDropdown item */
-    onClickItem?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+	/** callback called when clicking a ActionsDropdown item */
+	onClickItem?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }
 
 export interface IActionsDropdownItemComponentProps extends IBoxComponentProps {
-    /** data label returned in callback fn */
-    dataLabel?: any;
+	/** data label returned in callback fn */
+	dataLabel?: any;
 
-    /** value returned in callback fn */
-    value?: any;
+	/** value returned in callback fn */
+	value?: any;
 }
 
 export interface IActionsDropdownArrowComponentProps extends IBoxComponentProps {
-    /** direction of the Arrow */
-    arrowDirection?: 'up' | 'down';
+	/** direction of the Arrow */
+	arrowDirection?: 'up' | 'down';
 
-    /** color of the Arrow */
-    arrowColor?: string;
+	/** color of the Arrow */
+	arrowColor?: string;
 }

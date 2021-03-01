@@ -11,26 +11,26 @@ import { ICarouselComponentProps } from './model';
  * Carousel
  */
 export const Carousel: React.FC<ICarouselComponentProps> = (props) => {
-    return <ReactSlick {...props} />;
+	return <ReactSlick {...props} />;
 };
 
 Carousel.defaultProps = {
-    accessibility: true,
-    // arrows: true,
-    autoplaySpeed: 3000,
-    centerPadding: '50px',
-    className: '',
-    dots: true,
-    dotsClass: 'slick-dots',
-    draggable: true,
-    easing: 'linear',
-    // infinite: true,
-    pauseOnHover: true,
-    slide: 'div',
-    slidesToScroll: 3,
-    slidesToShow: 3,
-    speed: 500,
-    swipe: true
+	accessibility: true,
+	// arrows: true,
+	autoplaySpeed: 3000,
+	centerPadding: '50px',
+	className: '',
+	dots: true,
+	dotsClass: 'slick-dots',
+	draggable: true,
+	easing: 'linear',
+	// infinite: true,
+	pauseOnHover: true,
+	slide: 'div',
+	slidesToScroll: 3,
+	slidesToShow: 3,
+	speed: 500,
+	swipe: true,
 };
 
 Carousel.displayName = 'Carousel';

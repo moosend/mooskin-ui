@@ -8,18 +8,18 @@ import { IDatePickerComponentProps } from '../components/DatePicker/model';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
-    component: DatePicker,
-    title: 'Example/DatePicker'
+	component: DatePicker,
+	title: 'Example/DatePicker',
 } as any) as Meta;
 
 const Template: Story<IDatePickerComponentProps> = (args) => {
-    const [date, setDate] = React.useState(new Date());
-    return (
-        <>
-            <GlobalStyle />
-            <DatePicker {...args} value={date} onChange={(value: any) => setDate(value)} />
-        </>
-    );
+	const [date, setDate] = React.useState(new Date());
+	return (
+		<>
+			<GlobalStyle />
+			<DatePicker {...args} value={date} onChange={(value: any) => setDate(value)} />
+		</>
+	);
 };
 
 export const Normal = Template.bind({});

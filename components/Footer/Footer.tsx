@@ -13,12 +13,12 @@ import { StyledFooter, StyledFooterBody, StyledFooterEnd, StyledFooterHead } fro
  * Footer
  */
 export const Footer: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledFooter boxShadow="inner" {...props} />;
+	return <StyledFooter boxShadow="inner" {...props} />;
 });
 
 Footer.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 Footer.displayName = 'Footer';
@@ -27,12 +27,12 @@ Footer.displayName = 'Footer';
  * FooterHead
  */
 export const FooterHead: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledFooterHead {...props} />;
+	return <StyledFooterHead {...props} />;
 });
 
 FooterHead.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 FooterHead.displayName = 'FooterHead';
@@ -41,12 +41,12 @@ FooterHead.displayName = 'FooterHead';
  * FooterBody
  */
 export const FooterBody: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledFooterBody {...props} />;
+	return <StyledFooterBody {...props} />;
 });
 
 FooterBody.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 FooterBody.displayName = 'FooterBody';
@@ -55,12 +55,12 @@ FooterBody.displayName = 'FooterBody';
  * FooterEnd
  */
 export const FooterEnd: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-    return <StyledFooterEnd {...props} />;
+	return <StyledFooterEnd {...props} />;
 });
 
 FooterEnd.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 FooterEnd.displayName = 'FooterEnd';

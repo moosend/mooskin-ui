@@ -18,12 +18,12 @@ const spin = keyframes`
 `;
 
 export const StyledLoader = styled(Box)<ILoaderComponentProps>`
-    border: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid #f3f3f3;
-    border-top: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid #5ccdde;
-    border-radius: 50%;
-    width: ${(props) => getNumberOrStringValue(props.size)};
-    height: ${(props) => getNumberOrStringValue(props.size)};
-    animation: ${spin} 2s linear infinite;
+	border: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid #f3f3f3;
+	border-top: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid #5ccdde;
+	border-radius: 50%;
+	width: ${(props) => getNumberOrStringValue(props.size)};
+	height: ${(props) => getNumberOrStringValue(props.size)};
+	animation: ${spin} 2s linear infinite;
 `;
 
 StyledLoader.displayName = 'StyledLoader';

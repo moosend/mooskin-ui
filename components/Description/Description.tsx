@@ -13,12 +13,12 @@ import { StyledDescription } from './styles';
  * Description
  */
 export const Description: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
-    return <StyledDescription {...props} />;
+	return <StyledDescription {...props} />;
 });
 
 Description.defaultProps = {
-    className: '',
-    style: {}
+	className: '',
+	style: {},
 };
 
 Description.displayName = 'Description';

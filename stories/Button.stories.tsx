@@ -11,56 +11,56 @@ import variables from '../components/_utils/globals/variables';
 import { MooskinContextProvider } from '../components/Styled/MooskinContextProvider';
 
 export default ({
-    // component: Button,
-    title: 'Example/Button'
+	// component: Button,
+	title: 'Example/Button',
 } as any) as Meta;
 
 const Template: Story<IButtonComponentProps> = (args) => {
-    const [backgroundPalette, setBackgroundPalette] = React.useState({ ...variables.backgroundColors });
-    return (
-        <>
-            <GlobalStyle />
-            <MooskinContextProvider
-                value={{
-                    palette: { ...variables, backgroundColors: backgroundPalette }
-                }}
-            >
-                <Button {...args} onClick={() => setBackgroundPalette({ ...variables.backgroundColors, button: 'red' })} />
-            </MooskinContextProvider>
-        </>
-    );
+	const [backgroundPalette, setBackgroundPalette] = React.useState({ ...variables.backgroundColors });
+	return (
+		<>
+			<GlobalStyle />
+			<MooskinContextProvider
+				value={{
+					palette: { ...variables, backgroundColors: backgroundPalette },
+				}}
+			>
+				<Button {...args} onClick={() => setBackgroundPalette({ ...variables.backgroundColors, button: 'red' })} />
+			</MooskinContextProvider>
+		</>
+	);
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-    children: 'VIEW CAMPAIGN'
+	children: 'VIEW CAMPAIGN',
 } as IButtonComponentProps;
 
 export const Inversed = Template.bind({});
 Inversed.args = {
-    children: 'VIEW CAMPAIGN',
-    inverseStyle: true
+	children: 'VIEW CAMPAIGN',
+	inverseStyle: true,
 } as IButtonComponentProps;
 
 export const Icon = Template.bind({});
 Icon.args = {
-    children: (
-        <>
-            <ButtonIcon>file_copy</ButtonIcon>
-            VIEW CAMPAIGN
-        </>
-    ),
-    color: ['fontColors', 'common'] as any
+	children: (
+		<>
+			<ButtonIcon>file_copy</ButtonIcon>
+			VIEW CAMPAIGN
+		</>
+	),
+	color: ['fontColors', 'common'] as any,
 } as IButtonComponentProps;
 
 export const Href = Template.bind({});
 Href.args = {
-    children: 'VIEW CAMPAIGN',
-    href: 'https://www.moosend.com'
+	children: 'VIEW CAMPAIGN',
+	href: 'https://www.moosend.com',
 } as IButtonComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-    children: 'VIEW CAMPAIGN',
-    disabled: true
+	children: 'VIEW CAMPAIGN',
+	disabled: true,
 } as IButtonComponentProps;
