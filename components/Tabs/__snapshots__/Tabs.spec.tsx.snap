@@ -13,44 +13,26 @@ exports[`Pagination renders correctly 1`] = `
     onClickTab={[MockFunction]}
     palette={
       Object {
-        "actionsDropdown": Object {
-          "backgroundColor": "#3fbaca",
-          "fontColor": "#ffffff",
+        "backgroundColors": Object {
+          "button": "#3fbaca",
+          "common": "#ffffff",
+          "disabledButton": "#e2e2e2",
+          "main": "#f7f7f7",
+          "secondaryToggle": "#ffffff",
+          "toggle": "#425579",
         },
-        "anchor": Object {
-          "disabledFontColor": "#9d9d9d",
-          "fontColor": "#3fbaca",
+        "borderColors": Object {
+          "common": "#e2e2e2",
         },
-        "button": Object {
-          "backgroundColor": "#3fbaca",
-          "disabledBackgroundColor": "#e2e2e2",
-          "fontColor": "#ffffff",
-        },
-        "commonElement": Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#e2e2e2",
-          "fontColor": "#293346",
-        },
-        "description": Object {
-          "fontColor": "#9d9d9d",
-        },
-        "label": Object {
-          "fontColor": "#2d2d2d",
-        },
-        "layout": Object {
-          "backgroundColor": "#ffffff",
-          "borderColor": "#e2e2e2",
-          "fontColor": "#293346",
-        },
-        "main": Object {
-          "backgroundColor": "#f7f7f7",
-        },
-        "toggleElement": Object {
-          "backgroundColor": "#425579",
-          "borderColor": "#e2e2e2",
-          "fontColor": "#ffffff",
-          "secondaryBackgroundColor": "#ffffff",
-          "secondaryFontColor": "#9d9d9d",
+        "fontColors": Object {
+          "anchor": "#3fbaca",
+          "button": "#ffffff",
+          "common": "#293346",
+          "description": "#9d9d9d",
+          "disabledAnchor": "#9d9d9d",
+          "label": "#2d2d2d",
+          "secondaryToggle": "#9d9d9d",
+          "toggle": "#ffffff",
         },
       }
     }
@@ -62,44 +44,26 @@ exports[`Pagination renders correctly 1`] = `
       onClickTab={[MockFunction]}
       palette={
         Object {
-          "actionsDropdown": Object {
-            "backgroundColor": "#3fbaca",
-            "fontColor": "#ffffff",
+          "backgroundColors": Object {
+            "button": "#3fbaca",
+            "common": "#ffffff",
+            "disabledButton": "#e2e2e2",
+            "main": "#f7f7f7",
+            "secondaryToggle": "#ffffff",
+            "toggle": "#425579",
           },
-          "anchor": Object {
-            "disabledFontColor": "#9d9d9d",
-            "fontColor": "#3fbaca",
+          "borderColors": Object {
+            "common": "#e2e2e2",
           },
-          "button": Object {
-            "backgroundColor": "#3fbaca",
-            "disabledBackgroundColor": "#e2e2e2",
-            "fontColor": "#ffffff",
-          },
-          "commonElement": Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#e2e2e2",
-            "fontColor": "#293346",
-          },
-          "description": Object {
-            "fontColor": "#9d9d9d",
-          },
-          "label": Object {
-            "fontColor": "#2d2d2d",
-          },
-          "layout": Object {
-            "backgroundColor": "#ffffff",
-            "borderColor": "#e2e2e2",
-            "fontColor": "#293346",
-          },
-          "main": Object {
-            "backgroundColor": "#f7f7f7",
-          },
-          "toggleElement": Object {
-            "backgroundColor": "#425579",
-            "borderColor": "#e2e2e2",
-            "fontColor": "#ffffff",
-            "secondaryBackgroundColor": "#ffffff",
-            "secondaryFontColor": "#9d9d9d",
+          "fontColors": Object {
+            "anchor": "#3fbaca",
+            "button": "#ffffff",
+            "common": "#293346",
+            "description": "#9d9d9d",
+            "disabledAnchor": "#9d9d9d",
+            "label": "#2d2d2d",
+            "secondaryToggle": "#9d9d9d",
+            "toggle": "#ffffff",
           },
         }
       }
@@ -107,48 +71,30 @@ exports[`Pagination renders correctly 1`] = `
     >
       <Box
         activeItem={3}
-        className="sc-gtssRu dFFniv"
+        className="sc-gtssRu dJxHxj"
         onClickTab={[MockFunction]}
         palette={
           Object {
-            "actionsDropdown": Object {
-              "backgroundColor": "#3fbaca",
-              "fontColor": "#ffffff",
+            "backgroundColors": Object {
+              "button": "#3fbaca",
+              "common": "#ffffff",
+              "disabledButton": "#e2e2e2",
+              "main": "#f7f7f7",
+              "secondaryToggle": "#ffffff",
+              "toggle": "#425579",
             },
-            "anchor": Object {
-              "disabledFontColor": "#9d9d9d",
-              "fontColor": "#3fbaca",
+            "borderColors": Object {
+              "common": "#e2e2e2",
             },
-            "button": Object {
-              "backgroundColor": "#3fbaca",
-              "disabledBackgroundColor": "#e2e2e2",
-              "fontColor": "#ffffff",
-            },
-            "commonElement": Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#e2e2e2",
-              "fontColor": "#293346",
-            },
-            "description": Object {
-              "fontColor": "#9d9d9d",
-            },
-            "label": Object {
-              "fontColor": "#2d2d2d",
-            },
-            "layout": Object {
-              "backgroundColor": "#ffffff",
-              "borderColor": "#e2e2e2",
-              "fontColor": "#293346",
-            },
-            "main": Object {
-              "backgroundColor": "#f7f7f7",
-            },
-            "toggleElement": Object {
-              "backgroundColor": "#425579",
-              "borderColor": "#e2e2e2",
-              "fontColor": "#ffffff",
-              "secondaryBackgroundColor": "#ffffff",
-              "secondaryFontColor": "#9d9d9d",
+            "fontColors": Object {
+              "anchor": "#3fbaca",
+              "button": "#ffffff",
+              "common": "#293346",
+              "description": "#9d9d9d",
+              "disabledAnchor": "#9d9d9d",
+              "label": "#2d2d2d",
+              "secondaryToggle": "#9d9d9d",
+              "toggle": "#ffffff",
             },
           }
         }
@@ -156,48 +102,30 @@ exports[`Pagination renders correctly 1`] = `
       >
         <Component
           activeItem={3}
-          className="sc-gtssRu dFFniv"
+          className="sc-gtssRu dJxHxj"
           onClickTab={[MockFunction]}
           palette={
             Object {
-              "actionsDropdown": Object {
-                "backgroundColor": "#3fbaca",
-                "fontColor": "#ffffff",
+              "backgroundColors": Object {
+                "button": "#3fbaca",
+                "common": "#ffffff",
+                "disabledButton": "#e2e2e2",
+                "main": "#f7f7f7",
+                "secondaryToggle": "#ffffff",
+                "toggle": "#425579",
               },
-              "anchor": Object {
-                "disabledFontColor": "#9d9d9d",
-                "fontColor": "#3fbaca",
+              "borderColors": Object {
+                "common": "#e2e2e2",
               },
-              "button": Object {
-                "backgroundColor": "#3fbaca",
-                "disabledBackgroundColor": "#e2e2e2",
-                "fontColor": "#ffffff",
-              },
-              "commonElement": Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#e2e2e2",
-                "fontColor": "#293346",
-              },
-              "description": Object {
-                "fontColor": "#9d9d9d",
-              },
-              "label": Object {
-                "fontColor": "#2d2d2d",
-              },
-              "layout": Object {
-                "backgroundColor": "#ffffff",
-                "borderColor": "#e2e2e2",
-                "fontColor": "#293346",
-              },
-              "main": Object {
-                "backgroundColor": "#f7f7f7",
-              },
-              "toggleElement": Object {
-                "backgroundColor": "#425579",
-                "borderColor": "#e2e2e2",
-                "fontColor": "#ffffff",
-                "secondaryBackgroundColor": "#ffffff",
-                "secondaryFontColor": "#9d9d9d",
+              "fontColors": Object {
+                "anchor": "#3fbaca",
+                "button": "#ffffff",
+                "common": "#293346",
+                "description": "#9d9d9d",
+                "disabledAnchor": "#9d9d9d",
+                "label": "#2d2d2d",
+                "secondaryToggle": "#9d9d9d",
+                "toggle": "#ffffff",
               },
             }
           }
@@ -205,55 +133,37 @@ exports[`Pagination renders correctly 1`] = `
         >
           <StyledBox
             activeItem={3}
-            className="sc-gtssRu dFFniv"
+            className="sc-gtssRu dJxHxj"
             onClickTab={[MockFunction]}
             palette={
               Object {
-                "actionsDropdown": Object {
-                  "backgroundColor": "#3fbaca",
-                  "fontColor": "#ffffff",
+                "backgroundColors": Object {
+                  "button": "#3fbaca",
+                  "common": "#ffffff",
+                  "disabledButton": "#e2e2e2",
+                  "main": "#f7f7f7",
+                  "secondaryToggle": "#ffffff",
+                  "toggle": "#425579",
                 },
-                "anchor": Object {
-                  "disabledFontColor": "#9d9d9d",
-                  "fontColor": "#3fbaca",
+                "borderColors": Object {
+                  "common": "#e2e2e2",
                 },
-                "button": Object {
-                  "backgroundColor": "#3fbaca",
-                  "disabledBackgroundColor": "#e2e2e2",
-                  "fontColor": "#ffffff",
-                },
-                "commonElement": Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#e2e2e2",
-                  "fontColor": "#293346",
-                },
-                "description": Object {
-                  "fontColor": "#9d9d9d",
-                },
-                "label": Object {
-                  "fontColor": "#2d2d2d",
-                },
-                "layout": Object {
-                  "backgroundColor": "#ffffff",
-                  "borderColor": "#e2e2e2",
-                  "fontColor": "#293346",
-                },
-                "main": Object {
-                  "backgroundColor": "#f7f7f7",
-                },
-                "toggleElement": Object {
-                  "backgroundColor": "#425579",
-                  "borderColor": "#e2e2e2",
-                  "fontColor": "#ffffff",
-                  "secondaryBackgroundColor": "#ffffff",
-                  "secondaryFontColor": "#9d9d9d",
+                "fontColors": Object {
+                  "anchor": "#3fbaca",
+                  "button": "#ffffff",
+                  "common": "#293346",
+                  "description": "#9d9d9d",
+                  "disabledAnchor": "#9d9d9d",
+                  "label": "#2d2d2d",
+                  "secondaryToggle": "#9d9d9d",
+                  "toggle": "#ffffff",
                 },
               }
             }
             style={Object {}}
           >
             <div
-              className="sc-bdnylx kBsmpR sc-gtssRu dFFniv"
+              className="sc-bdnylx sJSbd sc-gtssRu dJxHxj"
               onClickTab={[MockFunction]}
               style={Object {}}
             >
@@ -267,44 +177,26 @@ exports[`Pagination renders correctly 1`] = `
                   d="flex"
                   palette={
                     Object {
-                      "actionsDropdown": Object {
-                        "backgroundColor": "#3fbaca",
-                        "fontColor": "#ffffff",
+                      "backgroundColors": Object {
+                        "button": "#3fbaca",
+                        "common": "#ffffff",
+                        "disabledButton": "#e2e2e2",
+                        "main": "#f7f7f7",
+                        "secondaryToggle": "#ffffff",
+                        "toggle": "#425579",
                       },
-                      "anchor": Object {
-                        "disabledFontColor": "#9d9d9d",
-                        "fontColor": "#3fbaca",
+                      "borderColors": Object {
+                        "common": "#e2e2e2",
                       },
-                      "button": Object {
-                        "backgroundColor": "#3fbaca",
-                        "disabledBackgroundColor": "#e2e2e2",
-                        "fontColor": "#ffffff",
-                      },
-                      "commonElement": Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#e2e2e2",
-                        "fontColor": "#293346",
-                      },
-                      "description": Object {
-                        "fontColor": "#9d9d9d",
-                      },
-                      "label": Object {
-                        "fontColor": "#2d2d2d",
-                      },
-                      "layout": Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#e2e2e2",
-                        "fontColor": "#293346",
-                      },
-                      "main": Object {
-                        "backgroundColor": "#f7f7f7",
-                      },
-                      "toggleElement": Object {
-                        "backgroundColor": "#425579",
-                        "borderColor": "#e2e2e2",
-                        "fontColor": "#ffffff",
-                        "secondaryBackgroundColor": "#ffffff",
-                        "secondaryFontColor": "#9d9d9d",
+                      "fontColors": Object {
+                        "anchor": "#3fbaca",
+                        "button": "#ffffff",
+                        "common": "#293346",
+                        "description": "#9d9d9d",
+                        "disabledAnchor": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "secondaryToggle": "#9d9d9d",
+                        "toggle": "#ffffff",
                       },
                     }
                   }
@@ -315,51 +207,33 @@ exports[`Pagination renders correctly 1`] = `
                     d="flex"
                     palette={
                       Object {
-                        "actionsDropdown": Object {
-                          "backgroundColor": "#3fbaca",
-                          "fontColor": "#ffffff",
+                        "backgroundColors": Object {
+                          "button": "#3fbaca",
+                          "common": "#ffffff",
+                          "disabledButton": "#e2e2e2",
+                          "main": "#f7f7f7",
+                          "secondaryToggle": "#ffffff",
+                          "toggle": "#425579",
                         },
-                        "anchor": Object {
-                          "disabledFontColor": "#9d9d9d",
-                          "fontColor": "#3fbaca",
+                        "borderColors": Object {
+                          "common": "#e2e2e2",
                         },
-                        "button": Object {
-                          "backgroundColor": "#3fbaca",
-                          "disabledBackgroundColor": "#e2e2e2",
-                          "fontColor": "#ffffff",
-                        },
-                        "commonElement": Object {
-                          "backgroundColor": "#ffffff",
-                          "borderColor": "#e2e2e2",
-                          "fontColor": "#293346",
-                        },
-                        "description": Object {
-                          "fontColor": "#9d9d9d",
-                        },
-                        "label": Object {
-                          "fontColor": "#2d2d2d",
-                        },
-                        "layout": Object {
-                          "backgroundColor": "#ffffff",
-                          "borderColor": "#e2e2e2",
-                          "fontColor": "#293346",
-                        },
-                        "main": Object {
-                          "backgroundColor": "#f7f7f7",
-                        },
-                        "toggleElement": Object {
-                          "backgroundColor": "#425579",
-                          "borderColor": "#e2e2e2",
-                          "fontColor": "#ffffff",
-                          "secondaryBackgroundColor": "#ffffff",
-                          "secondaryFontColor": "#9d9d9d",
+                        "fontColors": Object {
+                          "anchor": "#3fbaca",
+                          "button": "#ffffff",
+                          "common": "#293346",
+                          "description": "#9d9d9d",
+                          "disabledAnchor": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "secondaryToggle": "#9d9d9d",
+                          "toggle": "#ffffff",
                         },
                       }
                     }
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx gZxIgO"
+                      className="sc-bdnylx frIstK"
                       d="flex"
                       style={Object {}}
                     >
@@ -376,44 +250,26 @@ exports[`Pagination renders correctly 1`] = `
                           onClick={[Function]}
                           palette={
                             Object {
-                              "actionsDropdown": Object {
-                                "backgroundColor": "#3fbaca",
-                                "fontColor": "#ffffff",
+                              "backgroundColors": Object {
+                                "button": "#3fbaca",
+                                "common": "#ffffff",
+                                "disabledButton": "#e2e2e2",
+                                "main": "#f7f7f7",
+                                "secondaryToggle": "#ffffff",
+                                "toggle": "#425579",
                               },
-                              "anchor": Object {
-                                "disabledFontColor": "#9d9d9d",
-                                "fontColor": "#3fbaca",
+                              "borderColors": Object {
+                                "common": "#e2e2e2",
                               },
-                              "button": Object {
-                                "backgroundColor": "#3fbaca",
-                                "disabledBackgroundColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                              },
-                              "commonElement": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "description": Object {
-                                "fontColor": "#9d9d9d",
-                              },
-                              "label": Object {
-                                "fontColor": "#2d2d2d",
-                              },
-                              "layout": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "main": Object {
-                                "backgroundColor": "#f7f7f7",
-                              },
-                              "toggleElement": Object {
-                                "backgroundColor": "#425579",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                                "secondaryBackgroundColor": "#ffffff",
-                                "secondaryFontColor": "#9d9d9d",
+                              "fontColors": Object {
+                                "anchor": "#3fbaca",
+                                "button": "#ffffff",
+                                "common": "#293346",
+                                "description": "#9d9d9d",
+                                "disabledAnchor": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "secondaryToggle": "#9d9d9d",
+                                "toggle": "#ffffff",
                               },
                             }
                           }
@@ -425,44 +281,26 @@ exports[`Pagination renders correctly 1`] = `
                             onClick={[Function]}
                             palette={
                               Object {
-                                "actionsDropdown": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "fontColor": "#ffffff",
+                                "backgroundColors": Object {
+                                  "button": "#3fbaca",
+                                  "common": "#ffffff",
+                                  "disabledButton": "#e2e2e2",
+                                  "main": "#f7f7f7",
+                                  "secondaryToggle": "#ffffff",
+                                  "toggle": "#425579",
                                 },
-                                "anchor": Object {
-                                  "disabledFontColor": "#9d9d9d",
-                                  "fontColor": "#3fbaca",
+                                "borderColors": Object {
+                                  "common": "#e2e2e2",
                                 },
-                                "button": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "disabledBackgroundColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                },
-                                "commonElement": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "description": Object {
-                                  "fontColor": "#9d9d9d",
-                                },
-                                "label": Object {
-                                  "fontColor": "#2d2d2d",
-                                },
-                                "layout": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "main": Object {
-                                  "backgroundColor": "#f7f7f7",
-                                },
-                                "toggleElement": Object {
-                                  "backgroundColor": "#425579",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                  "secondaryBackgroundColor": "#ffffff",
-                                  "secondaryFontColor": "#9d9d9d",
+                                "fontColors": Object {
+                                  "anchor": "#3fbaca",
+                                  "button": "#ffffff",
+                                  "common": "#293346",
+                                  "description": "#9d9d9d",
+                                  "disabledAnchor": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "secondaryToggle": "#9d9d9d",
+                                  "toggle": "#ffffff",
                                 },
                               }
                             }
@@ -470,48 +308,30 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo cChrIF"
+                              className="sc-hKFyIo hQlczd"
                               onClick={[Function]}
                               palette={
                                 Object {
-                                  "actionsDropdown": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "fontColor": "#ffffff",
+                                  "backgroundColors": Object {
+                                    "button": "#3fbaca",
+                                    "common": "#ffffff",
+                                    "disabledButton": "#e2e2e2",
+                                    "main": "#f7f7f7",
+                                    "secondaryToggle": "#ffffff",
+                                    "toggle": "#425579",
                                   },
-                                  "anchor": Object {
-                                    "disabledFontColor": "#9d9d9d",
-                                    "fontColor": "#3fbaca",
+                                  "borderColors": Object {
+                                    "common": "#e2e2e2",
                                   },
-                                  "button": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "disabledBackgroundColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                  },
-                                  "commonElement": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "description": Object {
-                                    "fontColor": "#9d9d9d",
-                                  },
-                                  "label": Object {
-                                    "fontColor": "#2d2d2d",
-                                  },
-                                  "layout": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "main": Object {
-                                    "backgroundColor": "#f7f7f7",
-                                  },
-                                  "toggleElement": Object {
-                                    "backgroundColor": "#425579",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                    "secondaryBackgroundColor": "#ffffff",
-                                    "secondaryFontColor": "#9d9d9d",
+                                  "fontColors": Object {
+                                    "anchor": "#3fbaca",
+                                    "button": "#ffffff",
+                                    "common": "#293346",
+                                    "description": "#9d9d9d",
+                                    "disabledAnchor": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "secondaryToggle": "#9d9d9d",
+                                    "toggle": "#ffffff",
                                   },
                                 }
                               }
@@ -519,48 +339,30 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo cChrIF"
+                                className="sc-hKFyIo hQlczd"
                                 onClick={[Function]}
                                 palette={
                                   Object {
-                                    "actionsDropdown": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "fontColor": "#ffffff",
+                                    "backgroundColors": Object {
+                                      "button": "#3fbaca",
+                                      "common": "#ffffff",
+                                      "disabledButton": "#e2e2e2",
+                                      "main": "#f7f7f7",
+                                      "secondaryToggle": "#ffffff",
+                                      "toggle": "#425579",
                                     },
-                                    "anchor": Object {
-                                      "disabledFontColor": "#9d9d9d",
-                                      "fontColor": "#3fbaca",
+                                    "borderColors": Object {
+                                      "common": "#e2e2e2",
                                     },
-                                    "button": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "disabledBackgroundColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                    },
-                                    "commonElement": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "description": Object {
-                                      "fontColor": "#9d9d9d",
-                                    },
-                                    "label": Object {
-                                      "fontColor": "#2d2d2d",
-                                    },
-                                    "layout": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "main": Object {
-                                      "backgroundColor": "#f7f7f7",
-                                    },
-                                    "toggleElement": Object {
-                                      "backgroundColor": "#425579",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                      "secondaryBackgroundColor": "#ffffff",
-                                      "secondaryFontColor": "#9d9d9d",
+                                    "fontColors": Object {
+                                      "anchor": "#3fbaca",
+                                      "button": "#ffffff",
+                                      "common": "#293346",
+                                      "description": "#9d9d9d",
+                                      "disabledAnchor": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "secondaryToggle": "#9d9d9d",
+                                      "toggle": "#ffffff",
                                     },
                                   }
                                 }
@@ -568,55 +370,37 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo cChrIF"
+                                  className="sc-hKFyIo hQlczd"
                                   onClick={[Function]}
                                   palette={
                                     Object {
-                                      "actionsDropdown": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "fontColor": "#ffffff",
+                                      "backgroundColors": Object {
+                                        "button": "#3fbaca",
+                                        "common": "#ffffff",
+                                        "disabledButton": "#e2e2e2",
+                                        "main": "#f7f7f7",
+                                        "secondaryToggle": "#ffffff",
+                                        "toggle": "#425579",
                                       },
-                                      "anchor": Object {
-                                        "disabledFontColor": "#9d9d9d",
-                                        "fontColor": "#3fbaca",
+                                      "borderColors": Object {
+                                        "common": "#e2e2e2",
                                       },
-                                      "button": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "disabledBackgroundColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                      },
-                                      "commonElement": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "description": Object {
-                                        "fontColor": "#9d9d9d",
-                                      },
-                                      "label": Object {
-                                        "fontColor": "#2d2d2d",
-                                      },
-                                      "layout": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "main": Object {
-                                        "backgroundColor": "#f7f7f7",
-                                      },
-                                      "toggleElement": Object {
-                                        "backgroundColor": "#425579",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                        "secondaryBackgroundColor": "#ffffff",
-                                        "secondaryFontColor": "#9d9d9d",
+                                      "fontColors": Object {
+                                        "anchor": "#3fbaca",
+                                        "button": "#ffffff",
+                                        "common": "#293346",
+                                        "description": "#9d9d9d",
+                                        "disabledAnchor": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "secondaryToggle": "#9d9d9d",
+                                        "toggle": "#ffffff",
                                       },
                                     }
                                   }
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx kBsmpR sc-hKFyIo cChrIF"
+                                    className="sc-bdnylx sJSbd sc-hKFyIo hQlczd"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -641,44 +425,26 @@ exports[`Pagination renders correctly 1`] = `
                           onClick={[Function]}
                           palette={
                             Object {
-                              "actionsDropdown": Object {
-                                "backgroundColor": "#3fbaca",
-                                "fontColor": "#ffffff",
+                              "backgroundColors": Object {
+                                "button": "#3fbaca",
+                                "common": "#ffffff",
+                                "disabledButton": "#e2e2e2",
+                                "main": "#f7f7f7",
+                                "secondaryToggle": "#ffffff",
+                                "toggle": "#425579",
                               },
-                              "anchor": Object {
-                                "disabledFontColor": "#9d9d9d",
-                                "fontColor": "#3fbaca",
+                              "borderColors": Object {
+                                "common": "#e2e2e2",
                               },
-                              "button": Object {
-                                "backgroundColor": "#3fbaca",
-                                "disabledBackgroundColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                              },
-                              "commonElement": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "description": Object {
-                                "fontColor": "#9d9d9d",
-                              },
-                              "label": Object {
-                                "fontColor": "#2d2d2d",
-                              },
-                              "layout": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "main": Object {
-                                "backgroundColor": "#f7f7f7",
-                              },
-                              "toggleElement": Object {
-                                "backgroundColor": "#425579",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                                "secondaryBackgroundColor": "#ffffff",
-                                "secondaryFontColor": "#9d9d9d",
+                              "fontColors": Object {
+                                "anchor": "#3fbaca",
+                                "button": "#ffffff",
+                                "common": "#293346",
+                                "description": "#9d9d9d",
+                                "disabledAnchor": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "secondaryToggle": "#9d9d9d",
+                                "toggle": "#ffffff",
                               },
                             }
                           }
@@ -690,44 +456,26 @@ exports[`Pagination renders correctly 1`] = `
                             onClick={[Function]}
                             palette={
                               Object {
-                                "actionsDropdown": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "fontColor": "#ffffff",
+                                "backgroundColors": Object {
+                                  "button": "#3fbaca",
+                                  "common": "#ffffff",
+                                  "disabledButton": "#e2e2e2",
+                                  "main": "#f7f7f7",
+                                  "secondaryToggle": "#ffffff",
+                                  "toggle": "#425579",
                                 },
-                                "anchor": Object {
-                                  "disabledFontColor": "#9d9d9d",
-                                  "fontColor": "#3fbaca",
+                                "borderColors": Object {
+                                  "common": "#e2e2e2",
                                 },
-                                "button": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "disabledBackgroundColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                },
-                                "commonElement": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "description": Object {
-                                  "fontColor": "#9d9d9d",
-                                },
-                                "label": Object {
-                                  "fontColor": "#2d2d2d",
-                                },
-                                "layout": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "main": Object {
-                                  "backgroundColor": "#f7f7f7",
-                                },
-                                "toggleElement": Object {
-                                  "backgroundColor": "#425579",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                  "secondaryBackgroundColor": "#ffffff",
-                                  "secondaryFontColor": "#9d9d9d",
+                                "fontColors": Object {
+                                  "anchor": "#3fbaca",
+                                  "button": "#ffffff",
+                                  "common": "#293346",
+                                  "description": "#9d9d9d",
+                                  "disabledAnchor": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "secondaryToggle": "#9d9d9d",
+                                  "toggle": "#ffffff",
                                 },
                               }
                             }
@@ -735,48 +483,30 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo cChrIF"
+                              className="sc-hKFyIo hQlczd"
                               onClick={[Function]}
                               palette={
                                 Object {
-                                  "actionsDropdown": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "fontColor": "#ffffff",
+                                  "backgroundColors": Object {
+                                    "button": "#3fbaca",
+                                    "common": "#ffffff",
+                                    "disabledButton": "#e2e2e2",
+                                    "main": "#f7f7f7",
+                                    "secondaryToggle": "#ffffff",
+                                    "toggle": "#425579",
                                   },
-                                  "anchor": Object {
-                                    "disabledFontColor": "#9d9d9d",
-                                    "fontColor": "#3fbaca",
+                                  "borderColors": Object {
+                                    "common": "#e2e2e2",
                                   },
-                                  "button": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "disabledBackgroundColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                  },
-                                  "commonElement": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "description": Object {
-                                    "fontColor": "#9d9d9d",
-                                  },
-                                  "label": Object {
-                                    "fontColor": "#2d2d2d",
-                                  },
-                                  "layout": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "main": Object {
-                                    "backgroundColor": "#f7f7f7",
-                                  },
-                                  "toggleElement": Object {
-                                    "backgroundColor": "#425579",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                    "secondaryBackgroundColor": "#ffffff",
-                                    "secondaryFontColor": "#9d9d9d",
+                                  "fontColors": Object {
+                                    "anchor": "#3fbaca",
+                                    "button": "#ffffff",
+                                    "common": "#293346",
+                                    "description": "#9d9d9d",
+                                    "disabledAnchor": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "secondaryToggle": "#9d9d9d",
+                                    "toggle": "#ffffff",
                                   },
                                 }
                               }
@@ -784,48 +514,30 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo cChrIF"
+                                className="sc-hKFyIo hQlczd"
                                 onClick={[Function]}
                                 palette={
                                   Object {
-                                    "actionsDropdown": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "fontColor": "#ffffff",
+                                    "backgroundColors": Object {
+                                      "button": "#3fbaca",
+                                      "common": "#ffffff",
+                                      "disabledButton": "#e2e2e2",
+                                      "main": "#f7f7f7",
+                                      "secondaryToggle": "#ffffff",
+                                      "toggle": "#425579",
                                     },
-                                    "anchor": Object {
-                                      "disabledFontColor": "#9d9d9d",
-                                      "fontColor": "#3fbaca",
+                                    "borderColors": Object {
+                                      "common": "#e2e2e2",
                                     },
-                                    "button": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "disabledBackgroundColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                    },
-                                    "commonElement": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "description": Object {
-                                      "fontColor": "#9d9d9d",
-                                    },
-                                    "label": Object {
-                                      "fontColor": "#2d2d2d",
-                                    },
-                                    "layout": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "main": Object {
-                                      "backgroundColor": "#f7f7f7",
-                                    },
-                                    "toggleElement": Object {
-                                      "backgroundColor": "#425579",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                      "secondaryBackgroundColor": "#ffffff",
-                                      "secondaryFontColor": "#9d9d9d",
+                                    "fontColors": Object {
+                                      "anchor": "#3fbaca",
+                                      "button": "#ffffff",
+                                      "common": "#293346",
+                                      "description": "#9d9d9d",
+                                      "disabledAnchor": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "secondaryToggle": "#9d9d9d",
+                                      "toggle": "#ffffff",
                                     },
                                   }
                                 }
@@ -833,55 +545,37 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo cChrIF"
+                                  className="sc-hKFyIo hQlczd"
                                   onClick={[Function]}
                                   palette={
                                     Object {
-                                      "actionsDropdown": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "fontColor": "#ffffff",
+                                      "backgroundColors": Object {
+                                        "button": "#3fbaca",
+                                        "common": "#ffffff",
+                                        "disabledButton": "#e2e2e2",
+                                        "main": "#f7f7f7",
+                                        "secondaryToggle": "#ffffff",
+                                        "toggle": "#425579",
                                       },
-                                      "anchor": Object {
-                                        "disabledFontColor": "#9d9d9d",
-                                        "fontColor": "#3fbaca",
+                                      "borderColors": Object {
+                                        "common": "#e2e2e2",
                                       },
-                                      "button": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "disabledBackgroundColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                      },
-                                      "commonElement": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "description": Object {
-                                        "fontColor": "#9d9d9d",
-                                      },
-                                      "label": Object {
-                                        "fontColor": "#2d2d2d",
-                                      },
-                                      "layout": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "main": Object {
-                                        "backgroundColor": "#f7f7f7",
-                                      },
-                                      "toggleElement": Object {
-                                        "backgroundColor": "#425579",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                        "secondaryBackgroundColor": "#ffffff",
-                                        "secondaryFontColor": "#9d9d9d",
+                                      "fontColors": Object {
+                                        "anchor": "#3fbaca",
+                                        "button": "#ffffff",
+                                        "common": "#293346",
+                                        "description": "#9d9d9d",
+                                        "disabledAnchor": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "secondaryToggle": "#9d9d9d",
+                                        "toggle": "#ffffff",
                                       },
                                     }
                                   }
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx kBsmpR sc-hKFyIo cChrIF"
+                                    className="sc-bdnylx sJSbd sc-hKFyIo hQlczd"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -906,44 +600,26 @@ exports[`Pagination renders correctly 1`] = `
                           onClick={[Function]}
                           palette={
                             Object {
-                              "actionsDropdown": Object {
-                                "backgroundColor": "#3fbaca",
-                                "fontColor": "#ffffff",
+                              "backgroundColors": Object {
+                                "button": "#3fbaca",
+                                "common": "#ffffff",
+                                "disabledButton": "#e2e2e2",
+                                "main": "#f7f7f7",
+                                "secondaryToggle": "#ffffff",
+                                "toggle": "#425579",
                               },
-                              "anchor": Object {
-                                "disabledFontColor": "#9d9d9d",
-                                "fontColor": "#3fbaca",
+                              "borderColors": Object {
+                                "common": "#e2e2e2",
                               },
-                              "button": Object {
-                                "backgroundColor": "#3fbaca",
-                                "disabledBackgroundColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                              },
-                              "commonElement": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "description": Object {
-                                "fontColor": "#9d9d9d",
-                              },
-                              "label": Object {
-                                "fontColor": "#2d2d2d",
-                              },
-                              "layout": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "main": Object {
-                                "backgroundColor": "#f7f7f7",
-                              },
-                              "toggleElement": Object {
-                                "backgroundColor": "#425579",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                                "secondaryBackgroundColor": "#ffffff",
-                                "secondaryFontColor": "#9d9d9d",
+                              "fontColors": Object {
+                                "anchor": "#3fbaca",
+                                "button": "#ffffff",
+                                "common": "#293346",
+                                "description": "#9d9d9d",
+                                "disabledAnchor": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "secondaryToggle": "#9d9d9d",
+                                "toggle": "#ffffff",
                               },
                             }
                           }
@@ -955,44 +631,26 @@ exports[`Pagination renders correctly 1`] = `
                             onClick={[Function]}
                             palette={
                               Object {
-                                "actionsDropdown": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "fontColor": "#ffffff",
+                                "backgroundColors": Object {
+                                  "button": "#3fbaca",
+                                  "common": "#ffffff",
+                                  "disabledButton": "#e2e2e2",
+                                  "main": "#f7f7f7",
+                                  "secondaryToggle": "#ffffff",
+                                  "toggle": "#425579",
                                 },
-                                "anchor": Object {
-                                  "disabledFontColor": "#9d9d9d",
-                                  "fontColor": "#3fbaca",
+                                "borderColors": Object {
+                                  "common": "#e2e2e2",
                                 },
-                                "button": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "disabledBackgroundColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                },
-                                "commonElement": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "description": Object {
-                                  "fontColor": "#9d9d9d",
-                                },
-                                "label": Object {
-                                  "fontColor": "#2d2d2d",
-                                },
-                                "layout": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "main": Object {
-                                  "backgroundColor": "#f7f7f7",
-                                },
-                                "toggleElement": Object {
-                                  "backgroundColor": "#425579",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                  "secondaryBackgroundColor": "#ffffff",
-                                  "secondaryFontColor": "#9d9d9d",
+                                "fontColors": Object {
+                                  "anchor": "#3fbaca",
+                                  "button": "#ffffff",
+                                  "common": "#293346",
+                                  "description": "#9d9d9d",
+                                  "disabledAnchor": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "secondaryToggle": "#9d9d9d",
+                                  "toggle": "#ffffff",
                                 },
                               }
                             }
@@ -1000,48 +658,30 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={true}
-                              className="sc-hKFyIo eYqcKW"
+                              className="sc-hKFyIo dWRUqa"
                               onClick={[Function]}
                               palette={
                                 Object {
-                                  "actionsDropdown": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "fontColor": "#ffffff",
+                                  "backgroundColors": Object {
+                                    "button": "#3fbaca",
+                                    "common": "#ffffff",
+                                    "disabledButton": "#e2e2e2",
+                                    "main": "#f7f7f7",
+                                    "secondaryToggle": "#ffffff",
+                                    "toggle": "#425579",
                                   },
-                                  "anchor": Object {
-                                    "disabledFontColor": "#9d9d9d",
-                                    "fontColor": "#3fbaca",
+                                  "borderColors": Object {
+                                    "common": "#e2e2e2",
                                   },
-                                  "button": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "disabledBackgroundColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                  },
-                                  "commonElement": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "description": Object {
-                                    "fontColor": "#9d9d9d",
-                                  },
-                                  "label": Object {
-                                    "fontColor": "#2d2d2d",
-                                  },
-                                  "layout": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "main": Object {
-                                    "backgroundColor": "#f7f7f7",
-                                  },
-                                  "toggleElement": Object {
-                                    "backgroundColor": "#425579",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                    "secondaryBackgroundColor": "#ffffff",
-                                    "secondaryFontColor": "#9d9d9d",
+                                  "fontColors": Object {
+                                    "anchor": "#3fbaca",
+                                    "button": "#ffffff",
+                                    "common": "#293346",
+                                    "description": "#9d9d9d",
+                                    "disabledAnchor": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "secondaryToggle": "#9d9d9d",
+                                    "toggle": "#ffffff",
                                   },
                                 }
                               }
@@ -1049,48 +689,30 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={true}
-                                className="sc-hKFyIo eYqcKW"
+                                className="sc-hKFyIo dWRUqa"
                                 onClick={[Function]}
                                 palette={
                                   Object {
-                                    "actionsDropdown": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "fontColor": "#ffffff",
+                                    "backgroundColors": Object {
+                                      "button": "#3fbaca",
+                                      "common": "#ffffff",
+                                      "disabledButton": "#e2e2e2",
+                                      "main": "#f7f7f7",
+                                      "secondaryToggle": "#ffffff",
+                                      "toggle": "#425579",
                                     },
-                                    "anchor": Object {
-                                      "disabledFontColor": "#9d9d9d",
-                                      "fontColor": "#3fbaca",
+                                    "borderColors": Object {
+                                      "common": "#e2e2e2",
                                     },
-                                    "button": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "disabledBackgroundColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                    },
-                                    "commonElement": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "description": Object {
-                                      "fontColor": "#9d9d9d",
-                                    },
-                                    "label": Object {
-                                      "fontColor": "#2d2d2d",
-                                    },
-                                    "layout": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "main": Object {
-                                      "backgroundColor": "#f7f7f7",
-                                    },
-                                    "toggleElement": Object {
-                                      "backgroundColor": "#425579",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                      "secondaryBackgroundColor": "#ffffff",
-                                      "secondaryFontColor": "#9d9d9d",
+                                    "fontColors": Object {
+                                      "anchor": "#3fbaca",
+                                      "button": "#ffffff",
+                                      "common": "#293346",
+                                      "description": "#9d9d9d",
+                                      "disabledAnchor": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "secondaryToggle": "#9d9d9d",
+                                      "toggle": "#ffffff",
                                     },
                                   }
                                 }
@@ -1098,55 +720,37 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={true}
-                                  className="sc-hKFyIo eYqcKW"
+                                  className="sc-hKFyIo dWRUqa"
                                   onClick={[Function]}
                                   palette={
                                     Object {
-                                      "actionsDropdown": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "fontColor": "#ffffff",
+                                      "backgroundColors": Object {
+                                        "button": "#3fbaca",
+                                        "common": "#ffffff",
+                                        "disabledButton": "#e2e2e2",
+                                        "main": "#f7f7f7",
+                                        "secondaryToggle": "#ffffff",
+                                        "toggle": "#425579",
                                       },
-                                      "anchor": Object {
-                                        "disabledFontColor": "#9d9d9d",
-                                        "fontColor": "#3fbaca",
+                                      "borderColors": Object {
+                                        "common": "#e2e2e2",
                                       },
-                                      "button": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "disabledBackgroundColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                      },
-                                      "commonElement": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "description": Object {
-                                        "fontColor": "#9d9d9d",
-                                      },
-                                      "label": Object {
-                                        "fontColor": "#2d2d2d",
-                                      },
-                                      "layout": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "main": Object {
-                                        "backgroundColor": "#f7f7f7",
-                                      },
-                                      "toggleElement": Object {
-                                        "backgroundColor": "#425579",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                        "secondaryBackgroundColor": "#ffffff",
-                                        "secondaryFontColor": "#9d9d9d",
+                                      "fontColors": Object {
+                                        "anchor": "#3fbaca",
+                                        "button": "#ffffff",
+                                        "common": "#293346",
+                                        "description": "#9d9d9d",
+                                        "disabledAnchor": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "secondaryToggle": "#9d9d9d",
+                                        "toggle": "#ffffff",
                                       },
                                     }
                                   }
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx kBsmpR sc-hKFyIo eYqcKW"
+                                    className="sc-bdnylx sJSbd sc-hKFyIo dWRUqa"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1171,44 +775,26 @@ exports[`Pagination renders correctly 1`] = `
                           onClick={[Function]}
                           palette={
                             Object {
-                              "actionsDropdown": Object {
-                                "backgroundColor": "#3fbaca",
-                                "fontColor": "#ffffff",
+                              "backgroundColors": Object {
+                                "button": "#3fbaca",
+                                "common": "#ffffff",
+                                "disabledButton": "#e2e2e2",
+                                "main": "#f7f7f7",
+                                "secondaryToggle": "#ffffff",
+                                "toggle": "#425579",
                               },
-                              "anchor": Object {
-                                "disabledFontColor": "#9d9d9d",
-                                "fontColor": "#3fbaca",
+                              "borderColors": Object {
+                                "common": "#e2e2e2",
                               },
-                              "button": Object {
-                                "backgroundColor": "#3fbaca",
-                                "disabledBackgroundColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                              },
-                              "commonElement": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "description": Object {
-                                "fontColor": "#9d9d9d",
-                              },
-                              "label": Object {
-                                "fontColor": "#2d2d2d",
-                              },
-                              "layout": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "main": Object {
-                                "backgroundColor": "#f7f7f7",
-                              },
-                              "toggleElement": Object {
-                                "backgroundColor": "#425579",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                                "secondaryBackgroundColor": "#ffffff",
-                                "secondaryFontColor": "#9d9d9d",
+                              "fontColors": Object {
+                                "anchor": "#3fbaca",
+                                "button": "#ffffff",
+                                "common": "#293346",
+                                "description": "#9d9d9d",
+                                "disabledAnchor": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "secondaryToggle": "#9d9d9d",
+                                "toggle": "#ffffff",
                               },
                             }
                           }
@@ -1220,44 +806,26 @@ exports[`Pagination renders correctly 1`] = `
                             onClick={[Function]}
                             palette={
                               Object {
-                                "actionsDropdown": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "fontColor": "#ffffff",
+                                "backgroundColors": Object {
+                                  "button": "#3fbaca",
+                                  "common": "#ffffff",
+                                  "disabledButton": "#e2e2e2",
+                                  "main": "#f7f7f7",
+                                  "secondaryToggle": "#ffffff",
+                                  "toggle": "#425579",
                                 },
-                                "anchor": Object {
-                                  "disabledFontColor": "#9d9d9d",
-                                  "fontColor": "#3fbaca",
+                                "borderColors": Object {
+                                  "common": "#e2e2e2",
                                 },
-                                "button": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "disabledBackgroundColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                },
-                                "commonElement": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "description": Object {
-                                  "fontColor": "#9d9d9d",
-                                },
-                                "label": Object {
-                                  "fontColor": "#2d2d2d",
-                                },
-                                "layout": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "main": Object {
-                                  "backgroundColor": "#f7f7f7",
-                                },
-                                "toggleElement": Object {
-                                  "backgroundColor": "#425579",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                  "secondaryBackgroundColor": "#ffffff",
-                                  "secondaryFontColor": "#9d9d9d",
+                                "fontColors": Object {
+                                  "anchor": "#3fbaca",
+                                  "button": "#ffffff",
+                                  "common": "#293346",
+                                  "description": "#9d9d9d",
+                                  "disabledAnchor": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "secondaryToggle": "#9d9d9d",
+                                  "toggle": "#ffffff",
                                 },
                               }
                             }
@@ -1265,48 +833,30 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo cChrIF"
+                              className="sc-hKFyIo hQlczd"
                               onClick={[Function]}
                               palette={
                                 Object {
-                                  "actionsDropdown": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "fontColor": "#ffffff",
+                                  "backgroundColors": Object {
+                                    "button": "#3fbaca",
+                                    "common": "#ffffff",
+                                    "disabledButton": "#e2e2e2",
+                                    "main": "#f7f7f7",
+                                    "secondaryToggle": "#ffffff",
+                                    "toggle": "#425579",
                                   },
-                                  "anchor": Object {
-                                    "disabledFontColor": "#9d9d9d",
-                                    "fontColor": "#3fbaca",
+                                  "borderColors": Object {
+                                    "common": "#e2e2e2",
                                   },
-                                  "button": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "disabledBackgroundColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                  },
-                                  "commonElement": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "description": Object {
-                                    "fontColor": "#9d9d9d",
-                                  },
-                                  "label": Object {
-                                    "fontColor": "#2d2d2d",
-                                  },
-                                  "layout": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "main": Object {
-                                    "backgroundColor": "#f7f7f7",
-                                  },
-                                  "toggleElement": Object {
-                                    "backgroundColor": "#425579",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                    "secondaryBackgroundColor": "#ffffff",
-                                    "secondaryFontColor": "#9d9d9d",
+                                  "fontColors": Object {
+                                    "anchor": "#3fbaca",
+                                    "button": "#ffffff",
+                                    "common": "#293346",
+                                    "description": "#9d9d9d",
+                                    "disabledAnchor": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "secondaryToggle": "#9d9d9d",
+                                    "toggle": "#ffffff",
                                   },
                                 }
                               }
@@ -1314,48 +864,30 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo cChrIF"
+                                className="sc-hKFyIo hQlczd"
                                 onClick={[Function]}
                                 palette={
                                   Object {
-                                    "actionsDropdown": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "fontColor": "#ffffff",
+                                    "backgroundColors": Object {
+                                      "button": "#3fbaca",
+                                      "common": "#ffffff",
+                                      "disabledButton": "#e2e2e2",
+                                      "main": "#f7f7f7",
+                                      "secondaryToggle": "#ffffff",
+                                      "toggle": "#425579",
                                     },
-                                    "anchor": Object {
-                                      "disabledFontColor": "#9d9d9d",
-                                      "fontColor": "#3fbaca",
+                                    "borderColors": Object {
+                                      "common": "#e2e2e2",
                                     },
-                                    "button": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "disabledBackgroundColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                    },
-                                    "commonElement": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "description": Object {
-                                      "fontColor": "#9d9d9d",
-                                    },
-                                    "label": Object {
-                                      "fontColor": "#2d2d2d",
-                                    },
-                                    "layout": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "main": Object {
-                                      "backgroundColor": "#f7f7f7",
-                                    },
-                                    "toggleElement": Object {
-                                      "backgroundColor": "#425579",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                      "secondaryBackgroundColor": "#ffffff",
-                                      "secondaryFontColor": "#9d9d9d",
+                                    "fontColors": Object {
+                                      "anchor": "#3fbaca",
+                                      "button": "#ffffff",
+                                      "common": "#293346",
+                                      "description": "#9d9d9d",
+                                      "disabledAnchor": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "secondaryToggle": "#9d9d9d",
+                                      "toggle": "#ffffff",
                                     },
                                   }
                                 }
@@ -1363,55 +895,37 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo cChrIF"
+                                  className="sc-hKFyIo hQlczd"
                                   onClick={[Function]}
                                   palette={
                                     Object {
-                                      "actionsDropdown": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "fontColor": "#ffffff",
+                                      "backgroundColors": Object {
+                                        "button": "#3fbaca",
+                                        "common": "#ffffff",
+                                        "disabledButton": "#e2e2e2",
+                                        "main": "#f7f7f7",
+                                        "secondaryToggle": "#ffffff",
+                                        "toggle": "#425579",
                                       },
-                                      "anchor": Object {
-                                        "disabledFontColor": "#9d9d9d",
-                                        "fontColor": "#3fbaca",
+                                      "borderColors": Object {
+                                        "common": "#e2e2e2",
                                       },
-                                      "button": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "disabledBackgroundColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                      },
-                                      "commonElement": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "description": Object {
-                                        "fontColor": "#9d9d9d",
-                                      },
-                                      "label": Object {
-                                        "fontColor": "#2d2d2d",
-                                      },
-                                      "layout": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "main": Object {
-                                        "backgroundColor": "#f7f7f7",
-                                      },
-                                      "toggleElement": Object {
-                                        "backgroundColor": "#425579",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                        "secondaryBackgroundColor": "#ffffff",
-                                        "secondaryFontColor": "#9d9d9d",
+                                      "fontColors": Object {
+                                        "anchor": "#3fbaca",
+                                        "button": "#ffffff",
+                                        "common": "#293346",
+                                        "description": "#9d9d9d",
+                                        "disabledAnchor": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "secondaryToggle": "#9d9d9d",
+                                        "toggle": "#ffffff",
                                       },
                                     }
                                   }
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx kBsmpR sc-hKFyIo cChrIF"
+                                    className="sc-bdnylx sJSbd sc-hKFyIo hQlczd"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1436,44 +950,26 @@ exports[`Pagination renders correctly 1`] = `
                           onClick={[Function]}
                           palette={
                             Object {
-                              "actionsDropdown": Object {
-                                "backgroundColor": "#3fbaca",
-                                "fontColor": "#ffffff",
+                              "backgroundColors": Object {
+                                "button": "#3fbaca",
+                                "common": "#ffffff",
+                                "disabledButton": "#e2e2e2",
+                                "main": "#f7f7f7",
+                                "secondaryToggle": "#ffffff",
+                                "toggle": "#425579",
                               },
-                              "anchor": Object {
-                                "disabledFontColor": "#9d9d9d",
-                                "fontColor": "#3fbaca",
+                              "borderColors": Object {
+                                "common": "#e2e2e2",
                               },
-                              "button": Object {
-                                "backgroundColor": "#3fbaca",
-                                "disabledBackgroundColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                              },
-                              "commonElement": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "description": Object {
-                                "fontColor": "#9d9d9d",
-                              },
-                              "label": Object {
-                                "fontColor": "#2d2d2d",
-                              },
-                              "layout": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "main": Object {
-                                "backgroundColor": "#f7f7f7",
-                              },
-                              "toggleElement": Object {
-                                "backgroundColor": "#425579",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                                "secondaryBackgroundColor": "#ffffff",
-                                "secondaryFontColor": "#9d9d9d",
+                              "fontColors": Object {
+                                "anchor": "#3fbaca",
+                                "button": "#ffffff",
+                                "common": "#293346",
+                                "description": "#9d9d9d",
+                                "disabledAnchor": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "secondaryToggle": "#9d9d9d",
+                                "toggle": "#ffffff",
                               },
                             }
                           }
@@ -1485,44 +981,26 @@ exports[`Pagination renders correctly 1`] = `
                             onClick={[Function]}
                             palette={
                               Object {
-                                "actionsDropdown": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "fontColor": "#ffffff",
+                                "backgroundColors": Object {
+                                  "button": "#3fbaca",
+                                  "common": "#ffffff",
+                                  "disabledButton": "#e2e2e2",
+                                  "main": "#f7f7f7",
+                                  "secondaryToggle": "#ffffff",
+                                  "toggle": "#425579",
                                 },
-                                "anchor": Object {
-                                  "disabledFontColor": "#9d9d9d",
-                                  "fontColor": "#3fbaca",
+                                "borderColors": Object {
+                                  "common": "#e2e2e2",
                                 },
-                                "button": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "disabledBackgroundColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                },
-                                "commonElement": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "description": Object {
-                                  "fontColor": "#9d9d9d",
-                                },
-                                "label": Object {
-                                  "fontColor": "#2d2d2d",
-                                },
-                                "layout": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "main": Object {
-                                  "backgroundColor": "#f7f7f7",
-                                },
-                                "toggleElement": Object {
-                                  "backgroundColor": "#425579",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                  "secondaryBackgroundColor": "#ffffff",
-                                  "secondaryFontColor": "#9d9d9d",
+                                "fontColors": Object {
+                                  "anchor": "#3fbaca",
+                                  "button": "#ffffff",
+                                  "common": "#293346",
+                                  "description": "#9d9d9d",
+                                  "disabledAnchor": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "secondaryToggle": "#9d9d9d",
+                                  "toggle": "#ffffff",
                                 },
                               }
                             }
@@ -1530,48 +1008,30 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo cChrIF"
+                              className="sc-hKFyIo hQlczd"
                               onClick={[Function]}
                               palette={
                                 Object {
-                                  "actionsDropdown": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "fontColor": "#ffffff",
+                                  "backgroundColors": Object {
+                                    "button": "#3fbaca",
+                                    "common": "#ffffff",
+                                    "disabledButton": "#e2e2e2",
+                                    "main": "#f7f7f7",
+                                    "secondaryToggle": "#ffffff",
+                                    "toggle": "#425579",
                                   },
-                                  "anchor": Object {
-                                    "disabledFontColor": "#9d9d9d",
-                                    "fontColor": "#3fbaca",
+                                  "borderColors": Object {
+                                    "common": "#e2e2e2",
                                   },
-                                  "button": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "disabledBackgroundColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                  },
-                                  "commonElement": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "description": Object {
-                                    "fontColor": "#9d9d9d",
-                                  },
-                                  "label": Object {
-                                    "fontColor": "#2d2d2d",
-                                  },
-                                  "layout": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "main": Object {
-                                    "backgroundColor": "#f7f7f7",
-                                  },
-                                  "toggleElement": Object {
-                                    "backgroundColor": "#425579",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                    "secondaryBackgroundColor": "#ffffff",
-                                    "secondaryFontColor": "#9d9d9d",
+                                  "fontColors": Object {
+                                    "anchor": "#3fbaca",
+                                    "button": "#ffffff",
+                                    "common": "#293346",
+                                    "description": "#9d9d9d",
+                                    "disabledAnchor": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "secondaryToggle": "#9d9d9d",
+                                    "toggle": "#ffffff",
                                   },
                                 }
                               }
@@ -1579,48 +1039,30 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo cChrIF"
+                                className="sc-hKFyIo hQlczd"
                                 onClick={[Function]}
                                 palette={
                                   Object {
-                                    "actionsDropdown": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "fontColor": "#ffffff",
+                                    "backgroundColors": Object {
+                                      "button": "#3fbaca",
+                                      "common": "#ffffff",
+                                      "disabledButton": "#e2e2e2",
+                                      "main": "#f7f7f7",
+                                      "secondaryToggle": "#ffffff",
+                                      "toggle": "#425579",
                                     },
-                                    "anchor": Object {
-                                      "disabledFontColor": "#9d9d9d",
-                                      "fontColor": "#3fbaca",
+                                    "borderColors": Object {
+                                      "common": "#e2e2e2",
                                     },
-                                    "button": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "disabledBackgroundColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                    },
-                                    "commonElement": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "description": Object {
-                                      "fontColor": "#9d9d9d",
-                                    },
-                                    "label": Object {
-                                      "fontColor": "#2d2d2d",
-                                    },
-                                    "layout": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "main": Object {
-                                      "backgroundColor": "#f7f7f7",
-                                    },
-                                    "toggleElement": Object {
-                                      "backgroundColor": "#425579",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                      "secondaryBackgroundColor": "#ffffff",
-                                      "secondaryFontColor": "#9d9d9d",
+                                    "fontColors": Object {
+                                      "anchor": "#3fbaca",
+                                      "button": "#ffffff",
+                                      "common": "#293346",
+                                      "description": "#9d9d9d",
+                                      "disabledAnchor": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "secondaryToggle": "#9d9d9d",
+                                      "toggle": "#ffffff",
                                     },
                                   }
                                 }
@@ -1628,55 +1070,37 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo cChrIF"
+                                  className="sc-hKFyIo hQlczd"
                                   onClick={[Function]}
                                   palette={
                                     Object {
-                                      "actionsDropdown": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "fontColor": "#ffffff",
+                                      "backgroundColors": Object {
+                                        "button": "#3fbaca",
+                                        "common": "#ffffff",
+                                        "disabledButton": "#e2e2e2",
+                                        "main": "#f7f7f7",
+                                        "secondaryToggle": "#ffffff",
+                                        "toggle": "#425579",
                                       },
-                                      "anchor": Object {
-                                        "disabledFontColor": "#9d9d9d",
-                                        "fontColor": "#3fbaca",
+                                      "borderColors": Object {
+                                        "common": "#e2e2e2",
                                       },
-                                      "button": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "disabledBackgroundColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                      },
-                                      "commonElement": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "description": Object {
-                                        "fontColor": "#9d9d9d",
-                                      },
-                                      "label": Object {
-                                        "fontColor": "#2d2d2d",
-                                      },
-                                      "layout": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "main": Object {
-                                        "backgroundColor": "#f7f7f7",
-                                      },
-                                      "toggleElement": Object {
-                                        "backgroundColor": "#425579",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                        "secondaryBackgroundColor": "#ffffff",
-                                        "secondaryFontColor": "#9d9d9d",
+                                      "fontColors": Object {
+                                        "anchor": "#3fbaca",
+                                        "button": "#ffffff",
+                                        "common": "#293346",
+                                        "description": "#9d9d9d",
+                                        "disabledAnchor": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "secondaryToggle": "#9d9d9d",
+                                        "toggle": "#ffffff",
                                       },
                                     }
                                   }
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx kBsmpR sc-hKFyIo cChrIF"
+                                    className="sc-bdnylx sJSbd sc-hKFyIo hQlczd"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1701,44 +1125,26 @@ exports[`Pagination renders correctly 1`] = `
                           onClick={[Function]}
                           palette={
                             Object {
-                              "actionsDropdown": Object {
-                                "backgroundColor": "#3fbaca",
-                                "fontColor": "#ffffff",
+                              "backgroundColors": Object {
+                                "button": "#3fbaca",
+                                "common": "#ffffff",
+                                "disabledButton": "#e2e2e2",
+                                "main": "#f7f7f7",
+                                "secondaryToggle": "#ffffff",
+                                "toggle": "#425579",
                               },
-                              "anchor": Object {
-                                "disabledFontColor": "#9d9d9d",
-                                "fontColor": "#3fbaca",
+                              "borderColors": Object {
+                                "common": "#e2e2e2",
                               },
-                              "button": Object {
-                                "backgroundColor": "#3fbaca",
-                                "disabledBackgroundColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                              },
-                              "commonElement": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "description": Object {
-                                "fontColor": "#9d9d9d",
-                              },
-                              "label": Object {
-                                "fontColor": "#2d2d2d",
-                              },
-                              "layout": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "main": Object {
-                                "backgroundColor": "#f7f7f7",
-                              },
-                              "toggleElement": Object {
-                                "backgroundColor": "#425579",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                                "secondaryBackgroundColor": "#ffffff",
-                                "secondaryFontColor": "#9d9d9d",
+                              "fontColors": Object {
+                                "anchor": "#3fbaca",
+                                "button": "#ffffff",
+                                "common": "#293346",
+                                "description": "#9d9d9d",
+                                "disabledAnchor": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "secondaryToggle": "#9d9d9d",
+                                "toggle": "#ffffff",
                               },
                             }
                           }
@@ -1750,44 +1156,26 @@ exports[`Pagination renders correctly 1`] = `
                             onClick={[Function]}
                             palette={
                               Object {
-                                "actionsDropdown": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "fontColor": "#ffffff",
+                                "backgroundColors": Object {
+                                  "button": "#3fbaca",
+                                  "common": "#ffffff",
+                                  "disabledButton": "#e2e2e2",
+                                  "main": "#f7f7f7",
+                                  "secondaryToggle": "#ffffff",
+                                  "toggle": "#425579",
                                 },
-                                "anchor": Object {
-                                  "disabledFontColor": "#9d9d9d",
-                                  "fontColor": "#3fbaca",
+                                "borderColors": Object {
+                                  "common": "#e2e2e2",
                                 },
-                                "button": Object {
-                                  "backgroundColor": "#3fbaca",
-                                  "disabledBackgroundColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                },
-                                "commonElement": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "description": Object {
-                                  "fontColor": "#9d9d9d",
-                                },
-                                "label": Object {
-                                  "fontColor": "#2d2d2d",
-                                },
-                                "layout": Object {
-                                  "backgroundColor": "#ffffff",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#293346",
-                                },
-                                "main": Object {
-                                  "backgroundColor": "#f7f7f7",
-                                },
-                                "toggleElement": Object {
-                                  "backgroundColor": "#425579",
-                                  "borderColor": "#e2e2e2",
-                                  "fontColor": "#ffffff",
-                                  "secondaryBackgroundColor": "#ffffff",
-                                  "secondaryFontColor": "#9d9d9d",
+                                "fontColors": Object {
+                                  "anchor": "#3fbaca",
+                                  "button": "#ffffff",
+                                  "common": "#293346",
+                                  "description": "#9d9d9d",
+                                  "disabledAnchor": "#9d9d9d",
+                                  "label": "#2d2d2d",
+                                  "secondaryToggle": "#9d9d9d",
+                                  "toggle": "#ffffff",
                                 },
                               }
                             }
@@ -1795,48 +1183,30 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo cChrIF"
+                              className="sc-hKFyIo hQlczd"
                               onClick={[Function]}
                               palette={
                                 Object {
-                                  "actionsDropdown": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "fontColor": "#ffffff",
+                                  "backgroundColors": Object {
+                                    "button": "#3fbaca",
+                                    "common": "#ffffff",
+                                    "disabledButton": "#e2e2e2",
+                                    "main": "#f7f7f7",
+                                    "secondaryToggle": "#ffffff",
+                                    "toggle": "#425579",
                                   },
-                                  "anchor": Object {
-                                    "disabledFontColor": "#9d9d9d",
-                                    "fontColor": "#3fbaca",
+                                  "borderColors": Object {
+                                    "common": "#e2e2e2",
                                   },
-                                  "button": Object {
-                                    "backgroundColor": "#3fbaca",
-                                    "disabledBackgroundColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                  },
-                                  "commonElement": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "description": Object {
-                                    "fontColor": "#9d9d9d",
-                                  },
-                                  "label": Object {
-                                    "fontColor": "#2d2d2d",
-                                  },
-                                  "layout": Object {
-                                    "backgroundColor": "#ffffff",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#293346",
-                                  },
-                                  "main": Object {
-                                    "backgroundColor": "#f7f7f7",
-                                  },
-                                  "toggleElement": Object {
-                                    "backgroundColor": "#425579",
-                                    "borderColor": "#e2e2e2",
-                                    "fontColor": "#ffffff",
-                                    "secondaryBackgroundColor": "#ffffff",
-                                    "secondaryFontColor": "#9d9d9d",
+                                  "fontColors": Object {
+                                    "anchor": "#3fbaca",
+                                    "button": "#ffffff",
+                                    "common": "#293346",
+                                    "description": "#9d9d9d",
+                                    "disabledAnchor": "#9d9d9d",
+                                    "label": "#2d2d2d",
+                                    "secondaryToggle": "#9d9d9d",
+                                    "toggle": "#ffffff",
                                   },
                                 }
                               }
@@ -1844,48 +1214,30 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo cChrIF"
+                                className="sc-hKFyIo hQlczd"
                                 onClick={[Function]}
                                 palette={
                                   Object {
-                                    "actionsDropdown": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "fontColor": "#ffffff",
+                                    "backgroundColors": Object {
+                                      "button": "#3fbaca",
+                                      "common": "#ffffff",
+                                      "disabledButton": "#e2e2e2",
+                                      "main": "#f7f7f7",
+                                      "secondaryToggle": "#ffffff",
+                                      "toggle": "#425579",
                                     },
-                                    "anchor": Object {
-                                      "disabledFontColor": "#9d9d9d",
-                                      "fontColor": "#3fbaca",
+                                    "borderColors": Object {
+                                      "common": "#e2e2e2",
                                     },
-                                    "button": Object {
-                                      "backgroundColor": "#3fbaca",
-                                      "disabledBackgroundColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                    },
-                                    "commonElement": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "description": Object {
-                                      "fontColor": "#9d9d9d",
-                                    },
-                                    "label": Object {
-                                      "fontColor": "#2d2d2d",
-                                    },
-                                    "layout": Object {
-                                      "backgroundColor": "#ffffff",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#293346",
-                                    },
-                                    "main": Object {
-                                      "backgroundColor": "#f7f7f7",
-                                    },
-                                    "toggleElement": Object {
-                                      "backgroundColor": "#425579",
-                                      "borderColor": "#e2e2e2",
-                                      "fontColor": "#ffffff",
-                                      "secondaryBackgroundColor": "#ffffff",
-                                      "secondaryFontColor": "#9d9d9d",
+                                    "fontColors": Object {
+                                      "anchor": "#3fbaca",
+                                      "button": "#ffffff",
+                                      "common": "#293346",
+                                      "description": "#9d9d9d",
+                                      "disabledAnchor": "#9d9d9d",
+                                      "label": "#2d2d2d",
+                                      "secondaryToggle": "#9d9d9d",
+                                      "toggle": "#ffffff",
                                     },
                                   }
                                 }
@@ -1893,55 +1245,37 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo cChrIF"
+                                  className="sc-hKFyIo hQlczd"
                                   onClick={[Function]}
                                   palette={
                                     Object {
-                                      "actionsDropdown": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "fontColor": "#ffffff",
+                                      "backgroundColors": Object {
+                                        "button": "#3fbaca",
+                                        "common": "#ffffff",
+                                        "disabledButton": "#e2e2e2",
+                                        "main": "#f7f7f7",
+                                        "secondaryToggle": "#ffffff",
+                                        "toggle": "#425579",
                                       },
-                                      "anchor": Object {
-                                        "disabledFontColor": "#9d9d9d",
-                                        "fontColor": "#3fbaca",
+                                      "borderColors": Object {
+                                        "common": "#e2e2e2",
                                       },
-                                      "button": Object {
-                                        "backgroundColor": "#3fbaca",
-                                        "disabledBackgroundColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                      },
-                                      "commonElement": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "description": Object {
-                                        "fontColor": "#9d9d9d",
-                                      },
-                                      "label": Object {
-                                        "fontColor": "#2d2d2d",
-                                      },
-                                      "layout": Object {
-                                        "backgroundColor": "#ffffff",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#293346",
-                                      },
-                                      "main": Object {
-                                        "backgroundColor": "#f7f7f7",
-                                      },
-                                      "toggleElement": Object {
-                                        "backgroundColor": "#425579",
-                                        "borderColor": "#e2e2e2",
-                                        "fontColor": "#ffffff",
-                                        "secondaryBackgroundColor": "#ffffff",
-                                        "secondaryFontColor": "#9d9d9d",
+                                      "fontColors": Object {
+                                        "anchor": "#3fbaca",
+                                        "button": "#ffffff",
+                                        "common": "#293346",
+                                        "description": "#9d9d9d",
+                                        "disabledAnchor": "#9d9d9d",
+                                        "label": "#2d2d2d",
+                                        "secondaryToggle": "#9d9d9d",
+                                        "toggle": "#ffffff",
                                       },
                                     }
                                   }
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx kBsmpR sc-hKFyIo cChrIF"
+                                    className="sc-bdnylx sJSbd sc-hKFyIo hQlczd"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1968,44 +1302,26 @@ exports[`Pagination renders correctly 1`] = `
                   className=""
                   palette={
                     Object {
-                      "actionsDropdown": Object {
-                        "backgroundColor": "#3fbaca",
-                        "fontColor": "#ffffff",
+                      "backgroundColors": Object {
+                        "button": "#3fbaca",
+                        "common": "#ffffff",
+                        "disabledButton": "#e2e2e2",
+                        "main": "#f7f7f7",
+                        "secondaryToggle": "#ffffff",
+                        "toggle": "#425579",
                       },
-                      "anchor": Object {
-                        "disabledFontColor": "#9d9d9d",
-                        "fontColor": "#3fbaca",
+                      "borderColors": Object {
+                        "common": "#e2e2e2",
                       },
-                      "button": Object {
-                        "backgroundColor": "#3fbaca",
-                        "disabledBackgroundColor": "#e2e2e2",
-                        "fontColor": "#ffffff",
-                      },
-                      "commonElement": Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#e2e2e2",
-                        "fontColor": "#293346",
-                      },
-                      "description": Object {
-                        "fontColor": "#9d9d9d",
-                      },
-                      "label": Object {
-                        "fontColor": "#2d2d2d",
-                      },
-                      "layout": Object {
-                        "backgroundColor": "#ffffff",
-                        "borderColor": "#e2e2e2",
-                        "fontColor": "#293346",
-                      },
-                      "main": Object {
-                        "backgroundColor": "#f7f7f7",
-                      },
-                      "toggleElement": Object {
-                        "backgroundColor": "#425579",
-                        "borderColor": "#e2e2e2",
-                        "fontColor": "#ffffff",
-                        "secondaryBackgroundColor": "#ffffff",
-                        "secondaryFontColor": "#9d9d9d",
+                      "fontColors": Object {
+                        "anchor": "#3fbaca",
+                        "button": "#ffffff",
+                        "common": "#293346",
+                        "description": "#9d9d9d",
+                        "disabledAnchor": "#9d9d9d",
+                        "label": "#2d2d2d",
+                        "secondaryToggle": "#9d9d9d",
+                        "toggle": "#ffffff",
                       },
                     }
                   }
@@ -2016,44 +1332,26 @@ exports[`Pagination renders correctly 1`] = `
                     className=""
                     palette={
                       Object {
-                        "actionsDropdown": Object {
-                          "backgroundColor": "#3fbaca",
-                          "fontColor": "#ffffff",
+                        "backgroundColors": Object {
+                          "button": "#3fbaca",
+                          "common": "#ffffff",
+                          "disabledButton": "#e2e2e2",
+                          "main": "#f7f7f7",
+                          "secondaryToggle": "#ffffff",
+                          "toggle": "#425579",
                         },
-                        "anchor": Object {
-                          "disabledFontColor": "#9d9d9d",
-                          "fontColor": "#3fbaca",
+                        "borderColors": Object {
+                          "common": "#e2e2e2",
                         },
-                        "button": Object {
-                          "backgroundColor": "#3fbaca",
-                          "disabledBackgroundColor": "#e2e2e2",
-                          "fontColor": "#ffffff",
-                        },
-                        "commonElement": Object {
-                          "backgroundColor": "#ffffff",
-                          "borderColor": "#e2e2e2",
-                          "fontColor": "#293346",
-                        },
-                        "description": Object {
-                          "fontColor": "#9d9d9d",
-                        },
-                        "label": Object {
-                          "fontColor": "#2d2d2d",
-                        },
-                        "layout": Object {
-                          "backgroundColor": "#ffffff",
-                          "borderColor": "#e2e2e2",
-                          "fontColor": "#293346",
-                        },
-                        "main": Object {
-                          "backgroundColor": "#f7f7f7",
-                        },
-                        "toggleElement": Object {
-                          "backgroundColor": "#425579",
-                          "borderColor": "#e2e2e2",
-                          "fontColor": "#ffffff",
-                          "secondaryBackgroundColor": "#ffffff",
-                          "secondaryFontColor": "#9d9d9d",
+                        "fontColors": Object {
+                          "anchor": "#3fbaca",
+                          "button": "#ffffff",
+                          "common": "#293346",
+                          "description": "#9d9d9d",
+                          "disabledAnchor": "#9d9d9d",
+                          "label": "#2d2d2d",
+                          "secondaryToggle": "#9d9d9d",
+                          "toggle": "#ffffff",
                         },
                       }
                     }
@@ -2064,44 +1362,26 @@ exports[`Pagination renders correctly 1`] = `
                       className="sc-eCApGN"
                       palette={
                         Object {
-                          "actionsDropdown": Object {
-                            "backgroundColor": "#3fbaca",
-                            "fontColor": "#ffffff",
+                          "backgroundColors": Object {
+                            "button": "#3fbaca",
+                            "common": "#ffffff",
+                            "disabledButton": "#e2e2e2",
+                            "main": "#f7f7f7",
+                            "secondaryToggle": "#ffffff",
+                            "toggle": "#425579",
                           },
-                          "anchor": Object {
-                            "disabledFontColor": "#9d9d9d",
-                            "fontColor": "#3fbaca",
+                          "borderColors": Object {
+                            "common": "#e2e2e2",
                           },
-                          "button": Object {
-                            "backgroundColor": "#3fbaca",
-                            "disabledBackgroundColor": "#e2e2e2",
-                            "fontColor": "#ffffff",
-                          },
-                          "commonElement": Object {
-                            "backgroundColor": "#ffffff",
-                            "borderColor": "#e2e2e2",
-                            "fontColor": "#293346",
-                          },
-                          "description": Object {
-                            "fontColor": "#9d9d9d",
-                          },
-                          "label": Object {
-                            "fontColor": "#2d2d2d",
-                          },
-                          "layout": Object {
-                            "backgroundColor": "#ffffff",
-                            "borderColor": "#e2e2e2",
-                            "fontColor": "#293346",
-                          },
-                          "main": Object {
-                            "backgroundColor": "#f7f7f7",
-                          },
-                          "toggleElement": Object {
-                            "backgroundColor": "#425579",
-                            "borderColor": "#e2e2e2",
-                            "fontColor": "#ffffff",
-                            "secondaryBackgroundColor": "#ffffff",
-                            "secondaryFontColor": "#9d9d9d",
+                          "fontColors": Object {
+                            "anchor": "#3fbaca",
+                            "button": "#ffffff",
+                            "common": "#293346",
+                            "description": "#9d9d9d",
+                            "disabledAnchor": "#9d9d9d",
+                            "label": "#2d2d2d",
+                            "secondaryToggle": "#9d9d9d",
+                            "toggle": "#ffffff",
                           },
                         }
                       }
@@ -2112,44 +1392,26 @@ exports[`Pagination renders correctly 1`] = `
                         className="sc-eCApGN"
                         palette={
                           Object {
-                            "actionsDropdown": Object {
-                              "backgroundColor": "#3fbaca",
-                              "fontColor": "#ffffff",
+                            "backgroundColors": Object {
+                              "button": "#3fbaca",
+                              "common": "#ffffff",
+                              "disabledButton": "#e2e2e2",
+                              "main": "#f7f7f7",
+                              "secondaryToggle": "#ffffff",
+                              "toggle": "#425579",
                             },
-                            "anchor": Object {
-                              "disabledFontColor": "#9d9d9d",
-                              "fontColor": "#3fbaca",
+                            "borderColors": Object {
+                              "common": "#e2e2e2",
                             },
-                            "button": Object {
-                              "backgroundColor": "#3fbaca",
-                              "disabledBackgroundColor": "#e2e2e2",
-                              "fontColor": "#ffffff",
-                            },
-                            "commonElement": Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#e2e2e2",
-                              "fontColor": "#293346",
-                            },
-                            "description": Object {
-                              "fontColor": "#9d9d9d",
-                            },
-                            "label": Object {
-                              "fontColor": "#2d2d2d",
-                            },
-                            "layout": Object {
-                              "backgroundColor": "#ffffff",
-                              "borderColor": "#e2e2e2",
-                              "fontColor": "#293346",
-                            },
-                            "main": Object {
-                              "backgroundColor": "#f7f7f7",
-                            },
-                            "toggleElement": Object {
-                              "backgroundColor": "#425579",
-                              "borderColor": "#e2e2e2",
-                              "fontColor": "#ffffff",
-                              "secondaryBackgroundColor": "#ffffff",
-                              "secondaryFontColor": "#9d9d9d",
+                            "fontColors": Object {
+                              "anchor": "#3fbaca",
+                              "button": "#ffffff",
+                              "common": "#293346",
+                              "description": "#9d9d9d",
+                              "disabledAnchor": "#9d9d9d",
+                              "label": "#2d2d2d",
+                              "secondaryToggle": "#9d9d9d",
+                              "toggle": "#ffffff",
                             },
                           }
                         }
@@ -2160,51 +1422,33 @@ exports[`Pagination renders correctly 1`] = `
                           className="sc-eCApGN"
                           palette={
                             Object {
-                              "actionsDropdown": Object {
-                                "backgroundColor": "#3fbaca",
-                                "fontColor": "#ffffff",
+                              "backgroundColors": Object {
+                                "button": "#3fbaca",
+                                "common": "#ffffff",
+                                "disabledButton": "#e2e2e2",
+                                "main": "#f7f7f7",
+                                "secondaryToggle": "#ffffff",
+                                "toggle": "#425579",
                               },
-                              "anchor": Object {
-                                "disabledFontColor": "#9d9d9d",
-                                "fontColor": "#3fbaca",
+                              "borderColors": Object {
+                                "common": "#e2e2e2",
                               },
-                              "button": Object {
-                                "backgroundColor": "#3fbaca",
-                                "disabledBackgroundColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                              },
-                              "commonElement": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "description": Object {
-                                "fontColor": "#9d9d9d",
-                              },
-                              "label": Object {
-                                "fontColor": "#2d2d2d",
-                              },
-                              "layout": Object {
-                                "backgroundColor": "#ffffff",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#293346",
-                              },
-                              "main": Object {
-                                "backgroundColor": "#f7f7f7",
-                              },
-                              "toggleElement": Object {
-                                "backgroundColor": "#425579",
-                                "borderColor": "#e2e2e2",
-                                "fontColor": "#ffffff",
-                                "secondaryBackgroundColor": "#ffffff",
-                                "secondaryFontColor": "#9d9d9d",
+                              "fontColors": Object {
+                                "anchor": "#3fbaca",
+                                "button": "#ffffff",
+                                "common": "#293346",
+                                "description": "#9d9d9d",
+                                "disabledAnchor": "#9d9d9d",
+                                "label": "#2d2d2d",
+                                "secondaryToggle": "#9d9d9d",
+                                "toggle": "#ffffff",
                               },
                             }
                           }
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx kBsmpR sc-eCApGN"
+                            className="sc-bdnylx sJSbd sc-eCApGN"
                             style={Object {}}
                           >
                             <div>
