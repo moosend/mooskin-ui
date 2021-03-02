@@ -3,6 +3,9 @@ import * as React from 'react';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
+
 // Models
 import { IBoxComponentProps } from '../Box/model';
 import { ICarouselComponentProps } from './model';
@@ -39,9 +42,9 @@ Carousel.defaultProps = {
 
 Carousel.displayName = 'Carousel';
 
-export const CustomDot: React.FC<IBoxComponentProps> = (props) => {
+export const CustomDot: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
 	return <StyledDot {...props} />;
-};
+});
 
 CustomDot.defaultProps = {
 	className: '',
