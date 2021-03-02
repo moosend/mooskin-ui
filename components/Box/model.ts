@@ -2,7 +2,7 @@ import { IBackgroundColors, IBorderColors, IFontColors, IMooskinContext, IStyled
 
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 export type BoxShadowIntensityType = IntensityType | 'inner' | 'outline';
-export type NestedThemeType = [keyof IStyledTheme, keyof IFontColors & keyof IBorderColors & keyof IBackgroundColors];
+export type NestedThemeType = [keyof IStyledTheme, keyof IFontColors | keyof IBorderColors | keyof IBackgroundColors];
 
 export const boxComponentProps = [
 	'id',
