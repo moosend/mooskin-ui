@@ -13,7 +13,7 @@ import { StyledFooter, StyledFooterBody, StyledFooterEnd, StyledFooterHead } fro
  * Footer
  */
 export const Footer: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledFooter boxShadow="inner" {...props} />;
+	return <StyledFooter {...props} />;
 });
 
 Footer.defaultProps = {
