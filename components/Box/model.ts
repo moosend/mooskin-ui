@@ -1,18 +1,5 @@
 import { IBackgroundColors, IBorderColors, IFontColors, IMooskinContext, IStyledTheme } from '../Styled/model';
 
-export type DefaultOptionsType = 'inherit' | 'initial' | 'unset';
-export type BorderStyleType = 'none' | 'hidden' | 'dotted' | 'dashed' | 'solid' | 'double' | 'groove' | 'ridge' | 'inset' | 'outset';
-export type OverflowOptionsType = 'visible' | 'hidden' | 'scroll' | 'auto' | 'initial' | 'inherit';
-export type FlexAlignOptionsType = 'stretch' | 'center' | 'flex-start' | 'flex-end' | 'baseline' | 'initial' | 'inherit';
-export type FlexJustifyOptionsType =
-	| 'space-between'
-	| 'space-around'
-	| 'flex-start'
-	| 'flex-end'
-	| 'center'
-	| 'initial'
-	| 'inherit'
-	| 'space-evenly';
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 export type BoxShadowIntensityType = IntensityType | 'inner' | 'outline';
 export type NestedThemeType = [keyof IStyledTheme, keyof IFontColors & keyof IBorderColors & keyof IBackgroundColors];
@@ -115,7 +102,7 @@ export const boxComponentProps = [
 	'theme',
 ];
 
-export type IBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLElement>;
+export type IBoxComponentProps = IBaseBoxComponentProps & React.ImgHTMLAttributes<HTMLElement>;
 export type IBoxLabelComponentProps = IBaseBoxComponentProps & React.LabelHTMLAttributes<HTMLLabelElement>;
 export type IButtonBoxComponentProps = IBoxComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
 export type IInputBoxComponentProps = IBoxComponentProps & React.InputHTMLAttributes<HTMLInputElement>;
@@ -127,19 +114,19 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	boxAs?: any;
 
 	/** margin */
-	m?: number | string;
+	m?: React.CSSProperties['margin'];
 
 	/** margin top */
-	mt?: number | string;
+	mt?: React.CSSProperties['marginTop'];
 
 	/** margin right */
-	mr?: number | string;
+	mr?: React.CSSProperties['marginRight'];
 
 	/** margin bottom */
-	mb?: number | string;
+	mb?: React.CSSProperties['marginBottom'];
 
 	/** margin left */
-	ml?: number | string;
+	ml?: React.CSSProperties['marginLeft'];
 
 	/** margin left & margin right */
 	mx?: number | string;
@@ -148,19 +135,19 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	my?: number | string;
 
 	/** padding */
-	p?: number | string;
+	p?: React.CSSProperties['padding'];
 
 	/** padding top */
-	pt?: number | string;
+	pt?: React.CSSProperties['paddingTop'];
 
 	/** padding right */
-	pr?: number | string;
+	pr?: React.CSSProperties['paddingRight'];
 
 	/** padding bottom */
-	pb?: number | string;
+	pb?: React.CSSProperties['paddingBottom'];
 
 	/** padding left */
-	pl?: number | string;
+	pl?: React.CSSProperties['paddingLeft'];
 
 	/** padding left & padding right */
 	px?: number | string;
@@ -169,249 +156,226 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	py?: number | string;
 
 	/** color */
-	color?: string | NestedThemeType;
+	color?: React.CSSProperties['color'] | NestedThemeType;
 
 	/** opacity */
-	opacity?: number;
+	opacity?: React.CSSProperties['opacity'];
 
 	/** font family */
-	fontFamily?: string;
+	fontFamily?: React.CSSProperties['fontFamily'];
 
 	/** font size */
-	fontSize?: number | string;
+	fontSize?: React.CSSProperties['fontSize'];
 
 	/** font weight */
-	fontWeight?: number | string;
+	fontWeight?: React.CSSProperties['fontWeight'];
 
 	/** line height */
-	lineHeight?: number;
+	lineHeight?: React.CSSProperties['lineHeight'];
 
 	/** text align */
-	textAlign?: DefaultOptionsType | 'center' | 'left' | 'right';
+	textAlign?: React.CSSProperties['textAlign'];
 
 	/** font style */
-	fontStyle?: DefaultOptionsType | 'italic' | 'normal' | 'oblique' | 'revert';
+	fontStyle?: React.CSSProperties['fontStyle'];
 
 	/** text transform */
-	textTransform?: DefaultOptionsType | 'none' | 'capitalize' | 'math-auto' | 'lowercase' | 'uppercase';
+	textTransform?: React.CSSProperties['textTransform'];
 
 	/** text decoration */
-	textDecoration?: DefaultOptionsType | 'none' | 'underline' | 'overline' | 'line-through';
+	textDecoration?: React.CSSProperties['textDecoration'];
 
 	/** width */
-	w?: number | string;
+	w?: React.CSSProperties['width'];
 
 	/** height */
-	h?: number | string;
-
-	/** min width */
-	minW?: number | string;
+	h?: React.CSSProperties['height'];
 
 	/** max width */
-	maxW?: number | string;
+	maxW?: React.CSSProperties['maxWidth'];
 
-	/** min height */
-	minH?: number | string;
+	/** min width */
+	minW?: React.CSSProperties['minWidth'];
 
 	/** max height */
-	maxH?: number | string;
+	maxH?: React.CSSProperties['maxHeight'];
+
+	/** min height */
+	minH?: React.CSSProperties['minHeight'];
 
 	/** display */
-	d?:
-		| 'inline'
-		| 'block'
-		| 'contents'
-		| 'flex'
-		| 'grid'
-		| 'inline-block'
-		| 'inline-flex'
-		| 'inline-grid'
-		| 'inline-table'
-		| 'list-item'
-		| 'run-in'
-		| 'table'
-		| 'table-caption'
-		| 'table-column-group'
-		| 'table-header-group'
-		| 'table-footer-group'
-		| 'table-row-group'
-		| 'table-cell'
-		| 'table-column'
-		| 'table-row'
-		| 'none'
-		| 'initial'
-		| 'inherit';
+	d?: React.CSSProperties['display'];
 
 	/** overflow */
-	overflow?: OverflowOptionsType;
+	overflow?: React.CSSProperties['overflow'];
 
 	/** overflow X */
-	overflowX?: OverflowOptionsType;
+	overflowX?: React.CSSProperties['overflowX'];
 
 	/** overflow Y */
-	overflowY?: OverflowOptionsType;
+	overflowY?: React.CSSProperties['overflowY'];
 
 	/** align items */
-	align?: FlexAlignOptionsType;
+	align?: React.CSSProperties['alignItems'];
 
 	/** align content */
-	alignContent?: 'stretch' | FlexJustifyOptionsType;
+	alignContent?: React.CSSProperties['alignContent'];
 
 	/** align self */
-	alignSelf?: FlexAlignOptionsType;
+	alignSelf?: React.CSSProperties['alignSelf'];
 
 	/** justify items */
-	justifyItems?: FlexAlignOptionsType;
+	justifyItems?: React.CSSProperties['justifyItems'];
 
 	/** justify content */
-	justify?: FlexJustifyOptionsType;
+	justify?: React.CSSProperties['justifyContent'];
 
 	/** justify self */
-	justifySelf?: FlexJustifyOptionsType;
+	justifySelf?: React.CSSProperties['justifySelf'];
 
 	/** flex wrap */
-	flexWrap?: 'nowrap' | 'wrap' | 'wrap-reverse' | 'initial' | 'inherit';
+	flexWrap?: React.CSSProperties['flexWrap'];
 
 	/** flex direction */
-	direction?: 'row' | 'row-reverse' | 'column' | 'column-reverse' | 'initial' | 'inherit';
+	direction?: React.CSSProperties['flexDirection'];
 
 	/** flex */
-	flex?: number | string;
+	flex?: React.CSSProperties['flex'];
 
 	/** flex grow */
-	flexGrow?: number;
+	flexGrow?: React.CSSProperties['flexGrow'];
 
 	/** flex shrink */
-	flexShrink?: number;
+	flexShrink?: React.CSSProperties['flexShrink'];
 
 	/** flex basis */
-	flexBasis?: number | string;
+	flexBasis?: React.CSSProperties['flexBasis'];
 
 	/** order */
-	order?: number | string;
+	order?: React.CSSProperties['order'];
 
 	/** background */
-	bg?: string;
+	bg?: React.CSSProperties['background'];
 
 	/** background image */
-	bgImage?: string;
+	bgImage?: React.CSSProperties['backgroundImage'];
 
 	/** background color */
-	bgColor?: string | NestedThemeType;
+	bgColor?: React.CSSProperties['backgroundColor'] | NestedThemeType;
 
 	/** background size */
-	bgSize?: string;
+	bgSize?: React.CSSProperties['backgroundSize'];
 
 	/** background position */
-	bgPosition?: string;
+	bgPosition?: React.CSSProperties['backgroundPosition'];
 
 	/** background repeat */
-	bgRepeat?: string;
+	bgRepeat?: React.CSSProperties['backgroundRepeat'];
 
 	/** border */
-	border?: string;
+	border?: React.CSSProperties['border'];
 
 	/** border width */
-	borderWidth?: number | string;
+	borderWidth?: React.CSSProperties['borderWidth'];
 
 	/** border style */
-	borderStyle?: BorderStyleType;
+	borderStyle?: React.CSSProperties['borderStyle'];
 
 	/** border color */
-	borderColor?: string;
+	borderColor?: React.CSSProperties['borderColor'];
 
 	/** border top */
-	borderTop?: string;
+	borderTop?: React.CSSProperties['borderTop'];
 
 	/** border top width */
-	borderTopWidth?: number | string;
+	borderTopWidth?: React.CSSProperties['borderTopWidth'];
 
 	/** border top style */
-	borderTopStyle?: BorderStyleType;
+	borderTopStyle?: React.CSSProperties['borderTopStyle'];
 
 	/** border top color */
-	borderTopColor?: string;
+	borderTopColor?: React.CSSProperties['borderTopColor'];
 
 	/** border right */
-	borderRight?: string;
+	borderRight?: React.CSSProperties['borderRight'];
 
 	/** border right width */
-	borderRightWidth?: number | string;
+	borderRightWidth?: React.CSSProperties['borderRightWidth'];
 
 	/** border right style */
-	borderRightStyle?: BorderStyleType;
+	borderRightStyle?: React.CSSProperties['borderRightStyle'];
 
 	/** border right color */
-	borderRightColor?: string;
+	borderRightColor?: React.CSSProperties['borderRightColor'];
 
 	/** border bottom */
-	borderBottom?: string;
+	borderBottom?: React.CSSProperties['borderBottom'];
 
 	/** border bottom width */
-	borderBottomWidth?: number | string;
+	borderBottomWidth?: React.CSSProperties['borderBottomWidth'];
 
 	/** border bottom style */
-	borderBottomStyle?: BorderStyleType;
+	borderBottomStyle?: React.CSSProperties['borderBottomStyle'];
 
 	/** border bottom color */
-	borderBottomColor?: string;
+	borderBottomColor?: React.CSSProperties['borderBottomColor'];
 
 	/** border left */
-	borderLeft?: string;
+	borderLeft?: React.CSSProperties['borderLeft'];
 
 	/** border left width */
-	borderLeftWidth?: number | string;
+	borderLeftWidth?: React.CSSProperties['borderLeftWidth'];
 
 	/** border left style */
-	borderLeftStyle?: BorderStyleType;
+	borderLeftStyle?: React.CSSProperties['borderLeftStyle'];
 
 	/** border left color */
-	borderLeftColor?: string;
+	borderLeftColor?: React.CSSProperties['borderLeftColor'];
 
 	/** border radius */
-	borderRadius?: number | string;
+	borderRadius?: React.CSSProperties['borderRadius'];
 
 	/** border radius top left */
-	borderTopLeftRadius?: number | string;
+	borderTopLeftRadius?: React.CSSProperties['borderTopLeftRadius'];
 
 	/** border radius top right */
-	borderTopRightRadius?: number | string;
+	borderTopRightRadius?: React.CSSProperties['borderTopRightRadius'];
 
 	/** border radius bottom right */
-	borderBottomRightRadius?: number | string;
+	borderBottomRightRadius?: React.CSSProperties['borderBottomRightRadius'];
 
 	/** border radius bottom left */
-	borderBottomLeftRadius?: number | string;
+	borderBottomLeftRadius?: React.CSSProperties['borderBottomLeftRadius'];
 
 	/** position */
-	position?: 'static' | 'absolute' | 'fixed' | 'relative' | 'sticky' | 'initial' | 'inherit';
+	position?: React.CSSProperties['position'];
 
 	/** z index */
-	zIndex?: number | string;
+	zIndex?: React.CSSProperties['zIndex'];
 
 	/** top */
-	top?: number | string;
+	top?: React.CSSProperties['top'];
 
 	/** right */
-	right?: number | string;
+	right?: React.CSSProperties['right'];
 
 	/** bottom */
-	bottom?: number | string;
+	bottom?: React.CSSProperties['bottom'];
 
 	/** left */
-	left?: number | string;
+	left?: React.CSSProperties['left'];
 
 	/** box shadow */
-	boxShadow?: BoxShadowIntensityType;
+	boxShadow?: React.CSSProperties['boxShadow'] | BoxShadowIntensityType;
 
 	/** animation */
-	animation?: string;
+	animation?: React.CSSProperties['animation'];
 
 	/** visibility */
-	visibility?: 'visible' | 'hidden' | 'collapse' | 'initial' | 'inherit';
+	visibility?: React.CSSProperties['visibility'];
 
 	/** cursor */
-	cursor?: string;
+	cursor?: React.CSSProperties['cursor'];
 
 	/** rounds the element */
 	round?: IntensityType;

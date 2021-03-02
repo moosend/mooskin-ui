@@ -35,7 +35,7 @@ Normal.args = {
 				/>
 			</ListItemHead>
 			<ListItemBody>
-				<Box fontWeight="600" fontSize={16}>
+				<Box fontWeight={600} fontSize={16}>
 					Some Bold Text
 				</Box>
 				<Box fontSize={12}>
@@ -56,7 +56,7 @@ Normal.args = {
 				/>
 			</ListItemHead>
 			<ListItemBody>
-				<Box fontWeight="600" fontSize={16}>
+				<Box fontWeight={600} fontSize={16}>
 					Some Bold Text
 				</Box>
 				<Box fontSize={12}>
@@ -77,7 +77,7 @@ Normal.args = {
 				/>
 			</ListItemHead>
 			<ListItemBody>
-				<Box fontWeight="600" fontSize={16}>
+				<Box fontWeight={600} fontSize={16}>
 					Some Bold Text
 				</Box>
 				<Box fontSize={12}>
@@ -104,7 +104,7 @@ WithCols.args = {
 				/>
 			</ListItemHead>
 			<ListItemBody>
-				<Box fontWeight="600" fontSize={16}>
+				<Box fontWeight={600} fontSize={16}>
 					Some Bold Text
 				</Box>
 				<Box fontSize={12}>
@@ -125,7 +125,7 @@ WithCols.args = {
 				/>
 			</ListItemHead>
 			<ListItemBody>
-				<Box fontWeight="600" fontSize={16}>
+				<Box fontWeight={600} fontSize={16}>
 					Some Bold Text
 				</Box>
 				<Box fontSize={12}>
@@ -146,7 +146,7 @@ WithCols.args = {
 				/>
 			</ListItemHead>
 			<ListItemBody>
-				<Box fontWeight="600" fontSize={16}>
+				<Box fontWeight={600} fontSize={16}>
 					Some Bold Text
 				</Box>
 				<Box fontSize={12}>
@@ -167,7 +167,7 @@ WithCols.args = {
 				/>
 			</ListItemHead>
 			<ListItemBody>
-				<Box fontWeight="600" fontSize={16}>
+				<Box fontWeight={600} fontSize={16}>
 					Some Bold Text
 				</Box>
 				<Box fontSize={12}>
@@ -188,7 +188,7 @@ WithCols.args = {
 				/>
 			</ListItemHead>
 			<ListItemBody>
-				<Box fontWeight="600" fontSize={16}>
+				<Box fontWeight={600} fontSize={16}>
 					Some Bold Text
 				</Box>
 				<Box fontSize={12}>

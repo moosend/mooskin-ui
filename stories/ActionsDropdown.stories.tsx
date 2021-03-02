@@ -7,7 +7,7 @@ import { IActionsDropdownComponentProps } from '../components/ActionsDropdown/mo
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 // import GlobalStyle from '../components/Styled/GlobalStyles';
-import '../components/Styled/StorybookStyles.css';
+import '../components/Styled/GlobalStyles.css';
 
 export default ({
 	component: ActionsDropdown,

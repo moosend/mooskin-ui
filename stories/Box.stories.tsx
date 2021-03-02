@@ -16,7 +16,7 @@ const Template: Story<IBoxComponentProps> = (args) => {
 	return (
 		<>
 			<GlobalStyle />
-			<Box {...args} />
+			<Box {...args} position="absolute" top={0} right={0} />
 		</>
 	);
 };

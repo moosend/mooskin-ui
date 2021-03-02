@@ -28,7 +28,7 @@ Normal.args = {
 		<AlertIcon key="0" />,
 		<AlertTitle key="1">Your browser is outdated!</AlertTitle>,
 		<AlertDescription key="2">Your Mooskin experience may be degraded.</AlertDescription>,
-		<AlertCloseButton key="3" onClick={(e) => alert('close')} position="absolute" right="8px" top="8px" />,
+		<AlertCloseButton key="3" onClick={(e) => alert('close')} position="absolute" right={8} top={8} />,
 	],
 } as IBaseAlertComponentProps;
 
@@ -39,7 +39,7 @@ WithBox.args = {
 		<Box key="1" d="flex" direction="column" justify="center">
 			<AlertTitle>Your browser is outdated!</AlertTitle>
 			<AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-			<AlertCloseButton onClick={(e) => alert('close')} position="absolute" right="8px" top="8px" />
+			<AlertCloseButton onClick={(e) => alert('close')} position="absolute" right={8} top={8} />
 		</Box>,
 	],
 } as IBaseAlertComponentProps;

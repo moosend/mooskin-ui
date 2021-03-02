@@ -220,7 +220,7 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = withMooskinContex
 		<Box position="relative" color="inherit" {...props}>
 			<InputIcon onClick={() => setShowEmoji(!showEmoji)}>emoji_emotions</InputIcon>
 			{showEmoji && (
-				<Box position="absolute" right="0">
+				<Box position="absolute" right={0}>
 					<Picker onSelect={onChangeEmoji} exclude={['flags']} showPreview={false} showSkinTones={false} />
 					<InputOverlay onClick={() => setShowEmoji(!showEmoji)} />
 				</Box>

@@ -13,7 +13,7 @@ describe('Alert', () => {
 				<AlertIcon />
 				<AlertTitle>Your browser is outdated!</AlertTitle>
 				<AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-				<AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
+				<AlertCloseButton onClick={fn} position="absolute" right={8} top={8} />
 			</Alert>
 		);
 		expect(tree).toMatchSnapshot();
@@ -26,7 +26,7 @@ describe('Alert', () => {
 				<Box>
 					<AlertTitle>Your browser is outdated!</AlertTitle>
 					<AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
-					<AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
+					<AlertCloseButton onClick={fn} position="absolute" right={8} top={8} />
 				</Box>
 			</Alert>
 		);

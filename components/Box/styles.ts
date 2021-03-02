@@ -95,10 +95,10 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		position: ${(props) => props.position};
 		z-index: ${(props) => props.zIndex};
-		top: ${(props) => getNumberOrStringValue(props.top)};
-		right: ${(props) => getNumberOrStringValue(props.right)};
-		bottom: ${(props) => getNumberOrStringValue(props.bottom)};
-		left: ${(props) => getNumberOrStringValue(props.left)};
+		top: ${(props) => props.top};
+		right: ${(props) => props.right};
+		bottom: ${(props) => props.bottom};
+		left: ${(props) => props.left};
 
 		box-shadow: ${(props) => getBoxShadow(props.boxShadow)};
 
@@ -155,7 +155,7 @@ export const getRoundness = (round?: IntensityType) => {
 	}
 };
 
-export const getBoxShadow = (boxShadow?: BoxShadowIntensityType) => {
+export const getBoxShadow = (boxShadow?: React.CSSProperties['boxShadow'] | BoxShadowIntensityType) => {
 	switch (boxShadow) {
 		case 'xs':
 			return '0 0 0 1px rgba(0, 0, 0, 0.05)';
@@ -185,6 +185,6 @@ export const getBoxShadow = (boxShadow?: BoxShadowIntensityType) => {
 			return 'inset 0 2px 4px 0 rgba(0,0,0,0.06)';
 
 		default:
-			break;
+			return boxShadow;
 	}
 };
