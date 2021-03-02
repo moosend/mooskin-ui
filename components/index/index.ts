@@ -147,6 +147,7 @@ export { IPersonalizationTag, ITextEditorComponentProps } from '../TextEditor/mo
 
 // Global Styles
 export { GlobalStyle } from '../Styled/GlobalStyles';
+import '../Styled/GlobalStyles.css';
 
 export { default as IInputCallbackData } from '../_utils';
 
