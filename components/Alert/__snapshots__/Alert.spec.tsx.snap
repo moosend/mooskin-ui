@@ -693,10 +693,10 @@ exports[`Alert renders correctly 1`] = `
                 key="3/.3"
                 onClick={[MockFunction]}
                 position="absolute"
-                right="8px"
+                right={8}
                 status="info"
                 style={Object {}}
-                top="8px"
+                top={8}
                 variant="left-accent"
               >
                 <Component
@@ -728,10 +728,10 @@ exports[`Alert renders correctly 1`] = `
                     }
                   }
                   position="absolute"
-                  right="8px"
+                  right={8}
                   status="info"
                   style={Object {}}
-                  top="8px"
+                  top={8}
                   variant="left-accent"
                 >
                   <StyledAlertCloseButton
@@ -763,10 +763,10 @@ exports[`Alert renders correctly 1`] = `
                       }
                     }
                     position="absolute"
-                    right="8px"
+                    right={8}
                     status="info"
                     style={Object {}}
-                    top="8px"
+                    top={8}
                     variant="left-accent"
                   >
                     <Box
@@ -798,10 +798,10 @@ exports[`Alert renders correctly 1`] = `
                         }
                       }
                       position="absolute"
-                      right="8px"
+                      right={8}
                       status="info"
                       style={Object {}}
-                      top="8px"
+                      top={8}
                       variant="left-accent"
                     >
                       <Component
@@ -833,10 +833,10 @@ exports[`Alert renders correctly 1`] = `
                           }
                         }
                         position="absolute"
-                        right="8px"
+                        right={8}
                         status="info"
                         style={Object {}}
-                        top="8px"
+                        top={8}
                         variant="left-accent"
                       >
                         <StyledBox
@@ -868,14 +868,14 @@ exports[`Alert renders correctly 1`] = `
                             }
                           }
                           position="absolute"
-                          right="8px"
+                          right={8}
                           status="info"
                           style={Object {}}
-                          top="8px"
+                          top={8}
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx jAOsLC sc-jSFkmK sc-iCoHVE gLJPOM eGXeuV"
+                            className="sc-bdnylx gLbQWG sc-jSFkmK sc-iCoHVE gLJPOM eGXeuV"
                             onClick={[MockFunction]}
                             style={Object {}}
                           >

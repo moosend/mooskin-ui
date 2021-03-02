@@ -694,7 +694,7 @@ exports[`Modal renders correctly 1`] = `
                                                       top={10}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx eGjGky sc-fujyUd UQxeM"
+                                                        className="sc-bdnylx dSLMnC sc-fujyUd UQxeM"
                                                         onClick={[Function]}
                                                         style={Object {}}
                                                       >

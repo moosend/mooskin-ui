@@ -35,7 +35,6 @@ exports[`Alert renders correctly 1`] = `
     style={Object {}}
   >
     <StyledFooter
-      boxShadow="inner"
       className=""
       palette={
         Object {
@@ -65,8 +64,7 @@ exports[`Alert renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        boxShadow="inner"
-        className="sc-gtssRu iRoauC"
+        className="sc-gtssRu eHgYFh"
         palette={
           Object {
             "backgroundColors": Object {
@@ -95,8 +93,7 @@ exports[`Alert renders correctly 1`] = `
         style={Object {}}
       >
         <Component
-          boxShadow="inner"
-          className="sc-gtssRu iRoauC"
+          className="sc-gtssRu eHgYFh"
           palette={
             Object {
               "backgroundColors": Object {
@@ -125,8 +122,7 @@ exports[`Alert renders correctly 1`] = `
           style={Object {}}
         >
           <StyledBox
-            boxShadow="inner"
-            className="sc-gtssRu iRoauC"
+            className="sc-gtssRu eHgYFh"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -155,7 +151,7 @@ exports[`Alert renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx gmbloF sc-gtssRu iRoauC"
+              className="sc-bdnylx sJSbd sc-gtssRu eHgYFh"
               style={Object {}}
             >
               <FooterHead
