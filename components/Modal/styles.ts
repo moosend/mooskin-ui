@@ -77,7 +77,7 @@ StyledModalHeader.displayName = 'StyledModalHeader';
 export const StyledModalBody = styled(Box)<IBoxComponentProps>`
 	padding: 0.5rem 1.5rem;
 	flex: 1 1 0%;
-	overflow: auto;
+	/* overflow: auto; */
 	width: 100%;
 	color: inherit;
 `;
