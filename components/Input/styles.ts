@@ -51,7 +51,7 @@ StyledInputSolo.displayName = 'StyledInputSolo';
 export const StyledInputWrapped = styled(StyledInputBase)<IInputComponentProps>`
 	color: inherit;
 	border: none;
-	background-color: #ffffff;
+	background-color: transparent;
 `;
 
 StyledInputWrapped.displayName = 'StyledInputWrapped';
