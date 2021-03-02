@@ -1,17 +1,21 @@
 import * as React from 'react';
 
-import ReactSlick from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
 // Models
+import { IBoxComponentProps } from '../Box/model';
 import { ICarouselComponentProps } from './model';
+
+// Styled Components
+import { StyledCarousel, StyledDot } from './styles';
 
 /**
  * Carousel
  */
 export const Carousel: React.FC<ICarouselComponentProps> = (props) => {
-	return <ReactSlick {...props} />;
+	const renderCustomDot = () => (props.customDot ? props.customDot : <StyledDot />);
+	return <StyledCarousel customPaging={renderCustomDot} {...props} />;
 };
 
 Carousel.defaultProps = {
@@ -34,3 +38,14 @@ Carousel.defaultProps = {
 };
 
 Carousel.displayName = 'Carousel';
+
+export const CustomDot: React.FC<IBoxComponentProps> = (props) => {
+	return <StyledDot {...props} />;
+};
+
+CustomDot.defaultProps = {
+	className: '',
+	style: {},
+};
+
+CustomDot.displayName = 'CustomDot';

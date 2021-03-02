@@ -937,7 +937,7 @@ exports[`Modal renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <Box
-                                                  className="sc-gKAblj iQALMn"
+                                                  className="sc-gKAblj cqCqMD"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -966,7 +966,7 @@ exports[`Modal renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <Component
-                                                    className="sc-gKAblj iQALMn"
+                                                    className="sc-gKAblj cqCqMD"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -995,7 +995,7 @@ exports[`Modal renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <StyledBox
-                                                      className="sc-gKAblj iQALMn"
+                                                      className="sc-gKAblj cqCqMD"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -1024,7 +1024,7 @@ exports[`Modal renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx sJSbd sc-gKAblj iQALMn"
+                                                        className="sc-bdnylx sJSbd sc-gKAblj cqCqMD"
                                                         style={Object {}}
                                                       >
                                                         Modal Content Body

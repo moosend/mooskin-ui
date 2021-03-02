@@ -10,7 +10,7 @@ export { Skeleton, SkeletonCircle, SkeletonText } from '../Skeleton/Skeleton';
 export { Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay } from '../Drawer/Drawer';
 export { Stack, HStack, VStack } from '../Stack/Stack';
 export { Box } from '../Box/Box';
-export { Carousel } from '../Carousel/Carousel';
+export { Carousel, CustomDot } from '../Carousel/Carousel';
 export { Checkbox, CheckboxDescription, CheckboxIcon, CheckboxLabel } from '../Checkbox/Checkbox';
 export { DateTimePicker } from '../DateTimePicker/DateTimePicker';
 export { DatePicker } from '../DatePicker/DatePicker';

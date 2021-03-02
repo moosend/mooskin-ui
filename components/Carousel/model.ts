@@ -82,4 +82,7 @@ export interface ICarouselComponentProps {
 
 	/** Enable/disable swiping to change slides */
 	swipe?: boolean;
+
+	/** custom component to replace slide dots */
+	customDot?: React.ReactElement;
 }
