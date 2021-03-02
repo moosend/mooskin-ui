@@ -103,7 +103,6 @@ export {
 } from '../DateTimePicker/model';
 export { IDateRangePickerComponentProps, IRangeSelection } from '../DateRange/model';
 export { IDateSelectComponentProps } from '../DateSelect/model';
-export { IDescriptionComponentProps } from '../Description/model';
 export { ILabelComponentProps } from '../Label/model';
 export { IDrawerComponentProps, IDrawerContentComponentProps, IDrawerOverlayComponentProps } from '../Drawer/model';
 export { IExpandableCommonComponentProps, IExpandableComponentProps, IExpandableItemComponentProps } from '../Expandable/model';
@@ -144,6 +143,7 @@ export { ITabCommonComponentProps, ITabComponentProps } from '../Tabs/model';
 export { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from '../Tags/model';
 export { ITextAreaComponentProps } from '../TextArea/model';
 export { IPersonalizationTag, ITextEditorComponentProps } from '../TextEditor/model';
+export { IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors, IMooskinContext, IStyledTheme } from '../Styled/model';
 
 // Global Styles
 export { GlobalStyle } from '../Styled/GlobalStyles';

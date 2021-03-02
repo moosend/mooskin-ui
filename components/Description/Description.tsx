@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IDescriptionComponentProps } from './model';
+import { IBoxComponentProps } from '../Box/model';
 
 // Styled Components
 import { StyledDescription } from './styles';
@@ -12,7 +12,7 @@ import { StyledDescription } from './styles';
 /**
  * Description
  */
-export const Description: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
+export const Description: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
 	return <StyledDescription {...props} />;
 });
 

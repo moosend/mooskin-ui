@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IDescriptionComponentProps } from '../Description/model';
+import { IBoxComponentProps } from '../Box/model';
 import { ILabelComponentProps } from '../Label/model';
 import { ICheckboxComponentProps, ICheckboxIconComponentProps } from './model';
 
@@ -109,7 +109,7 @@ CheckboxLabel.displayName = 'CheckboxLabel';
 /**
  * CheckboxDescription
  */
-export const CheckboxDescription: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
+export const CheckboxDescription: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
 	return <Description {...props} />;
 });
 

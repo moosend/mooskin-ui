@@ -1,8 +1,8 @@
-import { IBackgroundColors, IBorderColors, IFontColors, IMooskinContext, IStyledTheme } from '../Styled/model';
+import { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors } from '../Styled/model';
 
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 export type BoxShadowIntensityType = IntensityType | 'inner' | 'outline';
-export type NestedThemeType = [keyof IStyledTheme, keyof IFontColors | keyof IBorderColors | keyof IBackgroundColors];
+export type NestedThemeType = [keyof IStyledTheme, keyof IThemeFontColors | keyof IThemeBorderColors | keyof IThemeBackgroundColors];
 
 export const boxComponentProps = [
 	'id',

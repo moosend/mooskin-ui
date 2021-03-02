@@ -13,7 +13,7 @@ import { StyledLabel } from './styles';
  * Label
  */
 export const Label: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
-	const onClick = (e: React.MouseEvent<HTMLElement>) => {
+	const onClick = (e: React.MouseEvent<HTMLLabelElement>) => {
 		!props.disabled && props.onClick && props.onClick(e);
 	};
 

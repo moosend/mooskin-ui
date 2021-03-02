@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IDescriptionComponentProps } from '../Description/model';
+import { IBoxComponentProps } from '../Box/model';
 import { ILabelComponentProps } from '../Label/model';
 import { IRadioComponentProps, IRadioIconComponentProps } from './model';
 
@@ -114,7 +114,7 @@ RadioLabel.displayName = 'RadioLabel';
 /**
  * RadioDescription
  */
-export const RadioDescription: React.FC<IDescriptionComponentProps> = withMooskinContext((props) => {
+export const RadioDescription: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
 	return <Description {...props} />;
 });
 

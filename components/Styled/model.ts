@@ -1,4 +1,4 @@
-export interface IFontColors {
+export interface IThemeFontColors {
 	anchor: string;
 	button: string;
 	common: string;
@@ -9,7 +9,7 @@ export interface IFontColors {
 	secondaryToggle: string;
 }
 
-export interface IBackgroundColors {
+export interface IThemeBackgroundColors {
 	button: string;
 	common: string;
 	disabledButton: string;
@@ -18,14 +18,14 @@ export interface IBackgroundColors {
 	secondaryToggle: string;
 }
 
-export interface IBorderColors {
+export interface IThemeBorderColors {
 	common: string;
 }
 
 export interface IStyledTheme {
-	fontColors: IFontColors;
-	backgroundColors: IBackgroundColors;
-	borderColors: IBorderColors;
+	fontColors: IThemeFontColors;
+	backgroundColors: IThemeBackgroundColors;
+	borderColors: IThemeBorderColors;
 }
 
 export interface IMooskinContext {
