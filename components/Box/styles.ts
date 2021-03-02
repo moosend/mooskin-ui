@@ -122,7 +122,7 @@ export const getNumberOrStringValue = (value?: number | string) => {
 
 export const getNestedValue = (value?: number | string | NestedThemeType, pallete?: IStyledTheme) => {
 	if (Array.isArray(value) && pallete) {
-		return pallete[value[0]][value[1]];
+		return (pallete as any)[value[0]][value[1]];
 	}
 	return value;
 };
