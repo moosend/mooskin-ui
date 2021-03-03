@@ -282,7 +282,7 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	borderStyle?: React.CSSProperties['borderStyle'];
 
 	/** border color */
-	borderColor?: React.CSSProperties['borderColor'];
+	borderColor?: React.CSSProperties['borderColor'] | NestedThemeType;
 
 	/** border top */
 	borderTop?: React.CSSProperties['borderTop'];
