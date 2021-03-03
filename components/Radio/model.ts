@@ -12,6 +12,9 @@ export interface IRadioComponentProps extends IBoxComponentProps {
 
 	/** wether the radio is selected or not */
 	selected?: boolean;
+
+	/** value to be returned in the callback */
+	value?: string | number;
 }
 
 export interface IRadioIconComponentProps extends IBoxComponentProps {
