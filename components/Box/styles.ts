@@ -64,7 +64,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		border: ${(props) => props.border};
 		border-style: ${(props) => props.borderStyle};
-		border-color: ${(props) => getNestedValue(props.bgColor, props.palette)};
+		border-color: ${(props) => getNestedValue(props.borderColor, props.palette)};
 		border-width: ${(props) => getNumberOrStringValue(props.borderWidth)};
 
 		border-top: ${(props) => props.borderTop};

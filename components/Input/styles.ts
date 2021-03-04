@@ -32,7 +32,6 @@ export const StyledInputBase = styled(Box)<IInputComponentProps>`
 	font-stretch: normal;
 	font-style: normal;
 	letter-spacing: normal;
-	width: 100%;
 	text-align: left;
 	flex: 1;
 `;
@@ -41,6 +40,7 @@ StyledInputBase.displayName = 'StyledInputBase';
 
 export const StyledInputSolo = styled(StyledInputBase)<IInputComponentProps>`
 	border-radius: 3px;
+	width: 100%;
 	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
 	border: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
 	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
