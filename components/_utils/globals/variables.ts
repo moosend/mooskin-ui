@@ -38,7 +38,7 @@ const theme: IStyledTheme = {
 		disabledAnchor: '#9d9d9d',
 		label: '#2d2d2d',
 		secondaryToggle: '#9d9d9d',
-		text: '#9d9d9d',
+		text: '#2d2d2d',
 		toggle: '#ffffff',
 	},
 	// layout: {
