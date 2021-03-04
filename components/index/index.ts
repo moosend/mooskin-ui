@@ -60,6 +60,8 @@ export {
 } from '../Select/Select';
 export { Switch, SwitchHandle } from '../Switch/Switch';
 export { Loader } from '../Loader/Loader';
+export { Text } from '../Text/Text';
+export { Image } from '../Image/Image';
 export { NumberLabel } from '../NumberLabel/NumberLabel';
 export { LoadingBar } from '../LoadingBar/LoadingBar';
 export { TextArea } from '../TextArea/TextArea';
@@ -85,6 +87,7 @@ export {
 	IBoxLabelComponentProps,
 	IButtonBoxComponentProps,
 	IInputBoxComponentProps,
+	IBoxImageComponentProps,
 	ITextAreaBoxComponentProps,
 } from '../Box/model';
 export { ICarouselComponentProps } from '../Carousel/model';
