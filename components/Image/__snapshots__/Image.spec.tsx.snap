@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Label renders correctly 1`] = `
-<Label
+exports[`Image renders correctly 1`] = `
+<Image
   className=""
+  src="asd"
   style={Object {}}
 >
   <Component
@@ -33,12 +34,12 @@ exports[`Label renders correctly 1`] = `
         },
       }
     }
+    src="asd"
     style={Object {}}
   >
-    <StyledLabel
-      boxAs="label"
+    <StyledImage
+      boxAs="img"
       className=""
-      onClick={[Function]}
       palette={
         Object {
           "backgroundColors": Object {
@@ -65,12 +66,12 @@ exports[`Label renders correctly 1`] = `
           },
         }
       }
+      src="asd"
       style={Object {}}
     >
       <Box
-        boxAs="label"
-        className="sc-gtssRu bxdeLg"
-        onClick={[Function]}
+        boxAs="img"
+        className="sc-gtssRu dTEizC"
         palette={
           Object {
             "backgroundColors": Object {
@@ -97,12 +98,12 @@ exports[`Label renders correctly 1`] = `
             },
           }
         }
+        src="asd"
         style={Object {}}
       >
         <Component
-          boxAs="label"
-          className="sc-gtssRu bxdeLg"
-          onClick={[Function]}
+          boxAs="img"
+          className="sc-gtssRu dTEizC"
           palette={
             Object {
               "backgroundColors": Object {
@@ -129,13 +130,13 @@ exports[`Label renders correctly 1`] = `
               },
             }
           }
+          src="asd"
           style={Object {}}
         >
           <StyledBox
-            as="label"
-            boxAs="label"
-            className="sc-gtssRu bxdeLg"
-            onClick={[Function]}
+            as="img"
+            boxAs="img"
+            className="sc-gtssRu dTEizC"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -162,19 +163,18 @@ exports[`Label renders correctly 1`] = `
                 },
               }
             }
+            src="asd"
             style={Object {}}
           >
-            <label
-              className="sc-bdnylx sJSbd sc-gtssRu bxdeLg"
-              onClick={[Function]}
+            <img
+              className="sc-bdnylx sJSbd sc-gtssRu dTEizC"
+              src="asd"
               style={Object {}}
-            >
-              Label here!
-            </label>
+            />
           </StyledBox>
         </Component>
       </Box>
-    </StyledLabel>
+    </StyledImage>
   </Component>
-</Label>
+</Image>
 `;

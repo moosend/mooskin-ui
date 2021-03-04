@@ -13,7 +13,6 @@ export const StyledLabel = styled(Box)<ILabelComponentProps>`
 	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 500;
-	min-width: 150px;
 	align-self: center;
 	display: flex;
 	color: ${(props) => props.palette?.fontColors.label || variables.fontColors.label};

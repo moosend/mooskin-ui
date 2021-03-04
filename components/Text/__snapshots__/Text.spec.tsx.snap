@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Label renders correctly 1`] = `
-<Label
+exports[`Text renders correctly 1`] = `
+<Text
   className=""
   style={Object {}}
 >
@@ -35,10 +35,8 @@ exports[`Label renders correctly 1`] = `
     }
     style={Object {}}
   >
-    <StyledLabel
-      boxAs="label"
+    <StyledText
       className=""
-      onClick={[Function]}
       palette={
         Object {
           "backgroundColors": Object {
@@ -68,9 +66,7 @@ exports[`Label renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        boxAs="label"
-        className="sc-gtssRu bxdeLg"
-        onClick={[Function]}
+        className="sc-gtssRu cDWSgB"
         palette={
           Object {
             "backgroundColors": Object {
@@ -100,9 +96,7 @@ exports[`Label renders correctly 1`] = `
         style={Object {}}
       >
         <Component
-          boxAs="label"
-          className="sc-gtssRu bxdeLg"
-          onClick={[Function]}
+          className="sc-gtssRu cDWSgB"
           palette={
             Object {
               "backgroundColors": Object {
@@ -132,10 +126,7 @@ exports[`Label renders correctly 1`] = `
           style={Object {}}
         >
           <StyledBox
-            as="label"
-            boxAs="label"
-            className="sc-gtssRu bxdeLg"
-            onClick={[Function]}
+            className="sc-gtssRu cDWSgB"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -164,17 +155,16 @@ exports[`Label renders correctly 1`] = `
             }
             style={Object {}}
           >
-            <label
-              className="sc-bdnylx sJSbd sc-gtssRu bxdeLg"
-              onClick={[Function]}
+            <div
+              className="sc-bdnylx sJSbd sc-gtssRu cDWSgB"
               style={Object {}}
             >
-              Label here!
-            </label>
+              Text here!
+            </div>
           </StyledBox>
         </Component>
       </Box>
-    </StyledLabel>
+    </StyledText>
   </Component>
-</Label>
+</Text>
 `;

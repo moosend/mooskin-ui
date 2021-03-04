@@ -6,6 +6,7 @@ export interface IThemeFontColors {
 	description: string;
 	label: string;
 	toggle: string;
+	text: string;
 	secondaryToggle: string;
 }
 

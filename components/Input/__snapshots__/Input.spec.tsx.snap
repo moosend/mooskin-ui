@@ -30,6 +30,7 @@ exports[`Input renders correctly 1`] = `
           "disabledAnchor": "#9d9d9d",
           "label": "#2d2d2d",
           "secondaryToggle": "#9d9d9d",
+          "text": "#9d9d9d",
           "toggle": "#ffffff",
         },
       }
@@ -60,6 +61,7 @@ exports[`Input renders correctly 1`] = `
             "disabledAnchor": "#9d9d9d",
             "label": "#2d2d2d",
             "secondaryToggle": "#9d9d9d",
+            "text": "#9d9d9d",
             "toggle": "#ffffff",
           },
         }
@@ -90,6 +92,7 @@ exports[`Input renders correctly 1`] = `
               "disabledAnchor": "#9d9d9d",
               "label": "#2d2d2d",
               "secondaryToggle": "#9d9d9d",
+              "text": "#9d9d9d",
               "toggle": "#ffffff",
             },
           }
@@ -120,6 +123,7 @@ exports[`Input renders correctly 1`] = `
                 "disabledAnchor": "#9d9d9d",
                 "label": "#2d2d2d",
                 "secondaryToggle": "#9d9d9d",
+                "text": "#9d9d9d",
                 "toggle": "#ffffff",
               },
             }
@@ -150,6 +154,7 @@ exports[`Input renders correctly 1`] = `
                   "disabledAnchor": "#9d9d9d",
                   "label": "#2d2d2d",
                   "secondaryToggle": "#9d9d9d",
+                  "text": "#9d9d9d",
                   "toggle": "#ffffff",
                 },
               }
@@ -192,6 +197,7 @@ exports[`Input renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
+                        "text": "#9d9d9d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -224,6 +230,7 @@ exports[`Input renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
+                          "text": "#9d9d9d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -233,7 +240,7 @@ exports[`Input renders correctly 1`] = `
                   >
                     <Box
                       boxAs="input"
-                      className="sc-dlnjPT sc-eCApGN iJHACm heDOCA"
+                      className="sc-dlnjPT sc-eCApGN iJHACm bqJlmV"
                       onChange={[Function]}
                       palette={
                         Object {
@@ -256,6 +263,7 @@ exports[`Input renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
+                            "text": "#9d9d9d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -265,7 +273,7 @@ exports[`Input renders correctly 1`] = `
                     >
                       <Component
                         boxAs="input"
-                        className="sc-dlnjPT sc-eCApGN iJHACm heDOCA"
+                        className="sc-dlnjPT sc-eCApGN iJHACm bqJlmV"
                         onChange={[Function]}
                         palette={
                           Object {
@@ -288,6 +296,7 @@ exports[`Input renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
+                              "text": "#9d9d9d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -298,7 +307,7 @@ exports[`Input renders correctly 1`] = `
                         <StyledBox
                           as="input"
                           boxAs="input"
-                          className="sc-dlnjPT sc-eCApGN iJHACm heDOCA"
+                          className="sc-dlnjPT sc-eCApGN iJHACm bqJlmV"
                           onChange={[Function]}
                           palette={
                             Object {
@@ -321,6 +330,7 @@ exports[`Input renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
+                                "text": "#9d9d9d",
                                 "toggle": "#ffffff",
                               },
                             }
@@ -329,7 +339,7 @@ exports[`Input renders correctly 1`] = `
                           wrapped={true}
                         >
                           <input
-                            className="sc-bdnylx sJSbd sc-dlnjPT sc-eCApGN iJHACm heDOCA"
+                            className="sc-bdnylx sJSbd sc-dlnjPT sc-eCApGN iJHACm bqJlmV"
                             onChange={[Function]}
                             style={Object {}}
                           />
@@ -370,6 +380,7 @@ exports[`Input renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
+                        "text": "#9d9d9d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -402,6 +413,7 @@ exports[`Input renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
+                          "text": "#9d9d9d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -435,6 +447,7 @@ exports[`Input renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
+                            "text": "#9d9d9d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -468,6 +481,7 @@ exports[`Input renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
+                              "text": "#9d9d9d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -510,6 +524,7 @@ exports[`Input renders correctly 1`] = `
                                     "disabledAnchor": "#9d9d9d",
                                     "label": "#2d2d2d",
                                     "secondaryToggle": "#9d9d9d",
+                                    "text": "#9d9d9d",
                                     "toggle": "#ffffff",
                                   },
                                 }
@@ -540,6 +555,7 @@ exports[`Input renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
+                                      "text": "#9d9d9d",
                                       "toggle": "#ffffff",
                                     },
                                   }
@@ -570,6 +586,7 @@ exports[`Input renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
+                                        "text": "#9d9d9d",
                                         "toggle": "#ffffff",
                                       },
                                     }
@@ -600,6 +617,7 @@ exports[`Input renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
+                                          "text": "#9d9d9d",
                                           "toggle": "#ffffff",
                                         },
                                       }
@@ -630,6 +648,7 @@ exports[`Input renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
+                                            "text": "#9d9d9d",
                                             "toggle": "#ffffff",
                                           },
                                         }
@@ -686,6 +705,7 @@ exports[`Input renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
+                        "text": "#9d9d9d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -718,6 +738,7 @@ exports[`Input renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
+                          "text": "#9d9d9d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -751,6 +772,7 @@ exports[`Input renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
+                            "text": "#9d9d9d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -784,6 +806,7 @@ exports[`Input renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
+                              "text": "#9d9d9d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -827,6 +850,7 @@ exports[`Input renders correctly 1`] = `
                                     "disabledAnchor": "#9d9d9d",
                                     "label": "#2d2d2d",
                                     "secondaryToggle": "#9d9d9d",
+                                    "text": "#9d9d9d",
                                     "toggle": "#ffffff",
                                   },
                                 }
@@ -857,6 +881,7 @@ exports[`Input renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
+                                      "text": "#9d9d9d",
                                       "toggle": "#ffffff",
                                     },
                                   }
@@ -887,6 +912,7 @@ exports[`Input renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
+                                        "text": "#9d9d9d",
                                         "toggle": "#ffffff",
                                       },
                                     }
@@ -917,6 +943,7 @@ exports[`Input renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
+                                          "text": "#9d9d9d",
                                           "toggle": "#ffffff",
                                         },
                                       }
@@ -947,6 +974,7 @@ exports[`Input renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
+                                            "text": "#9d9d9d",
                                             "toggle": "#ffffff",
                                           },
                                         }
@@ -1000,6 +1028,7 @@ exports[`Input renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
+                        "text": "#9d9d9d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -1029,6 +1058,7 @@ exports[`Input renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
+                          "text": "#9d9d9d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -1058,6 +1088,7 @@ exports[`Input renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
+                            "text": "#9d9d9d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -1087,6 +1118,7 @@ exports[`Input renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
+                              "text": "#9d9d9d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -1116,6 +1148,7 @@ exports[`Input renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
+                                "text": "#9d9d9d",
                                 "toggle": "#ffffff",
                               },
                             }

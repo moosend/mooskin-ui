@@ -102,8 +102,10 @@ export const boxComponentProps = [
 	'theme',
 ];
 
-export type IBoxComponentProps = IBaseBoxComponentProps & React.ImgHTMLAttributes<HTMLElement>;
+export type IBoxComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLElement>;
+export type IBoxImageComponentProps = IBaseBoxComponentProps & React.ImgHTMLAttributes<HTMLImageElement>;
 export type IBoxLabelComponentProps = IBaseBoxComponentProps & React.LabelHTMLAttributes<HTMLLabelElement>;
+export type IBoxTextComponentProps = IBaseBoxComponentProps & React.HTMLAttributes<HTMLSpanElement>;
 export type IButtonBoxComponentProps = IBoxComponentProps & React.ButtonHTMLAttributes<HTMLButtonElement>;
 export type IInputBoxComponentProps = IBoxComponentProps & React.InputHTMLAttributes<HTMLInputElement>;
 export type IAnchorBoxComponentProps = IBoxComponentProps & React.AnchorHTMLAttributes<HTMLAnchorElement>;

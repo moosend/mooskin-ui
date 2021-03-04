@@ -22,7 +22,6 @@ export const Label: React.FC<ILabelComponentProps> = withMooskinContext((props) 
 
 Label.defaultProps = {
 	className: '',
-	minW: 150,
 	style: {},
 };
 
