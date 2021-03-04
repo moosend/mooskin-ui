@@ -32,6 +32,7 @@ export const StyledInputBase = styled(Box)<IInputComponentProps>`
 	font-stretch: normal;
 	font-style: normal;
 	letter-spacing: normal;
+	width: 100%;
 	text-align: left;
 	flex: 1;
 `;
