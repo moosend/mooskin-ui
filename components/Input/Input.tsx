@@ -19,12 +19,12 @@ import {
 
 // Components
 import { Box } from '../Box/Box';
+import { Text } from '../Text/Text';
 
 // Styled Components
 import {
 	StyledInputContainer,
 	StyledInputIcon,
-	StyledInputOption,
 	StyledInputOptionList,
 	StyledInputOptionListTitle,
 	StyledInputOverlay,
@@ -116,11 +116,13 @@ InputContainer.displayName = 'InputContainer';
 export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinContext((props) => {
 	const [showList, setShowList] = React.useState(false);
 	return (
-		<Box position="relative" color="inherit" {...props}>
-			<InputIcon onClick={() => setShowList(!showList)}>{props.icon}</InputIcon>
+		<Box position="relative" color="inherit" zIndex={showList ? 3 : 0} {...props.wrapperProps}>
+			<InputIcon children={props.icon} onClick={() => setShowList(!showList)} {...props.iconProps} />
 			{showList && (
 				<>
-					<StyledInputOptionList w={300}>{props.children}</StyledInputOptionList>
+					<StyledInputOptionList w={300} {...props}>
+						{props.children}
+					</StyledInputOptionList>
 					<InputOverlay onClick={() => setShowList(!showList)} />
 				</>
 			)}
@@ -153,7 +155,7 @@ InputOptionListTitle.displayName = 'InputOptionListTitle';
  * InputOption
  */
 export const InputOption: React.FC<IInputOptionComponentProps> = withMooskinContext((props) => {
-	return <StyledInputOption {...props} />;
+	return <Text my={8} mx={15} fontSize={14} color={['fontColors', 'common'] as any} {...props} />;
 });
 
 InputOption.defaultProps = {
@@ -182,7 +184,7 @@ Input.displayName = 'Input';
  * InputIcon
  */
 export const InputIcon: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledInputIcon {...props} />;
+	return <StyledInputIcon ml={5} {...props} />;
 });
 
 InputIcon.defaultProps = {
@@ -220,7 +222,7 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = withMooskinContex
 		<Box position="relative" color="inherit" {...props}>
 			<InputIcon onClick={() => setShowEmoji(!showEmoji)}>emoji_emotions</InputIcon>
 			{showEmoji && (
-				<Box position="absolute" right={0}>
+				<Box position="absolute" right={0} zIndex={3}>
 					<Picker onSelect={onChangeEmoji} exclude={['flags']} showPreview={false} showSkinTones={false} />
 					<InputOverlay onClick={() => setShowEmoji(!showEmoji)} />
 				</Box>

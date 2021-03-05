@@ -54,6 +54,7 @@ StyledSwitchHandle.displayName = 'StyledSwitchHandle';
 
 export const StyledSwitchLabel = styled(Box)<Partial<ISwitchComponentProps>>`
 	font-family: Hind;
+	user-select: none;
 	font-size: 12px;
 	font-weight: 500;
 	color: #ffffff;

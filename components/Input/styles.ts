@@ -2,10 +2,12 @@ import styled from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
-import { IInputComponentProps, IInputContainerComponentProps, IInputListComponentProps, IInputOptionComponentProps } from './model';
+import { ILabelComponentProps } from '../Label/model';
+import { IInputComponentProps, IInputContainerComponentProps, IInputListComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
+import { Label } from '../Label/Label';
 
 import variables from '../_utils/globals/variables';
 
@@ -90,23 +92,9 @@ export const StyledInputOptionList = styled(Box)<Partial<IInputListComponentProp
 
 StyledInputOptionList.displayName = 'StyledInputOptionList';
 
-export const StyledInputOptionListTitle = styled(Box)<IBoxComponentProps>`
-	padding: 5px;
-	color: #bebebe;
-	border-bottom: 1px solid #f1f1f1;
-	background-color: #f5f7f9;
-	text-align: center;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+export const StyledInputOptionListTitle = styled(Label)<ILabelComponentProps>`
+	margin: 15px;
+	font-size: 14px;
 `;
 
 StyledInputOptionListTitle.displayName = 'StyledInputOptionListTitle';
-
-export const StyledInputOption = styled(Box)<IInputOptionComponentProps>`
-	padding: 3px 5px;
-	:not(:last-child) {
-		border-bottom: 1px solid #f1f1f1;
-	}
-`;
-
-StyledInputOption.displayName = 'StyledInputOption';

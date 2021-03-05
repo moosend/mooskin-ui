@@ -30,6 +30,7 @@ export const StyledSelectFilter = styled(Box)<IInputBoxComponentProps>`
 	color: inherit;
 	border: none;
 	flex: 1;
+	z-index: 2;
 `;
 
 StyledSelectFilter.displayName = 'StyledSelectFilter';
@@ -69,6 +70,7 @@ export const StyledSelectOptionList = styled(Box)<IBoxComponentProps>`
 	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
 	max-height: 160px;
 	overflow-y: auto;
+	z-index: 2;
 
 	/** Scrollbar */
 	::-webkit-scrollbar {
@@ -94,7 +96,7 @@ export const StyledSelectOverlay = styled(Box)<IBoxComponentProps>`
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: -1;
+	z-index: 1;
 `;
 
 StyledSelectOverlay.displayName = 'StyledSelectOverlay';
