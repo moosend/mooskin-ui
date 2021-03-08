@@ -78,7 +78,7 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 			if (React.isValidElement<IInputListComponentProps>(child) && child.type === InputOptionList) {
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
-					icon: 'check',
+					icon: child.props.icon,
 					key: i,
 				} as IInputListComponentProps);
 			}

@@ -31,7 +31,7 @@ exports[`Radio renders Radio correctly 1`] = `
           "disabledAnchor": "#9d9d9d",
           "label": "#2d2d2d",
           "secondaryToggle": "#9d9d9d",
-          "text": "#9d9d9d",
+          "text": "#2d2d2d",
           "toggle": "#ffffff",
         },
       }
@@ -63,7 +63,7 @@ exports[`Radio renders Radio correctly 1`] = `
             "disabledAnchor": "#9d9d9d",
             "label": "#2d2d2d",
             "secondaryToggle": "#9d9d9d",
-            "text": "#9d9d9d",
+            "text": "#2d2d2d",
             "toggle": "#ffffff",
           },
         }
@@ -95,7 +95,7 @@ exports[`Radio renders Radio correctly 1`] = `
               "disabledAnchor": "#9d9d9d",
               "label": "#2d2d2d",
               "secondaryToggle": "#9d9d9d",
-              "text": "#9d9d9d",
+              "text": "#2d2d2d",
               "toggle": "#ffffff",
             },
           }
@@ -127,7 +127,7 @@ exports[`Radio renders Radio correctly 1`] = `
                 "disabledAnchor": "#9d9d9d",
                 "label": "#2d2d2d",
                 "secondaryToggle": "#9d9d9d",
-                "text": "#9d9d9d",
+                "text": "#2d2d2d",
                 "toggle": "#ffffff",
               },
             }
@@ -159,7 +159,7 @@ exports[`Radio renders Radio correctly 1`] = `
                   "disabledAnchor": "#9d9d9d",
                   "label": "#2d2d2d",
                   "secondaryToggle": "#9d9d9d",
-                  "text": "#9d9d9d",
+                  "text": "#2d2d2d",
                   "toggle": "#ffffff",
                 },
               }
@@ -205,7 +205,7 @@ exports[`Radio renders Radio correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
-                        "text": "#9d9d9d",
+                        "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -237,7 +237,7 @@ exports[`Radio renders Radio correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
-                          "text": "#9d9d9d",
+                          "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -269,7 +269,7 @@ exports[`Radio renders Radio correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
-                            "text": "#9d9d9d",
+                            "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -301,7 +301,7 @@ exports[`Radio renders Radio correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
-                              "text": "#9d9d9d",
+                              "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -333,7 +333,7 @@ exports[`Radio renders Radio correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
-                                "text": "#9d9d9d",
+                                "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
                             }
@@ -384,7 +384,7 @@ exports[`Radio renders Radio correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
-                        "text": "#9d9d9d",
+                        "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -415,7 +415,7 @@ exports[`Radio renders Radio correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
-                          "text": "#9d9d9d",
+                          "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -446,7 +446,7 @@ exports[`Radio renders Radio correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
-                            "text": "#9d9d9d",
+                            "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -477,7 +477,7 @@ exports[`Radio renders Radio correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
-                              "text": "#9d9d9d",
+                              "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -509,7 +509,7 @@ exports[`Radio renders Radio correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
-                                "text": "#9d9d9d",
+                                "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
                             }
@@ -518,7 +518,7 @@ exports[`Radio renders Radio correctly 1`] = `
                         >
                           <Box
                             boxAs="label"
-                            className="sc-dlnjPT jTRkRA sc-gKAblj iSKqcW"
+                            className="sc-dlnjPT iSwLvp sc-gKAblj iSKqcW"
                             onClick={[Function]}
                             palette={
                               Object {
@@ -541,7 +541,7 @@ exports[`Radio renders Radio correctly 1`] = `
                                   "disabledAnchor": "#9d9d9d",
                                   "label": "#2d2d2d",
                                   "secondaryToggle": "#9d9d9d",
-                                  "text": "#9d9d9d",
+                                  "text": "#2d2d2d",
                                   "toggle": "#ffffff",
                                 },
                               }
@@ -550,7 +550,7 @@ exports[`Radio renders Radio correctly 1`] = `
                           >
                             <Component
                               boxAs="label"
-                              className="sc-dlnjPT jTRkRA sc-gKAblj iSKqcW"
+                              className="sc-dlnjPT iSwLvp sc-gKAblj iSKqcW"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -573,7 +573,7 @@ exports[`Radio renders Radio correctly 1`] = `
                                     "disabledAnchor": "#9d9d9d",
                                     "label": "#2d2d2d",
                                     "secondaryToggle": "#9d9d9d",
-                                    "text": "#9d9d9d",
+                                    "text": "#2d2d2d",
                                     "toggle": "#ffffff",
                                   },
                                 }
@@ -583,7 +583,7 @@ exports[`Radio renders Radio correctly 1`] = `
                               <StyledBox
                                 as="label"
                                 boxAs="label"
-                                className="sc-dlnjPT jTRkRA sc-gKAblj iSKqcW"
+                                className="sc-dlnjPT iSwLvp sc-gKAblj iSKqcW"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -606,7 +606,7 @@ exports[`Radio renders Radio correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
-                                      "text": "#9d9d9d",
+                                      "text": "#2d2d2d",
                                       "toggle": "#ffffff",
                                     },
                                   }
@@ -614,7 +614,7 @@ exports[`Radio renders Radio correctly 1`] = `
                                 style={Object {}}
                               >
                                 <label
-                                  className="sc-bdnylx sJSbd sc-dlnjPT jTRkRA sc-gKAblj iSKqcW"
+                                  className="sc-bdnylx sJSbd sc-dlnjPT iSwLvp sc-gKAblj iSKqcW"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >

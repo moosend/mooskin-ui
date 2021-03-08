@@ -38,7 +38,7 @@ exports[`Button renders correctly 1`] = `
           "disabledAnchor": "#9d9d9d",
           "label": "#2d2d2d",
           "secondaryToggle": "#9d9d9d",
-          "text": "#9d9d9d",
+          "text": "#2d2d2d",
           "toggle": "#ffffff",
         },
       }
@@ -75,7 +75,7 @@ exports[`Button renders correctly 1`] = `
             "disabledAnchor": "#9d9d9d",
             "label": "#2d2d2d",
             "secondaryToggle": "#9d9d9d",
-            "text": "#9d9d9d",
+            "text": "#2d2d2d",
             "toggle": "#ffffff",
           },
         }
@@ -112,7 +112,7 @@ exports[`Button renders correctly 1`] = `
               "disabledAnchor": "#9d9d9d",
               "label": "#2d2d2d",
               "secondaryToggle": "#9d9d9d",
-              "text": "#9d9d9d",
+              "text": "#2d2d2d",
               "toggle": "#ffffff",
             },
           }
@@ -129,7 +129,6 @@ exports[`Button renders correctly 1`] = `
           boxAs="label"
           className="myClass"
           id="label"
-          onClick={[Function]}
           palette={
             Object {
               "backgroundColors": Object {
@@ -151,7 +150,7 @@ exports[`Button renders correctly 1`] = `
                 "disabledAnchor": "#9d9d9d",
                 "label": "#2d2d2d",
                 "secondaryToggle": "#9d9d9d",
-                "text": "#9d9d9d",
+                "text": "#2d2d2d",
                 "toggle": "#ffffff",
               },
             }
@@ -166,9 +165,8 @@ exports[`Button renders correctly 1`] = `
             abbrAccuracy={1}
             abbreviate={true}
             boxAs="label"
-            className="sc-gtssRu bxdeLg myClass"
+            className="sc-gtssRu eKLwVr myClass"
             id="label"
-            onClick={[Function]}
             palette={
               Object {
                 "backgroundColors": Object {
@@ -190,7 +188,7 @@ exports[`Button renders correctly 1`] = `
                   "disabledAnchor": "#9d9d9d",
                   "label": "#2d2d2d",
                   "secondaryToggle": "#9d9d9d",
-                  "text": "#9d9d9d",
+                  "text": "#2d2d2d",
                   "toggle": "#ffffff",
                 },
               }
@@ -205,9 +203,8 @@ exports[`Button renders correctly 1`] = `
               abbrAccuracy={1}
               abbreviate={true}
               boxAs="label"
-              className="sc-gtssRu bxdeLg myClass"
+              className="sc-gtssRu eKLwVr myClass"
               id="label"
-              onClick={[Function]}
               palette={
                 Object {
                   "backgroundColors": Object {
@@ -229,7 +226,7 @@ exports[`Button renders correctly 1`] = `
                     "disabledAnchor": "#9d9d9d",
                     "label": "#2d2d2d",
                     "secondaryToggle": "#9d9d9d",
-                    "text": "#9d9d9d",
+                    "text": "#2d2d2d",
                     "toggle": "#ffffff",
                   },
                 }
@@ -245,9 +242,8 @@ exports[`Button renders correctly 1`] = `
                 abbreviate={true}
                 as="label"
                 boxAs="label"
-                className="sc-gtssRu bxdeLg myClass"
+                className="sc-gtssRu eKLwVr myClass"
                 id="label"
-                onClick={[Function]}
                 palette={
                   Object {
                     "backgroundColors": Object {
@@ -269,7 +265,7 @@ exports[`Button renders correctly 1`] = `
                       "disabledAnchor": "#9d9d9d",
                       "label": "#2d2d2d",
                       "secondaryToggle": "#9d9d9d",
-                      "text": "#9d9d9d",
+                      "text": "#2d2d2d",
                       "toggle": "#ffffff",
                     },
                   }
@@ -281,9 +277,8 @@ exports[`Button renders correctly 1`] = `
                 }
               >
                 <label
-                  className="sc-bdnylx sJSbd sc-gtssRu bxdeLg myClass"
+                  className="sc-bdnylx sJSbd sc-gtssRu eKLwVr myClass"
                   id="label"
-                  onClick={[Function]}
                   style={
                     Object {
                       "color": "blue",
