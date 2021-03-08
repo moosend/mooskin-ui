@@ -28,7 +28,7 @@ exports[`Text renders correctly 1`] = `
           "disabledAnchor": "#9d9d9d",
           "label": "#2d2d2d",
           "secondaryToggle": "#9d9d9d",
-          "text": "#9d9d9d",
+          "text": "#2d2d2d",
           "toggle": "#ffffff",
         },
       }
@@ -58,7 +58,7 @@ exports[`Text renders correctly 1`] = `
             "disabledAnchor": "#9d9d9d",
             "label": "#2d2d2d",
             "secondaryToggle": "#9d9d9d",
-            "text": "#9d9d9d",
+            "text": "#2d2d2d",
             "toggle": "#ffffff",
           },
         }
@@ -66,7 +66,7 @@ exports[`Text renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu cDWSgB"
+        className="sc-gtssRu ckndBS"
         palette={
           Object {
             "backgroundColors": Object {
@@ -88,7 +88,7 @@ exports[`Text renders correctly 1`] = `
               "disabledAnchor": "#9d9d9d",
               "label": "#2d2d2d",
               "secondaryToggle": "#9d9d9d",
-              "text": "#9d9d9d",
+              "text": "#2d2d2d",
               "toggle": "#ffffff",
             },
           }
@@ -96,7 +96,7 @@ exports[`Text renders correctly 1`] = `
         style={Object {}}
       >
         <Component
-          className="sc-gtssRu cDWSgB"
+          className="sc-gtssRu ckndBS"
           palette={
             Object {
               "backgroundColors": Object {
@@ -118,7 +118,7 @@ exports[`Text renders correctly 1`] = `
                 "disabledAnchor": "#9d9d9d",
                 "label": "#2d2d2d",
                 "secondaryToggle": "#9d9d9d",
-                "text": "#9d9d9d",
+                "text": "#2d2d2d",
                 "toggle": "#ffffff",
               },
             }
@@ -126,7 +126,7 @@ exports[`Text renders correctly 1`] = `
           style={Object {}}
         >
           <StyledBox
-            className="sc-gtssRu cDWSgB"
+            className="sc-gtssRu ckndBS"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -148,7 +148,7 @@ exports[`Text renders correctly 1`] = `
                   "disabledAnchor": "#9d9d9d",
                   "label": "#2d2d2d",
                   "secondaryToggle": "#9d9d9d",
-                  "text": "#9d9d9d",
+                  "text": "#2d2d2d",
                   "toggle": "#ffffff",
                 },
               }
@@ -156,7 +156,7 @@ exports[`Text renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sJSbd sc-gtssRu cDWSgB"
+              className="sc-bdnylx sJSbd sc-gtssRu ckndBS"
               style={Object {}}
             >
               Text here!

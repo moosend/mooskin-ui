@@ -30,7 +30,7 @@ exports[`Input renders correctly 1`] = `
           "disabledAnchor": "#9d9d9d",
           "label": "#2d2d2d",
           "secondaryToggle": "#9d9d9d",
-          "text": "#9d9d9d",
+          "text": "#2d2d2d",
           "toggle": "#ffffff",
         },
       }
@@ -61,7 +61,7 @@ exports[`Input renders correctly 1`] = `
             "disabledAnchor": "#9d9d9d",
             "label": "#2d2d2d",
             "secondaryToggle": "#9d9d9d",
-            "text": "#9d9d9d",
+            "text": "#2d2d2d",
             "toggle": "#ffffff",
           },
         }
@@ -69,7 +69,7 @@ exports[`Input renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu dNMjNS"
+        className="sc-hKFyIo kRvSiM"
         onChangeInput={[MockFunction]}
         palette={
           Object {
@@ -92,7 +92,7 @@ exports[`Input renders correctly 1`] = `
               "disabledAnchor": "#9d9d9d",
               "label": "#2d2d2d",
               "secondaryToggle": "#9d9d9d",
-              "text": "#9d9d9d",
+              "text": "#2d2d2d",
               "toggle": "#ffffff",
             },
           }
@@ -100,7 +100,7 @@ exports[`Input renders correctly 1`] = `
         style={Object {}}
       >
         <Component
-          className="sc-gtssRu dNMjNS"
+          className="sc-hKFyIo kRvSiM"
           onChangeInput={[MockFunction]}
           palette={
             Object {
@@ -123,7 +123,7 @@ exports[`Input renders correctly 1`] = `
                 "disabledAnchor": "#9d9d9d",
                 "label": "#2d2d2d",
                 "secondaryToggle": "#9d9d9d",
-                "text": "#9d9d9d",
+                "text": "#2d2d2d",
                 "toggle": "#ffffff",
               },
             }
@@ -131,7 +131,7 @@ exports[`Input renders correctly 1`] = `
           style={Object {}}
         >
           <StyledBox
-            className="sc-gtssRu dNMjNS"
+            className="sc-hKFyIo kRvSiM"
             onChangeInput={[MockFunction]}
             palette={
               Object {
@@ -154,7 +154,7 @@ exports[`Input renders correctly 1`] = `
                   "disabledAnchor": "#9d9d9d",
                   "label": "#2d2d2d",
                   "secondaryToggle": "#9d9d9d",
-                  "text": "#9d9d9d",
+                  "text": "#2d2d2d",
                   "toggle": "#ffffff",
                 },
               }
@@ -162,7 +162,7 @@ exports[`Input renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sJSbd sc-gtssRu dNMjNS"
+              className="sc-bdnylx sJSbd sc-hKFyIo kRvSiM"
               onChangeInput={[MockFunction]}
               style={Object {}}
             >
@@ -197,7 +197,7 @@ exports[`Input renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
-                        "text": "#9d9d9d",
+                        "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -230,7 +230,7 @@ exports[`Input renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
-                          "text": "#9d9d9d",
+                          "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -240,7 +240,7 @@ exports[`Input renders correctly 1`] = `
                   >
                     <Box
                       boxAs="input"
-                      className="sc-dlnjPT sc-eCApGN iJHACm bqJlmV"
+                      className="sc-eCApGN sc-gKAblj ddluuA iJgPne"
                       onChange={[Function]}
                       palette={
                         Object {
@@ -263,7 +263,7 @@ exports[`Input renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
-                            "text": "#9d9d9d",
+                            "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -273,7 +273,7 @@ exports[`Input renders correctly 1`] = `
                     >
                       <Component
                         boxAs="input"
-                        className="sc-dlnjPT sc-eCApGN iJHACm bqJlmV"
+                        className="sc-eCApGN sc-gKAblj ddluuA iJgPne"
                         onChange={[Function]}
                         palette={
                           Object {
@@ -296,7 +296,7 @@ exports[`Input renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
-                              "text": "#9d9d9d",
+                              "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -307,7 +307,7 @@ exports[`Input renders correctly 1`] = `
                         <StyledBox
                           as="input"
                           boxAs="input"
-                          className="sc-dlnjPT sc-eCApGN iJHACm bqJlmV"
+                          className="sc-eCApGN sc-gKAblj ddluuA iJgPne"
                           onChange={[Function]}
                           palette={
                             Object {
@@ -330,7 +330,7 @@ exports[`Input renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
-                                "text": "#9d9d9d",
+                                "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
                             }
@@ -339,7 +339,7 @@ exports[`Input renders correctly 1`] = `
                           wrapped={true}
                         >
                           <input
-                            className="sc-bdnylx sJSbd sc-dlnjPT sc-eCApGN iJHACm bqJlmV"
+                            className="sc-bdnylx sJSbd sc-eCApGN sc-gKAblj ddluuA iJgPne"
                             onChange={[Function]}
                             style={Object {}}
                           />
@@ -380,7 +380,7 @@ exports[`Input renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
-                        "text": "#9d9d9d",
+                        "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -391,41 +391,13 @@ exports[`Input renders correctly 1`] = `
                   <Box
                     className=""
                     color="inherit"
-                    icon="check"
-                    palette={
-                      Object {
-                        "backgroundColors": Object {
-                          "button": "#3fbaca",
-                          "common": "#ffffff",
-                          "disabledButton": "#e2e2e2",
-                          "main": "#f7f7f7",
-                          "secondaryToggle": "#ffffff",
-                          "toggle": "#425579",
-                        },
-                        "borderColors": Object {
-                          "common": "#e2e2e2",
-                        },
-                        "fontColors": Object {
-                          "anchor": "#3fbaca",
-                          "button": "#ffffff",
-                          "common": "#293346",
-                          "description": "#9d9d9d",
-                          "disabledAnchor": "#9d9d9d",
-                          "label": "#2d2d2d",
-                          "secondaryToggle": "#9d9d9d",
-                          "text": "#9d9d9d",
-                          "toggle": "#ffffff",
-                        },
-                      }
-                    }
                     position="relative"
-                    pr={5}
                     style={Object {}}
+                    zIndex={0}
                   >
                     <Component
                       className=""
                       color="inherit"
-                      icon="check"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -447,19 +419,18 @@ exports[`Input renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
-                            "text": "#9d9d9d",
+                            "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
                         }
                       }
                       position="relative"
-                      pr={5}
                       style={Object {}}
+                      zIndex={0}
                     >
                       <StyledBox
                         className=""
                         color="inherit"
-                        icon="check"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -481,17 +452,17 @@ exports[`Input renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
-                              "text": "#9d9d9d",
+                              "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
                           }
                         }
                         position="relative"
-                        pr={5}
                         style={Object {}}
+                        zIndex={0}
                       >
                         <div
-                          className="sc-bdnylx eHnLJp"
+                          className="sc-bdnylx btHDAE"
                           color="inherit"
                           style={Object {}}
                         >
@@ -524,7 +495,7 @@ exports[`Input renders correctly 1`] = `
                                     "disabledAnchor": "#9d9d9d",
                                     "label": "#2d2d2d",
                                     "secondaryToggle": "#9d9d9d",
-                                    "text": "#9d9d9d",
+                                    "text": "#2d2d2d",
                                     "toggle": "#ffffff",
                                   },
                                 }
@@ -533,6 +504,7 @@ exports[`Input renders correctly 1`] = `
                             >
                               <StyledInputIcon
                                 className=""
+                                ml={5}
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -555,7 +527,7 @@ exports[`Input renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
-                                      "text": "#9d9d9d",
+                                      "text": "#2d2d2d",
                                       "toggle": "#ffffff",
                                     },
                                   }
@@ -563,7 +535,8 @@ exports[`Input renders correctly 1`] = `
                                 style={Object {}}
                               >
                                 <Box
-                                  className="sc-gKAblj bmosCL"
+                                  className="sc-fujyUd fWdDRH"
+                                  ml={5}
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -586,7 +559,7 @@ exports[`Input renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
-                                        "text": "#9d9d9d",
+                                        "text": "#2d2d2d",
                                         "toggle": "#ffffff",
                                       },
                                     }
@@ -594,7 +567,8 @@ exports[`Input renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <Component
-                                    className="sc-gKAblj bmosCL"
+                                    className="sc-fujyUd fWdDRH"
+                                    ml={5}
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -617,7 +591,7 @@ exports[`Input renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
-                                          "text": "#9d9d9d",
+                                          "text": "#2d2d2d",
                                           "toggle": "#ffffff",
                                         },
                                       }
@@ -625,7 +599,8 @@ exports[`Input renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <StyledBox
-                                      className="sc-gKAblj bmosCL"
+                                      className="sc-fujyUd fWdDRH"
+                                      ml={5}
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -648,7 +623,7 @@ exports[`Input renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
-                                            "text": "#9d9d9d",
+                                            "text": "#2d2d2d",
                                             "toggle": "#ffffff",
                                           },
                                         }
@@ -656,7 +631,7 @@ exports[`Input renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <div
-                                        className="sc-bdnylx sJSbd sc-gKAblj bmosCL"
+                                        className="sc-bdnylx gSYPMI sc-fujyUd fWdDRH"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -705,7 +680,7 @@ exports[`Input renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
-                        "text": "#9d9d9d",
+                        "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -738,7 +713,7 @@ exports[`Input renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
-                          "text": "#9d9d9d",
+                          "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -772,7 +747,7 @@ exports[`Input renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
-                            "text": "#9d9d9d",
+                            "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -806,7 +781,7 @@ exports[`Input renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
-                              "text": "#9d9d9d",
+                              "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -850,7 +825,7 @@ exports[`Input renders correctly 1`] = `
                                     "disabledAnchor": "#9d9d9d",
                                     "label": "#2d2d2d",
                                     "secondaryToggle": "#9d9d9d",
-                                    "text": "#9d9d9d",
+                                    "text": "#2d2d2d",
                                     "toggle": "#ffffff",
                                   },
                                 }
@@ -859,6 +834,7 @@ exports[`Input renders correctly 1`] = `
                             >
                               <StyledInputIcon
                                 className=""
+                                ml={5}
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -881,7 +857,7 @@ exports[`Input renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
-                                      "text": "#9d9d9d",
+                                      "text": "#2d2d2d",
                                       "toggle": "#ffffff",
                                     },
                                   }
@@ -889,7 +865,8 @@ exports[`Input renders correctly 1`] = `
                                 style={Object {}}
                               >
                                 <Box
-                                  className="sc-gKAblj bmosCL"
+                                  className="sc-fujyUd fWdDRH"
+                                  ml={5}
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -912,7 +889,7 @@ exports[`Input renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
-                                        "text": "#9d9d9d",
+                                        "text": "#2d2d2d",
                                         "toggle": "#ffffff",
                                       },
                                     }
@@ -920,7 +897,8 @@ exports[`Input renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <Component
-                                    className="sc-gKAblj bmosCL"
+                                    className="sc-fujyUd fWdDRH"
+                                    ml={5}
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -943,7 +921,7 @@ exports[`Input renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
-                                          "text": "#9d9d9d",
+                                          "text": "#2d2d2d",
                                           "toggle": "#ffffff",
                                         },
                                       }
@@ -951,7 +929,8 @@ exports[`Input renders correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <StyledBox
-                                      className="sc-gKAblj bmosCL"
+                                      className="sc-fujyUd fWdDRH"
+                                      ml={5}
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -974,7 +953,7 @@ exports[`Input renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
-                                            "text": "#9d9d9d",
+                                            "text": "#2d2d2d",
                                             "toggle": "#ffffff",
                                           },
                                         }
@@ -982,7 +961,7 @@ exports[`Input renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <div
-                                        className="sc-bdnylx sJSbd sc-gKAblj bmosCL"
+                                        className="sc-bdnylx gSYPMI sc-fujyUd fWdDRH"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -1028,7 +1007,7 @@ exports[`Input renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
-                        "text": "#9d9d9d",
+                        "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -1037,6 +1016,7 @@ exports[`Input renders correctly 1`] = `
                 >
                   <StyledInputIcon
                     className=""
+                    ml={5}
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -1058,7 +1038,7 @@ exports[`Input renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
-                          "text": "#9d9d9d",
+                          "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -1066,7 +1046,8 @@ exports[`Input renders correctly 1`] = `
                     style={Object {}}
                   >
                     <Box
-                      className="sc-gKAblj bmosCL"
+                      className="sc-fujyUd fWdDRH"
+                      ml={5}
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -1088,7 +1069,7 @@ exports[`Input renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
-                            "text": "#9d9d9d",
+                            "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -1096,7 +1077,8 @@ exports[`Input renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gKAblj bmosCL"
+                        className="sc-fujyUd fWdDRH"
+                        ml={5}
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -1118,7 +1100,7 @@ exports[`Input renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
-                              "text": "#9d9d9d",
+                              "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -1126,7 +1108,8 @@ exports[`Input renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-gKAblj bmosCL"
+                          className="sc-fujyUd fWdDRH"
+                          ml={5}
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -1148,7 +1131,7 @@ exports[`Input renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
-                                "text": "#9d9d9d",
+                                "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
                             }
@@ -1156,7 +1139,7 @@ exports[`Input renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-gKAblj bmosCL"
+                            className="sc-bdnylx gSYPMI sc-fujyUd fWdDRH"
                             style={Object {}}
                           >
                             search

@@ -28,7 +28,7 @@ exports[`Alert renders correctly 1`] = `
           "disabledAnchor": "#9d9d9d",
           "label": "#2d2d2d",
           "secondaryToggle": "#9d9d9d",
-          "text": "#9d9d9d",
+          "text": "#2d2d2d",
           "toggle": "#ffffff",
         },
       }
@@ -58,7 +58,7 @@ exports[`Alert renders correctly 1`] = `
             "disabledAnchor": "#9d9d9d",
             "label": "#2d2d2d",
             "secondaryToggle": "#9d9d9d",
-            "text": "#9d9d9d",
+            "text": "#2d2d2d",
             "toggle": "#ffffff",
           },
         }
@@ -88,7 +88,7 @@ exports[`Alert renders correctly 1`] = `
               "disabledAnchor": "#9d9d9d",
               "label": "#2d2d2d",
               "secondaryToggle": "#9d9d9d",
-              "text": "#9d9d9d",
+              "text": "#2d2d2d",
               "toggle": "#ffffff",
             },
           }
@@ -118,7 +118,7 @@ exports[`Alert renders correctly 1`] = `
                 "disabledAnchor": "#9d9d9d",
                 "label": "#2d2d2d",
                 "secondaryToggle": "#9d9d9d",
-                "text": "#9d9d9d",
+                "text": "#2d2d2d",
                 "toggle": "#ffffff",
               },
             }
@@ -148,7 +148,7 @@ exports[`Alert renders correctly 1`] = `
                   "disabledAnchor": "#9d9d9d",
                   "label": "#2d2d2d",
                   "secondaryToggle": "#9d9d9d",
-                  "text": "#9d9d9d",
+                  "text": "#2d2d2d",
                   "toggle": "#ffffff",
                 },
               }
@@ -190,7 +190,7 @@ exports[`Alert renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
-                        "text": "#9d9d9d",
+                        "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -222,7 +222,7 @@ exports[`Alert renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
-                          "text": "#9d9d9d",
+                          "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -254,7 +254,7 @@ exports[`Alert renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
-                            "text": "#9d9d9d",
+                            "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -286,7 +286,7 @@ exports[`Alert renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
-                              "text": "#9d9d9d",
+                              "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -318,7 +318,7 @@ exports[`Alert renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
-                                "text": "#9d9d9d",
+                                "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
                             }
@@ -366,7 +366,7 @@ exports[`Alert renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
-                        "text": "#9d9d9d",
+                        "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -396,7 +396,7 @@ exports[`Alert renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
-                          "text": "#9d9d9d",
+                          "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -426,7 +426,7 @@ exports[`Alert renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
-                            "text": "#9d9d9d",
+                            "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -456,7 +456,7 @@ exports[`Alert renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
-                              "text": "#9d9d9d",
+                              "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -486,7 +486,7 @@ exports[`Alert renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
-                                "text": "#9d9d9d",
+                                "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
                             }
@@ -531,7 +531,7 @@ exports[`Alert renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
-                                      "text": "#9d9d9d",
+                                      "text": "#2d2d2d",
                                       "toggle": "#ffffff",
                                     },
                                   }
@@ -567,7 +567,7 @@ exports[`Alert renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
-                                        "text": "#9d9d9d",
+                                        "text": "#2d2d2d",
                                         "toggle": "#ffffff",
                                       },
                                     }
@@ -603,7 +603,7 @@ exports[`Alert renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
-                                          "text": "#9d9d9d",
+                                          "text": "#2d2d2d",
                                           "toggle": "#ffffff",
                                         },
                                       }
@@ -639,7 +639,7 @@ exports[`Alert renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
-                                            "text": "#9d9d9d",
+                                            "text": "#2d2d2d",
                                             "toggle": "#ffffff",
                                           },
                                         }
@@ -676,7 +676,7 @@ exports[`Alert renders correctly 1`] = `
                                               "disabledAnchor": "#9d9d9d",
                                               "label": "#2d2d2d",
                                               "secondaryToggle": "#9d9d9d",
-                                              "text": "#9d9d9d",
+                                              "text": "#2d2d2d",
                                               "toggle": "#ffffff",
                                             },
                                           }
@@ -725,7 +725,7 @@ exports[`Alert renders correctly 1`] = `
                                                         "disabledAnchor": "#9d9d9d",
                                                         "label": "#2d2d2d",
                                                         "secondaryToggle": "#9d9d9d",
-                                                        "text": "#9d9d9d",
+                                                        "text": "#2d2d2d",
                                                         "toggle": "#ffffff",
                                                       },
                                                     }
@@ -755,7 +755,7 @@ exports[`Alert renders correctly 1`] = `
                                                           "disabledAnchor": "#9d9d9d",
                                                           "label": "#2d2d2d",
                                                           "secondaryToggle": "#9d9d9d",
-                                                          "text": "#9d9d9d",
+                                                          "text": "#2d2d2d",
                                                           "toggle": "#ffffff",
                                                         },
                                                       }
@@ -813,7 +813,7 @@ exports[`Alert renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
-                                      "text": "#9d9d9d",
+                                      "text": "#2d2d2d",
                                       "toggle": "#ffffff",
                                     },
                                   }
@@ -848,7 +848,7 @@ exports[`Alert renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
-                                        "text": "#9d9d9d",
+                                        "text": "#2d2d2d",
                                         "toggle": "#ffffff",
                                       },
                                     }
@@ -883,7 +883,7 @@ exports[`Alert renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
-                                          "text": "#9d9d9d",
+                                          "text": "#2d2d2d",
                                           "toggle": "#ffffff",
                                         },
                                       }
@@ -918,7 +918,7 @@ exports[`Alert renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
-                                            "text": "#9d9d9d",
+                                            "text": "#2d2d2d",
                                             "toggle": "#ffffff",
                                           },
                                         }
@@ -954,7 +954,7 @@ exports[`Alert renders correctly 1`] = `
                                               "disabledAnchor": "#9d9d9d",
                                               "label": "#2d2d2d",
                                               "secondaryToggle": "#9d9d9d",
-                                              "text": "#9d9d9d",
+                                              "text": "#2d2d2d",
                                               "toggle": "#ffffff",
                                             },
                                           }
@@ -1004,7 +1004,7 @@ exports[`Alert renders correctly 1`] = `
                                                         "disabledAnchor": "#9d9d9d",
                                                         "label": "#2d2d2d",
                                                         "secondaryToggle": "#9d9d9d",
-                                                        "text": "#9d9d9d",
+                                                        "text": "#2d2d2d",
                                                         "toggle": "#ffffff",
                                                       },
                                                     }
@@ -1034,7 +1034,7 @@ exports[`Alert renders correctly 1`] = `
                                                           "disabledAnchor": "#9d9d9d",
                                                           "label": "#2d2d2d",
                                                           "secondaryToggle": "#9d9d9d",
-                                                          "text": "#9d9d9d",
+                                                          "text": "#2d2d2d",
                                                           "toggle": "#ffffff",
                                                         },
                                                       }
@@ -1093,7 +1093,7 @@ exports[`Alert renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
-                        "text": "#9d9d9d",
+                        "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
                     }
@@ -1123,7 +1123,7 @@ exports[`Alert renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
-                          "text": "#9d9d9d",
+                          "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
                       }
@@ -1153,7 +1153,7 @@ exports[`Alert renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
-                            "text": "#9d9d9d",
+                            "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
                         }
@@ -1183,7 +1183,7 @@ exports[`Alert renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
-                              "text": "#9d9d9d",
+                              "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
                           }
@@ -1213,7 +1213,7 @@ exports[`Alert renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
-                                "text": "#9d9d9d",
+                                "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
                             }
@@ -1260,7 +1260,7 @@ exports[`Alert renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
-                                      "text": "#9d9d9d",
+                                      "text": "#2d2d2d",
                                       "toggle": "#ffffff",
                                     },
                                   }
@@ -1297,7 +1297,7 @@ exports[`Alert renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
-                                        "text": "#9d9d9d",
+                                        "text": "#2d2d2d",
                                         "toggle": "#ffffff",
                                       },
                                     }
@@ -1334,7 +1334,7 @@ exports[`Alert renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
-                                          "text": "#9d9d9d",
+                                          "text": "#2d2d2d",
                                           "toggle": "#ffffff",
                                         },
                                       }
@@ -1371,7 +1371,7 @@ exports[`Alert renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
-                                            "text": "#9d9d9d",
+                                            "text": "#2d2d2d",
                                             "toggle": "#ffffff",
                                           },
                                         }
@@ -1409,7 +1409,7 @@ exports[`Alert renders correctly 1`] = `
                                               "disabledAnchor": "#9d9d9d",
                                               "label": "#2d2d2d",
                                               "secondaryToggle": "#9d9d9d",
-                                              "text": "#9d9d9d",
+                                              "text": "#2d2d2d",
                                               "toggle": "#ffffff",
                                             },
                                           }
@@ -1418,7 +1418,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx gJQAzr sc-gKAblj sc-fujyUd fXQpRa dUfsSP"
+                                          className="sc-bdnylx kZNLd sc-gKAblj sc-fujyUd fXQpRa dUfsSP"
                                           color="#37a037"
                                           onClick={[Function]}
                                           style={Object {}}
