@@ -97,7 +97,7 @@ export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IBaseAlertCo
 	font-size: 20px;
 	cursor: pointer;
 	border-radius: 9px;
-	:hover {
+	&:hover {
 		background: rgba(30, 30, 30, 0.1);
 	}
 `;

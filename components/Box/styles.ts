@@ -109,6 +109,16 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		opacity: ${(props) => props.opacity};
 
 		cursor: ${(props) => props.cursor};
+
+		:hover {
+			${(props) =>
+				props._hover &&
+				Object.keys(props._hover).map((item) => {
+					if (props._hover) {
+						return `${item}: ${props._hover[item]};`;
+					}
+				})}
+		}
 	}
 `;
 

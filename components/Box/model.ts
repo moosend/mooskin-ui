@@ -380,4 +380,7 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 
 	/** rounds the element */
 	round?: IntensityType;
+
+	/** hover */
+	_hover?: { [key: string]: any };
 }
