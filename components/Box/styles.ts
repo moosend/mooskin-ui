@@ -115,7 +115,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 StyledBox.displayName = 'StyledBox';
 
 export const getNumberOrStringValue = (value?: number | string) => {
-	if (value) {
+	if (typeof value !== 'undefined') {
 		return typeof value === 'number' ? `${value}px` : value;
 	}
 };
