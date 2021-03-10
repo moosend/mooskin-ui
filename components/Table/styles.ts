@@ -32,7 +32,6 @@ export const StyledTableHeaderItem = styled(Box)<IBoxComponentProps>`
 	font-weight: bold;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.27;
 	letter-spacing: normal;
 	text-align: left;
 	color: ${(props) => props.palette?.backgroundColors.toggle || variables.backgroundColors.toggle};
@@ -61,7 +60,6 @@ export const StyledTableRowItem = styled(Box)<IBoxComponentProps>`
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 0.94;
 	letter-spacing: normal;
 	text-align: left;
 	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};

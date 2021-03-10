@@ -51,7 +51,6 @@ export const StyledExpandableItemText = styled(Box)<IBoxComponentProps>`
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.29;
 	letter-spacing: normal;
 	text-align: left;
 	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};

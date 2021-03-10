@@ -14,17 +14,10 @@ import variables from '../_utils/globals/variables';
 export const StyledRadio = styled(Box)`
 	display: flex;
 	width: fit-content;
-`;
-
-StyledRadio.displayName = 'StyledRadio';
-
-export const StyledRadioWrapper = styled(Box)<Partial<IRadioComponentProps>>`
-	width: fit-content;
-	display: flex;
 	align-items: center;
 `;
 
-StyledRadioWrapper.displayName = 'StyledRadioWrapper';
+StyledRadio.displayName = 'StyledRadio';
 
 export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
@@ -43,7 +36,6 @@ export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.65;
 	letter-spacing: normal;
 	min-width: unset;
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};

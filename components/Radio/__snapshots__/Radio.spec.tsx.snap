@@ -72,7 +72,7 @@ exports[`Radio renders Radio correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-hKFyIo cxAJpF"
+        className="sc-hKFyIo dxNlPq"
         onClickRadio={[MockFunction]}
         palette={
           Object {
@@ -104,7 +104,7 @@ exports[`Radio renders Radio correctly 1`] = `
         style={Object {}}
       >
         <Component
-          className="sc-hKFyIo cxAJpF"
+          className="sc-hKFyIo dxNlPq"
           onClickRadio={[MockFunction]}
           palette={
             Object {
@@ -136,7 +136,7 @@ exports[`Radio renders Radio correctly 1`] = `
           style={Object {}}
         >
           <StyledBox
-            className="sc-hKFyIo cxAJpF"
+            className="sc-hKFyIo dxNlPq"
             onClickRadio={[MockFunction]}
             palette={
               Object {
@@ -168,7 +168,7 @@ exports[`Radio renders Radio correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sJSbd sc-hKFyIo cxAJpF"
+              className="sc-bdnylx sJSbd sc-hKFyIo dxNlPq"
               onClickRadio={[MockFunction]}
               selected={true}
               style={Object {}}
@@ -245,7 +245,7 @@ exports[`Radio renders Radio correctly 1`] = `
                     style={Object {}}
                   >
                     <Box
-                      className="sc-jSFkmK djalfx"
+                      className="sc-eCApGN eSmmaN"
                       color="red"
                       onClick={[Function]}
                       palette={
@@ -277,7 +277,7 @@ exports[`Radio renders Radio correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-jSFkmK djalfx"
+                        className="sc-eCApGN eSmmaN"
                         color="red"
                         onClick={[Function]}
                         palette={
@@ -309,7 +309,7 @@ exports[`Radio renders Radio correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-jSFkmK djalfx"
+                          className="sc-eCApGN eSmmaN"
                           color="red"
                           onClick={[Function]}
                           palette={
@@ -341,7 +341,7 @@ exports[`Radio renders Radio correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx XSZOu sc-jSFkmK djalfx"
+                            className="sc-bdnylx XSZOu sc-eCApGN eSmmaN"
                             color="red"
                             onClick={[Function]}
                             style={Object {}}
@@ -423,7 +423,7 @@ exports[`Radio renders Radio correctly 1`] = `
                     style={Object {}}
                   >
                     <Label
-                      className="sc-gKAblj iSKqcW"
+                      className="sc-jSFkmK kyZcBf"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -454,7 +454,7 @@ exports[`Radio renders Radio correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gKAblj iSKqcW"
+                        className="sc-jSFkmK kyZcBf"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -486,7 +486,7 @@ exports[`Radio renders Radio correctly 1`] = `
                       >
                         <StyledLabel
                           boxAs="label"
-                          className="sc-gKAblj iSKqcW"
+                          className="sc-jSFkmK kyZcBf"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -518,7 +518,7 @@ exports[`Radio renders Radio correctly 1`] = `
                         >
                           <Box
                             boxAs="label"
-                            className="sc-dlnjPT iSwLvp sc-gKAblj iSKqcW"
+                            className="sc-dlnjPT iSwLvp sc-jSFkmK kyZcBf"
                             onClick={[Function]}
                             palette={
                               Object {
@@ -550,7 +550,7 @@ exports[`Radio renders Radio correctly 1`] = `
                           >
                             <Component
                               boxAs="label"
-                              className="sc-dlnjPT iSwLvp sc-gKAblj iSKqcW"
+                              className="sc-dlnjPT iSwLvp sc-jSFkmK kyZcBf"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -583,7 +583,7 @@ exports[`Radio renders Radio correctly 1`] = `
                               <StyledBox
                                 as="label"
                                 boxAs="label"
-                                className="sc-dlnjPT iSwLvp sc-gKAblj iSKqcW"
+                                className="sc-dlnjPT iSwLvp sc-jSFkmK kyZcBf"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -614,7 +614,7 @@ exports[`Radio renders Radio correctly 1`] = `
                                 style={Object {}}
                               >
                                 <label
-                                  className="sc-bdnylx sJSbd sc-dlnjPT iSwLvp sc-gKAblj iSKqcW"
+                                  className="sc-bdnylx sJSbd sc-dlnjPT iSwLvp sc-jSFkmK kyZcBf"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >

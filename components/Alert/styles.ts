@@ -49,7 +49,6 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
 StyledAlert.displayName = 'StyledAlert';
 
 const StyledAlertCommonText = styled(Box)<IBaseAlertComponentProps>`
-	line-height: 1.5rem;
 	color: ${(props) => (props.variant === 'solid' ? '#FFFFFF' : '')};
 `;
 

@@ -32,7 +32,6 @@ export const StyledStepHeader = styled(Box)<IStepHeaderComponentProps>`
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.29;
 	letter-spacing: normal;
 	display: flex;
 	justify-content: center;

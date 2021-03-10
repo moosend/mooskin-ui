@@ -248,7 +248,7 @@ exports[`Selector renders Selector correctly 1`] = `
                   >
                     <Box
                       active={true}
-                      className="sc-dlnjPT eQtYcl"
+                      className="sc-dlnjPT kpYFMT"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -281,7 +281,7 @@ exports[`Selector renders Selector correctly 1`] = `
                     >
                       <Component
                         active={true}
-                        className="sc-dlnjPT eQtYcl"
+                        className="sc-dlnjPT kpYFMT"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -314,7 +314,7 @@ exports[`Selector renders Selector correctly 1`] = `
                       >
                         <StyledBox
                           active={true}
-                          className="sc-dlnjPT eQtYcl"
+                          className="sc-dlnjPT kpYFMT"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -346,7 +346,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT eQtYcl"
+                            className="sc-bdnylx sJSbd sc-dlnjPT kpYFMT"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -435,7 +435,7 @@ exports[`Selector renders Selector correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT kOofKE"
+                      className="sc-dlnjPT cenvKy"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -468,7 +468,7 @@ exports[`Selector renders Selector correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT kOofKE"
+                        className="sc-dlnjPT cenvKy"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -501,7 +501,7 @@ exports[`Selector renders Selector correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT kOofKE"
+                          className="sc-dlnjPT cenvKy"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -533,7 +533,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT kOofKE"
+                            className="sc-bdnylx sJSbd sc-dlnjPT cenvKy"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -622,7 +622,7 @@ exports[`Selector renders Selector correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT kOofKE"
+                      className="sc-dlnjPT cenvKy"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -655,7 +655,7 @@ exports[`Selector renders Selector correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT kOofKE"
+                        className="sc-dlnjPT cenvKy"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -688,7 +688,7 @@ exports[`Selector renders Selector correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT kOofKE"
+                          className="sc-dlnjPT cenvKy"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -720,7 +720,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT kOofKE"
+                            className="sc-bdnylx sJSbd sc-dlnjPT cenvKy"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -827,7 +827,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
     >
       <Box
         active={true}
-        className="sc-dlnjPT eQtYcl myClass"
+        className="sc-dlnjPT kpYFMT myClass"
         onClick={[MockFunction]}
         palette={
           Object {
@@ -863,7 +863,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
       >
         <Component
           active={true}
-          className="sc-dlnjPT eQtYcl myClass"
+          className="sc-dlnjPT kpYFMT myClass"
           onClick={[MockFunction]}
           palette={
             Object {
@@ -899,7 +899,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
         >
           <StyledBox
             active={true}
-            className="sc-dlnjPT eQtYcl myClass"
+            className="sc-dlnjPT kpYFMT myClass"
             onClick={[MockFunction]}
             palette={
               Object {
@@ -934,7 +934,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
             }
           >
             <div
-              className="sc-bdnylx sJSbd sc-dlnjPT eQtYcl myClass"
+              className="sc-bdnylx sJSbd sc-dlnjPT kpYFMT myClass"
               onClick={[MockFunction]}
               style={
                 Object {

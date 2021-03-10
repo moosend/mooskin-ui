@@ -245,7 +245,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT efAtSV"
+                      className="sc-dlnjPT kTuius"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -277,7 +277,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT efAtSV"
+                        className="sc-dlnjPT kTuius"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -309,7 +309,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT efAtSV"
+                          className="sc-dlnjPT kTuius"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -340,7 +340,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT efAtSV"
+                            className="sc-bdnylx sJSbd sc-dlnjPT kTuius"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -425,7 +425,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT efAtSV"
+                      className="sc-dlnjPT kTuius"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -457,7 +457,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT efAtSV"
+                        className="sc-dlnjPT kTuius"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -489,7 +489,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT efAtSV"
+                          className="sc-dlnjPT kTuius"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -520,7 +520,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT efAtSV"
+                            className="sc-bdnylx sJSbd sc-dlnjPT kTuius"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -605,7 +605,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={true}
-                      className="sc-dlnjPT dsgIdg"
+                      className="sc-dlnjPT fWFUWV"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -637,7 +637,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={true}
-                        className="sc-dlnjPT dsgIdg"
+                        className="sc-dlnjPT fWFUWV"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -669,7 +669,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={true}
-                          className="sc-dlnjPT dsgIdg"
+                          className="sc-dlnjPT fWFUWV"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -700,7 +700,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT dsgIdg"
+                            className="sc-bdnylx sJSbd sc-dlnjPT fWFUWV"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -785,7 +785,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT efAtSV"
+                      className="sc-dlnjPT kTuius"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -817,7 +817,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT efAtSV"
+                        className="sc-dlnjPT kTuius"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -849,7 +849,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT efAtSV"
+                          className="sc-dlnjPT kTuius"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -880,7 +880,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT efAtSV"
+                            className="sc-bdnylx sJSbd sc-dlnjPT kTuius"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -965,7 +965,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT efAtSV"
+                      className="sc-dlnjPT kTuius"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -997,7 +997,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT efAtSV"
+                        className="sc-dlnjPT kTuius"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -1029,7 +1029,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT efAtSV"
+                          className="sc-dlnjPT kTuius"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -1060,7 +1060,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT efAtSV"
+                            className="sc-bdnylx sJSbd sc-dlnjPT kTuius"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1076,12 +1076,12 @@ exports[`Pagination renders correctly 1`] = `
                 onClick={[Function]}
               >
                 <Box
-                  className="sc-hKFyIo hCPdwg"
+                  className="sc-hKFyIo leFdZC"
                   onClick={[Function]}
                   style={Object {}}
                 >
                   <Component
-                    className="sc-hKFyIo hCPdwg"
+                    className="sc-hKFyIo leFdZC"
                     onClick={[Function]}
                     palette={
                       Object {
@@ -1112,7 +1112,7 @@ exports[`Pagination renders correctly 1`] = `
                     style={Object {}}
                   >
                     <StyledBox
-                      className="sc-hKFyIo hCPdwg"
+                      className="sc-hKFyIo leFdZC"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -1143,7 +1143,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx sJSbd sc-hKFyIo hCPdwg"
+                        className="sc-bdnylx sJSbd sc-hKFyIo leFdZC"
                         onClick={[Function]}
                         style={Object {}}
                       >

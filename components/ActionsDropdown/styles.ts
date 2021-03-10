@@ -27,7 +27,6 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
 	font-weight: bold;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.25;
 	letter-spacing: normal;
 	text-align: left;
 	white-space: nowrap;

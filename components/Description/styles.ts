@@ -15,7 +15,6 @@ export const StyledDescription = styled(Box)<IBoxComponentProps>`
 	font-size: 12px;
 	color: ${(props) => props.palette?.fontColors.description || variables.fontColors.description};
 	width: fit-content;
-	line-height: 1;
 `;
 
 StyledDescription.displayName = 'StyledDescription';

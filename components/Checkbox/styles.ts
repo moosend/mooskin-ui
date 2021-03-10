@@ -14,17 +14,10 @@ import variables from '../_utils/globals/variables';
 export const StyledCheckbox = styled(Box)`
 	display: flex;
 	width: fit-content;
-`;
-
-StyledCheckbox.displayName = 'StyledCheckbox';
-
-export const StyledCheckboxWrapper = styled(Box)<Partial<ICheckboxComponentProps>>`
-	width: fit-content;
-	display: flex;
 	align-items: center;
 `;
 
-StyledCheckboxWrapper.displayName = 'StyledCheckboxWrapper';
+StyledCheckbox.displayName = 'StyledCheckbox';
 
 export const StyledCheckboxIcon = styled(Box)<Partial<ICheckboxComponentProps>>`
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
@@ -40,7 +33,6 @@ StyledCheckboxIcon.displayName = 'StyledCheckboxIcon';
 export const StyledCheckboxLabel = styled(Label)<ILabelComponentProps>`
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.65;
 	letter-spacing: normal;
 	min-width: unset;
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};

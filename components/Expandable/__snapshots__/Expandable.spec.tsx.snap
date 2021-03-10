@@ -569,7 +569,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <Box
-                                                  className="sc-jSFkmK kEaaJW"
+                                                  className="sc-jSFkmK bgrwig"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -599,7 +599,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <Component
-                                                    className="sc-jSFkmK kEaaJW"
+                                                    className="sc-jSFkmK bgrwig"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -629,7 +629,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <StyledBox
-                                                      className="sc-jSFkmK kEaaJW"
+                                                      className="sc-jSFkmK bgrwig"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -659,7 +659,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx sJSbd sc-jSFkmK kEaaJW"
+                                                        className="sc-bdnylx sJSbd sc-jSFkmK bgrwig"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 1
@@ -1260,7 +1260,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <Box
-                                                  className="sc-jSFkmK kEaaJW"
+                                                  className="sc-jSFkmK bgrwig"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -1290,7 +1290,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <Component
-                                                    className="sc-jSFkmK kEaaJW"
+                                                    className="sc-jSFkmK bgrwig"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -1320,7 +1320,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <StyledBox
-                                                      className="sc-jSFkmK kEaaJW"
+                                                      className="sc-jSFkmK bgrwig"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -1350,7 +1350,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx sJSbd sc-jSFkmK kEaaJW"
+                                                        className="sc-bdnylx sJSbd sc-jSFkmK bgrwig"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 2
@@ -1951,7 +1951,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <Box
-                                                  className="sc-jSFkmK kEaaJW"
+                                                  className="sc-jSFkmK bgrwig"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -1981,7 +1981,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <Component
-                                                    className="sc-jSFkmK kEaaJW"
+                                                    className="sc-jSFkmK bgrwig"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -2011,7 +2011,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <StyledBox
-                                                      className="sc-jSFkmK kEaaJW"
+                                                      className="sc-jSFkmK bgrwig"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -2041,7 +2041,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx sJSbd sc-jSFkmK kEaaJW"
+                                                        className="sc-bdnylx sJSbd sc-jSFkmK bgrwig"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 3
@@ -2642,7 +2642,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <Box
-                                                  className="sc-jSFkmK kEaaJW"
+                                                  className="sc-jSFkmK bgrwig"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -2672,7 +2672,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <Component
-                                                    className="sc-jSFkmK kEaaJW"
+                                                    className="sc-jSFkmK bgrwig"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -2702,7 +2702,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <StyledBox
-                                                      className="sc-jSFkmK kEaaJW"
+                                                      className="sc-jSFkmK bgrwig"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -2732,7 +2732,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx sJSbd sc-jSFkmK kEaaJW"
+                                                        className="sc-bdnylx sJSbd sc-jSFkmK bgrwig"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 4

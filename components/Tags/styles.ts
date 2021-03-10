@@ -20,7 +20,7 @@ StyledTags.displayName = 'StyledTags';
 
 export const StyledTag = styled(Box)<ITagComponentProps>`
 	display: flex;
-	padding: 0 10px;
+	padding: 1px 10px;
 	border-radius: 13px;
 	background-color: ${(props) => props.palette?.backgroundColors.toggle || variables.backgroundColors.toggle};
 	font-family: Hind;
@@ -28,7 +28,6 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.83;
 	letter-spacing: normal;
 	color: ${(props) => props.palette?.fontColors.toggle || variables.fontColors.toggle};
 	cursor: pointer;
@@ -48,7 +47,6 @@ export const StyledTagClose = styled(Box)<IBoxComponentProps>`
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.2;
 	letter-spacing: normal;
 	text-align: left;
 	color: ${(props) => props.palette?.fontColors.toggle || variables.fontColors.toggle};

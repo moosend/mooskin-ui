@@ -73,7 +73,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
     >
       <Box
         checked={true}
-        className="sc-hKFyIo cxAJpF"
+        className="sc-hKFyIo dxNlPq"
         onClickCheckbox={[MockFunction]}
         palette={
           Object {
@@ -105,7 +105,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
       >
         <Component
           checked={true}
-          className="sc-hKFyIo cxAJpF"
+          className="sc-hKFyIo dxNlPq"
           onClickCheckbox={[MockFunction]}
           palette={
             Object {
@@ -137,7 +137,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
         >
           <StyledBox
             checked={true}
-            className="sc-hKFyIo cxAJpF"
+            className="sc-hKFyIo dxNlPq"
             onClickCheckbox={[MockFunction]}
             palette={
               Object {
@@ -169,7 +169,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
           >
             <div
               checked={true}
-              className="sc-bdnylx sJSbd sc-hKFyIo cxAJpF"
+              className="sc-bdnylx sJSbd sc-hKFyIo dxNlPq"
               onClickCheckbox={[MockFunction]}
               style={Object {}}
             >
@@ -245,7 +245,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                     style={Object {}}
                   >
                     <Box
-                      className="sc-jSFkmK djalfx"
+                      className="sc-eCApGN eSmmaN"
                       color="red"
                       onClick={[Function]}
                       palette={
@@ -277,7 +277,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-jSFkmK djalfx"
+                        className="sc-eCApGN eSmmaN"
                         color="red"
                         onClick={[Function]}
                         palette={
@@ -309,7 +309,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-jSFkmK djalfx"
+                          className="sc-eCApGN eSmmaN"
                           color="red"
                           onClick={[Function]}
                           palette={
@@ -341,7 +341,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx XSZOu sc-jSFkmK djalfx"
+                            className="sc-bdnylx XSZOu sc-eCApGN eSmmaN"
                             color="red"
                             onClick={[Function]}
                             style={Object {}}
@@ -423,7 +423,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                     style={Object {}}
                   >
                     <Label
-                      className="sc-gKAblj gBTUMC"
+                      className="sc-jSFkmK YbHVr"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -454,7 +454,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gKAblj gBTUMC"
+                        className="sc-jSFkmK YbHVr"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -486,7 +486,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       >
                         <StyledLabel
                           boxAs="label"
-                          className="sc-gKAblj gBTUMC"
+                          className="sc-jSFkmK YbHVr"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -518,7 +518,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         >
                           <Box
                             boxAs="label"
-                            className="sc-dlnjPT iSwLvp sc-gKAblj gBTUMC"
+                            className="sc-dlnjPT iSwLvp sc-jSFkmK YbHVr"
                             onClick={[Function]}
                             palette={
                               Object {
@@ -550,7 +550,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           >
                             <Component
                               boxAs="label"
-                              className="sc-dlnjPT iSwLvp sc-gKAblj gBTUMC"
+                              className="sc-dlnjPT iSwLvp sc-jSFkmK YbHVr"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -583,7 +583,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                               <StyledBox
                                 as="label"
                                 boxAs="label"
-                                className="sc-dlnjPT iSwLvp sc-gKAblj gBTUMC"
+                                className="sc-dlnjPT iSwLvp sc-jSFkmK YbHVr"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -614,7 +614,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                 style={Object {}}
                               >
                                 <label
-                                  className="sc-bdnylx sJSbd sc-dlnjPT iSwLvp sc-gKAblj gBTUMC"
+                                  className="sc-bdnylx sJSbd sc-dlnjPT iSwLvp sc-jSFkmK YbHVr"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >

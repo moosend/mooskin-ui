@@ -25,7 +25,6 @@ export const StyledTabHeader = styled(Box)<ITabCommonComponentProps>`
 	font-weight: ${(props) => (props.active ? 'bold' : 'normal')};
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.25;
 	letter-spacing: normal;
 	text-align: left;
 	color: #2d2d2d;

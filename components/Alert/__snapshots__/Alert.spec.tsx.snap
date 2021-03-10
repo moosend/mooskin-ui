@@ -422,7 +422,7 @@ exports[`Alert renders correctly 1`] = `
                     variant="left-accent"
                   >
                     <Box
-                      className="sc-dlnjPT sc-hKFyIo euTdFZ fvbly"
+                      className="sc-dlnjPT sc-hKFyIo epnfcP fvbly"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -454,7 +454,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <Component
-                        className="sc-dlnjPT sc-hKFyIo euTdFZ fvbly"
+                        className="sc-dlnjPT sc-hKFyIo epnfcP fvbly"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -486,7 +486,7 @@ exports[`Alert renders correctly 1`] = `
                         variant="left-accent"
                       >
                         <StyledBox
-                          className="sc-dlnjPT sc-hKFyIo euTdFZ fvbly"
+                          className="sc-dlnjPT sc-hKFyIo epnfcP fvbly"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -518,7 +518,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT sc-hKFyIo euTdFZ fvbly"
+                            className="sc-bdnylx sJSbd sc-dlnjPT sc-hKFyIo epnfcP fvbly"
                             style={Object {}}
                           >
                             Your browser is outdated!
@@ -601,7 +601,7 @@ exports[`Alert renders correctly 1`] = `
                     variant="left-accent"
                   >
                     <Box
-                      className="sc-dlnjPT sc-eCApGN euTdFZ jjPdNE"
+                      className="sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -633,7 +633,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <Component
-                        className="sc-dlnjPT sc-eCApGN euTdFZ jjPdNE"
+                        className="sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -665,7 +665,7 @@ exports[`Alert renders correctly 1`] = `
                         variant="left-accent"
                       >
                         <StyledBox
-                          className="sc-dlnjPT sc-eCApGN euTdFZ jjPdNE"
+                          className="sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -697,7 +697,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT sc-eCApGN euTdFZ jjPdNE"
+                            className="sc-bdnylx sJSbd sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
                             style={Object {}}
                           >
                             Your Mooskin experience may be degraded.

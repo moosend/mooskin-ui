@@ -23,7 +23,6 @@ export const StyledPaginationButton = styled(Box)<IPaginationButtonComponentProp
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 0.94;
 	letter-spacing: normal;
 	text-align: center;
 	cursor: pointer;
@@ -50,7 +49,6 @@ export const StyledPaginationShowAll = styled(Box)<IBoxComponentProps>`
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
-	line-height: 1.07;
 	letter-spacing: normal;
 	text-align: left;
 	color: #3fbaca;

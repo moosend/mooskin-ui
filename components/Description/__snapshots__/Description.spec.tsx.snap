@@ -66,7 +66,7 @@ exports[`Description renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu EsYZB"
+        className="sc-gtssRu dZcusW"
         palette={
           Object {
             "backgroundColors": Object {
@@ -96,7 +96,7 @@ exports[`Description renders correctly 1`] = `
         style={Object {}}
       >
         <Component
-          className="sc-gtssRu EsYZB"
+          className="sc-gtssRu dZcusW"
           palette={
             Object {
               "backgroundColors": Object {
@@ -126,7 +126,7 @@ exports[`Description renders correctly 1`] = `
           style={Object {}}
         >
           <StyledBox
-            className="sc-gtssRu EsYZB"
+            className="sc-gtssRu dZcusW"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -156,7 +156,7 @@ exports[`Description renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sJSbd sc-gtssRu EsYZB"
+              className="sc-bdnylx sJSbd sc-gtssRu dZcusW"
               style={Object {}}
             >
               Description here!
