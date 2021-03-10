@@ -172,7 +172,10 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder) {
 				if (!showList) {
 					return React.cloneElement(child, {
-						children: props.selectedValue ? getPlaceholder(props.children) : recurseChildren(child.props.children),
+						children:
+							props.selectedValue && getPlaceholder(props.children)
+								? getPlaceholder(props.children)
+								: recurseChildren(child.props.children),
 						key: i,
 					} as IBoxComponentProps);
 				}
