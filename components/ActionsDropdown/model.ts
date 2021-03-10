@@ -13,11 +13,3 @@ export interface IActionsDropdownItemComponentProps extends IBoxComponentProps {
 	/** value returned in callback fn */
 	value?: any;
 }
-
-export interface IActionsDropdownArrowComponentProps extends IBoxComponentProps {
-	/** direction of the Arrow */
-	arrowDirection?: 'up' | 'down';
-
-	/** color of the Arrow */
-	arrowColor?: string;
-}

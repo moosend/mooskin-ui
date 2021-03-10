@@ -30,7 +30,11 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 	};
 
 	const onAddTag = (value: string) => {
-		props.onAddTag && props.onAddTag({ dataLabel: props.dataLabel, value });
+		let validated = true;
+		if (props.validateTag) {
+			validated = props.validateTag(value);
+		}
+		validated && props.onAddTag && props.onAddTag({ dataLabel: props.dataLabel, value });
 	};
 
 	const recurseChildren = (children: any): any => {
@@ -104,7 +108,7 @@ export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext((
 
 		const delimiters = props.delimiters;
 
-		if (delimiters && shouldSubmitPaste(text, props.delimiters)) {
+		if (value && delimiters && shouldSubmitPaste(text, props.delimiters)) {
 			let newTag: string[] = [];
 			const tags: string[] = [];
 
@@ -141,7 +145,7 @@ export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext((
 		const key = e.key;
 		const keyCode = e.keyCode;
 
-		if (delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))) {
+		if (value && delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))) {
 			e.preventDefault();
 			props.onAddTag && props.onAddTag(value.toString());
 			setValue('');

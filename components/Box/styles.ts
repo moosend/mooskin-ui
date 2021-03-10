@@ -95,10 +95,10 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		position: ${(props) => props.position};
 		z-index: ${(props) => props.zIndex};
-		top: ${(props) => props.top};
-		right: ${(props) => props.right};
-		bottom: ${(props) => props.bottom};
-		left: ${(props) => props.left};
+		top: ${(props) => getNumberOrStringValue(props.top)};
+		right: ${(props) => getNumberOrStringValue(props.right)};
+		bottom: ${(props) => getNumberOrStringValue(props.bottom)};
+		left: ${(props) => getNumberOrStringValue(props.left)};
 
 		box-shadow: ${(props) => getBoxShadow(props.boxShadow)};
 

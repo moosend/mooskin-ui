@@ -1,5 +1,5 @@
-import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 import { IInputCallbackData } from '../_utils/types/commonTypes';
+import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 
 export interface ITagsComponentProps extends IBoxComponentProps {
 	/** what data is being used, helps whn extracting user input, you know on what field changes are made */
@@ -13,6 +13,8 @@ export interface ITagsComponentProps extends IBoxComponentProps {
 	onRemoveTag?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 
 	onClickTag?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+
+	validateTag?: (tag: string) => boolean;
 }
 
 export interface ITagComponentProps extends IInputBoxComponentProps {

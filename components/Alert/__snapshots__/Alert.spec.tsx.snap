@@ -900,7 +900,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx gLbQWG sc-jSFkmK sc-iCoHVE gLJPOM eGXeuV"
+                            className="sc-bdnylx jAOsLC sc-jSFkmK sc-iCoHVE gLJPOM eGXeuV"
                             onClick={[MockFunction]}
                             style={Object {}}
                           >

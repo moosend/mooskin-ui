@@ -6,9 +6,12 @@ import { IBoxComponentProps } from '../Box/model';
 // Components
 import { Box } from '../Box/Box';
 
+// "CSS" variables
+import variables from '../_utils/globals/variables';
+
 export const StyledTable = styled(Box)<IBoxComponentProps>`
 	border: solid 1px #e2e2e2;
-	background-color: #ffffff;
+	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
 	display: flex;
 	flex-direction: column;
 `;
@@ -17,7 +20,8 @@ StyledTable.displayName = 'StyledTable';
 
 export const StyledTableHeader = styled(Box)<IBoxComponentProps>`
 	display: flex;
-	padding: 10px 0;
+	align-items: center;
+	min-height: 45px;
 `;
 
 StyledTableHeader.displayName = 'StyledTableHeader';
@@ -31,7 +35,7 @@ export const StyledTableHeaderItem = styled(Box)<IBoxComponentProps>`
 	line-height: 1.27;
 	letter-spacing: normal;
 	text-align: left;
-	color: #425579;
+	color: ${(props) => props.palette?.backgroundColors.toggle || variables.backgroundColors.toggle};
 	display: flex;
 	align-items: center;
 `;
@@ -40,8 +44,8 @@ StyledTableHeaderItem.displayName = 'StyledTableHeaderItem';
 
 export const StyledTableRow = styled(Box)<IBoxComponentProps>`
 	display: flex;
-	padding: 35px 0;
 	align-items: center;
+	min-height: 90px;
 	border-top: solid 1px #e2e2e2;
 	border-bottom: solid 1px #e2e2e2;
 	:last-child {
@@ -60,7 +64,7 @@ export const StyledTableRowItem = styled(Box)<IBoxComponentProps>`
 	line-height: 0.94;
 	letter-spacing: normal;
 	text-align: left;
-	color: #2d2d2d;
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	display: flex;
 	align-items: center;
 `;

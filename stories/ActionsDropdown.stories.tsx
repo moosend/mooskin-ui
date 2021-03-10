@@ -45,7 +45,7 @@ BottomArrow.args = {
 	bgColor: '#232c3d',
 	children: (
 		<>
-			<ActionsDropdownArrow arrowDirection="down" right={'unset !important'} left={22} />
+			<ActionsDropdownArrow bgColor="#232c3d" right="unset" left={22} bottom={-6} top="unset" />
 			<ActionsDropdownItem dataLabel="settings" value="settings">
 				Settings
 			</ActionsDropdownItem>

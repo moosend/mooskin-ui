@@ -72,11 +72,7 @@ export { Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from '../
 export { Footer, FooterBody, FooterEnd, FooterHead } from '../Footer/Footer';
 
 // Models
-export {
-	IActionsDropdownArrowComponentProps,
-	IActionsDropdownComponentProps,
-	IActionsDropdownItemComponentProps,
-} from '../ActionsDropdown/model';
+export { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from '../ActionsDropdown/model';
 export { IButtonComponentProps } from '../Button/model';
 export { IBaseAlertComponentProps } from '../Alert/model';
 export { IAnchorComponentProps } from '../Anchor/model';
