@@ -71,7 +71,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
     >
       <Box
         boxShadow="lg"
-        className="sc-gtssRu fcsQmr"
+        className="sc-gtssRu JXnZp"
         onClickItem={[MockFunction]}
         palette={
           Object {
@@ -103,7 +103,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
       >
         <Component
           boxShadow="lg"
-          className="sc-gtssRu fcsQmr"
+          className="sc-gtssRu JXnZp"
           onClickItem={[MockFunction]}
           palette={
             Object {
@@ -135,7 +135,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
         >
           <StyledBox
             boxShadow="lg"
-            className="sc-gtssRu fcsQmr"
+            className="sc-gtssRu JXnZp"
             onClickItem={[MockFunction]}
             palette={
               Object {
@@ -166,17 +166,15 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx rqlxn sc-gtssRu fcsQmr"
+              className="sc-bdnylx rqlxn sc-gtssRu JXnZp"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
               <ActionsDropdownArrow
-                arrowDirection="up"
                 className=""
                 style={Object {}}
               >
                 <Component
-                  arrowDirection="up"
                   className=""
                   palette={
                     Object {
@@ -207,7 +205,6 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                   style={Object {}}
                 >
                   <StyledActionsDropdownArrow
-                    arrowDirection="up"
                     className=""
                     palette={
                       Object {
@@ -238,8 +235,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                     style={Object {}}
                   >
                     <Box
-                      arrowDirection="up"
-                      className="sc-hKFyIo BtGCn"
+                      className="sc-hKFyIo kPnGBi"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -269,8 +265,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        arrowDirection="up"
-                        className="sc-hKFyIo BtGCn"
+                        className="sc-hKFyIo kPnGBi"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -300,8 +295,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          arrowDirection="up"
-                          className="sc-hKFyIo BtGCn"
+                          className="sc-hKFyIo kPnGBi"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -331,7 +325,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-hKFyIo BtGCn"
+                            className="sc-bdnylx sJSbd sc-hKFyIo kPnGBi"
                             style={Object {}}
                           />
                         </StyledBox>

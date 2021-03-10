@@ -728,7 +728,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       top={10}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx dSLMnC sc-fnVYJo byCcbH"
+                                                        className="sc-bdnylx eGjGky sc-fnVYJo byCcbH"
                                                         onClick={[Function]}
                                                         style={Object {}}
                                                       >

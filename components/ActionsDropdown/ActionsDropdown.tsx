@@ -5,7 +5,8 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IActionsDropdownArrowComponentProps, IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
+import { IBoxComponentProps } from '../index';
+import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Styled Components
 import { StyledActionsDropdown, StyledActionsDropdownArrow, StyledActionsDropdownItem } from './styles';
@@ -39,13 +40,12 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 				} as IActionsDropdownItemComponentProps);
 			}
 
-			if (React.isValidElement<IActionsDropdownArrowComponentProps>(child) && child.type === ActionsDropdownArrow) {
+			if (React.isValidElement<IBoxComponentProps>(child) && child.type === ActionsDropdownArrow) {
 				!hasArrow && setHasArrow(true);
 				return React.cloneElement(child, {
-					arrowColor: child.props.arrowColor ? child.props.arrowColor : props.bgColor || props.palette?.backgroundColors.button,
 					children: recurseChildren((child.props as any).children),
 					key: i,
-				} as IActionsDropdownArrowComponentProps);
+				} as IBoxComponentProps);
 			}
 
 			if (React.isValidElement(child) && (child.props as any).children) {
@@ -88,12 +88,11 @@ ActionsDropdownItem.displayName = 'ActionsDropdownItem';
 /**
  * ActionsDropdownArrow
  */
-export const ActionsDropdownArrow: React.FC<IActionsDropdownArrowComponentProps> = withMooskinContext((props) => {
+export const ActionsDropdownArrow: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
 	return <StyledActionsDropdownArrow {...props} />;
 });
 
 ActionsDropdownArrow.defaultProps = {
-	arrowDirection: 'up',
 	className: '',
 	style: {},
 };

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 // Models
-import { IActionsDropdownArrowComponentProps, IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
+import { IBoxComponentProps } from '../index';
+import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -11,10 +12,11 @@ import variables from '../_utils/globals/variables';
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
 	border-radius: 3px;
-	background-color: #3fbaca;
+	background-color: ${(props) => props.palette?.backgroundColors.button || variables.backgroundColors.button};
 	display: flex;
 	flex-direction: column;
 	position: relative;
+	z-index: 2;
 `;
 
 StyledActionsDropdown.displayName = 'StyledActionsDropdown';
@@ -41,15 +43,15 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
 
 StyledActionsDropdownItem.displayName = 'StyledActionsDropdownItem';
 
-export const StyledActionsDropdownArrow = styled(Box)<IActionsDropdownArrowComponentProps>`
+export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 	position: absolute;
-	top: ${(props) => (props.arrowDirection === 'up' ? '-7px' : '')};
-	bottom: ${(props) => (props.arrowDirection === 'down' ? '-7px' : '')};
+	top: -6px;
 	right: 22px;
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent;
-	border-bottom: ${(props) => (props.arrowDirection === 'up' ? `7px solid ${props.arrowColor || variables.backgroundColors.button}` : '')};
-	border-top: ${(props) => (props.arrowDirection === 'down' ? `7px solid ${props.arrowColor || variables.backgroundColors.button}` : '')};
+	width: 12px;
+	height: 12px;
+	transform: rotate(45deg);
+	z-index: -1;
+	background-color: ${(props) => props.palette?.backgroundColors.button || variables.backgroundColors.button};
 `;
 
 StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';
