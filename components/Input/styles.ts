@@ -18,7 +18,7 @@ export const StyledInputContainer = styled(Box)<IInputContainerComponentProps>`
 	flex: 1;
 	align-items: center;
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+	cursor: ${(props) => (props.disabled ? 'not-allowed' : '')};
 	border-radius: 3px;
 	border: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
 	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
@@ -47,6 +47,7 @@ export const StyledInputSolo = styled(StyledInputBase)<IInputComponentProps>`
 	border: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
 	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
 	padding: 7px 15px 7px;
+	cursor: ${(props) => (props.disabled ? 'not-allowed' : '')};
 `;
 
 StyledInputSolo.displayName = 'StyledInputSolo';
