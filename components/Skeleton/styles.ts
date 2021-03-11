@@ -1,12 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
 // Models
-import {
-	ICommonSkeletonComponentProps,
-	ISkeletonCircleComponentProps,
-	ISkeletonComponentProps,
-	ISkeletonTextComponentProps,
-} from './model';
+import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -35,6 +30,7 @@ const fadeIn = keyframes`
 `;
 
 export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
+	all: inherit;
 	opacity: 0.7;
 	border-radius: 2px;
 	border-color: ${(props) => props.startColor};
@@ -53,19 +49,14 @@ export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
 
 StyledCommonSkeleton.displayName = 'StyledCommonSkeleton';
 
-export const checkLoaded = (component: any, isLoaded?: boolean) => {
-	if (isLoaded) {
-		return styled.div`
-			animation: ${fadeIn} ${(props) => `0.6s`};
-		`;
-	}
+export const StyledFadeInSkeleton = styled(Box)`
+	animation: ${fadeIn} ${(props) => `0.6s`};
+`;
 
-	return component;
-};
+StyledFadeInSkeleton.displayName = 'StyledFadeInSkeleton';
 
-export const StyledSkeleton = styled(StyledCommonSkeleton)<ISkeletonComponentProps>`
-	height: ${(props) => props.height};
-	width: ${(props) => props.width};
+export const StyledSkeleton = styled(StyledCommonSkeleton)<ICommonSkeletonComponentProps>`
+	width: fit-content;
 `;
 
 StyledSkeleton.displayName = 'StyledSkeleton';

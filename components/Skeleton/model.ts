@@ -17,14 +17,6 @@ export interface ICommonSkeletonComponentProps extends IBoxComponentProps {
 	// fadeDuration?: number;
 }
 
-export interface ISkeletonComponentProps extends ICommonSkeletonComponentProps {
-	/** Height of the skeleton bar */
-	height?: string;
-
-	/** width of the skeleton bar */
-	width?: string;
-}
-
 export interface ISkeletonCircleComponentProps extends ICommonSkeletonComponentProps {
 	/** size of the skeleton circle */
 	size?: string;
@@ -36,4 +28,8 @@ export interface ISkeletonTextComponentProps extends ICommonSkeletonComponentPro
 
 	/** width of the skeleton text */
 	width?: string;
+}
+
+export interface ISkeletonWrapperComponent extends ICommonSkeletonComponentProps {
+	component: any;
 }

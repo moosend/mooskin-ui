@@ -129,12 +129,7 @@ export {
 } from '../Select/model';
 export { ISelectorComponentProps, ISelectorItemComponentProps } from '../Selector/model';
 export { ISidemenuComponentProps, ISidemenuItemComponentProps } from '../Sidemenu/model';
-export {
-	ICommonSkeletonComponentProps,
-	ISkeletonCircleComponentProps,
-	ISkeletonComponentProps,
-	ISkeletonTextComponentProps,
-} from '../Skeleton/model';
+export { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from '../Skeleton/model';
 export { IStackComponentProps } from '../Stack/model';
 export { IStepCommonComponentProps, IStepComponentProps, IStepHeaderComponentProps, IStepsComponentProps } from '../Steps/model';
 export { ISwitchComponentProps, ISwitchHandleComponentProps } from '../Switch/model';

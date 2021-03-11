@@ -4,17 +4,21 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ISkeletonCircleComponentProps, ISkeletonComponentProps, ISkeletonTextComponentProps } from './model';
+import {
+	ICommonSkeletonComponentProps,
+	ISkeletonCircleComponentProps,
+	ISkeletonTextComponentProps,
+	ISkeletonWrapperComponent,
+} from './model';
 
 // Styled Components
-import { checkLoaded, StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText } from './styles';
+import { StyledFadeInSkeleton, StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText } from './styles';
 
 /**
  * Skeleton
  */
-export const Skeleton: React.FC<ISkeletonComponentProps> = (props) => {
-	const EnhancedComponent = withLoader(checkLoaded(StyledSkeleton, props.isLoaded));
-	return <EnhancedComponent {...props} />;
+export const Skeleton: React.FC<ICommonSkeletonComponentProps> = (props) => {
+	return <SkeletonCommon {...props} component={StyledSkeleton} />;
 };
 
 Skeleton.defaultProps = {
@@ -33,8 +37,7 @@ Skeleton.displayName = 'Skeleton';
  * SkeletonCircle
  */
 export const SkeletonCircle: React.FC<ISkeletonCircleComponentProps> = (props) => {
-	const EnhancedComponent = withLoader(checkLoaded(StyledSkeletonCircle, props.isLoaded));
-	return <EnhancedComponent {...props} />;
+	return <SkeletonCommon {...props} component={StyledSkeletonCircle} />;
 };
 
 SkeletonCircle.defaultProps = {
@@ -54,10 +57,8 @@ SkeletonCircle.displayName = 'Skeleton';
  * SkeletonText
  */
 export const SkeletonText: React.FC<ISkeletonTextComponentProps> = (props) => {
-	const EnhancedComponent = withLoader(checkLoaded(StyledSkeletonText, props.isLoaded));
-
 	if (props.isLoaded) {
-		return <EnhancedComponent {...props} />;
+		return <SkeletonCommon {...props} component={StyledSkeletonText} />;
 	}
 
 	const lines = [...Array(props.lines)];
@@ -66,7 +67,7 @@ export const SkeletonText: React.FC<ISkeletonTextComponentProps> = (props) => {
 		return (
 			<>
 				{lines.map((line, i) => {
-					return <EnhancedComponent {...props} key={i} w={i === lines.length - 1 ? '80%' : '100%'} />;
+					return <SkeletonCommon {...props} component={StyledSkeletonText} key={i} w={i === lines.length - 1 ? '80%' : '100%'} />;
 				})}
 			</>
 		);
@@ -87,12 +88,39 @@ SkeletonText.defaultProps = {
 
 SkeletonText.displayName = 'Skeleton';
 
-/**
- * HoC for slow loading content
- */
-export const withLoader = (
-	Component: React.ComponentType<ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps>
-) =>
-	withMooskinContext((props: ISkeletonCircleComponentProps | ISkeletonComponentProps | ISkeletonTextComponentProps) => {
-		return <Component {...props} />;
-	});
+export const SkeletonCommon: React.FC<ISkeletonWrapperComponent> = withMooskinContext((props) => {
+	const [slowLoad, setSlowLoad] = React.useState<boolean | undefined>(false);
+	const [isLoaded, setIsLoaded] = React.useState<boolean | undefined>(false);
+
+	React.useEffect(() => {
+		if (props.isLoaded) {
+			if (isLoaded !== props.isLoaded) {
+				setSlowLoad(true);
+			}
+			setIsLoaded(true);
+		} else {
+			setSlowLoad(false);
+			setIsLoaded(false);
+		}
+	}, [props.isLoaded]);
+
+	React.useEffect(() => {
+		if (slowLoad) {
+			setTimeout(() => {
+				setSlowLoad(false);
+			}, 600);
+		}
+	}, [slowLoad]);
+
+	if (slowLoad) {
+		return <StyledFadeInSkeleton {...props} />;
+	}
+
+	if (!slowLoad && isLoaded) {
+		return <>{props.children}</>;
+	}
+
+	const ReturnComponent = props.component;
+
+	return <ReturnComponent {...props} />;
+});

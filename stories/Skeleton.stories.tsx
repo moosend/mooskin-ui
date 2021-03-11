@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
-import { ISkeletonCircleComponentProps, ISkeletonComponentProps, ISkeletonTextComponentProps } from '../components/Skeleton/model';
+import { ISkeletonCircleComponentProps, ICommonSkeletonComponentProps, ISkeletonTextComponentProps } from '../components/Skeleton/model';
 import { Skeleton, SkeletonCircle, SkeletonText } from '../components/Skeleton/Skeleton';
 
 import GlobalStyle from '../components/Styled/GlobalStyles';
@@ -12,7 +12,7 @@ export default ({
 	title: 'Example/Skeleton',
 } as any) as Meta;
 
-const SkeletonTemplate: Story<ISkeletonComponentProps> = (args) => {
+const SkeletonTemplate: Story<ICommonSkeletonComponentProps> = (args) => {
 	return (
 		<>
 			<GlobalStyle />
@@ -54,7 +54,7 @@ NormalSkeleton.args = {
 		</div>
 	),
 	spacing: 20,
-} as ISkeletonComponentProps;
+} as ICommonSkeletonComponentProps;
 
 export const CircleSkeleton = CircleTemplate.bind({});
 CircleSkeleton.args = {
