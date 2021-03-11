@@ -30,7 +30,6 @@ const fadeIn = keyframes`
 `;
 
 export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
-	all: inherit;
 	opacity: 0.7;
 	border-radius: 2px;
 	border-color: ${(props) => props.startColor};
