@@ -55,6 +55,12 @@ export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
 StyledCommonSkeleton.displayName = 'StyledCommonSkeleton';
 
 export const StyledFadeInSkeleton = styled(Box)`
+	color: inherit;
+	font-family: inherit;
+	font-size: inherit;
+	display: inherit;
+	align-items: inherit;
+	justify-content: inherit;
 	animation: ${fadeIn} ${(props) => `0.6s`};
 `;
 
