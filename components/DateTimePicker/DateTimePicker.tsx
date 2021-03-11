@@ -38,7 +38,7 @@ DateTimePicker.defaultProps = {
 	ampm: false,
 	format: 'dd/MM/yyyy HH:ss',
 	pickerType: 'date-time',
-	variant: 'inline',
+	// variant: 'inline',
 };
 
 DateTimePicker.displayName = 'DateTimePicker';

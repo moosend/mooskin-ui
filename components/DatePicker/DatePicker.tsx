@@ -39,7 +39,7 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 DatePicker.defaultProps = {
 	format: 'dd/MM/yyyy',
 	pickerType: 'date',
-	variant: 'inline',
+	// variant: 'inline',
 };
 
 DatePicker.displayName = 'DatePicker';

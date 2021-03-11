@@ -15,7 +15,9 @@ export const StyledAnchor = styled(Box)<IAnchorComponentProps>`
 	outline: 0;
 	font-family: Montserrat;
 	font-size: 12px;
-	text-decoration: underline;
+	&& {
+		text-decoration: underline;
+	}
 	&:hover {
 		text-decoration: none;
 	}

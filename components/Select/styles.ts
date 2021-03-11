@@ -58,6 +58,9 @@ export const StyledSelectPlaceholder = styled(Box)<IBoxComponentProps>`
 	text-align: left;
 	color: inherit;
 	flex: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 `;
 
 StyledSelectPlaceholder.displayName = 'StyledSelectPlaceholder';
