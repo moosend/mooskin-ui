@@ -19,16 +19,6 @@ const breatheAnimation = (startColor?: string, endColor?: string) => keyframes`
     }
 `;
 
-const fadeIn = keyframes`
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-`;
-
 export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
 	color: inherit;
 	font-family: inherit;
@@ -53,18 +43,6 @@ export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
 `;
 
 StyledCommonSkeleton.displayName = 'StyledCommonSkeleton';
-
-export const StyledFadeInSkeleton = styled(Box)`
-	color: inherit;
-	font-family: inherit;
-	font-size: inherit;
-	display: inherit;
-	align-items: inherit;
-	justify-content: inherit;
-	animation: ${fadeIn} ${(props) => `0.6s`};
-`;
-
-StyledFadeInSkeleton.displayName = 'StyledFadeInSkeleton';
 
 export const StyledSkeleton = styled(StyledCommonSkeleton)<ICommonSkeletonComponentProps>`
 	width: fit-content;

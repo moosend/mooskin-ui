@@ -4,22 +4,20 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import {
-	ICommonSkeletonComponentProps,
-	ISkeletonCircleComponentProps,
-	ISkeletonTextComponentProps,
-	ISkeletonWrapperComponent,
-} from './model';
+import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from './model';
 
 // Styled Components
-import { StyledFadeInSkeleton, StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText } from './styles';
+import { StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText } from './styles';
 
 /**
  * Skeleton
  */
-export const Skeleton: React.FC<ICommonSkeletonComponentProps> = (props) => {
-	return <SkeletonCommon {...props} component={StyledSkeleton} />;
-};
+export const Skeleton: React.FC<ICommonSkeletonComponentProps> = withMooskinContext((props) => {
+	if (props.isLoaded) {
+		return <>{props.children}</>;
+	}
+	return <StyledSkeleton {...props} />;
+});
 
 Skeleton.defaultProps = {
 	className: '',
@@ -36,9 +34,12 @@ Skeleton.displayName = 'Skeleton';
 /**
  * SkeletonCircle
  */
-export const SkeletonCircle: React.FC<ISkeletonCircleComponentProps> = (props) => {
-	return <SkeletonCommon {...props} component={StyledSkeletonCircle} />;
-};
+export const SkeletonCircle: React.FC<ISkeletonCircleComponentProps> = withMooskinContext((props) => {
+	if (props.isLoaded) {
+		return <>{props.children}</>;
+	}
+	return <StyledSkeletonCircle {...props} />;
+});
 
 SkeletonCircle.defaultProps = {
 	className: '',
@@ -56,9 +57,9 @@ SkeletonCircle.displayName = 'Skeleton';
 /**
  * SkeletonText
  */
-export const SkeletonText: React.FC<ISkeletonTextComponentProps> = (props) => {
+export const SkeletonText: React.FC<ISkeletonTextComponentProps> = withMooskinContext((props) => {
 	if (props.isLoaded) {
-		return <SkeletonCommon {...props} component={StyledSkeletonText} />;
+		return <>{props.children}</>;
 	}
 
 	const lines = [...Array(props.lines)];
@@ -67,13 +68,13 @@ export const SkeletonText: React.FC<ISkeletonTextComponentProps> = (props) => {
 		return (
 			<>
 				{lines.map((line, i) => {
-					return <SkeletonCommon {...props} component={StyledSkeletonText} key={i} w={i === lines.length - 1 ? '80%' : '100%'} />;
+					return <StyledSkeletonText {...props} key={i} w={i === lines.length - 1 ? '80%' : '100%'} />;
 				})}
 			</>
 		);
 	}
 	return null;
-};
+});
 
 SkeletonText.defaultProps = {
 	className: '',
@@ -87,40 +88,3 @@ SkeletonText.defaultProps = {
 };
 
 SkeletonText.displayName = 'Skeleton';
-
-export const SkeletonCommon: React.FC<ISkeletonWrapperComponent> = withMooskinContext((props) => {
-	const [slowLoad, setSlowLoad] = React.useState<boolean | undefined>(false);
-	const [isLoaded, setIsLoaded] = React.useState<boolean | undefined>(false);
-
-	React.useEffect(() => {
-		if (props.isLoaded) {
-			if (isLoaded !== props.isLoaded) {
-				setSlowLoad(true);
-			}
-			setIsLoaded(true);
-		} else {
-			setSlowLoad(false);
-			setIsLoaded(false);
-		}
-	}, [props.isLoaded]);
-
-	React.useEffect(() => {
-		if (slowLoad) {
-			setTimeout(() => {
-				setSlowLoad(false);
-			}, 600);
-		}
-	}, [slowLoad]);
-
-	if (slowLoad) {
-		return <StyledFadeInSkeleton {...props} />;
-	}
-
-	if (!slowLoad && isLoaded) {
-		return <>{props.children}</>;
-	}
-
-	const ReturnComponent = props.component;
-
-	return <ReturnComponent {...props} />;
-});
