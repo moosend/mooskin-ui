@@ -162,7 +162,7 @@ exports[`Layout renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sJSbd sc-gtssRu jrgeJz"
+              className="sc-bdnylx dyDpKS sc-gtssRu jrgeJz"
               spacing={15}
               style={Object {}}
             >
@@ -240,7 +240,7 @@ exports[`Layout renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx eNedGq"
+                      className="sc-bdnylx cIICIZ"
                       style={Object {}}
                     >
                       Box
@@ -322,7 +322,7 @@ exports[`Layout renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx eNedGq"
+                      className="sc-bdnylx cIICIZ"
                       style={Object {}}
                     >
                       Box
@@ -404,7 +404,7 @@ exports[`Layout renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx eNedGq"
+                      className="sc-bdnylx cIICIZ"
                       style={Object {}}
                     >
                       Box
@@ -486,7 +486,7 @@ exports[`Layout renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx eNedGq"
+                      className="sc-bdnylx cIICIZ"
                       style={Object {}}
                     >
                       Box
@@ -568,7 +568,7 @@ exports[`Layout renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx eNedGq"
+                      className="sc-bdnylx cIICIZ"
                       style={Object {}}
                     >
                       Box
@@ -650,7 +650,7 @@ exports[`Layout renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx eNedGq"
+                      className="sc-bdnylx cIICIZ"
                       style={Object {}}
                     >
                       Box
@@ -732,7 +732,7 @@ exports[`Layout renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx eNedGq"
+                      className="sc-bdnylx cIICIZ"
                       style={Object {}}
                     >
                       Box
@@ -814,7 +814,7 @@ exports[`Layout renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx eNedGq"
+                      className="sc-bdnylx cIICIZ"
                       style={Object {}}
                     >
                       Box

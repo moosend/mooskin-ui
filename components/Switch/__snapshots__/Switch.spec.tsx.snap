@@ -208,7 +208,7 @@ exports[`Switch renders correctly 1`] = `
             w={90}
           >
             <div
-              className="sc-bdnylx dsPTLI sc-gtssRu kaWGGz"
+              className="sc-bdnylx ieigBr sc-gtssRu kaWGGz"
               onClick={[Function]}
               onClickSwitch={[MockFunction]}
               style={
@@ -384,7 +384,7 @@ exports[`Switch renders correctly 1`] = `
                           switchWidth={90}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT dywnRj"
+                            className="sc-bdnylx dyDpKS sc-dlnjPT dywnRj"
                             style={Object {}}
                           />
                         </StyledBox>
@@ -464,7 +464,7 @@ exports[`Switch renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx sJSbd sc-hKFyIo sc-eCApGN fcXikT bHvCse"
+                        className="sc-bdnylx dyDpKS sc-hKFyIo sc-eCApGN fcXikT bHvCse"
                         style={Object {}}
                       >
                         Switch

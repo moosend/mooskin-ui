@@ -156,7 +156,7 @@ exports[`Text renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sJSbd sc-gtssRu ckndBS"
+              className="sc-bdnylx dyDpKS sc-gtssRu ckndBS"
               style={Object {}}
             >
               Text here!

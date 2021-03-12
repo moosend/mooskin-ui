@@ -69,7 +69,7 @@ exports[`Input renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-hKFyIo kRvSiM"
+        className="sc-hKFyIo iFRuMf"
         onChangeInput={[MockFunction]}
         palette={
           Object {
@@ -100,7 +100,7 @@ exports[`Input renders correctly 1`] = `
         style={Object {}}
       >
         <Component
-          className="sc-hKFyIo kRvSiM"
+          className="sc-hKFyIo iFRuMf"
           onChangeInput={[MockFunction]}
           palette={
             Object {
@@ -131,7 +131,7 @@ exports[`Input renders correctly 1`] = `
           style={Object {}}
         >
           <StyledBox
-            className="sc-hKFyIo kRvSiM"
+            className="sc-hKFyIo iFRuMf"
             onChangeInput={[MockFunction]}
             palette={
               Object {
@@ -162,7 +162,7 @@ exports[`Input renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sJSbd sc-hKFyIo kRvSiM"
+              className="sc-bdnylx dyDpKS sc-hKFyIo iFRuMf"
               onChangeInput={[MockFunction]}
               style={Object {}}
             >
@@ -339,7 +339,7 @@ exports[`Input renders correctly 1`] = `
                           wrapped={true}
                         >
                           <input
-                            className="sc-bdnylx sJSbd sc-eCApGN sc-gKAblj ddluuA iJgPne"
+                            className="sc-bdnylx dyDpKS sc-eCApGN sc-gKAblj ddluuA iJgPne"
                             onChange={[Function]}
                             style={Object {}}
                           />
@@ -462,7 +462,7 @@ exports[`Input renders correctly 1`] = `
                         zIndex={0}
                       >
                         <div
-                          className="sc-bdnylx btHDAE"
+                          className="sc-bdnylx klFCVH"
                           color="inherit"
                           style={Object {}}
                         >
@@ -631,7 +631,7 @@ exports[`Input renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <div
-                                        className="sc-bdnylx gSYPMI sc-fujyUd fWdDRH"
+                                        className="sc-bdnylx hLocpf sc-fujyUd fWdDRH"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -791,7 +791,7 @@ exports[`Input renders correctly 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="sc-bdnylx eHnLJp"
+                          className="sc-bdnylx bJnUUO"
                           color="inherit"
                           onChangeEmoji={[Function]}
                           style={Object {}}
@@ -961,7 +961,7 @@ exports[`Input renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <div
-                                        className="sc-bdnylx gSYPMI sc-fujyUd fWdDRH"
+                                        className="sc-bdnylx hLocpf sc-fujyUd fWdDRH"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -1139,7 +1139,7 @@ exports[`Input renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx gSYPMI sc-fujyUd fWdDRH"
+                            className="sc-bdnylx hLocpf sc-fujyUd fWdDRH"
                             style={Object {}}
                           >
                             search

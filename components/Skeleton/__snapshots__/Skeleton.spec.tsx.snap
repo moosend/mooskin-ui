@@ -9,15 +9,41 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
   startColor="#EDF2F7"
   style={Object {}}
 >
-  <WithMooskinContext
+  <Component
     className=""
     endColor="#A0AEC0"
     isLoaded={false}
+    palette={
+      Object {
+        "backgroundColors": Object {
+          "button": "#3fbaca",
+          "common": "#ffffff",
+          "disabledButton": "#e2e2e2",
+          "main": "#f7f7f7",
+          "secondaryToggle": "#ffffff",
+          "toggle": "#425579",
+        },
+        "borderColors": Object {
+          "common": "#e2e2e2",
+        },
+        "fontColors": Object {
+          "anchor": "#3fbaca",
+          "button": "#ffffff",
+          "common": "#293346",
+          "description": "#9d9d9d",
+          "disabledAnchor": "#9d9d9d",
+          "label": "#2d2d2d",
+          "secondaryToggle": "#9d9d9d",
+          "text": "#2d2d2d",
+          "toggle": "#ffffff",
+        },
+      }
+    }
     speed={0.8}
     startColor="#EDF2F7"
     style={Object {}}
   >
-    <Component
+    <StyledSkeleton
       className=""
       endColor="#A0AEC0"
       isLoaded={false}
@@ -51,8 +77,8 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
       startColor="#EDF2F7"
       style={Object {}}
     >
-      <StyledSkeleton
-        className=""
+      <Box
+        className="sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
         endColor="#A0AEC0"
         isLoaded={false}
         palette={
@@ -85,8 +111,8 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
         startColor="#EDF2F7"
         style={Object {}}
       >
-        <Box
-          className="sc-gtssRu sc-dlnjPT bXZZG iCAzTS"
+        <Component
+          className="sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
           endColor="#A0AEC0"
           isLoaded={false}
           palette={
@@ -119,8 +145,8 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
           startColor="#EDF2F7"
           style={Object {}}
         >
-          <Component
-            className="sc-gtssRu sc-dlnjPT bXZZG iCAzTS"
+          <StyledBox
+            className="sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
             endColor="#A0AEC0"
             isLoaded={false}
             palette={
@@ -153,84 +179,49 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
             startColor="#EDF2F7"
             style={Object {}}
           >
-            <StyledBox
-              className="sc-gtssRu sc-dlnjPT bXZZG iCAzTS"
-              endColor="#A0AEC0"
-              isLoaded={false}
-              palette={
-                Object {
-                  "backgroundColors": Object {
-                    "button": "#3fbaca",
-                    "common": "#ffffff",
-                    "disabledButton": "#e2e2e2",
-                    "main": "#f7f7f7",
-                    "secondaryToggle": "#ffffff",
-                    "toggle": "#425579",
-                  },
-                  "borderColors": Object {
-                    "common": "#e2e2e2",
-                  },
-                  "fontColors": Object {
-                    "anchor": "#3fbaca",
-                    "button": "#ffffff",
-                    "common": "#293346",
-                    "description": "#9d9d9d",
-                    "disabledAnchor": "#9d9d9d",
-                    "label": "#2d2d2d",
-                    "secondaryToggle": "#9d9d9d",
-                    "text": "#2d2d2d",
-                    "toggle": "#ffffff",
-                  },
-                }
-              }
+            <div
+              className="sc-bdnylx dyDpKS sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
               speed={0.8}
-              startColor="#EDF2F7"
               style={Object {}}
             >
               <div
-                className="sc-bdnylx sJSbd sc-gtssRu sc-dlnjPT bXZZG iCAzTS"
-                speed={0.8}
-                style={Object {}}
-              >
-                <div
-                  key="0"
-                  style={
-                    Object {
-                      "backgroundColor": "red",
-                      "height": 40,
-                      "width": 40,
-                    }
+                key="0"
+                style={
+                  Object {
+                    "backgroundColor": "red",
+                    "height": 40,
+                    "width": 40,
                   }
-                />
-                ,
-                <div
-                  key="1"
-                  style={
-                    Object {
-                      "backgroundColor": "green",
-                      "height": 40,
-                      "width": 40,
-                    }
+                }
+              />
+              ,
+              <div
+                key="1"
+                style={
+                  Object {
+                    "backgroundColor": "green",
+                    "height": 40,
+                    "width": 40,
                   }
-                />
-                ,
-                <div
-                  key="2"
-                  style={
-                    Object {
-                      "backgroundColor": "blue",
-                      "height": 40,
-                      "width": 40,
-                    }
+                }
+              />
+              ,
+              <div
+                key="2"
+                style={
+                  Object {
+                    "backgroundColor": "blue",
+                    "height": 40,
+                    "width": 40,
                   }
-                />
-              </div>
-            </StyledBox>
-          </Component>
-        </Box>
-      </StyledSkeleton>
-    </Component>
-  </WithMooskinContext>
+                }
+              />
+            </div>
+          </StyledBox>
+        </Component>
+      </Box>
+    </StyledSkeleton>
+  </Component>
 </Skeleton>
 `;
 
@@ -244,16 +235,42 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
   startColor="#EDF2F7"
   style={Object {}}
 >
-  <WithMooskinContext
+  <Component
     className=""
     endColor="#A0AEC0"
     isLoaded={false}
+    palette={
+      Object {
+        "backgroundColors": Object {
+          "button": "#3fbaca",
+          "common": "#ffffff",
+          "disabledButton": "#e2e2e2",
+          "main": "#f7f7f7",
+          "secondaryToggle": "#ffffff",
+          "toggle": "#425579",
+        },
+        "borderColors": Object {
+          "common": "#e2e2e2",
+        },
+        "fontColors": Object {
+          "anchor": "#3fbaca",
+          "button": "#ffffff",
+          "common": "#293346",
+          "description": "#9d9d9d",
+          "disabledAnchor": "#9d9d9d",
+          "label": "#2d2d2d",
+          "secondaryToggle": "#9d9d9d",
+          "text": "#2d2d2d",
+          "toggle": "#ffffff",
+        },
+      }
+    }
     size="20px"
     speed={0.8}
     startColor="#EDF2F7"
     style={Object {}}
   >
-    <Component
+    <StyledSkeletonCircle
       className=""
       endColor="#A0AEC0"
       isLoaded={false}
@@ -288,8 +305,8 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
       startColor="#EDF2F7"
       style={Object {}}
     >
-      <StyledSkeletonCircle
-        className=""
+      <Box
+        className="sc-gtssRu sc-hKFyIo bexDGe frPYgX"
         endColor="#A0AEC0"
         isLoaded={false}
         palette={
@@ -323,8 +340,8 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
         startColor="#EDF2F7"
         style={Object {}}
       >
-        <Box
-          className="sc-gtssRu sc-hKFyIo bXZZG frPYgX"
+        <Component
+          className="sc-gtssRu sc-hKFyIo bexDGe frPYgX"
           endColor="#A0AEC0"
           isLoaded={false}
           palette={
@@ -358,8 +375,8 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
           startColor="#EDF2F7"
           style={Object {}}
         >
-          <Component
-            className="sc-gtssRu sc-hKFyIo bXZZG frPYgX"
+          <StyledBox
+            className="sc-gtssRu sc-hKFyIo bexDGe frPYgX"
             endColor="#A0AEC0"
             isLoaded={false}
             palette={
@@ -393,53 +410,17 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
             startColor="#EDF2F7"
             style={Object {}}
           >
-            <StyledBox
-              className="sc-gtssRu sc-hKFyIo bXZZG frPYgX"
-              endColor="#A0AEC0"
-              isLoaded={false}
-              palette={
-                Object {
-                  "backgroundColors": Object {
-                    "button": "#3fbaca",
-                    "common": "#ffffff",
-                    "disabledButton": "#e2e2e2",
-                    "main": "#f7f7f7",
-                    "secondaryToggle": "#ffffff",
-                    "toggle": "#425579",
-                  },
-                  "borderColors": Object {
-                    "common": "#e2e2e2",
-                  },
-                  "fontColors": Object {
-                    "anchor": "#3fbaca",
-                    "button": "#ffffff",
-                    "common": "#293346",
-                    "description": "#9d9d9d",
-                    "disabledAnchor": "#9d9d9d",
-                    "label": "#2d2d2d",
-                    "secondaryToggle": "#9d9d9d",
-                    "text": "#2d2d2d",
-                    "toggle": "#ffffff",
-                  },
-                }
-              }
+            <div
+              className="sc-bdnylx dyDpKS sc-gtssRu sc-hKFyIo bexDGe frPYgX"
               size="20px"
               speed={0.8}
-              startColor="#EDF2F7"
               style={Object {}}
-            >
-              <div
-                className="sc-bdnylx sJSbd sc-gtssRu sc-hKFyIo bXZZG frPYgX"
-                size="20px"
-                speed={0.8}
-                style={Object {}}
-              />
-            </StyledBox>
-          </Component>
-        </Box>
-      </StyledSkeletonCircle>
-    </Component>
-  </WithMooskinContext>
+            />
+          </StyledBox>
+        </Component>
+      </Box>
+    </StyledSkeletonCircle>
+  </Component>
 </Skeleton>
 `;
 
@@ -453,21 +434,46 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
   startColor="#EDF2F7"
   style={Object {}}
 >
-  <WithMooskinContext
+  <Component
     className=""
     endColor="#A0AEC0"
     isLoaded={false}
-    key="0"
     lines={4}
+    palette={
+      Object {
+        "backgroundColors": Object {
+          "button": "#3fbaca",
+          "common": "#ffffff",
+          "disabledButton": "#e2e2e2",
+          "main": "#f7f7f7",
+          "secondaryToggle": "#ffffff",
+          "toggle": "#425579",
+        },
+        "borderColors": Object {
+          "common": "#e2e2e2",
+        },
+        "fontColors": Object {
+          "anchor": "#3fbaca",
+          "button": "#ffffff",
+          "common": "#293346",
+          "description": "#9d9d9d",
+          "disabledAnchor": "#9d9d9d",
+          "label": "#2d2d2d",
+          "secondaryToggle": "#9d9d9d",
+          "text": "#2d2d2d",
+          "toggle": "#ffffff",
+        },
+      }
+    }
     speed={0.8}
     startColor="#EDF2F7"
     style={Object {}}
-    w="100%"
   >
-    <Component
+    <StyledSkeletonText
       className=""
       endColor="#A0AEC0"
       isLoaded={false}
+      key="0"
       lines={4}
       palette={
         Object {
@@ -500,8 +506,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
       style={Object {}}
       w="100%"
     >
-      <StyledSkeletonText
-        className=""
+      <Box
+        className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
         endColor="#A0AEC0"
         isLoaded={false}
         lines={4}
@@ -536,8 +542,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         style={Object {}}
         w="100%"
       >
-        <Box
-          className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
+        <Component
+          className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
           endColor="#A0AEC0"
           isLoaded={false}
           lines={4}
@@ -572,8 +578,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           style={Object {}}
           w="100%"
         >
-          <Component
-            className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
+          <StyledBox
+            className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
             endColor="#A0AEC0"
             isLoaded={false}
             lines={4}
@@ -608,68 +614,20 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             style={Object {}}
             w="100%"
           >
-            <StyledBox
-              className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
-              endColor="#A0AEC0"
-              isLoaded={false}
-              lines={4}
-              palette={
-                Object {
-                  "backgroundColors": Object {
-                    "button": "#3fbaca",
-                    "common": "#ffffff",
-                    "disabledButton": "#e2e2e2",
-                    "main": "#f7f7f7",
-                    "secondaryToggle": "#ffffff",
-                    "toggle": "#425579",
-                  },
-                  "borderColors": Object {
-                    "common": "#e2e2e2",
-                  },
-                  "fontColors": Object {
-                    "anchor": "#3fbaca",
-                    "button": "#ffffff",
-                    "common": "#293346",
-                    "description": "#9d9d9d",
-                    "disabledAnchor": "#9d9d9d",
-                    "label": "#2d2d2d",
-                    "secondaryToggle": "#9d9d9d",
-                    "text": "#2d2d2d",
-                    "toggle": "#ffffff",
-                  },
-                }
-              }
+            <div
+              className="sc-bdnylx lprBVC sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
-              startColor="#EDF2F7"
               style={Object {}}
-              w="100%"
-            >
-              <div
-                className="sc-bdnylx gChYHV sc-gtssRu sc-eCApGN bXZZG kcBUaI"
-                speed={0.8}
-                style={Object {}}
-              />
-            </StyledBox>
-          </Component>
-        </Box>
-      </StyledSkeletonText>
-    </Component>
-  </WithMooskinContext>
-  <WithMooskinContext
-    className=""
-    endColor="#A0AEC0"
-    isLoaded={false}
-    key="1"
-    lines={4}
-    speed={0.8}
-    startColor="#EDF2F7"
-    style={Object {}}
-    w="100%"
-  >
-    <Component
+            />
+          </StyledBox>
+        </Component>
+      </Box>
+    </StyledSkeletonText>
+    <StyledSkeletonText
       className=""
       endColor="#A0AEC0"
       isLoaded={false}
+      key="1"
       lines={4}
       palette={
         Object {
@@ -702,8 +660,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
       style={Object {}}
       w="100%"
     >
-      <StyledSkeletonText
-        className=""
+      <Box
+        className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
         endColor="#A0AEC0"
         isLoaded={false}
         lines={4}
@@ -738,8 +696,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         style={Object {}}
         w="100%"
       >
-        <Box
-          className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
+        <Component
+          className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
           endColor="#A0AEC0"
           isLoaded={false}
           lines={4}
@@ -774,8 +732,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           style={Object {}}
           w="100%"
         >
-          <Component
-            className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
+          <StyledBox
+            className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
             endColor="#A0AEC0"
             isLoaded={false}
             lines={4}
@@ -810,68 +768,20 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             style={Object {}}
             w="100%"
           >
-            <StyledBox
-              className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
-              endColor="#A0AEC0"
-              isLoaded={false}
-              lines={4}
-              palette={
-                Object {
-                  "backgroundColors": Object {
-                    "button": "#3fbaca",
-                    "common": "#ffffff",
-                    "disabledButton": "#e2e2e2",
-                    "main": "#f7f7f7",
-                    "secondaryToggle": "#ffffff",
-                    "toggle": "#425579",
-                  },
-                  "borderColors": Object {
-                    "common": "#e2e2e2",
-                  },
-                  "fontColors": Object {
-                    "anchor": "#3fbaca",
-                    "button": "#ffffff",
-                    "common": "#293346",
-                    "description": "#9d9d9d",
-                    "disabledAnchor": "#9d9d9d",
-                    "label": "#2d2d2d",
-                    "secondaryToggle": "#9d9d9d",
-                    "text": "#2d2d2d",
-                    "toggle": "#ffffff",
-                  },
-                }
-              }
+            <div
+              className="sc-bdnylx lprBVC sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
-              startColor="#EDF2F7"
               style={Object {}}
-              w="100%"
-            >
-              <div
-                className="sc-bdnylx gChYHV sc-gtssRu sc-eCApGN bXZZG kcBUaI"
-                speed={0.8}
-                style={Object {}}
-              />
-            </StyledBox>
-          </Component>
-        </Box>
-      </StyledSkeletonText>
-    </Component>
-  </WithMooskinContext>
-  <WithMooskinContext
-    className=""
-    endColor="#A0AEC0"
-    isLoaded={false}
-    key="2"
-    lines={4}
-    speed={0.8}
-    startColor="#EDF2F7"
-    style={Object {}}
-    w="100%"
-  >
-    <Component
+            />
+          </StyledBox>
+        </Component>
+      </Box>
+    </StyledSkeletonText>
+    <StyledSkeletonText
       className=""
       endColor="#A0AEC0"
       isLoaded={false}
+      key="2"
       lines={4}
       palette={
         Object {
@@ -904,8 +814,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
       style={Object {}}
       w="100%"
     >
-      <StyledSkeletonText
-        className=""
+      <Box
+        className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
         endColor="#A0AEC0"
         isLoaded={false}
         lines={4}
@@ -940,8 +850,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         style={Object {}}
         w="100%"
       >
-        <Box
-          className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
+        <Component
+          className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
           endColor="#A0AEC0"
           isLoaded={false}
           lines={4}
@@ -976,8 +886,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           style={Object {}}
           w="100%"
         >
-          <Component
-            className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
+          <StyledBox
+            className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
             endColor="#A0AEC0"
             isLoaded={false}
             lines={4}
@@ -1012,68 +922,20 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             style={Object {}}
             w="100%"
           >
-            <StyledBox
-              className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
-              endColor="#A0AEC0"
-              isLoaded={false}
-              lines={4}
-              palette={
-                Object {
-                  "backgroundColors": Object {
-                    "button": "#3fbaca",
-                    "common": "#ffffff",
-                    "disabledButton": "#e2e2e2",
-                    "main": "#f7f7f7",
-                    "secondaryToggle": "#ffffff",
-                    "toggle": "#425579",
-                  },
-                  "borderColors": Object {
-                    "common": "#e2e2e2",
-                  },
-                  "fontColors": Object {
-                    "anchor": "#3fbaca",
-                    "button": "#ffffff",
-                    "common": "#293346",
-                    "description": "#9d9d9d",
-                    "disabledAnchor": "#9d9d9d",
-                    "label": "#2d2d2d",
-                    "secondaryToggle": "#9d9d9d",
-                    "text": "#2d2d2d",
-                    "toggle": "#ffffff",
-                  },
-                }
-              }
+            <div
+              className="sc-bdnylx lprBVC sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
-              startColor="#EDF2F7"
               style={Object {}}
-              w="100%"
-            >
-              <div
-                className="sc-bdnylx gChYHV sc-gtssRu sc-eCApGN bXZZG kcBUaI"
-                speed={0.8}
-                style={Object {}}
-              />
-            </StyledBox>
-          </Component>
-        </Box>
-      </StyledSkeletonText>
-    </Component>
-  </WithMooskinContext>
-  <WithMooskinContext
-    className=""
-    endColor="#A0AEC0"
-    isLoaded={false}
-    key="3"
-    lines={4}
-    speed={0.8}
-    startColor="#EDF2F7"
-    style={Object {}}
-    w="80%"
-  >
-    <Component
+            />
+          </StyledBox>
+        </Component>
+      </Box>
+    </StyledSkeletonText>
+    <StyledSkeletonText
       className=""
       endColor="#A0AEC0"
       isLoaded={false}
+      key="3"
       lines={4}
       palette={
         Object {
@@ -1106,8 +968,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
       style={Object {}}
       w="80%"
     >
-      <StyledSkeletonText
-        className=""
+      <Box
+        className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
         endColor="#A0AEC0"
         isLoaded={false}
         lines={4}
@@ -1142,8 +1004,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         style={Object {}}
         w="80%"
       >
-        <Box
-          className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
+        <Component
+          className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
           endColor="#A0AEC0"
           isLoaded={false}
           lines={4}
@@ -1178,8 +1040,8 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           style={Object {}}
           w="80%"
         >
-          <Component
-            className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
+          <StyledBox
+            className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
             endColor="#A0AEC0"
             isLoaded={false}
             lines={4}
@@ -1214,52 +1076,15 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             style={Object {}}
             w="80%"
           >
-            <StyledBox
-              className="sc-gtssRu sc-eCApGN bXZZG kcBUaI"
-              endColor="#A0AEC0"
-              isLoaded={false}
-              lines={4}
-              palette={
-                Object {
-                  "backgroundColors": Object {
-                    "button": "#3fbaca",
-                    "common": "#ffffff",
-                    "disabledButton": "#e2e2e2",
-                    "main": "#f7f7f7",
-                    "secondaryToggle": "#ffffff",
-                    "toggle": "#425579",
-                  },
-                  "borderColors": Object {
-                    "common": "#e2e2e2",
-                  },
-                  "fontColors": Object {
-                    "anchor": "#3fbaca",
-                    "button": "#ffffff",
-                    "common": "#293346",
-                    "description": "#9d9d9d",
-                    "disabledAnchor": "#9d9d9d",
-                    "label": "#2d2d2d",
-                    "secondaryToggle": "#9d9d9d",
-                    "text": "#2d2d2d",
-                    "toggle": "#ffffff",
-                  },
-                }
-              }
+            <div
+              className="sc-bdnylx FlfZv sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
-              startColor="#EDF2F7"
               style={Object {}}
-              w="80%"
-            >
-              <div
-                className="sc-bdnylx HRCfw sc-gtssRu sc-eCApGN bXZZG kcBUaI"
-                speed={0.8}
-                style={Object {}}
-              />
-            </StyledBox>
-          </Component>
-        </Box>
-      </StyledSkeletonText>
-    </Component>
-  </WithMooskinContext>
+            />
+          </StyledBox>
+        </Component>
+      </Box>
+    </StyledSkeletonText>
+  </Component>
 </Skeleton>
 `;
