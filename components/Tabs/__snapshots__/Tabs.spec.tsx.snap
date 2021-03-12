@@ -168,7 +168,7 @@ exports[`Pagination renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sJSbd sc-gtssRu dJxHxj"
+              className="sc-bdnylx dyDpKS sc-gtssRu dJxHxj"
               onClickTab={[MockFunction]}
               style={Object {}}
             >
@@ -240,7 +240,7 @@ exports[`Pagination renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx frIstK"
+                      className="sc-bdnylx dKVect"
                       d="flex"
                       style={Object {}}
                     >
@@ -412,7 +412,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx sJSbd sc-hKFyIo fCrIbD"
+                                    className="sc-bdnylx dyDpKS sc-hKFyIo fCrIbD"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -592,7 +592,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx sJSbd sc-hKFyIo fCrIbD"
+                                    className="sc-bdnylx dyDpKS sc-hKFyIo fCrIbD"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -772,7 +772,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx sJSbd sc-hKFyIo haFDjc"
+                                    className="sc-bdnylx dyDpKS sc-hKFyIo haFDjc"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -952,7 +952,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx sJSbd sc-hKFyIo fCrIbD"
+                                    className="sc-bdnylx dyDpKS sc-hKFyIo fCrIbD"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1132,7 +1132,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx sJSbd sc-hKFyIo fCrIbD"
+                                    className="sc-bdnylx dyDpKS sc-hKFyIo fCrIbD"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1312,7 +1312,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx sJSbd sc-hKFyIo fCrIbD"
+                                    className="sc-bdnylx dyDpKS sc-hKFyIo fCrIbD"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1490,7 +1490,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-eCApGN"
+                            className="sc-bdnylx dyDpKS sc-eCApGN"
                             style={Object {}}
                           >
                             <div>

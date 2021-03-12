@@ -29,7 +29,3 @@ export interface ISkeletonTextComponentProps extends ICommonSkeletonComponentPro
 	/** width of the skeleton text */
 	width?: string;
 }
-
-export interface ISkeletonWrapperComponent extends ICommonSkeletonComponentProps {
-	component: any;
-}

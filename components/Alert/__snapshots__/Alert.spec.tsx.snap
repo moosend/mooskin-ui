@@ -168,7 +168,7 @@ exports[`Alert renders correctly 1`] = `
             variant="left-accent"
           >
             <div
-              className="sc-bdnylx sJSbd sc-gtssRu SPTIr"
+              className="sc-bdnylx dyDpKS sc-gtssRu SPTIr"
               style={Object {}}
             >
               <AlertIcon
@@ -339,7 +339,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                            className="sc-bdnylx dyDpKS sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
                             style={Object {}}
                           >
                             announcement
@@ -518,7 +518,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT sc-hKFyIo epnfcP fvbly"
+                            className="sc-bdnylx dyDpKS sc-dlnjPT sc-hKFyIo epnfcP fvbly"
                             style={Object {}}
                           >
                             Your browser is outdated!
@@ -697,7 +697,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
+                            className="sc-bdnylx dyDpKS sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
                             style={Object {}}
                           >
                             Your Mooskin experience may be degraded.
@@ -792,7 +792,7 @@ exports[`Alert renders correctly 1`] = `
                     variant="left-accent"
                   >
                     <Box
-                      className="sc-jSFkmK sc-iCoHVE gLJPOM eGXeuV"
+                      className="sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
                       onClick={[MockFunction]}
                       palette={
                         Object {
@@ -828,7 +828,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <Component
-                        className="sc-jSFkmK sc-iCoHVE gLJPOM eGXeuV"
+                        className="sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
                         onClick={[MockFunction]}
                         palette={
                           Object {
@@ -864,7 +864,7 @@ exports[`Alert renders correctly 1`] = `
                         variant="left-accent"
                       >
                         <StyledBox
-                          className="sc-jSFkmK sc-iCoHVE gLJPOM eGXeuV"
+                          className="sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
                           onClick={[MockFunction]}
                           palette={
                             Object {
@@ -900,7 +900,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx jAOsLC sc-jSFkmK sc-iCoHVE gLJPOM eGXeuV"
+                            className="sc-bdnylx edvuYZ sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
                             onClick={[MockFunction]}
                             style={Object {}}
                           >

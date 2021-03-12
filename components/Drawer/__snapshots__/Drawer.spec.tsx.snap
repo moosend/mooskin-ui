@@ -180,7 +180,7 @@ exports[`Drawer renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sJSbd sc-gtssRu"
+              className="sc-bdnylx dyDpKS sc-gtssRu"
               onClose={[MockFunction]}
               size="sm"
               style={Object {}}
@@ -353,7 +353,7 @@ exports[`Drawer renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sJSbd sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
+                            className="sc-bdnylx dyDpKS sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -543,7 +543,7 @@ exports[`Drawer renders correctly 1`] = `
                                         w="50%"
                                       >
                                         <div
-                                          className="sc-bdnylx btYDzZ sc-dlnjPT sc-hKFyIo sc-jSFkmK gmUUbi kxhdAb jNhBeZ"
+                                          className="sc-bdnylx kDKSXy sc-dlnjPT sc-hKFyIo sc-jSFkmK gmUUbi kxhdAb jNhBeZ"
                                           onClick={[Function]}
                                           size="sm"
                                           style={Object {}}
@@ -626,7 +626,7 @@ exports[`Drawer renders correctly 1`] = `
                                                 top={10}
                                               >
                                                 <Box
-                                                  className="sc-fnVYJo byCcbH"
+                                                  className="sc-fnVYJo dMsAjF"
                                                   onClick={[Function]}
                                                   palette={
                                                     Object {
@@ -660,7 +660,7 @@ exports[`Drawer renders correctly 1`] = `
                                                   top={10}
                                                 >
                                                   <Component
-                                                    className="sc-fnVYJo byCcbH"
+                                                    className="sc-fnVYJo dMsAjF"
                                                     onClick={[Function]}
                                                     palette={
                                                       Object {
@@ -694,7 +694,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     top={10}
                                                   >
                                                     <StyledBox
-                                                      className="sc-fnVYJo byCcbH"
+                                                      className="sc-fnVYJo dMsAjF"
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -728,7 +728,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       top={10}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx eGjGky sc-fnVYJo byCcbH"
+                                                        className="sc-bdnylx dudUEd sc-fnVYJo dMsAjF"
                                                         onClick={[Function]}
                                                         style={Object {}}
                                                       >
@@ -901,7 +901,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <header
-                                                        className="sc-bdnylx sJSbd sc-bqGHjH drLbIb"
+                                                        className="sc-bdnylx dyDpKS sc-bqGHjH drLbIb"
                                                         style={Object {}}
                                                       >
                                                         Create your account
@@ -1068,7 +1068,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx sJSbd sc-ksluoS jiUKmX"
+                                                        className="sc-bdnylx dyDpKS sc-ksluoS jiUKmX"
                                                         style={Object {}}
                                                       >
                                                         Drawer Content Body
@@ -1240,7 +1240,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <footer
-                                                        className="sc-bdnylx sJSbd sc-hBMVcZ fJYgtM"
+                                                        className="sc-bdnylx dyDpKS sc-hBMVcZ fJYgtM"
                                                         style={Object {}}
                                                       >
                                                         Drawer Footer goes here!

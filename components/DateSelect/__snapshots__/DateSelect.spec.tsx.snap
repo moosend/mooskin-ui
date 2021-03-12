@@ -246,7 +246,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                 type="hour"
               >
                 <div
-                  className="sc-bdnylx sJSbd sc-dlnjPT bUbMRD"
+                  className="sc-bdnylx dyDpKS sc-dlnjPT bUbMRD"
                   format="12-Hour"
                   onChangeSelect={[Function]}
                   style={Object {}}
@@ -414,7 +414,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                               style={Object {}}
                             >
                               <div
-                                className="sc-bdnylx sJSbd sc-eCApGN iAsTcC"
+                                className="sc-bdnylx dyDpKS sc-eCApGN iAsTcC"
                                 onClick={[Function]}
                                 style={Object {}}
                               >
@@ -484,7 +484,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-jSFkmK jAVUJN"
+                                        className="sc-jSFkmK iOZlyf"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -514,7 +514,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <Component
-                                          className="sc-jSFkmK jAVUJN"
+                                          className="sc-jSFkmK iOZlyf"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -544,7 +544,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <StyledBox
-                                            className="sc-jSFkmK jAVUJN"
+                                            className="sc-jSFkmK iOZlyf"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -574,7 +574,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx sJSbd sc-jSFkmK jAVUJN"
+                                              className="sc-bdnylx dyDpKS sc-jSFkmK iOZlyf"
                                               style={Object {}}
                                             >
                                               Select an option
@@ -740,7 +740,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx sJSbd sc-pNWxx flvaRE"
+                                              className="sc-bdnylx dyDpKS sc-pNWxx flvaRE"
                                               style={Object {}}
                                             >
                                               keyboard_arrow_down
