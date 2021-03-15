@@ -180,7 +180,7 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx dyDpKS sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
+              className="sc-bdnylx hKVIpd sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
               speed={0.8}
               style={Object {}}
             >
@@ -411,7 +411,7 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx dyDpKS sc-gtssRu sc-hKFyIo bexDGe frPYgX"
+              className="sc-bdnylx hKVIpd sc-gtssRu sc-hKFyIo bexDGe frPYgX"
               size="20px"
               speed={0.8}
               style={Object {}}
@@ -615,7 +615,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             w="100%"
           >
             <div
-              className="sc-bdnylx lprBVC sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdnylx YiIHh sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
               style={Object {}}
             />
@@ -769,7 +769,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             w="100%"
           >
             <div
-              className="sc-bdnylx lprBVC sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdnylx YiIHh sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
               style={Object {}}
             />
@@ -923,7 +923,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             w="100%"
           >
             <div
-              className="sc-bdnylx lprBVC sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdnylx YiIHh sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
               style={Object {}}
             />
@@ -1077,7 +1077,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             w="80%"
           >
             <div
-              className="sc-bdnylx FlfZv sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdnylx fRhtOY sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
               style={Object {}}
             />

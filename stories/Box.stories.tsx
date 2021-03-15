@@ -16,7 +16,7 @@ const Template: Story<IBoxComponentProps> = (args) => {
 	return (
 		<>
 			<GlobalStyle />
-			<Box {...args} _hover={{ color: 'red' }} />
+			<Box {...args} _hover="color: red;" />
 		</>
 	);
 };

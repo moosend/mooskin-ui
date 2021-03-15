@@ -161,7 +161,7 @@ exports[`Label renders correctly 1`] = `
             style={Object {}}
           >
             <label
-              className="sc-bdnylx dyDpKS sc-gtssRu eKLwVr"
+              className="sc-bdnylx hKVIpd sc-gtssRu eKLwVr"
               style={Object {}}
             >
               Label here!

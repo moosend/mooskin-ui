@@ -382,5 +382,11 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	round?: IntensityType;
 
 	/** hover */
-	_hover?: { [key: string]: any };
+	_hover?: string;
+
+	/** hide box based on device size */
+	lgHide?: boolean;
+	mdHide?: boolean;
+	smHide?: boolean;
+	xsHide?: boolean;
 }

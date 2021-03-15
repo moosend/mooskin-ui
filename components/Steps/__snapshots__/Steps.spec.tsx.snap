@@ -168,7 +168,7 @@ exports[`Pagination renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx dyDpKS sc-gtssRu dJxHxj"
+              className="sc-bdnylx hKVIpd sc-gtssRu dJxHxj"
               onClickStep={[MockFunction]}
               style={Object {}}
             >
@@ -240,7 +240,7 @@ exports[`Pagination renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx dKVect"
+                      className="sc-bdnylx mETFC"
                       d="flex"
                       style={Object {}}
                     >
@@ -412,7 +412,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dyDpKS sc-hKFyIo htNMEM"
+                                    className="sc-bdnylx hKVIpd sc-hKFyIo htNMEM"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -572,7 +572,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx dyDpKS sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx hKVIpd sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -758,7 +758,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dyDpKS sc-hKFyIo htNMEM"
+                                    className="sc-bdnylx hKVIpd sc-hKFyIo htNMEM"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -918,7 +918,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx dyDpKS sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx hKVIpd sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -1104,7 +1104,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dyDpKS sc-hKFyIo dJqDWp"
+                                    className="sc-bdnylx hKVIpd sc-hKFyIo dJqDWp"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1264,7 +1264,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx dyDpKS sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx hKVIpd sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -1450,7 +1450,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dyDpKS sc-hKFyIo htNMEM"
+                                    className="sc-bdnylx hKVIpd sc-hKFyIo htNMEM"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1610,7 +1610,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx dyDpKS sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx hKVIpd sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -1796,7 +1796,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dyDpKS sc-hKFyIo htNMEM"
+                                    className="sc-bdnylx hKVIpd sc-hKFyIo htNMEM"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1956,7 +1956,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx dyDpKS sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx hKVIpd sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -2142,7 +2142,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx dyDpKS sc-hKFyIo htNMEM"
+                                    className="sc-bdnylx hKVIpd sc-hKFyIo htNMEM"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -2320,7 +2320,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dyDpKS sc-eCApGN"
+                            className="sc-bdnylx hKVIpd sc-eCApGN"
                             style={Object {}}
                           >
                             <div>

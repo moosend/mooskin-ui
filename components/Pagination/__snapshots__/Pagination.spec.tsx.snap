@@ -168,7 +168,7 @@ exports[`Pagination renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx dyDpKS sc-gtssRu fGBgRL"
+              className="sc-bdnylx hKVIpd sc-gtssRu fGBgRL"
               onClickButton={[MockFunction]}
               style={Object {}}
             >
@@ -340,7 +340,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dyDpKS sc-dlnjPT kTuius"
+                            className="sc-bdnylx hKVIpd sc-dlnjPT kTuius"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -520,7 +520,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dyDpKS sc-dlnjPT kTuius"
+                            className="sc-bdnylx hKVIpd sc-dlnjPT kTuius"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -700,7 +700,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dyDpKS sc-dlnjPT fWFUWV"
+                            className="sc-bdnylx hKVIpd sc-dlnjPT fWFUWV"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -880,7 +880,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dyDpKS sc-dlnjPT kTuius"
+                            className="sc-bdnylx hKVIpd sc-dlnjPT kTuius"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1060,7 +1060,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dyDpKS sc-dlnjPT kTuius"
+                            className="sc-bdnylx hKVIpd sc-dlnjPT kTuius"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1143,7 +1143,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx dyDpKS sc-hKFyIo leFdZC"
+                        className="sc-bdnylx hKVIpd sc-hKFyIo leFdZC"
                         onClick={[Function]}
                         style={Object {}}
                       >

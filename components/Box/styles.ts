@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+// Screen sizes
+import screens from '../_utils/globals/screens';
+
 // Models
 import { IStyledTheme } from '../Styled/model';
 import { BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
@@ -111,14 +114,10 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		cursor: ${(props) => props.cursor};
 
 		:hover {
-			${(props) =>
-				props._hover &&
-				Object.keys(props._hover).map((item) => {
-					if (props._hover) {
-						return `${item}: ${props._hover[item]};`;
-					}
-				})}
+			${(props) => props._hover}
 		}
+
+		${(props) => generateHiddenMediaQuery(props)}
 	}
 `;
 
@@ -197,4 +196,35 @@ export const getBoxShadow = (boxShadow?: React.CSSProperties['boxShadow'] | BoxS
 		default:
 			return boxShadow;
 	}
+};
+
+const generateHiddenMediaQuery = (props: IBoxComponentProps) => {
+	const { lgHide, mdHide, smHide, xsHide } = props;
+	let media = '';
+
+	if (lgHide) {
+		media = `${media} ${getQueryString(screens.large)}`;
+	}
+
+	if (mdHide) {
+		media = `${media} ${getQueryString(screens.medium)}`;
+	}
+
+	if (smHide) {
+		media = `${media} ${getQueryString(screens.small)}`;
+	}
+
+	if (xsHide) {
+		media = `${media} ${getQueryString(screens.xSmall)}`;
+	}
+
+	return media;
+};
+
+const getQueryString = (media: string) => {
+	return `
+        @media ${media} {
+            display: none;
+        }
+    `;
 };
