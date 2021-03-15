@@ -79,7 +79,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 		}
 
 		const placeholder: string[] = passedPlaceholder;
-		React.Children.forEach(children, (child, i) => {
+		React.Children.forEach(children, (child) => {
 			if (React.isValidElement<ISelectOptionComponentProps>(child) && child.type === SelectOption) {
 				let label = '';
 
@@ -87,6 +87,8 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 					label = child.props.searchLabel;
 				} else if (typeof child.props.children === 'string') {
 					label = child.props.children;
+				} else if (Array.isArray(child.props.children) && typeof child.props.children[0] === 'string') {
+					label = child.props.children[0];
 				}
 
 				if (Array.isArray(props.selectedValue)) {
@@ -171,11 +173,9 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder) {
 				if (!showList) {
+					const placeholder = getPlaceholder(props.children);
 					return React.cloneElement(child, {
-						children:
-							props.selectedValue && getPlaceholder(props.children)
-								? getPlaceholder(props.children)
-								: recurseChildren(child.props.children),
+						children: props.selectedValue && placeholder ? placeholder : recurseChildren(child.props.children),
 						key: i,
 					} as IBoxComponentProps);
 				}
@@ -304,7 +304,7 @@ SelectOption.displayName = 'SelectOption';
  * SelectFilter
  */
 export const SelectFilter: React.FC<IInputBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledSelectFilter {...props} boxAs="input" />;
+	return <StyledSelectFilter autoFocus {...props} boxAs="input" />;
 });
 
 SelectFilter.defaultProps = {
