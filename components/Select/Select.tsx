@@ -93,7 +93,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 
 				if (Array.isArray(props.selectedValue)) {
 					props.selectedValue.forEach((item) => {
-						if (item.toString().includes(child.props.value)) {
+						if (item.toString() === child.props.value) {
 							placeholder.push(label);
 						}
 					});
