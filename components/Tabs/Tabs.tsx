@@ -33,7 +33,7 @@ export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext((props) =>
 		return props.activeItem === activeId;
 	};
 
-	const riteOfRakshir = (children?: Array<React.ReactElement<ITabCommonComponentProps>>, activeId?: string | number, active?: boolean) => {
+	const riteOfRakshir = (children?: any, activeId?: string | number, active?: boolean) => {
 		let header: React.ReactElement<ITabCommonComponentProps> | undefined;
 		let content: React.ReactElement<ITabCommonComponentProps> | undefined;
 

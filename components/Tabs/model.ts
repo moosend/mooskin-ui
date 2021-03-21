@@ -18,6 +18,4 @@ export interface ITabCommonComponentProps extends IBoxComponentProps {
 export interface ITabComponentProps extends ITabCommonComponentProps {
 	/** identifier for togglin the tabbed item */
 	activeId?: string | number;
-
-	children?: Array<React.ReactElement<ITabCommonComponentProps>>;
 }
