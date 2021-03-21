@@ -32,13 +32,7 @@ export const Steps: React.FC<IStepsComponentProps> = withMooskinContext((props) 
 		return props.activeItem === activeId;
 	};
 
-	const assignChildren = (
-		tabIndex: number,
-		tabsLength: number,
-		children?: Array<React.ReactElement<IStepCommonComponentProps>>,
-		activeId?: string | number,
-		active?: boolean
-	) => {
+	const assignChildren = (tabIndex: number, tabsLength: number, children?: any, activeId?: string | number, active?: boolean) => {
 		let header: React.ReactElement<IStepCommonComponentProps> | undefined;
 		let content: React.ReactElement<IStepCommonComponentProps> | undefined;
 

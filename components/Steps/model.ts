@@ -23,6 +23,4 @@ export interface IStepHeaderComponentProps extends IStepCommonComponentProps {
 export interface IStepComponentProps extends IStepCommonComponentProps {
 	/** identifier for togglin the Stepbed item */
 	activeId?: string | number;
-
-	children?: Array<React.ReactElement<IStepCommonComponentProps>>;
 }
