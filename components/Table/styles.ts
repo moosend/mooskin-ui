@@ -34,7 +34,7 @@ export const StyledTableHeaderItem = styled(Box)<IBoxComponentProps>`
 	font-style: normal;
 	letter-spacing: normal;
 	text-align: left;
-	color: ${(props) => props.palette?.backgroundColors.toggle || variables.backgroundColors.toggle};
+	color: ${(props) => props.palette?.fontColors.tableHeader || variables.fontColors.tableHeader};
 	display: flex;
 	align-items: center;
 `;
@@ -45,8 +45,8 @@ export const StyledTableRow = styled(Box)<IBoxComponentProps>`
 	display: flex;
 	align-items: center;
 	min-height: 90px;
-	border-top: solid 1px #e2e2e2;
-	border-bottom: solid 1px #e2e2e2;
+	border-top: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
+	border-bottom: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
 	:last-child {
 		border: none;
 	}

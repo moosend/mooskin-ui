@@ -106,12 +106,12 @@ export const StyledSelectOverlay = styled(Box)<IBoxComponentProps>`
 StyledSelectOverlay.displayName = 'StyledSelectOverlay';
 
 export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
-	font-size: 12px;
+	font-size: 14px;
 	padding: 10px 15px;
 	font-family: Hind;
 	display: flex;
 	justify-content: space-between;
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.tableHeader || variables.fontColors.tableHeader};
 	:first-child {
 		padding-top: 13px;
 	}

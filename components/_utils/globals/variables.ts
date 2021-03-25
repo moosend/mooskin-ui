@@ -3,10 +3,15 @@ import { IStyledTheme } from '../../Styled/model';
 const theme: IStyledTheme = {
 	backgroundColors: {
 		button: '#3fbaca',
+		buttonDisabled: '#e2e2e2',
 		common: '#ffffff',
-		disabledButton: '#e2e2e2',
 		main: '#f7f7f7',
 		secondaryToggle: '#ffffff',
+		switchDisabled: '#e7e7e7',
+		switchHandle: '#ffffff',
+		switchOff: '#9d9d9d',
+		switchOn: '#3fbaca',
+		tag: '#293346',
 		toggle: '#425579',
 	},
 	borderColors: {
@@ -20,6 +25,8 @@ const theme: IStyledTheme = {
 		disabledAnchor: '#9d9d9d',
 		label: '#2d2d2d',
 		secondaryToggle: '#9d9d9d',
+		tableHeader: '#425579',
+		tag: '#ffffff',
 		text: '#2d2d2d',
 		toggle: '#ffffff',
 	},

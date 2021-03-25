@@ -36,7 +36,8 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	&:hover {
+	text-decoration: ${(props) => (!props.disabled ? 'underline' : '')};
+	:hover {
 		text-decoration: ${(props) => (!props.disabled ? 'underline' : '')};
 	}
 `;
@@ -47,7 +48,7 @@ export const StyledButtonNormal = styled(ButtonDefault)`
 	background-color: ${(props) =>
 		!props.disabled
 			? props.palette?.backgroundColors.button || variables.backgroundColors.button
-			: props.palette?.backgroundColors.disabledButton || variables.backgroundColors.disabledButton};
+			: props.palette?.backgroundColors.buttonDisabled || variables.backgroundColors.buttonDisabled};
 	color: ${(props) => props.palette?.fontColors.button || variables.fontColors.button};
 	padding: ${(props) => normalButtonSizes[props.buttonSize || 'md']};
 	border: none;
@@ -60,24 +61,23 @@ export const StyledButtonInverse = styled(ButtonDefault)`
 	color: ${(props) =>
 		!props.disabled
 			? props.palette?.backgroundColors.button || variables.backgroundColors.button
-			: props.palette?.backgroundColors.disabledButton || variables.backgroundColors.disabledButton};
+			: props.palette?.backgroundColors.buttonDisabled || variables.backgroundColors.buttonDisabled};
 	padding: ${(props) => inverseButtonSizes[props.buttonSize || 'md']};
 	background-color: transparent;
 	border: 2px solid
 		${(props) =>
 			!props.disabled
 				? props.palette?.backgroundColors.button || variables.backgroundColors.button
-				: props.palette?.backgroundColors.disabledButton || variables.backgroundColors.disabledButton};
+				: props.palette?.backgroundColors.buttonDisabled || variables.backgroundColors.buttonDisabled};
 `;
 
 StyledButtonInverse.displayName = 'StyledButtonInverse';
 
 export const StyledButtonIcon = styled(Box)`
 	font-family: 'Mooskin Icons Round';
-	font-size: 15px;
+	font-size: 10px;
 	font-style: normal;
 	color: inherit;
-	text-decoration: none;
 `;
 
 StyledButtonIcon.displayName = 'StyledButtonIcon';

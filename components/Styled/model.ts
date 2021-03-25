@@ -7,15 +7,22 @@ export interface IThemeFontColors {
 	label: string;
 	toggle: string;
 	text: string;
+	tag: string;
+	tableHeader: string;
 	secondaryToggle: string;
 }
 
 export interface IThemeBackgroundColors {
 	button: string;
+	switchOff: string;
+	switchOn: string;
+	switchHandle: string;
+	switchDisabled: string;
 	common: string;
-	disabledButton: string;
+	buttonDisabled: string;
 	main: string;
 	toggle: string;
+	tag: string;
 	secondaryToggle: string;
 }
 
