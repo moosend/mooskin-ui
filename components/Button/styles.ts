@@ -36,7 +36,6 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	text-decoration: ${(props) => (!props.disabled ? 'underline' : '')};
 	:hover {
 		text-decoration: ${(props) => (!props.disabled ? 'underline' : '')};
 	}
