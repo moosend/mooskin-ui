@@ -11,10 +11,15 @@ exports[`Alert renders correctly 1`] = `
       Object {
         "backgroundColors": Object {
           "button": "#3fbaca",
+          "buttonDisabled": "#e2e2e2",
           "common": "#ffffff",
-          "disabledButton": "#e2e2e2",
           "main": "#f7f7f7",
           "secondaryToggle": "#ffffff",
+          "switchDisabled": "#e7e7e7",
+          "switchHandle": "#ffffff",
+          "switchOff": "#9d9d9d",
+          "switchOn": "#3fbaca",
+          "tag": "#293346",
           "toggle": "#425579",
         },
         "borderColors": Object {
@@ -28,6 +33,8 @@ exports[`Alert renders correctly 1`] = `
           "disabledAnchor": "#9d9d9d",
           "label": "#2d2d2d",
           "secondaryToggle": "#9d9d9d",
+          "tableHeader": "#425579",
+          "tag": "#ffffff",
           "text": "#2d2d2d",
           "toggle": "#ffffff",
         },
@@ -41,10 +48,15 @@ exports[`Alert renders correctly 1`] = `
         Object {
           "backgroundColors": Object {
             "button": "#3fbaca",
+            "buttonDisabled": "#e2e2e2",
             "common": "#ffffff",
-            "disabledButton": "#e2e2e2",
             "main": "#f7f7f7",
             "secondaryToggle": "#ffffff",
+            "switchDisabled": "#e7e7e7",
+            "switchHandle": "#ffffff",
+            "switchOff": "#9d9d9d",
+            "switchOn": "#3fbaca",
+            "tag": "#293346",
             "toggle": "#425579",
           },
           "borderColors": Object {
@@ -58,6 +70,8 @@ exports[`Alert renders correctly 1`] = `
             "disabledAnchor": "#9d9d9d",
             "label": "#2d2d2d",
             "secondaryToggle": "#9d9d9d",
+            "tableHeader": "#425579",
+            "tag": "#ffffff",
             "text": "#2d2d2d",
             "toggle": "#ffffff",
           },
@@ -71,10 +85,15 @@ exports[`Alert renders correctly 1`] = `
           Object {
             "backgroundColors": Object {
               "button": "#3fbaca",
+              "buttonDisabled": "#e2e2e2",
               "common": "#ffffff",
-              "disabledButton": "#e2e2e2",
               "main": "#f7f7f7",
               "secondaryToggle": "#ffffff",
+              "switchDisabled": "#e7e7e7",
+              "switchHandle": "#ffffff",
+              "switchOff": "#9d9d9d",
+              "switchOn": "#3fbaca",
+              "tag": "#293346",
               "toggle": "#425579",
             },
             "borderColors": Object {
@@ -88,6 +107,8 @@ exports[`Alert renders correctly 1`] = `
               "disabledAnchor": "#9d9d9d",
               "label": "#2d2d2d",
               "secondaryToggle": "#9d9d9d",
+              "tableHeader": "#425579",
+              "tag": "#ffffff",
               "text": "#2d2d2d",
               "toggle": "#ffffff",
             },
@@ -101,10 +122,15 @@ exports[`Alert renders correctly 1`] = `
             Object {
               "backgroundColors": Object {
                 "button": "#3fbaca",
+                "buttonDisabled": "#e2e2e2",
                 "common": "#ffffff",
-                "disabledButton": "#e2e2e2",
                 "main": "#f7f7f7",
                 "secondaryToggle": "#ffffff",
+                "switchDisabled": "#e7e7e7",
+                "switchHandle": "#ffffff",
+                "switchOff": "#9d9d9d",
+                "switchOn": "#3fbaca",
+                "tag": "#293346",
                 "toggle": "#425579",
               },
               "borderColors": Object {
@@ -118,6 +144,8 @@ exports[`Alert renders correctly 1`] = `
                 "disabledAnchor": "#9d9d9d",
                 "label": "#2d2d2d",
                 "secondaryToggle": "#9d9d9d",
+                "tableHeader": "#425579",
+                "tag": "#ffffff",
                 "text": "#2d2d2d",
                 "toggle": "#ffffff",
               },
@@ -131,10 +159,15 @@ exports[`Alert renders correctly 1`] = `
               Object {
                 "backgroundColors": Object {
                   "button": "#3fbaca",
+                  "buttonDisabled": "#e2e2e2",
                   "common": "#ffffff",
-                  "disabledButton": "#e2e2e2",
                   "main": "#f7f7f7",
                   "secondaryToggle": "#ffffff",
+                  "switchDisabled": "#e7e7e7",
+                  "switchHandle": "#ffffff",
+                  "switchOff": "#9d9d9d",
+                  "switchOn": "#3fbaca",
+                  "tag": "#293346",
                   "toggle": "#425579",
                 },
                 "borderColors": Object {
@@ -148,6 +181,8 @@ exports[`Alert renders correctly 1`] = `
                   "disabledAnchor": "#9d9d9d",
                   "label": "#2d2d2d",
                   "secondaryToggle": "#9d9d9d",
+                  "tableHeader": "#425579",
+                  "tag": "#ffffff",
                   "text": "#2d2d2d",
                   "toggle": "#ffffff",
                 },
@@ -173,10 +208,15 @@ exports[`Alert renders correctly 1`] = `
                     Object {
                       "backgroundColors": Object {
                         "button": "#3fbaca",
+                        "buttonDisabled": "#e2e2e2",
                         "common": "#ffffff",
-                        "disabledButton": "#e2e2e2",
                         "main": "#f7f7f7",
                         "secondaryToggle": "#ffffff",
+                        "switchDisabled": "#e7e7e7",
+                        "switchHandle": "#ffffff",
+                        "switchOff": "#9d9d9d",
+                        "switchOn": "#3fbaca",
+                        "tag": "#293346",
                         "toggle": "#425579",
                       },
                       "borderColors": Object {
@@ -190,6 +230,8 @@ exports[`Alert renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
+                        "tableHeader": "#425579",
+                        "tag": "#ffffff",
                         "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
@@ -205,10 +247,15 @@ exports[`Alert renders correctly 1`] = `
                       Object {
                         "backgroundColors": Object {
                           "button": "#3fbaca",
+                          "buttonDisabled": "#e2e2e2",
                           "common": "#ffffff",
-                          "disabledButton": "#e2e2e2",
                           "main": "#f7f7f7",
                           "secondaryToggle": "#ffffff",
+                          "switchDisabled": "#e7e7e7",
+                          "switchHandle": "#ffffff",
+                          "switchOff": "#9d9d9d",
+                          "switchOn": "#3fbaca",
+                          "tag": "#293346",
                           "toggle": "#425579",
                         },
                         "borderColors": Object {
@@ -222,6 +269,8 @@ exports[`Alert renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
+                          "tableHeader": "#425579",
+                          "tag": "#ffffff",
                           "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
@@ -237,10 +286,15 @@ exports[`Alert renders correctly 1`] = `
                         Object {
                           "backgroundColors": Object {
                             "button": "#3fbaca",
+                            "buttonDisabled": "#e2e2e2",
                             "common": "#ffffff",
-                            "disabledButton": "#e2e2e2",
                             "main": "#f7f7f7",
                             "secondaryToggle": "#ffffff",
+                            "switchDisabled": "#e7e7e7",
+                            "switchHandle": "#ffffff",
+                            "switchOff": "#9d9d9d",
+                            "switchOn": "#3fbaca",
+                            "tag": "#293346",
                             "toggle": "#425579",
                           },
                           "borderColors": Object {
@@ -254,6 +308,8 @@ exports[`Alert renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
+                            "tableHeader": "#425579",
+                            "tag": "#ffffff",
                             "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
@@ -269,10 +325,15 @@ exports[`Alert renders correctly 1`] = `
                           Object {
                             "backgroundColors": Object {
                               "button": "#3fbaca",
+                              "buttonDisabled": "#e2e2e2",
                               "common": "#ffffff",
-                              "disabledButton": "#e2e2e2",
                               "main": "#f7f7f7",
                               "secondaryToggle": "#ffffff",
+                              "switchDisabled": "#e7e7e7",
+                              "switchHandle": "#ffffff",
+                              "switchOff": "#9d9d9d",
+                              "switchOn": "#3fbaca",
+                              "tag": "#293346",
                               "toggle": "#425579",
                             },
                             "borderColors": Object {
@@ -286,6 +347,8 @@ exports[`Alert renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
+                              "tableHeader": "#425579",
+                              "tag": "#ffffff",
                               "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
@@ -301,10 +364,15 @@ exports[`Alert renders correctly 1`] = `
                             Object {
                               "backgroundColors": Object {
                                 "button": "#3fbaca",
+                                "buttonDisabled": "#e2e2e2",
                                 "common": "#ffffff",
-                                "disabledButton": "#e2e2e2",
                                 "main": "#f7f7f7",
                                 "secondaryToggle": "#ffffff",
+                                "switchDisabled": "#e7e7e7",
+                                "switchHandle": "#ffffff",
+                                "switchOff": "#9d9d9d",
+                                "switchOn": "#3fbaca",
+                                "tag": "#293346",
                                 "toggle": "#425579",
                               },
                               "borderColors": Object {
@@ -318,6 +386,8 @@ exports[`Alert renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
+                                "tableHeader": "#425579",
+                                "tag": "#ffffff",
                                 "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
@@ -349,10 +419,15 @@ exports[`Alert renders correctly 1`] = `
                     Object {
                       "backgroundColors": Object {
                         "button": "#3fbaca",
+                        "buttonDisabled": "#e2e2e2",
                         "common": "#ffffff",
-                        "disabledButton": "#e2e2e2",
                         "main": "#f7f7f7",
                         "secondaryToggle": "#ffffff",
+                        "switchDisabled": "#e7e7e7",
+                        "switchHandle": "#ffffff",
+                        "switchOff": "#9d9d9d",
+                        "switchOn": "#3fbaca",
+                        "tag": "#293346",
                         "toggle": "#425579",
                       },
                       "borderColors": Object {
@@ -366,6 +441,8 @@ exports[`Alert renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
+                        "tableHeader": "#425579",
+                        "tag": "#ffffff",
                         "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
@@ -379,10 +456,15 @@ exports[`Alert renders correctly 1`] = `
                       Object {
                         "backgroundColors": Object {
                           "button": "#3fbaca",
+                          "buttonDisabled": "#e2e2e2",
                           "common": "#ffffff",
-                          "disabledButton": "#e2e2e2",
                           "main": "#f7f7f7",
                           "secondaryToggle": "#ffffff",
+                          "switchDisabled": "#e7e7e7",
+                          "switchHandle": "#ffffff",
+                          "switchOff": "#9d9d9d",
+                          "switchOn": "#3fbaca",
+                          "tag": "#293346",
                           "toggle": "#425579",
                         },
                         "borderColors": Object {
@@ -396,6 +478,8 @@ exports[`Alert renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
+                          "tableHeader": "#425579",
+                          "tag": "#ffffff",
                           "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
@@ -409,10 +493,15 @@ exports[`Alert renders correctly 1`] = `
                         Object {
                           "backgroundColors": Object {
                             "button": "#3fbaca",
+                            "buttonDisabled": "#e2e2e2",
                             "common": "#ffffff",
-                            "disabledButton": "#e2e2e2",
                             "main": "#f7f7f7",
                             "secondaryToggle": "#ffffff",
+                            "switchDisabled": "#e7e7e7",
+                            "switchHandle": "#ffffff",
+                            "switchOff": "#9d9d9d",
+                            "switchOn": "#3fbaca",
+                            "tag": "#293346",
                             "toggle": "#425579",
                           },
                           "borderColors": Object {
@@ -426,6 +515,8 @@ exports[`Alert renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
+                            "tableHeader": "#425579",
+                            "tag": "#ffffff",
                             "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
@@ -439,10 +530,15 @@ exports[`Alert renders correctly 1`] = `
                           Object {
                             "backgroundColors": Object {
                               "button": "#3fbaca",
+                              "buttonDisabled": "#e2e2e2",
                               "common": "#ffffff",
-                              "disabledButton": "#e2e2e2",
                               "main": "#f7f7f7",
                               "secondaryToggle": "#ffffff",
+                              "switchDisabled": "#e7e7e7",
+                              "switchHandle": "#ffffff",
+                              "switchOff": "#9d9d9d",
+                              "switchOn": "#3fbaca",
+                              "tag": "#293346",
                               "toggle": "#425579",
                             },
                             "borderColors": Object {
@@ -456,6 +552,8 @@ exports[`Alert renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
+                              "tableHeader": "#425579",
+                              "tag": "#ffffff",
                               "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
@@ -469,10 +567,15 @@ exports[`Alert renders correctly 1`] = `
                             Object {
                               "backgroundColors": Object {
                                 "button": "#3fbaca",
+                                "buttonDisabled": "#e2e2e2",
                                 "common": "#ffffff",
-                                "disabledButton": "#e2e2e2",
                                 "main": "#f7f7f7",
                                 "secondaryToggle": "#ffffff",
+                                "switchDisabled": "#e7e7e7",
+                                "switchHandle": "#ffffff",
+                                "switchOff": "#9d9d9d",
+                                "switchOn": "#3fbaca",
+                                "tag": "#293346",
                                 "toggle": "#425579",
                               },
                               "borderColors": Object {
@@ -486,6 +589,8 @@ exports[`Alert renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
+                                "tableHeader": "#425579",
+                                "tag": "#ffffff",
                                 "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
@@ -514,10 +619,15 @@ exports[`Alert renders correctly 1`] = `
                                   Object {
                                     "backgroundColors": Object {
                                       "button": "#3fbaca",
+                                      "buttonDisabled": "#e2e2e2",
                                       "common": "#ffffff",
-                                      "disabledButton": "#e2e2e2",
                                       "main": "#f7f7f7",
                                       "secondaryToggle": "#ffffff",
+                                      "switchDisabled": "#e7e7e7",
+                                      "switchHandle": "#ffffff",
+                                      "switchOff": "#9d9d9d",
+                                      "switchOn": "#3fbaca",
+                                      "tag": "#293346",
                                       "toggle": "#425579",
                                     },
                                     "borderColors": Object {
@@ -531,6 +641,8 @@ exports[`Alert renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
+                                      "tableHeader": "#425579",
+                                      "tag": "#ffffff",
                                       "text": "#2d2d2d",
                                       "toggle": "#ffffff",
                                     },
@@ -550,10 +662,15 @@ exports[`Alert renders correctly 1`] = `
                                     Object {
                                       "backgroundColors": Object {
                                         "button": "#3fbaca",
+                                        "buttonDisabled": "#e2e2e2",
                                         "common": "#ffffff",
-                                        "disabledButton": "#e2e2e2",
                                         "main": "#f7f7f7",
                                         "secondaryToggle": "#ffffff",
+                                        "switchDisabled": "#e7e7e7",
+                                        "switchHandle": "#ffffff",
+                                        "switchOff": "#9d9d9d",
+                                        "switchOn": "#3fbaca",
+                                        "tag": "#293346",
                                         "toggle": "#425579",
                                       },
                                       "borderColors": Object {
@@ -567,6 +684,8 @@ exports[`Alert renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
+                                        "tableHeader": "#425579",
+                                        "tag": "#ffffff",
                                         "text": "#2d2d2d",
                                         "toggle": "#ffffff",
                                       },
@@ -578,7 +697,7 @@ exports[`Alert renders correctly 1`] = `
                                   <Box
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-iCoHVE fXQpRa jOqnYU"
+                                    className="sc-gKAblj sc-iCoHVE kwVfyV jOqnYU"
                                     minW="unset"
                                     mr={10}
                                     onClick={[Function]}
@@ -586,10 +705,15 @@ exports[`Alert renders correctly 1`] = `
                                       Object {
                                         "backgroundColors": Object {
                                           "button": "#3fbaca",
+                                          "buttonDisabled": "#e2e2e2",
                                           "common": "#ffffff",
-                                          "disabledButton": "#e2e2e2",
                                           "main": "#f7f7f7",
                                           "secondaryToggle": "#ffffff",
+                                          "switchDisabled": "#e7e7e7",
+                                          "switchHandle": "#ffffff",
+                                          "switchOff": "#9d9d9d",
+                                          "switchOn": "#3fbaca",
+                                          "tag": "#293346",
                                           "toggle": "#425579",
                                         },
                                         "borderColors": Object {
@@ -603,6 +727,8 @@ exports[`Alert renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
+                                          "tableHeader": "#425579",
+                                          "tag": "#ffffff",
                                           "text": "#2d2d2d",
                                           "toggle": "#ffffff",
                                         },
@@ -614,7 +740,7 @@ exports[`Alert renders correctly 1`] = `
                                     <Component
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-iCoHVE fXQpRa jOqnYU"
+                                      className="sc-gKAblj sc-iCoHVE kwVfyV jOqnYU"
                                       minW="unset"
                                       mr={10}
                                       onClick={[Function]}
@@ -622,10 +748,15 @@ exports[`Alert renders correctly 1`] = `
                                         Object {
                                           "backgroundColors": Object {
                                             "button": "#3fbaca",
+                                            "buttonDisabled": "#e2e2e2",
                                             "common": "#ffffff",
-                                            "disabledButton": "#e2e2e2",
                                             "main": "#f7f7f7",
                                             "secondaryToggle": "#ffffff",
+                                            "switchDisabled": "#e7e7e7",
+                                            "switchHandle": "#ffffff",
+                                            "switchOff": "#9d9d9d",
+                                            "switchOn": "#3fbaca",
+                                            "tag": "#293346",
                                             "toggle": "#425579",
                                           },
                                           "borderColors": Object {
@@ -639,6 +770,8 @@ exports[`Alert renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
+                                            "tableHeader": "#425579",
+                                            "tag": "#ffffff",
                                             "text": "#2d2d2d",
                                             "toggle": "#ffffff",
                                           },
@@ -651,7 +784,7 @@ exports[`Alert renders correctly 1`] = `
                                         as="button"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-iCoHVE fXQpRa jOqnYU"
+                                        className="sc-gKAblj sc-iCoHVE kwVfyV jOqnYU"
                                         minW="unset"
                                         mr={10}
                                         onClick={[Function]}
@@ -659,10 +792,15 @@ exports[`Alert renders correctly 1`] = `
                                           Object {
                                             "backgroundColors": Object {
                                               "button": "#3fbaca",
+                                              "buttonDisabled": "#e2e2e2",
                                               "common": "#ffffff",
-                                              "disabledButton": "#e2e2e2",
                                               "main": "#f7f7f7",
                                               "secondaryToggle": "#ffffff",
+                                              "switchDisabled": "#e7e7e7",
+                                              "switchHandle": "#ffffff",
+                                              "switchOff": "#9d9d9d",
+                                              "switchOn": "#3fbaca",
+                                              "tag": "#293346",
                                               "toggle": "#425579",
                                             },
                                             "borderColors": Object {
@@ -676,6 +814,8 @@ exports[`Alert renders correctly 1`] = `
                                               "disabledAnchor": "#9d9d9d",
                                               "label": "#2d2d2d",
                                               "secondaryToggle": "#9d9d9d",
+                                              "tableHeader": "#425579",
+                                              "tag": "#ffffff",
                                               "text": "#2d2d2d",
                                               "toggle": "#ffffff",
                                             },
@@ -685,7 +825,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx lhBhUx sc-gKAblj sc-iCoHVE fXQpRa jOqnYU"
+                                          className="sc-bdnylx lhBhUx sc-gKAblj sc-iCoHVE kwVfyV jOqnYU"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -699,19 +839,24 @@ exports[`Alert renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <Box
-                                                className="sc-pNWxx izAEXF"
+                                                className="sc-pNWxx grBcxG"
                                                 style={Object {}}
                                               >
                                                 <Component
-                                                  className="sc-pNWxx izAEXF"
+                                                  className="sc-pNWxx grBcxG"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
                                                         "button": "#3fbaca",
+                                                        "buttonDisabled": "#e2e2e2",
                                                         "common": "#ffffff",
-                                                        "disabledButton": "#e2e2e2",
                                                         "main": "#f7f7f7",
                                                         "secondaryToggle": "#ffffff",
+                                                        "switchDisabled": "#e7e7e7",
+                                                        "switchHandle": "#ffffff",
+                                                        "switchOff": "#9d9d9d",
+                                                        "switchOn": "#3fbaca",
+                                                        "tag": "#293346",
                                                         "toggle": "#425579",
                                                       },
                                                       "borderColors": Object {
@@ -725,6 +870,8 @@ exports[`Alert renders correctly 1`] = `
                                                         "disabledAnchor": "#9d9d9d",
                                                         "label": "#2d2d2d",
                                                         "secondaryToggle": "#9d9d9d",
+                                                        "tableHeader": "#425579",
+                                                        "tag": "#ffffff",
                                                         "text": "#2d2d2d",
                                                         "toggle": "#ffffff",
                                                       },
@@ -733,15 +880,20 @@ exports[`Alert renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <StyledBox
-                                                    className="sc-pNWxx izAEXF"
+                                                    className="sc-pNWxx grBcxG"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
                                                           "button": "#3fbaca",
+                                                          "buttonDisabled": "#e2e2e2",
                                                           "common": "#ffffff",
-                                                          "disabledButton": "#e2e2e2",
                                                           "main": "#f7f7f7",
                                                           "secondaryToggle": "#ffffff",
+                                                          "switchDisabled": "#e7e7e7",
+                                                          "switchHandle": "#ffffff",
+                                                          "switchOff": "#9d9d9d",
+                                                          "switchOn": "#3fbaca",
+                                                          "tag": "#293346",
                                                           "toggle": "#425579",
                                                         },
                                                         "borderColors": Object {
@@ -755,6 +907,8 @@ exports[`Alert renders correctly 1`] = `
                                                           "disabledAnchor": "#9d9d9d",
                                                           "label": "#2d2d2d",
                                                           "secondaryToggle": "#9d9d9d",
+                                                          "tableHeader": "#425579",
+                                                          "tag": "#ffffff",
                                                           "text": "#2d2d2d",
                                                           "toggle": "#ffffff",
                                                         },
@@ -763,7 +917,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx hKVIpd sc-pNWxx izAEXF"
+                                                      className="sc-bdnylx hKVIpd sc-pNWxx grBcxG"
                                                       style={Object {}}
                                                     >
                                                       chevron_left
@@ -796,10 +950,15 @@ exports[`Alert renders correctly 1`] = `
                                   Object {
                                     "backgroundColors": Object {
                                       "button": "#3fbaca",
+                                      "buttonDisabled": "#e2e2e2",
                                       "common": "#ffffff",
-                                      "disabledButton": "#e2e2e2",
                                       "main": "#f7f7f7",
                                       "secondaryToggle": "#ffffff",
+                                      "switchDisabled": "#e7e7e7",
+                                      "switchHandle": "#ffffff",
+                                      "switchOff": "#9d9d9d",
+                                      "switchOn": "#3fbaca",
+                                      "tag": "#293346",
                                       "toggle": "#425579",
                                     },
                                     "borderColors": Object {
@@ -813,6 +972,8 @@ exports[`Alert renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
+                                      "tableHeader": "#425579",
+                                      "tag": "#ffffff",
                                       "text": "#2d2d2d",
                                       "toggle": "#ffffff",
                                     },
@@ -831,10 +992,15 @@ exports[`Alert renders correctly 1`] = `
                                     Object {
                                       "backgroundColors": Object {
                                         "button": "#3fbaca",
+                                        "buttonDisabled": "#e2e2e2",
                                         "common": "#ffffff",
-                                        "disabledButton": "#e2e2e2",
                                         "main": "#f7f7f7",
                                         "secondaryToggle": "#ffffff",
+                                        "switchDisabled": "#e7e7e7",
+                                        "switchHandle": "#ffffff",
+                                        "switchOff": "#9d9d9d",
+                                        "switchOn": "#3fbaca",
+                                        "tag": "#293346",
                                         "toggle": "#425579",
                                       },
                                       "borderColors": Object {
@@ -848,6 +1014,8 @@ exports[`Alert renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
+                                        "tableHeader": "#425579",
+                                        "tag": "#ffffff",
                                         "text": "#2d2d2d",
                                         "toggle": "#ffffff",
                                       },
@@ -859,17 +1027,22 @@ exports[`Alert renders correctly 1`] = `
                                   <Box
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-iCoHVE fXQpRa jOqnYU"
+                                    className="sc-gKAblj sc-iCoHVE kwVfyV jOqnYU"
                                     minW="unset"
                                     onClick={[Function]}
                                     palette={
                                       Object {
                                         "backgroundColors": Object {
                                           "button": "#3fbaca",
+                                          "buttonDisabled": "#e2e2e2",
                                           "common": "#ffffff",
-                                          "disabledButton": "#e2e2e2",
                                           "main": "#f7f7f7",
                                           "secondaryToggle": "#ffffff",
+                                          "switchDisabled": "#e7e7e7",
+                                          "switchHandle": "#ffffff",
+                                          "switchOff": "#9d9d9d",
+                                          "switchOn": "#3fbaca",
+                                          "tag": "#293346",
                                           "toggle": "#425579",
                                         },
                                         "borderColors": Object {
@@ -883,6 +1056,8 @@ exports[`Alert renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
+                                          "tableHeader": "#425579",
+                                          "tag": "#ffffff",
                                           "text": "#2d2d2d",
                                           "toggle": "#ffffff",
                                         },
@@ -894,17 +1069,22 @@ exports[`Alert renders correctly 1`] = `
                                     <Component
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-iCoHVE fXQpRa jOqnYU"
+                                      className="sc-gKAblj sc-iCoHVE kwVfyV jOqnYU"
                                       minW="unset"
                                       onClick={[Function]}
                                       palette={
                                         Object {
                                           "backgroundColors": Object {
                                             "button": "#3fbaca",
+                                            "buttonDisabled": "#e2e2e2",
                                             "common": "#ffffff",
-                                            "disabledButton": "#e2e2e2",
                                             "main": "#f7f7f7",
                                             "secondaryToggle": "#ffffff",
+                                            "switchDisabled": "#e7e7e7",
+                                            "switchHandle": "#ffffff",
+                                            "switchOff": "#9d9d9d",
+                                            "switchOn": "#3fbaca",
+                                            "tag": "#293346",
                                             "toggle": "#425579",
                                           },
                                           "borderColors": Object {
@@ -918,6 +1098,8 @@ exports[`Alert renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
+                                            "tableHeader": "#425579",
+                                            "tag": "#ffffff",
                                             "text": "#2d2d2d",
                                             "toggle": "#ffffff",
                                           },
@@ -930,17 +1112,22 @@ exports[`Alert renders correctly 1`] = `
                                         as="button"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-iCoHVE fXQpRa jOqnYU"
+                                        className="sc-gKAblj sc-iCoHVE kwVfyV jOqnYU"
                                         minW="unset"
                                         onClick={[Function]}
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
                                               "button": "#3fbaca",
+                                              "buttonDisabled": "#e2e2e2",
                                               "common": "#ffffff",
-                                              "disabledButton": "#e2e2e2",
                                               "main": "#f7f7f7",
                                               "secondaryToggle": "#ffffff",
+                                              "switchDisabled": "#e7e7e7",
+                                              "switchHandle": "#ffffff",
+                                              "switchOff": "#9d9d9d",
+                                              "switchOn": "#3fbaca",
+                                              "tag": "#293346",
                                               "toggle": "#425579",
                                             },
                                             "borderColors": Object {
@@ -954,6 +1141,8 @@ exports[`Alert renders correctly 1`] = `
                                               "disabledAnchor": "#9d9d9d",
                                               "label": "#2d2d2d",
                                               "secondaryToggle": "#9d9d9d",
+                                              "tableHeader": "#425579",
+                                              "tag": "#ffffff",
                                               "text": "#2d2d2d",
                                               "toggle": "#ffffff",
                                             },
@@ -963,7 +1152,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx cfrmME sc-gKAblj sc-iCoHVE fXQpRa jOqnYU"
+                                          className="sc-bdnylx cfrmME sc-gKAblj sc-iCoHVE kwVfyV jOqnYU"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -978,19 +1167,24 @@ exports[`Alert renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <Box
-                                                className="sc-pNWxx izAEXF"
+                                                className="sc-pNWxx grBcxG"
                                                 style={Object {}}
                                               >
                                                 <Component
-                                                  className="sc-pNWxx izAEXF"
+                                                  className="sc-pNWxx grBcxG"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
                                                         "button": "#3fbaca",
+                                                        "buttonDisabled": "#e2e2e2",
                                                         "common": "#ffffff",
-                                                        "disabledButton": "#e2e2e2",
                                                         "main": "#f7f7f7",
                                                         "secondaryToggle": "#ffffff",
+                                                        "switchDisabled": "#e7e7e7",
+                                                        "switchHandle": "#ffffff",
+                                                        "switchOff": "#9d9d9d",
+                                                        "switchOn": "#3fbaca",
+                                                        "tag": "#293346",
                                                         "toggle": "#425579",
                                                       },
                                                       "borderColors": Object {
@@ -1004,6 +1198,8 @@ exports[`Alert renders correctly 1`] = `
                                                         "disabledAnchor": "#9d9d9d",
                                                         "label": "#2d2d2d",
                                                         "secondaryToggle": "#9d9d9d",
+                                                        "tableHeader": "#425579",
+                                                        "tag": "#ffffff",
                                                         "text": "#2d2d2d",
                                                         "toggle": "#ffffff",
                                                       },
@@ -1012,15 +1208,20 @@ exports[`Alert renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <StyledBox
-                                                    className="sc-pNWxx izAEXF"
+                                                    className="sc-pNWxx grBcxG"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
                                                           "button": "#3fbaca",
+                                                          "buttonDisabled": "#e2e2e2",
                                                           "common": "#ffffff",
-                                                          "disabledButton": "#e2e2e2",
                                                           "main": "#f7f7f7",
                                                           "secondaryToggle": "#ffffff",
+                                                          "switchDisabled": "#e7e7e7",
+                                                          "switchHandle": "#ffffff",
+                                                          "switchOff": "#9d9d9d",
+                                                          "switchOn": "#3fbaca",
+                                                          "tag": "#293346",
                                                           "toggle": "#425579",
                                                         },
                                                         "borderColors": Object {
@@ -1034,6 +1235,8 @@ exports[`Alert renders correctly 1`] = `
                                                           "disabledAnchor": "#9d9d9d",
                                                           "label": "#2d2d2d",
                                                           "secondaryToggle": "#9d9d9d",
+                                                          "tableHeader": "#425579",
+                                                          "tag": "#ffffff",
                                                           "text": "#2d2d2d",
                                                           "toggle": "#ffffff",
                                                         },
@@ -1042,7 +1245,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx hKVIpd sc-pNWxx izAEXF"
+                                                      className="sc-bdnylx hKVIpd sc-pNWxx grBcxG"
                                                       style={Object {}}
                                                     >
                                                       chevron_right
@@ -1076,10 +1279,15 @@ exports[`Alert renders correctly 1`] = `
                     Object {
                       "backgroundColors": Object {
                         "button": "#3fbaca",
+                        "buttonDisabled": "#e2e2e2",
                         "common": "#ffffff",
-                        "disabledButton": "#e2e2e2",
                         "main": "#f7f7f7",
                         "secondaryToggle": "#ffffff",
+                        "switchDisabled": "#e7e7e7",
+                        "switchHandle": "#ffffff",
+                        "switchOff": "#9d9d9d",
+                        "switchOn": "#3fbaca",
+                        "tag": "#293346",
                         "toggle": "#425579",
                       },
                       "borderColors": Object {
@@ -1093,6 +1301,8 @@ exports[`Alert renders correctly 1`] = `
                         "disabledAnchor": "#9d9d9d",
                         "label": "#2d2d2d",
                         "secondaryToggle": "#9d9d9d",
+                        "tableHeader": "#425579",
+                        "tag": "#ffffff",
                         "text": "#2d2d2d",
                         "toggle": "#ffffff",
                       },
@@ -1106,10 +1316,15 @@ exports[`Alert renders correctly 1`] = `
                       Object {
                         "backgroundColors": Object {
                           "button": "#3fbaca",
+                          "buttonDisabled": "#e2e2e2",
                           "common": "#ffffff",
-                          "disabledButton": "#e2e2e2",
                           "main": "#f7f7f7",
                           "secondaryToggle": "#ffffff",
+                          "switchDisabled": "#e7e7e7",
+                          "switchHandle": "#ffffff",
+                          "switchOff": "#9d9d9d",
+                          "switchOn": "#3fbaca",
+                          "tag": "#293346",
                           "toggle": "#425579",
                         },
                         "borderColors": Object {
@@ -1123,6 +1338,8 @@ exports[`Alert renders correctly 1`] = `
                           "disabledAnchor": "#9d9d9d",
                           "label": "#2d2d2d",
                           "secondaryToggle": "#9d9d9d",
+                          "tableHeader": "#425579",
+                          "tag": "#ffffff",
                           "text": "#2d2d2d",
                           "toggle": "#ffffff",
                         },
@@ -1136,10 +1353,15 @@ exports[`Alert renders correctly 1`] = `
                         Object {
                           "backgroundColors": Object {
                             "button": "#3fbaca",
+                            "buttonDisabled": "#e2e2e2",
                             "common": "#ffffff",
-                            "disabledButton": "#e2e2e2",
                             "main": "#f7f7f7",
                             "secondaryToggle": "#ffffff",
+                            "switchDisabled": "#e7e7e7",
+                            "switchHandle": "#ffffff",
+                            "switchOff": "#9d9d9d",
+                            "switchOn": "#3fbaca",
+                            "tag": "#293346",
                             "toggle": "#425579",
                           },
                           "borderColors": Object {
@@ -1153,6 +1375,8 @@ exports[`Alert renders correctly 1`] = `
                             "disabledAnchor": "#9d9d9d",
                             "label": "#2d2d2d",
                             "secondaryToggle": "#9d9d9d",
+                            "tableHeader": "#425579",
+                            "tag": "#ffffff",
                             "text": "#2d2d2d",
                             "toggle": "#ffffff",
                           },
@@ -1166,10 +1390,15 @@ exports[`Alert renders correctly 1`] = `
                           Object {
                             "backgroundColors": Object {
                               "button": "#3fbaca",
+                              "buttonDisabled": "#e2e2e2",
                               "common": "#ffffff",
-                              "disabledButton": "#e2e2e2",
                               "main": "#f7f7f7",
                               "secondaryToggle": "#ffffff",
+                              "switchDisabled": "#e7e7e7",
+                              "switchHandle": "#ffffff",
+                              "switchOff": "#9d9d9d",
+                              "switchOn": "#3fbaca",
+                              "tag": "#293346",
                               "toggle": "#425579",
                             },
                             "borderColors": Object {
@@ -1183,6 +1412,8 @@ exports[`Alert renders correctly 1`] = `
                               "disabledAnchor": "#9d9d9d",
                               "label": "#2d2d2d",
                               "secondaryToggle": "#9d9d9d",
+                              "tableHeader": "#425579",
+                              "tag": "#ffffff",
                               "text": "#2d2d2d",
                               "toggle": "#ffffff",
                             },
@@ -1196,10 +1427,15 @@ exports[`Alert renders correctly 1`] = `
                             Object {
                               "backgroundColors": Object {
                                 "button": "#3fbaca",
+                                "buttonDisabled": "#e2e2e2",
                                 "common": "#ffffff",
-                                "disabledButton": "#e2e2e2",
                                 "main": "#f7f7f7",
                                 "secondaryToggle": "#ffffff",
+                                "switchDisabled": "#e7e7e7",
+                                "switchHandle": "#ffffff",
+                                "switchOff": "#9d9d9d",
+                                "switchOn": "#3fbaca",
+                                "tag": "#293346",
                                 "toggle": "#425579",
                               },
                               "borderColors": Object {
@@ -1213,6 +1449,8 @@ exports[`Alert renders correctly 1`] = `
                                 "disabledAnchor": "#9d9d9d",
                                 "label": "#2d2d2d",
                                 "secondaryToggle": "#9d9d9d",
+                                "tableHeader": "#425579",
+                                "tag": "#ffffff",
                                 "text": "#2d2d2d",
                                 "toggle": "#ffffff",
                               },
@@ -1243,10 +1481,15 @@ exports[`Alert renders correctly 1`] = `
                                   Object {
                                     "backgroundColors": Object {
                                       "button": "#3fbaca",
+                                      "buttonDisabled": "#e2e2e2",
                                       "common": "#ffffff",
-                                      "disabledButton": "#e2e2e2",
                                       "main": "#f7f7f7",
                                       "secondaryToggle": "#ffffff",
+                                      "switchDisabled": "#e7e7e7",
+                                      "switchHandle": "#ffffff",
+                                      "switchOff": "#9d9d9d",
+                                      "switchOn": "#3fbaca",
+                                      "tag": "#293346",
                                       "toggle": "#425579",
                                     },
                                     "borderColors": Object {
@@ -1260,6 +1503,8 @@ exports[`Alert renders correctly 1`] = `
                                       "disabledAnchor": "#9d9d9d",
                                       "label": "#2d2d2d",
                                       "secondaryToggle": "#9d9d9d",
+                                      "tableHeader": "#425579",
+                                      "tag": "#ffffff",
                                       "text": "#2d2d2d",
                                       "toggle": "#ffffff",
                                     },
@@ -1280,10 +1525,15 @@ exports[`Alert renders correctly 1`] = `
                                     Object {
                                       "backgroundColors": Object {
                                         "button": "#3fbaca",
+                                        "buttonDisabled": "#e2e2e2",
                                         "common": "#ffffff",
-                                        "disabledButton": "#e2e2e2",
                                         "main": "#f7f7f7",
                                         "secondaryToggle": "#ffffff",
+                                        "switchDisabled": "#e7e7e7",
+                                        "switchHandle": "#ffffff",
+                                        "switchOff": "#9d9d9d",
+                                        "switchOn": "#3fbaca",
+                                        "tag": "#293346",
                                         "toggle": "#425579",
                                       },
                                       "borderColors": Object {
@@ -1297,6 +1547,8 @@ exports[`Alert renders correctly 1`] = `
                                         "disabledAnchor": "#9d9d9d",
                                         "label": "#2d2d2d",
                                         "secondaryToggle": "#9d9d9d",
+                                        "tableHeader": "#425579",
+                                        "tag": "#ffffff",
                                         "text": "#2d2d2d",
                                         "toggle": "#ffffff",
                                       },
@@ -1309,7 +1561,7 @@ exports[`Alert renders correctly 1`] = `
                                     borderColor="#37a037"
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-fujyUd fXQpRa dUfsSP"
+                                    className="sc-gKAblj sc-fujyUd kwVfyV dUfsSP"
                                     color="#37a037"
                                     inverseStyle={true}
                                     onClick={[Function]}
@@ -1317,10 +1569,15 @@ exports[`Alert renders correctly 1`] = `
                                       Object {
                                         "backgroundColors": Object {
                                           "button": "#3fbaca",
+                                          "buttonDisabled": "#e2e2e2",
                                           "common": "#ffffff",
-                                          "disabledButton": "#e2e2e2",
                                           "main": "#f7f7f7",
                                           "secondaryToggle": "#ffffff",
+                                          "switchDisabled": "#e7e7e7",
+                                          "switchHandle": "#ffffff",
+                                          "switchOff": "#9d9d9d",
+                                          "switchOn": "#3fbaca",
+                                          "tag": "#293346",
                                           "toggle": "#425579",
                                         },
                                         "borderColors": Object {
@@ -1334,6 +1591,8 @@ exports[`Alert renders correctly 1`] = `
                                           "disabledAnchor": "#9d9d9d",
                                           "label": "#2d2d2d",
                                           "secondaryToggle": "#9d9d9d",
+                                          "tableHeader": "#425579",
+                                          "tag": "#ffffff",
                                           "text": "#2d2d2d",
                                           "toggle": "#ffffff",
                                         },
@@ -1346,7 +1605,7 @@ exports[`Alert renders correctly 1`] = `
                                       borderColor="#37a037"
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-fujyUd fXQpRa dUfsSP"
+                                      className="sc-gKAblj sc-fujyUd kwVfyV dUfsSP"
                                       color="#37a037"
                                       inverseStyle={true}
                                       onClick={[Function]}
@@ -1354,10 +1613,15 @@ exports[`Alert renders correctly 1`] = `
                                         Object {
                                           "backgroundColors": Object {
                                             "button": "#3fbaca",
+                                            "buttonDisabled": "#e2e2e2",
                                             "common": "#ffffff",
-                                            "disabledButton": "#e2e2e2",
                                             "main": "#f7f7f7",
                                             "secondaryToggle": "#ffffff",
+                                            "switchDisabled": "#e7e7e7",
+                                            "switchHandle": "#ffffff",
+                                            "switchOff": "#9d9d9d",
+                                            "switchOn": "#3fbaca",
+                                            "tag": "#293346",
                                             "toggle": "#425579",
                                           },
                                           "borderColors": Object {
@@ -1371,6 +1635,8 @@ exports[`Alert renders correctly 1`] = `
                                             "disabledAnchor": "#9d9d9d",
                                             "label": "#2d2d2d",
                                             "secondaryToggle": "#9d9d9d",
+                                            "tableHeader": "#425579",
+                                            "tag": "#ffffff",
                                             "text": "#2d2d2d",
                                             "toggle": "#ffffff",
                                           },
@@ -1384,7 +1650,7 @@ exports[`Alert renders correctly 1`] = `
                                         borderColor="#37a037"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-fujyUd fXQpRa dUfsSP"
+                                        className="sc-gKAblj sc-fujyUd kwVfyV dUfsSP"
                                         color="#37a037"
                                         inverseStyle={true}
                                         onClick={[Function]}
@@ -1392,10 +1658,15 @@ exports[`Alert renders correctly 1`] = `
                                           Object {
                                             "backgroundColors": Object {
                                               "button": "#3fbaca",
+                                              "buttonDisabled": "#e2e2e2",
                                               "common": "#ffffff",
-                                              "disabledButton": "#e2e2e2",
                                               "main": "#f7f7f7",
                                               "secondaryToggle": "#ffffff",
+                                              "switchDisabled": "#e7e7e7",
+                                              "switchHandle": "#ffffff",
+                                              "switchOff": "#9d9d9d",
+                                              "switchOn": "#3fbaca",
+                                              "tag": "#293346",
                                               "toggle": "#425579",
                                             },
                                             "borderColors": Object {
@@ -1409,6 +1680,8 @@ exports[`Alert renders correctly 1`] = `
                                               "disabledAnchor": "#9d9d9d",
                                               "label": "#2d2d2d",
                                               "secondaryToggle": "#9d9d9d",
+                                              "tableHeader": "#425579",
+                                              "tag": "#ffffff",
                                               "text": "#2d2d2d",
                                               "toggle": "#ffffff",
                                             },
@@ -1418,7 +1691,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx jYqVyF sc-gKAblj sc-fujyUd fXQpRa dUfsSP"
+                                          className="sc-bdnylx jYqVyF sc-gKAblj sc-fujyUd kwVfyV dUfsSP"
                                           color="#37a037"
                                           onClick={[Function]}
                                           style={Object {}}

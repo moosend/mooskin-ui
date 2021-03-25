@@ -49,7 +49,7 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinCo
 		<Box position="relative" d="flex" {...props.wrapperProps}>
 			<Input onFocus={() => setShowPicker(true)} value={getInputValue()} {...props.inputProps} />
 			{showPicker && (
-				<Box zIndex={1} boxShadow="md" position="absolute" top={40} right={0} {...props.pickerWrapperProps}>
+				<Box zIndex={1} boxShadow="md" position="absolute" top={40} left={0} {...props.pickerWrapperProps}>
 					<DateRangePicker ranges={props.ranges} onChange={props.onChange} {...props} />
 					<DateRangeOverlay onClick={() => setShowPicker(false)} />
 				</Box>

@@ -20,14 +20,14 @@ export default ({
 } as any) as Meta;
 
 const Template: Story<IExpandableComponentProps> = (args) => {
-	const [activeItem, setActiveItem] = React.useState(4);
+	const [activeItem, setActiveItem] = React.useState<string | number>(4);
 	return (
 		<>
 			<GlobalStyle />
 			<Expandable
 				{...args}
 				activeItem={activeItem}
-				onClickItem={(e: React.MouseEvent<HTMLElement>, value: number) => setActiveItem(value)}
+				onClickItem={(e: React.MouseEvent<HTMLElement>, value: number | string) => setActiveItem(value)}
 			/>
 		</>
 	);

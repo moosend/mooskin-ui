@@ -22,14 +22,14 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
 	display: flex;
 	padding: 1px 10px;
 	border-radius: 13px;
-	background-color: ${(props) => props.palette?.backgroundColors.toggle || variables.backgroundColors.toggle};
+	background-color: ${(props) => props.palette?.backgroundColors.tag || variables.backgroundColors.tag};
 	font-family: Hind;
 	font-size: 12px;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;
 	letter-spacing: normal;
-	color: ${(props) => props.palette?.fontColors.toggle || variables.fontColors.toggle};
+	color: ${(props) => props.palette?.fontColors.tag || variables.fontColors.tag};
 	cursor: pointer;
 	align-items: center;
 	white-space: nowrap;
@@ -49,7 +49,7 @@ export const StyledTagClose = styled(Box)<IBoxComponentProps>`
 	font-style: normal;
 	letter-spacing: normal;
 	text-align: left;
-	color: ${(props) => props.palette?.fontColors.toggle || variables.fontColors.toggle};
+	color: ${(props) => props.palette?.fontColors.tag || variables.fontColors.tag};
 	padding-left: 10px;
 `;
 

@@ -111,6 +111,8 @@ export type IAnchorBoxComponentProps = IBoxComponentProps & React.AnchorHTMLAttr
 export type ITextAreaBoxComponentProps = IBoxComponentProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export interface IBaseBoxComponentProps extends IMooskinContext {
+	ref?: any;
+
 	/** render Box as a different html element */
 	boxAs?: any;
 
