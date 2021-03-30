@@ -32,6 +32,7 @@ export const StyledSelectFilter = styled(Box)<IInputBoxComponentProps>`
 	background-color: transparent;
 	flex: 1;
 	z-index: 2;
+	min-width: 0;
 `;
 
 StyledSelectFilter.displayName = 'StyledSelectFilter';
