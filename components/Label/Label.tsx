@@ -17,7 +17,16 @@ export const Label: React.FC<ILabelComponentProps> = withMooskinContext((props) 
 		!props.disabled && props.onClick && props.onClick(e);
 	};
 
-	return <StyledLabel {...props} onClick={props.onClick ? onClick : undefined} boxAs="label" />;
+	console.log(props);
+
+	const children =
+		props.limit && typeof props.children === 'string'
+			? props.children && props.children.length > props.limit
+				? props.children.substr(0, props.limit) + '...'
+				: props.children
+			: props.children;
+
+	return <StyledLabel {...props} onClick={props.onClick ? onClick : undefined} children={children} boxAs="label" />;
 });
 
 Label.defaultProps = {

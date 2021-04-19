@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
+import { ITextComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -9,7 +9,7 @@ import { Box } from '../Box/Box';
 // "CSS" variables
 import variables from '../_utils/globals/variables';
 
-export const StyledText = styled(Box)<IBoxComponentProps>`
+export const StyledText = styled(Box)<ITextComponentProps>`
 	font-family: Hind;
 	font-size: 16px;
 	font-weight: 400;

@@ -1,11 +1,10 @@
 import * as React from 'react';
-import { IBoxComponentProps } from '../index';
 
 // Mooskin Context HoC that passes context to component props
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-// import { IBoxTextComponentProps } from '../Box/model';
+import { ITextComponentProps } from './model';
 
 // Styled Components
 import { StyledText } from './styles';
@@ -13,9 +12,14 @@ import { StyledText } from './styles';
 /**
  * Text
  */
-export const Text: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	// return <StyledText {...props} boxAs="span" />;
-	return <StyledText {...props} />;
+export const Text: React.FC<ITextComponentProps> = withMooskinContext((props) => {
+	const children =
+		props.limit && typeof props.children === 'string'
+			? props.children && props.children.length > props.limit
+				? props.children.substr(0, props.limit) + '...'
+				: props.children
+			: props.children;
+	return <StyledText {...props} children={children} />;
 });
 
 Text.defaultProps = {
