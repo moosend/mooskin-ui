@@ -20,6 +20,10 @@ export const StyledSwitch = styled(Box)<ISwitchComponentProps>`
 	cursor: ${(props) => (!props.disabled ? 'pointer' : 'not-allowed')};
 	border-radius: 36px;
 	transition: background-color 0.3s;
+	color: ${(props) =>
+		!props.disabled
+			? props.palette?.fontColors.button || variables.fontColors.button
+			: props.palette?.fontColors.description || variables.fontColors.description};
 	background-color: ${(props) => {
 		return !props.disabled
 			? props.active
@@ -57,7 +61,7 @@ export const StyledSwitchLabel = styled(Box)<Partial<ISwitchComponentProps>>`
 	user-select: none;
 	font-size: 12px;
 	font-weight: 500;
-	color: ${(props) => props.palette?.fontColors.button || variables.fontColors.button};
+	color: inherit;
 `;
 
 StyledSwitchLabel.displayName = 'StyledSwitchLabel';
@@ -69,7 +73,7 @@ export const StyledSwitchLabelNormal = styled(StyledSwitchLabel)`
 StyledSwitchLabelNormal.displayName = 'StyledSwitchLabelNormal';
 
 export const StyledSwitchLabelDisabled = styled(StyledSwitchLabel)`
-	color: ${(props) => props.palette?.fontColors.description || variables.fontColors.description};
+	color: inherit;
 	align-self: center;
 `;
 
