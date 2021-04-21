@@ -106,7 +106,7 @@ exports[`Switch renders correctly 1`] = `
     >
       <Box
         active={true}
-        className="sc-gtssRu kaWGGz"
+        className="sc-gtssRu esCAOM"
         onClick={[Function]}
         onClickSwitch={[MockFunction]}
         palette={
@@ -152,7 +152,7 @@ exports[`Switch renders correctly 1`] = `
       >
         <Component
           active={true}
-          className="sc-gtssRu kaWGGz"
+          className="sc-gtssRu esCAOM"
           onClick={[Function]}
           onClickSwitch={[MockFunction]}
           palette={
@@ -198,7 +198,7 @@ exports[`Switch renders correctly 1`] = `
         >
           <StyledBox
             active={true}
-            className="sc-gtssRu kaWGGz"
+            className="sc-gtssRu esCAOM"
             onClick={[Function]}
             onClickSwitch={[MockFunction]}
             palette={
@@ -243,7 +243,7 @@ exports[`Switch renders correctly 1`] = `
             w={90}
           >
             <div
-              className="sc-bdnylx erHxtI sc-gtssRu kaWGGz"
+              className="sc-bdnylx erHxtI sc-gtssRu esCAOM"
               onClick={[Function]}
               onClickSwitch={[MockFunction]}
               style={
@@ -468,12 +468,12 @@ exports[`Switch renders correctly 1`] = `
               >
                 <Box
                   active={true}
-                  className="sc-hKFyIo sc-eCApGN eVfDkE bHvCse"
+                  className="sc-hKFyIo sc-eCApGN lfudhx bHvCse"
                   style={Object {}}
                 >
                   <Component
                     active={true}
-                    className="sc-hKFyIo sc-eCApGN eVfDkE bHvCse"
+                    className="sc-hKFyIo sc-eCApGN lfudhx bHvCse"
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -511,7 +511,7 @@ exports[`Switch renders correctly 1`] = `
                   >
                     <StyledBox
                       active={true}
-                      className="sc-hKFyIo sc-eCApGN eVfDkE bHvCse"
+                      className="sc-hKFyIo sc-eCApGN lfudhx bHvCse"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -548,7 +548,7 @@ exports[`Switch renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx hKVIpd sc-hKFyIo sc-eCApGN eVfDkE bHvCse"
+                        className="sc-bdnylx hKVIpd sc-hKFyIo sc-eCApGN lfudhx bHvCse"
                         style={Object {}}
                       >
                         Switch
