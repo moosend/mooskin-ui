@@ -17,8 +17,6 @@ export const Label: React.FC<ILabelComponentProps> = withMooskinContext((props) 
 		!props.disabled && props.onClick && props.onClick(e);
 	};
 
-	console.log(props);
-
 	const children =
 		props.limit && typeof props.children === 'string'
 			? props.children && props.children.length > props.limit
