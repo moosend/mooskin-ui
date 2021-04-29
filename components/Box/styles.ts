@@ -30,6 +30,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		font-style: ${(props) => props.fontStyle};
 		text-transform: ${(props) => props.textTransform};
 		text-decoration: ${(props) => props.textDecoration};
+		white-space: ${(props) => props.whiteSpace};
 
 		width: ${(props) => getNumberOrStringValue(props.w)};
 		height: ${(props) => getNumberOrStringValue(props.h)};
