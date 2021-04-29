@@ -25,10 +25,6 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
 	background-color: ${(props) => props.palette?.backgroundColors.tag || variables.backgroundColors.tag};
 	font-family: Hind;
 	font-size: 12px;
-	font-weight: normal;
-	font-stretch: normal;
-	font-style: normal;
-	letter-spacing: normal;
 	color: ${(props) => props.palette?.fontColors.tag || variables.fontColors.tag};
 	cursor: pointer;
 	align-items: center;
@@ -39,6 +35,18 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
 `;
 
 StyledTag.displayName = 'StyledTag';
+
+export const StyledTagText = styled(Box)<ITagComponentProps>`
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	white-space: inherit;
+	max-width: 70px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+`;
+
+StyledTagText.displayName = 'StyledTagText';
 
 export const StyledTagClose = styled(Box)<IBoxComponentProps>`
 	opacity: 0.5;

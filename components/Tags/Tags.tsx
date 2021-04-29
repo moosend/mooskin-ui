@@ -9,7 +9,7 @@ import { IBoxComponentProps } from '../Box/model';
 import { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Styled Components
-import { StyledTag, StyledTagClose, StyledTagInput, StyledTags } from './styles';
+import { StyledTag, StyledTagClose, StyledTagInput, StyledTags, StyledTagText } from './styles';
 
 /**
  * Tags
@@ -47,7 +47,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 				return React.cloneElement(child, {
 					children: (
 						<>
-							{recurseChildren((child.props as any).children)}
+							<StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>
 							{child.props.removeIcon && props.onRemoveTag && <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>}
 						</>
 					),

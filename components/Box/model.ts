@@ -1,8 +1,10 @@
-import { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors } from '../Styled/model';
+// import { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors } from '../Styled/model';
+import { IMooskinContext } from '../Styled/model';
 
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 export type BoxShadowIntensityType = IntensityType | 'inner' | 'outline';
-export type NestedThemeType = [keyof IStyledTheme, keyof IThemeFontColors | keyof IThemeBorderColors | keyof IThemeBackgroundColors];
+// export type NestedThemeType = [keyof IStyledTheme, keyof IThemeFontColors | keyof IThemeBorderColors | keyof IThemeBackgroundColors];
+export type NestedThemeType = [string, string];
 
 export const boxComponentProps = [
 	'id',
@@ -382,6 +384,9 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 
 	/** rounds the element */
 	round?: IntensityType;
+
+	/** white space */
+	whiteSpace?: React.CSSProperties['whiteSpace'];
 
 	/** hover */
 	_hover?: string;
