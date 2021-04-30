@@ -114,6 +114,8 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		cursor: ${(props) => props.cursor};
 
+		all: ${(props) => props.all};
+
 		:hover {
 			${(props) => props._hover}
 		}

@@ -391,6 +391,9 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	/** hover */
 	_hover?: string;
 
+	/** all */
+	all?: React.CSSProperties['all'];
+
 	/** hide box based on device size */
 	lgHide?: boolean;
 	mdHide?: boolean;
