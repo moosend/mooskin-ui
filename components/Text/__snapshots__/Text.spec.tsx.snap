@@ -191,7 +191,7 @@ exports[`Text renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx hKVIpd sc-gtssRu ckndBS"
+              className="sc-bdnylx sROTQ sc-gtssRu ckndBS"
               style={Object {}}
             >
               Text here!

@@ -197,7 +197,7 @@ exports[`Input renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx hKVIpd sc-hKFyIo iFRuMf"
+              className="sc-bdnylx sROTQ sc-hKFyIo iFRuMf"
               onChangeInput={[MockFunction]}
               style={Object {}}
             >
@@ -409,7 +409,7 @@ exports[`Input renders correctly 1`] = `
                           wrapped={true}
                         >
                           <input
-                            className="sc-bdnylx hKVIpd sc-eCApGN sc-gKAblj ddluuA iJgPne"
+                            className="sc-bdnylx sROTQ sc-eCApGN sc-gKAblj ddluuA iJgPne"
                             onChange={[Function]}
                             style={Object {}}
                           />
@@ -553,7 +553,7 @@ exports[`Input renders correctly 1`] = `
                         zIndex={0}
                       >
                         <div
-                          className="sc-bdnylx kfOMSE"
+                          className="sc-bdnylx ksXiZt"
                           color="inherit"
                           style={Object {}}
                         >
@@ -757,7 +757,7 @@ exports[`Input renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <div
-                                        className="sc-bdnylx dMncrE sc-fujyUd fWdDRH"
+                                        className="sc-bdnylx dDpbjp sc-fujyUd fWdDRH"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -945,7 +945,7 @@ exports[`Input renders correctly 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="sc-bdnylx kvevrF"
+                          className="sc-bdnylx bvWWc"
                           color="inherit"
                           onChangeEmoji={[Function]}
                           style={Object {}}
@@ -1150,7 +1150,7 @@ exports[`Input renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <div
-                                        className="sc-bdnylx dMncrE sc-fujyUd fWdDRH"
+                                        className="sc-bdnylx dDpbjp sc-fujyUd fWdDRH"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -1363,7 +1363,7 @@ exports[`Input renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dMncrE sc-fujyUd fWdDRH"
+                            className="sc-bdnylx dDpbjp sc-fujyUd fWdDRH"
                             style={Object {}}
                           >
                             search

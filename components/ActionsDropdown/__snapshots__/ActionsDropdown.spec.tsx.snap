@@ -201,7 +201,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx eKyzSX sc-gtssRu JXnZp"
+              className="sc-bdnylx eCyA-Dm sc-gtssRu JXnZp"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -395,7 +395,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx hKVIpd sc-hKFyIo kPnGBi"
+                            className="sc-bdnylx sROTQ sc-hKFyIo kPnGBi"
                             style={Object {}}
                           />
                         </StyledBox>
@@ -613,7 +613,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx hKVIpd sc-dlnjPT fJaUfw"
+                            className="sc-bdnylx sROTQ sc-dlnjPT fJaUfw"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -835,7 +835,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx hKVIpd sc-dlnjPT fJaUfw"
+                            className="sc-bdnylx sROTQ sc-dlnjPT fJaUfw"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -1057,7 +1057,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx hKVIpd sc-dlnjPT fJaUfw"
+                            className="sc-bdnylx sROTQ sc-dlnjPT fJaUfw"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -1300,7 +1300,7 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
             }
           >
             <div
-              className="sc-bdnylx hKVIpd sc-dlnjPT fJaUfw myClass"
+              className="sc-bdnylx sROTQ sc-dlnjPT fJaUfw myClass"
               onClick={[MockFunction]}
               style={
                 Object {
