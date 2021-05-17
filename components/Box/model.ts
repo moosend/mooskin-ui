@@ -161,7 +161,7 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	py?: number | string;
 
 	/** color */
-	color?: React.CSSProperties['color'] | NestedThemeType;
+	color?: React.CSSProperties['color'] | NestedThemeType | any;
 
 	/** opacity */
 	opacity?: React.CSSProperties['opacity'];

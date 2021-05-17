@@ -70,6 +70,7 @@ export { Tabs, TabContent, TabHeader, Tab } from '../Tabs/Tabs';
 export { Tags, TagClose, TagInput, Tag } from '../Tags/Tags';
 export { Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from '../Table/Table';
 export { Footer, FooterBody, FooterEnd, FooterHead } from '../Footer/Footer';
+export { Slider } from '../Slider/Slider';
 
 // Models
 export { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from '../ActionsDropdown/model';
@@ -138,6 +139,7 @@ export { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } fro
 export { ITextAreaComponentProps } from '../TextArea/model';
 export { IPersonalizationTag, ITextEditorComponentProps } from '../TextEditor/model';
 export { IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors, IMooskinContext, IStyledTheme } from '../Styled/model';
+export { ISliderComponentProps } from '../Slider/model';
 
 // Global Styles
 export { GlobalStyle } from '../Styled/GlobalStyles';
