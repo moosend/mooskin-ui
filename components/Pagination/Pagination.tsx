@@ -28,6 +28,8 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 		setShowLast(false);
 	}, []);
 
+	const childrenLength = props.children && Array.isArray(props.children) && props.children.length;
+
 	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, page: number, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
 		props.onClickButton && props.onClickButton(e, page);
 		callback && callback(e);
@@ -46,7 +48,12 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 			if (React.isValidElement<IPaginationButtonComponentProps>(child) && child.type === PaginationButton) {
 				const page = i + 1;
 
-				const condition = props.activePage >= 4 ? page - 2 <= props.activePage && page + 2 >= props.activePage : page <= 5;
+				const condition =
+					childrenLength && props.activePage >= childrenLength - 1
+						? page >= childrenLength - 4
+						: props.activePage >= 4
+						? page - 2 <= props.activePage && page + 2 >= props.activePage
+						: page <= 5;
 
 				if (children[props.activePage - 4] && !showPrevious) {
 					setShowPrevious(true);
@@ -91,8 +98,6 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 		});
 	};
 
-	const childrenLength = props.children && Array.isArray(props.children) && props.children.length;
-
 	return (
 		<StyledPagination {...props}>
 			{!showAll && showFirst && (
@@ -116,7 +121,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 					last_page
 				</IconButton>
 			)}
-			{childrenLength && childrenLength > 5 && (
+			{childrenLength && childrenLength > 3 && (
 				<StyledPaginationShowAll onClick={() => setShowAll(!showAll)}>{showAll ? 'Hide' : 'Show all'}</StyledPaginationShowAll>
 			)}
 		</StyledPagination>
