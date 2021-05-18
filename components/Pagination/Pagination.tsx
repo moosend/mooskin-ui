@@ -100,24 +100,42 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 
 	return (
 		<StyledPagination {...props}>
-			{!showAll && showFirst && (
-				<IconButton onClick={() => onArrowClick(1)} color={['backgroundColors', 'toggle']}>
+			{!showAll && (
+				<IconButton
+					cursor={showFirst ? 'pointer' : 'not-allowed'}
+					onClick={showFirst ? () => onArrowClick(1) : undefined}
+					color={showFirst ? ['backgroundColors', 'toggle'] : 'rgb(157, 157, 157)'}
+				>
 					first_page
 				</IconButton>
 			)}
-			{!showAll && showPrevious && (
-				<IconButton mr={10} onClick={() => onArrowClick(props.activePage - 1)} color={['backgroundColors', 'toggle']}>
+			{!showAll && (
+				<IconButton
+					cursor={showPrevious ? 'pointer' : 'not-allowed'}
+					mr={10}
+					onClick={showPrevious ? () => onArrowClick(props.activePage - 1) : undefined}
+					color={showPrevious ? ['backgroundColors', 'toggle'] : 'rgb(157, 157, 157)'}
+				>
 					chevron_left
 				</IconButton>
 			)}
 			{recurseChildren(props.children)}
-			{!showAll && showNext && (
-				<IconButton onClick={() => onArrowClick(props.activePage + 1)} color={['backgroundColors', 'toggle']}>
+			{!showAll && (
+				<IconButton
+					cursor={showNext ? 'pointer' : 'not-allowed'}
+					onClick={showNext ? () => onArrowClick(props.activePage + 1) : undefined}
+					color={showNext ? ['backgroundColors', 'toggle'] : 'rgb(157, 157, 157)'}
+				>
 					chevron_right
 				</IconButton>
 			)}
-			{!showAll && showLast && (
-				<IconButton onClick={() => childrenLength && onArrowClick(childrenLength)} mr={10} color={['backgroundColors', 'toggle']}>
+			{!showAll && (
+				<IconButton
+					cursor={showLast ? 'pointer' : 'not-allowed'}
+					onClick={showLast ? () => childrenLength && onArrowClick(childrenLength) : undefined}
+					mr={10}
+					color={showLast ? ['backgroundColors', 'toggle'] : 'rgb(157, 157, 157)'}
+				>
 					last_page
 				</IconButton>
 			)}
