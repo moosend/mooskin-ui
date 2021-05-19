@@ -55,27 +55,27 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 						? page - 2 <= props.activePage && page + 2 >= props.activePage
 						: page <= 5;
 
-				if (children[props.activePage - 4] && !showPrevious) {
+				if (children[props.activePage - 2] && !showPrevious) {
 					setShowPrevious(true);
-				} else if (!children[props.activePage - 4] && showPrevious) {
+				} else if (!children[props.activePage - 2] && showPrevious) {
 					setShowPrevious(false);
 				}
 
-				if (children[props.activePage - 4] && !showFirst) {
+				if (children[props.activePage - 2] && !showFirst) {
 					setShowFirst(true);
-				} else if (!children[props.activePage - 4] && showFirst) {
+				} else if (!children[props.activePage - 2] && showFirst) {
 					setShowFirst(false);
 				}
 
-				if (children[props.activePage + 2] && !showNext) {
+				if (children[props.activePage] && !showNext) {
 					setShowNext(true);
-				} else if (!children[props.activePage + 2] && showNext) {
+				} else if (!children[props.activePage] && showNext) {
 					setShowNext(false);
 				}
 
-				if (children[props.activePage + 2] && !showLast) {
+				if (children[props.activePage] && !showLast) {
 					setShowLast(true);
-				} else if (!children[props.activePage + 2] && showLast) {
+				} else if (!children[props.activePage] && showLast) {
 					setShowLast(false);
 				}
 
