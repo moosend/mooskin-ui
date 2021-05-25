@@ -203,7 +203,7 @@ exports[`Pagination renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx beANOF sc-dlnjPT kra-dhH"
+              className="sc-bdnylx hdbdkm sc-dlnjPT kra-dhH"
               onClickButton={[MockFunction]}
               style={Object {}}
             >
@@ -439,7 +439,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx jqAtRZ sc-gtssRu bqGSSk"
+                            className="sc-bdnylx mYySe sc-gtssRu bqGSSk"
                             color={
                               Array [
                                 "backgroundColors",
@@ -696,7 +696,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx jkqLHY sc-gtssRu bqGSSk"
+                            className="sc-bdnylx dCkjvj sc-gtssRu bqGSSk"
                             color={
                               Array [
                                 "backgroundColors",
@@ -918,7 +918,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx beANOF sc-hKFyIo jHvdIy"
+                            className="sc-bdnylx hdbdkm sc-hKFyIo jHvdIy"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1133,7 +1133,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx beANOF sc-hKFyIo jHvdIy"
+                            className="sc-bdnylx hdbdkm sc-hKFyIo jHvdIy"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1348,7 +1348,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx beANOF sc-hKFyIo gFahEv"
+                            className="sc-bdnylx hdbdkm sc-hKFyIo gFahEv"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1563,7 +1563,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx beANOF sc-hKFyIo jHvdIy"
+                            className="sc-bdnylx hdbdkm sc-hKFyIo jHvdIy"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1778,7 +1778,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx beANOF sc-hKFyIo jHvdIy"
+                            className="sc-bdnylx hdbdkm sc-hKFyIo jHvdIy"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -2022,7 +2022,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx jqAtRZ sc-gtssRu bqGSSk"
+                            className="sc-bdnylx mYySe sc-gtssRu bqGSSk"
                             color={
                               Array [
                                 "backgroundColors",
@@ -2279,7 +2279,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx jkqLHY sc-gtssRu bqGSSk"
+                            className="sc-bdnylx dCkjvj sc-gtssRu bqGSSk"
                             color={
                               Array [
                                 "backgroundColors",
@@ -2383,7 +2383,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx beANOF sc-eCApGN jQUCfi"
+                        className="sc-bdnylx hdbdkm sc-eCApGN jQUCfi"
                         onClick={[Function]}
                         style={Object {}}
                       >

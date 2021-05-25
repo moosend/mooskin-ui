@@ -377,7 +377,7 @@ exports[`Stack renders Stack correctly 1`] = `
                 style={Object {}}
               >
                 <div
-                  className="sc-bdnylx kSxDbu sc-gtssRu iXkelt"
+                  className="sc-bdnylx blctOJ sc-gtssRu iXkelt"
                   direction="column"
                   spacing={20}
                   style={Object {}}
@@ -477,7 +477,7 @@ exports[`Stack renders Stack correctly 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="sc-bdnylx bXYFDB"
+                          className="sc-bdnylx qsFqu"
                           style={Object {}}
                         >
                           <span
@@ -587,7 +587,7 @@ exports[`Stack renders Stack correctly 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="sc-bdnylx bXYFDB"
+                          className="sc-bdnylx qsFqu"
                           style={Object {}}
                         >
                           <span

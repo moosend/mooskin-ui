@@ -118,6 +118,8 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		transition: ${(props) => props.transition};
 
+		text-overflow: ${(props) => props.textOverflow};
+
 		:hover {
 			${(props) => props._hover}
 		}

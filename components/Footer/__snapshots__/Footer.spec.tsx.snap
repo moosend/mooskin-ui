@@ -191,7 +191,7 @@ exports[`Alert renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx beANOF sc-gtssRu eHgYFh"
+              className="sc-bdnylx hdbdkm sc-gtssRu eHgYFh"
               style={Object {}}
             >
               <FooterHead
@@ -396,7 +396,7 @@ exports[`Alert renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx loIoxq sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
+                            className="sc-bdnylx eOVbex sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
                             fontSize={12}
                             fontWeight={800}
                             style={Object {}}
@@ -599,7 +599,7 @@ exports[`Alert renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx beANOF sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
+                            className="sc-bdnylx hdbdkm sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
                             style={Object {}}
                           >
                             <Button
@@ -825,7 +825,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx kMmzuF sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                          className="sc-bdnylx haFaMC sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -917,7 +917,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx beANOF sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx hdbdkm sc-pNWxx gxbiOV"
                                                       style={Object {}}
                                                     >
                                                       chevron_left
@@ -1152,7 +1152,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx fqFcWw sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                          className="sc-bdnylx hqhNTj sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -1245,7 +1245,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx beANOF sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx hdbdkm sc-pNWxx gxbiOV"
                                                       style={Object {}}
                                                     >
                                                       chevron_right
@@ -1459,7 +1459,7 @@ exports[`Alert renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx beANOF sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
+                            className="sc-bdnylx hdbdkm sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
                             style={Object {}}
                           >
                             <Button
@@ -1691,7 +1691,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx kSyiip sc-gKAblj sc-fujyUd fXTUTe dUfsSP"
+                                          className="sc-bdnylx gvXUAC sc-gKAblj sc-fujyUd fXTUTe dUfsSP"
                                           color="#37a037"
                                           onClick={[Function]}
                                           style={Object {}}

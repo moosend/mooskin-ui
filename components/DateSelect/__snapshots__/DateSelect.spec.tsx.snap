@@ -295,7 +295,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                 type="hour"
               >
                 <div
-                  className="sc-bdnylx beANOF sc-dlnjPT bUbMRD"
+                  className="sc-bdnylx hdbdkm sc-dlnjPT bUbMRD"
                   format="12-Hour"
                   onChangeSelect={[Function]}
                   style={Object {}}
@@ -498,7 +498,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                               style={Object {}}
                             >
                               <div
-                                className="sc-bdnylx beANOF sc-eCApGN iAsTcC"
+                                className="sc-bdnylx hdbdkm sc-eCApGN iAsTcC"
                                 onClick={[Function]}
                                 style={Object {}}
                               >
@@ -693,7 +693,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx beANOF sc-jSFkmK iOZlyf"
+                                              className="sc-bdnylx hdbdkm sc-jSFkmK iOZlyf"
                                               style={Object {}}
                                             >
                                               Select an option
@@ -894,7 +894,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx beANOF sc-pNWxx flvaRE"
+                                              className="sc-bdnylx hdbdkm sc-pNWxx flvaRE"
                                               style={Object {}}
                                             >
                                               keyboard_arrow_down

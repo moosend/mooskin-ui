@@ -397,6 +397,9 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	/** transition */
 	transition?: React.CSSProperties['transition'];
 
+	/** text overflow */
+	textOverflow?: React.CSSProperties['textOverflow'];
+
 	/** hide box based on device size */
 	lgHide?: boolean;
 	mdHide?: boolean;
