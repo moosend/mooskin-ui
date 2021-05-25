@@ -203,17 +203,29 @@ exports[`Pagination renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sROTQ sc-dlnjPT kra-dhH"
+              className="sc-bdnylx beANOF sc-dlnjPT kra-dhH"
               onClickButton={[MockFunction]}
               style={Object {}}
             >
               <WithMooskinContext
-                color="rgb(157, 157, 157)"
-                cursor="not-allowed"
+                color={
+                  Array [
+                    "backgroundColors",
+                    "toggle",
+                  ]
+                }
+                cursor="pointer"
+                onClick={[Function]}
               >
                 <Component
-                  color="rgb(157, 157, 157)"
-                  cursor="not-allowed"
+                  color={
+                    Array [
+                      "backgroundColors",
+                      "toggle",
+                    ]
+                  }
+                  cursor="pointer"
+                  onClick={[Function]}
                   palette={
                     Object {
                       "backgroundColors": Object {
@@ -249,8 +261,13 @@ exports[`Pagination renders correctly 1`] = `
                   }
                 >
                   <StyledIconButton
-                    color="rgb(157, 157, 157)"
-                    cursor="not-allowed"
+                    color={
+                      Array [
+                        "backgroundColors",
+                        "toggle",
+                      ]
+                    }
+                    cursor="pointer"
                     onClick={[Function]}
                     palette={
                       Object {
@@ -288,8 +305,13 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       className="sc-gtssRu bqGSSk"
-                      color="rgb(157, 157, 157)"
-                      cursor="not-allowed"
+                      color={
+                        Array [
+                          "backgroundColors",
+                          "toggle",
+                        ]
+                      }
+                      cursor="pointer"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -328,8 +350,13 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         className="sc-gtssRu bqGSSk"
-                        color="rgb(157, 157, 157)"
-                        cursor="not-allowed"
+                        color={
+                          Array [
+                            "backgroundColors",
+                            "toggle",
+                          ]
+                        }
+                        cursor="pointer"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -368,8 +395,13 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           className="sc-gtssRu bqGSSk"
-                          color="rgb(157, 157, 157)"
-                          cursor="not-allowed"
+                          color={
+                            Array [
+                              "backgroundColors",
+                              "toggle",
+                            ]
+                          }
+                          cursor="pointer"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -407,9 +439,14 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx egNmuB sc-gtssRu bqGSSk"
-                            color="rgb(157, 157, 157)"
-                            cursor="not-allowed"
+                            className="sc-bdnylx jqAtRZ sc-gtssRu bqGSSk"
+                            color={
+                              Array [
+                                "backgroundColors",
+                                "toggle",
+                              ]
+                            }
+                            cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -422,14 +459,26 @@ exports[`Pagination renders correctly 1`] = `
                 </Component>
               </WithMooskinContext>
               <WithMooskinContext
-                color="rgb(157, 157, 157)"
-                cursor="not-allowed"
+                color={
+                  Array [
+                    "backgroundColors",
+                    "toggle",
+                  ]
+                }
+                cursor="pointer"
                 mr={10}
+                onClick={[Function]}
               >
                 <Component
-                  color="rgb(157, 157, 157)"
-                  cursor="not-allowed"
+                  color={
+                    Array [
+                      "backgroundColors",
+                      "toggle",
+                    ]
+                  }
+                  cursor="pointer"
                   mr={10}
+                  onClick={[Function]}
                   palette={
                     Object {
                       "backgroundColors": Object {
@@ -465,8 +514,13 @@ exports[`Pagination renders correctly 1`] = `
                   }
                 >
                   <StyledIconButton
-                    color="rgb(157, 157, 157)"
-                    cursor="not-allowed"
+                    color={
+                      Array [
+                        "backgroundColors",
+                        "toggle",
+                      ]
+                    }
+                    cursor="pointer"
                     mr={10}
                     onClick={[Function]}
                     palette={
@@ -505,8 +559,13 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       className="sc-gtssRu bqGSSk"
-                      color="rgb(157, 157, 157)"
-                      cursor="not-allowed"
+                      color={
+                        Array [
+                          "backgroundColors",
+                          "toggle",
+                        ]
+                      }
+                      cursor="pointer"
                       mr={10}
                       onClick={[Function]}
                       palette={
@@ -546,8 +605,13 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         className="sc-gtssRu bqGSSk"
-                        color="rgb(157, 157, 157)"
-                        cursor="not-allowed"
+                        color={
+                          Array [
+                            "backgroundColors",
+                            "toggle",
+                          ]
+                        }
+                        cursor="pointer"
                         mr={10}
                         onClick={[Function]}
                         palette={
@@ -587,8 +651,13 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           className="sc-gtssRu bqGSSk"
-                          color="rgb(157, 157, 157)"
-                          cursor="not-allowed"
+                          color={
+                            Array [
+                              "backgroundColors",
+                              "toggle",
+                            ]
+                          }
+                          cursor="pointer"
                           mr={10}
                           onClick={[Function]}
                           palette={
@@ -627,9 +696,14 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx hmoRas sc-gtssRu bqGSSk"
-                            color="rgb(157, 157, 157)"
-                            cursor="not-allowed"
+                            className="sc-bdnylx jkqLHY sc-gtssRu bqGSSk"
+                            color={
+                              Array [
+                                "backgroundColors",
+                                "toggle",
+                              ]
+                            }
+                            cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -844,7 +918,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-hKFyIo jHvdIy"
+                            className="sc-bdnylx beANOF sc-hKFyIo jHvdIy"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1059,7 +1133,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-hKFyIo jHvdIy"
+                            className="sc-bdnylx beANOF sc-hKFyIo jHvdIy"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1274,7 +1348,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-hKFyIo gFahEv"
+                            className="sc-bdnylx beANOF sc-hKFyIo gFahEv"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1489,7 +1563,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-hKFyIo jHvdIy"
+                            className="sc-bdnylx beANOF sc-hKFyIo jHvdIy"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1704,7 +1778,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-hKFyIo jHvdIy"
+                            className="sc-bdnylx beANOF sc-hKFyIo jHvdIy"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1948,7 +2022,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx gDSCwg sc-gtssRu bqGSSk"
+                            className="sc-bdnylx jqAtRZ sc-gtssRu bqGSSk"
                             color={
                               Array [
                                 "backgroundColors",
@@ -2205,7 +2279,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx kqbPpB sc-gtssRu bqGSSk"
+                            className="sc-bdnylx jkqLHY sc-gtssRu bqGSSk"
                             color={
                               Array [
                                 "backgroundColors",
@@ -2309,7 +2383,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx sROTQ sc-eCApGN jQUCfi"
+                        className="sc-bdnylx beANOF sc-eCApGN jQUCfi"
                         onClick={[Function]}
                         style={Object {}}
                       >

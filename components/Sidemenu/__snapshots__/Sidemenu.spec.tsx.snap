@@ -203,7 +203,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sROTQ sc-gtssRu gGAwqn"
+              className="sc-bdnylx beANOF sc-gtssRu gGAwqn"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -416,7 +416,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-dlnjPT kjyA-DZ"
+                            className="sc-bdnylx beANOF sc-dlnjPT kjyA-DZ"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -638,7 +638,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-dlnjPT fgNFdL"
+                            className="sc-bdnylx beANOF sc-dlnjPT fgNFdL"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -860,7 +860,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-dlnjPT fgNFdL"
+                            className="sc-bdnylx beANOF sc-dlnjPT fgNFdL"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -1109,7 +1109,7 @@ exports[`Sidemenu renders SidemenuItem correctly 1`] = `
             }
           >
             <div
-              className="sc-bdnylx sROTQ sc-dlnjPT kjyA-DZ myClass"
+              className="sc-bdnylx beANOF sc-dlnjPT kjyA-DZ myClass"
               onClick={[MockFunction]}
               style={
                 Object {

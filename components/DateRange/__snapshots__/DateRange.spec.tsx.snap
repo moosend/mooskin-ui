@@ -149,7 +149,7 @@ exports[`DateRange renders correctly 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-bdnylx kbURPj"
+            className="sc-bdnylx ioFozy"
             d="flex"
             style={Object {}}
           >
@@ -360,7 +360,7 @@ exports[`DateRange renders correctly 1`] = `
                         value="20 Jun 2016 - 20 Jun 2016"
                       >
                         <input
-                          className="sc-bdnylx sROTQ sc-eCApGN sc-jSFkmK ddluuA cXFIKm"
+                          className="sc-bdnylx beANOF sc-eCApGN sc-jSFkmK ddluuA cXFIKm"
                           onFocus={[Function]}
                           style={Object {}}
                           value="20 Jun 2016 - 20 Jun 2016"

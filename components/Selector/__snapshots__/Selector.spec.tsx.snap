@@ -203,7 +203,7 @@ exports[`Selector renders Selector correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx sROTQ sc-gtssRu gkYWfH"
+              className="sc-bdnylx beANOF sc-gtssRu gkYWfH"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -416,7 +416,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-dlnjPT kpYFMT"
+                            className="sc-bdnylx beANOF sc-dlnjPT kpYFMT"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -638,7 +638,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-dlnjPT cenvKy"
+                            className="sc-bdnylx beANOF sc-dlnjPT cenvKy"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -860,7 +860,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx sROTQ sc-dlnjPT cenvKy"
+                            className="sc-bdnylx beANOF sc-dlnjPT cenvKy"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -1109,7 +1109,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
             }
           >
             <div
-              className="sc-bdnylx sROTQ sc-dlnjPT kpYFMT myClass"
+              className="sc-bdnylx beANOF sc-dlnjPT kpYFMT myClass"
               onClick={[MockFunction]}
               style={
                 Object {
