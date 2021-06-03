@@ -30,11 +30,11 @@ Normal.args = {
 				SAVE AS DRAFT
 			</FooterHead>
 			<FooterBody>
-				<Button mr={10} minW="unset">
+				<Button mr={10}>
 					<ButtonIcon>chevron_left</ButtonIcon>
 					BACK
 				</Button>
-				<Button minW="unset">
+				<Button>
 					NEXT
 					<ButtonIcon>chevron_right</ButtonIcon>
 				</Button>
