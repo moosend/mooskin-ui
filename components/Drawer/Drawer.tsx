@@ -181,7 +181,7 @@ export const DrawerCloseButton: React.FC<IBoxComponentProps> = withMooskinContex
 });
 
 DrawerCloseButton.defaultProps = {
-	className: '',
+	className: 'fal fa-times',
 	style: {},
 };
 

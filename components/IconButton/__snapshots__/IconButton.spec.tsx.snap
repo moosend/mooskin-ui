@@ -77,7 +77,7 @@ exports[`SmallIconButton renders correctly 1`] = `
       }
     >
       <Box
-        className="sc-gtssRu bqGSSk"
+        className="sc-gtssRu jXrpqA"
         onClick={[Function]}
         palette={
           Object {
@@ -115,7 +115,7 @@ exports[`SmallIconButton renders correctly 1`] = `
         style={Object {}}
       >
         <Component
-          className="sc-gtssRu bqGSSk"
+          className="sc-gtssRu jXrpqA"
           onClick={[Function]}
           palette={
             Object {
@@ -153,7 +153,7 @@ exports[`SmallIconButton renders correctly 1`] = `
           style={Object {}}
         >
           <StyledBox
-            className="sc-gtssRu bqGSSk"
+            className="sc-gtssRu jXrpqA"
             onClick={[Function]}
             palette={
               Object {
@@ -191,7 +191,7 @@ exports[`SmallIconButton renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx hdbdkm sc-gtssRu bqGSSk"
+              className="sc-bdnylx hdbdkm sc-gtssRu jXrpqA"
               onClick={[Function]}
               style={Object {}}
             >

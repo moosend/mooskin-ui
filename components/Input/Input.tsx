@@ -78,7 +78,6 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 			if (React.isValidElement<IInputListComponentProps>(child) && child.type === InputOptionList) {
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
-					icon: child.props.icon,
 					key: i,
 				} as IInputListComponentProps);
 			}
@@ -117,7 +116,7 @@ export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinCo
 	const [showList, setShowList] = React.useState(false);
 	return (
 		<Box position="relative" color="inherit" zIndex={showList ? 3 : 0} {...props.wrapperProps}>
-			<InputIcon children={props.icon} onClick={() => setShowList(!showList)} {...props.iconProps} />
+			<InputIcon onClick={() => setShowList(!showList)} {...props.iconProps} />
 			{showList && (
 				<>
 					<StyledInputOptionList w={300} {...props}>
@@ -220,7 +219,7 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = withMooskinContex
 
 	return (
 		<Box position="relative" color="inherit" {...props}>
-			<InputIcon onClick={() => setShowEmoji(!showEmoji)}>emoji_emotions</InputIcon>
+			<InputIcon className="fal fa-smile" onClick={() => setShowEmoji(!showEmoji)} />
 			{showEmoji && (
 				<Box position="absolute" right={0} zIndex={3}>
 					<Picker onSelect={onChangeEmoji} exclude={['flags']} showPreview={false} showSkinTones={false} />

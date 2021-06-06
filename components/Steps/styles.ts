@@ -48,12 +48,11 @@ export const StyledStepContent = styled(Box)<IStepCommonComponentProps>``;
 StyledStepContent.displayName = 'StyledStepContent';
 
 export const StyledStepArrow = styled(Box)<IStepCommonComponentProps>`
-	font-family: 'Mooskin Icons';
 	position: absolute;
-	top: 10px;
-	right: -5px;
+	top: 17px;
+	right: -3px;
 	color: inherit;
-	font-size: 12px;
+	font-size: 8px;
 `;
 
 StyledStepArrow.displayName = 'StyledStepArrow';

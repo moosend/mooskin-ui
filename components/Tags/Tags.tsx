@@ -48,7 +48,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 					children: (
 						<>
 							<StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>
-							{child.props.removeIcon && props.onRemoveTag && <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>}
+							{child.props.removeIcon && props.onRemoveTag && <TagClose onClick={(e) => onRemoveTag(e, i)} />}
 						</>
 					),
 					key: i,
@@ -183,7 +183,7 @@ export const TagClose: React.FC<IBoxComponentProps> = withMooskinContext((props)
 });
 
 TagClose.defaultProps = {
-	className: '',
+	className: 'fal fa-times-circle',
 	style: {},
 };
 

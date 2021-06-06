@@ -640,7 +640,7 @@ exports[`Modal renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <ModalCloseButton
-                                            className=""
+                                            className="fal fa-times"
                                             key="0/.0"
                                             onClick={[Function]}
                                             position="absolute"
@@ -649,7 +649,7 @@ exports[`Modal renders correctly 1`] = `
                                             top={10}
                                           >
                                             <Component
-                                              className=""
+                                              className="fal fa-times"
                                               onClick={[Function]}
                                               palette={
                                                 Object {
@@ -690,7 +690,7 @@ exports[`Modal renders correctly 1`] = `
                                               top={10}
                                             >
                                               <StyledModalCloseButton
-                                                className=""
+                                                className="fal fa-times"
                                                 onClick={[Function]}
                                                 palette={
                                                   Object {
@@ -731,7 +731,7 @@ exports[`Modal renders correctly 1`] = `
                                                 top={10}
                                               >
                                                 <Box
-                                                  className="sc-fujyUd bWwvNK"
+                                                  className="sc-fujyUd fmuacK fal fa-times"
                                                   onClick={[Function]}
                                                   palette={
                                                     Object {
@@ -772,7 +772,7 @@ exports[`Modal renders correctly 1`] = `
                                                   top={10}
                                                 >
                                                   <Component
-                                                    className="sc-fujyUd bWwvNK"
+                                                    className="sc-fujyUd fmuacK fal fa-times"
                                                     onClick={[Function]}
                                                     palette={
                                                       Object {
@@ -813,7 +813,7 @@ exports[`Modal renders correctly 1`] = `
                                                     top={10}
                                                   >
                                                     <StyledBox
-                                                      className="sc-fujyUd bWwvNK"
+                                                      className="sc-fujyUd fmuacK fal fa-times"
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -854,12 +854,10 @@ exports[`Modal renders correctly 1`] = `
                                                       top={10}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gGbNuZ sc-fujyUd bWwvNK"
+                                                        className="sc-bdnylx gGbNuZ sc-fujyUd fmuacK fal fa-times"
                                                         onClick={[Function]}
                                                         style={Object {}}
-                                                      >
-                                                        close
-                                                      </div>
+                                                      />
                                                     </StyledBox>
                                                   </Component>
                                                 </Box>

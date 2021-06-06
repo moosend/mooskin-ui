@@ -21,9 +21,8 @@ StyledRadio.displayName = 'StyledRadio';
 
 export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
-	font-family: 'Mooskin Icons';
 	padding-right: 10px;
-	font-size: 23px;
+	font-size: 20px;
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
 	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
 `;

@@ -253,7 +253,7 @@ exports[`Alert renders correctly 1`] = `
                   variant="left-accent"
                 >
                   <StyledAlertIcon
-                    className=""
+                    className="fal fa-info-circle "
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -292,7 +292,7 @@ exports[`Alert renders correctly 1`] = `
                     variant="left-accent"
                   >
                     <Box
-                      className="sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                      className="sc-jSFkmK sc-gKAblj hlePzs cpDLqH fal fa-info-circle "
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -331,7 +331,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <Component
-                        className="sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                        className="sc-jSFkmK sc-gKAblj hlePzs cpDLqH fal fa-info-circle "
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -370,7 +370,7 @@ exports[`Alert renders correctly 1`] = `
                         variant="left-accent"
                       >
                         <StyledBox
-                          className="sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                          className="sc-jSFkmK sc-gKAblj hlePzs cpDLqH fal fa-info-circle "
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -409,11 +409,9 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx hdbdkm sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                            className="sc-bdnylx hdbdkm sc-jSFkmK sc-gKAblj hlePzs cpDLqH fal fa-info-circle "
                             style={Object {}}
-                          >
-                            announcement
-                          </div>
+                          />
                         </StyledBox>
                       </Component>
                     </Box>
@@ -849,7 +847,7 @@ exports[`Alert renders correctly 1`] = `
                 </Component>
               </AlertDescription>
               <AlertCloseButton
-                className=""
+                className="fal fa-times"
                 key="3/.3"
                 onClick={[MockFunction]}
                 position="absolute"
@@ -860,7 +858,7 @@ exports[`Alert renders correctly 1`] = `
                 variant="left-accent"
               >
                 <Component
-                  className=""
+                  className="fal fa-times"
                   onClick={[MockFunction]}
                   palette={
                     Object {
@@ -903,7 +901,7 @@ exports[`Alert renders correctly 1`] = `
                   variant="left-accent"
                 >
                   <StyledAlertCloseButton
-                    className=""
+                    className="fal fa-times"
                     onClick={[MockFunction]}
                     palette={
                       Object {
@@ -946,7 +944,7 @@ exports[`Alert renders correctly 1`] = `
                     variant="left-accent"
                   >
                     <Box
-                      className="sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
+                      className="sc-jSFkmK sc-iCoHVE hlePzs ccprff fal fa-times"
                       onClick={[MockFunction]}
                       palette={
                         Object {
@@ -989,7 +987,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <Component
-                        className="sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
+                        className="sc-jSFkmK sc-iCoHVE hlePzs ccprff fal fa-times"
                         onClick={[MockFunction]}
                         palette={
                           Object {
@@ -1032,7 +1030,7 @@ exports[`Alert renders correctly 1`] = `
                         variant="left-accent"
                       >
                         <StyledBox
-                          className="sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
+                          className="sc-jSFkmK sc-iCoHVE hlePzs ccprff fal fa-times"
                           onClick={[MockFunction]}
                           palette={
                             Object {
@@ -1075,12 +1073,10 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx hgUOMB sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
+                            className="sc-bdnylx hgUOMB sc-jSFkmK sc-iCoHVE hlePzs ccprff fal fa-times"
                             onClick={[MockFunction]}
                             style={Object {}}
-                          >
-                            close
-                          </div>
+                          />
                         </StyledBox>
                       </Component>
                     </Box>
