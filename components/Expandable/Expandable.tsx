@@ -65,7 +65,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 			if (React.isValidElement<IExpandableCommonComponentProps>(child) && child.type === ExpandableItemButton) {
 				return React.cloneElement(child, {
 					active,
-					children: child.props.children ? recurseChildren(child.props.children, activeId, active) : 'keyboard_arrow_down',
+					children: recurseChildren(child.props.children, activeId, active),
 					key: i,
 				} as IExpandableCommonComponentProps);
 			}
@@ -157,7 +157,7 @@ export const ExpandableItemButton: React.FC<IExpandableCommonComponentProps> = w
 });
 
 ExpandableItemButton.defaultProps = {
-	className: '',
+	className: 'far fa-chevron-down',
 	style: {},
 };
 

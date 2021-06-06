@@ -96,10 +96,12 @@ export const StyledModalFooter = styled(Box)<IBoxComponentProps>`
 StyledModalFooter.displayName = 'StyledModalFooter';
 
 export const StyledModalCloseButton = styled(Box)<IBoxComponentProps>`
-	font-family: 'Mooskin Icons';
 	width: 32px;
 	height: 32px;
 	font-size: 32px;
+	display: flex;
+	align-items: center;
+	justify-items: center;
 	color: inherit;
 	cursor: pointer;
 	border-radius: 9px;

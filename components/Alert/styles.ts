@@ -68,7 +68,6 @@ export const StyledAlertDescription = styled(StyledAlertCommonText)<IBaseAlertCo
 StyledAlertDescription.displayName = 'StyledAlertDescription';
 
 const StyledAlertCommonIcon = styled(Box)<IBaseAlertComponentProps>`
-	font-family: 'Mooskin Icons';
 	color: ${(props) => (props.variant === 'solid' ? '#FFFFFF' : props.status && FontColors[props.status])};
 `;
 
@@ -77,9 +76,9 @@ StyledAlertCommonIcon.displayName = 'StyledAlertCommonIcon';
 export const StyledAlertIcon = styled(StyledAlertCommonIcon)`
 	flex-shrink: 0;
 	margin-right: 0.75rem;
-	width: 1.5rem;
-	height: 1.5rem;
-	font-size: 1.5rem;
+	/* width: 20px;
+	height: 20px; */
+	font-size: 20px;
 	display: inherit;
 `;
 
@@ -92,8 +91,8 @@ export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IBaseAlertCo
 	justify-content: center;
 	flex-shrink: 0;
 	transition: all 0.2s;
-	width: 32px;
-	height: 32px;
+	width: 30px;
+	height: 30px;
 	font-size: 20px;
 	cursor: pointer;
 	border-radius: 9px;

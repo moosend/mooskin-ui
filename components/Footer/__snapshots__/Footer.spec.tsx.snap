@@ -697,7 +697,7 @@ exports[`Alert renders correctly 1`] = `
                                   <Box
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                    className="sc-gKAblj sc-iCoHVE ggBli jOqnYU"
                                     minW="unset"
                                     mr={10}
                                     onClick={[Function]}
@@ -740,7 +740,7 @@ exports[`Alert renders correctly 1`] = `
                                     <Component
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                      className="sc-gKAblj sc-iCoHVE ggBli jOqnYU"
                                       minW="unset"
                                       mr={10}
                                       onClick={[Function]}
@@ -784,7 +784,7 @@ exports[`Alert renders correctly 1`] = `
                                         as="button"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                        className="sc-gKAblj sc-iCoHVE ggBli jOqnYU"
                                         minW="unset"
                                         mr={10}
                                         onClick={[Function]}
@@ -825,7 +825,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx haFaMC sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                          className="sc-bdnylx haFaMC sc-gKAblj sc-iCoHVE ggBli jOqnYU"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -839,11 +839,11 @@ exports[`Alert renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <Box
-                                                className="sc-pNWxx gxbiOV"
+                                                className="sc-pNWxx cqScrz"
                                                 style={Object {}}
                                               >
                                                 <Component
-                                                  className="sc-pNWxx gxbiOV"
+                                                  className="sc-pNWxx cqScrz"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -880,7 +880,7 @@ exports[`Alert renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <StyledBox
-                                                    className="sc-pNWxx gxbiOV"
+                                                    className="sc-pNWxx cqScrz"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -917,7 +917,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx hdbdkm sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx hdbdkm sc-pNWxx cqScrz"
                                                       style={Object {}}
                                                     >
                                                       chevron_left
@@ -1027,7 +1027,7 @@ exports[`Alert renders correctly 1`] = `
                                   <Box
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                    className="sc-gKAblj sc-iCoHVE ggBli jOqnYU"
                                     minW="unset"
                                     onClick={[Function]}
                                     palette={
@@ -1069,7 +1069,7 @@ exports[`Alert renders correctly 1`] = `
                                     <Component
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                      className="sc-gKAblj sc-iCoHVE ggBli jOqnYU"
                                       minW="unset"
                                       onClick={[Function]}
                                       palette={
@@ -1112,7 +1112,7 @@ exports[`Alert renders correctly 1`] = `
                                         as="button"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                        className="sc-gKAblj sc-iCoHVE ggBli jOqnYU"
                                         minW="unset"
                                         onClick={[Function]}
                                         palette={
@@ -1152,7 +1152,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx hqhNTj sc-gKAblj sc-iCoHVE fXTUTe jOqnYU"
+                                          className="sc-bdnylx hqhNTj sc-gKAblj sc-iCoHVE ggBli jOqnYU"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -1167,11 +1167,11 @@ exports[`Alert renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <Box
-                                                className="sc-pNWxx gxbiOV"
+                                                className="sc-pNWxx cqScrz"
                                                 style={Object {}}
                                               >
                                                 <Component
-                                                  className="sc-pNWxx gxbiOV"
+                                                  className="sc-pNWxx cqScrz"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -1208,7 +1208,7 @@ exports[`Alert renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <StyledBox
-                                                    className="sc-pNWxx gxbiOV"
+                                                    className="sc-pNWxx cqScrz"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -1245,7 +1245,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx hdbdkm sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx hdbdkm sc-pNWxx cqScrz"
                                                       style={Object {}}
                                                     >
                                                       chevron_right
@@ -1561,7 +1561,7 @@ exports[`Alert renders correctly 1`] = `
                                     borderColor="#37a037"
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-fujyUd fXTUTe dUfsSP"
+                                    className="sc-gKAblj sc-fujyUd ggBli dUfsSP"
                                     color="#37a037"
                                     inverseStyle={true}
                                     onClick={[Function]}
@@ -1605,7 +1605,7 @@ exports[`Alert renders correctly 1`] = `
                                       borderColor="#37a037"
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-fujyUd fXTUTe dUfsSP"
+                                      className="sc-gKAblj sc-fujyUd ggBli dUfsSP"
                                       color="#37a037"
                                       inverseStyle={true}
                                       onClick={[Function]}
@@ -1650,7 +1650,7 @@ exports[`Alert renders correctly 1`] = `
                                         borderColor="#37a037"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-fujyUd fXTUTe dUfsSP"
+                                        className="sc-gKAblj sc-fujyUd ggBli dUfsSP"
                                         color="#37a037"
                                         inverseStyle={true}
                                         onClick={[Function]}
@@ -1691,7 +1691,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx gvXUAC sc-gKAblj sc-fujyUd fXTUTe dUfsSP"
+                                          className="sc-bdnylx gvXUAC sc-gKAblj sc-fujyUd ggBli dUfsSP"
                                           color="#37a037"
                                           onClick={[Function]}
                                           style={Object {}}

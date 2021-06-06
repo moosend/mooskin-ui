@@ -705,11 +705,11 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                   </Component>
                                 </SelectPlaceholder>
                                 <SelectIcon
-                                  className=""
+                                  className="far fa-chevron-down"
                                   style={Object {}}
                                 >
                                   <Component
-                                    className=""
+                                    className="far fa-chevron-down"
                                     palette={
                                       Object {
                                         "backgroundColors": Object {
@@ -746,7 +746,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                     style={Object {}}
                                   >
                                     <StyledSelectIcon
-                                      className=""
+                                      className="far fa-chevron-down"
                                       palette={
                                         Object {
                                           "backgroundColors": Object {
@@ -783,7 +783,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-pNWxx flvaRE"
+                                        className="sc-pNWxx eFJFrx far fa-chevron-down"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -820,7 +820,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <Component
-                                          className="sc-pNWxx flvaRE"
+                                          className="sc-pNWxx eFJFrx far fa-chevron-down"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -857,7 +857,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <StyledBox
-                                            className="sc-pNWxx flvaRE"
+                                            className="sc-pNWxx eFJFrx far fa-chevron-down"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -894,11 +894,9 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx hdbdkm sc-pNWxx flvaRE"
+                                              className="sc-bdnylx hdbdkm sc-pNWxx eFJFrx far fa-chevron-down"
                                               style={Object {}}
-                                            >
-                                              keyboard_arrow_down
-                                            </div>
+                                            />
                                           </StyledBox>
                                         </Component>
                                       </Box>

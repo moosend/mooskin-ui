@@ -45,14 +45,14 @@ Normal.args = {
 				value="Input"
 			>
 				<Input />
-				<InputOptionList icon="check">
+				<InputOptionList iconProps={{ className: 'far fa-check' }}>
 					<InputOptionListTitle>Personalization Tags</InputOptionListTitle>
 					<InputOption value="tag1">Tag 1</InputOption>
 					<InputOption value="tag2">Tag 2</InputOption>
 					<InputOption value="tag3">Tag 3</InputOption>
 				</InputOptionList>
 				<InputEmoji />
-				<InputIcon>search</InputIcon>
+				<InputIcon className="far fa-search" />
 			</InputContainer>
 		</>
 	),

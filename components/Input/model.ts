@@ -38,9 +38,6 @@ export interface IInputEmojiComponentProps extends IBoxComponentProps {
 }
 
 export interface IInputListComponentProps extends IBoxComponentProps {
-	/** icon to be shown for toggling the dropdown */
-	icon: string;
-
 	iconProps?: IBoxComponentProps;
 
 	wrapperProps?: IBoxComponentProps;

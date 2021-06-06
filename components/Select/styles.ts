@@ -127,8 +127,7 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
 StyledSelectOption.displayName = 'StyledSelectOption';
 
 export const StyledSelectIcon = styled(Box)<IBoxComponentProps>`
-	font-family: 'Mooskin Icons';
-	font-size: 20px;
+	font-size: 12px;
 	display: flex;
 	align-items: center;
 	padding: 0 15px;

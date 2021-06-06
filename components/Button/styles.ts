@@ -69,7 +69,6 @@ export const StyledButtonInverse = styled(ButtonDefault)`
 StyledButtonInverse.displayName = 'StyledButtonInverse';
 
 export const StyledButtonIcon = styled(Box)`
-	font-family: 'Mooskin Icons Round';
 	font-size: 13px;
 	font-style: normal;
 	color: inherit;

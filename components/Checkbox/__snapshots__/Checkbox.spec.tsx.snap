@@ -209,14 +209,14 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
               style={Object {}}
             >
               <CheckboxIcon
-                className=""
+                className="far fa-check-square "
                 color="red"
                 key="0/.0"
                 onClick={[Function]}
                 style={Object {}}
               >
                 <Component
-                  className=""
+                  className="far fa-check-square "
                   color="red"
                   onClick={[Function]}
                   palette={
@@ -255,7 +255,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                   style={Object {}}
                 >
                   <StyledCheckboxIcon
-                    className=""
+                    className="far fa-check-square "
                     color="red"
                     onClick={[Function]}
                     palette={
@@ -294,7 +294,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                     style={Object {}}
                   >
                     <Box
-                      className="sc-eCApGN eSmmaN"
+                      className="sc-eCApGN kHpvee far fa-check-square "
                       color="red"
                       onClick={[Function]}
                       palette={
@@ -333,7 +333,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-eCApGN eSmmaN"
+                        className="sc-eCApGN kHpvee far fa-check-square "
                         color="red"
                         onClick={[Function]}
                         palette={
@@ -372,7 +372,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-eCApGN eSmmaN"
+                          className="sc-eCApGN kHpvee far fa-check-square "
                           color="red"
                           onClick={[Function]}
                           palette={
@@ -411,13 +411,11 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx chtfyN sc-eCApGN eSmmaN"
+                            className="sc-bdnylx chtfyN sc-eCApGN kHpvee far fa-check-square "
                             color="red"
                             onClick={[Function]}
                             style={Object {}}
-                          >
-                            check_box
-                          </div>
+                          />
                         </StyledBox>
                       </Component>
                     </Box>

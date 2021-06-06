@@ -304,7 +304,7 @@ exports[`Pagination renders correctly 1`] = `
                     }
                   >
                     <Box
-                      className="sc-gtssRu bqGSSk"
+                      className="sc-gtssRu jXrpqA"
                       color={
                         Array [
                           "backgroundColors",
@@ -349,7 +349,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gtssRu bqGSSk"
+                        className="sc-gtssRu jXrpqA"
                         color={
                           Array [
                             "backgroundColors",
@@ -394,7 +394,7 @@ exports[`Pagination renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-gtssRu bqGSSk"
+                          className="sc-gtssRu jXrpqA"
                           color={
                             Array [
                               "backgroundColors",
@@ -439,7 +439,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx mYySe sc-gtssRu bqGSSk"
+                            className="sc-bdnylx mYySe sc-gtssRu jXrpqA"
                             color={
                               Array [
                                 "backgroundColors",
@@ -558,7 +558,7 @@ exports[`Pagination renders correctly 1`] = `
                     }
                   >
                     <Box
-                      className="sc-gtssRu bqGSSk"
+                      className="sc-gtssRu jXrpqA"
                       color={
                         Array [
                           "backgroundColors",
@@ -604,7 +604,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gtssRu bqGSSk"
+                        className="sc-gtssRu jXrpqA"
                         color={
                           Array [
                             "backgroundColors",
@@ -650,7 +650,7 @@ exports[`Pagination renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-gtssRu bqGSSk"
+                          className="sc-gtssRu jXrpqA"
                           color={
                             Array [
                               "backgroundColors",
@@ -696,7 +696,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dCkjvj sc-gtssRu bqGSSk"
+                            className="sc-bdnylx dCkjvj sc-gtssRu jXrpqA"
                             color={
                               Array [
                                 "backgroundColors",
@@ -1887,7 +1887,7 @@ exports[`Pagination renders correctly 1`] = `
                     }
                   >
                     <Box
-                      className="sc-gtssRu bqGSSk"
+                      className="sc-gtssRu jXrpqA"
                       color={
                         Array [
                           "backgroundColors",
@@ -1932,7 +1932,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gtssRu bqGSSk"
+                        className="sc-gtssRu jXrpqA"
                         color={
                           Array [
                             "backgroundColors",
@@ -1977,7 +1977,7 @@ exports[`Pagination renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-gtssRu bqGSSk"
+                          className="sc-gtssRu jXrpqA"
                           color={
                             Array [
                               "backgroundColors",
@@ -2022,7 +2022,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx mYySe sc-gtssRu bqGSSk"
+                            className="sc-bdnylx mYySe sc-gtssRu jXrpqA"
                             color={
                               Array [
                                 "backgroundColors",
@@ -2141,7 +2141,7 @@ exports[`Pagination renders correctly 1`] = `
                     }
                   >
                     <Box
-                      className="sc-gtssRu bqGSSk"
+                      className="sc-gtssRu jXrpqA"
                       color={
                         Array [
                           "backgroundColors",
@@ -2187,7 +2187,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gtssRu bqGSSk"
+                        className="sc-gtssRu jXrpqA"
                         color={
                           Array [
                             "backgroundColors",
@@ -2233,7 +2233,7 @@ exports[`Pagination renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-gtssRu bqGSSk"
+                          className="sc-gtssRu jXrpqA"
                           color={
                             Array [
                               "backgroundColors",
@@ -2279,7 +2279,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dCkjvj sc-gtssRu bqGSSk"
+                            className="sc-bdnylx dCkjvj sc-gtssRu jXrpqA"
                             color={
                               Array [
                                 "backgroundColors",
