@@ -72,7 +72,8 @@ export const StyledInputOverlay = styled(Box)<IBoxComponentProps>`
 StyledInputOverlay.displayName = 'StyledInputOverlay';
 
 export const StyledInputIcon = styled(Box)<IBoxComponentProps>`
-	font-size: 16px;
+	font-family: 'Mooskin Icons';
+	font-size: 20px;
 	display: flex;
 	align-items: center;
 	color: inherit;

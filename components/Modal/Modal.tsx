@@ -144,11 +144,11 @@ ModalFooter.displayName = 'ModalFooter';
  * ModalCloseButton
  */
 export const ModalCloseButton: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledModalCloseButton {...props} />;
+	return <StyledModalCloseButton {...props} children="close" />;
 });
 
 ModalCloseButton.defaultProps = {
-	className: 'fal fa-times',
+	className: '',
 	style: {},
 };
 

@@ -10,10 +10,10 @@ import { IBaseAlertComponentProps } from './model';
 import { StyledAlert, StyledAlertCloseButton, StyledAlertDescription, StyledAlertIcon, StyledAlertTitle } from './styles';
 
 const AlertIcons = {
-	error: 'fal fa-exclamation-circle',
-	info: 'fal fa-info-circle',
-	success: 'fal fa-check-circle',
-	warning: 'fal fa-exclamation-triangle',
+	error: 'error',
+	info: 'announcement',
+	success: 'check_circle',
+	warning: 'warning',
 };
 
 /**
@@ -62,7 +62,7 @@ Alert.displayName = 'Alert';
  * AlertIcon
  */
 export const AlertIcon: React.FC<IBaseAlertComponentProps> = withMooskinContext((props) => {
-	return <StyledAlertIcon {...props} className={`${props.status && AlertIcons[props.status]} ${props.className}`} />;
+	return <StyledAlertIcon {...props} children={props.status && AlertIcons[props.status]} />;
 });
 
 AlertIcon.defaultProps = {
@@ -104,11 +104,11 @@ AlertDescription.displayName = 'AlertDescription';
  * AlertCloseButton
  */
 export const AlertCloseButton: React.FC<IBaseAlertComponentProps> = withMooskinContext((props) => {
-	return <StyledAlertCloseButton {...props} />;
+	return <StyledAlertCloseButton {...props} children="close" />;
 });
 
 AlertCloseButton.defaultProps = {
-	className: 'fal fa-times',
+	className: '',
 	style: {},
 };
 

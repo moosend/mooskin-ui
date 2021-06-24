@@ -304,7 +304,7 @@ exports[`Pagination renders correctly 1`] = `
                     }
                   >
                     <Box
-                      className="sc-gtssRu jXrpqA"
+                      className="sc-gtssRu bqGSSk"
                       cursor="pointer"
                       fontColor={
                         Array [
@@ -349,7 +349,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gtssRu jXrpqA"
+                        className="sc-gtssRu bqGSSk"
                         cursor="pointer"
                         fontColor={
                           Array [
@@ -394,7 +394,7 @@ exports[`Pagination renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-gtssRu jXrpqA"
+                          className="sc-gtssRu bqGSSk"
                           cursor="pointer"
                           fontColor={
                             Array [
@@ -439,7 +439,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx bGdbLR sc-gtssRu jXrpqA"
+                            className="sc-bdnylx mYySe sc-gtssRu bqGSSk"
                             cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}
@@ -552,7 +552,7 @@ exports[`Pagination renders correctly 1`] = `
                     }
                   >
                     <Box
-                      className="sc-gtssRu jXrpqA"
+                      className="sc-gtssRu bqGSSk"
                       cursor="pointer"
                       fontColor={
                         Array [
@@ -598,7 +598,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gtssRu jXrpqA"
+                        className="sc-gtssRu bqGSSk"
                         cursor="pointer"
                         fontColor={
                           Array [
@@ -644,7 +644,7 @@ exports[`Pagination renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-gtssRu jXrpqA"
+                          className="sc-gtssRu bqGSSk"
                           cursor="pointer"
                           fontColor={
                             Array [
@@ -690,7 +690,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx iSTsko sc-gtssRu jXrpqA"
+                            className="sc-bdnylx dCkjvj sc-gtssRu bqGSSk"
                             cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}
@@ -1875,7 +1875,7 @@ exports[`Pagination renders correctly 1`] = `
                     }
                   >
                     <Box
-                      className="sc-gtssRu jXrpqA"
+                      className="sc-gtssRu bqGSSk"
                       cursor="pointer"
                       fontColor={
                         Array [
@@ -1920,7 +1920,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gtssRu jXrpqA"
+                        className="sc-gtssRu bqGSSk"
                         cursor="pointer"
                         fontColor={
                           Array [
@@ -1965,7 +1965,7 @@ exports[`Pagination renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-gtssRu jXrpqA"
+                          className="sc-gtssRu bqGSSk"
                           cursor="pointer"
                           fontColor={
                             Array [
@@ -2010,7 +2010,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx bGdbLR sc-gtssRu jXrpqA"
+                            className="sc-bdnylx mYySe sc-gtssRu bqGSSk"
                             cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}
@@ -2123,7 +2123,7 @@ exports[`Pagination renders correctly 1`] = `
                     }
                   >
                     <Box
-                      className="sc-gtssRu jXrpqA"
+                      className="sc-gtssRu bqGSSk"
                       cursor="pointer"
                       fontColor={
                         Array [
@@ -2169,7 +2169,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-gtssRu jXrpqA"
+                        className="sc-gtssRu bqGSSk"
                         cursor="pointer"
                         fontColor={
                           Array [
@@ -2215,7 +2215,7 @@ exports[`Pagination renders correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-gtssRu jXrpqA"
+                          className="sc-gtssRu bqGSSk"
                           cursor="pointer"
                           fontColor={
                             Array [
@@ -2261,7 +2261,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx iSTsko sc-gtssRu jXrpqA"
+                            className="sc-bdnylx dCkjvj sc-gtssRu bqGSSk"
                             cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}

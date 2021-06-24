@@ -131,7 +131,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 					children: (
 						<>
 							{recurseChildren(child.props.children)}
-							{active && <SelectIcon className="fal fa-check" p={0} />}
+							{active && <SelectIcon children="check" p="0" fontSize={15} />}
 						</>
 					),
 					key: i,
@@ -193,7 +193,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 									onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
 								/>
 							)}
-							{!hasDropdownIcon && <SelectIcon className={!showList ? 'far fa-chevron-down' : 'far fa-chevron-up'} />}
+							{!hasDropdownIcon && <SelectIcon>{!showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}</SelectIcon>}
 						</>
 					),
 					key: i,
@@ -204,7 +204,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectIcon) {
 				!hasDropdownIcon && setHasDropdownIcon(true);
 				return React.cloneElement(child, {
-					className: !showList ? `far fa-chevron-down ${child.props.className}` : `far fa-chevron-up ${child.props.className}`,
+					children: !showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up',
 					key: i,
 					onClick: toggleList,
 				} as IBoxComponentProps);
@@ -380,9 +380,9 @@ export const SelectPagination: React.FC<ISelectPaginationComponentProps> = withM
 	};
 	return (
 		<StyledSelectPagination {...props}>
-			<SelectIcon onClick={(e) => onClick(e, 'left')} className="far fa-chevron-left" />
+			<SelectIcon onClick={(e) => onClick(e, 'left')}>keyboard_arrow_left</SelectIcon>
 			<StyledPaginationPage>{props.page}</StyledPaginationPage>
-			<SelectIcon onClick={(e) => onClick(e, 'right')} className="far fa-chevron-right" />
+			<SelectIcon onClick={(e) => onClick(e, 'right')}>keyboard_arrow_right</SelectIcon>
 		</StyledSelectPagination>
 	);
 });

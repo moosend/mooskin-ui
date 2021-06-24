@@ -23,13 +23,13 @@ const Template: Story<IIconButtonComponentProps> = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-	className: 'far fa-coffee',
+	children: 'check',
 	onClick: (e: React.MouseEvent<HTMLElement>) => console.log(e),
 } as IIconButtonComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-	className: 'far fa-coffee',
+	children: 'close',
 	disabled: true,
 	onClick: (e: React.MouseEvent<HTMLElement>) => console.log(e),
 } as IIconButtonComponentProps;

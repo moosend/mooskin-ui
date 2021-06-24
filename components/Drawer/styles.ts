@@ -223,12 +223,10 @@ export const StyledDrawerFooter = styled(Box)<IBoxComponentProps>`
 StyledDrawerFooter.displayName = 'StyledDrawerFooter';
 
 export const StyledDrawerCloseButton = styled(Box)<IBoxComponentProps>`
+	font-family: 'Mooskin Icons';
 	width: 32px;
 	height: 32px;
 	font-size: 32px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	cursor: pointer;
 	border-radius: 9px;
 	color: inherit;

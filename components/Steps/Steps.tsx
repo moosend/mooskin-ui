@@ -45,7 +45,7 @@ export const Steps: React.FC<IStepsComponentProps> = withMooskinContext((props) 
 					children: (
 						<>
 							{child.props.children}
-							{hasArrow && <StepArrow />}
+							{hasArrow && <StepArrow children="keyboard_arrow_right" />}
 						</>
 					),
 					onClick: (e) => (!child.props.disabled ? batchClickHandler(e, activeId, child.props.onClick) : undefined),
@@ -145,7 +145,7 @@ const StepArrow: React.FC<IStepCommonComponentProps> = withMooskinContext((props
 });
 
 StepArrow.defaultProps = {
-	className: 'fal fa-chevron-right',
+	className: '',
 	style: {},
 };
 

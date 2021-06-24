@@ -53,11 +53,11 @@ config.module.rules.push(
 			MiniCssExtractPlugin.loader,
 			{
 				loader: 'css-loader',
-				// options: {
-				// 	importLoaders: 1,
-				// 	localIdentName: '[local]___[hash:base64:5]',
-				// 	modules: true,
-				// },
+				options: {
+					importLoaders: 1,
+					localIdentName: '[local]___[hash:base64:5]',
+					modules: true,
+				},
 			},
 			'postcss-loader',
 		],

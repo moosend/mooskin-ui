@@ -29,7 +29,6 @@ StyledExpandableItem.displayName = 'StyledExpandableItem';
 
 export const StyledExpandableItemContainer = styled(Box)<IBoxComponentProps>`
 	display: flex;
-	align-items: center;
 	padding: 17px;
 	cursor: pointer;
 `;
@@ -37,7 +36,8 @@ export const StyledExpandableItemContainer = styled(Box)<IBoxComponentProps>`
 StyledExpandableItemContainer.displayName = 'StyledExpandableItemContainer';
 
 export const StyledExpandableItemButton = styled(Box)<IExpandableCommonComponentProps>`
-	font-size: 14px;
+	font-family: 'Mooskin Icons';
+	font-size: 20px;
 	transition: all ease 0.4s;
 	transform: ${(props) => (props.active ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;

@@ -502,11 +502,11 @@ exports[`Pagination renders correctly 1`] = `
                                   >
                                     Item: 1
                                     <StepArrow
-                                      className="fal fa-chevron-right"
+                                      className=""
                                       style={Object {}}
                                     >
                                       <Component
-                                        className="fal fa-chevron-right"
+                                        className=""
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -543,7 +543,7 @@ exports[`Pagination renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <StyledStepArrow
-                                          className="fal fa-chevron-right"
+                                          className=""
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -580,7 +580,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                            className="sc-jSFkmK gDhCsP"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -617,7 +617,7 @@ exports[`Pagination renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <Component
-                                              className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                              className="sc-jSFkmK gDhCsP"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -654,7 +654,7 @@ exports[`Pagination renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                className="sc-jSFkmK gDhCsP"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -691,9 +691,11 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx hdbdkm sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                  className="sc-bdnylx hdbdkm sc-jSFkmK gDhCsP"
                                                   style={Object {}}
-                                                />
+                                                >
+                                                  keyboard_arrow_right
+                                                </div>
                                               </StyledBox>
                                             </Component>
                                           </Box>
@@ -916,11 +918,11 @@ exports[`Pagination renders correctly 1`] = `
                                   >
                                     Item: 2
                                     <StepArrow
-                                      className="fal fa-chevron-right"
+                                      className=""
                                       style={Object {}}
                                     >
                                       <Component
-                                        className="fal fa-chevron-right"
+                                        className=""
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -957,7 +959,7 @@ exports[`Pagination renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <StyledStepArrow
-                                          className="fal fa-chevron-right"
+                                          className=""
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -994,7 +996,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                            className="sc-jSFkmK gDhCsP"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -1031,7 +1033,7 @@ exports[`Pagination renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <Component
-                                              className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                              className="sc-jSFkmK gDhCsP"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -1068,7 +1070,7 @@ exports[`Pagination renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                className="sc-jSFkmK gDhCsP"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -1105,9 +1107,11 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx hdbdkm sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                  className="sc-bdnylx hdbdkm sc-jSFkmK gDhCsP"
                                                   style={Object {}}
-                                                />
+                                                >
+                                                  keyboard_arrow_right
+                                                </div>
                                               </StyledBox>
                                             </Component>
                                           </Box>
@@ -1330,11 +1334,11 @@ exports[`Pagination renders correctly 1`] = `
                                   >
                                     Item: 3
                                     <StepArrow
-                                      className="fal fa-chevron-right"
+                                      className=""
                                       style={Object {}}
                                     >
                                       <Component
-                                        className="fal fa-chevron-right"
+                                        className=""
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -1371,7 +1375,7 @@ exports[`Pagination renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <StyledStepArrow
-                                          className="fal fa-chevron-right"
+                                          className=""
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -1408,7 +1412,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                            className="sc-jSFkmK gDhCsP"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -1445,7 +1449,7 @@ exports[`Pagination renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <Component
-                                              className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                              className="sc-jSFkmK gDhCsP"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -1482,7 +1486,7 @@ exports[`Pagination renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                className="sc-jSFkmK gDhCsP"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -1519,9 +1523,11 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx hdbdkm sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                  className="sc-bdnylx hdbdkm sc-jSFkmK gDhCsP"
                                                   style={Object {}}
-                                                />
+                                                >
+                                                  keyboard_arrow_right
+                                                </div>
                                               </StyledBox>
                                             </Component>
                                           </Box>
@@ -1744,11 +1750,11 @@ exports[`Pagination renders correctly 1`] = `
                                   >
                                     Item: 4
                                     <StepArrow
-                                      className="fal fa-chevron-right"
+                                      className=""
                                       style={Object {}}
                                     >
                                       <Component
-                                        className="fal fa-chevron-right"
+                                        className=""
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -1785,7 +1791,7 @@ exports[`Pagination renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <StyledStepArrow
-                                          className="fal fa-chevron-right"
+                                          className=""
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -1822,7 +1828,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                            className="sc-jSFkmK gDhCsP"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -1859,7 +1865,7 @@ exports[`Pagination renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <Component
-                                              className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                              className="sc-jSFkmK gDhCsP"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -1896,7 +1902,7 @@ exports[`Pagination renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                className="sc-jSFkmK gDhCsP"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -1933,9 +1939,11 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx hdbdkm sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                  className="sc-bdnylx hdbdkm sc-jSFkmK gDhCsP"
                                                   style={Object {}}
-                                                />
+                                                >
+                                                  keyboard_arrow_right
+                                                </div>
                                               </StyledBox>
                                             </Component>
                                           </Box>
@@ -2158,11 +2166,11 @@ exports[`Pagination renders correctly 1`] = `
                                   >
                                     Item: 5
                                     <StepArrow
-                                      className="fal fa-chevron-right"
+                                      className=""
                                       style={Object {}}
                                     >
                                       <Component
-                                        className="fal fa-chevron-right"
+                                        className=""
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -2199,7 +2207,7 @@ exports[`Pagination renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <StyledStepArrow
-                                          className="fal fa-chevron-right"
+                                          className=""
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -2236,7 +2244,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                            className="sc-jSFkmK gDhCsP"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -2273,7 +2281,7 @@ exports[`Pagination renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <Component
-                                              className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                              className="sc-jSFkmK gDhCsP"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -2310,7 +2318,7 @@ exports[`Pagination renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                className="sc-jSFkmK gDhCsP"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -2347,9 +2355,11 @@ exports[`Pagination renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <div
-                                                  className="sc-bdnylx hdbdkm sc-jSFkmK hQxcjx fal fa-chevron-right"
+                                                  className="sc-bdnylx hdbdkm sc-jSFkmK gDhCsP"
                                                   style={Object {}}
-                                                />
+                                                >
+                                                  keyboard_arrow_right
+                                                </div>
                                               </StyledBox>
                                             </Component>
                                           </Box>

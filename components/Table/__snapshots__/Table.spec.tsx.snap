@@ -800,12 +800,12 @@ exports[`Table renders correctly 1`] = `
                                                         style={Object {}}
                                                       >
                                                         <CheckboxIcon
-                                                          className="far fa-square"
+                                                          className=""
                                                           onClick={[Function]}
                                                           style={Object {}}
                                                         >
                                                           <Component
-                                                            className="far fa-square"
+                                                            className=""
                                                             onClick={[Function]}
                                                             palette={
                                                               Object {
@@ -843,7 +843,7 @@ exports[`Table renders correctly 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <StyledCheckboxIcon
-                                                              className="far fa-square"
+                                                              className=""
                                                               onClick={[Function]}
                                                               palette={
                                                                 Object {
@@ -881,7 +881,7 @@ exports[`Table renders correctly 1`] = `
                                                               style={Object {}}
                                                             >
                                                               <Box
-                                                                className="sc-eCApGN kHpvee far fa-square"
+                                                                className="sc-eCApGN eSmmaN"
                                                                 onClick={[Function]}
                                                                 palette={
                                                                   Object {
@@ -919,7 +919,7 @@ exports[`Table renders correctly 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <Component
-                                                                  className="sc-eCApGN kHpvee far fa-square"
+                                                                  className="sc-eCApGN eSmmaN"
                                                                   onClick={[Function]}
                                                                   palette={
                                                                     Object {
@@ -957,7 +957,7 @@ exports[`Table renders correctly 1`] = `
                                                                   style={Object {}}
                                                                 >
                                                                   <StyledBox
-                                                                    className="sc-eCApGN kHpvee far fa-square"
+                                                                    className="sc-eCApGN eSmmaN"
                                                                     onClick={[Function]}
                                                                     palette={
                                                                       Object {
@@ -995,10 +995,12 @@ exports[`Table renders correctly 1`] = `
                                                                     style={Object {}}
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx hdbdkm sc-eCApGN kHpvee far fa-square"
+                                                                      className="sc-bdnylx hdbdkm sc-eCApGN eSmmaN"
                                                                       onClick={[Function]}
                                                                       style={Object {}}
-                                                                    />
+                                                                    >
+                                                                      check_box_outline_blank
+                                                                    </div>
                                                                   </StyledBox>
                                                                 </Component>
                                                               </Box>
@@ -2873,17 +2875,17 @@ exports[`Table renders correctly 1`] = `
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx hdbdkm sc-hKFyIo dxNlPq"
+                                                        className="sc-bdnylx bBtRjj sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >
                                                         <CheckboxIcon
-                                                          className="far fa-square"
+                                                          className=""
                                                           onClick={[Function]}
                                                           style={Object {}}
                                                         >
                                                           <Component
-                                                            className="far fa-square"
+                                                            className=""
                                                             onClick={[Function]}
                                                             palette={
                                                               Object {
@@ -2921,7 +2923,7 @@ exports[`Table renders correctly 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <StyledCheckboxIcon
-                                                              className="far fa-square"
+                                                              className=""
                                                               onClick={[Function]}
                                                               palette={
                                                                 Object {
@@ -2959,7 +2961,7 @@ exports[`Table renders correctly 1`] = `
                                                               style={Object {}}
                                                             >
                                                               <Box
-                                                                className="sc-eCApGN kHpvee far fa-square"
+                                                                className="sc-eCApGN eSmmaN"
                                                                 onClick={[Function]}
                                                                 palette={
                                                                   Object {
@@ -2997,7 +2999,7 @@ exports[`Table renders correctly 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <Component
-                                                                  className="sc-eCApGN kHpvee far fa-square"
+                                                                  className="sc-eCApGN eSmmaN"
                                                                   onClick={[Function]}
                                                                   palette={
                                                                     Object {
@@ -3035,7 +3037,7 @@ exports[`Table renders correctly 1`] = `
                                                                   style={Object {}}
                                                                 >
                                                                   <StyledBox
-                                                                    className="sc-eCApGN kHpvee far fa-square"
+                                                                    className="sc-eCApGN eSmmaN"
                                                                     onClick={[Function]}
                                                                     palette={
                                                                       Object {
@@ -3073,10 +3075,12 @@ exports[`Table renders correctly 1`] = `
                                                                     style={Object {}}
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx hdbdkm sc-eCApGN kHpvee far fa-square"
+                                                                      className="sc-bdnylx hdbdkm sc-eCApGN eSmmaN"
                                                                       onClick={[Function]}
                                                                       style={Object {}}
-                                                                    />
+                                                                    >
+                                                                      check_box_outline_blank
+                                                                    </div>
                                                                   </StyledBox>
                                                                 </Component>
                                                               </Box>
@@ -4953,17 +4957,17 @@ exports[`Table renders correctly 1`] = `
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx hdbdkm sc-hKFyIo dxNlPq"
+                                                        className="sc-bdnylx bBtRjj sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >
                                                         <CheckboxIcon
-                                                          className="far fa-square"
+                                                          className=""
                                                           onClick={[Function]}
                                                           style={Object {}}
                                                         >
                                                           <Component
-                                                            className="far fa-square"
+                                                            className=""
                                                             onClick={[Function]}
                                                             palette={
                                                               Object {
@@ -5001,7 +5005,7 @@ exports[`Table renders correctly 1`] = `
                                                             style={Object {}}
                                                           >
                                                             <StyledCheckboxIcon
-                                                              className="far fa-square"
+                                                              className=""
                                                               onClick={[Function]}
                                                               palette={
                                                                 Object {
@@ -5039,7 +5043,7 @@ exports[`Table renders correctly 1`] = `
                                                               style={Object {}}
                                                             >
                                                               <Box
-                                                                className="sc-eCApGN kHpvee far fa-square"
+                                                                className="sc-eCApGN eSmmaN"
                                                                 onClick={[Function]}
                                                                 palette={
                                                                   Object {
@@ -5077,7 +5081,7 @@ exports[`Table renders correctly 1`] = `
                                                                 style={Object {}}
                                                               >
                                                                 <Component
-                                                                  className="sc-eCApGN kHpvee far fa-square"
+                                                                  className="sc-eCApGN eSmmaN"
                                                                   onClick={[Function]}
                                                                   palette={
                                                                     Object {
@@ -5115,7 +5119,7 @@ exports[`Table renders correctly 1`] = `
                                                                   style={Object {}}
                                                                 >
                                                                   <StyledBox
-                                                                    className="sc-eCApGN kHpvee far fa-square"
+                                                                    className="sc-eCApGN eSmmaN"
                                                                     onClick={[Function]}
                                                                     palette={
                                                                       Object {
@@ -5153,10 +5157,12 @@ exports[`Table renders correctly 1`] = `
                                                                     style={Object {}}
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx hdbdkm sc-eCApGN kHpvee far fa-square"
+                                                                      className="sc-bdnylx hdbdkm sc-eCApGN eSmmaN"
                                                                       onClick={[Function]}
                                                                       style={Object {}}
-                                                                    />
+                                                                    >
+                                                                      check_box_outline_blank
+                                                                    </div>
                                                                   </StyledBox>
                                                                 </Component>
                                                               </Box>

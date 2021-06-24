@@ -839,11 +839,11 @@ exports[`Alert renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <Box
-                                                className="sc-pNWxx cqScrz"
+                                                className="sc-pNWxx gxbiOV"
                                                 style={Object {}}
                                               >
                                                 <Component
-                                                  className="sc-pNWxx cqScrz"
+                                                  className="sc-pNWxx gxbiOV"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -880,7 +880,7 @@ exports[`Alert renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <StyledBox
-                                                    className="sc-pNWxx cqScrz"
+                                                    className="sc-pNWxx gxbiOV"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -917,7 +917,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx hdbdkm sc-pNWxx cqScrz"
+                                                      className="sc-bdnylx hdbdkm sc-pNWxx gxbiOV"
                                                       style={Object {}}
                                                     >
                                                       chevron_left
@@ -1167,11 +1167,11 @@ exports[`Alert renders correctly 1`] = `
                                               style={Object {}}
                                             >
                                               <Box
-                                                className="sc-pNWxx cqScrz"
+                                                className="sc-pNWxx gxbiOV"
                                                 style={Object {}}
                                               >
                                                 <Component
-                                                  className="sc-pNWxx cqScrz"
+                                                  className="sc-pNWxx gxbiOV"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -1208,7 +1208,7 @@ exports[`Alert renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <StyledBox
-                                                    className="sc-pNWxx cqScrz"
+                                                    className="sc-pNWxx gxbiOV"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -1245,7 +1245,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx hdbdkm sc-pNWxx cqScrz"
+                                                      className="sc-bdnylx hdbdkm sc-pNWxx gxbiOV"
                                                       style={Object {}}
                                                     >
                                                       chevron_right
@@ -1691,7 +1691,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx girISM sc-gKAblj sc-fujyUd ggBli dUfsSP"
+                                          className="sc-bdnylx gvXUAC sc-gKAblj sc-fujyUd ggBli dUfsSP"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"

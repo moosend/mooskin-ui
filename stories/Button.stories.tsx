@@ -46,7 +46,7 @@ export const Icon = Template.bind({});
 Icon.args = {
 	children: (
 		<>
-			<ButtonIcon className="far fa-coffee" />
+			<ButtonIcon>file_copy</ButtonIcon>
 			VIEW CAMPAIGN
 		</>
 	),

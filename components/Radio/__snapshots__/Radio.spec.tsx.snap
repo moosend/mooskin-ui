@@ -209,14 +209,14 @@ exports[`Radio renders Radio correctly 1`] = `
               style={Object {}}
             >
               <RadioIcon
-                className="far fa-dot-circle "
+                className=""
                 fontColor="red"
                 key="0/.0"
                 onClick={[Function]}
                 style={Object {}}
               >
                 <Component
-                  className="far fa-dot-circle "
+                  className=""
                   fontColor="red"
                   onClick={[Function]}
                   palette={
@@ -255,7 +255,7 @@ exports[`Radio renders Radio correctly 1`] = `
                   style={Object {}}
                 >
                   <StyledRadioIcon
-                    className="far fa-dot-circle "
+                    className=""
                     fontColor="red"
                     onClick={[Function]}
                     palette={
@@ -294,7 +294,7 @@ exports[`Radio renders Radio correctly 1`] = `
                     style={Object {}}
                   >
                     <Box
-                      className="sc-eCApGN kHpvee far fa-dot-circle "
+                      className="sc-eCApGN eSmmaN"
                       fontColor="red"
                       onClick={[Function]}
                       palette={
@@ -333,7 +333,7 @@ exports[`Radio renders Radio correctly 1`] = `
                       style={Object {}}
                     >
                       <Component
-                        className="sc-eCApGN kHpvee far fa-dot-circle "
+                        className="sc-eCApGN eSmmaN"
                         fontColor="red"
                         onClick={[Function]}
                         palette={
@@ -372,7 +372,7 @@ exports[`Radio renders Radio correctly 1`] = `
                         style={Object {}}
                       >
                         <StyledBox
-                          className="sc-eCApGN kHpvee far fa-dot-circle "
+                          className="sc-eCApGN eSmmaN"
                           fontColor="red"
                           onClick={[Function]}
                           palette={
@@ -411,10 +411,12 @@ exports[`Radio renders Radio correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx hdbdkm sc-eCApGN kHpvee far fa-dot-circle "
+                            className="sc-bdnylx chtfyN sc-eCApGN eSmmaN"
                             onClick={[Function]}
                             style={Object {}}
-                          />
+                          >
+                            radio_button_checked
+                          </div>
                         </StyledBox>
                       </Component>
                     </Box>

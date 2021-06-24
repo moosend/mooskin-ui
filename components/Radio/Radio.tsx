@@ -46,7 +46,7 @@ export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) 
 			if (React.isValidElement<IRadioIconComponentProps>(child) && child.type === RadioIcon) {
 				!hasRadio && setHasRadio(true);
 				return React.cloneElement(child, {
-					className: props.selected ? `far fa-dot-circle ${child.props.className}` : `far fa-circle ${child.props.className}`,
+					children: props.selected ? 'radio_button_checked' : 'radio_button_unchecked',
 					disabled: props.disabled,
 					key: i,
 					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick),
@@ -62,11 +62,14 @@ export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) 
 	};
 
 	// children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
-	console.log(props.selected);
 	return (
 		<StyledRadio {...props}>
 			{!hasRadio && (
-				<RadioIcon disabled={props.disabled} onClick={onClick} className={props.selected ? `far fa-dot-circle` : `far fa-circle`} />
+				<RadioIcon
+					disabled={props.disabled}
+					onClick={onClick}
+					children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
+				/>
 			)}
 			{recurseChildren(props.children)}
 		</StyledRadio>

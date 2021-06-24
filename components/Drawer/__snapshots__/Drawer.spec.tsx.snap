@@ -654,7 +654,7 @@ exports[`Drawer renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <DrawerCloseButton
-                                            className="fal fa-times"
+                                            className=""
                                             key="0/.0"
                                             onClick={[Function]}
                                             position="absolute"
@@ -663,7 +663,7 @@ exports[`Drawer renders correctly 1`] = `
                                             top={10}
                                           >
                                             <Component
-                                              className="fal fa-times"
+                                              className=""
                                               onClick={[Function]}
                                               palette={
                                                 Object {
@@ -704,7 +704,7 @@ exports[`Drawer renders correctly 1`] = `
                                               top={10}
                                             >
                                               <StyledDrawerCloseButton
-                                                className="fal fa-times"
+                                                className=""
                                                 onClick={[Function]}
                                                 palette={
                                                   Object {
@@ -745,7 +745,7 @@ exports[`Drawer renders correctly 1`] = `
                                                 top={10}
                                               >
                                                 <Box
-                                                  className="sc-fnVYJo hPCPgO fal fa-times"
+                                                  className="sc-fnVYJo dMsAjF"
                                                   onClick={[Function]}
                                                   palette={
                                                     Object {
@@ -786,7 +786,7 @@ exports[`Drawer renders correctly 1`] = `
                                                   top={10}
                                                 >
                                                   <Component
-                                                    className="sc-fnVYJo hPCPgO fal fa-times"
+                                                    className="sc-fnVYJo dMsAjF"
                                                     onClick={[Function]}
                                                     palette={
                                                       Object {
@@ -827,7 +827,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     top={10}
                                                   >
                                                     <StyledBox
-                                                      className="sc-fnVYJo hPCPgO fal fa-times"
+                                                      className="sc-fnVYJo dMsAjF"
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -868,7 +868,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       top={10}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gGbNuZ sc-fnVYJo hPCPgO fal fa-times"
+                                                        className="sc-bdnylx gGbNuZ sc-fnVYJo dMsAjF"
                                                         onClick={[Function]}
                                                         style={Object {}}
                                                       >

@@ -50,6 +50,7 @@ StyledTagText.displayName = 'StyledTagText';
 
 export const StyledTagClose = styled(Box)<IBoxComponentProps>`
 	opacity: 0.5;
+	font-family: 'Mooskin Icons Round';
 	font-size: 10px;
 	font-weight: normal;
 	font-stretch: normal;
