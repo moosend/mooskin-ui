@@ -115,7 +115,7 @@ InputContainer.displayName = 'InputContainer';
 export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinContext((props) => {
 	const [showList, setShowList] = React.useState(false);
 	return (
-		<Box position="relative" color="inherit" zIndex={showList ? 3 : 0} {...props.wrapperProps}>
+		<Box position="relative" fontColor="inherit" zIndex={showList ? 3 : 0} {...props.wrapperProps}>
 			<InputIcon onClick={() => setShowList(!showList)} {...props.iconProps} />
 			{showList && (
 				<>
@@ -154,7 +154,7 @@ InputOptionListTitle.displayName = 'InputOptionListTitle';
  * InputOption
  */
 export const InputOption: React.FC<IInputOptionComponentProps> = withMooskinContext((props) => {
-	return <Text my={8} mx={15} fontSize={14} color={['fontColors', 'common'] as any} {...props} />;
+	return <Text my={8} mx={15} fontSize={14} fontColor={['fontColors', 'common'] as any} {...props} />;
 });
 
 InputOption.defaultProps = {
@@ -218,7 +218,7 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = withMooskinContex
 	};
 
 	return (
-		<Box position="relative" color="inherit" {...props}>
+		<Box position="relative" fontColor="inherit" {...props}>
 			<InputIcon className="fal fa-smile" onClick={() => setShowEmoji(!showEmoji)} />
 			{showEmoji && (
 				<Box position="absolute" right={0} zIndex={3}>

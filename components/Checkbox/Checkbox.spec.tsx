@@ -9,7 +9,7 @@ describe('CheckBox', () => {
 
 		const tree = mount(
 			<Checkbox checked onClickCheckbox={func}>
-				<CheckboxIcon color="red" />
+				<CheckboxIcon fontColor="red" />
 				<CheckboxLabel>Normal Checkbox</CheckboxLabel>
 			</Checkbox>
 		);
@@ -22,7 +22,7 @@ describe('CheckBox', () => {
 
 		const tree = mount(
 			<Checkbox checked onClickCheckbox={func}>
-				<CheckboxIcon color="red" />
+				<CheckboxIcon fontColor="red" />
 				<CheckboxLabel>Normal Checkbox</CheckboxLabel>
 			</Checkbox>
 		);
@@ -37,7 +37,7 @@ describe('CheckBox', () => {
 
 		const tree = mount(
 			<Checkbox checked onClickCheckbox={func} disabled>
-				<CheckboxIcon color="red" />
+				<CheckboxIcon fontColor="red" />
 				<CheckboxLabel>Normal Checkbox</CheckboxLabel>
 			</Checkbox>
 		);
