@@ -1,10 +1,10 @@
-// import { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors } from '../Styled/model';
-import { IMooskinContext } from '../Styled/model';
+import { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors } from '../Styled/model';
+// import { IMooskinContext } from '../Styled/model';
 
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 export type BoxShadowIntensityType = IntensityType | 'inner' | 'outline';
-// export type NestedThemeType = [keyof IStyledTheme, keyof IThemeFontColors | keyof IThemeBorderColors | keyof IThemeBackgroundColors];
-export type NestedThemeType = [string, string];
+export type NestedThemeType = [keyof IStyledTheme, keyof IThemeFontColors | keyof IThemeBorderColors | keyof IThemeBackgroundColors];
+// export type NestedThemeType = [string, string];
 
 export const boxComponentProps = [
 	'id',
@@ -160,8 +160,8 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	/** padding top & padding-bottom */
 	py?: number | string;
 
-	/** color */
-	color?: React.CSSProperties['color'] | NestedThemeType | any;
+	/** font color */
+	fontColor?: React.CSSProperties['color'] | NestedThemeType;
 
 	/** opacity */
 	opacity?: React.CSSProperties['opacity'];

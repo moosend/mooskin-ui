@@ -60,7 +60,7 @@ export const CustomButton = Template.bind({});
 CustomButton.args = {
 	children: (
 		<>
-			<CheckboxIcon color="red" />
+			<CheckboxIcon fontColor="red" />
 			<Box>
 				<CheckboxLabel>Checkbox</CheckboxLabel>
 				<CheckboxDescription>Checkbox description goes here</CheckboxDescription>

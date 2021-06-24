@@ -118,11 +118,11 @@ CustomElements.args = {
 			<SelectContainer>
 				<SelectPlaceholder>Select an option</SelectPlaceholder>
 				<SelectFilter
-					color="red"
+					fontColor="red"
 					onChange={(e: React.ChangeEvent<HTMLInputElement>) => console.log('On Filter Change: ', e.target.value)}
 				/>
 				<SelectLoader />
-				<SelectIcon color="red" />
+				<SelectIcon fontColor="red" />
 			</SelectContainer>
 			<SelectOptionList>
 				<SelectOption onClick={(e) => console.log('Option clicked!')} value="1">

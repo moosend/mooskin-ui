@@ -63,7 +63,7 @@ export const CustomButton = Template.bind({});
 CustomButton.args = {
 	children: (
 		<>
-			<RadioIcon color="red" />
+			<RadioIcon fontColor="red" />
 			<RadioLabel>Normal Radio</RadioLabel>
 		</>
 	),

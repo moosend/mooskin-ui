@@ -22,7 +22,7 @@ describe('Alert', () => {
 					</Button>
 				</FooterBody>
 				<FooterEnd>
-					<Button inverseStyle borderColor="#37a037" color="#37a037">
+					<Button inverseStyle borderColor="#37a037" fontColor="#37a037">
 						DESIGN & DELIVERY TEST
 					</Button>
 				</FooterEnd>

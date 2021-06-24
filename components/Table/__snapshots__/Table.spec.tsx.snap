@@ -2667,14 +2667,14 @@ exports[`Table renders correctly 1`] = `
                                           <Checkbox
                                             checked={false}
                                             className=""
-                                            color="grey"
+                                            fontColor="grey"
                                             onClickCheckbox={[Function]}
                                             style={Object {}}
                                           >
                                             <Component
                                               checked={false}
                                               className=""
-                                              color="grey"
+                                              fontColor="grey"
                                               onClickCheckbox={[Function]}
                                               palette={
                                                 Object {
@@ -2714,7 +2714,7 @@ exports[`Table renders correctly 1`] = `
                                               <StyledCheckbox
                                                 checked={false}
                                                 className=""
-                                                color="grey"
+                                                fontColor="grey"
                                                 onClickCheckbox={[Function]}
                                                 palette={
                                                   Object {
@@ -2754,7 +2754,7 @@ exports[`Table renders correctly 1`] = `
                                                 <Box
                                                   checked={false}
                                                   className="sc-hKFyIo dxNlPq"
-                                                  color="grey"
+                                                  fontColor="grey"
                                                   onClickCheckbox={[Function]}
                                                   palette={
                                                     Object {
@@ -2794,7 +2794,7 @@ exports[`Table renders correctly 1`] = `
                                                   <Component
                                                     checked={false}
                                                     className="sc-hKFyIo dxNlPq"
-                                                    color="grey"
+                                                    fontColor="grey"
                                                     onClickCheckbox={[Function]}
                                                     palette={
                                                       Object {
@@ -2834,7 +2834,7 @@ exports[`Table renders correctly 1`] = `
                                                     <StyledBox
                                                       checked={false}
                                                       className="sc-hKFyIo dxNlPq"
-                                                      color="grey"
+                                                      fontColor="grey"
                                                       onClickCheckbox={[Function]}
                                                       palette={
                                                         Object {
@@ -2873,8 +2873,7 @@ exports[`Table renders correctly 1`] = `
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx bBtRjj sc-hKFyIo dxNlPq"
-                                                        color="grey"
+                                                        className="sc-bdnylx hdbdkm sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >
@@ -4748,14 +4747,14 @@ exports[`Table renders correctly 1`] = `
                                           <Checkbox
                                             checked={false}
                                             className=""
-                                            color="grey"
+                                            fontColor="grey"
                                             onClickCheckbox={[Function]}
                                             style={Object {}}
                                           >
                                             <Component
                                               checked={false}
                                               className=""
-                                              color="grey"
+                                              fontColor="grey"
                                               onClickCheckbox={[Function]}
                                               palette={
                                                 Object {
@@ -4795,7 +4794,7 @@ exports[`Table renders correctly 1`] = `
                                               <StyledCheckbox
                                                 checked={false}
                                                 className=""
-                                                color="grey"
+                                                fontColor="grey"
                                                 onClickCheckbox={[Function]}
                                                 palette={
                                                   Object {
@@ -4835,7 +4834,7 @@ exports[`Table renders correctly 1`] = `
                                                 <Box
                                                   checked={false}
                                                   className="sc-hKFyIo dxNlPq"
-                                                  color="grey"
+                                                  fontColor="grey"
                                                   onClickCheckbox={[Function]}
                                                   palette={
                                                     Object {
@@ -4875,7 +4874,7 @@ exports[`Table renders correctly 1`] = `
                                                   <Component
                                                     checked={false}
                                                     className="sc-hKFyIo dxNlPq"
-                                                    color="grey"
+                                                    fontColor="grey"
                                                     onClickCheckbox={[Function]}
                                                     palette={
                                                       Object {
@@ -4915,7 +4914,7 @@ exports[`Table renders correctly 1`] = `
                                                     <StyledBox
                                                       checked={false}
                                                       className="sc-hKFyIo dxNlPq"
-                                                      color="grey"
+                                                      fontColor="grey"
                                                       onClickCheckbox={[Function]}
                                                       palette={
                                                         Object {
@@ -4954,8 +4953,7 @@ exports[`Table renders correctly 1`] = `
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx bBtRjj sc-hKFyIo dxNlPq"
-                                                        color="grey"
+                                                        className="sc-bdnylx hdbdkm sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >

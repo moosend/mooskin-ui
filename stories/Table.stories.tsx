@@ -39,7 +39,7 @@ Normal.args = {
 			</TableHeader>
 			<TableRow>
 				<TableRowItem flex={2} justify="center">
-					<Checkbox color="grey" onClickCheckbox={(e, data) => alert(`Clicked!: ${data.value}`)} />
+					<Checkbox fontColor="grey" onClickCheckbox={(e, data) => alert(`Clicked!: ${data.value}`)} />
 				</TableRowItem>
 				<TableRowItem flex={8}>Main mailing list #1</TableRowItem>
 				<TableRowItem flex={3}>2</TableRowItem>
@@ -50,7 +50,7 @@ Normal.args = {
 			</TableRow>
 			<TableRow>
 				<TableRowItem flex={2} justify="center">
-					<Checkbox color="grey" onClickCheckbox={(e, data) => alert(`Clicked!: ${data.value}`)} />
+					<Checkbox fontColor="grey" onClickCheckbox={(e, data) => alert(`Clicked!: ${data.value}`)} />
 				</TableRowItem>
 				<TableRowItem flex={8}>Main mailing list #2</TableRowItem>
 				<TableRowItem flex={3}>3</TableRowItem>

@@ -9,7 +9,7 @@ describe('Radio', () => {
 
 		const tree = mount(
 			<Radio selected onClickRadio={func}>
-				<RadioIcon color="red" />
+				<RadioIcon fontColor="red" />
 				<RadioLabel>Normal Radio</RadioLabel>
 			</Radio>
 		);
@@ -22,7 +22,7 @@ describe('Radio', () => {
 
 		const tree = mount(
 			<Radio selected onClickRadio={func}>
-				<RadioIcon color="red" />
+				<RadioIcon fontColor="red" />
 				<RadioLabel>Normal Radio</RadioLabel>
 			</Radio>
 		);
@@ -37,7 +37,7 @@ describe('Radio', () => {
 
 		const tree = mount(
 			<Radio selected onClickRadio={func} disabled>
-				<RadioIcon color="red" />
+				<RadioIcon fontColor="red" />
 				<RadioLabel>Normal Radio</RadioLabel>
 			</Radio>
 		);

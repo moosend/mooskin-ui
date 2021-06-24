@@ -467,14 +467,14 @@ exports[`Input renders correctly 1`] = `
                 >
                   <Box
                     className=""
-                    color="inherit"
+                    fontColor="inherit"
                     position="relative"
                     style={Object {}}
                     zIndex={0}
                   >
                     <Component
                       className=""
-                      color="inherit"
+                      fontColor="inherit"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -514,7 +514,7 @@ exports[`Input renders correctly 1`] = `
                     >
                       <StyledBox
                         className=""
-                        color="inherit"
+                        fontColor="inherit"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -553,8 +553,7 @@ exports[`Input renders correctly 1`] = `
                         zIndex={0}
                       >
                         <div
-                          className="sc-bdnylx eTyWcD"
-                          color="inherit"
+                          className="sc-bdnylx iqShTS"
                           style={Object {}}
                         >
                           <InputIcon
@@ -821,7 +820,7 @@ exports[`Input renders correctly 1`] = `
                 >
                   <Box
                     className=""
-                    color="inherit"
+                    fontColor="inherit"
                     onChangeEmoji={[Function]}
                     palette={
                       Object {
@@ -862,7 +861,7 @@ exports[`Input renders correctly 1`] = `
                   >
                     <Component
                       className=""
-                      color="inherit"
+                      fontColor="inherit"
                       onChangeEmoji={[Function]}
                       palette={
                         Object {
@@ -903,7 +902,7 @@ exports[`Input renders correctly 1`] = `
                     >
                       <StyledBox
                         className=""
-                        color="inherit"
+                        fontColor="inherit"
                         onChangeEmoji={[Function]}
                         palette={
                           Object {
@@ -943,8 +942,7 @@ exports[`Input renders correctly 1`] = `
                         style={Object {}}
                       >
                         <div
-                          className="sc-bdnylx iooDbe"
-                          color="inherit"
+                          className="sc-bdnylx hUENpr"
                           onChangeEmoji={[Function]}
                           style={Object {}}
                         >

@@ -208,23 +208,23 @@ exports[`Pagination renders correctly 1`] = `
               style={Object {}}
             >
               <WithMooskinContext
-                color={
+                cursor="pointer"
+                fontColor={
                   Array [
                     "backgroundColors",
                     "toggle",
                   ]
                 }
-                cursor="pointer"
                 onClick={[Function]}
               >
                 <Component
-                  color={
+                  cursor="pointer"
+                  fontColor={
                     Array [
                       "backgroundColors",
                       "toggle",
                     ]
                   }
-                  cursor="pointer"
                   onClick={[Function]}
                   palette={
                     Object {
@@ -261,13 +261,13 @@ exports[`Pagination renders correctly 1`] = `
                   }
                 >
                   <StyledIconButton
-                    color={
+                    cursor="pointer"
+                    fontColor={
                       Array [
                         "backgroundColors",
                         "toggle",
                       ]
                     }
-                    cursor="pointer"
                     onClick={[Function]}
                     palette={
                       Object {
@@ -305,13 +305,13 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       className="sc-gtssRu jXrpqA"
-                      color={
+                      cursor="pointer"
+                      fontColor={
                         Array [
                           "backgroundColors",
                           "toggle",
                         ]
                       }
-                      cursor="pointer"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -350,13 +350,13 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         className="sc-gtssRu jXrpqA"
-                        color={
+                        cursor="pointer"
+                        fontColor={
                           Array [
                             "backgroundColors",
                             "toggle",
                           ]
                         }
-                        cursor="pointer"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -395,13 +395,13 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           className="sc-gtssRu jXrpqA"
-                          color={
+                          cursor="pointer"
+                          fontColor={
                             Array [
                               "backgroundColors",
                               "toggle",
                             ]
                           }
-                          cursor="pointer"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -439,13 +439,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx mYySe sc-gtssRu jXrpqA"
-                            color={
-                              Array [
-                                "backgroundColors",
-                                "toggle",
-                              ]
-                            }
+                            className="sc-bdnylx bGdbLR sc-gtssRu jXrpqA"
                             cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}
@@ -459,24 +453,24 @@ exports[`Pagination renders correctly 1`] = `
                 </Component>
               </WithMooskinContext>
               <WithMooskinContext
-                color={
+                cursor="pointer"
+                fontColor={
                   Array [
                     "backgroundColors",
                     "toggle",
                   ]
                 }
-                cursor="pointer"
                 mr={10}
                 onClick={[Function]}
               >
                 <Component
-                  color={
+                  cursor="pointer"
+                  fontColor={
                     Array [
                       "backgroundColors",
                       "toggle",
                     ]
                   }
-                  cursor="pointer"
                   mr={10}
                   onClick={[Function]}
                   palette={
@@ -514,13 +508,13 @@ exports[`Pagination renders correctly 1`] = `
                   }
                 >
                   <StyledIconButton
-                    color={
+                    cursor="pointer"
+                    fontColor={
                       Array [
                         "backgroundColors",
                         "toggle",
                       ]
                     }
-                    cursor="pointer"
                     mr={10}
                     onClick={[Function]}
                     palette={
@@ -559,13 +553,13 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       className="sc-gtssRu jXrpqA"
-                      color={
+                      cursor="pointer"
+                      fontColor={
                         Array [
                           "backgroundColors",
                           "toggle",
                         ]
                       }
-                      cursor="pointer"
                       mr={10}
                       onClick={[Function]}
                       palette={
@@ -605,13 +599,13 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         className="sc-gtssRu jXrpqA"
-                        color={
+                        cursor="pointer"
+                        fontColor={
                           Array [
                             "backgroundColors",
                             "toggle",
                           ]
                         }
-                        cursor="pointer"
                         mr={10}
                         onClick={[Function]}
                         palette={
@@ -651,13 +645,13 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           className="sc-gtssRu jXrpqA"
-                          color={
+                          cursor="pointer"
+                          fontColor={
                             Array [
                               "backgroundColors",
                               "toggle",
                             ]
                           }
-                          cursor="pointer"
                           mr={10}
                           onClick={[Function]}
                           palette={
@@ -696,13 +690,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dCkjvj sc-gtssRu jXrpqA"
-                            color={
-                              Array [
-                                "backgroundColors",
-                                "toggle",
-                              ]
-                            }
+                            className="sc-bdnylx iSTsko sc-gtssRu jXrpqA"
                             cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}
@@ -1791,23 +1779,23 @@ exports[`Pagination renders correctly 1`] = `
                 </Component>
               </PaginationButton>
               <WithMooskinContext
-                color={
+                cursor="pointer"
+                fontColor={
                   Array [
                     "backgroundColors",
                     "toggle",
                   ]
                 }
-                cursor="pointer"
                 onClick={[Function]}
               >
                 <Component
-                  color={
+                  cursor="pointer"
+                  fontColor={
                     Array [
                       "backgroundColors",
                       "toggle",
                     ]
                   }
-                  cursor="pointer"
                   onClick={[Function]}
                   palette={
                     Object {
@@ -1844,13 +1832,13 @@ exports[`Pagination renders correctly 1`] = `
                   }
                 >
                   <StyledIconButton
-                    color={
+                    cursor="pointer"
+                    fontColor={
                       Array [
                         "backgroundColors",
                         "toggle",
                       ]
                     }
-                    cursor="pointer"
                     onClick={[Function]}
                     palette={
                       Object {
@@ -1888,13 +1876,13 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       className="sc-gtssRu jXrpqA"
-                      color={
+                      cursor="pointer"
+                      fontColor={
                         Array [
                           "backgroundColors",
                           "toggle",
                         ]
                       }
-                      cursor="pointer"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -1933,13 +1921,13 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         className="sc-gtssRu jXrpqA"
-                        color={
+                        cursor="pointer"
+                        fontColor={
                           Array [
                             "backgroundColors",
                             "toggle",
                           ]
                         }
-                        cursor="pointer"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -1978,13 +1966,13 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           className="sc-gtssRu jXrpqA"
-                          color={
+                          cursor="pointer"
+                          fontColor={
                             Array [
                               "backgroundColors",
                               "toggle",
                             ]
                           }
-                          cursor="pointer"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -2022,13 +2010,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx mYySe sc-gtssRu jXrpqA"
-                            color={
-                              Array [
-                                "backgroundColors",
-                                "toggle",
-                              ]
-                            }
+                            className="sc-bdnylx bGdbLR sc-gtssRu jXrpqA"
                             cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}
@@ -2042,24 +2024,24 @@ exports[`Pagination renders correctly 1`] = `
                 </Component>
               </WithMooskinContext>
               <WithMooskinContext
-                color={
+                cursor="pointer"
+                fontColor={
                   Array [
                     "backgroundColors",
                     "toggle",
                   ]
                 }
-                cursor="pointer"
                 mr={10}
                 onClick={[Function]}
               >
                 <Component
-                  color={
+                  cursor="pointer"
+                  fontColor={
                     Array [
                       "backgroundColors",
                       "toggle",
                     ]
                   }
-                  cursor="pointer"
                   mr={10}
                   onClick={[Function]}
                   palette={
@@ -2097,13 +2079,13 @@ exports[`Pagination renders correctly 1`] = `
                   }
                 >
                   <StyledIconButton
-                    color={
+                    cursor="pointer"
+                    fontColor={
                       Array [
                         "backgroundColors",
                         "toggle",
                       ]
                     }
-                    cursor="pointer"
                     mr={10}
                     onClick={[Function]}
                     palette={
@@ -2142,13 +2124,13 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       className="sc-gtssRu jXrpqA"
-                      color={
+                      cursor="pointer"
+                      fontColor={
                         Array [
                           "backgroundColors",
                           "toggle",
                         ]
                       }
-                      cursor="pointer"
                       mr={10}
                       onClick={[Function]}
                       palette={
@@ -2188,13 +2170,13 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         className="sc-gtssRu jXrpqA"
-                        color={
+                        cursor="pointer"
+                        fontColor={
                           Array [
                             "backgroundColors",
                             "toggle",
                           ]
                         }
-                        cursor="pointer"
                         mr={10}
                         onClick={[Function]}
                         palette={
@@ -2234,13 +2216,13 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           className="sc-gtssRu jXrpqA"
-                          color={
+                          cursor="pointer"
+                          fontColor={
                             Array [
                               "backgroundColors",
                               "toggle",
                             ]
                           }
-                          cursor="pointer"
                           mr={10}
                           onClick={[Function]}
                           palette={
@@ -2279,13 +2261,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx dCkjvj sc-gtssRu jXrpqA"
-                            color={
-                              Array [
-                                "backgroundColors",
-                                "toggle",
-                              ]
-                            }
+                            className="sc-bdnylx iSTsko sc-gtssRu jXrpqA"
                             cursor="pointer"
                             onClick={[Function]}
                             style={Object {}}
