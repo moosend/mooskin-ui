@@ -21,7 +21,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		padding-bottom: ${(props) => getNumberOrStringValue(props.pb || props.py)};
 		padding-left: ${(props) => getNumberOrStringValue(props.pl || props.px)};
 
-		color: ${(props) => getNestedValue(props.color, props.palette)};
+		color: ${(props) => getNestedValue(props.fontColor, props.palette)};
 		font-family: ${(props) => props.fontFamily};
 		font-size: ${(props) => getNumberOrStringValue(props.fontSize)};
 		font-weight: ${(props) => props.fontWeight};
