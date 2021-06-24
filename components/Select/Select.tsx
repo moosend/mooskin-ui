@@ -121,8 +121,6 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 
 				let label = '';
 
-				console.log(child.props.children, typeof child.props.children);
-
 				if (child.props.searchLabel) {
 					label = child.props.searchLabel;
 				} else if (typeof child.props.children === 'string') {
