@@ -250,7 +250,7 @@ exports[`Anchor renders correctly 1`] = `
             target="_blank"
           >
             <a
-              className="sc-bdnylx hdbdkm sc-gtssRu eaFHfx myClass"
+              className="sc-bdnylx deSLUj sc-gtssRu eaFHfx myClass"
               disabled={true}
               href="www.moosend.com"
               id="Anchor1"

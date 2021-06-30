@@ -219,7 +219,7 @@ exports[`LoadingBar LoadingBar renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx cSqwyv sc-gtssRu hPYkct"
+              className="sc-bdnylx cUmsBK sc-gtssRu hPYkct"
               onLoaderDone={[MockFunction]}
               onLoaderError={[MockFunction]}
               opacity={1}

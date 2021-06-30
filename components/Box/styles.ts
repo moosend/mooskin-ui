@@ -120,6 +120,10 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		text-overflow: ${(props) => props.textOverflow};
 
+		grid-template-columns: ${(props) => props.gridTemplateColumns};
+
+		word-break: ${(props) => props.wordBreak};
+
 		:hover {
 			${(props) => props._hover}
 		}
