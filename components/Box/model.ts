@@ -388,6 +388,12 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	/** white space */
 	whiteSpace?: React.CSSProperties['whiteSpace'];
 
+	/** word break */
+	wordBreak?: React.CSSProperties['wordBreak'];
+
+	/** grid template columns */
+	gridTemplateColumns?: React.CSSProperties['gridTemplateColumns'];
+
 	/** hover */
 	_hover?: string;
 

@@ -191,7 +191,7 @@ exports[`Description renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx hdbdkm sc-gtssRu dZcusW"
+              className="sc-bdnylx deSLUj sc-gtssRu dZcusW"
               style={Object {}}
             >
               Description here!

@@ -203,7 +203,7 @@ exports[`Loader renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx hdbdkm sc-gtssRu bZjjdo"
+              className="sc-bdnylx deSLUj sc-gtssRu bZjjdo"
               size={50}
               style={Object {}}
             />
