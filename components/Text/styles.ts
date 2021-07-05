@@ -10,7 +10,6 @@ import { Box } from '../Box/Box';
 import variables from '../_utils/globals/variables';
 
 export const StyledText = styled(Box)<ITextComponentProps>`
-	font-family: Hind;
 	font-size: 16px;
 	font-weight: 400;
 	display: flex;

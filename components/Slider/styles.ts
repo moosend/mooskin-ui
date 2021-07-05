@@ -6,8 +6,6 @@ import { ISliderComponentProps } from './model';
 // Components
 import { Box } from '../Box/Box';
 
-// import variables from '../_utils/globals/variables';
-
 export const StyledSlider = styled(Box)<ISliderComponentProps>`
 	-webkit-appearance: none;
 	width: 100%;

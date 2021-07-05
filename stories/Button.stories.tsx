@@ -25,7 +25,7 @@ const Template: Story<IButtonComponentProps> = (args) => {
 					palette: { ...variables, backgroundColors: backgroundPalette },
 				}}
 			>
-				<Button {...args} onClick={() => setBackgroundPalette({ ...variables.backgroundColors, button: 'red' })} />
+				<Button {...args} onClick={() => setBackgroundPalette({ ...variables.backgroundColors, primary1: 'red' })} />
 			</MooskinContextProvider>
 		</>
 	);

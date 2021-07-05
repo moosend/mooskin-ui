@@ -25,13 +25,12 @@ export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
 	padding-right: 10px;
 	font-size: 23px;
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.primary2 || variables.fontColors.primary2};
 `;
 
 StyledRadioIcon.displayName = 'StyledRadioIcon';
 
 export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
-	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 500;
 	font-stretch: normal;
@@ -40,7 +39,7 @@ export const StyledRadioLabel = styled(Label)<ILabelComponentProps>`
 	min-width: unset;
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
 StyledRadioLabel.displayName = 'StyledRadioLabel';

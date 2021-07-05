@@ -11,7 +11,7 @@ import variables from '../_utils/globals/variables';
 
 export const StyledTable = styled(Box)<IBoxComponentProps>`
 	border: solid 1px #e2e2e2;
-	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	display: flex;
 	flex-direction: column;
 `;
@@ -27,14 +27,13 @@ export const StyledTableHeader = styled(Box)<IBoxComponentProps>`
 StyledTableHeader.displayName = 'StyledTableHeader';
 
 export const StyledTableHeaderItem = styled(Box)<IBoxComponentProps>`
-	font-family: Montserrat;
 	font-size: 11px;
 	font-weight: bold;
 	font-stretch: normal;
 	font-style: normal;
 	letter-spacing: normal;
 	text-align: left;
-	color: ${(props) => props.palette?.fontColors.tableHeader || variables.fontColors.tableHeader};
+	color: ${(props) => props.palette?.fontColors.secondary2 || variables.fontColors.secondary2};
 	display: flex;
 	align-items: center;
 `;
@@ -45,8 +44,8 @@ export const StyledTableRow = styled(Box)<IBoxComponentProps>`
 	display: flex;
 	align-items: center;
 	min-height: 90px;
-	border-top: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
-	border-bottom: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
+	border-top: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
+	border-bottom: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
 	:last-child {
 		border: none;
 	}
@@ -55,7 +54,6 @@ export const StyledTableRow = styled(Box)<IBoxComponentProps>`
 StyledTableRow.displayName = 'StyledTableRow';
 
 export const StyledTableRowItem = styled(Box)<IBoxComponentProps>`
-	font-family: Hind;
 	font-size: 16px;
 	font-weight: 500;
 	font-stretch: normal;

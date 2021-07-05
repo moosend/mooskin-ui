@@ -42,8 +42,8 @@ export const StyledModalContent = styled(Box)<IModalContentComponentProps>`
 	display: flex;
 	flex-direction: column;
 	z-index: 1400;
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
-	background: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
+	background: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	outline: 0px;
 	opacity: 1;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;

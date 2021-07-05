@@ -1,33 +1,70 @@
 export interface IThemeFontColors {
-	anchor: string;
-	button: string;
-	common: string;
-	disabledAnchor: string;
-	description: string;
-	label: string;
-	toggle: string;
+	primary1: string;
+	primary2: string;
+	primary3: string;
+	primary4: string;
+	secondary1: string;
+	secondary2: string;
+	secondary3: string;
+	secondary4: string;
+	secondary5: string;
+	secondary6: string;
+	white: string;
+	background: string;
+	gray1: string;
+	gray2: string;
+	medgray1: string;
+	medgray2: string;
+	darkgray1: string;
+	darkgray2: string;
 	text: string;
-	tag: string;
-	tableHeader: string;
-	secondaryToggle: string;
+	black: string;
 }
 
 export interface IThemeBackgroundColors {
-	button: string;
-	switchOff: string;
-	switchOn: string;
-	switchHandle: string;
-	switchDisabled: string;
-	common: string;
-	buttonDisabled: string;
-	main: string;
-	toggle: string;
-	tag: string;
-	secondaryToggle: string;
+	primary1: string;
+	primary2: string;
+	primary3: string;
+	primary4: string;
+	secondary1: string;
+	secondary2: string;
+	secondary3: string;
+	secondary4: string;
+	secondary5: string;
+	secondary6: string;
+	white: string;
+	background: string;
+	gray1: string;
+	gray2: string;
+	medgray1: string;
+	medgray2: string;
+	darkgray1: string;
+	darkgray2: string;
+	text: string;
+	black: string;
 }
 
 export interface IThemeBorderColors {
-	common: string;
+	primary1: string;
+	primary2: string;
+	primary3: string;
+	primary4: string;
+	secondary1: string;
+	secondary2: string;
+	secondary3: string;
+	secondary4: string;
+	secondary5: string;
+	secondary6: string;
+	white: string;
+	background: string;
+	gray1: string;
+	gray2: string;
+	medgray1: string;
+	medgray2: string;
+	darkgray1: string;
+	darkgray2: string;
+	text: string;
+	black: string;
 }
 
 export interface IStyledTheme {

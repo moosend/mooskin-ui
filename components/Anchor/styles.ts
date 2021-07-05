@@ -13,7 +13,6 @@ export const StyledAnchor = styled(Box)<IAnchorComponentProps>`
 	border-radius: 3px;
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 	outline: 0;
-	font-family: Montserrat;
 	font-size: 12px;
 	&& {
 		text-decoration: underline;
@@ -21,10 +20,8 @@ export const StyledAnchor = styled(Box)<IAnchorComponentProps>`
 	&:hover {
 		text-decoration: none;
 	}
-	color: ${(props) =>
-		props.disabled
-			? props.palette?.fontColors.disabledAnchor || variables.fontColors.disabledAnchor
-			: props.palette?.fontColors.anchor || variables.fontColors.anchor};
+	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+	color: ${(props) => props.palette?.fontColors.secondary2 || variables.fontColors.secondary2};
 `;
 
 StyledAnchor.displayName = 'StyledAnchor';

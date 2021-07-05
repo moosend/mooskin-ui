@@ -22,10 +22,9 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
 	display: flex;
 	padding: 1px 10px;
 	border-radius: 13px;
-	background-color: ${(props) => props.palette?.backgroundColors.tag || variables.backgroundColors.tag};
-	font-family: Hind;
+	background-color: ${(props) => props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2};
 	font-size: 12px;
-	color: ${(props) => props.palette?.fontColors.tag || variables.fontColors.tag};
+	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};
 	cursor: pointer;
 	align-items: center;
 	white-space: nowrap;
@@ -57,16 +56,15 @@ export const StyledTagClose = styled(Box)<IBoxComponentProps>`
 	font-style: normal;
 	letter-spacing: normal;
 	text-align: left;
-	color: ${(props) => props.palette?.fontColors.tag || variables.fontColors.tag};
+	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};
 	padding-left: 10px;
 `;
 
 StyledTagClose.displayName = 'StyledTagClose';
 
 export const StyledTagInput = styled(Box)<ITagsInputComponentProps>`
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	background-color: transparent;
-	font-family: Hind;
 	font-size: 14px;
 	outline: none;
 	border: none;

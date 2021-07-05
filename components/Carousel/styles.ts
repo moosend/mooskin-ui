@@ -18,7 +18,7 @@ export const StyledDot = styled(Box)<IBoxComponentProps>`
 	width: 15px;
 	height: 15px;
 	border-radius: 50%;
-	background-color: ${(props) => props.palette?.backgroundColors.toggle || variables.backgroundColors.toggle};
+	background-color: ${(props) => props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2};
 	opacity: 0.2;
 `;
 
