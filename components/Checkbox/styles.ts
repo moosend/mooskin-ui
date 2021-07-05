@@ -25,7 +25,7 @@ export const StyledCheckboxIcon = styled(Box)<Partial<ICheckboxComponentProps>>`
 	padding-right: 10px;
 	font-size: 23px;
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.primary2 || variables.fontColors.primary2};
 `;
 
 StyledCheckboxIcon.displayName = 'StyledCheckboxIcon';
@@ -37,7 +37,7 @@ export const StyledCheckboxLabel = styled(Label)<ILabelComponentProps>`
 	min-width: unset;
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
 StyledCheckboxLabel.displayName = 'StyledCheckboxLabel';

@@ -12,8 +12,8 @@ import variables from '../_utils/globals/variables';
 export const StyledListItem = styled(Box)<IBoxComponentProps>`
 	display: flex;
 	padding: 15px;
-	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
 StyledListItem.displayName = 'StyledListItem';

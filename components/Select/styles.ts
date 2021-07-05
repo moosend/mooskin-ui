@@ -11,7 +11,7 @@ import variables from '../_utils/globals/variables';
 
 export const StyledSelect = styled(Box)<ISelectComponentProps>`
 	position: relative;
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
@@ -20,7 +20,6 @@ StyledSelect.displayName = 'StyledSelect';
 
 export const StyledSelectFilter = styled(Box)<IInputBoxComponentProps>`
 	padding: 7px 15px 7px;
-	font-family: Hind;
 	font-size: 14px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -40,8 +39,8 @@ StyledSelectFilter.displayName = 'StyledSelectFilter';
 export const StyledSelectContainer = styled(Box)<IBoxComponentProps>`
 	display: flex;
 	border-radius: 3px;
-	border: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
-	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
+	border: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	color: inherit;
 	align-items: center;
 `;
@@ -50,7 +49,6 @@ StyledSelectContainer.displayName = 'StyledSelectContainer';
 
 export const StyledSelectPlaceholder = styled(Box)<IBoxComponentProps>`
 	padding: 7px 15px 7px;
-	font-family: Hind;
 	font-size: 14px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -72,7 +70,7 @@ export const StyledSelectOptionList = styled(Box)<IBoxComponentProps>`
 	left: 0;
 	right: 0;
 	color: inherit;
-	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	max-height: 160px;
 	overflow-y: auto;
 	z-index: 2;
@@ -109,10 +107,9 @@ StyledSelectOverlay.displayName = 'StyledSelectOverlay';
 export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
 	font-size: 14px;
 	padding: 10px 15px;
-	font-family: Hind;
 	display: flex;
 	justify-content: space-between;
-	color: ${(props) => props.palette?.fontColors.tableHeader || variables.fontColors.tableHeader};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	:first-child {
 		padding-top: 13px;
 	}
@@ -149,9 +146,8 @@ StyledSelectPagination.displayName = 'StyledSelectPagination';
 
 export const StyledPaginationPage = styled(Box)<IBoxComponentProps>`
 	font-size: 12px;
-	font-family: Hind;
 	align-items: center;
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
 StyledPaginationPage.displayName = 'StyledPaginationPage';

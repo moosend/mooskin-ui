@@ -22,14 +22,14 @@ export const StyledSwitch = styled(Box)<ISwitchComponentProps>`
 	transition: background-color 0.3s;
 	color: ${(props) =>
 		!props.disabled
-			? props.palette?.fontColors.button || variables.fontColors.button
-			: props.palette?.fontColors.description || variables.fontColors.description};
+			? props.palette?.fontColors.white || variables.fontColors.white
+			: props.palette?.fontColors.medgray1 || variables.fontColors.medgray1};
 	background-color: ${(props) => {
 		return !props.disabled
 			? props.active
-				? props.palette?.backgroundColors.switchOn || variables.backgroundColors.switchOn
-				: props.palette?.backgroundColors.switchOff || variables.backgroundColors.switchOff
-			: props.palette?.backgroundColors.switchDisabled || variables.backgroundColors.switchDisabled;
+				? props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1
+				: props.palette?.backgroundColors.gray2 || variables.backgroundColors.gray2
+			: props.palette?.backgroundColors.gray1 || variables.backgroundColors.gray1;
 	}};
 `;
 
@@ -42,7 +42,7 @@ export const StyledSwitchHandle = styled(Box)<ISwitchHandleComponentProps>`
 	left: 4px;
 	height: 19px;
 	width: 19px;
-	background-color: ${(props) => props.palette?.backgroundColors.switchHandle || variables.backgroundColors.switchHandle};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	transition: transform 0.3s;
 	border-radius: 50%;
 	z-index: 1;
@@ -57,7 +57,6 @@ export const StyledSwitchHandle = styled(Box)<ISwitchHandleComponentProps>`
 StyledSwitchHandle.displayName = 'StyledSwitchHandle';
 
 export const StyledSwitchLabel = styled(Box)<Partial<ISwitchComponentProps>>`
-	font-family: Hind;
 	user-select: none;
 	font-size: 12px;
 	font-weight: 500;

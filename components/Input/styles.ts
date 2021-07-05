@@ -13,22 +13,21 @@ import variables from '../_utils/globals/variables';
 
 export const StyledInputContainer = styled(Box)<IInputContainerComponentProps>`
 	position: relative;
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	display: flex;
 	flex: 1;
 	align-items: center;
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : '')};
 	border-radius: 3px;
-	border: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
-	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
+	border: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	padding: 7px 15px 7px;
 `;
 
 StyledInputContainer.displayName = 'StyledInputContainer';
 
 export const StyledInputBase = styled(Box)<IInputComponentProps>`
-	font-family: Hind;
 	font-size: 14px;
 	font-weight: normal;
 	font-stretch: normal;
@@ -43,9 +42,9 @@ StyledInputBase.displayName = 'StyledInputBase';
 export const StyledInputSolo = styled(StyledInputBase)<IInputComponentProps>`
 	border-radius: 3px;
 	width: 100%;
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
-	border: solid 1px ${(props) => props.palette?.borderColors.common || variables.borderColors.common};
-	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
+	border: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	padding: 7px 15px 7px;
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : '')};
 `;

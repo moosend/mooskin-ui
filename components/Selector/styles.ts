@@ -11,7 +11,7 @@ import variables from '../_utils/globals/variables';
 export const StyledSelector = styled(Box)<ISelectorComponentProps>`
 	padding: 6px;
 	border-radius: 22px;
-	background-color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	background-color: ${(props) => props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2};
 	display: flex;
 `;
 
@@ -26,13 +26,12 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
 	border-radius: 22px;
 	color: ${(props) =>
 		props.active
-			? `${props.palette?.fontColors.common || variables.fontColors.common}`
-			: `${props.palette?.borderColors.common || variables.borderColors.common}`};
+			? `${props.palette?.fontColors.text || variables.fontColors.text}`
+			: `${props.palette?.fontColors.medgray1 || variables.fontColors.medgray1}`};
 	background-color: ${(props) =>
 		props.active
-			? `${props.palette?.backgroundColors.common || variables.backgroundColors.common}`
-			: `${props.palette?.fontColors.common || variables.fontColors.common}`};
-	font-family: Hind;
+			? `${props.palette?.backgroundColors.white || variables.backgroundColors.white}`
+			: `${props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2}`};
 	font-size: 12px;
 	font-weight: 500;
 	font-stretch: normal;

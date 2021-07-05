@@ -19,7 +19,7 @@ StyledExpandable.displayName = 'StyledExpandable';
 export const StyledExpandableItem = styled(Box)<IExpandableItemComponentProps>`
 	border-radius: 3px;
 	border: solid 1px #e2e2e2;
-	background-color: ${(props) => props.palette?.backgroundColors.common || variables.backgroundColors.common};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	:not(:last-child) {
 		margin-bottom: 15px;
 	}
@@ -46,14 +46,13 @@ StyledExpandableItemButton.displayName = 'StyledExpandableItemButton';
 
 export const StyledExpandableItemText = styled(Box)<IBoxComponentProps>`
 	flex: 1;
-	font-family: Montserrat;
 	font-size: 14px;
 	font-weight: 500;
 	font-stretch: normal;
 	font-style: normal;
 	letter-spacing: normal;
 	text-align: left;
-	color: ${(props) => props.palette?.fontColors.common || variables.fontColors.common};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
 StyledExpandableItemText.displayName = 'StyledExpandableItemText';
