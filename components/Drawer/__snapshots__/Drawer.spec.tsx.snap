@@ -400,7 +400,7 @@ exports[`Drawer renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx deSLUj sc-gtssRu"
+              className="sc-bdnylx RudKt sc-gtssRu"
               onClose={[MockFunction]}
               size="sm"
               style={Object {}}
@@ -793,7 +793,7 @@ exports[`Drawer renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
+                            className="sc-bdnylx RudKt sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1203,7 +1203,7 @@ exports[`Drawer renders correctly 1`] = `
                                         w="50%"
                                       >
                                         <div
-                                          className="sc-bdnylx ilydmX sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb jNhBeZ"
+                                          className="sc-bdnylx jxiJgc sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb jNhBeZ"
                                           onClick={[Function]}
                                           size="sm"
                                           style={Object {}}
@@ -1608,7 +1608,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       top={10}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ihnpHc sc-fnVYJo dMsAjF"
+                                                        className="sc-bdnylx dWdTgS sc-fnVYJo dMsAjF"
                                                         onClick={[Function]}
                                                         style={Object {}}
                                                       >
@@ -2001,7 +2001,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <header
-                                                        className="sc-bdnylx deSLUj sc-bqGHjH drLbIb"
+                                                        className="sc-bdnylx RudKt sc-bqGHjH drLbIb"
                                                         style={Object {}}
                                                       >
                                                         Create your account
@@ -2388,7 +2388,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx deSLUj sc-ksluoS jiUKmX"
+                                                        className="sc-bdnylx RudKt sc-ksluoS jiUKmX"
                                                         style={Object {}}
                                                       >
                                                         Drawer Content Body
@@ -2780,7 +2780,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <footer
-                                                        className="sc-bdnylx deSLUj sc-hBMVcZ fJYgtM"
+                                                        className="sc-bdnylx RudKt sc-hBMVcZ fJYgtM"
                                                         style={Object {}}
                                                       >
                                                         Drawer Footer goes here!

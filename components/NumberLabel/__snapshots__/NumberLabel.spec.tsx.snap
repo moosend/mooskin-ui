@@ -585,7 +585,7 @@ exports[`Button renders correctly 1`] = `
                 }
               >
                 <label
-                  className="sc-bdnylx deSLUj sc-gtssRu gGjztn myClass"
+                  className="sc-bdnylx RudKt sc-gtssRu gGjztn myClass"
                   id="label"
                   style={
                     Object {
