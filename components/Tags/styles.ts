@@ -22,6 +22,7 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
 	display: flex;
 	padding: 1px 10px;
 	border-radius: 13px;
+	line-height: 1.7;
 	background-color: ${(props) => props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2};
 	font-size: 12px;
 	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};

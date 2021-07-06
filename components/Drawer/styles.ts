@@ -228,7 +228,7 @@ export const StyledDrawerCloseButton = styled(Box)<IBoxComponentProps>`
 	height: 32px;
 	font-size: 32px;
 	cursor: pointer;
-	border-radius: 9px;
+	border-radius: 2px;
 	color: inherit;
 	&:hover {
 		background: rgba(30, 30, 30, 0.1);

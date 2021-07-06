@@ -17,7 +17,7 @@ export const StyledExpandable = styled(Box)<IExpandableComponentProps>`
 StyledExpandable.displayName = 'StyledExpandable';
 
 export const StyledExpandableItem = styled(Box)<IExpandableItemComponentProps>`
-	border-radius: 3px;
+	border-radius: 2px;
 	border: solid 1px #e2e2e2;
 	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	:not(:last-child) {

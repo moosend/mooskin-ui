@@ -17,7 +17,7 @@ export const StyledPagination = styled(Box)<IPaginationComponentProps>`
 StyledPagination.displayName = 'StyledPagination';
 
 export const StyledPaginationButton = styled(Box)<IPaginationButtonComponentProps>`
-	border-radius: 3px;
+	border-radius: 2px;
 	font-size: 16px;
 	font-weight: 500;
 	font-stretch: normal;

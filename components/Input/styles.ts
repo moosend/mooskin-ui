@@ -19,7 +19,7 @@ export const StyledInputContainer = styled(Box)<IInputContainerComponentProps>`
 	align-items: center;
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : '')};
-	border-radius: 3px;
+	border-radius: 2px;
 	border: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
 	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	padding: 7px 15px 7px;
@@ -40,7 +40,7 @@ export const StyledInputBase = styled(Box)<IInputComponentProps>`
 StyledInputBase.displayName = 'StyledInputBase';
 
 export const StyledInputSolo = styled(StyledInputBase)<IInputComponentProps>`
-	border-radius: 3px;
+	border-radius: 2px;
 	width: 100%;
 	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	border: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
@@ -85,7 +85,7 @@ export const StyledInputOptionList = styled(Box)<Partial<IInputListComponentProp
 	right: 0;
 	height: auto;
 	background: #fff;
-	border-radius: 3px;
+	border-radius: 2px;
 	z-index: 4;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.32);
 `;

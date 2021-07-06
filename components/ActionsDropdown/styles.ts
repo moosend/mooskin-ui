@@ -11,7 +11,7 @@ import { Box } from '../Box/Box';
 import variables from '../_utils/globals/variables';
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
-	border-radius: 3px;
+	border-radius: 2px;
 	background-color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
 	display: flex;
 	flex-direction: column;

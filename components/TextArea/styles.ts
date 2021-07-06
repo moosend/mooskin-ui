@@ -11,7 +11,7 @@ import variables from '../_utils/globals/variables';
 
 export const StyledTextArea = styled(Box)<ITextAreaBoxComponentProps>`
 	padding: 11px;
-	border-radius: 3px;
+	border-radius: 2px;
 	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	border: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
 	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};

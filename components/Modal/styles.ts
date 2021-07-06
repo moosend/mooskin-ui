@@ -102,7 +102,7 @@ export const StyledModalCloseButton = styled(Box)<IBoxComponentProps>`
 	font-size: 32px;
 	color: inherit;
 	cursor: pointer;
-	border-radius: 9px;
+	border-radius: 2px;
 	&:hover {
 		background: rgba(30, 30, 30, 0.1);
 	}

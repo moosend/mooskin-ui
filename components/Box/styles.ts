@@ -17,7 +17,7 @@ export const getNumberOrStringValue = (value?: number | string) => {
 export const getNestedValue = (value?: number | string | NestedThemeType, pallete?: IStyledTheme) => {
 	if (typeof value === 'string' && value.includes('.') && pallete) {
 		const valueAsArray = value.split('.');
-		return (pallete as any)[valueAsArray[0]][valueAsArray[1]];
+		return (pallete as any)[valueAsArray[0]] ? (pallete as any)[valueAsArray[0]][valueAsArray[1]] : value;
 	}
 	return value;
 };
@@ -101,7 +101,7 @@ const generateStyles = (data: {
 }) => {
 	const { property, nestedValue, processedValue, value, pallete } = data;
 
-	if (!value) {
+	if (typeof value === 'undefined') {
 		return;
 	}
 
@@ -129,7 +129,7 @@ const generateStyles = (data: {
 			media = `${media} ${getMediaQueryString(screens.xSmall, property, xSmallValue)}`;
 		}
 	} else {
-		largeValue = processedValue ? getNumberOrStringValue(value) : value;
+		largeValue = processedValue ? getNumberOrStringValue(value) : nestedValue ? getNestedValue(value, pallete) : value;
 	}
 
 	return `
