@@ -155,7 +155,7 @@ InputOptionListTitle.displayName = 'InputOptionListTitle';
  * InputOption
  */
 export const InputOption: React.FC<IInputOptionComponentProps> = withMooskinContext((props) => {
-	return <Text my={8} mx={15} fontSize={14} fontColor={['fontColors', 'common'] as any} {...props} />;
+	return <Text my={8} mx={15} fontSize={14} fontColor="fontColors.primary1" {...props} />;
 });
 
 InputOption.defaultProps = {
