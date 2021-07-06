@@ -50,13 +50,14 @@ Icon.args = {
 			VIEW CAMPAIGN
 		</>
 	),
-	color: ['fontColors', 'common'] as any,
+	fontColor: 'fontColors.primary1',
 } as IButtonComponentProps;
 
 export const Href = Template.bind({});
 Href.args = {
 	children: 'VIEW CAMPAIGN',
 	href: 'https://www.moosend.com',
+	bgColor: ['red', 'blue', 'green', 'yellow'],
 } as IButtonComponentProps;
 
 export const Disabled = Template.bind({});

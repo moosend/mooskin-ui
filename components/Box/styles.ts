@@ -7,142 +7,17 @@ import screens from '../_utils/globals/screens';
 import { IStyledTheme } from '../Styled/model';
 import { BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
 
-export const StyledBox = styled.div<IBoxComponentProps>`
-	&&& {
-		margin: ${(props) => getNumberOrStringValue(props.m)};
-		margin-top: ${(props) => getNumberOrStringValue(props.mt || props.my)};
-		margin-right: ${(props) => getNumberOrStringValue(props.mr || props.mx)};
-		margin-bottom: ${(props) => getNumberOrStringValue(props.mb || props.my)};
-		margin-left: ${(props) => getNumberOrStringValue(props.ml || props.mx)};
-
-		padding: ${(props) => getNumberOrStringValue(props.p)};
-		padding-top: ${(props) => getNumberOrStringValue(props.pt || props.py)};
-		padding-right: ${(props) => getNumberOrStringValue(props.pr || props.px)};
-		padding-bottom: ${(props) => getNumberOrStringValue(props.pb || props.py)};
-		padding-left: ${(props) => getNumberOrStringValue(props.pl || props.px)};
-
-		color: ${(props) => getNestedValue(props.fontColor, props.palette)};
-		font-family: ${(props) => props.fontFamily};
-		font-size: ${(props) => getNumberOrStringValue(props.fontSize)};
-		font-weight: ${(props) => props.fontWeight};
-		line-height: ${(props) => props.lineHeight};
-		text-align: ${(props) => props.textAlign};
-		font-style: ${(props) => props.fontStyle};
-		text-transform: ${(props) => props.textTransform};
-		text-decoration: ${(props) => props.textDecoration};
-		white-space: ${(props) => props.whiteSpace};
-
-		width: ${(props) => getNumberOrStringValue(props.w)};
-		height: ${(props) => getNumberOrStringValue(props.h)};
-		min-width: ${(props) => getNumberOrStringValue(props.minW)};
-		max-width: ${(props) => getNumberOrStringValue(props.maxW)};
-		min-height: ${(props) => getNumberOrStringValue(props.minH)};
-		max-height: ${(props) => getNumberOrStringValue(props.maxH)};
-
-		display: ${(props) => props.d};
-
-		overflow: ${(props) => props.overflow};
-		overflow-y: ${(props) => props.overflowY};
-		overflow-x: ${(props) => props.overflowX};
-
-		align-items: ${(props) => props.align};
-		align-content: ${(props) => props.alignContent};
-		align-self: ${(props) => props.alignSelf};
-		justify-content: ${(props) => props.justify};
-		justify-items: ${(props) => props.justifyItems};
-		justify-self: ${(props) => props.justifySelf};
-		flex-wrap: ${(props) => props.flexWrap};
-		flex-direction: ${(props) => props.direction};
-		flex: ${(props) => props.flex};
-		flex-grow: ${(props) => props.flexGrow};
-		flex-shrink: ${(props) => props.flexShrink};
-		flex-basis: ${(props) => getNumberOrStringValue(props.flexBasis)};
-		order: ${(props) => props.order};
-
-		background: ${(props) => props.bg};
-		background-image: ${(props) => props.bgImage};
-		background-color: ${(props) => getNestedValue(props.bgColor, props.palette)};
-		background-size: ${(props) => props.bgSize};
-		background-position: ${(props) => props.bgPosition};
-		background-repeat: ${(props) => props.bgRepeat};
-
-		border: ${(props) => props.border};
-		border-style: ${(props) => props.borderStyle};
-		border-color: ${(props) => getNestedValue(props.borderColor, props.palette)};
-		border-width: ${(props) => getNumberOrStringValue(props.borderWidth)};
-
-		border-top: ${(props) => props.borderTop};
-		border-top-style: ${(props) => props.borderTopStyle};
-		border-top-color: ${(props) => props.borderTopColor};
-		border-top-width: ${(props) => getNumberOrStringValue(props.borderTopWidth)};
-
-		border-right: ${(props) => props.borderRight};
-		border-right-style: ${(props) => props.borderRightStyle};
-		border-right-color: ${(props) => props.borderRightColor};
-		border-right-width: ${(props) => getNumberOrStringValue(props.borderRightWidth)};
-
-		border-bottom: ${(props) => props.borderBottom};
-		border-bottom-style: ${(props) => props.borderBottomStyle};
-		border-bottom-color: ${(props) => props.borderBottomColor};
-		border-bottom-width: ${(props) => getNumberOrStringValue(props.borderBottomWidth)};
-
-		border-left: ${(props) => props.borderLeft};
-		border-left-style: ${(props) => props.borderLeftStyle};
-		border-left-color: ${(props) => props.borderLeftColor};
-		border-left-width: ${(props) => getNumberOrStringValue(props.borderLeftWidth)};
-
-		border-radius: ${(props) => (props.borderRadius ? getNumberOrStringValue(props.borderRadius) : getRoundness(props.round))};
-		border-top-left-radius: ${(props) => getNumberOrStringValue(props.borderTopLeftRadius)};
-		border-top-right-radius: ${(props) => getNumberOrStringValue(props.borderTopRightRadius)};
-		border-bottom-right-radius: ${(props) => getNumberOrStringValue(props.borderBottomRightRadius)};
-		border-bottom-left-radius: ${(props) => getNumberOrStringValue(props.borderBottomLeftRadius)};
-
-		position: ${(props) => props.position};
-		z-index: ${(props) => props.zIndex};
-		top: ${(props) => getNumberOrStringValue(props.top)};
-		right: ${(props) => getNumberOrStringValue(props.right)};
-		bottom: ${(props) => getNumberOrStringValue(props.bottom)};
-		left: ${(props) => getNumberOrStringValue(props.left)};
-
-		box-shadow: ${(props) => getBoxShadow(props.boxShadow)};
-
-		animation: ${(props) => props.animation};
-
-		visibility: ${(props) => props.visibility};
-
-		opacity: ${(props) => props.opacity};
-
-		cursor: ${(props) => props.cursor};
-
-		all: ${(props) => props.all};
-
-		transition: ${(props) => props.transition};
-
-		text-overflow: ${(props) => props.textOverflow};
-
-		grid-template-columns: ${(props) => props.gridTemplateColumns};
-
-		word-break: ${(props) => props.wordBreak};
-
-		:hover {
-			${(props) => props._hover}
-		}
-
-		${(props) => generateHiddenMediaQuery(props)}
-	}
-`;
-
-StyledBox.displayName = 'StyledBox';
-
 export const getNumberOrStringValue = (value?: number | string) => {
 	if (typeof value !== 'undefined') {
 		return typeof value === 'number' ? `${value}px` : value;
 	}
+	return '';
 };
 
 export const getNestedValue = (value?: number | string | NestedThemeType, pallete?: IStyledTheme) => {
-	if (Array.isArray(value) && pallete) {
-		return (pallete as any)[value[0]][value[1]];
+	if (typeof value === 'string' && value.includes('.') && pallete) {
+		const valueAsArray = value.split('.');
+		return (pallete as any)[valueAsArray[0]][valueAsArray[1]];
 	}
 	return value;
 };
@@ -209,33 +84,178 @@ export const getBoxShadow = (boxShadow?: React.CSSProperties['boxShadow'] | BoxS
 	}
 };
 
-const generateHiddenMediaQuery = (props: IBoxComponentProps) => {
-	const { lgHide, mdHide, smHide, xsHide } = props;
-	let media = '';
-
-	if (lgHide) {
-		media = `${media} ${getQueryString(screens.large)}`;
-	}
-
-	if (mdHide) {
-		media = `${media} ${getQueryString(screens.medium)}`;
-	}
-
-	if (smHide) {
-		media = `${media} ${getQueryString(screens.small)}`;
-	}
-
-	if (xsHide) {
-		media = `${media} ${getQueryString(screens.xSmall)}`;
-	}
-
-	return media;
-};
-
-const getQueryString = (media: string) => {
+const getMediaQueryString = (media: string, property: string, value?: number | string) => {
 	return `
         @media ${media} {
-            display: none;
+            ${property}: ${value};
         }
     `;
 };
+
+const generateStyles = (data: {
+	property: string;
+	value?: number | string | any[];
+	processedValue?: boolean;
+	nestedValue?: boolean;
+	pallete?: IStyledTheme;
+}) => {
+	const { property, nestedValue, processedValue, value, pallete } = data;
+
+	if (!value) {
+		return;
+	}
+
+	let media = '';
+	let largeValue;
+	let mediumValue;
+	let smallValue;
+	let xSmallValue;
+
+	if (Array.isArray(value)) {
+		if (value[0]) {
+			largeValue = processedValue ? getNumberOrStringValue(value[0]) : nestedValue ? getNestedValue(value[0], pallete) : value[0];
+			// media = `${media} ${getMediaQueryString(screens.large)}`;
+		}
+		if (value[1]) {
+			mediumValue = processedValue ? getNumberOrStringValue(value[1]) : nestedValue ? getNestedValue(value[1], pallete) : value[1];
+			media = `${media} ${getMediaQueryString(screens.medium, property, mediumValue)}`;
+		}
+		if (value[2]) {
+			smallValue = processedValue ? getNumberOrStringValue(value[2]) : nestedValue ? getNestedValue(value[2], pallete) : value[2];
+			media = `${media} ${getMediaQueryString(screens.small, property, smallValue)}`;
+		}
+		if (value[3]) {
+			xSmallValue = processedValue ? getNumberOrStringValue(value[3]) : nestedValue ? getNestedValue(value[3], pallete) : value[3];
+			media = `${media} ${getMediaQueryString(screens.xSmall, property, xSmallValue)}`;
+		}
+	} else {
+		largeValue = processedValue ? getNumberOrStringValue(value) : value;
+	}
+
+	return `
+		${property}: ${largeValue};
+		${media}
+	`;
+};
+
+export const StyledBox = styled.div<IBoxComponentProps>`
+	&&& {
+
+		${(props) => generateStyles({ property: 'margin', value: props.m, processedValue: true })}
+		${(props) => generateStyles({ property: 'margin-top', value: props.mt || props.my, processedValue: true })}
+		${(props) => generateStyles({ property: 'margin-right', value: props.mr || props.mx, processedValue: true })}
+		${(props) => generateStyles({ property: 'margin-bottom', value: props.mb || props.my, processedValue: true })}
+		${(props) => generateStyles({ property: 'margin-left', value: props.ml || props.mx, processedValue: true })}
+
+		${(props) => generateStyles({ property: 'padding', value: props.p, processedValue: true })}
+		${(props) => generateStyles({ property: 'padding-top', value: props.pt || props.py, processedValue: true })}
+		${(props) => generateStyles({ property: 'padding-right', value: props.pr || props.px, processedValue: true })}
+		${(props) => generateStyles({ property: 'padding-bottom', value: props.pb || props.py, processedValue: true })}
+		${(props) => generateStyles({ property: 'padding-left', value: props.pl || props.px, processedValue: true })}
+
+		${(props) => generateStyles({ property: 'color', value: props.fontColor, nestedValue: true, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'font-family', value: props.fontFamily })}
+		${(props) => generateStyles({ property: 'font-size', value: props.fontSize, processedValue: true })}
+		${(props) => generateStyles({ property: 'font-weight', value: props.fontWeight })}
+		${(props) => generateStyles({ property: 'line-height', value: props.lineHeight })}
+		${(props) => generateStyles({ property: 'text-align', value: props.textAlign })}
+		${(props) => generateStyles({ property: 'font-style', value: props.fontStyle })}
+		${(props) => generateStyles({ property: 'text-transform', value: props.textTransform })}
+		${(props) => generateStyles({ property: 'text-decoration', value: props.textDecoration })}
+		${(props) => generateStyles({ property: 'white-space', value: props.whiteSpace })}
+
+		${(props) => generateStyles({ property: 'width', value: props.w, processedValue: true })}
+		${(props) => generateStyles({ property: 'height', value: props.h, processedValue: true })}
+		${(props) => generateStyles({ property: 'min-width', value: props.minW, processedValue: true })}
+		${(props) => generateStyles({ property: 'max-width', value: props.maxW, processedValue: true })}
+		${(props) => generateStyles({ property: 'min-height', value: props.minH, processedValue: true })}
+		${(props) => generateStyles({ property: 'max-height', value: props.maxH, processedValue: true })}
+
+		${(props) => generateStyles({ property: 'display', value: props.d })}
+
+		${(props) => generateStyles({ property: 'overflow', value: props.overflow })}
+		${(props) => generateStyles({ property: 'overflow-y', value: props.overflowY })}
+		${(props) => generateStyles({ property: 'overflow-x', value: props.overflowX })}
+
+		${(props) => generateStyles({ property: 'align-items', value: props.align })}
+		${(props) => generateStyles({ property: 'align-content', value: props.alignContent })}
+		${(props) => generateStyles({ property: 'align-self', value: props.alignSelf })}
+		${(props) => generateStyles({ property: 'justify-content', value: props.justify })}
+		${(props) => generateStyles({ property: 'justify-items', value: props.justifySelf })}
+		${(props) => generateStyles({ property: 'justify-self', value: props.justifySelf })}
+		${(props) => generateStyles({ property: 'flex-wrap', value: props.flexWrap })}
+		${(props) => generateStyles({ property: 'overflow-y', value: props.overflowY })}
+		${(props) => generateStyles({ property: 'flex-direction', value: props.direction })}
+		${(props) => generateStyles({ property: 'flex', value: props.flex })}
+		${(props) => generateStyles({ property: 'flex-grow', value: props.flexGrow })}
+		${(props) => generateStyles({ property: 'flex-shrink', value: props.flexShrink })}
+		${(props) => generateStyles({ property: 'flex-basis', value: props.flexBasis, processedValue: true })}
+		${(props) => generateStyles({ property: 'order', value: props.order })}
+
+		${(props) => generateStyles({ property: 'background', value: props.bg })}
+		${(props) => generateStyles({ property: 'background-image', value: props.bgImage })}
+		${(props) => generateStyles({ property: 'background-color', value: props.bgColor, nestedValue: true, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'background-size', value: props.bgSize })}
+		${(props) => generateStyles({ property: 'background-position', value: props.bgPosition })}
+		${(props) => generateStyles({ property: 'background-repeat', value: props.bgRepeat })}
+
+		${(props) => generateStyles({ property: 'border', value: props.border })}
+		${(props) => generateStyles({ property: 'border-style', value: props.borderStyle })}
+		${(props) => generateStyles({ property: 'border-color', value: props.borderColor, nestedValue: true, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'border-width', value: props.borderWidth, processedValue: true })}
+
+		${(props) => generateStyles({ property: 'border-top', value: props.borderTop })}
+		${(props) => generateStyles({ property: 'border-top-style', value: props.borderTopStyle })}
+		${(props) => generateStyles({ property: 'border-top-color', value: props.borderTopColor })}
+		${(props) => generateStyles({ property: 'border-top-width', value: props.borderTopWidth, processedValue: true })}
+
+		${(props) => generateStyles({ property: 'border-right', value: props.borderRight })}
+		${(props) => generateStyles({ property: 'border-right-style', value: props.borderRightStyle })}
+		${(props) => generateStyles({ property: 'border-right-color', value: props.borderRightColor })}
+		${(props) => generateStyles({ property: 'border-right-width', value: props.borderRightWidth, processedValue: true })}
+
+		${(props) => generateStyles({ property: 'border-bottom', value: props.borderBottom })}
+		${(props) => generateStyles({ property: 'border-bottom-style', value: props.borderBottomStyle })}
+		${(props) => generateStyles({ property: 'border-bottom-color', value: props.borderBottomColor })}
+		${(props) => generateStyles({ property: 'border-bottom-width', value: props.borderBottomWidth, processedValue: true })}
+
+		${(props) => generateStyles({ property: 'border-left', value: props.borderLeft })}
+		${(props) => generateStyles({ property: 'border-left-style', value: props.borderLeftStyle })}
+		${(props) => generateStyles({ property: 'border-left-color', value: props.borderLeftColor })}
+		${(props) => generateStyles({ property: 'border-left-width', value: props.borderLeftWidth, processedValue: true })}
+
+		${(props) =>
+			props.borderRadius
+				? generateStyles({ property: 'border-radius', value: props.borderRadius, processedValue: true })
+				: `border-radius: ${getRoundness(props.round)};`}
+		${(props) => generateStyles({ property: 'border-top-left-radius', value: props.borderTopLeftRadius, processedValue: true })}
+		${(props) => generateStyles({ property: 'border-top-right-radius', value: props.borderTopRightRadius, processedValue: true })}
+		${(props) => generateStyles({ property: 'border-bottom-right-radius', value: props.borderBottomRightRadius, processedValue: true })}
+		${(props) => generateStyles({ property: 'border-bottom-left-radius', value: props.borderBottomLeftRadius, processedValue: true })}
+
+		${(props) => generateStyles({ property: 'position', value: props.position })}
+		${(props) => generateStyles({ property: 'z-index', value: props.zIndex })}
+		${(props) => generateStyles({ property: 'top', value: props.top, processedValue: true })}
+		${(props) => generateStyles({ property: 'right', value: props.right, processedValue: true })}
+		${(props) => generateStyles({ property: 'bottom', value: props.bottom, processedValue: true })}
+		${(props) => generateStyles({ property: 'left', value: props.left, processedValue: true })}
+
+		box-shadow: ${(props) => getBoxShadow(props.boxShadow)};
+
+		${(props) => generateStyles({ property: 'animation', value: props.animation })}
+		${(props) => generateStyles({ property: 'visibility', value: props.visibility })}
+		${(props) => generateStyles({ property: 'opacity', value: props.opacity })}
+		${(props) => generateStyles({ property: 'cursor', value: props.cursor })}
+		${(props) => generateStyles({ property: 'all', value: props.all })}
+		${(props) => generateStyles({ property: 'transition', value: props.transition })}
+		${(props) => generateStyles({ property: 'text-overflow', value: props.textOverflow })}
+		${(props) => generateStyles({ property: 'grid-template-columns', value: props.gridTemplateColumns })}
+		${(props) => generateStyles({ property: 'word-break', value: props.wordBreak })}
+
+		:hover {
+			${(props) => props._hover}
+		}
+	}
+`;
+
+StyledBox.displayName = 'StyledBox';

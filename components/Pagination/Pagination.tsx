@@ -105,7 +105,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 				<IconButton
 					cursor={showFirst ? 'pointer' : 'not-allowed'}
 					onClick={showFirst ? () => onArrowClick(1) : undefined}
-					fontColor={showFirst ? ['backgroundColors', 'primary2'] : variables.fontColors.primary2}
+					fontColor={showFirst ? 'backgroundColors.primary2' : variables.fontColors.primary2}
 				>
 					first_page
 				</IconButton>
@@ -115,7 +115,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 					cursor={showPrevious ? 'pointer' : 'not-allowed'}
 					mr={10}
 					onClick={showPrevious ? () => onArrowClick(props.activePage - 1) : undefined}
-					fontColor={showPrevious ? ['backgroundColors', 'primary2'] : variables.fontColors.primary2}
+					fontColor={showPrevious ? 'backgroundColors.primary2' : variables.fontColors.primary2}
 				>
 					chevron_left
 				</IconButton>
@@ -125,7 +125,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 				<IconButton
 					cursor={showNext ? 'pointer' : 'not-allowed'}
 					onClick={showNext ? () => onArrowClick(props.activePage + 1) : undefined}
-					fontColor={showNext ? ['backgroundColors', 'primary2'] : variables.fontColors.primary2}
+					fontColor={showNext ? 'backgroundColors.primary2' : variables.fontColors.primary2}
 				>
 					chevron_right
 				</IconButton>
@@ -135,7 +135,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 					cursor={showLast ? 'pointer' : 'not-allowed'}
 					onClick={showLast ? () => childrenLength && onArrowClick(childrenLength) : undefined}
 					mr={10}
-					fontColor={showLast ? ['backgroundColors', 'primary2'] : variables.fontColors.primary2}
+					fontColor={showLast ? 'backgroundColors.primary2' : variables.fontColors.primary2}
 				>
 					last_page
 				</IconButton>

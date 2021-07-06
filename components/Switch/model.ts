@@ -20,7 +20,7 @@ export interface ISwitchComponentProps extends IBoxComponentProps {
 
 export interface ISwitchHandleComponentProps extends IBoxComponentProps {
 	/** switch width to calculate position */
-	switchWidth?: number | string;
+	switchWidth?: any;
 
 	/** Switch status */
 	active?: boolean;
