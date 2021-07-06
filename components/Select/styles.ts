@@ -38,7 +38,7 @@ StyledSelectFilter.displayName = 'StyledSelectFilter';
 
 export const StyledSelectContainer = styled(Box)<IBoxComponentProps>`
 	display: flex;
-	border-radius: 3px;
+	border-radius: 2px;
 	border: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
 	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	color: inherit;

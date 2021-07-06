@@ -23,7 +23,7 @@ const inverseButtonSizes = {
 
 export const ButtonDefault = styled(Box)<IButtonComponentProps>`
 	width: fit-content;
-	border-radius: 3px;
+	border-radius: 2px;
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 	outline: 0;
 	font-size: 12px;
