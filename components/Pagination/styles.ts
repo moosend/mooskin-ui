@@ -32,7 +32,7 @@ export const StyledPaginationButton = styled(Box)<IPaginationButtonComponentProp
 			: `${props.palette?.fontColors.medgray1 || variables.fontColors.medgray1}`};
 	background-color: ${(props) =>
 		props.active
-			? `${props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1}`
+			? `${props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2}`
 			: `${props.palette?.backgroundColors.white || variables.backgroundColors.white}`};
 	border: ${(props) => (props.active ? 'none' : `solid 1px ${props.palette?.borderColors.medgray1 || variables.borderColors.medgray1}`)};
 	:not(:last-child) {
@@ -49,8 +49,8 @@ export const StyledPaginationShowAll = styled(Box)<IBoxComponentProps>`
 	font-style: normal;
 	letter-spacing: normal;
 	text-align: left;
-	color: #3fbaca;
-	border-bottom: 1px solid #3fbaca;
+	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
+	border-bottom: 1px solid ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
 	cursor: pointer;
 `;
 
