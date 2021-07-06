@@ -376,7 +376,7 @@ exports[`Table renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx deSLUj sc-gKAblj hWYIYs"
+              className="sc-bdnylx RudKt sc-gKAblj hWYIYs"
               style={Object {}}
             >
               <TableHeader
@@ -754,7 +754,7 @@ exports[`Table renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-iCoHVE eXstCy"
+                            className="sc-bdnylx RudKt sc-iCoHVE eXstCy"
                             style={Object {}}
                           >
                             <TableHeaderItem
@@ -1144,7 +1144,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx kxrIuy sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx kXIGoF sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           <Checkbox
@@ -1535,7 +1535,7 @@ exports[`Table renders correctly 1`] = `
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx deSLUj sc-hKFyIo dxNlPq"
+                                                        className="sc-bdnylx RudKt sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >
@@ -1920,7 +1920,7 @@ exports[`Table renders correctly 1`] = `
                                                                     style={Object {}}
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx deSLUj sc-eCApGN imjzyD"
+                                                                      className="sc-bdnylx RudKt sc-eCApGN imjzyD"
                                                                       onClick={[Function]}
                                                                       style={Object {}}
                                                                     >
@@ -2327,7 +2327,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx hVFSFD sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx eujIIw sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           Mailing list name
@@ -2719,7 +2719,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iyPZUT sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           SEGMENTS
@@ -3111,7 +3111,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iyPZUT sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           Change (last day)
@@ -3503,7 +3503,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iyPZUT sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           Active recipients
@@ -3895,7 +3895,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iyPZUT sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           Tags
@@ -4287,7 +4287,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx gptLXF sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx gumbcC sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         />
                                       </StyledBox>
@@ -4678,7 +4678,7 @@ exports[`Table renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-pNWxx julZJV"
+                            className="sc-bdnylx RudKt sc-pNWxx julZJV"
                             style={Object {}}
                           >
                             <TableRowItem
@@ -5068,7 +5068,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx kxrIuy sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx kXIGoF sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           <Checkbox
@@ -5465,7 +5465,7 @@ exports[`Table renders correctly 1`] = `
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx kbMWsW sc-hKFyIo dxNlPq"
+                                                        className="sc-bdnylx jgjgLb sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >
@@ -5850,7 +5850,7 @@ exports[`Table renders correctly 1`] = `
                                                                     style={Object {}}
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx deSLUj sc-eCApGN imjzyD"
+                                                                      className="sc-bdnylx RudKt sc-eCApGN imjzyD"
                                                                       onClick={[Function]}
                                                                       style={Object {}}
                                                                     >
@@ -6257,7 +6257,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx hVFSFD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx eujIIw sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Main mailing list #1
@@ -6649,7 +6649,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iyPZUT sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           2
@@ -7041,7 +7041,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iyPZUT sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           +12
@@ -7433,7 +7433,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iyPZUT sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           124,543
@@ -7825,7 +7825,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iyPZUT sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Tags component!
@@ -8217,7 +8217,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx gptLXF sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx gumbcC sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Actions
@@ -8610,7 +8610,7 @@ exports[`Table renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-pNWxx julZJV"
+                            className="sc-bdnylx RudKt sc-pNWxx julZJV"
                             style={Object {}}
                           >
                             <TableRowItem
@@ -9000,7 +9000,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx kxrIuy sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx kXIGoF sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           <Checkbox
@@ -9397,7 +9397,7 @@ exports[`Table renders correctly 1`] = `
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx kbMWsW sc-hKFyIo dxNlPq"
+                                                        className="sc-bdnylx jgjgLb sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >
@@ -9782,7 +9782,7 @@ exports[`Table renders correctly 1`] = `
                                                                     style={Object {}}
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx deSLUj sc-eCApGN imjzyD"
+                                                                      className="sc-bdnylx RudKt sc-eCApGN imjzyD"
                                                                       onClick={[Function]}
                                                                       style={Object {}}
                                                                     >
@@ -10189,7 +10189,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx hVFSFD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx eujIIw sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Main mailing list #2
@@ -10581,7 +10581,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iyPZUT sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           3
@@ -10973,7 +10973,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iyPZUT sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           +7
@@ -11365,7 +11365,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iyPZUT sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           80,000
@@ -11757,7 +11757,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx ldbdBw sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iyPZUT sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Tags component!
@@ -12149,7 +12149,7 @@ exports[`Table renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx gptLXF sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx gumbcC sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Actions

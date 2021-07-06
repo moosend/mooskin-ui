@@ -394,7 +394,7 @@ exports[`Modal renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx deSLUj sc-gtssRu"
+              className="sc-bdnylx RudKt sc-gtssRu"
               onClose={[MockFunction]}
               style={Object {}}
             >
@@ -786,7 +786,7 @@ exports[`Modal renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
+                            className="sc-bdnylx RudKt sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1190,7 +1190,7 @@ exports[`Modal renders correctly 1`] = `
                                         w="50%"
                                       >
                                         <div
-                                          className="sc-bdnylx ilydmX sc-dlnjPT sc-hKFyIo dIkxby laJKTU"
+                                          className="sc-bdnylx jxiJgc sc-dlnjPT sc-hKFyIo dIkxby laJKTU"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -1594,7 +1594,7 @@ exports[`Modal renders correctly 1`] = `
                                                       top={10}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ihnpHc sc-fujyUd bWwvNK"
+                                                        className="sc-bdnylx dWdTgS sc-fujyUd bWwvNK"
                                                         onClick={[Function]}
                                                         style={Object {}}
                                                       >
@@ -1987,7 +1987,7 @@ exports[`Modal renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <header
-                                                        className="sc-bdnylx deSLUj sc-jSFkmK fctZID"
+                                                        className="sc-bdnylx RudKt sc-jSFkmK fctZID"
                                                         style={Object {}}
                                                       >
                                                         Create your account
@@ -2374,7 +2374,7 @@ exports[`Modal renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx deSLUj sc-gKAblj cqCqMD"
+                                                        className="sc-bdnylx RudKt sc-gKAblj cqCqMD"
                                                         style={Object {}}
                                                       >
                                                         Modal Content Body
@@ -2766,7 +2766,7 @@ exports[`Modal renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <footer
-                                                        className="sc-bdnylx deSLUj sc-iCoHVE jHzxyK"
+                                                        className="sc-bdnylx RudKt sc-iCoHVE jHzxyK"
                                                         style={Object {}}
                                                       >
                                                         Modal Footer goes here!

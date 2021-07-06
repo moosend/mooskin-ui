@@ -388,7 +388,7 @@ exports[`Selector renders Selector correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx deSLUj sc-gtssRu bQFkch"
+              className="sc-bdnylx RudKt sc-gtssRu bQFkch"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -786,7 +786,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-dlnjPT fMdGfA"
+                            className="sc-bdnylx RudKt sc-dlnjPT fMdGfA"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -1193,7 +1193,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-dlnjPT gxQPCM"
+                            className="sc-bdnylx RudKt sc-dlnjPT gxQPCM"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -1600,7 +1600,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-dlnjPT gxQPCM"
+                            className="sc-bdnylx RudKt sc-dlnjPT gxQPCM"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -2034,7 +2034,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
             }
           >
             <div
-              className="sc-bdnylx deSLUj sc-dlnjPT fMdGfA myClass"
+              className="sc-bdnylx RudKt sc-dlnjPT fMdGfA myClass"
               onClick={[MockFunction]}
               style={
                 Object {

@@ -388,7 +388,7 @@ exports[`Alert renders correctly 1`] = `
             variant="left-accent"
           >
             <div
-              className="sc-bdnylx deSLUj sc-gtssRu SPTIr"
+              className="sc-bdnylx RudKt sc-gtssRu SPTIr"
               style={Object {}}
             >
               <AlertIcon
@@ -779,7 +779,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                            className="sc-bdnylx RudKt sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
                             style={Object {}}
                           >
                             announcement
@@ -1178,7 +1178,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-dlnjPT sc-hKFyIo epnfcP fvbly"
+                            className="sc-bdnylx RudKt sc-dlnjPT sc-hKFyIo epnfcP fvbly"
                             style={Object {}}
                           >
                             Your browser is outdated!
@@ -1577,7 +1577,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx deSLUj sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
+                            className="sc-bdnylx RudKt sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
                             style={Object {}}
                           >
                             Your Mooskin experience may be degraded.
@@ -2000,7 +2000,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx gnNkwU sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
+                            className="sc-bdnylx xPTBi sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
                             onClick={[MockFunction]}
                             style={Object {}}
                           >
