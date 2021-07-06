@@ -25,28 +25,28 @@ export const getNestedValue = (value?: number | string | NestedThemeType, pallet
 export const getRoundness = (round?: IntensityType) => {
 	switch (round) {
 		case 'xs':
-			return '0.125rem';
+			return 'border-radius: 0.125rem;';
 
 		case 'sm':
-			return '0.25rem';
+			return 'border-radius: 0.25rem;';
 
 		case 'base':
-			return '0.375rem';
+			return 'border-radius: 0.375rem;';
 
 		case 'md':
-			return '0.5rem';
+			return 'border-radius: 0.5rem;';
 
 		case 'lg':
-			return '0.625rem';
+			return 'border-radius: 0.625rem;';
 
 		case 'xl':
-			return '0.75rem';
+			return 'border-radius: 0.75rem;';
 
 		case '2xl':
-			return '1rem';
+			return 'border-radius: 1rem;';
 
 		default:
-			break;
+			return;
 	}
 };
 
@@ -142,16 +142,23 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 	&&& {
 
 		${(props) => generateStyles({ property: 'margin', value: props.m, processedValue: true })}
-		${(props) => generateStyles({ property: 'margin-top', value: props.mt || props.my, processedValue: true })}
-		${(props) => generateStyles({ property: 'margin-right', value: props.mr || props.mx, processedValue: true })}
-		${(props) => generateStyles({ property: 'margin-bottom', value: props.mb || props.my, processedValue: true })}
-		${(props) => generateStyles({ property: 'margin-left', value: props.ml || props.mx, processedValue: true })}
+		${(props) => generateStyles({ property: 'margin-top', value: typeof props.mt !== 'undefined' ? props.mt : props.my, processedValue: true })}
+		${(props) =>
+			generateStyles({ property: 'margin-right', value: typeof props.mr !== 'undefined' ? props.mr : props.mx, processedValue: true })}
+		${(props) =>
+			generateStyles({ property: 'margin-bottom', value: typeof props.mb !== 'undefined' ? props.mb : props.my, processedValue: true })}
+		${(props) =>
+			generateStyles({ property: 'margin-left', value: typeof props.ml !== 'undefined' ? props.ml : props.mx, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'padding', value: props.p, processedValue: true })}
-		${(props) => generateStyles({ property: 'padding-top', value: props.pt || props.py, processedValue: true })}
-		${(props) => generateStyles({ property: 'padding-right', value: props.pr || props.px, processedValue: true })}
-		${(props) => generateStyles({ property: 'padding-bottom', value: props.pb || props.py, processedValue: true })}
-		${(props) => generateStyles({ property: 'padding-left', value: props.pl || props.px, processedValue: true })}
+		${(props) =>
+			generateStyles({ property: 'padding-top', value: typeof props.pt !== 'undefined' ? props.pt : props.py, processedValue: true })}
+		${(props) =>
+			generateStyles({ property: 'padding-right', value: typeof props.pr !== 'undefined' ? props.pr : props.px, processedValue: true })}
+		${(props) =>
+			generateStyles({ property: 'padding-bottom', value: typeof props.pb !== 'undefined' ? props.pb : props.py, processedValue: true })}
+		${(props) =>
+			generateStyles({ property: 'padding-left', value: typeof props.pl !== 'undefined' ? props.pl : props.px, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'color', value: props.fontColor, nestedValue: true, pallete: props.palette })}
 		${(props) => generateStyles({ property: 'font-family', value: props.fontFamily })}
@@ -227,7 +234,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		${(props) =>
 			props.borderRadius
 				? generateStyles({ property: 'border-radius', value: props.borderRadius, processedValue: true })
-				: `border-radius: ${getRoundness(props.round)};`}
+				: getRoundness(props.round)}
 		${(props) => generateStyles({ property: 'border-top-left-radius', value: props.borderTopLeftRadius, processedValue: true })}
 		${(props) => generateStyles({ property: 'border-top-right-radius', value: props.borderTopRightRadius, processedValue: true })}
 		${(props) => generateStyles({ property: 'border-bottom-right-radius', value: props.borderBottomRightRadius, processedValue: true })}
