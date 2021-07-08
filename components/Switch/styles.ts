@@ -28,7 +28,7 @@ export const StyledSwitch = styled(Box)<ISwitchComponentProps>`
 		return !props.disabled
 			? props.active
 				? props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1
-				: props.palette?.backgroundColors.gray2 || variables.backgroundColors.gray2
+				: props.palette?.backgroundColors.gray1 || variables.backgroundColors.gray1
 			: props.palette?.backgroundColors.gray1 || variables.backgroundColors.gray1;
 	}};
 `;
