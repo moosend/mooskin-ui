@@ -46,7 +46,7 @@ export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext((pro
 		});
 	};
 
-	return <StyledAlert {...props} children={recurseChildren(props.children)} />;
+	return <StyledAlert {...props} boxShadow="lg" children={recurseChildren(props.children)} />;
 });
 
 Alert.defaultProps = {

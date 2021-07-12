@@ -10,7 +10,7 @@ import { ILoaderComponentProps } from './model';
 import { Box } from '../Box/Box';
 
 // "CSS" Variables
-// import variables from '../_utils/globals/variables';
+import variables from '../_utils/globals/variables';
 
 const spin = keyframes`
     0% { transform: rotate(0deg); }
@@ -18,8 +18,10 @@ const spin = keyframes`
 `;
 
 export const StyledLoader = styled(Box)<ILoaderComponentProps>`
-	border: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid #f3f3f3;
-	border-top: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid #5ccdde;
+	border: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid
+		${(props) => props.palette?.borderColors.medgray1 || variables.borderColors.medgray1};
+	border-top: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid
+		${(props) => props.palette?.borderColors.primary1 || variables.borderColors.primary1};
 	border-radius: 50%;
 	width: ${(props) => getNumberOrStringValue(props.size)};
 	height: ${(props) => getNumberOrStringValue(props.size)};

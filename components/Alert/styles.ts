@@ -6,24 +6,19 @@ import { IBaseAlertComponentProps } from './model';
 // Components
 import { Box } from '../Box/Box';
 
-const BackgroundColors = {
-	error: '#FED7D7',
-	info: '#bee3f8',
-	success: '#C6F6D5',
-	warning: '#FEEBC8',
-};
+import variables from '../_utils/globals/variables';
 
 const SolidBackgroundColors = {
-	error: 'rgb(229, 62, 62)',
-	info: 'rgb(49, 130, 206)',
-	success: '#38A169',
+	error: variables.backgroundColors.primary4,
+	info: variables.backgroundColors.primary1,
+	success: variables.backgroundColors.secondary1,
 	warning: 'rgb(221, 107, 32)',
 };
 
 const FontColors = {
-	error: '#E53E3E',
-	info: '#3182ce',
-	success: '#38A169',
+	error: variables.backgroundColors.primary4,
+	info: variables.backgroundColors.primary1,
+	success: variables.backgroundColors.secondary1,
 	warning: '#DD6B20',
 };
 
@@ -42,14 +37,16 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
 	border-color: ${(props) => props.status && SolidBackgroundColors[props.status]};
 	border-radius: 2px;
 	background-color: ${(props) => {
-		return props.variant === 'solid' ? props.status && SolidBackgroundColors[props.status] : props.status && BackgroundColors[props.status];
+		return props.variant === 'solid'
+			? props.status && SolidBackgroundColors[props.status]
+			: (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white;
 	}};
 `;
 
 StyledAlert.displayName = 'StyledAlert';
 
 const StyledAlertCommonText = styled(Box)<IBaseAlertComponentProps>`
-	color: ${(props) => (props.variant === 'solid' ? '#FFFFFF' : '')};
+	color: ${(props) => (props.variant === 'solid' ? variables.fontColors.white : '')};
 `;
 
 StyledAlertCommonText.displayName = 'StyledAlertCommonText';
@@ -69,7 +66,7 @@ StyledAlertDescription.displayName = 'StyledAlertDescription';
 
 const StyledAlertCommonIcon = styled(Box)<IBaseAlertComponentProps>`
 	font-family: 'Mooskin Icons';
-	color: ${(props) => (props.variant === 'solid' ? '#FFFFFF' : props.status && FontColors[props.status])};
+	color: ${(props) => (props.variant === 'solid' ? variables.fontColors.white : props.status && FontColors[props.status])};
 `;
 
 StyledAlertCommonIcon.displayName = 'StyledAlertCommonIcon';
