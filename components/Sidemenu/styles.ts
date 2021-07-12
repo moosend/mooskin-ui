@@ -26,7 +26,8 @@ export const StyledSidemenuItem = styled(Box)<ISidemenuItemComponentProps>`
 	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	margin-left: ${(props) => (props.active ? '-2px' : '0')};
 	padding-left: 9px;
-	border-left: ${(props) => (props.active ? `3px solid ${variables.backgroundColors.primary1}` : '')};
+	border-left: ${(props) =>
+		props.active ? `3px solid ${props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1}` : ''};
 	cursor: pointer;
 	&:not(:last-child) {
 		margin-bottom: 32px;
