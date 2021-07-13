@@ -213,22 +213,22 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		${(props) => generateStyles({ property: 'border-top', value: props.borderTop })}
 		${(props) => generateStyles({ property: 'border-top-style', value: props.borderTopStyle })}
-		${(props) => generateStyles({ property: 'border-top-color', value: props.borderTopColor })}
+		${(props) => generateStyles({ property: 'border-top-color', value: props.borderTopColor, nestedValue: true, pallete: props.palette })}
 		${(props) => generateStyles({ property: 'border-top-width', value: props.borderTopWidth, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'border-right', value: props.borderRight })}
 		${(props) => generateStyles({ property: 'border-right-style', value: props.borderRightStyle })}
-		${(props) => generateStyles({ property: 'border-right-color', value: props.borderRightColor })}
+		${(props) => generateStyles({ property: 'border-right-color', value: props.borderRightColor, nestedValue: true, pallete: props.palette })}
 		${(props) => generateStyles({ property: 'border-right-width', value: props.borderRightWidth, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'border-bottom', value: props.borderBottom })}
 		${(props) => generateStyles({ property: 'border-bottom-style', value: props.borderBottomStyle })}
-		${(props) => generateStyles({ property: 'border-bottom-color', value: props.borderBottomColor })}
+		${(props) => generateStyles({ property: 'border-bottom-color', value: props.borderBottomColor, nestedValue: true, pallete: props.palette })}
 		${(props) => generateStyles({ property: 'border-bottom-width', value: props.borderBottomWidth, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'border-left', value: props.borderLeft })}
 		${(props) => generateStyles({ property: 'border-left-style', value: props.borderLeftStyle })}
-		${(props) => generateStyles({ property: 'border-left-color', value: props.borderLeftColor })}
+		${(props) => generateStyles({ property: 'border-left-color', value: props.borderLeftColor, nestedValue: true, pallete: props.palette })}
 		${(props) => generateStyles({ property: 'border-left-width', value: props.borderLeftWidth, processedValue: true })}
 
 		${(props) =>

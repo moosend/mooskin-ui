@@ -46,7 +46,10 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
 StyledAlert.displayName = 'StyledAlert';
 
 const StyledAlertCommonText = styled(Box)<IBaseAlertComponentProps>`
-	color: ${(props) => (props.variant === 'solid' ? variables.fontColors.white : '')};
+	color: ${(props) =>
+		props.variant === 'solid'
+			? props.palette?.fontColors.white || variables.fontColors.white
+			: props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
 StyledAlertCommonText.displayName = 'StyledAlertCommonText';
