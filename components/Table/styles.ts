@@ -44,8 +44,12 @@ export const StyledTableRow = styled(Box)<IBoxComponentProps>`
 	display: flex;
 	align-items: center;
 	min-height: 90px;
-	border-top: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
-	border-bottom: solid 1px ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
 	:last-child {
 		border: none;
 	}

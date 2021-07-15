@@ -388,7 +388,7 @@ exports[`Pagination renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx RudKt sc-gtssRu dJxHxj"
+              className="sc-bdnylx gLeIQZ sc-gtssRu dJxHxj"
               onClickTab={[MockFunction]}
               style={Object {}}
             >
@@ -548,7 +548,7 @@ exports[`Pagination renders correctly 1`] = `
                     style={Object {}}
                   >
                     <div
-                      className="sc-bdnylx hWdQK"
+                      className="sc-bdnylx gwjMm"
                       d="flex"
                       style={Object {}}
                     >
@@ -940,7 +940,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx RudKt sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx gLeIQZ sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1340,7 +1340,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx RudKt sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx gLeIQZ sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1740,7 +1740,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx RudKt sc-hKFyIo cdjcV"
+                                    className="sc-bdnylx gLeIQZ sc-hKFyIo cdjcV"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -2140,7 +2140,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx RudKt sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx gLeIQZ sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -2540,7 +2540,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx RudKt sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx gLeIQZ sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -2940,7 +2940,7 @@ exports[`Pagination renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <div
-                                    className="sc-bdnylx RudKt sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx gLeIQZ sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -3338,7 +3338,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-eCApGN"
+                            className="sc-bdnylx gLeIQZ sc-eCApGN"
                             style={Object {}}
                           >
                             <div>

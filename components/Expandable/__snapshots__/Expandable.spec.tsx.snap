@@ -382,7 +382,7 @@ exports[`Expandable renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx RudKt sc-gtssRu dJxHxj"
+              className="sc-bdnylx gLeIQZ sc-gtssRu dJxHxj"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -548,7 +548,7 @@ exports[`Expandable renders correctly 1`] = `
                     <Box
                       active={false}
                       activeId={1}
-                      className="sc-dlnjPT bqCbRp"
+                      className="sc-dlnjPT jLTatE"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -624,7 +624,7 @@ exports[`Expandable renders correctly 1`] = `
                       <Component
                         active={false}
                         activeId={1}
-                        className="sc-dlnjPT bqCbRp"
+                        className="sc-dlnjPT jLTatE"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -700,7 +700,7 @@ exports[`Expandable renders correctly 1`] = `
                         <StyledBox
                           active={false}
                           activeId={1}
-                          className="sc-dlnjPT bqCbRp"
+                          className="sc-dlnjPT jLTatE"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -774,7 +774,7 @@ exports[`Expandable renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT bqCbRp"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -1159,7 +1159,7 @@ exports[`Expandable renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx RudKt sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx gLeIQZ sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -1539,7 +1539,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx RudKt sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx gLeIQZ sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 1
@@ -1932,7 +1932,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx RudKt sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx gLeIQZ sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -2119,7 +2119,7 @@ exports[`Expandable renders correctly 1`] = `
                     <Box
                       active={false}
                       activeId={2}
-                      className="sc-dlnjPT bqCbRp"
+                      className="sc-dlnjPT jLTatE"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -2195,7 +2195,7 @@ exports[`Expandable renders correctly 1`] = `
                       <Component
                         active={false}
                         activeId={2}
-                        className="sc-dlnjPT bqCbRp"
+                        className="sc-dlnjPT jLTatE"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -2271,7 +2271,7 @@ exports[`Expandable renders correctly 1`] = `
                         <StyledBox
                           active={false}
                           activeId={2}
-                          className="sc-dlnjPT bqCbRp"
+                          className="sc-dlnjPT jLTatE"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -2345,7 +2345,7 @@ exports[`Expandable renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT bqCbRp"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -2730,7 +2730,7 @@ exports[`Expandable renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx RudKt sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx gLeIQZ sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -3110,7 +3110,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx RudKt sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx gLeIQZ sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 2
@@ -3503,7 +3503,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx RudKt sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx gLeIQZ sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -3690,7 +3690,7 @@ exports[`Expandable renders correctly 1`] = `
                     <Box
                       active={false}
                       activeId={3}
-                      className="sc-dlnjPT bqCbRp"
+                      className="sc-dlnjPT jLTatE"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -3766,7 +3766,7 @@ exports[`Expandable renders correctly 1`] = `
                       <Component
                         active={false}
                         activeId={3}
-                        className="sc-dlnjPT bqCbRp"
+                        className="sc-dlnjPT jLTatE"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -3842,7 +3842,7 @@ exports[`Expandable renders correctly 1`] = `
                         <StyledBox
                           active={false}
                           activeId={3}
-                          className="sc-dlnjPT bqCbRp"
+                          className="sc-dlnjPT jLTatE"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -3916,7 +3916,7 @@ exports[`Expandable renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT bqCbRp"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -4301,7 +4301,7 @@ exports[`Expandable renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx RudKt sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx gLeIQZ sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -4681,7 +4681,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx RudKt sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx gLeIQZ sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 3
@@ -5074,7 +5074,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx RudKt sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx gLeIQZ sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -5261,7 +5261,7 @@ exports[`Expandable renders correctly 1`] = `
                     <Box
                       active={false}
                       activeId={4}
-                      className="sc-dlnjPT bqCbRp"
+                      className="sc-dlnjPT jLTatE"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -5337,7 +5337,7 @@ exports[`Expandable renders correctly 1`] = `
                       <Component
                         active={false}
                         activeId={4}
-                        className="sc-dlnjPT bqCbRp"
+                        className="sc-dlnjPT jLTatE"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -5413,7 +5413,7 @@ exports[`Expandable renders correctly 1`] = `
                         <StyledBox
                           active={false}
                           activeId={4}
-                          className="sc-dlnjPT bqCbRp"
+                          className="sc-dlnjPT jLTatE"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -5487,7 +5487,7 @@ exports[`Expandable renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT bqCbRp"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -5872,7 +5872,7 @@ exports[`Expandable renders correctly 1`] = `
                                         style={Object {}}
                                       >
                                         <div
-                                          className="sc-bdnylx RudKt sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx gLeIQZ sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -6252,7 +6252,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx RudKt sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx gLeIQZ sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 4
@@ -6645,7 +6645,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       style={Object {}}
                                                     >
                                                       <div
-                                                        className="sc-bdnylx RudKt sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx gLeIQZ sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down

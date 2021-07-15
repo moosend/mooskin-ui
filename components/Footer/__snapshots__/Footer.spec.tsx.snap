@@ -376,7 +376,7 @@ exports[`Alert renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx RudKt sc-gtssRu DTjtv"
+              className="sc-bdnylx gLeIQZ sc-gtssRu DTjtv"
               style={Object {}}
             >
               <FooterHead
@@ -766,7 +766,7 @@ exports[`Alert renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx YPEsD sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
+                            className="sc-bdnylx ewmiMv sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
                             fontSize={12}
                             fontWeight={800}
                             style={Object {}}
@@ -1154,7 +1154,7 @@ exports[`Alert renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
                             style={Object {}}
                           >
                             <Button
@@ -1326,7 +1326,7 @@ exports[`Alert renders correctly 1`] = `
                                   <Box
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-iCoHVE bkuNSO dVmiqS"
+                                    className="sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                     minW="unset"
                                     mr={10}
                                     onClick={[Function]}
@@ -1406,7 +1406,7 @@ exports[`Alert renders correctly 1`] = `
                                     <Component
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-iCoHVE bkuNSO dVmiqS"
+                                      className="sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                       minW="unset"
                                       mr={10}
                                       onClick={[Function]}
@@ -1487,7 +1487,7 @@ exports[`Alert renders correctly 1`] = `
                                         as="button"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-iCoHVE bkuNSO dVmiqS"
+                                        className="sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                         minW="unset"
                                         mr={10}
                                         onClick={[Function]}
@@ -1565,7 +1565,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx ftiqVf sc-gKAblj sc-iCoHVE bkuNSO dVmiqS"
+                                          className="sc-bdnylx ZscTv sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -1731,7 +1731,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx RudKt sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx gLeIQZ sc-pNWxx gxbiOV"
                                                       style={Object {}}
                                                     >
                                                       chevron_left
@@ -1915,7 +1915,7 @@ exports[`Alert renders correctly 1`] = `
                                   <Box
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-iCoHVE bkuNSO dVmiqS"
+                                    className="sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                     minW="unset"
                                     onClick={[Function]}
                                     palette={
@@ -1994,7 +1994,7 @@ exports[`Alert renders correctly 1`] = `
                                     <Component
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-iCoHVE bkuNSO dVmiqS"
+                                      className="sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                       minW="unset"
                                       onClick={[Function]}
                                       palette={
@@ -2074,7 +2074,7 @@ exports[`Alert renders correctly 1`] = `
                                         as="button"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-iCoHVE bkuNSO dVmiqS"
+                                        className="sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                         minW="unset"
                                         onClick={[Function]}
                                         palette={
@@ -2151,7 +2151,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx hlHlsX sc-gKAblj sc-iCoHVE bkuNSO dVmiqS"
+                                          className="sc-bdnylx fahtTn sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -2318,7 +2318,7 @@ exports[`Alert renders correctly 1`] = `
                                                     style={Object {}}
                                                   >
                                                     <div
-                                                      className="sc-bdnylx RudKt sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx gLeIQZ sc-pNWxx gxbiOV"
                                                       style={Object {}}
                                                     >
                                                       chevron_right
@@ -2717,7 +2717,7 @@ exports[`Alert renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
                             style={Object {}}
                           >
                             <Button
@@ -2893,7 +2893,7 @@ exports[`Alert renders correctly 1`] = `
                                     borderColor="#37a037"
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-fujyUd bkuNSO jZrIud"
+                                    className="sc-gKAblj sc-fujyUd hkIKDf jZrIud"
                                     fontColor="#37a037"
                                     inverseStyle={true}
                                     onClick={[Function]}
@@ -2974,7 +2974,7 @@ exports[`Alert renders correctly 1`] = `
                                       borderColor="#37a037"
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-fujyUd bkuNSO jZrIud"
+                                      className="sc-gKAblj sc-fujyUd hkIKDf jZrIud"
                                       fontColor="#37a037"
                                       inverseStyle={true}
                                       onClick={[Function]}
@@ -3056,7 +3056,7 @@ exports[`Alert renders correctly 1`] = `
                                         borderColor="#37a037"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-fujyUd bkuNSO jZrIud"
+                                        className="sc-gKAblj sc-fujyUd hkIKDf jZrIud"
                                         fontColor="#37a037"
                                         inverseStyle={true}
                                         onClick={[Function]}
@@ -3134,7 +3134,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx rtfJM sc-gKAblj sc-fujyUd bkuNSO jZrIud"
+                                          className="sc-bdnylx ckHmPM sc-gKAblj sc-fujyUd hkIKDf jZrIud"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"

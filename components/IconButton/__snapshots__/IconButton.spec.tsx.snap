@@ -376,7 +376,7 @@ exports[`SmallIconButton renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx RudKt sc-gtssRu fehwhe"
+              className="sc-bdnylx gLeIQZ sc-gtssRu fehwhe"
               onClick={[Function]}
               style={Object {}}
             >
