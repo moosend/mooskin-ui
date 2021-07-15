@@ -1,6 +1,11 @@
 import { IBoxComponentProps } from '../Box/model';
 
 export interface IPaginationComponentProps extends IBoxComponentProps {
+	singleItem?: boolean;
+
+	/** hide show all */
+	hideShowAll?: boolean;
+
 	/** number of the active button page */
 	activePage: number;
 

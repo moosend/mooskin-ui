@@ -79,6 +79,17 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 					setShowLast(false);
 				}
 
+				if (props.singleItem) {
+					return page === props.activePage
+						? React.cloneElement(child, {
+								active: true,
+								children: page,
+								key: i,
+								// onClick: (e) => batchClickHandler(e, page, child.props.onClick),
+						  } as IPaginationButtonComponentProps)
+						: null;
+				}
+
 				if (showAll || condition) {
 					return React.cloneElement(child, {
 						active: page === props.activePage,
@@ -100,7 +111,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 
 	return (
 		<StyledPagination {...props}>
-			{!showAll && (
+			{!showAll && !props.singleItem && (
 				<IconButton
 					cursor={showFirst ? 'pointer' : 'not-allowed'}
 					onClick={showFirst ? () => onArrowClick(1) : undefined}
@@ -132,7 +143,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 					chevron_right
 				</IconButton>
 			)}
-			{!showAll && (
+			{!showAll && !props.singleItem && (
 				<IconButton
 					cursor={showLast ? 'pointer' : 'not-allowed'}
 					onClick={showLast ? () => childrenLength && onArrowClick(childrenLength) : undefined}
@@ -143,7 +154,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 					last_page
 				</IconButton>
 			)}
-			{childrenLength && childrenLength > 5 && (
+			{!props.hideShowAll && childrenLength && childrenLength > 5 && (
 				<StyledPaginationShowAll onClick={() => setShowAll(!showAll)}>{showAll ? 'Hide' : 'Show all'}</StyledPaginationShowAll>
 			)}
 		</StyledPagination>
