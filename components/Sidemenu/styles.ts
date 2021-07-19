@@ -9,7 +9,9 @@ import { Box } from '../Box/Box';
 import variables from '../_utils/globals/variables';
 
 export const StyledSidemenu = styled(Box)<ISidemenuComponentProps>`
-	border-left: 1px solid #e2e2e2;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
 	display: flex;
 	flex-direction: column;
 `;

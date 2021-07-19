@@ -260,7 +260,7 @@ exports[`DateRange renders correctly 1`] = `
           style={Object {}}
         >
           <div
-            className="sc-bdnylx ipMiBx"
+            className="sc-bdnylx gMSoSl"
             d="flex"
             style={Object {}}
           >
@@ -425,7 +425,7 @@ exports[`DateRange renders correctly 1`] = `
                 >
                   <Box
                     boxAs="input"
-                    className="sc-eCApGN sc-jSFkmK fQlSyR etca-dy"
+                    className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                     onFocus={[Function]}
                     palette={
                       Object {
@@ -502,7 +502,7 @@ exports[`DateRange renders correctly 1`] = `
                   >
                     <Component
                       boxAs="input"
-                      className="sc-eCApGN sc-jSFkmK fQlSyR etca-dy"
+                      className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                       onFocus={[Function]}
                       palette={
                         Object {
@@ -580,7 +580,7 @@ exports[`DateRange renders correctly 1`] = `
                       <StyledBox
                         as="input"
                         boxAs="input"
-                        className="sc-eCApGN sc-jSFkmK fQlSyR etca-dy"
+                        className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                         onFocus={[Function]}
                         palette={
                           Object {
@@ -656,7 +656,7 @@ exports[`DateRange renders correctly 1`] = `
                         value="20 Jun 2016 - 20 Jun 2016"
                       >
                         <input
-                          className="sc-bdnylx RudKt sc-eCApGN sc-jSFkmK fQlSyR etca-dy"
+                          className="sc-bdnylx gLeIQZ sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                           onFocus={[Function]}
                           style={Object {}}
                           value="20 Jun 2016 - 20 Jun 2016"

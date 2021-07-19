@@ -161,7 +161,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
     >
       <Box
         activeItem="/settings"
-        className="sc-gtssRu gGAwqn"
+        className="sc-gtssRu eglBhX"
         onClickItem={[MockFunction]}
         palette={
           Object {
@@ -237,7 +237,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
       >
         <Component
           activeItem="/settings"
-          className="sc-gtssRu gGAwqn"
+          className="sc-gtssRu eglBhX"
           onClickItem={[MockFunction]}
           palette={
             Object {
@@ -313,7 +313,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
         >
           <StyledBox
             activeItem="/settings"
-            className="sc-gtssRu gGAwqn"
+            className="sc-gtssRu eglBhX"
             onClickItem={[MockFunction]}
             palette={
               Object {
@@ -388,7 +388,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx RudKt sc-gtssRu gGAwqn"
+              className="sc-bdnylx gLeIQZ sc-gtssRu eglBhX"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -786,7 +786,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT bACzJA"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT bACzJA"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -1193,7 +1193,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT FULzg"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT FULzg"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -1600,7 +1600,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT FULzg"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT FULzg"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -2034,7 +2034,7 @@ exports[`Sidemenu renders SidemenuItem correctly 1`] = `
             }
           >
             <div
-              className="sc-bdnylx RudKt sc-dlnjPT bACzJA myClass"
+              className="sc-bdnylx gLeIQZ sc-dlnjPT bACzJA myClass"
               onClick={[MockFunction]}
               style={
                 Object {

@@ -387,7 +387,7 @@ exports[`Image renders correctly 1`] = `
             style={Object {}}
           >
             <img
-              className="sc-bdnylx RudKt sc-gtssRu dTEizC"
+              className="sc-bdnylx gLeIQZ sc-gtssRu dTEizC"
               src="asd"
               style={Object {}}
             />

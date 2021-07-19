@@ -84,6 +84,7 @@ exports[`Alert renders correctly 1`] = `
     variant="left-accent"
   >
     <StyledAlert
+      boxShadow="lg"
       className=""
       palette={
         Object {
@@ -160,7 +161,8 @@ exports[`Alert renders correctly 1`] = `
       variant="left-accent"
     >
       <Box
-        className="sc-gtssRu SPTIr"
+        boxShadow="lg"
+        className="sc-gtssRu kVbRSh"
         palette={
           Object {
             "backgroundColors": Object {
@@ -236,7 +238,8 @@ exports[`Alert renders correctly 1`] = `
         variant="left-accent"
       >
         <Component
-          className="sc-gtssRu SPTIr"
+          boxShadow="lg"
+          className="sc-gtssRu kVbRSh"
           palette={
             Object {
               "backgroundColors": Object {
@@ -312,7 +315,8 @@ exports[`Alert renders correctly 1`] = `
           variant="left-accent"
         >
           <StyledBox
-            className="sc-gtssRu SPTIr"
+            boxShadow="lg"
+            className="sc-gtssRu kVbRSh"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -388,7 +392,7 @@ exports[`Alert renders correctly 1`] = `
             variant="left-accent"
           >
             <div
-              className="sc-bdnylx RudKt sc-gtssRu SPTIr"
+              className="sc-bdnylx cnUZLX sc-gtssRu kVbRSh"
               style={Object {}}
             >
               <AlertIcon
@@ -551,7 +555,7 @@ exports[`Alert renders correctly 1`] = `
                     variant="left-accent"
                   >
                     <Box
-                      className="sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                      className="sc-jSFkmK sc-gKAblj etWsbY fKLtkt"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -627,7 +631,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <Component
-                        className="sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                        className="sc-jSFkmK sc-gKAblj etWsbY fKLtkt"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -703,7 +707,7 @@ exports[`Alert renders correctly 1`] = `
                         variant="left-accent"
                       >
                         <StyledBox
-                          className="sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                          className="sc-jSFkmK sc-gKAblj etWsbY fKLtkt"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -779,7 +783,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-jSFkmK sc-gKAblj gLJPOM fKLtkt"
+                            className="sc-bdnylx gLeIQZ sc-jSFkmK sc-gKAblj etWsbY fKLtkt"
                             style={Object {}}
                           >
                             announcement
@@ -950,7 +954,7 @@ exports[`Alert renders correctly 1`] = `
                     variant="left-accent"
                   >
                     <Box
-                      className="sc-dlnjPT sc-hKFyIo epnfcP fvbly"
+                      className="sc-dlnjPT sc-hKFyIo jgcOcz fvbly"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -1026,7 +1030,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <Component
-                        className="sc-dlnjPT sc-hKFyIo epnfcP fvbly"
+                        className="sc-dlnjPT sc-hKFyIo jgcOcz fvbly"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -1102,7 +1106,7 @@ exports[`Alert renders correctly 1`] = `
                         variant="left-accent"
                       >
                         <StyledBox
-                          className="sc-dlnjPT sc-hKFyIo epnfcP fvbly"
+                          className="sc-dlnjPT sc-hKFyIo jgcOcz fvbly"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -1178,7 +1182,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT sc-hKFyIo epnfcP fvbly"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT sc-hKFyIo jgcOcz fvbly"
                             style={Object {}}
                           >
                             Your browser is outdated!
@@ -1349,7 +1353,7 @@ exports[`Alert renders correctly 1`] = `
                     variant="left-accent"
                   >
                     <Box
-                      className="sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
+                      className="sc-dlnjPT sc-eCApGN jgcOcz jjPdNE"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -1425,7 +1429,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <Component
-                        className="sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
+                        className="sc-dlnjPT sc-eCApGN jgcOcz jjPdNE"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -1501,7 +1505,7 @@ exports[`Alert renders correctly 1`] = `
                         variant="left-accent"
                       >
                         <StyledBox
-                          className="sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
+                          className="sc-dlnjPT sc-eCApGN jgcOcz jjPdNE"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -1577,7 +1581,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-dlnjPT sc-eCApGN epnfcP jjPdNE"
+                            className="sc-bdnylx gLeIQZ sc-dlnjPT sc-eCApGN jgcOcz jjPdNE"
                             style={Object {}}
                           >
                             Your Mooskin experience may be degraded.
@@ -1760,7 +1764,7 @@ exports[`Alert renders correctly 1`] = `
                     variant="left-accent"
                   >
                     <Box
-                      className="sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
+                      className="sc-jSFkmK sc-iCoHVE etWsbY iNrJOI"
                       onClick={[MockFunction]}
                       palette={
                         Object {
@@ -1840,7 +1844,7 @@ exports[`Alert renders correctly 1`] = `
                       variant="left-accent"
                     >
                       <Component
-                        className="sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
+                        className="sc-jSFkmK sc-iCoHVE etWsbY iNrJOI"
                         onClick={[MockFunction]}
                         palette={
                           Object {
@@ -1920,7 +1924,7 @@ exports[`Alert renders correctly 1`] = `
                         variant="left-accent"
                       >
                         <StyledBox
-                          className="sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
+                          className="sc-jSFkmK sc-iCoHVE etWsbY iNrJOI"
                           onClick={[MockFunction]}
                           palette={
                             Object {
@@ -2000,7 +2004,7 @@ exports[`Alert renders correctly 1`] = `
                           variant="left-accent"
                         >
                           <div
-                            className="sc-bdnylx xPTBi sc-jSFkmK sc-iCoHVE gLJPOM cUqboX"
+                            className="sc-bdnylx hOEdOm sc-jSFkmK sc-iCoHVE etWsbY iNrJOI"
                             onClick={[MockFunction]}
                             style={Object {}}
                           >

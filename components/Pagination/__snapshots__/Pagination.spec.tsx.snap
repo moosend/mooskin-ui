@@ -161,7 +161,7 @@ exports[`Pagination renders correctly 1`] = `
     >
       <Box
         activePage={3}
-        className="sc-iIgiFR gfSgsh"
+        className="sc-dlnjPT kra-dhH"
         onClickButton={[MockFunction]}
         palette={
           Object {
@@ -237,7 +237,7 @@ exports[`Pagination renders correctly 1`] = `
       >
         <Component
           activePage={3}
-          className="sc-iIgiFR gfSgsh"
+          className="sc-dlnjPT kra-dhH"
           onClickButton={[MockFunction]}
           palette={
             Object {
@@ -313,7 +313,7 @@ exports[`Pagination renders correctly 1`] = `
         >
           <StyledBox
             activePage={3}
-            className="sc-iIgiFR gfSgsh"
+            className="sc-dlnjPT kra-dhH"
             onClickButton={[MockFunction]}
             palette={
               Object {
@@ -388,19 +388,21 @@ exports[`Pagination renders correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx RudKt sc-iIgiFR gfSgsh"
+              className="sc-bdnylx gLeIQZ sc-dlnjPT kra-dhH"
               onClickButton={[MockFunction]}
               style={Object {}}
             >
               <WithMooskinContext
                 cursor="pointer"
-                fontColor="backgroundColors.primary2"
+                fontColor="fontColors.text"
                 onClick={[Function]}
+                opacity={1}
               >
                 <Component
                   cursor="pointer"
-                  fontColor="backgroundColors.primary2"
+                  fontColor="fontColors.text"
                   onClick={[Function]}
+                  opacity={1}
                   palette={
                     Object {
                       "backgroundColors": Object {
@@ -474,8 +476,9 @@ exports[`Pagination renders correctly 1`] = `
                 >
                   <StyledIconButton
                     cursor="pointer"
-                    fontColor="backgroundColors.primary2"
+                    fontColor="fontColors.text"
                     onClick={[Function]}
+                    opacity={1}
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -550,8 +553,9 @@ exports[`Pagination renders correctly 1`] = `
                     <Box
                       className="sc-gtssRu fehwhe"
                       cursor="pointer"
-                      fontColor="backgroundColors.primary2"
+                      fontColor="fontColors.text"
                       onClick={[Function]}
+                      opacity={1}
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -627,8 +631,9 @@ exports[`Pagination renders correctly 1`] = `
                       <Component
                         className="sc-gtssRu fehwhe"
                         cursor="pointer"
-                        fontColor="backgroundColors.primary2"
+                        fontColor="fontColors.text"
                         onClick={[Function]}
+                        opacity={1}
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -704,8 +709,9 @@ exports[`Pagination renders correctly 1`] = `
                         <StyledBox
                           className="sc-gtssRu fehwhe"
                           cursor="pointer"
-                          fontColor="backgroundColors.primary2"
+                          fontColor="fontColors.text"
                           onClick={[Function]}
+                          opacity={1}
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -779,9 +785,10 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx kJtOOp sc-gtssRu fehwhe"
+                            className="sc-bdnylx fUMHVH sc-gtssRu fehwhe"
                             cursor="pointer"
                             onClick={[Function]}
+                            opacity={1}
                             style={Object {}}
                           >
                             first_page
@@ -794,15 +801,17 @@ exports[`Pagination renders correctly 1`] = `
               </WithMooskinContext>
               <WithMooskinContext
                 cursor="pointer"
-                fontColor="backgroundColors.primary2"
+                fontColor="fontColors.text"
                 mr={10}
                 onClick={[Function]}
+                opacity={1}
               >
                 <Component
                   cursor="pointer"
-                  fontColor="backgroundColors.primary2"
+                  fontColor="fontColors.text"
                   mr={10}
                   onClick={[Function]}
+                  opacity={1}
                   palette={
                     Object {
                       "backgroundColors": Object {
@@ -876,9 +885,10 @@ exports[`Pagination renders correctly 1`] = `
                 >
                   <StyledIconButton
                     cursor="pointer"
-                    fontColor="backgroundColors.primary2"
+                    fontColor="fontColors.text"
                     mr={10}
                     onClick={[Function]}
+                    opacity={1}
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -953,9 +963,10 @@ exports[`Pagination renders correctly 1`] = `
                     <Box
                       className="sc-gtssRu fehwhe"
                       cursor="pointer"
-                      fontColor="backgroundColors.primary2"
+                      fontColor="fontColors.text"
                       mr={10}
                       onClick={[Function]}
+                      opacity={1}
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -1031,9 +1042,10 @@ exports[`Pagination renders correctly 1`] = `
                       <Component
                         className="sc-gtssRu fehwhe"
                         cursor="pointer"
-                        fontColor="backgroundColors.primary2"
+                        fontColor="fontColors.text"
                         mr={10}
                         onClick={[Function]}
+                        opacity={1}
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -1109,9 +1121,10 @@ exports[`Pagination renders correctly 1`] = `
                         <StyledBox
                           className="sc-gtssRu fehwhe"
                           cursor="pointer"
-                          fontColor="backgroundColors.primary2"
+                          fontColor="fontColors.text"
                           mr={10}
                           onClick={[Function]}
+                          opacity={1}
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -1185,9 +1198,10 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx hrfYTZ sc-gtssRu fehwhe"
+                            className="sc-bdnylx ipDwPr sc-gtssRu fehwhe"
                             cursor="pointer"
                             onClick={[Function]}
+                            opacity={1}
                             style={Object {}}
                           >
                             chevron_left
@@ -1359,7 +1373,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-gstumO crnIIE"
+                      className="sc-hKFyIo ejwqWQ"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -1435,7 +1449,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-gstumO crnIIE"
+                        className="sc-hKFyIo ejwqWQ"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -1511,7 +1525,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-gstumO crnIIE"
+                          className="sc-hKFyIo ejwqWQ"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -1586,7 +1600,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-gstumO crnIIE"
+                            className="sc-bdnylx gLeIQZ sc-hKFyIo ejwqWQ"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1759,7 +1773,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-gstumO crnIIE"
+                      className="sc-hKFyIo ejwqWQ"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -1835,7 +1849,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-gstumO crnIIE"
+                        className="sc-hKFyIo ejwqWQ"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -1911,7 +1925,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-gstumO crnIIE"
+                          className="sc-hKFyIo ejwqWQ"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -1986,7 +2000,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-gstumO crnIIE"
+                            className="sc-bdnylx gLeIQZ sc-hKFyIo ejwqWQ"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -2159,7 +2173,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={true}
-                      className="sc-gstumO hZtLhB"
+                      className="sc-hKFyIo godoDc"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -2235,7 +2249,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={true}
-                        className="sc-gstumO hZtLhB"
+                        className="sc-hKFyIo godoDc"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -2311,7 +2325,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={true}
-                          className="sc-gstumO hZtLhB"
+                          className="sc-hKFyIo godoDc"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -2386,7 +2400,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-gstumO hZtLhB"
+                            className="sc-bdnylx gLeIQZ sc-hKFyIo godoDc"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -2559,7 +2573,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-gstumO crnIIE"
+                      className="sc-hKFyIo ejwqWQ"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -2635,7 +2649,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-gstumO crnIIE"
+                        className="sc-hKFyIo ejwqWQ"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -2711,7 +2725,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-gstumO crnIIE"
+                          className="sc-hKFyIo ejwqWQ"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -2786,7 +2800,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-gstumO crnIIE"
+                            className="sc-bdnylx gLeIQZ sc-hKFyIo ejwqWQ"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -2959,7 +2973,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-gstumO crnIIE"
+                      className="sc-hKFyIo ejwqWQ"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -3035,7 +3049,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-gstumO crnIIE"
+                        className="sc-hKFyIo ejwqWQ"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -3111,7 +3125,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-gstumO crnIIE"
+                          className="sc-hKFyIo ejwqWQ"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -3186,7 +3200,7 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx RudKt sc-gstumO crnIIE"
+                            className="sc-bdnylx gLeIQZ sc-hKFyIo ejwqWQ"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -3200,13 +3214,15 @@ exports[`Pagination renders correctly 1`] = `
               </PaginationButton>
               <WithMooskinContext
                 cursor="pointer"
-                fontColor="backgroundColors.primary2"
+                fontColor="fontColors.text"
                 onClick={[Function]}
+                opacity={1}
               >
                 <Component
                   cursor="pointer"
-                  fontColor="backgroundColors.primary2"
+                  fontColor="fontColors.text"
                   onClick={[Function]}
+                  opacity={1}
                   palette={
                     Object {
                       "backgroundColors": Object {
@@ -3280,8 +3296,9 @@ exports[`Pagination renders correctly 1`] = `
                 >
                   <StyledIconButton
                     cursor="pointer"
-                    fontColor="backgroundColors.primary2"
+                    fontColor="fontColors.text"
                     onClick={[Function]}
+                    opacity={1}
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -3356,8 +3373,9 @@ exports[`Pagination renders correctly 1`] = `
                     <Box
                       className="sc-gtssRu fehwhe"
                       cursor="pointer"
-                      fontColor="backgroundColors.primary2"
+                      fontColor="fontColors.text"
                       onClick={[Function]}
+                      opacity={1}
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -3433,8 +3451,9 @@ exports[`Pagination renders correctly 1`] = `
                       <Component
                         className="sc-gtssRu fehwhe"
                         cursor="pointer"
-                        fontColor="backgroundColors.primary2"
+                        fontColor="fontColors.text"
                         onClick={[Function]}
+                        opacity={1}
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -3510,8 +3529,9 @@ exports[`Pagination renders correctly 1`] = `
                         <StyledBox
                           className="sc-gtssRu fehwhe"
                           cursor="pointer"
-                          fontColor="backgroundColors.primary2"
+                          fontColor="fontColors.text"
                           onClick={[Function]}
+                          opacity={1}
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -3585,9 +3605,10 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx kJtOOp sc-gtssRu fehwhe"
+                            className="sc-bdnylx fUMHVH sc-gtssRu fehwhe"
                             cursor="pointer"
                             onClick={[Function]}
+                            opacity={1}
                             style={Object {}}
                           >
                             chevron_right
@@ -3600,15 +3621,17 @@ exports[`Pagination renders correctly 1`] = `
               </WithMooskinContext>
               <WithMooskinContext
                 cursor="pointer"
-                fontColor="backgroundColors.primary2"
+                fontColor="fontColors.text"
                 mr={10}
                 onClick={[Function]}
+                opacity={1}
               >
                 <Component
                   cursor="pointer"
-                  fontColor="backgroundColors.primary2"
+                  fontColor="fontColors.text"
                   mr={10}
                   onClick={[Function]}
+                  opacity={1}
                   palette={
                     Object {
                       "backgroundColors": Object {
@@ -3682,9 +3705,10 @@ exports[`Pagination renders correctly 1`] = `
                 >
                   <StyledIconButton
                     cursor="pointer"
-                    fontColor="backgroundColors.primary2"
+                    fontColor="fontColors.text"
                     mr={10}
                     onClick={[Function]}
+                    opacity={1}
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -3759,9 +3783,10 @@ exports[`Pagination renders correctly 1`] = `
                     <Box
                       className="sc-gtssRu fehwhe"
                       cursor="pointer"
-                      fontColor="backgroundColors.primary2"
+                      fontColor="fontColors.text"
                       mr={10}
                       onClick={[Function]}
+                      opacity={1}
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -3837,9 +3862,10 @@ exports[`Pagination renders correctly 1`] = `
                       <Component
                         className="sc-gtssRu fehwhe"
                         cursor="pointer"
-                        fontColor="backgroundColors.primary2"
+                        fontColor="fontColors.text"
                         mr={10}
                         onClick={[Function]}
+                        opacity={1}
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -3915,9 +3941,10 @@ exports[`Pagination renders correctly 1`] = `
                         <StyledBox
                           className="sc-gtssRu fehwhe"
                           cursor="pointer"
-                          fontColor="backgroundColors.primary2"
+                          fontColor="fontColors.text"
                           mr={10}
                           onClick={[Function]}
+                          opacity={1}
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -3991,9 +4018,10 @@ exports[`Pagination renders correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx hrfYTZ sc-gtssRu fehwhe"
+                            className="sc-bdnylx ipDwPr sc-gtssRu fehwhe"
                             cursor="pointer"
                             onClick={[Function]}
+                            opacity={1}
                             style={Object {}}
                           >
                             last_page
@@ -4008,12 +4036,12 @@ exports[`Pagination renders correctly 1`] = `
                 onClick={[Function]}
               >
                 <Box
-                  className="sc-amjij QGhag"
+                  className="sc-eCApGN gDxBSP"
                   onClick={[Function]}
                   style={Object {}}
                 >
                   <Component
-                    className="sc-amjij QGhag"
+                    className="sc-eCApGN gDxBSP"
                     onClick={[Function]}
                     palette={
                       Object {
@@ -4088,7 +4116,7 @@ exports[`Pagination renders correctly 1`] = `
                     style={Object {}}
                   >
                     <StyledBox
-                      className="sc-amjij QGhag"
+                      className="sc-eCApGN gDxBSP"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -4163,7 +4191,7 @@ exports[`Pagination renders correctly 1`] = `
                       style={Object {}}
                     >
                       <div
-                        className="sc-bdnylx RudKt sc-amjij QGhag"
+                        className="sc-bdnylx gLeIQZ sc-eCApGN gDxBSP"
                         onClick={[Function]}
                         style={Object {}}
                       >

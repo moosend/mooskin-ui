@@ -190,7 +190,7 @@ exports[`Button renders correctly 1`] = `
       <Box
         boxAs="a"
         buttonSize="md"
-        className="sc-gtssRu sc-hKFyIo bOQZfG dbgScq myClass"
+        className="sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
         disabled={true}
         href="www.moosend.com"
         id="button1"
@@ -276,7 +276,7 @@ exports[`Button renders correctly 1`] = `
         <Component
           boxAs="a"
           buttonSize="md"
-          className="sc-gtssRu sc-hKFyIo bOQZfG dbgScq myClass"
+          className="sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
           disabled={true}
           href="www.moosend.com"
           id="button1"
@@ -363,7 +363,7 @@ exports[`Button renders correctly 1`] = `
             as="a"
             boxAs="a"
             buttonSize="md"
-            className="sc-gtssRu sc-hKFyIo bOQZfG dbgScq myClass"
+            className="sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
             disabled={true}
             href="www.moosend.com"
             id="button1"
@@ -447,7 +447,7 @@ exports[`Button renders correctly 1`] = `
             type="submit"
           >
             <a
-              className="sc-bdnylx RudKt sc-gtssRu sc-hKFyIo bOQZfG dbgScq myClass"
+              className="sc-bdnylx gLeIQZ sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
               disabled={true}
               href="www.moosend.com"
               id="button1"

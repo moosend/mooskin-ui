@@ -183,7 +183,7 @@ exports[`Anchor renders correctly 1`] = `
     >
       <Box
         boxAs="a"
-        className="sc-gtssRu hjwUJA myClass"
+        className="sc-gtssRu AVBRk myClass"
         disabled={true}
         href="www.moosend.com"
         id="Anchor1"
@@ -267,7 +267,7 @@ exports[`Anchor renders correctly 1`] = `
       >
         <Component
           boxAs="a"
-          className="sc-gtssRu hjwUJA myClass"
+          className="sc-gtssRu AVBRk myClass"
           disabled={true}
           href="www.moosend.com"
           id="Anchor1"
@@ -352,7 +352,7 @@ exports[`Anchor renders correctly 1`] = `
           <StyledBox
             as="a"
             boxAs="a"
-            className="sc-gtssRu hjwUJA myClass"
+            className="sc-gtssRu AVBRk myClass"
             disabled={true}
             href="www.moosend.com"
             id="Anchor1"
@@ -435,7 +435,7 @@ exports[`Anchor renders correctly 1`] = `
             target="_blank"
           >
             <a
-              className="sc-bdnylx RudKt sc-gtssRu hjwUJA myClass"
+              className="sc-bdnylx gLeIQZ sc-gtssRu AVBRk myClass"
               disabled={true}
               href="www.moosend.com"
               id="Anchor1"

@@ -388,7 +388,7 @@ exports[`Radio renders Radio correctly 1`] = `
             style={Object {}}
           >
             <div
-              className="sc-bdnylx RudKt sc-hKFyIo dxNlPq"
+              className="sc-bdnylx gLeIQZ sc-hKFyIo dxNlPq"
               onClickRadio={[MockFunction]}
               selected={true}
               style={Object {}}
@@ -781,7 +781,7 @@ exports[`Radio renders Radio correctly 1`] = `
                           style={Object {}}
                         >
                           <div
-                            className="sc-bdnylx eVduEN sc-eCApGN imjzyD"
+                            className="sc-bdnylx kxcPON sc-eCApGN imjzyD"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1405,7 +1405,7 @@ exports[`Radio renders Radio correctly 1`] = `
                                 style={Object {}}
                               >
                                 <label
-                                  className="sc-bdnylx RudKt sc-dlnjPT bZBLRB sc-jSFkmK hYcieQ"
+                                  className="sc-bdnylx gLeIQZ sc-dlnjPT bZBLRB sc-jSFkmK hYcieQ"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >

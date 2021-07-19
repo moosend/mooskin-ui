@@ -76,6 +76,7 @@ export const StyledInputIcon = styled(Box)<IBoxComponentProps>`
 	display: flex;
 	align-items: center;
 	color: inherit;
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
 StyledInputIcon.displayName = 'StyledInputIcon';
@@ -84,7 +85,7 @@ export const StyledInputOptionList = styled(Box)<Partial<IInputListComponentProp
 	position: absolute;
 	right: 0;
 	height: auto;
-	background: #fff;
+	background: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	border-radius: 2px;
 	z-index: 4;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.32);
@@ -95,6 +96,7 @@ StyledInputOptionList.displayName = 'StyledInputOptionList';
 export const StyledInputOptionListTitle = styled(Label)<ILabelComponentProps>`
 	margin: 15px;
 	font-size: 14px;
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
 StyledInputOptionListTitle.displayName = 'StyledInputOptionListTitle';

@@ -302,7 +302,7 @@ exports[`DatePicker renders correctly 1`] = `
                         }
                       }
                       boxAs="input"
-                      className="sc-eCApGN sc-jSFkmK fQlSyR etca-dy"
+                      className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                       error={false}
                       format="dd/MM/yyyy"
                       helperText=""
@@ -393,7 +393,7 @@ exports[`DatePicker renders correctly 1`] = `
                           }
                         }
                         boxAs="input"
-                        className="sc-eCApGN sc-jSFkmK fQlSyR etca-dy"
+                        className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                         error={false}
                         format="dd/MM/yyyy"
                         helperText=""
@@ -485,7 +485,7 @@ exports[`DatePicker renders correctly 1`] = `
                           }
                           as="input"
                           boxAs="input"
-                          className="sc-eCApGN sc-jSFkmK fQlSyR etca-dy"
+                          className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                           error={false}
                           format="dd/MM/yyyy"
                           helperText=""
@@ -570,7 +570,7 @@ exports[`DatePicker renders correctly 1`] = `
                           value="02/01/2021"
                         >
                           <input
-                            className="sc-bdnylx RudKt sc-eCApGN sc-jSFkmK fQlSyR etca-dy"
+                            className="sc-bdnylx gLeIQZ sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                             format="dd/MM/yyyy"
                             onClick={[Function]}
                             onKeyDown={[Function]}

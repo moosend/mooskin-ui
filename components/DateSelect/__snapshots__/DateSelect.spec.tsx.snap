@@ -554,7 +554,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                 type="hour"
               >
                 <div
-                  className="sc-bdnylx RudKt sc-dlnjPT hPGFh"
+                  className="sc-bdnylx gLeIQZ sc-dlnjPT hPGFh"
                   format="12-Hour"
                   onChangeSelect={[Function]}
                   style={Object {}}
@@ -717,7 +717,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                         style={Object {}}
                       >
                         <Box
-                          className="sc-eCApGN KWlnI"
+                          className="sc-eCApGN fajFZl"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -792,7 +792,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                           style={Object {}}
                         >
                           <Component
-                            className="sc-eCApGN KWlnI"
+                            className="sc-eCApGN fajFZl"
                             onClick={[Function]}
                             palette={
                               Object {
@@ -867,7 +867,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                             style={Object {}}
                           >
                             <StyledBox
-                              className="sc-eCApGN KWlnI"
+                              className="sc-eCApGN fajFZl"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -942,7 +942,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                               style={Object {}}
                             >
                               <div
-                                className="sc-bdnylx RudKt sc-eCApGN KWlnI"
+                                className="sc-bdnylx gLeIQZ sc-eCApGN fajFZl"
                                 onClick={[Function]}
                                 style={Object {}}
                               >
@@ -1322,7 +1322,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx RudKt sc-jSFkmK fAoBae"
+                                              className="sc-bdnylx gLeIQZ sc-jSFkmK fAoBae"
                                               style={Object {}}
                                             >
                                               Select an option
@@ -1708,7 +1708,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <div
-                                              className="sc-bdnylx RudKt sc-pNWxx flvaRE"
+                                              className="sc-bdnylx gLeIQZ sc-pNWxx flvaRE"
                                               style={Object {}}
                                             >
                                               keyboard_arrow_down
