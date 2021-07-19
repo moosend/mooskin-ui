@@ -3,7 +3,7 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 
 import { ITagsComponentProps } from '../components/Tags/model';
-import { Tag, TagInput, Tags } from '../components/Tags/Tags';
+import { Tag, TagInput, Tags, TagText } from '../components/Tags/Tags';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 import GlobalStyle from '../components/Styled/GlobalStyles';
@@ -58,7 +58,11 @@ WithInput.args = {
 	children: (
 		<>
 			{[...Array(4)].map((item, i) => {
-				return <Tag key={i}>{`Tag ${i + 1}`}</Tag>;
+				return (
+					<Tag key={i}>
+						<TagText>{`Tag and more ${i + 1}`}</TagText>
+					</Tag>
+				);
 			})}
 			<TagInput placeholder="Add a label" delimiters={[',', ' ', 'Enter', 13]} pl={10} />
 		</>
