@@ -47,7 +47,8 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 				return React.cloneElement(child, {
 					children: (
 						<>
-							<StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>
+							{recurseChildren(child.props.children)}
+							{/* <StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>} */}
 							{child.props.removeIcon && props.onRemoveTag && <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>}
 						</>
 					),
@@ -188,6 +189,20 @@ TagClose.defaultProps = {
 };
 
 TagClose.displayName = 'TagClose';
+
+/**
+ * TagText
+ */
+export const TagText: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+	return <StyledTagText {...props} />;
+});
+
+TagText.defaultProps = {
+	className: '',
+	style: {},
+};
+
+TagText.displayName = 'TagText';
 
 /**
  * Helpers
