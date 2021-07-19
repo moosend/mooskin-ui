@@ -67,7 +67,7 @@ export { LoadingBar } from '../LoadingBar/LoadingBar';
 export { TextArea } from '../TextArea/TextArea';
 export { TextEditor } from '../TextEditor/TextEditor';
 export { Tabs, TabContent, TabHeader, Tab } from '../Tabs/Tabs';
-export { Tags, TagClose, TagInput, Tag } from '../Tags/Tags';
+export { Tags, TagClose, TagInput, Tag, TagText } from '../Tags/Tags';
 export { Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from '../Table/Table';
 export { Footer, FooterBody, FooterEnd, FooterHead } from '../Footer/Footer';
 export { Slider } from '../Slider/Slider';
