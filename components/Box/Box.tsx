@@ -19,6 +19,7 @@ export const Box: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
 Box.defaultProps = {
 	className: '',
 	style: {},
+	transition: '0.2s all',
 };
 
 Box.displayName = 'Box';
