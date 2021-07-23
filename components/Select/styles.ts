@@ -1,13 +1,24 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Models
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
-import { ISelectComponentProps, ISelectOptionComponentProps } from './model';
+import { ISelectComponentProps, ISelectOptionComponentProps, ISelectOptionListProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
 
 import variables from '../_utils/globals/variables';
+
+const fadeIn = keyframes`
+ 0% {
+	 opacity: 0;
+	 transform: translate(0, -20px);
+ }
+ 100% {
+	 opacity: 1;
+	 transform: translate(0);
+ }
+`;
 
 export const StyledSelect = styled(Box)<ISelectComponentProps>`
 	position: relative;
@@ -64,7 +75,7 @@ export const StyledSelectPlaceholder = styled(Box)<IBoxComponentProps>`
 
 StyledSelectPlaceholder.displayName = 'StyledSelectPlaceholder';
 
-export const StyledSelectOptionList = styled(Box)<IBoxComponentProps>`
+export const StyledSelectOptionList = styled(Box)<ISelectOptionListProps>`
 	position: absolute;
 	top: 40px;
 	left: 0;
@@ -90,6 +101,19 @@ export const StyledSelectOptionList = styled(Box)<IBoxComponentProps>`
 		background: #555;
 	}
 `;
+
+export const StyledSelectOptionListFadeIn = styled(StyledSelectOptionList)`
+	animation: ${fadeIn} 0.15s;
+`;
+
+StyledSelectOptionListFadeIn.displayName = 'StyledSelectOptionListFadeIn';
+
+export const StyledSelectOptionListFadeOut = styled(StyledSelectOptionList)`
+	opacity: 0;
+	animation: ${fadeIn} 0.15s reverse;
+`;
+
+StyledSelectOptionListFadeOut.displayName = 'StyledSelectOptionListFadeOut';
 
 StyledSelectOptionList.displayName = 'StyledSelectOptionList';
 

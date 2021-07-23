@@ -11,11 +11,13 @@ export interface ISelectComponentProps extends IBoxComponentProps {
 	/** to specify which value is selected, has to be one of the option values */
 	selectedValue?: string | number | Array<string | number>;
 
-	/** control whether to show the Options list */
-	showList?: boolean;
-
 	/** disables this Select */
 	disabled?: boolean;
+}
+
+export interface ISelectOptionListProps extends IBoxComponentProps {
+	/** control whether to show the Options list */
+	showList?: boolean;
 }
 
 export interface ISelectFilterComponentProps extends IInputBoxComponentProps {
