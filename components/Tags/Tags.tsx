@@ -15,6 +15,8 @@ import { StyledTag, StyledTagClose, StyledTagInput, StyledTags, StyledTagText } 
  * Tags
  */
 export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) => {
+	const [tagClose, setTagClose] = React.useState(false);
+
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		data: IInputCallbackData,
@@ -49,13 +51,36 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 						<>
 							{recurseChildren(child.props.children)}
 							{/* <StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>} */}
-							{child.props.removeIcon && props.onRemoveTag && <TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>}
+							{child.props.removeIcon && props.onRemoveTag && !tagClose && (
+								<TagClose
+									onClick={(e) => {
+										e.stopPropagation();
+										onRemoveTag(e, i);
+									}}
+								>
+									highlight_off
+								</TagClose>
+							)}
 						</>
 					),
 					key: i,
 					onClick: (e: React.MouseEvent<HTMLElement>) =>
 						batchClickHandler(e, { dataLabel: props.dataLabel, value: i }, child.props.onClick),
 				} as ITagComponentProps);
+			}
+
+			if (React.isValidElement<IBoxComponentProps>(child) && child.type === TagClose) {
+				!tagClose && setTagClose(true);
+				return React.cloneElement(child, {
+					children: child.props.children ? child.props.children : 'highlight_off',
+					key: i,
+					onClick: child.props.onClick
+						? child.props.onClick
+						: (e) => {
+								e.stopPropagation();
+								onRemoveTag(e, i);
+						  },
+				} as IBoxComponentProps);
 			}
 
 			if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput) {
