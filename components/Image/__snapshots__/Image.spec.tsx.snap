@@ -232,6 +232,7 @@ exports[`Image renders correctly 1`] = `
         }
         src="asd"
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           boxAs="img"
@@ -308,6 +309,7 @@ exports[`Image renders correctly 1`] = `
           }
           src="asd"
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             as="img"
@@ -385,9 +387,10 @@ exports[`Image renders correctly 1`] = `
             }
             src="asd"
             style={Object {}}
+            transition="0.2s all"
           >
             <img
-              className="sc-bdnylx gLeIQZ sc-gtssRu dTEizC"
+              className="sc-bdnylx jknATe sc-gtssRu dTEizC"
               src="asd"
               style={Object {}}
             />

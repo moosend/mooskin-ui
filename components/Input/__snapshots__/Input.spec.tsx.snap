@@ -230,6 +230,7 @@ exports[`Input renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-hKFyIo eIXAee"
@@ -305,6 +306,7 @@ exports[`Input renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-hKFyIo eIXAee"
@@ -380,9 +382,10 @@ exports[`Input renders correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-hKFyIo eIXAee"
+              className="sc-bdnylx jknATe sc-hKFyIo eIXAee"
               onChangeInput={[MockFunction]}
               style={Object {}}
             >
@@ -621,6 +624,7 @@ exports[`Input renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                       wrapped={true}
                     >
                       <Component
@@ -698,6 +702,7 @@ exports[`Input renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                         wrapped={true}
                       >
                         <StyledBox
@@ -776,10 +781,11 @@ exports[`Input renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                           wrapped={true}
                         >
                           <input
-                            className="sc-bdnylx gLeIQZ sc-eCApGN sc-gKAblj fQlSyR iJgPne"
+                            className="sc-bdnylx jknATe sc-eCApGN sc-gKAblj fQlSyR iJgPne"
                             onChange={[Function]}
                             style={Object {}}
                           />
@@ -877,6 +883,7 @@ exports[`Input renders correctly 1`] = `
                     color="inherit"
                     position="relative"
                     style={Object {}}
+                    transition="0.2s all"
                     zIndex={0}
                   >
                     <Component
@@ -954,6 +961,7 @@ exports[`Input renders correctly 1`] = `
                       }
                       position="relative"
                       style={Object {}}
+                      transition="0.2s all"
                       zIndex={0}
                     >
                       <StyledBox
@@ -1031,10 +1039,11 @@ exports[`Input renders correctly 1`] = `
                         }
                         position="relative"
                         style={Object {}}
+                        transition="0.2s all"
                         zIndex={0}
                       >
                         <div
-                          className="sc-bdnylx hyLmGp"
+                          className="sc-bdnylx kPkMmm"
                           color="inherit"
                           style={Object {}}
                         >
@@ -1269,6 +1278,7 @@ exports[`Input renders correctly 1`] = `
                                     }
                                   }
                                   style={Object {}}
+                                  transition="0.2s all"
                                 >
                                   <Component
                                     className="sc-fujyUd kyVFLD"
@@ -1345,6 +1355,7 @@ exports[`Input renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <StyledBox
                                       className="sc-fujyUd kyVFLD"
@@ -1421,9 +1432,10 @@ exports[`Input renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <div
-                                        className="sc-bdnylx ieMpoK sc-fujyUd kyVFLD"
+                                        className="sc-bdnylx eTqIpZ sc-fujyUd kyVFLD"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -1601,6 +1613,7 @@ exports[`Input renders correctly 1`] = `
                     position="relative"
                     pr={5}
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <Component
                       className=""
@@ -1679,6 +1692,7 @@ exports[`Input renders correctly 1`] = `
                       position="relative"
                       pr={5}
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <StyledBox
                         className=""
@@ -1757,9 +1771,10 @@ exports[`Input renders correctly 1`] = `
                         position="relative"
                         pr={5}
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx itjpEV"
+                          className="sc-bdnylx bVfeye"
                           color="inherit"
                           onChangeEmoji={[Function]}
                           style={Object {}}
@@ -1995,6 +2010,7 @@ exports[`Input renders correctly 1`] = `
                                     }
                                   }
                                   style={Object {}}
+                                  transition="0.2s all"
                                 >
                                   <Component
                                     className="sc-fujyUd kyVFLD"
@@ -2071,6 +2087,7 @@ exports[`Input renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <StyledBox
                                       className="sc-fujyUd kyVFLD"
@@ -2147,9 +2164,10 @@ exports[`Input renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <div
-                                        className="sc-bdnylx ieMpoK sc-fujyUd kyVFLD"
+                                        className="sc-bdnylx eTqIpZ sc-fujyUd kyVFLD"
                                         onClick={[Function]}
                                         style={Object {}}
                                       >
@@ -2395,6 +2413,7 @@ exports[`Input renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-fujyUd kyVFLD"
@@ -2470,6 +2489,7 @@ exports[`Input renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-fujyUd kyVFLD"
@@ -2545,9 +2565,10 @@ exports[`Input renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx ieMpoK sc-fujyUd kyVFLD"
+                            className="sc-bdnylx eTqIpZ sc-fujyUd kyVFLD"
                             style={Object {}}
                           >
                             search

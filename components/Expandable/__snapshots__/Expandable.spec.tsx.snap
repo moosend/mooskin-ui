@@ -230,6 +230,7 @@ exports[`Expandable renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu dJxHxj"
@@ -305,6 +306,7 @@ exports[`Expandable renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu dJxHxj"
@@ -380,9 +382,10 @@ exports[`Expandable renders correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu dJxHxj"
+              className="sc-bdnylx jknATe sc-gtssRu dJxHxj"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -620,6 +623,7 @@ exports[`Expandable renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         active={false}
@@ -696,6 +700,7 @@ exports[`Expandable renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           active={false}
@@ -772,9 +777,10 @@ exports[`Expandable renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT jLTatE"
+                            className="sc-bdnylx jknATe sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -1007,6 +1013,7 @@ exports[`Expandable renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo lmvPMg"
@@ -1082,6 +1089,7 @@ exports[`Expandable renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo lmvPMg"
@@ -1157,9 +1165,10 @@ exports[`Expandable renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx jknATe sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -1389,6 +1398,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-jSFkmK gwZdKD"
@@ -1463,6 +1473,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-jSFkmK gwZdKD"
@@ -1537,9 +1548,10 @@ exports[`Expandable renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx jknATe sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 1
@@ -1780,6 +1792,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     active={false}
@@ -1855,6 +1868,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       active={false}
@@ -1930,9 +1944,10 @@ exports[`Expandable renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx jknATe sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -2191,6 +2206,7 @@ exports[`Expandable renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         active={false}
@@ -2267,6 +2283,7 @@ exports[`Expandable renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           active={false}
@@ -2343,9 +2360,10 @@ exports[`Expandable renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT jLTatE"
+                            className="sc-bdnylx jknATe sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -2578,6 +2596,7 @@ exports[`Expandable renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo lmvPMg"
@@ -2653,6 +2672,7 @@ exports[`Expandable renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo lmvPMg"
@@ -2728,9 +2748,10 @@ exports[`Expandable renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx jknATe sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -2960,6 +2981,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-jSFkmK gwZdKD"
@@ -3034,6 +3056,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-jSFkmK gwZdKD"
@@ -3108,9 +3131,10 @@ exports[`Expandable renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx jknATe sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 2
@@ -3351,6 +3375,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     active={false}
@@ -3426,6 +3451,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       active={false}
@@ -3501,9 +3527,10 @@ exports[`Expandable renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx jknATe sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -3762,6 +3789,7 @@ exports[`Expandable renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         active={false}
@@ -3838,6 +3866,7 @@ exports[`Expandable renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           active={false}
@@ -3914,9 +3943,10 @@ exports[`Expandable renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT jLTatE"
+                            className="sc-bdnylx jknATe sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -4149,6 +4179,7 @@ exports[`Expandable renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo lmvPMg"
@@ -4224,6 +4255,7 @@ exports[`Expandable renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo lmvPMg"
@@ -4299,9 +4331,10 @@ exports[`Expandable renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx jknATe sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -4531,6 +4564,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-jSFkmK gwZdKD"
@@ -4605,6 +4639,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-jSFkmK gwZdKD"
@@ -4679,9 +4714,10 @@ exports[`Expandable renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx jknATe sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 3
@@ -4922,6 +4958,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     active={false}
@@ -4997,6 +5034,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       active={false}
@@ -5072,9 +5110,10 @@ exports[`Expandable renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx jknATe sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -5333,6 +5372,7 @@ exports[`Expandable renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         active={false}
@@ -5409,6 +5449,7 @@ exports[`Expandable renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           active={false}
@@ -5485,9 +5526,10 @@ exports[`Expandable renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT jLTatE"
+                            className="sc-bdnylx jknATe sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -5720,6 +5762,7 @@ exports[`Expandable renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo lmvPMg"
@@ -5795,6 +5838,7 @@ exports[`Expandable renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo lmvPMg"
@@ -5870,9 +5914,10 @@ exports[`Expandable renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx jknATe sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -6102,6 +6147,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-jSFkmK gwZdKD"
@@ -6176,6 +6222,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-jSFkmK gwZdKD"
@@ -6250,9 +6297,10 @@ exports[`Expandable renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx jknATe sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 4
@@ -6493,6 +6541,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     active={false}
@@ -6568,6 +6617,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       active={false}
@@ -6643,9 +6693,10 @@ exports[`Expandable renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx jknATe sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down

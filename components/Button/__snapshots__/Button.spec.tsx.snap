@@ -271,6 +271,7 @@ exports[`Button renders correctly 1`] = `
             "color": "blue",
           }
         }
+        transition="0.2s all"
         type="submit"
       >
         <Component
@@ -357,6 +358,7 @@ exports[`Button renders correctly 1`] = `
               "color": "blue",
             }
           }
+          transition="0.2s all"
           type="submit"
         >
           <StyledBox
@@ -444,10 +446,11 @@ exports[`Button renders correctly 1`] = `
                 "color": "blue",
               }
             }
+            transition="0.2s all"
             type="submit"
           >
             <a
-              className="sc-bdnylx gLeIQZ sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
+              className="sc-bdnylx jknATe sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
               disabled={true}
               href="www.moosend.com"
               id="button1"

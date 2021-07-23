@@ -259,6 +259,7 @@ exports[`Switch renders correctly 1`] = `
           }
         }
         text="Switch"
+        transition="0.2s all"
         w={90}
       >
         <Component
@@ -342,6 +343,7 @@ exports[`Switch renders correctly 1`] = `
             }
           }
           text="Switch"
+          transition="0.2s all"
           w={90}
         >
           <StyledBox
@@ -425,10 +427,11 @@ exports[`Switch renders correctly 1`] = `
               }
             }
             text="Switch"
+            transition="0.2s all"
             w={90}
           >
             <div
-              className="sc-bdnylx lEAVY sc-gtssRu lksYxG"
+              className="sc-bdnylx giPOZr sc-gtssRu lksYxG"
               onClick={[Function]}
               onClickSwitch={[MockFunction]}
               style={
@@ -670,6 +673,7 @@ exports[`Switch renders correctly 1`] = `
                       }
                       style={Object {}}
                       switchWidth={90}
+                      transition="0.2s all"
                     >
                       <Component
                         active={true}
@@ -746,6 +750,7 @@ exports[`Switch renders correctly 1`] = `
                         }
                         style={Object {}}
                         switchWidth={90}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           active={true}
@@ -822,9 +827,10 @@ exports[`Switch renders correctly 1`] = `
                           }
                           style={Object {}}
                           switchWidth={90}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT bkPvLE"
+                            className="sc-bdnylx jknATe sc-dlnjPT bkPvLE"
                             style={Object {}}
                           />
                         </StyledBox>
@@ -840,6 +846,7 @@ exports[`Switch renders correctly 1`] = `
                   active={true}
                   className="sc-hKFyIo sc-eCApGN cPa-DTE bHvCse"
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <Component
                     active={true}
@@ -915,6 +922,7 @@ exports[`Switch renders correctly 1`] = `
                       }
                     }
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <StyledBox
                       active={true}
@@ -990,9 +998,10 @@ exports[`Switch renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <div
-                        className="sc-bdnylx gLeIQZ sc-hKFyIo sc-eCApGN cPa-DTE bHvCse"
+                        className="sc-bdnylx jknATe sc-hKFyIo sc-eCApGN cPa-DTE bHvCse"
                         style={Object {}}
                       >
                         Switch

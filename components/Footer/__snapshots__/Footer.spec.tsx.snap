@@ -226,6 +226,7 @@ exports[`Alert renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu DTjtv"
@@ -300,6 +301,7 @@ exports[`Alert renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu DTjtv"
@@ -374,9 +376,10 @@ exports[`Alert renders correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu DTjtv"
+              className="sc-bdnylx jknATe sc-gtssRu DTjtv"
               style={Object {}}
             >
               <FooterHead
@@ -612,6 +615,7 @@ exports[`Alert renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
@@ -688,6 +692,7 @@ exports[`Alert renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
@@ -764,9 +769,10 @@ exports[`Alert renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx ewmiMv sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
+                            className="sc-bdnylx gkiXOU sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
                             fontSize={12}
                             fontWeight={800}
                             style={Object {}}
@@ -1004,6 +1010,7 @@ exports[`Alert renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
@@ -1078,6 +1085,7 @@ exports[`Alert renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
@@ -1152,9 +1160,10 @@ exports[`Alert renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
+                            className="sc-bdnylx jknATe sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
                             style={Object {}}
                           >
                             <Button
@@ -1401,6 +1410,7 @@ exports[`Alert renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                     type="button"
                                   >
                                     <Component
@@ -1481,6 +1491,7 @@ exports[`Alert renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                       type="button"
                                     >
                                       <StyledBox
@@ -1562,10 +1573,11 @@ exports[`Alert renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx ZscTv sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
+                                          className="sc-bdnylx gXdjDw sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -1581,6 +1593,7 @@ exports[`Alert renders correctly 1`] = `
                                               <Box
                                                 className="sc-pNWxx gxbiOV"
                                                 style={Object {}}
+                                                transition="0.2s all"
                                               >
                                                 <Component
                                                   className="sc-pNWxx gxbiOV"
@@ -1655,6 +1668,7 @@ exports[`Alert renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <StyledBox
                                                     className="sc-pNWxx gxbiOV"
@@ -1729,9 +1743,10 @@ exports[`Alert renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx gLeIQZ sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx jknATe sc-pNWxx gxbiOV"
                                                       style={Object {}}
                                                     >
                                                       chevron_left
@@ -1989,6 +2004,7 @@ exports[`Alert renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                     type="button"
                                   >
                                     <Component
@@ -2068,6 +2084,7 @@ exports[`Alert renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                       type="button"
                                     >
                                       <StyledBox
@@ -2148,10 +2165,11 @@ exports[`Alert renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx fahtTn sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
+                                          className="sc-bdnylx innUFg sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -2168,6 +2186,7 @@ exports[`Alert renders correctly 1`] = `
                                               <Box
                                                 className="sc-pNWxx gxbiOV"
                                                 style={Object {}}
+                                                transition="0.2s all"
                                               >
                                                 <Component
                                                   className="sc-pNWxx gxbiOV"
@@ -2242,6 +2261,7 @@ exports[`Alert renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <StyledBox
                                                     className="sc-pNWxx gxbiOV"
@@ -2316,9 +2336,10 @@ exports[`Alert renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx gLeIQZ sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx jknATe sc-pNWxx gxbiOV"
                                                       style={Object {}}
                                                     >
                                                       chevron_right
@@ -2567,6 +2588,7 @@ exports[`Alert renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
@@ -2641,6 +2663,7 @@ exports[`Alert renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
@@ -2715,9 +2738,10 @@ exports[`Alert renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
+                            className="sc-bdnylx jknATe sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
                             style={Object {}}
                           >
                             <Button
@@ -2968,6 +2992,7 @@ exports[`Alert renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                     type="button"
                                   >
                                     <Component
@@ -3049,6 +3074,7 @@ exports[`Alert renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                       type="button"
                                     >
                                       <StyledBox
@@ -3131,10 +3157,11 @@ exports[`Alert renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx ckHmPM sc-gKAblj sc-fujyUd hkIKDf jZrIud"
+                                          className="sc-bdnylx kMXOdT sc-gKAblj sc-fujyUd hkIKDf jZrIud"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"

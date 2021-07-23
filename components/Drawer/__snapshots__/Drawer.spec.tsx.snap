@@ -242,6 +242,7 @@ exports[`Drawer renders correctly 1`] = `
         placement="right"
         size="sm"
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu"
@@ -320,6 +321,7 @@ exports[`Drawer renders correctly 1`] = `
           placement="right"
           size="sm"
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu"
@@ -398,9 +400,10 @@ exports[`Drawer renders correctly 1`] = `
             placement="right"
             size="sm"
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu"
+              className="sc-bdnylx jknATe sc-gtssRu"
               onClose={[MockFunction]}
               size="sm"
               style={Object {}}
@@ -639,6 +642,7 @@ exports[`Drawer renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
@@ -715,6 +719,7 @@ exports[`Drawer renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
@@ -791,9 +796,10 @@ exports[`Drawer renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
+                            className="sc-bdnylx jknATe sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1042,6 +1048,7 @@ exports[`Drawer renders correctly 1`] = `
                                     placement="right"
                                     size="sm"
                                     style={Object {}}
+                                    transition="0.2s all"
                                     w="50%"
                                   >
                                     <Component
@@ -1121,6 +1128,7 @@ exports[`Drawer renders correctly 1`] = `
                                       placement="right"
                                       size="sm"
                                       style={Object {}}
+                                      transition="0.2s all"
                                       w="50%"
                                     >
                                       <StyledBox
@@ -1200,10 +1208,11 @@ exports[`Drawer renders correctly 1`] = `
                                         placement="right"
                                         size="sm"
                                         style={Object {}}
+                                        transition="0.2s all"
                                         w="50%"
                                       >
                                         <div
-                                          className="sc-bdnylx iUidVg sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb jNhBeZ"
+                                          className="sc-bdnylx iaVZCr sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb jNhBeZ"
                                           onClick={[Function]}
                                           size="sm"
                                           style={Object {}}
@@ -1450,6 +1459,7 @@ exports[`Drawer renders correctly 1`] = `
                                                   right={10}
                                                   style={Object {}}
                                                   top={10}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-fnVYJo ffkGxm"
@@ -1528,6 +1538,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     right={10}
                                                     style={Object {}}
                                                     top={10}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-fnVYJo ffkGxm"
@@ -1606,9 +1617,10 @@ exports[`Drawer renders correctly 1`] = `
                                                       right={10}
                                                       style={Object {}}
                                                       top={10}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ceZxXy sc-fnVYJo ffkGxm"
+                                                        className="sc-bdnylx hGZZrR sc-fnVYJo ffkGxm"
                                                         onClick={[Function]}
                                                         style={Object {}}
                                                       >
@@ -1848,6 +1860,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     boxAs="header"
@@ -1923,6 +1936,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       as="header"
@@ -1999,9 +2013,10 @@ exports[`Drawer renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <header
-                                                        className="sc-bdnylx gLeIQZ sc-bqGHjH drLbIb"
+                                                        className="sc-bdnylx jknATe sc-bqGHjH drLbIb"
                                                         style={Object {}}
                                                       >
                                                         Create your account
@@ -2238,6 +2253,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-ksluoS jiUKmX"
@@ -2312,6 +2328,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-ksluoS jiUKmX"
@@ -2386,9 +2403,10 @@ exports[`Drawer renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-ksluoS jiUKmX"
+                                                        className="sc-bdnylx jknATe sc-ksluoS jiUKmX"
                                                         style={Object {}}
                                                       >
                                                         Drawer Content Body
@@ -2627,6 +2645,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     boxAs="footer"
@@ -2702,6 +2721,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       as="footer"
@@ -2778,9 +2798,10 @@ exports[`Drawer renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <footer
-                                                        className="sc-bdnylx gLeIQZ sc-hBMVcZ fJYgtM"
+                                                        className="sc-bdnylx jknATe sc-hBMVcZ fJYgtM"
                                                         style={Object {}}
                                                       >
                                                         Drawer Footer goes here!

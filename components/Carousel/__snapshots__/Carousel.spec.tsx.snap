@@ -238,6 +238,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -316,6 +317,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -394,9 +396,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 4
@@ -440,6 +443,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -518,6 +522,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -596,9 +601,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 5
@@ -642,6 +648,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -720,6 +727,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -798,9 +806,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 6
@@ -845,6 +854,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -923,6 +933,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -1001,9 +1012,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 0
@@ -1048,6 +1060,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -1126,6 +1139,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -1204,9 +1218,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 1
@@ -1251,6 +1266,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -1329,6 +1345,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -1407,9 +1424,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 2
@@ -1454,6 +1472,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -1532,6 +1551,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -1610,9 +1630,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 3
@@ -1657,6 +1678,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -1735,6 +1757,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -1813,9 +1836,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 4
@@ -1860,6 +1884,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -1938,6 +1963,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -2016,9 +2042,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 5
@@ -2063,6 +2090,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -2141,6 +2169,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -2219,9 +2248,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 6
@@ -2265,6 +2295,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -2343,6 +2374,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -2421,9 +2453,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 0
@@ -2467,6 +2500,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -2545,6 +2579,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -2623,9 +2658,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 1
@@ -2669,6 +2705,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -2747,6 +2784,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -2825,9 +2863,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 2
@@ -2871,6 +2910,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -2949,6 +2989,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -3027,9 +3068,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 3
@@ -3073,6 +3115,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -3151,6 +3194,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -3229,9 +3273,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 4
@@ -3275,6 +3320,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -3353,6 +3399,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -3431,9 +3478,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 5
@@ -3477,6 +3525,7 @@ exports[`Carousel renders correctly 1`] = `
                         p={30}
                         round="md"
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <Component
                           boxShadow="md"
@@ -3555,6 +3604,7 @@ exports[`Carousel renders correctly 1`] = `
                           }
                           round="md"
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <StyledBox
                             boxShadow="md"
@@ -3633,9 +3683,10 @@ exports[`Carousel renders correctly 1`] = `
                             }
                             round="md"
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx ekXwFw"
+                              className="sc-bdnylx hRfnUj"
                               style={Object {}}
                             >
                               Box 6
@@ -3711,6 +3762,7 @@ exports[`Carousel renders correctly 1`] = `
                     className="sc-dlnjPT fvzCWx"
                     onClick={[Function]}
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <Component
                       className="sc-dlnjPT fvzCWx"
@@ -3786,6 +3838,7 @@ exports[`Carousel renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <StyledBox
                         className="sc-dlnjPT fvzCWx"
@@ -3861,9 +3914,10 @@ exports[`Carousel renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx gLeIQZ sc-dlnjPT fvzCWx"
+                          className="sc-bdnylx jknATe sc-dlnjPT fvzCWx"
                           onClick={[Function]}
                           style={Object {}}
                         />
@@ -3883,6 +3937,7 @@ exports[`Carousel renders correctly 1`] = `
                     className="sc-dlnjPT fvzCWx"
                     onClick={[Function]}
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <Component
                       className="sc-dlnjPT fvzCWx"
@@ -3958,6 +4013,7 @@ exports[`Carousel renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <StyledBox
                         className="sc-dlnjPT fvzCWx"
@@ -4033,9 +4089,10 @@ exports[`Carousel renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx gLeIQZ sc-dlnjPT fvzCWx"
+                          className="sc-bdnylx jknATe sc-dlnjPT fvzCWx"
                           onClick={[Function]}
                           style={Object {}}
                         />
@@ -4055,6 +4112,7 @@ exports[`Carousel renders correctly 1`] = `
                     className="sc-dlnjPT fvzCWx"
                     onClick={[Function]}
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <Component
                       className="sc-dlnjPT fvzCWx"
@@ -4130,6 +4188,7 @@ exports[`Carousel renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <StyledBox
                         className="sc-dlnjPT fvzCWx"
@@ -4205,9 +4264,10 @@ exports[`Carousel renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx gLeIQZ sc-dlnjPT fvzCWx"
+                          className="sc-bdnylx jknATe sc-dlnjPT fvzCWx"
                           onClick={[Function]}
                           style={Object {}}
                         />

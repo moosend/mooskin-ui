@@ -234,6 +234,7 @@ exports[`Selector renders Selector correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           activeItem="/settings"
@@ -310,6 +311,7 @@ exports[`Selector renders Selector correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             activeItem="/settings"
@@ -386,9 +388,10 @@ exports[`Selector renders Selector correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu bQFkch"
+              className="sc-bdnylx jknATe sc-gtssRu bQFkch"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -629,6 +632,7 @@ exports[`Selector renders Selector correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                       value="/settings"
                     >
                       <Component
@@ -706,6 +710,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                         value="/settings"
                       >
                         <StyledBox
@@ -783,10 +788,11 @@ exports[`Selector renders Selector correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT fMdGfA"
+                            className="sc-bdnylx jknATe sc-dlnjPT fMdGfA"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -1036,6 +1042,7 @@ exports[`Selector renders Selector correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                       value="/template"
                     >
                       <Component
@@ -1113,6 +1120,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                         value="/template"
                       >
                         <StyledBox
@@ -1190,10 +1198,11 @@ exports[`Selector renders Selector correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT gxQPCM"
+                            className="sc-bdnylx jknATe sc-dlnjPT gxQPCM"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -1443,6 +1452,7 @@ exports[`Selector renders Selector correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                       value="/preview"
                     >
                       <Component
@@ -1520,6 +1530,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                         value="/preview"
                       >
                         <StyledBox
@@ -1597,10 +1608,11 @@ exports[`Selector renders Selector correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT gxQPCM"
+                            className="sc-bdnylx jknATe sc-dlnjPT gxQPCM"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -1872,6 +1884,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
             "color": "blue",
           }
         }
+        transition="0.2s all"
       >
         <Component
           active={true}
@@ -1952,6 +1965,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
               "color": "blue",
             }
           }
+          transition="0.2s all"
         >
           <StyledBox
             active={true}
@@ -2032,9 +2046,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
                 "color": "blue",
               }
             }
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-dlnjPT fMdGfA myClass"
+              className="sc-bdnylx jknATe sc-dlnjPT fMdGfA myClass"
               onClick={[MockFunction]}
               style={
                 Object {

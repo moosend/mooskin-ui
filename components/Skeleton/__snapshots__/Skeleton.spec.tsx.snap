@@ -242,6 +242,7 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
         speed={0.8}
         startColor="#EDF2F7"
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
@@ -320,6 +321,7 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
           speed={0.8}
           startColor="#EDF2F7"
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
@@ -398,9 +400,10 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
             speed={0.8}
             startColor="#EDF2F7"
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
+              className="sc-bdnylx jknATe sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
               speed={0.8}
               style={Object {}}
             >
@@ -691,6 +694,7 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
         speed={0.8}
         startColor="#EDF2F7"
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu sc-hKFyIo bexDGe frPYgX"
@@ -770,6 +774,7 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
           speed={0.8}
           startColor="#EDF2F7"
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu sc-hKFyIo bexDGe frPYgX"
@@ -849,9 +854,10 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
             speed={0.8}
             startColor="#EDF2F7"
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu sc-hKFyIo bexDGe frPYgX"
+              className="sc-bdnylx jknATe sc-gtssRu sc-hKFyIo bexDGe frPYgX"
               size="20px"
               speed={0.8}
               style={Object {}}
@@ -1112,6 +1118,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         speed={0.8}
         startColor="#EDF2F7"
         style={Object {}}
+        transition="0.2s all"
         w="100%"
       >
         <Component
@@ -1192,6 +1199,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           speed={0.8}
           startColor="#EDF2F7"
           style={Object {}}
+          transition="0.2s all"
           w="100%"
         >
           <StyledBox
@@ -1272,10 +1280,11 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             speed={0.8}
             startColor="#EDF2F7"
             style={Object {}}
+            transition="0.2s all"
             w="100%"
           >
             <div
-              className="sc-bdnylx gtnRCl sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdnylx gbkXOi sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
               style={Object {}}
             />
@@ -1442,6 +1451,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         speed={0.8}
         startColor="#EDF2F7"
         style={Object {}}
+        transition="0.2s all"
         w="100%"
       >
         <Component
@@ -1522,6 +1532,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           speed={0.8}
           startColor="#EDF2F7"
           style={Object {}}
+          transition="0.2s all"
           w="100%"
         >
           <StyledBox
@@ -1602,10 +1613,11 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             speed={0.8}
             startColor="#EDF2F7"
             style={Object {}}
+            transition="0.2s all"
             w="100%"
           >
             <div
-              className="sc-bdnylx gtnRCl sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdnylx gbkXOi sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
               style={Object {}}
             />
@@ -1772,6 +1784,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         speed={0.8}
         startColor="#EDF2F7"
         style={Object {}}
+        transition="0.2s all"
         w="100%"
       >
         <Component
@@ -1852,6 +1865,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           speed={0.8}
           startColor="#EDF2F7"
           style={Object {}}
+          transition="0.2s all"
           w="100%"
         >
           <StyledBox
@@ -1932,10 +1946,11 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             speed={0.8}
             startColor="#EDF2F7"
             style={Object {}}
+            transition="0.2s all"
             w="100%"
           >
             <div
-              className="sc-bdnylx gtnRCl sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdnylx gbkXOi sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
               style={Object {}}
             />
@@ -2102,6 +2117,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         speed={0.8}
         startColor="#EDF2F7"
         style={Object {}}
+        transition="0.2s all"
         w="80%"
       >
         <Component
@@ -2182,6 +2198,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           speed={0.8}
           startColor="#EDF2F7"
           style={Object {}}
+          transition="0.2s all"
           w="80%"
         >
           <StyledBox
@@ -2262,10 +2279,11 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             speed={0.8}
             startColor="#EDF2F7"
             style={Object {}}
+            transition="0.2s all"
             w="80%"
           >
             <div
-              className="sc-bdnylx ffnntg sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdnylx fyfBNL sc-gtssRu sc-eCApGN bexDGe kcBUaI"
               speed={0.8}
               style={Object {}}
             />

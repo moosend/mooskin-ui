@@ -228,6 +228,7 @@ exports[`Label renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           boxAs="label"
@@ -303,6 +304,7 @@ exports[`Label renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             as="label"
@@ -379,9 +381,10 @@ exports[`Label renders correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <label
-              className="sc-bdnylx gLeIQZ sc-gtssRu gGjztn"
+              className="sc-bdnylx jknATe sc-gtssRu gGjztn"
               style={Object {}}
             >
               Label here!

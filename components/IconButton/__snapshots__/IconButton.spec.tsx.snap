@@ -224,6 +224,7 @@ exports[`SmallIconButton renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu fehwhe"
@@ -299,6 +300,7 @@ exports[`SmallIconButton renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu fehwhe"
@@ -374,9 +376,10 @@ exports[`SmallIconButton renders correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu fehwhe"
+              className="sc-bdnylx jknATe sc-gtssRu fehwhe"
               onClick={[Function]}
               style={Object {}}
             >

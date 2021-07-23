@@ -7,6 +7,7 @@ exports[`Box renders Box correctly 1`] = `
   m={5}
   p={5}
   style={Object {}}
+  transition="0.2s all"
 >
   <Component
     align="baseline"
@@ -84,6 +85,7 @@ exports[`Box renders Box correctly 1`] = `
       }
     }
     style={Object {}}
+    transition="0.2s all"
   >
     <StyledBox
       align="baseline"
@@ -161,9 +163,10 @@ exports[`Box renders Box correctly 1`] = `
         }
       }
       style={Object {}}
+      transition="0.2s all"
     >
       <div
-        className="sc-bdnylx iPkuSB"
+        className="sc-bdnylx hdQkIq"
         style={Object {}}
       >
         Box

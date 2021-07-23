@@ -21,6 +21,7 @@ exports[`Slider renders correctly 1`] = `
       min={0}
       onChange={[Function]}
       style={Object {}}
+      transition="0.2s all"
       type="range"
       value={5}
     >
@@ -101,6 +102,7 @@ exports[`Slider renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
         type="range"
         value={5}
       >
@@ -182,11 +184,12 @@ exports[`Slider renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
           type="range"
           value={5}
         >
           <input
-            className="sc-bdnylx gLeIQZ sc-gtssRu eklUIY"
+            className="sc-bdnylx jknATe sc-gtssRu eklUIY"
             max={10}
             min={0}
             onChange={[Function]}

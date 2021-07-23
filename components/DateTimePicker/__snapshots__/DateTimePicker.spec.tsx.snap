@@ -395,6 +395,7 @@ exports[`DateTimePicker renders correctly 1`] = `
                           "width": "100%",
                         }
                       }
+                      transition="0.2s all"
                       value="02/01/2021 00:00"
                     >
                       <Component
@@ -486,6 +487,7 @@ exports[`DateTimePicker renders correctly 1`] = `
                             "width": "100%",
                           }
                         }
+                        transition="0.2s all"
                         value="02/01/2021 00:00"
                       >
                         <StyledBox
@@ -578,10 +580,11 @@ exports[`DateTimePicker renders correctly 1`] = `
                               "width": "100%",
                             }
                           }
+                          transition="0.2s all"
                           value="02/01/2021 00:00"
                         >
                           <input
-                            className="sc-bdnylx gLeIQZ sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                            className="sc-bdnylx jknATe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                             format="dd/MM/yyyy HH:ss"
                             onClick={[Function]}
                             onKeyDown={[Function]}

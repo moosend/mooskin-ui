@@ -458,6 +458,7 @@ exports[`Stack renders Stack correctly 1`] = `
             }
             spacing={20}
             style={Object {}}
+            transition="0.2s all"
           >
             <Component
               align="initial"
@@ -546,6 +547,7 @@ exports[`Stack renders Stack correctly 1`] = `
               }
               spacing={20}
               style={Object {}}
+              transition="0.2s all"
             >
               <StyledBox
                 align="initial"
@@ -634,9 +636,10 @@ exports[`Stack renders Stack correctly 1`] = `
                 }
                 spacing={20}
                 style={Object {}}
+                transition="0.2s all"
               >
                 <div
-                  className="sc-bdnylx bjgpxv sc-gtssRu iXkelt"
+                  className="sc-bdnylx iPhRPE sc-gtssRu iXkelt"
                   direction="column"
                   spacing={20}
                   style={Object {}}
@@ -658,6 +661,7 @@ exports[`Stack renders Stack correctly 1`] = `
                     className=""
                     my={20}
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <Component
                       className=""
@@ -733,6 +737,7 @@ exports[`Stack renders Stack correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <StyledBox
                         className=""
@@ -808,9 +813,10 @@ exports[`Stack renders Stack correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx hhNozl"
+                          className="sc-bdnylx DafAu"
                           style={Object {}}
                         >
                           <span
@@ -842,6 +848,7 @@ exports[`Stack renders Stack correctly 1`] = `
                     className=""
                     my={20}
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <Component
                       className=""
@@ -917,6 +924,7 @@ exports[`Stack renders Stack correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <StyledBox
                         className=""
@@ -992,9 +1000,10 @@ exports[`Stack renders Stack correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx hhNozl"
+                          className="sc-bdnylx DafAu"
                           style={Object {}}
                         >
                           <span

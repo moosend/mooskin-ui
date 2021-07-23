@@ -226,6 +226,7 @@ exports[`Text renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu kPOGzy"
@@ -300,6 +301,7 @@ exports[`Text renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu kPOGzy"
@@ -374,9 +376,10 @@ exports[`Text renders correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu kPOGzy"
+              className="sc-bdnylx jknATe sc-gtssRu kPOGzy"
               style={Object {}}
             >
               Text here!

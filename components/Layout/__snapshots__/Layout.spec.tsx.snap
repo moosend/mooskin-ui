@@ -230,6 +230,7 @@ exports[`Layout renders correctly 1`] = `
         }
         spacing={15}
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu jrgeJz"
@@ -305,6 +306,7 @@ exports[`Layout renders correctly 1`] = `
           }
           spacing={15}
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu jrgeJz"
@@ -380,9 +382,10 @@ exports[`Layout renders correctly 1`] = `
             }
             spacing={15}
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu jrgeJz"
+              className="sc-bdnylx jknATe sc-gtssRu jrgeJz"
               spacing={15}
               style={Object {}}
             >
@@ -392,6 +395,7 @@ exports[`Layout renders correctly 1`] = `
                 p={30}
                 round="sm"
                 style={Object {}}
+                transition="0.2s all"
               >
                 <Component
                   boxShadow="md"
@@ -469,6 +473,7 @@ exports[`Layout renders correctly 1`] = `
                   }
                   round="sm"
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <StyledBox
                     boxShadow="md"
@@ -546,9 +551,10 @@ exports[`Layout renders correctly 1`] = `
                     }
                     round="sm"
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx PzOiN"
+                      className="sc-bdnylx dUcFKu"
                       style={Object {}}
                     >
                       Box
@@ -562,6 +568,7 @@ exports[`Layout renders correctly 1`] = `
                 p={30}
                 round="sm"
                 style={Object {}}
+                transition="0.2s all"
               >
                 <Component
                   boxShadow="md"
@@ -639,6 +646,7 @@ exports[`Layout renders correctly 1`] = `
                   }
                   round="sm"
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <StyledBox
                     boxShadow="md"
@@ -716,9 +724,10 @@ exports[`Layout renders correctly 1`] = `
                     }
                     round="sm"
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx PzOiN"
+                      className="sc-bdnylx dUcFKu"
                       style={Object {}}
                     >
                       Box
@@ -732,6 +741,7 @@ exports[`Layout renders correctly 1`] = `
                 p={30}
                 round="sm"
                 style={Object {}}
+                transition="0.2s all"
               >
                 <Component
                   boxShadow="md"
@@ -809,6 +819,7 @@ exports[`Layout renders correctly 1`] = `
                   }
                   round="sm"
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <StyledBox
                     boxShadow="md"
@@ -886,9 +897,10 @@ exports[`Layout renders correctly 1`] = `
                     }
                     round="sm"
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx PzOiN"
+                      className="sc-bdnylx dUcFKu"
                       style={Object {}}
                     >
                       Box
@@ -902,6 +914,7 @@ exports[`Layout renders correctly 1`] = `
                 p={30}
                 round="sm"
                 style={Object {}}
+                transition="0.2s all"
               >
                 <Component
                   boxShadow="md"
@@ -979,6 +992,7 @@ exports[`Layout renders correctly 1`] = `
                   }
                   round="sm"
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <StyledBox
                     boxShadow="md"
@@ -1056,9 +1070,10 @@ exports[`Layout renders correctly 1`] = `
                     }
                     round="sm"
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx PzOiN"
+                      className="sc-bdnylx dUcFKu"
                       style={Object {}}
                     >
                       Box
@@ -1072,6 +1087,7 @@ exports[`Layout renders correctly 1`] = `
                 p={30}
                 round="sm"
                 style={Object {}}
+                transition="0.2s all"
               >
                 <Component
                   boxShadow="md"
@@ -1149,6 +1165,7 @@ exports[`Layout renders correctly 1`] = `
                   }
                   round="sm"
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <StyledBox
                     boxShadow="md"
@@ -1226,9 +1243,10 @@ exports[`Layout renders correctly 1`] = `
                     }
                     round="sm"
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx PzOiN"
+                      className="sc-bdnylx dUcFKu"
                       style={Object {}}
                     >
                       Box
@@ -1242,6 +1260,7 @@ exports[`Layout renders correctly 1`] = `
                 p={30}
                 round="sm"
                 style={Object {}}
+                transition="0.2s all"
               >
                 <Component
                   boxShadow="md"
@@ -1319,6 +1338,7 @@ exports[`Layout renders correctly 1`] = `
                   }
                   round="sm"
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <StyledBox
                     boxShadow="md"
@@ -1396,9 +1416,10 @@ exports[`Layout renders correctly 1`] = `
                     }
                     round="sm"
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx PzOiN"
+                      className="sc-bdnylx dUcFKu"
                       style={Object {}}
                     >
                       Box
@@ -1412,6 +1433,7 @@ exports[`Layout renders correctly 1`] = `
                 p={30}
                 round="sm"
                 style={Object {}}
+                transition="0.2s all"
               >
                 <Component
                   boxShadow="md"
@@ -1489,6 +1511,7 @@ exports[`Layout renders correctly 1`] = `
                   }
                   round="sm"
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <StyledBox
                     boxShadow="md"
@@ -1566,9 +1589,10 @@ exports[`Layout renders correctly 1`] = `
                     }
                     round="sm"
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx PzOiN"
+                      className="sc-bdnylx dUcFKu"
                       style={Object {}}
                     >
                       Box
@@ -1582,6 +1606,7 @@ exports[`Layout renders correctly 1`] = `
                 p={30}
                 round="sm"
                 style={Object {}}
+                transition="0.2s all"
               >
                 <Component
                   boxShadow="md"
@@ -1659,6 +1684,7 @@ exports[`Layout renders correctly 1`] = `
                   }
                   round="sm"
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <StyledBox
                     boxShadow="md"
@@ -1736,9 +1762,10 @@ exports[`Layout renders correctly 1`] = `
                     }
                     round="sm"
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx PzOiN"
+                      className="sc-bdnylx dUcFKu"
                       style={Object {}}
                     >
                       Box

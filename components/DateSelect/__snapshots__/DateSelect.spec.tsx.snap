@@ -395,6 +395,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
             }
             selectedValue=""
             style={Object {}}
+            transition="0.2s all"
             type="hour"
           >
             <Component
@@ -473,6 +474,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
               }
               selectedValue=""
               style={Object {}}
+              transition="0.2s all"
               type="hour"
             >
               <StyledBox
@@ -551,10 +553,11 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                 }
                 selectedValue=""
                 style={Object {}}
+                transition="0.2s all"
                 type="hour"
               >
                 <div
-                  className="sc-bdnylx gLeIQZ sc-dlnjPT hPGFh"
+                  className="sc-bdnylx jknATe sc-dlnjPT hPGFh"
                   format="12-Hour"
                   onChangeSelect={[Function]}
                   style={Object {}}
@@ -790,6 +793,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <Component
                             className="sc-eCApGN fajFZl"
@@ -865,6 +869,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                               }
                             }
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <StyledBox
                               className="sc-eCApGN fajFZl"
@@ -940,9 +945,10 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                 }
                               }
                               style={Object {}}
+                              transition="0.2s all"
                             >
                               <div
-                                className="sc-bdnylx gLeIQZ sc-eCApGN fajFZl"
+                                className="sc-bdnylx jknATe sc-eCApGN fajFZl"
                                 onClick={[Function]}
                                 style={Object {}}
                               >
@@ -1172,6 +1178,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <Component
                                           className="sc-jSFkmK fAoBae"
@@ -1246,6 +1253,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             }
                                           }
                                           style={Object {}}
+                                          transition="0.2s all"
                                         >
                                           <StyledBox
                                             className="sc-jSFkmK fAoBae"
@@ -1320,9 +1328,10 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                               }
                                             }
                                             style={Object {}}
+                                            transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx gLeIQZ sc-jSFkmK fAoBae"
+                                              className="sc-bdnylx jknATe sc-jSFkmK fAoBae"
                                               style={Object {}}
                                             >
                                               Select an option
@@ -1558,6 +1567,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <Component
                                           className="sc-pNWxx flvaRE"
@@ -1632,6 +1642,7 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                             }
                                           }
                                           style={Object {}}
+                                          transition="0.2s all"
                                         >
                                           <StyledBox
                                             className="sc-pNWxx flvaRE"
@@ -1706,9 +1717,10 @@ exports[`DateSelect renders other type of the component correctly 1`] = `
                                               }
                                             }
                                             style={Object {}}
+                                            transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx gLeIQZ sc-pNWxx flvaRE"
+                                              className="sc-bdnylx jknATe sc-pNWxx flvaRE"
                                               style={Object {}}
                                             >
                                               keyboard_arrow_down

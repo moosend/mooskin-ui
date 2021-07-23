@@ -418,6 +418,7 @@ exports[`Button renders correctly 1`] = `
                 "color": "blue",
               }
             }
+            transition="0.2s all"
           >
             <Component
               abbrAccuracy={1}
@@ -500,6 +501,7 @@ exports[`Button renders correctly 1`] = `
                   "color": "blue",
                 }
               }
+              transition="0.2s all"
             >
               <StyledBox
                 abbrAccuracy={1}
@@ -583,9 +585,10 @@ exports[`Button renders correctly 1`] = `
                     "color": "blue",
                   }
                 }
+                transition="0.2s all"
               >
                 <label
-                  className="sc-bdnylx gLeIQZ sc-gtssRu gGjztn myClass"
+                  className="sc-bdnylx jknATe sc-gtssRu gGjztn myClass"
                   id="label"
                   style={
                     Object {

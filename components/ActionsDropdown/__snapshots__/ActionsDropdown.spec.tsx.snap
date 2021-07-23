@@ -232,6 +232,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           boxShadow="lg"
@@ -308,6 +309,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             boxShadow="lg"
@@ -384,9 +386,10 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx cnUZLX sc-gtssRu hpHwpK"
+              className="sc-bdnylx dxxBgo sc-gtssRu hpHwpK"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -615,6 +618,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-hKFyIo etsZKo"
@@ -689,6 +693,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-hKFyIo etsZKo"
@@ -763,9 +768,10 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-hKFyIo etsZKo"
+                            className="sc-bdnylx jknATe sc-hKFyIo etsZKo"
                             style={Object {}}
                           />
                         </StyledBox>
@@ -1011,6 +1017,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                       value="/settings"
                     >
                       <Component
@@ -1088,6 +1095,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                         value="/settings"
                       >
                         <StyledBox
@@ -1165,10 +1173,11 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT gozQXx"
+                            className="sc-bdnylx jknATe sc-dlnjPT gozQXx"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -1418,6 +1427,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                       value="/template"
                     >
                       <Component
@@ -1495,6 +1505,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                         value="/template"
                       >
                         <StyledBox
@@ -1572,10 +1583,11 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT gozQXx"
+                            className="sc-bdnylx jknATe sc-dlnjPT gozQXx"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -1825,6 +1837,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                       value="/preview"
                     >
                       <Component
@@ -1902,6 +1915,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                         value="/preview"
                       >
                         <StyledBox
@@ -1979,10 +1993,11 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT gozQXx"
+                            className="sc-bdnylx jknATe sc-dlnjPT gozQXx"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -2250,6 +2265,7 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
             "color": "blue",
           }
         }
+        transition="0.2s all"
       >
         <Component
           className="sc-dlnjPT gozQXx myClass"
@@ -2329,6 +2345,7 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
               "color": "blue",
             }
           }
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-dlnjPT gozQXx myClass"
@@ -2408,9 +2425,10 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
                 "color": "blue",
               }
             }
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-dlnjPT gozQXx myClass"
+              className="sc-bdnylx jknATe sc-dlnjPT gozQXx myClass"
               onClick={[MockFunction]}
               style={
                 Object {

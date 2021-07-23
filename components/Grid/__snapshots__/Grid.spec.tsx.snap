@@ -242,6 +242,7 @@ exports[`Grid renders Grid correctly 1`] = `
             "textAlign": "center",
           }
         }
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu dPVAKt"
@@ -320,6 +321,7 @@ exports[`Grid renders Grid correctly 1`] = `
               "textAlign": "center",
             }
           }
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu dPVAKt"
@@ -398,9 +400,10 @@ exports[`Grid renders Grid correctly 1`] = `
                 "textAlign": "center",
               }
             }
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu dPVAKt"
+              className="sc-bdnylx jknATe sc-gtssRu dPVAKt"
               style={
                 Object {
                   "textAlign": "center",
@@ -652,6 +655,7 @@ exports[`Grid renders Grid correctly 1`] = `
                           "padding": 10,
                         }
                       }
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT hWYNkB"
@@ -731,6 +735,7 @@ exports[`Grid renders Grid correctly 1`] = `
                             "padding": 10,
                           }
                         }
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT hWYNkB"
@@ -810,9 +815,10 @@ exports[`Grid renders Grid correctly 1`] = `
                               "padding": 10,
                             }
                           }
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                            className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                             style={
                               Object {
                                 "border": "3px solid #F48770",
@@ -1080,6 +1086,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={3}
                                   >
                                     <Component
@@ -1163,6 +1170,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={3}
                                     >
                                       <StyledBox
@@ -1246,10 +1254,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={3}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo idTvyR"
+                                          className="sc-bdnylx jknATe sc-hKFyIo idTvyR"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -1517,6 +1526,7 @@ exports[`Grid renders Grid correctly 1`] = `
                           "padding": 10,
                         }
                       }
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT hWYNkB"
@@ -1596,6 +1606,7 @@ exports[`Grid renders Grid correctly 1`] = `
                             "padding": 10,
                           }
                         }
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT hWYNkB"
@@ -1675,9 +1686,10 @@ exports[`Grid renders Grid correctly 1`] = `
                               "padding": 10,
                             }
                           }
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                            className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                             style={
                               Object {
                                 "border": "3px solid #F48770",
@@ -1934,6 +1946,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo irobCB"
@@ -2014,6 +2027,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo irobCB"
@@ -2094,9 +2108,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo irobCB"
+                                          className="sc-bdnylx jknATe sc-hKFyIo irobCB"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -2361,6 +2376,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo irobCB"
@@ -2441,6 +2457,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo irobCB"
@@ -2521,9 +2538,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo irobCB"
+                                          className="sc-bdnylx jknATe sc-hKFyIo irobCB"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -2791,6 +2809,7 @@ exports[`Grid renders Grid correctly 1`] = `
                           "padding": 10,
                         }
                       }
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT hWYNkB"
@@ -2870,6 +2889,7 @@ exports[`Grid renders Grid correctly 1`] = `
                             "padding": 10,
                           }
                         }
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT hWYNkB"
@@ -2949,9 +2969,10 @@ exports[`Grid renders Grid correctly 1`] = `
                               "padding": 10,
                             }
                           }
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                            className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                             style={
                               Object {
                                 "border": "3px solid #F48770",
@@ -3208,6 +3229,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo hEutot"
@@ -3288,6 +3310,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo hEutot"
@@ -3368,9 +3391,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo hEutot"
+                                          className="sc-bdnylx jknATe sc-hKFyIo hEutot"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -3635,6 +3659,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo hEutot"
@@ -3715,6 +3740,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo hEutot"
@@ -3795,9 +3821,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo hEutot"
+                                          className="sc-bdnylx jknATe sc-hKFyIo hEutot"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -4065,6 +4092,7 @@ exports[`Grid renders Grid correctly 1`] = `
                           "padding": 10,
                         }
                       }
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT hWYNkB"
@@ -4144,6 +4172,7 @@ exports[`Grid renders Grid correctly 1`] = `
                             "padding": 10,
                           }
                         }
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT hWYNkB"
@@ -4223,9 +4252,10 @@ exports[`Grid renders Grid correctly 1`] = `
                               "padding": 10,
                             }
                           }
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                            className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                             style={
                               Object {
                                 "border": "3px solid #F48770",
@@ -4489,6 +4519,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -4571,6 +4602,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -4653,10 +4685,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo eMPVCS"
+                                          className="sc-bdnylx jknATe sc-hKFyIo eMPVCS"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -4928,6 +4961,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -5010,6 +5044,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -5092,10 +5127,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo eMPVCS"
+                                          className="sc-bdnylx jknATe sc-hKFyIo eMPVCS"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -5367,6 +5403,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -5449,6 +5486,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -5531,10 +5569,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo eMPVCS"
+                                          className="sc-bdnylx jknATe sc-hKFyIo eMPVCS"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -5806,6 +5845,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -5888,6 +5928,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -5970,10 +6011,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo eMPVCS"
+                                          className="sc-bdnylx jknATe sc-hKFyIo eMPVCS"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -6245,6 +6287,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -6327,6 +6370,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -6409,10 +6453,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo eMPVCS"
+                                          className="sc-bdnylx jknATe sc-hKFyIo eMPVCS"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -6684,6 +6729,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -6766,6 +6812,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -6848,10 +6895,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo eMPVCS"
+                                          className="sc-bdnylx jknATe sc-hKFyIo eMPVCS"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -7123,6 +7171,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -7205,6 +7254,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -7287,10 +7337,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo bvbvvA"
+                                          className="sc-bdnylx jknATe sc-hKFyIo bvbvvA"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -7562,6 +7613,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -7644,6 +7696,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -7726,10 +7779,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo bvbvvA"
+                                          className="sc-bdnylx jknATe sc-hKFyIo bvbvvA"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -7997,6 +8051,7 @@ exports[`Grid renders Grid correctly 1`] = `
                           "padding": 10,
                         }
                       }
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT hWYNkB"
@@ -8076,6 +8131,7 @@ exports[`Grid renders Grid correctly 1`] = `
                             "padding": 10,
                           }
                         }
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT hWYNkB"
@@ -8155,9 +8211,10 @@ exports[`Grid renders Grid correctly 1`] = `
                               "padding": 10,
                             }
                           }
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                            className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                             style={
                               Object {
                                 "border": "3px solid #F48770",
@@ -8425,6 +8482,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={4}
                                   >
                                     <Component
@@ -8508,6 +8566,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={4}
                                     >
                                       <StyledBox
@@ -8591,10 +8650,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={4}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo gssWIu"
+                                          className="sc-bdnylx jknATe sc-hKFyIo gssWIu"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -8870,6 +8930,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={8}
                                   >
                                     <Component
@@ -8953,6 +9014,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={8}
                                     >
                                       <StyledBox
@@ -9036,10 +9098,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={8}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo knmExW"
+                                          className="sc-bdnylx jknATe sc-hKFyIo knmExW"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -9307,6 +9370,7 @@ exports[`Grid renders Grid correctly 1`] = `
                           "padding": 10,
                         }
                       }
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT hWYNkB"
@@ -9386,6 +9450,7 @@ exports[`Grid renders Grid correctly 1`] = `
                             "padding": 10,
                           }
                         }
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT hWYNkB"
@@ -9465,9 +9530,10 @@ exports[`Grid renders Grid correctly 1`] = `
                               "padding": 10,
                             }
                           }
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                            className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                             style={
                               Object {
                                 "border": "3px solid #F48770",
@@ -9735,6 +9801,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={2}
                                   >
                                     <Component
@@ -9818,6 +9885,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={2}
                                     >
                                       <StyledBox
@@ -9901,10 +9969,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={2}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo hzDNtN"
+                                          className="sc-bdnylx jknATe sc-hKFyIo hzDNtN"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -10180,6 +10249,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={2}
                                   >
                                     <Component
@@ -10263,6 +10333,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={2}
                                     >
                                       <StyledBox
@@ -10346,10 +10417,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={2}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo bXIlCZ"
+                                          className="sc-bdnylx jknATe sc-hKFyIo bXIlCZ"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -10625,6 +10697,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={8}
                                   >
                                     <Component
@@ -10708,6 +10781,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={8}
                                     >
                                       <StyledBox
@@ -10791,10 +10865,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={8}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo cUhDLv"
+                                          className="sc-bdnylx jknATe sc-hKFyIo cUhDLv"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -11062,6 +11137,7 @@ exports[`Grid renders Grid correctly 1`] = `
                           "padding": 10,
                         }
                       }
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT hWYNkB"
@@ -11141,6 +11217,7 @@ exports[`Grid renders Grid correctly 1`] = `
                             "padding": 10,
                           }
                         }
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT hWYNkB"
@@ -11220,9 +11297,10 @@ exports[`Grid renders Grid correctly 1`] = `
                               "padding": 10,
                             }
                           }
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                            className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                             style={
                               Object {
                                 "border": "3px solid #F48770",
@@ -11490,6 +11568,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -11573,6 +11652,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -11656,10 +11736,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo cBVGJG"
+                                          className="sc-bdnylx jknATe sc-hKFyIo cBVGJG"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -11935,6 +12016,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                     xs={12}
                                   >
                                     <Component
@@ -12018,6 +12100,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                       xs={12}
                                     >
                                       <StyledBox
@@ -12101,10 +12184,11 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                         xs={12}
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo jajVLi"
+                                          className="sc-bdnylx jknATe sc-hKFyIo jajVLi"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -12372,6 +12456,7 @@ exports[`Grid renders Grid correctly 1`] = `
                           "padding": 10,
                         }
                       }
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-dlnjPT hWYNkB"
@@ -12451,6 +12536,7 @@ exports[`Grid renders Grid correctly 1`] = `
                             "padding": 10,
                           }
                         }
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-dlnjPT hWYNkB"
@@ -12530,9 +12616,10 @@ exports[`Grid renders Grid correctly 1`] = `
                               "padding": 10,
                             }
                           }
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                            className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                             style={
                               Object {
                                 "border": "3px solid #F48770",
@@ -12765,6 +12852,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo hLpCQW"
@@ -12839,6 +12927,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo hLpCQW"
@@ -12913,9 +13002,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                          className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                           style={Object {}}
                                         >
                                           <Row
@@ -13163,6 +13253,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                       "padding": 10,
                                                     }
                                                   }
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-dlnjPT hWYNkB"
@@ -13242,6 +13333,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                         "padding": 10,
                                                       }
                                                     }
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-dlnjPT hWYNkB"
@@ -13321,9 +13413,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                                           "padding": 10,
                                                         }
                                                       }
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                                                        className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                                                         style={
                                                           Object {
                                                             "border": "3px solid #F48770",
@@ -13576,6 +13669,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                     "padding": 10,
                                                                   }
                                                                 }
+                                                                transition="0.2s all"
                                                               >
                                                                 <Component
                                                                   className="sc-hKFyIo hLpCQW"
@@ -13655,6 +13749,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                       "padding": 10,
                                                                     }
                                                                   }
+                                                                  transition="0.2s all"
                                                                 >
                                                                   <StyledBox
                                                                     className="sc-hKFyIo hLpCQW"
@@ -13734,9 +13829,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                         "padding": 10,
                                                                       }
                                                                     }
+                                                                    transition="0.2s all"
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                                                      className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                                                       style={
                                                                         Object {
                                                                           "border": "3px solid #5ccdde",
@@ -13997,6 +14093,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                     "padding": 10,
                                                                   }
                                                                 }
+                                                                transition="0.2s all"
                                                               >
                                                                 <Component
                                                                   className="sc-hKFyIo hLpCQW"
@@ -14076,6 +14173,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                       "padding": 10,
                                                                     }
                                                                   }
+                                                                  transition="0.2s all"
                                                                 >
                                                                   <StyledBox
                                                                     className="sc-hKFyIo hLpCQW"
@@ -14155,9 +14253,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                         "padding": 10,
                                                                       }
                                                                     }
+                                                                    transition="0.2s all"
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                                                      className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                                                       style={
                                                                         Object {
                                                                           "border": "3px solid #5ccdde",
@@ -14418,6 +14517,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                     "padding": 10,
                                                                   }
                                                                 }
+                                                                transition="0.2s all"
                                                               >
                                                                 <Component
                                                                   className="sc-hKFyIo hLpCQW"
@@ -14497,6 +14597,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                       "padding": 10,
                                                                     }
                                                                   }
+                                                                  transition="0.2s all"
                                                                 >
                                                                   <StyledBox
                                                                     className="sc-hKFyIo hLpCQW"
@@ -14576,9 +14677,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                         "padding": 10,
                                                                       }
                                                                     }
+                                                                    transition="0.2s all"
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                                                      className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                                                       style={
                                                                         Object {
                                                                           "border": "3px solid #5ccdde",
@@ -14846,6 +14948,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                       "padding": 10,
                                                     }
                                                   }
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-dlnjPT hWYNkB"
@@ -14925,6 +15028,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                         "padding": 10,
                                                       }
                                                     }
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-dlnjPT hWYNkB"
@@ -15004,9 +15108,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                                           "padding": 10,
                                                         }
                                                       }
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                                                        className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                                                         style={
                                                           Object {
                                                             "border": "3px solid #F48770",
@@ -15259,6 +15364,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                     "padding": 10,
                                                                   }
                                                                 }
+                                                                transition="0.2s all"
                                                               >
                                                                 <Component
                                                                   className="sc-hKFyIo hLpCQW"
@@ -15338,6 +15444,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                       "padding": 10,
                                                                     }
                                                                   }
+                                                                  transition="0.2s all"
                                                                 >
                                                                   <StyledBox
                                                                     className="sc-hKFyIo hLpCQW"
@@ -15417,9 +15524,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                         "padding": 10,
                                                                       }
                                                                     }
+                                                                    transition="0.2s all"
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                                                      className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                                                       style={
                                                                         Object {
                                                                           "border": "3px solid #5ccdde",
@@ -15680,6 +15788,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                     "padding": 10,
                                                                   }
                                                                 }
+                                                                transition="0.2s all"
                                                               >
                                                                 <Component
                                                                   className="sc-hKFyIo hLpCQW"
@@ -15759,6 +15868,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                       "padding": 10,
                                                                     }
                                                                   }
+                                                                  transition="0.2s all"
                                                                 >
                                                                   <StyledBox
                                                                     className="sc-hKFyIo hLpCQW"
@@ -15838,9 +15948,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                         "padding": 10,
                                                                       }
                                                                     }
+                                                                    transition="0.2s all"
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                                                      className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                                                       style={
                                                                         Object {
                                                                           "border": "3px solid #5ccdde",
@@ -16108,6 +16219,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                       "padding": 10,
                                                     }
                                                   }
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-dlnjPT hWYNkB"
@@ -16187,6 +16299,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                         "padding": 10,
                                                       }
                                                     }
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-dlnjPT hWYNkB"
@@ -16266,9 +16379,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                                           "padding": 10,
                                                         }
                                                       }
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-dlnjPT hWYNkB"
+                                                        className="sc-bdnylx jknATe sc-dlnjPT hWYNkB"
                                                         style={
                                                           Object {
                                                             "border": "3px solid #F48770",
@@ -16521,6 +16635,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                     "padding": 10,
                                                                   }
                                                                 }
+                                                                transition="0.2s all"
                                                               >
                                                                 <Component
                                                                   className="sc-hKFyIo hLpCQW"
@@ -16600,6 +16715,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                       "padding": 10,
                                                                     }
                                                                   }
+                                                                  transition="0.2s all"
                                                                 >
                                                                   <StyledBox
                                                                     className="sc-hKFyIo hLpCQW"
@@ -16679,9 +16795,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                                                         "padding": 10,
                                                                       }
                                                                     }
+                                                                    transition="0.2s all"
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                                                      className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                                                       style={
                                                                         Object {
                                                                           "border": "3px solid #5ccdde",
@@ -16956,6 +17073,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo hLpCQW"
@@ -17035,6 +17153,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo hLpCQW"
@@ -17114,9 +17233,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                          className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -17377,6 +17497,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo hLpCQW"
@@ -17456,6 +17577,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo hLpCQW"
@@ -17535,9 +17657,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                          className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",
@@ -17798,6 +17921,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                         "padding": 10,
                                       }
                                     }
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-hKFyIo hLpCQW"
@@ -17877,6 +18001,7 @@ exports[`Grid renders Grid correctly 1`] = `
                                           "padding": 10,
                                         }
                                       }
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-hKFyIo hLpCQW"
@@ -17956,9 +18081,10 @@ exports[`Grid renders Grid correctly 1`] = `
                                             "padding": 10,
                                           }
                                         }
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx gLeIQZ sc-hKFyIo hLpCQW"
+                                          className="sc-bdnylx jknATe sc-hKFyIo hLpCQW"
                                           style={
                                             Object {
                                               "border": "3px solid #5ccdde",

@@ -234,6 +234,7 @@ exports[`Pagination renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           activeItem={3}
@@ -310,6 +311,7 @@ exports[`Pagination renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             activeItem={3}
@@ -386,9 +388,10 @@ exports[`Pagination renders correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu dJxHxj"
+              className="sc-bdnylx jknATe sc-gtssRu dJxHxj"
               onClickStep={[MockFunction]}
               style={Object {}}
             >
@@ -396,6 +399,7 @@ exports[`Pagination renders correctly 1`] = `
                 className=""
                 d="flex"
                 style={Object {}}
+                transition="0.2s all"
               >
                 <Component
                   className=""
@@ -471,6 +475,7 @@ exports[`Pagination renders correctly 1`] = `
                     }
                   }
                   style={Object {}}
+                  transition="0.2s all"
                 >
                   <StyledBox
                     className=""
@@ -546,9 +551,10 @@ exports[`Pagination renders correctly 1`] = `
                       }
                     }
                     style={Object {}}
+                    transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx gwjMm"
+                      className="sc-bdnylx jqbWkF"
                       d="flex"
                       style={Object {}}
                     >
@@ -786,6 +792,7 @@ exports[`Pagination renders correctly 1`] = `
                                 }
                               }
                               style={Object {}}
+                              transition="0.2s all"
                             >
                               <Component
                                 active={false}
@@ -862,6 +869,7 @@ exports[`Pagination renders correctly 1`] = `
                                   }
                                 }
                                 style={Object {}}
+                                transition="0.2s all"
                               >
                                 <StyledBox
                                   active={false}
@@ -938,9 +946,10 @@ exports[`Pagination renders correctly 1`] = `
                                     }
                                   }
                                   style={Object {}}
+                                  transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx gLeIQZ sc-hKFyIo sNwrC"
+                                    className="sc-bdnylx jknATe sc-hKFyIo sNwrC"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1170,6 +1179,7 @@ exports[`Pagination renders correctly 1`] = `
                                               }
                                             }
                                             style={Object {}}
+                                            transition="0.2s all"
                                           >
                                             <Component
                                               className="sc-jSFkmK gDhCsP"
@@ -1244,6 +1254,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 }
                                               }
                                               style={Object {}}
+                                              transition="0.2s all"
                                             >
                                               <StyledBox
                                                 className="sc-jSFkmK gDhCsP"
@@ -1318,9 +1329,10 @@ exports[`Pagination renders correctly 1`] = `
                                                   }
                                                 }
                                                 style={Object {}}
+                                                transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx gLeIQZ sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx jknATe sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -1572,6 +1584,7 @@ exports[`Pagination renders correctly 1`] = `
                                 }
                               }
                               style={Object {}}
+                              transition="0.2s all"
                             >
                               <Component
                                 active={false}
@@ -1648,6 +1661,7 @@ exports[`Pagination renders correctly 1`] = `
                                   }
                                 }
                                 style={Object {}}
+                                transition="0.2s all"
                               >
                                 <StyledBox
                                   active={false}
@@ -1724,9 +1738,10 @@ exports[`Pagination renders correctly 1`] = `
                                     }
                                   }
                                   style={Object {}}
+                                  transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx gLeIQZ sc-hKFyIo sNwrC"
+                                    className="sc-bdnylx jknATe sc-hKFyIo sNwrC"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1956,6 +1971,7 @@ exports[`Pagination renders correctly 1`] = `
                                               }
                                             }
                                             style={Object {}}
+                                            transition="0.2s all"
                                           >
                                             <Component
                                               className="sc-jSFkmK gDhCsP"
@@ -2030,6 +2046,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 }
                                               }
                                               style={Object {}}
+                                              transition="0.2s all"
                                             >
                                               <StyledBox
                                                 className="sc-jSFkmK gDhCsP"
@@ -2104,9 +2121,10 @@ exports[`Pagination renders correctly 1`] = `
                                                   }
                                                 }
                                                 style={Object {}}
+                                                transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx gLeIQZ sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx jknATe sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -2358,6 +2376,7 @@ exports[`Pagination renders correctly 1`] = `
                                 }
                               }
                               style={Object {}}
+                              transition="0.2s all"
                             >
                               <Component
                                 active={true}
@@ -2434,6 +2453,7 @@ exports[`Pagination renders correctly 1`] = `
                                   }
                                 }
                                 style={Object {}}
+                                transition="0.2s all"
                               >
                                 <StyledBox
                                   active={true}
@@ -2510,9 +2530,10 @@ exports[`Pagination renders correctly 1`] = `
                                     }
                                   }
                                   style={Object {}}
+                                  transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx gLeIQZ sc-hKFyIo hwBWon"
+                                    className="sc-bdnylx jknATe sc-hKFyIo hwBWon"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -2742,6 +2763,7 @@ exports[`Pagination renders correctly 1`] = `
                                               }
                                             }
                                             style={Object {}}
+                                            transition="0.2s all"
                                           >
                                             <Component
                                               className="sc-jSFkmK gDhCsP"
@@ -2816,6 +2838,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 }
                                               }
                                               style={Object {}}
+                                              transition="0.2s all"
                                             >
                                               <StyledBox
                                                 className="sc-jSFkmK gDhCsP"
@@ -2890,9 +2913,10 @@ exports[`Pagination renders correctly 1`] = `
                                                   }
                                                 }
                                                 style={Object {}}
+                                                transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx gLeIQZ sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx jknATe sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -3144,6 +3168,7 @@ exports[`Pagination renders correctly 1`] = `
                                 }
                               }
                               style={Object {}}
+                              transition="0.2s all"
                             >
                               <Component
                                 active={false}
@@ -3220,6 +3245,7 @@ exports[`Pagination renders correctly 1`] = `
                                   }
                                 }
                                 style={Object {}}
+                                transition="0.2s all"
                               >
                                 <StyledBox
                                   active={false}
@@ -3296,9 +3322,10 @@ exports[`Pagination renders correctly 1`] = `
                                     }
                                   }
                                   style={Object {}}
+                                  transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx gLeIQZ sc-hKFyIo sNwrC"
+                                    className="sc-bdnylx jknATe sc-hKFyIo sNwrC"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -3528,6 +3555,7 @@ exports[`Pagination renders correctly 1`] = `
                                               }
                                             }
                                             style={Object {}}
+                                            transition="0.2s all"
                                           >
                                             <Component
                                               className="sc-jSFkmK gDhCsP"
@@ -3602,6 +3630,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 }
                                               }
                                               style={Object {}}
+                                              transition="0.2s all"
                                             >
                                               <StyledBox
                                                 className="sc-jSFkmK gDhCsP"
@@ -3676,9 +3705,10 @@ exports[`Pagination renders correctly 1`] = `
                                                   }
                                                 }
                                                 style={Object {}}
+                                                transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx gLeIQZ sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx jknATe sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -3930,6 +3960,7 @@ exports[`Pagination renders correctly 1`] = `
                                 }
                               }
                               style={Object {}}
+                              transition="0.2s all"
                             >
                               <Component
                                 active={false}
@@ -4006,6 +4037,7 @@ exports[`Pagination renders correctly 1`] = `
                                   }
                                 }
                                 style={Object {}}
+                                transition="0.2s all"
                               >
                                 <StyledBox
                                   active={false}
@@ -4082,9 +4114,10 @@ exports[`Pagination renders correctly 1`] = `
                                     }
                                   }
                                   style={Object {}}
+                                  transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx gLeIQZ sc-hKFyIo sNwrC"
+                                    className="sc-bdnylx jknATe sc-hKFyIo sNwrC"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -4314,6 +4347,7 @@ exports[`Pagination renders correctly 1`] = `
                                               }
                                             }
                                             style={Object {}}
+                                            transition="0.2s all"
                                           >
                                             <Component
                                               className="sc-jSFkmK gDhCsP"
@@ -4388,6 +4422,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 }
                                               }
                                               style={Object {}}
+                                              transition="0.2s all"
                                             >
                                               <StyledBox
                                                 className="sc-jSFkmK gDhCsP"
@@ -4462,9 +4497,10 @@ exports[`Pagination renders correctly 1`] = `
                                                   }
                                                 }
                                                 style={Object {}}
+                                                transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx gLeIQZ sc-jSFkmK gDhCsP"
+                                                  className="sc-bdnylx jknATe sc-jSFkmK gDhCsP"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -4716,6 +4752,7 @@ exports[`Pagination renders correctly 1`] = `
                                 }
                               }
                               style={Object {}}
+                              transition="0.2s all"
                             >
                               <Component
                                 active={false}
@@ -4792,6 +4829,7 @@ exports[`Pagination renders correctly 1`] = `
                                   }
                                 }
                                 style={Object {}}
+                                transition="0.2s all"
                               >
                                 <StyledBox
                                   active={false}
@@ -4868,9 +4906,10 @@ exports[`Pagination renders correctly 1`] = `
                                     }
                                   }
                                   style={Object {}}
+                                  transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx gLeIQZ sc-hKFyIo sNwrC"
+                                    className="sc-bdnylx jknATe sc-hKFyIo sNwrC"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -5116,6 +5155,7 @@ exports[`Pagination renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         active={true}
@@ -5191,6 +5231,7 @@ exports[`Pagination renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           active={true}
@@ -5266,9 +5307,10 @@ exports[`Pagination renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-eCApGN"
+                            className="sc-bdnylx jknATe sc-eCApGN"
                             style={Object {}}
                           >
                             <div>

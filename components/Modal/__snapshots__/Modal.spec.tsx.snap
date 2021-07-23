@@ -238,6 +238,7 @@ exports[`Modal renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gtssRu"
@@ -315,6 +316,7 @@ exports[`Modal renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gtssRu"
@@ -392,9 +394,10 @@ exports[`Modal renders correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gtssRu"
+              className="sc-bdnylx jknATe sc-gtssRu"
               onClose={[MockFunction]}
               style={Object {}}
             >
@@ -632,6 +635,7 @@ exports[`Modal renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
@@ -708,6 +712,7 @@ exports[`Modal renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
@@ -784,9 +789,10 @@ exports[`Modal renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
+                            className="sc-bdnylx jknATe sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1031,6 +1037,7 @@ exports[`Modal renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                     w="50%"
                                   >
                                     <Component
@@ -1109,6 +1116,7 @@ exports[`Modal renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                       w="50%"
                                     >
                                       <StyledBox
@@ -1187,10 +1195,11 @@ exports[`Modal renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                         w="50%"
                                       >
                                         <div
-                                          className="sc-bdnylx iUidVg sc-dlnjPT sc-hKFyIo dIkxby laJKTU"
+                                          className="sc-bdnylx iaVZCr sc-dlnjPT sc-hKFyIo dIkxby laJKTU"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -1436,6 +1445,7 @@ exports[`Modal renders correctly 1`] = `
                                                   right={10}
                                                   style={Object {}}
                                                   top={10}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-fujyUd CgLAt"
@@ -1514,6 +1524,7 @@ exports[`Modal renders correctly 1`] = `
                                                     right={10}
                                                     style={Object {}}
                                                     top={10}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-fujyUd CgLAt"
@@ -1592,9 +1603,10 @@ exports[`Modal renders correctly 1`] = `
                                                       right={10}
                                                       style={Object {}}
                                                       top={10}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ceZxXy sc-fujyUd CgLAt"
+                                                        className="sc-bdnylx hGZZrR sc-fujyUd CgLAt"
                                                         onClick={[Function]}
                                                         style={Object {}}
                                                       >
@@ -1834,6 +1846,7 @@ exports[`Modal renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     boxAs="header"
@@ -1909,6 +1922,7 @@ exports[`Modal renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       as="header"
@@ -1985,9 +1999,10 @@ exports[`Modal renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <header
-                                                        className="sc-bdnylx gLeIQZ sc-jSFkmK fctZID"
+                                                        className="sc-bdnylx jknATe sc-jSFkmK fctZID"
                                                         style={Object {}}
                                                       >
                                                         Create your account
@@ -2224,6 +2239,7 @@ exports[`Modal renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     className="sc-gKAblj cqCqMD"
@@ -2298,6 +2314,7 @@ exports[`Modal renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       className="sc-gKAblj cqCqMD"
@@ -2372,9 +2389,10 @@ exports[`Modal renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx gLeIQZ sc-gKAblj cqCqMD"
+                                                        className="sc-bdnylx jknATe sc-gKAblj cqCqMD"
                                                         style={Object {}}
                                                       >
                                                         Modal Content Body
@@ -2613,6 +2631,7 @@ exports[`Modal renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     boxAs="footer"
@@ -2688,6 +2707,7 @@ exports[`Modal renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       as="footer"
@@ -2764,9 +2784,10 @@ exports[`Modal renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <footer
-                                                        className="sc-bdnylx gLeIQZ sc-iCoHVE jHzxyK"
+                                                        className="sc-bdnylx jknATe sc-iCoHVE jHzxyK"
                                                         style={Object {}}
                                                       >
                                                         Modal Footer goes here!

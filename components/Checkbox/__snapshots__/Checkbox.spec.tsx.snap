@@ -234,6 +234,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           checked={true}
@@ -310,6 +311,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             checked={true}
@@ -386,10 +388,11 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
               checked={true}
-              className="sc-bdnylx gLeIQZ sc-hKFyIo dxNlPq"
+              className="sc-bdnylx jknATe sc-hKFyIo dxNlPq"
               onClickCheckbox={[MockFunction]}
               style={Object {}}
             >
@@ -627,6 +630,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-eCApGN imjzyD"
@@ -703,6 +707,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-eCApGN imjzyD"
@@ -779,9 +784,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx kxcPON sc-eCApGN imjzyD"
+                            className="sc-bdnylx cEaWrq sc-eCApGN imjzyD"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1250,6 +1256,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                               }
                             }
                             style={Object {}}
+                            transition="0.2s all"
                           >
                             <Component
                               boxAs="label"
@@ -1326,6 +1333,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                 }
                               }
                               style={Object {}}
+                              transition="0.2s all"
                             >
                               <StyledBox
                                 as="label"
@@ -1403,9 +1411,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                   }
                                 }
                                 style={Object {}}
+                                transition="0.2s all"
                               >
                                 <label
-                                  className="sc-bdnylx gLeIQZ sc-dlnjPT bZBLRB sc-jSFkmK dkQkQF"
+                                  className="sc-bdnylx jknATe sc-dlnjPT bZBLRB sc-jSFkmK dkQkQF"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >

@@ -106,6 +106,7 @@ exports[`DateRange renders correctly 1`] = `
       d="flex"
       position="relative"
       style={Object {}}
+      transition="0.2s all"
     >
       <Component
         className=""
@@ -182,6 +183,7 @@ exports[`DateRange renders correctly 1`] = `
         }
         position="relative"
         style={Object {}}
+        transition="0.2s all"
       >
         <StyledBox
           className=""
@@ -258,9 +260,10 @@ exports[`DateRange renders correctly 1`] = `
           }
           position="relative"
           style={Object {}}
+          transition="0.2s all"
         >
           <div
-            className="sc-bdnylx gMSoSl"
+            className="sc-bdnylx cFVWAa"
             d="flex"
             style={Object {}}
           >
@@ -498,6 +501,7 @@ exports[`DateRange renders correctly 1`] = `
                       }
                     }
                     style={Object {}}
+                    transition="0.2s all"
                     value="20 Jun 2016 - 20 Jun 2016"
                   >
                     <Component
@@ -575,6 +579,7 @@ exports[`DateRange renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                       value="20 Jun 2016 - 20 Jun 2016"
                     >
                       <StyledBox
@@ -653,10 +658,11 @@ exports[`DateRange renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                         value="20 Jun 2016 - 20 Jun 2016"
                       >
                         <input
-                          className="sc-bdnylx gLeIQZ sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                          className="sc-bdnylx jknATe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                           onFocus={[Function]}
                           style={Object {}}
                           value="20 Jun 2016 - 20 Jun 2016"

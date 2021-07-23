@@ -226,6 +226,7 @@ exports[`Table renders correctly 1`] = `
           }
         }
         style={Object {}}
+        transition="0.2s all"
       >
         <Component
           className="sc-gKAblj hWYIYs"
@@ -300,6 +301,7 @@ exports[`Table renders correctly 1`] = `
             }
           }
           style={Object {}}
+          transition="0.2s all"
         >
           <StyledBox
             className="sc-gKAblj hWYIYs"
@@ -374,9 +376,10 @@ exports[`Table renders correctly 1`] = `
               }
             }
             style={Object {}}
+            transition="0.2s all"
           >
             <div
-              className="sc-bdnylx gLeIQZ sc-gKAblj hWYIYs"
+              className="sc-bdnylx jknATe sc-gKAblj hWYIYs"
               style={Object {}}
             >
               <TableHeader
@@ -604,6 +607,7 @@ exports[`Table renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-iCoHVE eXstCy"
@@ -678,6 +682,7 @@ exports[`Table renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-iCoHVE eXstCy"
@@ -752,9 +757,10 @@ exports[`Table renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-iCoHVE eXstCy"
+                            className="sc-bdnylx jknATe sc-iCoHVE eXstCy"
                             style={Object {}}
                           >
                             <TableHeaderItem
@@ -990,6 +996,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-fujyUd cHSdOE"
@@ -1066,6 +1073,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-fujyUd cHSdOE"
@@ -1142,9 +1150,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx kzoEoh sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iVZWou sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           <Checkbox
@@ -1380,6 +1389,7 @@ exports[`Table renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     checked={false}
@@ -1456,6 +1466,7 @@ exports[`Table renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       checked={false}
@@ -1532,10 +1543,11 @@ exports[`Table renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx gLeIQZ sc-hKFyIo dxNlPq"
+                                                        className="sc-bdnylx jknATe sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >
@@ -1768,6 +1780,7 @@ exports[`Table renders correctly 1`] = `
                                                                   }
                                                                 }
                                                                 style={Object {}}
+                                                                transition="0.2s all"
                                                               >
                                                                 <Component
                                                                   className="sc-eCApGN imjzyD"
@@ -1843,6 +1856,7 @@ exports[`Table renders correctly 1`] = `
                                                                     }
                                                                   }
                                                                   style={Object {}}
+                                                                  transition="0.2s all"
                                                                 >
                                                                   <StyledBox
                                                                     className="sc-eCApGN imjzyD"
@@ -1918,9 +1932,10 @@ exports[`Table renders correctly 1`] = `
                                                                       }
                                                                     }
                                                                     style={Object {}}
+                                                                    transition="0.2s all"
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx gLeIQZ sc-eCApGN imjzyD"
+                                                                      className="sc-bdnylx jknATe sc-eCApGN imjzyD"
                                                                       onClick={[Function]}
                                                                       style={Object {}}
                                                                     >
@@ -2175,6 +2190,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-fujyUd cHSdOE"
@@ -2250,6 +2266,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-fujyUd cHSdOE"
@@ -2325,9 +2342,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx iYtlEo sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx enjkmv sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           Mailing list name
@@ -2567,6 +2585,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-fujyUd cHSdOE"
@@ -2642,6 +2661,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-fujyUd cHSdOE"
@@ -2717,9 +2737,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iXGuJs sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           SEGMENTS
@@ -2959,6 +2980,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-fujyUd cHSdOE"
@@ -3034,6 +3056,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-fujyUd cHSdOE"
@@ -3109,9 +3132,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iXGuJs sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           Change (last day)
@@ -3351,6 +3375,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-fujyUd cHSdOE"
@@ -3426,6 +3451,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-fujyUd cHSdOE"
@@ -3501,9 +3527,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iXGuJs sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           Active recipients
@@ -3743,6 +3770,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-fujyUd cHSdOE"
@@ -3818,6 +3846,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-fujyUd cHSdOE"
@@ -3893,9 +3922,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iXGuJs sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         >
                                           Tags
@@ -4135,6 +4165,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-fujyUd cHSdOE"
@@ -4210,6 +4241,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-fujyUd cHSdOE"
@@ -4285,9 +4317,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx jdbKlG sc-fujyUd cHSdOE"
+                                          className="sc-bdnylx iGfmIh sc-fujyUd cHSdOE"
                                           style={Object {}}
                                         />
                                       </StyledBox>
@@ -4528,6 +4561,7 @@ exports[`Table renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-pNWxx hcIhlV"
@@ -4602,6 +4636,7 @@ exports[`Table renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-pNWxx hcIhlV"
@@ -4676,9 +4711,10 @@ exports[`Table renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-pNWxx hcIhlV"
+                            className="sc-bdnylx jknATe sc-pNWxx hcIhlV"
                             style={Object {}}
                           >
                             <TableRowItem
@@ -4914,6 +4950,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -4990,6 +5027,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -5066,9 +5104,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx kzoEoh sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iVZWou sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           <Checkbox
@@ -5308,6 +5347,7 @@ exports[`Table renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     checked={false}
@@ -5385,6 +5425,7 @@ exports[`Table renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       checked={false}
@@ -5462,10 +5503,11 @@ exports[`Table renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx kMLIfj sc-hKFyIo dxNlPq"
+                                                        className="sc-bdnylx cFcgMM sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >
@@ -5698,6 +5740,7 @@ exports[`Table renders correctly 1`] = `
                                                                   }
                                                                 }
                                                                 style={Object {}}
+                                                                transition="0.2s all"
                                                               >
                                                                 <Component
                                                                   className="sc-eCApGN imjzyD"
@@ -5773,6 +5816,7 @@ exports[`Table renders correctly 1`] = `
                                                                     }
                                                                   }
                                                                   style={Object {}}
+                                                                  transition="0.2s all"
                                                                 >
                                                                   <StyledBox
                                                                     className="sc-eCApGN imjzyD"
@@ -5848,9 +5892,10 @@ exports[`Table renders correctly 1`] = `
                                                                       }
                                                                     }
                                                                     style={Object {}}
+                                                                    transition="0.2s all"
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx gLeIQZ sc-eCApGN imjzyD"
+                                                                      className="sc-bdnylx jknATe sc-eCApGN imjzyD"
                                                                       onClick={[Function]}
                                                                       style={Object {}}
                                                                     >
@@ -6105,6 +6150,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -6180,6 +6226,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -6255,9 +6302,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx iYtlEo sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx enjkmv sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Main mailing list #1
@@ -6497,6 +6545,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -6572,6 +6621,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -6647,9 +6697,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iXGuJs sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           2
@@ -6889,6 +6940,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -6964,6 +7016,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -7039,9 +7092,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iXGuJs sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           +12
@@ -7281,6 +7335,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -7356,6 +7411,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -7431,9 +7487,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iXGuJs sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           124,543
@@ -7673,6 +7730,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -7748,6 +7806,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -7823,9 +7882,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iXGuJs sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Tags component!
@@ -8065,6 +8125,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -8140,6 +8201,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -8215,9 +8277,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx jdbKlG sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iGfmIh sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Actions
@@ -8460,6 +8523,7 @@ exports[`Table renders correctly 1`] = `
                         }
                       }
                       style={Object {}}
+                      transition="0.2s all"
                     >
                       <Component
                         className="sc-pNWxx hcIhlV"
@@ -8534,6 +8598,7 @@ exports[`Table renders correctly 1`] = `
                           }
                         }
                         style={Object {}}
+                        transition="0.2s all"
                       >
                         <StyledBox
                           className="sc-pNWxx hcIhlV"
@@ -8608,9 +8673,10 @@ exports[`Table renders correctly 1`] = `
                             }
                           }
                           style={Object {}}
+                          transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx gLeIQZ sc-pNWxx hcIhlV"
+                            className="sc-bdnylx jknATe sc-pNWxx hcIhlV"
                             style={Object {}}
                           >
                             <TableRowItem
@@ -8846,6 +8912,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -8922,6 +8989,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -8998,9 +9066,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx kzoEoh sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iVZWou sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           <Checkbox
@@ -9240,6 +9309,7 @@ exports[`Table renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
+                                                  transition="0.2s all"
                                                 >
                                                   <Component
                                                     checked={false}
@@ -9317,6 +9387,7 @@ exports[`Table renders correctly 1`] = `
                                                       }
                                                     }
                                                     style={Object {}}
+                                                    transition="0.2s all"
                                                   >
                                                     <StyledBox
                                                       checked={false}
@@ -9394,10 +9465,11 @@ exports[`Table renders correctly 1`] = `
                                                         }
                                                       }
                                                       style={Object {}}
+                                                      transition="0.2s all"
                                                     >
                                                       <div
                                                         checked={false}
-                                                        className="sc-bdnylx kMLIfj sc-hKFyIo dxNlPq"
+                                                        className="sc-bdnylx cFcgMM sc-hKFyIo dxNlPq"
                                                         onClickCheckbox={[Function]}
                                                         style={Object {}}
                                                       >
@@ -9630,6 +9702,7 @@ exports[`Table renders correctly 1`] = `
                                                                   }
                                                                 }
                                                                 style={Object {}}
+                                                                transition="0.2s all"
                                                               >
                                                                 <Component
                                                                   className="sc-eCApGN imjzyD"
@@ -9705,6 +9778,7 @@ exports[`Table renders correctly 1`] = `
                                                                     }
                                                                   }
                                                                   style={Object {}}
+                                                                  transition="0.2s all"
                                                                 >
                                                                   <StyledBox
                                                                     className="sc-eCApGN imjzyD"
@@ -9780,9 +9854,10 @@ exports[`Table renders correctly 1`] = `
                                                                       }
                                                                     }
                                                                     style={Object {}}
+                                                                    transition="0.2s all"
                                                                   >
                                                                     <div
-                                                                      className="sc-bdnylx gLeIQZ sc-eCApGN imjzyD"
+                                                                      className="sc-bdnylx jknATe sc-eCApGN imjzyD"
                                                                       onClick={[Function]}
                                                                       style={Object {}}
                                                                     >
@@ -10037,6 +10112,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -10112,6 +10188,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -10187,9 +10264,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx iYtlEo sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx enjkmv sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Main mailing list #2
@@ -10429,6 +10507,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -10504,6 +10583,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -10579,9 +10659,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iXGuJs sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           3
@@ -10821,6 +10902,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -10896,6 +10978,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -10971,9 +11054,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iXGuJs sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           +7
@@ -11213,6 +11297,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -11288,6 +11373,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -11363,9 +11449,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iXGuJs sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           80,000
@@ -11605,6 +11692,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -11680,6 +11768,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -11755,9 +11844,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx dSWeyD sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iXGuJs sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Tags component!
@@ -11997,6 +12087,7 @@ exports[`Table renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
+                                    transition="0.2s all"
                                   >
                                     <Component
                                       className="sc-jrsJCI dZpybU"
@@ -12072,6 +12163,7 @@ exports[`Table renders correctly 1`] = `
                                         }
                                       }
                                       style={Object {}}
+                                      transition="0.2s all"
                                     >
                                       <StyledBox
                                         className="sc-jrsJCI dZpybU"
@@ -12147,9 +12239,10 @@ exports[`Table renders correctly 1`] = `
                                           }
                                         }
                                         style={Object {}}
+                                        transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx jdbKlG sc-jrsJCI dZpybU"
+                                          className="sc-bdnylx iGfmIh sc-jrsJCI dZpybU"
                                           style={Object {}}
                                         >
                                           Actions

@@ -264,6 +264,7 @@ exports[`Anchor renders correctly 1`] = `
           }
         }
         target="_blank"
+        transition="0.2s all"
       >
         <Component
           boxAs="a"
@@ -348,6 +349,7 @@ exports[`Anchor renders correctly 1`] = `
             }
           }
           target="_blank"
+          transition="0.2s all"
         >
           <StyledBox
             as="a"
@@ -433,9 +435,10 @@ exports[`Anchor renders correctly 1`] = `
               }
             }
             target="_blank"
+            transition="0.2s all"
           >
             <a
-              className="sc-bdnylx gLeIQZ sc-gtssRu AVBRk myClass"
+              className="sc-bdnylx jknATe sc-gtssRu AVBRk myClass"
               disabled={true}
               href="www.moosend.com"
               id="Anchor1"
