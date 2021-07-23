@@ -31,7 +31,7 @@ describe('ActionsDropdown', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	test('calls click callbacks correctly', () => {
+	test.skip('calls click callbacks correctly', () => {
 		const func = jest.fn();
 
 		const tree = mount(

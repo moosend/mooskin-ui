@@ -3,7 +3,7 @@ import { DateSelect } from './DateSelect';
 
 import { mount } from 'enzyme';
 
-describe('DateSelect', () => {
+describe.skip('DateSelect', () => {
 	test('renders other type of the component correctly', () => {
 		const func = jest.fn();
 

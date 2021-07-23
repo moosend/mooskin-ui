@@ -5,7 +5,7 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
-import { ISelectComponentProps, ISelectOptionComponentProps, ISelectPaginationComponentProps } from './model';
+import { ISelectComponentProps, ISelectOptionComponentProps, ISelectOptionListProps, ISelectPaginationComponentProps } from './model';
 
 // Components
 import { Loader } from '../Loader/Loader';
@@ -18,7 +18,8 @@ import {
 	StyledSelectFilter,
 	StyledSelectIcon,
 	StyledSelectOption,
-	StyledSelectOptionList,
+	StyledSelectOptionListFadeIn,
+	StyledSelectOptionListFadeOut,
 	StyledSelectOverlay,
 	StyledSelectPagination,
 	StyledSelectPlaceholder,
@@ -28,7 +29,7 @@ import {
  * Select
  */
 export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props) => {
-	const [showList, setShowList] = React.useState(props.showList);
+	const [showList, setShowList] = React.useState(false);
 	const [filterValue, setFilterValue] = React.useState('');
 
 	// non mandatory elements
@@ -68,10 +69,6 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 		setShowList(!showList);
 		setFilterValue('');
 	};
-
-	React.useEffect(() => {
-		setShowList(props.showList);
-	}, [props.showList]);
 
 	const getPlaceholder = (children: any, passedPlaceholder: string[] = []) => {
 		if (!children) {
@@ -161,14 +158,12 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 				return null;
 			}
 
-			if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectOptionList) {
-				if (showList) {
-					return React.cloneElement(child, {
-						children: recurseChildren(child.props.children),
-						key: i,
-					} as IBoxComponentProps);
-				}
-				return null;
+			if (React.isValidElement<ISelectOptionListProps>(child) && child.type === SelectOptionList) {
+				return React.cloneElement(child, {
+					children: recurseChildren(child.props.children),
+					key: i,
+					showList: child.props.showList || showList,
+				} as IBoxComponentProps);
 			}
 
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder) {
@@ -275,8 +270,26 @@ SelectPlaceholder.displayName = 'SelectPlaceholder';
 /**
  * SelectOptionList
  */
-export const SelectOptionList: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledSelectOptionList boxShadow="base" round="xs" {...props} />;
+export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinContext((props) => {
+	const [showList, setShowList] = React.useState(props.showList);
+
+	React.useEffect(() => {
+		if (props.showList) {
+			setShowList(true);
+		} else {
+			setTimeout(() => {
+				setShowList(false);
+			}, 140);
+		}
+	}, [props.showList]);
+
+	if (!showList) {
+		return null;
+	}
+
+	const SelectOptionListComponent = props.showList ? StyledSelectOptionListFadeIn : StyledSelectOptionListFadeOut;
+
+	return <SelectOptionListComponent boxShadow="base" round="xs" {...props} />;
 });
 
 SelectOptionList.defaultProps = {

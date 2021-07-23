@@ -38,6 +38,7 @@ Normal.args = {
 			</ActionsDropdownItem>
 		</>
 	),
+	isOpen: true,
 } as IActionsDropdownComponentProps;
 
 export const BottomArrow = Template.bind({});
@@ -57,4 +58,5 @@ BottomArrow.args = {
 			</ActionsDropdownItem>
 		</>
 	),
+	isOpen: true,
 } as IActionsDropdownComponentProps;

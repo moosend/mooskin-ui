@@ -2,6 +2,9 @@ import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps } from '../Box/model';
 
 export interface IActionsDropdownComponentProps extends IBoxComponentProps {
+	/** whether the dropdown is open or not */
+	isOpen?: boolean;
+
 	/** callback called when clicking a ActionsDropdown item */
 	onClickItem?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }

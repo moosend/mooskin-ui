@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../index';
@@ -10,6 +10,17 @@ import { Box } from '../Box/Box';
 // "CSS" variables
 import variables from '../_utils/globals/variables';
 
+const fadeIn = keyframes`
+ 0% {
+	 opacity: 0;
+	 transform: translate(0, -20px);
+ }
+ 100% {
+	 opacity: 1;
+	 transform: translate(0);
+ }
+`;
+
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
 	border-radius: 2px;
 	background-color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
@@ -20,6 +31,19 @@ export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>
 `;
 
 StyledActionsDropdown.displayName = 'StyledActionsDropdown';
+
+export const StyledActionsDropdownFadeIn = styled(StyledActionsDropdown)`
+	animation: ${fadeIn} 0.15s;
+`;
+
+StyledActionsDropdownFadeIn.displayName = 'StyledActionsDropdownFadeIn';
+
+export const StyledActionsDropdownFadeOut = styled(StyledActionsDropdown)`
+	opacity: 0;
+	animation: ${fadeIn} 0.15s reverse;
+`;
+
+StyledActionsDropdownFadeOut.displayName = 'StyledActionsDropdownFadeOut';
 
 export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemComponentProps>`
 	font-size: 12px;

@@ -5,17 +5,33 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
 import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IBoxComponentProps } from '../index';
+import { Box } from '../Box/Box';
+import { IBoxComponentProps } from '../Box/model';
 import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Styled Components
-import { StyledActionsDropdown, StyledActionsDropdownArrow, StyledActionsDropdownItem } from './styles';
+import { StyledActionsDropdownArrow, StyledActionsDropdownFadeIn, StyledActionsDropdownFadeOut, StyledActionsDropdownItem } from './styles';
 
 /**
  * ActionsDropdown
  */
 export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMooskinContext((props) => {
 	const [hasArrow, setHasArrow] = React.useState(false);
+	const [show, setShow] = React.useState(props.isOpen);
+
+	React.useEffect(() => {
+		if (props.isOpen) {
+			setShow(true);
+		} else {
+			setTimeout(() => {
+				setShow(false);
+			}, 140);
+		}
+	}, [props.isOpen]);
+
+	if (!show) {
+		return null;
+	}
 
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
@@ -56,11 +72,14 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 		});
 	};
 
+	const ActionDropdownComponent = props.isOpen ? StyledActionsDropdownFadeIn : StyledActionsDropdownFadeOut;
+
 	return (
-		<StyledActionsDropdown boxShadow="lg" {...props}>
+		<ActionDropdownComponent boxShadow="lg" {...props}>
+			<Box position="absolute" h={30} top={-30} left={0} right={0} />
 			{!hasArrow && <ActionsDropdownArrow />}
 			{recurseChildren(props.children)}
-		</StyledActionsDropdown>
+		</ActionDropdownComponent>
 	);
 });
 
