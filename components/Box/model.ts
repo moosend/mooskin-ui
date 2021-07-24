@@ -405,6 +405,9 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	/** transition */
 	transition?: React.CSSProperties['transition'] | Array<React.CSSProperties['transition']>;
 
+	/** transition */
+	transform?: React.CSSProperties['transform'] | Array<React.CSSProperties['transform']>;
+
 	/** text overflow */
 	textOverflow?: React.CSSProperties['textOverflow'] | Array<React.CSSProperties['textOverflow']>;
 }

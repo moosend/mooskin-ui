@@ -399,7 +399,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 4
@@ -604,7 +604,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 5
@@ -809,7 +809,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 6
@@ -1015,7 +1015,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 0
@@ -1221,7 +1221,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 1
@@ -1427,7 +1427,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 2
@@ -1633,7 +1633,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 3
@@ -1839,7 +1839,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 4
@@ -2045,7 +2045,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 5
@@ -2251,7 +2251,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 6
@@ -2456,7 +2456,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 0
@@ -2661,7 +2661,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 1
@@ -2866,7 +2866,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 2
@@ -3071,7 +3071,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 3
@@ -3276,7 +3276,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 4
@@ -3481,7 +3481,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 5
@@ -3686,7 +3686,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hRfnUj"
+                              className="sc-bdnylx fzQcXK"
                               style={Object {}}
                             >
                               Box 6
@@ -3917,7 +3917,7 @@ exports[`Carousel renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx jknATe sc-dlnjPT fvzCWx"
+                          className="sc-bdnylx jrLcJL sc-dlnjPT fvzCWx"
                           onClick={[Function]}
                           style={Object {}}
                         />
@@ -4092,7 +4092,7 @@ exports[`Carousel renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx jknATe sc-dlnjPT fvzCWx"
+                          className="sc-bdnylx jrLcJL sc-dlnjPT fvzCWx"
                           onClick={[Function]}
                           style={Object {}}
                         />
@@ -4267,7 +4267,7 @@ exports[`Carousel renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx jknATe sc-dlnjPT fvzCWx"
+                          className="sc-bdnylx jrLcJL sc-dlnjPT fvzCWx"
                           onClick={[Function]}
                           style={Object {}}
                         />

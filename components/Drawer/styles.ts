@@ -119,13 +119,13 @@ export const StyledDrawerContentRight = styled(StyledDrawerContent)`
 StyledDrawerContentRight.displayName = 'StyledDrawerContentRight';
 
 export const StyledDrawerContentRightIn = styled(StyledDrawerContentRight)`
-	animation: ${contentRightFadeIn} 0.3s;
+	animation: ${contentRightFadeIn} 0.15s;
 `;
 
 StyledDrawerContentRightIn.displayName = 'StyledDrawerContentRightIn';
 
 export const StyledDrawerContentRightOut = styled(StyledDrawerContentRight)`
-	animation: ${contentRightFadeIn} 0.3s reverse;
+	animation: ${contentRightFadeIn} 0.15s reverse;
 `;
 
 StyledDrawerContentRightOut.displayName = 'StyledDrawerContentRightOut';
@@ -139,13 +139,13 @@ export const StyledDrawerContentLeft = styled(StyledDrawerContent)`
 StyledDrawerContentLeft.displayName = 'StyledDrawerContentLeft';
 
 export const StyledDrawerContentLeftIn = styled(StyledDrawerContentLeft)`
-	animation: ${contentLeftFadeIn} 0.3s;
+	animation: ${contentLeftFadeIn} 0.15s;
 `;
 
 StyledDrawerContentLeftIn.displayName = 'StyledDrawerContentLeftIn';
 
 export const StyledDrawerContentLeftOut = styled(StyledDrawerContentLeft)`
-	animation: ${contentLeftFadeIn} 0.3s reverse;
+	animation: ${contentLeftFadeIn} 0.15s reverse;
 `;
 
 StyledDrawerContentLeftOut.displayName = 'StyledDrawerContentLeftOut';
@@ -159,13 +159,13 @@ export const StyledDrawerContentTop = styled(StyledDrawerContent)`
 StyledDrawerContentTop.displayName = 'StyledDrawerContentTop';
 
 export const StyledDrawerContentTopIn = styled(StyledDrawerContentTop)`
-	animation: ${contentTopFadeIn} 0.3s;
+	animation: ${contentTopFadeIn} 0.15s;
 `;
 
 StyledDrawerContentTopIn.displayName = 'StyledDrawerContentTopIn';
 
 export const StyledDrawerContentTopOut = styled(StyledDrawerContentTop)`
-	animation: ${contentTopFadeIn} 0.3s reverse;
+	animation: ${contentTopFadeIn} 0.15s reverse;
 `;
 
 StyledDrawerContentTopOut.displayName = 'StyledDrawerContentTopOut';
@@ -179,13 +179,13 @@ export const StyledDrawerContentBottom = styled(StyledDrawerContent)`
 StyledDrawerContentBottom.displayName = 'StyledDrawerContentBottom';
 
 export const StyledDrawerContentBottomIn = styled(StyledDrawerContentBottom)`
-	animation: ${contentBottomFadeIn} 0.3s;
+	animation: ${contentBottomFadeIn} 0.15s;
 `;
 
 StyledDrawerContentBottomIn.displayName = 'StyledDrawerContentBottomIn';
 
 export const StyledDrawerContentBottomOut = styled(StyledDrawerContentBottom)`
-	animation: ${contentBottomFadeIn} 0.3s reverse;
+	animation: ${contentBottomFadeIn} 0.15s reverse;
 `;
 
 StyledDrawerContentBottomOut.displayName = 'StyledDrawerContentBottomOut';
@@ -252,14 +252,14 @@ StyledDrawerOverlay.displayName = 'StyledDrawerOverlay';
 
 export const StyledDrawerOverlayFadeIn = styled(StyledDrawerOverlay)`
 	background-color: rgba(0, 0, 0, 0.48);
-	animation: ${overlayFadeIn} 0.3s;
+	animation: ${overlayFadeIn} 0.15s;
 `;
 
 StyledDrawerOverlayFadeIn.displayName = 'StyledDrawerOverlayFadeIn';
 
 export const StyledDrawerOverlayFadeOut = styled(StyledDrawerOverlay)`
 	background-color: rgba(0, 0, 0, 0);
-	animation: ${overlayFadeIn} 0.3s reverse;
+	animation: ${overlayFadeIn} 0.15s reverse;
 `;
 
 StyledDrawerOverlayFadeOut.displayName = 'StyledDrawerOverlayFadeOut';

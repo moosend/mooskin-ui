@@ -19,7 +19,7 @@ export const StyledSwitch = styled(Box)<ISwitchComponentProps>`
 	padding: 0 8px;
 	cursor: ${(props) => (!props.disabled ? 'pointer' : 'not-allowed')};
 	border-radius: 36px;
-	transition: background-color 0.3s;
+	transition: background-color 0.15s;
 	color: ${(props) =>
 		!props.disabled
 			? props.palette?.fontColors.white || variables.fontColors.white
@@ -43,7 +43,7 @@ export const StyledSwitchHandle = styled(Box)<ISwitchHandleComponentProps>`
 	height: 19px;
 	width: 19px;
 	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
-	transition: transform 0.3s;
+	transition: transform 0.15s;
 	border-radius: 50%;
 	z-index: 1;
 	transform: ${(props) =>

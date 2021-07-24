@@ -27,7 +27,6 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 	};
 
 	const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
-		e.stopPropagation();
 		props.onRemoveTag && props.onRemoveTag(e, { dataLabel: props.dataLabel, value: i });
 	};
 
@@ -39,7 +38,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 		validated && props.onAddTag && props.onAddTag({ dataLabel: props.dataLabel, value });
 	};
 
-	const recurseChildren = (children: any): any => {
+	const recurseChildren = (children: any, tagIndex?: number): any => {
 		if (!children) {
 			return null;
 		}
@@ -49,17 +48,10 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 				return React.cloneElement(child, {
 					children: (
 						<>
-							{recurseChildren(child.props.children)}
+							{recurseChildren(child.props.children, i)}
 							{/* <StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>} */}
 							{child.props.removeIcon && props.onRemoveTag && !tagClose && (
-								<TagClose
-									onClick={(e) => {
-										e.stopPropagation();
-										onRemoveTag(e, i);
-									}}
-								>
-									highlight_off
-								</TagClose>
+								<TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>
 							)}
 						</>
 					),
@@ -74,12 +66,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 				return React.cloneElement(child, {
 					children: child.props.children ? child.props.children : 'highlight_off',
 					key: i,
-					onClick: child.props.onClick
-						? child.props.onClick
-						: (e) => {
-								e.stopPropagation();
-								onRemoveTag(e, i);
-						  },
+					onClick: child.props.onClick ? child.props.onClick : (e) => onRemoveTag(e, tagIndex ?? 0),
 				} as IBoxComponentProps);
 			}
 
@@ -91,7 +78,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 			}
 
 			if (React.isValidElement(child) && (child.props as any).children) {
-				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
+				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children, tagIndex) } as any);
 			}
 
 			return child;

@@ -450,7 +450,7 @@ exports[`Button renders correctly 1`] = `
             type="submit"
           >
             <a
-              className="sc-bdnylx jknATe sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
+              className="sc-bdnylx jrLcJL sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
               disabled={true}
               href="www.moosend.com"
               id="button1"

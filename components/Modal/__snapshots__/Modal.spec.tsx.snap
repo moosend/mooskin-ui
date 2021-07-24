@@ -397,7 +397,7 @@ exports[`Modal renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jknATe sc-gtssRu"
+              className="sc-bdnylx jrLcJL sc-gtssRu"
               onClose={[MockFunction]}
               style={Object {}}
             >
@@ -484,84 +484,25 @@ exports[`Modal renders correctly 1`] = `
                   }
                   style={Object {}}
                 >
-                  <StyledModalOverlayFadeIn
-                    className=""
-                    isOpen={true}
-                    onClick={[Function]}
-                    palette={
-                      Object {
-                        "backgroundColors": Object {
-                          "background": "#FAFAFA",
-                          "black": "#000000",
-                          "darkgray1": "#777777",
-                          "darkgray2": "#454545",
-                          "gray1": "#E0E0E0",
-                          "gray2": "#E7E7E7",
-                          "medgray1": "#757575",
-                          "medgray2": "#888888",
-                          "primary1": "#4169E1",
-                          "primary2": "#212121",
-                          "primary3": "#00796B",
-                          "primary4": "#D32F2F",
-                          "secondary1": "#2E7D32",
-                          "secondary2": "#757575",
-                          "secondary3": "#673AB7",
-                          "secondary4": "#9C27B0",
-                          "secondary5": "#00796B",
-                          "secondary6": "#ECF0FC",
-                          "text": "#212121",
-                          "white": "#FFFFFF",
-                        },
-                        "borderColors": Object {
-                          "background": "#FAFAFA",
-                          "black": "#000000",
-                          "darkgray1": "#777777",
-                          "darkgray2": "#454545",
-                          "gray1": "#E0E0E0",
-                          "gray2": "#E7E7E7",
-                          "medgray1": "#757575",
-                          "medgray2": "#888888",
-                          "primary1": "#4169E1",
-                          "primary2": "#212121",
-                          "primary3": "#00796B",
-                          "primary4": "#D32F2F",
-                          "secondary1": "#2E7D32",
-                          "secondary2": "#757575",
-                          "secondary3": "#673AB7",
-                          "secondary4": "#9C27B0",
-                          "secondary5": "#00796B",
-                          "secondary6": "#ECF0FC",
-                          "text": "#212121",
-                          "white": "#FFFFFF",
-                        },
-                        "fontColors": Object {
-                          "background": "#FAFAFA",
-                          "black": "#000000",
-                          "darkgray1": "#777777",
-                          "darkgray2": "#454545",
-                          "gray1": "#E0E0E0",
-                          "gray2": "#E7E7E7",
-                          "medgray1": "#757575",
-                          "medgray2": "#888888",
-                          "primary1": "#4169E1",
-                          "primary2": "#212121",
-                          "primary3": "#00796B",
-                          "primary4": "#D32F2F",
-                          "secondary1": "#2E7D32",
-                          "secondary2": "#757575",
-                          "secondary3": "#673AB7",
-                          "secondary4": "#9C27B0",
-                          "secondary5": "#00796B",
-                          "secondary6": "#ECF0FC",
-                          "text": "#212121",
-                          "white": "#FFFFFF",
-                        },
-                      }
-                    }
-                    style={Object {}}
+                  <Transition
+                    addEndListener={[Function]}
+                    appear={false}
+                    enter={true}
+                    exit={true}
+                    in={true}
+                    mountOnEnter={false}
+                    onEnter={[Function]}
+                    onEntered={[Function]}
+                    onEntering={[Function]}
+                    onExit={[Function]}
+                    onExited={[Function]}
+                    onExiting={[Function]}
+                    timeout={150}
+                    unmountOnExit={true}
                   >
-                    <Box
-                      className="sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
+                    <StyledModalOverlayFadeIn
+                      boxShadow="base"
+                      className=""
                       isOpen={true}
                       onClick={[Function]}
                       palette={
@@ -634,11 +575,12 @@ exports[`Modal renders correctly 1`] = `
                           },
                         }
                       }
+                      round="xs"
                       style={Object {}}
-                      transition="0.2s all"
                     >
-                      <Component
-                        className="sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
+                      <Box
+                        boxShadow="base"
+                        className="sc-pNWxx sc-jrsJCI sIsqV bJVzoT"
                         isOpen={true}
                         onClick={[Function]}
                         palette={
@@ -711,11 +653,13 @@ exports[`Modal renders correctly 1`] = `
                             },
                           }
                         }
+                        round="xs"
                         style={Object {}}
                         transition="0.2s all"
                       >
-                        <StyledBox
-                          className="sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
+                        <Component
+                          boxShadow="base"
+                          className="sc-pNWxx sc-jrsJCI sIsqV bJVzoT"
                           isOpen={true}
                           onClick={[Function]}
                           palette={
@@ -788,102 +732,104 @@ exports[`Modal renders correctly 1`] = `
                               },
                             }
                           }
+                          round="xs"
                           style={Object {}}
                           transition="0.2s all"
                         >
-                          <div
-                            className="sc-bdnylx jknATe sc-pNWxx sc-jrsJCI dYCdWA bJVzoT"
+                          <StyledBox
+                            boxShadow="base"
+                            className="sc-pNWxx sc-jrsJCI sIsqV bJVzoT"
+                            isOpen={true}
                             onClick={[Function]}
+                            palette={
+                              Object {
+                                "backgroundColors": Object {
+                                  "background": "#FAFAFA",
+                                  "black": "#000000",
+                                  "darkgray1": "#777777",
+                                  "darkgray2": "#454545",
+                                  "gray1": "#E0E0E0",
+                                  "gray2": "#E7E7E7",
+                                  "medgray1": "#757575",
+                                  "medgray2": "#888888",
+                                  "primary1": "#4169E1",
+                                  "primary2": "#212121",
+                                  "primary3": "#00796B",
+                                  "primary4": "#D32F2F",
+                                  "secondary1": "#2E7D32",
+                                  "secondary2": "#757575",
+                                  "secondary3": "#673AB7",
+                                  "secondary4": "#9C27B0",
+                                  "secondary5": "#00796B",
+                                  "secondary6": "#ECF0FC",
+                                  "text": "#212121",
+                                  "white": "#FFFFFF",
+                                },
+                                "borderColors": Object {
+                                  "background": "#FAFAFA",
+                                  "black": "#000000",
+                                  "darkgray1": "#777777",
+                                  "darkgray2": "#454545",
+                                  "gray1": "#E0E0E0",
+                                  "gray2": "#E7E7E7",
+                                  "medgray1": "#757575",
+                                  "medgray2": "#888888",
+                                  "primary1": "#4169E1",
+                                  "primary2": "#212121",
+                                  "primary3": "#00796B",
+                                  "primary4": "#D32F2F",
+                                  "secondary1": "#2E7D32",
+                                  "secondary2": "#757575",
+                                  "secondary3": "#673AB7",
+                                  "secondary4": "#9C27B0",
+                                  "secondary5": "#00796B",
+                                  "secondary6": "#ECF0FC",
+                                  "text": "#212121",
+                                  "white": "#FFFFFF",
+                                },
+                                "fontColors": Object {
+                                  "background": "#FAFAFA",
+                                  "black": "#000000",
+                                  "darkgray1": "#777777",
+                                  "darkgray2": "#454545",
+                                  "gray1": "#E0E0E0",
+                                  "gray2": "#E7E7E7",
+                                  "medgray1": "#757575",
+                                  "medgray2": "#888888",
+                                  "primary1": "#4169E1",
+                                  "primary2": "#212121",
+                                  "primary3": "#00796B",
+                                  "primary4": "#D32F2F",
+                                  "secondary1": "#2E7D32",
+                                  "secondary2": "#757575",
+                                  "secondary3": "#673AB7",
+                                  "secondary4": "#9C27B0",
+                                  "secondary5": "#00796B",
+                                  "secondary6": "#ECF0FC",
+                                  "text": "#212121",
+                                  "white": "#FFFFFF",
+                                },
+                              }
+                            }
+                            round="xs"
                             style={Object {}}
+                            transition="0.2s all"
                           >
-                            <ModalContent
-                              className=""
-                              h="50%"
-                              isOpen={true}
-                              key="0/.0"
+                            <div
+                              className="sc-bdnylx kRudSX sc-pNWxx sc-jrsJCI sIsqV bJVzoT"
                               onClick={[Function]}
                               style={Object {}}
-                              w="50%"
                             >
-                              <Component
+                              <ModalContent
                                 className=""
                                 h="50%"
                                 isOpen={true}
+                                key="0/.0"
                                 onClick={[Function]}
-                                palette={
-                                  Object {
-                                    "backgroundColors": Object {
-                                      "background": "#FAFAFA",
-                                      "black": "#000000",
-                                      "darkgray1": "#777777",
-                                      "darkgray2": "#454545",
-                                      "gray1": "#E0E0E0",
-                                      "gray2": "#E7E7E7",
-                                      "medgray1": "#757575",
-                                      "medgray2": "#888888",
-                                      "primary1": "#4169E1",
-                                      "primary2": "#212121",
-                                      "primary3": "#00796B",
-                                      "primary4": "#D32F2F",
-                                      "secondary1": "#2E7D32",
-                                      "secondary2": "#757575",
-                                      "secondary3": "#673AB7",
-                                      "secondary4": "#9C27B0",
-                                      "secondary5": "#00796B",
-                                      "secondary6": "#ECF0FC",
-                                      "text": "#212121",
-                                      "white": "#FFFFFF",
-                                    },
-                                    "borderColors": Object {
-                                      "background": "#FAFAFA",
-                                      "black": "#000000",
-                                      "darkgray1": "#777777",
-                                      "darkgray2": "#454545",
-                                      "gray1": "#E0E0E0",
-                                      "gray2": "#E7E7E7",
-                                      "medgray1": "#757575",
-                                      "medgray2": "#888888",
-                                      "primary1": "#4169E1",
-                                      "primary2": "#212121",
-                                      "primary3": "#00796B",
-                                      "primary4": "#D32F2F",
-                                      "secondary1": "#2E7D32",
-                                      "secondary2": "#757575",
-                                      "secondary3": "#673AB7",
-                                      "secondary4": "#9C27B0",
-                                      "secondary5": "#00796B",
-                                      "secondary6": "#ECF0FC",
-                                      "text": "#212121",
-                                      "white": "#FFFFFF",
-                                    },
-                                    "fontColors": Object {
-                                      "background": "#FAFAFA",
-                                      "black": "#000000",
-                                      "darkgray1": "#777777",
-                                      "darkgray2": "#454545",
-                                      "gray1": "#E0E0E0",
-                                      "gray2": "#E7E7E7",
-                                      "medgray1": "#757575",
-                                      "medgray2": "#888888",
-                                      "primary1": "#4169E1",
-                                      "primary2": "#212121",
-                                      "primary3": "#00796B",
-                                      "primary4": "#D32F2F",
-                                      "secondary1": "#2E7D32",
-                                      "secondary2": "#757575",
-                                      "secondary3": "#673AB7",
-                                      "secondary4": "#9C27B0",
-                                      "secondary5": "#00796B",
-                                      "secondary6": "#ECF0FC",
-                                      "text": "#212121",
-                                      "white": "#FFFFFF",
-                                    },
-                                  }
-                                }
                                 style={Object {}}
                                 w="50%"
                               >
-                                <StyledModalContentFadeIn
+                                <Component
                                   className=""
                                   h="50%"
                                   isOpen={true}
@@ -961,8 +907,8 @@ exports[`Modal renders correctly 1`] = `
                                   style={Object {}}
                                   w="50%"
                                 >
-                                  <Box
-                                    className="sc-dlnjPT sc-hKFyIo dIkxby laJKTU"
+                                  <StyledModalContentFadeIn
+                                    className=""
                                     h="50%"
                                     isOpen={true}
                                     onClick={[Function]}
@@ -1037,11 +983,10 @@ exports[`Modal renders correctly 1`] = `
                                       }
                                     }
                                     style={Object {}}
-                                    transition="0.2s all"
                                     w="50%"
                                   >
-                                    <Component
-                                      className="sc-dlnjPT sc-hKFyIo dIkxby laJKTU"
+                                    <Box
+                                      className="sc-dlnjPT sc-hKFyIo dIkxby dbXBQT"
                                       h="50%"
                                       isOpen={true}
                                       onClick={[Function]}
@@ -1119,8 +1064,8 @@ exports[`Modal renders correctly 1`] = `
                                       transition="0.2s all"
                                       w="50%"
                                     >
-                                      <StyledBox
-                                        className="sc-dlnjPT sc-hKFyIo dIkxby laJKTU"
+                                      <Component
+                                        className="sc-dlnjPT sc-hKFyIo dIkxby dbXBQT"
                                         h="50%"
                                         isOpen={true}
                                         onClick={[Function]}
@@ -1198,99 +1143,100 @@ exports[`Modal renders correctly 1`] = `
                                         transition="0.2s all"
                                         w="50%"
                                       >
-                                        <div
-                                          className="sc-bdnylx iaVZCr sc-dlnjPT sc-hKFyIo dIkxby laJKTU"
+                                        <StyledBox
+                                          className="sc-dlnjPT sc-hKFyIo dIkxby dbXBQT"
+                                          h="50%"
+                                          isOpen={true}
                                           onClick={[Function]}
+                                          palette={
+                                            Object {
+                                              "backgroundColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                              "borderColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                              "fontColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                            }
+                                          }
                                           style={Object {}}
+                                          transition="0.2s all"
+                                          w="50%"
                                         >
-                                          <ModalCloseButton
-                                            className=""
-                                            key="0/.0"
+                                          <div
+                                            className="sc-bdnylx fIbaQW sc-dlnjPT sc-hKFyIo dIkxby dbXBQT"
                                             onClick={[Function]}
-                                            position="absolute"
-                                            right={10}
                                             style={Object {}}
-                                            top={10}
                                           >
-                                            <Component
+                                            <ModalCloseButton
                                               className=""
+                                              key="0/.0"
                                               onClick={[Function]}
-                                              palette={
-                                                Object {
-                                                  "backgroundColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "borderColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "fontColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                }
-                                              }
                                               position="absolute"
                                               right={10}
                                               style={Object {}}
                                               top={10}
                                             >
-                                              <StyledModalCloseButton
+                                              <Component
                                                 className=""
                                                 onClick={[Function]}
                                                 palette={
@@ -1368,8 +1314,8 @@ exports[`Modal renders correctly 1`] = `
                                                 style={Object {}}
                                                 top={10}
                                               >
-                                                <Box
-                                                  className="sc-fujyUd CgLAt"
+                                                <StyledModalCloseButton
+                                                  className=""
                                                   onClick={[Function]}
                                                   palette={
                                                     Object {
@@ -1445,9 +1391,8 @@ exports[`Modal renders correctly 1`] = `
                                                   right={10}
                                                   style={Object {}}
                                                   top={10}
-                                                  transition="0.2s all"
                                                 >
-                                                  <Component
+                                                  <Box
                                                     className="sc-fujyUd CgLAt"
                                                     onClick={[Function]}
                                                     palette={
@@ -1526,7 +1471,7 @@ exports[`Modal renders correctly 1`] = `
                                                     top={10}
                                                     transition="0.2s all"
                                                   >
-                                                    <StyledBox
+                                                    <Component
                                                       className="sc-fujyUd CgLAt"
                                                       onClick={[Function]}
                                                       palette={
@@ -1605,100 +1550,104 @@ exports[`Modal renders correctly 1`] = `
                                                       top={10}
                                                       transition="0.2s all"
                                                     >
-                                                      <div
-                                                        className="sc-bdnylx hGZZrR sc-fujyUd CgLAt"
+                                                      <StyledBox
+                                                        className="sc-fujyUd CgLAt"
                                                         onClick={[Function]}
+                                                        palette={
+                                                          Object {
+                                                            "backgroundColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "borderColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "fontColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                          }
+                                                        }
+                                                        position="absolute"
+                                                        right={10}
                                                         style={Object {}}
+                                                        top={10}
+                                                        transition="0.2s all"
                                                       >
-                                                        close
-                                                      </div>
-                                                    </StyledBox>
-                                                  </Component>
-                                                </Box>
-                                              </StyledModalCloseButton>
-                                            </Component>
-                                          </ModalCloseButton>
-                                          <ModalHeader
-                                            className=""
-                                            key="1/.1"
-                                            style={Object {}}
-                                          >
-                                            <Component
+                                                        <div
+                                                          className="sc-bdnylx uMmCw sc-fujyUd CgLAt"
+                                                          onClick={[Function]}
+                                                          style={Object {}}
+                                                        >
+                                                          close
+                                                        </div>
+                                                      </StyledBox>
+                                                    </Component>
+                                                  </Box>
+                                                </StyledModalCloseButton>
+                                              </Component>
+                                            </ModalCloseButton>
+                                            <ModalHeader
                                               className=""
-                                              palette={
-                                                Object {
-                                                  "backgroundColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "borderColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "fontColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                }
-                                              }
+                                              key="1/.1"
                                               style={Object {}}
                                             >
-                                              <StyledModalHeader
-                                                boxAs="header"
+                                              <Component
                                                 className=""
                                                 palette={
                                                   Object {
@@ -1772,9 +1721,9 @@ exports[`Modal renders correctly 1`] = `
                                                 }
                                                 style={Object {}}
                                               >
-                                                <Box
+                                                <StyledModalHeader
                                                   boxAs="header"
-                                                  className="sc-jSFkmK fctZID"
+                                                  className=""
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -1846,9 +1795,8 @@ exports[`Modal renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
-                                                  transition="0.2s all"
                                                 >
-                                                  <Component
+                                                  <Box
                                                     boxAs="header"
                                                     className="sc-jSFkmK fctZID"
                                                     palette={
@@ -1924,8 +1872,7 @@ exports[`Modal renders correctly 1`] = `
                                                     style={Object {}}
                                                     transition="0.2s all"
                                                   >
-                                                    <StyledBox
-                                                      as="header"
+                                                    <Component
                                                       boxAs="header"
                                                       className="sc-jSFkmK fctZID"
                                                       palette={
@@ -2001,98 +1948,101 @@ exports[`Modal renders correctly 1`] = `
                                                       style={Object {}}
                                                       transition="0.2s all"
                                                     >
-                                                      <header
-                                                        className="sc-bdnylx jknATe sc-jSFkmK fctZID"
+                                                      <StyledBox
+                                                        as="header"
+                                                        boxAs="header"
+                                                        className="sc-jSFkmK fctZID"
+                                                        palette={
+                                                          Object {
+                                                            "backgroundColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "borderColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "fontColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                          }
+                                                        }
                                                         style={Object {}}
+                                                        transition="0.2s all"
                                                       >
-                                                        Create your account
-                                                      </header>
-                                                    </StyledBox>
-                                                  </Component>
-                                                </Box>
-                                              </StyledModalHeader>
-                                            </Component>
-                                          </ModalHeader>
-                                          <ModalBody
-                                            className=""
-                                            key="2/.2"
-                                            style={Object {}}
-                                          >
-                                            <Component
+                                                        <header
+                                                          className="sc-bdnylx jrLcJL sc-jSFkmK fctZID"
+                                                          style={Object {}}
+                                                        >
+                                                          Create your account
+                                                        </header>
+                                                      </StyledBox>
+                                                    </Component>
+                                                  </Box>
+                                                </StyledModalHeader>
+                                              </Component>
+                                            </ModalHeader>
+                                            <ModalBody
                                               className=""
-                                              palette={
-                                                Object {
-                                                  "backgroundColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "borderColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "fontColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                }
-                                              }
+                                              key="2/.2"
                                               style={Object {}}
                                             >
-                                              <StyledModalBody
+                                              <Component
                                                 className=""
                                                 palette={
                                                   Object {
@@ -2166,8 +2116,8 @@ exports[`Modal renders correctly 1`] = `
                                                 }
                                                 style={Object {}}
                                               >
-                                                <Box
-                                                  className="sc-gKAblj cqCqMD"
+                                                <StyledModalBody
+                                                  className=""
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -2239,9 +2189,8 @@ exports[`Modal renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
-                                                  transition="0.2s all"
                                                 >
-                                                  <Component
+                                                  <Box
                                                     className="sc-gKAblj cqCqMD"
                                                     palette={
                                                       Object {
@@ -2316,7 +2265,7 @@ exports[`Modal renders correctly 1`] = `
                                                     style={Object {}}
                                                     transition="0.2s all"
                                                   >
-                                                    <StyledBox
+                                                    <Component
                                                       className="sc-gKAblj cqCqMD"
                                                       palette={
                                                         Object {
@@ -2391,99 +2340,99 @@ exports[`Modal renders correctly 1`] = `
                                                       style={Object {}}
                                                       transition="0.2s all"
                                                     >
-                                                      <div
-                                                        className="sc-bdnylx jknATe sc-gKAblj cqCqMD"
+                                                      <StyledBox
+                                                        className="sc-gKAblj cqCqMD"
+                                                        palette={
+                                                          Object {
+                                                            "backgroundColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "borderColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "fontColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                          }
+                                                        }
                                                         style={Object {}}
+                                                        transition="0.2s all"
                                                       >
-                                                        Modal Content Body
-                                                      </div>
-                                                    </StyledBox>
-                                                  </Component>
-                                                </Box>
-                                              </StyledModalBody>
-                                            </Component>
-                                          </ModalBody>
-                                          <ModalFooter
-                                            className=""
-                                            key="3/.3"
-                                            style={Object {}}
-                                          >
-                                            <Component
+                                                        <div
+                                                          className="sc-bdnylx jrLcJL sc-gKAblj cqCqMD"
+                                                          style={Object {}}
+                                                        >
+                                                          Modal Content Body
+                                                        </div>
+                                                      </StyledBox>
+                                                    </Component>
+                                                  </Box>
+                                                </StyledModalBody>
+                                              </Component>
+                                            </ModalBody>
+                                            <ModalFooter
                                               className=""
-                                              palette={
-                                                Object {
-                                                  "backgroundColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "borderColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "fontColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                }
-                                              }
+                                              key="3/.3"
                                               style={Object {}}
                                             >
-                                              <StyledModalFooter
-                                                boxAs="footer"
+                                              <Component
                                                 className=""
                                                 palette={
                                                   Object {
@@ -2557,9 +2506,9 @@ exports[`Modal renders correctly 1`] = `
                                                 }
                                                 style={Object {}}
                                               >
-                                                <Box
+                                                <StyledModalFooter
                                                   boxAs="footer"
-                                                  className="sc-iCoHVE jHzxyK"
+                                                  className=""
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -2631,9 +2580,8 @@ exports[`Modal renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
-                                                  transition="0.2s all"
                                                 >
-                                                  <Component
+                                                  <Box
                                                     boxAs="footer"
                                                     className="sc-iCoHVE jHzxyK"
                                                     palette={
@@ -2709,8 +2657,7 @@ exports[`Modal renders correctly 1`] = `
                                                     style={Object {}}
                                                     transition="0.2s all"
                                                   >
-                                                    <StyledBox
-                                                      as="footer"
+                                                    <Component
                                                       boxAs="footer"
                                                       className="sc-iCoHVE jHzxyK"
                                                       palette={
@@ -2786,30 +2733,108 @@ exports[`Modal renders correctly 1`] = `
                                                       style={Object {}}
                                                       transition="0.2s all"
                                                     >
-                                                      <footer
-                                                        className="sc-bdnylx jknATe sc-iCoHVE jHzxyK"
+                                                      <StyledBox
+                                                        as="footer"
+                                                        boxAs="footer"
+                                                        className="sc-iCoHVE jHzxyK"
+                                                        palette={
+                                                          Object {
+                                                            "backgroundColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "borderColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "fontColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                          }
+                                                        }
                                                         style={Object {}}
+                                                        transition="0.2s all"
                                                       >
-                                                        Modal Footer goes here!
-                                                      </footer>
-                                                    </StyledBox>
-                                                  </Component>
-                                                </Box>
-                                              </StyledModalFooter>
-                                            </Component>
-                                          </ModalFooter>
-                                        </div>
-                                      </StyledBox>
-                                    </Component>
-                                  </Box>
-                                </StyledModalContentFadeIn>
-                              </Component>
-                            </ModalContent>
-                          </div>
-                        </StyledBox>
-                      </Component>
-                    </Box>
-                  </StyledModalOverlayFadeIn>
+                                                        <footer
+                                                          className="sc-bdnylx jrLcJL sc-iCoHVE jHzxyK"
+                                                          style={Object {}}
+                                                        >
+                                                          Modal Footer goes here!
+                                                        </footer>
+                                                      </StyledBox>
+                                                    </Component>
+                                                  </Box>
+                                                </StyledModalFooter>
+                                              </Component>
+                                            </ModalFooter>
+                                          </div>
+                                        </StyledBox>
+                                      </Component>
+                                    </Box>
+                                  </StyledModalContentFadeIn>
+                                </Component>
+                              </ModalContent>
+                            </div>
+                          </StyledBox>
+                        </Component>
+                      </Box>
+                    </StyledModalOverlayFadeIn>
+                  </Transition>
                 </Component>
               </ModalOverlay>
             </div>

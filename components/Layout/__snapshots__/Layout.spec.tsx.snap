@@ -385,7 +385,7 @@ exports[`Layout renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jknATe sc-gtssRu jrgeJz"
+              className="sc-bdnylx jrLcJL sc-gtssRu jrgeJz"
               spacing={15}
               style={Object {}}
             >
@@ -554,7 +554,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx dUcFKu"
+                      className="sc-bdnylx jWQdbz"
                       style={Object {}}
                     >
                       Box
@@ -727,7 +727,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx dUcFKu"
+                      className="sc-bdnylx jWQdbz"
                       style={Object {}}
                     >
                       Box
@@ -900,7 +900,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx dUcFKu"
+                      className="sc-bdnylx jWQdbz"
                       style={Object {}}
                     >
                       Box
@@ -1073,7 +1073,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx dUcFKu"
+                      className="sc-bdnylx jWQdbz"
                       style={Object {}}
                     >
                       Box
@@ -1246,7 +1246,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx dUcFKu"
+                      className="sc-bdnylx jWQdbz"
                       style={Object {}}
                     >
                       Box
@@ -1419,7 +1419,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx dUcFKu"
+                      className="sc-bdnylx jWQdbz"
                       style={Object {}}
                     >
                       Box
@@ -1592,7 +1592,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx dUcFKu"
+                      className="sc-bdnylx jWQdbz"
                       style={Object {}}
                     >
                       Box
@@ -1765,7 +1765,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx dUcFKu"
+                      className="sc-bdnylx jWQdbz"
                       style={Object {}}
                     >
                       Box

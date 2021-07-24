@@ -20,6 +20,16 @@ import {
 	StyledModalOverlayFadeOut,
 } from './styles';
 
+// Transitions
+import { Transition } from 'react-transition-group';
+const ModalOverlayComponents = {
+	entered: StyledModalOverlayFadeIn,
+	entering: StyledModalOverlayFadeIn,
+	exited: null,
+	exiting: StyledModalOverlayFadeOut,
+	unmounted: null,
+};
+
 /**
  * Modal
  */
@@ -87,6 +97,7 @@ Modal.displayName = 'Modal';
  * ModalContent
  */
 export const ModalContent: React.FC<IModalContentComponentProps> = withMooskinContext((props) => {
+	console.log('called');
 	const ModalContentComponent = props.isOpen ? StyledModalContentFadeIn : StyledModalContentFadeOut;
 	return <ModalContentComponent {...props} />;
 });
@@ -158,26 +169,17 @@ ModalCloseButton.displayName = 'ModalCloseButton';
  * ModalOverlay
  */
 export const ModalOverlay: React.FC<IModalOverlayComponentProps> = withMooskinContext((props) => {
-	const [show, setShow] = React.useState(props.isOpen);
-
-	React.useEffect(() => {
-		if (props.isOpen) {
-			setShow(true);
-			props.onOpen && props.onOpen();
-		} else {
-			setTimeout(() => {
-				setShow(false);
-			}, 120);
-		}
-	}, [props.isOpen]);
-
-	const ModalOverlayComponent = props.isOpen ? StyledModalOverlayFadeIn : StyledModalOverlayFadeOut;
-
-	if (show) {
-		return <ModalOverlayComponent {...props} />;
-	}
-
-	return null;
+	return (
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={150}>
+			{(state) => {
+				const ModalOverlayComponent = ModalOverlayComponents[state];
+				if (ModalOverlayComponent) {
+					return <ModalOverlayComponent boxShadow="base" round="xs" {...props} />;
+				}
+				return null;
+			}}
+		</Transition>
+	);
 });
 
 ModalOverlay.defaultProps = {

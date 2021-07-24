@@ -403,7 +403,7 @@ exports[`Drawer renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jknATe sc-gtssRu"
+              className="sc-bdnylx jrLcJL sc-gtssRu"
               onClose={[MockFunction]}
               size="sm"
               style={Object {}}
@@ -491,84 +491,25 @@ exports[`Drawer renders correctly 1`] = `
                   }
                   style={Object {}}
                 >
-                  <StyledDrawerOverlayFadeIn
-                    className=""
-                    isOpen={true}
-                    onClick={[Function]}
-                    palette={
-                      Object {
-                        "backgroundColors": Object {
-                          "background": "#FAFAFA",
-                          "black": "#000000",
-                          "darkgray1": "#777777",
-                          "darkgray2": "#454545",
-                          "gray1": "#E0E0E0",
-                          "gray2": "#E7E7E7",
-                          "medgray1": "#757575",
-                          "medgray2": "#888888",
-                          "primary1": "#4169E1",
-                          "primary2": "#212121",
-                          "primary3": "#00796B",
-                          "primary4": "#D32F2F",
-                          "secondary1": "#2E7D32",
-                          "secondary2": "#757575",
-                          "secondary3": "#673AB7",
-                          "secondary4": "#9C27B0",
-                          "secondary5": "#00796B",
-                          "secondary6": "#ECF0FC",
-                          "text": "#212121",
-                          "white": "#FFFFFF",
-                        },
-                        "borderColors": Object {
-                          "background": "#FAFAFA",
-                          "black": "#000000",
-                          "darkgray1": "#777777",
-                          "darkgray2": "#454545",
-                          "gray1": "#E0E0E0",
-                          "gray2": "#E7E7E7",
-                          "medgray1": "#757575",
-                          "medgray2": "#888888",
-                          "primary1": "#4169E1",
-                          "primary2": "#212121",
-                          "primary3": "#00796B",
-                          "primary4": "#D32F2F",
-                          "secondary1": "#2E7D32",
-                          "secondary2": "#757575",
-                          "secondary3": "#673AB7",
-                          "secondary4": "#9C27B0",
-                          "secondary5": "#00796B",
-                          "secondary6": "#ECF0FC",
-                          "text": "#212121",
-                          "white": "#FFFFFF",
-                        },
-                        "fontColors": Object {
-                          "background": "#FAFAFA",
-                          "black": "#000000",
-                          "darkgray1": "#777777",
-                          "darkgray2": "#454545",
-                          "gray1": "#E0E0E0",
-                          "gray2": "#E7E7E7",
-                          "medgray1": "#757575",
-                          "medgray2": "#888888",
-                          "primary1": "#4169E1",
-                          "primary2": "#212121",
-                          "primary3": "#00796B",
-                          "primary4": "#D32F2F",
-                          "secondary1": "#2E7D32",
-                          "secondary2": "#757575",
-                          "secondary3": "#673AB7",
-                          "secondary4": "#9C27B0",
-                          "secondary5": "#00796B",
-                          "secondary6": "#ECF0FC",
-                          "text": "#212121",
-                          "white": "#FFFFFF",
-                        },
-                      }
-                    }
-                    style={Object {}}
+                  <Transition
+                    addEndListener={[Function]}
+                    appear={false}
+                    enter={true}
+                    exit={true}
+                    in={true}
+                    mountOnEnter={false}
+                    onEnter={[Function]}
+                    onEntered={[Function]}
+                    onEntering={[Function]}
+                    onExit={[Function]}
+                    onExited={[Function]}
+                    onExiting={[Function]}
+                    timeout={150}
+                    unmountOnExit={true}
                   >
-                    <Box
-                      className="sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
+                    <StyledDrawerOverlayFadeIn
+                      boxShadow="base"
+                      className=""
                       isOpen={true}
                       onClick={[Function]}
                       palette={
@@ -641,11 +582,12 @@ exports[`Drawer renders correctly 1`] = `
                           },
                         }
                       }
+                      round="xs"
                       style={Object {}}
-                      transition="0.2s all"
                     >
-                      <Component
-                        className="sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
+                      <Box
+                        boxShadow="base"
+                        className="sc-fFSRdu sc-bkbjAj ghcKOC gtmshO"
                         isOpen={true}
                         onClick={[Function]}
                         palette={
@@ -718,11 +660,13 @@ exports[`Drawer renders correctly 1`] = `
                             },
                           }
                         }
+                        round="xs"
                         style={Object {}}
                         transition="0.2s all"
                       >
-                        <StyledBox
-                          className="sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
+                        <Component
+                          boxShadow="base"
+                          className="sc-fFSRdu sc-bkbjAj ghcKOC gtmshO"
                           isOpen={true}
                           onClick={[Function]}
                           palette={
@@ -795,104 +739,105 @@ exports[`Drawer renders correctly 1`] = `
                               },
                             }
                           }
+                          round="xs"
                           style={Object {}}
                           transition="0.2s all"
                         >
-                          <div
-                            className="sc-bdnylx jknATe sc-fFSRdu sc-bkbjAj ghcKOC kgnJat"
+                          <StyledBox
+                            boxShadow="base"
+                            className="sc-fFSRdu sc-bkbjAj ghcKOC gtmshO"
+                            isOpen={true}
                             onClick={[Function]}
+                            palette={
+                              Object {
+                                "backgroundColors": Object {
+                                  "background": "#FAFAFA",
+                                  "black": "#000000",
+                                  "darkgray1": "#777777",
+                                  "darkgray2": "#454545",
+                                  "gray1": "#E0E0E0",
+                                  "gray2": "#E7E7E7",
+                                  "medgray1": "#757575",
+                                  "medgray2": "#888888",
+                                  "primary1": "#4169E1",
+                                  "primary2": "#212121",
+                                  "primary3": "#00796B",
+                                  "primary4": "#D32F2F",
+                                  "secondary1": "#2E7D32",
+                                  "secondary2": "#757575",
+                                  "secondary3": "#673AB7",
+                                  "secondary4": "#9C27B0",
+                                  "secondary5": "#00796B",
+                                  "secondary6": "#ECF0FC",
+                                  "text": "#212121",
+                                  "white": "#FFFFFF",
+                                },
+                                "borderColors": Object {
+                                  "background": "#FAFAFA",
+                                  "black": "#000000",
+                                  "darkgray1": "#777777",
+                                  "darkgray2": "#454545",
+                                  "gray1": "#E0E0E0",
+                                  "gray2": "#E7E7E7",
+                                  "medgray1": "#757575",
+                                  "medgray2": "#888888",
+                                  "primary1": "#4169E1",
+                                  "primary2": "#212121",
+                                  "primary3": "#00796B",
+                                  "primary4": "#D32F2F",
+                                  "secondary1": "#2E7D32",
+                                  "secondary2": "#757575",
+                                  "secondary3": "#673AB7",
+                                  "secondary4": "#9C27B0",
+                                  "secondary5": "#00796B",
+                                  "secondary6": "#ECF0FC",
+                                  "text": "#212121",
+                                  "white": "#FFFFFF",
+                                },
+                                "fontColors": Object {
+                                  "background": "#FAFAFA",
+                                  "black": "#000000",
+                                  "darkgray1": "#777777",
+                                  "darkgray2": "#454545",
+                                  "gray1": "#E0E0E0",
+                                  "gray2": "#E7E7E7",
+                                  "medgray1": "#757575",
+                                  "medgray2": "#888888",
+                                  "primary1": "#4169E1",
+                                  "primary2": "#212121",
+                                  "primary3": "#00796B",
+                                  "primary4": "#D32F2F",
+                                  "secondary1": "#2E7D32",
+                                  "secondary2": "#757575",
+                                  "secondary3": "#673AB7",
+                                  "secondary4": "#9C27B0",
+                                  "secondary5": "#00796B",
+                                  "secondary6": "#ECF0FC",
+                                  "text": "#212121",
+                                  "white": "#FFFFFF",
+                                },
+                              }
+                            }
+                            round="xs"
                             style={Object {}}
+                            transition="0.2s all"
                           >
-                            <DrawerContent
-                              className=""
-                              h="50%"
-                              key="0/.0"
+                            <div
+                              className="sc-bdnylx kRudSX sc-fFSRdu sc-bkbjAj ghcKOC gtmshO"
                               onClick={[Function]}
-                              placement="right"
-                              size="sm"
                               style={Object {}}
-                              w="50%"
                             >
-                              <Component
+                              <DrawerContent
                                 className=""
                                 h="50%"
+                                key="0/.0"
                                 onClick={[Function]}
-                                palette={
-                                  Object {
-                                    "backgroundColors": Object {
-                                      "background": "#FAFAFA",
-                                      "black": "#000000",
-                                      "darkgray1": "#777777",
-                                      "darkgray2": "#454545",
-                                      "gray1": "#E0E0E0",
-                                      "gray2": "#E7E7E7",
-                                      "medgray1": "#757575",
-                                      "medgray2": "#888888",
-                                      "primary1": "#4169E1",
-                                      "primary2": "#212121",
-                                      "primary3": "#00796B",
-                                      "primary4": "#D32F2F",
-                                      "secondary1": "#2E7D32",
-                                      "secondary2": "#757575",
-                                      "secondary3": "#673AB7",
-                                      "secondary4": "#9C27B0",
-                                      "secondary5": "#00796B",
-                                      "secondary6": "#ECF0FC",
-                                      "text": "#212121",
-                                      "white": "#FFFFFF",
-                                    },
-                                    "borderColors": Object {
-                                      "background": "#FAFAFA",
-                                      "black": "#000000",
-                                      "darkgray1": "#777777",
-                                      "darkgray2": "#454545",
-                                      "gray1": "#E0E0E0",
-                                      "gray2": "#E7E7E7",
-                                      "medgray1": "#757575",
-                                      "medgray2": "#888888",
-                                      "primary1": "#4169E1",
-                                      "primary2": "#212121",
-                                      "primary3": "#00796B",
-                                      "primary4": "#D32F2F",
-                                      "secondary1": "#2E7D32",
-                                      "secondary2": "#757575",
-                                      "secondary3": "#673AB7",
-                                      "secondary4": "#9C27B0",
-                                      "secondary5": "#00796B",
-                                      "secondary6": "#ECF0FC",
-                                      "text": "#212121",
-                                      "white": "#FFFFFF",
-                                    },
-                                    "fontColors": Object {
-                                      "background": "#FAFAFA",
-                                      "black": "#000000",
-                                      "darkgray1": "#777777",
-                                      "darkgray2": "#454545",
-                                      "gray1": "#E0E0E0",
-                                      "gray2": "#E7E7E7",
-                                      "medgray1": "#757575",
-                                      "medgray2": "#888888",
-                                      "primary1": "#4169E1",
-                                      "primary2": "#212121",
-                                      "primary3": "#00796B",
-                                      "primary4": "#D32F2F",
-                                      "secondary1": "#2E7D32",
-                                      "secondary2": "#757575",
-                                      "secondary3": "#673AB7",
-                                      "secondary4": "#9C27B0",
-                                      "secondary5": "#00796B",
-                                      "secondary6": "#ECF0FC",
-                                      "text": "#212121",
-                                      "white": "#FFFFFF",
-                                    },
-                                  }
-                                }
                                 placement="right"
                                 size="sm"
                                 style={Object {}}
                                 w="50%"
                               >
-                                <StyledDrawerContentRightOut
+                                <Component
                                   className=""
                                   h="50%"
                                   onClick={[Function]}
@@ -971,8 +916,8 @@ exports[`Drawer renders correctly 1`] = `
                                   style={Object {}}
                                   w="50%"
                                 >
-                                  <Box
-                                    className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb jNhBeZ"
+                                  <StyledDrawerContentRightOut
+                                    className=""
                                     h="50%"
                                     onClick={[Function]}
                                     palette={
@@ -1048,11 +993,10 @@ exports[`Drawer renders correctly 1`] = `
                                     placement="right"
                                     size="sm"
                                     style={Object {}}
-                                    transition="0.2s all"
                                     w="50%"
                                   >
-                                    <Component
-                                      className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb jNhBeZ"
+                                    <Box
+                                      className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb fBTWZO"
                                       h="50%"
                                       onClick={[Function]}
                                       palette={
@@ -1131,8 +1075,8 @@ exports[`Drawer renders correctly 1`] = `
                                       transition="0.2s all"
                                       w="50%"
                                     >
-                                      <StyledBox
-                                        className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb jNhBeZ"
+                                      <Component
+                                        className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb fBTWZO"
                                         h="50%"
                                         onClick={[Function]}
                                         palette={
@@ -1211,100 +1155,102 @@ exports[`Drawer renders correctly 1`] = `
                                         transition="0.2s all"
                                         w="50%"
                                       >
-                                        <div
-                                          className="sc-bdnylx iaVZCr sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb jNhBeZ"
+                                        <StyledBox
+                                          className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb fBTWZO"
+                                          h="50%"
                                           onClick={[Function]}
+                                          palette={
+                                            Object {
+                                              "backgroundColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                              "borderColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                              "fontColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                            }
+                                          }
+                                          placement="right"
                                           size="sm"
                                           style={Object {}}
+                                          transition="0.2s all"
+                                          w="50%"
                                         >
-                                          <DrawerCloseButton
-                                            className=""
-                                            key="0/.0"
+                                          <div
+                                            className="sc-bdnylx fIbaQW sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb fBTWZO"
                                             onClick={[Function]}
-                                            position="absolute"
-                                            right={10}
+                                            size="sm"
                                             style={Object {}}
-                                            top={10}
                                           >
-                                            <Component
+                                            <DrawerCloseButton
                                               className=""
+                                              key="0/.0"
                                               onClick={[Function]}
-                                              palette={
-                                                Object {
-                                                  "backgroundColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "borderColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "fontColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                }
-                                              }
                                               position="absolute"
                                               right={10}
                                               style={Object {}}
                                               top={10}
                                             >
-                                              <StyledDrawerCloseButton
+                                              <Component
                                                 className=""
                                                 onClick={[Function]}
                                                 palette={
@@ -1382,8 +1328,8 @@ exports[`Drawer renders correctly 1`] = `
                                                 style={Object {}}
                                                 top={10}
                                               >
-                                                <Box
-                                                  className="sc-fnVYJo ffkGxm"
+                                                <StyledDrawerCloseButton
+                                                  className=""
                                                   onClick={[Function]}
                                                   palette={
                                                     Object {
@@ -1459,9 +1405,8 @@ exports[`Drawer renders correctly 1`] = `
                                                   right={10}
                                                   style={Object {}}
                                                   top={10}
-                                                  transition="0.2s all"
                                                 >
-                                                  <Component
+                                                  <Box
                                                     className="sc-fnVYJo ffkGxm"
                                                     onClick={[Function]}
                                                     palette={
@@ -1540,7 +1485,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     top={10}
                                                     transition="0.2s all"
                                                   >
-                                                    <StyledBox
+                                                    <Component
                                                       className="sc-fnVYJo ffkGxm"
                                                       onClick={[Function]}
                                                       palette={
@@ -1619,100 +1564,104 @@ exports[`Drawer renders correctly 1`] = `
                                                       top={10}
                                                       transition="0.2s all"
                                                     >
-                                                      <div
-                                                        className="sc-bdnylx hGZZrR sc-fnVYJo ffkGxm"
+                                                      <StyledBox
+                                                        className="sc-fnVYJo ffkGxm"
                                                         onClick={[Function]}
+                                                        palette={
+                                                          Object {
+                                                            "backgroundColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "borderColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "fontColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                          }
+                                                        }
+                                                        position="absolute"
+                                                        right={10}
                                                         style={Object {}}
+                                                        top={10}
+                                                        transition="0.2s all"
                                                       >
-                                                        close
-                                                      </div>
-                                                    </StyledBox>
-                                                  </Component>
-                                                </Box>
-                                              </StyledDrawerCloseButton>
-                                            </Component>
-                                          </DrawerCloseButton>
-                                          <DrawerHeader
-                                            className=""
-                                            key="1/.1"
-                                            style={Object {}}
-                                          >
-                                            <Component
+                                                        <div
+                                                          className="sc-bdnylx uMmCw sc-fnVYJo ffkGxm"
+                                                          onClick={[Function]}
+                                                          style={Object {}}
+                                                        >
+                                                          close
+                                                        </div>
+                                                      </StyledBox>
+                                                    </Component>
+                                                  </Box>
+                                                </StyledDrawerCloseButton>
+                                              </Component>
+                                            </DrawerCloseButton>
+                                            <DrawerHeader
                                               className=""
-                                              palette={
-                                                Object {
-                                                  "backgroundColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "borderColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "fontColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                }
-                                              }
+                                              key="1/.1"
                                               style={Object {}}
                                             >
-                                              <StyledDrawerHeader
-                                                boxAs="header"
+                                              <Component
                                                 className=""
                                                 palette={
                                                   Object {
@@ -1786,9 +1735,9 @@ exports[`Drawer renders correctly 1`] = `
                                                 }
                                                 style={Object {}}
                                               >
-                                                <Box
+                                                <StyledDrawerHeader
                                                   boxAs="header"
-                                                  className="sc-bqGHjH drLbIb"
+                                                  className=""
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -1860,9 +1809,8 @@ exports[`Drawer renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
-                                                  transition="0.2s all"
                                                 >
-                                                  <Component
+                                                  <Box
                                                     boxAs="header"
                                                     className="sc-bqGHjH drLbIb"
                                                     palette={
@@ -1938,8 +1886,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     style={Object {}}
                                                     transition="0.2s all"
                                                   >
-                                                    <StyledBox
-                                                      as="header"
+                                                    <Component
                                                       boxAs="header"
                                                       className="sc-bqGHjH drLbIb"
                                                       palette={
@@ -2015,98 +1962,101 @@ exports[`Drawer renders correctly 1`] = `
                                                       style={Object {}}
                                                       transition="0.2s all"
                                                     >
-                                                      <header
-                                                        className="sc-bdnylx jknATe sc-bqGHjH drLbIb"
+                                                      <StyledBox
+                                                        as="header"
+                                                        boxAs="header"
+                                                        className="sc-bqGHjH drLbIb"
+                                                        palette={
+                                                          Object {
+                                                            "backgroundColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "borderColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "fontColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                          }
+                                                        }
                                                         style={Object {}}
+                                                        transition="0.2s all"
                                                       >
-                                                        Create your account
-                                                      </header>
-                                                    </StyledBox>
-                                                  </Component>
-                                                </Box>
-                                              </StyledDrawerHeader>
-                                            </Component>
-                                          </DrawerHeader>
-                                          <DrawerBody
-                                            className=""
-                                            key="2/.2"
-                                            style={Object {}}
-                                          >
-                                            <Component
+                                                        <header
+                                                          className="sc-bdnylx jrLcJL sc-bqGHjH drLbIb"
+                                                          style={Object {}}
+                                                        >
+                                                          Create your account
+                                                        </header>
+                                                      </StyledBox>
+                                                    </Component>
+                                                  </Box>
+                                                </StyledDrawerHeader>
+                                              </Component>
+                                            </DrawerHeader>
+                                            <DrawerBody
                                               className=""
-                                              palette={
-                                                Object {
-                                                  "backgroundColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "borderColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "fontColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                }
-                                              }
+                                              key="2/.2"
                                               style={Object {}}
                                             >
-                                              <StyledDrawerBody
+                                              <Component
                                                 className=""
                                                 palette={
                                                   Object {
@@ -2180,8 +2130,8 @@ exports[`Drawer renders correctly 1`] = `
                                                 }
                                                 style={Object {}}
                                               >
-                                                <Box
-                                                  className="sc-ksluoS jiUKmX"
+                                                <StyledDrawerBody
+                                                  className=""
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -2253,9 +2203,8 @@ exports[`Drawer renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
-                                                  transition="0.2s all"
                                                 >
-                                                  <Component
+                                                  <Box
                                                     className="sc-ksluoS jiUKmX"
                                                     palette={
                                                       Object {
@@ -2330,7 +2279,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     style={Object {}}
                                                     transition="0.2s all"
                                                   >
-                                                    <StyledBox
+                                                    <Component
                                                       className="sc-ksluoS jiUKmX"
                                                       palette={
                                                         Object {
@@ -2405,99 +2354,99 @@ exports[`Drawer renders correctly 1`] = `
                                                       style={Object {}}
                                                       transition="0.2s all"
                                                     >
-                                                      <div
-                                                        className="sc-bdnylx jknATe sc-ksluoS jiUKmX"
+                                                      <StyledBox
+                                                        className="sc-ksluoS jiUKmX"
+                                                        palette={
+                                                          Object {
+                                                            "backgroundColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "borderColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "fontColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                          }
+                                                        }
                                                         style={Object {}}
+                                                        transition="0.2s all"
                                                       >
-                                                        Drawer Content Body
-                                                      </div>
-                                                    </StyledBox>
-                                                  </Component>
-                                                </Box>
-                                              </StyledDrawerBody>
-                                            </Component>
-                                          </DrawerBody>
-                                          <DrawerFooter
-                                            className=""
-                                            key="3/.3"
-                                            style={Object {}}
-                                          >
-                                            <Component
+                                                        <div
+                                                          className="sc-bdnylx jrLcJL sc-ksluoS jiUKmX"
+                                                          style={Object {}}
+                                                        >
+                                                          Drawer Content Body
+                                                        </div>
+                                                      </StyledBox>
+                                                    </Component>
+                                                  </Box>
+                                                </StyledDrawerBody>
+                                              </Component>
+                                            </DrawerBody>
+                                            <DrawerFooter
                                               className=""
-                                              palette={
-                                                Object {
-                                                  "backgroundColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "borderColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                  "fontColors": Object {
-                                                    "background": "#FAFAFA",
-                                                    "black": "#000000",
-                                                    "darkgray1": "#777777",
-                                                    "darkgray2": "#454545",
-                                                    "gray1": "#E0E0E0",
-                                                    "gray2": "#E7E7E7",
-                                                    "medgray1": "#757575",
-                                                    "medgray2": "#888888",
-                                                    "primary1": "#4169E1",
-                                                    "primary2": "#212121",
-                                                    "primary3": "#00796B",
-                                                    "primary4": "#D32F2F",
-                                                    "secondary1": "#2E7D32",
-                                                    "secondary2": "#757575",
-                                                    "secondary3": "#673AB7",
-                                                    "secondary4": "#9C27B0",
-                                                    "secondary5": "#00796B",
-                                                    "secondary6": "#ECF0FC",
-                                                    "text": "#212121",
-                                                    "white": "#FFFFFF",
-                                                  },
-                                                }
-                                              }
+                                              key="3/.3"
                                               style={Object {}}
                                             >
-                                              <StyledDrawerFooter
-                                                boxAs="footer"
+                                              <Component
                                                 className=""
                                                 palette={
                                                   Object {
@@ -2571,9 +2520,9 @@ exports[`Drawer renders correctly 1`] = `
                                                 }
                                                 style={Object {}}
                                               >
-                                                <Box
+                                                <StyledDrawerFooter
                                                   boxAs="footer"
-                                                  className="sc-hBMVcZ fJYgtM"
+                                                  className=""
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -2645,9 +2594,8 @@ exports[`Drawer renders correctly 1`] = `
                                                     }
                                                   }
                                                   style={Object {}}
-                                                  transition="0.2s all"
                                                 >
-                                                  <Component
+                                                  <Box
                                                     boxAs="footer"
                                                     className="sc-hBMVcZ fJYgtM"
                                                     palette={
@@ -2723,8 +2671,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     style={Object {}}
                                                     transition="0.2s all"
                                                   >
-                                                    <StyledBox
-                                                      as="footer"
+                                                    <Component
                                                       boxAs="footer"
                                                       className="sc-hBMVcZ fJYgtM"
                                                       palette={
@@ -2800,30 +2747,108 @@ exports[`Drawer renders correctly 1`] = `
                                                       style={Object {}}
                                                       transition="0.2s all"
                                                     >
-                                                      <footer
-                                                        className="sc-bdnylx jknATe sc-hBMVcZ fJYgtM"
+                                                      <StyledBox
+                                                        as="footer"
+                                                        boxAs="footer"
+                                                        className="sc-hBMVcZ fJYgtM"
+                                                        palette={
+                                                          Object {
+                                                            "backgroundColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "borderColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                            "fontColors": Object {
+                                                              "background": "#FAFAFA",
+                                                              "black": "#000000",
+                                                              "darkgray1": "#777777",
+                                                              "darkgray2": "#454545",
+                                                              "gray1": "#E0E0E0",
+                                                              "gray2": "#E7E7E7",
+                                                              "medgray1": "#757575",
+                                                              "medgray2": "#888888",
+                                                              "primary1": "#4169E1",
+                                                              "primary2": "#212121",
+                                                              "primary3": "#00796B",
+                                                              "primary4": "#D32F2F",
+                                                              "secondary1": "#2E7D32",
+                                                              "secondary2": "#757575",
+                                                              "secondary3": "#673AB7",
+                                                              "secondary4": "#9C27B0",
+                                                              "secondary5": "#00796B",
+                                                              "secondary6": "#ECF0FC",
+                                                              "text": "#212121",
+                                                              "white": "#FFFFFF",
+                                                            },
+                                                          }
+                                                        }
                                                         style={Object {}}
+                                                        transition="0.2s all"
                                                       >
-                                                        Drawer Footer goes here!
-                                                      </footer>
-                                                    </StyledBox>
-                                                  </Component>
-                                                </Box>
-                                              </StyledDrawerFooter>
-                                            </Component>
-                                          </DrawerFooter>
-                                        </div>
-                                      </StyledBox>
-                                    </Component>
-                                  </Box>
-                                </StyledDrawerContentRightOut>
-                              </Component>
-                            </DrawerContent>
-                          </div>
-                        </StyledBox>
-                      </Component>
-                    </Box>
-                  </StyledDrawerOverlayFadeIn>
+                                                        <footer
+                                                          className="sc-bdnylx jrLcJL sc-hBMVcZ fJYgtM"
+                                                          style={Object {}}
+                                                        >
+                                                          Drawer Footer goes here!
+                                                        </footer>
+                                                      </StyledBox>
+                                                    </Component>
+                                                  </Box>
+                                                </StyledDrawerFooter>
+                                              </Component>
+                                            </DrawerFooter>
+                                          </div>
+                                        </StyledBox>
+                                      </Component>
+                                    </Box>
+                                  </StyledDrawerContentRightOut>
+                                </Component>
+                              </DrawerContent>
+                            </div>
+                          </StyledBox>
+                        </Component>
+                      </Box>
+                    </StyledDrawerOverlayFadeIn>
+                  </Transition>
                 </Component>
               </DrawerOverlay>
             </div>

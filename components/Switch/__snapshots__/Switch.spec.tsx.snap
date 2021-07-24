@@ -180,7 +180,7 @@ exports[`Switch renders correctly 1`] = `
     >
       <Box
         active={true}
-        className="sc-gtssRu lksYxG"
+        className="sc-gtssRu CHeKR"
         onClick={[Function]}
         onClickSwitch={[MockFunction]}
         palette={
@@ -264,7 +264,7 @@ exports[`Switch renders correctly 1`] = `
       >
         <Component
           active={true}
-          className="sc-gtssRu lksYxG"
+          className="sc-gtssRu CHeKR"
           onClick={[Function]}
           onClickSwitch={[MockFunction]}
           palette={
@@ -348,7 +348,7 @@ exports[`Switch renders correctly 1`] = `
         >
           <StyledBox
             active={true}
-            className="sc-gtssRu lksYxG"
+            className="sc-gtssRu CHeKR"
             onClick={[Function]}
             onClickSwitch={[MockFunction]}
             palette={
@@ -431,7 +431,7 @@ exports[`Switch renders correctly 1`] = `
             w={90}
           >
             <div
-              className="sc-bdnylx giPOZr sc-gtssRu lksYxG"
+              className="sc-bdnylx Irqu sc-gtssRu CHeKR"
               onClick={[Function]}
               onClickSwitch={[MockFunction]}
               style={
@@ -600,7 +600,7 @@ exports[`Switch renders correctly 1`] = `
                   >
                     <Box
                       active={true}
-                      className="sc-dlnjPT bkPvLE"
+                      className="sc-dlnjPT euqxyv"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -677,7 +677,7 @@ exports[`Switch renders correctly 1`] = `
                     >
                       <Component
                         active={true}
-                        className="sc-dlnjPT bkPvLE"
+                        className="sc-dlnjPT euqxyv"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -754,7 +754,7 @@ exports[`Switch renders correctly 1`] = `
                       >
                         <StyledBox
                           active={true}
-                          className="sc-dlnjPT bkPvLE"
+                          className="sc-dlnjPT euqxyv"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -830,7 +830,7 @@ exports[`Switch renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx jknATe sc-dlnjPT bkPvLE"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT euqxyv"
                             style={Object {}}
                           />
                         </StyledBox>
@@ -1001,7 +1001,7 @@ exports[`Switch renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <div
-                        className="sc-bdnylx jknATe sc-hKFyIo sc-eCApGN cPa-DTE bHvCse"
+                        className="sc-bdnylx jrLcJL sc-hKFyIo sc-eCApGN cPa-DTE bHvCse"
                         style={Object {}}
                       >
                         Switch

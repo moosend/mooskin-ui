@@ -80,7 +80,24 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
       }
     }
     style={Object {}}
-  />
+  >
+    <Transition
+      addEndListener={[Function]}
+      appear={false}
+      enter={true}
+      exit={true}
+      in={false}
+      mountOnEnter={false}
+      onEnter={[Function]}
+      onEntered={[Function]}
+      onEntering={[Function]}
+      onExit={[Function]}
+      onExited={[Function]}
+      onExiting={[Function]}
+      timeout={150}
+      unmountOnExit={true}
+    />
+  </Component>
 </ActionsDropdown>
 `;
 
@@ -493,7 +510,7 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jknATe sc-eCApGN kpqzvj myClass"
+              className="sc-bdnylx jrLcJL sc-eCApGN kpqzvj myClass"
               onClick={[MockFunction]}
               style={
                 Object {

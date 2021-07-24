@@ -17,6 +17,9 @@ import {
 	StyledExpandableItemText,
 } from './styles';
 
+// Transitions
+import { Transition } from 'react-transition-group';
+
 /**
  * Expandable
  */
@@ -79,9 +82,6 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 			}
 
 			if (React.isValidElement<IExpandableCommonComponentProps>(child) && child.type === ExpandableItemContent) {
-				if (!active) {
-					return null;
-				}
 				return React.cloneElement(child, {
 					active,
 					children: recurseChildren(child.props.children, activeId, active),
@@ -163,11 +163,23 @@ ExpandableItemButton.defaultProps = {
 
 ExpandableItemButton.displayName = 'ExpandableItemButton';
 
+const transitionOpacity = {
+	entered: 1,
+	entering: 0,
+	exited: 0,
+	exiting: 0,
+	unmounted: 0,
+};
+
 /**
  * ExpandableItemContent
  */
 export const ExpandableItemContent: React.FC<IExpandableCommonComponentProps> = withMooskinContext((props) => {
-	return <StyledExpandableItemContent {...props} />;
+	return (
+		<Transition addEndListener={() => undefined} unmountOnExit mountOnEnter in={props.active} timeout={100}>
+			{(state) => <StyledExpandableItemContent opacity={transitionOpacity[state]} {...props} />}
+		</Transition>
+	);
 });
 
 ExpandableItemContent.defaultProps = {

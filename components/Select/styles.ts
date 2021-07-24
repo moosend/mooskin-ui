@@ -10,14 +10,14 @@ import { Box } from '../Box/Box';
 import variables from '../_utils/globals/variables';
 
 const fadeIn = keyframes`
- 0% {
-	 opacity: 0;
-	 transform: translate(0, -20px);
- }
- 100% {
-	 opacity: 1;
-	 transform: translate(0);
- }
+	0% {
+		opacity: 0;
+		transform: translate(0, -20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
 `;
 
 export const StyledSelect = styled(Box)<ISelectComponentProps>`

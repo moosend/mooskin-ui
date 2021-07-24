@@ -19,7 +19,7 @@ const spin = keyframes`
 
 export const StyledLoader = styled(Box)<ILoaderComponentProps>`
 	border: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid
-		${(props) => props.palette?.borderColors.medgray1 || variables.borderColors.medgray1};
+		${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
 	border-top: ${(props) => getNumberOrStringValue(props.spinnerWidth)} solid
 		${(props) => props.palette?.borderColors.primary1 || variables.borderColors.primary1};
 	border-radius: 50%;

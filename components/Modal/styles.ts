@@ -19,14 +19,25 @@ const overlayFadeIn = keyframes`
 `;
 
 const contentFadeIn = keyframes`
-    0% {
-        opacity: 0;
-        transform: scale(0.2)
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1)
-    }
+	0% {
+		opacity: 0;
+		transform: translate(0, -60px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+`;
+
+const contentFadeOut = keyframes`
+	0% {
+		opacity: 1;
+		transform: translate(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(0, 60px);
+	}
 `;
 
 export const StyledModal = styled(Box)<IModalComponentProps>``;
@@ -58,7 +69,7 @@ export const StyledModalContentFadeIn = styled(StyledModalContent)`
 StyledModalContentFadeIn.displayName = 'StyledModalContentFadeIn';
 
 export const StyledModalContentFadeOut = styled(StyledModalContent)`
-	animation: ${contentFadeIn} 0.15s reverse;
+	animation: ${contentFadeOut} 0.15s;
 `;
 
 StyledModalContentFadeOut.displayName = 'StyledModalContentFadeOut';
@@ -120,6 +131,7 @@ export const StyledModalOverlay = styled(Box)<IBoxComponentProps>`
 	z-index: 1400;
 	justify-content: center;
 	align-items: center;
+	background-color: rgba(0, 0, 0, 0.48);
 `;
 
 StyledModalOverlay.displayName = 'StyledModalOverlay';

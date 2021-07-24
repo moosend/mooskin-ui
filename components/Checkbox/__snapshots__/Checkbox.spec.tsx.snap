@@ -392,7 +392,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
           >
             <div
               checked={true}
-              className="sc-bdnylx jknATe sc-hKFyIo dxNlPq"
+              className="sc-bdnylx jrLcJL sc-hKFyIo dxNlPq"
               onClickCheckbox={[MockFunction]}
               style={Object {}}
             >
@@ -787,7 +787,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx cEaWrq sc-eCApGN imjzyD"
+                            className="sc-bdnylx hgoyVH sc-eCApGN imjzyD"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -1414,7 +1414,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                 transition="0.2s all"
                               >
                                 <label
-                                  className="sc-bdnylx jknATe sc-dlnjPT bZBLRB sc-jSFkmK dkQkQF"
+                                  className="sc-bdnylx jrLcJL sc-dlnjPT bZBLRB sc-jSFkmK dkQkQF"
                                   onClick={[Function]}
                                   style={Object {}}
                                 >

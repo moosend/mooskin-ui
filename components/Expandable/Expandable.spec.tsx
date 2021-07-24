@@ -80,8 +80,8 @@ describe('Expandable', () => {
 			</Expandable>
 		);
 
-		expect(tree.find(ExpandableItemContent).length).toEqual(1);
-		expect(tree.find(ExpandableItemContent).text()).toEqual('Content for item with index 2');
+		expect(tree.find(ExpandableItemContent).length).toEqual(2);
+		expect(tree.find(ExpandableItemContent).last().text()).toEqual('Content for item with index 2');
 	});
 
 	test('calls on click item function when clicking on the item container', () => {

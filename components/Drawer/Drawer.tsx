@@ -26,6 +26,16 @@ import {
 	StyledDrawerOverlayFadeOut,
 } from './styles';
 
+// Transitions
+import { Transition } from 'react-transition-group';
+const DrawerOverlayComponents = {
+	entered: StyledDrawerOverlayFadeIn,
+	entering: StyledDrawerOverlayFadeIn,
+	exited: null,
+	exiting: StyledDrawerOverlayFadeOut,
+	unmounted: null,
+};
+
 const ContentByPosition = {
 	bottom: {
 		in: StyledDrawerContentBottomIn,
@@ -191,26 +201,17 @@ DrawerCloseButton.displayName = 'DrawerCloseButton';
  * DrawerOverlay
  */
 export const DrawerOverlay: React.FC<IDrawerOverlayComponentProps> = withMooskinContext((props) => {
-	const [show, setShow] = React.useState(props.isOpen);
-
-	React.useEffect(() => {
-		if (props.isOpen) {
-			props.onOpen && props.onOpen();
-			setShow(true);
-		} else {
-			setTimeout(() => {
-				setShow(false);
-			}, 200);
-		}
-	}, [props.isOpen]);
-
-	const DrawerOverlayComponent = props.isOpen ? StyledDrawerOverlayFadeIn : StyledDrawerOverlayFadeOut;
-
-	if (show) {
-		return <DrawerOverlayComponent {...props} />;
-	}
-
-	return null;
+	return (
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={150}>
+			{(state) => {
+				const DrawerOverlayComponent = DrawerOverlayComponents[state];
+				if (DrawerOverlayComponent) {
+					return <DrawerOverlayComponent boxShadow="base" round="xs" {...props} />;
+				}
+				return null;
+			}}
+		</Transition>
+	);
 });
 
 DrawerOverlay.defaultProps = {

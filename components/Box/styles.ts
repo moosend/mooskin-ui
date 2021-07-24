@@ -250,6 +250,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		${(props) => generateStyles({ property: 'opacity', value: props.opacity })}
 		${(props) => generateStyles({ property: 'cursor', value: props.cursor })}
 		${(props) => generateStyles({ property: 'transition', value: props.transition })}
+		${(props) => generateStyles({ property: 'transform', value: props.transform })}
 		${(props) => generateStyles({ property: 'text-overflow', value: props.textOverflow })}
 		${(props) => generateStyles({ property: 'grid-template-columns', value: props.gridTemplateColumns })}
 		${(props) => generateStyles({ property: 'word-break', value: props.wordBreak })}

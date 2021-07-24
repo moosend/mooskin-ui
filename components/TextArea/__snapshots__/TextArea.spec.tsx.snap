@@ -396,7 +396,7 @@ exports[`TextArea renders correctly 1`] = `
             value="asd"
           >
             <textarea
-              className="sc-bdnylx jknATe sc-gtssRu bzuVNB"
+              className="sc-bdnylx jrLcJL sc-gtssRu bzuVNB"
               onChange={[Function]}
               style={Object {}}
               value="asd"

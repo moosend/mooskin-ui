@@ -12,26 +12,21 @@ import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } fr
 // Styled Components
 import { StyledActionsDropdownArrow, StyledActionsDropdownFadeIn, StyledActionsDropdownFadeOut, StyledActionsDropdownItem } from './styles';
 
+// Transitions
+import { Transition } from 'react-transition-group';
+const DropdownComponents = {
+	entered: StyledActionsDropdownFadeIn,
+	entering: StyledActionsDropdownFadeIn,
+	exited: null,
+	exiting: StyledActionsDropdownFadeOut,
+	unmounted: null,
+};
+
 /**
  * ActionsDropdown
  */
 export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMooskinContext((props) => {
 	const [hasArrow, setHasArrow] = React.useState(false);
-	const [show, setShow] = React.useState(props.isOpen);
-
-	React.useEffect(() => {
-		if (props.isOpen) {
-			setShow(true);
-		} else {
-			setTimeout(() => {
-				setShow(false);
-			}, 140);
-		}
-	}, [props.isOpen]);
-
-	if (!show) {
-		return null;
-	}
 
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
@@ -72,14 +67,22 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 		});
 	};
 
-	const ActionDropdownComponent = props.isOpen ? StyledActionsDropdownFadeIn : StyledActionsDropdownFadeOut;
-
 	return (
-		<ActionDropdownComponent boxShadow="lg" {...props}>
-			<Box position="absolute" h={30} top={-30} left={0} right={0} />
-			{!hasArrow && <ActionsDropdownArrow />}
-			{recurseChildren(props.children)}
-		</ActionDropdownComponent>
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={150}>
+			{(state) => {
+				const ActionDropdownComponent = DropdownComponents[state];
+				if (ActionDropdownComponent) {
+					return (
+						<ActionDropdownComponent boxShadow="lg" {...props}>
+							<Box position="absolute" h={30} top={-30} left={0} right={0} />
+							{!hasArrow && <ActionsDropdownArrow />}
+							{recurseChildren(props.children)}
+						</ActionDropdownComponent>
+					);
+				}
+				return null;
+			}}
+		</Transition>
 	);
 });
 

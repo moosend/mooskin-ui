@@ -438,7 +438,7 @@ exports[`Anchor renders correctly 1`] = `
             transition="0.2s all"
           >
             <a
-              className="sc-bdnylx jknATe sc-gtssRu AVBRk myClass"
+              className="sc-bdnylx jrLcJL sc-gtssRu AVBRk myClass"
               disabled={true}
               href="www.moosend.com"
               id="Anchor1"

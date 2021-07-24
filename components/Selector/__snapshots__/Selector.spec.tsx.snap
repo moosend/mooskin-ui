@@ -391,7 +391,7 @@ exports[`Selector renders Selector correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jknATe sc-gtssRu bQFkch"
+              className="sc-bdnylx jrLcJL sc-gtssRu bQFkch"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -559,7 +559,7 @@ exports[`Selector renders Selector correctly 1`] = `
                   >
                     <Box
                       active={true}
-                      className="sc-dlnjPT fMdGfA"
+                      className="sc-dlnjPT iaNYWj"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -637,7 +637,7 @@ exports[`Selector renders Selector correctly 1`] = `
                     >
                       <Component
                         active={true}
-                        className="sc-dlnjPT fMdGfA"
+                        className="sc-dlnjPT iaNYWj"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -715,7 +715,7 @@ exports[`Selector renders Selector correctly 1`] = `
                       >
                         <StyledBox
                           active={true}
-                          className="sc-dlnjPT fMdGfA"
+                          className="sc-dlnjPT iaNYWj"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -792,7 +792,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx jknATe sc-dlnjPT fMdGfA"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT iaNYWj"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -969,7 +969,7 @@ exports[`Selector renders Selector correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT gxQPCM"
+                      className="sc-dlnjPT fOgFjn"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -1047,7 +1047,7 @@ exports[`Selector renders Selector correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT gxQPCM"
+                        className="sc-dlnjPT fOgFjn"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -1125,7 +1125,7 @@ exports[`Selector renders Selector correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT gxQPCM"
+                          className="sc-dlnjPT fOgFjn"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -1202,7 +1202,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx jknATe sc-dlnjPT gxQPCM"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT fOgFjn"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -1379,7 +1379,7 @@ exports[`Selector renders Selector correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT gxQPCM"
+                      className="sc-dlnjPT fOgFjn"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -1457,7 +1457,7 @@ exports[`Selector renders Selector correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT gxQPCM"
+                        className="sc-dlnjPT fOgFjn"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -1535,7 +1535,7 @@ exports[`Selector renders Selector correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT gxQPCM"
+                          className="sc-dlnjPT fOgFjn"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -1612,7 +1612,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx jknATe sc-dlnjPT gxQPCM"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT fOgFjn"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -1807,7 +1807,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
     >
       <Box
         active={true}
-        className="sc-dlnjPT fMdGfA myClass"
+        className="sc-dlnjPT iaNYWj myClass"
         onClick={[MockFunction]}
         palette={
           Object {
@@ -1888,7 +1888,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
       >
         <Component
           active={true}
-          className="sc-dlnjPT fMdGfA myClass"
+          className="sc-dlnjPT iaNYWj myClass"
           onClick={[MockFunction]}
           palette={
             Object {
@@ -1969,7 +1969,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
         >
           <StyledBox
             active={true}
-            className="sc-dlnjPT fMdGfA myClass"
+            className="sc-dlnjPT iaNYWj myClass"
             onClick={[MockFunction]}
             palette={
               Object {
@@ -2049,7 +2049,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jknATe sc-dlnjPT fMdGfA myClass"
+              className="sc-bdnylx jrLcJL sc-dlnjPT iaNYWj myClass"
               onClick={[MockFunction]}
               style={
                 Object {

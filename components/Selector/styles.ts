@@ -37,7 +37,7 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
 	font-stretch: normal;
 	font-style: normal;
 	letter-spacing: normal;
-	transition: 0.3s ease all;
+	transition: 0.15s ease all;
 	opacity: ${(props) => (props.active ? 1 : 0.5)};
 	cursor: pointer;
 	&:not(:last-child) {

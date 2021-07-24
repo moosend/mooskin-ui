@@ -385,7 +385,7 @@ exports[`Expandable renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jknATe sc-gtssRu dJxHxj"
+              className="sc-bdnylx jrLcJL sc-gtssRu dJxHxj"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -780,7 +780,7 @@ exports[`Expandable renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx jknATe sc-dlnjPT jLTatE"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -1168,7 +1168,7 @@ exports[`Expandable renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx jknATe sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx jrLcJL sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -1551,7 +1551,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx jknATe sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx jrLcJL sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 1
@@ -1947,7 +1947,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx jknATe sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx jrLcJL sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -1965,6 +1965,107 @@ exports[`Expandable renders correctly 1`] = `
                                 </StyledExpandableItemContainer>
                               </Component>
                             </ExpandableItemContainer>
+                            <ExpandableItemContent
+                              active={false}
+                              className=""
+                              key="1/.1"
+                              p={15}
+                              style={Object {}}
+                            >
+                              <Component
+                                active={false}
+                                className=""
+                                p={15}
+                                palette={
+                                  Object {
+                                    "backgroundColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "borderColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "fontColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                  }
+                                }
+                                style={Object {}}
+                              >
+                                <Transition
+                                  addEndListener={[Function]}
+                                  appear={false}
+                                  enter={true}
+                                  exit={true}
+                                  in={false}
+                                  mountOnEnter={true}
+                                  onEnter={[Function]}
+                                  onEntered={[Function]}
+                                  onEntering={[Function]}
+                                  onExit={[Function]}
+                                  onExited={[Function]}
+                                  onExiting={[Function]}
+                                  timeout={100}
+                                  unmountOnExit={true}
+                                />
+                              </Component>
+                            </ExpandableItemContent>
                           </div>
                         </StyledBox>
                       </Component>
@@ -2363,7 +2464,7 @@ exports[`Expandable renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx jknATe sc-dlnjPT jLTatE"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -2751,7 +2852,7 @@ exports[`Expandable renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx jknATe sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx jrLcJL sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -3134,7 +3235,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx jknATe sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx jrLcJL sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 2
@@ -3530,7 +3631,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx jknATe sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx jrLcJL sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -3548,6 +3649,107 @@ exports[`Expandable renders correctly 1`] = `
                                 </StyledExpandableItemContainer>
                               </Component>
                             </ExpandableItemContainer>
+                            <ExpandableItemContent
+                              active={false}
+                              className=""
+                              key="1/.1"
+                              p={15}
+                              style={Object {}}
+                            >
+                              <Component
+                                active={false}
+                                className=""
+                                p={15}
+                                palette={
+                                  Object {
+                                    "backgroundColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "borderColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "fontColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                  }
+                                }
+                                style={Object {}}
+                              >
+                                <Transition
+                                  addEndListener={[Function]}
+                                  appear={false}
+                                  enter={true}
+                                  exit={true}
+                                  in={false}
+                                  mountOnEnter={true}
+                                  onEnter={[Function]}
+                                  onEntered={[Function]}
+                                  onEntering={[Function]}
+                                  onExit={[Function]}
+                                  onExited={[Function]}
+                                  onExiting={[Function]}
+                                  timeout={100}
+                                  unmountOnExit={true}
+                                />
+                              </Component>
+                            </ExpandableItemContent>
                           </div>
                         </StyledBox>
                       </Component>
@@ -3946,7 +4148,7 @@ exports[`Expandable renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx jknATe sc-dlnjPT jLTatE"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -4334,7 +4536,7 @@ exports[`Expandable renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx jknATe sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx jrLcJL sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -4717,7 +4919,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx jknATe sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx jrLcJL sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 3
@@ -5113,7 +5315,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx jknATe sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx jrLcJL sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -5131,6 +5333,107 @@ exports[`Expandable renders correctly 1`] = `
                                 </StyledExpandableItemContainer>
                               </Component>
                             </ExpandableItemContainer>
+                            <ExpandableItemContent
+                              active={false}
+                              className=""
+                              key="1/.1"
+                              p={15}
+                              style={Object {}}
+                            >
+                              <Component
+                                active={false}
+                                className=""
+                                p={15}
+                                palette={
+                                  Object {
+                                    "backgroundColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "borderColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "fontColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                  }
+                                }
+                                style={Object {}}
+                              >
+                                <Transition
+                                  addEndListener={[Function]}
+                                  appear={false}
+                                  enter={true}
+                                  exit={true}
+                                  in={false}
+                                  mountOnEnter={true}
+                                  onEnter={[Function]}
+                                  onEntered={[Function]}
+                                  onEntering={[Function]}
+                                  onExit={[Function]}
+                                  onExited={[Function]}
+                                  onExiting={[Function]}
+                                  timeout={100}
+                                  unmountOnExit={true}
+                                />
+                              </Component>
+                            </ExpandableItemContent>
                           </div>
                         </StyledBox>
                       </Component>
@@ -5529,7 +5832,7 @@ exports[`Expandable renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx jknATe sc-dlnjPT jLTatE"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT jLTatE"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -5917,7 +6220,7 @@ exports[`Expandable renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx jknATe sc-hKFyIo lmvPMg"
+                                          className="sc-bdnylx jrLcJL sc-hKFyIo lmvPMg"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -6300,7 +6603,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx jknATe sc-jSFkmK gwZdKD"
+                                                        className="sc-bdnylx jrLcJL sc-jSFkmK gwZdKD"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 4
@@ -6696,7 +6999,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx jknATe sc-eCApGN kSDGCm"
+                                                        className="sc-bdnylx jrLcJL sc-eCApGN kSDGCm"
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -6714,6 +7017,107 @@ exports[`Expandable renders correctly 1`] = `
                                 </StyledExpandableItemContainer>
                               </Component>
                             </ExpandableItemContainer>
+                            <ExpandableItemContent
+                              active={false}
+                              className=""
+                              key="1/.1"
+                              p={15}
+                              style={Object {}}
+                            >
+                              <Component
+                                active={false}
+                                className=""
+                                p={15}
+                                palette={
+                                  Object {
+                                    "backgroundColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "borderColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "fontColors": Object {
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                  }
+                                }
+                                style={Object {}}
+                              >
+                                <Transition
+                                  addEndListener={[Function]}
+                                  appear={false}
+                                  enter={true}
+                                  exit={true}
+                                  in={false}
+                                  mountOnEnter={true}
+                                  onEnter={[Function]}
+                                  onEntered={[Function]}
+                                  onEntering={[Function]}
+                                  onExit={[Function]}
+                                  onExited={[Function]}
+                                  onExiting={[Function]}
+                                  timeout={100}
+                                  unmountOnExit={true}
+                                />
+                              </Component>
+                            </ExpandableItemContent>
                           </div>
                         </StyledBox>
                       </Component>

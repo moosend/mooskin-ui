@@ -25,6 +25,16 @@ import {
 	StyledSelectPlaceholder,
 } from './styles';
 
+// Transitions
+import { Transition } from 'react-transition-group';
+const OptionListComponents = {
+	entered: StyledSelectOptionListFadeIn,
+	entering: StyledSelectOptionListFadeIn,
+	exited: null,
+	exiting: StyledSelectOptionListFadeOut,
+	unmounted: null,
+};
+
 /**
  * Select
  */
@@ -271,25 +281,17 @@ SelectPlaceholder.displayName = 'SelectPlaceholder';
  * SelectOptionList
  */
 export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinContext((props) => {
-	const [showList, setShowList] = React.useState(props.showList);
-
-	React.useEffect(() => {
-		if (props.showList) {
-			setShowList(true);
-		} else {
-			setTimeout(() => {
-				setShowList(false);
-			}, 140);
-		}
-	}, [props.showList]);
-
-	if (!showList) {
-		return null;
-	}
-
-	const SelectOptionListComponent = props.showList ? StyledSelectOptionListFadeIn : StyledSelectOptionListFadeOut;
-
-	return <SelectOptionListComponent boxShadow="base" round="xs" {...props} />;
+	return (
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.showList} timeout={150}>
+			{(state) => {
+				const OptionListComponent = OptionListComponents[state];
+				if (OptionListComponent) {
+					return <OptionListComponent boxShadow="base" round="xs" {...props} />;
+				}
+				return null;
+			}}
+		</Transition>
+	);
 });
 
 SelectOptionList.defaultProps = {
