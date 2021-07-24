@@ -97,7 +97,6 @@ Modal.displayName = 'Modal';
  * ModalContent
  */
 export const ModalContent: React.FC<IModalContentComponentProps> = withMooskinContext((props) => {
-	console.log('called');
 	const ModalContentComponent = props.isOpen ? StyledModalContentFadeIn : StyledModalContentFadeOut;
 	return <ModalContentComponent {...props} />;
 });
