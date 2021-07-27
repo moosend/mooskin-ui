@@ -43,10 +43,9 @@ Normal.args = {
 
 export const BottomArrow = Template.bind({});
 BottomArrow.args = {
-	bgColor: '#232c3d',
 	children: (
 		<>
-			<ActionsDropdownArrow bgColor="#232c3d" right="unset" left={22} bottom={-6} top="unset" />
+			<ActionsDropdownArrow right="unset" left={22} bottom={-6} top="unset" />
 			<ActionsDropdownItem dataLabel="settings" value="settings">
 				Settings
 			</ActionsDropdownItem>
