@@ -9,10 +9,11 @@ import { Box } from '../Box/Box';
 import variables from '../_utils/globals/variables';
 
 export const StyledSelector = styled(Box)<ISelectorComponentProps>`
-	padding: 6px;
+	padding: 4px;
 	border-radius: 22px;
-	background-color: ${(props) => props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	display: flex;
+	border: 1px solid #eee;
 `;
 
 StyledSelector.displayName = 'StyledSelector';
@@ -26,12 +27,12 @@ export const StyledSelectorItem = styled(Box)<ISelectorItemComponentProps>`
 	border-radius: 22px;
 	color: ${(props) =>
 		props.active
-			? `${props.palette?.fontColors.text || variables.fontColors.text}`
+			? `${props.palette?.fontColors.primary1 || variables.fontColors.primary1}`
 			: `${props.palette?.fontColors.medgray1 || variables.fontColors.medgray1}`};
 	background-color: ${(props) =>
 		props.active
-			? `${props.palette?.backgroundColors.white || variables.backgroundColors.white}`
-			: `${props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2}`};
+			? `${props.palette?.backgroundColors.secondary6 || variables.backgroundColors.secondary6}`
+			: `${props.palette?.backgroundColors.white || variables.backgroundColors.white}`};
 	font-size: 12px;
 	font-weight: 500;
 	font-stretch: normal;
