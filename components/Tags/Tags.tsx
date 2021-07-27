@@ -27,6 +27,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 	};
 
 	const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
+		e.stopPropagation();
 		props.onRemoveTag && props.onRemoveTag(e, { dataLabel: props.dataLabel, value: i });
 	};
 
