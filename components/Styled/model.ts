@@ -17,6 +17,7 @@ export interface IThemeFontColors {
 	medgray2: string;
 	darkgray1: string;
 	darkgray2: string;
+	darkgray3: string;
 	text: string;
 	black: string;
 }
@@ -40,6 +41,7 @@ export interface IThemeBackgroundColors {
 	medgray2: string;
 	darkgray1: string;
 	darkgray2: string;
+	darkgray3: string;
 	text: string;
 	black: string;
 }
@@ -63,6 +65,7 @@ export interface IThemeBorderColors {
 	medgray2: string;
 	darkgray1: string;
 	darkgray2: string;
+	darkgray3: string;
 	text: string;
 	black: string;
 }

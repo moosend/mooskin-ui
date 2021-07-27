@@ -23,7 +23,7 @@ export const StyledSwitch = styled(Box)<ISwitchComponentProps>`
 	color: ${(props) =>
 		!props.disabled
 			? props.palette?.fontColors.white || variables.fontColors.white
-			: props.palette?.fontColors.medgray1 || variables.fontColors.medgray1};
+			: props.palette?.fontColors.darkgray3 || variables.fontColors.darkgray3};
 	background-color: ${(props) => {
 		return !props.disabled
 			? props.active

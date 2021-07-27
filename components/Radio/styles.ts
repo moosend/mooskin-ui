@@ -25,7 +25,7 @@ export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
 	padding-right: 10px;
 	font-size: 23px;
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-	color: ${(props) => props.palette?.fontColors.primary2 || variables.fontColors.primary2};
+	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
 `;
 
 StyledRadioIcon.displayName = 'StyledRadioIcon';
