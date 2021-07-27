@@ -23,7 +23,7 @@ const fadeIn = keyframes`
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
 	border-radius: 2px;
-	background-color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -53,7 +53,7 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
 	letter-spacing: normal;
 	text-align: left;
 	white-space: nowrap;
-	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	cursor: pointer;
 	&:not(:last-child) {
 		padding: 10px 10px 0;
@@ -65,6 +65,7 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
 
 StyledActionsDropdownItem.displayName = 'StyledActionsDropdownItem';
 
+// :after is a workaround to remove box-shadow from the bottom of the rotated arrow box
 export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 	position: absolute;
 	top: -6px;
@@ -73,7 +74,18 @@ export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 	height: 12px;
 	transform: rotate(45deg);
 	z-index: -1;
-	background-color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0px;
+		right: -8px;
+		width: 17px;
+		height: 24px;
+		transform: rotate(45deg);
+		z-index: -1;
+		background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
+	}
 `;
 
 StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';

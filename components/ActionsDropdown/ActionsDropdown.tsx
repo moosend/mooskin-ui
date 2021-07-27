@@ -73,9 +73,9 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 				const ActionDropdownComponent = DropdownComponents[state];
 				if (ActionDropdownComponent) {
 					return (
-						<ActionDropdownComponent boxShadow="lg" {...props}>
+						<ActionDropdownComponent boxShadow="base" {...props}>
 							<Box position="absolute" h={30} top={-30} left={0} right={0} />
-							{!hasArrow && <ActionsDropdownArrow />}
+							{!hasArrow && <ActionsDropdownArrow boxShadow="base" />}
 							{recurseChildren(props.children)}
 						</ActionDropdownComponent>
 					);
