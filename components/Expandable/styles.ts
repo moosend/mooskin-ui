@@ -39,6 +39,7 @@ export const StyledExpandableItemButton = styled(Box)<IExpandableCommonComponent
 	font-family: 'Mooskin Icons';
 	font-size: 20px;
 	transition: all ease 0.4s;
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	transform: ${(props) => (props.active ? 'rotate(180deg)' : 'rotate(0deg)')};
 `;
 
