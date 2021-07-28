@@ -53,7 +53,7 @@ export const StyledButtonInverse = styled(ButtonDefault)`
 	color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
 	padding: ${(props) => inverseButtonSizes[props.buttonSize || 'md']};
 	background-color: transparent;
-	border: 2px solid ${(props) => props.palette?.borderColors.primary1 || variables.borderColors.primary1};
+	border: 2px solid ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
 `;
 
 StyledButtonInverse.displayName = 'StyledButtonInverse';
