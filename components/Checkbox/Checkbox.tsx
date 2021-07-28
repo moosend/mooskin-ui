@@ -48,6 +48,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = withMooskinContext((p
 				return React.cloneElement(child, {
 					children: props.checked ? 'check_box' : 'check_box_outline_blank',
 					disabled: props.disabled,
+					checked: props.checked,
 					key: i,
 					onClick: (e) => batchClickHandler(e, child.props.onClick),
 				} as ICheckboxIconComponentProps);
@@ -64,7 +65,12 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = withMooskinContext((p
 	return (
 		<StyledCheckbox {...props}>
 			{!hasCheckbox && (
-				<CheckboxIcon disabled={props.disabled} onClick={onClick} children={props.checked ? 'check_box' : 'check_box_outline_blank'} />
+				<CheckboxIcon
+					disabled={props.disabled}
+					checked={props.checked}
+					onClick={onClick}
+					children={props.checked ? 'check_box' : 'check_box_outline_blank'}
+				/>
 			)}
 			{recurseChildren(props.children)}
 		</StyledCheckbox>

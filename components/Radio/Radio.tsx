@@ -48,6 +48,7 @@ export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) 
 				return React.cloneElement(child, {
 					children: props.selected ? 'radio_button_checked' : 'radio_button_unchecked',
 					disabled: props.disabled,
+					selected: props.selected,
 					key: i,
 					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick),
 				} as IRadioIconComponentProps);
@@ -67,6 +68,7 @@ export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) 
 			{!hasRadio && (
 				<RadioIcon
 					disabled={props.disabled}
+					selected={props.selected}
 					onClick={onClick}
 					children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
 				/>

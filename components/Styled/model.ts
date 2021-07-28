@@ -20,6 +20,7 @@ export interface IThemeFontColors {
 	darkgray3: string;
 	text: string;
 	black: string;
+	checkboxUnselected: string;
 }
 
 export interface IThemeBackgroundColors {
@@ -44,6 +45,7 @@ export interface IThemeBackgroundColors {
 	darkgray3: string;
 	text: string;
 	black: string;
+	checkboxUnselected: string;
 }
 
 export interface IThemeBorderColors {
@@ -68,6 +70,7 @@ export interface IThemeBorderColors {
 	darkgray3: string;
 	text: string;
 	black: string;
+	checkboxUnselected: string;
 }
 
 export interface IStyledTheme {

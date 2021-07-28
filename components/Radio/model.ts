@@ -20,4 +20,5 @@ export interface IRadioComponentProps extends IBoxComponentProps {
 export interface IRadioIconComponentProps extends IBoxComponentProps {
 	/** provide to make the radio disabled */
 	disabled?: boolean;
+	selected?: boolean;
 }

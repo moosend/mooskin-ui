@@ -23,6 +23,7 @@ const theme: IStyledTheme = {
 		darkgray3: '#424242',
 		text: '#212121',
 		black: '#000000',
+		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
 	},
 	borderColors: {
 		primary1: '#4169E1',
@@ -46,6 +47,7 @@ const theme: IStyledTheme = {
 		darkgray3: '#424242',
 		text: '#212121',
 		black: '#000000',
+		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
 	},
 	fontColors: {
 		primary1: '#4169E1',
@@ -69,6 +71,7 @@ const theme: IStyledTheme = {
 		darkgray3: '#424242',
 		text: '#212121',
 		black: '#000000',
+		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
 	},
 };
 

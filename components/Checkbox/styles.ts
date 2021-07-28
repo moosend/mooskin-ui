@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 // Models
 import { ILabelComponentProps } from '../Label/model';
-import { ICheckboxComponentProps } from './model';
+import { ICheckboxIconComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -19,13 +19,16 @@ export const StyledCheckbox = styled(Box)`
 
 StyledCheckbox.displayName = 'StyledCheckbox';
 
-export const StyledCheckboxIcon = styled(Box)<Partial<ICheckboxComponentProps>>`
+export const StyledCheckboxIcon = styled(Box)<ICheckboxIconComponentProps>`
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 	font-family: 'Mooskin Icons';
 	padding-right: 10px;
 	font-size: 23px;
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
+	color: ${(props) =>
+		props.checked
+			? props.palette?.fontColors.primary1 || variables.fontColors.primary1
+			: props.palette?.fontColors.checkboxUnselected || variables.fontColors.checkboxUnselected};
 `;
 
 StyledCheckboxIcon.displayName = 'StyledCheckboxIcon';

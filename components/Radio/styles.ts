@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 // Models
 import { ILabelComponentProps } from '../Label/model';
-import { IRadioComponentProps } from './model';
+import { IRadioIconComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -19,13 +19,16 @@ export const StyledRadio = styled(Box)`
 
 StyledRadio.displayName = 'StyledRadio';
 
-export const StyledRadioIcon = styled(Box)<Partial<IRadioComponentProps>>`
+export const StyledRadioIcon = styled(Box)<IRadioIconComponentProps>`
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 	font-family: 'Mooskin Icons';
 	padding-right: 10px;
 	font-size: 23px;
 	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
+	color: ${(props) =>
+		props.selected
+			? props.palette?.fontColors.primary1 || variables.fontColors.primary1
+			: props.palette?.fontColors.checkboxUnselected || variables.fontColors.checkboxUnselected};
 `;
 
 StyledRadioIcon.displayName = 'StyledRadioIcon';

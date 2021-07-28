@@ -18,4 +18,5 @@ export interface ICheckboxComponentProps extends IBoxComponentProps {
 export interface ICheckboxIconComponentProps extends IBoxComponentProps {
 	/** provide to make the Checkbox disabled */
 	disabled?: boolean;
+	checked?: boolean;
 }
