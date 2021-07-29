@@ -155,7 +155,9 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 				</IconButton>
 			)}
 			{!props.hideShowAll && childrenLength && childrenLength > 5 && (
-				<StyledPaginationShowAll onClick={() => setShowAll(!showAll)}>{showAll ? 'Hide' : 'Show all'}</StyledPaginationShowAll>
+				<StyledPaginationShowAll palette={props.palette} onClick={() => setShowAll(!showAll)}>
+					{showAll ? 'Hide' : 'Show all'}
+				</StyledPaginationShowAll>
 			)}
 		</StyledPagination>
 	);
