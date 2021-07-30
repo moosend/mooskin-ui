@@ -16,8 +16,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
         "backgroundColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -38,8 +40,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
         "borderColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -60,8 +64,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
         "fontColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -92,8 +98,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
           "backgroundColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -114,8 +122,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
           "borderColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -136,8 +146,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
           "fontColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -168,8 +180,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
             "backgroundColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -190,8 +204,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
             "borderColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -212,8 +228,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
             "fontColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -245,8 +263,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
               "backgroundColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -267,8 +287,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
               "borderColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -289,8 +311,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
               "fontColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -322,8 +346,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                 "backgroundColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -344,8 +370,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                 "borderColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -366,8 +394,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                 "fontColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -397,6 +427,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
               style={Object {}}
             >
               <CheckboxIcon
+                checked={true}
                 className=""
                 fontColor="red"
                 key="0/.0"
@@ -404,6 +435,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                 style={Object {}}
               >
                 <Component
+                  checked={true}
                   className=""
                   fontColor="red"
                   onClick={[Function]}
@@ -412,8 +444,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -434,8 +468,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -456,8 +492,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -480,6 +518,7 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                   style={Object {}}
                 >
                   <StyledCheckboxIcon
+                    checked={true}
                     className=""
                     fontColor="red"
                     onClick={[Function]}
@@ -488,8 +527,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -510,8 +551,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -532,8 +575,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -556,7 +601,8 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                     style={Object {}}
                   >
                     <Box
-                      className="sc-eCApGN imjzyD"
+                      checked={true}
+                      className="sc-eCApGN dUDViG"
                       fontColor="red"
                       onClick={[Function]}
                       palette={
@@ -564,8 +610,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -586,8 +634,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -608,8 +658,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -633,7 +685,8 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       transition="0.2s all"
                     >
                       <Component
-                        className="sc-eCApGN imjzyD"
+                        checked={true}
+                        className="sc-eCApGN dUDViG"
                         fontColor="red"
                         onClick={[Function]}
                         palette={
@@ -641,8 +694,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -663,8 +718,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -685,8 +742,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -710,7 +769,8 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         transition="0.2s all"
                       >
                         <StyledBox
-                          className="sc-eCApGN imjzyD"
+                          checked={true}
+                          className="sc-eCApGN dUDViG"
                           fontColor="red"
                           onClick={[Function]}
                           palette={
@@ -718,8 +778,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -740,8 +802,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -762,8 +826,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -787,7 +853,8 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx hgoyVH sc-eCApGN imjzyD"
+                            checked={true}
+                            className="sc-bdnylx hgoyVH sc-eCApGN dUDViG"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -813,8 +880,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -835,8 +904,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -857,8 +928,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -888,8 +961,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -910,8 +985,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -932,8 +1009,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -963,8 +1042,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -985,8 +1066,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1007,8 +1090,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1038,8 +1123,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1060,8 +1147,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1082,8 +1171,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1114,8 +1205,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1136,8 +1229,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1158,8 +1253,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1190,8 +1287,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                 "backgroundColors": Object {
                                   "background": "#FAFAFA",
                                   "black": "#000000",
+                                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                   "darkgray1": "#777777",
                                   "darkgray2": "#454545",
+                                  "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
                                   "medgray1": "#757575",
@@ -1212,8 +1311,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                 "borderColors": Object {
                                   "background": "#FAFAFA",
                                   "black": "#000000",
+                                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                   "darkgray1": "#777777",
                                   "darkgray2": "#454545",
+                                  "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
                                   "medgray1": "#757575",
@@ -1234,8 +1335,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                 "fontColors": Object {
                                   "background": "#FAFAFA",
                                   "black": "#000000",
+                                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                   "darkgray1": "#777777",
                                   "darkgray2": "#454545",
+                                  "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
                                   "medgray1": "#757575",
@@ -1267,8 +1370,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                   "backgroundColors": Object {
                                     "background": "#FAFAFA",
                                     "black": "#000000",
+                                    "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                     "darkgray1": "#777777",
                                     "darkgray2": "#454545",
+                                    "darkgray3": "#424242",
                                     "gray1": "#E0E0E0",
                                     "gray2": "#E7E7E7",
                                     "medgray1": "#757575",
@@ -1289,8 +1394,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                   "borderColors": Object {
                                     "background": "#FAFAFA",
                                     "black": "#000000",
+                                    "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                     "darkgray1": "#777777",
                                     "darkgray2": "#454545",
+                                    "darkgray3": "#424242",
                                     "gray1": "#E0E0E0",
                                     "gray2": "#E7E7E7",
                                     "medgray1": "#757575",
@@ -1311,8 +1418,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                   "fontColors": Object {
                                     "background": "#FAFAFA",
                                     "black": "#000000",
+                                    "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                     "darkgray1": "#777777",
                                     "darkgray2": "#454545",
+                                    "darkgray3": "#424242",
                                     "gray1": "#E0E0E0",
                                     "gray2": "#E7E7E7",
                                     "medgray1": "#757575",
@@ -1345,8 +1454,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                     "backgroundColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1367,8 +1478,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                     "borderColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1389,8 +1502,10 @@ exports[`CheckBox renders CheckBox correctly 1`] = `
                                     "fontColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",

@@ -16,8 +16,10 @@ exports[`Selector renders Selector correctly 1`] = `
         "backgroundColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -38,8 +40,10 @@ exports[`Selector renders Selector correctly 1`] = `
         "borderColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -60,8 +64,10 @@ exports[`Selector renders Selector correctly 1`] = `
         "fontColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -92,8 +98,10 @@ exports[`Selector renders Selector correctly 1`] = `
           "backgroundColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -114,8 +122,10 @@ exports[`Selector renders Selector correctly 1`] = `
           "borderColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -136,8 +146,10 @@ exports[`Selector renders Selector correctly 1`] = `
           "fontColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -161,15 +173,17 @@ exports[`Selector renders Selector correctly 1`] = `
     >
       <Box
         activeItem="/settings"
-        className="sc-gtssRu bQFkch"
+        className="sc-gtssRu jyxQMQ"
         onClickItem={[MockFunction]}
         palette={
           Object {
             "backgroundColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -190,8 +204,10 @@ exports[`Selector renders Selector correctly 1`] = `
             "borderColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -212,8 +228,10 @@ exports[`Selector renders Selector correctly 1`] = `
             "fontColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -238,15 +256,17 @@ exports[`Selector renders Selector correctly 1`] = `
       >
         <Component
           activeItem="/settings"
-          className="sc-gtssRu bQFkch"
+          className="sc-gtssRu jyxQMQ"
           onClickItem={[MockFunction]}
           palette={
             Object {
               "backgroundColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -267,8 +287,10 @@ exports[`Selector renders Selector correctly 1`] = `
               "borderColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -289,8 +311,10 @@ exports[`Selector renders Selector correctly 1`] = `
               "fontColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -315,15 +339,17 @@ exports[`Selector renders Selector correctly 1`] = `
         >
           <StyledBox
             activeItem="/settings"
-            className="sc-gtssRu bQFkch"
+            className="sc-gtssRu jyxQMQ"
             onClickItem={[MockFunction]}
             palette={
               Object {
                 "backgroundColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -344,8 +370,10 @@ exports[`Selector renders Selector correctly 1`] = `
                 "borderColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -366,8 +394,10 @@ exports[`Selector renders Selector correctly 1`] = `
                 "fontColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -391,7 +421,7 @@ exports[`Selector renders Selector correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jrLcJL sc-gtssRu bQFkch"
+              className="sc-bdnylx jrLcJL sc-gtssRu jyxQMQ"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -412,8 +442,10 @@ exports[`Selector renders Selector correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -434,8 +466,10 @@ exports[`Selector renders Selector correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -456,8 +490,10 @@ exports[`Selector renders Selector correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -489,8 +525,10 @@ exports[`Selector renders Selector correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -511,8 +549,10 @@ exports[`Selector renders Selector correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -533,8 +573,10 @@ exports[`Selector renders Selector correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -559,15 +601,17 @@ exports[`Selector renders Selector correctly 1`] = `
                   >
                     <Box
                       active={true}
-                      className="sc-dlnjPT iaNYWj"
+                      className="sc-dlnjPT jEifDT"
                       onClick={[Function]}
                       palette={
                         Object {
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -588,8 +632,10 @@ exports[`Selector renders Selector correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -610,8 +656,10 @@ exports[`Selector renders Selector correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -637,15 +685,17 @@ exports[`Selector renders Selector correctly 1`] = `
                     >
                       <Component
                         active={true}
-                        className="sc-dlnjPT iaNYWj"
+                        className="sc-dlnjPT jEifDT"
                         onClick={[Function]}
                         palette={
                           Object {
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -666,8 +716,10 @@ exports[`Selector renders Selector correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -688,8 +740,10 @@ exports[`Selector renders Selector correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -715,15 +769,17 @@ exports[`Selector renders Selector correctly 1`] = `
                       >
                         <StyledBox
                           active={true}
-                          className="sc-dlnjPT iaNYWj"
+                          className="sc-dlnjPT jEifDT"
                           onClick={[Function]}
                           palette={
                             Object {
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -744,8 +800,10 @@ exports[`Selector renders Selector correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -766,8 +824,10 @@ exports[`Selector renders Selector correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -792,7 +852,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx jrLcJL sc-dlnjPT iaNYWj"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT jEifDT"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -822,8 +882,10 @@ exports[`Selector renders Selector correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -844,8 +906,10 @@ exports[`Selector renders Selector correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -866,8 +930,10 @@ exports[`Selector renders Selector correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -899,8 +965,10 @@ exports[`Selector renders Selector correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -921,8 +989,10 @@ exports[`Selector renders Selector correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -943,8 +1013,10 @@ exports[`Selector renders Selector correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -969,15 +1041,17 @@ exports[`Selector renders Selector correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT fOgFjn"
+                      className="sc-dlnjPT DTeCc"
                       onClick={[Function]}
                       palette={
                         Object {
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -998,8 +1072,10 @@ exports[`Selector renders Selector correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1020,8 +1096,10 @@ exports[`Selector renders Selector correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1047,15 +1125,17 @@ exports[`Selector renders Selector correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT fOgFjn"
+                        className="sc-dlnjPT DTeCc"
                         onClick={[Function]}
                         palette={
                           Object {
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1076,8 +1156,10 @@ exports[`Selector renders Selector correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1098,8 +1180,10 @@ exports[`Selector renders Selector correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1125,15 +1209,17 @@ exports[`Selector renders Selector correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT fOgFjn"
+                          className="sc-dlnjPT DTeCc"
                           onClick={[Function]}
                           palette={
                             Object {
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1154,8 +1240,10 @@ exports[`Selector renders Selector correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1176,8 +1264,10 @@ exports[`Selector renders Selector correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1202,7 +1292,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx jrLcJL sc-dlnjPT fOgFjn"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT DTeCc"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -1232,8 +1322,10 @@ exports[`Selector renders Selector correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -1254,8 +1346,10 @@ exports[`Selector renders Selector correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -1276,8 +1370,10 @@ exports[`Selector renders Selector correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -1309,8 +1405,10 @@ exports[`Selector renders Selector correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -1331,8 +1429,10 @@ exports[`Selector renders Selector correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -1353,8 +1453,10 @@ exports[`Selector renders Selector correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -1379,15 +1481,17 @@ exports[`Selector renders Selector correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT fOgFjn"
+                      className="sc-dlnjPT DTeCc"
                       onClick={[Function]}
                       palette={
                         Object {
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1408,8 +1512,10 @@ exports[`Selector renders Selector correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1430,8 +1536,10 @@ exports[`Selector renders Selector correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1457,15 +1565,17 @@ exports[`Selector renders Selector correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT fOgFjn"
+                        className="sc-dlnjPT DTeCc"
                         onClick={[Function]}
                         palette={
                           Object {
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1486,8 +1596,10 @@ exports[`Selector renders Selector correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1508,8 +1620,10 @@ exports[`Selector renders Selector correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1535,15 +1649,17 @@ exports[`Selector renders Selector correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT fOgFjn"
+                          className="sc-dlnjPT DTeCc"
                           onClick={[Function]}
                           palette={
                             Object {
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1564,8 +1680,10 @@ exports[`Selector renders Selector correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1586,8 +1704,10 @@ exports[`Selector renders Selector correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1612,7 +1732,7 @@ exports[`Selector renders Selector correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx jrLcJL sc-dlnjPT fOgFjn"
+                            className="sc-bdnylx jrLcJL sc-dlnjPT DTeCc"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -1654,8 +1774,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
         "backgroundColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -1676,8 +1798,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
         "borderColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -1698,8 +1822,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
         "fontColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -1734,8 +1860,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
           "backgroundColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -1756,8 +1884,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
           "borderColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -1778,8 +1908,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
           "fontColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -1807,15 +1939,17 @@ exports[`Selector renders SelectorItem correctly 1`] = `
     >
       <Box
         active={true}
-        className="sc-dlnjPT iaNYWj myClass"
+        className="sc-dlnjPT jEifDT myClass"
         onClick={[MockFunction]}
         palette={
           Object {
             "backgroundColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -1836,8 +1970,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
             "borderColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -1858,8 +1994,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
             "fontColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -1888,15 +2026,17 @@ exports[`Selector renders SelectorItem correctly 1`] = `
       >
         <Component
           active={true}
-          className="sc-dlnjPT iaNYWj myClass"
+          className="sc-dlnjPT jEifDT myClass"
           onClick={[MockFunction]}
           palette={
             Object {
               "backgroundColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -1917,8 +2057,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
               "borderColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -1939,8 +2081,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
               "fontColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -1969,15 +2113,17 @@ exports[`Selector renders SelectorItem correctly 1`] = `
         >
           <StyledBox
             active={true}
-            className="sc-dlnjPT iaNYWj myClass"
+            className="sc-dlnjPT jEifDT myClass"
             onClick={[MockFunction]}
             palette={
               Object {
                 "backgroundColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -1998,8 +2144,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
                 "borderColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -2020,8 +2168,10 @@ exports[`Selector renders SelectorItem correctly 1`] = `
                 "fontColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -2049,7 +2199,7 @@ exports[`Selector renders SelectorItem correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jrLcJL sc-dlnjPT iaNYWj myClass"
+              className="sc-bdnylx jrLcJL sc-dlnjPT jEifDT myClass"
               onClick={[MockFunction]}
               style={
                 Object {

@@ -347,7 +347,7 @@ SelectLoader.displayName = 'SelectLoader';
  * SelectIcon
  */
 export const SelectIcon: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledSelectIcon {...props} />;
+	return <StyledSelectIcon {...props} className={`notranslate ${props.className}`} />;
 });
 
 SelectIcon.defaultProps = {

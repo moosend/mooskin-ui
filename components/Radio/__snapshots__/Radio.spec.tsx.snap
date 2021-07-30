@@ -15,8 +15,10 @@ exports[`Radio renders Radio correctly 1`] = `
         "backgroundColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -37,8 +39,10 @@ exports[`Radio renders Radio correctly 1`] = `
         "borderColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -59,8 +63,10 @@ exports[`Radio renders Radio correctly 1`] = `
         "fontColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -91,8 +97,10 @@ exports[`Radio renders Radio correctly 1`] = `
           "backgroundColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -113,8 +121,10 @@ exports[`Radio renders Radio correctly 1`] = `
           "borderColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -135,8 +145,10 @@ exports[`Radio renders Radio correctly 1`] = `
           "fontColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -167,8 +179,10 @@ exports[`Radio renders Radio correctly 1`] = `
             "backgroundColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -189,8 +203,10 @@ exports[`Radio renders Radio correctly 1`] = `
             "borderColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -211,8 +227,10 @@ exports[`Radio renders Radio correctly 1`] = `
             "fontColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -244,8 +262,10 @@ exports[`Radio renders Radio correctly 1`] = `
               "backgroundColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -266,8 +286,10 @@ exports[`Radio renders Radio correctly 1`] = `
               "borderColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -288,8 +310,10 @@ exports[`Radio renders Radio correctly 1`] = `
               "fontColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -321,8 +345,10 @@ exports[`Radio renders Radio correctly 1`] = `
                 "backgroundColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -343,8 +369,10 @@ exports[`Radio renders Radio correctly 1`] = `
                 "borderColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -365,8 +393,10 @@ exports[`Radio renders Radio correctly 1`] = `
                 "fontColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -401,6 +431,7 @@ exports[`Radio renders Radio correctly 1`] = `
                 fontColor="red"
                 key="0/.0"
                 onClick={[Function]}
+                selected={true}
                 style={Object {}}
               >
                 <Component
@@ -412,8 +443,10 @@ exports[`Radio renders Radio correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -434,8 +467,10 @@ exports[`Radio renders Radio correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -456,8 +491,10 @@ exports[`Radio renders Radio correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -477,6 +514,7 @@ exports[`Radio renders Radio correctly 1`] = `
                       },
                     }
                   }
+                  selected={true}
                   style={Object {}}
                 >
                   <StyledRadioIcon
@@ -488,8 +526,10 @@ exports[`Radio renders Radio correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -510,8 +550,10 @@ exports[`Radio renders Radio correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -532,8 +574,10 @@ exports[`Radio renders Radio correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -553,10 +597,11 @@ exports[`Radio renders Radio correctly 1`] = `
                         },
                       }
                     }
+                    selected={true}
                     style={Object {}}
                   >
                     <Box
-                      className="sc-eCApGN imjzyD"
+                      className="sc-eCApGN dUDViG"
                       fontColor="red"
                       onClick={[Function]}
                       palette={
@@ -564,8 +609,10 @@ exports[`Radio renders Radio correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -586,8 +633,10 @@ exports[`Radio renders Radio correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -608,8 +657,10 @@ exports[`Radio renders Radio correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -629,11 +680,12 @@ exports[`Radio renders Radio correctly 1`] = `
                           },
                         }
                       }
+                      selected={true}
                       style={Object {}}
                       transition="0.2s all"
                     >
                       <Component
-                        className="sc-eCApGN imjzyD"
+                        className="sc-eCApGN dUDViG"
                         fontColor="red"
                         onClick={[Function]}
                         palette={
@@ -641,8 +693,10 @@ exports[`Radio renders Radio correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -663,8 +717,10 @@ exports[`Radio renders Radio correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -685,8 +741,10 @@ exports[`Radio renders Radio correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -706,11 +764,12 @@ exports[`Radio renders Radio correctly 1`] = `
                             },
                           }
                         }
+                        selected={true}
                         style={Object {}}
                         transition="0.2s all"
                       >
                         <StyledBox
-                          className="sc-eCApGN imjzyD"
+                          className="sc-eCApGN dUDViG"
                           fontColor="red"
                           onClick={[Function]}
                           palette={
@@ -718,8 +777,10 @@ exports[`Radio renders Radio correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -740,8 +801,10 @@ exports[`Radio renders Radio correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -762,8 +825,10 @@ exports[`Radio renders Radio correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -783,12 +848,14 @@ exports[`Radio renders Radio correctly 1`] = `
                               },
                             }
                           }
+                          selected={true}
                           style={Object {}}
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx hgoyVH sc-eCApGN imjzyD"
+                            className="sc-bdnylx hgoyVH sc-eCApGN dUDViG"
                             onClick={[Function]}
+                            selected={true}
                             style={Object {}}
                           >
                             radio_button_checked
@@ -813,8 +880,10 @@ exports[`Radio renders Radio correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -835,8 +904,10 @@ exports[`Radio renders Radio correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -857,8 +928,10 @@ exports[`Radio renders Radio correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -888,8 +961,10 @@ exports[`Radio renders Radio correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -910,8 +985,10 @@ exports[`Radio renders Radio correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -932,8 +1009,10 @@ exports[`Radio renders Radio correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -963,8 +1042,10 @@ exports[`Radio renders Radio correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -985,8 +1066,10 @@ exports[`Radio renders Radio correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1007,8 +1090,10 @@ exports[`Radio renders Radio correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1038,8 +1123,10 @@ exports[`Radio renders Radio correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1060,8 +1147,10 @@ exports[`Radio renders Radio correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1082,8 +1171,10 @@ exports[`Radio renders Radio correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1114,8 +1205,10 @@ exports[`Radio renders Radio correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1136,8 +1229,10 @@ exports[`Radio renders Radio correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1158,8 +1253,10 @@ exports[`Radio renders Radio correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1190,8 +1287,10 @@ exports[`Radio renders Radio correctly 1`] = `
                                 "backgroundColors": Object {
                                   "background": "#FAFAFA",
                                   "black": "#000000",
+                                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                   "darkgray1": "#777777",
                                   "darkgray2": "#454545",
+                                  "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
                                   "medgray1": "#757575",
@@ -1212,8 +1311,10 @@ exports[`Radio renders Radio correctly 1`] = `
                                 "borderColors": Object {
                                   "background": "#FAFAFA",
                                   "black": "#000000",
+                                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                   "darkgray1": "#777777",
                                   "darkgray2": "#454545",
+                                  "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
                                   "medgray1": "#757575",
@@ -1234,8 +1335,10 @@ exports[`Radio renders Radio correctly 1`] = `
                                 "fontColors": Object {
                                   "background": "#FAFAFA",
                                   "black": "#000000",
+                                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                   "darkgray1": "#777777",
                                   "darkgray2": "#454545",
+                                  "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
                                   "medgray1": "#757575",
@@ -1267,8 +1370,10 @@ exports[`Radio renders Radio correctly 1`] = `
                                   "backgroundColors": Object {
                                     "background": "#FAFAFA",
                                     "black": "#000000",
+                                    "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                     "darkgray1": "#777777",
                                     "darkgray2": "#454545",
+                                    "darkgray3": "#424242",
                                     "gray1": "#E0E0E0",
                                     "gray2": "#E7E7E7",
                                     "medgray1": "#757575",
@@ -1289,8 +1394,10 @@ exports[`Radio renders Radio correctly 1`] = `
                                   "borderColors": Object {
                                     "background": "#FAFAFA",
                                     "black": "#000000",
+                                    "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                     "darkgray1": "#777777",
                                     "darkgray2": "#454545",
+                                    "darkgray3": "#424242",
                                     "gray1": "#E0E0E0",
                                     "gray2": "#E7E7E7",
                                     "medgray1": "#757575",
@@ -1311,8 +1418,10 @@ exports[`Radio renders Radio correctly 1`] = `
                                   "fontColors": Object {
                                     "background": "#FAFAFA",
                                     "black": "#000000",
+                                    "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                     "darkgray1": "#777777",
                                     "darkgray2": "#454545",
+                                    "darkgray3": "#424242",
                                     "gray1": "#E0E0E0",
                                     "gray2": "#E7E7E7",
                                     "medgray1": "#757575",
@@ -1345,8 +1454,10 @@ exports[`Radio renders Radio correctly 1`] = `
                                     "backgroundColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1367,8 +1478,10 @@ exports[`Radio renders Radio correctly 1`] = `
                                     "borderColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1389,8 +1502,10 @@ exports[`Radio renders Radio correctly 1`] = `
                                     "fontColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",

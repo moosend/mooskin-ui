@@ -16,8 +16,10 @@ exports[`Pagination renders correctly 1`] = `
         "backgroundColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -38,8 +40,10 @@ exports[`Pagination renders correctly 1`] = `
         "borderColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -60,8 +64,10 @@ exports[`Pagination renders correctly 1`] = `
         "fontColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -92,8 +98,10 @@ exports[`Pagination renders correctly 1`] = `
           "backgroundColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -114,8 +122,10 @@ exports[`Pagination renders correctly 1`] = `
           "borderColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -136,8 +146,10 @@ exports[`Pagination renders correctly 1`] = `
           "fontColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -168,8 +180,10 @@ exports[`Pagination renders correctly 1`] = `
             "backgroundColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -190,8 +204,10 @@ exports[`Pagination renders correctly 1`] = `
             "borderColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -212,8 +228,10 @@ exports[`Pagination renders correctly 1`] = `
             "fontColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -245,8 +263,10 @@ exports[`Pagination renders correctly 1`] = `
               "backgroundColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -267,8 +287,10 @@ exports[`Pagination renders correctly 1`] = `
               "borderColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -289,8 +311,10 @@ exports[`Pagination renders correctly 1`] = `
               "fontColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -322,8 +346,10 @@ exports[`Pagination renders correctly 1`] = `
                 "backgroundColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -344,8 +370,10 @@ exports[`Pagination renders correctly 1`] = `
                 "borderColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -366,8 +394,10 @@ exports[`Pagination renders correctly 1`] = `
                 "fontColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -395,13 +425,16 @@ exports[`Pagination renders correctly 1`] = `
               onClickButton={[MockFunction]}
               style={Object {}}
             >
-              <WithMooskinContext
+              <IconButton
+                className=""
                 cursor="pointer"
                 fontColor="fontColors.text"
                 onClick={[Function]}
                 opacity={1}
+                style={Object {}}
               >
                 <Component
+                  className=""
                   cursor="pointer"
                   fontColor="fontColors.text"
                   onClick={[Function]}
@@ -411,8 +444,10 @@ exports[`Pagination renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -433,8 +468,10 @@ exports[`Pagination renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -455,8 +492,10 @@ exports[`Pagination renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -476,8 +515,10 @@ exports[`Pagination renders correctly 1`] = `
                       },
                     }
                   }
+                  style={Object {}}
                 >
                   <StyledIconButton
+                    className="notranslate "
                     cursor="pointer"
                     fontColor="fontColors.text"
                     onClick={[Function]}
@@ -487,8 +528,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -509,8 +552,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -531,8 +576,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -552,9 +599,10 @@ exports[`Pagination renders correctly 1`] = `
                         },
                       }
                     }
+                    style={Object {}}
                   >
                     <Box
-                      className="sc-gtssRu fehwhe"
+                      className="sc-gtssRu fehwhe notranslate "
                       cursor="pointer"
                       fontColor="fontColors.text"
                       onClick={[Function]}
@@ -564,8 +612,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -586,8 +636,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -608,8 +660,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -633,7 +687,7 @@ exports[`Pagination renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <Component
-                        className="sc-gtssRu fehwhe"
+                        className="sc-gtssRu fehwhe notranslate "
                         cursor="pointer"
                         fontColor="fontColors.text"
                         onClick={[Function]}
@@ -643,8 +697,10 @@ exports[`Pagination renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -665,8 +721,10 @@ exports[`Pagination renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -687,8 +745,10 @@ exports[`Pagination renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -712,7 +772,7 @@ exports[`Pagination renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <StyledBox
-                          className="sc-gtssRu fehwhe"
+                          className="sc-gtssRu fehwhe notranslate "
                           cursor="pointer"
                           fontColor="fontColors.text"
                           onClick={[Function]}
@@ -722,8 +782,10 @@ exports[`Pagination renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -744,8 +806,10 @@ exports[`Pagination renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -766,8 +830,10 @@ exports[`Pagination renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -791,7 +857,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx hUZaBl sc-gtssRu fehwhe"
+                            className="sc-bdnylx hUZaBl sc-gtssRu fehwhe notranslate "
                             cursor="pointer"
                             onClick={[Function]}
                             opacity={1}
@@ -804,15 +870,18 @@ exports[`Pagination renders correctly 1`] = `
                     </Box>
                   </StyledIconButton>
                 </Component>
-              </WithMooskinContext>
-              <WithMooskinContext
+              </IconButton>
+              <IconButton
+                className=""
                 cursor="pointer"
                 fontColor="fontColors.text"
                 mr={10}
                 onClick={[Function]}
                 opacity={1}
+                style={Object {}}
               >
                 <Component
+                  className=""
                   cursor="pointer"
                   fontColor="fontColors.text"
                   mr={10}
@@ -823,8 +892,10 @@ exports[`Pagination renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -845,8 +916,10 @@ exports[`Pagination renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -867,8 +940,10 @@ exports[`Pagination renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -888,8 +963,10 @@ exports[`Pagination renders correctly 1`] = `
                       },
                     }
                   }
+                  style={Object {}}
                 >
                   <StyledIconButton
+                    className="notranslate "
                     cursor="pointer"
                     fontColor="fontColors.text"
                     mr={10}
@@ -900,8 +977,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -922,8 +1001,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -944,8 +1025,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -965,9 +1048,10 @@ exports[`Pagination renders correctly 1`] = `
                         },
                       }
                     }
+                    style={Object {}}
                   >
                     <Box
-                      className="sc-gtssRu fehwhe"
+                      className="sc-gtssRu fehwhe notranslate "
                       cursor="pointer"
                       fontColor="fontColors.text"
                       mr={10}
@@ -978,8 +1062,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1000,8 +1086,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1022,8 +1110,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1047,7 +1137,7 @@ exports[`Pagination renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <Component
-                        className="sc-gtssRu fehwhe"
+                        className="sc-gtssRu fehwhe notranslate "
                         cursor="pointer"
                         fontColor="fontColors.text"
                         mr={10}
@@ -1058,8 +1148,10 @@ exports[`Pagination renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1080,8 +1172,10 @@ exports[`Pagination renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1102,8 +1196,10 @@ exports[`Pagination renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1127,7 +1223,7 @@ exports[`Pagination renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <StyledBox
-                          className="sc-gtssRu fehwhe"
+                          className="sc-gtssRu fehwhe notranslate "
                           cursor="pointer"
                           fontColor="fontColors.text"
                           mr={10}
@@ -1138,8 +1234,10 @@ exports[`Pagination renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1160,8 +1258,10 @@ exports[`Pagination renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1182,8 +1282,10 @@ exports[`Pagination renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1207,7 +1309,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx eYjeKV sc-gtssRu fehwhe"
+                            className="sc-bdnylx eYjeKV sc-gtssRu fehwhe notranslate "
                             cursor="pointer"
                             onClick={[Function]}
                             opacity={1}
@@ -1220,7 +1322,7 @@ exports[`Pagination renders correctly 1`] = `
                     </Box>
                   </StyledIconButton>
                 </Component>
-              </WithMooskinContext>
+              </IconButton>
               <PaginationButton
                 active={false}
                 className=""
@@ -1237,8 +1339,10 @@ exports[`Pagination renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -1259,8 +1363,10 @@ exports[`Pagination renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -1281,8 +1387,10 @@ exports[`Pagination renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -1313,8 +1421,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -1335,8 +1445,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -1357,8 +1469,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -1389,8 +1503,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1411,8 +1527,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1433,8 +1551,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1466,8 +1586,10 @@ exports[`Pagination renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1488,8 +1610,10 @@ exports[`Pagination renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1510,8 +1634,10 @@ exports[`Pagination renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1543,8 +1669,10 @@ exports[`Pagination renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1565,8 +1693,10 @@ exports[`Pagination renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1587,8 +1717,10 @@ exports[`Pagination renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1640,8 +1772,10 @@ exports[`Pagination renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -1662,8 +1796,10 @@ exports[`Pagination renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -1684,8 +1820,10 @@ exports[`Pagination renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -1716,8 +1854,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -1738,8 +1878,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -1760,8 +1902,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -1792,8 +1936,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1814,8 +1960,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1836,8 +1984,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1869,8 +2019,10 @@ exports[`Pagination renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1891,8 +2043,10 @@ exports[`Pagination renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1913,8 +2067,10 @@ exports[`Pagination renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1946,8 +2102,10 @@ exports[`Pagination renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1968,8 +2126,10 @@ exports[`Pagination renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1990,8 +2150,10 @@ exports[`Pagination renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2043,8 +2205,10 @@ exports[`Pagination renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2065,8 +2229,10 @@ exports[`Pagination renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2087,8 +2253,10 @@ exports[`Pagination renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2119,8 +2287,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2141,8 +2311,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2163,8 +2335,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2195,8 +2369,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -2217,8 +2393,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -2239,8 +2417,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -2272,8 +2452,10 @@ exports[`Pagination renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -2294,8 +2476,10 @@ exports[`Pagination renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -2316,8 +2500,10 @@ exports[`Pagination renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -2349,8 +2535,10 @@ exports[`Pagination renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2371,8 +2559,10 @@ exports[`Pagination renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2393,8 +2583,10 @@ exports[`Pagination renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2446,8 +2638,10 @@ exports[`Pagination renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2468,8 +2662,10 @@ exports[`Pagination renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2490,8 +2686,10 @@ exports[`Pagination renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2522,8 +2720,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2544,8 +2744,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2566,8 +2768,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2598,8 +2802,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -2620,8 +2826,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -2642,8 +2850,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -2675,8 +2885,10 @@ exports[`Pagination renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -2697,8 +2909,10 @@ exports[`Pagination renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -2719,8 +2933,10 @@ exports[`Pagination renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -2752,8 +2968,10 @@ exports[`Pagination renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2774,8 +2992,10 @@ exports[`Pagination renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2796,8 +3016,10 @@ exports[`Pagination renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2849,8 +3071,10 @@ exports[`Pagination renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2871,8 +3095,10 @@ exports[`Pagination renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2893,8 +3119,10 @@ exports[`Pagination renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2925,8 +3153,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2947,8 +3177,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2969,8 +3201,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -3001,8 +3235,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -3023,8 +3259,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -3045,8 +3283,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -3078,8 +3318,10 @@ exports[`Pagination renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -3100,8 +3342,10 @@ exports[`Pagination renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -3122,8 +3366,10 @@ exports[`Pagination renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -3155,8 +3401,10 @@ exports[`Pagination renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -3177,8 +3425,10 @@ exports[`Pagination renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -3199,8 +3449,10 @@ exports[`Pagination renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -3236,13 +3488,16 @@ exports[`Pagination renders correctly 1`] = `
                   </StyledPaginationButton>
                 </Component>
               </PaginationButton>
-              <WithMooskinContext
+              <IconButton
+                className=""
                 cursor="pointer"
                 fontColor="fontColors.text"
                 onClick={[Function]}
                 opacity={1}
+                style={Object {}}
               >
                 <Component
+                  className=""
                   cursor="pointer"
                   fontColor="fontColors.text"
                   onClick={[Function]}
@@ -3252,8 +3507,10 @@ exports[`Pagination renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -3274,8 +3531,10 @@ exports[`Pagination renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -3296,8 +3555,10 @@ exports[`Pagination renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -3317,8 +3578,10 @@ exports[`Pagination renders correctly 1`] = `
                       },
                     }
                   }
+                  style={Object {}}
                 >
                   <StyledIconButton
+                    className="notranslate "
                     cursor="pointer"
                     fontColor="fontColors.text"
                     onClick={[Function]}
@@ -3328,8 +3591,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -3350,8 +3615,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -3372,8 +3639,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -3393,9 +3662,10 @@ exports[`Pagination renders correctly 1`] = `
                         },
                       }
                     }
+                    style={Object {}}
                   >
                     <Box
-                      className="sc-gtssRu fehwhe"
+                      className="sc-gtssRu fehwhe notranslate "
                       cursor="pointer"
                       fontColor="fontColors.text"
                       onClick={[Function]}
@@ -3405,8 +3675,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -3427,8 +3699,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -3449,8 +3723,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -3474,7 +3750,7 @@ exports[`Pagination renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <Component
-                        className="sc-gtssRu fehwhe"
+                        className="sc-gtssRu fehwhe notranslate "
                         cursor="pointer"
                         fontColor="fontColors.text"
                         onClick={[Function]}
@@ -3484,8 +3760,10 @@ exports[`Pagination renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -3506,8 +3784,10 @@ exports[`Pagination renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -3528,8 +3808,10 @@ exports[`Pagination renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -3553,7 +3835,7 @@ exports[`Pagination renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <StyledBox
-                          className="sc-gtssRu fehwhe"
+                          className="sc-gtssRu fehwhe notranslate "
                           cursor="pointer"
                           fontColor="fontColors.text"
                           onClick={[Function]}
@@ -3563,8 +3845,10 @@ exports[`Pagination renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -3585,8 +3869,10 @@ exports[`Pagination renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -3607,8 +3893,10 @@ exports[`Pagination renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -3632,7 +3920,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx hUZaBl sc-gtssRu fehwhe"
+                            className="sc-bdnylx hUZaBl sc-gtssRu fehwhe notranslate "
                             cursor="pointer"
                             onClick={[Function]}
                             opacity={1}
@@ -3645,15 +3933,18 @@ exports[`Pagination renders correctly 1`] = `
                     </Box>
                   </StyledIconButton>
                 </Component>
-              </WithMooskinContext>
-              <WithMooskinContext
+              </IconButton>
+              <IconButton
+                className=""
                 cursor="pointer"
                 fontColor="fontColors.text"
                 mr={10}
                 onClick={[Function]}
                 opacity={1}
+                style={Object {}}
               >
                 <Component
+                  className=""
                   cursor="pointer"
                   fontColor="fontColors.text"
                   mr={10}
@@ -3664,8 +3955,10 @@ exports[`Pagination renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -3686,8 +3979,10 @@ exports[`Pagination renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -3708,8 +4003,10 @@ exports[`Pagination renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -3729,8 +4026,10 @@ exports[`Pagination renders correctly 1`] = `
                       },
                     }
                   }
+                  style={Object {}}
                 >
                   <StyledIconButton
+                    className="notranslate "
                     cursor="pointer"
                     fontColor="fontColors.text"
                     mr={10}
@@ -3741,8 +4040,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -3763,8 +4064,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -3785,8 +4088,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -3806,9 +4111,10 @@ exports[`Pagination renders correctly 1`] = `
                         },
                       }
                     }
+                    style={Object {}}
                   >
                     <Box
-                      className="sc-gtssRu fehwhe"
+                      className="sc-gtssRu fehwhe notranslate "
                       cursor="pointer"
                       fontColor="fontColors.text"
                       mr={10}
@@ -3819,8 +4125,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -3841,8 +4149,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -3863,8 +4173,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -3888,7 +4200,7 @@ exports[`Pagination renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <Component
-                        className="sc-gtssRu fehwhe"
+                        className="sc-gtssRu fehwhe notranslate "
                         cursor="pointer"
                         fontColor="fontColors.text"
                         mr={10}
@@ -3899,8 +4211,10 @@ exports[`Pagination renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -3921,8 +4235,10 @@ exports[`Pagination renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -3943,8 +4259,10 @@ exports[`Pagination renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -3968,7 +4286,7 @@ exports[`Pagination renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <StyledBox
-                          className="sc-gtssRu fehwhe"
+                          className="sc-gtssRu fehwhe notranslate "
                           cursor="pointer"
                           fontColor="fontColors.text"
                           mr={10}
@@ -3979,8 +4297,10 @@ exports[`Pagination renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -4001,8 +4321,10 @@ exports[`Pagination renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -4023,8 +4345,10 @@ exports[`Pagination renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -4048,7 +4372,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx eYjeKV sc-gtssRu fehwhe"
+                            className="sc-bdnylx eYjeKV sc-gtssRu fehwhe notranslate "
                             cursor="pointer"
                             onClick={[Function]}
                             opacity={1}
@@ -4061,13 +4385,165 @@ exports[`Pagination renders correctly 1`] = `
                     </Box>
                   </StyledIconButton>
                 </Component>
-              </WithMooskinContext>
+              </IconButton>
               <StyledPaginationShowAll
                 onClick={[Function]}
+                palette={
+                  Object {
+                    "backgroundColors": Object {
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "gray1": "#E0E0E0",
+                      "gray2": "#E7E7E7",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "primary1": "#4169E1",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "borderColors": Object {
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "gray1": "#E0E0E0",
+                      "gray2": "#E7E7E7",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "primary1": "#4169E1",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "fontColors": Object {
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "gray1": "#E0E0E0",
+                      "gray2": "#E7E7E7",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "primary1": "#4169E1",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                  }
+                }
               >
                 <Box
                   className="sc-eCApGN gDxBSP"
                   onClick={[Function]}
+                  palette={
+                    Object {
+                      "backgroundColors": Object {
+                        "background": "#FAFAFA",
+                        "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                        "darkgray1": "#777777",
+                        "darkgray2": "#454545",
+                        "darkgray3": "#424242",
+                        "gray1": "#E0E0E0",
+                        "gray2": "#E7E7E7",
+                        "medgray1": "#757575",
+                        "medgray2": "#888888",
+                        "primary1": "#4169E1",
+                        "primary2": "#212121",
+                        "primary3": "#00796B",
+                        "primary4": "#D32F2F",
+                        "secondary1": "#2E7D32",
+                        "secondary2": "#757575",
+                        "secondary3": "#673AB7",
+                        "secondary4": "#9C27B0",
+                        "secondary5": "#00796B",
+                        "secondary6": "#ECF0FC",
+                        "text": "#212121",
+                        "white": "#FFFFFF",
+                      },
+                      "borderColors": Object {
+                        "background": "#FAFAFA",
+                        "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                        "darkgray1": "#777777",
+                        "darkgray2": "#454545",
+                        "darkgray3": "#424242",
+                        "gray1": "#E0E0E0",
+                        "gray2": "#E7E7E7",
+                        "medgray1": "#757575",
+                        "medgray2": "#888888",
+                        "primary1": "#4169E1",
+                        "primary2": "#212121",
+                        "primary3": "#00796B",
+                        "primary4": "#D32F2F",
+                        "secondary1": "#2E7D32",
+                        "secondary2": "#757575",
+                        "secondary3": "#673AB7",
+                        "secondary4": "#9C27B0",
+                        "secondary5": "#00796B",
+                        "secondary6": "#ECF0FC",
+                        "text": "#212121",
+                        "white": "#FFFFFF",
+                      },
+                      "fontColors": Object {
+                        "background": "#FAFAFA",
+                        "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                        "darkgray1": "#777777",
+                        "darkgray2": "#454545",
+                        "darkgray3": "#424242",
+                        "gray1": "#E0E0E0",
+                        "gray2": "#E7E7E7",
+                        "medgray1": "#757575",
+                        "medgray2": "#888888",
+                        "primary1": "#4169E1",
+                        "primary2": "#212121",
+                        "primary3": "#00796B",
+                        "primary4": "#D32F2F",
+                        "secondary1": "#2E7D32",
+                        "secondary2": "#757575",
+                        "secondary3": "#673AB7",
+                        "secondary4": "#9C27B0",
+                        "secondary5": "#00796B",
+                        "secondary6": "#ECF0FC",
+                        "text": "#212121",
+                        "white": "#FFFFFF",
+                      },
+                    }
+                  }
                   style={Object {}}
                   transition="0.2s all"
                 >
@@ -4079,8 +4555,10 @@ exports[`Pagination renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -4101,8 +4579,10 @@ exports[`Pagination renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -4123,8 +4603,10 @@ exports[`Pagination renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -4155,8 +4637,10 @@ exports[`Pagination renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -4177,8 +4661,10 @@ exports[`Pagination renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -4199,8 +4685,10 @@ exports[`Pagination renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",

@@ -16,5 +16,12 @@ export const IconButton: React.FC<IIconButtonComponentProps> = withMooskinContex
 	const onClick = (e: React.MouseEvent<HTMLElement>) => {
 		!props.disabled && props.onClick && props.onClick(e);
 	};
-	return <StyledIconButton {...props} onClick={onClick} />;
+	return <StyledIconButton {...props} onClick={onClick} className={`notranslate ${props.className}`} />;
 });
+
+IconButton.displayName = 'IconButton';
+
+IconButton.defaultProps = {
+	className: '',
+	style: {},
+};

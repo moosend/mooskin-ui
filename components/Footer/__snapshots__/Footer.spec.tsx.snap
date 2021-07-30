@@ -12,8 +12,10 @@ exports[`Alert renders correctly 1`] = `
         "backgroundColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -34,8 +36,10 @@ exports[`Alert renders correctly 1`] = `
         "borderColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -56,8 +60,10 @@ exports[`Alert renders correctly 1`] = `
         "fontColors": Object {
           "background": "#FAFAFA",
           "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
+          "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "medgray1": "#757575",
@@ -86,8 +92,10 @@ exports[`Alert renders correctly 1`] = `
           "backgroundColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -108,8 +116,10 @@ exports[`Alert renders correctly 1`] = `
           "borderColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -130,8 +140,10 @@ exports[`Alert renders correctly 1`] = `
           "fontColors": Object {
             "background": "#FAFAFA",
             "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
+            "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "medgray1": "#757575",
@@ -160,8 +172,10 @@ exports[`Alert renders correctly 1`] = `
             "backgroundColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -182,8 +196,10 @@ exports[`Alert renders correctly 1`] = `
             "borderColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -204,8 +220,10 @@ exports[`Alert renders correctly 1`] = `
             "fontColors": Object {
               "background": "#FAFAFA",
               "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
+              "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "medgray1": "#757575",
@@ -235,8 +253,10 @@ exports[`Alert renders correctly 1`] = `
               "backgroundColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -257,8 +277,10 @@ exports[`Alert renders correctly 1`] = `
               "borderColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -279,8 +301,10 @@ exports[`Alert renders correctly 1`] = `
               "fontColors": Object {
                 "background": "#FAFAFA",
                 "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
+                "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "medgray1": "#757575",
@@ -310,8 +334,10 @@ exports[`Alert renders correctly 1`] = `
                 "backgroundColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -332,8 +358,10 @@ exports[`Alert renders correctly 1`] = `
                 "borderColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -354,8 +382,10 @@ exports[`Alert renders correctly 1`] = `
                 "fontColors": Object {
                   "background": "#FAFAFA",
                   "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
+                  "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "medgray1": "#757575",
@@ -397,8 +427,10 @@ exports[`Alert renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -419,8 +451,10 @@ exports[`Alert renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -441,8 +475,10 @@ exports[`Alert renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -473,8 +509,10 @@ exports[`Alert renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -495,8 +533,10 @@ exports[`Alert renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -517,8 +557,10 @@ exports[`Alert renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -549,8 +591,10 @@ exports[`Alert renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -571,8 +615,10 @@ exports[`Alert renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -593,8 +639,10 @@ exports[`Alert renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -626,8 +674,10 @@ exports[`Alert renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -648,8 +698,10 @@ exports[`Alert renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -670,8 +722,10 @@ exports[`Alert renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -703,8 +757,10 @@ exports[`Alert renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -725,8 +781,10 @@ exports[`Alert renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -747,8 +805,10 @@ exports[`Alert renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -796,8 +856,10 @@ exports[`Alert renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -818,8 +880,10 @@ exports[`Alert renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -840,8 +904,10 @@ exports[`Alert renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -870,8 +936,10 @@ exports[`Alert renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -892,8 +960,10 @@ exports[`Alert renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -914,8 +984,10 @@ exports[`Alert renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -944,8 +1016,10 @@ exports[`Alert renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -966,8 +1040,10 @@ exports[`Alert renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -988,8 +1064,10 @@ exports[`Alert renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -1019,8 +1097,10 @@ exports[`Alert renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1041,8 +1121,10 @@ exports[`Alert renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1063,8 +1145,10 @@ exports[`Alert renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -1094,8 +1178,10 @@ exports[`Alert renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1116,8 +1202,10 @@ exports[`Alert renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1138,8 +1226,10 @@ exports[`Alert renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -1184,8 +1274,10 @@ exports[`Alert renders correctly 1`] = `
                                     "backgroundColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1206,8 +1298,10 @@ exports[`Alert renders correctly 1`] = `
                                     "borderColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1228,8 +1322,10 @@ exports[`Alert renders correctly 1`] = `
                                     "fontColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1264,8 +1360,10 @@ exports[`Alert renders correctly 1`] = `
                                       "backgroundColors": Object {
                                         "background": "#FAFAFA",
                                         "black": "#000000",
+                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                         "darkgray1": "#777777",
                                         "darkgray2": "#454545",
+                                        "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
                                         "medgray1": "#757575",
@@ -1286,8 +1384,10 @@ exports[`Alert renders correctly 1`] = `
                                       "borderColors": Object {
                                         "background": "#FAFAFA",
                                         "black": "#000000",
+                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                         "darkgray1": "#777777",
                                         "darkgray2": "#454545",
+                                        "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
                                         "medgray1": "#757575",
@@ -1308,8 +1408,10 @@ exports[`Alert renders correctly 1`] = `
                                       "fontColors": Object {
                                         "background": "#FAFAFA",
                                         "black": "#000000",
+                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                         "darkgray1": "#777777",
                                         "darkgray2": "#454545",
+                                        "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
                                         "medgray1": "#757575",
@@ -1344,8 +1446,10 @@ exports[`Alert renders correctly 1`] = `
                                         "backgroundColors": Object {
                                           "background": "#FAFAFA",
                                           "black": "#000000",
+                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                           "darkgray1": "#777777",
                                           "darkgray2": "#454545",
+                                          "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
                                           "medgray1": "#757575",
@@ -1366,8 +1470,10 @@ exports[`Alert renders correctly 1`] = `
                                         "borderColors": Object {
                                           "background": "#FAFAFA",
                                           "black": "#000000",
+                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                           "darkgray1": "#777777",
                                           "darkgray2": "#454545",
+                                          "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
                                           "medgray1": "#757575",
@@ -1388,8 +1494,10 @@ exports[`Alert renders correctly 1`] = `
                                         "fontColors": Object {
                                           "background": "#FAFAFA",
                                           "black": "#000000",
+                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                           "darkgray1": "#777777",
                                           "darkgray2": "#454545",
+                                          "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
                                           "medgray1": "#757575",
@@ -1425,8 +1533,10 @@ exports[`Alert renders correctly 1`] = `
                                           "backgroundColors": Object {
                                             "background": "#FAFAFA",
                                             "black": "#000000",
+                                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                             "darkgray1": "#777777",
                                             "darkgray2": "#454545",
+                                            "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
                                             "medgray1": "#757575",
@@ -1447,8 +1557,10 @@ exports[`Alert renders correctly 1`] = `
                                           "borderColors": Object {
                                             "background": "#FAFAFA",
                                             "black": "#000000",
+                                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                             "darkgray1": "#777777",
                                             "darkgray2": "#454545",
+                                            "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
                                             "medgray1": "#757575",
@@ -1469,8 +1581,10 @@ exports[`Alert renders correctly 1`] = `
                                           "fontColors": Object {
                                             "background": "#FAFAFA",
                                             "black": "#000000",
+                                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                             "darkgray1": "#777777",
                                             "darkgray2": "#454545",
+                                            "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
                                             "medgray1": "#757575",
@@ -1507,8 +1621,10 @@ exports[`Alert renders correctly 1`] = `
                                             "backgroundColors": Object {
                                               "background": "#FAFAFA",
                                               "black": "#000000",
+                                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                               "darkgray1": "#777777",
                                               "darkgray2": "#454545",
+                                              "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
                                               "medgray1": "#757575",
@@ -1529,8 +1645,10 @@ exports[`Alert renders correctly 1`] = `
                                             "borderColors": Object {
                                               "background": "#FAFAFA",
                                               "black": "#000000",
+                                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                               "darkgray1": "#777777",
                                               "darkgray2": "#454545",
+                                              "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
                                               "medgray1": "#757575",
@@ -1551,8 +1669,10 @@ exports[`Alert renders correctly 1`] = `
                                             "fontColors": Object {
                                               "background": "#FAFAFA",
                                               "black": "#000000",
+                                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                               "darkgray1": "#777777",
                                               "darkgray2": "#454545",
+                                              "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
                                               "medgray1": "#757575",
@@ -1587,23 +1707,25 @@ exports[`Alert renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <StyledButtonIcon
-                                              className=""
+                                              className="notranslate "
                                               style={Object {}}
                                             >
                                               <Box
-                                                className="sc-pNWxx gxbiOV"
+                                                className="sc-pNWxx gxbiOV notranslate "
                                                 style={Object {}}
                                                 transition="0.2s all"
                                               >
                                                 <Component
-                                                  className="sc-pNWxx gxbiOV"
+                                                  className="sc-pNWxx gxbiOV notranslate "
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
                                                         "background": "#FAFAFA",
                                                         "black": "#000000",
+                                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                         "darkgray1": "#777777",
                                                         "darkgray2": "#454545",
+                                                        "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
                                                         "medgray1": "#757575",
@@ -1624,8 +1746,10 @@ exports[`Alert renders correctly 1`] = `
                                                       "borderColors": Object {
                                                         "background": "#FAFAFA",
                                                         "black": "#000000",
+                                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                         "darkgray1": "#777777",
                                                         "darkgray2": "#454545",
+                                                        "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
                                                         "medgray1": "#757575",
@@ -1646,8 +1770,10 @@ exports[`Alert renders correctly 1`] = `
                                                       "fontColors": Object {
                                                         "background": "#FAFAFA",
                                                         "black": "#000000",
+                                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                         "darkgray1": "#777777",
                                                         "darkgray2": "#454545",
+                                                        "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
                                                         "medgray1": "#757575",
@@ -1671,14 +1797,16 @@ exports[`Alert renders correctly 1`] = `
                                                   transition="0.2s all"
                                                 >
                                                   <StyledBox
-                                                    className="sc-pNWxx gxbiOV"
+                                                    className="sc-pNWxx gxbiOV notranslate "
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
                                                           "background": "#FAFAFA",
                                                           "black": "#000000",
+                                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                           "darkgray1": "#777777",
                                                           "darkgray2": "#454545",
+                                                          "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
                                                           "medgray1": "#757575",
@@ -1699,8 +1827,10 @@ exports[`Alert renders correctly 1`] = `
                                                         "borderColors": Object {
                                                           "background": "#FAFAFA",
                                                           "black": "#000000",
+                                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                           "darkgray1": "#777777",
                                                           "darkgray2": "#454545",
+                                                          "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
                                                           "medgray1": "#757575",
@@ -1721,8 +1851,10 @@ exports[`Alert renders correctly 1`] = `
                                                         "fontColors": Object {
                                                           "background": "#FAFAFA",
                                                           "black": "#000000",
+                                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                           "darkgray1": "#777777",
                                                           "darkgray2": "#454545",
+                                                          "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
                                                           "medgray1": "#757575",
@@ -1746,7 +1878,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx jrLcJL sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx jrLcJL sc-pNWxx gxbiOV notranslate "
                                                       style={Object {}}
                                                     >
                                                       chevron_left
@@ -1780,8 +1912,10 @@ exports[`Alert renders correctly 1`] = `
                                     "backgroundColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1802,8 +1936,10 @@ exports[`Alert renders correctly 1`] = `
                                     "borderColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1824,8 +1960,10 @@ exports[`Alert renders correctly 1`] = `
                                     "fontColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -1859,8 +1997,10 @@ exports[`Alert renders correctly 1`] = `
                                       "backgroundColors": Object {
                                         "background": "#FAFAFA",
                                         "black": "#000000",
+                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                         "darkgray1": "#777777",
                                         "darkgray2": "#454545",
+                                        "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
                                         "medgray1": "#757575",
@@ -1881,8 +2021,10 @@ exports[`Alert renders correctly 1`] = `
                                       "borderColors": Object {
                                         "background": "#FAFAFA",
                                         "black": "#000000",
+                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                         "darkgray1": "#777777",
                                         "darkgray2": "#454545",
+                                        "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
                                         "medgray1": "#757575",
@@ -1903,8 +2045,10 @@ exports[`Alert renders correctly 1`] = `
                                       "fontColors": Object {
                                         "background": "#FAFAFA",
                                         "black": "#000000",
+                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                         "darkgray1": "#777777",
                                         "darkgray2": "#454545",
+                                        "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
                                         "medgray1": "#757575",
@@ -1938,8 +2082,10 @@ exports[`Alert renders correctly 1`] = `
                                         "backgroundColors": Object {
                                           "background": "#FAFAFA",
                                           "black": "#000000",
+                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                           "darkgray1": "#777777",
                                           "darkgray2": "#454545",
+                                          "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
                                           "medgray1": "#757575",
@@ -1960,8 +2106,10 @@ exports[`Alert renders correctly 1`] = `
                                         "borderColors": Object {
                                           "background": "#FAFAFA",
                                           "black": "#000000",
+                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                           "darkgray1": "#777777",
                                           "darkgray2": "#454545",
+                                          "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
                                           "medgray1": "#757575",
@@ -1982,8 +2130,10 @@ exports[`Alert renders correctly 1`] = `
                                         "fontColors": Object {
                                           "background": "#FAFAFA",
                                           "black": "#000000",
+                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                           "darkgray1": "#777777",
                                           "darkgray2": "#454545",
+                                          "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
                                           "medgray1": "#757575",
@@ -2018,8 +2168,10 @@ exports[`Alert renders correctly 1`] = `
                                           "backgroundColors": Object {
                                             "background": "#FAFAFA",
                                             "black": "#000000",
+                                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                             "darkgray1": "#777777",
                                             "darkgray2": "#454545",
+                                            "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
                                             "medgray1": "#757575",
@@ -2040,8 +2192,10 @@ exports[`Alert renders correctly 1`] = `
                                           "borderColors": Object {
                                             "background": "#FAFAFA",
                                             "black": "#000000",
+                                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                             "darkgray1": "#777777",
                                             "darkgray2": "#454545",
+                                            "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
                                             "medgray1": "#757575",
@@ -2062,8 +2216,10 @@ exports[`Alert renders correctly 1`] = `
                                           "fontColors": Object {
                                             "background": "#FAFAFA",
                                             "black": "#000000",
+                                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                             "darkgray1": "#777777",
                                             "darkgray2": "#454545",
+                                            "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
                                             "medgray1": "#757575",
@@ -2099,8 +2255,10 @@ exports[`Alert renders correctly 1`] = `
                                             "backgroundColors": Object {
                                               "background": "#FAFAFA",
                                               "black": "#000000",
+                                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                               "darkgray1": "#777777",
                                               "darkgray2": "#454545",
+                                              "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
                                               "medgray1": "#757575",
@@ -2121,8 +2279,10 @@ exports[`Alert renders correctly 1`] = `
                                             "borderColors": Object {
                                               "background": "#FAFAFA",
                                               "black": "#000000",
+                                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                               "darkgray1": "#777777",
                                               "darkgray2": "#454545",
+                                              "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
                                               "medgray1": "#757575",
@@ -2143,8 +2303,10 @@ exports[`Alert renders correctly 1`] = `
                                             "fontColors": Object {
                                               "background": "#FAFAFA",
                                               "black": "#000000",
+                                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                               "darkgray1": "#777777",
                                               "darkgray2": "#454545",
+                                              "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
                                               "medgray1": "#757575",
@@ -2180,23 +2342,25 @@ exports[`Alert renders correctly 1`] = `
                                             style={Object {}}
                                           >
                                             <StyledButtonIcon
-                                              className=""
+                                              className="notranslate "
                                               style={Object {}}
                                             >
                                               <Box
-                                                className="sc-pNWxx gxbiOV"
+                                                className="sc-pNWxx gxbiOV notranslate "
                                                 style={Object {}}
                                                 transition="0.2s all"
                                               >
                                                 <Component
-                                                  className="sc-pNWxx gxbiOV"
+                                                  className="sc-pNWxx gxbiOV notranslate "
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
                                                         "background": "#FAFAFA",
                                                         "black": "#000000",
+                                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                         "darkgray1": "#777777",
                                                         "darkgray2": "#454545",
+                                                        "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
                                                         "medgray1": "#757575",
@@ -2217,8 +2381,10 @@ exports[`Alert renders correctly 1`] = `
                                                       "borderColors": Object {
                                                         "background": "#FAFAFA",
                                                         "black": "#000000",
+                                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                         "darkgray1": "#777777",
                                                         "darkgray2": "#454545",
+                                                        "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
                                                         "medgray1": "#757575",
@@ -2239,8 +2405,10 @@ exports[`Alert renders correctly 1`] = `
                                                       "fontColors": Object {
                                                         "background": "#FAFAFA",
                                                         "black": "#000000",
+                                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                         "darkgray1": "#777777",
                                                         "darkgray2": "#454545",
+                                                        "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
                                                         "medgray1": "#757575",
@@ -2264,14 +2432,16 @@ exports[`Alert renders correctly 1`] = `
                                                   transition="0.2s all"
                                                 >
                                                   <StyledBox
-                                                    className="sc-pNWxx gxbiOV"
+                                                    className="sc-pNWxx gxbiOV notranslate "
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
                                                           "background": "#FAFAFA",
                                                           "black": "#000000",
+                                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                           "darkgray1": "#777777",
                                                           "darkgray2": "#454545",
+                                                          "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
                                                           "medgray1": "#757575",
@@ -2292,8 +2462,10 @@ exports[`Alert renders correctly 1`] = `
                                                         "borderColors": Object {
                                                           "background": "#FAFAFA",
                                                           "black": "#000000",
+                                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                           "darkgray1": "#777777",
                                                           "darkgray2": "#454545",
+                                                          "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
                                                           "medgray1": "#757575",
@@ -2314,8 +2486,10 @@ exports[`Alert renders correctly 1`] = `
                                                         "fontColors": Object {
                                                           "background": "#FAFAFA",
                                                           "black": "#000000",
+                                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                                           "darkgray1": "#777777",
                                                           "darkgray2": "#454545",
+                                                          "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
                                                           "medgray1": "#757575",
@@ -2339,7 +2513,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx jrLcJL sc-pNWxx gxbiOV"
+                                                      className="sc-bdnylx jrLcJL sc-pNWxx gxbiOV notranslate "
                                                       style={Object {}}
                                                     >
                                                       chevron_right
@@ -2374,8 +2548,10 @@ exports[`Alert renders correctly 1`] = `
                       "backgroundColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2396,8 +2572,10 @@ exports[`Alert renders correctly 1`] = `
                       "borderColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2418,8 +2596,10 @@ exports[`Alert renders correctly 1`] = `
                       "fontColors": Object {
                         "background": "#FAFAFA",
                         "black": "#000000",
+                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                         "darkgray1": "#777777",
                         "darkgray2": "#454545",
+                        "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
                         "medgray1": "#757575",
@@ -2448,8 +2628,10 @@ exports[`Alert renders correctly 1`] = `
                         "backgroundColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2470,8 +2652,10 @@ exports[`Alert renders correctly 1`] = `
                         "borderColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2492,8 +2676,10 @@ exports[`Alert renders correctly 1`] = `
                         "fontColors": Object {
                           "background": "#FAFAFA",
                           "black": "#000000",
+                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                           "darkgray1": "#777777",
                           "darkgray2": "#454545",
+                          "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
                           "medgray1": "#757575",
@@ -2522,8 +2708,10 @@ exports[`Alert renders correctly 1`] = `
                           "backgroundColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -2544,8 +2732,10 @@ exports[`Alert renders correctly 1`] = `
                           "borderColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -2566,8 +2756,10 @@ exports[`Alert renders correctly 1`] = `
                           "fontColors": Object {
                             "background": "#FAFAFA",
                             "black": "#000000",
+                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                             "darkgray1": "#777777",
                             "darkgray2": "#454545",
+                            "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
                             "medgray1": "#757575",
@@ -2597,8 +2789,10 @@ exports[`Alert renders correctly 1`] = `
                             "backgroundColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -2619,8 +2813,10 @@ exports[`Alert renders correctly 1`] = `
                             "borderColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -2641,8 +2837,10 @@ exports[`Alert renders correctly 1`] = `
                             "fontColors": Object {
                               "background": "#FAFAFA",
                               "black": "#000000",
+                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                               "darkgray1": "#777777",
                               "darkgray2": "#454545",
+                              "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
                               "medgray1": "#757575",
@@ -2672,8 +2870,10 @@ exports[`Alert renders correctly 1`] = `
                               "backgroundColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2694,8 +2894,10 @@ exports[`Alert renders correctly 1`] = `
                               "borderColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2716,8 +2918,10 @@ exports[`Alert renders correctly 1`] = `
                               "fontColors": Object {
                                 "background": "#FAFAFA",
                                 "black": "#000000",
+                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                 "darkgray1": "#777777",
                                 "darkgray2": "#454545",
+                                "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
                                 "medgray1": "#757575",
@@ -2764,8 +2968,10 @@ exports[`Alert renders correctly 1`] = `
                                     "backgroundColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -2786,8 +2992,10 @@ exports[`Alert renders correctly 1`] = `
                                     "borderColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -2808,8 +3016,10 @@ exports[`Alert renders correctly 1`] = `
                                     "fontColors": Object {
                                       "background": "#FAFAFA",
                                       "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                       "darkgray1": "#777777",
                                       "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
                                       "medgray1": "#757575",
@@ -2845,8 +3055,10 @@ exports[`Alert renders correctly 1`] = `
                                       "backgroundColors": Object {
                                         "background": "#FAFAFA",
                                         "black": "#000000",
+                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                         "darkgray1": "#777777",
                                         "darkgray2": "#454545",
+                                        "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
                                         "medgray1": "#757575",
@@ -2867,8 +3079,10 @@ exports[`Alert renders correctly 1`] = `
                                       "borderColors": Object {
                                         "background": "#FAFAFA",
                                         "black": "#000000",
+                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                         "darkgray1": "#777777",
                                         "darkgray2": "#454545",
+                                        "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
                                         "medgray1": "#757575",
@@ -2889,8 +3103,10 @@ exports[`Alert renders correctly 1`] = `
                                       "fontColors": Object {
                                         "background": "#FAFAFA",
                                         "black": "#000000",
+                                        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                         "darkgray1": "#777777",
                                         "darkgray2": "#454545",
+                                        "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
                                         "medgray1": "#757575",
@@ -2926,8 +3142,10 @@ exports[`Alert renders correctly 1`] = `
                                         "backgroundColors": Object {
                                           "background": "#FAFAFA",
                                           "black": "#000000",
+                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                           "darkgray1": "#777777",
                                           "darkgray2": "#454545",
+                                          "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
                                           "medgray1": "#757575",
@@ -2948,8 +3166,10 @@ exports[`Alert renders correctly 1`] = `
                                         "borderColors": Object {
                                           "background": "#FAFAFA",
                                           "black": "#000000",
+                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                           "darkgray1": "#777777",
                                           "darkgray2": "#454545",
+                                          "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
                                           "medgray1": "#757575",
@@ -2970,8 +3190,10 @@ exports[`Alert renders correctly 1`] = `
                                         "fontColors": Object {
                                           "background": "#FAFAFA",
                                           "black": "#000000",
+                                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                           "darkgray1": "#777777",
                                           "darkgray2": "#454545",
+                                          "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
                                           "medgray1": "#757575",
@@ -3008,8 +3230,10 @@ exports[`Alert renders correctly 1`] = `
                                           "backgroundColors": Object {
                                             "background": "#FAFAFA",
                                             "black": "#000000",
+                                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                             "darkgray1": "#777777",
                                             "darkgray2": "#454545",
+                                            "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
                                             "medgray1": "#757575",
@@ -3030,8 +3254,10 @@ exports[`Alert renders correctly 1`] = `
                                           "borderColors": Object {
                                             "background": "#FAFAFA",
                                             "black": "#000000",
+                                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                             "darkgray1": "#777777",
                                             "darkgray2": "#454545",
+                                            "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
                                             "medgray1": "#757575",
@@ -3052,8 +3278,10 @@ exports[`Alert renders correctly 1`] = `
                                           "fontColors": Object {
                                             "background": "#FAFAFA",
                                             "black": "#000000",
+                                            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                             "darkgray1": "#777777",
                                             "darkgray2": "#454545",
+                                            "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
                                             "medgray1": "#757575",
@@ -3091,8 +3319,10 @@ exports[`Alert renders correctly 1`] = `
                                             "backgroundColors": Object {
                                               "background": "#FAFAFA",
                                               "black": "#000000",
+                                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                               "darkgray1": "#777777",
                                               "darkgray2": "#454545",
+                                              "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
                                               "medgray1": "#757575",
@@ -3113,8 +3343,10 @@ exports[`Alert renders correctly 1`] = `
                                             "borderColors": Object {
                                               "background": "#FAFAFA",
                                               "black": "#000000",
+                                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                               "darkgray1": "#777777",
                                               "darkgray2": "#454545",
+                                              "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
                                               "medgray1": "#757575",
@@ -3135,8 +3367,10 @@ exports[`Alert renders correctly 1`] = `
                                             "fontColors": Object {
                                               "background": "#FAFAFA",
                                               "black": "#000000",
+                                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                                               "darkgray1": "#777777",
                                               "darkgray2": "#454545",
+                                              "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
                                               "medgray1": "#757575",

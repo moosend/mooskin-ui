@@ -198,7 +198,7 @@ InputIcon.displayName = 'InputIcon';
  * InputOverlay
  */
 export const InputOverlay: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledInputOverlay {...props} />;
+	return <StyledInputOverlay {...props} className={`notranslate ${props.className}`} />;
 });
 
 InputOverlay.defaultProps = {

@@ -187,7 +187,7 @@ DrawerFooter.displayName = 'DrawerFooter';
  * DrawerCloseButton
  */
 export const DrawerCloseButton: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledDrawerCloseButton {...props} children="close" />;
+	return <StyledDrawerCloseButton {...props} children="close" className={`notranslate ${props.className}`} />;
 });
 
 DrawerCloseButton.defaultProps = {

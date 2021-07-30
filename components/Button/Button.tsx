@@ -34,7 +34,7 @@ Button.displayName = 'Button';
  * ButtonIcon
  */
 export const ButtonIcon: React.FC<IBoxComponentProps> = (props) => {
-	return <StyledButtonIcon {...props} />;
+	return <StyledButtonIcon {...props} className={`notranslate ${props.className}`} />;
 };
 
 ButtonIcon.defaultProps = {

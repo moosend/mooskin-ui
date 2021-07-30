@@ -153,7 +153,7 @@ ExpandableItemText.displayName = 'ExpandableItemText';
  * ExpandableItemButton
  */
 export const ExpandableItemButton: React.FC<IExpandableCommonComponentProps> = withMooskinContext((props) => {
-	return <StyledExpandableItemButton {...props} />;
+	return <StyledExpandableItemButton {...props} className={`notranslate ${props.className}`} />;
 });
 
 ExpandableItemButton.defaultProps = {
