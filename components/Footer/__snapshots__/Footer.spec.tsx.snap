@@ -1348,7 +1348,7 @@ exports[`Alert renders correctly 1`] = `
                                 style={Object {}}
                                 type="button"
                               >
-                                <StyledButtonNormal
+                                <StyledButton
                                   boxAs="button"
                                   buttonSize="md"
                                   className=""
@@ -1893,7 +1893,7 @@ exports[`Alert renders correctly 1`] = `
                                       </StyledBox>
                                     </Component>
                                   </Box>
-                                </StyledButtonNormal>
+                                </StyledButton>
                               </Component>
                             </Button>
                             <Button
@@ -1986,7 +1986,7 @@ exports[`Alert renders correctly 1`] = `
                                 style={Object {}}
                                 type="button"
                               >
-                                <StyledButtonNormal
+                                <StyledButton
                                   boxAs="button"
                                   buttonSize="md"
                                   className=""
@@ -2527,7 +2527,7 @@ exports[`Alert renders correctly 1`] = `
                                       </StyledBox>
                                     </Component>
                                   </Box>
-                                </StyledButtonNormal>
+                                </StyledButton>
                               </Component>
                             </Button>
                           </div>
@@ -2948,12 +2948,11 @@ exports[`Alert renders correctly 1`] = `
                             className="sc-bdnylx jrLcJL sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
                             style={Object {}}
                           >
-                            <Button
+                            <ButtonSecondary
                               borderColor="#37a037"
                               buttonSize="md"
                               className=""
                               fontColor="#37a037"
-                              inverseStyle={true}
                               style={Object {}}
                               type="button"
                             >
@@ -2962,7 +2961,6 @@ exports[`Alert renders correctly 1`] = `
                                 buttonSize="md"
                                 className=""
                                 fontColor="#37a037"
-                                inverseStyle={true}
                                 palette={
                                   Object {
                                     "backgroundColors": Object {
@@ -3042,13 +3040,12 @@ exports[`Alert renders correctly 1`] = `
                                 style={Object {}}
                                 type="button"
                               >
-                                <StyledButtonInverse
+                                <StyledButtonSecondary
                                   borderColor="#37a037"
                                   boxAs="button"
                                   buttonSize="md"
                                   className=""
                                   fontColor="#37a037"
-                                  inverseStyle={true}
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -3133,9 +3130,8 @@ exports[`Alert renders correctly 1`] = `
                                     borderColor="#37a037"
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-fujyUd hkIKDf jZrIud"
+                                    className="sc-gKAblj sc-fujyUd hkIKDf eOuAOv"
                                     fontColor="#37a037"
-                                    inverseStyle={true}
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -3221,9 +3217,8 @@ exports[`Alert renders correctly 1`] = `
                                       borderColor="#37a037"
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-fujyUd hkIKDf jZrIud"
+                                      className="sc-gKAblj sc-fujyUd hkIKDf eOuAOv"
                                       fontColor="#37a037"
-                                      inverseStyle={true}
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -3310,9 +3305,8 @@ exports[`Alert renders correctly 1`] = `
                                         borderColor="#37a037"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-fujyUd hkIKDf jZrIud"
+                                        className="sc-gKAblj sc-fujyUd hkIKDf eOuAOv"
                                         fontColor="#37a037"
-                                        inverseStyle={true}
                                         onClick={[Function]}
                                         palette={
                                           Object {
@@ -3395,7 +3389,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx ZQejS sc-gKAblj sc-fujyUd hkIKDf jZrIud"
+                                          className="sc-bdnylx ZQejS sc-gKAblj sc-fujyUd hkIKDf eOuAOv"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -3405,9 +3399,9 @@ exports[`Alert renders correctly 1`] = `
                                       </StyledBox>
                                     </Component>
                                   </Box>
-                                </StyledButtonInverse>
+                                </StyledButtonSecondary>
                               </Component>
-                            </Button>
+                            </ButtonSecondary>
                           </div>
                         </StyledBox>
                       </Component>

@@ -2712,7 +2712,7 @@ exports[`Alert renders correctly 1`] = `
                                                   style={Object {}}
                                                   type="button"
                                                 >
-                                                  <StyledButtonNormal
+                                                  <StyledButton
                                                     boxAs="button"
                                                     buttonSize="md"
                                                     className=""
@@ -3063,7 +3063,7 @@ exports[`Alert renders correctly 1`] = `
                                                         </StyledBox>
                                                       </Component>
                                                     </Box>
-                                                  </StyledButtonNormal>
+                                                  </StyledButton>
                                                 </Component>
                                               </Button>
                                             </div>
@@ -5211,7 +5211,7 @@ exports[`Alert renders correctly 1`] = `
                                                   style={Object {}}
                                                   type="button"
                                                 >
-                                                  <StyledButtonNormal
+                                                  <StyledButton
                                                     boxAs="button"
                                                     buttonSize="md"
                                                     className=""
@@ -5562,7 +5562,7 @@ exports[`Alert renders correctly 1`] = `
                                                         </StyledBox>
                                                       </Component>
                                                     </Box>
-                                                  </StyledButtonNormal>
+                                                  </StyledButton>
                                                 </Component>
                                               </Button>
                                             </div>
@@ -7710,7 +7710,7 @@ exports[`Alert renders correctly 1`] = `
                                                   style={Object {}}
                                                   type="button"
                                                 >
-                                                  <StyledButtonNormal
+                                                  <StyledButton
                                                     boxAs="button"
                                                     buttonSize="md"
                                                     className=""
@@ -8061,7 +8061,7 @@ exports[`Alert renders correctly 1`] = `
                                                         </StyledBox>
                                                       </Component>
                                                     </Box>
-                                                  </StyledButtonNormal>
+                                                  </StyledButton>
                                                 </Component>
                                               </Button>
                                             </div>

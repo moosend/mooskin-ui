@@ -7,7 +7,6 @@ exports[`Button renders correctly 1`] = `
   disabled={true}
   href="www.moosend.com"
   id="button1"
-  inverseStyle={true}
   onClick={[MockFunction]}
   style={
     Object {
@@ -22,7 +21,6 @@ exports[`Button renders correctly 1`] = `
     disabled={true}
     href="www.moosend.com"
     id="button1"
-    inverseStyle={true}
     onClick={[MockFunction]}
     palette={
       Object {
@@ -107,14 +105,13 @@ exports[`Button renders correctly 1`] = `
     }
     type="submit"
   >
-    <StyledButtonInverse
+    <StyledButton
       boxAs="a"
       buttonSize="md"
       className="myClass"
       disabled={true}
       href="www.moosend.com"
       id="button1"
-      inverseStyle={true}
       onClick={[Function]}
       palette={
         Object {
@@ -202,11 +199,10 @@ exports[`Button renders correctly 1`] = `
       <Box
         boxAs="a"
         buttonSize="md"
-        className="sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
+        className="sc-gtssRu sc-dlnjPT fmhWED kdlRCA myClass"
         disabled={true}
         href="www.moosend.com"
         id="button1"
-        inverseStyle={true}
         onClick={[Function]}
         palette={
           Object {
@@ -295,11 +291,10 @@ exports[`Button renders correctly 1`] = `
         <Component
           boxAs="a"
           buttonSize="md"
-          className="sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
+          className="sc-gtssRu sc-dlnjPT fmhWED kdlRCA myClass"
           disabled={true}
           href="www.moosend.com"
           id="button1"
-          inverseStyle={true}
           onClick={[Function]}
           palette={
             Object {
@@ -389,11 +384,10 @@ exports[`Button renders correctly 1`] = `
             as="a"
             boxAs="a"
             buttonSize="md"
-            className="sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
+            className="sc-gtssRu sc-dlnjPT fmhWED kdlRCA myClass"
             disabled={true}
             href="www.moosend.com"
             id="button1"
-            inverseStyle={true}
             onClick={[Function]}
             palette={
               Object {
@@ -480,7 +474,7 @@ exports[`Button renders correctly 1`] = `
             type="submit"
           >
             <a
-              className="sc-bdnylx jrLcJL sc-gtssRu sc-hKFyIo fmhWED dbgScq myClass"
+              className="sc-bdnylx jrLcJL sc-gtssRu sc-dlnjPT fmhWED kdlRCA myClass"
               disabled={true}
               href="www.moosend.com"
               id="button1"
@@ -497,7 +491,7 @@ exports[`Button renders correctly 1`] = `
           </StyledBox>
         </Component>
       </Box>
-    </StyledButtonInverse>
+    </StyledButton>
   </Component>
 </Button>
 `;

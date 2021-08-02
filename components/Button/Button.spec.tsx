@@ -8,16 +8,7 @@ describe('Button', () => {
 		const func = jest.fn();
 
 		const tree = mount(
-			<Button
-				onClick={func}
-				disabled
-				className="myClass"
-				style={{ color: 'blue' }}
-				inverseStyle
-				id={'button1'}
-				href={'www.moosend.com'}
-				type={'submit'}
-			>
+			<Button onClick={func} disabled className="myClass" style={{ color: 'blue' }} id={'button1'} href={'www.moosend.com'} type={'submit'}>
 				Mooskin
 			</Button>
 		);
@@ -29,8 +20,8 @@ describe('Button', () => {
 
 		const component = mount(<Button onClick={func}>asd</Button>);
 
-		expect(component.find('StyledButtonNormal').text()).toBe('asd');
-		expect(component.find('StyledButtonNormal').prop('disabled')).not.toBe(true);
+		expect(component.find('StyledButton').text()).toBe('asd');
+		expect(component.find('StyledButton').prop('disabled')).not.toBe(true);
 	});
 
 	test('renders a disabled button if disabled prop is passed', () => {
@@ -49,7 +40,7 @@ describe('Button', () => {
 		const func = jest.fn();
 
 		const component = mount(<Button onClick={func}>asd</Button>);
-		component.find('StyledButtonNormal').simulate('click');
+		component.find('StyledButton').simulate('click');
 		expect(func).toHaveBeenCalled();
 	});
 });
