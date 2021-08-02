@@ -15,10 +15,10 @@ const normalButtonSizes = {
 	sm: '8px 10px',
 };
 
-const inverseButtonSizes = {
-	lg: '8px',
-	md: '7px 8px',
-	sm: '6px 7px',
+const secondaryButtonSizes = {
+	lg: '9px',
+	md: '8px 9px',
+	sm: '7px 8px',
 };
 
 export const ButtonDefault = styled(Box)<IButtonComponentProps>`
@@ -39,7 +39,7 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
 
 ButtonDefault.displayName = 'ButtonDefault';
 
-export const StyledButtonNormal = styled(ButtonDefault)`
+export const StyledButton = styled(ButtonDefault)`
 	background-color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
 	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};
 	padding: ${(props) => normalButtonSizes[props.buttonSize || 'md']};
@@ -47,16 +47,16 @@ export const StyledButtonNormal = styled(ButtonDefault)`
 	outline: 0;
 `;
 
-StyledButtonNormal.displayName = 'StyledButtonNormal';
+StyledButton.displayName = 'StyledButton';
 
-export const StyledButtonInverse = styled(ButtonDefault)`
-	color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
-	padding: ${(props) => inverseButtonSizes[props.buttonSize || 'md']};
+export const StyledButtonSecondary = styled(ButtonDefault)`
+	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
+	padding: ${(props) => secondaryButtonSizes[props.buttonSize || 'md']};
 	background-color: transparent;
-	border: 2px solid ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
+	border: 1px solid ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
 `;
 
-StyledButtonInverse.displayName = 'StyledButtonInverse';
+StyledButtonSecondary.displayName = 'StyledButtonSecondary';
 
 export const StyledButtonIcon = styled(Box)`
 	font-family: 'Mooskin Icons Round';

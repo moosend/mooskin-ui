@@ -8,7 +8,7 @@ import { IBoxComponentProps } from '../Box/model';
 import { IButtonComponentProps } from './model';
 
 // Styled Components
-import { StyledButtonIcon, StyledButtonInverse, StyledButtonNormal } from './styles';
+import { StyledButton, StyledButtonIcon, StyledButtonSecondary } from './styles';
 
 /**
  * Button
@@ -17,8 +17,7 @@ export const Button: React.FC<IButtonComponentProps> = withMooskinContext((props
 	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		!props.disabled && props.onClick && props.onClick(e);
 	};
-	const ButtonComponent = props.inverseStyle ? StyledButtonInverse : StyledButtonNormal;
-	return <ButtonComponent {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+	return <StyledButton {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
 });
 
 Button.defaultProps = {
@@ -29,6 +28,25 @@ Button.defaultProps = {
 };
 
 Button.displayName = 'Button';
+
+/**
+ * ButtonSecondary
+ */
+export const ButtonSecondary: React.FC<IButtonComponentProps> = withMooskinContext((props) => {
+	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		!props.disabled && props.onClick && props.onClick(e);
+	};
+	return <StyledButtonSecondary {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+});
+
+ButtonSecondary.defaultProps = {
+	buttonSize: 'md',
+	className: '',
+	style: {},
+	type: 'button',
+};
+
+ButtonSecondary.displayName = 'ButtonSecondary';
 
 /**
  * ButtonIcon

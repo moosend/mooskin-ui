@@ -4,7 +4,7 @@ export { MooskinContext, MooskinContextProvider, useMooskinContext, withMooskinC
 // Components
 export { ActionsDropdown, ActionsDropdownArrow, ActionsDropdownItem } from '../ActionsDropdown/ActionsDropdown';
 export { Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../Alert/Alert';
-export { Button, ButtonIcon } from '../Button/Button';
+export { Button, ButtonSecondary, ButtonIcon } from '../Button/Button';
 export { Anchor } from '../Anchor/Anchor';
 export { Skeleton, SkeletonCircle, SkeletonText } from '../Skeleton/Skeleton';
 export { Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay } from '../Drawer/Drawer';

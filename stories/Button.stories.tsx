@@ -36,12 +36,6 @@ Normal.args = {
 	children: 'VIEW CAMPAIGN',
 } as IButtonComponentProps;
 
-export const Inversed = Template.bind({});
-Inversed.args = {
-	children: 'VIEW CAMPAIGN',
-	inverseStyle: true,
-} as IButtonComponentProps;
-
 export const Icon = Template.bind({});
 Icon.args = {
 	children: (

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Footer, FooterBody, FooterEnd, FooterHead } from './Footer';
 
 import { mount } from 'enzyme';
-import { Button, ButtonIcon } from '../Button/Button';
+import { Button, ButtonSecondary, ButtonIcon } from '../Button/Button';
 
 describe('Alert', () => {
 	test('renders correctly', () => {
@@ -22,9 +22,9 @@ describe('Alert', () => {
 					</Button>
 				</FooterBody>
 				<FooterEnd>
-					<Button inverseStyle borderColor="#37a037" fontColor="#37a037">
+					<ButtonSecondary borderColor="#37a037" fontColor="#37a037">
 						DESIGN & DELIVERY TEST
-					</Button>
+					</ButtonSecondary>
 				</FooterEnd>
 			</Footer>
 		);
