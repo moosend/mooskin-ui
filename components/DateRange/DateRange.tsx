@@ -19,6 +19,8 @@ import { IDateRangePickerComponentProps } from './model';
 import { Box } from '../Box/Box';
 import { Input } from '../Input/Input';
 
+import { StyledDateRange } from './styles';
+
 const defaultFormat = 'dd MMM yyyy';
 
 /**
@@ -49,10 +51,10 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinCo
 		<Box position="relative" d="flex" {...props.wrapperProps}>
 			<Input onFocus={() => setShowPicker(true)} value={getInputValue()} {...props.inputProps} />
 			{showPicker && (
-				<Box zIndex={1} boxShadow="md" position="absolute" top={40} left={0} {...props.pickerWrapperProps}>
+				<StyledDateRange boxShadow="md" {...props.pickerWrapperProps} palette={(props as any).palette}>
 					<DateRangePicker ranges={props.ranges} onChange={props.onChange} {...props} />
 					<DateRangeOverlay onClick={() => setShowPicker(false)} />
-				</Box>
+				</StyledDateRange>
 			)}
 		</Box>
 	);

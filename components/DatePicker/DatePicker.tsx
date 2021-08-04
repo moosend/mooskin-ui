@@ -31,7 +31,7 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 
 	return (
 		<MuiPickersUtilsProvider utils={DateFnsUtils}>
-			<PickerComponent {...props} TextFieldComponent={renderInput} />
+			<PickerComponent {...props} variant="inline" TextFieldComponent={renderInput} />
 		</MuiPickersUtilsProvider>
 	);
 };
