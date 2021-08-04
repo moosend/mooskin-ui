@@ -11,7 +11,6 @@ import { DatePicker as DatePickerUI, KeyboardDatePicker, MuiPickersUtilsProvider
 
 // Components
 import { Input } from '../Input/Input';
-import { StyledDatePicker } from './styles';
 
 const ComponentByType = {
 	date: DatePickerUI,
@@ -31,11 +30,9 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 	const PickerComponent = ComponentByType[type];
 
 	return (
-		<StyledDatePicker palette={(props as any).palette}>
-			<MuiPickersUtilsProvider utils={DateFnsUtils}>
-				<PickerComponent {...props} variant="inline" TextFieldComponent={renderInput} />
-			</MuiPickersUtilsProvider>
-		</StyledDatePicker>
+		<MuiPickersUtilsProvider utils={DateFnsUtils}>
+			<PickerComponent {...props} variant="inline" TextFieldComponent={renderInput} />
+		</MuiPickersUtilsProvider>
 	);
 };
 
