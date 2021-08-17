@@ -282,7 +282,7 @@ SelectPlaceholder.displayName = 'SelectPlaceholder';
  */
 export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinContext((props) => {
 	return (
-		<Transition addEndListener={() => undefined} unmountOnExit in={props.showList} timeout={150}>
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.showList} timeout={145}>
 			{(state) => {
 				const OptionListComponent = OptionListComponents[state];
 				if (OptionListComponent) {

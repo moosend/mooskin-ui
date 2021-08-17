@@ -100,7 +100,7 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
       onExit={[Function]}
       onExited={[Function]}
       onExiting={[Function]}
-      timeout={150}
+      timeout={145}
       unmountOnExit={true}
     />
   </Component>

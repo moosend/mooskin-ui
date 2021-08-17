@@ -68,7 +68,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 	};
 
 	return (
-		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={150}>
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={145}>
 			{(state) => {
 				const ActionDropdownComponent = DropdownComponents[state];
 				if (ActionDropdownComponent) {
