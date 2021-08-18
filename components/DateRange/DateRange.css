@@ -134,7 +134,7 @@
     flex-direction: column-reverse;
 }
 
-:global(.daterange-component .m-input-moment .options){
+:global(.hideTime .m-input-moment .options) {
     display: none !important;
 }
 
@@ -189,13 +189,13 @@
     display: none;
 }
 
-/* :global(.daterange-component .m-time .time){
+:global(.daterange-component .m-time .time){
     background: #5ccdde;
-} */
+}
 
-/* :global(.daterange-component .m-time .separater){
+:global(.daterange-component .m-time .separater){
     color: #5ccdde;
-} */
+}
 
 :global(.daterange-component .u-slider-time .value){
     background: #fff;
@@ -216,13 +216,13 @@
     left: -5px;
 }
 
-/* :global(.daterange-component .m-time .time-text){
+:global(.daterange-component .m-time .time-text){
     text-transform: uppercase;
     color: #fff;
     margin: 8px 0;
     left: 0;
     width: 40%;
-} */
+}
 
 :global(.daterange-component .m-calendar .current-day){
     color: #5ccdde;
@@ -236,9 +236,51 @@
     padding: 40px 0 30px;
 }
 
-/* :global(.m-time .sliders){
+:global(.m-time .sliders){
     background: #5ccdde;
     padding: 10px 15px !important;
     display: flex;
     flex-wrap: wrap;
-} */
+}
+
+:global(.daterange-component .m-input-moment .options){
+    margin: 0;
+    border-bottom: 5px solid #EDECED;
+    margin-bottom: -5px;
+}
+
+:global(.daterange-component .m-input-moment .options button.is-active){
+    background: #EDECED;
+    color: #666;
+}
+
+:global(.daterange-component .m-input-moment .options button){
+    border: 0;
+    color: #C3C3C3;
+    margin: 0px;
+    border-radius: 0;
+    height: 40px;
+    font-family: 'Convergence', 'Alegreya Sans', sans-serif;
+}
+
+:global(.daterange-component .m-input-moment .options button::before){
+    content: '';
+    margin-left: 0;
+    transform: translate(0, 2px);
+}
+
+:global(.daterange-component .m-input-moment .options .ion-calendar::before){
+    content: url('../../assets/images/date/calendar_date_icon_faded.png');
+}
+
+:global(.daterange-component .m-input-moment .options button.is-active.ion-calendar::before){
+    content: url('../../assets/images/date/calendar_date_icon.png');
+}
+
+:global(.daterange-component .m-input-moment .options .ion-clock::before){
+    content: url('../../assets/images/date/calendar_time_icon_faded.png');
+}
+
+:global(.daterange-component .m-input-moment .options button.is-active.ion-clock::before){
+    content: url('../../assets/images/date/calendar_time_icon.png');
+}
