@@ -2,7 +2,7 @@
 
 exports[`DateRange renders correctly 1`] = `
 <div
-  className="daterange-component myClass dateRange"
+  className="daterange-component myClass dateRange hideTime"
   id="input1"
   style={
     Object {

@@ -169,6 +169,9 @@ export interface IDateRangeProps{
     /** date passed will be the selected date */
     date: {start: moment.Moment | null, end: moment.Moment | null};
 
+    /** show time pickers */
+    showTime?: boolean;
+
     /** format the labeled date */
     format?: string;
 
@@ -214,6 +217,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         date: {start: moment(), end: moment()},
         format: 'DD MMM YYYY',
         placeholder: 'Please select date...',
+        showTime: false,
         style: {}
     };
 
@@ -271,7 +275,7 @@ export default class DateRange extends React.Component<IDateRangeProps, IDateRan
         return(
             <div
                 id={this.props.id}
-                className={`daterange-component ${this.props.className} ${styles.dateRange}`}
+                className={`daterange-component ${this.props.className} ${styles.dateRange} ${this.props.showTime ? '' : 'hideTime'}`}
                 style={this.props.style}
             >
                 {this.props.label && <label className={styles.label} style={spacing} >{this.props.label}</label>}
