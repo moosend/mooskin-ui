@@ -134,7 +134,7 @@
     flex-direction: column-reverse;
 }
 
-:global(.hideTime .m-input-moment .options) {
+:global(div.daterange-component.hideTime div.m-input-moment .options) {
     display: none !important;
 }
 
@@ -243,10 +243,11 @@
     flex-wrap: wrap;
 }
 
-:global(.daterange-component .m-input-moment .options){
+:global(div.daterange-component div.m-input-moment .options){
     margin: 0;
     border-bottom: 5px solid #EDECED;
     margin-bottom: -5px;
+    display: inline-block !important;
 }
 
 :global(.daterange-component .m-input-moment .options button.is-active){
