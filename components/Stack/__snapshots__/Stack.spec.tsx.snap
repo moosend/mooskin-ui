@@ -45,6 +45,7 @@ exports[`Stack renders Stack correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -69,6 +70,7 @@ exports[`Stack renders Stack correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -93,6 +95,7 @@ exports[`Stack renders Stack correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -139,6 +142,7 @@ exports[`Stack renders Stack correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -163,6 +167,7 @@ exports[`Stack renders Stack correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -187,6 +192,7 @@ exports[`Stack renders Stack correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -233,6 +239,7 @@ exports[`Stack renders Stack correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -257,6 +264,7 @@ exports[`Stack renders Stack correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -281,6 +289,7 @@ exports[`Stack renders Stack correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -327,6 +336,7 @@ exports[`Stack renders Stack correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -351,6 +361,7 @@ exports[`Stack renders Stack correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -375,6 +386,7 @@ exports[`Stack renders Stack correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -421,6 +433,7 @@ exports[`Stack renders Stack correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -445,6 +458,7 @@ exports[`Stack renders Stack correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -469,6 +483,7 @@ exports[`Stack renders Stack correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -516,6 +531,7 @@ exports[`Stack renders Stack correctly 1`] = `
                     "darkgray3": "#424242",
                     "gray1": "#E0E0E0",
                     "gray2": "#E7E7E7",
+                    "grayAlpha": "rgba(0,0,0,0.17)",
                     "medgray1": "#757575",
                     "medgray2": "#888888",
                     "primary1": "#4169E1",
@@ -540,6 +556,7 @@ exports[`Stack renders Stack correctly 1`] = `
                     "darkgray3": "#424242",
                     "gray1": "#E0E0E0",
                     "gray2": "#E7E7E7",
+                    "grayAlpha": "rgba(0,0,0,0.17)",
                     "medgray1": "#757575",
                     "medgray2": "#888888",
                     "primary1": "#4169E1",
@@ -564,6 +581,7 @@ exports[`Stack renders Stack correctly 1`] = `
                     "darkgray3": "#424242",
                     "gray1": "#E0E0E0",
                     "gray2": "#E7E7E7",
+                    "grayAlpha": "rgba(0,0,0,0.17)",
                     "medgray1": "#757575",
                     "medgray2": "#888888",
                     "primary1": "#4169E1",
@@ -611,6 +629,7 @@ exports[`Stack renders Stack correctly 1`] = `
                       "darkgray3": "#424242",
                       "gray1": "#E0E0E0",
                       "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
                       "medgray1": "#757575",
                       "medgray2": "#888888",
                       "primary1": "#4169E1",
@@ -635,6 +654,7 @@ exports[`Stack renders Stack correctly 1`] = `
                       "darkgray3": "#424242",
                       "gray1": "#E0E0E0",
                       "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
                       "medgray1": "#757575",
                       "medgray2": "#888888",
                       "primary1": "#4169E1",
@@ -659,6 +679,7 @@ exports[`Stack renders Stack correctly 1`] = `
                       "darkgray3": "#424242",
                       "gray1": "#E0E0E0",
                       "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
                       "medgray1": "#757575",
                       "medgray2": "#888888",
                       "primary1": "#4169E1",
@@ -681,7 +702,7 @@ exports[`Stack renders Stack correctly 1`] = `
                 transition="0.2s all"
               >
                 <div
-                  className="sc-bdnylx cshEil sc-gtssRu iXkelt"
+                  className="sc-bdnylx ftlOMw sc-gtssRu iXkelt"
                   direction="column"
                   spacing={20}
                   style={Object {}}
@@ -719,6 +740,7 @@ exports[`Stack renders Stack correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -743,6 +765,7 @@ exports[`Stack renders Stack correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -767,6 +790,7 @@ exports[`Stack renders Stack correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -801,6 +825,7 @@ exports[`Stack renders Stack correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -825,6 +850,7 @@ exports[`Stack renders Stack correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -849,6 +875,7 @@ exports[`Stack renders Stack correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -870,7 +897,7 @@ exports[`Stack renders Stack correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx ggKiRj"
+                          className="sc-bdnylx lgWlVe"
                           style={Object {}}
                         >
                           <span
@@ -918,6 +945,7 @@ exports[`Stack renders Stack correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -942,6 +970,7 @@ exports[`Stack renders Stack correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -966,6 +995,7 @@ exports[`Stack renders Stack correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -1000,6 +1030,7 @@ exports[`Stack renders Stack correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -1024,6 +1055,7 @@ exports[`Stack renders Stack correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -1048,6 +1080,7 @@ exports[`Stack renders Stack correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -1069,7 +1102,7 @@ exports[`Stack renders Stack correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx ggKiRj"
+                          className="sc-bdnylx lgWlVe"
                           style={Object {}}
                         >
                           <span

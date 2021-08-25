@@ -32,6 +32,7 @@ exports[`DateRange renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -56,6 +57,7 @@ exports[`DateRange renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -80,6 +82,7 @@ exports[`DateRange renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -128,6 +131,7 @@ exports[`DateRange renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -152,6 +156,7 @@ exports[`DateRange renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -176,6 +181,7 @@ exports[`DateRange renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -211,6 +217,7 @@ exports[`DateRange renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -235,6 +242,7 @@ exports[`DateRange renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -259,6 +267,7 @@ exports[`DateRange renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -281,7 +290,7 @@ exports[`DateRange renders correctly 1`] = `
           transition="0.2s all"
         >
           <div
-            className="sc-bdnylx cyjVtv"
+            className="sc-bdnylx dSQLCK"
             d="flex"
             style={Object {}}
           >
@@ -305,6 +314,7 @@ exports[`DateRange renders correctly 1`] = `
                       "darkgray3": "#424242",
                       "gray1": "#E0E0E0",
                       "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
                       "medgray1": "#757575",
                       "medgray2": "#888888",
                       "primary1": "#4169E1",
@@ -329,6 +339,7 @@ exports[`DateRange renders correctly 1`] = `
                       "darkgray3": "#424242",
                       "gray1": "#E0E0E0",
                       "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
                       "medgray1": "#757575",
                       "medgray2": "#888888",
                       "primary1": "#4169E1",
@@ -353,6 +364,7 @@ exports[`DateRange renders correctly 1`] = `
                       "darkgray3": "#424242",
                       "gray1": "#E0E0E0",
                       "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
                       "medgray1": "#757575",
                       "medgray2": "#888888",
                       "primary1": "#4169E1",
@@ -388,6 +400,7 @@ exports[`DateRange renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -412,6 +425,7 @@ exports[`DateRange renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -436,6 +450,7 @@ exports[`DateRange renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -471,6 +486,7 @@ exports[`DateRange renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -495,6 +511,7 @@ exports[`DateRange renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -519,6 +536,7 @@ exports[`DateRange renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -555,6 +573,7 @@ exports[`DateRange renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -579,6 +598,7 @@ exports[`DateRange renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -603,6 +623,7 @@ exports[`DateRange renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -640,6 +661,7 @@ exports[`DateRange renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -664,6 +686,7 @@ exports[`DateRange renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -688,6 +711,7 @@ exports[`DateRange renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -710,7 +734,7 @@ exports[`DateRange renders correctly 1`] = `
                         value="20 Jun 2016 - 20 Jun 2016"
                       >
                         <input
-                          className="sc-bdnylx jrLcJL sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                          className="sc-bdnylx drKdKK sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                           onFocus={[Function]}
                           style={Object {}}
                           value="20 Jun 2016 - 20 Jun 2016"

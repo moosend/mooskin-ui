@@ -53,7 +53,7 @@ export const StyledButtonSecondary = styled(ButtonDefault)`
 	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
 	padding: ${(props) => secondaryButtonSizes[props.buttonSize || 'md']};
 	background-color: transparent;
-	border: 1px solid ${(props) => props.palette?.borderColors.gray1 || variables.borderColors.gray1};
+	border: 1px solid ${(props) => props.palette?.borderColors.grayAlpha || variables.borderColors.grayAlpha};
 `;
 
 StyledButtonSecondary.displayName = 'StyledButtonSecondary';

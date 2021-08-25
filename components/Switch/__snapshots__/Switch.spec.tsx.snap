@@ -28,6 +28,7 @@ exports[`Switch renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -52,6 +53,7 @@ exports[`Switch renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -76,6 +78,7 @@ exports[`Switch renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -117,6 +120,7 @@ exports[`Switch renders correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -141,6 +145,7 @@ exports[`Switch renders correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -165,6 +170,7 @@ exports[`Switch renders correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -206,6 +212,7 @@ exports[`Switch renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -230,6 +237,7 @@ exports[`Switch renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -254,6 +262,7 @@ exports[`Switch renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -296,6 +305,7 @@ exports[`Switch renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -320,6 +330,7 @@ exports[`Switch renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -344,6 +355,7 @@ exports[`Switch renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -386,6 +398,7 @@ exports[`Switch renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -410,6 +423,7 @@ exports[`Switch renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -434,6 +448,7 @@ exports[`Switch renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -461,7 +476,7 @@ exports[`Switch renders correctly 1`] = `
             w={90}
           >
             <div
-              className="sc-bdnylx Irqu sc-gtssRu CHeKR"
+              className="sc-bdnylx eJmVCH sc-gtssRu CHeKR"
               onClick={[Function]}
               onClickSwitch={[MockFunction]}
               style={
@@ -490,6 +505,7 @@ exports[`Switch renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -514,6 +530,7 @@ exports[`Switch renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -538,6 +555,7 @@ exports[`Switch renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -572,6 +590,7 @@ exports[`Switch renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -596,6 +615,7 @@ exports[`Switch renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -620,6 +640,7 @@ exports[`Switch renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -654,6 +675,7 @@ exports[`Switch renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -678,6 +700,7 @@ exports[`Switch renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -702,6 +725,7 @@ exports[`Switch renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -737,6 +761,7 @@ exports[`Switch renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -761,6 +786,7 @@ exports[`Switch renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -785,6 +811,7 @@ exports[`Switch renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -820,6 +847,7 @@ exports[`Switch renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -844,6 +872,7 @@ exports[`Switch renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -868,6 +897,7 @@ exports[`Switch renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -890,7 +920,7 @@ exports[`Switch renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx jrLcJL sc-dlnjPT euqxyv"
+                            className="sc-bdnylx drKdKK sc-dlnjPT euqxyv"
                             style={Object {}}
                           />
                         </StyledBox>
@@ -922,6 +952,7 @@ exports[`Switch renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -946,6 +977,7 @@ exports[`Switch renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -970,6 +1002,7 @@ exports[`Switch renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1004,6 +1037,7 @@ exports[`Switch renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -1028,6 +1062,7 @@ exports[`Switch renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -1052,6 +1087,7 @@ exports[`Switch renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -1073,7 +1109,7 @@ exports[`Switch renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <div
-                        className="sc-bdnylx jrLcJL sc-hKFyIo sc-eCApGN cPa-DTE bHvCse"
+                        className="sc-bdnylx drKdKK sc-hKFyIo sc-eCApGN cPa-DTE bHvCse"
                         style={Object {}}
                       >
                         Switch

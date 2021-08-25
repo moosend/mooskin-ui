@@ -19,6 +19,7 @@ exports[`Layout renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -43,6 +44,7 @@ exports[`Layout renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -67,6 +69,7 @@ exports[`Layout renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -100,6 +103,7 @@ exports[`Layout renders correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -124,6 +128,7 @@ exports[`Layout renders correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -148,6 +153,7 @@ exports[`Layout renders correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -181,6 +187,7 @@ exports[`Layout renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -205,6 +212,7 @@ exports[`Layout renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -229,6 +237,7 @@ exports[`Layout renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -263,6 +272,7 @@ exports[`Layout renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -287,6 +297,7 @@ exports[`Layout renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -311,6 +322,7 @@ exports[`Layout renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -345,6 +357,7 @@ exports[`Layout renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -369,6 +382,7 @@ exports[`Layout renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -393,6 +407,7 @@ exports[`Layout renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -415,7 +430,7 @@ exports[`Layout renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jrLcJL sc-gtssRu jrgeJz"
+              className="sc-bdnylx drKdKK sc-gtssRu jrgeJz"
               spacing={15}
               style={Object {}}
             >
@@ -442,6 +457,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -466,6 +482,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -490,6 +507,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -526,6 +544,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -550,6 +569,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -574,6 +594,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -596,7 +617,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx jWQdbz"
+                      className="sc-bdnylx eXBkze"
                       style={Object {}}
                     >
                       Box
@@ -627,6 +648,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -651,6 +673,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -675,6 +698,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -711,6 +735,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -735,6 +760,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -759,6 +785,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -781,7 +808,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx jWQdbz"
+                      className="sc-bdnylx eXBkze"
                       style={Object {}}
                     >
                       Box
@@ -812,6 +839,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -836,6 +864,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -860,6 +889,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -896,6 +926,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -920,6 +951,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -944,6 +976,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -966,7 +999,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx jWQdbz"
+                      className="sc-bdnylx eXBkze"
                       style={Object {}}
                     >
                       Box
@@ -997,6 +1030,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1021,6 +1055,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1045,6 +1080,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1081,6 +1117,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1105,6 +1142,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1129,6 +1167,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1151,7 +1190,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx jWQdbz"
+                      className="sc-bdnylx eXBkze"
                       style={Object {}}
                     >
                       Box
@@ -1182,6 +1221,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1206,6 +1246,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1230,6 +1271,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1266,6 +1308,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1290,6 +1333,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1314,6 +1358,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1336,7 +1381,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx jWQdbz"
+                      className="sc-bdnylx eXBkze"
                       style={Object {}}
                     >
                       Box
@@ -1367,6 +1412,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1391,6 +1437,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1415,6 +1462,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1451,6 +1499,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1475,6 +1524,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1499,6 +1549,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1521,7 +1572,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx jWQdbz"
+                      className="sc-bdnylx eXBkze"
                       style={Object {}}
                     >
                       Box
@@ -1552,6 +1603,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1576,6 +1628,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1600,6 +1653,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1636,6 +1690,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1660,6 +1715,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1684,6 +1740,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1706,7 +1763,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx jWQdbz"
+                      className="sc-bdnylx eXBkze"
                       style={Object {}}
                     >
                       Box
@@ -1737,6 +1794,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1761,6 +1819,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1785,6 +1844,7 @@ exports[`Layout renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -1821,6 +1881,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1845,6 +1906,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1869,6 +1931,7 @@ exports[`Layout renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1891,7 +1954,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx jWQdbz"
+                      className="sc-bdnylx eXBkze"
                       style={Object {}}
                     >
                       Box

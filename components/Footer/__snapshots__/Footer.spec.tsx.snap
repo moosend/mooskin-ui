@@ -18,6 +18,7 @@ exports[`Alert renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -42,6 +43,7 @@ exports[`Alert renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -66,6 +68,7 @@ exports[`Alert renders correctly 1`] = `
           "darkgray3": "#424242",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -98,6 +101,7 @@ exports[`Alert renders correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -122,6 +126,7 @@ exports[`Alert renders correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -146,6 +151,7 @@ exports[`Alert renders correctly 1`] = `
             "darkgray3": "#424242",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -178,6 +184,7 @@ exports[`Alert renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -202,6 +209,7 @@ exports[`Alert renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -226,6 +234,7 @@ exports[`Alert renders correctly 1`] = `
               "darkgray3": "#424242",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -259,6 +268,7 @@ exports[`Alert renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -283,6 +293,7 @@ exports[`Alert renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -307,6 +318,7 @@ exports[`Alert renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -340,6 +352,7 @@ exports[`Alert renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -364,6 +377,7 @@ exports[`Alert renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -388,6 +402,7 @@ exports[`Alert renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -409,7 +424,7 @@ exports[`Alert renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx jrLcJL sc-gtssRu DTjtv"
+              className="sc-bdnylx drKdKK sc-gtssRu DTjtv"
               style={Object {}}
             >
               <FooterHead
@@ -433,6 +448,7 @@ exports[`Alert renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -457,6 +473,7 @@ exports[`Alert renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -481,6 +498,7 @@ exports[`Alert renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -515,6 +533,7 @@ exports[`Alert renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -539,6 +558,7 @@ exports[`Alert renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -563,6 +583,7 @@ exports[`Alert renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -597,6 +618,7 @@ exports[`Alert renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -621,6 +643,7 @@ exports[`Alert renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -645,6 +668,7 @@ exports[`Alert renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -680,6 +704,7 @@ exports[`Alert renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -704,6 +729,7 @@ exports[`Alert renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -728,6 +754,7 @@ exports[`Alert renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -763,6 +790,7 @@ exports[`Alert renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -787,6 +815,7 @@ exports[`Alert renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -811,6 +840,7 @@ exports[`Alert renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -832,7 +862,7 @@ exports[`Alert renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx kYLDBR sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
+                            className="sc-bdnylx ejzsBw sc-dlnjPT sc-hKFyIo jgVeqN lgxvXg"
                             fontSize={12}
                             fontWeight={800}
                             style={Object {}}
@@ -862,6 +892,7 @@ exports[`Alert renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -886,6 +917,7 @@ exports[`Alert renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -910,6 +942,7 @@ exports[`Alert renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -942,6 +975,7 @@ exports[`Alert renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -966,6 +1000,7 @@ exports[`Alert renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -990,6 +1025,7 @@ exports[`Alert renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -1022,6 +1058,7 @@ exports[`Alert renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -1046,6 +1083,7 @@ exports[`Alert renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -1070,6 +1108,7 @@ exports[`Alert renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -1103,6 +1142,7 @@ exports[`Alert renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -1127,6 +1167,7 @@ exports[`Alert renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -1151,6 +1192,7 @@ exports[`Alert renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -1184,6 +1226,7 @@ exports[`Alert renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1208,6 +1251,7 @@ exports[`Alert renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1232,6 +1276,7 @@ exports[`Alert renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1253,7 +1298,7 @@ exports[`Alert renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx jrLcJL sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
+                            className="sc-bdnylx drKdKK sc-dlnjPT sc-eCApGN jgVeqN cpiCqj"
                             style={Object {}}
                           >
                             <Button
@@ -1280,6 +1325,7 @@ exports[`Alert renders correctly 1`] = `
                                       "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
                                       "medgray1": "#757575",
                                       "medgray2": "#888888",
                                       "primary1": "#4169E1",
@@ -1304,6 +1350,7 @@ exports[`Alert renders correctly 1`] = `
                                       "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
                                       "medgray1": "#757575",
                                       "medgray2": "#888888",
                                       "primary1": "#4169E1",
@@ -1328,6 +1375,7 @@ exports[`Alert renders correctly 1`] = `
                                       "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
                                       "medgray1": "#757575",
                                       "medgray2": "#888888",
                                       "primary1": "#4169E1",
@@ -1366,6 +1414,7 @@ exports[`Alert renders correctly 1`] = `
                                         "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
+                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                         "medgray1": "#757575",
                                         "medgray2": "#888888",
                                         "primary1": "#4169E1",
@@ -1390,6 +1439,7 @@ exports[`Alert renders correctly 1`] = `
                                         "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
+                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                         "medgray1": "#757575",
                                         "medgray2": "#888888",
                                         "primary1": "#4169E1",
@@ -1414,6 +1464,7 @@ exports[`Alert renders correctly 1`] = `
                                         "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
+                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                         "medgray1": "#757575",
                                         "medgray2": "#888888",
                                         "primary1": "#4169E1",
@@ -1452,6 +1503,7 @@ exports[`Alert renders correctly 1`] = `
                                           "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
+                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                           "medgray1": "#757575",
                                           "medgray2": "#888888",
                                           "primary1": "#4169E1",
@@ -1476,6 +1528,7 @@ exports[`Alert renders correctly 1`] = `
                                           "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
+                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                           "medgray1": "#757575",
                                           "medgray2": "#888888",
                                           "primary1": "#4169E1",
@@ -1500,6 +1553,7 @@ exports[`Alert renders correctly 1`] = `
                                           "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
+                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                           "medgray1": "#757575",
                                           "medgray2": "#888888",
                                           "primary1": "#4169E1",
@@ -1539,6 +1593,7 @@ exports[`Alert renders correctly 1`] = `
                                             "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
+                                            "grayAlpha": "rgba(0,0,0,0.17)",
                                             "medgray1": "#757575",
                                             "medgray2": "#888888",
                                             "primary1": "#4169E1",
@@ -1563,6 +1618,7 @@ exports[`Alert renders correctly 1`] = `
                                             "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
+                                            "grayAlpha": "rgba(0,0,0,0.17)",
                                             "medgray1": "#757575",
                                             "medgray2": "#888888",
                                             "primary1": "#4169E1",
@@ -1587,6 +1643,7 @@ exports[`Alert renders correctly 1`] = `
                                             "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
+                                            "grayAlpha": "rgba(0,0,0,0.17)",
                                             "medgray1": "#757575",
                                             "medgray2": "#888888",
                                             "primary1": "#4169E1",
@@ -1627,6 +1684,7 @@ exports[`Alert renders correctly 1`] = `
                                               "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
+                                              "grayAlpha": "rgba(0,0,0,0.17)",
                                               "medgray1": "#757575",
                                               "medgray2": "#888888",
                                               "primary1": "#4169E1",
@@ -1651,6 +1709,7 @@ exports[`Alert renders correctly 1`] = `
                                               "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
+                                              "grayAlpha": "rgba(0,0,0,0.17)",
                                               "medgray1": "#757575",
                                               "medgray2": "#888888",
                                               "primary1": "#4169E1",
@@ -1675,6 +1734,7 @@ exports[`Alert renders correctly 1`] = `
                                               "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
+                                              "grayAlpha": "rgba(0,0,0,0.17)",
                                               "medgray1": "#757575",
                                               "medgray2": "#888888",
                                               "primary1": "#4169E1",
@@ -1697,7 +1757,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx bnidDp sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
+                                          className="sc-bdnylx fqeaoo sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -1728,6 +1788,7 @@ exports[`Alert renders correctly 1`] = `
                                                         "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
+                                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                                         "medgray1": "#757575",
                                                         "medgray2": "#888888",
                                                         "primary1": "#4169E1",
@@ -1752,6 +1813,7 @@ exports[`Alert renders correctly 1`] = `
                                                         "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
+                                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                                         "medgray1": "#757575",
                                                         "medgray2": "#888888",
                                                         "primary1": "#4169E1",
@@ -1776,6 +1838,7 @@ exports[`Alert renders correctly 1`] = `
                                                         "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
+                                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                                         "medgray1": "#757575",
                                                         "medgray2": "#888888",
                                                         "primary1": "#4169E1",
@@ -1809,6 +1872,7 @@ exports[`Alert renders correctly 1`] = `
                                                           "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
+                                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                                           "medgray1": "#757575",
                                                           "medgray2": "#888888",
                                                           "primary1": "#4169E1",
@@ -1833,6 +1897,7 @@ exports[`Alert renders correctly 1`] = `
                                                           "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
+                                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                                           "medgray1": "#757575",
                                                           "medgray2": "#888888",
                                                           "primary1": "#4169E1",
@@ -1857,6 +1922,7 @@ exports[`Alert renders correctly 1`] = `
                                                           "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
+                                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                                           "medgray1": "#757575",
                                                           "medgray2": "#888888",
                                                           "primary1": "#4169E1",
@@ -1878,7 +1944,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx jrLcJL sc-pNWxx gxbiOV notranslate "
+                                                      className="sc-bdnylx drKdKK sc-pNWxx gxbiOV notranslate "
                                                       style={Object {}}
                                                     >
                                                       chevron_left
@@ -1918,6 +1984,7 @@ exports[`Alert renders correctly 1`] = `
                                       "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
                                       "medgray1": "#757575",
                                       "medgray2": "#888888",
                                       "primary1": "#4169E1",
@@ -1942,6 +2009,7 @@ exports[`Alert renders correctly 1`] = `
                                       "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
                                       "medgray1": "#757575",
                                       "medgray2": "#888888",
                                       "primary1": "#4169E1",
@@ -1966,6 +2034,7 @@ exports[`Alert renders correctly 1`] = `
                                       "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
                                       "medgray1": "#757575",
                                       "medgray2": "#888888",
                                       "primary1": "#4169E1",
@@ -2003,6 +2072,7 @@ exports[`Alert renders correctly 1`] = `
                                         "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
+                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                         "medgray1": "#757575",
                                         "medgray2": "#888888",
                                         "primary1": "#4169E1",
@@ -2027,6 +2097,7 @@ exports[`Alert renders correctly 1`] = `
                                         "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
+                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                         "medgray1": "#757575",
                                         "medgray2": "#888888",
                                         "primary1": "#4169E1",
@@ -2051,6 +2122,7 @@ exports[`Alert renders correctly 1`] = `
                                         "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
+                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                         "medgray1": "#757575",
                                         "medgray2": "#888888",
                                         "primary1": "#4169E1",
@@ -2088,6 +2160,7 @@ exports[`Alert renders correctly 1`] = `
                                           "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
+                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                           "medgray1": "#757575",
                                           "medgray2": "#888888",
                                           "primary1": "#4169E1",
@@ -2112,6 +2185,7 @@ exports[`Alert renders correctly 1`] = `
                                           "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
+                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                           "medgray1": "#757575",
                                           "medgray2": "#888888",
                                           "primary1": "#4169E1",
@@ -2136,6 +2210,7 @@ exports[`Alert renders correctly 1`] = `
                                           "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
+                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                           "medgray1": "#757575",
                                           "medgray2": "#888888",
                                           "primary1": "#4169E1",
@@ -2174,6 +2249,7 @@ exports[`Alert renders correctly 1`] = `
                                             "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
+                                            "grayAlpha": "rgba(0,0,0,0.17)",
                                             "medgray1": "#757575",
                                             "medgray2": "#888888",
                                             "primary1": "#4169E1",
@@ -2198,6 +2274,7 @@ exports[`Alert renders correctly 1`] = `
                                             "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
+                                            "grayAlpha": "rgba(0,0,0,0.17)",
                                             "medgray1": "#757575",
                                             "medgray2": "#888888",
                                             "primary1": "#4169E1",
@@ -2222,6 +2299,7 @@ exports[`Alert renders correctly 1`] = `
                                             "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
+                                            "grayAlpha": "rgba(0,0,0,0.17)",
                                             "medgray1": "#757575",
                                             "medgray2": "#888888",
                                             "primary1": "#4169E1",
@@ -2261,6 +2339,7 @@ exports[`Alert renders correctly 1`] = `
                                               "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
+                                              "grayAlpha": "rgba(0,0,0,0.17)",
                                               "medgray1": "#757575",
                                               "medgray2": "#888888",
                                               "primary1": "#4169E1",
@@ -2285,6 +2364,7 @@ exports[`Alert renders correctly 1`] = `
                                               "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
+                                              "grayAlpha": "rgba(0,0,0,0.17)",
                                               "medgray1": "#757575",
                                               "medgray2": "#888888",
                                               "primary1": "#4169E1",
@@ -2309,6 +2389,7 @@ exports[`Alert renders correctly 1`] = `
                                               "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
+                                              "grayAlpha": "rgba(0,0,0,0.17)",
                                               "medgray1": "#757575",
                                               "medgray2": "#888888",
                                               "primary1": "#4169E1",
@@ -2331,7 +2412,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx ilnHQd sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
+                                          className="sc-bdnylx boacyE sc-gKAblj sc-iCoHVE hkIKDf dVmiqS"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -2363,6 +2444,7 @@ exports[`Alert renders correctly 1`] = `
                                                         "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
+                                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                                         "medgray1": "#757575",
                                                         "medgray2": "#888888",
                                                         "primary1": "#4169E1",
@@ -2387,6 +2469,7 @@ exports[`Alert renders correctly 1`] = `
                                                         "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
+                                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                                         "medgray1": "#757575",
                                                         "medgray2": "#888888",
                                                         "primary1": "#4169E1",
@@ -2411,6 +2494,7 @@ exports[`Alert renders correctly 1`] = `
                                                         "darkgray3": "#424242",
                                                         "gray1": "#E0E0E0",
                                                         "gray2": "#E7E7E7",
+                                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                                         "medgray1": "#757575",
                                                         "medgray2": "#888888",
                                                         "primary1": "#4169E1",
@@ -2444,6 +2528,7 @@ exports[`Alert renders correctly 1`] = `
                                                           "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
+                                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                                           "medgray1": "#757575",
                                                           "medgray2": "#888888",
                                                           "primary1": "#4169E1",
@@ -2468,6 +2553,7 @@ exports[`Alert renders correctly 1`] = `
                                                           "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
+                                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                                           "medgray1": "#757575",
                                                           "medgray2": "#888888",
                                                           "primary1": "#4169E1",
@@ -2492,6 +2578,7 @@ exports[`Alert renders correctly 1`] = `
                                                           "darkgray3": "#424242",
                                                           "gray1": "#E0E0E0",
                                                           "gray2": "#E7E7E7",
+                                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                                           "medgray1": "#757575",
                                                           "medgray2": "#888888",
                                                           "primary1": "#4169E1",
@@ -2513,7 +2600,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx jrLcJL sc-pNWxx gxbiOV notranslate "
+                                                      className="sc-bdnylx drKdKK sc-pNWxx gxbiOV notranslate "
                                                       style={Object {}}
                                                     >
                                                       chevron_right
@@ -2554,6 +2641,7 @@ exports[`Alert renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -2578,6 +2666,7 @@ exports[`Alert renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -2602,6 +2691,7 @@ exports[`Alert renders correctly 1`] = `
                         "darkgray3": "#424242",
                         "gray1": "#E0E0E0",
                         "gray2": "#E7E7E7",
+                        "grayAlpha": "rgba(0,0,0,0.17)",
                         "medgray1": "#757575",
                         "medgray2": "#888888",
                         "primary1": "#4169E1",
@@ -2634,6 +2724,7 @@ exports[`Alert renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -2658,6 +2749,7 @@ exports[`Alert renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -2682,6 +2774,7 @@ exports[`Alert renders correctly 1`] = `
                           "darkgray3": "#424242",
                           "gray1": "#E0E0E0",
                           "gray2": "#E7E7E7",
+                          "grayAlpha": "rgba(0,0,0,0.17)",
                           "medgray1": "#757575",
                           "medgray2": "#888888",
                           "primary1": "#4169E1",
@@ -2714,6 +2807,7 @@ exports[`Alert renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -2738,6 +2832,7 @@ exports[`Alert renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -2762,6 +2857,7 @@ exports[`Alert renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -2795,6 +2891,7 @@ exports[`Alert renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -2819,6 +2916,7 @@ exports[`Alert renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -2843,6 +2941,7 @@ exports[`Alert renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -2876,6 +2975,7 @@ exports[`Alert renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2900,6 +3000,7 @@ exports[`Alert renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2924,6 +3025,7 @@ exports[`Alert renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2945,7 +3047,7 @@ exports[`Alert renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx jrLcJL sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
+                            className="sc-bdnylx drKdKK sc-dlnjPT sc-jSFkmK jgVeqN fZzUKW"
                             style={Object {}}
                           >
                             <ButtonSecondary
@@ -2972,6 +3074,7 @@ exports[`Alert renders correctly 1`] = `
                                       "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
                                       "medgray1": "#757575",
                                       "medgray2": "#888888",
                                       "primary1": "#4169E1",
@@ -2996,6 +3099,7 @@ exports[`Alert renders correctly 1`] = `
                                       "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
                                       "medgray1": "#757575",
                                       "medgray2": "#888888",
                                       "primary1": "#4169E1",
@@ -3020,6 +3124,7 @@ exports[`Alert renders correctly 1`] = `
                                       "darkgray3": "#424242",
                                       "gray1": "#E0E0E0",
                                       "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
                                       "medgray1": "#757575",
                                       "medgray2": "#888888",
                                       "primary1": "#4169E1",
@@ -3058,6 +3163,7 @@ exports[`Alert renders correctly 1`] = `
                                         "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
+                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                         "medgray1": "#757575",
                                         "medgray2": "#888888",
                                         "primary1": "#4169E1",
@@ -3082,6 +3188,7 @@ exports[`Alert renders correctly 1`] = `
                                         "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
+                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                         "medgray1": "#757575",
                                         "medgray2": "#888888",
                                         "primary1": "#4169E1",
@@ -3106,6 +3213,7 @@ exports[`Alert renders correctly 1`] = `
                                         "darkgray3": "#424242",
                                         "gray1": "#E0E0E0",
                                         "gray2": "#E7E7E7",
+                                        "grayAlpha": "rgba(0,0,0,0.17)",
                                         "medgray1": "#757575",
                                         "medgray2": "#888888",
                                         "primary1": "#4169E1",
@@ -3130,7 +3238,7 @@ exports[`Alert renders correctly 1`] = `
                                     borderColor="#37a037"
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKAblj sc-fujyUd hkIKDf eOuAOv"
+                                    className="sc-gKAblj sc-fujyUd hkIKDf cPQDzS"
                                     fontColor="#37a037"
                                     onClick={[Function]}
                                     palette={
@@ -3144,6 +3252,7 @@ exports[`Alert renders correctly 1`] = `
                                           "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
+                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                           "medgray1": "#757575",
                                           "medgray2": "#888888",
                                           "primary1": "#4169E1",
@@ -3168,6 +3277,7 @@ exports[`Alert renders correctly 1`] = `
                                           "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
+                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                           "medgray1": "#757575",
                                           "medgray2": "#888888",
                                           "primary1": "#4169E1",
@@ -3192,6 +3302,7 @@ exports[`Alert renders correctly 1`] = `
                                           "darkgray3": "#424242",
                                           "gray1": "#E0E0E0",
                                           "gray2": "#E7E7E7",
+                                          "grayAlpha": "rgba(0,0,0,0.17)",
                                           "medgray1": "#757575",
                                           "medgray2": "#888888",
                                           "primary1": "#4169E1",
@@ -3217,7 +3328,7 @@ exports[`Alert renders correctly 1`] = `
                                       borderColor="#37a037"
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKAblj sc-fujyUd hkIKDf eOuAOv"
+                                      className="sc-gKAblj sc-fujyUd hkIKDf cPQDzS"
                                       fontColor="#37a037"
                                       onClick={[Function]}
                                       palette={
@@ -3231,6 +3342,7 @@ exports[`Alert renders correctly 1`] = `
                                             "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
+                                            "grayAlpha": "rgba(0,0,0,0.17)",
                                             "medgray1": "#757575",
                                             "medgray2": "#888888",
                                             "primary1": "#4169E1",
@@ -3255,6 +3367,7 @@ exports[`Alert renders correctly 1`] = `
                                             "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
+                                            "grayAlpha": "rgba(0,0,0,0.17)",
                                             "medgray1": "#757575",
                                             "medgray2": "#888888",
                                             "primary1": "#4169E1",
@@ -3279,6 +3392,7 @@ exports[`Alert renders correctly 1`] = `
                                             "darkgray3": "#424242",
                                             "gray1": "#E0E0E0",
                                             "gray2": "#E7E7E7",
+                                            "grayAlpha": "rgba(0,0,0,0.17)",
                                             "medgray1": "#757575",
                                             "medgray2": "#888888",
                                             "primary1": "#4169E1",
@@ -3305,7 +3419,7 @@ exports[`Alert renders correctly 1`] = `
                                         borderColor="#37a037"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKAblj sc-fujyUd hkIKDf eOuAOv"
+                                        className="sc-gKAblj sc-fujyUd hkIKDf cPQDzS"
                                         fontColor="#37a037"
                                         onClick={[Function]}
                                         palette={
@@ -3319,6 +3433,7 @@ exports[`Alert renders correctly 1`] = `
                                               "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
+                                              "grayAlpha": "rgba(0,0,0,0.17)",
                                               "medgray1": "#757575",
                                               "medgray2": "#888888",
                                               "primary1": "#4169E1",
@@ -3343,6 +3458,7 @@ exports[`Alert renders correctly 1`] = `
                                               "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
+                                              "grayAlpha": "rgba(0,0,0,0.17)",
                                               "medgray1": "#757575",
                                               "medgray2": "#888888",
                                               "primary1": "#4169E1",
@@ -3367,6 +3483,7 @@ exports[`Alert renders correctly 1`] = `
                                               "darkgray3": "#424242",
                                               "gray1": "#E0E0E0",
                                               "gray2": "#E7E7E7",
+                                              "grayAlpha": "rgba(0,0,0,0.17)",
                                               "medgray1": "#757575",
                                               "medgray2": "#888888",
                                               "primary1": "#4169E1",
@@ -3389,7 +3506,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdnylx ZQejS sc-gKAblj sc-fujyUd hkIKDf eOuAOv"
+                                          className="sc-bdnylx fSoJP sc-gKAblj sc-fujyUd hkIKDf cPQDzS"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
