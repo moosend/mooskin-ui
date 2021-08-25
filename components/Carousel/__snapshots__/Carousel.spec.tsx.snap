@@ -256,6 +256,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -280,6 +281,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -304,6 +306,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -341,6 +344,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -365,6 +369,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -389,6 +394,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -411,7 +417,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 4
@@ -473,6 +479,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -497,6 +504,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -521,6 +529,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -558,6 +567,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -582,6 +592,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -606,6 +617,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -628,7 +640,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 5
@@ -690,6 +702,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -714,6 +727,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -738,6 +752,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -775,6 +790,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -799,6 +815,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -823,6 +840,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -845,7 +863,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 6
@@ -908,6 +926,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -932,6 +951,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -956,6 +976,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -993,6 +1014,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1017,6 +1039,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1041,6 +1064,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1063,7 +1087,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 0
@@ -1126,6 +1150,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1150,6 +1175,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1174,6 +1200,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1211,6 +1238,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1235,6 +1263,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1259,6 +1288,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1281,7 +1311,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 1
@@ -1344,6 +1374,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1368,6 +1399,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1392,6 +1424,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1429,6 +1462,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1453,6 +1487,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1477,6 +1512,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1499,7 +1535,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 2
@@ -1562,6 +1598,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1586,6 +1623,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1610,6 +1648,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1647,6 +1686,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1671,6 +1711,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1695,6 +1736,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1717,7 +1759,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 3
@@ -1780,6 +1822,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1804,6 +1847,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1828,6 +1872,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -1865,6 +1910,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1889,6 +1935,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1913,6 +1960,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -1935,7 +1983,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 4
@@ -1998,6 +2046,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2022,6 +2071,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2046,6 +2096,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2083,6 +2134,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2107,6 +2159,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2131,6 +2184,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2153,7 +2207,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 5
@@ -2216,6 +2270,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2240,6 +2295,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2264,6 +2320,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2301,6 +2358,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2325,6 +2383,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2349,6 +2408,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2371,7 +2431,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 6
@@ -2433,6 +2493,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2457,6 +2518,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2481,6 +2543,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2518,6 +2581,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2542,6 +2606,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2566,6 +2631,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2588,7 +2654,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 0
@@ -2650,6 +2716,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2674,6 +2741,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2698,6 +2766,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2735,6 +2804,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2759,6 +2829,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2783,6 +2854,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2805,7 +2877,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 1
@@ -2867,6 +2939,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2891,6 +2964,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2915,6 +2989,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -2952,6 +3027,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -2976,6 +3052,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3000,6 +3077,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3022,7 +3100,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 2
@@ -3084,6 +3162,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3108,6 +3187,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3132,6 +3212,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3169,6 +3250,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3193,6 +3275,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3217,6 +3300,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3239,7 +3323,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 3
@@ -3301,6 +3385,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3325,6 +3410,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3349,6 +3435,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3386,6 +3473,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3410,6 +3498,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3434,6 +3523,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3456,7 +3546,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 4
@@ -3518,6 +3608,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3542,6 +3633,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3566,6 +3658,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3603,6 +3696,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3627,6 +3721,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3651,6 +3746,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3673,7 +3769,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 5
@@ -3735,6 +3831,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3759,6 +3856,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3783,6 +3881,7 @@ exports[`Carousel renders correctly 1`] = `
                                 "darkgray3": "#424242",
                                 "gray1": "#E0E0E0",
                                 "gray2": "#E7E7E7",
+                                "grayAlpha": "rgba(0,0,0,0.17)",
                                 "medgray1": "#757575",
                                 "medgray2": "#888888",
                                 "primary1": "#4169E1",
@@ -3820,6 +3919,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3844,6 +3944,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3868,6 +3969,7 @@ exports[`Carousel renders correctly 1`] = `
                                   "darkgray3": "#424242",
                                   "gray1": "#E0E0E0",
                                   "gray2": "#E7E7E7",
+                                  "grayAlpha": "rgba(0,0,0,0.17)",
                                   "medgray1": "#757575",
                                   "medgray2": "#888888",
                                   "primary1": "#4169E1",
@@ -3890,7 +3992,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx fzQcXK"
+                              className="sc-bdnylx bkkyun"
                               style={Object {}}
                             >
                               Box 6
@@ -3982,6 +4084,7 @@ exports[`Carousel renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -4006,6 +4109,7 @@ exports[`Carousel renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -4030,6 +4134,7 @@ exports[`Carousel renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -4064,6 +4169,7 @@ exports[`Carousel renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -4088,6 +4194,7 @@ exports[`Carousel renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -4112,6 +4219,7 @@ exports[`Carousel renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -4133,7 +4241,7 @@ exports[`Carousel renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx jrLcJL sc-dlnjPT fvzCWx"
+                          className="sc-bdnylx drKdKK sc-dlnjPT fvzCWx"
                           onClick={[Function]}
                           style={Object {}}
                         />
@@ -4169,6 +4277,7 @@ exports[`Carousel renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -4193,6 +4302,7 @@ exports[`Carousel renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -4217,6 +4327,7 @@ exports[`Carousel renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -4251,6 +4362,7 @@ exports[`Carousel renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -4275,6 +4387,7 @@ exports[`Carousel renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -4299,6 +4412,7 @@ exports[`Carousel renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -4320,7 +4434,7 @@ exports[`Carousel renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx jrLcJL sc-dlnjPT fvzCWx"
+                          className="sc-bdnylx drKdKK sc-dlnjPT fvzCWx"
                           onClick={[Function]}
                           style={Object {}}
                         />
@@ -4356,6 +4470,7 @@ exports[`Carousel renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -4380,6 +4495,7 @@ exports[`Carousel renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -4404,6 +4520,7 @@ exports[`Carousel renders correctly 1`] = `
                             "darkgray3": "#424242",
                             "gray1": "#E0E0E0",
                             "gray2": "#E7E7E7",
+                            "grayAlpha": "rgba(0,0,0,0.17)",
                             "medgray1": "#757575",
                             "medgray2": "#888888",
                             "primary1": "#4169E1",
@@ -4438,6 +4555,7 @@ exports[`Carousel renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -4462,6 +4580,7 @@ exports[`Carousel renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -4486,6 +4605,7 @@ exports[`Carousel renders correctly 1`] = `
                               "darkgray3": "#424242",
                               "gray1": "#E0E0E0",
                               "gray2": "#E7E7E7",
+                              "grayAlpha": "rgba(0,0,0,0.17)",
                               "medgray1": "#757575",
                               "medgray2": "#888888",
                               "primary1": "#4169E1",
@@ -4507,7 +4627,7 @@ exports[`Carousel renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx jrLcJL sc-dlnjPT fvzCWx"
+                          className="sc-bdnylx drKdKK sc-dlnjPT fvzCWx"
                           onClick={[Function]}
                           style={Object {}}
                         />

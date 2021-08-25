@@ -11,6 +11,7 @@ export interface IThemeFontColors {
 	secondary6: string;
 	white: string;
 	background: string;
+	grayAlpha: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;
@@ -36,6 +37,7 @@ export interface IThemeBackgroundColors {
 	secondary6: string;
 	white: string;
 	background: string;
+	grayAlpha: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;
@@ -61,6 +63,7 @@ export interface IThemeBorderColors {
 	secondary6: string;
 	white: string;
 	background: string;
+	grayAlpha: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;

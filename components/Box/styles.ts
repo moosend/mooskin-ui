@@ -254,6 +254,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		${(props) => generateStyles({ property: 'text-overflow', value: props.textOverflow })}
 		${(props) => generateStyles({ property: 'grid-template-columns', value: props.gridTemplateColumns })}
 		${(props) => generateStyles({ property: 'word-break', value: props.wordBreak })}
+		${(props) => generateStyles({ property: 'outline', value: props.outline })}
 
 		:hover {
 			${(props) => props._hover}
