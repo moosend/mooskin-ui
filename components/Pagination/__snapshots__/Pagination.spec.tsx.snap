@@ -436,7 +436,7 @@ exports[`Pagination renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx drKdKK sc-dlnjPT kra-dhH"
+              className="sc-bdnylx ckoRHe sc-dlnjPT kra-dhH"
               onClickButton={[MockFunction]}
               style={Object {}}
             >
@@ -887,7 +887,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx hUPxYQ sc-gtssRu fehwhe notranslate "
+                            className="sc-bdnylx hPkbCU sc-gtssRu fehwhe notranslate "
                             cursor="pointer"
                             onClick={[Function]}
                             opacity={1}
@@ -1354,7 +1354,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx bRSOpU sc-gtssRu fehwhe notranslate "
+                            className="sc-bdnylx inUJRQ sc-gtssRu fehwhe notranslate "
                             cursor="pointer"
                             onClick={[Function]}
                             opacity={1}
@@ -1804,7 +1804,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx drKdKK sc-hKFyIo ejwqWQ"
+                            className="sc-bdnylx ckoRHe sc-hKFyIo ejwqWQ"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -2252,7 +2252,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx drKdKK sc-hKFyIo ejwqWQ"
+                            className="sc-bdnylx ckoRHe sc-hKFyIo ejwqWQ"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -2700,7 +2700,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx drKdKK sc-hKFyIo godoDc"
+                            className="sc-bdnylx ckoRHe sc-hKFyIo godoDc"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -3148,7 +3148,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx drKdKK sc-hKFyIo ejwqWQ"
+                            className="sc-bdnylx ckoRHe sc-hKFyIo ejwqWQ"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -3596,7 +3596,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx drKdKK sc-hKFyIo ejwqWQ"
+                            className="sc-bdnylx ckoRHe sc-hKFyIo ejwqWQ"
                             onClick={[Function]}
                             style={Object {}}
                           >
@@ -4055,7 +4055,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx hUPxYQ sc-gtssRu fehwhe notranslate "
+                            className="sc-bdnylx hPkbCU sc-gtssRu fehwhe notranslate "
                             cursor="pointer"
                             onClick={[Function]}
                             opacity={1}
@@ -4522,7 +4522,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx bRSOpU sc-gtssRu fehwhe notranslate "
+                            className="sc-bdnylx inUJRQ sc-gtssRu fehwhe notranslate "
                             cursor="pointer"
                             onClick={[Function]}
                             opacity={1}
@@ -4874,7 +4874,7 @@ exports[`Pagination renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <div
-                        className="sc-bdnylx drKdKK sc-eCApGN gDxBSP"
+                        className="sc-bdnylx ckoRHe sc-eCApGN gDxBSP"
                         onClick={[Function]}
                         style={Object {}}
                       >

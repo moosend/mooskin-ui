@@ -207,7 +207,7 @@ exports[`Slider renders correctly 1`] = `
           value={5}
         >
           <input
-            className="sc-bdnylx drKdKK sc-gtssRu eklUIY"
+            className="sc-bdnylx ckoRHe sc-gtssRu eklUIY"
             max={10}
             min={0}
             onChange={[Function]}

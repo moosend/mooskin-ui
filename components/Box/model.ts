@@ -412,5 +412,14 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 	textOverflow?: React.CSSProperties['textOverflow'] | Array<React.CSSProperties['textOverflow']>;
 
 	/** outline */
-	outline?: React.CSSProperties['outline'];
+	outline?: React.CSSProperties['outline'] | Array<React.CSSProperties['outline']>;
+
+	/** outline width */
+	outlineWidth?: React.CSSProperties['outlineWidth'] | Array<React.CSSProperties['outlineWidth']>;
+
+	/** outline style */
+	outlineStyle?: React.CSSProperties['outlineStyle'] | Array<React.CSSProperties['outlineStyle']>;
+
+	/** outline color */
+	outlineColor?: React.CSSProperties['outlineColor'] | NestedThemeType | Array<React.CSSProperties['outlineColor']>;
 }

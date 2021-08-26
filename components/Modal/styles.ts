@@ -45,7 +45,8 @@ export const StyledModal = styled(Box)<IModalComponentProps>``;
 StyledModal.displayName = 'StyledModal';
 
 export const StyledModalContent = styled(Box)<IModalContentComponentProps>`
-	position: fixed;
+	position: relative;
+	margin: auto;
 	width: 100%;
 	max-width: 100%;
 	max-height: 100vh;
@@ -114,7 +115,7 @@ export const StyledModalCloseButton = styled(Box)<IBoxComponentProps>`
 	color: inherit;
 	cursor: pointer;
 	border-radius: 2px;
-	color: #616161;
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
 StyledModalCloseButton.displayName = 'StyledModalCloseButton';
@@ -127,8 +128,6 @@ export const StyledModalOverlay = styled(Box)<IBoxComponentProps>`
 	left: 0px;
 	top: 0px;
 	z-index: 1400;
-	justify-content: center;
-	align-items: center;
 	background-color: rgba(0, 0, 0, 0.48);
 `;
 
