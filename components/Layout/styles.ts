@@ -8,7 +8,7 @@ export const StyledLayout = styled(Box)<ILayoutComponentProps>`
 	display: grid;
 	grid-column-gap: ${(props) => props.spacing}px;
 	grid-row-gap: ${(props) => props.spacing}px;
-	grid-template-columns: ${(props) => props.cols && `repeat(${props.cols}, auto)`};
+	grid-template-columns: ${(props) => props.cols && `repeat(${props.cols}, 1fr)`};
 `;
 
 StyledLayout.displayName = 'StyledLayout';
