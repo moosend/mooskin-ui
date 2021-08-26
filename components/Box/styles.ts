@@ -236,6 +236,11 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		${(props) => generateStyles({ property: 'border-bottom-right-radius', value: props.borderBottomRightRadius, processedValue: true })}
 		${(props) => generateStyles({ property: 'border-bottom-left-radius', value: props.borderBottomLeftRadius, processedValue: true })}
 
+		${(props) => generateStyles({ property: 'outline', value: props.outline })}
+		${(props) => generateStyles({ property: 'outline-style', value: props.outlineStyle })}
+		${(props) => generateStyles({ property: 'outline-color', value: props.outlineColor, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'outline-width', value: props.outlineWidth, processedValue: true })}
+
 		${(props) => generateStyles({ property: 'position', value: props.position })}
 		${(props) => generateStyles({ property: 'z-index', value: props.zIndex })}
 		${(props) => generateStyles({ property: 'top', value: props.top, processedValue: true })}
@@ -254,7 +259,6 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		${(props) => generateStyles({ property: 'text-overflow', value: props.textOverflow })}
 		${(props) => generateStyles({ property: 'grid-template-columns', value: props.gridTemplateColumns })}
 		${(props) => generateStyles({ property: 'word-break', value: props.wordBreak })}
-		${(props) => generateStyles({ property: 'outline', value: props.outline })}
 
 		:hover {
 			${(props) => props._hover}

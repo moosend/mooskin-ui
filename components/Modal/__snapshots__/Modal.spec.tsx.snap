@@ -442,7 +442,7 @@ exports[`Modal renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx drKdKK sc-gtssRu"
+              className="sc-bdnylx ckoRHe sc-gtssRu"
               onClose={[MockFunction]}
               style={Object {}}
             >
@@ -643,7 +643,7 @@ exports[`Modal renders correctly 1`] = `
                     >
                       <Box
                         boxShadow="base"
-                        className="sc-pNWxx sc-jrsJCI sIsqV bJVzoT"
+                        className="sc-pNWxx sc-jrsJCI gWmuOJ bJVzoT"
                         isOpen={true}
                         onClick={[Function]}
                         palette={
@@ -731,7 +731,7 @@ exports[`Modal renders correctly 1`] = `
                       >
                         <Component
                           boxShadow="base"
-                          className="sc-pNWxx sc-jrsJCI sIsqV bJVzoT"
+                          className="sc-pNWxx sc-jrsJCI gWmuOJ bJVzoT"
                           isOpen={true}
                           onClick={[Function]}
                           palette={
@@ -819,7 +819,7 @@ exports[`Modal renders correctly 1`] = `
                         >
                           <StyledBox
                             boxShadow="base"
-                            className="sc-pNWxx sc-jrsJCI sIsqV bJVzoT"
+                            className="sc-pNWxx sc-jrsJCI gWmuOJ bJVzoT"
                             isOpen={true}
                             onClick={[Function]}
                             palette={
@@ -906,7 +906,7 @@ exports[`Modal renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hZdMsm sc-pNWxx sc-jrsJCI sIsqV bJVzoT"
+                              className="sc-bdnylx flapBS sc-pNWxx sc-jrsJCI gWmuOJ bJVzoT"
                               onClick={[Function]}
                               style={Object {}}
                             >
@@ -1094,7 +1094,7 @@ exports[`Modal renders correctly 1`] = `
                                     w="50%"
                                   >
                                     <Box
-                                      className="sc-dlnjPT sc-hKFyIo dIkxby dbXBQT"
+                                      className="sc-dlnjPT sc-hKFyIo iywsRr dbXBQT"
                                       h="50%"
                                       isOpen={true}
                                       onClick={[Function]}
@@ -1182,7 +1182,7 @@ exports[`Modal renders correctly 1`] = `
                                       w="50%"
                                     >
                                       <Component
-                                        className="sc-dlnjPT sc-hKFyIo dIkxby dbXBQT"
+                                        className="sc-dlnjPT sc-hKFyIo iywsRr dbXBQT"
                                         h="50%"
                                         isOpen={true}
                                         onClick={[Function]}
@@ -1270,7 +1270,7 @@ exports[`Modal renders correctly 1`] = `
                                         w="50%"
                                       >
                                         <StyledBox
-                                          className="sc-dlnjPT sc-hKFyIo dIkxby dbXBQT"
+                                          className="sc-dlnjPT sc-hKFyIo iywsRr dbXBQT"
                                           h="50%"
                                           isOpen={true}
                                           onClick={[Function]}
@@ -1358,7 +1358,7 @@ exports[`Modal renders correctly 1`] = `
                                           w="50%"
                                         >
                                           <div
-                                            className="sc-bdnylx bJhMYv sc-dlnjPT sc-hKFyIo dIkxby dbXBQT"
+                                            className="sc-bdnylx cWSvmr sc-dlnjPT sc-hKFyIo iywsRr dbXBQT"
                                             onClick={[Function]}
                                             style={Object {}}
                                           >
@@ -1546,7 +1546,7 @@ exports[`Modal renders correctly 1`] = `
                                                   top={10}
                                                 >
                                                   <Box
-                                                    className="sc-fujyUd edSKLA notranslate "
+                                                    className="sc-fujyUd dozWsr notranslate "
                                                     onClick={[Function]}
                                                     palette={
                                                       Object {
@@ -1634,7 +1634,7 @@ exports[`Modal renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <Component
-                                                      className="sc-fujyUd edSKLA notranslate "
+                                                      className="sc-fujyUd dozWsr notranslate "
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -1722,7 +1722,7 @@ exports[`Modal renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <StyledBox
-                                                        className="sc-fujyUd edSKLA notranslate "
+                                                        className="sc-fujyUd dozWsr notranslate "
                                                         onClick={[Function]}
                                                         palette={
                                                           Object {
@@ -1810,7 +1810,7 @@ exports[`Modal renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <div
-                                                          className="sc-bdnylx iFzYTF sc-fujyUd edSKLA notranslate "
+                                                          className="sc-bdnylx frdiWp sc-fujyUd dozWsr notranslate "
                                                           onClick={[Function]}
                                                           style={Object {}}
                                                         >
@@ -2251,7 +2251,7 @@ exports[`Modal renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <header
-                                                          className="sc-bdnylx drKdKK sc-jSFkmK fctZID"
+                                                          className="sc-bdnylx ckoRHe sc-jSFkmK fctZID"
                                                           style={Object {}}
                                                         >
                                                           Create your account
@@ -2686,7 +2686,7 @@ exports[`Modal renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <div
-                                                          className="sc-bdnylx drKdKK sc-gKAblj cqCqMD"
+                                                          className="sc-bdnylx ckoRHe sc-gKAblj cqCqMD"
                                                           style={Object {}}
                                                         >
                                                           Modal Content Body
@@ -3126,7 +3126,7 @@ exports[`Modal renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <footer
-                                                          className="sc-bdnylx drKdKK sc-iCoHVE jHzxyK"
+                                                          className="sc-bdnylx ckoRHe sc-iCoHVE jHzxyK"
                                                           style={Object {}}
                                                         >
                                                           Modal Footer goes here!

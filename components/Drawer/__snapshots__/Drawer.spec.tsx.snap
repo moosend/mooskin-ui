@@ -448,7 +448,7 @@ exports[`Drawer renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx drKdKK sc-gtssRu"
+              className="sc-bdnylx ckoRHe sc-gtssRu"
               onClose={[MockFunction]}
               size="sm"
               style={Object {}}
@@ -650,7 +650,7 @@ exports[`Drawer renders correctly 1`] = `
                     >
                       <Box
                         boxShadow="base"
-                        className="sc-fFSRdu sc-bkbjAj ghcKOC gtmshO"
+                        className="sc-fFSRdu sc-bkbjAj bXwnsN gtmshO"
                         isOpen={true}
                         onClick={[Function]}
                         palette={
@@ -738,7 +738,7 @@ exports[`Drawer renders correctly 1`] = `
                       >
                         <Component
                           boxShadow="base"
-                          className="sc-fFSRdu sc-bkbjAj ghcKOC gtmshO"
+                          className="sc-fFSRdu sc-bkbjAj bXwnsN gtmshO"
                           isOpen={true}
                           onClick={[Function]}
                           palette={
@@ -826,7 +826,7 @@ exports[`Drawer renders correctly 1`] = `
                         >
                           <StyledBox
                             boxShadow="base"
-                            className="sc-fFSRdu sc-bkbjAj ghcKOC gtmshO"
+                            className="sc-fFSRdu sc-bkbjAj bXwnsN gtmshO"
                             isOpen={true}
                             onClick={[Function]}
                             palette={
@@ -913,7 +913,7 @@ exports[`Drawer renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hZdMsm sc-fFSRdu sc-bkbjAj ghcKOC gtmshO"
+                              className="sc-bdnylx flapBS sc-fFSRdu sc-bkbjAj bXwnsN gtmshO"
                               onClick={[Function]}
                               style={Object {}}
                             >
@@ -1104,7 +1104,7 @@ exports[`Drawer renders correctly 1`] = `
                                     w="50%"
                                   >
                                     <Box
-                                      className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb fBTWZO"
+                                      className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isDHom iegmpR fBTWZO"
                                       h="50%"
                                       onClick={[Function]}
                                       palette={
@@ -1193,7 +1193,7 @@ exports[`Drawer renders correctly 1`] = `
                                       w="50%"
                                     >
                                       <Component
-                                        className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb fBTWZO"
+                                        className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isDHom iegmpR fBTWZO"
                                         h="50%"
                                         onClick={[Function]}
                                         palette={
@@ -1282,7 +1282,7 @@ exports[`Drawer renders correctly 1`] = `
                                         w="50%"
                                       >
                                         <StyledBox
-                                          className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb fBTWZO"
+                                          className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isDHom iegmpR fBTWZO"
                                           h="50%"
                                           onClick={[Function]}
                                           palette={
@@ -1371,7 +1371,7 @@ exports[`Drawer renders correctly 1`] = `
                                           w="50%"
                                         >
                                           <div
-                                            className="sc-bdnylx bJhMYv sc-dlnjPT sc-hKFyIo sc-jSFkmK isxwzc kxhdAb fBTWZO"
+                                            className="sc-bdnylx cWSvmr sc-dlnjPT sc-hKFyIo sc-jSFkmK isDHom iegmpR fBTWZO"
                                             onClick={[Function]}
                                             size="sm"
                                             style={Object {}}
@@ -1824,7 +1824,7 @@ exports[`Drawer renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <div
-                                                          className="sc-bdnylx iFzYTF sc-fnVYJo ffkGxm notranslate "
+                                                          className="sc-bdnylx frdiWp sc-fnVYJo ffkGxm notranslate "
                                                           onClick={[Function]}
                                                           style={Object {}}
                                                         >
@@ -2265,7 +2265,7 @@ exports[`Drawer renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <header
-                                                          className="sc-bdnylx drKdKK sc-bqGHjH drLbIb"
+                                                          className="sc-bdnylx ckoRHe sc-bqGHjH drLbIb"
                                                           style={Object {}}
                                                         >
                                                           Create your account
@@ -2700,7 +2700,7 @@ exports[`Drawer renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <div
-                                                          className="sc-bdnylx drKdKK sc-ksluoS jiUKmX"
+                                                          className="sc-bdnylx ckoRHe sc-ksluoS jiUKmX"
                                                           style={Object {}}
                                                         >
                                                           Drawer Content Body
@@ -3140,7 +3140,7 @@ exports[`Drawer renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <footer
-                                                          className="sc-bdnylx drKdKK sc-hBMVcZ fJYgtM"
+                                                          className="sc-bdnylx ckoRHe sc-hBMVcZ fJYgtM"
                                                           style={Object {}}
                                                         >
                                                           Drawer Footer goes here!

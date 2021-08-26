@@ -436,7 +436,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx drKdKK sc-gtssRu eglBhX"
+              className="sc-bdnylx ckoRHe sc-gtssRu eglBhX"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -882,7 +882,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx drKdKK sc-dlnjPT bACzJA"
+                            className="sc-bdnylx ckoRHe sc-dlnjPT bACzJA"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -1337,7 +1337,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx drKdKK sc-dlnjPT FULzg"
+                            className="sc-bdnylx ckoRHe sc-dlnjPT FULzg"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -1792,7 +1792,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx drKdKK sc-dlnjPT FULzg"
+                            className="sc-bdnylx ckoRHe sc-dlnjPT FULzg"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -2274,7 +2274,7 @@ exports[`Sidemenu renders SidemenuItem correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx drKdKK sc-dlnjPT bACzJA myClass"
+              className="sc-bdnylx ckoRHe sc-dlnjPT bACzJA myClass"
               onClick={[MockFunction]}
               style={
                 Object {

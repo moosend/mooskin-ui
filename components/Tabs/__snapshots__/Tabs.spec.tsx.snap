@@ -436,7 +436,7 @@ exports[`Pagination renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx drKdKK sc-gtssRu dJxHxj"
+              className="sc-bdnylx ckoRHe sc-gtssRu dJxHxj"
               onClickTab={[MockFunction]}
               style={Object {}}
             >
@@ -617,7 +617,7 @@ exports[`Pagination renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx krXdGB"
+                      className="sc-bdnylx hEPLIp"
                       d="flex"
                       style={Object {}}
                     >
@@ -1057,7 +1057,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx drKdKK sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx ckoRHe sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1505,7 +1505,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx drKdKK sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx ckoRHe sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -1953,7 +1953,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx drKdKK sc-hKFyIo cdjcV"
+                                    className="sc-bdnylx ckoRHe sc-hKFyIo cdjcV"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -2401,7 +2401,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx drKdKK sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx ckoRHe sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -2849,7 +2849,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx drKdKK sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx ckoRHe sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -3297,7 +3297,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx drKdKK sc-hKFyIo kTnxRU"
+                                    className="sc-bdnylx ckoRHe sc-hKFyIo kTnxRU"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -3743,7 +3743,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx drKdKK sc-eCApGN"
+                            className="sc-bdnylx ckoRHe sc-eCApGN"
                             style={Object {}}
                           >
                             <div>

@@ -651,7 +651,7 @@ exports[`Button renders correctly 1`] = `
                 transition="0.2s all"
               >
                 <label
-                  className="sc-bdnylx drKdKK sc-gtssRu gGjztn myClass"
+                  className="sc-bdnylx ckoRHe sc-gtssRu gGjztn myClass"
                   id="label"
                   style={
                     Object {

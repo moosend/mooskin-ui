@@ -452,7 +452,7 @@ exports[`LoadingBar LoadingBar renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx kvponk sc-gtssRu bFlzzl"
+              className="sc-bdnylx gqBeIA sc-gtssRu bFlzzl"
               onLoaderDone={[MockFunction]}
               onLoaderError={[MockFunction]}
               opacity={1}

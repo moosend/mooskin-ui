@@ -598,7 +598,7 @@ exports[`Alert renders correctly 1`] = `
                 transition="0.2s all"
               >
                 <div
-                  className="sc-bdnylx drKdKK sc-jSFkmK dcmWph"
+                  className="sc-bdnylx ckoRHe sc-jSFkmK dcmWph"
                   spacing={15}
                   style={Object {}}
                 >
@@ -1033,7 +1033,7 @@ exports[`Alert renders correctly 1`] = `
                               transition="0.2s all"
                             >
                               <div
-                                className="sc-bdnylx kKQZpB sc-gKAblj eMFnQq"
+                                className="sc-bdnylx ewxagd sc-gKAblj eMFnQq"
                                 style={Object {}}
                               >
                                 <ListItemHead
@@ -1459,7 +1459,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx drKdKK sc-iCoHVE sc-fujyUd swINs"
+                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-fujyUd swINs"
                                               style={Object {}}
                                             >
                                               <img
@@ -1905,7 +1905,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx drKdKK sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-pNWxx swINs gpuKFU"
                                               style={Object {}}
                                             >
                                               <Box
@@ -2088,7 +2088,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx gNUqHe"
+                                                      className="sc-bdnylx dYjrdi"
                                                       fontSize={16}
                                                       fontWeight="600"
                                                       style={Object {}}
@@ -2275,7 +2275,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx dWLUxQ"
+                                                      className="sc-bdnylx dQldvg"
                                                       fontSize={12}
                                                       style={Object {}}
                                                     >
@@ -2714,7 +2714,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx drKdKK sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-jrsJCI swINs fOFiPD"
                                               style={Object {}}
                                             >
                                               <Button
@@ -3161,7 +3161,7 @@ exports[`Alert renders correctly 1`] = `
                                                           type="button"
                                                         >
                                                           <button
-                                                            className="sc-bdnylx drKdKK sc-gtssRu sc-dlnjPT LTZlO kdlRCA"
+                                                            className="sc-bdnylx ckoRHe sc-gtssRu sc-dlnjPT LTZlO kdlRCA"
                                                             onClick={[Function]}
                                                             style={Object {}}
                                                             type="button"
@@ -3619,7 +3619,7 @@ exports[`Alert renders correctly 1`] = `
                               transition="0.2s all"
                             >
                               <div
-                                className="sc-bdnylx kKQZpB sc-gKAblj eMFnQq"
+                                className="sc-bdnylx ewxagd sc-gKAblj eMFnQq"
                                 style={Object {}}
                               >
                                 <ListItemHead
@@ -4045,7 +4045,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx drKdKK sc-iCoHVE sc-fujyUd swINs"
+                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-fujyUd swINs"
                                               style={Object {}}
                                             >
                                               <img
@@ -4491,7 +4491,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx drKdKK sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-pNWxx swINs gpuKFU"
                                               style={Object {}}
                                             >
                                               <Box
@@ -4674,7 +4674,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx gNUqHe"
+                                                      className="sc-bdnylx dYjrdi"
                                                       fontSize={16}
                                                       fontWeight="600"
                                                       style={Object {}}
@@ -4861,7 +4861,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx dWLUxQ"
+                                                      className="sc-bdnylx dQldvg"
                                                       fontSize={12}
                                                       style={Object {}}
                                                     >
@@ -5300,7 +5300,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx drKdKK sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-jrsJCI swINs fOFiPD"
                                               style={Object {}}
                                             >
                                               <Button
@@ -5747,7 +5747,7 @@ exports[`Alert renders correctly 1`] = `
                                                           type="button"
                                                         >
                                                           <button
-                                                            className="sc-bdnylx drKdKK sc-gtssRu sc-dlnjPT LTZlO kdlRCA"
+                                                            className="sc-bdnylx ckoRHe sc-gtssRu sc-dlnjPT LTZlO kdlRCA"
                                                             onClick={[Function]}
                                                             style={Object {}}
                                                             type="button"
@@ -6205,7 +6205,7 @@ exports[`Alert renders correctly 1`] = `
                               transition="0.2s all"
                             >
                               <div
-                                className="sc-bdnylx kKQZpB sc-gKAblj eMFnQq"
+                                className="sc-bdnylx ewxagd sc-gKAblj eMFnQq"
                                 style={Object {}}
                               >
                                 <ListItemHead
@@ -6631,7 +6631,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx drKdKK sc-iCoHVE sc-fujyUd swINs"
+                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-fujyUd swINs"
                                               style={Object {}}
                                             >
                                               <img
@@ -7077,7 +7077,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx drKdKK sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-pNWxx swINs gpuKFU"
                                               style={Object {}}
                                             >
                                               <Box
@@ -7260,7 +7260,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx gNUqHe"
+                                                      className="sc-bdnylx dYjrdi"
                                                       fontSize={16}
                                                       fontWeight="600"
                                                       style={Object {}}
@@ -7447,7 +7447,7 @@ exports[`Alert renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <div
-                                                      className="sc-bdnylx dWLUxQ"
+                                                      className="sc-bdnylx dQldvg"
                                                       fontSize={12}
                                                       style={Object {}}
                                                     >
@@ -7886,7 +7886,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx drKdKK sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-jrsJCI swINs fOFiPD"
                                               style={Object {}}
                                             >
                                               <Button
@@ -8333,7 +8333,7 @@ exports[`Alert renders correctly 1`] = `
                                                           type="button"
                                                         >
                                                           <button
-                                                            className="sc-bdnylx drKdKK sc-gtssRu sc-dlnjPT LTZlO kdlRCA"
+                                                            className="sc-bdnylx ckoRHe sc-gtssRu sc-dlnjPT LTZlO kdlRCA"
                                                             onClick={[Function]}
                                                             style={Object {}}
                                                             type="button"

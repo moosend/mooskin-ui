@@ -654,7 +654,7 @@ exports[`DatePicker renders correctly 1`] = `
                           value="02/01/2021"
                         >
                           <input
-                            className="sc-bdnylx drKdKK sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                            className="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                             format="dd/MM/yyyy"
                             onClick={[Function]}
                             onKeyDown={[Function]}

@@ -92,7 +92,7 @@ export const StyledDrawer = styled(Box)<IDrawerComponentProps>``;
 StyledDrawer.displayName = 'StyledDrawer';
 
 export const StyledDrawerContent = styled(Box)<IDrawerContentComponentProps>`
-	position: fixed;
+	position: relative;
 	width: 100%;
 	max-width: 100%;
 	max-height: 100vh;
@@ -111,8 +111,7 @@ export const StyledDrawerContent = styled(Box)<IDrawerContentComponentProps>`
 StyledDrawerContent.displayName = 'StyledDrawerContent';
 
 export const StyledDrawerContentRight = styled(StyledDrawerContent)`
-	right: 0px;
-	top: 0px;
+	margin-left: auto;
 	max-width: ${(props) => getContentSize(props.size)};
 `;
 
@@ -131,8 +130,7 @@ export const StyledDrawerContentRightOut = styled(StyledDrawerContentRight)`
 StyledDrawerContentRightOut.displayName = 'StyledDrawerContentRightOut';
 
 export const StyledDrawerContentLeft = styled(StyledDrawerContent)`
-	left: 0px;
-	top: 0px;
+	margin-right: auto;
 	max-width: ${(props) => getContentSize(props.size)};
 `;
 
@@ -151,8 +149,7 @@ export const StyledDrawerContentLeftOut = styled(StyledDrawerContentLeft)`
 StyledDrawerContentLeftOut.displayName = 'StyledDrawerContentLeftOut';
 
 export const StyledDrawerContentTop = styled(StyledDrawerContent)`
-	left: 0px;
-	top: 0px;
+	margin-bottom: auto;
 	max-height: ${(props) => getContentSize(props.size)};
 `;
 
@@ -171,8 +168,7 @@ export const StyledDrawerContentTopOut = styled(StyledDrawerContentTop)`
 StyledDrawerContentTopOut.displayName = 'StyledDrawerContentTopOut';
 
 export const StyledDrawerContentBottom = styled(StyledDrawerContent)`
-	left: 0px;
-	bottom: 0px;
+	margin-top: auto;
 	max-height: ${(props) => getContentSize(props.size)};
 `;
 
@@ -245,7 +241,6 @@ export const StyledDrawerOverlay = styled(Box)<IDrawerOverlayComponentProps>`
 	left: 0px;
 	top: 0px;
 	z-index: 1400;
-	justify-content: center;
 `;
 
 StyledDrawerOverlay.displayName = 'StyledDrawerOverlay';
