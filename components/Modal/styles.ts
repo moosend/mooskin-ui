@@ -49,7 +49,7 @@ export const StyledModalContent = styled(Box)<IModalContentComponentProps>`
 	margin: auto;
 	width: 100%;
 	max-width: 100%;
-	max-height: 100vh;
+	/* max-height: 100vh; */
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -121,6 +121,7 @@ export const StyledModalCloseButton = styled(Box)<IBoxComponentProps>`
 StyledModalCloseButton.displayName = 'StyledModalCloseButton';
 
 export const StyledModalOverlay = styled(Box)<IBoxComponentProps>`
+	overflow: auto;
 	display: flex;
 	width: 100vw;
 	height: 100vh;
