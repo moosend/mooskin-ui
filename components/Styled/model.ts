@@ -24,6 +24,7 @@ export interface IThemeFontColors {
 	inverseText: string;
 	black: string;
 	checkboxUnselected: string;
+	dropdown: string;
 }
 
 export interface IThemeBackgroundColors {
@@ -52,6 +53,7 @@ export interface IThemeBackgroundColors {
 	inverseText: string;
 	black: string;
 	checkboxUnselected: string;
+	dropdown: string;
 }
 
 export interface IThemeBorderColors {
@@ -80,6 +82,7 @@ export interface IThemeBorderColors {
 	inverseText: string;
 	black: string;
 	checkboxUnselected: string;
+	dropdown: string;
 }
 
 export interface IStyledTheme {

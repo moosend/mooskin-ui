@@ -27,6 +27,7 @@ const theme: IStyledTheme = {
 		inverseText: '#212121',
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
+		dropdown: '#FFFFFF',
 	},
 	borderColors: {
 		primary1: '#4169E1',
@@ -54,6 +55,7 @@ const theme: IStyledTheme = {
 		inverseText: '#212121',
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
+		dropdown: '#FFFFFF',
 	},
 	fontColors: {
 		primary1: '#4169E1',
@@ -81,6 +83,7 @@ const theme: IStyledTheme = {
 		inverseText: '#212121',
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
+		dropdown: '#FFFFFF',
 	},
 };
 

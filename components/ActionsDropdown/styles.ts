@@ -23,7 +23,7 @@ const fadeIn = keyframes`
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
 	border-radius: 2px;
-	background-color: ${(props) => props.palette?.backgroundColors.altWhite || variables.backgroundColors.altWhite};
+	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -53,7 +53,7 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
 	letter-spacing: normal;
 	text-align: left;
 	white-space: nowrap;
-	color: ${(props) => props.palette?.fontColors.altWhite || variables.fontColors.altWhite};
+	color: ${(props) => props.palette?.fontColors.inverseText || variables.fontColors.inverseText};
 	cursor: pointer;
 	&:not(:last-child) {
 		padding: 10px 10px 0;
@@ -67,6 +67,7 @@ StyledActionsDropdownItem.displayName = 'StyledActionsDropdownItem';
 
 // :after is a workaround to remove box-shadow from the bottom of the rotated arrow box
 export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
+	box-shadow: rgb(0 0 0 / 2%) 3px 2px 8px -2px, rgb(0 0 0 / 7%) 2px 2px 2px 0px;
 	position: absolute;
 	top: -6px;
 	right: 22px;
@@ -74,8 +75,8 @@ export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 	height: 12px;
 	transform: rotate(45deg);
 	z-index: -1;
-	background-color: ${(props) => props.palette?.backgroundColors.altWhite || variables.backgroundColors.altWhite};
-	&:after {
+	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
+	/* &:after {
 		content: '';
 		position: absolute;
 		top: 0px;
@@ -84,8 +85,8 @@ export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 		height: 24px;
 		transform: rotate(45deg);
 		z-index: -1;
-		background-color: ${(props) => props.palette?.backgroundColors.altWhite || variables.backgroundColors.altWhite};
-	}
+		background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
+	} */
 `;
 
 StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';
