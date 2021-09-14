@@ -23,7 +23,7 @@ const fadeIn = keyframes`
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
 	border-radius: 2px;
-	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
+	background-color: ${(props) => props.palette?.backgroundColors.altWhite || variables.backgroundColors.altWhite};
 	display: flex;
 	flex-direction: column;
 	position: relative;
@@ -53,7 +53,7 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
 	letter-spacing: normal;
 	text-align: left;
 	white-space: nowrap;
-	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
+	color: ${(props) => props.palette?.fontColors.altWhite || variables.fontColors.altWhite};
 	cursor: pointer;
 	&:not(:last-child) {
 		padding: 10px 10px 0;
@@ -74,7 +74,7 @@ export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 	height: 12px;
 	transform: rotate(45deg);
 	z-index: -1;
-	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
+	background-color: ${(props) => props.palette?.backgroundColors.altWhite || variables.backgroundColors.altWhite};
 	&:after {
 		content: '';
 		position: absolute;
@@ -84,7 +84,7 @@ export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 		height: 24px;
 		transform: rotate(45deg);
 		z-index: -1;
-		background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
+		background-color: ${(props) => props.palette?.backgroundColors.altWhite || variables.backgroundColors.altWhite};
 	}
 `;
 
