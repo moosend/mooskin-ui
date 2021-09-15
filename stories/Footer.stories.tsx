@@ -5,7 +5,7 @@ import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 import { Footer, FooterBody, FooterEnd, FooterHead } from '../components/Footer/Footer';
 
 import { IBoxComponentProps } from '../components/Box/model';
-import { Button, ButtonIcon, ButtonSecondary } from '../components/Button/Button';
+import { Button, ButtonIcon, ButtonTwo } from '../components/Button/Button';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
@@ -40,7 +40,7 @@ Normal.args = {
 				</Button>
 			</FooterBody>
 			<FooterEnd>
-				<ButtonSecondary>DESIGN & DELIVERY TEST</ButtonSecondary>
+				<ButtonTwo>DESIGN & DELIVERY TEST</ButtonTwo>
 			</FooterEnd>
 		</>
 	),

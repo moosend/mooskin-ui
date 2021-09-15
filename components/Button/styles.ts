@@ -49,14 +49,23 @@ export const StyledButton = styled(ButtonDefault)`
 
 StyledButton.displayName = 'StyledButton';
 
-export const StyledButtonSecondary = styled(ButtonDefault)`
+export const StyledButtonTwo = styled(ButtonDefault)`
 	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
 	padding: ${(props) => secondaryButtonSizes[props.buttonSize || 'md']};
 	background-color: transparent;
-	border: 1px solid ${(props) => props.palette?.borderColors.grayAlpha || variables.borderColors.grayAlpha};
+	border: 1px solid ${(props) => props.palette?.borderColors.primary1 || variables.borderColors.primary1};
 `;
 
-StyledButtonSecondary.displayName = 'StyledButtonSecondary';
+StyledButtonTwo.displayName = 'StyledButtonTwo';
+
+export const StyledButtonThree = styled(ButtonDefault)`
+	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
+	padding: ${(props) => secondaryButtonSizes[props.buttonSize || 'md']};
+	background-color: transparent;
+	border: none;
+`;
+
+StyledButtonThree.displayName = 'StyledButtonThree';
 
 export const StyledButtonIcon = styled(Box)`
 	font-family: 'Mooskin Icons Round';
