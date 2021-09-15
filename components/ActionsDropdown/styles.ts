@@ -73,7 +73,7 @@ export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 	right: 22px;
 	width: 12px;
 	height: 12px;
-	transform: rotate(45deg);
+	transform: rotate(225deg);
 	z-index: -1;
 	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
 	/* &:after {
