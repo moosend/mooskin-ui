@@ -10,6 +10,7 @@ export interface IThemeFontColors {
 	secondary5: string;
 	secondary6: string;
 	white: string;
+	altWhite: string;
 	background: string;
 	grayAlpha: string;
 	gray1: string;
@@ -20,8 +21,10 @@ export interface IThemeFontColors {
 	darkgray2: string;
 	darkgray3: string;
 	text: string;
+	inverseText: string;
 	black: string;
 	checkboxUnselected: string;
+	dropdown: string;
 }
 
 export interface IThemeBackgroundColors {
@@ -36,6 +39,7 @@ export interface IThemeBackgroundColors {
 	secondary5: string;
 	secondary6: string;
 	white: string;
+	altWhite: string;
 	background: string;
 	grayAlpha: string;
 	gray1: string;
@@ -46,8 +50,10 @@ export interface IThemeBackgroundColors {
 	darkgray2: string;
 	darkgray3: string;
 	text: string;
+	inverseText: string;
 	black: string;
 	checkboxUnselected: string;
+	dropdown: string;
 }
 
 export interface IThemeBorderColors {
@@ -62,6 +68,7 @@ export interface IThemeBorderColors {
 	secondary5: string;
 	secondary6: string;
 	white: string;
+	altWhite: string;
 	background: string;
 	grayAlpha: string;
 	gray1: string;
@@ -72,8 +79,10 @@ export interface IThemeBorderColors {
 	darkgray2: string;
 	darkgray3: string;
 	text: string;
+	inverseText: string;
 	black: string;
 	checkboxUnselected: string;
+	dropdown: string;
 }
 
 export interface IStyledTheme {
