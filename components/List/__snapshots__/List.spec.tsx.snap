@@ -343,7 +343,7 @@ exports[`Alert renders correctly 1`] = `
           style={Object {}}
         >
           <Box
-            className="sc-jSFkmK dcmWph"
+            className="sc-gKAblj jIBHwG"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -428,7 +428,7 @@ exports[`Alert renders correctly 1`] = `
             transition="0.2s all"
           >
             <Component
-              className="sc-jSFkmK dcmWph"
+              className="sc-gKAblj jIBHwG"
               palette={
                 Object {
                   "backgroundColors": Object {
@@ -513,7 +513,7 @@ exports[`Alert renders correctly 1`] = `
               transition="0.2s all"
             >
               <StyledBox
-                className="sc-jSFkmK dcmWph"
+                className="sc-gKAblj jIBHwG"
                 palette={
                   Object {
                     "backgroundColors": Object {
@@ -598,7 +598,7 @@ exports[`Alert renders correctly 1`] = `
                 transition="0.2s all"
               >
                 <div
-                  className="sc-bdnylx ckoRHe sc-jSFkmK dcmWph"
+                  className="sc-bdnylx ckoRHe sc-gKAblj jIBHwG"
                   spacing={15}
                   style={Object {}}
                 >
@@ -776,7 +776,7 @@ exports[`Alert renders correctly 1`] = `
                       >
                         <Box
                           boxShadow="xs"
-                          className="sc-gKAblj eMFnQq"
+                          className="sc-iCoHVE kEgcPR"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -862,7 +862,7 @@ exports[`Alert renders correctly 1`] = `
                         >
                           <Component
                             boxShadow="xs"
-                            className="sc-gKAblj eMFnQq"
+                            className="sc-iCoHVE kEgcPR"
                             palette={
                               Object {
                                 "backgroundColors": Object {
@@ -948,7 +948,7 @@ exports[`Alert renders correctly 1`] = `
                           >
                             <StyledBox
                               boxShadow="xs"
-                              className="sc-gKAblj eMFnQq"
+                              className="sc-iCoHVE kEgcPR"
                               palette={
                                 Object {
                                   "backgroundColors": Object {
@@ -1033,7 +1033,7 @@ exports[`Alert renders correctly 1`] = `
                               transition="0.2s all"
                             >
                               <div
-                                className="sc-bdnylx ewxagd sc-gKAblj eMFnQq"
+                                className="sc-bdnylx ewxagd sc-iCoHVE kEgcPR"
                                 style={Object {}}
                               >
                                 <ListItemHead
@@ -1207,7 +1207,7 @@ exports[`Alert renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-iCoHVE sc-fujyUd swINs"
+                                        className="sc-fujyUd sc-pNWxx jEtiir"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -1291,7 +1291,7 @@ exports[`Alert renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <Component
-                                          className="sc-iCoHVE sc-fujyUd swINs"
+                                          className="sc-fujyUd sc-pNWxx jEtiir"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -1375,7 +1375,7 @@ exports[`Alert renders correctly 1`] = `
                                           transition="0.2s all"
                                         >
                                           <StyledBox
-                                            className="sc-iCoHVE sc-fujyUd swINs"
+                                            className="sc-fujyUd sc-pNWxx jEtiir"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -1459,7 +1459,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-fujyUd swINs"
+                                              className="sc-bdnylx ckoRHe sc-fujyUd sc-pNWxx jEtiir"
                                               style={Object {}}
                                             >
                                               <img
@@ -1653,7 +1653,7 @@ exports[`Alert renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                        className="sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -1737,7 +1737,7 @@ exports[`Alert renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <Component
-                                          className="sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                          className="sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -1821,7 +1821,7 @@ exports[`Alert renders correctly 1`] = `
                                           transition="0.2s all"
                                         >
                                           <StyledBox
-                                            className="sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                            className="sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -1905,7 +1905,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                              className="sc-bdnylx ckoRHe sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                               style={Object {}}
                                             >
                                               <Box
@@ -2462,7 +2462,7 @@ exports[`Alert renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                        className="sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -2546,7 +2546,7 @@ exports[`Alert renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <Component
-                                          className="sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                          className="sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -2630,7 +2630,7 @@ exports[`Alert renders correctly 1`] = `
                                           transition="0.2s all"
                                         >
                                           <StyledBox
-                                            className="sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                            className="sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -2714,7 +2714,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                              className="sc-bdnylx ckoRHe sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                               style={Object {}}
                                             >
                                               <Button
@@ -3362,7 +3362,7 @@ exports[`Alert renders correctly 1`] = `
                       >
                         <Box
                           boxShadow="xs"
-                          className="sc-gKAblj eMFnQq"
+                          className="sc-iCoHVE kEgcPR"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -3448,7 +3448,7 @@ exports[`Alert renders correctly 1`] = `
                         >
                           <Component
                             boxShadow="xs"
-                            className="sc-gKAblj eMFnQq"
+                            className="sc-iCoHVE kEgcPR"
                             palette={
                               Object {
                                 "backgroundColors": Object {
@@ -3534,7 +3534,7 @@ exports[`Alert renders correctly 1`] = `
                           >
                             <StyledBox
                               boxShadow="xs"
-                              className="sc-gKAblj eMFnQq"
+                              className="sc-iCoHVE kEgcPR"
                               palette={
                                 Object {
                                   "backgroundColors": Object {
@@ -3619,7 +3619,7 @@ exports[`Alert renders correctly 1`] = `
                               transition="0.2s all"
                             >
                               <div
-                                className="sc-bdnylx ewxagd sc-gKAblj eMFnQq"
+                                className="sc-bdnylx ewxagd sc-iCoHVE kEgcPR"
                                 style={Object {}}
                               >
                                 <ListItemHead
@@ -3793,7 +3793,7 @@ exports[`Alert renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-iCoHVE sc-fujyUd swINs"
+                                        className="sc-fujyUd sc-pNWxx jEtiir"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -3877,7 +3877,7 @@ exports[`Alert renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <Component
-                                          className="sc-iCoHVE sc-fujyUd swINs"
+                                          className="sc-fujyUd sc-pNWxx jEtiir"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -3961,7 +3961,7 @@ exports[`Alert renders correctly 1`] = `
                                           transition="0.2s all"
                                         >
                                           <StyledBox
-                                            className="sc-iCoHVE sc-fujyUd swINs"
+                                            className="sc-fujyUd sc-pNWxx jEtiir"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -4045,7 +4045,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-fujyUd swINs"
+                                              className="sc-bdnylx ckoRHe sc-fujyUd sc-pNWxx jEtiir"
                                               style={Object {}}
                                             >
                                               <img
@@ -4239,7 +4239,7 @@ exports[`Alert renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                        className="sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -4323,7 +4323,7 @@ exports[`Alert renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <Component
-                                          className="sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                          className="sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -4407,7 +4407,7 @@ exports[`Alert renders correctly 1`] = `
                                           transition="0.2s all"
                                         >
                                           <StyledBox
-                                            className="sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                            className="sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -4491,7 +4491,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                              className="sc-bdnylx ckoRHe sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                               style={Object {}}
                                             >
                                               <Box
@@ -5048,7 +5048,7 @@ exports[`Alert renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                        className="sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -5132,7 +5132,7 @@ exports[`Alert renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <Component
-                                          className="sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                          className="sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -5216,7 +5216,7 @@ exports[`Alert renders correctly 1`] = `
                                           transition="0.2s all"
                                         >
                                           <StyledBox
-                                            className="sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                            className="sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -5300,7 +5300,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                              className="sc-bdnylx ckoRHe sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                               style={Object {}}
                                             >
                                               <Button
@@ -5948,7 +5948,7 @@ exports[`Alert renders correctly 1`] = `
                       >
                         <Box
                           boxShadow="xs"
-                          className="sc-gKAblj eMFnQq"
+                          className="sc-iCoHVE kEgcPR"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -6034,7 +6034,7 @@ exports[`Alert renders correctly 1`] = `
                         >
                           <Component
                             boxShadow="xs"
-                            className="sc-gKAblj eMFnQq"
+                            className="sc-iCoHVE kEgcPR"
                             palette={
                               Object {
                                 "backgroundColors": Object {
@@ -6120,7 +6120,7 @@ exports[`Alert renders correctly 1`] = `
                           >
                             <StyledBox
                               boxShadow="xs"
-                              className="sc-gKAblj eMFnQq"
+                              className="sc-iCoHVE kEgcPR"
                               palette={
                                 Object {
                                   "backgroundColors": Object {
@@ -6205,7 +6205,7 @@ exports[`Alert renders correctly 1`] = `
                               transition="0.2s all"
                             >
                               <div
-                                className="sc-bdnylx ewxagd sc-gKAblj eMFnQq"
+                                className="sc-bdnylx ewxagd sc-iCoHVE kEgcPR"
                                 style={Object {}}
                               >
                                 <ListItemHead
@@ -6379,7 +6379,7 @@ exports[`Alert renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-iCoHVE sc-fujyUd swINs"
+                                        className="sc-fujyUd sc-pNWxx jEtiir"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -6463,7 +6463,7 @@ exports[`Alert renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <Component
-                                          className="sc-iCoHVE sc-fujyUd swINs"
+                                          className="sc-fujyUd sc-pNWxx jEtiir"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -6547,7 +6547,7 @@ exports[`Alert renders correctly 1`] = `
                                           transition="0.2s all"
                                         >
                                           <StyledBox
-                                            className="sc-iCoHVE sc-fujyUd swINs"
+                                            className="sc-fujyUd sc-pNWxx jEtiir"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -6631,7 +6631,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-fujyUd swINs"
+                                              className="sc-bdnylx ckoRHe sc-fujyUd sc-pNWxx jEtiir"
                                               style={Object {}}
                                             >
                                               <img
@@ -6825,7 +6825,7 @@ exports[`Alert renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                        className="sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -6909,7 +6909,7 @@ exports[`Alert renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <Component
-                                          className="sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                          className="sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -6993,7 +6993,7 @@ exports[`Alert renders correctly 1`] = `
                                           transition="0.2s all"
                                         >
                                           <StyledBox
-                                            className="sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                            className="sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -7077,7 +7077,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-pNWxx swINs gpuKFU"
+                                              className="sc-bdnylx ckoRHe sc-fujyUd sc-jrsJCI jEtiir kAmzve"
                                               style={Object {}}
                                             >
                                               <Box
@@ -7634,7 +7634,7 @@ exports[`Alert renders correctly 1`] = `
                                       style={Object {}}
                                     >
                                       <Box
-                                        className="sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                        className="sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                         palette={
                                           Object {
                                             "backgroundColors": Object {
@@ -7718,7 +7718,7 @@ exports[`Alert renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <Component
-                                          className="sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                          className="sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                           palette={
                                             Object {
                                               "backgroundColors": Object {
@@ -7802,7 +7802,7 @@ exports[`Alert renders correctly 1`] = `
                                           transition="0.2s all"
                                         >
                                           <StyledBox
-                                            className="sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                            className="sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -7886,7 +7886,7 @@ exports[`Alert renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <div
-                                              className="sc-bdnylx ckoRHe sc-iCoHVE sc-jrsJCI swINs fOFiPD"
+                                              className="sc-bdnylx ckoRHe sc-fujyUd sc-kEqYlL jEtiir jtkxGm"
                                               style={Object {}}
                                             >
                                               <Button

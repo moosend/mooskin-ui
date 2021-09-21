@@ -8,7 +8,7 @@ import { IBoxComponentProps } from '../Box/model';
 import { IButtonComponentProps } from './model';
 
 // Styled Components
-import { StyledButton, StyledButtonIcon, StyledButtonSecondary } from './styles';
+import { StyledButton, StyledButtonIcon, StyledButtonThree, StyledButtonTwo } from './styles';
 
 /**
  * Button
@@ -30,23 +30,42 @@ Button.defaultProps = {
 Button.displayName = 'Button';
 
 /**
- * ButtonSecondary
+ * ButtonTwo
  */
-export const ButtonSecondary: React.FC<IButtonComponentProps> = withMooskinContext((props) => {
+export const ButtonTwo: React.FC<IButtonComponentProps> = withMooskinContext((props) => {
 	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		!props.disabled && props.onClick && props.onClick(e);
 	};
-	return <StyledButtonSecondary {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+	return <StyledButtonTwo {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
 });
 
-ButtonSecondary.defaultProps = {
+ButtonTwo.defaultProps = {
 	buttonSize: 'md',
 	className: '',
 	style: {},
 	type: 'button',
 };
 
-ButtonSecondary.displayName = 'ButtonSecondary';
+ButtonTwo.displayName = 'ButtonTwo';
+
+/**
+ * ButtonThree
+ */
+export const ButtonThree: React.FC<IButtonComponentProps> = withMooskinContext((props) => {
+	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		!props.disabled && props.onClick && props.onClick(e);
+	};
+	return <StyledButtonThree {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+});
+
+ButtonThree.defaultProps = {
+	buttonSize: 'md',
+	className: '',
+	style: {},
+	type: 'button',
+};
+
+ButtonThree.displayName = 'ButtonThree';
 
 /**
  * ButtonIcon

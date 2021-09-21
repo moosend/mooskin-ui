@@ -23,7 +23,7 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
 	padding: 1px 10px;
 	border-radius: 13px;
 	line-height: 1.7;
-	background-color: ${(props) => props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2};
+	background-color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
 	font-size: 12px;
 	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};
 	cursor: pointer;
