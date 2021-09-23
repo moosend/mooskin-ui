@@ -20,10 +20,7 @@ export const StyledSwitch = styled(Box)<ISwitchComponentProps>`
 	cursor: ${(props) => (!props.disabled ? 'pointer' : 'not-allowed')};
 	border-radius: 36px;
 	transition: background-color 0.15s;
-	color: ${(props) =>
-		!props.disabled
-			? props.palette?.fontColors.white || variables.fontColors.white
-			: props.palette?.fontColors.darkgray3 || variables.fontColors.darkgray3};
+	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};
 	background-color: ${(props) => {
 		return !props.disabled
 			? props.active
