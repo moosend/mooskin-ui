@@ -13,6 +13,8 @@ export interface IThemeFontColors {
 	altWhite: string;
 	background: string;
 	grayAlpha: string;
+	grayAlpha100: string;
+	grayAlpha400: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;
@@ -42,6 +44,7 @@ export interface IThemeBackgroundColors {
 	altWhite: string;
 	background: string;
 	grayAlpha: string;
+	gray100: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;
@@ -71,6 +74,7 @@ export interface IThemeBorderColors {
 	altWhite: string;
 	background: string;
 	grayAlpha: string;
+	grayAlpha100: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;

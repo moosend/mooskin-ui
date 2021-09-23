@@ -34,14 +34,19 @@ export const ButtonDefault = styled(Box)<IButtonComponentProps>`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	opacity: ${(props) => (props.disabled ? 0.5 : 1)};
 `;
 
 ButtonDefault.displayName = 'ButtonDefault';
 
 export const StyledButton = styled(ButtonDefault)`
-	background-color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
-	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};
+	background-color: ${(props) =>
+		props.disabled
+			? props.palette?.backgroundColors.gray100 || variables.backgroundColors.gray100
+			: props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
+	color: ${(props) =>
+		props.disabled
+			? props.palette?.fontColors.grayAlpha400 || variables.fontColors.grayAlpha400
+			: props.palette?.fontColors.white || variables.fontColors.white};
 	padding: ${(props) => normalButtonSizes[props.buttonSize || 'md']};
 	border: none;
 	outline: 0;
@@ -50,16 +55,26 @@ export const StyledButton = styled(ButtonDefault)`
 StyledButton.displayName = 'StyledButton';
 
 export const StyledButtonTwo = styled(ButtonDefault)`
-	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
+	color: ${(props) =>
+		props.disabled
+			? props.palette?.fontColors.grayAlpha400 || variables.fontColors.grayAlpha400
+			: props.palette?.fontColors.primary1 || variables.fontColors.primary1};
 	padding: ${(props) => secondaryButtonSizes[props.buttonSize || 'md']};
 	background-color: transparent;
-	border: 1px solid ${(props) => props.palette?.borderColors.primary1 || variables.borderColors.primary1};
+	border: 1px solid
+		${(props) =>
+			props.disabled
+				? props.palette?.borderColors.grayAlpha100 || variables.borderColors.grayAlpha100
+				: props.palette?.borderColors.primary1 || variables.borderColors.primary1};
 `;
 
 StyledButtonTwo.displayName = 'StyledButtonTwo';
 
 export const StyledButtonThree = styled(ButtonDefault)`
-	color: ${(props) => props.palette?.fontColors.primary1 || variables.fontColors.primary1};
+	color: ${(props) =>
+		props.disabled
+			? props.palette?.fontColors.grayAlpha400 || variables.fontColors.grayAlpha400
+			: props.palette?.fontColors.primary1 || variables.fontColors.primary1};
 	padding: ${(props) => secondaryButtonSizes[props.buttonSize || 'md']};
 	background-color: transparent;
 	border: none;
