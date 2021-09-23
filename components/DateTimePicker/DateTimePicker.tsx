@@ -21,69 +21,114 @@ const ComponentByType = {
 	'date-time-keyboard': KeyboardDateTimePicker,
 };
 
-const materialTheme = createMuiTheme({
-	overrides: {
-		MuiButtonBase: {
-			root: {
-				backgroundColor: variables.backgroundColors.background,
-				color: variables.fontColors.text,
-			},
-		},
-		MuiPaper: {
-			root: {
-				backgroundColor: variables.backgroundColors.background,
-			},
-		},
-		MuiPickersCalendarHeader: {
-			switchHeader: {
-				backgroundColor: variables.backgroundColors.background,
-				color: variables.fontColors.text,
-			},
-		},
-		MuiPickersDay: {
-			current: {
-				color: variables.fontColors.white,
-			},
-			day: {
-				backgroundColor: variables.backgroundColors.background,
-				color: variables.fontColors.text,
-			},
-			dayDisabled: {
-				color: variables.backgroundColors.medgray1,
-			},
-			daySelected: {
-				backgroundColor: variables.backgroundColors.primary1,
-				color: variables.fontColors.white,
-			},
-		},
-		MuiPickersModal: {
-			dialogAction: {
-				color: variables.fontColors.text,
-			},
-		},
-		MuiPickersSlideTransition: {
-			transitionContainer: {
-				color: variables.fontColors.text,
-			},
-		},
-		MuiPickersToolbar: {
-			toolbar: {
-				backgroundColor: variables.backgroundColors.primary1,
-			},
-		},
-		MuiPickersToolbarButton: {
-			toolbarBtn: {
-				backgroundColor: variables.backgroundColors.primary1,
-			},
-		},
-	},
-} as any);
-
 /**
  * DateTimePicker
  */
 export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimePickerKeyboardComponentProps> = withMooskinContext(
 	(props) => {
+		const materialTheme = createMuiTheme({
+			overrides: {
+				MuiButton: {
+					textPrimary: {
+						backgroundColor: (props as any).palette.backgroundColors.background || variables.backgroundColors.background,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					},
+					label: {
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					}
+				},
+				MuiPaper: {
+					root: {
+						backgroundColor: (props as any).palette.backgroundColors.white || variables.backgroundColors.white,
+					},
+				},
+				MuiPickersCalendarHeader: {
+					switchHeader: {
+						backgroundColor: (props as any).palette.backgroundColors.background || variables.backgroundColors.background,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					},
+					iconButton: {
+						backgroundColor: (props as any).palette.backgroundColors.primary1 + "!important" || variables.backgroundColors.primary1 + "!important",
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					},
+					dayLabel: {
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					}
+				},
+				MuiPickersDay: {
+					current: {
+						color: (props as any).palette.fontColors.white || variables.fontColors.white,
+					},
+					day: {
+						backgroundColor: (props as any).palette.backgroundColors.background || variables.backgroundColors.background,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					},
+					dayDisabled: {
+						color: (props as any).palette.backgroundColors.medgray1 || variables.backgroundColors.medgray1,
+					},
+					daySelected: {
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+						color: (props as any).palette.fontColors.white || variables.fontColors.white,
+					},
+				},
+				MuiTypography: {
+					body2: {
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					},
+					alignCenter: {
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					}
+				},
+				MuiIconButton: {
+					label: {
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					}
+				},
+				MuiPickersModal: {
+					dialogAction: {
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					},
+				},
+				MuiPickersSlideTransition: {
+					transitionContainer: {
+						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+					},
+				},
+				MuiPickersToolbar: {
+					toolbar: {
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+					},
+				},
+				MuiPickersToolbarButton: {
+					toolbarBtn: {
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+					},
+				},
+				MuiPickersClock: {
+					pin: {
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+					}
+				},
+				MuiPickersClockNumber: {
+					clockNumber: {
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
+					}
+				},
+				MuiPickersClockPointer: {
+					pointer: {
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+					},
+					thumb: {
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+						borderColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+					},
+					noPoint: {
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+					}
+				}
+			},
+		} as any);
+
 		const renderInput = (dateInputProps: any) => <Input style={{ width: '100%' }} {...dateInputProps} {...props.inputComponentProps} />;
 
 		const type: PickerType = props.pickerType ? props.pickerType : 'date-time';
