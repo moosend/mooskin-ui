@@ -25,15 +25,19 @@ exports[`Button renders correctly 1`] = `
     palette={
       Object {
         "backgroundColors": Object {
+          "altWhite": "#FFFFFF",
           "background": "#FAFAFA",
           "black": "#000000",
           "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
           "darkgray3": "#424242",
+          "dropdown": "#FFFFFF",
           "gray1": "#E0E0E0",
+          "gray100": "#F0F0F0",
           "gray2": "#E7E7E7",
           "grayAlpha": "rgba(0,0,0,0.17)",
+          "inverseText": "#212121",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -50,15 +54,19 @@ exports[`Button renders correctly 1`] = `
           "white": "#FFFFFF",
         },
         "borderColors": Object {
+          "altWhite": "#FFFFFF",
           "background": "#FAFAFA",
           "black": "#000000",
           "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
           "darkgray3": "#424242",
+          "dropdown": "#FFFFFF",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "grayAlpha": "rgba(0,0,0,0.17)",
+          "grayAlpha100": "rgba(0,0,0,0.06)",
+          "inverseText": "#212121",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -75,15 +83,20 @@ exports[`Button renders correctly 1`] = `
           "white": "#FFFFFF",
         },
         "fontColors": Object {
+          "altWhite": "#FFFFFF",
           "background": "#FAFAFA",
           "black": "#000000",
           "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
           "darkgray1": "#777777",
           "darkgray2": "#454545",
           "darkgray3": "#424242",
+          "dropdown": "#FFFFFF",
           "gray1": "#E0E0E0",
           "gray2": "#E7E7E7",
           "grayAlpha": "rgba(0,0,0,0.17)",
+          "grayAlpha100": "rgba(0,0,0,0.06)",
+          "grayAlpha400": "rgba(0,0,0,0.36)",
+          "inverseText": "#212121",
           "medgray1": "#757575",
           "medgray2": "#888888",
           "primary1": "#4169E1",
@@ -119,15 +132,19 @@ exports[`Button renders correctly 1`] = `
       palette={
         Object {
           "backgroundColors": Object {
+            "altWhite": "#FFFFFF",
             "background": "#FAFAFA",
             "black": "#000000",
             "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
             "darkgray3": "#424242",
+            "dropdown": "#FFFFFF",
             "gray1": "#E0E0E0",
+            "gray100": "#F0F0F0",
             "gray2": "#E7E7E7",
             "grayAlpha": "rgba(0,0,0,0.17)",
+            "inverseText": "#212121",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -144,15 +161,19 @@ exports[`Button renders correctly 1`] = `
             "white": "#FFFFFF",
           },
           "borderColors": Object {
+            "altWhite": "#FFFFFF",
             "background": "#FAFAFA",
             "black": "#000000",
             "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
             "darkgray3": "#424242",
+            "dropdown": "#FFFFFF",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "grayAlpha": "rgba(0,0,0,0.17)",
+            "grayAlpha100": "rgba(0,0,0,0.06)",
+            "inverseText": "#212121",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -169,15 +190,20 @@ exports[`Button renders correctly 1`] = `
             "white": "#FFFFFF",
           },
           "fontColors": Object {
+            "altWhite": "#FFFFFF",
             "background": "#FAFAFA",
             "black": "#000000",
             "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
             "darkgray1": "#777777",
             "darkgray2": "#454545",
             "darkgray3": "#424242",
+            "dropdown": "#FFFFFF",
             "gray1": "#E0E0E0",
             "gray2": "#E7E7E7",
             "grayAlpha": "rgba(0,0,0,0.17)",
+            "grayAlpha100": "rgba(0,0,0,0.06)",
+            "grayAlpha400": "rgba(0,0,0,0.36)",
+            "inverseText": "#212121",
             "medgray1": "#757575",
             "medgray2": "#888888",
             "primary1": "#4169E1",
@@ -205,7 +231,7 @@ exports[`Button renders correctly 1`] = `
       <Box
         boxAs="a"
         buttonSize="md"
-        className="sc-gtssRu sc-dlnjPT fmhWED kdlRCA myClass"
+        className="sc-gtssRu sc-dlnjPT fcxKOc hvVPZv myClass"
         disabled={true}
         href="www.moosend.com"
         id="button1"
@@ -213,15 +239,19 @@ exports[`Button renders correctly 1`] = `
         palette={
           Object {
             "backgroundColors": Object {
+              "altWhite": "#FFFFFF",
               "background": "#FAFAFA",
               "black": "#000000",
               "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
               "darkgray3": "#424242",
+              "dropdown": "#FFFFFF",
               "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
               "gray2": "#E7E7E7",
               "grayAlpha": "rgba(0,0,0,0.17)",
+              "inverseText": "#212121",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -238,15 +268,19 @@ exports[`Button renders correctly 1`] = `
               "white": "#FFFFFF",
             },
             "borderColors": Object {
+              "altWhite": "#FFFFFF",
               "background": "#FAFAFA",
               "black": "#000000",
               "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
               "darkgray3": "#424242",
+              "dropdown": "#FFFFFF",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "inverseText": "#212121",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -263,15 +297,20 @@ exports[`Button renders correctly 1`] = `
               "white": "#FFFFFF",
             },
             "fontColors": Object {
+              "altWhite": "#FFFFFF",
               "background": "#FAFAFA",
               "black": "#000000",
               "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
               "darkgray1": "#777777",
               "darkgray2": "#454545",
               "darkgray3": "#424242",
+              "dropdown": "#FFFFFF",
               "gray1": "#E0E0E0",
               "gray2": "#E7E7E7",
               "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
+              "inverseText": "#212121",
               "medgray1": "#757575",
               "medgray2": "#888888",
               "primary1": "#4169E1",
@@ -300,7 +339,7 @@ exports[`Button renders correctly 1`] = `
         <Component
           boxAs="a"
           buttonSize="md"
-          className="sc-gtssRu sc-dlnjPT fmhWED kdlRCA myClass"
+          className="sc-gtssRu sc-dlnjPT fcxKOc hvVPZv myClass"
           disabled={true}
           href="www.moosend.com"
           id="button1"
@@ -308,15 +347,19 @@ exports[`Button renders correctly 1`] = `
           palette={
             Object {
               "backgroundColors": Object {
+                "altWhite": "#FFFFFF",
                 "background": "#FAFAFA",
                 "black": "#000000",
                 "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
                 "darkgray3": "#424242",
+                "dropdown": "#FFFFFF",
                 "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
                 "gray2": "#E7E7E7",
                 "grayAlpha": "rgba(0,0,0,0.17)",
+                "inverseText": "#212121",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -333,15 +376,19 @@ exports[`Button renders correctly 1`] = `
                 "white": "#FFFFFF",
               },
               "borderColors": Object {
+                "altWhite": "#FFFFFF",
                 "background": "#FAFAFA",
                 "black": "#000000",
                 "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
                 "darkgray3": "#424242",
+                "dropdown": "#FFFFFF",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "inverseText": "#212121",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -358,15 +405,20 @@ exports[`Button renders correctly 1`] = `
                 "white": "#FFFFFF",
               },
               "fontColors": Object {
+                "altWhite": "#FFFFFF",
                 "background": "#FAFAFA",
                 "black": "#000000",
                 "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                 "darkgray1": "#777777",
                 "darkgray2": "#454545",
                 "darkgray3": "#424242",
+                "dropdown": "#FFFFFF",
                 "gray1": "#E0E0E0",
                 "gray2": "#E7E7E7",
                 "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
+                "inverseText": "#212121",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
                 "primary1": "#4169E1",
@@ -396,7 +448,7 @@ exports[`Button renders correctly 1`] = `
             as="a"
             boxAs="a"
             buttonSize="md"
-            className="sc-gtssRu sc-dlnjPT fmhWED kdlRCA myClass"
+            className="sc-gtssRu sc-dlnjPT fcxKOc hvVPZv myClass"
             disabled={true}
             href="www.moosend.com"
             id="button1"
@@ -404,15 +456,19 @@ exports[`Button renders correctly 1`] = `
             palette={
               Object {
                 "backgroundColors": Object {
+                  "altWhite": "#FFFFFF",
                   "background": "#FAFAFA",
                   "black": "#000000",
                   "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
                   "darkgray3": "#424242",
+                  "dropdown": "#FFFFFF",
                   "gray1": "#E0E0E0",
+                  "gray100": "#F0F0F0",
                   "gray2": "#E7E7E7",
                   "grayAlpha": "rgba(0,0,0,0.17)",
+                  "inverseText": "#212121",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -429,15 +485,19 @@ exports[`Button renders correctly 1`] = `
                   "white": "#FFFFFF",
                 },
                 "borderColors": Object {
+                  "altWhite": "#FFFFFF",
                   "background": "#FAFAFA",
                   "black": "#000000",
                   "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
                   "darkgray3": "#424242",
+                  "dropdown": "#FFFFFF",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "grayAlpha": "rgba(0,0,0,0.17)",
+                  "grayAlpha100": "rgba(0,0,0,0.06)",
+                  "inverseText": "#212121",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -454,15 +514,20 @@ exports[`Button renders correctly 1`] = `
                   "white": "#FFFFFF",
                 },
                 "fontColors": Object {
+                  "altWhite": "#FFFFFF",
                   "background": "#FAFAFA",
                   "black": "#000000",
                   "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
                   "darkgray1": "#777777",
                   "darkgray2": "#454545",
                   "darkgray3": "#424242",
+                  "dropdown": "#FFFFFF",
                   "gray1": "#E0E0E0",
                   "gray2": "#E7E7E7",
                   "grayAlpha": "rgba(0,0,0,0.17)",
+                  "grayAlpha100": "rgba(0,0,0,0.06)",
+                  "grayAlpha400": "rgba(0,0,0,0.36)",
+                  "inverseText": "#212121",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
                   "primary1": "#4169E1",
@@ -489,7 +554,7 @@ exports[`Button renders correctly 1`] = `
             type="submit"
           >
             <a
-              className="sc-bdnylx ckoRHe sc-gtssRu sc-dlnjPT fmhWED kdlRCA myClass"
+              className="sc-bdnylx ckoRHe sc-gtssRu sc-dlnjPT fcxKOc hvVPZv myClass"
               disabled={true}
               href="www.moosend.com"
               id="button1"
