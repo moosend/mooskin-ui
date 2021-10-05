@@ -16,7 +16,6 @@ const theme: IStyledTheme = {
 		altWhite: '#FFFFFF',
 		background: '#FAFAFA',
 		grayAlpha: 'rgba(0,0,0,0.17)',
-		gray100: '#F0F0F0',
 		gray1: '#E0E0E0',
 		gray2: '#E7E7E7',
 		medgray1: '#757575',
@@ -29,6 +28,11 @@ const theme: IStyledTheme = {
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
 		dropdown: '#FFFFFF',
+		accountNavigation: '#FFFFFF',
+		submenu: '#FFFFFF',
+		autosExpression: '#212121',
+		client: '#E0E0E0',
+		createNew: '#FFFFFF'
 	},
 	borderColors: {
 		primary1: '#4169E1',
@@ -45,7 +49,6 @@ const theme: IStyledTheme = {
 		altWhite: '#FFFFFF',
 		background: '#FAFAFA',
 		grayAlpha: 'rgba(0,0,0,0.17)',
-		grayAlpha100: 'rgba(0,0,0,0.06)',
 		gray1: '#E0E0E0',
 		gray2: '#E7E7E7',
 		medgray1: '#757575',
@@ -58,6 +61,11 @@ const theme: IStyledTheme = {
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
 		dropdown: '#FFFFFF',
+		accountNavigation: '#FFFFFF',
+		submenu: '#FFFFFF',
+		autosExpression: '#212121',
+		client: '#E0E0E0',
+		createNew: '#FFFFFF'
 	},
 	fontColors: {
 		primary1: '#4169E1',
@@ -74,8 +82,6 @@ const theme: IStyledTheme = {
 		altWhite: '#FFFFFF',
 		background: '#FAFAFA',
 		grayAlpha: 'rgba(0,0,0,0.17)',
-		grayAlpha100: 'rgba(0,0,0,0.06)',
-		grayAlpha400: 'rgba(0,0,0,0.36)',
 		gray1: '#E0E0E0',
 		gray2: '#E7E7E7',
 		medgray1: '#757575',
@@ -87,7 +93,12 @@ const theme: IStyledTheme = {
 		inverseText: '#212121',
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
-		dropdown: '#FFFFFF',
+		dropdown: '#212121',
+		accountNavigation: '#FFFFFF',
+		submenu: '#FFFFFF',
+		autosExpression: '#212121',
+		client: '#E0E0E0',
+		createNew: '#212121'
 	},
 };
 

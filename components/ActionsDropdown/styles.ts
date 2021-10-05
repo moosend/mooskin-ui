@@ -53,7 +53,7 @@ export const StyledActionsDropdownItem = styled(Box)<IActionsDropdownItemCompone
 	letter-spacing: normal;
 	text-align: left;
 	white-space: nowrap;
-	color: ${(props) => props.palette?.fontColors.inverseText || variables.fontColors.inverseText};
+	color: ${(props) => props.palette?.fontColors.dropdown || variables.fontColors.dropdown};
 	cursor: pointer;
 	&:not(:last-child) {
 		padding: 10px 10px 0;
