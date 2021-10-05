@@ -3,6 +3,7 @@ export interface IThemeFontColors {
 	primary2: string;
 	primary3: string;
 	primary4: string;
+	primary5: string;
 	secondary1: string;
 	secondary2: string;
 	secondary3: string;
@@ -15,6 +16,7 @@ export interface IThemeFontColors {
 	grayAlpha: string;
 	grayAlpha100: string;
 	grayAlpha400: string;
+	gray100: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;
@@ -34,6 +36,7 @@ export interface IThemeBackgroundColors {
 	primary2: string;
 	primary3: string;
 	primary4: string;
+	primary5: string;
 	secondary1: string;
 	secondary2: string;
 	secondary3: string;
@@ -44,6 +47,8 @@ export interface IThemeBackgroundColors {
 	altWhite: string;
 	background: string;
 	grayAlpha: string;
+	grayAlpha100: string;
+	grayAlpha400: string;
 	gray100: string;
 	gray1: string;
 	gray2: string;
@@ -64,6 +69,7 @@ export interface IThemeBorderColors {
 	primary2: string;
 	primary3: string;
 	primary4: string;
+	primary5: string;
 	secondary1: string;
 	secondary2: string;
 	secondary3: string;
@@ -75,6 +81,8 @@ export interface IThemeBorderColors {
 	background: string;
 	grayAlpha: string;
 	grayAlpha100: string;
+	grayAlpha400: string;
+	gray100: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;
@@ -89,10 +97,20 @@ export interface IThemeBorderColors {
 	dropdown: string;
 }
 
+export interface IThemeChartColors {
+	primaryblue: string;
+	primaryteal: string;
+	secondarygreen: string;
+	primaryred: string;
+	primaryyellow: string;
+	medgray1: string;
+}
+
 export interface IStyledTheme {
 	fontColors: IThemeFontColors;
 	backgroundColors: IThemeBackgroundColors;
 	borderColors: IThemeBorderColors;
+	chartColors: IThemeChartColors;
 }
 
 export interface IMooskinContext {
