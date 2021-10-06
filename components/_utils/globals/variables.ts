@@ -97,14 +97,6 @@ const theme: IStyledTheme = {
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
 		dropdown: '#FFFFFF',
 	},
-	chartColors: {
-		primaryblue: '#212121',
-		primaryteal: '#4169E1',
-		secondarygreen: '#2E7D32',
-		primaryred: '#D32F2F',
-		primaryyellow: '#f0b941',
-		medgray1: '#757575',
-	},
 };
 
 export default theme;

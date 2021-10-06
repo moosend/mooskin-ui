@@ -97,20 +97,10 @@ export interface IThemeBorderColors {
 	dropdown: string;
 }
 
-export interface IThemeChartColors {
-	primaryblue: string;
-	primaryteal: string;
-	secondarygreen: string;
-	primaryred: string;
-	primaryyellow: string;
-	medgray1: string;
-}
-
 export interface IStyledTheme {
 	fontColors: IThemeFontColors;
 	backgroundColors: IThemeBackgroundColors;
 	borderColors: IThemeBorderColors;
-	chartColors: IThemeChartColors;
 }
 
 export interface IMooskinContext {
