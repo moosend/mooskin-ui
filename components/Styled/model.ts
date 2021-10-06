@@ -3,6 +3,7 @@ export interface IThemeFontColors {
 	primary2: string;
 	primary3: string;
 	primary4: string;
+	primary5: string;
 	secondary1: string;
 	secondary2: string;
 	secondary3: string;
@@ -13,6 +14,9 @@ export interface IThemeFontColors {
 	altWhite: string;
 	background: string;
 	grayAlpha: string;
+	grayAlpha100: string;
+	grayAlpha400: string;
+	gray100: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;
@@ -37,6 +41,7 @@ export interface IThemeBackgroundColors {
 	primary2: string;
 	primary3: string;
 	primary4: string;
+	primary5: string;
 	secondary1: string;
 	secondary2: string;
 	secondary3: string;
@@ -47,6 +52,9 @@ export interface IThemeBackgroundColors {
 	altWhite: string;
 	background: string;
 	grayAlpha: string;
+	grayAlpha100: string;
+	grayAlpha400: string;
+	gray100: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;
@@ -71,6 +79,7 @@ export interface IThemeBorderColors {
 	primary2: string;
 	primary3: string;
 	primary4: string;
+	primary5: string;
 	secondary1: string;
 	secondary2: string;
 	secondary3: string;
@@ -81,6 +90,9 @@ export interface IThemeBorderColors {
 	altWhite: string;
 	background: string;
 	grayAlpha: string;
+	grayAlpha100: string;
+	grayAlpha400: string;
+	gray100: string;
 	gray1: string;
 	gray2: string;
 	medgray1: string;

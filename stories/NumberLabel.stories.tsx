@@ -5,6 +5,7 @@ import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
 import { INumberLabelComponentProps } from '../components/NumberLabel/model';
 import { NumberLabel } from '../components/NumberLabel/NumberLabel';
 
+import { Box } from '../components/Box/Box';
 import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
@@ -16,53 +17,62 @@ const Template: Story<INumberLabelComponentProps> = (args) => {
 	return (
 		<>
 			<GlobalStyle />
-			<NumberLabel {...args} />
+			<Box {...args} />
 		</>
 	);
 };
 
 export const Normal = Template.bind({});
 Normal.args = {
-	children: 12345,
+	children: <NumberLabel>12345</NumberLabel>,
 } as INumberLabelComponentProps;
 
 export const WithAbbreviate = Template.bind({});
 WithAbbreviate.args = {
-	abbreviate: true,
-	children: 15432,
+	children: <NumberLabel abbreviate>15432</NumberLabel>,
 } as INumberLabelComponentProps;
 
 export const WithAbbreviateAccuracyLow = Template.bind({});
 WithAbbreviateAccuracyLow.args = {
-	abbrAccuracy: 0,
-	abbreviate: true,
-	children: 3522439,
+	children: (
+		<NumberLabel abbrAccuracy={0} abbreviate>
+			3522439
+		</NumberLabel>
+	),
 } as INumberLabelComponentProps;
 
 export const WithAbbreviateAccuracyHigh = Template.bind({});
 WithAbbreviateAccuracyHigh.args = {
-	abbrAccuracy: 3,
-	abbreviate: true,
-	children: 7102522433,
+	children: (
+		<NumberLabel abbrAccuracy={3} abbreviate>
+			7102522433
+		</NumberLabel>
+	),
 } as INumberLabelComponentProps;
 
 export const WithRoundAccuracyLow = Template.bind({});
 WithRoundAccuracyLow.args = {
-	children: 15432,
-	roundAccuracy: 'low',
-	roundNumber: true,
+	children: (
+		<NumberLabel roundAccuracy="low" roundNumber>
+			15432
+		</NumberLabel>
+	),
 } as INumberLabelComponentProps;
 
 export const WithRoundAccuracyHigh = Template.bind({});
 WithRoundAccuracyHigh.args = {
-	children: 7102522433,
-	roundAccuracy: 'high',
-	roundNumber: true,
+	children: (
+		<NumberLabel roundNumber roundAccuracy="high">
+			7102522433
+		</NumberLabel>
+	),
 } as INumberLabelComponentProps;
 
 export const WithAbbreviateDefaultRound = Template.bind({});
 WithAbbreviateDefaultRound.args = {
-	abbreviate: true,
-	children: 3522439,
-	roundNumber: true,
+	children: (
+		<NumberLabel abbreviate roundNumber>
+			3522439
+		</NumberLabel>
+	),
 } as INumberLabelComponentProps;
