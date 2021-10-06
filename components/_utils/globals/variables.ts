@@ -32,6 +32,11 @@ const theme: IStyledTheme = {
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
 		dropdown: '#FFFFFF',
+		accountNavigation: '#FFFFFF',
+		submenu: '#FFFFFF',
+		autosExpression: '#212121',
+		client: '#E0E0E0',
+		createNew: '#FFFFFF'
 	},
 	borderColors: {
 		primary1: '#4169E1',
@@ -64,6 +69,11 @@ const theme: IStyledTheme = {
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
 		dropdown: '#FFFFFF',
+		accountNavigation: '#FFFFFF',
+		submenu: '#FFFFFF',
+		autosExpression: '#212121',
+		client: '#E0E0E0',
+		createNew: '#FFFFFF'
 	},
 	fontColors: {
 		primary1: '#4169E1',
@@ -95,7 +105,12 @@ const theme: IStyledTheme = {
 		inverseText: '#212121',
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
-		dropdown: '#FFFFFF',
+		dropdown: '#212121',
+		accountNavigation: '#FFFFFF',
+		submenu: '#FFFFFF',
+		autosExpression: '#212121',
+		client: '#E0E0E0',
+		createNew: '#212121'
 	},
 };
 
