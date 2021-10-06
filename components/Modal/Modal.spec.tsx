@@ -1,38 +1,52 @@
 import * as React from 'react';
-import Button from '../Button';
-import Modal from './Modal';
+import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from './Modal';
 
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Modal', () => {
+	test('renders correctly', () => {
+		const fn = jest.fn();
+		const fn2 = jest.fn();
 
-    test('renders correctly', () => {
-        const func = jest.fn();
+		const tree = mount(
+			<Modal onClose={fn} isOpen>
+				<ModalOverlay onClick={fn2}>
+					<ModalContent w="50%" h="50%">
+						<ModalCloseButton position="absolute" top={10} right={10} />
+						<ModalHeader>Create your account</ModalHeader>
 
-        const tree = shallow(
-            <Modal
-                className="myClass"
-                style={{color: 'blue'}}
-                id={'button1'}
-                onClickOverlay={func}
-            >
-                <div>
-                    Mooskin
-                </div>
-            </Modal>
-        );
-        expect(tree).toMatchSnapshot();
-    });
+						<ModalBody>Modal Content Body</ModalBody>
 
-    test('onOverlayClick callback is called when cover is clicked', () => {
-        const func = jest.fn();
+						<ModalFooter>Modal Footer goes here!</ModalFooter>
+					</ModalContent>
+				</ModalOverlay>
+			</Modal>
+		);
 
-        const component = shallow(<Modal onClickOverlay={func}>asd</Modal>);
+		expect(tree).toMatchSnapshot();
+	});
 
-        component.find('.cover').simulate('click');
+	test('closes Modal on Overlay click', () => {
+		const fn = jest.fn();
+		const fn2 = jest.fn();
 
-        expect(func).toHaveBeenCalled();
+		const tree = mount(
+			<Modal onClose={fn} isOpen>
+				<ModalOverlay onClick={fn2}>
+					<ModalContent w="50%" h="50%">
+						<ModalCloseButton position="absolute" top={10} right={10} />
+						<ModalHeader>Create your account</ModalHeader>
 
-    });
+						<ModalBody>Modal Content Body</ModalBody>
 
+						<ModalFooter>Modal Footer goes here!</ModalFooter>
+					</ModalContent>
+				</ModalOverlay>
+			</Modal>
+		);
+
+		tree.find(ModalOverlay).simulate('click');
+		expect(fn).toHaveBeenCalled();
+		expect(fn2).toHaveBeenCalled();
+	});
 });

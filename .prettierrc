@@ -1,0 +1,6 @@
+{
+  "packageManager": "yarn",
+  "singleQuote": true,
+  "useTabs": true,
+  "printWidth": 140
+}

@@ -1,84 +1,189 @@
 import * as React from 'react';
 
-import styles from './Modal.css';
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
-import {H2} from '../Headings';
-import SmallIconButton from '../SmallIconButton';
+// Models
+import { IBoxComponentProps } from '../Box/model';
+import { IModalComponentProps, IModalContentComponentProps, IModalOverlayComponentProps } from './model';
 
-export interface IModalProps{
+// Styled Components
+import {
+	StyledModal,
+	StyledModalBody,
+	StyledModalCloseButton,
+	StyledModalContentFadeIn,
+	StyledModalContentFadeOut,
+	StyledModalFooter,
+	StyledModalHeader,
+	StyledModalOverlayFadeIn,
+	StyledModalOverlayFadeOut,
+} from './styles';
 
-    /** id of the modal */
-    id?: string;
+// Transitions
+import { Transition } from 'react-transition-group';
+const ModalOverlayComponents = {
+	entered: StyledModalOverlayFadeIn,
+	entering: StyledModalOverlayFadeIn,
+	exited: null,
+	exiting: StyledModalOverlayFadeOut,
+	unmounted: null,
+};
 
-    /** modal title */
-    title?: string;
+/**
+ * Modal
+ */
+export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) => {
+	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
+		props.onClose && props.onClose(e);
+		callback && callback(e);
+	};
 
-    /** override modal styles */
-    style?: React.CSSProperties;
+	const recurseChildren = (children: any): any => {
+		if (!children) {
+			return null;
+		}
 
-    /** override modal class */
-    className?: string;
+		return React.Children.map(children, (child, i) => {
+			if (React.isValidElement<IBoxComponentProps>(child) && child.type === ModalCloseButton) {
+				return React.cloneElement(child, {
+					children: recurseChildren(child.props.children),
+					key: i,
+					onClick: (e) => batchClickHandler(e, child.props.onClick),
+				} as IBoxComponentProps);
+			}
 
-    /** onClick callback function when the background cover is clicked */
-    onClickOverlay?: (e: React.MouseEvent<HTMLDivElement>) => void;
+			if (React.isValidElement<IModalOverlayComponentProps>(child) && child.type === ModalOverlay) {
+				return React.cloneElement(child, {
+					children: recurseChildren(child.props.children),
+					isOpen: child.props.isOpen ? child.props.isOpen : props.isOpen,
+					key: i,
+					onClick: props.closeOnOverlayClick ? (e) => batchClickHandler(e, child.props.onClick) : child.props.onClick,
+				} as IModalOverlayComponentProps);
+			}
 
-    /** onClick callback function when the cloes icon is clicked */
-    onClickClose?: (e: React.MouseEvent<HTMLDivElement>) => void;
+			if (React.isValidElement<IModalContentComponentProps>(child) && child.type === ModalContent) {
+				return React.cloneElement(child, {
+					children: recurseChildren(child.props.children),
+					isOpen: child.props.isOpen ? child.props.isOpen : props.isOpen,
+					key: i,
+					onClick: (e: React.MouseEvent<HTMLElement>) => {
+						e.stopPropagation();
+						child.props.onClick && child.props.onClick(e);
+					},
+				} as IModalContentComponentProps);
+			}
 
-}
+			if (React.isValidElement(child) && (child.props as any).children) {
+				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
+			}
 
-export default class Modal extends React.Component<IModalProps, {}>{
+			return child;
+		});
+	};
 
-    static defaultProps = {
-        className: '',
-        style: {}
-    };
+	return <StyledModal {...props} children={recurseChildren(props.children)} />;
+});
 
-    static displayName = 'Modal';
+Modal.defaultProps = {
+	className: '',
+	closeOnOverlayClick: true,
+	style: {},
+};
 
-    render() {
+Modal.displayName = 'Modal';
 
-        return(
-            <div
-                className={`modal-component ${styles.container} ${this.props.className}`}
-                id={this.props.id}
-            >
-                <div
-                    className={styles.modal}
-                    style={this.props.style}
-                >
-                    {this.getHeader()}
-                    {this.props.children}
-                </div>
-                {this.getOverlay()}
-            </div>
-        );
-    }
+/**
+ * ModalContent
+ */
+export const ModalContent: React.FC<IModalContentComponentProps> = withMooskinContext((props) => {
+	const ModalContentComponent = props.isOpen ? StyledModalContentFadeIn : StyledModalContentFadeOut;
+	return <ModalContentComponent {...props} />;
+});
 
-    getHeader = () => {
+ModalContent.defaultProps = {
+	className: '',
+	style: {},
+};
 
-        const closeIcon = <SmallIconButton transparent icon="close" onClick={this.props.onClickClose} />;
+ModalContent.displayName = 'ModalContent';
 
-        if (this.props.title){
-            return (
-                <div className={styles.header}>
-                    <H2 style={{margin: 'auto'}} >{this.props.title}</H2>
-                    <div className={styles.iconWrapper}>
-                        {closeIcon}
-                    </div>
-                </div>
-            );
-        }
+/**
+ * ModalHeader
+ */
+export const ModalHeader: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+	return <StyledModalHeader boxAs="header" {...props} />;
+});
 
-        return (
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end'}}>
-                {closeIcon}
-            </div>
-        );
-    }
+ModalHeader.defaultProps = {
+	className: '',
+	style: {},
+};
 
-    getOverlay = () => {
-        return <div className={styles.cover} onClick={this.props.onClickOverlay} />;
-    }
+ModalHeader.displayName = 'ModalHeader';
 
-}
+/**
+ * ModalBody
+ */
+export const ModalBody: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+	return <StyledModalBody {...props} />;
+});
+
+ModalBody.defaultProps = {
+	className: '',
+	style: {},
+};
+
+ModalBody.displayName = 'ModalBody';
+
+/**
+ * ModalFooter
+ */
+export const ModalFooter: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+	return <StyledModalFooter boxAs="footer" {...props} />;
+});
+
+ModalFooter.defaultProps = {
+	className: '',
+	style: {},
+};
+
+ModalFooter.displayName = 'ModalFooter';
+
+/**
+ * ModalCloseButton
+ */
+export const ModalCloseButton: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+	return <StyledModalCloseButton {...props} children="close" className={`notranslate ${props.className}`} />;
+});
+
+ModalCloseButton.defaultProps = {
+	className: '',
+	style: {},
+};
+
+ModalCloseButton.displayName = 'ModalCloseButton';
+
+/**
+ * ModalOverlay
+ */
+export const ModalOverlay: React.FC<IModalOverlayComponentProps> = withMooskinContext((props) => {
+	return (
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={145}>
+			{(state) => {
+				const ModalOverlayComponent = ModalOverlayComponents[state];
+				if (ModalOverlayComponent) {
+					return <ModalOverlayComponent boxShadow="base" round="xs" {...props} />;
+				}
+				return null;
+			}}
+		</Transition>
+	);
+});
+
+ModalOverlay.defaultProps = {
+	className: '',
+	style: {},
+};
+
+ModalOverlay.displayName = 'ModalOverlay';
