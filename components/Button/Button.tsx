@@ -1,92 +1,82 @@
 import * as React from 'react';
 
-import styles from './Button.css';
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
-export interface IButtonProps {
-    /** provide to make the button disabled */
-    disabled?: boolean;
+// Models
+import { IBoxComponentProps } from '../Box/model';
+import { IButtonComponentProps } from './model';
 
-    /** provide to inverse the button's styles */
-    inverseStyle?: boolean;
+// Styled Components
+import { StyledButton, StyledButtonIcon, StyledButtonThree, StyledButtonTwo } from './styles';
 
-    /** button id attribute */
-    id?: string;
+/**
+ * Button
+ */
+export const Button: React.FC<IButtonComponentProps> = withMooskinContext((props) => {
+	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		!props.disabled && props.onClick && props.onClick(e);
+	};
+	return <StyledButton {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+});
 
-    /** button href */
-    href?: string;
+Button.defaultProps = {
+	buttonSize: 'md',
+	className: '',
+	style: {},
+	type: 'button',
+};
 
-    /** button type */
-    type?: string;
+Button.displayName = 'Button';
 
-    /** button class */
-    className?: string;
+/**
+ * ButtonTwo
+ */
+export const ButtonTwo: React.FC<IButtonComponentProps> = withMooskinContext((props) => {
+	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		!props.disabled && props.onClick && props.onClick(e);
+	};
+	return <StyledButtonTwo {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+});
 
-    /** override button styles */
-    style?: React.CSSProperties;
+ButtonTwo.defaultProps = {
+	buttonSize: 'md',
+	className: '',
+	style: {},
+	type: 'button',
+};
 
-    /** callback that is called when the button is clicked */
-    onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
+ButtonTwo.displayName = 'ButtonTwo';
 
-    /** children can only be a string */
-    children?: Element | JSX.Element | string;
-}
+/**
+ * ButtonThree
+ */
+export const ButtonThree: React.FC<IButtonComponentProps> = withMooskinContext((props) => {
+	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+		!props.disabled && props.onClick && props.onClick(e);
+	};
+	return <StyledButtonThree {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+});
 
-export default class Button extends React.Component<IButtonProps, {}> {
+ButtonThree.defaultProps = {
+	buttonSize: 'md',
+	className: '',
+	style: {},
+	type: 'button',
+};
 
-    static defaultProps = {
-        className: '',
-        style: {},
-        type: 'button'
-    };
+ButtonThree.displayName = 'ButtonThree';
 
-    static displayName = 'Button';
+/**
+ * ButtonIcon
+ */
+export const ButtonIcon: React.FC<IBoxComponentProps> = (props) => {
+	return <StyledButtonIcon {...props} className={`notranslate ${props.className}`} />;
+};
 
-    render(){
+ButtonIcon.defaultProps = {
+	className: '',
+	style: {},
+};
 
-        const button = this.getButton();
-
-        return button;
-
-    }
-
-    getButton = () => {
-
-        const {style, inverseStyle, disabled, children, className, id, href, type} = this.props;
-
-        const buttonStyles = inverseStyle ? styles.inverseButton : styles.normalButton;
-        const disabledStyles = disabled ? styles.disabledButton : '';
-
-        const classes = `button-component ${styles.button} ${buttonStyles} ${disabledStyles} ${className}`;
-
-        if (href){
-            return (
-                <a
-                    id={id}
-                    href={href}
-                    className={`button-component-link ${classes}`}
-                    style={style}
-                    onClick={this.onClick}
-                >
-                    {children}
-                </a>
-            );
-        } else {
-            return (
-                <button
-                    id={id}
-                    type={type}
-                    onClick={this.onClick}
-                    disabled={disabled}
-                    className={classes}
-                    style={style}
-                >
-                    {children}
-                </button>
-            );
-        }
-    }
-
-    onClick = (e: React.MouseEvent<HTMLElement>) => {
-        !this.props.disabled && this.props.onClick && this.props.onClick(e);
-    }
-}
+ButtonIcon.displayName = 'ButtonIcon';

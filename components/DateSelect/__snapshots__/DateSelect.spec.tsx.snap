@@ -1,0 +1,1832 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateSelect renders other type of the component correctly 1`] = `
+<DateSelect
+  className=""
+  format="12-Hour"
+  onChangeSelect={[MockFunction]}
+  style={Object {}}
+  type="hour"
+>
+  <Component
+    className=""
+    format="12-Hour"
+    onChangeSelect={[MockFunction]}
+    palette={
+      Object {
+        "backgroundColors": Object {
+          "background": "#FAFAFA",
+          "black": "#000000",
+          "darkgray1": "#777777",
+          "darkgray2": "#454545",
+          "gray1": "#E0E0E0",
+          "gray2": "#E7E7E7",
+          "medgray1": "#757575",
+          "medgray2": "#888888",
+          "primary1": "#4169E1",
+          "primary2": "#212121",
+          "primary3": "#00796B",
+          "primary4": "#D32F2F",
+          "secondary1": "#2E7D32",
+          "secondary2": "#757575",
+          "secondary3": "#673AB7",
+          "secondary4": "#9C27B0",
+          "secondary5": "#00796B",
+          "secondary6": "#ECF0FC",
+          "text": "#212121",
+          "white": "#FFFFFF",
+        },
+        "borderColors": Object {
+          "background": "#FAFAFA",
+          "black": "#000000",
+          "darkgray1": "#777777",
+          "darkgray2": "#454545",
+          "gray1": "#E0E0E0",
+          "gray2": "#E7E7E7",
+          "medgray1": "#757575",
+          "medgray2": "#888888",
+          "primary1": "#4169E1",
+          "primary2": "#212121",
+          "primary3": "#00796B",
+          "primary4": "#D32F2F",
+          "secondary1": "#2E7D32",
+          "secondary2": "#757575",
+          "secondary3": "#673AB7",
+          "secondary4": "#9C27B0",
+          "secondary5": "#00796B",
+          "secondary6": "#ECF0FC",
+          "text": "#212121",
+          "white": "#FFFFFF",
+        },
+        "fontColors": Object {
+          "background": "#FAFAFA",
+          "black": "#000000",
+          "darkgray1": "#777777",
+          "darkgray2": "#454545",
+          "gray1": "#E0E0E0",
+          "gray2": "#E7E7E7",
+          "medgray1": "#757575",
+          "medgray2": "#888888",
+          "primary1": "#4169E1",
+          "primary2": "#212121",
+          "primary3": "#00796B",
+          "primary4": "#D32F2F",
+          "secondary1": "#2E7D32",
+          "secondary2": "#757575",
+          "secondary3": "#673AB7",
+          "secondary4": "#9C27B0",
+          "secondary5": "#00796B",
+          "secondary6": "#ECF0FC",
+          "text": "#212121",
+          "white": "#FFFFFF",
+        },
+      }
+    }
+    style={Object {}}
+    type="hour"
+  >
+    <Select
+      className=""
+      format="12-Hour"
+      onChangeSelect={[Function]}
+      palette={
+        Object {
+          "backgroundColors": Object {
+            "background": "#FAFAFA",
+            "black": "#000000",
+            "darkgray1": "#777777",
+            "darkgray2": "#454545",
+            "gray1": "#E0E0E0",
+            "gray2": "#E7E7E7",
+            "medgray1": "#757575",
+            "medgray2": "#888888",
+            "primary1": "#4169E1",
+            "primary2": "#212121",
+            "primary3": "#00796B",
+            "primary4": "#D32F2F",
+            "secondary1": "#2E7D32",
+            "secondary2": "#757575",
+            "secondary3": "#673AB7",
+            "secondary4": "#9C27B0",
+            "secondary5": "#00796B",
+            "secondary6": "#ECF0FC",
+            "text": "#212121",
+            "white": "#FFFFFF",
+          },
+          "borderColors": Object {
+            "background": "#FAFAFA",
+            "black": "#000000",
+            "darkgray1": "#777777",
+            "darkgray2": "#454545",
+            "gray1": "#E0E0E0",
+            "gray2": "#E7E7E7",
+            "medgray1": "#757575",
+            "medgray2": "#888888",
+            "primary1": "#4169E1",
+            "primary2": "#212121",
+            "primary3": "#00796B",
+            "primary4": "#D32F2F",
+            "secondary1": "#2E7D32",
+            "secondary2": "#757575",
+            "secondary3": "#673AB7",
+            "secondary4": "#9C27B0",
+            "secondary5": "#00796B",
+            "secondary6": "#ECF0FC",
+            "text": "#212121",
+            "white": "#FFFFFF",
+          },
+          "fontColors": Object {
+            "background": "#FAFAFA",
+            "black": "#000000",
+            "darkgray1": "#777777",
+            "darkgray2": "#454545",
+            "gray1": "#E0E0E0",
+            "gray2": "#E7E7E7",
+            "medgray1": "#757575",
+            "medgray2": "#888888",
+            "primary1": "#4169E1",
+            "primary2": "#212121",
+            "primary3": "#00796B",
+            "primary4": "#D32F2F",
+            "secondary1": "#2E7D32",
+            "secondary2": "#757575",
+            "secondary3": "#673AB7",
+            "secondary4": "#9C27B0",
+            "secondary5": "#00796B",
+            "secondary6": "#ECF0FC",
+            "text": "#212121",
+            "white": "#FFFFFF",
+          },
+        }
+      }
+      selectedValue=""
+      style={Object {}}
+      type="hour"
+    >
+      <Component
+        className=""
+        format="12-Hour"
+        onChangeSelect={[Function]}
+        palette={
+          Object {
+            "backgroundColors": Object {
+              "background": "#FAFAFA",
+              "black": "#000000",
+              "darkgray1": "#777777",
+              "darkgray2": "#454545",
+              "gray1": "#E0E0E0",
+              "gray2": "#E7E7E7",
+              "medgray1": "#757575",
+              "medgray2": "#888888",
+              "primary1": "#4169E1",
+              "primary2": "#212121",
+              "primary3": "#00796B",
+              "primary4": "#D32F2F",
+              "secondary1": "#2E7D32",
+              "secondary2": "#757575",
+              "secondary3": "#673AB7",
+              "secondary4": "#9C27B0",
+              "secondary5": "#00796B",
+              "secondary6": "#ECF0FC",
+              "text": "#212121",
+              "white": "#FFFFFF",
+            },
+            "borderColors": Object {
+              "background": "#FAFAFA",
+              "black": "#000000",
+              "darkgray1": "#777777",
+              "darkgray2": "#454545",
+              "gray1": "#E0E0E0",
+              "gray2": "#E7E7E7",
+              "medgray1": "#757575",
+              "medgray2": "#888888",
+              "primary1": "#4169E1",
+              "primary2": "#212121",
+              "primary3": "#00796B",
+              "primary4": "#D32F2F",
+              "secondary1": "#2E7D32",
+              "secondary2": "#757575",
+              "secondary3": "#673AB7",
+              "secondary4": "#9C27B0",
+              "secondary5": "#00796B",
+              "secondary6": "#ECF0FC",
+              "text": "#212121",
+              "white": "#FFFFFF",
+            },
+            "fontColors": Object {
+              "background": "#FAFAFA",
+              "black": "#000000",
+              "darkgray1": "#777777",
+              "darkgray2": "#454545",
+              "gray1": "#E0E0E0",
+              "gray2": "#E7E7E7",
+              "medgray1": "#757575",
+              "medgray2": "#888888",
+              "primary1": "#4169E1",
+              "primary2": "#212121",
+              "primary3": "#00796B",
+              "primary4": "#D32F2F",
+              "secondary1": "#2E7D32",
+              "secondary2": "#757575",
+              "secondary3": "#673AB7",
+              "secondary4": "#9C27B0",
+              "secondary5": "#00796B",
+              "secondary6": "#ECF0FC",
+              "text": "#212121",
+              "white": "#FFFFFF",
+            },
+          }
+        }
+        selectedValue=""
+        style={Object {}}
+        type="hour"
+      >
+        <StyledSelect
+          className=""
+          format="12-Hour"
+          onChangeSelect={[Function]}
+          palette={
+            Object {
+              "backgroundColors": Object {
+                "background": "#FAFAFA",
+                "black": "#000000",
+                "darkgray1": "#777777",
+                "darkgray2": "#454545",
+                "gray1": "#E0E0E0",
+                "gray2": "#E7E7E7",
+                "medgray1": "#757575",
+                "medgray2": "#888888",
+                "primary1": "#4169E1",
+                "primary2": "#212121",
+                "primary3": "#00796B",
+                "primary4": "#D32F2F",
+                "secondary1": "#2E7D32",
+                "secondary2": "#757575",
+                "secondary3": "#673AB7",
+                "secondary4": "#9C27B0",
+                "secondary5": "#00796B",
+                "secondary6": "#ECF0FC",
+                "text": "#212121",
+                "white": "#FFFFFF",
+              },
+              "borderColors": Object {
+                "background": "#FAFAFA",
+                "black": "#000000",
+                "darkgray1": "#777777",
+                "darkgray2": "#454545",
+                "gray1": "#E0E0E0",
+                "gray2": "#E7E7E7",
+                "medgray1": "#757575",
+                "medgray2": "#888888",
+                "primary1": "#4169E1",
+                "primary2": "#212121",
+                "primary3": "#00796B",
+                "primary4": "#D32F2F",
+                "secondary1": "#2E7D32",
+                "secondary2": "#757575",
+                "secondary3": "#673AB7",
+                "secondary4": "#9C27B0",
+                "secondary5": "#00796B",
+                "secondary6": "#ECF0FC",
+                "text": "#212121",
+                "white": "#FFFFFF",
+              },
+              "fontColors": Object {
+                "background": "#FAFAFA",
+                "black": "#000000",
+                "darkgray1": "#777777",
+                "darkgray2": "#454545",
+                "gray1": "#E0E0E0",
+                "gray2": "#E7E7E7",
+                "medgray1": "#757575",
+                "medgray2": "#888888",
+                "primary1": "#4169E1",
+                "primary2": "#212121",
+                "primary3": "#00796B",
+                "primary4": "#D32F2F",
+                "secondary1": "#2E7D32",
+                "secondary2": "#757575",
+                "secondary3": "#673AB7",
+                "secondary4": "#9C27B0",
+                "secondary5": "#00796B",
+                "secondary6": "#ECF0FC",
+                "text": "#212121",
+                "white": "#FFFFFF",
+              },
+            }
+          }
+          selectedValue=""
+          style={Object {}}
+          type="hour"
+        >
+          <Box
+            className="sc-dlnjPT hPGFh"
+            format="12-Hour"
+            onChangeSelect={[Function]}
+            palette={
+              Object {
+                "backgroundColors": Object {
+                  "background": "#FAFAFA",
+                  "black": "#000000",
+                  "darkgray1": "#777777",
+                  "darkgray2": "#454545",
+                  "gray1": "#E0E0E0",
+                  "gray2": "#E7E7E7",
+                  "medgray1": "#757575",
+                  "medgray2": "#888888",
+                  "primary1": "#4169E1",
+                  "primary2": "#212121",
+                  "primary3": "#00796B",
+                  "primary4": "#D32F2F",
+                  "secondary1": "#2E7D32",
+                  "secondary2": "#757575",
+                  "secondary3": "#673AB7",
+                  "secondary4": "#9C27B0",
+                  "secondary5": "#00796B",
+                  "secondary6": "#ECF0FC",
+                  "text": "#212121",
+                  "white": "#FFFFFF",
+                },
+                "borderColors": Object {
+                  "background": "#FAFAFA",
+                  "black": "#000000",
+                  "darkgray1": "#777777",
+                  "darkgray2": "#454545",
+                  "gray1": "#E0E0E0",
+                  "gray2": "#E7E7E7",
+                  "medgray1": "#757575",
+                  "medgray2": "#888888",
+                  "primary1": "#4169E1",
+                  "primary2": "#212121",
+                  "primary3": "#00796B",
+                  "primary4": "#D32F2F",
+                  "secondary1": "#2E7D32",
+                  "secondary2": "#757575",
+                  "secondary3": "#673AB7",
+                  "secondary4": "#9C27B0",
+                  "secondary5": "#00796B",
+                  "secondary6": "#ECF0FC",
+                  "text": "#212121",
+                  "white": "#FFFFFF",
+                },
+                "fontColors": Object {
+                  "background": "#FAFAFA",
+                  "black": "#000000",
+                  "darkgray1": "#777777",
+                  "darkgray2": "#454545",
+                  "gray1": "#E0E0E0",
+                  "gray2": "#E7E7E7",
+                  "medgray1": "#757575",
+                  "medgray2": "#888888",
+                  "primary1": "#4169E1",
+                  "primary2": "#212121",
+                  "primary3": "#00796B",
+                  "primary4": "#D32F2F",
+                  "secondary1": "#2E7D32",
+                  "secondary2": "#757575",
+                  "secondary3": "#673AB7",
+                  "secondary4": "#9C27B0",
+                  "secondary5": "#00796B",
+                  "secondary6": "#ECF0FC",
+                  "text": "#212121",
+                  "white": "#FFFFFF",
+                },
+              }
+            }
+            selectedValue=""
+            style={Object {}}
+            transition="0.2s all"
+            type="hour"
+          >
+            <Component
+              className="sc-dlnjPT hPGFh"
+              format="12-Hour"
+              onChangeSelect={[Function]}
+              palette={
+                Object {
+                  "backgroundColors": Object {
+                    "background": "#FAFAFA",
+                    "black": "#000000",
+                    "darkgray1": "#777777",
+                    "darkgray2": "#454545",
+                    "gray1": "#E0E0E0",
+                    "gray2": "#E7E7E7",
+                    "medgray1": "#757575",
+                    "medgray2": "#888888",
+                    "primary1": "#4169E1",
+                    "primary2": "#212121",
+                    "primary3": "#00796B",
+                    "primary4": "#D32F2F",
+                    "secondary1": "#2E7D32",
+                    "secondary2": "#757575",
+                    "secondary3": "#673AB7",
+                    "secondary4": "#9C27B0",
+                    "secondary5": "#00796B",
+                    "secondary6": "#ECF0FC",
+                    "text": "#212121",
+                    "white": "#FFFFFF",
+                  },
+                  "borderColors": Object {
+                    "background": "#FAFAFA",
+                    "black": "#000000",
+                    "darkgray1": "#777777",
+                    "darkgray2": "#454545",
+                    "gray1": "#E0E0E0",
+                    "gray2": "#E7E7E7",
+                    "medgray1": "#757575",
+                    "medgray2": "#888888",
+                    "primary1": "#4169E1",
+                    "primary2": "#212121",
+                    "primary3": "#00796B",
+                    "primary4": "#D32F2F",
+                    "secondary1": "#2E7D32",
+                    "secondary2": "#757575",
+                    "secondary3": "#673AB7",
+                    "secondary4": "#9C27B0",
+                    "secondary5": "#00796B",
+                    "secondary6": "#ECF0FC",
+                    "text": "#212121",
+                    "white": "#FFFFFF",
+                  },
+                  "fontColors": Object {
+                    "background": "#FAFAFA",
+                    "black": "#000000",
+                    "darkgray1": "#777777",
+                    "darkgray2": "#454545",
+                    "gray1": "#E0E0E0",
+                    "gray2": "#E7E7E7",
+                    "medgray1": "#757575",
+                    "medgray2": "#888888",
+                    "primary1": "#4169E1",
+                    "primary2": "#212121",
+                    "primary3": "#00796B",
+                    "primary4": "#D32F2F",
+                    "secondary1": "#2E7D32",
+                    "secondary2": "#757575",
+                    "secondary3": "#673AB7",
+                    "secondary4": "#9C27B0",
+                    "secondary5": "#00796B",
+                    "secondary6": "#ECF0FC",
+                    "text": "#212121",
+                    "white": "#FFFFFF",
+                  },
+                }
+              }
+              selectedValue=""
+              style={Object {}}
+              transition="0.2s all"
+              type="hour"
+            >
+              <StyledBox
+                className="sc-dlnjPT hPGFh"
+                format="12-Hour"
+                onChangeSelect={[Function]}
+                palette={
+                  Object {
+                    "backgroundColors": Object {
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "gray1": "#E0E0E0",
+                      "gray2": "#E7E7E7",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "primary1": "#4169E1",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "borderColors": Object {
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "gray1": "#E0E0E0",
+                      "gray2": "#E7E7E7",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "primary1": "#4169E1",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "fontColors": Object {
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "gray1": "#E0E0E0",
+                      "gray2": "#E7E7E7",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "primary1": "#4169E1",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                  }
+                }
+                selectedValue=""
+                style={Object {}}
+                transition="0.2s all"
+                type="hour"
+              >
+                <div
+                  className="sc-bdnylx jknATe sc-dlnjPT hPGFh"
+                  format="12-Hour"
+                  onChangeSelect={[Function]}
+                  style={Object {}}
+                  type="hour"
+                >
+                  <SelectContainer
+                    className=""
+                    key="0/.0"
+                    onClick={[Function]}
+                    style={Object {}}
+                  >
+                    <Component
+                      className=""
+                      onClick={[Function]}
+                      palette={
+                        Object {
+                          "backgroundColors": Object {
+                            "background": "#FAFAFA",
+                            "black": "#000000",
+                            "darkgray1": "#777777",
+                            "darkgray2": "#454545",
+                            "gray1": "#E0E0E0",
+                            "gray2": "#E7E7E7",
+                            "medgray1": "#757575",
+                            "medgray2": "#888888",
+                            "primary1": "#4169E1",
+                            "primary2": "#212121",
+                            "primary3": "#00796B",
+                            "primary4": "#D32F2F",
+                            "secondary1": "#2E7D32",
+                            "secondary2": "#757575",
+                            "secondary3": "#673AB7",
+                            "secondary4": "#9C27B0",
+                            "secondary5": "#00796B",
+                            "secondary6": "#ECF0FC",
+                            "text": "#212121",
+                            "white": "#FFFFFF",
+                          },
+                          "borderColors": Object {
+                            "background": "#FAFAFA",
+                            "black": "#000000",
+                            "darkgray1": "#777777",
+                            "darkgray2": "#454545",
+                            "gray1": "#E0E0E0",
+                            "gray2": "#E7E7E7",
+                            "medgray1": "#757575",
+                            "medgray2": "#888888",
+                            "primary1": "#4169E1",
+                            "primary2": "#212121",
+                            "primary3": "#00796B",
+                            "primary4": "#D32F2F",
+                            "secondary1": "#2E7D32",
+                            "secondary2": "#757575",
+                            "secondary3": "#673AB7",
+                            "secondary4": "#9C27B0",
+                            "secondary5": "#00796B",
+                            "secondary6": "#ECF0FC",
+                            "text": "#212121",
+                            "white": "#FFFFFF",
+                          },
+                          "fontColors": Object {
+                            "background": "#FAFAFA",
+                            "black": "#000000",
+                            "darkgray1": "#777777",
+                            "darkgray2": "#454545",
+                            "gray1": "#E0E0E0",
+                            "gray2": "#E7E7E7",
+                            "medgray1": "#757575",
+                            "medgray2": "#888888",
+                            "primary1": "#4169E1",
+                            "primary2": "#212121",
+                            "primary3": "#00796B",
+                            "primary4": "#D32F2F",
+                            "secondary1": "#2E7D32",
+                            "secondary2": "#757575",
+                            "secondary3": "#673AB7",
+                            "secondary4": "#9C27B0",
+                            "secondary5": "#00796B",
+                            "secondary6": "#ECF0FC",
+                            "text": "#212121",
+                            "white": "#FFFFFF",
+                          },
+                        }
+                      }
+                      style={Object {}}
+                    >
+                      <StyledSelectContainer
+                        className=""
+                        onClick={[Function]}
+                        palette={
+                          Object {
+                            "backgroundColors": Object {
+                              "background": "#FAFAFA",
+                              "black": "#000000",
+                              "darkgray1": "#777777",
+                              "darkgray2": "#454545",
+                              "gray1": "#E0E0E0",
+                              "gray2": "#E7E7E7",
+                              "medgray1": "#757575",
+                              "medgray2": "#888888",
+                              "primary1": "#4169E1",
+                              "primary2": "#212121",
+                              "primary3": "#00796B",
+                              "primary4": "#D32F2F",
+                              "secondary1": "#2E7D32",
+                              "secondary2": "#757575",
+                              "secondary3": "#673AB7",
+                              "secondary4": "#9C27B0",
+                              "secondary5": "#00796B",
+                              "secondary6": "#ECF0FC",
+                              "text": "#212121",
+                              "white": "#FFFFFF",
+                            },
+                            "borderColors": Object {
+                              "background": "#FAFAFA",
+                              "black": "#000000",
+                              "darkgray1": "#777777",
+                              "darkgray2": "#454545",
+                              "gray1": "#E0E0E0",
+                              "gray2": "#E7E7E7",
+                              "medgray1": "#757575",
+                              "medgray2": "#888888",
+                              "primary1": "#4169E1",
+                              "primary2": "#212121",
+                              "primary3": "#00796B",
+                              "primary4": "#D32F2F",
+                              "secondary1": "#2E7D32",
+                              "secondary2": "#757575",
+                              "secondary3": "#673AB7",
+                              "secondary4": "#9C27B0",
+                              "secondary5": "#00796B",
+                              "secondary6": "#ECF0FC",
+                              "text": "#212121",
+                              "white": "#FFFFFF",
+                            },
+                            "fontColors": Object {
+                              "background": "#FAFAFA",
+                              "black": "#000000",
+                              "darkgray1": "#777777",
+                              "darkgray2": "#454545",
+                              "gray1": "#E0E0E0",
+                              "gray2": "#E7E7E7",
+                              "medgray1": "#757575",
+                              "medgray2": "#888888",
+                              "primary1": "#4169E1",
+                              "primary2": "#212121",
+                              "primary3": "#00796B",
+                              "primary4": "#D32F2F",
+                              "secondary1": "#2E7D32",
+                              "secondary2": "#757575",
+                              "secondary3": "#673AB7",
+                              "secondary4": "#9C27B0",
+                              "secondary5": "#00796B",
+                              "secondary6": "#ECF0FC",
+                              "text": "#212121",
+                              "white": "#FFFFFF",
+                            },
+                          }
+                        }
+                        style={Object {}}
+                      >
+                        <Box
+                          className="sc-eCApGN fajFZl"
+                          onClick={[Function]}
+                          palette={
+                            Object {
+                              "backgroundColors": Object {
+                                "background": "#FAFAFA",
+                                "black": "#000000",
+                                "darkgray1": "#777777",
+                                "darkgray2": "#454545",
+                                "gray1": "#E0E0E0",
+                                "gray2": "#E7E7E7",
+                                "medgray1": "#757575",
+                                "medgray2": "#888888",
+                                "primary1": "#4169E1",
+                                "primary2": "#212121",
+                                "primary3": "#00796B",
+                                "primary4": "#D32F2F",
+                                "secondary1": "#2E7D32",
+                                "secondary2": "#757575",
+                                "secondary3": "#673AB7",
+                                "secondary4": "#9C27B0",
+                                "secondary5": "#00796B",
+                                "secondary6": "#ECF0FC",
+                                "text": "#212121",
+                                "white": "#FFFFFF",
+                              },
+                              "borderColors": Object {
+                                "background": "#FAFAFA",
+                                "black": "#000000",
+                                "darkgray1": "#777777",
+                                "darkgray2": "#454545",
+                                "gray1": "#E0E0E0",
+                                "gray2": "#E7E7E7",
+                                "medgray1": "#757575",
+                                "medgray2": "#888888",
+                                "primary1": "#4169E1",
+                                "primary2": "#212121",
+                                "primary3": "#00796B",
+                                "primary4": "#D32F2F",
+                                "secondary1": "#2E7D32",
+                                "secondary2": "#757575",
+                                "secondary3": "#673AB7",
+                                "secondary4": "#9C27B0",
+                                "secondary5": "#00796B",
+                                "secondary6": "#ECF0FC",
+                                "text": "#212121",
+                                "white": "#FFFFFF",
+                              },
+                              "fontColors": Object {
+                                "background": "#FAFAFA",
+                                "black": "#000000",
+                                "darkgray1": "#777777",
+                                "darkgray2": "#454545",
+                                "gray1": "#E0E0E0",
+                                "gray2": "#E7E7E7",
+                                "medgray1": "#757575",
+                                "medgray2": "#888888",
+                                "primary1": "#4169E1",
+                                "primary2": "#212121",
+                                "primary3": "#00796B",
+                                "primary4": "#D32F2F",
+                                "secondary1": "#2E7D32",
+                                "secondary2": "#757575",
+                                "secondary3": "#673AB7",
+                                "secondary4": "#9C27B0",
+                                "secondary5": "#00796B",
+                                "secondary6": "#ECF0FC",
+                                "text": "#212121",
+                                "white": "#FFFFFF",
+                              },
+                            }
+                          }
+                          style={Object {}}
+                          transition="0.2s all"
+                        >
+                          <Component
+                            className="sc-eCApGN fajFZl"
+                            onClick={[Function]}
+                            palette={
+                              Object {
+                                "backgroundColors": Object {
+                                  "background": "#FAFAFA",
+                                  "black": "#000000",
+                                  "darkgray1": "#777777",
+                                  "darkgray2": "#454545",
+                                  "gray1": "#E0E0E0",
+                                  "gray2": "#E7E7E7",
+                                  "medgray1": "#757575",
+                                  "medgray2": "#888888",
+                                  "primary1": "#4169E1",
+                                  "primary2": "#212121",
+                                  "primary3": "#00796B",
+                                  "primary4": "#D32F2F",
+                                  "secondary1": "#2E7D32",
+                                  "secondary2": "#757575",
+                                  "secondary3": "#673AB7",
+                                  "secondary4": "#9C27B0",
+                                  "secondary5": "#00796B",
+                                  "secondary6": "#ECF0FC",
+                                  "text": "#212121",
+                                  "white": "#FFFFFF",
+                                },
+                                "borderColors": Object {
+                                  "background": "#FAFAFA",
+                                  "black": "#000000",
+                                  "darkgray1": "#777777",
+                                  "darkgray2": "#454545",
+                                  "gray1": "#E0E0E0",
+                                  "gray2": "#E7E7E7",
+                                  "medgray1": "#757575",
+                                  "medgray2": "#888888",
+                                  "primary1": "#4169E1",
+                                  "primary2": "#212121",
+                                  "primary3": "#00796B",
+                                  "primary4": "#D32F2F",
+                                  "secondary1": "#2E7D32",
+                                  "secondary2": "#757575",
+                                  "secondary3": "#673AB7",
+                                  "secondary4": "#9C27B0",
+                                  "secondary5": "#00796B",
+                                  "secondary6": "#ECF0FC",
+                                  "text": "#212121",
+                                  "white": "#FFFFFF",
+                                },
+                                "fontColors": Object {
+                                  "background": "#FAFAFA",
+                                  "black": "#000000",
+                                  "darkgray1": "#777777",
+                                  "darkgray2": "#454545",
+                                  "gray1": "#E0E0E0",
+                                  "gray2": "#E7E7E7",
+                                  "medgray1": "#757575",
+                                  "medgray2": "#888888",
+                                  "primary1": "#4169E1",
+                                  "primary2": "#212121",
+                                  "primary3": "#00796B",
+                                  "primary4": "#D32F2F",
+                                  "secondary1": "#2E7D32",
+                                  "secondary2": "#757575",
+                                  "secondary3": "#673AB7",
+                                  "secondary4": "#9C27B0",
+                                  "secondary5": "#00796B",
+                                  "secondary6": "#ECF0FC",
+                                  "text": "#212121",
+                                  "white": "#FFFFFF",
+                                },
+                              }
+                            }
+                            style={Object {}}
+                            transition="0.2s all"
+                          >
+                            <StyledBox
+                              className="sc-eCApGN fajFZl"
+                              onClick={[Function]}
+                              palette={
+                                Object {
+                                  "backgroundColors": Object {
+                                    "background": "#FAFAFA",
+                                    "black": "#000000",
+                                    "darkgray1": "#777777",
+                                    "darkgray2": "#454545",
+                                    "gray1": "#E0E0E0",
+                                    "gray2": "#E7E7E7",
+                                    "medgray1": "#757575",
+                                    "medgray2": "#888888",
+                                    "primary1": "#4169E1",
+                                    "primary2": "#212121",
+                                    "primary3": "#00796B",
+                                    "primary4": "#D32F2F",
+                                    "secondary1": "#2E7D32",
+                                    "secondary2": "#757575",
+                                    "secondary3": "#673AB7",
+                                    "secondary4": "#9C27B0",
+                                    "secondary5": "#00796B",
+                                    "secondary6": "#ECF0FC",
+                                    "text": "#212121",
+                                    "white": "#FFFFFF",
+                                  },
+                                  "borderColors": Object {
+                                    "background": "#FAFAFA",
+                                    "black": "#000000",
+                                    "darkgray1": "#777777",
+                                    "darkgray2": "#454545",
+                                    "gray1": "#E0E0E0",
+                                    "gray2": "#E7E7E7",
+                                    "medgray1": "#757575",
+                                    "medgray2": "#888888",
+                                    "primary1": "#4169E1",
+                                    "primary2": "#212121",
+                                    "primary3": "#00796B",
+                                    "primary4": "#D32F2F",
+                                    "secondary1": "#2E7D32",
+                                    "secondary2": "#757575",
+                                    "secondary3": "#673AB7",
+                                    "secondary4": "#9C27B0",
+                                    "secondary5": "#00796B",
+                                    "secondary6": "#ECF0FC",
+                                    "text": "#212121",
+                                    "white": "#FFFFFF",
+                                  },
+                                  "fontColors": Object {
+                                    "background": "#FAFAFA",
+                                    "black": "#000000",
+                                    "darkgray1": "#777777",
+                                    "darkgray2": "#454545",
+                                    "gray1": "#E0E0E0",
+                                    "gray2": "#E7E7E7",
+                                    "medgray1": "#757575",
+                                    "medgray2": "#888888",
+                                    "primary1": "#4169E1",
+                                    "primary2": "#212121",
+                                    "primary3": "#00796B",
+                                    "primary4": "#D32F2F",
+                                    "secondary1": "#2E7D32",
+                                    "secondary2": "#757575",
+                                    "secondary3": "#673AB7",
+                                    "secondary4": "#9C27B0",
+                                    "secondary5": "#00796B",
+                                    "secondary6": "#ECF0FC",
+                                    "text": "#212121",
+                                    "white": "#FFFFFF",
+                                  },
+                                }
+                              }
+                              style={Object {}}
+                              transition="0.2s all"
+                            >
+                              <div
+                                className="sc-bdnylx jknATe sc-eCApGN fajFZl"
+                                onClick={[Function]}
+                                style={Object {}}
+                              >
+                                <SelectPlaceholder
+                                  className=""
+                                  key="0/.0"
+                                  style={Object {}}
+                                >
+                                  <Component
+                                    className=""
+                                    palette={
+                                      Object {
+                                        "backgroundColors": Object {
+                                          "background": "#FAFAFA",
+                                          "black": "#000000",
+                                          "darkgray1": "#777777",
+                                          "darkgray2": "#454545",
+                                          "gray1": "#E0E0E0",
+                                          "gray2": "#E7E7E7",
+                                          "medgray1": "#757575",
+                                          "medgray2": "#888888",
+                                          "primary1": "#4169E1",
+                                          "primary2": "#212121",
+                                          "primary3": "#00796B",
+                                          "primary4": "#D32F2F",
+                                          "secondary1": "#2E7D32",
+                                          "secondary2": "#757575",
+                                          "secondary3": "#673AB7",
+                                          "secondary4": "#9C27B0",
+                                          "secondary5": "#00796B",
+                                          "secondary6": "#ECF0FC",
+                                          "text": "#212121",
+                                          "white": "#FFFFFF",
+                                        },
+                                        "borderColors": Object {
+                                          "background": "#FAFAFA",
+                                          "black": "#000000",
+                                          "darkgray1": "#777777",
+                                          "darkgray2": "#454545",
+                                          "gray1": "#E0E0E0",
+                                          "gray2": "#E7E7E7",
+                                          "medgray1": "#757575",
+                                          "medgray2": "#888888",
+                                          "primary1": "#4169E1",
+                                          "primary2": "#212121",
+                                          "primary3": "#00796B",
+                                          "primary4": "#D32F2F",
+                                          "secondary1": "#2E7D32",
+                                          "secondary2": "#757575",
+                                          "secondary3": "#673AB7",
+                                          "secondary4": "#9C27B0",
+                                          "secondary5": "#00796B",
+                                          "secondary6": "#ECF0FC",
+                                          "text": "#212121",
+                                          "white": "#FFFFFF",
+                                        },
+                                        "fontColors": Object {
+                                          "background": "#FAFAFA",
+                                          "black": "#000000",
+                                          "darkgray1": "#777777",
+                                          "darkgray2": "#454545",
+                                          "gray1": "#E0E0E0",
+                                          "gray2": "#E7E7E7",
+                                          "medgray1": "#757575",
+                                          "medgray2": "#888888",
+                                          "primary1": "#4169E1",
+                                          "primary2": "#212121",
+                                          "primary3": "#00796B",
+                                          "primary4": "#D32F2F",
+                                          "secondary1": "#2E7D32",
+                                          "secondary2": "#757575",
+                                          "secondary3": "#673AB7",
+                                          "secondary4": "#9C27B0",
+                                          "secondary5": "#00796B",
+                                          "secondary6": "#ECF0FC",
+                                          "text": "#212121",
+                                          "white": "#FFFFFF",
+                                        },
+                                      }
+                                    }
+                                    style={Object {}}
+                                  >
+                                    <StyledSelectPlaceholder
+                                      className=""
+                                      palette={
+                                        Object {
+                                          "backgroundColors": Object {
+                                            "background": "#FAFAFA",
+                                            "black": "#000000",
+                                            "darkgray1": "#777777",
+                                            "darkgray2": "#454545",
+                                            "gray1": "#E0E0E0",
+                                            "gray2": "#E7E7E7",
+                                            "medgray1": "#757575",
+                                            "medgray2": "#888888",
+                                            "primary1": "#4169E1",
+                                            "primary2": "#212121",
+                                            "primary3": "#00796B",
+                                            "primary4": "#D32F2F",
+                                            "secondary1": "#2E7D32",
+                                            "secondary2": "#757575",
+                                            "secondary3": "#673AB7",
+                                            "secondary4": "#9C27B0",
+                                            "secondary5": "#00796B",
+                                            "secondary6": "#ECF0FC",
+                                            "text": "#212121",
+                                            "white": "#FFFFFF",
+                                          },
+                                          "borderColors": Object {
+                                            "background": "#FAFAFA",
+                                            "black": "#000000",
+                                            "darkgray1": "#777777",
+                                            "darkgray2": "#454545",
+                                            "gray1": "#E0E0E0",
+                                            "gray2": "#E7E7E7",
+                                            "medgray1": "#757575",
+                                            "medgray2": "#888888",
+                                            "primary1": "#4169E1",
+                                            "primary2": "#212121",
+                                            "primary3": "#00796B",
+                                            "primary4": "#D32F2F",
+                                            "secondary1": "#2E7D32",
+                                            "secondary2": "#757575",
+                                            "secondary3": "#673AB7",
+                                            "secondary4": "#9C27B0",
+                                            "secondary5": "#00796B",
+                                            "secondary6": "#ECF0FC",
+                                            "text": "#212121",
+                                            "white": "#FFFFFF",
+                                          },
+                                          "fontColors": Object {
+                                            "background": "#FAFAFA",
+                                            "black": "#000000",
+                                            "darkgray1": "#777777",
+                                            "darkgray2": "#454545",
+                                            "gray1": "#E0E0E0",
+                                            "gray2": "#E7E7E7",
+                                            "medgray1": "#757575",
+                                            "medgray2": "#888888",
+                                            "primary1": "#4169E1",
+                                            "primary2": "#212121",
+                                            "primary3": "#00796B",
+                                            "primary4": "#D32F2F",
+                                            "secondary1": "#2E7D32",
+                                            "secondary2": "#757575",
+                                            "secondary3": "#673AB7",
+                                            "secondary4": "#9C27B0",
+                                            "secondary5": "#00796B",
+                                            "secondary6": "#ECF0FC",
+                                            "text": "#212121",
+                                            "white": "#FFFFFF",
+                                          },
+                                        }
+                                      }
+                                      style={Object {}}
+                                    >
+                                      <Box
+                                        className="sc-jSFkmK fAoBae"
+                                        palette={
+                                          Object {
+                                            "backgroundColors": Object {
+                                              "background": "#FAFAFA",
+                                              "black": "#000000",
+                                              "darkgray1": "#777777",
+                                              "darkgray2": "#454545",
+                                              "gray1": "#E0E0E0",
+                                              "gray2": "#E7E7E7",
+                                              "medgray1": "#757575",
+                                              "medgray2": "#888888",
+                                              "primary1": "#4169E1",
+                                              "primary2": "#212121",
+                                              "primary3": "#00796B",
+                                              "primary4": "#D32F2F",
+                                              "secondary1": "#2E7D32",
+                                              "secondary2": "#757575",
+                                              "secondary3": "#673AB7",
+                                              "secondary4": "#9C27B0",
+                                              "secondary5": "#00796B",
+                                              "secondary6": "#ECF0FC",
+                                              "text": "#212121",
+                                              "white": "#FFFFFF",
+                                            },
+                                            "borderColors": Object {
+                                              "background": "#FAFAFA",
+                                              "black": "#000000",
+                                              "darkgray1": "#777777",
+                                              "darkgray2": "#454545",
+                                              "gray1": "#E0E0E0",
+                                              "gray2": "#E7E7E7",
+                                              "medgray1": "#757575",
+                                              "medgray2": "#888888",
+                                              "primary1": "#4169E1",
+                                              "primary2": "#212121",
+                                              "primary3": "#00796B",
+                                              "primary4": "#D32F2F",
+                                              "secondary1": "#2E7D32",
+                                              "secondary2": "#757575",
+                                              "secondary3": "#673AB7",
+                                              "secondary4": "#9C27B0",
+                                              "secondary5": "#00796B",
+                                              "secondary6": "#ECF0FC",
+                                              "text": "#212121",
+                                              "white": "#FFFFFF",
+                                            },
+                                            "fontColors": Object {
+                                              "background": "#FAFAFA",
+                                              "black": "#000000",
+                                              "darkgray1": "#777777",
+                                              "darkgray2": "#454545",
+                                              "gray1": "#E0E0E0",
+                                              "gray2": "#E7E7E7",
+                                              "medgray1": "#757575",
+                                              "medgray2": "#888888",
+                                              "primary1": "#4169E1",
+                                              "primary2": "#212121",
+                                              "primary3": "#00796B",
+                                              "primary4": "#D32F2F",
+                                              "secondary1": "#2E7D32",
+                                              "secondary2": "#757575",
+                                              "secondary3": "#673AB7",
+                                              "secondary4": "#9C27B0",
+                                              "secondary5": "#00796B",
+                                              "secondary6": "#ECF0FC",
+                                              "text": "#212121",
+                                              "white": "#FFFFFF",
+                                            },
+                                          }
+                                        }
+                                        style={Object {}}
+                                        transition="0.2s all"
+                                      >
+                                        <Component
+                                          className="sc-jSFkmK fAoBae"
+                                          palette={
+                                            Object {
+                                              "backgroundColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                              "borderColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                              "fontColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                            }
+                                          }
+                                          style={Object {}}
+                                          transition="0.2s all"
+                                        >
+                                          <StyledBox
+                                            className="sc-jSFkmK fAoBae"
+                                            palette={
+                                              Object {
+                                                "backgroundColors": Object {
+                                                  "background": "#FAFAFA",
+                                                  "black": "#000000",
+                                                  "darkgray1": "#777777",
+                                                  "darkgray2": "#454545",
+                                                  "gray1": "#E0E0E0",
+                                                  "gray2": "#E7E7E7",
+                                                  "medgray1": "#757575",
+                                                  "medgray2": "#888888",
+                                                  "primary1": "#4169E1",
+                                                  "primary2": "#212121",
+                                                  "primary3": "#00796B",
+                                                  "primary4": "#D32F2F",
+                                                  "secondary1": "#2E7D32",
+                                                  "secondary2": "#757575",
+                                                  "secondary3": "#673AB7",
+                                                  "secondary4": "#9C27B0",
+                                                  "secondary5": "#00796B",
+                                                  "secondary6": "#ECF0FC",
+                                                  "text": "#212121",
+                                                  "white": "#FFFFFF",
+                                                },
+                                                "borderColors": Object {
+                                                  "background": "#FAFAFA",
+                                                  "black": "#000000",
+                                                  "darkgray1": "#777777",
+                                                  "darkgray2": "#454545",
+                                                  "gray1": "#E0E0E0",
+                                                  "gray2": "#E7E7E7",
+                                                  "medgray1": "#757575",
+                                                  "medgray2": "#888888",
+                                                  "primary1": "#4169E1",
+                                                  "primary2": "#212121",
+                                                  "primary3": "#00796B",
+                                                  "primary4": "#D32F2F",
+                                                  "secondary1": "#2E7D32",
+                                                  "secondary2": "#757575",
+                                                  "secondary3": "#673AB7",
+                                                  "secondary4": "#9C27B0",
+                                                  "secondary5": "#00796B",
+                                                  "secondary6": "#ECF0FC",
+                                                  "text": "#212121",
+                                                  "white": "#FFFFFF",
+                                                },
+                                                "fontColors": Object {
+                                                  "background": "#FAFAFA",
+                                                  "black": "#000000",
+                                                  "darkgray1": "#777777",
+                                                  "darkgray2": "#454545",
+                                                  "gray1": "#E0E0E0",
+                                                  "gray2": "#E7E7E7",
+                                                  "medgray1": "#757575",
+                                                  "medgray2": "#888888",
+                                                  "primary1": "#4169E1",
+                                                  "primary2": "#212121",
+                                                  "primary3": "#00796B",
+                                                  "primary4": "#D32F2F",
+                                                  "secondary1": "#2E7D32",
+                                                  "secondary2": "#757575",
+                                                  "secondary3": "#673AB7",
+                                                  "secondary4": "#9C27B0",
+                                                  "secondary5": "#00796B",
+                                                  "secondary6": "#ECF0FC",
+                                                  "text": "#212121",
+                                                  "white": "#FFFFFF",
+                                                },
+                                              }
+                                            }
+                                            style={Object {}}
+                                            transition="0.2s all"
+                                          >
+                                            <div
+                                              className="sc-bdnylx jknATe sc-jSFkmK fAoBae"
+                                              style={Object {}}
+                                            >
+                                              Select an option
+                                            </div>
+                                          </StyledBox>
+                                        </Component>
+                                      </Box>
+                                    </StyledSelectPlaceholder>
+                                  </Component>
+                                </SelectPlaceholder>
+                                <SelectIcon
+                                  className=""
+                                  style={Object {}}
+                                >
+                                  <Component
+                                    className=""
+                                    palette={
+                                      Object {
+                                        "backgroundColors": Object {
+                                          "background": "#FAFAFA",
+                                          "black": "#000000",
+                                          "darkgray1": "#777777",
+                                          "darkgray2": "#454545",
+                                          "gray1": "#E0E0E0",
+                                          "gray2": "#E7E7E7",
+                                          "medgray1": "#757575",
+                                          "medgray2": "#888888",
+                                          "primary1": "#4169E1",
+                                          "primary2": "#212121",
+                                          "primary3": "#00796B",
+                                          "primary4": "#D32F2F",
+                                          "secondary1": "#2E7D32",
+                                          "secondary2": "#757575",
+                                          "secondary3": "#673AB7",
+                                          "secondary4": "#9C27B0",
+                                          "secondary5": "#00796B",
+                                          "secondary6": "#ECF0FC",
+                                          "text": "#212121",
+                                          "white": "#FFFFFF",
+                                        },
+                                        "borderColors": Object {
+                                          "background": "#FAFAFA",
+                                          "black": "#000000",
+                                          "darkgray1": "#777777",
+                                          "darkgray2": "#454545",
+                                          "gray1": "#E0E0E0",
+                                          "gray2": "#E7E7E7",
+                                          "medgray1": "#757575",
+                                          "medgray2": "#888888",
+                                          "primary1": "#4169E1",
+                                          "primary2": "#212121",
+                                          "primary3": "#00796B",
+                                          "primary4": "#D32F2F",
+                                          "secondary1": "#2E7D32",
+                                          "secondary2": "#757575",
+                                          "secondary3": "#673AB7",
+                                          "secondary4": "#9C27B0",
+                                          "secondary5": "#00796B",
+                                          "secondary6": "#ECF0FC",
+                                          "text": "#212121",
+                                          "white": "#FFFFFF",
+                                        },
+                                        "fontColors": Object {
+                                          "background": "#FAFAFA",
+                                          "black": "#000000",
+                                          "darkgray1": "#777777",
+                                          "darkgray2": "#454545",
+                                          "gray1": "#E0E0E0",
+                                          "gray2": "#E7E7E7",
+                                          "medgray1": "#757575",
+                                          "medgray2": "#888888",
+                                          "primary1": "#4169E1",
+                                          "primary2": "#212121",
+                                          "primary3": "#00796B",
+                                          "primary4": "#D32F2F",
+                                          "secondary1": "#2E7D32",
+                                          "secondary2": "#757575",
+                                          "secondary3": "#673AB7",
+                                          "secondary4": "#9C27B0",
+                                          "secondary5": "#00796B",
+                                          "secondary6": "#ECF0FC",
+                                          "text": "#212121",
+                                          "white": "#FFFFFF",
+                                        },
+                                      }
+                                    }
+                                    style={Object {}}
+                                  >
+                                    <StyledSelectIcon
+                                      className=""
+                                      palette={
+                                        Object {
+                                          "backgroundColors": Object {
+                                            "background": "#FAFAFA",
+                                            "black": "#000000",
+                                            "darkgray1": "#777777",
+                                            "darkgray2": "#454545",
+                                            "gray1": "#E0E0E0",
+                                            "gray2": "#E7E7E7",
+                                            "medgray1": "#757575",
+                                            "medgray2": "#888888",
+                                            "primary1": "#4169E1",
+                                            "primary2": "#212121",
+                                            "primary3": "#00796B",
+                                            "primary4": "#D32F2F",
+                                            "secondary1": "#2E7D32",
+                                            "secondary2": "#757575",
+                                            "secondary3": "#673AB7",
+                                            "secondary4": "#9C27B0",
+                                            "secondary5": "#00796B",
+                                            "secondary6": "#ECF0FC",
+                                            "text": "#212121",
+                                            "white": "#FFFFFF",
+                                          },
+                                          "borderColors": Object {
+                                            "background": "#FAFAFA",
+                                            "black": "#000000",
+                                            "darkgray1": "#777777",
+                                            "darkgray2": "#454545",
+                                            "gray1": "#E0E0E0",
+                                            "gray2": "#E7E7E7",
+                                            "medgray1": "#757575",
+                                            "medgray2": "#888888",
+                                            "primary1": "#4169E1",
+                                            "primary2": "#212121",
+                                            "primary3": "#00796B",
+                                            "primary4": "#D32F2F",
+                                            "secondary1": "#2E7D32",
+                                            "secondary2": "#757575",
+                                            "secondary3": "#673AB7",
+                                            "secondary4": "#9C27B0",
+                                            "secondary5": "#00796B",
+                                            "secondary6": "#ECF0FC",
+                                            "text": "#212121",
+                                            "white": "#FFFFFF",
+                                          },
+                                          "fontColors": Object {
+                                            "background": "#FAFAFA",
+                                            "black": "#000000",
+                                            "darkgray1": "#777777",
+                                            "darkgray2": "#454545",
+                                            "gray1": "#E0E0E0",
+                                            "gray2": "#E7E7E7",
+                                            "medgray1": "#757575",
+                                            "medgray2": "#888888",
+                                            "primary1": "#4169E1",
+                                            "primary2": "#212121",
+                                            "primary3": "#00796B",
+                                            "primary4": "#D32F2F",
+                                            "secondary1": "#2E7D32",
+                                            "secondary2": "#757575",
+                                            "secondary3": "#673AB7",
+                                            "secondary4": "#9C27B0",
+                                            "secondary5": "#00796B",
+                                            "secondary6": "#ECF0FC",
+                                            "text": "#212121",
+                                            "white": "#FFFFFF",
+                                          },
+                                        }
+                                      }
+                                      style={Object {}}
+                                    >
+                                      <Box
+                                        className="sc-kEqYlL fHpMkn"
+                                        palette={
+                                          Object {
+                                            "backgroundColors": Object {
+                                              "background": "#FAFAFA",
+                                              "black": "#000000",
+                                              "darkgray1": "#777777",
+                                              "darkgray2": "#454545",
+                                              "gray1": "#E0E0E0",
+                                              "gray2": "#E7E7E7",
+                                              "medgray1": "#757575",
+                                              "medgray2": "#888888",
+                                              "primary1": "#4169E1",
+                                              "primary2": "#212121",
+                                              "primary3": "#00796B",
+                                              "primary4": "#D32F2F",
+                                              "secondary1": "#2E7D32",
+                                              "secondary2": "#757575",
+                                              "secondary3": "#673AB7",
+                                              "secondary4": "#9C27B0",
+                                              "secondary5": "#00796B",
+                                              "secondary6": "#ECF0FC",
+                                              "text": "#212121",
+                                              "white": "#FFFFFF",
+                                            },
+                                            "borderColors": Object {
+                                              "background": "#FAFAFA",
+                                              "black": "#000000",
+                                              "darkgray1": "#777777",
+                                              "darkgray2": "#454545",
+                                              "gray1": "#E0E0E0",
+                                              "gray2": "#E7E7E7",
+                                              "medgray1": "#757575",
+                                              "medgray2": "#888888",
+                                              "primary1": "#4169E1",
+                                              "primary2": "#212121",
+                                              "primary3": "#00796B",
+                                              "primary4": "#D32F2F",
+                                              "secondary1": "#2E7D32",
+                                              "secondary2": "#757575",
+                                              "secondary3": "#673AB7",
+                                              "secondary4": "#9C27B0",
+                                              "secondary5": "#00796B",
+                                              "secondary6": "#ECF0FC",
+                                              "text": "#212121",
+                                              "white": "#FFFFFF",
+                                            },
+                                            "fontColors": Object {
+                                              "background": "#FAFAFA",
+                                              "black": "#000000",
+                                              "darkgray1": "#777777",
+                                              "darkgray2": "#454545",
+                                              "gray1": "#E0E0E0",
+                                              "gray2": "#E7E7E7",
+                                              "medgray1": "#757575",
+                                              "medgray2": "#888888",
+                                              "primary1": "#4169E1",
+                                              "primary2": "#212121",
+                                              "primary3": "#00796B",
+                                              "primary4": "#D32F2F",
+                                              "secondary1": "#2E7D32",
+                                              "secondary2": "#757575",
+                                              "secondary3": "#673AB7",
+                                              "secondary4": "#9C27B0",
+                                              "secondary5": "#00796B",
+                                              "secondary6": "#ECF0FC",
+                                              "text": "#212121",
+                                              "white": "#FFFFFF",
+                                            },
+                                          }
+                                        }
+                                        style={Object {}}
+                                        transition="0.2s all"
+                                      >
+                                        <Component
+                                          className="sc-kEqYlL fHpMkn"
+                                          palette={
+                                            Object {
+                                              "backgroundColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                              "borderColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                              "fontColors": Object {
+                                                "background": "#FAFAFA",
+                                                "black": "#000000",
+                                                "darkgray1": "#777777",
+                                                "darkgray2": "#454545",
+                                                "gray1": "#E0E0E0",
+                                                "gray2": "#E7E7E7",
+                                                "medgray1": "#757575",
+                                                "medgray2": "#888888",
+                                                "primary1": "#4169E1",
+                                                "primary2": "#212121",
+                                                "primary3": "#00796B",
+                                                "primary4": "#D32F2F",
+                                                "secondary1": "#2E7D32",
+                                                "secondary2": "#757575",
+                                                "secondary3": "#673AB7",
+                                                "secondary4": "#9C27B0",
+                                                "secondary5": "#00796B",
+                                                "secondary6": "#ECF0FC",
+                                                "text": "#212121",
+                                                "white": "#FFFFFF",
+                                              },
+                                            }
+                                          }
+                                          style={Object {}}
+                                          transition="0.2s all"
+                                        >
+                                          <StyledBox
+                                            className="sc-kEqYlL fHpMkn"
+                                            palette={
+                                              Object {
+                                                "backgroundColors": Object {
+                                                  "background": "#FAFAFA",
+                                                  "black": "#000000",
+                                                  "darkgray1": "#777777",
+                                                  "darkgray2": "#454545",
+                                                  "gray1": "#E0E0E0",
+                                                  "gray2": "#E7E7E7",
+                                                  "medgray1": "#757575",
+                                                  "medgray2": "#888888",
+                                                  "primary1": "#4169E1",
+                                                  "primary2": "#212121",
+                                                  "primary3": "#00796B",
+                                                  "primary4": "#D32F2F",
+                                                  "secondary1": "#2E7D32",
+                                                  "secondary2": "#757575",
+                                                  "secondary3": "#673AB7",
+                                                  "secondary4": "#9C27B0",
+                                                  "secondary5": "#00796B",
+                                                  "secondary6": "#ECF0FC",
+                                                  "text": "#212121",
+                                                  "white": "#FFFFFF",
+                                                },
+                                                "borderColors": Object {
+                                                  "background": "#FAFAFA",
+                                                  "black": "#000000",
+                                                  "darkgray1": "#777777",
+                                                  "darkgray2": "#454545",
+                                                  "gray1": "#E0E0E0",
+                                                  "gray2": "#E7E7E7",
+                                                  "medgray1": "#757575",
+                                                  "medgray2": "#888888",
+                                                  "primary1": "#4169E1",
+                                                  "primary2": "#212121",
+                                                  "primary3": "#00796B",
+                                                  "primary4": "#D32F2F",
+                                                  "secondary1": "#2E7D32",
+                                                  "secondary2": "#757575",
+                                                  "secondary3": "#673AB7",
+                                                  "secondary4": "#9C27B0",
+                                                  "secondary5": "#00796B",
+                                                  "secondary6": "#ECF0FC",
+                                                  "text": "#212121",
+                                                  "white": "#FFFFFF",
+                                                },
+                                                "fontColors": Object {
+                                                  "background": "#FAFAFA",
+                                                  "black": "#000000",
+                                                  "darkgray1": "#777777",
+                                                  "darkgray2": "#454545",
+                                                  "gray1": "#E0E0E0",
+                                                  "gray2": "#E7E7E7",
+                                                  "medgray1": "#757575",
+                                                  "medgray2": "#888888",
+                                                  "primary1": "#4169E1",
+                                                  "primary2": "#212121",
+                                                  "primary3": "#00796B",
+                                                  "primary4": "#D32F2F",
+                                                  "secondary1": "#2E7D32",
+                                                  "secondary2": "#757575",
+                                                  "secondary3": "#673AB7",
+                                                  "secondary4": "#9C27B0",
+                                                  "secondary5": "#00796B",
+                                                  "secondary6": "#ECF0FC",
+                                                  "text": "#212121",
+                                                  "white": "#FFFFFF",
+                                                },
+                                              }
+                                            }
+                                            style={Object {}}
+                                            transition="0.2s all"
+                                          >
+                                            <div
+                                              className="sc-bdnylx jknATe sc-kEqYlL fHpMkn"
+                                              style={Object {}}
+                                            >
+                                              keyboard_arrow_down
+                                            </div>
+                                          </StyledBox>
+                                        </Component>
+                                      </Box>
+                                    </StyledSelectIcon>
+                                  </Component>
+                                </SelectIcon>
+                              </div>
+                            </StyledBox>
+                          </Component>
+                        </Box>
+                      </StyledSelectContainer>
+                    </Component>
+                  </SelectContainer>
+                  <SelectOptionList
+                    className=""
+                    key="1/.1"
+                    showList={false}
+                    style={Object {}}
+                  >
+                    <Component
+                      className=""
+                      palette={
+                        Object {
+                          "backgroundColors": Object {
+                            "background": "#FAFAFA",
+                            "black": "#000000",
+                            "darkgray1": "#777777",
+                            "darkgray2": "#454545",
+                            "gray1": "#E0E0E0",
+                            "gray2": "#E7E7E7",
+                            "medgray1": "#757575",
+                            "medgray2": "#888888",
+                            "primary1": "#4169E1",
+                            "primary2": "#212121",
+                            "primary3": "#00796B",
+                            "primary4": "#D32F2F",
+                            "secondary1": "#2E7D32",
+                            "secondary2": "#757575",
+                            "secondary3": "#673AB7",
+                            "secondary4": "#9C27B0",
+                            "secondary5": "#00796B",
+                            "secondary6": "#ECF0FC",
+                            "text": "#212121",
+                            "white": "#FFFFFF",
+                          },
+                          "borderColors": Object {
+                            "background": "#FAFAFA",
+                            "black": "#000000",
+                            "darkgray1": "#777777",
+                            "darkgray2": "#454545",
+                            "gray1": "#E0E0E0",
+                            "gray2": "#E7E7E7",
+                            "medgray1": "#757575",
+                            "medgray2": "#888888",
+                            "primary1": "#4169E1",
+                            "primary2": "#212121",
+                            "primary3": "#00796B",
+                            "primary4": "#D32F2F",
+                            "secondary1": "#2E7D32",
+                            "secondary2": "#757575",
+                            "secondary3": "#673AB7",
+                            "secondary4": "#9C27B0",
+                            "secondary5": "#00796B",
+                            "secondary6": "#ECF0FC",
+                            "text": "#212121",
+                            "white": "#FFFFFF",
+                          },
+                          "fontColors": Object {
+                            "background": "#FAFAFA",
+                            "black": "#000000",
+                            "darkgray1": "#777777",
+                            "darkgray2": "#454545",
+                            "gray1": "#E0E0E0",
+                            "gray2": "#E7E7E7",
+                            "medgray1": "#757575",
+                            "medgray2": "#888888",
+                            "primary1": "#4169E1",
+                            "primary2": "#212121",
+                            "primary3": "#00796B",
+                            "primary4": "#D32F2F",
+                            "secondary1": "#2E7D32",
+                            "secondary2": "#757575",
+                            "secondary3": "#673AB7",
+                            "secondary4": "#9C27B0",
+                            "secondary5": "#00796B",
+                            "secondary6": "#ECF0FC",
+                            "text": "#212121",
+                            "white": "#FFFFFF",
+                          },
+                        }
+                      }
+                      showList={false}
+                      style={Object {}}
+                    />
+                  </SelectOptionList>
+                </div>
+              </StyledBox>
+            </Component>
+          </Box>
+        </StyledSelect>
+      </Component>
+    </Select>
+  </Component>
+</DateSelect>
+`;

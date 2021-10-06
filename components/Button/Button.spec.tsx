@@ -1,52 +1,46 @@
 import * as React from 'react';
-import Button from './Button';
+import { Button } from './Button';
 
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('Button', () => {
+	test('renders correctly', () => {
+		const func = jest.fn();
 
-    test('renders correctly', () => {
-        const func = jest.fn();
+		const tree = mount(
+			<Button onClick={func} disabled className="myClass" style={{ color: 'blue' }} id={'button1'} href={'www.moosend.com'} type={'submit'}>
+				Mooskin
+			</Button>
+		);
+		expect(tree).toMatchSnapshot();
+	});
 
-        const tree = shallow(
-            <Button
-                onClick={func}
-                disabled
-                className="myClass"
-                style={{color: 'blue'}}
-                inverseStyle
-                id={'button1'}
-                href={'www.moosend.com'}
-                type={'submit'}
-            >
-                Mooskin
-            </Button>
-        );
-        expect(tree).toMatchSnapshot();
-    });
+	test('renders properly into dom with color and label', () => {
+		const func = jest.fn();
 
-    test('renders properly into dom with color and label', () => {
-        const func = jest.fn();
+		const component = mount(<Button onClick={func}>asd</Button>);
 
-        const component = shallow(<Button onClick={func}>asd</Button>);
+		expect(component.find('StyledButton').text()).toBe('asd');
+		expect(component.find('StyledButton').prop('disabled')).not.toBe(true);
+	});
 
-        expect(component.find('button').text()).toBe('asd');
-        expect(component.find('button').prop('disabled')).not.toBe(true);
-    });
+	test('renders a disabled button if disabled prop is passed', () => {
+		const func = jest.fn();
 
-    test('renders a disabled button if disabled prop is passed', () => {
-        const func = jest.fn();
+		const component = mount(
+			<Button onClick={func} disabled>
+				asd
+			</Button>
+		);
 
-        const component = shallow(<Button  onClick={func} disabled>asd</Button>);
+		expect(component.find('[disabled=true]').length).not.toEqual(0);
+	});
 
-        expect(component.find('[disabled=true]').length).toBe(1);
-    });
+	test('onClick prop callback is called when clicked', () => {
+		const func = jest.fn();
 
-    test('onClick prop callback is called when clicked', () => {
-        const func = jest.fn();
-
-        const component = shallow(<Button  onClick={func}>asd</Button>);
-        component.find('button').simulate('click');
-        expect(func).toHaveBeenCalled();
-    });
+		const component = mount(<Button onClick={func}>asd</Button>);
+		component.find('StyledButton').simulate('click');
+		expect(func).toHaveBeenCalled();
+	});
 });

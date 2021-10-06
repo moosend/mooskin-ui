@@ -1,272 +1,185 @@
 import * as React from 'react';
 
-import styles from './Pagination.css';
+import { IconButton } from '../IconButton/IconButton';
 
-export interface IPaginationProps {
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
-    /** custom classes for Pagination */
-    className?: string;
+// Models
+import { IPaginationButtonComponentProps, IPaginationComponentProps } from './model';
 
-    /** custom id for Pagination */
-    id?: string;
+// Styled Components
+import { StyledPagination, StyledPaginationButton, StyledPaginationShowAll } from './styles';
 
-    /** custom styles for Pagination top element */
-    style?: React.CSSProperties;
+/**
+ * Pagination
+ */
+export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContext((props) => {
+	const [showAll, setShowAll] = React.useState(false);
+	const [showFirst, setShowFirst] = React.useState(false);
+	const [showPrevious, setShowPrevious] = React.useState(false);
+	const [showNext, setShowNext] = React.useState(false);
+	const [showLast, setShowLast] = React.useState(false);
 
-    /** total number of items */
-    items: number;
+	React.useEffect(() => {
+		setShowFirst(false);
+		setShowPrevious(false);
+		setShowNext(false);
+		setShowLast(false);
+	}, []);
 
-    /** the number of the current page */
-    currentItem?: number;
+	const childrenLength = props.children && Array.isArray(props.children) && props.children.length;
 
-    /** the max number of buttons to be displayed */
-    maxButtons?: number;
+	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, page: number, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
+		props.onClickButton && props.onClickButton(e, page);
+		callback && callback(e);
+	};
 
-    /** boolean to specify whether to show the next item button */
-    nextBtn?: boolean;
+	const onArrowClick = (page: number) => {
+		props.onClickButton && props.onClickButton({} as any, page);
+	};
 
-    /** boolean to specify whether to show the previous item button */
-    prevBtn?: boolean;
+	const recurseChildren = (children: any): any => {
+		if (!children) {
+			return null;
+		}
 
-    /** boolean to specify whether to show the very last item button */
-    lastBtn?: boolean;
+		return React.Children.map(children, (child, i) => {
+			if (React.isValidElement<IPaginationButtonComponentProps>(child) && child.type === PaginationButton) {
+				const page = i + 1;
 
-    /** boolean to specify whether to show the very first item button */
-    firstBtn?: boolean;
+				const condition =
+					childrenLength && props.activePage >= childrenLength - 1
+						? page >= childrenLength - 4
+						: props.activePage >= 4
+						? page - 2 <= props.activePage && page + 2 >= props.activePage
+						: page <= 5;
 
-    /** inverse stying for pagination */
-    inverseStyle?: boolean;
+				if (children[props.activePage - 2] && !showPrevious) {
+					setShowPrevious(true);
+				} else if (!children[props.activePage - 2] && showPrevious) {
+					setShowPrevious(false);
+				}
 
-    /** callback that is called when a button is clicked */
-    onClick: (item: number) => void;
-}
+				if (children[props.activePage - 2] && !showFirst) {
+					setShowFirst(true);
+				} else if (!children[props.activePage - 2] && showFirst) {
+					setShowFirst(false);
+				}
 
-export interface IPaginationButtonProps {
-    active: boolean;
-    disabled?: boolean;
-    label: string; // could be an icon
-    inverseStyle?: boolean;
-    item: number;
-    className?: string;
-    onClick: (item: number) => (e: React.MouseEvent<HTMLElement>) => void;
-}
+				if (children[props.activePage] && !showNext) {
+					setShowNext(true);
+				} else if (!children[props.activePage] && showNext) {
+					setShowNext(false);
+				}
 
-export enum RendereableItemTypes {
-    right,
-    left,
-    current,
-    none
-}
+				if (children[props.activePage] && !showLast) {
+					setShowLast(true);
+				} else if (!children[props.activePage] && showLast) {
+					setShowLast(false);
+				}
 
-export default class Pagination extends React.Component<IPaginationProps, {}>{
+				if (props.singleItem) {
+					return page === props.activePage
+						? React.cloneElement(child, {
+								active: true,
+								children: page,
+								key: i,
+								// onClick: (e) => batchClickHandler(e, page, child.props.onClick),
+						  } as IPaginationButtonComponentProps)
+						: null;
+				}
 
-    static defaultProps: Partial<IPaginationProps> = {
-        currentItem: 1,
-        firstBtn: false,
-        lastBtn: false,
-        maxButtons: 5,
-        nextBtn: false,
-        prevBtn: false,
-    };
+				if (showAll || condition) {
+					return React.cloneElement(child, {
+						active: page === props.activePage,
+						children: page,
+						key: i,
+						onClick: (e) => batchClickHandler(e, page, child.props.onClick),
+					} as IPaginationButtonComponentProps);
+				}
+				return null;
+			}
 
-    static displayName = 'Pagination';
+			if (React.isValidElement(child) && (child.props as any).children) {
+				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
+			}
 
-    render() {
+			return child;
+		});
+	};
 
-        const {className, style, id} = this.props;
+	return (
+		<StyledPagination {...props}>
+			{!showAll && !props.singleItem && (
+				<IconButton
+					cursor={showFirst ? 'pointer' : 'not-allowed'}
+					onClick={showFirst ? () => onArrowClick(1) : undefined}
+					fontColor={showFirst ? 'fontColors.text' : 'fontColors.medgray2'}
+					opacity={showFirst ? 1 : 0.6}
+				>
+					first_page
+				</IconButton>
+			)}
+			{!showAll && (
+				<IconButton
+					cursor={showPrevious ? 'pointer' : 'not-allowed'}
+					mr={10}
+					onClick={showPrevious ? () => onArrowClick(props.activePage - 1) : undefined}
+					fontColor={showPrevious ? 'fontColors.text' : 'fontColors.medgray2'}
+					opacity={showPrevious ? 1 : 0.6}
+				>
+					chevron_left
+				</IconButton>
+			)}
+			{recurseChildren(props.children)}
+			{!showAll && (
+				<IconButton
+					cursor={showNext ? 'pointer' : 'not-allowed'}
+					onClick={showNext ? () => onArrowClick(props.activePage + 1) : undefined}
+					fontColor={showNext ? 'fontColors.text' : 'fontColors.medgray2'}
+					opacity={showNext ? 1 : 0.6}
+				>
+					chevron_right
+				</IconButton>
+			)}
+			{!showAll && !props.singleItem && (
+				<IconButton
+					cursor={showLast ? 'pointer' : 'not-allowed'}
+					onClick={showLast ? () => childrenLength && onArrowClick(childrenLength) : undefined}
+					mr={10}
+					fontColor={showLast ? 'fontColors.text' : 'fontColors.medgray2'}
+					opacity={showLast ? 1 : 0.6}
+				>
+					last_page
+				</IconButton>
+			)}
+			{!props.hideShowAll && childrenLength && childrenLength > 5 && (
+				<StyledPaginationShowAll palette={props.palette} onClick={() => setShowAll(!showAll)}>
+					{showAll ? 'Hide' : 'Show all'}
+				</StyledPaginationShowAll>
+			)}
+		</StyledPagination>
+	);
+});
 
-        return (
-            <div
-                className={`${styles.pagination} ${className}`}
-                style={style}
-                id={id}
-            >
-                <div className={styles.paginationInner}>
-                    {this.renderAllButtons()}
-                </div>
-            </div>
-        );
-    }
-
-    onClick = (item: number) => {
-        return (e: React.MouseEvent<HTMLElement>) => {
-            this.props.onClick(item);
-        };
-    }
-
-    renderAllButtons(){
-        const {currentItem, items, firstBtn, lastBtn, nextBtn, prevBtn} = this.props;
-
-        // render back and prev buttons as well as ellipsis as needed
-        return currentItem && [
-            firstBtn && currentItem > 2 &&
-            (
-                <PaginationButton
-                    key={'asd1'}
-                    active={false}
-                    label={this.props.inverseStyle ? '<< First' : '<<'}
-                    item={1}
-                    inverseStyle={this.props.inverseStyle}
-                    onClick={this.onClick}
-                    className="pagination-first-btn"
-                />
-            ),
-            prevBtn && currentItem > 1 &&
-            (
-                <PaginationButton
-                    key={'asd2'}
-                    active={false}
-                    label={this.props.inverseStyle ? '< Prev' : '<'}
-                    item={currentItem && currentItem - 1 || 1}
-                    inverseStyle={this.props.inverseStyle}
-                    onClick={this.onClick}
-                    className="pagination-prev-btn"
-                />
-            ),
-            this.needsLeftEllipsis() &&
-            (
-                <PaginationButton
-                    key={'asdd2'}
-                    active={false}
-                    label={'...'}
-                    item={currentItem}
-                    onClick={(this.onClick)}
-                    inverseStyle={this.props.inverseStyle}
-                    disabled
-                    className="pagination-ellipsis"
-                />
-            ),
-            this.renderNormalButtons(),
-            this.needsRightEllipsis() &&
-            (
-                <PaginationButton
-                    key={'asdd3'}
-                    active={false}
-                    label={'...'}
-                    item={currentItem}
-                    onClick={(this.onClick)}
-                    inverseStyle={this.props.inverseStyle}
-                    disabled
-                    className="pagination-ellipsis"
-                />
-            ),
-            nextBtn && currentItem <= items - 1 &&
-            (
-                <PaginationButton
-                    key={'asd3'}
-                    active={false}
-                    label={this.props.inverseStyle ? 'Next >' : '>'}
-                    item={currentItem && currentItem + 1 || items}
-                    inverseStyle={this.props.inverseStyle}
-                    onClick={this.onClick}
-                    className="pagination-next-btn"
-                />
-            ),
-            lastBtn && currentItem < items - 1 &&
-            (
-                <PaginationButton
-                    key={'asd4'}
-                    active={false}
-                    label={this.props.inverseStyle ? 'Last >>' : '>>'}
-                    item={items}
-                    inverseStyle={this.props.inverseStyle}
-                    onClick={this.onClick}
-                    className="pagination-last-btn"
-                />
-            ),
-        ];
-    }
-
-    renderNormalButtons(){
-
-        const buttonCounts: [number, number] = this.getLeftRightButtonCounts();
-
-        return [...Array(this.props.items).keys()].map((index) => {
-
-            const item = index + 1;
-
-            const itemType = this.getItemType(item, buttonCounts[0], buttonCounts[1]);
-
-            return itemType !== RendereableItemTypes.none && (
-                <PaginationButton
-                    key={item}
-                    active={itemType === RendereableItemTypes.current}
-                    label={item.toString()}
-                    item={item}
-                    onClick={this.onClick}
-                    inverseStyle={this.props.inverseStyle}
-                    className={`pagination-normal-btn ${styles.itemButton}`}
-                />
-            );
-        });
-    }
-
-    getItemType(item: number, leftButtonsCount: number, rightButtonsCount: number){
-
-        const {currentItem} = this.props;
-
-        let itemType: RendereableItemTypes = RendereableItemTypes.none;
-
-        // using some minor math with button counts derived from maxButtons check if item should be rendered
-        if (currentItem && item < currentItem && item + leftButtonsCount >= currentItem){
-            itemType = RendereableItemTypes.left;
-        }else if (currentItem && item > currentItem && item - rightButtonsCount <= currentItem){
-            itemType = RendereableItemTypes.right;
-        }else if (currentItem && item === currentItem){
-            itemType = RendereableItemTypes.current;
-        }
-
-        return itemType;
-    }
-
-    getLeftRightButtonCounts(): [number, number]{
-
-        const {maxButtons} = this.props;
-
-        let leftButtonsCount: number = 0;
-        let rightButtonsCount: number = 0;
-
-        // determine button counts to the left and right of the active item, based on if the number is even or odd
-        if (maxButtons){
-            leftButtonsCount = maxButtons % 2 !== 0 ? (maxButtons - 1) / 2 : maxButtons / 2;
-            rightButtonsCount = maxButtons % 2 !== 0 ? (maxButtons - 1) / 2 : leftButtonsCount - 1;
-        }
-
-        return [leftButtonsCount, rightButtonsCount];
-    }
-
-    needsLeftEllipsis(){
-        const {currentItem} = this.props;
-        const leftButtonCount = this.getLeftRightButtonCounts()[0];
-        return currentItem && currentItem - leftButtonCount > 1;
-    }
-
-    needsRightEllipsis(){
-        const {currentItem, items} = this.props;
-        const rightButtonCount = this.getLeftRightButtonCounts()[1];
-        return currentItem && currentItem + rightButtonCount < items;
-    }
-}
-
-export const PaginationButton: React.StatelessComponent<IPaginationButtonProps> = (props) => {
-
-    const activeClass = props.inverseStyle ? styles.inverseActive : styles.activeButton;
-    const activeStyle = props.active ? activeClass : '';
-    const disabledClass = props.disabled ? styles.disabledButton : '';
-    const inverseStyle = props.inverseStyle ? styles.inverseButton : '';
-
-    return (
-        <div
-            className={`${styles.paginationButton} ${activeStyle} ${disabledClass} ${inverseStyle} ${props.className}`}
-            onClick={props.onClick(props.item)}
-        >
-            {props.label}
-        </div>
-    );
+Pagination.defaultProps = {
+	className: '',
+	style: {},
 };
 
+Pagination.displayName = 'Pagination';
+
+/**
+ * PaginationButton
+ */
+export const PaginationButton: React.FC<IPaginationButtonComponentProps> = withMooskinContext((props) => {
+	return <StyledPaginationButton {...props} />;
+});
+
 PaginationButton.defaultProps = {
-    className: ''
+	className: '',
+	style: {},
 };
 
 PaginationButton.displayName = 'PaginationButton';

@@ -2,70 +2,634 @@
 
 exports[`TextArea renders correctly 1`] = `
 <TextArea
-  className="myClass"
-  cols={40}
-  description="just some textarea"
-  disabled={true}
-  id="textarea"
-  label="with a label ofc"
-  labelWidth={30}
-  maxlength={50}
-  minlength={10}
-  name="textarea name"
+  className=""
   onChange={[MockFunction]}
-  placeholder="textarea placeholder"
-  required={true}
-  rows={10}
-  style={
-    Object {
-      "color": "blue",
-    }
-  }
-  value="textarea value"
+  style={Object {}}
+  value="asd"
 >
-  <div
-    className="textarea-component areaContainer myClass"
-    style={
+  <Component
+    className=""
+    onChange={[MockFunction]}
+    palette={
       Object {
-        "color": "blue",
+        "backgroundColors": Object {
+          "accountNavigation": "#FFFFFF",
+          "altWhite": "#FFFFFF",
+          "autosExpression": "#212121",
+          "background": "#FAFAFA",
+          "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+          "client": "#E0E0E0",
+          "createNew": "#FFFFFF",
+          "darkgray1": "#777777",
+          "darkgray2": "#454545",
+          "darkgray3": "#424242",
+          "dropdown": "#FFFFFF",
+          "gray1": "#E0E0E0",
+          "gray100": "#F0F0F0",
+          "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
+          "grayAlpha100": "rgba(0,0,0,0.06)",
+          "grayAlpha400": "rgba(0,0,0,0.36)",
+          "inverseText": "#212121",
+          "medgray1": "#757575",
+          "medgray2": "#888888",
+          "primary1": "#4169E1",
+          "primary2": "#212121",
+          "primary3": "#00796B",
+          "primary4": "#D32F2F",
+          "primary5": "#f0b941",
+          "secondary1": "#2E7D32",
+          "secondary2": "#757575",
+          "secondary3": "#673AB7",
+          "secondary4": "#9C27B0",
+          "secondary5": "#00796B",
+          "secondary6": "#ECF0FC",
+          "submenu": "#FFFFFF",
+          "text": "#212121",
+          "white": "#FFFFFF",
+        },
+        "borderColors": Object {
+          "accountNavigation": "#FFFFFF",
+          "altWhite": "#FFFFFF",
+          "autosExpression": "#212121",
+          "background": "#FAFAFA",
+          "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+          "client": "#E0E0E0",
+          "createNew": "#FFFFFF",
+          "darkgray1": "#777777",
+          "darkgray2": "#454545",
+          "darkgray3": "#424242",
+          "dropdown": "#FFFFFF",
+          "gray1": "#E0E0E0",
+          "gray100": "#F0F0F0",
+          "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
+          "grayAlpha100": "rgba(0,0,0,0.06)",
+          "grayAlpha400": "rgba(0,0,0,0.36)",
+          "inverseText": "#212121",
+          "medgray1": "#757575",
+          "medgray2": "#888888",
+          "primary1": "#4169E1",
+          "primary2": "#212121",
+          "primary3": "#00796B",
+          "primary4": "#D32F2F",
+          "primary5": "#f0b941",
+          "secondary1": "#2E7D32",
+          "secondary2": "#757575",
+          "secondary3": "#673AB7",
+          "secondary4": "#9C27B0",
+          "secondary5": "#00796B",
+          "secondary6": "#ECF0FC",
+          "submenu": "#FFFFFF",
+          "text": "#212121",
+          "white": "#FFFFFF",
+        },
+        "fontColors": Object {
+          "accountNavigation": "#FFFFFF",
+          "altWhite": "#FFFFFF",
+          "autosExpression": "#212121",
+          "background": "#FAFAFA",
+          "black": "#000000",
+          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+          "client": "#E0E0E0",
+          "createNew": "#212121",
+          "darkgray1": "#777777",
+          "darkgray2": "#454545",
+          "darkgray3": "#424242",
+          "dropdown": "#212121",
+          "gray1": "#E0E0E0",
+          "gray100": "#F0F0F0",
+          "gray2": "#E7E7E7",
+          "grayAlpha": "rgba(0,0,0,0.17)",
+          "grayAlpha100": "rgba(0,0,0,0.06)",
+          "grayAlpha400": "rgba(0,0,0,0.36)",
+          "inverseText": "#212121",
+          "medgray1": "#757575",
+          "medgray2": "#888888",
+          "primary1": "#4169E1",
+          "primary2": "#212121",
+          "primary3": "#00796B",
+          "primary4": "#D32F2F",
+          "primary5": "#f0b941",
+          "secondary1": "#2E7D32",
+          "secondary2": "#757575",
+          "secondary3": "#673AB7",
+          "secondary4": "#9C27B0",
+          "secondary5": "#00796B",
+          "secondary6": "#ECF0FC",
+          "submenu": "#FFFFFF",
+          "text": "#212121",
+          "white": "#FFFFFF",
+        },
       }
     }
+    style={Object {}}
+    value="asd"
   >
-    <label
-      className="textareaLabel"
-      htmlFor="textarea"
-      style={
+    <StyledTextArea
+      boxAs="textarea"
+      className=""
+      onChange={[Function]}
+      palette={
         Object {
-          "flexBasis": "30px",
+          "backgroundColors": Object {
+            "accountNavigation": "#FFFFFF",
+            "altWhite": "#FFFFFF",
+            "autosExpression": "#212121",
+            "background": "#FAFAFA",
+            "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+            "client": "#E0E0E0",
+            "createNew": "#FFFFFF",
+            "darkgray1": "#777777",
+            "darkgray2": "#454545",
+            "darkgray3": "#424242",
+            "dropdown": "#FFFFFF",
+            "gray1": "#E0E0E0",
+            "gray100": "#F0F0F0",
+            "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
+            "grayAlpha100": "rgba(0,0,0,0.06)",
+            "grayAlpha400": "rgba(0,0,0,0.36)",
+            "inverseText": "#212121",
+            "medgray1": "#757575",
+            "medgray2": "#888888",
+            "primary1": "#4169E1",
+            "primary2": "#212121",
+            "primary3": "#00796B",
+            "primary4": "#D32F2F",
+            "primary5": "#f0b941",
+            "secondary1": "#2E7D32",
+            "secondary2": "#757575",
+            "secondary3": "#673AB7",
+            "secondary4": "#9C27B0",
+            "secondary5": "#00796B",
+            "secondary6": "#ECF0FC",
+            "submenu": "#FFFFFF",
+            "text": "#212121",
+            "white": "#FFFFFF",
+          },
+          "borderColors": Object {
+            "accountNavigation": "#FFFFFF",
+            "altWhite": "#FFFFFF",
+            "autosExpression": "#212121",
+            "background": "#FAFAFA",
+            "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+            "client": "#E0E0E0",
+            "createNew": "#FFFFFF",
+            "darkgray1": "#777777",
+            "darkgray2": "#454545",
+            "darkgray3": "#424242",
+            "dropdown": "#FFFFFF",
+            "gray1": "#E0E0E0",
+            "gray100": "#F0F0F0",
+            "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
+            "grayAlpha100": "rgba(0,0,0,0.06)",
+            "grayAlpha400": "rgba(0,0,0,0.36)",
+            "inverseText": "#212121",
+            "medgray1": "#757575",
+            "medgray2": "#888888",
+            "primary1": "#4169E1",
+            "primary2": "#212121",
+            "primary3": "#00796B",
+            "primary4": "#D32F2F",
+            "primary5": "#f0b941",
+            "secondary1": "#2E7D32",
+            "secondary2": "#757575",
+            "secondary3": "#673AB7",
+            "secondary4": "#9C27B0",
+            "secondary5": "#00796B",
+            "secondary6": "#ECF0FC",
+            "submenu": "#FFFFFF",
+            "text": "#212121",
+            "white": "#FFFFFF",
+          },
+          "fontColors": Object {
+            "accountNavigation": "#FFFFFF",
+            "altWhite": "#FFFFFF",
+            "autosExpression": "#212121",
+            "background": "#FAFAFA",
+            "black": "#000000",
+            "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+            "client": "#E0E0E0",
+            "createNew": "#212121",
+            "darkgray1": "#777777",
+            "darkgray2": "#454545",
+            "darkgray3": "#424242",
+            "dropdown": "#212121",
+            "gray1": "#E0E0E0",
+            "gray100": "#F0F0F0",
+            "gray2": "#E7E7E7",
+            "grayAlpha": "rgba(0,0,0,0.17)",
+            "grayAlpha100": "rgba(0,0,0,0.06)",
+            "grayAlpha400": "rgba(0,0,0,0.36)",
+            "inverseText": "#212121",
+            "medgray1": "#757575",
+            "medgray2": "#888888",
+            "primary1": "#4169E1",
+            "primary2": "#212121",
+            "primary3": "#00796B",
+            "primary4": "#D32F2F",
+            "primary5": "#f0b941",
+            "secondary1": "#2E7D32",
+            "secondary2": "#757575",
+            "secondary3": "#673AB7",
+            "secondary4": "#9C27B0",
+            "secondary5": "#00796B",
+            "secondary6": "#ECF0FC",
+            "submenu": "#FFFFFF",
+            "text": "#212121",
+            "white": "#FFFFFF",
+          },
         }
       }
+      style={Object {}}
+      value="asd"
     >
-      with a label ofc
-    </label>
-    <div
-      className="textAreaDiv"
-    >
-      <textarea
-        className="textarea textarea disabledTextArea undefined"
-        cols={40}
-        disabled={true}
-        id="textarea"
-        maxLength={50}
-        minLength={10}
-        name="nodejs"
-        onBlur={[Function]}
+      <Box
+        boxAs="textarea"
+        className="sc-gtssRu bzuVNB"
         onChange={[Function]}
-        placeholder="textarea placeholder"
-        required={true}
-        rows={10}
-        value="textarea value"
-      />
-      <i
-        className="description undefined"
+        palette={
+          Object {
+            "backgroundColors": Object {
+              "accountNavigation": "#FFFFFF",
+              "altWhite": "#FFFFFF",
+              "autosExpression": "#212121",
+              "background": "#FAFAFA",
+              "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+              "client": "#E0E0E0",
+              "createNew": "#FFFFFF",
+              "darkgray1": "#777777",
+              "darkgray2": "#454545",
+              "darkgray3": "#424242",
+              "dropdown": "#FFFFFF",
+              "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
+              "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
+              "inverseText": "#212121",
+              "medgray1": "#757575",
+              "medgray2": "#888888",
+              "primary1": "#4169E1",
+              "primary2": "#212121",
+              "primary3": "#00796B",
+              "primary4": "#D32F2F",
+              "primary5": "#f0b941",
+              "secondary1": "#2E7D32",
+              "secondary2": "#757575",
+              "secondary3": "#673AB7",
+              "secondary4": "#9C27B0",
+              "secondary5": "#00796B",
+              "secondary6": "#ECF0FC",
+              "submenu": "#FFFFFF",
+              "text": "#212121",
+              "white": "#FFFFFF",
+            },
+            "borderColors": Object {
+              "accountNavigation": "#FFFFFF",
+              "altWhite": "#FFFFFF",
+              "autosExpression": "#212121",
+              "background": "#FAFAFA",
+              "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+              "client": "#E0E0E0",
+              "createNew": "#FFFFFF",
+              "darkgray1": "#777777",
+              "darkgray2": "#454545",
+              "darkgray3": "#424242",
+              "dropdown": "#FFFFFF",
+              "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
+              "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
+              "inverseText": "#212121",
+              "medgray1": "#757575",
+              "medgray2": "#888888",
+              "primary1": "#4169E1",
+              "primary2": "#212121",
+              "primary3": "#00796B",
+              "primary4": "#D32F2F",
+              "primary5": "#f0b941",
+              "secondary1": "#2E7D32",
+              "secondary2": "#757575",
+              "secondary3": "#673AB7",
+              "secondary4": "#9C27B0",
+              "secondary5": "#00796B",
+              "secondary6": "#ECF0FC",
+              "submenu": "#FFFFFF",
+              "text": "#212121",
+              "white": "#FFFFFF",
+            },
+            "fontColors": Object {
+              "accountNavigation": "#FFFFFF",
+              "altWhite": "#FFFFFF",
+              "autosExpression": "#212121",
+              "background": "#FAFAFA",
+              "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+              "client": "#E0E0E0",
+              "createNew": "#212121",
+              "darkgray1": "#777777",
+              "darkgray2": "#454545",
+              "darkgray3": "#424242",
+              "dropdown": "#212121",
+              "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
+              "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
+              "inverseText": "#212121",
+              "medgray1": "#757575",
+              "medgray2": "#888888",
+              "primary1": "#4169E1",
+              "primary2": "#212121",
+              "primary3": "#00796B",
+              "primary4": "#D32F2F",
+              "primary5": "#f0b941",
+              "secondary1": "#2E7D32",
+              "secondary2": "#757575",
+              "secondary3": "#673AB7",
+              "secondary4": "#9C27B0",
+              "secondary5": "#00796B",
+              "secondary6": "#ECF0FC",
+              "submenu": "#FFFFFF",
+              "text": "#212121",
+              "white": "#FFFFFF",
+            },
+          }
+        }
+        style={Object {}}
+        transition="0.2s all"
+        value="asd"
       >
-        just some textarea
-      </i>
-    </div>
-  </div>
+        <Component
+          boxAs="textarea"
+          className="sc-gtssRu bzuVNB"
+          onChange={[Function]}
+          palette={
+            Object {
+              "backgroundColors": Object {
+                "accountNavigation": "#FFFFFF",
+                "altWhite": "#FFFFFF",
+                "autosExpression": "#212121",
+                "background": "#FAFAFA",
+                "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                "client": "#E0E0E0",
+                "createNew": "#FFFFFF",
+                "darkgray1": "#777777",
+                "darkgray2": "#454545",
+                "darkgray3": "#424242",
+                "dropdown": "#FFFFFF",
+                "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
+                "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
+                "inverseText": "#212121",
+                "medgray1": "#757575",
+                "medgray2": "#888888",
+                "primary1": "#4169E1",
+                "primary2": "#212121",
+                "primary3": "#00796B",
+                "primary4": "#D32F2F",
+                "primary5": "#f0b941",
+                "secondary1": "#2E7D32",
+                "secondary2": "#757575",
+                "secondary3": "#673AB7",
+                "secondary4": "#9C27B0",
+                "secondary5": "#00796B",
+                "secondary6": "#ECF0FC",
+                "submenu": "#FFFFFF",
+                "text": "#212121",
+                "white": "#FFFFFF",
+              },
+              "borderColors": Object {
+                "accountNavigation": "#FFFFFF",
+                "altWhite": "#FFFFFF",
+                "autosExpression": "#212121",
+                "background": "#FAFAFA",
+                "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                "client": "#E0E0E0",
+                "createNew": "#FFFFFF",
+                "darkgray1": "#777777",
+                "darkgray2": "#454545",
+                "darkgray3": "#424242",
+                "dropdown": "#FFFFFF",
+                "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
+                "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
+                "inverseText": "#212121",
+                "medgray1": "#757575",
+                "medgray2": "#888888",
+                "primary1": "#4169E1",
+                "primary2": "#212121",
+                "primary3": "#00796B",
+                "primary4": "#D32F2F",
+                "primary5": "#f0b941",
+                "secondary1": "#2E7D32",
+                "secondary2": "#757575",
+                "secondary3": "#673AB7",
+                "secondary4": "#9C27B0",
+                "secondary5": "#00796B",
+                "secondary6": "#ECF0FC",
+                "submenu": "#FFFFFF",
+                "text": "#212121",
+                "white": "#FFFFFF",
+              },
+              "fontColors": Object {
+                "accountNavigation": "#FFFFFF",
+                "altWhite": "#FFFFFF",
+                "autosExpression": "#212121",
+                "background": "#FAFAFA",
+                "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                "client": "#E0E0E0",
+                "createNew": "#212121",
+                "darkgray1": "#777777",
+                "darkgray2": "#454545",
+                "darkgray3": "#424242",
+                "dropdown": "#212121",
+                "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
+                "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
+                "inverseText": "#212121",
+                "medgray1": "#757575",
+                "medgray2": "#888888",
+                "primary1": "#4169E1",
+                "primary2": "#212121",
+                "primary3": "#00796B",
+                "primary4": "#D32F2F",
+                "primary5": "#f0b941",
+                "secondary1": "#2E7D32",
+                "secondary2": "#757575",
+                "secondary3": "#673AB7",
+                "secondary4": "#9C27B0",
+                "secondary5": "#00796B",
+                "secondary6": "#ECF0FC",
+                "submenu": "#FFFFFF",
+                "text": "#212121",
+                "white": "#FFFFFF",
+              },
+            }
+          }
+          style={Object {}}
+          transition="0.2s all"
+          value="asd"
+        >
+          <StyledBox
+            as="textarea"
+            boxAs="textarea"
+            className="sc-gtssRu bzuVNB"
+            onChange={[Function]}
+            palette={
+              Object {
+                "backgroundColors": Object {
+                  "accountNavigation": "#FFFFFF",
+                  "altWhite": "#FFFFFF",
+                  "autosExpression": "#212121",
+                  "background": "#FAFAFA",
+                  "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                  "client": "#E0E0E0",
+                  "createNew": "#FFFFFF",
+                  "darkgray1": "#777777",
+                  "darkgray2": "#454545",
+                  "darkgray3": "#424242",
+                  "dropdown": "#FFFFFF",
+                  "gray1": "#E0E0E0",
+                  "gray100": "#F0F0F0",
+                  "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
+                  "grayAlpha100": "rgba(0,0,0,0.06)",
+                  "grayAlpha400": "rgba(0,0,0,0.36)",
+                  "inverseText": "#212121",
+                  "medgray1": "#757575",
+                  "medgray2": "#888888",
+                  "primary1": "#4169E1",
+                  "primary2": "#212121",
+                  "primary3": "#00796B",
+                  "primary4": "#D32F2F",
+                  "primary5": "#f0b941",
+                  "secondary1": "#2E7D32",
+                  "secondary2": "#757575",
+                  "secondary3": "#673AB7",
+                  "secondary4": "#9C27B0",
+                  "secondary5": "#00796B",
+                  "secondary6": "#ECF0FC",
+                  "submenu": "#FFFFFF",
+                  "text": "#212121",
+                  "white": "#FFFFFF",
+                },
+                "borderColors": Object {
+                  "accountNavigation": "#FFFFFF",
+                  "altWhite": "#FFFFFF",
+                  "autosExpression": "#212121",
+                  "background": "#FAFAFA",
+                  "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                  "client": "#E0E0E0",
+                  "createNew": "#FFFFFF",
+                  "darkgray1": "#777777",
+                  "darkgray2": "#454545",
+                  "darkgray3": "#424242",
+                  "dropdown": "#FFFFFF",
+                  "gray1": "#E0E0E0",
+                  "gray100": "#F0F0F0",
+                  "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
+                  "grayAlpha100": "rgba(0,0,0,0.06)",
+                  "grayAlpha400": "rgba(0,0,0,0.36)",
+                  "inverseText": "#212121",
+                  "medgray1": "#757575",
+                  "medgray2": "#888888",
+                  "primary1": "#4169E1",
+                  "primary2": "#212121",
+                  "primary3": "#00796B",
+                  "primary4": "#D32F2F",
+                  "primary5": "#f0b941",
+                  "secondary1": "#2E7D32",
+                  "secondary2": "#757575",
+                  "secondary3": "#673AB7",
+                  "secondary4": "#9C27B0",
+                  "secondary5": "#00796B",
+                  "secondary6": "#ECF0FC",
+                  "submenu": "#FFFFFF",
+                  "text": "#212121",
+                  "white": "#FFFFFF",
+                },
+                "fontColors": Object {
+                  "accountNavigation": "#FFFFFF",
+                  "altWhite": "#FFFFFF",
+                  "autosExpression": "#212121",
+                  "background": "#FAFAFA",
+                  "black": "#000000",
+                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                  "client": "#E0E0E0",
+                  "createNew": "#212121",
+                  "darkgray1": "#777777",
+                  "darkgray2": "#454545",
+                  "darkgray3": "#424242",
+                  "dropdown": "#212121",
+                  "gray1": "#E0E0E0",
+                  "gray100": "#F0F0F0",
+                  "gray2": "#E7E7E7",
+                  "grayAlpha": "rgba(0,0,0,0.17)",
+                  "grayAlpha100": "rgba(0,0,0,0.06)",
+                  "grayAlpha400": "rgba(0,0,0,0.36)",
+                  "inverseText": "#212121",
+                  "medgray1": "#757575",
+                  "medgray2": "#888888",
+                  "primary1": "#4169E1",
+                  "primary2": "#212121",
+                  "primary3": "#00796B",
+                  "primary4": "#D32F2F",
+                  "primary5": "#f0b941",
+                  "secondary1": "#2E7D32",
+                  "secondary2": "#757575",
+                  "secondary3": "#673AB7",
+                  "secondary4": "#9C27B0",
+                  "secondary5": "#00796B",
+                  "secondary6": "#ECF0FC",
+                  "submenu": "#FFFFFF",
+                  "text": "#212121",
+                  "white": "#FFFFFF",
+                },
+              }
+            }
+            style={Object {}}
+            transition="0.2s all"
+            value="asd"
+          >
+            <textarea
+              className="sc-bdnylx ckoRHe sc-gtssRu bzuVNB"
+              onChange={[Function]}
+              style={Object {}}
+              value="asd"
+            />
+          </StyledBox>
+        </Component>
+      </Box>
+    </StyledTextArea>
+  </Component>
 </TextArea>
 `;

@@ -1,162 +1,295 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Slider render AB Slider correctly 1`] = `
-<ABSlider
-  count={1370}
-  onChange={[MockFunction]}
-  percentage={20}
->
-  <div
-    className="abContainer undefined"
-  >
-    <div
-      className="section sectionA"
-      style={
-        Object {
-          "left": 0,
-          "right": "80%",
-        }
-      }
-    >
-      <span
-        className="font"
-      >
-        A
-      </span>
-      <span
-        className="percentText"
-      >
-        20
-        % (
-        274
-        )
-      </span>
-    </div>
-    <div
-      className="section sectionB"
-      style={
-        Object {
-          "left": "20%",
-          "right": "60%",
-        }
-      }
-    >
-      <span
-        className="font"
-      >
-        B
-      </span>
-      <span
-        className="percentText"
-      >
-        20
-        % (
-        274
-        )
-      </span>
-    </div>
-    <div
-      className="section sectionW"
-      style={
-        Object {
-          "left": "40%",
-          "right": 0,
-        }
-      }
-    >
-      <span
-        className="font"
-      >
-        Winner
-      </span>
-      <span
-        className="percentText"
-      >
-        60
-        % (
-        822
-        )
-      </span>
-    </div>
-    <input
-      max={100}
-      min={0}
-      onChange={[Function]}
-      step={2}
-      style={
-        Object {
-          "margin": 0,
-        }
-      }
-      type="range"
-      value={40}
-    />
-  </div>
-</ABSlider>
-`;
-
 exports[`Slider renders correctly 1`] = `
-<div
-  className="sliderContainer"
+<Slider
+  max={10}
+  min={0}
+  value={5}
 >
-  <label
-    className="sliderLabel"
-  >
-    Slider Label
-  </label>
-  <input
-    className="slider disabled   myClass"
-    disabled={true}
-    id="Slider1"
+  <StyledSlider
+    boxAs="input"
     max={10}
     min={0}
     onChange={[Function]}
-    onMouseDown={[Function]}
-    onMouseMove={[Function]}
-    onMouseUp={[Function]}
-    style={
-      Object {
-        "color": "blue",
-      }
-    }
     type="range"
-    value={4}
-  />
-  <div
-    className="fill disabledFill undefined"
-    style={
-      Object {
-        "top": "23px",
-        "width": "0%",
-      }
-    }
-  />
-  <div
-    className="trackLabels"
+    value={5}
   >
-    <span
-      className="trackLabel"
-      key="0"
+    <Box
+      boxAs="input"
+      className="sc-gtssRu eklUIY"
+      max={10}
+      min={0}
+      onChange={[Function]}
+      style={Object {}}
+      transition="0.2s all"
+      type="range"
+      value={5}
     >
-      0
-    </span>
-    <span
-      className="trackLabel"
-      key="1"
-    >
-      10
-    </span>
-  </div>
-  <div
-    className="tooltip"
-    style={
-      Object {
-        "display": "none",
-        "left": 0,
-      }
-    }
-  >
-    4
-  </div>
-</div>
+      <Component
+        boxAs="input"
+        className="sc-gtssRu eklUIY"
+        max={10}
+        min={0}
+        onChange={[Function]}
+        palette={
+          Object {
+            "backgroundColors": Object {
+              "accountNavigation": "#FFFFFF",
+              "altWhite": "#FFFFFF",
+              "autosExpression": "#212121",
+              "background": "#FAFAFA",
+              "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+              "client": "#E0E0E0",
+              "createNew": "#FFFFFF",
+              "darkgray1": "#777777",
+              "darkgray2": "#454545",
+              "darkgray3": "#424242",
+              "dropdown": "#FFFFFF",
+              "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
+              "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
+              "inverseText": "#212121",
+              "medgray1": "#757575",
+              "medgray2": "#888888",
+              "primary1": "#4169E1",
+              "primary2": "#212121",
+              "primary3": "#00796B",
+              "primary4": "#D32F2F",
+              "primary5": "#f0b941",
+              "secondary1": "#2E7D32",
+              "secondary2": "#757575",
+              "secondary3": "#673AB7",
+              "secondary4": "#9C27B0",
+              "secondary5": "#00796B",
+              "secondary6": "#ECF0FC",
+              "submenu": "#FFFFFF",
+              "text": "#212121",
+              "white": "#FFFFFF",
+            },
+            "borderColors": Object {
+              "accountNavigation": "#FFFFFF",
+              "altWhite": "#FFFFFF",
+              "autosExpression": "#212121",
+              "background": "#FAFAFA",
+              "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+              "client": "#E0E0E0",
+              "createNew": "#FFFFFF",
+              "darkgray1": "#777777",
+              "darkgray2": "#454545",
+              "darkgray3": "#424242",
+              "dropdown": "#FFFFFF",
+              "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
+              "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
+              "inverseText": "#212121",
+              "medgray1": "#757575",
+              "medgray2": "#888888",
+              "primary1": "#4169E1",
+              "primary2": "#212121",
+              "primary3": "#00796B",
+              "primary4": "#D32F2F",
+              "primary5": "#f0b941",
+              "secondary1": "#2E7D32",
+              "secondary2": "#757575",
+              "secondary3": "#673AB7",
+              "secondary4": "#9C27B0",
+              "secondary5": "#00796B",
+              "secondary6": "#ECF0FC",
+              "submenu": "#FFFFFF",
+              "text": "#212121",
+              "white": "#FFFFFF",
+            },
+            "fontColors": Object {
+              "accountNavigation": "#FFFFFF",
+              "altWhite": "#FFFFFF",
+              "autosExpression": "#212121",
+              "background": "#FAFAFA",
+              "black": "#000000",
+              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+              "client": "#E0E0E0",
+              "createNew": "#212121",
+              "darkgray1": "#777777",
+              "darkgray2": "#454545",
+              "darkgray3": "#424242",
+              "dropdown": "#212121",
+              "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
+              "gray2": "#E7E7E7",
+              "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
+              "inverseText": "#212121",
+              "medgray1": "#757575",
+              "medgray2": "#888888",
+              "primary1": "#4169E1",
+              "primary2": "#212121",
+              "primary3": "#00796B",
+              "primary4": "#D32F2F",
+              "primary5": "#f0b941",
+              "secondary1": "#2E7D32",
+              "secondary2": "#757575",
+              "secondary3": "#673AB7",
+              "secondary4": "#9C27B0",
+              "secondary5": "#00796B",
+              "secondary6": "#ECF0FC",
+              "submenu": "#FFFFFF",
+              "text": "#212121",
+              "white": "#FFFFFF",
+            },
+          }
+        }
+        style={Object {}}
+        transition="0.2s all"
+        type="range"
+        value={5}
+      >
+        <StyledBox
+          as="input"
+          boxAs="input"
+          className="sc-gtssRu eklUIY"
+          max={10}
+          min={0}
+          onChange={[Function]}
+          palette={
+            Object {
+              "backgroundColors": Object {
+                "accountNavigation": "#FFFFFF",
+                "altWhite": "#FFFFFF",
+                "autosExpression": "#212121",
+                "background": "#FAFAFA",
+                "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                "client": "#E0E0E0",
+                "createNew": "#FFFFFF",
+                "darkgray1": "#777777",
+                "darkgray2": "#454545",
+                "darkgray3": "#424242",
+                "dropdown": "#FFFFFF",
+                "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
+                "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
+                "inverseText": "#212121",
+                "medgray1": "#757575",
+                "medgray2": "#888888",
+                "primary1": "#4169E1",
+                "primary2": "#212121",
+                "primary3": "#00796B",
+                "primary4": "#D32F2F",
+                "primary5": "#f0b941",
+                "secondary1": "#2E7D32",
+                "secondary2": "#757575",
+                "secondary3": "#673AB7",
+                "secondary4": "#9C27B0",
+                "secondary5": "#00796B",
+                "secondary6": "#ECF0FC",
+                "submenu": "#FFFFFF",
+                "text": "#212121",
+                "white": "#FFFFFF",
+              },
+              "borderColors": Object {
+                "accountNavigation": "#FFFFFF",
+                "altWhite": "#FFFFFF",
+                "autosExpression": "#212121",
+                "background": "#FAFAFA",
+                "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                "client": "#E0E0E0",
+                "createNew": "#FFFFFF",
+                "darkgray1": "#777777",
+                "darkgray2": "#454545",
+                "darkgray3": "#424242",
+                "dropdown": "#FFFFFF",
+                "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
+                "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
+                "inverseText": "#212121",
+                "medgray1": "#757575",
+                "medgray2": "#888888",
+                "primary1": "#4169E1",
+                "primary2": "#212121",
+                "primary3": "#00796B",
+                "primary4": "#D32F2F",
+                "primary5": "#f0b941",
+                "secondary1": "#2E7D32",
+                "secondary2": "#757575",
+                "secondary3": "#673AB7",
+                "secondary4": "#9C27B0",
+                "secondary5": "#00796B",
+                "secondary6": "#ECF0FC",
+                "submenu": "#FFFFFF",
+                "text": "#212121",
+                "white": "#FFFFFF",
+              },
+              "fontColors": Object {
+                "accountNavigation": "#FFFFFF",
+                "altWhite": "#FFFFFF",
+                "autosExpression": "#212121",
+                "background": "#FAFAFA",
+                "black": "#000000",
+                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                "client": "#E0E0E0",
+                "createNew": "#212121",
+                "darkgray1": "#777777",
+                "darkgray2": "#454545",
+                "darkgray3": "#424242",
+                "dropdown": "#212121",
+                "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
+                "gray2": "#E7E7E7",
+                "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
+                "inverseText": "#212121",
+                "medgray1": "#757575",
+                "medgray2": "#888888",
+                "primary1": "#4169E1",
+                "primary2": "#212121",
+                "primary3": "#00796B",
+                "primary4": "#D32F2F",
+                "primary5": "#f0b941",
+                "secondary1": "#2E7D32",
+                "secondary2": "#757575",
+                "secondary3": "#673AB7",
+                "secondary4": "#9C27B0",
+                "secondary5": "#00796B",
+                "secondary6": "#ECF0FC",
+                "submenu": "#FFFFFF",
+                "text": "#212121",
+                "white": "#FFFFFF",
+              },
+            }
+          }
+          style={Object {}}
+          transition="0.2s all"
+          type="range"
+          value={5}
+        >
+          <input
+            className="sc-bdnylx ckoRHe sc-gtssRu eklUIY"
+            max={10}
+            min={0}
+            onChange={[Function]}
+            style={Object {}}
+            type="range"
+            value={5}
+          />
+        </StyledBox>
+      </Component>
+    </Box>
+  </StyledSlider>
+</Slider>
 `;

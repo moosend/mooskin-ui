@@ -1,107 +1,383 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Select renders Option correctly 1`] = `
-<li
-  className=""
-  onClick={[MockFunction]}
->
-  Option1
-</li>
-`;
-
 exports[`Select renders Select correctly 1`] = `
-<div
-  className="select-component componentContainer  myClass"
-  style={
+<Component
+  className=""
+  onChange={[MockFunction]}
+  palette={
     Object {
-      "color": "blue",
+      "backgroundColors": Object {
+        "accountNavigation": "#FFFFFF",
+        "altWhite": "#FFFFFF",
+        "autosExpression": "#212121",
+        "background": "#FAFAFA",
+        "black": "#000000",
+        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+        "client": "#E0E0E0",
+        "createNew": "#FFFFFF",
+        "darkgray1": "#777777",
+        "darkgray2": "#454545",
+        "darkgray3": "#424242",
+        "dropdown": "#FFFFFF",
+        "gray1": "#E0E0E0",
+        "gray100": "#F0F0F0",
+        "gray2": "#E7E7E7",
+        "grayAlpha": "rgba(0,0,0,0.17)",
+        "grayAlpha100": "rgba(0,0,0,0.06)",
+        "grayAlpha400": "rgba(0,0,0,0.36)",
+        "inverseText": "#212121",
+        "medgray1": "#757575",
+        "medgray2": "#888888",
+        "primary1": "#4169E1",
+        "primary2": "#212121",
+        "primary3": "#00796B",
+        "primary4": "#D32F2F",
+        "primary5": "#f0b941",
+        "secondary1": "#2E7D32",
+        "secondary2": "#757575",
+        "secondary3": "#673AB7",
+        "secondary4": "#9C27B0",
+        "secondary5": "#00796B",
+        "secondary6": "#ECF0FC",
+        "submenu": "#FFFFFF",
+        "text": "#212121",
+        "white": "#FFFFFF",
+      },
+      "borderColors": Object {
+        "accountNavigation": "#FFFFFF",
+        "altWhite": "#FFFFFF",
+        "autosExpression": "#212121",
+        "background": "#FAFAFA",
+        "black": "#000000",
+        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+        "client": "#E0E0E0",
+        "createNew": "#FFFFFF",
+        "darkgray1": "#777777",
+        "darkgray2": "#454545",
+        "darkgray3": "#424242",
+        "dropdown": "#FFFFFF",
+        "gray1": "#E0E0E0",
+        "gray100": "#F0F0F0",
+        "gray2": "#E7E7E7",
+        "grayAlpha": "rgba(0,0,0,0.17)",
+        "grayAlpha100": "rgba(0,0,0,0.06)",
+        "grayAlpha400": "rgba(0,0,0,0.36)",
+        "inverseText": "#212121",
+        "medgray1": "#757575",
+        "medgray2": "#888888",
+        "primary1": "#4169E1",
+        "primary2": "#212121",
+        "primary3": "#00796B",
+        "primary4": "#D32F2F",
+        "primary5": "#f0b941",
+        "secondary1": "#2E7D32",
+        "secondary2": "#757575",
+        "secondary3": "#673AB7",
+        "secondary4": "#9C27B0",
+        "secondary5": "#00796B",
+        "secondary6": "#ECF0FC",
+        "submenu": "#FFFFFF",
+        "text": "#212121",
+        "white": "#FFFFFF",
+      },
+      "fontColors": Object {
+        "accountNavigation": "#FFFFFF",
+        "altWhite": "#FFFFFF",
+        "autosExpression": "#212121",
+        "background": "#FAFAFA",
+        "black": "#000000",
+        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+        "client": "#E0E0E0",
+        "createNew": "#212121",
+        "darkgray1": "#777777",
+        "darkgray2": "#454545",
+        "darkgray3": "#424242",
+        "dropdown": "#212121",
+        "gray1": "#E0E0E0",
+        "gray100": "#F0F0F0",
+        "gray2": "#E7E7E7",
+        "grayAlpha": "rgba(0,0,0,0.17)",
+        "grayAlpha100": "rgba(0,0,0,0.06)",
+        "grayAlpha400": "rgba(0,0,0,0.36)",
+        "inverseText": "#212121",
+        "medgray1": "#757575",
+        "medgray2": "#888888",
+        "primary1": "#4169E1",
+        "primary2": "#212121",
+        "primary3": "#00796B",
+        "primary4": "#D32F2F",
+        "primary5": "#f0b941",
+        "secondary1": "#2E7D32",
+        "secondary2": "#757575",
+        "secondary3": "#673AB7",
+        "secondary4": "#9C27B0",
+        "secondary5": "#00796B",
+        "secondary6": "#ECF0FC",
+        "submenu": "#FFFFFF",
+        "text": "#212121",
+        "white": "#FFFFFF",
+      },
     }
   }
+  style={Object {}}
 >
-  <label
-    className="label "
+  <SelectContainer
+    className=""
     style={Object {}}
   >
-    Select something
-  </label>
-  <div
-    className="overlay"
-    onClick={[Function]}
-    style={
-      Object {
-        "display": "none",
-      }
-    }
-  />
-  <div
-    style={
-      Object {
-        "flex": 1,
-      }
-    }
+    <SelectPlaceholder
+      className=""
+      style={Object {}}
+    >
+      Select an option
+    </SelectPlaceholder>
+    <SelectFilter
+      className=""
+      style={Object {}}
+    />
+    <SelectIcon
+      className=""
+      style={Object {}}
+    />
+  </SelectContainer>
+  <SelectOptionList
+    className=""
+    style={Object {}}
   >
-    <div
-      className="selectContainer labelContainer undefined "
-      style={
-        Object {
-          "zIndex": 0,
-        }
-      }
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="1"
     >
-      <input
-        className="innerInput"
-        onBlur={[Function]}
-        onChange={[Function]}
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-        type="text"
-        value=""
-      />
-      <img
-        className="spinner"
-        src=""
-      />
-      <div
-        className="label-container innerDiv"
-        style={
-          Object {
-            "display": "block",
-          }
-        }
-      >
-        No options available
-      </div>
-      <div
-        className="selectIcon"
-      />
-      <input
-        readOnly={true}
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-        value="option1"
-      />
-      <div
-        className="options-container  optionsContainer"
-        style={
-          Object {
-            "display": "none",
-          }
-        }
-      >
-        <ul />
-      </div>
-    </div>
-    <i
-      className="description undefined"
+      Option 1
+    </SelectOption>
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="2"
     >
-      with description
-    </i>
-  </div>
-</div>
+      Option 2
+    </SelectOption>
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="3"
+    >
+      Option 3
+    </SelectOption>
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="4"
+    >
+      Option 4
+    </SelectOption>
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="5"
+    >
+      Option 5
+    </SelectOption>
+  </SelectOptionList>
+  <SelectOverlay
+    className=""
+    style={Object {}}
+  />
+</Component>
+`;
+
+exports[`Select should be rendered as a multi select if the selected prop is an array 1`] = `
+<Component
+  className=""
+  dataLabel="select"
+  onChange={[MockFunction]}
+  palette={
+    Object {
+      "backgroundColors": Object {
+        "accountNavigation": "#FFFFFF",
+        "altWhite": "#FFFFFF",
+        "autosExpression": "#212121",
+        "background": "#FAFAFA",
+        "black": "#000000",
+        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+        "client": "#E0E0E0",
+        "createNew": "#FFFFFF",
+        "darkgray1": "#777777",
+        "darkgray2": "#454545",
+        "darkgray3": "#424242",
+        "dropdown": "#FFFFFF",
+        "gray1": "#E0E0E0",
+        "gray100": "#F0F0F0",
+        "gray2": "#E7E7E7",
+        "grayAlpha": "rgba(0,0,0,0.17)",
+        "grayAlpha100": "rgba(0,0,0,0.06)",
+        "grayAlpha400": "rgba(0,0,0,0.36)",
+        "inverseText": "#212121",
+        "medgray1": "#757575",
+        "medgray2": "#888888",
+        "primary1": "#4169E1",
+        "primary2": "#212121",
+        "primary3": "#00796B",
+        "primary4": "#D32F2F",
+        "primary5": "#f0b941",
+        "secondary1": "#2E7D32",
+        "secondary2": "#757575",
+        "secondary3": "#673AB7",
+        "secondary4": "#9C27B0",
+        "secondary5": "#00796B",
+        "secondary6": "#ECF0FC",
+        "submenu": "#FFFFFF",
+        "text": "#212121",
+        "white": "#FFFFFF",
+      },
+      "borderColors": Object {
+        "accountNavigation": "#FFFFFF",
+        "altWhite": "#FFFFFF",
+        "autosExpression": "#212121",
+        "background": "#FAFAFA",
+        "black": "#000000",
+        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+        "client": "#E0E0E0",
+        "createNew": "#FFFFFF",
+        "darkgray1": "#777777",
+        "darkgray2": "#454545",
+        "darkgray3": "#424242",
+        "dropdown": "#FFFFFF",
+        "gray1": "#E0E0E0",
+        "gray100": "#F0F0F0",
+        "gray2": "#E7E7E7",
+        "grayAlpha": "rgba(0,0,0,0.17)",
+        "grayAlpha100": "rgba(0,0,0,0.06)",
+        "grayAlpha400": "rgba(0,0,0,0.36)",
+        "inverseText": "#212121",
+        "medgray1": "#757575",
+        "medgray2": "#888888",
+        "primary1": "#4169E1",
+        "primary2": "#212121",
+        "primary3": "#00796B",
+        "primary4": "#D32F2F",
+        "primary5": "#f0b941",
+        "secondary1": "#2E7D32",
+        "secondary2": "#757575",
+        "secondary3": "#673AB7",
+        "secondary4": "#9C27B0",
+        "secondary5": "#00796B",
+        "secondary6": "#ECF0FC",
+        "submenu": "#FFFFFF",
+        "text": "#212121",
+        "white": "#FFFFFF",
+      },
+      "fontColors": Object {
+        "accountNavigation": "#FFFFFF",
+        "altWhite": "#FFFFFF",
+        "autosExpression": "#212121",
+        "background": "#FAFAFA",
+        "black": "#000000",
+        "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+        "client": "#E0E0E0",
+        "createNew": "#212121",
+        "darkgray1": "#777777",
+        "darkgray2": "#454545",
+        "darkgray3": "#424242",
+        "dropdown": "#212121",
+        "gray1": "#E0E0E0",
+        "gray100": "#F0F0F0",
+        "gray2": "#E7E7E7",
+        "grayAlpha": "rgba(0,0,0,0.17)",
+        "grayAlpha100": "rgba(0,0,0,0.06)",
+        "grayAlpha400": "rgba(0,0,0,0.36)",
+        "inverseText": "#212121",
+        "medgray1": "#757575",
+        "medgray2": "#888888",
+        "primary1": "#4169E1",
+        "primary2": "#212121",
+        "primary3": "#00796B",
+        "primary4": "#D32F2F",
+        "primary5": "#f0b941",
+        "secondary1": "#2E7D32",
+        "secondary2": "#757575",
+        "secondary3": "#673AB7",
+        "secondary4": "#9C27B0",
+        "secondary5": "#00796B",
+        "secondary6": "#ECF0FC",
+        "submenu": "#FFFFFF",
+        "text": "#212121",
+        "white": "#FFFFFF",
+      },
+    }
+  }
+  selectedValue={
+    Array [
+      "2",
+      "4",
+    ]
+  }
+  showList={true}
+  style={Object {}}
+>
+  <SelectContainer
+    className=""
+    style={Object {}}
+  >
+    <SelectPlaceholder
+      className=""
+      style={Object {}}
+    >
+      Select an option
+    </SelectPlaceholder>
+    <SelectFilter
+      className=""
+      style={Object {}}
+    />
+    <SelectIcon
+      className=""
+      style={Object {}}
+    />
+  </SelectContainer>
+  <SelectOptionList
+    className=""
+    style={Object {}}
+  >
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="1"
+    >
+      Option 1
+    </SelectOption>
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="2"
+    >
+      Option 2
+    </SelectOption>
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="3"
+    >
+      Option 3
+    </SelectOption>
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="4"
+    >
+      Option 4
+    </SelectOption>
+    <SelectOption
+      className=""
+      style={Object {}}
+      value="5"
+    >
+      Option 5
+    </SelectOption>
+  </SelectOptionList>
+  <SelectOverlay
+    className=""
+    style={Object {}}
+  />
+</Component>
 `;

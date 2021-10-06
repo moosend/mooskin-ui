@@ -1,208 +1,93 @@
 import * as React from 'react';
-import Select, {Option} from './Select';
+import {
+	Select,
+	SelectContainer,
+	SelectFilter,
+	SelectIcon,
+	SelectOption,
+	SelectOptionList,
+	SelectOverlay,
+	SelectPlaceholder,
+} from './Select';
 
-import {mount, shallow} from 'enzyme';
+import { mount, shallow } from 'enzyme';
 
 describe('Select', () => {
+	test('renders Select correctly', () => {
+		const func = jest.fn();
 
-    test('renders Select correctly', () => {
-        const func = jest.fn();
+		const tree = shallow(
+			<Select onChange={func}>
+				<SelectContainer>
+					<SelectPlaceholder>Select an option</SelectPlaceholder>
+					<SelectFilter />
+					<SelectIcon />
+				</SelectContainer>
+				<SelectOptionList>
+					<SelectOption value="1">Option 1</SelectOption>
+					<SelectOption value="2">Option 2</SelectOption>
+					<SelectOption value="3">Option 3</SelectOption>
+					<SelectOption value="4">Option 4</SelectOption>
+					<SelectOption value="5">Option 5</SelectOption>
+				</SelectOptionList>
+				<SelectOverlay />
+			</Select>
+		);
+		expect(tree).toMatchSnapshot();
+	});
 
-        const tree = shallow(
-            <Select
-                onChange={func}
-                selected="option1"
-                dataLabel="plan"
-                id="select1"
-                label="Select something"
-                placeholder="placeholder"
-                className="myClass"
-                style={{color: 'blue'}}
-                description="with description"
-                isLoading
-            />
-        );
-        expect(tree).toMatchSnapshot();
-    });
+	test('renders Option correctly and calls callback on click', () => {
+		const func = jest.fn();
 
-    test('renders Option correctly', () => {
-        const func = jest.fn();
+		const tree = mount(
+			<SelectOption value="1" onClick={func}>
+				Option1
+			</SelectOption>
+		);
 
-        const tree = shallow(
-            <Option value="option1" onClick={func}>Option1</Option>
-        );
-        expect(tree).toMatchSnapshot();
-    });
+		tree.find('StyledSelectOption').simulate('click');
 
-    test('renders properly with 1 child', () => {
-        const func = jest.fn();
+		expect(func).toHaveBeenCalled();
+	});
 
-        const component = shallow(
-            <Select onChange={func} selected="option1" dataLabel="plan">
-                <Option value="option1">Option1</Option>
-            </Select>
-        );
+	test('renders Filter correctly and calls callback on change', () => {
+		const func = jest.fn();
 
-        expect(component.find('.select-component').length).toBe(1);
+		const tree = mount(<SelectFilter onChange={func} />);
 
-        expect(component.find(Option).length).toBe(1);
-    });
+		tree
+			.find('StyledSelectFilter')
+			.first()
+			.simulate('change', { target: { value: 'filter' } });
 
-    test('renders properly with multiple children', () => {
-        const func = jest.fn();
+		expect(func).toHaveBeenCalled();
+	});
 
-        const component = shallow(
-            <Select onChange={func} selected="option1" dataLabel="plan">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-            </Select>
-        );
+	test('should be rendered as a multi select if the selected prop is an array', () => {
+		const options = ['2', '4'];
 
-        expect(component.find(Option).length).toBe(2);
-    });
+		const func = jest.fn();
 
-    test('appends onClick callback to each Option', () => {
-        const func = jest.fn();
+		const component = shallow(
+			<Select onChange={func} showList selectedValue={options} dataLabel="select">
+				<SelectContainer>
+					<SelectPlaceholder>Select an option</SelectPlaceholder>
+					<SelectFilter />
+					<SelectIcon />
+				</SelectContainer>
+				<SelectOptionList>
+					<SelectOption value="1">Option 1</SelectOption>
+					<SelectOption value="2">Option 2</SelectOption>
+					<SelectOption value="3">Option 3</SelectOption>
+					<SelectOption value="4">Option 4</SelectOption>
+					<SelectOption value="5">Option 5</SelectOption>
+				</SelectOptionList>
+				<SelectOverlay />
+			</Select>
+		);
 
-        const component = shallow(
-            <Select onChange={func} selected="option1" dataLabel="plan">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-            </Select>
-        );
-
-        component.find(Option).forEach((option) => {
-            expect(option.prop('onClick')).toBeTruthy();
-        });
-    });
-
-    test('Option renders without onClick by default', () => {
-
-        const component = shallow(<Option value="option1">Option1</Option>);
-
-        expect(component.prop('onClick')).toBeFalsy();
-    });
-
-    test('opens the list when clicked with right mouse btn', () => {
-        const func = jest.fn();
-
-        const component = shallow(
-            <Select onChange={func} selected="option1" dataLabel="plan">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-            </Select>
-        );
-
-        expect(component.find('.options-container').prop('style')).toEqual({display: 'none'});
-
-        component.find('.label-container').simulate('click', {button: 0});
-
-        expect(component.find('.options-container').prop('style')).toEqual({display: 'block'});
-    });
-
-    test('applies correct classes when the related status is passed', () => {
-
-        const component = shallow(
-            <Select status={'error'} selected="option1" dataLabel="plan">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-            </Select>
-        );
-
-        expect(component.find('.error')).toBeTruthy;
-    });
-
-    test('text from prop is applied when there are no options available', () => {
-
-        const component = shallow(
-            <Select dataLabel="plan" emptySelectText="The select is empty" />
-        );
-
-        expect(component.find('.label-container').text()).toEqual('The select is empty');
-    });
-
-    test('adds alternate styles when prop is passed', () => {
-
-        const component = mount(
-            <Select selected="option1" alternate dataLabel="plan">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-            </Select>
-        );
-
-        expect(component.find('.options-container').hasClass('alternateOptions')).toBe(true);
-        expect(component.find('.selectContainer').hasClass('alternateContainer')).toBe(true);
-    });
-
-    test('locks the Select when an option is selected, with the relevant prop', () => {
-
-        const component = mount(
-            <Select selected="option1" alternate lockSelected dataLabel="plan">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-            </Select>
-        );
-
-        expect(component.find('.lockContainer').length).toBe(1);
-    });
-
-    test('should be rendered as a multi select if the selected prop is an array', () => {
-
-        let options = [
-            'option1',
-            'option3'
-        ];
-
-        const onChange = (e, data) => {
-            options = data.value;
-        };
-
-        const component = mount(
-            <Select selected={options} onChange={onChange} dataLabel="plan">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-                <Option value="option3">Option3</Option>
-                <Option value="option4">Option4</Option>
-            </Select>
-        );
-
-        expect(component.find('i').length).toBe(2);
-        expect(component.prop('selected')).toEqual(options);
-
-        component.find('li').first().simulate('click');
-        component.setProps({selected: options});
-
-        expect(component.prop('selected')).toEqual(options);
-        expect(component.find('i').length).toBe(1);
-
-        component.find('li').at(1).simulate('click');
-        component.setProps({selected: options});
-
-        expect(component.prop('selected')).toEqual(options);
-        expect(component.find('i').length).toBe(2);
-
-        component.find('li').last().simulate('click');
-        component.setProps({selected: options});
-
-        expect(component.prop('selected')).toEqual(options);
-        expect(component.find('i').length).toBe(3);
-    });
-
-    test('should call the onFilterChange callback when changing the filter input value', () => {
-
-        const onFilterChange = jest.fn();
-
-        const component = mount(
-            <Select selected={'option1'} onFilterChange={onFilterChange} dataLabel="plan">
-                <Option value="option1">Option1</Option>
-                <Option value="option2">Option2</Option>
-                <Option value="option3">Option3</Option>
-                <Option value="option4">Option4</Option>
-            </Select>
-        );
-
-        component.find('input').first().simulate('change', { target: { value: 'filter' }});
-
-        expect(onFilterChange).toHaveBeenCalled();
-    });
+		// component.find('StyledSelectOption').first().simulate('click');
+		// expect(func).toHaveBeenCalledWith({dataLabel: 'select', value: ['2', '4', '1']});
+		expect(component).toMatchSnapshot();
+	});
 });

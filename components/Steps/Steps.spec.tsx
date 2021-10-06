@@ -1,86 +1,131 @@
 import * as React from 'react';
-import Steps, {Step} from './Steps';
+import { Step, StepContent, StepHeader, Steps } from './Steps';
 
-import { mount, render, shallow} from 'enzyme';
+import { mount } from 'enzyme';
 
-describe('Steps', () => {
+describe('Pagination', () => {
+	test('renders correctly', () => {
+		const func = jest.fn();
 
-    test('renders correctly', () => {
-        const tree = shallow(
-            <Steps>
-                <Step id="1" title="Step 1" active>
-                    Content 1
-                </Step>
-                <Step id="2" title="Step 2">
-                    Content 2
-                </Step>
-                <Step id="3" title="Step 3">
-                    Content 3
-                </Step>
-            </Steps>
-        );
-        expect(tree).toMatchSnapshot();
-    });
+		const tree = mount(
+			<Steps activeItem={3} onClickStep={func}>
+				<Step activeId={1}>
+					<StepHeader>{`Item: 1`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 1`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={2}>
+					<StepHeader>{`Item: 2`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 2`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={3}>
+					<StepHeader>{`Item: 3`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 3`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={4}>
+					<StepHeader>{`Item: 4`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 4`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={5}>
+					<StepHeader>{`Item: 5`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 5`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={6}>
+					<StepHeader>{`Item: 6`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 6`}</div>
+					</StepContent>
+				</Step>
+			</Steps>
+		);
 
-    test('renders correctly with only the active one being visible', () => {
-        const tree = render(
-            <Steps>
-                <Step id="1" title="Step 1" active>
-                    Content 1
-                </Step>
-                <Step id="2" title="Step 2">
-                    Content 2
-                </Step>
-                <Step id="3" title="Step 3">
-                    Content 3
-                </Step>
-            </Steps>
-        );
+		expect(tree).toMatchSnapshot();
+	});
 
-        expect(tree.find('.activeStep').length).toBe(1);
-    });
+	test('renders active Step content correctly', () => {
+		const func = jest.fn();
 
-    test('renders the body correctly with each content', () => {
-        const tree = render(
-            <Steps>
-                <Step id="1" title="Step 1" active>
-                    Content 1
-                </Step>
-                <Step id="2" title="Step 2">
-                    Content 2
-                </Step>
-                <Step id="3" title="Step 3">
-                    Content 3
-                </Step>
-            </Steps>
-        );
+		const tree = mount(
+			<Steps activeItem={3} onClickStep={func}>
+				<Step activeId={1}>
+					<StepHeader>{`Item: 1`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 1`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={2}>
+					<StepHeader>{`Item: 2`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 2`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={3}>
+					<StepHeader>{`Item: 3`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 3`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={4}>
+					<StepHeader>{`Item: 4`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 4`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={5}>
+					<StepHeader>{`Item: 5`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 5`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={6}>
+					<StepHeader>{`Item: 6`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 6`}</div>
+					</StepContent>
+				</Step>
+			</Steps>
+		);
 
-        expect(tree.find('.stepBody').length).toBe(1);
-    });
+		expect(tree.find('StyledStepContent').length).toEqual(1);
+		expect(tree.find('StyledStepContent').text()).toEqual('Content for item with index: 3');
+	});
 
-    test('onClick is called correctly when one of the Steps is clicked', () => {
+	test('renders active Step content correctly', () => {
+		const func = jest.fn();
 
-        const fn = jest.fn();
+		const tree = mount(
+			<Steps activeItem={3} onClickStep={func}>
+				<Step activeId={1}>
+					<StepHeader>{`Item: 1`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 1`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={2}>
+					<StepHeader>{`Item: 2`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 2`}</div>
+					</StepContent>
+				</Step>
+				<Step activeId={3}>
+					<StepHeader>{`Item: 3`}</StepHeader>
+					<StepContent>
+						<div>{`Content for item with index: 3`}</div>
+					</StepContent>
+				</Step>
+			</Steps>
+		);
 
-        const tree = shallow(
-            <Steps>
-                <Step id="1" title="Step 1" active>
-                    Content 1
-                </Step>
-                <Step id="2" title="Step 2" onClick={fn}>
-                    Content 2
-                </Step>
-                <Step id="3" title="Step 3">
-                    Content 3
-                </Step>
-            </Steps>
-        );
-
-        tree.find(Step)
-            .findWhere((bc) => bc.prop('id') === '2')
-            .dive()
-            .simulate('click');
-
-        expect(fn).toHaveBeenCalledWith('2');
-    });
+		tree.find(StepHeader).first().simulate('click');
+		expect(func).toHaveBeenCalled();
+	});
 });

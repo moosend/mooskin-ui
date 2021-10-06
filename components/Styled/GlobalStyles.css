@@ -1,0 +1,74 @@
+@charset "UTF-8";
+
+/* Global Styles */
+* {
+	box-sizing: border-box;
+	outline: none;
+	font-family: system-ui;
+	margin: 0;
+	padding: 0;
+	color: #212121;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+/* Mooskin Icons */
+@font-face {
+	font-family: 'Mooskin Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../assets/mooskin-icons/outlined.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Mooskin Icons Outlined';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../assets/mooskin-icons/regular.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Mooskin Icons Round';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../assets/mooskin-icons/round.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Mooskin Icons Sharp';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../assets/mooskin-icons/sharp.woff2') format('woff2');
+}
+@font-face {
+	font-family: 'Mooskin Icons Two Tone';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../../assets/mooskin-icons/two-tone.woff2') format('woff2');
+}
+
+.mooskin-icons {
+	font-family: 'Mooskin Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	/* -webkit-font-feature-settings: 'liga'; */
+	-webkit-font-smoothing: antialiased;
+}
