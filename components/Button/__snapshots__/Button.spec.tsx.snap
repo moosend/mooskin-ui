@@ -38,8 +38,11 @@ exports[`Button renders correctly 1`] = `
           "darkgray3": "#424242",
           "dropdown": "#FFFFFF",
           "gray1": "#E0E0E0",
+          "gray100": "#F0F0F0",
           "gray2": "#E7E7E7",
           "grayAlpha": "rgba(0,0,0,0.17)",
+          "grayAlpha100": "rgba(0,0,0,0.06)",
+          "grayAlpha400": "rgba(0,0,0,0.36)",
           "inverseText": "#212121",
           "medgray1": "#757575",
           "medgray2": "#888888",
@@ -47,6 +50,7 @@ exports[`Button renders correctly 1`] = `
           "primary2": "#212121",
           "primary3": "#00796B",
           "primary4": "#D32F2F",
+          "primary5": "#f0b941",
           "secondary1": "#2E7D32",
           "secondary2": "#757575",
           "secondary3": "#673AB7",
@@ -71,8 +75,11 @@ exports[`Button renders correctly 1`] = `
           "darkgray3": "#424242",
           "dropdown": "#FFFFFF",
           "gray1": "#E0E0E0",
+          "gray100": "#F0F0F0",
           "gray2": "#E7E7E7",
           "grayAlpha": "rgba(0,0,0,0.17)",
+          "grayAlpha100": "rgba(0,0,0,0.06)",
+          "grayAlpha400": "rgba(0,0,0,0.36)",
           "inverseText": "#212121",
           "medgray1": "#757575",
           "medgray2": "#888888",
@@ -80,6 +87,7 @@ exports[`Button renders correctly 1`] = `
           "primary2": "#212121",
           "primary3": "#00796B",
           "primary4": "#D32F2F",
+          "primary5": "#f0b941",
           "secondary1": "#2E7D32",
           "secondary2": "#757575",
           "secondary3": "#673AB7",
@@ -91,7 +99,7 @@ exports[`Button renders correctly 1`] = `
           "white": "#FFFFFF",
         },
         "fontColors": Object {
-          "accountNavigation": "#FFFFFF",
+          "accountNavigation": "#212121",
           "altWhite": "#FFFFFF",
           "autosExpression": "#212121",
           "background": "#FAFAFA",
@@ -104,8 +112,11 @@ exports[`Button renders correctly 1`] = `
           "darkgray3": "#424242",
           "dropdown": "#212121",
           "gray1": "#E0E0E0",
+          "gray100": "#F0F0F0",
           "gray2": "#E7E7E7",
           "grayAlpha": "rgba(0,0,0,0.17)",
+          "grayAlpha100": "rgba(0,0,0,0.06)",
+          "grayAlpha400": "rgba(0,0,0,0.36)",
           "inverseText": "#212121",
           "medgray1": "#757575",
           "medgray2": "#888888",
@@ -113,6 +124,7 @@ exports[`Button renders correctly 1`] = `
           "primary2": "#212121",
           "primary3": "#00796B",
           "primary4": "#D32F2F",
+          "primary5": "#f0b941",
           "secondary1": "#2E7D32",
           "secondary2": "#757575",
           "secondary3": "#673AB7",
@@ -156,8 +168,11 @@ exports[`Button renders correctly 1`] = `
             "darkgray3": "#424242",
             "dropdown": "#FFFFFF",
             "gray1": "#E0E0E0",
+            "gray100": "#F0F0F0",
             "gray2": "#E7E7E7",
             "grayAlpha": "rgba(0,0,0,0.17)",
+            "grayAlpha100": "rgba(0,0,0,0.06)",
+            "grayAlpha400": "rgba(0,0,0,0.36)",
             "inverseText": "#212121",
             "medgray1": "#757575",
             "medgray2": "#888888",
@@ -165,6 +180,7 @@ exports[`Button renders correctly 1`] = `
             "primary2": "#212121",
             "primary3": "#00796B",
             "primary4": "#D32F2F",
+            "primary5": "#f0b941",
             "secondary1": "#2E7D32",
             "secondary2": "#757575",
             "secondary3": "#673AB7",
@@ -189,8 +205,11 @@ exports[`Button renders correctly 1`] = `
             "darkgray3": "#424242",
             "dropdown": "#FFFFFF",
             "gray1": "#E0E0E0",
+            "gray100": "#F0F0F0",
             "gray2": "#E7E7E7",
             "grayAlpha": "rgba(0,0,0,0.17)",
+            "grayAlpha100": "rgba(0,0,0,0.06)",
+            "grayAlpha400": "rgba(0,0,0,0.36)",
             "inverseText": "#212121",
             "medgray1": "#757575",
             "medgray2": "#888888",
@@ -198,6 +217,7 @@ exports[`Button renders correctly 1`] = `
             "primary2": "#212121",
             "primary3": "#00796B",
             "primary4": "#D32F2F",
+            "primary5": "#f0b941",
             "secondary1": "#2E7D32",
             "secondary2": "#757575",
             "secondary3": "#673AB7",
@@ -209,7 +229,7 @@ exports[`Button renders correctly 1`] = `
             "white": "#FFFFFF",
           },
           "fontColors": Object {
-            "accountNavigation": "#FFFFFF",
+            "accountNavigation": "#212121",
             "altWhite": "#FFFFFF",
             "autosExpression": "#212121",
             "background": "#FAFAFA",
@@ -222,8 +242,11 @@ exports[`Button renders correctly 1`] = `
             "darkgray3": "#424242",
             "dropdown": "#212121",
             "gray1": "#E0E0E0",
+            "gray100": "#F0F0F0",
             "gray2": "#E7E7E7",
             "grayAlpha": "rgba(0,0,0,0.17)",
+            "grayAlpha100": "rgba(0,0,0,0.06)",
+            "grayAlpha400": "rgba(0,0,0,0.36)",
             "inverseText": "#212121",
             "medgray1": "#757575",
             "medgray2": "#888888",
@@ -231,6 +254,7 @@ exports[`Button renders correctly 1`] = `
             "primary2": "#212121",
             "primary3": "#00796B",
             "primary4": "#D32F2F",
+            "primary5": "#f0b941",
             "secondary1": "#2E7D32",
             "secondary2": "#757575",
             "secondary3": "#673AB7",
@@ -253,7 +277,7 @@ exports[`Button renders correctly 1`] = `
       <Box
         boxAs="a"
         buttonSize="md"
-        className="sc-gtssRu sc-dlnjPT fcxKOc kRTFee myClass"
+        className="sc-gtssRu sc-dlnjPT fcxKOc hvVPZv myClass"
         disabled={true}
         href="www.moosend.com"
         id="button1"
@@ -274,8 +298,11 @@ exports[`Button renders correctly 1`] = `
               "darkgray3": "#424242",
               "dropdown": "#FFFFFF",
               "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
               "gray2": "#E7E7E7",
               "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
               "inverseText": "#212121",
               "medgray1": "#757575",
               "medgray2": "#888888",
@@ -283,6 +310,7 @@ exports[`Button renders correctly 1`] = `
               "primary2": "#212121",
               "primary3": "#00796B",
               "primary4": "#D32F2F",
+              "primary5": "#f0b941",
               "secondary1": "#2E7D32",
               "secondary2": "#757575",
               "secondary3": "#673AB7",
@@ -307,8 +335,11 @@ exports[`Button renders correctly 1`] = `
               "darkgray3": "#424242",
               "dropdown": "#FFFFFF",
               "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
               "gray2": "#E7E7E7",
               "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
               "inverseText": "#212121",
               "medgray1": "#757575",
               "medgray2": "#888888",
@@ -316,6 +347,7 @@ exports[`Button renders correctly 1`] = `
               "primary2": "#212121",
               "primary3": "#00796B",
               "primary4": "#D32F2F",
+              "primary5": "#f0b941",
               "secondary1": "#2E7D32",
               "secondary2": "#757575",
               "secondary3": "#673AB7",
@@ -327,7 +359,7 @@ exports[`Button renders correctly 1`] = `
               "white": "#FFFFFF",
             },
             "fontColors": Object {
-              "accountNavigation": "#FFFFFF",
+              "accountNavigation": "#212121",
               "altWhite": "#FFFFFF",
               "autosExpression": "#212121",
               "background": "#FAFAFA",
@@ -340,8 +372,11 @@ exports[`Button renders correctly 1`] = `
               "darkgray3": "#424242",
               "dropdown": "#212121",
               "gray1": "#E0E0E0",
+              "gray100": "#F0F0F0",
               "gray2": "#E7E7E7",
               "grayAlpha": "rgba(0,0,0,0.17)",
+              "grayAlpha100": "rgba(0,0,0,0.06)",
+              "grayAlpha400": "rgba(0,0,0,0.36)",
               "inverseText": "#212121",
               "medgray1": "#757575",
               "medgray2": "#888888",
@@ -349,6 +384,7 @@ exports[`Button renders correctly 1`] = `
               "primary2": "#212121",
               "primary3": "#00796B",
               "primary4": "#D32F2F",
+              "primary5": "#f0b941",
               "secondary1": "#2E7D32",
               "secondary2": "#757575",
               "secondary3": "#673AB7",
@@ -372,7 +408,7 @@ exports[`Button renders correctly 1`] = `
         <Component
           boxAs="a"
           buttonSize="md"
-          className="sc-gtssRu sc-dlnjPT fcxKOc kRTFee myClass"
+          className="sc-gtssRu sc-dlnjPT fcxKOc hvVPZv myClass"
           disabled={true}
           href="www.moosend.com"
           id="button1"
@@ -393,8 +429,11 @@ exports[`Button renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "dropdown": "#FFFFFF",
                 "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
                 "gray2": "#E7E7E7",
                 "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
                 "inverseText": "#212121",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
@@ -402,6 +441,7 @@ exports[`Button renders correctly 1`] = `
                 "primary2": "#212121",
                 "primary3": "#00796B",
                 "primary4": "#D32F2F",
+                "primary5": "#f0b941",
                 "secondary1": "#2E7D32",
                 "secondary2": "#757575",
                 "secondary3": "#673AB7",
@@ -426,8 +466,11 @@ exports[`Button renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "dropdown": "#FFFFFF",
                 "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
                 "gray2": "#E7E7E7",
                 "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
                 "inverseText": "#212121",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
@@ -435,6 +478,7 @@ exports[`Button renders correctly 1`] = `
                 "primary2": "#212121",
                 "primary3": "#00796B",
                 "primary4": "#D32F2F",
+                "primary5": "#f0b941",
                 "secondary1": "#2E7D32",
                 "secondary2": "#757575",
                 "secondary3": "#673AB7",
@@ -446,7 +490,7 @@ exports[`Button renders correctly 1`] = `
                 "white": "#FFFFFF",
               },
               "fontColors": Object {
-                "accountNavigation": "#FFFFFF",
+                "accountNavigation": "#212121",
                 "altWhite": "#FFFFFF",
                 "autosExpression": "#212121",
                 "background": "#FAFAFA",
@@ -459,8 +503,11 @@ exports[`Button renders correctly 1`] = `
                 "darkgray3": "#424242",
                 "dropdown": "#212121",
                 "gray1": "#E0E0E0",
+                "gray100": "#F0F0F0",
                 "gray2": "#E7E7E7",
                 "grayAlpha": "rgba(0,0,0,0.17)",
+                "grayAlpha100": "rgba(0,0,0,0.06)",
+                "grayAlpha400": "rgba(0,0,0,0.36)",
                 "inverseText": "#212121",
                 "medgray1": "#757575",
                 "medgray2": "#888888",
@@ -468,6 +515,7 @@ exports[`Button renders correctly 1`] = `
                 "primary2": "#212121",
                 "primary3": "#00796B",
                 "primary4": "#D32F2F",
+                "primary5": "#f0b941",
                 "secondary1": "#2E7D32",
                 "secondary2": "#757575",
                 "secondary3": "#673AB7",
@@ -492,7 +540,7 @@ exports[`Button renders correctly 1`] = `
             as="a"
             boxAs="a"
             buttonSize="md"
-            className="sc-gtssRu sc-dlnjPT fcxKOc kRTFee myClass"
+            className="sc-gtssRu sc-dlnjPT fcxKOc hvVPZv myClass"
             disabled={true}
             href="www.moosend.com"
             id="button1"
@@ -513,8 +561,11 @@ exports[`Button renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "dropdown": "#FFFFFF",
                   "gray1": "#E0E0E0",
+                  "gray100": "#F0F0F0",
                   "gray2": "#E7E7E7",
                   "grayAlpha": "rgba(0,0,0,0.17)",
+                  "grayAlpha100": "rgba(0,0,0,0.06)",
+                  "grayAlpha400": "rgba(0,0,0,0.36)",
                   "inverseText": "#212121",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
@@ -522,6 +573,7 @@ exports[`Button renders correctly 1`] = `
                   "primary2": "#212121",
                   "primary3": "#00796B",
                   "primary4": "#D32F2F",
+                  "primary5": "#f0b941",
                   "secondary1": "#2E7D32",
                   "secondary2": "#757575",
                   "secondary3": "#673AB7",
@@ -546,8 +598,11 @@ exports[`Button renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "dropdown": "#FFFFFF",
                   "gray1": "#E0E0E0",
+                  "gray100": "#F0F0F0",
                   "gray2": "#E7E7E7",
                   "grayAlpha": "rgba(0,0,0,0.17)",
+                  "grayAlpha100": "rgba(0,0,0,0.06)",
+                  "grayAlpha400": "rgba(0,0,0,0.36)",
                   "inverseText": "#212121",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
@@ -555,6 +610,7 @@ exports[`Button renders correctly 1`] = `
                   "primary2": "#212121",
                   "primary3": "#00796B",
                   "primary4": "#D32F2F",
+                  "primary5": "#f0b941",
                   "secondary1": "#2E7D32",
                   "secondary2": "#757575",
                   "secondary3": "#673AB7",
@@ -566,7 +622,7 @@ exports[`Button renders correctly 1`] = `
                   "white": "#FFFFFF",
                 },
                 "fontColors": Object {
-                  "accountNavigation": "#FFFFFF",
+                  "accountNavigation": "#212121",
                   "altWhite": "#FFFFFF",
                   "autosExpression": "#212121",
                   "background": "#FAFAFA",
@@ -579,8 +635,11 @@ exports[`Button renders correctly 1`] = `
                   "darkgray3": "#424242",
                   "dropdown": "#212121",
                   "gray1": "#E0E0E0",
+                  "gray100": "#F0F0F0",
                   "gray2": "#E7E7E7",
                   "grayAlpha": "rgba(0,0,0,0.17)",
+                  "grayAlpha100": "rgba(0,0,0,0.06)",
+                  "grayAlpha400": "rgba(0,0,0,0.36)",
                   "inverseText": "#212121",
                   "medgray1": "#757575",
                   "medgray2": "#888888",
@@ -588,6 +647,7 @@ exports[`Button renders correctly 1`] = `
                   "primary2": "#212121",
                   "primary3": "#00796B",
                   "primary4": "#D32F2F",
+                  "primary5": "#f0b941",
                   "secondary1": "#2E7D32",
                   "secondary2": "#757575",
                   "secondary3": "#673AB7",
@@ -609,7 +669,7 @@ exports[`Button renders correctly 1`] = `
             type="submit"
           >
             <a
-              className="sc-bdnylx ckoRHe sc-gtssRu sc-dlnjPT fcxKOc kRTFee myClass"
+              className="sc-bdnylx ckoRHe sc-gtssRu sc-dlnjPT fcxKOc hvVPZv myClass"
               disabled={true}
               href="www.moosend.com"
               id="button1"
