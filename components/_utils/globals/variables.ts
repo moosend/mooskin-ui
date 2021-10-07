@@ -32,7 +32,7 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#212121',
 		client: '#E0E0E0',
-		createNew: '#FFFFFF'
+		createNew: '#FFFFFF',
 	},
 	borderColors: {
 		primary1: '#4169E1',
@@ -65,7 +65,7 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#212121',
 		client: '#E0E0E0',
-		createNew: '#FFFFFF'
+		createNew: '#FFFFFF',
 	},
 	fontColors: {
 		primary1: '#4169E1',
@@ -94,11 +94,11 @@ const theme: IStyledTheme = {
 		black: '#000000',
 		checkboxUnselected: 'rgba(0, 0, 0, 0.62)',
 		dropdown: '#212121',
-		accountNavigation: '#FFFFFF',
+		accountNavigation: '#212121',
 		submenu: '#FFFFFF',
 		autosExpression: '#212121',
 		client: '#E0E0E0',
-		createNew: '#212121'
+		createNew: '#212121',
 	},
 };
 
