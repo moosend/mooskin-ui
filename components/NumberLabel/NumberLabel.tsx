@@ -95,7 +95,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 
 	const roundValue = (value: string, acc: string, digits: { [key: string]: number }) => {
 		const array = value.split('');
-		if (value.length < 4) {
+		if (value.length <= 4) {
 			if (acc === 'high') {
 				return Math.round(Number(value) / 10) * 10;
 			} else if (acc === 'low') {
