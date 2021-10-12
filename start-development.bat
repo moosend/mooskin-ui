@@ -1,1 +1,1 @@
-start npm run playground
+start npm run storybook

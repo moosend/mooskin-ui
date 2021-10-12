@@ -1,61 +1,26 @@
 import * as React from 'react';
 
-// import loaderImage from '../../assets/images/loader/loader.png';
+// Mooskin Context HoC that passes context to component props
+import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
-import styles from './Loader.css';
+// Models
+import { ILoaderComponentProps } from './model';
 
-export interface ILoaderProps {
+// Styled Components
+import { StyledLoader } from './styles';
 
-    /** id of the loader */
-    id?: string;
+/**
+ * Loader
+ */
+export const Loader: React.FC<ILoaderComponentProps> = withMooskinContext((props) => {
+	return <StyledLoader {...props} />;
+});
 
-    /** wether the loader is active or not */
-    active: boolean;
+Loader.defaultProps = {
+	className: '',
+	size: 50,
+	spinnerWidth: 5,
+	style: {},
+};
 
-    /** custom loader */
-    loader?: string;
-
-    /** custom animation */
-    animation?: string | React.CSSProperties;
-
-    /** override loader styles */
-    style?: React.CSSProperties;
-
-    /** override loader class */
-    className?: string;
-
-}
-
-export default class Loader extends React.Component<ILoaderProps, {}> {
-
-    static defaultProps = {
-        className: '',
-        style: {}
-    };
-
-    static displayName = 'Loader';
-
-    render() {
-
-        const display = this.props.active ? '' : styles.hidden;
-
-        // const loader = this.props.loader ? this.props.loader : loaderImage;
-        const loader = this.props.loader ? this.props.loader : 'https://image.ibb.co/cMfEhU/loader.png';
-
-        const animation = this.props.animation ? this.props.animation :
-                        styles.animation;
-
-        return (
-            <div
-                style={this.props.style}
-                id={this.props.id}
-                className={`loader-component ${styles.loader} ${display} ${this.props.className}`}
-            >
-                <img
-                    src={loader}
-                    className={`${styles.image} ${animation}`}
-                />
-            </div>
-        );
-    }
-}
+Loader.displayName = 'Loader';

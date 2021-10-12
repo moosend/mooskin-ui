@@ -1,109 +1,40 @@
 import * as React from 'react';
 
-import Button from '../Button';
-import LoadingBar from './LoadingBar';
+import { LoadingBar } from './LoadingBar';
 
-import {mount, render, shallow} from 'enzyme';
+import { mount } from 'enzyme';
 
 describe('LoadingBar', () => {
+	test(`LoadingBar renders correctly`, () => {
+		const func1 = jest.fn();
+		const func2 = jest.fn();
 
-    test(`LoadingBar renders correctly`, () => {
-        const func1 = jest.fn();
-        const func2 = jest.fn();
+		const tree = mount(<LoadingBar progress={10} error={false} onLoaderError={func1} onLoaderDone={func2} />);
 
-        const tree = shallow(
-            <LoadingBar
-                progress={10}
-                className={'myClass'}
-                style={{color: 'red'}}
-                id={'5'}
-                direction="left"
-                error={false}
-                onError={func1}
-                onProgressDone={func2}
-            />
-        );
+		expect(tree).toMatchSnapshot();
+	});
 
-        expect(tree).toMatchSnapshot();
+	test(`calls done callback function on complete`, () => {
+		const func = jest.fn();
 
-    });
+		const component = mount(<LoadingBar progress={80} error={false} onLoaderDone={func} />);
 
-    test(`LoadingBar state changes reflecting received props`, () => {
-        const func = jest.fn();
+		component.setProps({ progress: 100 });
 
-        let progress = 80;
+		setTimeout(() => {
+			expect(func).toHaveBeenCalled();
+		}, 10);
+	});
 
-        const addProgress = () => {
-            progress = progress + 10;
-        };
+	test(`onLoaderError callback is called when an error prop of true is passed`, () => {
+		const func = jest.fn();
 
-        const component = shallow(
-            <LoadingBar
-                progress={progress}
-                className={'myClass'}
-                style={{color: 'red'}}
-                id={'5'}
-                direction="left"
-                error={false}
-                onProgressDone={func}
-            />
-        );
+		const component = mount(<LoadingBar progress={10} onLoaderError={func} />);
 
-        const button = shallow(
-            <Button onClick={addProgress}>Add</Button>
-        );
+		component.setProps({ error: true });
 
-        button.simulate('click');
-
-        component.setProps({progress});
-
-        expect(component.state('width')).toEqual(90);
-
-        button.simulate('click');
-
-        component.setProps({progress});
-
-        expect(component.state('width')).toEqual(100);
-
-    });
-
-    test(`onError callback is called when an error prop of true is passed`, () => {
-        const func = jest.fn();
-
-        let error = false;
-
-        const simulateError = () => {
-            error = true;
-        };
-
-        const component = shallow(
-            <LoadingBar
-                progress={10}
-                className={'myClass'}
-                style={{color: 'red'}}
-                id={'5'}
-                direction="left"
-                error={error}
-                onError={func}
-            />
-        );
-
-        const button = shallow(
-            <Button onClick={simulateError}>simulateError</Button>
-        );
-
-        expect(component.state('error')).toEqual(false);
-
-        button.simulate('click');
-
-        component.setProps({error});
-
-        expect(component.state('error')).toEqual(true);
-
-        setTimeout(() => {
-            expect(func).toHaveBeenCalled();
-        }, 1000);
-
-    });
-
+		setTimeout(() => {
+			expect(func).toHaveBeenCalled();
+		}, 10);
+	});
 });

@@ -1,39 +1,49 @@
+import { boxComponentProps } from '../Box/model';
 
 export const arrayHasDupes = (array: any[]): boolean => {
-    const n = array.length;
+	const n = array.length;
 
-    for (let i = 0; i < n; i++) {
-        for (let j = i + 1; j < n; j++) {
-            if (array[i] === array[j]){
-                return true;
-            }
-        }
-    }
+	for (let i = 0; i < n; i++) {
+		for (let j = i + 1; j < n; j++) {
+			if (array[i] === array[j]) {
+				return true;
+			}
+		}
+	}
 
-    return false;
+	return false;
 };
 
 export const debounce = (func: (...args: any[]) => any, wait: number, immediate: boolean) => {
+	let timeout: any;
 
-    let timeout: any;
+	return function () {
+		const args = arguments;
+		const later = () => {
+			timeout = null;
 
-    return function() {
-        const args = arguments;
-        const later = () => {
-            timeout = null;
+			if (!immediate) {
+				func.apply(this, args);
+			}
+		};
 
-            if (!immediate){
-                func.apply(this, args);
-            }
-        };
+		const callNow = immediate && !timeout;
 
-        const callNow = immediate && !timeout;
+		timeout && clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
 
-        timeout && clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
+		if (callNow) {
+			func.apply(this, args);
+		}
+	};
+};
 
-        if (callNow) {
-            func.apply(this, args);
-        }
-    };
+export const getBoxProps = (componentProps: any) => {
+	const boxProps: any = {};
+	Object.keys(componentProps).map((key) => {
+		if (boxComponentProps.includes(key)) {
+			boxProps[key] = (componentProps as any)[key];
+		}
+	});
+	return boxProps;
 };

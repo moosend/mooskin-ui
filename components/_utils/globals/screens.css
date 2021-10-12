@@ -1,9 +1,0 @@
-@custom-media --large (min-width: 1200px);
-@custom-media --medium (min-width: 992px) and (max-width: 1199px);
-@custom-media --small (min-width: 769px) and (max-width: 991px);
-@custom-media --xSmall (max-width: 768px);
-
-@custom-media --deviceLarge (min-device-width: 1200px);
-@custom-media --deviceMedium (min-device-width: 992px) and (max-device-width: 1199px);
-@custom-media --deviceSmall (min-device-width: 769px) and (max-device-width: 991px);
-@custom-media --deviceXsmall (max-device-width: 768px);

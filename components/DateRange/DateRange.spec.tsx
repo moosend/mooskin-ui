@@ -1,74 +1,25 @@
-import moment from 'moment';
 import * as React from 'react';
-import DateRange from './DateRange';
+import { DateRange } from './DateRange';
 
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
+
+const fn = jest.fn();
 
 describe('DateRange', () => {
-
-    test('renders correctly', () => {
-        const func = jest.fn();
-        // Date.now = jest.fn(() => new Date(moment.parseZone('2013-01-01T00:00:00-13:00').utcOffset()));
-
-        const tree = shallow(
-            <DateRange
-                onChange={func}
-                disabled
-                className="myClass"
-                style={{color: 'blue'}}
-                id={'input1'}
-                date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}}
-                label="with a label ofc"
-            />
-        );
-        expect(tree).toMatchSnapshot();
-    });
-
-    test('renders properly into dom with props', () => {
-        // Date.now = jest.fn(() => new Date(moment.parseZone('2013-01-01T00:00:00-13:00').utcOffset()));
-
-        const component = shallow(
-            <DateRange date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}}/>
-        );
-
-        expect(component.find('InputMoment').first().prop('moment'))
-        .toEqual(moment.parseZone('2013-01-01T00:00:00-13:00'));
-        expect(component.find('InputMoment').last().prop('moment'))
-        .toEqual(moment.parseZone('2013-01-01T00:00:00-13:00'));
-    });
-
-    test('onChange callback is called when date is changed', () => {
-        const func = jest.fn();
-
-        const component = mount(
-            <DateRange
-                date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}}
-                onChange={func}
-            />
-        );
-
-        component.find('InputMoment').first().find('td').at(15).simulate('click');
-        expect(func).not.toHaveBeenCalled();
-
-        component.find('Button').last().simulate('click');
-        expect(func).toHaveBeenCalled();
-    });
-
-    test('dateRange shows when input is clicked and disappears when anywhere except dateRange is clicked', () => {
-        const func = jest.fn();
-
-        const component = mount(
-            <DateRange
-                date={{start: moment.parseZone('2013-01-01T00:00:00-13:00'), end: moment.parseZone('2013-01-01T00:00:00-13:00')}}
-                onChange={func}
-            />
-        );
-
-        component.find('input').first().simulate('click');
-        expect(component.find('div').at(2).prop('style')).toEqual({display: 'block', left: 0});
-
-        component.find('div').last().simulate('click');
-        expect(component.find('div').at(2).prop('style')).toEqual({display: 'none', left: 0});
-    });
-
+	test('renders correctly', () => {
+		const mockDate = new Date(1466424490000);
+		const tree = mount(
+			<DateRange
+				onChange={fn}
+				ranges={[
+					{
+						endDate: mockDate,
+						key: 'selection',
+						startDate: mockDate,
+					},
+				]}
+			/>
+		);
+		expect(tree).toMatchSnapshot();
+	});
 });
