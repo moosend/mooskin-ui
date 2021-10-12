@@ -13,6 +13,10 @@ export interface IThemeFontColors {
 	white: string;
 	altWhite: string;
 	background: string;
+	blue400: string;
+	teal400: string;
+	pink400: string;
+	orange400: string;
 	grayAlpha: string;
 	grayAlpha100: string;
 	grayAlpha400: string;
@@ -51,6 +55,10 @@ export interface IThemeBackgroundColors {
 	white: string;
 	altWhite: string;
 	background: string;
+	blue400: string;
+	teal400: string;
+	pink400: string;
+	orange400: string;
 	grayAlpha: string;
 	grayAlpha100: string;
 	grayAlpha400: string;
@@ -89,6 +97,10 @@ export interface IThemeBorderColors {
 	white: string;
 	altWhite: string;
 	background: string;
+	blue400: string;
+	teal400: string;
+	pink400: string;
+	orange400: string;
 	grayAlpha: string;
 	grayAlpha100: string;
 	grayAlpha400: string;
@@ -105,7 +117,7 @@ export interface IThemeBorderColors {
 	black: string;
 	checkboxUnselected: string;
 	dropdown: string;
-	accountNavigation: string
+	accountNavigation: string;
 	submenu: string;
 	autosExpression: string;
 	client: string;

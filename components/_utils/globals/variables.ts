@@ -16,6 +16,10 @@ const theme: IStyledTheme = {
 		white: '#FFFFFF',
 		altWhite: '#FFFFFF',
 		background: '#FAFAFA',
+		blue400: '#4299E1',
+		teal400: '#38B2AC',
+		pink400: '#ED64A6',
+		orange400: '#ED8936',
 		grayAlpha: 'rgba(0,0,0,0.17)',
 		grayAlpha100: 'rgba(0,0,0,0.06)',
 		grayAlpha400: 'rgba(0,0,0,0.36)',
@@ -36,7 +40,7 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#212121',
 		client: '#E0E0E0',
-		createNew: '#FFFFFF'
+		createNew: '#FFFFFF',
 	},
 	borderColors: {
 		primary1: '#4169E1',
@@ -53,6 +57,10 @@ const theme: IStyledTheme = {
 		white: '#FFFFFF',
 		altWhite: '#FFFFFF',
 		background: '#FAFAFA',
+		blue400: '#4299E1',
+		teal400: '#38B2AC',
+		pink400: '#ED64A6',
+		orange400: '#ED8936',
 		grayAlpha: 'rgba(0,0,0,0.17)',
 		grayAlpha100: 'rgba(0,0,0,0.06)',
 		grayAlpha400: 'rgba(0,0,0,0.36)',
@@ -73,7 +81,7 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#212121',
 		client: '#E0E0E0',
-		createNew: '#FFFFFF'
+		createNew: '#FFFFFF',
 	},
 	fontColors: {
 		primary1: '#4169E1',
@@ -90,6 +98,10 @@ const theme: IStyledTheme = {
 		white: '#FFFFFF',
 		altWhite: '#FFFFFF',
 		background: '#FAFAFA',
+		blue400: '#4299E1',
+		teal400: '#38B2AC',
+		pink400: '#ED64A6',
+		orange400: '#ED8936',
 		grayAlpha: 'rgba(0,0,0,0.17)',
 		grayAlpha100: 'rgba(0,0,0,0.06)',
 		grayAlpha400: 'rgba(0,0,0,0.36)',
@@ -110,7 +122,7 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#212121',
 		client: '#E0E0E0',
-		createNew: '#212121'
+		createNew: '#212121',
 	},
 };
 
