@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Box,
-	title: 'Example/Box',
+	title: 'Example/Box'
 } as any) as Meta;
 
 const Template: Story<IBoxComponentProps> = (args) => {
@@ -27,5 +27,5 @@ Normal.args = {
 	children: 'Box',
 	color: 'blue',
 	p: 30,
-	round: 'md',
+	round: 'md'
 };

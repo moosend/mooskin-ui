@@ -13,7 +13,7 @@ const AlertIcons = {
 	error: 'error',
 	info: 'announcement',
 	success: 'check_circle',
-	warning: 'warning',
+	warning: 'warning'
 };
 
 /**
@@ -34,7 +34,7 @@ export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext((pro
 					children: recurseChildren(child.props.children),
 					key: i,
 					status: child.props.status ? child.props.status : props.status,
-					variant: child.props.variant ? child.props.variant : props.variant,
+					variant: child.props.variant ? child.props.variant : props.variant
 				} as IBaseAlertComponentProps);
 			}
 
@@ -53,7 +53,7 @@ Alert.defaultProps = {
 	className: '',
 	status: 'info',
 	style: {},
-	variant: 'subtle',
+	variant: 'subtle'
 };
 
 Alert.displayName = 'Alert';
@@ -67,7 +67,7 @@ export const AlertIcon: React.FC<IBaseAlertComponentProps> = withMooskinContext(
 
 AlertIcon.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 AlertIcon.displayName = 'AlertIcon';
@@ -81,7 +81,7 @@ export const AlertTitle: React.FC<IBaseAlertComponentProps> = withMooskinContext
 
 AlertTitle.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 AlertTitle.displayName = 'AlertTitle';
@@ -95,7 +95,7 @@ export const AlertDescription: React.FC<IBaseAlertComponentProps> = withMooskinC
 
 AlertDescription.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 AlertDescription.displayName = 'AlertDescription';
@@ -109,7 +109,7 @@ export const AlertCloseButton: React.FC<IBaseAlertComponentProps> = withMooskinC
 
 AlertCloseButton.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 AlertCloseButton.displayName = 'AlertCloseButton';

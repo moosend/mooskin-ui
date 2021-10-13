@@ -20,7 +20,7 @@ Loader.defaultProps = {
 	className: '',
 	size: 50,
 	spinnerWidth: 5,
-	style: {},
+	style: {}
 };
 
 Loader.displayName = 'Loader';

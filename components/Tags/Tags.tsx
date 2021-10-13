@@ -57,8 +57,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 						</>
 					),
 					key: i,
-					onClick: (e: React.MouseEvent<HTMLElement>) =>
-						batchClickHandler(e, { dataLabel: props.dataLabel, value: i }, child.props.onClick),
+					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, { dataLabel: props.dataLabel, value: i }, child.props.onClick)
 				} as ITagComponentProps);
 			}
 
@@ -67,14 +66,14 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 				return React.cloneElement(child, {
 					children: child.props.children ? child.props.children : 'highlight_off',
 					key: i,
-					onClick: child.props.onClick ? child.props.onClick : (e) => onRemoveTag(e, tagIndex ?? 0),
+					onClick: child.props.onClick ? child.props.onClick : (e) => onRemoveTag(e, tagIndex ?? 0)
 				} as IBoxComponentProps);
 			}
 
 			if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput) {
 				return React.cloneElement(child, {
 					key: i,
-					onAddTag,
+					onAddTag
 				} as ITagsInputComponentProps);
 			}
 
@@ -91,7 +90,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 
 Tags.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Tags.displayName = 'Tags';
@@ -106,7 +105,7 @@ export const Tag: React.FC<ITagComponentProps> = withMooskinContext((props) => {
 Tag.defaultProps = {
 	className: '',
 	removeIcon: true,
-	style: {},
+	style: {}
 };
 
 Tag.displayName = 'Tag';
@@ -184,7 +183,7 @@ export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext((
 TagInput.defaultProps = {
 	className: '',
 	delimiters: ['Enter', 13],
-	style: {},
+	style: {}
 };
 
 TagInput.displayName = 'TagInput';
@@ -198,7 +197,7 @@ export const TagClose: React.FC<IBoxComponentProps> = withMooskinContext((props)
 
 TagClose.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 TagClose.displayName = 'TagClose';
@@ -212,7 +211,7 @@ export const TagText: React.FC<IBoxComponentProps> = withMooskinContext((props) 
 
 TagText.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 TagText.displayName = 'TagText';
@@ -280,7 +279,6 @@ const getConvertedDelimiters = (delimiters: any) => {
 // };
 
 // const checkIfEmail = (tag: string) => {
-//     // tslint:disable-next-line
 //     const re = /(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s
 //      @\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/;
 //     return re.test(tag);

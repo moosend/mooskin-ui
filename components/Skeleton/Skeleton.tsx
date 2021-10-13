@@ -26,7 +26,7 @@ Skeleton.defaultProps = {
 	isLoaded: false,
 	speed: 0.8,
 	startColor: '#EDF2F7',
-	style: {},
+	style: {}
 };
 
 Skeleton.displayName = 'Skeleton';
@@ -49,7 +49,7 @@ SkeletonCircle.defaultProps = {
 	size: '20px',
 	speed: 0.8,
 	startColor: '#EDF2F7',
-	style: {},
+	style: {}
 };
 
 SkeletonCircle.displayName = 'Skeleton';
@@ -84,7 +84,7 @@ SkeletonText.defaultProps = {
 	lines: 4,
 	speed: 0.8,
 	startColor: '#EDF2F7',
-	style: {},
+	style: {}
 };
 
 SkeletonText.displayName = 'Skeleton';

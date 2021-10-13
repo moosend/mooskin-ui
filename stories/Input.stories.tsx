@@ -9,7 +9,7 @@ import {
 	InputIcon,
 	InputOption,
 	InputOptionList,
-	InputOptionListTitle,
+	InputOptionListTitle
 } from '../components/Input/Input';
 import { IInputContainerComponentProps } from '../components/Input/model';
 
@@ -23,7 +23,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Input,
-	title: 'Example/Input',
+	title: 'Example/Input'
 } as any) as Meta;
 
 const Template: Story<IInputContainerComponentProps> = (args) => {
@@ -55,7 +55,7 @@ Normal.args = {
 				<InputIcon>search</InputIcon>
 			</InputContainer>
 		</>
-	),
+	)
 } as IInputContainerComponentProps;
 
 export const WithLabel = Template.bind({});
@@ -65,7 +65,7 @@ WithLabel.args = {
 			<Label>Some Field:</Label>
 			<Input autoFocus />
 		</>
-	),
+	)
 } as IInputContainerComponentProps;
 
 export const WithDescription = Template.bind({});
@@ -76,5 +76,5 @@ WithDescription.args = {
 			<Description>Description goes here</Description>
 		</>
 	),
-	d: 'block',
+	d: 'block'
 } as IInputContainerComponentProps;

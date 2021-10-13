@@ -8,7 +8,7 @@ import {
 	ExpandableItemButton,
 	ExpandableItemContainer,
 	ExpandableItemContent,
-	ExpandableItemText,
+	ExpandableItemText
 } from '../components/Expandable/Expandable';
 import { IExpandableComponentProps } from '../components/Expandable/model';
 
@@ -16,7 +16,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Expandable,
-	title: 'Example/Expandable',
+	title: 'Example/Expandable'
 } as any) as Meta;
 
 const Template: Story<IExpandableComponentProps> = (args) => {
@@ -47,5 +47,5 @@ Normal.args = {
 				</ExpandableItemContent>
 			</ExpandableItem>
 		);
-	}),
+	})
 } as IExpandableComponentProps;

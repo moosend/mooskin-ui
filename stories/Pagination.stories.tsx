@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Pagination,
-	title: 'Example/Pagination',
+	title: 'Example/Pagination'
 } as any) as Meta;
 
 const Template: Story<IPaginationComponentProps> = (args) => {
@@ -26,5 +26,5 @@ export const Normal = Template.bind({});
 Normal.args = {
 	children: [...Array(9)].map((item, i) => {
 		return <PaginationButton key={i} />;
-	}),
+	})
 } as IPaginationComponentProps;

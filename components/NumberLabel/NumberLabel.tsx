@@ -29,7 +29,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 			billion: 1000000000,
 			million: 1000000,
 			thousand: 1000,
-			trillion: 1000000000000,
+			trillion: 1000000000000
 		};
 
 		if (value < digits.thousand) {
@@ -170,7 +170,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 NumberLabel.defaultProps = {
 	abbrAccuracy: 1,
 	className: '',
-	style: {},
+	style: {}
 };
 
 NumberLabel.displayName = 'NumberLabel';

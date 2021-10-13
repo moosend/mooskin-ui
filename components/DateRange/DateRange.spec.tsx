@@ -15,8 +15,8 @@ describe('DateRange', () => {
 					{
 						endDate: mockDate,
 						key: 'selection',
-						startDate: mockDate,
-					},
+						startDate: mockDate
+					}
 				]}
 			/>
 		);

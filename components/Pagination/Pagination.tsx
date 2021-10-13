@@ -84,7 +84,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 						? React.cloneElement(child, {
 								active: true,
 								children: page,
-								key: i,
+								key: i
 								// onClick: (e) => batchClickHandler(e, page, child.props.onClick),
 						  } as IPaginationButtonComponentProps)
 						: null;
@@ -95,7 +95,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 						active: page === props.activePage,
 						children: page,
 						key: i,
-						onClick: (e) => batchClickHandler(e, page, child.props.onClick),
+						onClick: (e) => batchClickHandler(e, page, child.props.onClick)
 					} as IPaginationButtonComponentProps);
 				}
 				return null;
@@ -165,7 +165,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 
 Pagination.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Pagination.displayName = 'Pagination';
@@ -179,7 +179,7 @@ export const PaginationButton: React.FC<IPaginationButtonComponentProps> = withM
 
 PaginationButton.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 PaginationButton.displayName = 'PaginationButton';

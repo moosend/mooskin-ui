@@ -22,7 +22,7 @@ import {
 	StyledSelectOptionListFadeOut,
 	StyledSelectOverlay,
 	StyledSelectPagination,
-	StyledSelectPlaceholder,
+	StyledSelectPlaceholder
 } from './styles';
 
 // Transitions
@@ -32,7 +32,7 @@ const OptionListComponents = {
 	entering: StyledSelectOptionListFadeIn,
 	exited: null,
 	exiting: StyledSelectOptionListFadeOut,
-	unmounted: null,
+	unmounted: null
 };
 
 /**
@@ -143,7 +143,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 					),
 					key: i,
 					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
-					value: child.props.value,
+					value: child.props.value
 				} as ISelectOptionComponentProps);
 
 				if (filterValue && label) {
@@ -162,7 +162,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 						onClick: (e: React.MouseEvent<HTMLInputElement>) => {
 							e.stopPropagation();
 							child.props.onClick && child.props.onClick(e);
-						},
+						}
 					} as IInputBoxComponentProps);
 				}
 				return null;
@@ -172,7 +172,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
 					key: i,
-					showList: child.props.showList || showList,
+					showList: child.props.showList || showList
 				} as IBoxComponentProps);
 			}
 
@@ -181,7 +181,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 					const placeholder = getPlaceholder(props.children);
 					return React.cloneElement(child, {
 						children: props.selectedValue && placeholder ? placeholder : recurseChildren(child.props.children),
-						key: i,
+						key: i
 					} as IBoxComponentProps);
 				}
 				return null;
@@ -202,7 +202,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 						</>
 					),
 					key: i,
-					onClick: !props.disabled ? toggleList : undefined,
+					onClick: !props.disabled ? toggleList : undefined
 				} as IBoxComponentProps);
 			}
 
@@ -211,7 +211,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 				return React.cloneElement(child, {
 					children: !showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up',
 					key: i,
-					onClick: toggleList,
+					onClick: toggleList
 				} as IBoxComponentProps);
 			}
 
@@ -220,7 +220,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 				if (showList) {
 					return React.cloneElement(child, {
 						key: i,
-						onClick: toggleList,
+						onClick: toggleList
 					} as IBoxComponentProps);
 				}
 				return null;
@@ -244,7 +244,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 
 Select.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Select.displayName = 'Select';
@@ -258,7 +258,7 @@ export const SelectContainer: React.FC<IBoxComponentProps> = withMooskinContext(
 
 SelectContainer.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SelectContainer.displayName = 'SelectContainer';
@@ -272,7 +272,7 @@ export const SelectPlaceholder: React.FC<IBoxComponentProps> = withMooskinContex
 
 SelectPlaceholder.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SelectPlaceholder.displayName = 'SelectPlaceholder';
@@ -296,7 +296,7 @@ export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinCon
 
 SelectOptionList.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SelectOptionList.displayName = 'SelectOptionList';
@@ -310,7 +310,7 @@ export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinCo
 
 SelectOption.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SelectOption.displayName = 'SelectOption';
@@ -324,7 +324,7 @@ export const SelectFilter: React.FC<IInputBoxComponentProps> = withMooskinContex
 
 SelectFilter.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SelectFilter.displayName = 'SelectFilter';
@@ -338,7 +338,7 @@ export const SelectLoader: React.FC<IBoxComponentProps> = withMooskinContext((pr
 
 SelectLoader.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SelectLoader.displayName = 'SelectLoader';
@@ -352,7 +352,7 @@ export const SelectIcon: React.FC<IBoxComponentProps> = withMooskinContext((prop
 
 SelectIcon.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SelectIcon.displayName = 'SelectIcon';
@@ -366,7 +366,7 @@ export const SelectOverlay: React.FC<IBoxComponentProps> = withMooskinContext((p
 
 SelectOverlay.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SelectOverlay.displayName = 'SelectOverlay';
@@ -404,7 +404,7 @@ export const SelectPagination: React.FC<ISelectPaginationComponentProps> = withM
 
 SelectPagination.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SelectPagination.displayName = 'SelectPagination';

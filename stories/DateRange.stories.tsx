@@ -12,14 +12,14 @@ import { MooskinContextProvider } from '../components/Styled/MooskinContextProvi
 
 export default ({
 	component: DateRange,
-	title: 'Example/DateRange',
+	title: 'Example/DateRange'
 } as any) as Meta;
 
 const Template: Story<IDateRangePickerComponentProps> = (args) => {
 	const [range, setRange] = React.useState({
 		endDate: new Date(),
 		key: 'selection',
-		startDate: new Date(),
+		startDate: new Date()
 	});
 	const [palette, setPalette] = React.useState(variables);
 
@@ -38,7 +38,7 @@ const Template: Story<IDateRangePickerComponentProps> = (args) => {
 								primary2: '#F42711',
 								gray2: '#282828',
 								white: '#313131',
-								background: '#242424',
+								background: '#242424'
 							},
 							fontColors: {
 								...variables.fontColors,
@@ -47,9 +47,9 @@ const Template: Story<IDateRangePickerComponentProps> = (args) => {
 								text: '#FFFFFF',
 								white: '#fff',
 								medgray1: '#fff',
-								checkboxUnselected: '#fff',
+								checkboxUnselected: '#fff'
 							},
-							borderColors: { ...variables.borderColors, primary1: '#F42711' },
+							borderColors: { ...variables.borderColors, primary1: '#F42711' }
 						})
 					}
 				>

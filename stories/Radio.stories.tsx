@@ -12,7 +12,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Radio,
-	title: 'Example/Radio',
+	title: 'Example/Radio'
 } as any) as Meta;
 
 const Template: Story<IRadioComponentProps> = (args) => {
@@ -32,20 +32,20 @@ const Template: Story<IRadioComponentProps> = (args) => {
 export const Normal = Template.bind({});
 Normal.args = {
 	children: <RadioLabel>Normal Radio</RadioLabel>,
-	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
+	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;
 
 export const Selected = Template.bind({});
 Selected.args = {
 	children: <RadioLabel>Selected Radio</RadioLabel>,
-	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
+	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	children: <RadioLabel>Disabled Radio</RadioLabel>,
 	disabled: true,
-	onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
+	onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;
 
 export const Description = Template.bind({});
@@ -56,7 +56,7 @@ Description.args = {
 			<RadioDescription>Radio description goes here</RadioDescription>
 		</Box>
 	),
-	onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
+	onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;
 
 export const CustomButton = Template.bind({});
@@ -67,5 +67,5 @@ CustomButton.args = {
 			<RadioLabel>Normal Radio</RadioLabel>
 		</>
 	),
-	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
+	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
 } as IRadioComponentProps;

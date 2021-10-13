@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Selector,
-	title: 'Example/Selector',
+	title: 'Example/Selector'
 } as any) as Meta;
 
 const Template: Story<ISelectorComponentProps> = (args) => {
@@ -32,5 +32,5 @@ Normal.args = {
 			</SelectorItem>
 			<SelectorItem value={3}>IMPORT</SelectorItem>
 		</>
-	),
+	)
 } as ISelectorComponentProps;

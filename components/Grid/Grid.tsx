@@ -18,7 +18,7 @@ export const Grid: React.FC<IGridProps> = withMooskinContext((props) => {
 
 Grid.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Grid.displayName = 'Grid';
@@ -32,7 +32,7 @@ export const Row: React.FC<IRowProps> = withMooskinContext((props) => {
 
 Row.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Row.displayName = 'Row';
@@ -46,7 +46,7 @@ export const Col: React.FC<IColProps> = withMooskinContext((props) => {
 
 Col.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Col.displayName = 'Col';

@@ -7,7 +7,7 @@ import {
 	SelectOption,
 	SelectOptionList,
 	SelectOverlay,
-	SelectPlaceholder,
+	SelectPlaceholder
 } from './Select';
 
 import { mount, shallow } from 'enzyme';

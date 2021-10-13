@@ -21,7 +21,7 @@ export const TextArea: React.FC<ITextAreaComponentProps> = withMooskinContext((p
 
 TextArea.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 TextArea.displayName = 'TextArea';

@@ -10,7 +10,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Table,
-	title: 'Example/Table',
+	title: 'Example/Table'
 } as any) as Meta;
 
 const Template: Story<IBoxComponentProps> = (args) => {
@@ -60,5 +60,5 @@ Normal.args = {
 				<TableRowItem flex={2}>Actions</TableRowItem>
 			</TableRow>
 		</>
-	),
+	)
 } as IBoxComponentProps;

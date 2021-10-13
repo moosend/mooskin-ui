@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Slider,
-	title: 'Example/Slider',
+	title: 'Example/Slider'
 } as any) as Meta;
 
 const Template: Story<ISliderComponentProps> = (args) => {
@@ -23,5 +23,5 @@ const Template: Story<ISliderComponentProps> = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-	onChangeSlider: (e, data) => console.log(e, data),
+	onChangeSlider: (e, data) => console.log(e, data)
 } as ISliderComponentProps;

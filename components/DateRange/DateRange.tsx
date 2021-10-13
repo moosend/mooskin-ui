@@ -63,7 +63,7 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinCo
 DateRange.defaultProps = {
 	className: '',
 	direction: 'horizontal',
-	format: defaultFormat,
+	format: defaultFormat
 	// months: 2
 };
 
@@ -78,7 +78,7 @@ const DateRangeOverlay: React.FC<IBoxComponentProps> = (props) => {
 
 DateRangeOverlay.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 DateRangeOverlay.displayName = 'DateRangeOverlay';

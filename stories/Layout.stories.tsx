@@ -10,7 +10,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Layout,
-	title: 'Example/Layout',
+	title: 'Example/Layout'
 } as any) as Meta;
 
 const Template: Story<ILayoutComponentProps> = (args) => {
@@ -52,5 +52,5 @@ Normal.args = {
 			</Box>
 		</>
 	),
-	cols: 3,
+	cols: 3
 } as ILayoutComponentProps;

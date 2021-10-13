@@ -12,7 +12,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Tags,
-	title: 'Example/StackedTabs',
+	title: 'Example/StackedTabs'
 } as any) as Meta;
 
 const Template: Story<ITagsComponentProps> = (args) => {
