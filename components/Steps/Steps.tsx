@@ -48,7 +48,7 @@ export const Steps: React.FC<IStepsComponentProps> = withMooskinContext((props) 
 							{hasArrow && <StepArrow children="keyboard_arrow_right" />}
 						</>
 					),
-					onClick: (e) => (!child.props.disabled ? batchClickHandler(e, activeId, child.props.onClick) : undefined),
+					onClick: (e) => (!child.props.disabled ? batchClickHandler(e, activeId, child.props.onClick) : undefined)
 				} as IStepHeaderComponentProps);
 			}
 
@@ -90,7 +90,7 @@ export const Steps: React.FC<IStepsComponentProps> = withMooskinContext((props) 
 
 Steps.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Steps.displayName = 'Steps';
@@ -104,7 +104,7 @@ export const Step: React.FC<IStepComponentProps> = withMooskinContext((props) =>
 
 Step.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Step.displayName = 'Step';
@@ -118,7 +118,7 @@ export const StepHeader: React.FC<IStepHeaderComponentProps> = withMooskinContex
 
 StepHeader.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 StepHeader.displayName = 'StepHeader';
@@ -132,7 +132,7 @@ export const StepContent: React.FC<IStepCommonComponentProps> = withMooskinConte
 
 StepContent.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 StepContent.displayName = 'StepContent';
@@ -146,7 +146,7 @@ const StepArrow: React.FC<IStepCommonComponentProps> = withMooskinContext((props
 
 StepArrow.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 StepArrow.displayName = 'StepArrow';

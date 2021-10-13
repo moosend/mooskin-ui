@@ -24,7 +24,7 @@ export const Text: React.FC<ITextComponentProps> = withMooskinContext((props) =>
 
 Text.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Text.displayName = 'Text';

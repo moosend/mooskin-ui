@@ -9,7 +9,7 @@ import {
 	DrawerContent,
 	DrawerFooter,
 	DrawerHeader,
-	DrawerOverlay,
+	DrawerOverlay
 } from '../components/Drawer/Drawer';
 import { IDrawerComponentProps } from '../components/Drawer/model';
 
@@ -17,7 +17,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Drawer,
-	title: 'Example/Drawer',
+	title: 'Example/Drawer'
 } as any) as Meta;
 
 const Template: Story<IDrawerComponentProps> = (args) => {
@@ -44,7 +44,7 @@ Normal.args = {
 		</DrawerOverlay>
 	),
 	isOpen: true,
-	onClose: () => alert('Close!'),
+	onClose: () => alert('Close!')
 } as IDrawerComponentProps;
 
 export const Large = Template.bind({});
@@ -64,7 +64,7 @@ Large.args = {
 	isOpen: true,
 	onClose: () => alert('Close!'),
 	onOpen: () => alert('Open!'),
-	size: 'lg',
+	size: 'lg'
 } as IDrawerComponentProps;
 
 export const Bottom = Template.bind({});
@@ -84,5 +84,5 @@ Bottom.args = {
 	isOpen: true,
 	onClose: () => alert('Close!'),
 	placement: 'bottom',
-	size: 'md',
+	size: 'md'
 } as IDrawerComponentProps;

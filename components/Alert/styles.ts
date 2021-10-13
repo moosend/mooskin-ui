@@ -12,14 +12,14 @@ const SolidBackgroundColors = {
 	error: variables.backgroundColors.primary4,
 	info: variables.backgroundColors.primary1,
 	success: variables.backgroundColors.secondary1,
-	warning: 'rgb(221, 107, 32)',
+	warning: 'rgb(221, 107, 32)'
 };
 
 const FontColors = {
 	error: variables.backgroundColors.primary4,
 	info: variables.backgroundColors.primary1,
 	success: variables.backgroundColors.secondary1,
-	warning: '#DD6B20',
+	warning: '#DD6B20'
 };
 
 export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`

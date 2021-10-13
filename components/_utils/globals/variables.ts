@@ -40,7 +40,7 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#212121',
 		client: '#E0E0E0',
-		createNew: '#FFFFFF',
+		createNew: '#FFFFFF'
 	},
 	borderColors: {
 		primary1: '#4169E1',
@@ -81,7 +81,7 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#212121',
 		client: '#E0E0E0',
-		createNew: '#FFFFFF',
+		createNew: '#FFFFFF'
 	},
 	fontColors: {
 		primary1: '#4169E1',
@@ -122,8 +122,8 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#212121',
 		client: '#E0E0E0',
-		createNew: '#212121',
-	},
+		createNew: '#212121'
+	}
 };
 
 export default theme;

@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Tabs,
-	title: 'Example/Tabs',
+	title: 'Example/Tabs'
 } as any) as Meta;
 
 const Template: Story<ITabsComponentProps> = (args) => {
@@ -34,5 +34,5 @@ Normal.args = {
 			</Tab>
 		);
 	}),
-	onClickTab: (e: React.MouseEvent<HTMLElement>, value: number) => console.log(e, value),
+	onClickTab: (e: React.MouseEvent<HTMLElement>, value: number) => console.log(e, value)
 } as ITabsComponentProps;

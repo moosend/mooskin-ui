@@ -94,7 +94,7 @@ HStack.defaultProps = {
 	flexWrap: 'wrap',
 	justify: 'initial',
 	spacing: 0,
-	style: {},
+	style: {}
 };
 
 HStack.displayName = 'HStack';
@@ -113,7 +113,7 @@ VStack.defaultProps = {
 	flexWrap: 'wrap',
 	justify: 'center',
 	spacing: 0,
-	style: {},
+	style: {}
 };
 
 VStack.displayName = 'VStack';

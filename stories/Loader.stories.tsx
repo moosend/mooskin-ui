@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Loader,
-	title: 'Example/Loader',
+	title: 'Example/Loader'
 } as any) as Meta;
 
 const Template: Story<ILoaderComponentProps> = (args) => {

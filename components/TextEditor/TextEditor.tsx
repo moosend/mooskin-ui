@@ -22,12 +22,12 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = (props) => {
 									editor.insertContent(item.value);
 								},
 								text: item.label,
-								type: 'menuitem',
+								type: 'menuitem'
 							};
 						});
 					callback(items);
 				},
-				text: props.personalizationTags.buttonLabel,
+				text: props.personalizationTags.buttonLabel
 			});
 	};
 
@@ -47,7 +47,7 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = (props) => {
 				setup: props.personalizationTags ? getSetup : undefined,
 				...props.init,
 				menubar: props.menubar,
-				selector: props.selector,
+				selector: props.selector
 			}}
 		/>
 	);
@@ -84,7 +84,7 @@ TextEditor.defaultProps = {
 		// 'template',
 		'toc',
 		'visualblocks',
-		'wordcount',
+		'wordcount'
 	],
 	// style: {},
 	// toolbar: `bullist numlist | emoticons | code | image | anchor link | paste pastetext |
@@ -101,7 +101,7 @@ TextEditor.defaultProps = {
             formatselect |
             fontselect fontsizeselect forecolor backcolor |
             visualblocks |
-            code |`,
+            code |`
 };
 
 TextEditor.displayName = 'TextEditor';

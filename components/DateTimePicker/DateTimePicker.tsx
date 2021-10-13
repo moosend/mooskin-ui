@@ -18,7 +18,7 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 const ComponentByType = {
 	'date-time': DateTimePickerUI,
-	'date-time-keyboard': KeyboardDateTimePicker,
+	'date-time-keyboard': KeyboardDateTimePicker
 };
 
 /**
@@ -31,82 +31,83 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 				MuiButton: {
 					textPrimary: {
 						backgroundColor: (props as any).palette.backgroundColors.background || variables.backgroundColors.background,
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
 					},
 					label: {
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
 					}
 				},
 				MuiPaper: {
 					root: {
-						backgroundColor: (props as any).palette.backgroundColors.white || variables.backgroundColors.white,
-					},
+						backgroundColor: (props as any).palette.backgroundColors.white || variables.backgroundColors.white
+					}
 				},
 				MuiPickersCalendarHeader: {
 					switchHeader: {
 						backgroundColor: (props as any).palette.backgroundColors.background || variables.backgroundColors.background,
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
 					},
 					iconButton: {
-						backgroundColor: (props as any).palette.backgroundColors.primary1 + "!important" || variables.backgroundColors.primary1 + "!important",
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+						backgroundColor:
+							(props as any).palette.backgroundColors.primary1 + '!important' || variables.backgroundColors.primary1 + '!important',
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
 					},
 					dayLabel: {
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
 					}
 				},
 				MuiPickersDay: {
 					current: {
-						color: (props as any).palette.fontColors.white || variables.fontColors.white,
+						color: (props as any).palette.fontColors.white || variables.fontColors.white
 					},
 					day: {
 						backgroundColor: (props as any).palette.backgroundColors.background || variables.backgroundColors.background,
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
 					},
 					dayDisabled: {
-						color: (props as any).palette.backgroundColors.medgray1 || variables.backgroundColors.medgray1,
+						color: (props as any).palette.backgroundColors.medgray1 || variables.backgroundColors.medgray1
 					},
 					daySelected: {
 						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
-						color: (props as any).palette.fontColors.white || variables.fontColors.white,
-					},
+						color: (props as any).palette.fontColors.white || variables.fontColors.white
+					}
 				},
 				MuiTypography: {
 					body2: {
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
 					},
 					alignCenter: {
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
 					}
 				},
 				MuiIconButton: {
 					label: {
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
 					}
 				},
 				MuiPickersModal: {
 					dialogAction: {
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
-					},
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
+					}
 				},
 				MuiPickersSlideTransition: {
 					transitionContainer: {
-						color: (props as any).palette.fontColors.text || variables.fontColors.text,
-					},
+						color: (props as any).palette.fontColors.text || variables.fontColors.text
+					}
 				},
 				MuiPickersToolbar: {
 					toolbar: {
-						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
-					},
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1
+					}
 				},
 				MuiPickersToolbarButton: {
 					toolbarBtn: {
-						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
-					},
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1
+					}
 				},
 				MuiPickersClock: {
 					pin: {
-						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1
 					}
 				},
 				MuiPickersClockNumber: {
@@ -116,17 +117,17 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 				},
 				MuiPickersClockPointer: {
 					pointer: {
-						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1
 					},
 					thumb: {
 						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
-						borderColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+						borderColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1
 					},
 					noPoint: {
-						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1,
+						backgroundColor: (props as any).palette.backgroundColors.primary1 || variables.backgroundColors.primary1
 					}
 				}
-			},
+			}
 		} as any);
 
 		const renderInput = (dateInputProps: any) => <Input style={{ width: '100%' }} {...dateInputProps} {...props.inputComponentProps} />;
@@ -148,7 +149,7 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 DateTimePicker.defaultProps = {
 	ampm: false,
 	format: 'dd/MM/yyyy HH:ss',
-	pickerType: 'date-time',
+	pickerType: 'date-time'
 	// variant: 'inline',
 };
 

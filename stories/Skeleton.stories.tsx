@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Skeleton,
-	title: 'Example/Skeleton',
+	title: 'Example/Skeleton'
 } as any) as Meta;
 
 const SkeletonTemplate: Story<ICommonSkeletonComponentProps> = (args) => {
@@ -41,7 +41,7 @@ const TextTemplate: Story<ISkeletonTextComponentProps> = (args) => {
 
 const boxStyle = {
 	height: 40,
-	width: 40,
+	width: 40
 };
 
 export const NormalSkeleton = SkeletonTemplate.bind({});
@@ -53,12 +53,12 @@ NormalSkeleton.args = {
 			<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
 		</div>
 	),
-	spacing: 20,
+	spacing: 20
 } as ICommonSkeletonComponentProps;
 
 export const CircleSkeleton = CircleTemplate.bind({});
 CircleSkeleton.args = {
-	size: '40px',
+	size: '40px'
 } as ISkeletonCircleComponentProps;
 
 export const TextSkeleton = TextTemplate.bind({});
@@ -72,5 +72,5 @@ TextSkeleton.args = {
 			PageMaker including versions of Lorem Ipsum.
 		</div>
 	),
-	lines: 5,
+	lines: 5
 } as ISkeletonTextComponentProps;

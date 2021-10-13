@@ -12,7 +12,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: DateSelect,
-	title: 'Example/DateSelect',
+	title: 'Example/DateSelect'
 } as any) as Meta;
 
 const Template: Story<IDateSelectComponentProps> = (args) => {
@@ -34,7 +34,7 @@ TwelveHour.args = {
 	dataLabel: 'DateSelect',
 	format: '12-Hour',
 	// selectedValue: 0,
-	type: 'hour',
+	type: 'hour'
 } as IDateSelectComponentProps;
 
 export const TwentyFourHour = Template.bind({});
@@ -42,14 +42,14 @@ TwentyFourHour.args = {
 	dataLabel: 'DateSelect',
 	format: '24-Hour',
 	// selectedValue: 0,
-	type: 'hour',
+	type: 'hour'
 } as IDateSelectComponentProps;
 
 export const Minute = Template.bind({});
 Minute.args = {
 	dataLabel: 'DateSelect',
 	// selectedValue: 0,
-	type: 'minute',
+	type: 'minute'
 } as IDateSelectComponentProps;
 
 export const DayOfMonth = Template.bind({});
@@ -57,19 +57,19 @@ DayOfMonth.args = {
 	dataLabel: 'DateSelect',
 	format: '1',
 	// selectedValue: 0,
-	type: 'month',
+	type: 'month'
 } as IDateSelectComponentProps;
 
 export const Week = Template.bind({});
 Week.args = {
 	dataLabel: 'DateSelect',
 	// selectedValue: 0,
-	type: 'week',
+	type: 'week'
 } as IDateSelectComponentProps;
 
 export const Ordinal = Template.bind({});
 Ordinal.args = {
 	dataLabel: 'DateSelect',
 	// selectedValue: 0,
-	type: 'ordinal',
+	type: 'ordinal'
 } as IDateSelectComponentProps;

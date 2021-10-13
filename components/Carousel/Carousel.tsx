@@ -37,7 +37,7 @@ Carousel.defaultProps = {
 	slidesToScroll: 3,
 	slidesToShow: 3,
 	speed: 500,
-	swipe: true,
+	swipe: true
 };
 
 Carousel.displayName = 'Carousel';
@@ -48,7 +48,7 @@ export const CustomDot: React.FC<IBoxComponentProps> = withMooskinContext((props
 
 CustomDot.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 CustomDot.displayName = 'CustomDot';

@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: LoadingBar,
-	title: 'Example/LoadingBar',
+	title: 'Example/LoadingBar'
 } as any) as Meta;
 
 const Template: Story<ILoadingBarComponentProps> = (args) => {
@@ -25,5 +25,5 @@ export const Normal = Template.bind({});
 Normal.args = {
 	onLoaderDone: () => console.log('Done'),
 	onLoaderError: () => console.log('Error'),
-	progress: 70,
+	progress: 70
 } as ILoadingBarComponentProps;

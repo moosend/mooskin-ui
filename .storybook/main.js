@@ -14,5 +14,5 @@ module.exports = {
 
 		// Return the altered config
 		return { ...config, module: { ...config.module, rules: baseConfig.module.rules }, plugins: [...config.plugins, ...baseConfig.plugins] };
-	},
+	}
 };

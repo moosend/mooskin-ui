@@ -13,7 +13,7 @@ import {
 	SelectOptionList,
 	SelectOverlay,
 	SelectPagination,
-	SelectPlaceholder,
+	SelectPlaceholder
 } from '../components/Select/Select';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
@@ -23,7 +23,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Select,
-	title: 'Example/Select',
+	title: 'Example/Select'
 } as any) as Meta;
 
 const Template: Story<ISelectComponentProps> = (args) => {
@@ -59,7 +59,7 @@ Normal.args = {
 		</>
 	),
 	dataLabel: 'Select',
-	selectedValue: '2',
+	selectedValue: '2'
 } as ISelectComponentProps;
 
 export const Multi = Template.bind({});
@@ -81,7 +81,7 @@ Multi.args = {
 		</>
 	),
 	dataLabel: 'Select',
-	selectedValue: ['2', '4'],
+	selectedValue: ['2', '4']
 } as ISelectComponentProps;
 
 export const WithPagination = Template.bind({});
@@ -108,7 +108,7 @@ WithPagination.args = {
 			</SelectOptionList>
 		</>
 	),
-	dataLabel: 'Select',
+	dataLabel: 'Select'
 } as ISelectComponentProps;
 
 export const CustomElements = Template.bind({});
@@ -138,5 +138,5 @@ CustomElements.args = {
 		</>
 	),
 	dataLabel: 'Select',
-	showList: true,
+	showList: true
 } as ISelectComponentProps;

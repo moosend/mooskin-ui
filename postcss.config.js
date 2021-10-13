@@ -6,6 +6,6 @@ module.exports = {
 		cssnano: { zindex: false },
 		'postcss-flexbugs-fixes': {},
 		'postcss-browser-reporter': {},
-		'postcss-reporter': {},
-	},
+		'postcss-reporter': {}
+	}
 };

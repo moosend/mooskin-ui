@@ -19,7 +19,7 @@ const DropdownComponents = {
 	entering: StyledActionsDropdownFadeIn,
 	exited: null,
 	exiting: StyledActionsDropdownFadeOut,
-	unmounted: null,
+	unmounted: null
 };
 
 /**
@@ -47,7 +47,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 				return React.cloneElement(child, {
 					children: recurseChildren((child.props as any).children),
 					key: i,
-					onClick: (e) => batchClickHandler(e, { dataLabel: child.props.dataLabel, value: child.props.value }, child.props.onClick),
+					onClick: (e) => batchClickHandler(e, { dataLabel: child.props.dataLabel, value: child.props.value }, child.props.onClick)
 				} as IActionsDropdownItemComponentProps);
 			}
 
@@ -55,7 +55,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 				!hasArrow && setHasArrow(true);
 				return React.cloneElement(child, {
 					children: recurseChildren((child.props as any).children),
-					key: i,
+					key: i
 				} as IBoxComponentProps);
 			}
 
@@ -88,7 +88,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 
 ActionsDropdown.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ActionsDropdown.displayName = 'ActionsDropdown';
@@ -102,7 +102,7 @@ export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> =
 
 ActionsDropdownItem.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ActionsDropdownItem.displayName = 'ActionsDropdownItem';
@@ -116,7 +116,7 @@ export const ActionsDropdownArrow: React.FC<IBoxComponentProps> = withMooskinCon
 
 ActionsDropdownArrow.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ActionsDropdownArrow.displayName = 'ActionsDropdownArrow';

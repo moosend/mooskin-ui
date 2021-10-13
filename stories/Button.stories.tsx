@@ -12,7 +12,7 @@ import { MooskinContextProvider } from '../components/Styled/MooskinContextProvi
 
 export default ({
 	// component: Button,
-	title: 'Example/Button',
+	title: 'Example/Button'
 } as any) as Meta;
 
 const Template: Story<IButtonComponentProps> = (args) => {
@@ -22,7 +22,7 @@ const Template: Story<IButtonComponentProps> = (args) => {
 			<GlobalStyle />
 			<MooskinContextProvider
 				value={{
-					palette: { ...variables, backgroundColors: backgroundPalette },
+					palette: { ...variables, backgroundColors: backgroundPalette }
 				}}
 			>
 				<Button {...args} onClick={() => setBackgroundPalette({ ...variables.backgroundColors, primary1: 'red' })} />
@@ -33,7 +33,7 @@ const Template: Story<IButtonComponentProps> = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-	children: 'VIEW CAMPAIGN',
+	children: 'VIEW CAMPAIGN'
 } as IButtonComponentProps;
 
 export const Icon = Template.bind({});
@@ -44,18 +44,18 @@ Icon.args = {
 			VIEW CAMPAIGN
 		</>
 	),
-	fontColor: 'fontColors.primary1',
+	fontColor: 'fontColors.primary1'
 } as IButtonComponentProps;
 
 export const Href = Template.bind({});
 Href.args = {
 	children: 'VIEW CAMPAIGN',
 	href: 'https://www.moosend.com',
-	bgColor: ['red', 'blue', 'green', 'yellow'],
+	bgColor: ['red', 'blue', 'green', 'yellow']
 } as IButtonComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	children: 'VIEW CAMPAIGN',
-	disabled: true,
+	disabled: true
 } as IButtonComponentProps;
