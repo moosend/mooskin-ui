@@ -39,7 +39,7 @@ const theme: IStyledTheme = {
 		dropdown: '#FFFFFF',
 		accountNavigation: '#FFFFFF',
 		submenu: '#FFFFFF',
-		autosExpression: '#212121',
+		autosExpression: '#ffffff',
 		client: '#E0E0E0',
 		createNew: '#FFFFFF'
 	},
@@ -81,7 +81,7 @@ const theme: IStyledTheme = {
 		dropdown: '#FFFFFF',
 		accountNavigation: '#FFFFFF',
 		submenu: '#FFFFFF',
-		autosExpression: '#212121',
+		autosExpression: '#ffffff',
 		client: '#E0E0E0',
 		createNew: '#FFFFFF'
 	},
@@ -123,7 +123,7 @@ const theme: IStyledTheme = {
 		dropdown: '#212121',
 		accountNavigation: '#FFFFFF',
 		submenu: '#FFFFFF',
-		autosExpression: '#212121',
+		autosExpression: '#ffffff',
 		client: '#E0E0E0',
 		createNew: '#212121'
 	}
