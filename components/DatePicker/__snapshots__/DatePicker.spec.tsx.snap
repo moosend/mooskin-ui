@@ -909,7 +909,14 @@ exports[`DatePicker renders correctly 1`] = `
                 format="dd/MM/yyyy"
                 inputRef={
                   Object {
-                    "current": undefined,
+                    "current": <div>
+                      <input
+                        class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                        format="dd/MM/yyyy"
+                        style="width: 100%;"
+                        value="02/01/2021"
+                      />
+                    </div>,
                   }
                 }
                 inputValue="02/01/2021"
@@ -1043,7 +1050,14 @@ exports[`DatePicker renders correctly 1`] = `
                   helperText=""
                   inputRef={
                     Object {
-                      "current": undefined,
+                      "current": <div>
+                        <input
+                          class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                          format="dd/MM/yyyy"
+                          style="width: 100%;"
+                          value="02/01/2021"
+                        />
+                      </div>,
                     }
                   }
                   onClick={[Function]}
@@ -1166,147 +1180,14 @@ exports[`DatePicker renders correctly 1`] = `
                   pickerType="date"
                   value="02/01/2021"
                 >
-                  <Input
-                    InputProps={
-                      Object {
-                        "readOnly": true,
-                      }
-                    }
-                    className=""
-                    error={false}
-                    format="dd/MM/yyyy"
-                    helperText=""
-                    inputRef={
-                      Object {
-                        "current": undefined,
-                      }
-                    }
-                    onClick={[Function]}
-                    onKeyDown={[Function]}
-                    palette={
-                      Object {
-                        "backgroundColors": Object {
-                          "accountNavigation": "#FFFFFF",
-                          "altWhite": "#FFFFFF",
-                          "autosExpression": "#212121",
-                          "background": "#FAFAFA",
-                          "black": "#000000",
-                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                          "client": "#E0E0E0",
-                          "createNew": "#FFFFFF",
-                          "darkgray1": "#777777",
-                          "darkgray2": "#454545",
-                          "darkgray3": "#424242",
-                          "dropdown": "#FFFFFF",
-                          "gray1": "#E0E0E0",
-                          "gray100": "#F0F0F0",
-                          "gray2": "#E7E7E7",
-                          "grayAlpha": "rgba(0,0,0,0.17)",
-                          "grayAlpha100": "rgba(0,0,0,0.06)",
-                          "grayAlpha400": "rgba(0,0,0,0.36)",
-                          "inverseText": "#212121",
-                          "medgray1": "#757575",
-                          "medgray2": "#888888",
-                          "primary1": "#4169E1",
-                          "primary2": "#212121",
-                          "primary3": "#00796B",
-                          "primary4": "#D32F2F",
-                          "primary5": "#f0b941",
-                          "secondary1": "#2E7D32",
-                          "secondary2": "#757575",
-                          "secondary3": "#673AB7",
-                          "secondary4": "#9C27B0",
-                          "secondary5": "#00796B",
-                          "secondary6": "#ECF0FC",
-                          "submenu": "#FFFFFF",
-                          "text": "#212121",
-                          "white": "#FFFFFF",
-                        },
-                        "borderColors": Object {
-                          "accountNavigation": "#FFFFFF",
-                          "altWhite": "#FFFFFF",
-                          "autosExpression": "#212121",
-                          "background": "#FAFAFA",
-                          "black": "#000000",
-                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                          "client": "#E0E0E0",
-                          "createNew": "#FFFFFF",
-                          "darkgray1": "#777777",
-                          "darkgray2": "#454545",
-                          "darkgray3": "#424242",
-                          "dropdown": "#FFFFFF",
-                          "gray1": "#E0E0E0",
-                          "gray100": "#F0F0F0",
-                          "gray2": "#E7E7E7",
-                          "grayAlpha": "rgba(0,0,0,0.17)",
-                          "grayAlpha100": "rgba(0,0,0,0.06)",
-                          "grayAlpha400": "rgba(0,0,0,0.36)",
-                          "inverseText": "#212121",
-                          "medgray1": "#757575",
-                          "medgray2": "#888888",
-                          "primary1": "#4169E1",
-                          "primary2": "#212121",
-                          "primary3": "#00796B",
-                          "primary4": "#D32F2F",
-                          "primary5": "#f0b941",
-                          "secondary1": "#2E7D32",
-                          "secondary2": "#757575",
-                          "secondary3": "#673AB7",
-                          "secondary4": "#9C27B0",
-                          "secondary5": "#00796B",
-                          "secondary6": "#ECF0FC",
-                          "submenu": "#FFFFFF",
-                          "text": "#212121",
-                          "white": "#FFFFFF",
-                        },
-                        "fontColors": Object {
-                          "accountNavigation": "#FFFFFF",
-                          "altWhite": "#FFFFFF",
-                          "autosExpression": "#212121",
-                          "background": "#FAFAFA",
-                          "black": "#000000",
-                          "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                          "client": "#E0E0E0",
-                          "createNew": "#212121",
-                          "darkgray1": "#777777",
-                          "darkgray2": "#454545",
-                          "darkgray3": "#424242",
-                          "dropdown": "#212121",
-                          "gray1": "#E0E0E0",
-                          "gray100": "#F0F0F0",
-                          "gray2": "#E7E7E7",
-                          "grayAlpha": "rgba(0,0,0,0.17)",
-                          "grayAlpha100": "rgba(0,0,0,0.06)",
-                          "grayAlpha400": "rgba(0,0,0,0.36)",
-                          "inverseText": "#212121",
-                          "medgray1": "#757575",
-                          "medgray2": "#888888",
-                          "primary1": "#4169E1",
-                          "primary2": "#212121",
-                          "primary3": "#00796B",
-                          "primary4": "#D32F2F",
-                          "primary5": "#f0b941",
-                          "secondary1": "#2E7D32",
-                          "secondary2": "#757575",
-                          "secondary3": "#673AB7",
-                          "secondary4": "#9C27B0",
-                          "secondary5": "#00796B",
-                          "secondary6": "#ECF0FC",
-                          "submenu": "#FFFFFF",
-                          "text": "#212121",
-                          "white": "#FFFFFF",
-                        },
-                      }
-                    }
-                    pickerType="date"
+                  <div
                     style={
                       Object {
-                        "width": "100%",
+                        "width": "fit-content",
                       }
                     }
-                    value="02/01/2021"
                   >
-                    <Component
+                    <Input
                       InputProps={
                         Object {
                           "readOnly": true,
@@ -1318,7 +1199,14 @@ exports[`DatePicker renders correctly 1`] = `
                       helperText=""
                       inputRef={
                         Object {
-                          "current": undefined,
+                          "current": <div>
+                            <input
+                              class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                              format="dd/MM/yyyy"
+                              style="width: 100%;"
+                              value="02/01/2021"
+                            />
+                          </div>,
                         }
                       }
                       onClick={[Function]}
@@ -1446,20 +1334,26 @@ exports[`DatePicker renders correctly 1`] = `
                       }
                       value="02/01/2021"
                     >
-                      <StyledInputSolo
+                      <Component
                         InputProps={
                           Object {
                             "readOnly": true,
                           }
                         }
-                        boxAs="input"
                         className=""
                         error={false}
                         format="dd/MM/yyyy"
                         helperText=""
                         inputRef={
                           Object {
-                            "current": undefined,
+                            "current": <div>
+                              <input
+                                class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                                format="dd/MM/yyyy"
+                                style="width: 100%;"
+                                value="02/01/2021"
+                              />
+                            </div>,
                           }
                         }
                         onClick={[Function]}
@@ -1587,20 +1481,27 @@ exports[`DatePicker renders correctly 1`] = `
                         }
                         value="02/01/2021"
                       >
-                        <Box
+                        <StyledInputSolo
                           InputProps={
                             Object {
                               "readOnly": true,
                             }
                           }
                           boxAs="input"
-                          className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                          className=""
                           error={false}
                           format="dd/MM/yyyy"
                           helperText=""
                           inputRef={
                             Object {
-                              "current": undefined,
+                              "current": <div>
+                                <input
+                                  class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                                  format="dd/MM/yyyy"
+                                  style="width: 100%;"
+                                  value="02/01/2021"
+                                />
+                              </div>,
                             }
                           }
                           onClick={[Function]}
@@ -1726,10 +1627,9 @@ exports[`DatePicker renders correctly 1`] = `
                               "width": "100%",
                             }
                           }
-                          transition="0.2s all"
                           value="02/01/2021"
                         >
-                          <Component
+                          <Box
                             InputProps={
                               Object {
                                 "readOnly": true,
@@ -1742,7 +1642,14 @@ exports[`DatePicker renders correctly 1`] = `
                             helperText=""
                             inputRef={
                               Object {
-                                "current": undefined,
+                                "current": <div>
+                                  <input
+                                    class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                                    format="dd/MM/yyyy"
+                                    style="width: 100%;"
+                                    value="02/01/2021"
+                                  />
+                                </div>,
                               }
                             }
                             onClick={[Function]}
@@ -1871,13 +1778,12 @@ exports[`DatePicker renders correctly 1`] = `
                             transition="0.2s all"
                             value="02/01/2021"
                           >
-                            <StyledBox
+                            <Component
                               InputProps={
                                 Object {
                                   "readOnly": true,
                                 }
                               }
-                              as="input"
                               boxAs="input"
                               className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                               error={false}
@@ -1885,7 +1791,14 @@ exports[`DatePicker renders correctly 1`] = `
                               helperText=""
                               inputRef={
                                 Object {
-                                  "current": undefined,
+                                  "current": <div>
+                                    <input
+                                      class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                                      format="dd/MM/yyyy"
+                                      style="width: 100%;"
+                                      value="02/01/2021"
+                                    />
+                                  </div>,
                                 }
                               }
                               onClick={[Function]}
@@ -2014,24 +1927,152 @@ exports[`DatePicker renders correctly 1`] = `
                               transition="0.2s all"
                               value="02/01/2021"
                             >
-                              <input
-                                className="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                              <StyledBox
+                                InputProps={
+                                  Object {
+                                    "readOnly": true,
+                                  }
+                                }
+                                as="input"
+                                boxAs="input"
+                                className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                                error={false}
                                 format="dd/MM/yyyy"
+                                helperText=""
+                                inputRef={
+                                  Object {
+                                    "current": <div>
+                                      <input
+                                        class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                                        format="dd/MM/yyyy"
+                                        style="width: 100%;"
+                                        value="02/01/2021"
+                                      />
+                                    </div>,
+                                  }
+                                }
                                 onClick={[Function]}
                                 onKeyDown={[Function]}
+                                palette={
+                                  Object {
+                                    "backgroundColors": Object {
+                                      "altWhite": "#FFFFFF",
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
+                                      "dropdown": "#FFFFFF",
+                                      "gray1": "#E0E0E0",
+                                      "gray100": "#F0F0F0",
+                                      "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
+                                      "inverseText": "#212121",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "borderColors": Object {
+                                      "altWhite": "#FFFFFF",
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
+                                      "dropdown": "#FFFFFF",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
+                                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                                      "inverseText": "#212121",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                    "fontColors": Object {
+                                      "altWhite": "#FFFFFF",
+                                      "background": "#FAFAFA",
+                                      "black": "#000000",
+                                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                                      "darkgray1": "#777777",
+                                      "darkgray2": "#454545",
+                                      "darkgray3": "#424242",
+                                      "dropdown": "#FFFFFF",
+                                      "gray1": "#E0E0E0",
+                                      "gray2": "#E7E7E7",
+                                      "grayAlpha": "rgba(0,0,0,0.17)",
+                                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                                      "inverseText": "#212121",
+                                      "medgray1": "#757575",
+                                      "medgray2": "#888888",
+                                      "primary1": "#4169E1",
+                                      "primary2": "#212121",
+                                      "primary3": "#00796B",
+                                      "primary4": "#D32F2F",
+                                      "secondary1": "#2E7D32",
+                                      "secondary2": "#757575",
+                                      "secondary3": "#673AB7",
+                                      "secondary4": "#9C27B0",
+                                      "secondary5": "#00796B",
+                                      "secondary6": "#ECF0FC",
+                                      "text": "#212121",
+                                      "white": "#FFFFFF",
+                                    },
+                                  }
+                                }
+                                pickerType="date"
                                 style={
                                   Object {
                                     "width": "100%",
                                   }
                                 }
+                                transition="0.2s all"
                                 value="02/01/2021"
-                              />
-                            </StyledBox>
-                          </Component>
-                        </Box>
-                      </StyledInputSolo>
-                    </Component>
-                  </Input>
+                              >
+                                <input
+                                  className="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                                  format="dd/MM/yyyy"
+                                  onClick={[Function]}
+                                  onKeyDown={[Function]}
+                                  style={
+                                    Object {
+                                      "width": "100%",
+                                    }
+                                  }
+                                  value="02/01/2021"
+                                />
+                              </StyledBox>
+                            </Component>
+                          </Box>
+                        </StyledInputSolo>
+                      </Component>
+                    </Input>
+                  </div>
                 </renderInput>
               </PureDateInput>
               <WithStyles(ForwardRef(Popover))

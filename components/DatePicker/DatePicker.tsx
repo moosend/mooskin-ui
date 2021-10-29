@@ -108,7 +108,13 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 	} as any);
 	const { inputProps } = props;
 
-	const renderInput = (dateInputProps: any) => <Input style={{ width: '100%' }} {...dateInputProps} {...inputProps} />;
+	const renderInput = (dateInputProps: any) => {
+		return (
+			<div ref={dateInputProps.inputRef} style={{ width: 'fit-content' }}>
+				<Input style={{ width: '100%' }} {...dateInputProps} {...inputProps} />
+			</div>
+		);
+	};
 
 	const type: PickerType = props.pickerType ? props.pickerType : 'date';
 
