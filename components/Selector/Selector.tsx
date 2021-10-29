@@ -29,7 +29,7 @@ export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext((p
 					active: child.props.value === props.activeItem,
 					children: recurseChildren((child.props as any).children),
 					key: i,
-					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
+					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick)
 				} as ISelectorItemComponentProps);
 			}
 
@@ -46,7 +46,7 @@ export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext((p
 
 Selector.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 /**
@@ -58,5 +58,5 @@ export const SelectorItem: React.FC<ISelectorItemComponentProps> = withMooskinCo
 
 SelectorItem.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };

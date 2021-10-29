@@ -1,4 +1,4 @@
-import { ILabelComponentProps } from '../Label/model';
+import type { ILabelComponentProps } from '../Label/model';
 
 export interface INumberLabelComponentProps extends ILabelComponentProps {
 	/** abbreviate numerical value */

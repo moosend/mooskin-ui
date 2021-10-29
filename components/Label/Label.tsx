@@ -29,7 +29,7 @@ export const Label: React.FC<ILabelComponentProps> = withMooskinContext((props) 
 
 Label.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Label.displayName = 'Label';

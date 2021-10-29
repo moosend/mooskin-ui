@@ -10,7 +10,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Carousel,
-	title: 'Example/Carousel',
+	title: 'Example/Carousel'
 } as any) as Meta;
 
 const Template: Story<ICarouselComponentProps> = (args) => {
@@ -30,5 +30,5 @@ Normal.args = {
 				<Box boxShadow="md" round="md" m={30} p={30}>{`Box ${i}`}</Box>
 			</div>
 		);
-	}),
+	})
 } as ICarouselComponentProps;

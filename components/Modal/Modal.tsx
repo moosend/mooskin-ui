@@ -17,7 +17,7 @@ import {
 	StyledModalFooter,
 	StyledModalHeader,
 	StyledModalOverlayFadeIn,
-	StyledModalOverlayFadeOut,
+	StyledModalOverlayFadeOut
 } from './styles';
 
 // Transitions
@@ -27,7 +27,7 @@ const ModalOverlayComponents = {
 	entering: StyledModalOverlayFadeIn,
 	exited: null,
 	exiting: StyledModalOverlayFadeOut,
-	unmounted: null,
+	unmounted: null
 };
 
 /**
@@ -49,7 +49,7 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
 					key: i,
-					onClick: (e) => batchClickHandler(e, child.props.onClick),
+					onClick: (e) => batchClickHandler(e, child.props.onClick)
 				} as IBoxComponentProps);
 			}
 
@@ -58,7 +58,7 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 					children: recurseChildren(child.props.children),
 					isOpen: child.props.isOpen ? child.props.isOpen : props.isOpen,
 					key: i,
-					onClick: props.closeOnOverlayClick ? (e) => batchClickHandler(e, child.props.onClick) : child.props.onClick,
+					onClick: props.closeOnOverlayClick ? (e) => batchClickHandler(e, child.props.onClick) : child.props.onClick
 				} as IModalOverlayComponentProps);
 			}
 
@@ -70,7 +70,7 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 					onClick: (e: React.MouseEvent<HTMLElement>) => {
 						e.stopPropagation();
 						child.props.onClick && child.props.onClick(e);
-					},
+					}
 				} as IModalContentComponentProps);
 			}
 
@@ -88,7 +88,7 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 Modal.defaultProps = {
 	className: '',
 	closeOnOverlayClick: true,
-	style: {},
+	style: {}
 };
 
 Modal.displayName = 'Modal';
@@ -103,7 +103,7 @@ export const ModalContent: React.FC<IModalContentComponentProps> = withMooskinCo
 
 ModalContent.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ModalContent.displayName = 'ModalContent';
@@ -117,7 +117,7 @@ export const ModalHeader: React.FC<IBoxComponentProps> = withMooskinContext((pro
 
 ModalHeader.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ModalHeader.displayName = 'ModalHeader';
@@ -131,7 +131,7 @@ export const ModalBody: React.FC<IBoxComponentProps> = withMooskinContext((props
 
 ModalBody.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ModalBody.displayName = 'ModalBody';
@@ -145,7 +145,7 @@ export const ModalFooter: React.FC<IBoxComponentProps> = withMooskinContext((pro
 
 ModalFooter.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ModalFooter.displayName = 'ModalFooter';
@@ -159,7 +159,7 @@ export const ModalCloseButton: React.FC<IBoxComponentProps> = withMooskinContext
 
 ModalCloseButton.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ModalCloseButton.displayName = 'ModalCloseButton';
@@ -183,7 +183,7 @@ export const ModalOverlay: React.FC<IModalOverlayComponentProps> = withMooskinCo
 
 ModalOverlay.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ModalOverlay.displayName = 'ModalOverlay';

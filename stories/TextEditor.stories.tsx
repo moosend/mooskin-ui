@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: TextEditor,
-	title: 'Example/TextEditor',
+	title: 'Example/TextEditor'
 } as any) as Meta;
 
 const Template: Story<ITextEditorComponentProps> = (args) => {
@@ -23,22 +23,22 @@ const Template: Story<ITextEditorComponentProps> = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-	onEditorChange: (content, editor) => console.log(content),
+	onEditorChange: (content, editor) => console.log(content)
 } as ITextEditorComponentProps;
 
 export const WithMenu = Template.bind({});
 WithMenu.args = {
-	menubar: true,
+	menubar: true
 } as ITextEditorComponentProps;
 
 export const Inline = Template.bind({});
 Inline.args = {
-	inline: true,
+	inline: true
 } as ITextEditorComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-	disabled: true,
+	disabled: true
 } as ITextEditorComponentProps;
 
 export const WithPersonalizationTags = Template.bind({});
@@ -52,7 +52,7 @@ WithPersonalizationTags.args = {
 			{ label: 'Tag 3', value: '#tag3#' },
 			{ label: 'Tag 4', value: '#tag4#' },
 			{ label: 'Tag 5', value: '#tag5#' },
-			{ label: 'Tag 6', value: '#tag6#' },
-		],
-	},
+			{ label: 'Tag 6', value: '#tag6#' }
+		]
+	}
 } as ITextEditorComponentProps;

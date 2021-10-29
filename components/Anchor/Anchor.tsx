@@ -23,7 +23,7 @@ export const Anchor: React.FC<IAnchorComponentProps> = withMooskinContext((props
 Anchor.defaultProps = {
 	className: '',
 	style: {},
-	target: '_blank',
+	target: '_blank'
 };
 
 Anchor.displayName = 'Anchor';

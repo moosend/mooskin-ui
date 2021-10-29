@@ -18,7 +18,7 @@ export const Table: React.FC<IBoxComponentProps> = withMooskinContext((props) =>
 
 Table.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Table.displayName = 'Table';
@@ -32,7 +32,7 @@ export const TableHeader: React.FC<IBoxComponentProps> = withMooskinContext((pro
 
 TableHeader.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 TableHeader.displayName = 'TableHeader';
@@ -46,7 +46,7 @@ export const TableHeaderItem: React.FC<IBoxComponentProps> = withMooskinContext(
 
 TableHeaderItem.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 TableHeaderItem.displayName = 'TableHeaderItem';
@@ -60,7 +60,7 @@ export const TableRow: React.FC<IBoxComponentProps> = withMooskinContext((props)
 
 TableRow.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 TableRow.displayName = 'TableRow';
@@ -74,7 +74,7 @@ export const TableRowItem: React.FC<IBoxComponentProps> = withMooskinContext((pr
 
 TableRowItem.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 TableRowItem.displayName = 'TableRowItem';

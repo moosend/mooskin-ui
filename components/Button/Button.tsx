@@ -24,7 +24,7 @@ Button.defaultProps = {
 	buttonSize: 'md',
 	className: '',
 	style: {},
-	type: 'button',
+	type: 'button'
 };
 
 Button.displayName = 'Button';
@@ -43,7 +43,7 @@ ButtonTwo.defaultProps = {
 	buttonSize: 'md',
 	className: '',
 	style: {},
-	type: 'button',
+	type: 'button'
 };
 
 ButtonTwo.displayName = 'ButtonTwo';
@@ -62,7 +62,7 @@ ButtonThree.defaultProps = {
 	buttonSize: 'md',
 	className: '',
 	style: {},
-	type: 'button',
+	type: 'button'
 };
 
 ButtonThree.displayName = 'ButtonThree';
@@ -76,7 +76,7 @@ export const ButtonIcon: React.FC<IBoxComponentProps> = (props) => {
 
 ButtonIcon.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ButtonIcon.displayName = 'ButtonIcon';

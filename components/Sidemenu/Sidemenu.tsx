@@ -29,7 +29,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext((p
 					active: child.props.active ? child.props.active : child.props.value === props.activeItem,
 					children: recurseChildren((child.props as any).children),
 					key: i,
-					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
+					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick)
 				} as ISidemenuItemComponentProps);
 			}
 
@@ -46,7 +46,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext((p
 
 Sidemenu.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 /**
@@ -58,5 +58,5 @@ export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = withMooskinCo
 
 SidemenuItem.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };

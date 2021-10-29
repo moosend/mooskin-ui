@@ -14,10 +14,10 @@ export const getNumberOrStringValue = (value?: number | string) => {
 	return '';
 };
 
-export const getNestedValue = (value?: number | string | NestedThemeType, pallete?: IStyledTheme) => {
-	if (typeof value === 'string' && value.includes('.') && pallete) {
+export const getNestedValue = (value?: number | string | NestedThemeType, palette?: IStyledTheme) => {
+	if (typeof value === 'string' && value.includes('.') && palette) {
 		const valueAsArray = value.split('.');
-		return (pallete as any)[valueAsArray[0]] ? (pallete as any)[valueAsArray[0]][valueAsArray[1]] : value;
+		return (palette as any)[valueAsArray[0]] ? (palette as any)[valueAsArray[0]][valueAsArray[1]] : value;
 	}
 	return value;
 };
@@ -92,8 +92,8 @@ const getMediaQueryString = (media: string, property: string, value?: number | s
     `;
 };
 
-const generateStyles = (data: { property: string; value?: number | string | any[]; processedValue?: boolean; pallete?: IStyledTheme }) => {
-	const { property, processedValue, value, pallete } = data;
+const generateStyles = (data: { property: string; value?: number | string | any[]; processedValue?: boolean; palette?: IStyledTheme }) => {
+	const { property, processedValue, value, palette } = data;
 
 	if (typeof value === 'undefined') {
 		return;
@@ -107,23 +107,23 @@ const generateStyles = (data: { property: string; value?: number | string | any[
 
 	if (Array.isArray(value)) {
 		if (value[0]) {
-			largeValue = processedValue ? getNumberOrStringValue(value[0]) : pallete ? getNestedValue(value[0], pallete) : value[0];
+			largeValue = processedValue ? getNumberOrStringValue(value[0]) : palette ? getNestedValue(value[0], palette) : value[0];
 			// media = `${media} ${getMediaQueryString(screens.large)}`;
 		}
 		if (value[1]) {
-			mediumValue = processedValue ? getNumberOrStringValue(value[1]) : pallete ? getNestedValue(value[1], pallete) : value[1];
+			mediumValue = processedValue ? getNumberOrStringValue(value[1]) : palette ? getNestedValue(value[1], palette) : value[1];
 			media = `${media} ${getMediaQueryString(screens.medium, property, mediumValue)}`;
 		}
 		if (value[2]) {
-			smallValue = processedValue ? getNumberOrStringValue(value[2]) : pallete ? getNestedValue(value[2], pallete) : value[2];
+			smallValue = processedValue ? getNumberOrStringValue(value[2]) : palette ? getNestedValue(value[2], palette) : value[2];
 			media = `${media} ${getMediaQueryString(screens.small, property, smallValue)}`;
 		}
 		if (value[3]) {
-			xSmallValue = processedValue ? getNumberOrStringValue(value[3]) : pallete ? getNestedValue(value[3], pallete) : value[3];
+			xSmallValue = processedValue ? getNumberOrStringValue(value[3]) : palette ? getNestedValue(value[3], palette) : value[3];
 			media = `${media} ${getMediaQueryString(screens.xSmall, property, xSmallValue)}`;
 		}
 	} else {
-		largeValue = processedValue ? getNumberOrStringValue(value) : pallete ? getNestedValue(value, pallete) : value;
+		largeValue = processedValue ? getNumberOrStringValue(value) : palette ? getNestedValue(value, palette) : value;
 	}
 
 	return `
@@ -156,7 +156,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		${(props) =>
 			generateStyles({ property: 'padding-left', value: typeof props.pl !== 'undefined' ? props.pl : props.px, processedValue: true })}
 
-		${(props) => generateStyles({ property: 'color', value: props.fontColor, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'color', value: props.fontColor, palette: props.palette })}
 		${(props) => generateStyles({ property: 'font-family', value: props.fontFamily })}
 		${(props) => generateStyles({ property: 'font-size', value: props.fontSize, processedValue: true })}
 		${(props) => generateStyles({ property: 'font-weight', value: props.fontWeight })}
@@ -197,34 +197,34 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		${(props) => generateStyles({ property: 'background', value: props.bg })}
 		${(props) => generateStyles({ property: 'background-image', value: props.bgImage })}
-		${(props) => generateStyles({ property: 'background-color', value: props.bgColor, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'background-color', value: props.bgColor, palette: props.palette })}
 		${(props) => generateStyles({ property: 'background-size', value: props.bgSize })}
 		${(props) => generateStyles({ property: 'background-position', value: props.bgPosition })}
 		${(props) => generateStyles({ property: 'background-repeat', value: props.bgRepeat })}
 
 		${(props) => generateStyles({ property: 'border', value: props.border })}
 		${(props) => generateStyles({ property: 'border-style', value: props.borderStyle })}
-		${(props) => generateStyles({ property: 'border-color', value: props.borderColor, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'border-color', value: props.borderColor, palette: props.palette })}
 		${(props) => generateStyles({ property: 'border-width', value: props.borderWidth, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'border-top', value: props.borderTop })}
 		${(props) => generateStyles({ property: 'border-top-style', value: props.borderTopStyle })}
-		${(props) => generateStyles({ property: 'border-top-color', value: props.borderTopColor, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'border-top-color', value: props.borderTopColor, palette: props.palette })}
 		${(props) => generateStyles({ property: 'border-top-width', value: props.borderTopWidth, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'border-right', value: props.borderRight })}
 		${(props) => generateStyles({ property: 'border-right-style', value: props.borderRightStyle })}
-		${(props) => generateStyles({ property: 'border-right-color', value: props.borderRightColor, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'border-right-color', value: props.borderRightColor, palette: props.palette })}
 		${(props) => generateStyles({ property: 'border-right-width', value: props.borderRightWidth, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'border-bottom', value: props.borderBottom })}
 		${(props) => generateStyles({ property: 'border-bottom-style', value: props.borderBottomStyle })}
-		${(props) => generateStyles({ property: 'border-bottom-color', value: props.borderBottomColor, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'border-bottom-color', value: props.borderBottomColor, palette: props.palette })}
 		${(props) => generateStyles({ property: 'border-bottom-width', value: props.borderBottomWidth, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'border-left', value: props.borderLeft })}
 		${(props) => generateStyles({ property: 'border-left-style', value: props.borderLeftStyle })}
-		${(props) => generateStyles({ property: 'border-left-color', value: props.borderLeftColor, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'border-left-color', value: props.borderLeftColor, palette: props.palette })}
 		${(props) => generateStyles({ property: 'border-left-width', value: props.borderLeftWidth, processedValue: true })}
 
 		${(props) =>
@@ -238,7 +238,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		${(props) => generateStyles({ property: 'outline', value: props.outline })}
 		${(props) => generateStyles({ property: 'outline-style', value: props.outlineStyle })}
-		${(props) => generateStyles({ property: 'outline-color', value: props.outlineColor, pallete: props.palette })}
+		${(props) => generateStyles({ property: 'outline-color', value: props.outlineColor, palette: props.palette })}
 		${(props) => generateStyles({ property: 'outline-width', value: props.outlineWidth, processedValue: true })}
 
 		${(props) => generateStyles({ property: 'position', value: props.position })}

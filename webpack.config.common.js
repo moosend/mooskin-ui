@@ -20,15 +20,15 @@ module.exports = {
 			cacheGroups: {
 				vendors: {
 					test: /[\\/]node_modules[\\/]/,
-					priority: -10,
+					priority: -10
 				},
 				default: {
 					minChunks: 2,
 					priority: -20,
-					reuseExistingChunk: true,
-				},
-			},
-		},
+					reuseExistingChunk: true
+				}
+			}
+		}
 	},
 
 	module: {
@@ -39,17 +39,17 @@ module.exports = {
 				options: {
 					limit: 650000,
 					// outputPath: 'fonts/',
-					name: '[path][name].[ext]',
+					name: '[path][name].[ext]'
 					// mimetype: 'application/font-woff'
-				},
+				}
 			},
 			{
 				test: /\.ttf$|\.eot$|\.svg$/,
 				loader: 'url-loader',
 				options: {
 					limit: 650000,
-					name: '[path][name].[ext]',
-				},
+					name: '[path][name].[ext]'
+				}
 			},
 			{
 				test: /\.(png|jpg|gif)$/,
@@ -57,17 +57,17 @@ module.exports = {
 				options: {
 					limit: 650000,
 					name: '[path][name].[ext]',
-					mimetype: 'image/png',
-				},
-			},
-		],
+					mimetype: 'image/png'
+				}
+			}
+		]
 	},
 	plugins: [
 		//new webpack.optimize.ModuleConcatenationPlugin()
 	],
 	resolve: {
 		extensions: ['.tsx', '.ts', '.js'],
-		modules: [path.resolve('./'), 'node_modules'],
-	},
+		modules: [path.resolve('./'), 'node_modules']
+	}
 	//   devtool: 'inline-source-map',
 };

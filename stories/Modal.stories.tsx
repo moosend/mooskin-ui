@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Modal,
-	title: 'Example/Modal',
+	title: 'Example/Modal'
 } as any) as Meta;
 
 const Template: Story<IModalComponentProps> = (args) => {
@@ -36,5 +36,5 @@ Normal.args = {
 		</ModalOverlay>
 	),
 	isOpen: true,
-	onClose: () => alert('Close!'),
+	onClose: () => alert('Close!')
 } as IModalComponentProps;

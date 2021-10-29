@@ -45,7 +45,7 @@ export const LoadingBar: React.FC<ILoadingBarComponentProps> = withMooskinContex
 LoadingBar.defaultProps = {
 	className: '',
 	progress: 0,
-	style: {},
+	style: {}
 };
 
 LoadingBar.displayName = 'LoadingBar';

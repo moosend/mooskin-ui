@@ -1,6 +1,7 @@
 {
-  "packageManager": "yarn",
-  "singleQuote": true,
-  "useTabs": true,
-  "printWidth": 140
+	"packageManager": "yarn",
+	"singleQuote": true,
+	"useTabs": true,
+	"printWidth": 140,
+	"trailingComma": "none"
 }

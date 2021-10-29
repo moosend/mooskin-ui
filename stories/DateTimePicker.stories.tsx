@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: DateTimePicker,
-	title: 'Example/DateTimePicker',
+	title: 'Example/DateTimePicker'
 } as any) as Meta;
 
 const Template: Story<IDateTimePickerComponentProps> = (args) => {

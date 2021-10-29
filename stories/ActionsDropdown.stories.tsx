@@ -11,7 +11,7 @@ import '../components/Styled/GlobalStyles.css';
 
 export default ({
 	component: ActionsDropdown,
-	title: 'Example/ActionsDropdown',
+	title: 'Example/ActionsDropdown'
 } as any) as Meta;
 
 const Template: Story<IActionsDropdownComponentProps> = (args) => {
@@ -38,7 +38,7 @@ Normal.args = {
 			</ActionsDropdownItem>
 		</>
 	),
-	isOpen: true,
+	isOpen: true
 } as IActionsDropdownComponentProps;
 
 export const BottomArrow = Template.bind({});
@@ -57,5 +57,5 @@ BottomArrow.args = {
 			</ActionsDropdownItem>
 		</>
 	),
-	isOpen: true,
+	isOpen: true
 } as IActionsDropdownComponentProps;

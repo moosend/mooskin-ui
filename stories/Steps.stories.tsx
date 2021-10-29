@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Steps,
-	title: 'Example/Steps',
+	title: 'Example/Steps'
 } as any) as Meta;
 
 const Template: Story<IStepsComponentProps> = (args) => {
@@ -33,5 +33,5 @@ Normal.args = {
 				</StepContent>
 			</Step>
 		);
-	}),
+	})
 } as IStepsComponentProps;

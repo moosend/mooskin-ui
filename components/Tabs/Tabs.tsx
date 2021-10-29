@@ -41,7 +41,7 @@ export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext((props) =>
 			if (React.isValidElement<ITabCommonComponentProps>(child) && child.type === TabHeader) {
 				header = React.cloneElement(child, {
 					active,
-					onClick: (e) => batchClickHandler(e, activeId, child.props.onClick),
+					onClick: (e) => batchClickHandler(e, activeId, child.props.onClick)
 				} as IBoxComponentProps);
 			}
 
@@ -83,7 +83,7 @@ export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext((props) =>
 
 Tabs.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Tabs.displayName = 'Tabs';
@@ -97,7 +97,7 @@ export const Tab: React.FC<ITabComponentProps> = withMooskinContext((props) => {
 
 Tab.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Tab.displayName = 'Tab';
@@ -111,7 +111,7 @@ export const TabHeader: React.FC<ITabCommonComponentProps> = withMooskinContext(
 
 TabHeader.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 TabHeader.displayName = 'TabHeader';
@@ -125,7 +125,7 @@ export const TabContent: React.FC<ITabCommonComponentProps> = withMooskinContext
 
 TabContent.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 TabContent.displayName = 'TabContent';

@@ -6,6 +6,8 @@ export interface IDateRangePickerComponentProps extends DateRangePickerProps {
 	inputProps?: IInputComponentProps;
 	pickerWrapperProps?: IBoxComponentProps;
 	wrapperProps?: IBoxComponentProps;
+	inputContainerPrpps?: IBoxComponentProps;
+	customComponent?: JSX.Element;
 }
 
 export interface IRangeSelection {

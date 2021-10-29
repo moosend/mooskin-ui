@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Switch,
-	title: 'Example/Switch',
+	title: 'Example/Switch'
 } as any) as Meta;
 
 const Template: Story<ISwitchComponentProps> = (args) => {
@@ -27,12 +27,12 @@ Active.args = {} as ISwitchComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
-	disabled: true,
+	disabled: true
 } as ISwitchComponentProps;
 
 export const Custom = Template.bind({});
 Custom.args = {
 	bgColor: 'red',
 	children: <SwitchHandle bgColor="green" />,
-	w: 120,
+	w: 120
 } as ISwitchComponentProps;

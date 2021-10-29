@@ -29,7 +29,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 			billion: 1000000000,
 			million: 1000000,
 			thousand: 1000,
-			trillion: 1000000000000,
+			trillion: 1000000000000
 		};
 
 		if (value < digits.thousand) {
@@ -95,7 +95,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 
 	const roundValue = (value: string, acc: string, digits: { [key: string]: number }) => {
 		const array = value.split('');
-		if (value.length < 4) {
+		if (value.length <= 4) {
 			if (acc === 'high') {
 				return Math.round(Number(value) / 10) * 10;
 			} else if (acc === 'low') {
@@ -170,7 +170,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 NumberLabel.defaultProps = {
 	abbrAccuracy: 1,
 	className: '',
-	style: {},
+	style: {}
 };
 
 NumberLabel.displayName = 'NumberLabel';

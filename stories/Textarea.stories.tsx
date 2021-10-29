@@ -10,7 +10,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: TextArea,
-	title: 'Example/TextArea',
+	title: 'Example/TextArea'
 } as any) as Meta;
 
 const Template: Story<ITextAreaComponentProps> = (args) => {
@@ -25,12 +25,12 @@ const Template: Story<ITextAreaComponentProps> = (args) => {
 export const Normal = Template.bind({});
 Normal.args = {
 	onChange: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-	value: 'test',
+	value: 'test'
 } as ITextAreaComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	disabled: true,
 	onChange: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-	value: 'test',
+	value: 'test'
 } as ITextAreaComponentProps;

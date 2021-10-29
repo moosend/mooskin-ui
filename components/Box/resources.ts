@@ -9,310 +9,310 @@ interface ISupportedStyleProps {
 export const SupportedStyleProps: ISupportedStyleProps = {
 	m: {
 		processedValue: true,
-		property: 'margin',
+		property: 'margin'
 	},
 	mt: {
 		processedValue: true,
-		property: 'margin-top',
+		property: 'margin-top'
 	},
 	mr: {
 		processedValue: true,
-		property: 'margin-right',
+		property: 'margin-right'
 	},
 	mb: {
 		processedValue: true,
-		property: 'margin-bottom',
+		property: 'margin-bottom'
 	},
 	ml: {
 		processedValue: true,
-		property: 'margin-left',
+		property: 'margin-left'
 	},
 	p: {
 		processedValue: true,
-		property: 'padding',
+		property: 'padding'
 	},
 	pt: {
 		processedValue: true,
-		property: 'padding-top',
+		property: 'padding-top'
 	},
 	pr: {
 		processedValue: true,
-		property: 'padding-right',
+		property: 'padding-right'
 	},
 	pb: {
 		processedValue: true,
-		property: 'padding-bottom',
+		property: 'padding-bottom'
 	},
 	pl: {
 		processedValue: true,
-		property: 'padding-left',
+		property: 'padding-left'
 	},
 	fontColor: {
 		property: 'color',
-		usePallete: true,
+		usePallete: true
 	},
 	fontFamily: {
-		property: 'font-family',
+		property: 'font-family'
 	},
 	fontSize: {
-		property: 'font-size',
+		property: 'font-size'
 	},
 	fontWeight: {
-		property: 'font-weight',
+		property: 'font-weight'
 	},
 	lineHeight: {
-		property: 'line-height',
+		property: 'line-height'
 	},
 	textAlign: {
-		property: 'text-align',
+		property: 'text-align'
 	},
 	fontStyle: {
-		property: 'font-style',
+		property: 'font-style'
 	},
 	textTransform: {
-		property: 'text-transform',
+		property: 'text-transform'
 	},
 	textDecoration: {
-		property: 'text-decoration',
+		property: 'text-decoration'
 	},
 	whiteSpace: {
-		property: 'white-space',
+		property: 'white-space'
 	},
 	w: {
 		processedValue: true,
-		property: 'width',
+		property: 'width'
 	},
 	h: {
 		processedValue: true,
-		property: 'height',
+		property: 'height'
 	},
 	minW: {
 		processedValue: true,
-		property: 'min-width',
+		property: 'min-width'
 	},
 	maxW: {
 		processedValue: true,
-		property: 'max-width',
+		property: 'max-width'
 	},
 	minH: {
 		processedValue: true,
-		property: 'min-height',
+		property: 'min-height'
 	},
 	maxH: {
 		processedValue: true,
-		property: 'max-height',
+		property: 'max-height'
 	},
 	d: {
-		property: 'display',
+		property: 'display'
 	},
 	overflow: {
-		property: 'overflow',
+		property: 'overflow'
 	},
 	overflowY: {
-		property: 'overflow-y',
+		property: 'overflow-y'
 	},
 	overflowX: {
-		property: 'overflow-x',
+		property: 'overflow-x'
 	},
 	align: {
-		property: 'align-items',
+		property: 'align-items'
 	},
 	alignContent: {
-		property: 'align-content',
+		property: 'align-content'
 	},
 	alignSelf: {
-		property: 'align-self',
+		property: 'align-self'
 	},
 	justify: {
-		property: 'justify-content',
+		property: 'justify-content'
 	},
 	justifyItems: {
-		property: 'justify-items',
+		property: 'justify-items'
 	},
 	justifySelf: {
-		property: 'justify-self',
+		property: 'justify-self'
 	},
 	flexWrap: {
-		property: 'flex-wrap',
+		property: 'flex-wrap'
 	},
 	direction: {
-		property: 'flex-direction',
+		property: 'flex-direction'
 	},
 	flex: {
-		property: 'flex',
+		property: 'flex'
 	},
 	flexGrow: {
-		property: 'flex-grow',
+		property: 'flex-grow'
 	},
 	flexShrink: {
-		property: 'flex-shrink',
+		property: 'flex-shrink'
 	},
 	flexBasis: {
 		processedValue: true,
-		property: 'flex-basis',
+		property: 'flex-basis'
 	},
 	order: {
-		property: 'order',
+		property: 'order'
 	},
 	bg: {
-		property: 'background',
+		property: 'background'
 	},
 	bgImage: {
-		property: 'background-image',
+		property: 'background-image'
 	},
 	bgColor: {
 		property: 'background-color',
-		usePallete: true,
+		usePallete: true
 	},
 	bgSize: {
-		property: 'background-size',
+		property: 'background-size'
 	},
 	bgPosition: {
-		property: 'background-position',
+		property: 'background-position'
 	},
 	bgRepeat: {
-		property: 'background-repeat',
+		property: 'background-repeat'
 	},
 	border: {
-		property: 'border',
+		property: 'border'
 	},
 	borderStyle: {
-		property: 'border-style',
+		property: 'border-style'
 	},
 	borderColor: {
 		property: 'border-color',
-		usePallete: true,
+		usePallete: true
 	},
 	borderWidth: {
 		processedValue: true,
-		property: 'border-width',
+		property: 'border-width'
 	},
 	borderTop: {
-		property: 'border-top',
+		property: 'border-top'
 	},
 	borderTopStyle: {
-		property: 'border-top-style',
+		property: 'border-top-style'
 	},
 	borderTopColor: {
 		property: 'border-top-color',
-		usePallete: true,
+		usePallete: true
 	},
 	borderTopWidth: {
 		processedValue: true,
-		property: 'border-top-width',
+		property: 'border-top-width'
 	},
 	borderRight: {
-		property: 'border-right',
+		property: 'border-right'
 	},
 	borderRightStyle: {
-		property: 'border-right-style',
+		property: 'border-right-style'
 	},
 	borderRightColor: {
 		property: 'border-right-color',
-		usePallete: true,
+		usePallete: true
 	},
 	borderRightWidth: {
 		processedValue: true,
-		property: 'border-right-width',
+		property: 'border-right-width'
 	},
 	borderBottom: {
-		property: 'border-bottom',
+		property: 'border-bottom'
 	},
 	borderBottomStyle: {
-		property: 'border-bottom-style',
+		property: 'border-bottom-style'
 	},
 	borderBottomColor: {
 		property: 'border-bottom-color',
-		usePallete: true,
+		usePallete: true
 	},
 	borderBottomWidth: {
 		processedValue: true,
-		property: 'border-bottom-width',
+		property: 'border-bottom-width'
 	},
 	borderLeft: {
-		property: 'border-left',
+		property: 'border-left'
 	},
 	borderLeftStyle: {
-		property: 'border-left-style',
+		property: 'border-left-style'
 	},
 	borderLeftColor: {
 		property: 'border-left-color',
-		usePallete: true,
+		usePallete: true
 	},
 	borderLeftWidth: {
 		processedValue: true,
-		property: 'border-left-width',
+		property: 'border-left-width'
 	},
 	borderRadius: {
 		processedValue: true,
-		property: 'border-radius',
+		property: 'border-radius'
 	},
 	borderTopLeftRadius: {
 		processedValue: true,
-		property: 'border-top-left-radius',
+		property: 'border-top-left-radius'
 	},
 	borderTopRightRadius: {
 		processedValue: true,
-		property: 'border-top-right-radius',
+		property: 'border-top-right-radius'
 	},
 	borderBottomRightRadius: {
 		processedValue: true,
-		property: 'border-bottom-right-radius',
+		property: 'border-bottom-right-radius'
 	},
 	borderBottomLeftRadius: {
 		processedValue: true,
-		property: 'border-bottom-left-radius',
+		property: 'border-bottom-left-radius'
 	},
 	position: {
-		property: 'position',
+		property: 'position'
 	},
 	zIndex: {
-		property: 'z-index',
+		property: 'z-index'
 	},
 	top: {
 		processedValue: true,
-		property: 'top',
+		property: 'top'
 	},
 	right: {
 		processedValue: true,
-		property: 'right',
+		property: 'right'
 	},
 	bottom: {
 		processedValue: true,
-		property: 'bottom',
+		property: 'bottom'
 	},
 	left: {
 		processedValue: true,
-		property: 'left',
+		property: 'left'
 	},
 	boxShadow: {
-		property: 'box-shadow',
+		property: 'box-shadow'
 	},
 	animation: {
-		property: 'animation',
+		property: 'animation'
 	},
 	visibility: {
-		property: 'visibility',
+		property: 'visibility'
 	},
 	opacity: {
-		property: 'opacity',
+		property: 'opacity'
 	},
 	cursor: {
-		property: 'cursor',
+		property: 'cursor'
 	},
 	all: {
-		property: 'all',
+		property: 'all'
 	},
 	transition: {
-		property: 'transition',
+		property: 'transition'
 	},
 	textOverflow: {
-		property: 'text-overflow',
+		property: 'text-overflow'
 	},
 	gridTemplateColumns: {
-		property: 'grid-template-columns',
+		property: 'grid-template-columns'
 	},
 	wordBreak: {
-		property: 'word-break',
-	},
+		property: 'word-break'
+	}
 };

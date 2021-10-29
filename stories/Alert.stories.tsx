@@ -10,7 +10,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Alert,
-	title: 'Example/Alert',
+	title: 'Example/Alert'
 } as any) as Meta;
 
 const Template: Story<IBaseAlertComponentProps> = (args) => {
@@ -28,8 +28,8 @@ Normal.args = {
 		<AlertIcon key="0" />,
 		<AlertTitle key="1">Your browser is outdated!</AlertTitle>,
 		<AlertDescription key="2">Your Mooskin experience may be degraded.</AlertDescription>,
-		<AlertCloseButton key="3" onClick={(e) => alert('close')} position="absolute" right={8} top={8} />,
-	],
+		<AlertCloseButton key="3" onClick={(e) => alert('close')} position="absolute" right={8} top={8} />
+	]
 } as IBaseAlertComponentProps;
 
 export const WithBox = Template.bind({});
@@ -40,6 +40,6 @@ WithBox.args = {
 			<AlertTitle>Your browser is outdated!</AlertTitle>
 			<AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
 			<AlertCloseButton onClick={(e) => alert('close')} position="absolute" right={8} top={8} />
-		</Box>,
-	],
+		</Box>
+	]
 } as IBaseAlertComponentProps;

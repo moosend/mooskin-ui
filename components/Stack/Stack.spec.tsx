@@ -5,7 +5,7 @@ import { mount } from 'enzyme';
 
 const boxStyle = {
 	height: 40,
-	width: 40,
+	width: 40
 };
 
 describe('Stack', () => {

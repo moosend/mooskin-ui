@@ -12,13 +12,13 @@ import variables from '../_utils/globals/variables';
 const normalButtonSizes = {
 	lg: '10px',
 	md: '9px 10px',
-	sm: '8px 10px',
+	sm: '8px 10px'
 };
 
 const secondaryButtonSizes = {
 	lg: '9px',
 	md: '8px 9px',
-	sm: '7px 8px',
+	sm: '7px 8px'
 };
 
 export const ButtonDefault = styled(Box)<IButtonComponentProps>`

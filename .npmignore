@@ -7,7 +7,6 @@ webpack.config.*
 coverage/
 node_modules/
 tsconfig.json
-tslint.json
 postcss.config.json
 index.html
 docs

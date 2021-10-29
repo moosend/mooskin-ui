@@ -6,5 +6,5 @@ export default {
 	large: '(min-width: 1200px)',
 	medium: '(min-width: 992px) and (max-width: 1199px)',
 	small: '(min-width: 769px) and (max-width: 991px)',
-	xSmall: '(max-width: 768px)',
+	xSmall: '(max-width: 768px)'
 };
