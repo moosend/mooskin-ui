@@ -5,7 +5,7 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
-import { ILabelComponentProps } from '../Label/model';
+import type { ILabelComponentProps } from '../Label/model';
 import { ICheckboxComponentProps, ICheckboxIconComponentProps } from './model';
 
 // Components
@@ -39,7 +39,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = withMooskinContext((p
 					children: recurseChildren(child.props.children),
 					disabled: props.disabled,
 					key: i,
-					onClick: (e) => batchClickHandler(e, child.props.onClick),
+					onClick: (e) => batchClickHandler(e, child.props.onClick)
 				} as ILabelComponentProps);
 			}
 
@@ -50,7 +50,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = withMooskinContext((p
 					disabled: props.disabled,
 					checked: props.checked,
 					key: i,
-					onClick: (e) => batchClickHandler(e, child.props.onClick),
+					onClick: (e) => batchClickHandler(e, child.props.onClick)
 				} as ICheckboxIconComponentProps);
 			}
 
@@ -79,7 +79,7 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = withMooskinContext((p
 
 Checkbox.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Checkbox.displayName = 'Checkbox';
@@ -93,7 +93,7 @@ export const CheckboxIcon: React.FC<ICheckboxIconComponentProps> = withMooskinCo
 
 CheckboxIcon.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 CheckboxIcon.displayName = 'CheckboxIcon';
@@ -107,7 +107,7 @@ export const CheckboxLabel: React.FC<ILabelComponentProps> = withMooskinContext(
 
 CheckboxLabel.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 CheckboxLabel.displayName = 'CheckboxLabel';
@@ -121,7 +121,7 @@ export const CheckboxDescription: React.FC<IBoxComponentProps> = withMooskinCont
 
 CheckboxDescription.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 CheckboxDescription.displayName = 'CheckboxDescription';

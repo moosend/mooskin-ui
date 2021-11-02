@@ -18,7 +18,7 @@ export const Description: React.FC<IBoxComponentProps> = withMooskinContext((pro
 
 Description.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Description.displayName = 'Description';

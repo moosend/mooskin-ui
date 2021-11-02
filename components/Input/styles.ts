@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
-import { ILabelComponentProps } from '../Label/model';
+import type { ILabelComponentProps } from '../Label/model';
 import { IInputComponentProps, IInputContainerComponentProps, IInputListComponentProps } from './model';
 
 // Components

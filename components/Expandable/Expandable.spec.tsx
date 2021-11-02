@@ -5,7 +5,7 @@ import {
 	ExpandableItemButton,
 	ExpandableItemContainer,
 	ExpandableItemContent,
-	ExpandableItemText,
+	ExpandableItemText
 } from './Expandable';
 
 import { mount } from 'enzyme';

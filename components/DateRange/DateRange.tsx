@@ -17,7 +17,7 @@ import { IDateRangePickerComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
-import { Input } from '../Input/Input';
+import { Input, InputContainer } from '../Input/Input';
 
 import { StyledDateRange } from './styles';
 
@@ -49,7 +49,10 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinCo
 
 	return (
 		<Box position="relative" d="flex" {...props.wrapperProps}>
-			<Input onFocus={() => setShowPicker(true)} value={getInputValue()} {...props.inputProps} />
+			<InputContainer value={getInputValue()} {...props.inputContainerPrpps}>
+				{props.customComponent}
+				<Input onFocus={() => setShowPicker(true)} {...props.inputProps} />
+			</InputContainer>
 			{showPicker && (
 				<StyledDateRange boxShadow="md" {...props.pickerWrapperProps} palette={(props as any).palette}>
 					<DateRangePicker ranges={props.ranges} onChange={props.onChange} {...props} />
@@ -63,7 +66,7 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinCo
 DateRange.defaultProps = {
 	className: '',
 	direction: 'horizontal',
-	format: defaultFormat,
+	format: defaultFormat
 	// months: 2
 };
 
@@ -78,7 +81,7 @@ const DateRangeOverlay: React.FC<IBoxComponentProps> = (props) => {
 
 DateRangeOverlay.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 DateRangeOverlay.displayName = 'DateRangeOverlay';

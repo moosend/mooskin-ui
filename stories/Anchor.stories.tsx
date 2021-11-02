@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Anchor,
-	title: 'Example/Anchor',
+	title: 'Example/Anchor'
 } as any) as Meta;
 
 const Template: Story<IAnchorComponentProps> = (args) => {
@@ -24,12 +24,12 @@ const Template: Story<IAnchorComponentProps> = (args) => {
 export const Normal = Template.bind({});
 Normal.args = {
 	children: 'VIEW CAMPAIGN',
-	href: 'https://www.moosend.com',
+	href: 'https://www.moosend.com'
 } as IAnchorComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	children: 'VIEW CAMPAIGN',
 	disabled: true,
-	href: 'https://www.moosend.com',
+	href: 'https://www.moosend.com'
 } as IAnchorComponentProps;

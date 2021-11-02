@@ -14,7 +14,7 @@ import {
 	IInputContainerComponentProps,
 	IInputEmojiComponentProps,
 	IInputListComponentProps,
-	IInputOptionComponentProps,
+	IInputOptionComponentProps
 } from './model';
 
 // Components
@@ -29,7 +29,7 @@ import {
 	StyledInputOptionListTitle,
 	StyledInputOverlay,
 	StyledInputSolo,
-	StyledInputWrapped,
+	StyledInputWrapped
 } from './styles';
 
 /**
@@ -64,14 +64,14 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 					onChange: (e: React.ChangeEvent<HTMLInputElement>) =>
 						batchChangeHandler(e, { dataLabel: props.dataLabel, value: e.target.value }, child.props.onChange),
 					value: props.value,
-					wrapped: true,
+					wrapped: true
 				} as IInputComponentProps);
 			}
 
 			if (React.isValidElement<IInputEmojiComponentProps>(child) && child.type === InputEmoji) {
 				return React.cloneElement(child, {
 					key: i,
-					onChangeEmoji: onDropdownOptionClick,
+					onChangeEmoji: onDropdownOptionClick
 				} as IInputEmojiComponentProps);
 			}
 
@@ -79,7 +79,7 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
 					icon: child.props.icon,
-					key: i,
+					key: i
 				} as IInputListComponentProps);
 			}
 
@@ -88,7 +88,7 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 					children: recurseChildren(child.props.children),
 					key: i,
 					onClick: (e) => onDropdownOptionClick(child.props.value),
-					value: child.props.value,
+					value: child.props.value
 				} as IInputOptionComponentProps);
 			}
 
@@ -105,7 +105,7 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 
 InputContainer.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 InputContainer.displayName = 'InputContainer';
@@ -132,7 +132,7 @@ export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinCo
 
 InputOptionList.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 InputOptionList.displayName = 'InputOptionList';
@@ -146,7 +146,7 @@ export const InputOptionListTitle: React.FC<IBoxComponentProps> = withMooskinCon
 
 InputOptionListTitle.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 InputOptionListTitle.displayName = 'InputOptionListTitle';
@@ -160,7 +160,7 @@ export const InputOption: React.FC<IInputOptionComponentProps> = withMooskinCont
 
 InputOption.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 InputOption.displayName = 'InputOption';
@@ -175,7 +175,7 @@ export const Input: React.FC<IInputComponentProps> = withMooskinContext((props) 
 
 Input.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Input.displayName = 'Input';
@@ -189,7 +189,7 @@ export const InputIcon: React.FC<IBoxComponentProps> = withMooskinContext((props
 
 InputIcon.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 InputIcon.displayName = 'InputIcon';
@@ -203,7 +203,7 @@ export const InputOverlay: React.FC<IBoxComponentProps> = withMooskinContext((pr
 
 InputOverlay.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 InputOverlay.displayName = 'InputOverlay';
@@ -233,7 +233,7 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = withMooskinContex
 
 InputEmoji.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 InputEmoji.displayName = 'InputEmoji';

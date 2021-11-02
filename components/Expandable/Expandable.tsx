@@ -14,7 +14,7 @@ import {
 	StyledExpandableItemButton,
 	StyledExpandableItemContainer,
 	StyledExpandableItemContent,
-	StyledExpandableItemText,
+	StyledExpandableItemText
 } from './styles';
 
 // Transitions
@@ -53,7 +53,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 					active: active ? active : isActive,
 					activeId: activeId ? activeId : child.props.activeId,
 					children: recurseChildren(child.props.children, child.props.activeId, isActive),
-					key: i,
+					key: i
 				} as IExpandableItemComponentProps);
 			}
 
@@ -61,7 +61,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children, activeId, active),
 					key: i,
-					onClick: (e) => batchClickHandler(e, activeId, child.props.onClick),
+					onClick: (e) => batchClickHandler(e, activeId, child.props.onClick)
 				} as IBoxComponentProps);
 			}
 
@@ -69,7 +69,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 				return React.cloneElement(child, {
 					active,
 					children: child.props.children ? recurseChildren(child.props.children, activeId, active) : 'keyboard_arrow_down',
-					key: i,
+					key: i
 				} as IExpandableCommonComponentProps);
 			}
 
@@ -77,7 +77,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 				return React.cloneElement(child, {
 					active,
 					children: recurseChildren(child.props.children, activeId, active),
-					key: i,
+					key: i
 				} as IExpandableCommonComponentProps);
 			}
 
@@ -85,7 +85,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 				return React.cloneElement(child, {
 					active,
 					children: recurseChildren(child.props.children, activeId, active),
-					key: i,
+					key: i
 				} as IExpandableCommonComponentProps);
 			}
 
@@ -102,7 +102,7 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 
 Expandable.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Expandable.displayName = 'Expandable';
@@ -116,7 +116,7 @@ export const ExpandableItem: React.FC<IExpandableItemComponentProps> = withMoosk
 
 ExpandableItem.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ExpandableItem.displayName = 'ExpandableItem';
@@ -130,7 +130,7 @@ export const ExpandableItemContainer: React.FC<IExpandableItemComponentProps> = 
 
 ExpandableItemContainer.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ExpandableItemContainer.displayName = 'ExpandableItemContainer';
@@ -144,7 +144,7 @@ export const ExpandableItemText: React.FC<IBoxComponentProps> = withMooskinConte
 
 ExpandableItemText.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ExpandableItemText.displayName = 'ExpandableItemText';
@@ -158,7 +158,7 @@ export const ExpandableItemButton: React.FC<IExpandableCommonComponentProps> = w
 
 ExpandableItemButton.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ExpandableItemButton.displayName = 'ExpandableItemButton';
@@ -168,7 +168,7 @@ const transitionOpacity = {
 	entering: 0,
 	exited: 0,
 	exiting: 0,
-	unmounted: 0,
+	unmounted: 0
 };
 
 /**
@@ -184,7 +184,7 @@ export const ExpandableItemContent: React.FC<IExpandableCommonComponentProps> = 
 
 ExpandableItemContent.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ExpandableItemContent.displayName = 'ExpandableItemContent';

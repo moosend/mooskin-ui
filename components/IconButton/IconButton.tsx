@@ -23,5 +23,5 @@ IconButton.displayName = 'IconButton';
 
 IconButton.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };

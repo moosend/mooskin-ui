@@ -5,7 +5,7 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
-import { ILabelComponentProps } from '../Label/model';
+import type { ILabelComponentProps } from '../Label/model';
 import { IRadioComponentProps, IRadioIconComponentProps } from './model';
 
 // Components
@@ -39,7 +39,7 @@ export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) 
 					children: recurseChildren(child.props.children),
 					disabled: props.disabled,
 					key: i,
-					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick),
+					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick)
 				} as ILabelComponentProps);
 			}
 
@@ -50,7 +50,7 @@ export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) 
 					disabled: props.disabled,
 					selected: props.selected,
 					key: i,
-					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick),
+					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, child.props.onClick)
 				} as IRadioIconComponentProps);
 			}
 
@@ -80,7 +80,7 @@ export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) 
 
 Radio.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Radio.displayName = 'Radio';
@@ -94,7 +94,7 @@ export const RadioIcon: React.FC<IRadioIconComponentProps> = withMooskinContext(
 
 RadioIcon.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 RadioIcon.displayName = 'RadioIcon';
@@ -108,7 +108,7 @@ export const RadioLabel: React.FC<ILabelComponentProps> = withMooskinContext((pr
 
 RadioLabel.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 RadioLabel.displayName = 'RadioLabel';
@@ -122,7 +122,7 @@ export const RadioDescription: React.FC<IBoxComponentProps> = withMooskinContext
 
 RadioDescription.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 RadioDescription.displayName = 'RadioDescription';

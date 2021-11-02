@@ -7,7 +7,7 @@ var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 
 
 config.devServer = {
 	contentBase: './' + distFolder,
-	historyApiFallback: true,
+	historyApiFallback: true
 };
 
 config.entry = './playground/playground.tsx';
@@ -15,13 +15,13 @@ config.entry = './playground/playground.tsx';
 config.output = {
 	path: __dirname + '/' + distFolder,
 	publicPath: '',
-	filename: 'playground.js',
+	filename: 'playground.js'
 };
 
 config.plugins.push(
 	new HtmlWebpackPlugin({
 		template: './playground/index.html',
-		favicon: './playground/favicon.ico',
+		favicon: './playground/favicon.ico'
 	}),
 	extractCSS
 );
@@ -30,21 +30,21 @@ config.module.rules.push(
 	{
 		test: /\.tsx?$/,
 		exclude: /node_modules/,
-		use: ['babel-loader', 'ts-loader'],
+		use: ['babel-loader', 'ts-loader']
 	},
 	{
 		test: /\.txt$|\.md$/,
-		loader: 'raw-loader',
+		loader: 'raw-loader'
 	},
 	{
 		enforce: 'pre',
 		test: /\.js$/,
-		loader: 'source-map-loader',
+		loader: 'source-map-loader'
 	},
 	{
 		enforce: 'pre',
 		test: /\.tsx?$/,
-		use: 'source-map-loader',
+		use: 'source-map-loader'
 	},
 	{
 		test: /\.css$/,
@@ -56,11 +56,11 @@ config.module.rules.push(
 				options: {
 					importLoaders: 1,
 					localIdentName: '[local]___[hash:base64:5]',
-					modules: true,
-				},
+					modules: true
+				}
 			},
-			'postcss-loader',
-		],
+			'postcss-loader'
+		]
 	},
 	{
 		test: /\.css$/,
@@ -71,11 +71,11 @@ config.module.rules.push(
 			{
 				loader: 'css-loader',
 				options: {
-					importLoaders: 1,
-				},
+					importLoaders: 1
+				}
 			},
-			'postcss-loader',
-		],
+			'postcss-loader'
+		]
 	}
 );
 

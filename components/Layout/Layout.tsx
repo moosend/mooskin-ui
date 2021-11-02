@@ -19,7 +19,7 @@ export const Layout: React.FC<ILayoutComponentProps> = withMooskinContext((props
 Layout.defaultProps = {
 	className: '',
 	spacing: 15,
-	style: {},
+	style: {}
 };
 
 Layout.displayName = 'Layout';

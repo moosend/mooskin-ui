@@ -10,7 +10,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Footer,
-	title: 'Example/Footer',
+	title: 'Example/Footer'
 } as any) as Meta;
 
 const Template: Story<IBoxComponentProps> = (args) => {
@@ -43,5 +43,5 @@ Normal.args = {
 				<ButtonTwo>DESIGN & DELIVERY TEST</ButtonTwo>
 			</FooterEnd>
 		</>
-	),
+	)
 } as IBoxComponentProps;

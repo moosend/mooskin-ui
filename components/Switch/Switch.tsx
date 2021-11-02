@@ -36,7 +36,7 @@ export const Switch: React.FC<ISwitchComponentProps> = withMooskinContext((props
 						active: props.active,
 						children: recurseChildren((child.props as any).children),
 						key: i,
-						switchWidth: props.w,
+						switchWidth: props.w
 					} as ISwitchHandleComponentProps);
 				}
 				return null;
@@ -62,7 +62,7 @@ export const Switch: React.FC<ISwitchComponentProps> = withMooskinContext((props
 Switch.defaultProps = {
 	className: '',
 	style: {},
-	w: 90,
+	w: 90
 };
 
 Switch.displayName = 'Switch';
@@ -73,7 +73,7 @@ export const SwitchHandle: React.FC<ISwitchHandleComponentProps> = withMooskinCo
 
 SwitchHandle.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 SwitchHandle.displayName = 'SwitchHandle';

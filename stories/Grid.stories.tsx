@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Grid,
-	title: 'Example/Grid',
+	title: 'Example/Grid'
 } as any) as Meta;
 
 const Template: Story<IGridProps> = (args) => {

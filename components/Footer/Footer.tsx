@@ -18,7 +18,7 @@ export const Footer: React.FC<IBoxComponentProps> = withMooskinContext((props) =
 
 Footer.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 Footer.displayName = 'Footer';
@@ -32,7 +32,7 @@ export const FooterHead: React.FC<IBoxComponentProps> = withMooskinContext((prop
 
 FooterHead.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 FooterHead.displayName = 'FooterHead';
@@ -46,7 +46,7 @@ export const FooterBody: React.FC<IBoxComponentProps> = withMooskinContext((prop
 
 FooterBody.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 FooterBody.displayName = 'FooterBody';
@@ -60,7 +60,7 @@ export const FooterEnd: React.FC<IBoxComponentProps> = withMooskinContext((props
 
 FooterEnd.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 FooterEnd.displayName = 'FooterEnd';

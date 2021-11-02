@@ -9,7 +9,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Sidemenu,
-	title: 'Example/Sidemenu',
+	title: 'Example/Sidemenu'
 } as any) as Meta;
 
 const Template: Story<ISidemenuComponentProps> = (args) => {
@@ -36,5 +36,5 @@ Normal.args = {
 			</SidemenuItem>
 			<SidemenuItem value="/preview">Preview</SidemenuItem>
 		</>
-	),
+	)
 } as ISidemenuComponentProps;

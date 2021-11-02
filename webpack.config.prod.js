@@ -36,7 +36,7 @@ config.output = {
 	libraryTarget: 'umd',
 	umdNamedDefine: true,
 	globalObject: 'this',
-	publicPath: '../',
+	publicPath: '../'
 };
 
 config.module.rules.push(
@@ -50,11 +50,11 @@ config.module.rules.push(
 				options: {
 					compilerOptions: {
 						declaration: true,
-						declarationDir: './' + distFolder,
-					},
-				},
-			},
-		],
+						declarationDir: './' + distFolder
+					}
+				}
+			}
+		]
 	},
 	{
 		test: /\.css$/,
@@ -66,12 +66,12 @@ config.module.rules.push(
 				options: {
 					importLoaders: 1,
 					localIdentName: '[local]___[hash:base64:5]',
-					modules: true,
-				},
+					modules: true
+				}
 			},
 
-			'postcss-loader',
-		],
+			'postcss-loader'
+		]
 	},
 	{
 		test: /\.css$/,
@@ -83,10 +83,10 @@ config.module.rules.push(
 				loader: 'css-loader',
 				options: {
 					// importLoaders: 1,
-				},
-			},
+				}
+			}
 			// 'postcss-loader'
-		],
+		]
 	}
 );
 

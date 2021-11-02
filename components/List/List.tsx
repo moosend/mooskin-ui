@@ -23,7 +23,7 @@ export const List: React.FC<ILayoutComponentProps> = withMooskinContext((props) 
 List.defaultProps = {
 	className: '',
 	spacing: 15,
-	style: {},
+	style: {}
 };
 
 List.displayName = 'List';
@@ -37,7 +37,7 @@ export const ListItem: React.FC<IBoxComponentProps> = withMooskinContext((props)
 
 ListItem.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ListItem.displayName = 'ListItem';
@@ -51,7 +51,7 @@ export const ListItemHead: React.FC<IBoxComponentProps> = withMooskinContext((pr
 
 ListItemHead.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ListItemHead.displayName = 'ListItemHead';
@@ -65,7 +65,7 @@ export const ListItemBody: React.FC<IBoxComponentProps> = withMooskinContext((pr
 
 ListItemBody.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ListItemBody.displayName = 'ListItemBody';
@@ -79,7 +79,7 @@ export const ListItemEnd: React.FC<IBoxComponentProps> = withMooskinContext((pro
 
 ListItemEnd.defaultProps = {
 	className: '',
-	style: {},
+	style: {}
 };
 
 ListItemEnd.displayName = 'ListItemEnd';

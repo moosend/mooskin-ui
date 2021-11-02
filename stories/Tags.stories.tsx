@@ -10,7 +10,7 @@ import GlobalStyle from '../components/Styled/GlobalStyles';
 
 export default ({
 	component: Tags,
-	title: 'Example/Tags',
+	title: 'Example/Tags'
 } as any) as Meta;
 
 const Template: Story<ITagsComponentProps> = (args) => {
@@ -33,7 +33,7 @@ Normal.args = {
 	}),
 	limit: 4,
 	onClickTag: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
-	onRemoveTag: (e, data) => console.log(e, data),
+	onRemoveTag: (e, data) => console.log(e, data)
 } as ITagsComponentProps;
 
 export const ReadOnly = Template.bind({});
@@ -48,7 +48,7 @@ ReadOnly.args = {
 		);
 	}),
 	onRemoveTag: undefined,
-	p: 10,
+	p: 10
 } as ITagsComponentProps;
 
 export const WithInput = Template.bind({});
@@ -71,5 +71,5 @@ WithInput.args = {
 	onAddTag: (data) => console.log(data),
 	onClickTag: (e, data) => console.log(e, data),
 	onRemoveTag: (e, data) => console.log(e, data),
-	p: 5,
+	p: 5
 } as ITagsComponentProps;

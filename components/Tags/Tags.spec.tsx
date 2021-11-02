@@ -360,7 +360,7 @@ describe.skip('Tags', () => {
 			'Virgin Islands (US)',
 			'Yemen',
 			'Zambia',
-			'Zimbabwe',
+			'Zimbabwe'
 		];
 
 		const component = mount(<Tags source={countries} tags={tags} onAdd={onAdd} onRemove={onRemove} />);
@@ -641,7 +641,7 @@ describe.skip('Tags', () => {
 			'Virgin Islands (US)',
 			'Yemen',
 			'Zambia',
-			'Zimbabwe',
+			'Zimbabwe'
 		];
 
 		const tags = ['Prishtina', 'Athens', 'London', 'New York', 'Beijing'];
@@ -707,8 +707,8 @@ describe.skip('Tags', () => {
 
 		component.find('input').simulate('paste', {
 			clipboardData: {
-				getData: () => '  D, o. n ,i.,. Gen,,ti.Sh . k ,um. .ba , . ',
-			},
+				getData: () => '  D, o. n ,i.,. Gen,,ti.Sh . k ,um. .ba , . '
+			}
 		});
 		component.setProps({ tags });
 		expect(component.find('Tag').length).toBe(10);
@@ -718,8 +718,8 @@ describe.skip('Tags', () => {
 
 		component.find('input').simulate('paste', {
 			clipboardData: {
-				getData: () => ', Doni .G.E,N T , i .      doni@moosend.com       ',
-			},
+				getData: () => ', Doni .G.E,N T , i .      doni@moosend.com       '
+			}
 		});
 		component.setProps({ tags });
 		expect(component.find('Tag').length).toBe(8);
@@ -756,8 +756,8 @@ describe.skip('Tags', () => {
 
 		component.find('input').simulate('paste', {
 			clipboardData: {
-				getData: () => 'here I go again on my own, with a bucket full of gold',
-			},
+				getData: () => 'here I go again on my own, with a bucket full of gold'
+			}
 		});
 		component.setProps({ tags });
 		expect(component.find('Tag').length).toBe(6);
@@ -767,8 +767,8 @@ describe.skip('Tags', () => {
 
 		component.find('input').simulate('paste', {
 			clipboardData: {
-				getData: () => 'weird seperators are garanteed to be weird, seriously',
-			},
+				getData: () => 'weird seperators are garanteed to be weird, seriously'
+			}
 		});
 		component.setProps({ tags });
 		expect(component.find('Tag').length).toBe(6);
@@ -968,7 +968,6 @@ describe.skip('Tags', () => {
 		// tags = [];
 		// component.setProps({tags});
 
-		// tslint:disable-next-line
 		component.find('input').simulate('paste', { clipboardData: { getData: () => 'doni@moosend.com, genti@moosend.com, olala' } });
 		component.setProps({ tags });
 		expect(component.find('Tag').length).toBe(2);
