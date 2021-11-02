@@ -110,7 +110,7 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 
 	const renderInput = (dateInputProps: any) => {
 		return (
-			<div ref={dateInputProps.inputRef} style={{ width: 'fit-content' }}>
+			<div ref={dateInputProps.inputRef}>
 				<Input style={{ width: '100%' }} {...dateInputProps} {...inputProps} />
 			</div>
 		);
