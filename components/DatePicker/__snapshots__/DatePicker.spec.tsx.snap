@@ -1009,7 +1009,7 @@ exports[`DatePicker renders correctly 1`] = `
                       <input
                         class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                         format="dd/MM/yyyy"
-                        style="width: 500px;"
+                        style="width: 100%;"
                         value="02/01/2021"
                       />
                     </div>,
@@ -1174,7 +1174,7 @@ exports[`DatePicker renders correctly 1`] = `
                         <input
                           class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                           format="dd/MM/yyyy"
-                          style="width: 500px;"
+                          style="width: 100%;"
                           value="02/01/2021"
                         />
                       </div>,
@@ -1341,7 +1341,7 @@ exports[`DatePicker renders correctly 1`] = `
                             <input
                               class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                               format="dd/MM/yyyy"
-                              style="width: 500px;"
+                              style="width: 100%;"
                               value="02/01/2021"
                             />
                           </div>,
@@ -1491,7 +1491,7 @@ exports[`DatePicker renders correctly 1`] = `
                       pickerType="date"
                       style={
                         Object {
-                          "width": 500,
+                          "width": "100%",
                         }
                       }
                       value="02/01/2021"
@@ -1512,7 +1512,7 @@ exports[`DatePicker renders correctly 1`] = `
                               <input
                                 class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                                 format="dd/MM/yyyy"
-                                style="width: 500px;"
+                                style="width: 100%;"
                                 value="02/01/2021"
                               />
                             </div>,
@@ -1662,7 +1662,7 @@ exports[`DatePicker renders correctly 1`] = `
                         pickerType="date"
                         style={
                           Object {
-                            "width": 500,
+                            "width": "100%",
                           }
                         }
                         value="02/01/2021"
@@ -1684,7 +1684,7 @@ exports[`DatePicker renders correctly 1`] = `
                                 <input
                                   class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                                   format="dd/MM/yyyy"
-                                  style="width: 500px;"
+                                  style="width: 100%;"
                                   value="02/01/2021"
                                 />
                               </div>,
@@ -1834,7 +1834,7 @@ exports[`DatePicker renders correctly 1`] = `
                           pickerType="date"
                           style={
                             Object {
-                              "width": 500,
+                              "width": "100%",
                             }
                           }
                           value="02/01/2021"
@@ -1856,7 +1856,7 @@ exports[`DatePicker renders correctly 1`] = `
                                   <input
                                     class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                                     format="dd/MM/yyyy"
-                                    style="width: 500px;"
+                                    style="width: 100%;"
                                     value="02/01/2021"
                                   />
                                 </div>,
@@ -2006,7 +2006,7 @@ exports[`DatePicker renders correctly 1`] = `
                             pickerType="date"
                             style={
                               Object {
-                                "width": 500,
+                                "width": "100%",
                               }
                             }
                             transition="0.2s all"
@@ -2029,7 +2029,7 @@ exports[`DatePicker renders correctly 1`] = `
                                     <input
                                       class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                                       format="dd/MM/yyyy"
-                                      style="width: 500px;"
+                                      style="width: 100%;"
                                       value="02/01/2021"
                                     />
                                   </div>,
@@ -2179,7 +2179,7 @@ exports[`DatePicker renders correctly 1`] = `
                               pickerType="date"
                               style={
                                 Object {
-                                  "width": 500,
+                                  "width": "100%",
                                 }
                               }
                               transition="0.2s all"
@@ -2203,7 +2203,7 @@ exports[`DatePicker renders correctly 1`] = `
                                       <input
                                         class="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
                                         format="dd/MM/yyyy"
-                                        style="width: 500px;"
+                                        style="width: 100%;"
                                         value="02/01/2021"
                                       />
                                     </div>,
@@ -2353,7 +2353,7 @@ exports[`DatePicker renders correctly 1`] = `
                                 pickerType="date"
                                 style={
                                   Object {
-                                    "width": 500,
+                                    "width": "100%",
                                   }
                                 }
                                 transition="0.2s all"
@@ -2366,7 +2366,7 @@ exports[`DatePicker renders correctly 1`] = `
                                   onKeyDown={[Function]}
                                   style={
                                     Object {
-                                      "width": 500,
+                                      "width": "100%",
                                     }
                                   }
                                   value="02/01/2021"
