@@ -39,7 +39,7 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 				},
 				MuiPaper: {
 					root: {
-						backgroundColor: (props as any).palette.backgroundColors.white || variables.backgroundColors.white
+						backgroundColor: (props as any).palette.backgroundColors.background || variables.backgroundColors.background
 					}
 				},
 				MuiPickersCalendarHeader: {

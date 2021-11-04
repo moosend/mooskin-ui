@@ -109,11 +109,7 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 	const { inputProps } = props;
 
 	const renderInput = (dateInputProps: any) => {
-		return (
-			<div ref={dateInputProps.inputRef}>
-				<Input style={{ width: '100%' }} {...dateInputProps} {...inputProps} />
-			</div>
-		);
+		return <Input style={{ width: '100%' }} {...dateInputProps} {...inputProps} />;
 	};
 
 	const type: PickerType = props.pickerType ? props.pickerType : 'date';
@@ -123,7 +119,7 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 	return (
 		<MuiPickersUtilsProvider utils={DateFnsUtils}>
 			<ThemeProvider theme={materialTheme}>
-				<PickerComponent {...props} variant="inline" TextFieldComponent={renderInput} />
+				<PickerComponent {...props} TextFieldComponent={renderInput} />
 			</ThemeProvider>
 		</MuiPickersUtilsProvider>
 	);

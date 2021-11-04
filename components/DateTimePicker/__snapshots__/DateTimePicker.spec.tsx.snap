@@ -211,7 +211,7 @@ exports[`DateTimePicker renders correctly 1`] = `
               },
               "MuiPaper": Object {
                 "root": Object {
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": "#FAFAFA",
                 },
               },
               "MuiPickersCalendarHeader": Object {
