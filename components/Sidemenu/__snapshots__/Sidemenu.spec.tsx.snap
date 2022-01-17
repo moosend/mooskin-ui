@@ -299,7 +299,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
     >
       <Box
         activeItem="/settings"
-        className="sc-gtssRu eglBhX"
+        className="sc-gsDKAQ ljevCW"
         onClickItem={[MockFunction]}
         palette={
           Object {
@@ -445,7 +445,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
       >
         <Component
           activeItem="/settings"
-          className="sc-gtssRu eglBhX"
+          className="sc-gsDKAQ ljevCW"
           onClickItem={[MockFunction]}
           palette={
             Object {
@@ -591,7 +591,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
         >
           <StyledBox
             activeItem="/settings"
-            className="sc-gtssRu eglBhX"
+            className="sc-gsDKAQ ljevCW"
             onClickItem={[MockFunction]}
             palette={
               Object {
@@ -736,7 +736,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu eglBhX"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ ljevCW"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -1042,7 +1042,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                   >
                     <Box
                       active={true}
-                      className="sc-dlnjPT bACzJA"
+                      className="sc-dkPtRN cDYoHN"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -1189,7 +1189,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                     >
                       <Component
                         active={true}
-                        className="sc-dlnjPT bACzJA"
+                        className="sc-dkPtRN cDYoHN"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -1336,7 +1336,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                       >
                         <StyledBox
                           active={true}
-                          className="sc-dlnjPT bACzJA"
+                          className="sc-dkPtRN cDYoHN"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -1482,7 +1482,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/settings"
                         >
                           <div
-                            className="sc-bdnylx ckoRHe sc-dlnjPT bACzJA"
+                            className="sc-bdvvtL hoqwgz sc-dkPtRN cDYoHN"
                             onClick={[Function]}
                             style={Object {}}
                             value="/settings"
@@ -1797,7 +1797,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT FULzg"
+                      className="sc-dkPtRN dbFsmN"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -1944,7 +1944,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT FULzg"
+                        className="sc-dkPtRN dbFsmN"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -2091,7 +2091,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT FULzg"
+                          className="sc-dkPtRN dbFsmN"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -2237,7 +2237,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/template"
                         >
                           <div
-                            className="sc-bdnylx ckoRHe sc-dlnjPT FULzg"
+                            className="sc-bdvvtL hoqwgz sc-dkPtRN dbFsmN"
                             onClick={[Function]}
                             style={Object {}}
                             value="/template"
@@ -2552,7 +2552,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                   >
                     <Box
                       active={false}
-                      className="sc-dlnjPT FULzg"
+                      className="sc-dkPtRN dbFsmN"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -2699,7 +2699,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                     >
                       <Component
                         active={false}
-                        className="sc-dlnjPT FULzg"
+                        className="sc-dkPtRN dbFsmN"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -2846,7 +2846,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                       >
                         <StyledBox
                           active={false}
-                          className="sc-dlnjPT FULzg"
+                          className="sc-dkPtRN dbFsmN"
                           onClick={[Function]}
                           palette={
                             Object {
@@ -2992,7 +2992,7 @@ exports[`Sidemenu renders Sidemenu correctly 1`] = `
                           value="/preview"
                         >
                           <div
-                            className="sc-bdnylx ckoRHe sc-dlnjPT FULzg"
+                            className="sc-bdvvtL hoqwgz sc-dkPtRN dbFsmN"
                             onClick={[Function]}
                             style={Object {}}
                             value="/preview"
@@ -3325,7 +3325,7 @@ exports[`Sidemenu renders SidemenuItem correctly 1`] = `
     >
       <Box
         active={true}
-        className="sc-dlnjPT bACzJA myClass"
+        className="sc-dkPtRN cDYoHN myClass"
         onClick={[MockFunction]}
         palette={
           Object {
@@ -3475,7 +3475,7 @@ exports[`Sidemenu renders SidemenuItem correctly 1`] = `
       >
         <Component
           active={true}
-          className="sc-dlnjPT bACzJA myClass"
+          className="sc-dkPtRN cDYoHN myClass"
           onClick={[MockFunction]}
           palette={
             Object {
@@ -3625,7 +3625,7 @@ exports[`Sidemenu renders SidemenuItem correctly 1`] = `
         >
           <StyledBox
             active={true}
-            className="sc-dlnjPT bACzJA myClass"
+            className="sc-dkPtRN cDYoHN myClass"
             onClick={[MockFunction]}
             palette={
               Object {
@@ -3774,7 +3774,7 @@ exports[`Sidemenu renders SidemenuItem correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-dlnjPT bACzJA myClass"
+              className="sc-bdvvtL hoqwgz sc-dkPtRN cDYoHN myClass"
               onClick={[MockFunction]}
               style={
                 Object {

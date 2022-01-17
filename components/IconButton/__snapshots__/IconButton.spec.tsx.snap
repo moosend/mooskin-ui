@@ -295,7 +295,7 @@ exports[`SmallIconButton renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu fehwhe notranslate "
+        className="sc-gsDKAQ dxuHQv notranslate "
         onClick={[Function]}
         palette={
           Object {
@@ -440,7 +440,7 @@ exports[`SmallIconButton renders correctly 1`] = `
         transition="0.2s all"
       >
         <Component
-          className="sc-gtssRu fehwhe notranslate "
+          className="sc-gsDKAQ dxuHQv notranslate "
           onClick={[Function]}
           palette={
             Object {
@@ -585,7 +585,7 @@ exports[`SmallIconButton renders correctly 1`] = `
           transition="0.2s all"
         >
           <StyledBox
-            className="sc-gtssRu fehwhe notranslate "
+            className="sc-gsDKAQ dxuHQv notranslate "
             onClick={[Function]}
             palette={
               Object {
@@ -730,7 +730,7 @@ exports[`SmallIconButton renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu fehwhe notranslate "
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ dxuHQv notranslate "
               onClick={[Function]}
               style={Object {}}
             >

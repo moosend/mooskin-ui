@@ -294,7 +294,7 @@ exports[`Label renders correctly 1`] = `
     >
       <Box
         boxAs="label"
-        className="sc-gtssRu gGjztn"
+        className="sc-gsDKAQ jfKbIm"
         palette={
           Object {
             "backgroundColors": Object {
@@ -439,7 +439,7 @@ exports[`Label renders correctly 1`] = `
       >
         <Component
           boxAs="label"
-          className="sc-gtssRu gGjztn"
+          className="sc-gsDKAQ jfKbIm"
           palette={
             Object {
               "backgroundColors": Object {
@@ -585,7 +585,7 @@ exports[`Label renders correctly 1`] = `
           <StyledBox
             as="label"
             boxAs="label"
-            className="sc-gtssRu gGjztn"
+            className="sc-gsDKAQ jfKbIm"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -729,7 +729,7 @@ exports[`Label renders correctly 1`] = `
             transition="0.2s all"
           >
             <label
-              className="sc-bdnylx ckoRHe sc-gtssRu gGjztn"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ jfKbIm"
               style={Object {}}
             >
               Label here!

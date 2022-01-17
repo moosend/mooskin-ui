@@ -295,7 +295,7 @@ exports[`Layout renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu jrgeJz"
+        className="sc-gsDKAQ fTrNcq"
         palette={
           Object {
             "backgroundColors": Object {
@@ -440,7 +440,7 @@ exports[`Layout renders correctly 1`] = `
         transition="0.2s all"
       >
         <Component
-          className="sc-gtssRu jrgeJz"
+          className="sc-gsDKAQ fTrNcq"
           palette={
             Object {
               "backgroundColors": Object {
@@ -585,7 +585,7 @@ exports[`Layout renders correctly 1`] = `
           transition="0.2s all"
         >
           <StyledBox
-            className="sc-gtssRu jrgeJz"
+            className="sc-gsDKAQ fTrNcq"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -730,7 +730,7 @@ exports[`Layout renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu jrgeJz"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ fTrNcq"
               spacing={15}
               style={Object {}}
             >
@@ -1037,7 +1037,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx cATaly"
+                      className="sc-bdvvtL jTGwfP"
                       style={Object {}}
                     >
                       Box
@@ -1348,7 +1348,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx cATaly"
+                      className="sc-bdvvtL jTGwfP"
                       style={Object {}}
                     >
                       Box
@@ -1659,7 +1659,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx cATaly"
+                      className="sc-bdvvtL jTGwfP"
                       style={Object {}}
                     >
                       Box
@@ -1970,7 +1970,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx cATaly"
+                      className="sc-bdvvtL jTGwfP"
                       style={Object {}}
                     >
                       Box
@@ -2281,7 +2281,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx cATaly"
+                      className="sc-bdvvtL jTGwfP"
                       style={Object {}}
                     >
                       Box
@@ -2592,7 +2592,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx cATaly"
+                      className="sc-bdvvtL jTGwfP"
                       style={Object {}}
                     >
                       Box
@@ -2903,7 +2903,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx cATaly"
+                      className="sc-bdvvtL jTGwfP"
                       style={Object {}}
                     >
                       Box
@@ -3214,7 +3214,7 @@ exports[`Layout renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx cATaly"
+                      className="sc-bdvvtL jTGwfP"
                       style={Object {}}
                     >
                       Box

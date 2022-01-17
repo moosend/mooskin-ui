@@ -304,7 +304,7 @@ exports[`Drawer renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu"
+        className="sc-gsDKAQ"
         closeOnOverlayClick={true}
         onClose={[MockFunction]}
         palette={
@@ -452,7 +452,7 @@ exports[`Drawer renders correctly 1`] = `
         transition="0.2s all"
       >
         <Component
-          className="sc-gtssRu"
+          className="sc-gsDKAQ"
           closeOnOverlayClick={true}
           onClose={[MockFunction]}
           palette={
@@ -600,7 +600,7 @@ exports[`Drawer renders correctly 1`] = `
           transition="0.2s all"
         >
           <StyledBox
-            className="sc-gtssRu"
+            className="sc-gsDKAQ"
             closeOnOverlayClick={true}
             onClose={[MockFunction]}
             palette={
@@ -748,7 +748,7 @@ exports[`Drawer renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ"
               onClose={[MockFunction]}
               size="sm"
               style={Object {}}
@@ -1070,7 +1070,7 @@ exports[`Drawer renders correctly 1`] = `
                     >
                       <Box
                         boxShadow="base"
-                        className="sc-fFSRdu sc-bkbjAj bXwnsN gtmshO"
+                        className="sc-fFeiMQ sc-bkkeKt fWLIAv OyxrG"
                         isOpen={true}
                         onClick={[Function]}
                         palette={
@@ -1218,7 +1218,7 @@ exports[`Drawer renders correctly 1`] = `
                       >
                         <Component
                           boxShadow="base"
-                          className="sc-fFSRdu sc-bkbjAj bXwnsN gtmshO"
+                          className="sc-fFeiMQ sc-bkkeKt fWLIAv OyxrG"
                           isOpen={true}
                           onClick={[Function]}
                           palette={
@@ -1366,7 +1366,7 @@ exports[`Drawer renders correctly 1`] = `
                         >
                           <StyledBox
                             boxShadow="base"
-                            className="sc-fFSRdu sc-bkbjAj bXwnsN gtmshO"
+                            className="sc-fFeiMQ sc-bkkeKt fWLIAv OyxrG"
                             isOpen={true}
                             onClick={[Function]}
                             palette={
@@ -1513,7 +1513,7 @@ exports[`Drawer renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx flapBS sc-fFSRdu sc-bkbjAj bXwnsN gtmshO"
+                              className="sc-bdvvtL cYvpAP sc-fFeiMQ sc-bkkeKt fWLIAv OyxrG"
                               onClick={[Function]}
                               style={Object {}}
                             >
@@ -1824,7 +1824,7 @@ exports[`Drawer renders correctly 1`] = `
                                     w="50%"
                                   >
                                     <Box
-                                      className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isDHom iegmpR fBTWZO"
+                                      className="sc-dkPtRN sc-hKwDye sc-jRQBWg Ouojv jrvhLV nTHCp"
                                       h="50%"
                                       onClick={[Function]}
                                       palette={
@@ -1973,7 +1973,7 @@ exports[`Drawer renders correctly 1`] = `
                                       w="50%"
                                     >
                                       <Component
-                                        className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isDHom iegmpR fBTWZO"
+                                        className="sc-dkPtRN sc-hKwDye sc-jRQBWg Ouojv jrvhLV nTHCp"
                                         h="50%"
                                         onClick={[Function]}
                                         palette={
@@ -2122,7 +2122,7 @@ exports[`Drawer renders correctly 1`] = `
                                         w="50%"
                                       >
                                         <StyledBox
-                                          className="sc-dlnjPT sc-hKFyIo sc-jSFkmK isDHom iegmpR fBTWZO"
+                                          className="sc-dkPtRN sc-hKwDye sc-jRQBWg Ouojv jrvhLV nTHCp"
                                           h="50%"
                                           onClick={[Function]}
                                           palette={
@@ -2271,7 +2271,7 @@ exports[`Drawer renders correctly 1`] = `
                                           w="50%"
                                         >
                                           <div
-                                            className="sc-bdnylx cWSvmr sc-dlnjPT sc-hKFyIo sc-jSFkmK isDHom iegmpR fBTWZO"
+                                            className="sc-bdvvtL eEWZwa sc-dkPtRN sc-hKwDye sc-jRQBWg Ouojv jrvhLV nTHCp"
                                             onClick={[Function]}
                                             size="sm"
                                             style={Object {}}
@@ -2580,7 +2580,7 @@ exports[`Drawer renders correctly 1`] = `
                                                   top={10}
                                                 >
                                                   <Box
-                                                    className="sc-fnVYJo ffkGxm notranslate "
+                                                    className="sc-fotOHu elouHd notranslate "
                                                     onClick={[Function]}
                                                     palette={
                                                       Object {
@@ -2728,7 +2728,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <Component
-                                                      className="sc-fnVYJo ffkGxm notranslate "
+                                                      className="sc-fotOHu elouHd notranslate "
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -2876,7 +2876,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <StyledBox
-                                                        className="sc-fnVYJo ffkGxm notranslate "
+                                                        className="sc-fotOHu elouHd notranslate "
                                                         onClick={[Function]}
                                                         palette={
                                                           Object {
@@ -3024,7 +3024,7 @@ exports[`Drawer renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <div
-                                                          className="sc-bdnylx frdiWp sc-fnVYJo ffkGxm notranslate "
+                                                          className="sc-bdvvtL QSnZk sc-fotOHu elouHd notranslate "
                                                           onClick={[Function]}
                                                           style={Object {}}
                                                         >
@@ -3330,7 +3330,7 @@ exports[`Drawer renders correctly 1`] = `
                                                 >
                                                   <Box
                                                     boxAs="header"
-                                                    className="sc-bqGHjH drLbIb"
+                                                    className="sc-bqiRlB iTKWER"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -3475,7 +3475,7 @@ exports[`Drawer renders correctly 1`] = `
                                                   >
                                                     <Component
                                                       boxAs="header"
-                                                      className="sc-bqGHjH drLbIb"
+                                                      className="sc-bqiRlB iTKWER"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -3621,7 +3621,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       <StyledBox
                                                         as="header"
                                                         boxAs="header"
-                                                        className="sc-bqGHjH drLbIb"
+                                                        className="sc-bqiRlB iTKWER"
                                                         palette={
                                                           Object {
                                                             "backgroundColors": Object {
@@ -3765,7 +3765,7 @@ exports[`Drawer renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <header
-                                                          className="sc-bdnylx ckoRHe sc-bqGHjH drLbIb"
+                                                          className="sc-bdvvtL hoqwgz sc-bqiRlB iTKWER"
                                                           style={Object {}}
                                                         >
                                                           Create your account
@@ -4068,7 +4068,7 @@ exports[`Drawer renders correctly 1`] = `
                                                   style={Object {}}
                                                 >
                                                   <Box
-                                                    className="sc-ksluoS jiUKmX"
+                                                    className="sc-ksdxgE dKpYqy"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -4212,7 +4212,7 @@ exports[`Drawer renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <Component
-                                                      className="sc-ksluoS jiUKmX"
+                                                      className="sc-ksdxgE dKpYqy"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -4356,7 +4356,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <StyledBox
-                                                        className="sc-ksluoS jiUKmX"
+                                                        className="sc-ksdxgE dKpYqy"
                                                         palette={
                                                           Object {
                                                             "backgroundColors": Object {
@@ -4500,7 +4500,7 @@ exports[`Drawer renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <div
-                                                          className="sc-bdnylx ckoRHe sc-ksluoS jiUKmX"
+                                                          className="sc-bdvvtL hoqwgz sc-ksdxgE dKpYqy"
                                                           style={Object {}}
                                                         >
                                                           Drawer Content Body
@@ -4805,7 +4805,7 @@ exports[`Drawer renders correctly 1`] = `
                                                 >
                                                   <Box
                                                     boxAs="footer"
-                                                    className="sc-hBMVcZ fJYgtM"
+                                                    className="sc-hBUSln emfomw"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -4950,7 +4950,7 @@ exports[`Drawer renders correctly 1`] = `
                                                   >
                                                     <Component
                                                       boxAs="footer"
-                                                      className="sc-hBMVcZ fJYgtM"
+                                                      className="sc-hBUSln emfomw"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -5096,7 +5096,7 @@ exports[`Drawer renders correctly 1`] = `
                                                       <StyledBox
                                                         as="footer"
                                                         boxAs="footer"
-                                                        className="sc-hBMVcZ fJYgtM"
+                                                        className="sc-hBUSln emfomw"
                                                         palette={
                                                           Object {
                                                             "backgroundColors": Object {
@@ -5240,7 +5240,7 @@ exports[`Drawer renders correctly 1`] = `
                                                         transition="0.2s all"
                                                       >
                                                         <footer
-                                                          className="sc-bdnylx ckoRHe sc-hBMVcZ fJYgtM"
+                                                          className="sc-bdvvtL hoqwgz sc-hBUSln emfomw"
                                                           style={Object {}}
                                                         >
                                                           Drawer Footer goes here!

@@ -16,7 +16,7 @@ exports[`Slider renders correctly 1`] = `
   >
     <Box
       boxAs="input"
-      className="sc-gtssRu eklUIY"
+      className="sc-gsDKAQ kshIoV"
       max={10}
       min={0}
       onChange={[Function]}
@@ -27,7 +27,7 @@ exports[`Slider renders correctly 1`] = `
     >
       <Component
         boxAs="input"
-        className="sc-gtssRu eklUIY"
+        className="sc-gsDKAQ kshIoV"
         max={10}
         min={0}
         onChange={[Function]}
@@ -178,7 +178,7 @@ exports[`Slider renders correctly 1`] = `
         <StyledBox
           as="input"
           boxAs="input"
-          className="sc-gtssRu eklUIY"
+          className="sc-gsDKAQ kshIoV"
           max={10}
           min={0}
           onChange={[Function]}
@@ -327,7 +327,7 @@ exports[`Slider renders correctly 1`] = `
           value={5}
         >
           <input
-            className="sc-bdnylx ckoRHe sc-gtssRu eklUIY"
+            className="sc-bdvvtL hoqwgz sc-gsDKAQ kshIoV"
             max={10}
             min={0}
             onChange={[Function]}

@@ -295,7 +295,7 @@ exports[`Expandable renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu dJxHxj"
+        className="sc-gsDKAQ jpXSQq"
         onClickItem={[MockFunction]}
         palette={
           Object {
@@ -440,7 +440,7 @@ exports[`Expandable renders correctly 1`] = `
         transition="0.2s all"
       >
         <Component
-          className="sc-gtssRu dJxHxj"
+          className="sc-gsDKAQ jpXSQq"
           onClickItem={[MockFunction]}
           palette={
             Object {
@@ -585,7 +585,7 @@ exports[`Expandable renders correctly 1`] = `
           transition="0.2s all"
         >
           <StyledBox
-            className="sc-gtssRu dJxHxj"
+            className="sc-gsDKAQ jpXSQq"
             onClickItem={[MockFunction]}
             palette={
               Object {
@@ -730,7 +730,7 @@ exports[`Expandable renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu dJxHxj"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ jpXSQq"
               onClickItem={[MockFunction]}
               style={Object {}}
             >
@@ -1034,7 +1034,7 @@ exports[`Expandable renders correctly 1`] = `
                     <Box
                       active={false}
                       activeId={1}
-                      className="sc-dlnjPT jLTatE"
+                      className="sc-dkPtRN hQCxXJ"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -1180,7 +1180,7 @@ exports[`Expandable renders correctly 1`] = `
                       <Component
                         active={false}
                         activeId={1}
-                        className="sc-dlnjPT jLTatE"
+                        className="sc-dkPtRN hQCxXJ"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -1326,7 +1326,7 @@ exports[`Expandable renders correctly 1`] = `
                         <StyledBox
                           active={false}
                           activeId={1}
-                          className="sc-dlnjPT jLTatE"
+                          className="sc-dkPtRN hQCxXJ"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -1470,7 +1470,7 @@ exports[`Expandable renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx ckoRHe sc-dlnjPT jLTatE"
+                            className="sc-bdvvtL hoqwgz sc-dkPtRN hQCxXJ"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -1768,7 +1768,7 @@ exports[`Expandable renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <Box
-                                    className="sc-hKFyIo lmvPMg"
+                                    className="sc-hKwDye gzhyWA"
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -1913,7 +1913,7 @@ exports[`Expandable renders correctly 1`] = `
                                     transition="0.2s all"
                                   >
                                     <Component
-                                      className="sc-hKFyIo lmvPMg"
+                                      className="sc-hKwDye gzhyWA"
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -2058,7 +2058,7 @@ exports[`Expandable renders correctly 1`] = `
                                       transition="0.2s all"
                                     >
                                       <StyledBox
-                                        className="sc-hKFyIo lmvPMg"
+                                        className="sc-hKwDye gzhyWA"
                                         onClick={[Function]}
                                         palette={
                                           Object {
@@ -2203,7 +2203,7 @@ exports[`Expandable renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx ckoRHe sc-hKFyIo lmvPMg"
+                                          className="sc-bdvvtL hoqwgz sc-hKwDye gzhyWA"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -2499,7 +2499,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <Box
-                                                  className="sc-jSFkmK gwZdKD"
+                                                  className="sc-jRQBWg ldpktA"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -2643,7 +2643,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   transition="0.2s all"
                                                 >
                                                   <Component
-                                                    className="sc-jSFkmK gwZdKD"
+                                                    className="sc-jRQBWg ldpktA"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -2787,7 +2787,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <StyledBox
-                                                      className="sc-jSFkmK gwZdKD"
+                                                      className="sc-jRQBWg ldpktA"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -2931,7 +2931,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ckoRHe sc-jSFkmK gwZdKD"
+                                                        className="sc-bdvvtL hoqwgz sc-jRQBWg ldpktA"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 1
@@ -3238,7 +3238,7 @@ exports[`Expandable renders correctly 1`] = `
                                               >
                                                 <Box
                                                   active={false}
-                                                  className="sc-eCApGN eiXiES notranslate "
+                                                  className="sc-eCImPb hVvylm notranslate "
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -3383,7 +3383,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 >
                                                   <Component
                                                     active={false}
-                                                    className="sc-eCApGN eiXiES notranslate "
+                                                    className="sc-eCImPb hVvylm notranslate "
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -3528,7 +3528,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   >
                                                     <StyledBox
                                                       active={false}
-                                                      className="sc-eCApGN eiXiES notranslate "
+                                                      className="sc-eCImPb hVvylm notranslate "
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -3672,7 +3672,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ckoRHe sc-eCApGN eiXiES notranslate "
+                                                        className="sc-bdvvtL hoqwgz sc-eCImPb hVvylm notranslate "
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -4167,7 +4167,7 @@ exports[`Expandable renders correctly 1`] = `
                     <Box
                       active={false}
                       activeId={2}
-                      className="sc-dlnjPT jLTatE"
+                      className="sc-dkPtRN hQCxXJ"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -4313,7 +4313,7 @@ exports[`Expandable renders correctly 1`] = `
                       <Component
                         active={false}
                         activeId={2}
-                        className="sc-dlnjPT jLTatE"
+                        className="sc-dkPtRN hQCxXJ"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -4459,7 +4459,7 @@ exports[`Expandable renders correctly 1`] = `
                         <StyledBox
                           active={false}
                           activeId={2}
-                          className="sc-dlnjPT jLTatE"
+                          className="sc-dkPtRN hQCxXJ"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -4603,7 +4603,7 @@ exports[`Expandable renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx ckoRHe sc-dlnjPT jLTatE"
+                            className="sc-bdvvtL hoqwgz sc-dkPtRN hQCxXJ"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -4901,7 +4901,7 @@ exports[`Expandable renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <Box
-                                    className="sc-hKFyIo lmvPMg"
+                                    className="sc-hKwDye gzhyWA"
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -5046,7 +5046,7 @@ exports[`Expandable renders correctly 1`] = `
                                     transition="0.2s all"
                                   >
                                     <Component
-                                      className="sc-hKFyIo lmvPMg"
+                                      className="sc-hKwDye gzhyWA"
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -5191,7 +5191,7 @@ exports[`Expandable renders correctly 1`] = `
                                       transition="0.2s all"
                                     >
                                       <StyledBox
-                                        className="sc-hKFyIo lmvPMg"
+                                        className="sc-hKwDye gzhyWA"
                                         onClick={[Function]}
                                         palette={
                                           Object {
@@ -5336,7 +5336,7 @@ exports[`Expandable renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx ckoRHe sc-hKFyIo lmvPMg"
+                                          className="sc-bdvvtL hoqwgz sc-hKwDye gzhyWA"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -5632,7 +5632,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <Box
-                                                  className="sc-jSFkmK gwZdKD"
+                                                  className="sc-jRQBWg ldpktA"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -5776,7 +5776,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   transition="0.2s all"
                                                 >
                                                   <Component
-                                                    className="sc-jSFkmK gwZdKD"
+                                                    className="sc-jRQBWg ldpktA"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -5920,7 +5920,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <StyledBox
-                                                      className="sc-jSFkmK gwZdKD"
+                                                      className="sc-jRQBWg ldpktA"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -6064,7 +6064,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ckoRHe sc-jSFkmK gwZdKD"
+                                                        className="sc-bdvvtL hoqwgz sc-jRQBWg ldpktA"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 2
@@ -6371,7 +6371,7 @@ exports[`Expandable renders correctly 1`] = `
                                               >
                                                 <Box
                                                   active={false}
-                                                  className="sc-eCApGN eiXiES notranslate "
+                                                  className="sc-eCImPb hVvylm notranslate "
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -6516,7 +6516,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 >
                                                   <Component
                                                     active={false}
-                                                    className="sc-eCApGN eiXiES notranslate "
+                                                    className="sc-eCImPb hVvylm notranslate "
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -6661,7 +6661,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   >
                                                     <StyledBox
                                                       active={false}
-                                                      className="sc-eCApGN eiXiES notranslate "
+                                                      className="sc-eCImPb hVvylm notranslate "
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -6805,7 +6805,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ckoRHe sc-eCApGN eiXiES notranslate "
+                                                        className="sc-bdvvtL hoqwgz sc-eCImPb hVvylm notranslate "
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -7300,7 +7300,7 @@ exports[`Expandable renders correctly 1`] = `
                     <Box
                       active={false}
                       activeId={3}
-                      className="sc-dlnjPT jLTatE"
+                      className="sc-dkPtRN hQCxXJ"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -7446,7 +7446,7 @@ exports[`Expandable renders correctly 1`] = `
                       <Component
                         active={false}
                         activeId={3}
-                        className="sc-dlnjPT jLTatE"
+                        className="sc-dkPtRN hQCxXJ"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -7592,7 +7592,7 @@ exports[`Expandable renders correctly 1`] = `
                         <StyledBox
                           active={false}
                           activeId={3}
-                          className="sc-dlnjPT jLTatE"
+                          className="sc-dkPtRN hQCxXJ"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -7736,7 +7736,7 @@ exports[`Expandable renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx ckoRHe sc-dlnjPT jLTatE"
+                            className="sc-bdvvtL hoqwgz sc-dkPtRN hQCxXJ"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -8034,7 +8034,7 @@ exports[`Expandable renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <Box
-                                    className="sc-hKFyIo lmvPMg"
+                                    className="sc-hKwDye gzhyWA"
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -8179,7 +8179,7 @@ exports[`Expandable renders correctly 1`] = `
                                     transition="0.2s all"
                                   >
                                     <Component
-                                      className="sc-hKFyIo lmvPMg"
+                                      className="sc-hKwDye gzhyWA"
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -8324,7 +8324,7 @@ exports[`Expandable renders correctly 1`] = `
                                       transition="0.2s all"
                                     >
                                       <StyledBox
-                                        className="sc-hKFyIo lmvPMg"
+                                        className="sc-hKwDye gzhyWA"
                                         onClick={[Function]}
                                         palette={
                                           Object {
@@ -8469,7 +8469,7 @@ exports[`Expandable renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx ckoRHe sc-hKFyIo lmvPMg"
+                                          className="sc-bdvvtL hoqwgz sc-hKwDye gzhyWA"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -8765,7 +8765,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <Box
-                                                  className="sc-jSFkmK gwZdKD"
+                                                  className="sc-jRQBWg ldpktA"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -8909,7 +8909,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   transition="0.2s all"
                                                 >
                                                   <Component
-                                                    className="sc-jSFkmK gwZdKD"
+                                                    className="sc-jRQBWg ldpktA"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -9053,7 +9053,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <StyledBox
-                                                      className="sc-jSFkmK gwZdKD"
+                                                      className="sc-jRQBWg ldpktA"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -9197,7 +9197,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ckoRHe sc-jSFkmK gwZdKD"
+                                                        className="sc-bdvvtL hoqwgz sc-jRQBWg ldpktA"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 3
@@ -9504,7 +9504,7 @@ exports[`Expandable renders correctly 1`] = `
                                               >
                                                 <Box
                                                   active={false}
-                                                  className="sc-eCApGN eiXiES notranslate "
+                                                  className="sc-eCImPb hVvylm notranslate "
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -9649,7 +9649,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 >
                                                   <Component
                                                     active={false}
-                                                    className="sc-eCApGN eiXiES notranslate "
+                                                    className="sc-eCImPb hVvylm notranslate "
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -9794,7 +9794,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   >
                                                     <StyledBox
                                                       active={false}
-                                                      className="sc-eCApGN eiXiES notranslate "
+                                                      className="sc-eCImPb hVvylm notranslate "
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -9938,7 +9938,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ckoRHe sc-eCApGN eiXiES notranslate "
+                                                        className="sc-bdvvtL hoqwgz sc-eCImPb hVvylm notranslate "
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down
@@ -10433,7 +10433,7 @@ exports[`Expandable renders correctly 1`] = `
                     <Box
                       active={false}
                       activeId={4}
-                      className="sc-dlnjPT jLTatE"
+                      className="sc-dkPtRN hQCxXJ"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -10579,7 +10579,7 @@ exports[`Expandable renders correctly 1`] = `
                       <Component
                         active={false}
                         activeId={4}
-                        className="sc-dlnjPT jLTatE"
+                        className="sc-dkPtRN hQCxXJ"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -10725,7 +10725,7 @@ exports[`Expandable renders correctly 1`] = `
                         <StyledBox
                           active={false}
                           activeId={4}
-                          className="sc-dlnjPT jLTatE"
+                          className="sc-dkPtRN hQCxXJ"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -10869,7 +10869,7 @@ exports[`Expandable renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx ckoRHe sc-dlnjPT jLTatE"
+                            className="sc-bdvvtL hoqwgz sc-dkPtRN hQCxXJ"
                             style={Object {}}
                           >
                             <ExpandableItemContainer
@@ -11167,7 +11167,7 @@ exports[`Expandable renders correctly 1`] = `
                                   style={Object {}}
                                 >
                                   <Box
-                                    className="sc-hKFyIo lmvPMg"
+                                    className="sc-hKwDye gzhyWA"
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -11312,7 +11312,7 @@ exports[`Expandable renders correctly 1`] = `
                                     transition="0.2s all"
                                   >
                                     <Component
-                                      className="sc-hKFyIo lmvPMg"
+                                      className="sc-hKwDye gzhyWA"
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -11457,7 +11457,7 @@ exports[`Expandable renders correctly 1`] = `
                                       transition="0.2s all"
                                     >
                                       <StyledBox
-                                        className="sc-hKFyIo lmvPMg"
+                                        className="sc-hKwDye gzhyWA"
                                         onClick={[Function]}
                                         palette={
                                           Object {
@@ -11602,7 +11602,7 @@ exports[`Expandable renders correctly 1`] = `
                                         transition="0.2s all"
                                       >
                                         <div
-                                          className="sc-bdnylx ckoRHe sc-hKFyIo lmvPMg"
+                                          className="sc-bdvvtL hoqwgz sc-hKwDye gzhyWA"
                                           onClick={[Function]}
                                           style={Object {}}
                                         >
@@ -11898,7 +11898,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 style={Object {}}
                                               >
                                                 <Box
-                                                  className="sc-jSFkmK gwZdKD"
+                                                  className="sc-jRQBWg ldpktA"
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -12042,7 +12042,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   transition="0.2s all"
                                                 >
                                                   <Component
-                                                    className="sc-jSFkmK gwZdKD"
+                                                    className="sc-jRQBWg ldpktA"
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -12186,7 +12186,7 @@ exports[`Expandable renders correctly 1`] = `
                                                     transition="0.2s all"
                                                   >
                                                     <StyledBox
-                                                      className="sc-jSFkmK gwZdKD"
+                                                      className="sc-jRQBWg ldpktA"
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -12330,7 +12330,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ckoRHe sc-jSFkmK gwZdKD"
+                                                        className="sc-bdvvtL hoqwgz sc-jRQBWg ldpktA"
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 4
@@ -12637,7 +12637,7 @@ exports[`Expandable renders correctly 1`] = `
                                               >
                                                 <Box
                                                   active={false}
-                                                  className="sc-eCApGN eiXiES notranslate "
+                                                  className="sc-eCImPb hVvylm notranslate "
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -12782,7 +12782,7 @@ exports[`Expandable renders correctly 1`] = `
                                                 >
                                                   <Component
                                                     active={false}
-                                                    className="sc-eCApGN eiXiES notranslate "
+                                                    className="sc-eCImPb hVvylm notranslate "
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -12927,7 +12927,7 @@ exports[`Expandable renders correctly 1`] = `
                                                   >
                                                     <StyledBox
                                                       active={false}
-                                                      className="sc-eCApGN eiXiES notranslate "
+                                                      className="sc-eCImPb hVvylm notranslate "
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -13071,7 +13071,7 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdnylx ckoRHe sc-eCApGN eiXiES notranslate "
+                                                        className="sc-bdvvtL hoqwgz sc-eCImPb hVvylm notranslate "
                                                         style={Object {}}
                                                       >
                                                         keyboard_arrow_down

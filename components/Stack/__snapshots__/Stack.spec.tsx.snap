@@ -649,7 +649,7 @@ exports[`Stack renders Stack correctly 1`] = `
         >
           <Box
             align="initial"
-            className="sc-gtssRu iXkelt"
+            className="sc-gsDKAQ dHpxyI"
             direction="column"
             divider={
               <span
@@ -807,7 +807,7 @@ exports[`Stack renders Stack correctly 1`] = `
           >
             <Component
               align="initial"
-              className="sc-gtssRu iXkelt"
+              className="sc-gsDKAQ dHpxyI"
               direction="column"
               divider={
                 <span
@@ -965,7 +965,7 @@ exports[`Stack renders Stack correctly 1`] = `
             >
               <StyledBox
                 align="initial"
-                className="sc-gtssRu iXkelt"
+                className="sc-gsDKAQ dHpxyI"
                 direction="column"
                 divider={
                   <span
@@ -1122,7 +1122,7 @@ exports[`Stack renders Stack correctly 1`] = `
                 transition="0.2s all"
               >
                 <div
-                  className="sc-bdnylx fyiDFM sc-gtssRu iXkelt"
+                  className="sc-bdvvtL cwFpwZ sc-gsDKAQ dHpxyI"
                   direction="column"
                   spacing={20}
                   style={Object {}}
@@ -1437,7 +1437,7 @@ exports[`Stack renders Stack correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx hklSQe"
+                          className="sc-bdvvtL kltWYn"
                           style={Object {}}
                         >
                           <span
@@ -1762,7 +1762,7 @@ exports[`Stack renders Stack correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx hklSQe"
+                          className="sc-bdvvtL kltWYn"
                           style={Object {}}
                         >
                           <span

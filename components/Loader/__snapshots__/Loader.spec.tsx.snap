@@ -298,7 +298,7 @@ exports[`Loader renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu fqrnNu"
+        className="sc-gsDKAQ kugghH"
         palette={
           Object {
             "backgroundColors": Object {
@@ -444,7 +444,7 @@ exports[`Loader renders correctly 1`] = `
         transition="0.2s all"
       >
         <Component
-          className="sc-gtssRu fqrnNu"
+          className="sc-gsDKAQ kugghH"
           palette={
             Object {
               "backgroundColors": Object {
@@ -590,7 +590,7 @@ exports[`Loader renders correctly 1`] = `
           transition="0.2s all"
         >
           <StyledBox
-            className="sc-gtssRu fqrnNu"
+            className="sc-gsDKAQ kugghH"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -736,7 +736,7 @@ exports[`Loader renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu fqrnNu"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ kugghH"
               size={50}
               style={Object {}}
             />

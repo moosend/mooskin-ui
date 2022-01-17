@@ -617,7 +617,7 @@ exports[`Button renders correctly 1`] = `
             abbrAccuracy={1}
             abbreviate={true}
             boxAs="label"
-            className="sc-gtssRu gGjztn myClass"
+            className="sc-gsDKAQ jfKbIm myClass"
             id="label"
             palette={
               Object {
@@ -769,7 +769,7 @@ exports[`Button renders correctly 1`] = `
               abbrAccuracy={1}
               abbreviate={true}
               boxAs="label"
-              className="sc-gtssRu gGjztn myClass"
+              className="sc-gsDKAQ jfKbIm myClass"
               id="label"
               palette={
                 Object {
@@ -922,7 +922,7 @@ exports[`Button renders correctly 1`] = `
                 abbreviate={true}
                 as="label"
                 boxAs="label"
-                className="sc-gtssRu gGjztn myClass"
+                className="sc-gsDKAQ jfKbIm myClass"
                 id="label"
                 palette={
                   Object {
@@ -1071,7 +1071,7 @@ exports[`Button renders correctly 1`] = `
                 transition="0.2s all"
               >
                 <label
-                  className="sc-bdnylx ckoRHe sc-gtssRu gGjztn myClass"
+                  className="sc-bdvvtL hoqwgz sc-gsDKAQ jfKbIm myClass"
                   id="label"
                   style={
                     Object {

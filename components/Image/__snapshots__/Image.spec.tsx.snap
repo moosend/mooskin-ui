@@ -297,7 +297,7 @@ exports[`Image renders correctly 1`] = `
     >
       <Box
         boxAs="img"
-        className="sc-gtssRu dTEizC"
+        className="sc-gsDKAQ iWpMXz"
         palette={
           Object {
             "backgroundColors": Object {
@@ -443,7 +443,7 @@ exports[`Image renders correctly 1`] = `
       >
         <Component
           boxAs="img"
-          className="sc-gtssRu dTEizC"
+          className="sc-gsDKAQ iWpMXz"
           palette={
             Object {
               "backgroundColors": Object {
@@ -590,7 +590,7 @@ exports[`Image renders correctly 1`] = `
           <StyledBox
             as="img"
             boxAs="img"
-            className="sc-gtssRu dTEizC"
+            className="sc-gsDKAQ iWpMXz"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -735,7 +735,7 @@ exports[`Image renders correctly 1`] = `
             transition="0.2s all"
           >
             <img
-              className="sc-bdnylx ckoRHe sc-gtssRu dTEizC"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ iWpMXz"
               src="asd"
               style={Object {}}
             />

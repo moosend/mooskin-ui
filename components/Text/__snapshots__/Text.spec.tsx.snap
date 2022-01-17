@@ -292,7 +292,7 @@ exports[`Text renders correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu kPOGzy"
+        className="sc-gsDKAQ SGKSH"
         palette={
           Object {
             "backgroundColors": Object {
@@ -436,7 +436,7 @@ exports[`Text renders correctly 1`] = `
         transition="0.2s all"
       >
         <Component
-          className="sc-gtssRu kPOGzy"
+          className="sc-gsDKAQ SGKSH"
           palette={
             Object {
               "backgroundColors": Object {
@@ -580,7 +580,7 @@ exports[`Text renders correctly 1`] = `
           transition="0.2s all"
         >
           <StyledBox
-            className="sc-gtssRu kPOGzy"
+            className="sc-gsDKAQ SGKSH"
             palette={
               Object {
                 "backgroundColors": Object {
@@ -724,7 +724,7 @@ exports[`Text renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu kPOGzy"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ SGKSH"
               style={Object {}}
             >
               Text here!

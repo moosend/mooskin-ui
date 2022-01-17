@@ -304,7 +304,7 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
+        className="sc-gsDKAQ sc-dkPtRN ioNkAb gVJKyB"
         endColor="#A0AEC0"
         isLoaded={false}
         palette={
@@ -452,7 +452,7 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
         transition="0.2s all"
       >
         <Component
-          className="sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
+          className="sc-gsDKAQ sc-dkPtRN ioNkAb gVJKyB"
           endColor="#A0AEC0"
           isLoaded={false}
           palette={
@@ -600,7 +600,7 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
           transition="0.2s all"
         >
           <StyledBox
-            className="sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
+            className="sc-gsDKAQ sc-dkPtRN ioNkAb gVJKyB"
             endColor="#A0AEC0"
             isLoaded={false}
             palette={
@@ -748,7 +748,7 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu sc-dlnjPT bexDGe gdMTeg"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ sc-dkPtRN ioNkAb gVJKyB"
               speed={0.8}
               style={Object {}}
             >
@@ -1100,7 +1100,7 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
       style={Object {}}
     >
       <Box
-        className="sc-gtssRu sc-hKFyIo bexDGe frPYgX"
+        className="sc-gsDKAQ sc-hKwDye ioNkAb khQVDj"
         endColor="#A0AEC0"
         isLoaded={false}
         palette={
@@ -1249,7 +1249,7 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
         transition="0.2s all"
       >
         <Component
-          className="sc-gtssRu sc-hKFyIo bexDGe frPYgX"
+          className="sc-gsDKAQ sc-hKwDye ioNkAb khQVDj"
           endColor="#A0AEC0"
           isLoaded={false}
           palette={
@@ -1398,7 +1398,7 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
           transition="0.2s all"
         >
           <StyledBox
-            className="sc-gtssRu sc-hKFyIo bexDGe frPYgX"
+            className="sc-gsDKAQ sc-hKwDye ioNkAb khQVDj"
             endColor="#A0AEC0"
             isLoaded={false}
             palette={
@@ -1547,7 +1547,7 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu sc-hKFyIo bexDGe frPYgX"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ sc-hKwDye ioNkAb khQVDj"
               size="20px"
               speed={0.8}
               style={Object {}}
@@ -1869,7 +1869,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
       w="100%"
     >
       <Box
-        className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+        className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
         endColor="#A0AEC0"
         isLoaded={false}
         lines={4}
@@ -2019,7 +2019,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         w="100%"
       >
         <Component
-          className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+          className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
           endColor="#A0AEC0"
           isLoaded={false}
           lines={4}
@@ -2169,7 +2169,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           w="100%"
         >
           <StyledBox
-            className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+            className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
             endColor="#A0AEC0"
             isLoaded={false}
             lines={4}
@@ -2319,7 +2319,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             w="100%"
           >
             <div
-              className="sc-bdnylx bAfewG sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdvvtL cpUItf sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
               speed={0.8}
               style={Object {}}
             />
@@ -2478,7 +2478,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
       w="100%"
     >
       <Box
-        className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+        className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
         endColor="#A0AEC0"
         isLoaded={false}
         lines={4}
@@ -2628,7 +2628,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         w="100%"
       >
         <Component
-          className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+          className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
           endColor="#A0AEC0"
           isLoaded={false}
           lines={4}
@@ -2778,7 +2778,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           w="100%"
         >
           <StyledBox
-            className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+            className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
             endColor="#A0AEC0"
             isLoaded={false}
             lines={4}
@@ -2928,7 +2928,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             w="100%"
           >
             <div
-              className="sc-bdnylx bAfewG sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdvvtL cpUItf sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
               speed={0.8}
               style={Object {}}
             />
@@ -3087,7 +3087,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
       w="100%"
     >
       <Box
-        className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+        className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
         endColor="#A0AEC0"
         isLoaded={false}
         lines={4}
@@ -3237,7 +3237,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         w="100%"
       >
         <Component
-          className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+          className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
           endColor="#A0AEC0"
           isLoaded={false}
           lines={4}
@@ -3387,7 +3387,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           w="100%"
         >
           <StyledBox
-            className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+            className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
             endColor="#A0AEC0"
             isLoaded={false}
             lines={4}
@@ -3537,7 +3537,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             w="100%"
           >
             <div
-              className="sc-bdnylx bAfewG sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdvvtL cpUItf sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
               speed={0.8}
               style={Object {}}
             />
@@ -3696,7 +3696,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
       w="80%"
     >
       <Box
-        className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+        className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
         endColor="#A0AEC0"
         isLoaded={false}
         lines={4}
@@ -3846,7 +3846,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
         w="80%"
       >
         <Component
-          className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+          className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
           endColor="#A0AEC0"
           isLoaded={false}
           lines={4}
@@ -3996,7 +3996,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           w="80%"
         >
           <StyledBox
-            className="sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+            className="sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
             endColor="#A0AEC0"
             isLoaded={false}
             lines={4}
@@ -4146,7 +4146,7 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             w="80%"
           >
             <div
-              className="sc-bdnylx fWBdCb sc-gtssRu sc-eCApGN bexDGe kcBUaI"
+              className="sc-bdvvtL gZdTTK sc-gsDKAQ sc-eCImPb ioNkAb bEUDFY"
               speed={0.8}
               style={Object {}}
             />

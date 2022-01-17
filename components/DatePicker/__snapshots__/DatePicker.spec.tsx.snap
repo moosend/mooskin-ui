@@ -1789,7 +1789,7 @@ exports[`DatePicker renders correctly 1`] = `
                             }
                           }
                           boxAs="input"
-                          className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                          className="sc-eCImPb sc-jRQBWg fPxHpR kIwyoM"
                           error={false}
                           format="dd/MM/yyyy"
                           helperText=""
@@ -1950,7 +1950,7 @@ exports[`DatePicker renders correctly 1`] = `
                               }
                             }
                             boxAs="input"
-                            className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                            className="sc-eCImPb sc-jRQBWg fPxHpR kIwyoM"
                             error={false}
                             format="dd/MM/yyyy"
                             helperText=""
@@ -2112,7 +2112,7 @@ exports[`DatePicker renders correctly 1`] = `
                               }
                               as="input"
                               boxAs="input"
-                              className="sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                              className="sc-eCImPb sc-jRQBWg fPxHpR kIwyoM"
                               error={false}
                               format="dd/MM/yyyy"
                               helperText=""
@@ -2267,7 +2267,7 @@ exports[`DatePicker renders correctly 1`] = `
                               value="02/01/2021"
                             >
                               <input
-                                className="sc-bdnylx ckoRHe sc-eCApGN sc-jSFkmK fQlSyR kGAihP"
+                                className="sc-bdvvtL hoqwgz sc-eCImPb sc-jRQBWg fPxHpR kIwyoM"
                                 format="dd/MM/yyyy"
                                 onClick={[Function]}
                                 onKeyDown={[Function]}
@@ -2681,7 +2681,6 @@ exports[`DatePicker renders correctly 1`] = `
                         }
                         className="MuiDialog-root"
                         closeAfterTransition={true}
-                        disableBackdropClick={false}
                         disableEscapeKeyDown={false}
                         onClose={[Function]}
                         open={false}

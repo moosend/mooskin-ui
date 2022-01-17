@@ -304,7 +304,7 @@ exports[`Box renders Box correctly 1`] = `
       transition="0.2s all"
     >
       <div
-        className="sc-bdnylx gKsrPu"
+        className="sc-bdvvtL emYaH"
         style={Object {}}
       >
         Box

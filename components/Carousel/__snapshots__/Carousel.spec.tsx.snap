@@ -38,7 +38,7 @@ exports[`Carousel renders correctly 1`] = `
       accessibility={true}
       autoplaySpeed={3000}
       centerPadding="50px"
-      className="sc-gtssRu jAQECE"
+      className="sc-gsDKAQ jSfoUB"
       customPaging={[Function]}
       dots={true}
       dotsClass="slick-dots"
@@ -62,7 +62,7 @@ exports[`Carousel renders correctly 1`] = `
         beforeChange={null}
         centerMode={false}
         centerPadding="50px"
-        className="sc-gtssRu jAQECE"
+        className="sc-gsDKAQ jSfoUB"
         cssEase="ease"
         customPaging={[Function]}
         dots={true}
@@ -104,7 +104,7 @@ exports[`Carousel renders correctly 1`] = `
         waitForAnimate={true}
       >
         <div
-          className="slick-slider sc-gtssRu jAQECE slick-initialized"
+          className="slick-slider sc-gsDKAQ jSfoUB slick-initialized"
           dir="ltr"
         >
           <PrevArrow
@@ -537,7 +537,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 4
@@ -880,7 +880,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 5
@@ -1223,7 +1223,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 6
@@ -1567,7 +1567,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 0
@@ -1911,7 +1911,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 1
@@ -2255,7 +2255,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 2
@@ -2599,7 +2599,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 3
@@ -2943,7 +2943,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 4
@@ -3287,7 +3287,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 5
@@ -3631,7 +3631,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 6
@@ -3974,7 +3974,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 0
@@ -4317,7 +4317,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 1
@@ -4660,7 +4660,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 2
@@ -5003,7 +5003,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 3
@@ -5346,7 +5346,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 4
@@ -5689,7 +5689,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 5
@@ -6032,7 +6032,7 @@ exports[`Carousel renders correctly 1`] = `
                             transition="0.2s all"
                           >
                             <div
-                              className="sc-bdnylx hESYlv"
+                              className="sc-bdvvtL crazBC"
                               style={Object {}}
                             >
                               Box 6
@@ -6105,13 +6105,13 @@ exports[`Carousel renders correctly 1`] = `
                   onClick={[Function]}
                 >
                   <Box
-                    className="sc-dlnjPT fvzCWx"
+                    className="sc-dkPtRN hvAbFU"
                     onClick={[Function]}
                     style={Object {}}
                     transition="0.2s all"
                   >
                     <Component
-                      className="sc-dlnjPT fvzCWx"
+                      className="sc-dkPtRN hvAbFU"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -6256,7 +6256,7 @@ exports[`Carousel renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <StyledBox
-                        className="sc-dlnjPT fvzCWx"
+                        className="sc-dkPtRN hvAbFU"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -6401,7 +6401,7 @@ exports[`Carousel renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx ckoRHe sc-dlnjPT fvzCWx"
+                          className="sc-bdvvtL hoqwgz sc-dkPtRN hvAbFU"
                           onClick={[Function]}
                           style={Object {}}
                         />
@@ -6418,13 +6418,13 @@ exports[`Carousel renders correctly 1`] = `
                   onClick={[Function]}
                 >
                   <Box
-                    className="sc-dlnjPT fvzCWx"
+                    className="sc-dkPtRN hvAbFU"
                     onClick={[Function]}
                     style={Object {}}
                     transition="0.2s all"
                   >
                     <Component
-                      className="sc-dlnjPT fvzCWx"
+                      className="sc-dkPtRN hvAbFU"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -6569,7 +6569,7 @@ exports[`Carousel renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <StyledBox
-                        className="sc-dlnjPT fvzCWx"
+                        className="sc-dkPtRN hvAbFU"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -6714,7 +6714,7 @@ exports[`Carousel renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx ckoRHe sc-dlnjPT fvzCWx"
+                          className="sc-bdvvtL hoqwgz sc-dkPtRN hvAbFU"
                           onClick={[Function]}
                           style={Object {}}
                         />
@@ -6731,13 +6731,13 @@ exports[`Carousel renders correctly 1`] = `
                   onClick={[Function]}
                 >
                   <Box
-                    className="sc-dlnjPT fvzCWx"
+                    className="sc-dkPtRN hvAbFU"
                     onClick={[Function]}
                     style={Object {}}
                     transition="0.2s all"
                   >
                     <Component
-                      className="sc-dlnjPT fvzCWx"
+                      className="sc-dkPtRN hvAbFU"
                       onClick={[Function]}
                       palette={
                         Object {
@@ -6882,7 +6882,7 @@ exports[`Carousel renders correctly 1`] = `
                       transition="0.2s all"
                     >
                       <StyledBox
-                        className="sc-dlnjPT fvzCWx"
+                        className="sc-dkPtRN hvAbFU"
                         onClick={[Function]}
                         palette={
                           Object {
@@ -7027,7 +7027,7 @@ exports[`Carousel renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdnylx ckoRHe sc-dlnjPT fvzCWx"
+                          className="sc-bdvvtL hoqwgz sc-dkPtRN hvAbFU"
                           onClick={[Function]}
                           style={Object {}}
                         />

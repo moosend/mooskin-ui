@@ -299,7 +299,7 @@ exports[`Pagination renders correctly 1`] = `
     >
       <Box
         activeItem={3}
-        className="sc-gtssRu dJxHxj"
+        className="sc-gsDKAQ jpXSQq"
         onClickStep={[MockFunction]}
         palette={
           Object {
@@ -445,7 +445,7 @@ exports[`Pagination renders correctly 1`] = `
       >
         <Component
           activeItem={3}
-          className="sc-gtssRu dJxHxj"
+          className="sc-gsDKAQ jpXSQq"
           onClickStep={[MockFunction]}
           palette={
             Object {
@@ -591,7 +591,7 @@ exports[`Pagination renders correctly 1`] = `
         >
           <StyledBox
             activeItem={3}
-            className="sc-gtssRu dJxHxj"
+            className="sc-gsDKAQ jpXSQq"
             onClickStep={[MockFunction]}
             palette={
               Object {
@@ -736,7 +736,7 @@ exports[`Pagination renders correctly 1`] = `
             transition="0.2s all"
           >
             <div
-              className="sc-bdnylx ckoRHe sc-gtssRu dJxHxj"
+              className="sc-bdvvtL hoqwgz sc-gsDKAQ jpXSQq"
               onClickStep={[MockFunction]}
               style={Object {}}
             >
@@ -1037,7 +1037,7 @@ exports[`Pagination renders correctly 1`] = `
                     transition="0.2s all"
                   >
                     <div
-                      className="sc-bdnylx hEPLIp"
+                      className="sc-bdvvtL dmXLmE"
                       d="flex"
                       style={Object {}}
                     >
@@ -1340,7 +1340,7 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo sNwrC"
+                              className="sc-hKwDye dDPijq"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -1486,7 +1486,7 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo sNwrC"
+                                className="sc-hKwDye dDPijq"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -1632,7 +1632,7 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo sNwrC"
+                                  className="sc-hKwDye dDPijq"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -1777,7 +1777,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx ckoRHe sc-hKFyIo sNwrC"
+                                    className="sc-bdvvtL hoqwgz sc-hKwDye dDPijq"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -2073,7 +2073,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK gDhCsP"
+                                            className="sc-jRQBWg kZMIjg"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -2217,7 +2217,7 @@ exports[`Pagination renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <Component
-                                              className="sc-jSFkmK gDhCsP"
+                                              className="sc-jRQBWg kZMIjg"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -2361,7 +2361,7 @@ exports[`Pagination renders correctly 1`] = `
                                               transition="0.2s all"
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK gDhCsP"
+                                                className="sc-jRQBWg kZMIjg"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -2505,7 +2505,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx ckoRHe sc-jSFkmK gDhCsP"
+                                                  className="sc-bdvvtL hoqwgz sc-jRQBWg kZMIjg"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -2822,7 +2822,7 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo sNwrC"
+                              className="sc-hKwDye dDPijq"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -2968,7 +2968,7 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo sNwrC"
+                                className="sc-hKwDye dDPijq"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -3114,7 +3114,7 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo sNwrC"
+                                  className="sc-hKwDye dDPijq"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -3259,7 +3259,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx ckoRHe sc-hKFyIo sNwrC"
+                                    className="sc-bdvvtL hoqwgz sc-hKwDye dDPijq"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -3555,7 +3555,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK gDhCsP"
+                                            className="sc-jRQBWg kZMIjg"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -3699,7 +3699,7 @@ exports[`Pagination renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <Component
-                                              className="sc-jSFkmK gDhCsP"
+                                              className="sc-jRQBWg kZMIjg"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -3843,7 +3843,7 @@ exports[`Pagination renders correctly 1`] = `
                                               transition="0.2s all"
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK gDhCsP"
+                                                className="sc-jRQBWg kZMIjg"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -3987,7 +3987,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx ckoRHe sc-jSFkmK gDhCsP"
+                                                  className="sc-bdvvtL hoqwgz sc-jRQBWg kZMIjg"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -4304,7 +4304,7 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={true}
-                              className="sc-hKFyIo hwBWon"
+                              className="sc-hKwDye flLKaX"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -4450,7 +4450,7 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={true}
-                                className="sc-hKFyIo hwBWon"
+                                className="sc-hKwDye flLKaX"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -4596,7 +4596,7 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={true}
-                                  className="sc-hKFyIo hwBWon"
+                                  className="sc-hKwDye flLKaX"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -4741,7 +4741,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx ckoRHe sc-hKFyIo hwBWon"
+                                    className="sc-bdvvtL hoqwgz sc-hKwDye flLKaX"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -5037,7 +5037,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK gDhCsP"
+                                            className="sc-jRQBWg kZMIjg"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -5181,7 +5181,7 @@ exports[`Pagination renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <Component
-                                              className="sc-jSFkmK gDhCsP"
+                                              className="sc-jRQBWg kZMIjg"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -5325,7 +5325,7 @@ exports[`Pagination renders correctly 1`] = `
                                               transition="0.2s all"
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK gDhCsP"
+                                                className="sc-jRQBWg kZMIjg"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -5469,7 +5469,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx ckoRHe sc-jSFkmK gDhCsP"
+                                                  className="sc-bdvvtL hoqwgz sc-jRQBWg kZMIjg"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -5786,7 +5786,7 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo sNwrC"
+                              className="sc-hKwDye dDPijq"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -5932,7 +5932,7 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo sNwrC"
+                                className="sc-hKwDye dDPijq"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -6078,7 +6078,7 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo sNwrC"
+                                  className="sc-hKwDye dDPijq"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -6223,7 +6223,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx ckoRHe sc-hKFyIo sNwrC"
+                                    className="sc-bdvvtL hoqwgz sc-hKwDye dDPijq"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -6519,7 +6519,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK gDhCsP"
+                                            className="sc-jRQBWg kZMIjg"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -6663,7 +6663,7 @@ exports[`Pagination renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <Component
-                                              className="sc-jSFkmK gDhCsP"
+                                              className="sc-jRQBWg kZMIjg"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -6807,7 +6807,7 @@ exports[`Pagination renders correctly 1`] = `
                                               transition="0.2s all"
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK gDhCsP"
+                                                className="sc-jRQBWg kZMIjg"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -6951,7 +6951,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx ckoRHe sc-jSFkmK gDhCsP"
+                                                  className="sc-bdvvtL hoqwgz sc-jRQBWg kZMIjg"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -7268,7 +7268,7 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo sNwrC"
+                              className="sc-hKwDye dDPijq"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -7414,7 +7414,7 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo sNwrC"
+                                className="sc-hKwDye dDPijq"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -7560,7 +7560,7 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo sNwrC"
+                                  className="sc-hKwDye dDPijq"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -7705,7 +7705,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx ckoRHe sc-hKFyIo sNwrC"
+                                    className="sc-bdvvtL hoqwgz sc-hKwDye dDPijq"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -8001,7 +8001,7 @@ exports[`Pagination renders correctly 1`] = `
                                           style={Object {}}
                                         >
                                           <Box
-                                            className="sc-jSFkmK gDhCsP"
+                                            className="sc-jRQBWg kZMIjg"
                                             palette={
                                               Object {
                                                 "backgroundColors": Object {
@@ -8145,7 +8145,7 @@ exports[`Pagination renders correctly 1`] = `
                                             transition="0.2s all"
                                           >
                                             <Component
-                                              className="sc-jSFkmK gDhCsP"
+                                              className="sc-jRQBWg kZMIjg"
                                               palette={
                                                 Object {
                                                   "backgroundColors": Object {
@@ -8289,7 +8289,7 @@ exports[`Pagination renders correctly 1`] = `
                                               transition="0.2s all"
                                             >
                                               <StyledBox
-                                                className="sc-jSFkmK gDhCsP"
+                                                className="sc-jRQBWg kZMIjg"
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -8433,7 +8433,7 @@ exports[`Pagination renders correctly 1`] = `
                                                 transition="0.2s all"
                                               >
                                                 <div
-                                                  className="sc-bdnylx ckoRHe sc-jSFkmK gDhCsP"
+                                                  className="sc-bdvvtL hoqwgz sc-jRQBWg kZMIjg"
                                                   style={Object {}}
                                                 >
                                                   keyboard_arrow_right
@@ -8750,7 +8750,7 @@ exports[`Pagination renders correctly 1`] = `
                           >
                             <Box
                               active={false}
-                              className="sc-hKFyIo sNwrC"
+                              className="sc-hKwDye dDPijq"
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -8896,7 +8896,7 @@ exports[`Pagination renders correctly 1`] = `
                             >
                               <Component
                                 active={false}
-                                className="sc-hKFyIo sNwrC"
+                                className="sc-hKwDye dDPijq"
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -9042,7 +9042,7 @@ exports[`Pagination renders correctly 1`] = `
                               >
                                 <StyledBox
                                   active={false}
-                                  className="sc-hKFyIo sNwrC"
+                                  className="sc-hKwDye dDPijq"
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -9187,7 +9187,7 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdnylx ckoRHe sc-hKFyIo sNwrC"
+                                    className="sc-bdvvtL hoqwgz sc-hKwDye dDPijq"
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -9499,7 +9499,7 @@ exports[`Pagination renders correctly 1`] = `
                   >
                     <Box
                       active={true}
-                      className="sc-eCApGN"
+                      className="sc-eCImPb"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -9644,7 +9644,7 @@ exports[`Pagination renders correctly 1`] = `
                     >
                       <Component
                         active={true}
-                        className="sc-eCApGN"
+                        className="sc-eCImPb"
                         palette={
                           Object {
                             "backgroundColors": Object {
@@ -9789,7 +9789,7 @@ exports[`Pagination renders correctly 1`] = `
                       >
                         <StyledBox
                           active={true}
-                          className="sc-eCApGN"
+                          className="sc-eCImPb"
                           palette={
                             Object {
                               "backgroundColors": Object {
@@ -9933,7 +9933,7 @@ exports[`Pagination renders correctly 1`] = `
                           transition="0.2s all"
                         >
                           <div
-                            className="sc-bdnylx ckoRHe sc-eCApGN"
+                            className="sc-bdvvtL hoqwgz sc-eCImPb"
                             style={Object {}}
                           >
                             <div>
