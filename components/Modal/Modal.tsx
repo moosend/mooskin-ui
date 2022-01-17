@@ -169,7 +169,7 @@ ModalCloseButton.displayName = 'ModalCloseButton';
  */
 export const ModalOverlay: React.FC<IModalOverlayComponentProps> = withMooskinContext((props) => {
 	return (
-		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={145}>
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={150}>
 			{(state) => {
 				const ModalOverlayComponent = ModalOverlayComponents[state];
 				if (ModalOverlayComponent) {

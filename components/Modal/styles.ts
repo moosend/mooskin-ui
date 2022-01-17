@@ -64,13 +64,13 @@ export const StyledModalContent = styled(Box)<IModalContentComponentProps>`
 StyledModalContent.displayName = 'StyledModalContent';
 
 export const StyledModalContentFadeIn = styled(StyledModalContent)`
-	animation: ${contentFadeIn} 0.15s;
+	animation: ${contentFadeIn} 0.15s forwards;
 `;
 
 StyledModalContentFadeIn.displayName = 'StyledModalContentFadeIn';
 
 export const StyledModalContentFadeOut = styled(StyledModalContent)`
-	animation: ${contentFadeOut} 0.15s;
+	animation: ${contentFadeOut} 0.15s forwards;
 `;
 
 StyledModalContentFadeOut.displayName = 'StyledModalContentFadeOut';
