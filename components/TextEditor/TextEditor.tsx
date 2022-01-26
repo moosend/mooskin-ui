@@ -41,7 +41,6 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = (props) => {
 	return (
 		<Editor
 			{...props}
-			apiKey="f3vo81k6z7efry5af62a1l5nm882r1dyrqn2df1cugtsofwq"
 			toolbar={getToolbar()}
 			init={{
 				setup: props.personalizationTags ? getSetup : undefined,
