@@ -1814,7 +1814,7 @@ exports[`Modal renders correctly 1`] = `
                                     w="50%"
                                   >
                                     <Box
-                                      className="sc-dkPtRN sc-hKwDye hqoZRe VSigb"
+                                      className="sc-dkPtRN sc-hKwDye bBkmmN VSigb"
                                       h="50%"
                                       isOpen={true}
                                       onClick={[Function]}
@@ -1962,7 +1962,7 @@ exports[`Modal renders correctly 1`] = `
                                       w="50%"
                                     >
                                       <Component
-                                        className="sc-dkPtRN sc-hKwDye hqoZRe VSigb"
+                                        className="sc-dkPtRN sc-hKwDye bBkmmN VSigb"
                                         h="50%"
                                         isOpen={true}
                                         onClick={[Function]}
@@ -2110,7 +2110,7 @@ exports[`Modal renders correctly 1`] = `
                                         w="50%"
                                       >
                                         <StyledBox
-                                          className="sc-dkPtRN sc-hKwDye hqoZRe VSigb"
+                                          className="sc-dkPtRN sc-hKwDye bBkmmN VSigb"
                                           h="50%"
                                           isOpen={true}
                                           onClick={[Function]}
@@ -2258,7 +2258,7 @@ exports[`Modal renders correctly 1`] = `
                                           w="50%"
                                         >
                                           <div
-                                            className="sc-bdvvtL eEWZwa sc-dkPtRN sc-hKwDye hqoZRe VSigb"
+                                            className="sc-bdvvtL eEWZwa sc-dkPtRN sc-hKwDye bBkmmN VSigb"
                                             onClick={[Function]}
                                             style={Object {}}
                                           >

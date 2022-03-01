@@ -51,6 +51,7 @@ export const StyledModalContent = styled(Box)<IModalContentComponentProps>`
 	max-width: 100%;
 	/* max-height: 100vh; */
 	height: 100vh;
+	border-radius: 4px;
 	display: flex;
 	flex-direction: column;
 	z-index: 1400;
