@@ -42,6 +42,8 @@ export interface IThemeFontColors {
 	autosExpression: string;
 	client: string;
 	createNew: string;
+	menuDark: string;
+	menuLight: string;
 }
 
 export interface IThemeBackgroundColors {
@@ -88,6 +90,8 @@ export interface IThemeBackgroundColors {
 	autosExpression: string;
 	client: string;
 	createNew: string;
+	menuDark: string;
+	menuLight: string;
 }
 
 export interface IThemeBorderColors {
@@ -134,6 +138,8 @@ export interface IThemeBorderColors {
 	autosExpression: string;
 	client: string;
 	createNew: string;
+	menuDark: string;
+	menuLight: string;
 }
 
 export interface IStyledTheme {

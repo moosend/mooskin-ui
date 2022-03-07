@@ -44,7 +44,9 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#ffffff',
 		client: '#E0E0E0',
-		createNew: '#FFFFFF'
+		createNew: '#FFFFFF',
+		menuDark: '#21262A',
+		menuLight: '#2E3841'
 	},
 	borderColors: {
 		primary1: '#4169E1',
@@ -89,7 +91,9 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#ffffff',
 		client: '#E0E0E0',
-		createNew: '#FFFFFF'
+		createNew: '#FFFFFF',
+		menuDark: '#21262A',
+		menuLight: '#2E3841'
 	},
 	fontColors: {
 		primary1: '#4169E1',
@@ -134,7 +138,9 @@ const theme: IStyledTheme = {
 		submenu: '#FFFFFF',
 		autosExpression: '#ffffff',
 		client: '#E0E0E0',
-		createNew: '#212121'
+		createNew: '#212121',
+		menuDark: '#21262A',
+		menuLight: '#2E3841'
 	}
 };
 
