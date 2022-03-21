@@ -92,13 +92,13 @@ export const StyledSelectOptionList = styled(Box)<ISelectOptionListProps>`
 		height: 10px;
 	}
 	::-webkit-scrollbar-track {
-		background: #f1f1f1;
+		background: ${(props) => props.palette?.backgroundColors.gray1};
 	}
 	::-webkit-scrollbar-thumb {
-		background: #888;
+		background: ${(props) => props.palette?.backgroundColors.medgray1};
 	}
 	::-webkit-scrollbar-thumb:hover {
-		background: #555;
+		background: ${(props) => props.palette?.backgroundColors.darkgray3};
 	}
 `;
 
