@@ -1,6 +1,6 @@
 {
 	"name": "@moosend/mooskin",
-	"version": "1.0.23",
+	"version": "1.0.24",
 	"description": "A collection of React components for Moosend UI",
 	"main": "lib/index/index.js",
 	"types": "lib/index/index.d.ts",
@@ -42,7 +42,7 @@
 		"@date-io/date-fns": "1.x",
 		"@material-ui/core": "^4.11.2",
 		"@material-ui/pickers": "^3.2.10",
-		"@tinymce/tinymce-react": "^4.1.0",
+		"@tinymce/tinymce-react": "^3.10.1",
 		"date-fns": "^2.16.1",
 		"emoji-mart": "^3.0.0",
 		"react": "^16.0.3",
@@ -52,7 +52,7 @@
 		"react-transition-group": "^4.4.2",
 		"slick-carousel": "^1.8.1",
 		"styled-components": "^5.2.0",
-		"tinymce": "^6.0.3"
+		"tinymce": "^5.6.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.4.0",
