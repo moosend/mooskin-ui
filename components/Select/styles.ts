@@ -85,21 +85,6 @@ export const StyledSelectOptionList = styled(Box)<ISelectOptionListProps>`
 	max-height: 160px;
 	overflow-y: auto;
 	z-index: 2;
-
-	/** Scrollbar */
-	::-webkit-scrollbar {
-		width: 10px;
-		height: 10px;
-	}
-	::-webkit-scrollbar-track {
-		background: ${(props) => props.palette?.backgroundColors.gray1};
-	}
-	::-webkit-scrollbar-thumb {
-		background: ${(props) => props.palette?.backgroundColors.medgray1};
-	}
-	::-webkit-scrollbar-thumb:hover {
-		background: ${(props) => props.palette?.backgroundColors.darkgray3};
-	}
 `;
 
 export const StyledSelectOptionListFadeIn = styled(StyledSelectOptionList)`

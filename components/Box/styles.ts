@@ -266,17 +266,20 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 
 		/** Scrollbar */
 		::-webkit-scrollbar {
-			width: 10px;
-			height: 10px;
+			width: 14px;
 		}
-		::-webkit-scrollbar-track {
-			background: ${(props) => props.palette?.backgroundColors.gray1};
-		}
+		
 		::-webkit-scrollbar-thumb {
-			background: ${(props) => props.palette?.backgroundColors.medgray1};
+			border: 4px solid rgba(0, 0, 0, 0);
+			background-clip: padding-box;
+			border-radius: 9999px;
+			background-color: ${(props) => props.palette?.backgroundColors.grayAlpha400};
 		}
 		::-webkit-scrollbar-thumb:hover {
-			background: ${(props) => props.palette?.backgroundColors.darkgray3};
+			border: 4px solid rgba(0, 0, 0, 0);
+			background-clip: padding-box;
+			border-radius: 9999px;
+			background-color: ${(props) => props.palette?.backgroundColors.medgray1};
 		}
 	}
 `;
