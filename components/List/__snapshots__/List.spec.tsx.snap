@@ -5175,7 +5175,7 @@ exports[`Alert renders correctly 1`] = `
                                                     <Box
                                                       boxAs="button"
                                                       buttonSize="md"
-                                                      className="sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                      className="sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -5332,7 +5332,7 @@ exports[`Alert renders correctly 1`] = `
                                                       <Component
                                                         boxAs="button"
                                                         buttonSize="md"
-                                                        className="sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                        className="sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                         onClick={[Function]}
                                                         palette={
                                                           Object {
@@ -5490,7 +5490,7 @@ exports[`Alert renders correctly 1`] = `
                                                           as="button"
                                                           boxAs="button"
                                                           buttonSize="md"
-                                                          className="sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                          className="sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                           onClick={[Function]}
                                                           palette={
                                                             Object {
@@ -5645,7 +5645,7 @@ exports[`Alert renders correctly 1`] = `
                                                           type="button"
                                                         >
                                                           <button
-                                                            className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                            className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                             onClick={[Function]}
                                                             style={Object {}}
                                                             type="button"
@@ -9762,7 +9762,7 @@ exports[`Alert renders correctly 1`] = `
                                                     <Box
                                                       boxAs="button"
                                                       buttonSize="md"
-                                                      className="sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                      className="sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -9919,7 +9919,7 @@ exports[`Alert renders correctly 1`] = `
                                                       <Component
                                                         boxAs="button"
                                                         buttonSize="md"
-                                                        className="sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                        className="sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                         onClick={[Function]}
                                                         palette={
                                                           Object {
@@ -10077,7 +10077,7 @@ exports[`Alert renders correctly 1`] = `
                                                           as="button"
                                                           boxAs="button"
                                                           buttonSize="md"
-                                                          className="sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                          className="sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                           onClick={[Function]}
                                                           palette={
                                                             Object {
@@ -10232,7 +10232,7 @@ exports[`Alert renders correctly 1`] = `
                                                           type="button"
                                                         >
                                                           <button
-                                                            className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                            className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                             onClick={[Function]}
                                                             style={Object {}}
                                                             type="button"
@@ -14349,7 +14349,7 @@ exports[`Alert renders correctly 1`] = `
                                                     <Box
                                                       boxAs="button"
                                                       buttonSize="md"
-                                                      className="sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                      className="sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -14506,7 +14506,7 @@ exports[`Alert renders correctly 1`] = `
                                                       <Component
                                                         boxAs="button"
                                                         buttonSize="md"
-                                                        className="sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                        className="sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                         onClick={[Function]}
                                                         palette={
                                                           Object {
@@ -14664,7 +14664,7 @@ exports[`Alert renders correctly 1`] = `
                                                           as="button"
                                                           boxAs="button"
                                                           buttonSize="md"
-                                                          className="sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                          className="sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                           onClick={[Function]}
                                                           palette={
                                                             Object {
@@ -14819,7 +14819,7 @@ exports[`Alert renders correctly 1`] = `
                                                           type="button"
                                                         >
                                                           <button
-                                                            className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN bTKjAz nIwIL"
+                                                            className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN dssjTZ nIwIL"
                                                             onClick={[Function]}
                                                             style={Object {}}
                                                             type="button"
