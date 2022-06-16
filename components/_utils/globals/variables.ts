@@ -2,7 +2,7 @@ import { IStyledTheme } from '../../Styled/model';
 
 const theme: IStyledTheme = {
 	backgroundColors: {
-		primary1: '#4169E1',
+		primary1: '#5548D9',
 		primary2: '#212121',
 		primary3: '#00796B',
 		primary4: '#D32F2F',
@@ -18,6 +18,7 @@ const theme: IStyledTheme = {
 		background: '#FAFAFA',
 		blue400: '#4299E1',
 		teal400: '#38B2AC',
+		teal500: '#02999A',
 		pink400: '#ED64A6',
 		red400: '#f56565',
 		red600: '#C53030',
@@ -49,7 +50,7 @@ const theme: IStyledTheme = {
 		menuLight: '#2E3841'
 	},
 	borderColors: {
-		primary1: '#4169E1',
+		primary1: '#5548D9',
 		primary2: '#212121',
 		primary3: '#00796B',
 		primary4: '#D32F2F',
@@ -65,6 +66,7 @@ const theme: IStyledTheme = {
 		background: '#FAFAFA',
 		blue400: '#4299E1',
 		teal400: '#38B2AC',
+		teal500: '#02999A',
 		pink400: '#ED64A6',
 		red400: '#f56565',
 		red600: '#C53030',
@@ -96,7 +98,7 @@ const theme: IStyledTheme = {
 		menuLight: '#2E3841'
 	},
 	fontColors: {
-		primary1: '#4169E1',
+		primary1: '#5548D9',
 		primary2: '#212121',
 		primary3: '#00796B',
 		primary4: '#D32F2F',
@@ -112,6 +114,7 @@ const theme: IStyledTheme = {
 		background: '#FAFAFA',
 		blue400: '#4299E1',
 		teal400: '#38B2AC',
+		teal500: '#02999A',
 		pink400: '#ED64A6',
 		red400: '#f56565',
 		red600: '#C53030',

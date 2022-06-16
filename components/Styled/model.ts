@@ -15,6 +15,7 @@ export interface IThemeFontColors {
 	background: string;
 	blue400: string;
 	teal400: string;
+	teal500: string;
 	pink400: string;
 	orange400: string;
 	red400: string;
@@ -63,6 +64,7 @@ export interface IThemeBackgroundColors {
 	background: string;
 	blue400: string;
 	teal400: string;
+	teal500: string;
 	pink400: string;
 	red400: string;
 	red600: string;
@@ -111,6 +113,7 @@ export interface IThemeBorderColors {
 	background: string;
 	blue400: string;
 	teal400: string;
+	teal500: string;
 	pink400: string;
 	red400: string;
 	red600: string;

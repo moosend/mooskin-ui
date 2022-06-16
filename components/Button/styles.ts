@@ -10,20 +10,20 @@ import { Box } from '../Box/Box';
 import variables from '../_utils/globals/variables';
 
 const normalButtonSizes = {
-	lg: '10px',
-	md: '9px 10px',
-	sm: '8px 10px'
+	lg: '15px',
+	md: '9px 15px',
+	sm: '8px 15px'
 };
 
 const secondaryButtonSizes = {
-	lg: '9px',
-	md: '8px 9px',
-	sm: '7px 8px'
+	lg: '14px',
+	md: '8px 14px',
+	sm: '7px 13px'
 };
 
 export const ButtonDefault = styled(Box)<IButtonComponentProps>`
 	width: fit-content;
-	border-radius: 2px;
+	border-radius: 20px;
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 	outline: 0;
 	font-size: 12px;
