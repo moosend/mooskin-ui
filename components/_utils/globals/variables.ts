@@ -144,6 +144,9 @@ const theme: IStyledTheme = {
 		createNew: '#212121',
 		menuDark: '#21262A',
 		menuLight: '#2E3841'
+	},
+	styles: {
+		buttonBorderRadius: '100px'
 	}
 };
 

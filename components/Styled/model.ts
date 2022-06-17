@@ -145,10 +145,15 @@ export interface IThemeBorderColors {
 	menuLight: string;
 }
 
+export interface IThemeStyles {
+	buttonBorderRadius: string | number;
+}
+
 export interface IStyledTheme {
 	fontColors: IThemeFontColors;
 	backgroundColors: IThemeBackgroundColors;
 	borderColors: IThemeBorderColors;
+	styles?: IThemeStyles;
 }
 
 export interface IMooskinContext {

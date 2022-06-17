@@ -23,7 +23,7 @@ const secondaryButtonSizes = {
 
 export const ButtonDefault = styled(Box)<IButtonComponentProps>`
 	width: fit-content;
-	border-radius: 100px;
+	border-radius: ${(props) => props.palette?.styles?.buttonBorderRadius || variables.styles?.buttonBorderRadius};
 	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 	outline: 0;
 	font-size: 12px;
