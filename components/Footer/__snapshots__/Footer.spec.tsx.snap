@@ -153,6 +153,9 @@ exports[`Alert renders correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     style={Object {}}
@@ -305,6 +308,9 @@ exports[`Alert renders correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       style={Object {}}
@@ -456,6 +462,9 @@ exports[`Alert renders correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -610,6 +619,9 @@ exports[`Alert renders correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           style={Object {}}
@@ -762,6 +774,9 @@ exports[`Alert renders correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
@@ -928,6 +943,9 @@ exports[`Alert renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   style={Object {}}
@@ -1082,6 +1100,9 @@ exports[`Alert renders correctly 1`] = `
                           "text": "#212121",
                           "white": "#FFFFFF",
                         },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
+                        },
                       }
                     }
                     style={Object {}}
@@ -1235,6 +1256,9 @@ exports[`Alert renders correctly 1`] = `
                             "teal500": "#02999A",
                             "text": "#212121",
                             "white": "#FFFFFF",
+                          },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
                           },
                         }
                       }
@@ -1391,6 +1415,9 @@ exports[`Alert renders correctly 1`] = `
                               "text": "#212121",
                               "white": "#FFFFFF",
                             },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
+                            },
                           }
                         }
                         style={Object {}}
@@ -1545,6 +1572,9 @@ exports[`Alert renders correctly 1`] = `
                                 "teal500": "#02999A",
                                 "text": "#212121",
                                 "white": "#FFFFFF",
+                              },
+                              "styles": Object {
+                                "buttonBorderRadius": "100px",
                               },
                             }
                           }
@@ -1717,6 +1747,9 @@ exports[`Alert renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   style={Object {}}
@@ -1869,6 +1902,9 @@ exports[`Alert renders correctly 1`] = `
                           "text": "#212121",
                           "white": "#FFFFFF",
                         },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
+                        },
                       }
                     }
                     style={Object {}}
@@ -2020,6 +2056,9 @@ exports[`Alert renders correctly 1`] = `
                             "teal500": "#02999A",
                             "text": "#212121",
                             "white": "#FFFFFF",
+                          },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
                           },
                         }
                       }
@@ -2174,6 +2213,9 @@ exports[`Alert renders correctly 1`] = `
                               "text": "#212121",
                               "white": "#FFFFFF",
                             },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
+                            },
                           }
                         }
                         style={Object {}}
@@ -2326,6 +2368,9 @@ exports[`Alert renders correctly 1`] = `
                                 "teal500": "#02999A",
                                 "text": "#212121",
                                 "white": "#FFFFFF",
+                              },
+                              "styles": Object {
+                                "buttonBorderRadius": "100px",
                               },
                             }
                           }
@@ -2495,6 +2540,9 @@ exports[`Alert renders correctly 1`] = `
                                       "text": "#212121",
                                       "white": "#FFFFFF",
                                     },
+                                    "styles": Object {
+                                      "buttonBorderRadius": "100px",
+                                    },
                                   }
                                 }
                                 style={Object {}}
@@ -2653,6 +2701,9 @@ exports[`Alert renders correctly 1`] = `
                                         "text": "#212121",
                                         "white": "#FFFFFF",
                                       },
+                                      "styles": Object {
+                                        "buttonBorderRadius": "100px",
+                                      },
                                     }
                                   }
                                   style={Object {}}
@@ -2661,7 +2712,7 @@ exports[`Alert renders correctly 1`] = `
                                   <Box
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKclnd sc-iCfMLu ldkSYD ejaJtw"
+                                    className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
                                     minW="unset"
                                     mr={10}
                                     onClick={[Function]}
@@ -2811,6 +2862,9 @@ exports[`Alert renders correctly 1`] = `
                                           "text": "#212121",
                                           "white": "#FFFFFF",
                                         },
+                                        "styles": Object {
+                                          "buttonBorderRadius": "100px",
+                                        },
                                       }
                                     }
                                     style={Object {}}
@@ -2820,7 +2874,7 @@ exports[`Alert renders correctly 1`] = `
                                     <Component
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKclnd sc-iCfMLu ldkSYD ejaJtw"
+                                      className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
                                       minW="unset"
                                       mr={10}
                                       onClick={[Function]}
@@ -2970,6 +3024,9 @@ exports[`Alert renders correctly 1`] = `
                                             "text": "#212121",
                                             "white": "#FFFFFF",
                                           },
+                                          "styles": Object {
+                                            "buttonBorderRadius": "100px",
+                                          },
                                         }
                                       }
                                       style={Object {}}
@@ -2980,7 +3037,7 @@ exports[`Alert renders correctly 1`] = `
                                         as="button"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKclnd sc-iCfMLu ldkSYD ejaJtw"
+                                        className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
                                         minW="unset"
                                         mr={10}
                                         onClick={[Function]}
@@ -3130,6 +3187,9 @@ exports[`Alert renders correctly 1`] = `
                                               "text": "#212121",
                                               "white": "#FFFFFF",
                                             },
+                                            "styles": Object {
+                                              "buttonBorderRadius": "100px",
+                                            },
                                           }
                                         }
                                         style={Object {}}
@@ -3137,7 +3197,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdvvtL eODsKR sc-gKclnd sc-iCfMLu ldkSYD ejaJtw"
+                                          className="sc-bdvvtL eODsKR sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -3303,6 +3363,9 @@ exports[`Alert renders correctly 1`] = `
                                                         "text": "#212121",
                                                         "white": "#FFFFFF",
                                                       },
+                                                      "styles": Object {
+                                                        "buttonBorderRadius": "100px",
+                                                      },
                                                     }
                                                   }
                                                   style={Object {}}
@@ -3455,6 +3518,9 @@ exports[`Alert renders correctly 1`] = `
                                                           "teal500": "#02999A",
                                                           "text": "#212121",
                                                           "white": "#FFFFFF",
+                                                        },
+                                                        "styles": Object {
+                                                          "buttonBorderRadius": "100px",
                                                         },
                                                       }
                                                     }
@@ -3637,6 +3703,9 @@ exports[`Alert renders correctly 1`] = `
                                       "text": "#212121",
                                       "white": "#FFFFFF",
                                     },
+                                    "styles": Object {
+                                      "buttonBorderRadius": "100px",
+                                    },
                                   }
                                 }
                                 style={Object {}}
@@ -3794,6 +3863,9 @@ exports[`Alert renders correctly 1`] = `
                                         "text": "#212121",
                                         "white": "#FFFFFF",
                                       },
+                                      "styles": Object {
+                                        "buttonBorderRadius": "100px",
+                                      },
                                     }
                                   }
                                   style={Object {}}
@@ -3802,7 +3874,7 @@ exports[`Alert renders correctly 1`] = `
                                   <Box
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKclnd sc-iCfMLu ldkSYD ejaJtw"
+                                    className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
                                     minW="unset"
                                     onClick={[Function]}
                                     palette={
@@ -3951,6 +4023,9 @@ exports[`Alert renders correctly 1`] = `
                                           "text": "#212121",
                                           "white": "#FFFFFF",
                                         },
+                                        "styles": Object {
+                                          "buttonBorderRadius": "100px",
+                                        },
                                       }
                                     }
                                     style={Object {}}
@@ -3960,7 +4035,7 @@ exports[`Alert renders correctly 1`] = `
                                     <Component
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKclnd sc-iCfMLu ldkSYD ejaJtw"
+                                      className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
                                       minW="unset"
                                       onClick={[Function]}
                                       palette={
@@ -4109,6 +4184,9 @@ exports[`Alert renders correctly 1`] = `
                                             "text": "#212121",
                                             "white": "#FFFFFF",
                                           },
+                                          "styles": Object {
+                                            "buttonBorderRadius": "100px",
+                                          },
                                         }
                                       }
                                       style={Object {}}
@@ -4119,7 +4197,7 @@ exports[`Alert renders correctly 1`] = `
                                         as="button"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKclnd sc-iCfMLu ldkSYD ejaJtw"
+                                        className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
                                         minW="unset"
                                         onClick={[Function]}
                                         palette={
@@ -4268,6 +4346,9 @@ exports[`Alert renders correctly 1`] = `
                                               "text": "#212121",
                                               "white": "#FFFFFF",
                                             },
+                                            "styles": Object {
+                                              "buttonBorderRadius": "100px",
+                                            },
                                           }
                                         }
                                         style={Object {}}
@@ -4275,7 +4356,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdvvtL ckBslN sc-gKclnd sc-iCfMLu ldkSYD ejaJtw"
+                                          className="sc-bdvvtL ckBslN sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -4442,6 +4523,9 @@ exports[`Alert renders correctly 1`] = `
                                                         "text": "#212121",
                                                         "white": "#FFFFFF",
                                                       },
+                                                      "styles": Object {
+                                                        "buttonBorderRadius": "100px",
+                                                      },
                                                     }
                                                   }
                                                   style={Object {}}
@@ -4594,6 +4678,9 @@ exports[`Alert renders correctly 1`] = `
                                                           "teal500": "#02999A",
                                                           "text": "#212121",
                                                           "white": "#FFFFFF",
+                                                        },
+                                                        "styles": Object {
+                                                          "buttonBorderRadius": "100px",
                                                         },
                                                       }
                                                     }
@@ -4777,6 +4864,9 @@ exports[`Alert renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   style={Object {}}
@@ -4929,6 +5019,9 @@ exports[`Alert renders correctly 1`] = `
                           "text": "#212121",
                           "white": "#FFFFFF",
                         },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
+                        },
                       }
                     }
                     style={Object {}}
@@ -5080,6 +5173,9 @@ exports[`Alert renders correctly 1`] = `
                             "teal500": "#02999A",
                             "text": "#212121",
                             "white": "#FFFFFF",
+                          },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
                           },
                         }
                       }
@@ -5234,6 +5330,9 @@ exports[`Alert renders correctly 1`] = `
                               "text": "#212121",
                               "white": "#FFFFFF",
                             },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
+                            },
                           }
                         }
                         style={Object {}}
@@ -5386,6 +5485,9 @@ exports[`Alert renders correctly 1`] = `
                                 "teal500": "#02999A",
                                 "text": "#212121",
                                 "white": "#FFFFFF",
+                              },
+                              "styles": Object {
+                                "buttonBorderRadius": "100px",
                               },
                             }
                           }
@@ -5555,6 +5657,9 @@ exports[`Alert renders correctly 1`] = `
                                       "text": "#212121",
                                       "white": "#FFFFFF",
                                     },
+                                    "styles": Object {
+                                      "buttonBorderRadius": "100px",
+                                    },
                                   }
                                 }
                                 style={Object {}}
@@ -5713,6 +5818,9 @@ exports[`Alert renders correctly 1`] = `
                                         "text": "#212121",
                                         "white": "#FFFFFF",
                                       },
+                                      "styles": Object {
+                                        "buttonBorderRadius": "100px",
+                                      },
                                     }
                                   }
                                   style={Object {}}
@@ -5722,7 +5830,7 @@ exports[`Alert renders correctly 1`] = `
                                     borderColor="#37a037"
                                     boxAs="button"
                                     buttonSize="md"
-                                    className="sc-gKclnd sc-furwcr ldkSYD cBIzGS"
+                                    className="sc-gKclnd sc-furwcr bUjDYQ cBIzGS"
                                     fontColor="#37a037"
                                     onClick={[Function]}
                                     palette={
@@ -5871,6 +5979,9 @@ exports[`Alert renders correctly 1`] = `
                                           "text": "#212121",
                                           "white": "#FFFFFF",
                                         },
+                                        "styles": Object {
+                                          "buttonBorderRadius": "100px",
+                                        },
                                       }
                                     }
                                     style={Object {}}
@@ -5881,7 +5992,7 @@ exports[`Alert renders correctly 1`] = `
                                       borderColor="#37a037"
                                       boxAs="button"
                                       buttonSize="md"
-                                      className="sc-gKclnd sc-furwcr ldkSYD cBIzGS"
+                                      className="sc-gKclnd sc-furwcr bUjDYQ cBIzGS"
                                       fontColor="#37a037"
                                       onClick={[Function]}
                                       palette={
@@ -6030,6 +6141,9 @@ exports[`Alert renders correctly 1`] = `
                                             "text": "#212121",
                                             "white": "#FFFFFF",
                                           },
+                                          "styles": Object {
+                                            "buttonBorderRadius": "100px",
+                                          },
                                         }
                                       }
                                       style={Object {}}
@@ -6041,7 +6155,7 @@ exports[`Alert renders correctly 1`] = `
                                         borderColor="#37a037"
                                         boxAs="button"
                                         buttonSize="md"
-                                        className="sc-gKclnd sc-furwcr ldkSYD cBIzGS"
+                                        className="sc-gKclnd sc-furwcr bUjDYQ cBIzGS"
                                         fontColor="#37a037"
                                         onClick={[Function]}
                                         palette={
@@ -6190,6 +6304,9 @@ exports[`Alert renders correctly 1`] = `
                                               "text": "#212121",
                                               "white": "#FFFFFF",
                                             },
+                                            "styles": Object {
+                                              "buttonBorderRadius": "100px",
+                                            },
                                           }
                                         }
                                         style={Object {}}
@@ -6197,7 +6314,7 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdvvtL cJIdxC sc-gKclnd sc-furwcr ldkSYD cBIzGS"
+                                          className="sc-bdvvtL cJIdxC sc-gKclnd sc-furwcr bUjDYQ cBIzGS"
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"

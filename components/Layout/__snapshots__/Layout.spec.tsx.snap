@@ -154,6 +154,9 @@ exports[`Layout renders correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     spacing={15}
@@ -307,6 +310,9 @@ exports[`Layout renders correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       spacing={15}
@@ -459,6 +465,9 @@ exports[`Layout renders correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -614,6 +623,9 @@ exports[`Layout renders correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           spacing={15}
@@ -767,6 +779,9 @@ exports[`Layout renders correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
@@ -937,6 +952,9 @@ exports[`Layout renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   round="sm"
@@ -1092,6 +1110,9 @@ exports[`Layout renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -1266,6 +1287,9 @@ exports[`Layout renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   round="sm"
@@ -1421,6 +1445,9 @@ exports[`Layout renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -1595,6 +1622,9 @@ exports[`Layout renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   round="sm"
@@ -1750,6 +1780,9 @@ exports[`Layout renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -1924,6 +1957,9 @@ exports[`Layout renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   round="sm"
@@ -2079,6 +2115,9 @@ exports[`Layout renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -2253,6 +2292,9 @@ exports[`Layout renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   round="sm"
@@ -2408,6 +2450,9 @@ exports[`Layout renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -2582,6 +2627,9 @@ exports[`Layout renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   round="sm"
@@ -2737,6 +2785,9 @@ exports[`Layout renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -2911,6 +2962,9 @@ exports[`Layout renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   round="sm"
@@ -3066,6 +3120,9 @@ exports[`Layout renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -3240,6 +3297,9 @@ exports[`Layout renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   round="sm"
@@ -3395,6 +3455,9 @@ exports[`Layout renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }

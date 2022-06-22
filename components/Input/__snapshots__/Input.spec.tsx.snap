@@ -155,6 +155,9 @@ exports[`Input renders correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     style={Object {}}
@@ -308,6 +311,9 @@ exports[`Input renders correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       style={Object {}}
@@ -460,6 +466,9 @@ exports[`Input renders correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -615,6 +624,9 @@ exports[`Input renders correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           style={Object {}}
@@ -768,6 +780,9 @@ exports[`Input renders correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
@@ -935,6 +950,9 @@ exports[`Input renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   style={Object {}}
@@ -1090,6 +1108,9 @@ exports[`Input renders correctly 1`] = `
                           "text": "#212121",
                           "white": "#FFFFFF",
                         },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
+                        },
                       }
                     }
                     style={Object {}}
@@ -1244,6 +1265,9 @@ exports[`Input renders correctly 1`] = `
                             "teal500": "#02999A",
                             "text": "#212121",
                             "white": "#FFFFFF",
+                          },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
                           },
                         }
                       }
@@ -1401,6 +1425,9 @@ exports[`Input renders correctly 1`] = `
                               "text": "#212121",
                               "white": "#FFFFFF",
                             },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
+                            },
                           }
                         }
                         style={Object {}}
@@ -1557,6 +1584,9 @@ exports[`Input renders correctly 1`] = `
                                 "teal500": "#02999A",
                                 "text": "#212121",
                                 "white": "#FFFFFF",
+                              },
+                              "styles": Object {
+                                "buttonBorderRadius": "100px",
                               },
                             }
                           }
@@ -1731,6 +1761,9 @@ exports[`Input renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   pr={5}
@@ -1893,6 +1926,9 @@ exports[`Input renders correctly 1`] = `
                             "text": "#212121",
                             "white": "#FFFFFF",
                           },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
+                          },
                         }
                       }
                       position="relative"
@@ -2048,6 +2084,9 @@ exports[`Input renders correctly 1`] = `
                               "teal500": "#02999A",
                               "text": "#212121",
                               "white": "#FFFFFF",
+                            },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
                             },
                           }
                         }
@@ -2215,6 +2254,9 @@ exports[`Input renders correctly 1`] = `
                                     "text": "#212121",
                                     "white": "#FFFFFF",
                                   },
+                                  "styles": Object {
+                                    "buttonBorderRadius": "100px",
+                                  },
                                 }
                               }
                               style={Object {}}
@@ -2369,6 +2411,9 @@ exports[`Input renders correctly 1`] = `
                                       "text": "#212121",
                                       "white": "#FFFFFF",
                                     },
+                                    "styles": Object {
+                                      "buttonBorderRadius": "100px",
+                                    },
                                   }
                                 }
                                 style={Object {}}
@@ -2522,6 +2567,9 @@ exports[`Input renders correctly 1`] = `
                                         "teal500": "#02999A",
                                         "text": "#212121",
                                         "white": "#FFFFFF",
+                                      },
+                                      "styles": Object {
+                                        "buttonBorderRadius": "100px",
                                       },
                                     }
                                   }
@@ -2678,6 +2726,9 @@ exports[`Input renders correctly 1`] = `
                                           "text": "#212121",
                                           "white": "#FFFFFF",
                                         },
+                                        "styles": Object {
+                                          "buttonBorderRadius": "100px",
+                                        },
                                       }
                                     }
                                     style={Object {}}
@@ -2832,6 +2883,9 @@ exports[`Input renders correctly 1`] = `
                                             "teal500": "#02999A",
                                             "text": "#212121",
                                             "white": "#FFFFFF",
+                                          },
+                                          "styles": Object {
+                                            "buttonBorderRadius": "100px",
                                           },
                                         }
                                       }
@@ -3013,6 +3067,9 @@ exports[`Input renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   pr={5}
@@ -3167,6 +3224,9 @@ exports[`Input renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -3325,6 +3385,9 @@ exports[`Input renders correctly 1`] = `
                             "text": "#212121",
                             "white": "#FFFFFF",
                           },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
+                          },
                         }
                       }
                       position="relative"
@@ -3481,6 +3544,9 @@ exports[`Input renders correctly 1`] = `
                               "teal500": "#02999A",
                               "text": "#212121",
                               "white": "#FFFFFF",
+                            },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
                             },
                           }
                         }
@@ -3649,6 +3715,9 @@ exports[`Input renders correctly 1`] = `
                                     "text": "#212121",
                                     "white": "#FFFFFF",
                                   },
+                                  "styles": Object {
+                                    "buttonBorderRadius": "100px",
+                                  },
                                 }
                               }
                               style={Object {}}
@@ -3803,6 +3872,9 @@ exports[`Input renders correctly 1`] = `
                                       "text": "#212121",
                                       "white": "#FFFFFF",
                                     },
+                                    "styles": Object {
+                                      "buttonBorderRadius": "100px",
+                                    },
                                   }
                                 }
                                 style={Object {}}
@@ -3956,6 +4028,9 @@ exports[`Input renders correctly 1`] = `
                                         "teal500": "#02999A",
                                         "text": "#212121",
                                         "white": "#FFFFFF",
+                                      },
+                                      "styles": Object {
+                                        "buttonBorderRadius": "100px",
                                       },
                                     }
                                   }
@@ -4112,6 +4187,9 @@ exports[`Input renders correctly 1`] = `
                                           "text": "#212121",
                                           "white": "#FFFFFF",
                                         },
+                                        "styles": Object {
+                                          "buttonBorderRadius": "100px",
+                                        },
                                       }
                                     }
                                     style={Object {}}
@@ -4266,6 +4344,9 @@ exports[`Input renders correctly 1`] = `
                                             "teal500": "#02999A",
                                             "text": "#212121",
                                             "white": "#FFFFFF",
+                                          },
+                                          "styles": Object {
+                                            "buttonBorderRadius": "100px",
                                           },
                                         }
                                       }
@@ -4444,6 +4525,9 @@ exports[`Input renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   style={Object {}}
@@ -4597,6 +4681,9 @@ exports[`Input renders correctly 1`] = `
                           "text": "#212121",
                           "white": "#FFFFFF",
                         },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
+                        },
                       }
                     }
                     style={Object {}}
@@ -4749,6 +4836,9 @@ exports[`Input renders correctly 1`] = `
                             "teal500": "#02999A",
                             "text": "#212121",
                             "white": "#FFFFFF",
+                          },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
                           },
                         }
                       }
@@ -4904,6 +4994,9 @@ exports[`Input renders correctly 1`] = `
                               "text": "#212121",
                               "white": "#FFFFFF",
                             },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
+                            },
                           }
                         }
                         style={Object {}}
@@ -5057,6 +5150,9 @@ exports[`Input renders correctly 1`] = `
                                 "teal500": "#02999A",
                                 "text": "#212121",
                                 "white": "#FFFFFF",
+                              },
+                              "styles": Object {
+                                "buttonBorderRadius": "100px",
                               },
                             }
                           }

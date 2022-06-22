@@ -155,6 +155,9 @@ exports[`ActionsDropdown renders ActionsDropdown correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     style={Object {}}
@@ -338,6 +341,9 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     style={
@@ -495,6 +501,9 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       style={
@@ -651,6 +660,9 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -810,6 +822,9 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           style={
@@ -967,6 +982,9 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }

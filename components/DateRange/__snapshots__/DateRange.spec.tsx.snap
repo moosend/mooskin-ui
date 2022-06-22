@@ -167,6 +167,9 @@ exports[`DateRange renders correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     ranges={
@@ -335,6 +338,9 @@ exports[`DateRange renders correctly 1`] = `
               "text": "#212121",
               "white": "#FFFFFF",
             },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
+            },
           }
         }
         position="relative"
@@ -489,6 +495,9 @@ exports[`DateRange renders correctly 1`] = `
                 "teal500": "#02999A",
                 "text": "#212121",
                 "white": "#FFFFFF",
+              },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
               },
             }
           }
@@ -654,6 +663,9 @@ exports[`DateRange renders correctly 1`] = `
                       "text": "#212121",
                       "white": "#FFFFFF",
                     },
+                    "styles": Object {
+                      "buttonBorderRadius": "100px",
+                    },
                   }
                 }
                 style={Object {}}
@@ -807,6 +819,9 @@ exports[`DateRange renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   style={Object {}}
@@ -959,6 +974,9 @@ exports[`DateRange renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -1114,6 +1132,9 @@ exports[`DateRange renders correctly 1`] = `
                             "text": "#212121",
                             "white": "#FFFFFF",
                           },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
+                          },
                         }
                       }
                       style={Object {}}
@@ -1267,6 +1288,9 @@ exports[`DateRange renders correctly 1`] = `
                               "teal500": "#02999A",
                               "text": "#212121",
                               "white": "#FFFFFF",
+                            },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
                             },
                           }
                         }
@@ -1438,6 +1462,9 @@ exports[`DateRange renders correctly 1`] = `
                                     "text": "#212121",
                                     "white": "#FFFFFF",
                                   },
+                                  "styles": Object {
+                                    "buttonBorderRadius": "100px",
+                                  },
                                 }
                               }
                               style={Object {}}
@@ -1595,6 +1622,9 @@ exports[`DateRange renders correctly 1`] = `
                                       "text": "#212121",
                                       "white": "#FFFFFF",
                                     },
+                                    "styles": Object {
+                                      "buttonBorderRadius": "100px",
+                                    },
                                   }
                                 }
                                 style={Object {}}
@@ -1751,6 +1781,9 @@ exports[`DateRange renders correctly 1`] = `
                                         "teal500": "#02999A",
                                         "text": "#212121",
                                         "white": "#FFFFFF",
+                                      },
+                                      "styles": Object {
+                                        "buttonBorderRadius": "100px",
                                       },
                                     }
                                   }
@@ -1910,6 +1943,9 @@ exports[`DateRange renders correctly 1`] = `
                                           "text": "#212121",
                                           "white": "#FFFFFF",
                                         },
+                                        "styles": Object {
+                                          "buttonBorderRadius": "100px",
+                                        },
                                       }
                                     }
                                     style={Object {}}
@@ -2068,6 +2104,9 @@ exports[`DateRange renders correctly 1`] = `
                                             "teal500": "#02999A",
                                             "text": "#212121",
                                             "white": "#FFFFFF",
+                                          },
+                                          "styles": Object {
+                                            "buttonBorderRadius": "100px",
                                           },
                                         }
                                       }

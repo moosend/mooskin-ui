@@ -157,6 +157,9 @@ exports[`Selector renders Selector correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     style={Object {}}
@@ -311,6 +314,9 @@ exports[`Selector renders Selector correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       style={Object {}}
@@ -464,6 +470,9 @@ exports[`Selector renders Selector correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -620,6 +629,9 @@ exports[`Selector renders Selector correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           style={Object {}}
@@ -774,6 +786,9 @@ exports[`Selector renders Selector correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
@@ -943,6 +958,9 @@ exports[`Selector renders Selector correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   style={Object {}}
@@ -1098,6 +1116,9 @@ exports[`Selector renders Selector correctly 1`] = `
                           "text": "#212121",
                           "white": "#FFFFFF",
                         },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
+                        },
                       }
                     }
                     style={Object {}}
@@ -1252,6 +1273,9 @@ exports[`Selector renders Selector correctly 1`] = `
                             "teal500": "#02999A",
                             "text": "#212121",
                             "white": "#FFFFFF",
+                          },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
                           },
                         }
                       }
@@ -1409,6 +1433,9 @@ exports[`Selector renders Selector correctly 1`] = `
                               "text": "#212121",
                               "white": "#FFFFFF",
                             },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
+                            },
                           }
                         }
                         style={Object {}}
@@ -1564,6 +1591,9 @@ exports[`Selector renders Selector correctly 1`] = `
                                 "teal500": "#02999A",
                                 "text": "#212121",
                                 "white": "#FFFFFF",
+                              },
+                              "styles": Object {
+                                "buttonBorderRadius": "100px",
                               },
                             }
                           }
@@ -1743,6 +1773,9 @@ exports[`Selector renders Selector correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   style={Object {}}
@@ -1898,6 +1931,9 @@ exports[`Selector renders Selector correctly 1`] = `
                           "text": "#212121",
                           "white": "#FFFFFF",
                         },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
+                        },
                       }
                     }
                     style={Object {}}
@@ -2052,6 +2088,9 @@ exports[`Selector renders Selector correctly 1`] = `
                             "teal500": "#02999A",
                             "text": "#212121",
                             "white": "#FFFFFF",
+                          },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
                           },
                         }
                       }
@@ -2209,6 +2248,9 @@ exports[`Selector renders Selector correctly 1`] = `
                               "text": "#212121",
                               "white": "#FFFFFF",
                             },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
+                            },
                           }
                         }
                         style={Object {}}
@@ -2364,6 +2406,9 @@ exports[`Selector renders Selector correctly 1`] = `
                                 "teal500": "#02999A",
                                 "text": "#212121",
                                 "white": "#FFFFFF",
+                              },
+                              "styles": Object {
+                                "buttonBorderRadius": "100px",
                               },
                             }
                           }
@@ -2543,6 +2588,9 @@ exports[`Selector renders Selector correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   style={Object {}}
@@ -2698,6 +2746,9 @@ exports[`Selector renders Selector correctly 1`] = `
                           "text": "#212121",
                           "white": "#FFFFFF",
                         },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
+                        },
                       }
                     }
                     style={Object {}}
@@ -2852,6 +2903,9 @@ exports[`Selector renders Selector correctly 1`] = `
                             "teal500": "#02999A",
                             "text": "#212121",
                             "white": "#FFFFFF",
+                          },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
                           },
                         }
                       }
@@ -3009,6 +3063,9 @@ exports[`Selector renders Selector correctly 1`] = `
                               "text": "#212121",
                               "white": "#FFFFFF",
                             },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
+                            },
                           }
                         }
                         style={Object {}}
@@ -3164,6 +3221,9 @@ exports[`Selector renders Selector correctly 1`] = `
                                 "teal500": "#02999A",
                                 "text": "#212121",
                                 "white": "#FFFFFF",
+                              },
+                              "styles": Object {
+                                "buttonBorderRadius": "100px",
                               },
                             }
                           }
@@ -3355,6 +3415,9 @@ exports[`Selector renders SelectorItem correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     style={
@@ -3513,6 +3576,9 @@ exports[`Selector renders SelectorItem correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       style={
@@ -3670,6 +3736,9 @@ exports[`Selector renders SelectorItem correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -3830,6 +3899,9 @@ exports[`Selector renders SelectorItem correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           style={
@@ -3988,6 +4060,9 @@ exports[`Selector renders SelectorItem correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }

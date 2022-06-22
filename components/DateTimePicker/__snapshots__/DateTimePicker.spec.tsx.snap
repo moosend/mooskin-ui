@@ -158,6 +158,9 @@ exports[`DateTimePicker renders correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     pickerType="date-time"
@@ -717,6 +720,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           pickerType="date-time"
@@ -894,6 +900,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                   "text": "#212121",
                   "white": "#FFFFFF",
                 },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
+                },
               }
             }
             pickerType="date-time"
@@ -1066,6 +1075,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                     "text": "#212121",
                     "white": "#FFFFFF",
                   },
+                  "styles": Object {
+                    "buttonBorderRadius": "100px",
+                  },
                 }
               }
               pickerType="date-time"
@@ -1224,6 +1236,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                       "teal500": "#02999A",
                       "text": "#212121",
                       "white": "#FFFFFF",
+                    },
+                    "styles": Object {
+                      "buttonBorderRadius": "100px",
                     },
                   }
                 }
@@ -1387,6 +1402,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                         "text": "#212121",
                         "white": "#FFFFFF",
                       },
+                      "styles": Object {
+                        "buttonBorderRadius": "100px",
+                      },
                     }
                   }
                   pickerType="date-time"
@@ -1549,6 +1567,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                           "teal500": "#02999A",
                           "text": "#212121",
                           "white": "#FFFFFF",
+                        },
+                        "styles": Object {
+                          "buttonBorderRadius": "100px",
                         },
                       }
                     }
@@ -1717,6 +1738,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                             "teal500": "#02999A",
                             "text": "#212121",
                             "white": "#FFFFFF",
+                          },
+                          "styles": Object {
+                            "buttonBorderRadius": "100px",
                           },
                         }
                       }
@@ -1887,6 +1911,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                               "text": "#212121",
                               "white": "#FFFFFF",
                             },
+                            "styles": Object {
+                              "buttonBorderRadius": "100px",
+                            },
                           }
                         }
                         pickerType="date-time"
@@ -2055,6 +2082,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                                 "teal500": "#02999A",
                                 "text": "#212121",
                                 "white": "#FFFFFF",
+                              },
+                              "styles": Object {
+                                "buttonBorderRadius": "100px",
                               },
                             }
                           }
@@ -2226,6 +2256,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                                   "text": "#212121",
                                   "white": "#FFFFFF",
                                 },
+                                "styles": Object {
+                                  "buttonBorderRadius": "100px",
+                                },
                               }
                             }
                             pickerType="date-time"
@@ -2396,6 +2429,9 @@ exports[`DateTimePicker renders correctly 1`] = `
                                     "teal500": "#02999A",
                                     "text": "#212121",
                                     "white": "#FFFFFF",
+                                  },
+                                  "styles": Object {
+                                    "buttonBorderRadius": "100px",
                                   },
                                 }
                               }

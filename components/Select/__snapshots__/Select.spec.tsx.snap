@@ -150,6 +150,9 @@ exports[`Select renders Select correctly 1`] = `
         "text": "#212121",
         "white": "#FFFFFF",
       },
+      "styles": Object {
+        "buttonBorderRadius": "100px",
+      },
     }
   }
   style={Object {}}
@@ -370,6 +373,9 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
         "teal500": "#02999A",
         "text": "#212121",
         "white": "#FFFFFF",
+      },
+      "styles": Object {
+        "buttonBorderRadius": "100px",
       },
     }
   }

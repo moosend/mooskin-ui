@@ -21,7 +21,8 @@ StyledTab.displayName = 'StyledTab';
 
 export const StyledTabHeader = styled(Box)<ITabCommonComponentProps>`
 	font-size: 12px;
-	border-bottom: ${(props) => (props.active ? `solid 2px ${variables.borderColors.primary1}` : 'none')};
+	border-bottom: ${(props) =>
+		props.active ? `solid 2px ${props.palette?.borderColors.primary1 || variables.borderColors.primary1}` : 'none'};
 	padding: ${(props) => (props.active ? '5px 0 3px' : '5px 0')};
 	font-weight: ${(props) => (props.active ? 'bold' : 'normal')};
 	font-stretch: normal;

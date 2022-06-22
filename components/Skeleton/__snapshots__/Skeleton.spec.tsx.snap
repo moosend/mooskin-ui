@@ -159,6 +159,9 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     speed={0.8}
@@ -315,6 +318,9 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       speed={0.8}
@@ -470,6 +476,9 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -628,6 +637,9 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           speed={0.8}
@@ -784,6 +796,9 @@ exports[`Skeleton renders Skeleton correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
@@ -998,6 +1013,9 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     size="20px"
@@ -1155,6 +1173,9 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       size="20px"
@@ -1311,6 +1332,9 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -1470,6 +1494,9 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           size="20px"
@@ -1627,6 +1654,9 @@ exports[`Skeleton renders SkeletonCircle correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
@@ -1811,6 +1841,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
           "text": "#212121",
           "white": "#FFFFFF",
         },
+        "styles": Object {
+          "buttonBorderRadius": "100px",
+        },
       }
     }
     speed={0.8}
@@ -1969,6 +2002,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       speed={0.8}
@@ -2126,6 +2162,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -2286,6 +2325,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           speed={0.8}
@@ -2444,6 +2486,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
@@ -2614,6 +2659,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       speed={0.8}
@@ -2771,6 +2819,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -2931,6 +2982,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           speed={0.8}
@@ -3089,6 +3143,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
@@ -3259,6 +3316,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       speed={0.8}
@@ -3416,6 +3476,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -3576,6 +3639,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           speed={0.8}
@@ -3734,6 +3800,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
@@ -3904,6 +3973,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
             "text": "#212121",
             "white": "#FFFFFF",
           },
+          "styles": Object {
+            "buttonBorderRadius": "100px",
+          },
         }
       }
       speed={0.8}
@@ -4061,6 +4133,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
               "teal500": "#02999A",
               "text": "#212121",
               "white": "#FFFFFF",
+            },
+            "styles": Object {
+              "buttonBorderRadius": "100px",
             },
           }
         }
@@ -4221,6 +4296,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
                 "text": "#212121",
                 "white": "#FFFFFF",
               },
+              "styles": Object {
+                "buttonBorderRadius": "100px",
+              },
             }
           }
           speed={0.8}
@@ -4379,6 +4457,9 @@ exports[`Skeleton renders SkeletonText correctly 1`] = `
                   "teal500": "#02999A",
                   "text": "#212121",
                   "white": "#FFFFFF",
+                },
+                "styles": Object {
+                  "buttonBorderRadius": "100px",
                 },
               }
             }
