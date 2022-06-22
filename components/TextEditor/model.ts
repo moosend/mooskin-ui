@@ -1,6 +1,8 @@
 import { IAllProps } from '@tinymce/tinymce-react';
 
 export interface ITextEditorComponentProps extends Partial<IAllProps> {
+	onInit?: any;
+
 	/** selects different element to attach the editor to */
 	selector?: any;
 

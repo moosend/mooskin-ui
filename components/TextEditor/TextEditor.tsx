@@ -42,6 +42,7 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = (props) => {
 		<Editor
 			{...props}
 			toolbar={getToolbar()}
+			onInit={(evt, editor) => props.onInit(editor)}
 			init={{
 				setup: props.personalizationTags ? getSetup : undefined,
 				...props.init,
