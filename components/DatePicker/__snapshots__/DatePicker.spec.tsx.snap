@@ -205,36 +205,33 @@ exports[`DatePicker renders correctly 1`] = `
               },
             },
             "overrides": Object {
-              "MuiButton": Object {
-                "label": Object {
-                  "color": "#212121",
-                },
-                "textPrimary": Object {
-                  "backgroundColor": "#FAFAFA",
-                  "color": "#212121",
-                },
-              },
               "MuiIconButton": Object {
                 "label": Object {
-                  "color": "#212121",
+                  "color": "inherit",
                 },
               },
-              "MuiPaper": Object {
-                "root": Object {
-                  "backgroundColor": "#FAFAFA",
+              "MuiPickerDTTabs": Object {
+                "tabs": Object {
+                  "backgroundColor": "#5548D9",
+                  "fill": "#FFFFFF",
                 },
               },
               "MuiPickersCalendarHeader": Object {
-                "dayLabel": Object {
-                  "color": "#212121",
-                },
                 "iconButton": Object {
-                  "backgroundColor": "#5548D9!important",
-                  "color": "#212121",
+                  "fill": "#212121",
                 },
-                "switchHeader": Object {
-                  "backgroundColor": "#FAFAFA",
-                  "color": "#212121",
+              },
+              "MuiPickersClock": Object {
+                "pin": Object {
+                  "backgroundColor": "#5548D9",
+                },
+              },
+              "MuiPickersClockPointer": Object {
+                "pointer": Object {
+                  "backgroundColor": "#5548D9",
+                },
+                "thumb": Object {
+                  "borderColor": "#5548D9",
                 },
               },
               "MuiPickersDay": Object {
@@ -242,7 +239,7 @@ exports[`DatePicker renders correctly 1`] = `
                   "color": "#FFFFFF",
                 },
                 "day": Object {
-                  "backgroundColor": "#FAFAFA",
+                  "backgroundColor": "#FFFFFF",
                   "color": "#212121",
                 },
                 "dayDisabled": Object {
@@ -258,27 +255,19 @@ exports[`DatePicker renders correctly 1`] = `
                   "color": "#212121",
                 },
               },
-              "MuiPickersSlideTransition": Object {
-                "transitionContainer": Object {
-                  "color": "#212121",
-                },
-              },
               "MuiPickersToolbar": Object {
                 "toolbar": Object {
                   "backgroundColor": "#5548D9",
                 },
               },
-              "MuiPickersToolbarButton": Object {
-                "toolbarBtn": Object {
-                  "backgroundColor": "#5548D9",
+              "MuiSvgIcon": Object {
+                "root": Object {
+                  "fill": "inherit",
                 },
               },
-              "MuiTypography": Object {
-                "alignCenter": Object {
-                  "color": "#212121",
-                },
-                "body2": Object {
-                  "color": "#212121",
+              "MuiTabs": Object {
+                "indicator": Object {
+                  "backgroundColor": "#00796B",
                 },
               },
             },
