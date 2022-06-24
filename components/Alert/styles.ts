@@ -9,17 +9,17 @@ import { Box } from '../Box/Box';
 import variables from '../_utils/globals/variables';
 
 const SolidBackgroundColors = {
-	error: variables.backgroundColors.primary4,
-	info: variables.backgroundColors.primary1,
-	success: variables.backgroundColors.secondary1,
-	warning: 'rgb(221, 107, 32)'
+	error: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.red600 || variables.backgroundColors.red600,
+	info: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1,
+	success: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.green600 || variables.backgroundColors.green600,
+	warning: (props: IBaseAlertComponentProps) => 'rgb(221, 107, 32)'
 };
 
 const FontColors = {
-	error: variables.backgroundColors.primary4,
-	info: variables.backgroundColors.primary1,
-	success: variables.backgroundColors.secondary1,
-	warning: '#DD6B20'
+	error: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.red600 || variables.backgroundColors.primary4,
+	info: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.red600 || variables.backgroundColors.primary1,
+	success: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.red600 || variables.backgroundColors.secondary1,
+	warning: (props: IBaseAlertComponentProps) => '#DD6B20'
 };
 
 export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
@@ -34,7 +34,7 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
 	padding-left: ${(props) => (props.variant === 'left-accent' ? '0.75rem' : '1rem')};
 	border-left: ${(props) => (props.variant === 'left-accent' ? '4px solid' : '')};
 	border-top: ${(props) => (props.variant === 'top-accent' ? '4px solid' : '')};
-	border-color: ${(props) => props.status && SolidBackgroundColors[props.status]};
+	border-color: ${(props) => props.status && SolidBackgroundColors[props.status](props)};
 	border-radius: 2px;
 	background-color: ${(props) => {
 		return props.variant === 'solid'
@@ -69,7 +69,7 @@ StyledAlertDescription.displayName = 'StyledAlertDescription';
 
 const StyledAlertCommonIcon = styled(Box)<IBaseAlertComponentProps>`
 	font-family: 'Mooskin Icons';
-	color: ${(props) => (props.variant === 'solid' ? variables.fontColors.white : props.status && FontColors[props.status])};
+	color: ${(props) => (props.variant === 'solid' ? variables.fontColors.white : props.status && FontColors[props.status](props))};
 `;
 
 StyledAlertCommonIcon.displayName = 'StyledAlertCommonIcon';
