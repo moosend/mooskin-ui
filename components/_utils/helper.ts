@@ -63,7 +63,7 @@ export const getOverridesForPicker = (theme: IStyledTheme, defaults: IStyledThem
 		},
 		MuiPickersDay: {
 			current: {
-				color: theme.fontColors.white || defaults.fontColors.white
+				color: theme.fontColors.primary1 || defaults.fontColors.primary1
 			},
 			day: {
 				backgroundColor: theme.backgroundColors.white || defaults.backgroundColors.white,

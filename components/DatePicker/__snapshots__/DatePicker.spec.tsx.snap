@@ -236,7 +236,7 @@ exports[`DatePicker renders correctly 1`] = `
               },
               "MuiPickersDay": Object {
                 "current": Object {
-                  "color": "#FFFFFF",
+                  "color": "#5548D9",
                 },
                 "day": Object {
                   "backgroundColor": "#FFFFFF",
