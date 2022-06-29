@@ -104,6 +104,9 @@ export const getOverridesForPicker = (theme: IStyledTheme, defaults: IStyledThem
 			},
 			thumb: {
 				borderColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+			},
+			noPoint: {
+				backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
 			}
 		},
 		MuiTabs: {
@@ -114,6 +117,11 @@ export const getOverridesForPicker = (theme: IStyledTheme, defaults: IStyledThem
 		MuiIconButton: {
 			label: {
 				color: 'inherit'
+			}
+		},
+		MuiButton: {
+			label: {
+				color: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
 			}
 		}
 	}
