@@ -205,6 +205,11 @@ exports[`DatePicker renders correctly 1`] = `
               },
             },
             "overrides": Object {
+              "MuiButton": Object {
+                "label": Object {
+                  "color": "#5548D9",
+                },
+              },
               "MuiIconButton": Object {
                 "label": Object {
                   "color": "inherit",
@@ -227,6 +232,9 @@ exports[`DatePicker renders correctly 1`] = `
                 },
               },
               "MuiPickersClockPointer": Object {
+                "noPoint": Object {
+                  "backgroundColor": "#5548D9",
+                },
                 "pointer": Object {
                   "backgroundColor": "#5548D9",
                 },
