@@ -45,6 +45,9 @@ export interface IThemeFontColors {
 	createNew: string;
 	menuDark: string;
 	menuLight: string;
+	editorRow: string;
+	editorElement: string;
+	editorRepeatable: string;
 }
 
 export interface IThemeBackgroundColors {
@@ -94,6 +97,9 @@ export interface IThemeBackgroundColors {
 	createNew: string;
 	menuDark: string;
 	menuLight: string;
+	editorRow: string;
+	editorElement: string;
+	editorRepeatable: string;
 }
 
 export interface IThemeBorderColors {
@@ -143,6 +149,9 @@ export interface IThemeBorderColors {
 	createNew: string;
 	menuDark: string;
 	menuLight: string;
+	editorRow: string;
+	editorElement: string;
+	editorRepeatable: string;
 }
 
 export interface IThemeStyles {

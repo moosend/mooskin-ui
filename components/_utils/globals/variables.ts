@@ -47,7 +47,10 @@ const theme: IStyledTheme = {
 		client: '#E0E0E0',
 		createNew: '#FFFFFF',
 		menuDark: '#21262A',
-		menuLight: '#2E3841'
+		menuLight: '#2E3841',
+		editorElement: '#1286FA',
+		editorRepeatable: '#5C50E7',
+		editorRow: '#63B8C8'
 	},
 	borderColors: {
 		primary1: '#5548D9',
@@ -95,7 +98,10 @@ const theme: IStyledTheme = {
 		client: '#E0E0E0',
 		createNew: '#FFFFFF',
 		menuDark: '#21262A',
-		menuLight: '#2E3841'
+		menuLight: '#2E3841',
+		editorElement: '#1286FA',
+		editorRepeatable: '#5C50E7',
+		editorRow: '#63B8C8'
 	},
 	fontColors: {
 		primary1: '#5548D9',
@@ -143,7 +149,10 @@ const theme: IStyledTheme = {
 		client: '#E0E0E0',
 		createNew: '#212121',
 		menuDark: '#21262A',
-		menuLight: '#2E3841'
+		menuLight: '#2E3841',
+		editorElement: '#1286FA',
+		editorRepeatable: '#5C50E7',
+		editorRow: '#63B8C8'
 	},
 	styles: {
 		buttonBorderRadius: '100px'
