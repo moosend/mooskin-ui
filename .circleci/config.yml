@@ -17,12 +17,12 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
             - v1-dependencies-
-      - run: npm install
+      - run: yarn install
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: npm test
+      - run: yarn test
       - persist_to_workspace:
           root: ~/repo
           paths: .
@@ -32,7 +32,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
-      - run: npm prepare
+      - run: yarn prepare
       - persist_to_workspace:
           root: ~/repo
           paths: .
