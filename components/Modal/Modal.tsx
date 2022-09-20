@@ -45,6 +45,21 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 		}
 
 		return React.Children.map(children, (child, i) => {
+			// on press esc button close modal
+			const escButtonHandler = (event:any) => {				
+				if(event.keyCode === 27){
+					if (React.isValidElement<IModalOverlayComponentProps>(child) && child.type === ModalCloseButton) {
+						batchClickHandler(event, child.props.onClick)
+					}					
+				}				
+			}
+			// apply eventListener on esc button 
+			React.useEffect(() => {
+				window.addEventListener("keydown", (event) => escButtonHandler(event));
+				return () => {
+					window.removeEventListener("keydown", (event) => escButtonHandler(event));
+				};
+			});
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === ModalCloseButton) {
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
