@@ -93,7 +93,7 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 		});
 	};
 
-	return <StyledModal {...props} onKeyDown={handleKeyDown} setRef={(ref: HTMLElement)=>(modalRef.current=ref)} children={recurseChildren(props.children)} />;
+	return <StyledModal {...props} onKeyDown={handleKeyDown} setRef={(ref: HTMLElement)=>(modalRef.current=ref)} tabIndex={0} children={recurseChildren(props.children)} />;
 });
 
 Modal.defaultProps = {
