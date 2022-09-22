@@ -343,6 +343,7 @@ exports[`Modal renders correctly 1`] = `
       }
       setRef={[Function]}
       style={Object {}}
+      tabIndex={0}
     >
       <Box
         className="sc-gsDKAQ"
@@ -512,6 +513,7 @@ exports[`Modal renders correctly 1`] = `
         }
         setRef={[Function]}
         style={Object {}}
+        tabIndex={0}
         transition="0.2s all"
       >
         <Component
@@ -682,6 +684,7 @@ exports[`Modal renders correctly 1`] = `
           }
           setRef={[Function]}
           style={Object {}}
+          tabIndex={0}
           transition="0.2s all"
         >
           <StyledBox
@@ -852,7 +855,7 @@ exports[`Modal renders correctly 1`] = `
             }
             setRef={[Function]}
             style={Object {}}
-            tabIndex="0"
+            tabIndex={0}
             transition="0.2s all"
           >
             <div
@@ -860,7 +863,7 @@ exports[`Modal renders correctly 1`] = `
               onClose={[MockFunction]}
               onKeyDown={[Function]}
               style={Object {}}
-              tabIndex="0"
+              tabIndex={0}
             >
               <ModalOverlay
                 className=""
@@ -1724,14 +1727,12 @@ exports[`Modal renders correctly 1`] = `
                             }
                             round="xs"
                             style={Object {}}
-                            tabIndex="0"
                             transition="0.2s all"
                           >
                             <div
                               className="sc-bdvvtL bxvrDv sc-pVTFL sc-jrQzAO ftbJxL iZVrzD"
                               onClick={[Function]}
                               style={Object {}}
-                              tabIndex="0"
                             >
                               <ModalContent
                                 className=""
@@ -2582,7 +2583,6 @@ exports[`Modal renders correctly 1`] = `
                                             }
                                           }
                                           style={Object {}}
-                                          tabIndex="0"
                                           transition="0.2s all"
                                           w="50%"
                                         >
@@ -2590,7 +2590,6 @@ exports[`Modal renders correctly 1`] = `
                                             className="sc-bdvvtL bLmcAy sc-dkPtRN sc-hKwDye bBkmmN VSigb"
                                             onClick={[Function]}
                                             style={Object {}}
-                                            tabIndex="0"
                                           >
                                             <ModalCloseButton
                                               className=""
@@ -3441,7 +3440,6 @@ exports[`Modal renders correctly 1`] = `
                                                         position="absolute"
                                                         right={10}
                                                         style={Object {}}
-                                                        tabIndex="0"
                                                         top={10}
                                                         transition="0.2s all"
                                                       >
@@ -3449,7 +3447,6 @@ exports[`Modal renders correctly 1`] = `
                                                           className="sc-bdvvtL hSjSwM sc-furwcr ljXGFb notranslate "
                                                           onClick={[Function]}
                                                           style={Object {}}
-                                                          tabIndex="0"
                                                         >
                                                           close
                                                         </div>
@@ -4290,13 +4287,11 @@ exports[`Modal renders correctly 1`] = `
                                                           }
                                                         }
                                                         style={Object {}}
-                                                        tabIndex="0"
                                                         transition="0.2s all"
                                                       >
                                                         <header
                                                           className="sc-bdvvtL buKeIX sc-jRQBWg fVfodI"
                                                           style={Object {}}
-                                                          tabIndex="0"
                                                         >
                                                           Create your account
                                                         </header>
@@ -5132,13 +5127,11 @@ exports[`Modal renders correctly 1`] = `
                                                           }
                                                         }
                                                         style={Object {}}
-                                                        tabIndex="0"
                                                         transition="0.2s all"
                                                       >
                                                         <div
                                                           className="sc-bdvvtL buKeIX sc-gKclnd eqUsft"
                                                           style={Object {}}
-                                                          tabIndex="0"
                                                         >
                                                           Modal Content Body
                                                         </div>
@@ -5979,13 +5972,11 @@ exports[`Modal renders correctly 1`] = `
                                                           }
                                                         }
                                                         style={Object {}}
-                                                        tabIndex="0"
                                                         transition="0.2s all"
                                                       >
                                                         <footer
                                                           className="sc-bdvvtL buKeIX sc-iCfMLu iiJYRu"
                                                           style={Object {}}
-                                                          tabIndex="0"
                                                         >
                                                           Modal Footer goes here!
                                                         </footer>
