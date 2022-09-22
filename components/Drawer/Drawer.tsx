@@ -65,10 +65,10 @@ export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext((props
 	};
 
 	React.useEffect(() => {
-		if (drawerRef.current) {
+		if (drawerRef.current && props.isOpen === true) {
 			drawerRef.current.focus();
 		}
-	}, []);
+	}, [props.isOpen]);
 
 	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
 		props.onClose && props.onClose(e);
