@@ -26,7 +26,7 @@ describe('Drawer', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	test('closes drawer on Overlay click', () => {
+	test('closes drawer on Overlay click or on ESC key', () => {
 		const fn = jest.fn();
 		const fn2 = jest.fn();
 
@@ -46,33 +46,10 @@ describe('Drawer', () => {
 		);
 
 		tree.find(DrawerOverlay).simulate('click');
-		expect(fn).toHaveBeenCalled();
+
+		tree.find('StyledDrawer').simulate('keyDown', { keyCode: 27, key: 'Escape', preventDefault: () => undefined });
+
+		expect(fn).toHaveBeenCalledTimes(2);
 		expect(fn2).toHaveBeenCalled();
 	});
-	
-	test("Closes Drawer on esc button", () => {
-		const fn = jest.fn();
-		const tree = mount(
-			<Drawer onClose={fn} isOpen>
-				<DrawerOverlay >
-					<DrawerContent w="50%" h="50%">
-						<DrawerCloseButton position="absolute" top={10} right={10} />
-						<DrawerHeader>Create your account</DrawerHeader>
-
-						<DrawerBody>Drawer Content Body</DrawerBody>
-
-						<DrawerFooter>Drawer Footer goes here!</DrawerFooter>
-					</DrawerContent>
-				</DrawerOverlay>
-			</Drawer>
-		)
-		const instanceMock = jest.spyOn(tree, "instance");
-		document.addEventListener = jest
-		  .fn()
-		expect(document.addEventListener).toBeCalledWith(
-		  "keydown",
-		  expect.any(Function)
-		);
-		expect(instanceMock).toBeCalledTimes(1);
-	  });
 });

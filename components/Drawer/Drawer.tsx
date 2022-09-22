@@ -56,24 +56,25 @@ const ContentByPosition = {
 };
 
 export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext((props) => {
+	let drawerRef: React.MutableRefObject<undefined | HTMLElement> = React.useRef();
+
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+		if (e.keyCode === 27) {
+			props.onClose && props.onClose();
+		}
+	};
+
+	React.useEffect(() => {
+		if (drawerRef.current) {
+			drawerRef.current.focus();
+		}
+	}, []);
+
 	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
 		props.onClose && props.onClose(e);
 		callback && callback(e);
 	};
-	// on press esc button close Drawer
-	 const escButtonHandler = (event:any) => {
-		if(event.keyCode === 27){
-			console.log("On esc button Drawer")
-			props.onClose && props.onClose(event);
-		}
-	 }
-	 // apply eventListener on esc button 
-	const applyEventListener = (ref:any) =>{
-		ref?.addEventListener("keydown", (event:any) => escButtonHandler(event), true);
-		return () => {
-			ref?.removeEventListener("keydown", (event:any) => escButtonHandler(event), true);
-		}
-	}	
+
 	const recurseChildren = (children: any): any => {
 		if (!children) {
 			return null;
@@ -117,7 +118,15 @@ export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext((props
 			return child;
 		});
 	};
-	return <StyledDrawer {...props} setRef={(ref: React.RefObject<HTMLElement>)=>applyEventListener(ref)} children={recurseChildren(props.children)} />;
+	return (
+		<StyledDrawer
+			{...props}
+			onKeyDown={handleKeyDown}
+			setRef={(ref: HTMLElement) => (drawerRef.current = ref)}
+			tabIndex={0}
+			children={recurseChildren(props.children)}
+		/>
+	);
 });
 
 Drawer.defaultProps = {

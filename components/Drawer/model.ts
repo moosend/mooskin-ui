@@ -19,15 +19,10 @@ export interface IDrawerComponentProps extends IBoxComponentProps {
 	closeOnOverlayClick?: boolean;
 
 	/** close callback */
-	onClose?: (e: React.MouseEvent<HTMLElement>) => void;
+	onClose?: (e?: React.MouseEvent<HTMLElement>) => void;
 
 	/** open callback */
 	onOpen?: () => void;
-
-	ref?: any;
-
-	/** setRef prop handles the ref of the component (esc button press) */
-	setRef?: (ref: React.RefObject<HTMLElement>) => void;
 }
 
 export interface IDrawerContentComponentProps extends IBoxComponentProps {
