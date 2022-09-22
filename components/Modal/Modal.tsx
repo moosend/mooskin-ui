@@ -49,7 +49,7 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 	};
 
 	React.useEffect(() => {
-		if (modalRef.current && props.isOpen === true) {
+		if (modalRef.current && props.isOpen) {
 			modalRef.current.focus();
 		}
 	}, [props.isOpen]);

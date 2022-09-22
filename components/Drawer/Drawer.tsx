@@ -65,7 +65,7 @@ export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext((props
 	};
 
 	React.useEffect(() => {
-		if (drawerRef.current && props.isOpen === true) {
+		if (drawerRef.current && props.isOpen) {
 			drawerRef.current.focus();
 		}
 	}, [props.isOpen]);
