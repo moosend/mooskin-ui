@@ -34,24 +34,22 @@ const ModalOverlayComponents = {
  * Modal
  */
 export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) => {
+	let modalRef: React.MutableRefObject<undefined | HTMLElement> = React.useRef();
 	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
 		props.onClose && props.onClose(e);
 		callback && callback(e);
 	};
 	// on press esc button close Drawer
-	const escButtonHandler = (event:any) => {
-		if(event.keyCode === 27){
-			console.log("On esc button Modal")
-			props.onClose && props.onClose(event);
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+		if (e.keyCode === 27) {
+			props.onClose && props.onClose();
 		}
-	 }	 
-	// apply eventListener on esc button 
-	const applyEventListener = (ref:any) =>{
-		ref?.addEventListener("keydown", (event:any) => escButtonHandler(event), true);
-		return () => {
-			ref?.removeEventListener("keydown", (event:any) => escButtonHandler(event), true);
+	};
+	React.useEffect(() => {
+		if (modalRef.current) {
+			modalRef.current.focus();
 		}
-	}	
+	}, []);
 	const recurseChildren = (children: any): any => {
 		if (!children) {
 			return null;
@@ -95,7 +93,7 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 		});
 	};
 
-	return <StyledModal {...props} setRef={(ref: React.RefObject<HTMLElement>)=>applyEventListener(ref)} children={recurseChildren(props.children)} />;
+	return <StyledModal {...props} onKeyDown={handleKeyDown} setRef={(ref: HTMLElement)=>(modalRef.current=ref)} children={recurseChildren(props.children)} />;
 });
 
 Modal.defaultProps = {
