@@ -56,6 +56,20 @@ const ContentByPosition = {
 };
 
 export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext((props) => {
+	let drawerRef: React.MutableRefObject<undefined | HTMLElement> = React.useRef();
+
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+		if (e.keyCode === 27) {
+			props.onClose && props.onClose();
+		}
+	};
+
+	React.useEffect(() => {
+		if (drawerRef.current) {
+			drawerRef.current.focus();
+		}
+	}, []);
+
 	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
 		props.onClose && props.onClose(e);
 		callback && callback(e);
@@ -65,7 +79,6 @@ export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext((props
 		if (!children) {
 			return null;
 		}
-
 		return React.Children.map(children, (child, i) => {
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === DrawerCloseButton) {
 				return React.cloneElement(child, {
@@ -105,8 +118,15 @@ export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext((props
 			return child;
 		});
 	};
-
-	return <StyledDrawer {...props} children={recurseChildren(props.children)} />;
+	return (
+		<StyledDrawer
+			{...props}
+			onKeyDown={handleKeyDown}
+			setRef={(ref: HTMLElement) => (drawerRef.current = ref)}
+			tabIndex={0}
+			children={recurseChildren(props.children)}
+		/>
+	);
 });
 
 Drawer.defaultProps = {

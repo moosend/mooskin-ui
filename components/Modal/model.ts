@@ -11,7 +11,7 @@ export interface IModalComponentProps extends IBoxComponentProps {
 	closeOnOverlayClick?: boolean;
 
 	/** close callback */
-	onClose?: (e: React.MouseEvent<HTMLElement>) => void;
+	onClose?: (e?: React.MouseEvent<HTMLElement>) => void;
 }
 
 export interface IModalContentComponentProps extends IBoxComponentProps {

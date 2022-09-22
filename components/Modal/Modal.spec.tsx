@@ -26,7 +26,7 @@ describe('Modal', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	test('closes Modal on Overlay click', () => {
+	test('closes Modal on Overlay click or on click ESC key', () => {
 		const fn = jest.fn();
 		const fn2 = jest.fn();
 
@@ -44,9 +44,10 @@ describe('Modal', () => {
 				</ModalOverlay>
 			</Modal>
 		);
-
+		tree.find('StyledModal').simulate('keyDown', { keyCode: 27, key: 'Escape', preventDefault: () => undefined });
 		tree.find(ModalOverlay).simulate('click');
-		expect(fn).toHaveBeenCalled();
+		expect(fn).toHaveBeenCalledTimes(2);
 		expect(fn2).toHaveBeenCalled();
 	});
+
 });

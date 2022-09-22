@@ -181,6 +181,7 @@ exports[`Drawer renders correctly 1`] = `
       className=""
       closeOnOverlayClick={true}
       onClose={[MockFunction]}
+      onKeyDown={[Function]}
       palette={
         Object {
           "backgroundColors": Object {
@@ -342,13 +343,16 @@ exports[`Drawer renders correctly 1`] = `
         }
       }
       placement="right"
+      setRef={[Function]}
       size="sm"
       style={Object {}}
+      tabIndex={0}
     >
       <Box
         className="sc-gsDKAQ"
         closeOnOverlayClick={true}
         onClose={[MockFunction]}
+        onKeyDown={[Function]}
         palette={
           Object {
             "backgroundColors": Object {
@@ -510,14 +514,17 @@ exports[`Drawer renders correctly 1`] = `
           }
         }
         placement="right"
+        setRef={[Function]}
         size="sm"
         style={Object {}}
+        tabIndex={0}
         transition="0.2s all"
       >
         <Component
           className="sc-gsDKAQ"
           closeOnOverlayClick={true}
           onClose={[MockFunction]}
+          onKeyDown={[Function]}
           palette={
             Object {
               "backgroundColors": Object {
@@ -679,14 +686,17 @@ exports[`Drawer renders correctly 1`] = `
             }
           }
           placement="right"
+          setRef={[Function]}
           size="sm"
           style={Object {}}
+          tabIndex={0}
           transition="0.2s all"
         >
           <StyledBox
             className="sc-gsDKAQ"
             closeOnOverlayClick={true}
             onClose={[MockFunction]}
+            onKeyDown={[Function]}
             palette={
               Object {
                 "backgroundColors": Object {
@@ -848,15 +858,19 @@ exports[`Drawer renders correctly 1`] = `
               }
             }
             placement="right"
+            setRef={[Function]}
             size="sm"
             style={Object {}}
+            tabIndex={0}
             transition="0.2s all"
           >
             <div
               className="sc-bdvvtL buKeIX sc-gsDKAQ"
               onClose={[MockFunction]}
+              onKeyDown={[Function]}
               size="sm"
               style={Object {}}
+              tabIndex={0}
             >
               <DrawerOverlay
                 className=""
@@ -1720,12 +1734,14 @@ exports[`Drawer renders correctly 1`] = `
                             }
                             round="xs"
                             style={Object {}}
+                            tabIndex="0"
                             transition="0.2s all"
                           >
                             <div
                               className="sc-bdvvtL bxvrDv sc-fFeiMQ sc-bkkeKt fWLIAv OyxrG"
                               onClick={[Function]}
                               style={Object {}}
+                              tabIndex="0"
                             >
                               <DrawerContent
                                 className=""
@@ -2582,6 +2598,7 @@ exports[`Drawer renders correctly 1`] = `
                                           placement="right"
                                           size="sm"
                                           style={Object {}}
+                                          tabIndex="0"
                                           transition="0.2s all"
                                           w="50%"
                                         >
@@ -2590,6 +2607,7 @@ exports[`Drawer renders correctly 1`] = `
                                             onClick={[Function]}
                                             size="sm"
                                             style={Object {}}
+                                            tabIndex="0"
                                           >
                                             <DrawerCloseButton
                                               className=""
@@ -3440,6 +3458,7 @@ exports[`Drawer renders correctly 1`] = `
                                                         position="absolute"
                                                         right={10}
                                                         style={Object {}}
+                                                        tabIndex="0"
                                                         top={10}
                                                         transition="0.2s all"
                                                       >
@@ -3447,6 +3466,7 @@ exports[`Drawer renders correctly 1`] = `
                                                           className="sc-bdvvtL hSjSwM sc-fotOHu elouHd notranslate "
                                                           onClick={[Function]}
                                                           style={Object {}}
+                                                          tabIndex="0"
                                                         >
                                                           close
                                                         </div>
@@ -4287,11 +4307,13 @@ exports[`Drawer renders correctly 1`] = `
                                                           }
                                                         }
                                                         style={Object {}}
+                                                        tabIndex="0"
                                                         transition="0.2s all"
                                                       >
                                                         <header
                                                           className="sc-bdvvtL buKeIX sc-bqiRlB iTKWER"
                                                           style={Object {}}
+                                                          tabIndex="0"
                                                         >
                                                           Create your account
                                                         </header>
@@ -5127,11 +5149,13 @@ exports[`Drawer renders correctly 1`] = `
                                                           }
                                                         }
                                                         style={Object {}}
+                                                        tabIndex="0"
                                                         transition="0.2s all"
                                                       >
                                                         <div
                                                           className="sc-bdvvtL buKeIX sc-ksdxgE dKpYqy"
                                                           style={Object {}}
+                                                          tabIndex="0"
                                                         >
                                                           Drawer Content Body
                                                         </div>
@@ -5972,11 +5996,13 @@ exports[`Drawer renders correctly 1`] = `
                                                           }
                                                         }
                                                         style={Object {}}
+                                                        tabIndex="0"
                                                         transition="0.2s all"
                                                       >
                                                         <footer
                                                           className="sc-bdvvtL buKeIX sc-hBUSln emfomw"
                                                           style={Object {}}
+                                                          tabIndex="0"
                                                         >
                                                           Drawer Footer goes here!
                                                         </footer>

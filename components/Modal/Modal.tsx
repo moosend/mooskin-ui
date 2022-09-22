@@ -34,11 +34,22 @@ const ModalOverlayComponents = {
  * Modal
  */
 export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) => {
+	let modalRef: React.MutableRefObject<undefined | HTMLElement> = React.useRef();
 	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
 		props.onClose && props.onClose(e);
 		callback && callback(e);
 	};
-
+	// on press esc button close Drawer
+	const handleKeyDown = (e: React.KeyboardEvent<HTMLElement>) => {
+		if (e.keyCode === 27) {
+			props.onClose && props.onClose();
+		}
+	};
+	React.useEffect(() => {
+		if (modalRef.current) {
+			modalRef.current.focus();
+		}
+	}, []);
 	const recurseChildren = (children: any): any => {
 		if (!children) {
 			return null;
@@ -82,7 +93,7 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 		});
 	};
 
-	return <StyledModal {...props} children={recurseChildren(props.children)} />;
+	return <StyledModal {...props} onKeyDown={handleKeyDown} setRef={(ref: HTMLElement)=>(modalRef.current=ref)} tabIndex={0} children={recurseChildren(props.children)} />;
 });
 
 Modal.defaultProps = {

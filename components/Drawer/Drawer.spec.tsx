@@ -26,7 +26,7 @@ describe('Drawer', () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	test('closes drawer on Overlay click', () => {
+	test('closes drawer on Overlay click or on ESC key', () => {
 		const fn = jest.fn();
 		const fn2 = jest.fn();
 
@@ -46,7 +46,10 @@ describe('Drawer', () => {
 		);
 
 		tree.find(DrawerOverlay).simulate('click');
-		expect(fn).toHaveBeenCalled();
+
+		tree.find('StyledDrawer').simulate('keyDown', { keyCode: 27, key: 'Escape', preventDefault: () => undefined });
+
+		expect(fn).toHaveBeenCalledTimes(2);
 		expect(fn2).toHaveBeenCalled();
 	});
 });
