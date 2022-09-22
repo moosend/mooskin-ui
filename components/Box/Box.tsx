@@ -13,7 +13,7 @@ import { StyledBox } from './styles';
  * Box
  */
 export const Box: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledBox {...props} as={props.boxAs} />;
+	return <StyledBox ref={(ref: React.RefObject<HTMLElement>) => (props.setRef && props.setRef(ref))} tabIndex="0" {...props} as={props.boxAs} />;
 });
 
 Box.defaultProps = {

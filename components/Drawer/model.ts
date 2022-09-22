@@ -23,6 +23,11 @@ export interface IDrawerComponentProps extends IBoxComponentProps {
 
 	/** open callback */
 	onOpen?: () => void;
+
+	ref?: any;
+
+	/** setRef prop handles the ref of the component (esc button press) */
+	setRef?: (ref: React.RefObject<HTMLElement>) => void;
 }
 
 export interface IDrawerContentComponentProps extends IBoxComponentProps {

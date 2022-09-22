@@ -115,6 +115,7 @@ export type ITextAreaBoxComponentProps = IBoxComponentProps & React.TextareaHTML
 export interface IBaseBoxComponentProps extends IMooskinContext {
 	ref?: any;
 
+	setRef?: (ref: React.RefObject<HTMLElement>) => void;
 	/** render Box as a different html element */
 	boxAs?: any;
 

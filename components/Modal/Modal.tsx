@@ -38,28 +38,26 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 		props.onClose && props.onClose(e);
 		callback && callback(e);
 	};
-
+	// on press esc button close Drawer
+	const escButtonHandler = (event:any) => {
+		if(event.keyCode === 27){
+			console.log("On esc button Modal")
+			props.onClose && props.onClose(event);
+		}
+	 }	 
+	// apply eventListener on esc button 
+	const applyEventListener = (ref:any) =>{
+		ref?.addEventListener("keydown", (event:any) => escButtonHandler(event), true);
+		return () => {
+			ref?.removeEventListener("keydown", (event:any) => escButtonHandler(event), true);
+		}
+	}	
 	const recurseChildren = (children: any): any => {
 		if (!children) {
 			return null;
 		}
 
 		return React.Children.map(children, (child, i) => {
-			// on press esc button close modal
-			const escButtonHandler = (event:any) => {				
-				if(event.keyCode === 27){
-					if (React.isValidElement<IModalOverlayComponentProps>(child) && child.type === ModalCloseButton) {
-						batchClickHandler(event, child.props.onClick)
-					}					
-				}				
-			}
-			// apply eventListener on esc button 
-			React.useEffect(() => {
-				window.addEventListener("keydown", (event) => escButtonHandler(event));
-				return () => {
-					window.removeEventListener("keydown", (event) => escButtonHandler(event));
-				};
-			});
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === ModalCloseButton) {
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
@@ -97,7 +95,7 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext((props) 
 		});
 	};
 
-	return <StyledModal {...props} children={recurseChildren(props.children)} />;
+	return <StyledModal {...props} setRef={(ref: React.RefObject<HTMLElement>)=>applyEventListener(ref)} children={recurseChildren(props.children)} />;
 });
 
 Modal.defaultProps = {

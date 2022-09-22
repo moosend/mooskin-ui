@@ -49,4 +49,30 @@ describe('Modal', () => {
 		expect(fn).toHaveBeenCalled();
 		expect(fn2).toHaveBeenCalled();
 	});
+
+	test("Closes Drawer on esc button", () => {
+		const fn = jest.fn();
+		const tree = mount(
+			<Modal onClose={fn} isOpen>
+				<ModalOverlay >
+					<ModalContent w="50%" h="50%">
+						<ModalCloseButton position="absolute" top={10} right={10} />
+						<ModalHeader>Create your account</ModalHeader>
+
+						<ModalBody>Modal Content Body</ModalBody>
+
+						<ModalFooter>Modal Footer goes here!</ModalFooter>
+					</ModalContent>
+				</ModalOverlay>
+			</Modal>
+		)
+		const instanceMock = jest.spyOn(tree, "instance");
+		document.addEventListener = jest
+		  .fn()
+		expect(document.addEventListener).toBeCalledWith(
+		  "keydown",
+		  expect.any(Function)
+		);
+		expect(instanceMock).toBeCalledTimes(1);
+	  });
 });
