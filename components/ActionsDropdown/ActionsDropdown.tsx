@@ -10,7 +10,7 @@ import { IBoxComponentProps } from '../Box/model';
 import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Styled Components
-import { StyledActionsDropdownArrow, StyledActionsDropdownFadeIn, StyledActionsDropdownFadeOut, StyledActionsDropdownItem, StyledActionsDropdownButtonClose, StyledActionDropdownOverlay, StyledActionDropdownWrapper } from './styles';
+import { StyledActionsDropdownArrow, StyledActionsDropdownFadeIn, StyledActionsDropdownFadeOut, StyledActionsDropdownItem, StyledActionsDropdownButtonClose, StyledActionDropdownOverlay } from './styles';
 
 // Transitions
 import { Transition } from 'react-transition-group';
@@ -79,32 +79,22 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								h={[0, 0, '100vh', '100vh']}
 								position={['relative', 'relative', 'fixed', 'fixed']}
 								d={['none', 'none', 'block', 'block']}
+
 							/>
-							<StyledActionDropdownWrapper
-								boxShadow='base'
-								position= {['relative', 'relative', 'fixed', 'fixed']}
+							
+							<ActionDropdownComponent 
+								boxShadow= 'base'
+								position={['relative', 'relative', 'fixed', 'fixed']}
 								borderRadius={['2px', '2px', '8px', '8px']}
 								bottom={['unset', 'unset', '73px', '73px']}
 								left={['unset', 'unset', '10px', '10px']}
 								right={['unset', 'unset', '10px', '10px']}
-								maxH = {['unset','unset', '384px', '384px']}
-								p = {['0px', '0px', '0px', '0px']}
+								{...props}
 							>
-								<ActionDropdownComponent 
-									position={['relative', 'relative', 'fixed', 'fixed']}
-									borderRadius={['2px', '2px', '8px', '8px']}
-									bottom={['unset', 'unset', '78px', '78px']}
-									left={['unset', 'unset', '10px', '10px']}
-									right={['unset', 'unset', '10px', '10px']}
-									maxH = {['auto','auto', '364px', '364px']}
-									
-									{...props}
-								>
-									<Box position="absolute"  />
-									{!hasArrow && <ActionsDropdownArrow boxShadow="base" />}
-										{recurseChildren(props.children)}					
-								</ActionDropdownComponent>
-							</StyledActionDropdownWrapper>
+								<Box position="absolute"  />
+								{!hasArrow && <ActionsDropdownArrow boxShadow="base" />}
+									{recurseChildren(props.children)}					
+							</ActionDropdownComponent>
 							<StyledActionsDropdownButtonClose 
 								boxShadow= 'base'
 								position= {['relative', 'relative', 'fixed', 'fixed']}
