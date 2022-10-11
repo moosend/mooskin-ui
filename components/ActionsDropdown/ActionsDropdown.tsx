@@ -89,6 +89,8 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								bottom={['unset', 'unset', '73px', '73px']}
 								left={['unset', 'unset', '10px', '10px']}
 								right={['unset', 'unset', '10px', '10px']}
+								maxH={['unset', 'unset', '415px', '415px']}
+								overflowY={['unset', 'unset', 'auto', 'auto']}
 								{...props}
 							>
 								<Box position="absolute"  />
@@ -99,7 +101,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								boxShadow= 'base'
 								position= {['relative', 'relative', 'fixed', 'fixed']}
 								d= {['none', 'none', 'block', 'block']}
-								borderRadius= {['2px', '2px', '14px', '14px']}
+								borderRadius= {['2px', '2px', '8px', '8px']}
 								bottom= {['unset', 'unset', '10px', '10px']}
 								left= {['unset', 'unset', '10px', '10px']}
 								right= {['unset', 'unset', '10px', '10px']}
