@@ -10,7 +10,7 @@ import { IBoxComponentProps } from '../Box/model';
 import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Styled Components
-import { StyledActionsDropdownArrow, StyledActionsDropdownFadeIn, StyledActionsDropdownFadeOut, StyledActionsDropdownItem } from './styles';
+import { StyledActionsDropdownArrow, StyledActionsDropdownFadeIn, StyledActionsDropdownFadeOut, StyledActionsDropdownItem, StyledActionsDropdownButtonClose, StyledActionDropdownOverlay } from './styles';
 
 // Transitions
 import { Transition } from 'react-transition-group';
@@ -62,7 +62,6 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 			if (React.isValidElement(child) && (child.props as any).children) {
 				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
 			}
-
 			return child;
 		});
 	};
@@ -71,13 +70,46 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={145}>
 			{(state) => {
 				const ActionDropdownComponent = DropdownComponents[state];
+				
 				if (ActionDropdownComponent) {
 					return (
-						<ActionDropdownComponent boxShadow="base" {...props}>
-							<Box position="absolute" h={30} top={-30} left={0} right={0} />
-							{!hasArrow && <ActionsDropdownArrow boxShadow="base" />}
-							{recurseChildren(props.children)}
-						</ActionDropdownComponent>
+						<>
+							<StyledActionDropdownOverlay 
+								w={[0, 0, '100vw', '100vw']}
+								h={[0, 0, '100vh', '100vh']}
+								position={['relative', 'relative', 'fixed', 'fixed']}
+								d={['none', 'none', 'block', 'block']}
+
+							/>
+							
+							<ActionDropdownComponent 
+								boxShadow= 'base'
+								position={['relative', 'relative', 'fixed', 'fixed']}
+								borderRadius={['2px', '2px', '8px', '8px']}
+								bottom={['unset', 'unset', '73px', '73px']}
+								left={['unset', 'unset', '10px', '10px']}
+								right={['unset', 'unset', '10px', '10px']}
+								maxH={['unset', 'unset', '415px', '415px']}
+								overflowY={['unset', 'unset', 'auto', 'auto']}
+								{...props}
+							>
+								<Box position="absolute"  />
+								{!hasArrow && <ActionsDropdownArrow boxShadow="base" />}
+									{recurseChildren(props.children)}					
+							</ActionDropdownComponent>
+							<StyledActionsDropdownButtonClose 
+								boxShadow= 'base'
+								position= {['relative', 'relative', 'fixed', 'fixed']}
+								d= {['none', 'none', 'block', 'block']}
+								borderRadius= {['2px', '2px', '8px', '8px']}
+								bottom= {['unset', 'unset', '10px', '10px']}
+								left= {['unset', 'unset', '10px', '10px']}
+								right= {['unset', 'unset', '10px', '10px']}
+								onClick= {props.onClose}
+							>
+								Close
+							</StyledActionsDropdownButtonClose>
+						</>
 					);
 				}
 				return null;
@@ -97,7 +129,13 @@ ActionsDropdown.displayName = 'ActionsDropdown';
  * ActionsDropdownItem
  */
 export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = withMooskinContext((props) => {
-	return <StyledActionsDropdownItem {...props} />;
+	return <StyledActionsDropdownItem 
+				textAlign={['unset', 'unset', 'center', 'center']}
+				p={['', '', '16px 16px 16px', '16px 16px 16px']}
+				fontSize= {["12px", "12px", "20px", "20px"]}
+				fontWeight={['bold', 'bold', 400, 400]}				
+				{...props} 
+			/>;
 });
 
 ActionsDropdownItem.defaultProps = {
@@ -111,7 +149,7 @@ ActionsDropdownItem.displayName = 'ActionsDropdownItem';
  * ActionsDropdownArrow
  */
 export const ActionsDropdownArrow: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledActionsDropdownArrow {...props} />;
+	return <StyledActionsDropdownArrow d={['block', 'block', 'none', 'none']} {...props} />;
 });
 
 ActionsDropdownArrow.defaultProps = {
@@ -120,3 +158,4 @@ ActionsDropdownArrow.defaultProps = {
 };
 
 ActionsDropdownArrow.displayName = 'ActionsDropdownArrow';
+

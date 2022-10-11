@@ -372,7 +372,31 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
   >
     <StyledActionsDropdownItem
       className="myClass"
+      fontSize={
+        Array [
+          "12px",
+          "12px",
+          "20px",
+          "20px",
+        ]
+      }
+      fontWeight={
+        Array [
+          "bold",
+          "bold",
+          400,
+          400,
+        ]
+      }
       onClick={[MockFunction]}
+      p={
+        Array [
+          "",
+          "",
+          "16px 16px 16px",
+          "16px 16px 16px",
+        ]
+      }
       palette={
         Object {
           "backgroundColors": Object {
@@ -538,10 +562,42 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
           "color": "blue",
         }
       }
+      textAlign={
+        Array [
+          "unset",
+          "unset",
+          "center",
+          "center",
+        ]
+      }
     >
       <Box
         className="sc-eCImPb hNQMIk myClass"
+        fontSize={
+          Array [
+            "12px",
+            "12px",
+            "20px",
+            "20px",
+          ]
+        }
+        fontWeight={
+          Array [
+            "bold",
+            "bold",
+            400,
+            400,
+          ]
+        }
         onClick={[MockFunction]}
+        p={
+          Array [
+            "",
+            "",
+            "16px 16px 16px",
+            "16px 16px 16px",
+          ]
+        }
         palette={
           Object {
             "backgroundColors": Object {
@@ -707,11 +763,43 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
             "color": "blue",
           }
         }
+        textAlign={
+          Array [
+            "unset",
+            "unset",
+            "center",
+            "center",
+          ]
+        }
         transition="0.2s all"
       >
         <Component
           className="sc-eCImPb hNQMIk myClass"
+          fontSize={
+            Array [
+              "12px",
+              "12px",
+              "20px",
+              "20px",
+            ]
+          }
+          fontWeight={
+            Array [
+              "bold",
+              "bold",
+              400,
+              400,
+            ]
+          }
           onClick={[MockFunction]}
+          p={
+            Array [
+              "",
+              "",
+              "16px 16px 16px",
+              "16px 16px 16px",
+            ]
+          }
           palette={
             Object {
               "backgroundColors": Object {
@@ -877,11 +965,43 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
               "color": "blue",
             }
           }
+          textAlign={
+            Array [
+              "unset",
+              "unset",
+              "center",
+              "center",
+            ]
+          }
           transition="0.2s all"
         >
           <StyledBox
             className="sc-eCImPb hNQMIk myClass"
+            fontSize={
+              Array [
+                "12px",
+                "12px",
+                "20px",
+                "20px",
+              ]
+            }
+            fontWeight={
+              Array [
+                "bold",
+                "bold",
+                400,
+                400,
+              ]
+            }
             onClick={[MockFunction]}
+            p={
+              Array [
+                "",
+                "",
+                "16px 16px 16px",
+                "16px 16px 16px",
+              ]
+            }
             palette={
               Object {
                 "backgroundColors": Object {
@@ -1047,10 +1167,34 @@ exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
                 "color": "blue",
               }
             }
+            textAlign={
+              Array [
+                "unset",
+                "unset",
+                "center",
+                "center",
+              ]
+            }
             transition="0.2s all"
           >
             <div
-              className="sc-bdvvtL buKeIX sc-eCImPb hNQMIk myClass"
+              className="sc-bdvvtL cIdmoE sc-eCImPb hNQMIk myClass"
+              fontSize={
+                Array [
+                  "12px",
+                  "12px",
+                  "20px",
+                  "20px",
+                ]
+              }
+              fontWeight={
+                Array [
+                  "bold",
+                  "bold",
+                  400,
+                  400,
+                ]
+              }
               onClick={[MockFunction]}
               style={
                 Object {

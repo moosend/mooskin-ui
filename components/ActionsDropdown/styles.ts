@@ -22,11 +22,9 @@ const fadeIn = keyframes`
 `;
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
-	border-radius: 2px;
 	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
 	display: flex;
 	flex-direction: column;
-	position: relative;
 	z-index: 2;
 `;
 
@@ -90,3 +88,30 @@ export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 `;
 
 StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';
+
+
+export const StyledActionsDropdownButtonClose = styled(Box)<IBoxComponentProps>`
+	width: auto;
+	height: 56px;
+	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
+	font-color: ${(props) => props.palette?.fontColors.dropdown || variables.fontColors.dropdown};
+	font-weight: 200;
+	font-size: 20px;
+	padding: 16px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 11;
+`;
+
+StyledActionsDropdownButtonClose.displayName = 'StyledActionsDropdownButtonClose';
+
+export const StyledActionDropdownOverlay = styled(Box)<IBoxComponentProps>`
+	overflow: auto;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.48);
+	
+`;
+
+StyledActionDropdownOverlay.displayName = 'StyledActionDropdownOverlay';
