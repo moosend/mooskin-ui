@@ -90,3 +90,22 @@ export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
 `;
 
 StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';
+
+
+export const StyledActionsDropdownButtonClose = styled(Box)<IBoxComponentProps>`
+	width: auto;
+	height: 56px;
+	border-radius: 14px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	background-color: #fff;
+	font-color: #000;
+	font-weight: 200;
+	font-size: 20px;
+	padding: 16px;
+	text-align: center;
+	cursor: pointer;
+`;
+
+StyledActionsDropdownButtonClose.displayName = 'StyledActionsDropdownButtonClose';
