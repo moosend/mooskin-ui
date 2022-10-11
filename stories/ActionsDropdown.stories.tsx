@@ -36,6 +36,24 @@ Normal.args = {
 			<ActionsDropdownItem dataLabel="preview" value="preview">
 				Preview
 			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="settings" value="settings" onClick={() => alert('Random on Click!')}>
+				Settings 1
+			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e) => console.log('Duplicate Clicked')}>
+				Duplicate 1
+			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="preview" value="preview">
+				Preview 1
+			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="settings" value="settings" onClick={() => alert('Random on Click!')}>
+				Settings 2
+			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e) => console.log('Duplicate Clicked')}>
+				Duplicate 2
+			</ActionsDropdownItem>
+			<ActionsDropdownItem dataLabel="preview" value="preview">
+				Preview 2
+			</ActionsDropdownItem>
 		</>
 	),
 	isOpen: true

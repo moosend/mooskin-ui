@@ -26,6 +26,7 @@ export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>
 	display: flex;
 	flex-direction: column;
 	z-index: 2;
+	overflow: scroll;
 `;
 
 StyledActionsDropdown.displayName = 'StyledActionsDropdown';
@@ -111,7 +112,14 @@ export const StyledActionDropdownOverlay = styled(Box)<IBoxComponentProps>`
 	top: 0px;
 	z-index: 1;
 	background-color: rgba(0, 0, 0, 0.48);
-	
 `;
 
 StyledActionDropdownOverlay.displayName = 'StyledActionDropdownOverlay';
+
+export const StyledActionDropdownWrapper = styled(Box)<IBoxComponentProps>`
+	z-index: 2;
+	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
+	border-radius:14px;
+`;
+
+StyledActionDropdownWrapper.displayName = 'StyledActionDropdownWrapper';
