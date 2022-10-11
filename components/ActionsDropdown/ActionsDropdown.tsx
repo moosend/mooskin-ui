@@ -10,7 +10,7 @@ import { IBoxComponentProps } from '../Box/model';
 import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Styled Components
-import { StyledActionsDropdownArrow, StyledActionsDropdownFadeIn, StyledActionsDropdownFadeOut, StyledActionsDropdownItem, StyledActionsDropdownButtonClose } from './styles';
+import { StyledActionsDropdownArrow, StyledActionsDropdownFadeIn, StyledActionsDropdownFadeOut, StyledActionsDropdownItem, StyledActionsDropdownButtonClose, StyledActionDropdownOverlay } from './styles';
 
 // Transitions
 import { Transition } from 'react-transition-group';
@@ -74,6 +74,14 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 				if (ActionDropdownComponent) {
 					return (
 						<>
+							<StyledActionDropdownOverlay 
+								w={[0, 0, '100vw', '100vw']}
+								h={[0, 0, '100vh', '100vh']}
+								position={['relative', 'relative', 'fixed', 'fixed']}
+								d={['none', 'none', 'block', 'block']}
+
+							/>
+							
 							<ActionDropdownComponent 
 								boxShadow= 'base'
 								position={['relative', 'relative', 'fixed', 'fixed']}

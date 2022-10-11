@@ -100,6 +100,18 @@ export const StyledActionsDropdownButtonClose = styled(Box)<IBoxComponentProps>`
 	padding: 16px;
 	text-align: center;
 	cursor: pointer;
+	z-index: 11;
 `;
 
 StyledActionsDropdownButtonClose.displayName = 'StyledActionsDropdownButtonClose';
+
+export const StyledActionDropdownOverlay = styled(Box)<IBoxComponentProps>`
+	overflow: auto;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.48);
+	
+`;
+
+StyledActionDropdownOverlay.displayName = 'StyledActionDropdownOverlay';
