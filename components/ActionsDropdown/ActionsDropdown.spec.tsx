@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { ActionsDropdown, ActionsDropdownItem, ActionsDropdownButtonClose } from './ActionsDropdown';
-
+import { ActionsDropdown, ActionsDropdownItem } from './ActionsDropdown';
+import { StyledActionsDropdownButtonClose } from './styles';
 import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
@@ -50,9 +50,9 @@ describe('ActionsDropdown', () => {
 
 	test('calls click on ActionsDropdown Close Button', () => {	
 		const func = jest.fn();		
-		const tree = mount(<ActionsDropdownButtonClose onClick={func}/>	);
+		const tree = mount(<StyledActionsDropdownButtonClose onClick={func}/>	);
 
-		tree.find(ActionsDropdownButtonClose).simulate('click');
+		tree.find(StyledActionsDropdownButtonClose).simulate('click');
 		expect(func).toHaveBeenCalled();
 	});
 });

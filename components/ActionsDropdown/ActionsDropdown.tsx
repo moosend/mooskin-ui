@@ -37,13 +37,6 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 		callback && callback(e, data);
 	};
 
-	const onClickCloseButtonHandler = (e:React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
-		console.log("closeButtonClicked")
-		e.stopPropagation();
-		props.onClose && props.onClose(e)
-		callback && callback(e);
-	}
-
 	const recurseChildren = (children: any): any => {
 		if (!children) {
 			return null;
@@ -69,14 +62,6 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 			if (React.isValidElement(child) && (child.props as any).children) {
 				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
 			}
-			if (React.isValidElement<IBoxComponentProps>(child) && child.type === ActionsDropdownButtonClose) {
-				return React.cloneElement(child, {
-					children: recurseChildren(child.props.children),
-					key: i,
-					onClick: (e) => onClickCloseButtonHandler(e, child.props.onClick)
-				} as IBoxComponentProps);
-			}
-
 			return child;
 		});
 	};
@@ -90,7 +75,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 					return (
 						<>
 							<ActionDropdownComponent 
-								boxShadow="base"
+								boxShadow= 'base'
 								position={['relative', 'relative', 'fixed', 'fixed']}
 								borderRadius={['2px', '2px', '8px', '8px']}
 								bottom={['unset', 'unset', '73px', '73px']}
@@ -102,24 +87,18 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								{!hasArrow && <ActionsDropdownArrow boxShadow="base" />}
 									{recurseChildren(props.children)}					
 							</ActionDropdownComponent>
-							<ActionsDropdownButtonClose 
-								w = 'auto'
-								h= '56px'
+							<StyledActionsDropdownButtonClose 
+								boxShadow= 'base'
 								position= {['relative', 'relative', 'fixed', 'fixed']}
 								d= {['none', 'none', 'block', 'block']}
 								borderRadius= {['2px', '2px', '14px', '14px']}
 								bottom= {['unset', 'unset', '10px', '10px']}
 								left= {['unset', 'unset', '10px', '10px']}
 								right= {['unset', 'unset', '10px', '10px']}
-								bgColor= '#fff'
-								fontColor= '#000'
-								fontWeight = {200}
-								fontSize= '20px'
-								p= '16px'
-								onClick= {onClickCloseButtonHandler}
+								onClick= {props.onClose}
 							>
 								Close
-							</ActionsDropdownButtonClose>
+							</StyledActionsDropdownButtonClose>
 						</>
 					);
 				}
@@ -170,16 +149,3 @@ ActionsDropdownArrow.defaultProps = {
 
 ActionsDropdownArrow.displayName = 'ActionsDropdownArrow';
 
-/**
- * ActionsDropdownButtonClose
- */
- export const ActionsDropdownButtonClose: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledActionsDropdownButtonClose d={['block', 'block', 'none', 'none']} {...props} />;
-});
-
-ActionsDropdownButtonClose.defaultProps = {
-	className: '',
-	style: {}
-};
-
-ActionsDropdownButtonClose.displayName = 'ActionsDropdownButtonClose';

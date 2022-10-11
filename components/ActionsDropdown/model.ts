@@ -19,10 +19,3 @@ export interface IActionsDropdownItemComponentProps extends IBoxComponentProps {
 	value?: any;
 }
 
-export interface IActionsDropdownButtonCloseComponentProps extends IBoxComponentProps {
-	//onClick Close Button
-	onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
-
-	/** value returned in callback fn */
-	value?: any;
-}

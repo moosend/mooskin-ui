@@ -22,11 +22,9 @@ const fadeIn = keyframes`
 `;
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
-	border-radius: 2px;
 	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
 	display: flex;
 	flex-direction: column;
-	position: relative;
 	z-index: 2;
 `;
 
@@ -95,12 +93,8 @@ StyledActionsDropdownArrow.displayName = 'StyledActionsDropdownArrow';
 export const StyledActionsDropdownButtonClose = styled(Box)<IBoxComponentProps>`
 	width: auto;
 	height: 56px;
-	border-radius: 14px;
-	bottom: 10px;
-	left: 10px;
-	right: 10px;
-	background-color: #fff;
-	font-color: #000;
+	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
+	font-color: ${(props) => props.palette?.fontColors.dropdown || variables.fontColors.dropdown};
 	font-weight: 200;
 	font-size: 20px;
 	padding: 16px;
