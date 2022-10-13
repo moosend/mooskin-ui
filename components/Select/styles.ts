@@ -75,14 +75,28 @@ export const StyledSelectPlaceholder = styled(Box)<IBoxComponentProps>`
 
 StyledSelectPlaceholder.displayName = 'StyledSelectPlaceholder';
 
+export const StyledSearchPlaceholderMobileView = styled(Box)<IBoxComponentProps>`
+	padding: 7px 15px 7px;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	text-align: left;
+	color: inherit;
+	flex: 1;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	cursor:text
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
+`;
+
+StyledSearchPlaceholderMobileView.displayName = 'StyledSearchPlaceholderMobileView';
+
 export const StyledSelectOptionList = styled(Box)<ISelectOptionListProps>`
-	position: absolute;
-	top: 40px;
-	left: 0;
-	right: 0;
 	color: inherit;
 	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
-	max-height: 160px;
 	overflow-y: auto;
 	z-index: 2;
 `;
@@ -115,9 +129,6 @@ StyledSelectOverlay.displayName = 'StyledSelectOverlay';
 
 export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
 	font-size: 14px;
-	padding: 10px 15px;
-	display: flex;
-	justify-content: space-between;
 	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	:first-child {
 		padding-top: 13px;
@@ -126,7 +137,7 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
 		padding: 10px 15px 0;
 	}
 	&:last-child {
-		padding: 10px 15px;
+		padding-bottom: 10px;
 	}
 `;
 
@@ -160,3 +171,23 @@ export const StyledPaginationPage = styled(Box)<IBoxComponentProps>`
 `;
 
 StyledPaginationPage.displayName = 'StyledPaginationPage';
+
+
+export const StyledSelectListButtonClose  = styled(Box)<IBoxComponentProps>`
+	width: auto;
+	height: 56px;
+	border-radius: 14px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	background-color:  ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
+	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
+	font-weight: 200;
+	font-size: 20px;
+	padding: 16px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 11;
+`;
+
+StyledSelectListButtonClose.displayName = 'StyledSelectListButtonClose';

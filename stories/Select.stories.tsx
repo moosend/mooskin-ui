@@ -55,6 +55,10 @@ Normal.args = {
 				<SelectOption value="3">Option 3</SelectOption>
 				<SelectOption value="4">Option 4</SelectOption>
 				<SelectOption value="5">Option 5</SelectOption>
+				<SelectOption value="2">Option 6</SelectOption>
+				<SelectOption value="3">Option 7</SelectOption>
+				<SelectOption value="4">Option 8</SelectOption>
+				<SelectOption value="5">Option 9</SelectOption>
 			</SelectOptionList>
 		</>
 	),
