@@ -140,7 +140,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 					children: (
 						<>
 							{recurseChildren(child.props.children)}
-							{active && <SelectIcon children="check" p="0" fontSize={15} />}
+							{active && <SelectIcon children="check" p="0" mr={[0, 0, "-32px", "-32px"]} pl={["0px", "0px", "15px", "15px"]} fontSize={[15, 15, 20, 20]} />}
 						</>
 					),
 					key: i,
@@ -361,6 +361,7 @@ SelectOptionList.displayName = 'SelectOptionList';
  */
 export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinContext((props) => {
 	return <StyledSelectOption 
+				d= {['flex','flex','flex','flex']}
 				textAlign= {['unset', 'unset', 'center', 'center']}
 				fontSize={['14px','14px', '20px', '20px']}
 				justify= {['space-between', 'space-between', 'center', 'center']}
