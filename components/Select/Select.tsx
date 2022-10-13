@@ -361,7 +361,7 @@ SelectOptionList.displayName = 'SelectOptionList';
  */
 export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinContext((props) => {
 	return <StyledSelectOption 
-				d= {['flex','flex','flex','flex']}
+				d= 'flex'
 				textAlign= {['unset', 'unset', 'center', 'center']}
 				fontSize={['14px','14px', '20px', '20px']}
 				justify= {['space-between', 'space-between', 'center', 'center']}
