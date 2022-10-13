@@ -137,7 +137,7 @@ export const StyledSelectOption = styled(Box)<ISelectOptionComponentProps>`
 		padding: 10px 15px 0;
 	}
 	&:last-child {
-		padding: 10px 15px;
+		padding-bottom: 10px;
 	}
 `;
 

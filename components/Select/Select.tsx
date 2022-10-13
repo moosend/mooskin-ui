@@ -174,6 +174,25 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 				return React.cloneElement(child, {
 					children: (
 					<>
+						{<SearchPlaceholderMobileView
+							d={['none', 'none', 'flex', 'flex']}
+							boxShadow= "base" 
+							position= {['absolute','absolute', 'fixed', 'fixed']}
+							mt= {['unset', 'unset', '-54px', '-54px']}
+							borderRadius= {['0px', '0px', '8px', '8px']}
+							left= {['0px','0px', '10px', '10px']}
+							right= {['0px','0px', '10px', '10px']}
+							zIndex= {['unset', 'unset', 11, 11]}
+							bgColor={['transparent', 'transparent', '#fff', '#fff']}
+							onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
+							onChange={(e: React.ChangeEvent<HTMLInputElement>) => (setFilterValue(e.target.value), console.log(filterValue))}
+						>
+							<SelectFilter
+								onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
+								onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
+							/>
+							<SelectIcon>{'search'}</SelectIcon>	
+						</SearchPlaceholderMobileView>}
 						{recurseChildren(child.props.children)}
 						{ (
 							<StyledSelectListButtonClose
@@ -217,25 +236,6 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 										onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
 										onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
 									/>
-									<SearchPlaceholderMobileView
-										d={['none', 'none', 'flex', 'flex']}
-										boxShadow= "base" 
-										position= {['absolute','absolute', 'fixed', 'fixed']}
-										bottom= {['unset', 'unset', '495px', '495px']}
-										borderRadius= {['0px', '0px', '8px', '8px']}
-										left= {['0px','0px', '10px', '10px']}
-										right= {['0px','0px', '10px', '10px']}
-										zIndex= {['unset', 'unset', 11, 11]}
-										bgColor={['transparent', 'transparent', '#fff', '#fff']}
-										onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
-										onChange={(e: React.ChangeEvent<HTMLInputElement>) => (setFilterValue(e.target.value), console.log(filterValue))}
-									>
-										<SelectFilter
-											onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
-											onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
-										/>
-										<SelectIcon>{'search'}</SelectIcon>	
-									</SearchPlaceholderMobileView>
 								</>
 							)}
 							{!hasDropdownIcon && <SelectIcon>{!showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up'}</SelectIcon>}
@@ -338,6 +338,7 @@ export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinCon
 									fontSize={['14px','14px', '20px', '20px']}
 									justify= {['space-between', 'space-between', 'center', 'center']}
 									maxH= {['160px', '160px', '415px', '415px']}
+									pb = {['10px', '10px', '0px', '0px']}
 									round="xs" 
 									{...props} 
 								/>
@@ -363,8 +364,8 @@ export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinCo
 				textAlign= {['unset', 'unset', 'center', 'center']}
 				fontSize={['14px','14px', '20px', '20px']}
 				justify= {['space-between', 'space-between', 'center', 'center']}
-				fontWeight={['bold', 'bold', 400, 400]}		
-				p={['10px 15px', '10px 15px', '16px', '16px']}
+				fontWeight={['normal', 'normal', 400, 400]}		
+				p={['10px 15px 0px', '10px 15px 0px', '16px', '16px']}
 				{...props} 
 			/>;
 });
