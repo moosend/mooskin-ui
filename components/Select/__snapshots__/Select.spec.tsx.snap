@@ -403,7 +403,6 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
       "4",
     ]
   }
-  showList={true}
   style={Object {}}
 >
   <SelectContainer

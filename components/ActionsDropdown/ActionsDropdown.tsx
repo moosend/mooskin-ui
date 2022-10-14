@@ -85,9 +85,8 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								w={[0, 0, '100vw', '100vw']}
 								h={[0, 0, '100vh', '100vh']}
 								position={['relative', 'relative', 'fixed', 'fixed']}
-								d={['none', 'none', 'block', 'block']}
+								noRender={['lg', 'md']}
 							/>
-
 							<ActionDropdownComponent
 								boxShadow="base"
 								position={['relative', 'relative', 'fixed', 'fixed']}
@@ -106,7 +105,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 							<StyledActionsDropdownButtonClose
 								boxShadow="base"
 								position={['relative', 'relative', 'fixed', 'fixed']}
-								d={['none', 'none', 'block', 'block']}
+								noRender={['lg', 'md']}
 								borderRadius={['2px', '2px', '8px', '8px']}
 								bottom={['unset', 'unset', '10px', '10px']}
 								left={['unset', 'unset', '10px', '10px']}

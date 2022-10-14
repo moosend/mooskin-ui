@@ -4,6 +4,7 @@ import { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColo
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
 export type BoxShadowIntensityType = IntensityType | 'inner' | 'outline';
 export type NestedThemeType = `${keyof IStyledTheme}.${keyof IThemeFontColors | keyof IThemeBorderColors | keyof IThemeBackgroundColors}`;
+export type ScreenType = 'lg' | 'md' | 'sm' | 'xs';
 // export type NestedThemeType = [string, string];
 
 export const boxComponentProps = [
@@ -113,9 +114,12 @@ export type IAnchorBoxComponentProps = IBoxComponentProps & React.AnchorHTMLAttr
 export type ITextAreaBoxComponentProps = IBoxComponentProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export interface IBaseBoxComponentProps extends IMooskinContext {
-	ref?: any;
 
+	noRender?: Array<ScreenType>;
+
+	/** returns the ref */
 	setRef?: (ref: HTMLElement) => void;
+
 	/** render Box as a different html element */
 	boxAs?: any;
 

@@ -184,7 +184,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 						<>
 							{
 								<SearchPlaceholderMobileView
-									d={['none', 'none', 'flex', 'flex']}
+									noRender={['lg', 'md']}
 									boxShadow="base"
 									position={['absolute', 'absolute', 'fixed', 'fixed']}
 									mt={['unset', 'unset', '-54px', '-54px']}
@@ -207,7 +207,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 							{
 								<StyledSelectListButtonClose
 									position={['relative', 'relative', 'fixed', 'fixed']}
-									d={['none', 'none', 'block', 'block']}
+									noRender={['lg', 'md']}
 									borderRadius={['2px', '2px', '8px', '8px']}
 									bottom={['unset', 'unset', '10px', '10px']}
 									left={['unset', 'unset', '10px', '10px']}
@@ -488,9 +488,7 @@ SelectPagination.defaultProps = {
 SelectPagination.displayName = 'SelectPagination';
 
 export const SearchPlaceholderMobileView: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return (
-		<StyledSearchPlaceholderMobileView bgColor={['transparent', 'transparent', 'rgba(0, 0, 0, 0.48)', 'rgba(0, 0, 0, 0.48)']} {...props} />
-	);
+	return <StyledSearchPlaceholderMobileView {...props} />;
 });
 
 SelectOverlay.defaultProps = {

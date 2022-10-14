@@ -76,6 +76,7 @@ export const StyledSelectPlaceholder = styled(Box)<IBoxComponentProps>`
 StyledSelectPlaceholder.displayName = 'StyledSelectPlaceholder';
 
 export const StyledSearchPlaceholderMobileView = styled(Box)<IBoxComponentProps>`
+	display: flex;
 	padding: 7px 15px 7px;
 	font-size: 14px;
 	font-weight: normal;
@@ -89,6 +90,7 @@ export const StyledSearchPlaceholderMobileView = styled(Box)<IBoxComponentProps>
 	text-overflow: ellipsis;
 	overflow: hidden;
 	cursor:text
+	background-color: rgba(0, 0, 0, 0.48);
 	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 `;
 
@@ -172,15 +174,14 @@ export const StyledPaginationPage = styled(Box)<IBoxComponentProps>`
 
 StyledPaginationPage.displayName = 'StyledPaginationPage';
 
-
-export const StyledSelectListButtonClose  = styled(Box)<IBoxComponentProps>`
+export const StyledSelectListButtonClose = styled(Box)<IBoxComponentProps>`
 	width: auto;
 	height: 56px;
 	border-radius: 14px;
 	bottom: 10px;
 	left: 10px;
 	right: 10px;
-	background-color:  ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
+	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
 	font-weight: 200;
 	font-size: 20px;
