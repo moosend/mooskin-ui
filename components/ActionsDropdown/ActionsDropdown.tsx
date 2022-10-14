@@ -10,7 +10,14 @@ import { IBoxComponentProps } from '../Box/model';
 import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Styled Components
-import { StyledActionsDropdownArrow, StyledActionsDropdownFadeIn, StyledActionsDropdownFadeOut, StyledActionsDropdownItem, StyledActionsDropdownButtonClose, StyledActionDropdownOverlay } from './styles';
+import {
+	StyledActionsDropdownArrow,
+	StyledActionsDropdownFadeIn,
+	StyledActionsDropdownFadeOut,
+	StyledActionsDropdownItem,
+	StyledActionsDropdownButtonClose,
+	StyledActionDropdownOverlay
+} from './styles';
 
 // Transitions
 import { Transition } from 'react-transition-group';
@@ -70,20 +77,19 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={145}>
 			{(state) => {
 				const ActionDropdownComponent = DropdownComponents[state];
-				
+
 				if (ActionDropdownComponent) {
 					return (
 						<>
-							<StyledActionDropdownOverlay 
+							<StyledActionDropdownOverlay
 								w={[0, 0, '100vw', '100vw']}
 								h={[0, 0, '100vh', '100vh']}
 								position={['relative', 'relative', 'fixed', 'fixed']}
 								d={['none', 'none', 'block', 'block']}
-
 							/>
-							
-							<ActionDropdownComponent 
-								boxShadow= 'base'
+
+							<ActionDropdownComponent
+								boxShadow="base"
 								position={['relative', 'relative', 'fixed', 'fixed']}
 								borderRadius={['2px', '2px', '8px', '8px']}
 								bottom={['unset', 'unset', '73px', '73px']}
@@ -93,19 +99,19 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								overflowY={['unset', 'unset', 'auto', 'auto']}
 								{...props}
 							>
-								<Box position="absolute"  />
+								<Box position="absolute" />
 								{!hasArrow && <ActionsDropdownArrow boxShadow="base" />}
-									{recurseChildren(props.children)}					
+								{recurseChildren(props.children)}
 							</ActionDropdownComponent>
-							<StyledActionsDropdownButtonClose 
-								boxShadow= 'base'
-								position= {['relative', 'relative', 'fixed', 'fixed']}
-								d= {['none', 'none', 'block', 'block']}
-								borderRadius= {['2px', '2px', '8px', '8px']}
-								bottom= {['unset', 'unset', '10px', '10px']}
-								left= {['unset', 'unset', '10px', '10px']}
-								right= {['unset', 'unset', '10px', '10px']}
-								onClick= {props.onClose}
+							<StyledActionsDropdownButtonClose
+								boxShadow="base"
+								position={['relative', 'relative', 'fixed', 'fixed']}
+								d={['none', 'none', 'block', 'block']}
+								borderRadius={['2px', '2px', '8px', '8px']}
+								bottom={['unset', 'unset', '10px', '10px']}
+								left={['unset', 'unset', '10px', '10px']}
+								right={['unset', 'unset', '10px', '10px']}
+								onClick={props.onClose}
 							>
 								Close
 							</StyledActionsDropdownButtonClose>
@@ -129,13 +135,15 @@ ActionsDropdown.displayName = 'ActionsDropdown';
  * ActionsDropdownItem
  */
 export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = withMooskinContext((props) => {
-	return <StyledActionsDropdownItem 
-				textAlign={['unset', 'unset', 'center', 'center']}
-				p={['', '', '16px 16px 16px', '16px 16px 16px']}
-				fontSize= {["12px", "12px", "20px", "20px"]}
-				fontWeight={['bold', 'bold', 400, 400]}				
-				{...props} 
-			/>;
+	return (
+		<StyledActionsDropdownItem
+			textAlign={['unset', 'unset', 'center', 'center']}
+			p={['', '', '16px 16px 16px', '16px 16px 16px']}
+			fontSize={['12px', '12px', '20px', '20px']}
+			fontWeight={['bold', 'bold', 400, 400]}
+			{...props}
+		/>
+	);
 });
 
 ActionsDropdownItem.defaultProps = {
@@ -158,4 +166,3 @@ ActionsDropdownArrow.defaultProps = {
 };
 
 ActionsDropdownArrow.displayName = 'ActionsDropdownArrow';
-

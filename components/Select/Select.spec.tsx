@@ -69,7 +69,7 @@ describe('Select', () => {
 		const func = jest.fn();
 
 		const component = shallow(
-			<Select onChange={func} showList selectedValue={options} dataLabel="select">
+			<Select onChange={func} selectedValue={options} dataLabel="select">
 				<SelectContainer>
 					<SelectPlaceholder>Select an option</SelectPlaceholder>
 					<SelectFilter />
