@@ -10,13 +10,13 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 import { StyledBox } from './styles';
 import { Screens } from '../_utils/globals/screens';
 
-let renderTimout: any;
-
 /**
  * Box
  */
 export const Box: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
 	const [shouldRender, setShouldRender] = React.useState(true);
+
+	let renderTimout: any;
 
 	React.useEffect(() => {
 		if (props.noRender) setShouldRender(checkShouldRender(props.noRender));
