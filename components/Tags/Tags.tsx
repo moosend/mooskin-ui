@@ -99,7 +99,7 @@ Tags.displayName = 'Tags';
  * Tag
  */
 export const Tag: React.FC<ITagComponentProps> = withMooskinContext((props) => {
-	return <StyledTag {...props} />;
+	return <StyledTag fontSize={[12, 12, 14, 14]} {...props} />;
 });
 
 Tag.defaultProps = {

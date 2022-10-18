@@ -102,7 +102,7 @@ CheckboxIcon.displayName = 'CheckboxIcon';
  * CheckboxLabel
  */
 export const CheckboxLabel: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
-	return <StyledCheckboxLabel disabled={props.disabled} {...props} />;
+	return <StyledCheckboxLabel fontSize={[14, 14, 16, 16]} disabled={props.disabled} {...props} />;
 });
 
 CheckboxLabel.defaultProps = {

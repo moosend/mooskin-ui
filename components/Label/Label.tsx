@@ -24,7 +24,9 @@ export const Label: React.FC<ILabelComponentProps> = withMooskinContext((props) 
 				: props.children
 			: props.children;
 
-	return <StyledLabel {...props} onClick={props.onClick ? onClick : undefined} children={children} boxAs="label" />;
+	return (
+		<StyledLabel {...props} onClick={props.onClick ? onClick : undefined} children={children} boxAs="label" fontSize={[14, 14, 16, 16]} />
+	);
 });
 
 Label.defaultProps = {

@@ -103,7 +103,7 @@ RadioIcon.displayName = 'RadioIcon';
  * RadioLabel
  */
 export const RadioLabel: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
-	return <StyledRadioLabel disabled={props.disabled} {...props} />;
+	return <StyledRadioLabel fontSize={[14, 14, 16, 16]} disabled={props.disabled} {...props} />;
 });
 
 RadioLabel.defaultProps = {

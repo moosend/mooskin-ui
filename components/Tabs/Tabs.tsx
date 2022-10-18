@@ -106,7 +106,7 @@ Tab.displayName = 'Tab';
  * TabHeader
  */
 export const TabHeader: React.FC<ITabCommonComponentProps> = withMooskinContext((props) => {
-	return <StyledTabHeader {...props} />;
+	return <StyledTabHeader fontSize={[12, 12, 14, 14]} {...props} />;
 });
 
 TabHeader.defaultProps = {

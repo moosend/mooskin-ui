@@ -139,7 +139,7 @@ ExpandableItemContainer.displayName = 'ExpandableItemContainer';
  * ExpandableItemText
  */
 export const ExpandableItemText: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledExpandableItemText {...props} />;
+	return <StyledExpandableItemText fontSize={[14, 14, 16, 16]} {...props} />;
 });
 
 ExpandableItemText.defaultProps = {

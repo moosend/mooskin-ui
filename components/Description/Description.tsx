@@ -13,7 +13,7 @@ import { StyledDescription } from './styles';
  * Description
  */
 export const Description: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledDescription {...props} />;
+	return <StyledDescription fontSize={[12, 12, 13, 13]} {...props} />;
 });
 
 Description.defaultProps = {
