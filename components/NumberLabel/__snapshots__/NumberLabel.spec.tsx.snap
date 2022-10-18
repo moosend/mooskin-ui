@@ -530,6 +530,14 @@ exports[`Button renders correctly 1`] = `
           abbreviate={true}
           boxAs="label"
           className="myClass"
+          fontSize={
+            Array [
+              14,
+              14,
+              16,
+              16,
+            ]
+          }
           id="label"
           palette={
             Object {
@@ -702,6 +710,14 @@ exports[`Button renders correctly 1`] = `
             abbreviate={true}
             boxAs="label"
             className="sc-gsDKAQ jfKbIm myClass"
+            fontSize={
+              Array [
+                14,
+                14,
+                16,
+                16,
+              ]
+            }
             id="label"
             palette={
               Object {
@@ -875,6 +891,14 @@ exports[`Button renders correctly 1`] = `
               abbreviate={true}
               boxAs="label"
               className="sc-gsDKAQ jfKbIm myClass"
+              fontSize={
+                Array [
+                  14,
+                  14,
+                  16,
+                  16,
+                ]
+              }
               id="label"
               palette={
                 Object {
@@ -1049,6 +1073,14 @@ exports[`Button renders correctly 1`] = `
                 as="label"
                 boxAs="label"
                 className="sc-gsDKAQ jfKbIm myClass"
+                fontSize={
+                  Array [
+                    14,
+                    14,
+                    16,
+                    16,
+                  ]
+                }
                 id="label"
                 palette={
                   Object {
@@ -1218,7 +1250,15 @@ exports[`Button renders correctly 1`] = `
                 transition="0.2s all"
               >
                 <label
-                  className="sc-bdvvtL buKeIX sc-gsDKAQ jfKbIm myClass"
+                  className="sc-bdvvtL jrakHI sc-gsDKAQ jfKbIm myClass"
+                  fontSize={
+                    Array [
+                      14,
+                      14,
+                      16,
+                      16,
+                    ]
+                  }
                   id="label"
                   style={
                     Object {

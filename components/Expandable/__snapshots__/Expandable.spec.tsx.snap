@@ -2693,6 +2693,14 @@ exports[`Expandable renders correctly 1`] = `
                                             >
                                               <StyledExpandableItemText
                                                 className=""
+                                                fontSize={
+                                                  Array [
+                                                    14,
+                                                    14,
+                                                    16,
+                                                    16,
+                                                  ]
+                                                }
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -2857,6 +2865,14 @@ exports[`Expandable renders correctly 1`] = `
                                               >
                                                 <Box
                                                   className="sc-jRQBWg ldpktA"
+                                                  fontSize={
+                                                    Array [
+                                                      14,
+                                                      14,
+                                                      16,
+                                                      16,
+                                                    ]
+                                                  }
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -3022,6 +3038,14 @@ exports[`Expandable renders correctly 1`] = `
                                                 >
                                                   <Component
                                                     className="sc-jRQBWg ldpktA"
+                                                    fontSize={
+                                                      Array [
+                                                        14,
+                                                        14,
+                                                        16,
+                                                        16,
+                                                      ]
+                                                    }
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -3187,6 +3211,14 @@ exports[`Expandable renders correctly 1`] = `
                                                   >
                                                     <StyledBox
                                                       className="sc-jRQBWg ldpktA"
+                                                      fontSize={
+                                                        Array [
+                                                          14,
+                                                          14,
+                                                          16,
+                                                          16,
+                                                        ]
+                                                      }
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -3351,7 +3383,15 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdvvtL buKeIX sc-jRQBWg ldpktA"
+                                                        className="sc-bdvvtL jrakHI sc-jRQBWg ldpktA"
+                                                        fontSize={
+                                                          Array [
+                                                            14,
+                                                            14,
+                                                            16,
+                                                            16,
+                                                          ]
+                                                        }
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 1
@@ -6267,6 +6307,14 @@ exports[`Expandable renders correctly 1`] = `
                                             >
                                               <StyledExpandableItemText
                                                 className=""
+                                                fontSize={
+                                                  Array [
+                                                    14,
+                                                    14,
+                                                    16,
+                                                    16,
+                                                  ]
+                                                }
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -6431,6 +6479,14 @@ exports[`Expandable renders correctly 1`] = `
                                               >
                                                 <Box
                                                   className="sc-jRQBWg ldpktA"
+                                                  fontSize={
+                                                    Array [
+                                                      14,
+                                                      14,
+                                                      16,
+                                                      16,
+                                                    ]
+                                                  }
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -6596,6 +6652,14 @@ exports[`Expandable renders correctly 1`] = `
                                                 >
                                                   <Component
                                                     className="sc-jRQBWg ldpktA"
+                                                    fontSize={
+                                                      Array [
+                                                        14,
+                                                        14,
+                                                        16,
+                                                        16,
+                                                      ]
+                                                    }
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -6761,6 +6825,14 @@ exports[`Expandable renders correctly 1`] = `
                                                   >
                                                     <StyledBox
                                                       className="sc-jRQBWg ldpktA"
+                                                      fontSize={
+                                                        Array [
+                                                          14,
+                                                          14,
+                                                          16,
+                                                          16,
+                                                        ]
+                                                      }
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -6925,7 +6997,15 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdvvtL buKeIX sc-jRQBWg ldpktA"
+                                                        className="sc-bdvvtL jrakHI sc-jRQBWg ldpktA"
+                                                        fontSize={
+                                                          Array [
+                                                            14,
+                                                            14,
+                                                            16,
+                                                            16,
+                                                          ]
+                                                        }
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 2
@@ -9841,6 +9921,14 @@ exports[`Expandable renders correctly 1`] = `
                                             >
                                               <StyledExpandableItemText
                                                 className=""
+                                                fontSize={
+                                                  Array [
+                                                    14,
+                                                    14,
+                                                    16,
+                                                    16,
+                                                  ]
+                                                }
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -10005,6 +10093,14 @@ exports[`Expandable renders correctly 1`] = `
                                               >
                                                 <Box
                                                   className="sc-jRQBWg ldpktA"
+                                                  fontSize={
+                                                    Array [
+                                                      14,
+                                                      14,
+                                                      16,
+                                                      16,
+                                                    ]
+                                                  }
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -10170,6 +10266,14 @@ exports[`Expandable renders correctly 1`] = `
                                                 >
                                                   <Component
                                                     className="sc-jRQBWg ldpktA"
+                                                    fontSize={
+                                                      Array [
+                                                        14,
+                                                        14,
+                                                        16,
+                                                        16,
+                                                      ]
+                                                    }
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -10335,6 +10439,14 @@ exports[`Expandable renders correctly 1`] = `
                                                   >
                                                     <StyledBox
                                                       className="sc-jRQBWg ldpktA"
+                                                      fontSize={
+                                                        Array [
+                                                          14,
+                                                          14,
+                                                          16,
+                                                          16,
+                                                        ]
+                                                      }
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -10499,7 +10611,15 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdvvtL buKeIX sc-jRQBWg ldpktA"
+                                                        className="sc-bdvvtL jrakHI sc-jRQBWg ldpktA"
+                                                        fontSize={
+                                                          Array [
+                                                            14,
+                                                            14,
+                                                            16,
+                                                            16,
+                                                          ]
+                                                        }
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 3
@@ -13415,6 +13535,14 @@ exports[`Expandable renders correctly 1`] = `
                                             >
                                               <StyledExpandableItemText
                                                 className=""
+                                                fontSize={
+                                                  Array [
+                                                    14,
+                                                    14,
+                                                    16,
+                                                    16,
+                                                  ]
+                                                }
                                                 palette={
                                                   Object {
                                                     "backgroundColors": Object {
@@ -13579,6 +13707,14 @@ exports[`Expandable renders correctly 1`] = `
                                               >
                                                 <Box
                                                   className="sc-jRQBWg ldpktA"
+                                                  fontSize={
+                                                    Array [
+                                                      14,
+                                                      14,
+                                                      16,
+                                                      16,
+                                                    ]
+                                                  }
                                                   palette={
                                                     Object {
                                                       "backgroundColors": Object {
@@ -13744,6 +13880,14 @@ exports[`Expandable renders correctly 1`] = `
                                                 >
                                                   <Component
                                                     className="sc-jRQBWg ldpktA"
+                                                    fontSize={
+                                                      Array [
+                                                        14,
+                                                        14,
+                                                        16,
+                                                        16,
+                                                      ]
+                                                    }
                                                     palette={
                                                       Object {
                                                         "backgroundColors": Object {
@@ -13909,6 +14053,14 @@ exports[`Expandable renders correctly 1`] = `
                                                   >
                                                     <StyledBox
                                                       className="sc-jRQBWg ldpktA"
+                                                      fontSize={
+                                                        Array [
+                                                          14,
+                                                          14,
+                                                          16,
+                                                          16,
+                                                        ]
+                                                      }
                                                       palette={
                                                         Object {
                                                           "backgroundColors": Object {
@@ -14073,7 +14225,15 @@ exports[`Expandable renders correctly 1`] = `
                                                       transition="0.2s all"
                                                     >
                                                       <div
-                                                        className="sc-bdvvtL buKeIX sc-jRQBWg ldpktA"
+                                                        className="sc-bdvvtL jrakHI sc-jRQBWg ldpktA"
+                                                        fontSize={
+                                                          Array [
+                                                            14,
+                                                            14,
+                                                            16,
+                                                            16,
+                                                          ]
+                                                        }
                                                         style={Object {}}
                                                       >
                                                         Title for item with index 4

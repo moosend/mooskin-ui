@@ -172,6 +172,14 @@ exports[`Label renders correctly 1`] = `
     <StyledLabel
       boxAs="label"
       className=""
+      fontSize={
+        Array [
+          14,
+          14,
+          16,
+          16,
+        ]
+      }
       palette={
         Object {
           "backgroundColors": Object {
@@ -337,6 +345,14 @@ exports[`Label renders correctly 1`] = `
       <Box
         boxAs="label"
         className="sc-gsDKAQ jfKbIm"
+        fontSize={
+          Array [
+            14,
+            14,
+            16,
+            16,
+          ]
+        }
         palette={
           Object {
             "backgroundColors": Object {
@@ -503,6 +519,14 @@ exports[`Label renders correctly 1`] = `
         <Component
           boxAs="label"
           className="sc-gsDKAQ jfKbIm"
+          fontSize={
+            Array [
+              14,
+              14,
+              16,
+              16,
+            ]
+          }
           palette={
             Object {
               "backgroundColors": Object {
@@ -670,6 +694,14 @@ exports[`Label renders correctly 1`] = `
             as="label"
             boxAs="label"
             className="sc-gsDKAQ jfKbIm"
+            fontSize={
+              Array [
+                14,
+                14,
+                16,
+                16,
+              ]
+            }
             palette={
               Object {
                 "backgroundColors": Object {
@@ -834,7 +866,15 @@ exports[`Label renders correctly 1`] = `
             transition="0.2s all"
           >
             <label
-              className="sc-bdvvtL buKeIX sc-gsDKAQ jfKbIm"
+              className="sc-bdvvtL jrakHI sc-gsDKAQ jfKbIm"
+              fontSize={
+                Array [
+                  14,
+                  14,
+                  16,
+                  16,
+                ]
+              }
               style={Object {}}
             >
               Label here!

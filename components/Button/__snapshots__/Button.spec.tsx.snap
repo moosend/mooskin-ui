@@ -194,6 +194,14 @@ exports[`Button renders correctly 1`] = `
       buttonSize="md"
       className="myClass"
       disabled={true}
+      fontSize={
+        Array [
+          12,
+          12,
+          14,
+          14,
+        ]
+      }
       href="www.moosend.com"
       id="button1"
       onClick={[Function]}
@@ -369,6 +377,14 @@ exports[`Button renders correctly 1`] = `
         buttonSize="md"
         className="sc-gsDKAQ sc-dkPtRN iXGKWB iXdnUr myClass"
         disabled={true}
+        fontSize={
+          Array [
+            12,
+            12,
+            14,
+            14,
+          ]
+        }
         href="www.moosend.com"
         id="button1"
         onClick={[Function]}
@@ -545,6 +561,14 @@ exports[`Button renders correctly 1`] = `
           buttonSize="md"
           className="sc-gsDKAQ sc-dkPtRN iXGKWB iXdnUr myClass"
           disabled={true}
+          fontSize={
+            Array [
+              12,
+              12,
+              14,
+              14,
+            ]
+          }
           href="www.moosend.com"
           id="button1"
           onClick={[Function]}
@@ -722,6 +746,14 @@ exports[`Button renders correctly 1`] = `
             buttonSize="md"
             className="sc-gsDKAQ sc-dkPtRN iXGKWB iXdnUr myClass"
             disabled={true}
+            fontSize={
+              Array [
+                12,
+                12,
+                14,
+                14,
+              ]
+            }
             href="www.moosend.com"
             id="button1"
             onClick={[Function]}
@@ -894,8 +926,16 @@ exports[`Button renders correctly 1`] = `
             type="submit"
           >
             <a
-              className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN iXGKWB iXdnUr myClass"
+              className="sc-bdvvtL hRNpJQ sc-gsDKAQ sc-dkPtRN iXGKWB iXdnUr myClass"
               disabled={true}
+              fontSize={
+                Array [
+                  12,
+                  12,
+                  14,
+                  14,
+                ]
+              }
               href="www.moosend.com"
               id="button1"
               onClick={[Function]}

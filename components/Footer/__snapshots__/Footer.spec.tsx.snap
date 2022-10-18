@@ -2696,6 +2696,14 @@ exports[`Alert renders correctly 1`] = `
                                   boxAs="button"
                                   buttonSize="md"
                                   className=""
+                                  fontSize={
+                                    Array [
+                                      12,
+                                      12,
+                                      14,
+                                      14,
+                                    ]
+                                  }
                                   minW="unset"
                                   mr={10}
                                   onClick={[Function]}
@@ -2866,6 +2874,14 @@ exports[`Alert renders correctly 1`] = `
                                     boxAs="button"
                                     buttonSize="md"
                                     className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                    fontSize={
+                                      Array [
+                                        12,
+                                        12,
+                                        14,
+                                        14,
+                                      ]
+                                    }
                                     minW="unset"
                                     mr={10}
                                     onClick={[Function]}
@@ -3037,6 +3053,14 @@ exports[`Alert renders correctly 1`] = `
                                       boxAs="button"
                                       buttonSize="md"
                                       className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                      fontSize={
+                                        Array [
+                                          12,
+                                          12,
+                                          14,
+                                          14,
+                                        ]
+                                      }
                                       minW="unset"
                                       mr={10}
                                       onClick={[Function]}
@@ -3209,6 +3233,14 @@ exports[`Alert renders correctly 1`] = `
                                         boxAs="button"
                                         buttonSize="md"
                                         className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                        fontSize={
+                                          Array [
+                                            12,
+                                            12,
+                                            14,
+                                            14,
+                                          ]
+                                        }
                                         minW="unset"
                                         mr={10}
                                         onClick={[Function]}
@@ -3377,7 +3409,15 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdvvtL eODsKR sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                          className="sc-bdvvtL iFtWDW sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                          fontSize={
+                                            Array [
+                                              12,
+                                              12,
+                                              14,
+                                              14,
+                                            ]
+                                          }
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -3922,6 +3962,14 @@ exports[`Alert renders correctly 1`] = `
                                   boxAs="button"
                                   buttonSize="md"
                                   className=""
+                                  fontSize={
+                                    Array [
+                                      12,
+                                      12,
+                                      14,
+                                      14,
+                                    ]
+                                  }
                                   minW="unset"
                                   onClick={[Function]}
                                   palette={
@@ -4091,6 +4139,14 @@ exports[`Alert renders correctly 1`] = `
                                     boxAs="button"
                                     buttonSize="md"
                                     className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                    fontSize={
+                                      Array [
+                                        12,
+                                        12,
+                                        14,
+                                        14,
+                                      ]
+                                    }
                                     minW="unset"
                                     onClick={[Function]}
                                     palette={
@@ -4261,6 +4317,14 @@ exports[`Alert renders correctly 1`] = `
                                       boxAs="button"
                                       buttonSize="md"
                                       className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                      fontSize={
+                                        Array [
+                                          12,
+                                          12,
+                                          14,
+                                          14,
+                                        ]
+                                      }
                                       minW="unset"
                                       onClick={[Function]}
                                       palette={
@@ -4432,6 +4496,14 @@ exports[`Alert renders correctly 1`] = `
                                         boxAs="button"
                                         buttonSize="md"
                                         className="sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                        fontSize={
+                                          Array [
+                                            12,
+                                            12,
+                                            14,
+                                            14,
+                                          ]
+                                        }
                                         minW="unset"
                                         onClick={[Function]}
                                         palette={
@@ -4599,7 +4671,15 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdvvtL ckBslN sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                          className="sc-bdvvtL lkIhta sc-gKclnd sc-iCfMLu bUjDYQ ejaJtw"
+                                          fontSize={
+                                            Array [
+                                              12,
+                                              12,
+                                              14,
+                                              14,
+                                            ]
+                                          }
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"
@@ -5986,6 +6066,14 @@ exports[`Alert renders correctly 1`] = `
                                   buttonSize="md"
                                   className=""
                                   fontColor="#37a037"
+                                  fontSize={
+                                    Array [
+                                      12,
+                                      12,
+                                      14,
+                                      14,
+                                    ]
+                                  }
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -6156,6 +6244,14 @@ exports[`Alert renders correctly 1`] = `
                                     buttonSize="md"
                                     className="sc-gKclnd sc-furwcr bUjDYQ cBIzGS"
                                     fontColor="#37a037"
+                                    fontSize={
+                                      Array [
+                                        12,
+                                        12,
+                                        14,
+                                        14,
+                                      ]
+                                    }
                                     onClick={[Function]}
                                     palette={
                                       Object {
@@ -6327,6 +6423,14 @@ exports[`Alert renders correctly 1`] = `
                                       buttonSize="md"
                                       className="sc-gKclnd sc-furwcr bUjDYQ cBIzGS"
                                       fontColor="#37a037"
+                                      fontSize={
+                                        Array [
+                                          12,
+                                          12,
+                                          14,
+                                          14,
+                                        ]
+                                      }
                                       onClick={[Function]}
                                       palette={
                                         Object {
@@ -6499,6 +6603,14 @@ exports[`Alert renders correctly 1`] = `
                                         buttonSize="md"
                                         className="sc-gKclnd sc-furwcr bUjDYQ cBIzGS"
                                         fontColor="#37a037"
+                                        fontSize={
+                                          Array [
+                                            12,
+                                            12,
+                                            14,
+                                            14,
+                                          ]
+                                        }
                                         onClick={[Function]}
                                         palette={
                                           Object {
@@ -6665,7 +6777,15 @@ exports[`Alert renders correctly 1`] = `
                                         type="button"
                                       >
                                         <button
-                                          className="sc-bdvvtL cJIdxC sc-gKclnd sc-furwcr bUjDYQ cBIzGS"
+                                          className="sc-bdvvtL eSxqAp sc-gKclnd sc-furwcr bUjDYQ cBIzGS"
+                                          fontSize={
+                                            Array [
+                                              12,
+                                              12,
+                                              14,
+                                              14,
+                                            ]
+                                          }
                                           onClick={[Function]}
                                           style={Object {}}
                                           type="button"

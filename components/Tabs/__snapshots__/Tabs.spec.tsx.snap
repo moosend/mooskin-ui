@@ -1364,6 +1364,14 @@ exports[`Pagination renders correctly 1`] = `
                           <StyledTabHeader
                             active={false}
                             className=""
+                            fontSize={
+                              Array [
+                                12,
+                                12,
+                                14,
+                                14,
+                              ]
+                            }
                             onClick={[Function]}
                             palette={
                               Object {
@@ -1530,6 +1538,14 @@ exports[`Pagination renders correctly 1`] = `
                             <Box
                               active={false}
                               className="sc-hKwDye cpVXRc"
+                              fontSize={
+                                Array [
+                                  12,
+                                  12,
+                                  14,
+                                  14,
+                                ]
+                              }
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -1697,6 +1713,14 @@ exports[`Pagination renders correctly 1`] = `
                               <Component
                                 active={false}
                                 className="sc-hKwDye cpVXRc"
+                                fontSize={
+                                  Array [
+                                    12,
+                                    12,
+                                    14,
+                                    14,
+                                  ]
+                                }
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -1864,6 +1888,14 @@ exports[`Pagination renders correctly 1`] = `
                                 <StyledBox
                                   active={false}
                                   className="sc-hKwDye cpVXRc"
+                                  fontSize={
+                                    Array [
+                                      12,
+                                      12,
+                                      14,
+                                      14,
+                                    ]
+                                  }
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -2029,7 +2061,15 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdvvtL buKeIX sc-hKwDye cpVXRc"
+                                    className="sc-bdvvtL hRNpJQ sc-hKwDye cpVXRc"
+                                    fontSize={
+                                      Array [
+                                        12,
+                                        12,
+                                        14,
+                                        14,
+                                      ]
+                                    }
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -2217,6 +2257,14 @@ exports[`Pagination renders correctly 1`] = `
                           <StyledTabHeader
                             active={false}
                             className=""
+                            fontSize={
+                              Array [
+                                12,
+                                12,
+                                14,
+                                14,
+                              ]
+                            }
                             onClick={[Function]}
                             palette={
                               Object {
@@ -2383,6 +2431,14 @@ exports[`Pagination renders correctly 1`] = `
                             <Box
                               active={false}
                               className="sc-hKwDye cpVXRc"
+                              fontSize={
+                                Array [
+                                  12,
+                                  12,
+                                  14,
+                                  14,
+                                ]
+                              }
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -2550,6 +2606,14 @@ exports[`Pagination renders correctly 1`] = `
                               <Component
                                 active={false}
                                 className="sc-hKwDye cpVXRc"
+                                fontSize={
+                                  Array [
+                                    12,
+                                    12,
+                                    14,
+                                    14,
+                                  ]
+                                }
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -2717,6 +2781,14 @@ exports[`Pagination renders correctly 1`] = `
                                 <StyledBox
                                   active={false}
                                   className="sc-hKwDye cpVXRc"
+                                  fontSize={
+                                    Array [
+                                      12,
+                                      12,
+                                      14,
+                                      14,
+                                    ]
+                                  }
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -2882,7 +2954,15 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdvvtL buKeIX sc-hKwDye cpVXRc"
+                                    className="sc-bdvvtL hRNpJQ sc-hKwDye cpVXRc"
+                                    fontSize={
+                                      Array [
+                                        12,
+                                        12,
+                                        14,
+                                        14,
+                                      ]
+                                    }
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -3070,6 +3150,14 @@ exports[`Pagination renders correctly 1`] = `
                           <StyledTabHeader
                             active={true}
                             className=""
+                            fontSize={
+                              Array [
+                                12,
+                                12,
+                                14,
+                                14,
+                              ]
+                            }
                             onClick={[Function]}
                             palette={
                               Object {
@@ -3236,6 +3324,14 @@ exports[`Pagination renders correctly 1`] = `
                             <Box
                               active={true}
                               className="sc-hKwDye fkDHIK"
+                              fontSize={
+                                Array [
+                                  12,
+                                  12,
+                                  14,
+                                  14,
+                                ]
+                              }
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -3403,6 +3499,14 @@ exports[`Pagination renders correctly 1`] = `
                               <Component
                                 active={true}
                                 className="sc-hKwDye fkDHIK"
+                                fontSize={
+                                  Array [
+                                    12,
+                                    12,
+                                    14,
+                                    14,
+                                  ]
+                                }
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -3570,6 +3674,14 @@ exports[`Pagination renders correctly 1`] = `
                                 <StyledBox
                                   active={true}
                                   className="sc-hKwDye fkDHIK"
+                                  fontSize={
+                                    Array [
+                                      12,
+                                      12,
+                                      14,
+                                      14,
+                                    ]
+                                  }
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -3735,7 +3847,15 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdvvtL buKeIX sc-hKwDye fkDHIK"
+                                    className="sc-bdvvtL hRNpJQ sc-hKwDye fkDHIK"
+                                    fontSize={
+                                      Array [
+                                        12,
+                                        12,
+                                        14,
+                                        14,
+                                      ]
+                                    }
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -3923,6 +4043,14 @@ exports[`Pagination renders correctly 1`] = `
                           <StyledTabHeader
                             active={false}
                             className=""
+                            fontSize={
+                              Array [
+                                12,
+                                12,
+                                14,
+                                14,
+                              ]
+                            }
                             onClick={[Function]}
                             palette={
                               Object {
@@ -4089,6 +4217,14 @@ exports[`Pagination renders correctly 1`] = `
                             <Box
                               active={false}
                               className="sc-hKwDye cpVXRc"
+                              fontSize={
+                                Array [
+                                  12,
+                                  12,
+                                  14,
+                                  14,
+                                ]
+                              }
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -4256,6 +4392,14 @@ exports[`Pagination renders correctly 1`] = `
                               <Component
                                 active={false}
                                 className="sc-hKwDye cpVXRc"
+                                fontSize={
+                                  Array [
+                                    12,
+                                    12,
+                                    14,
+                                    14,
+                                  ]
+                                }
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -4423,6 +4567,14 @@ exports[`Pagination renders correctly 1`] = `
                                 <StyledBox
                                   active={false}
                                   className="sc-hKwDye cpVXRc"
+                                  fontSize={
+                                    Array [
+                                      12,
+                                      12,
+                                      14,
+                                      14,
+                                    ]
+                                  }
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -4588,7 +4740,15 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdvvtL buKeIX sc-hKwDye cpVXRc"
+                                    className="sc-bdvvtL hRNpJQ sc-hKwDye cpVXRc"
+                                    fontSize={
+                                      Array [
+                                        12,
+                                        12,
+                                        14,
+                                        14,
+                                      ]
+                                    }
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -4776,6 +4936,14 @@ exports[`Pagination renders correctly 1`] = `
                           <StyledTabHeader
                             active={false}
                             className=""
+                            fontSize={
+                              Array [
+                                12,
+                                12,
+                                14,
+                                14,
+                              ]
+                            }
                             onClick={[Function]}
                             palette={
                               Object {
@@ -4942,6 +5110,14 @@ exports[`Pagination renders correctly 1`] = `
                             <Box
                               active={false}
                               className="sc-hKwDye cpVXRc"
+                              fontSize={
+                                Array [
+                                  12,
+                                  12,
+                                  14,
+                                  14,
+                                ]
+                              }
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -5109,6 +5285,14 @@ exports[`Pagination renders correctly 1`] = `
                               <Component
                                 active={false}
                                 className="sc-hKwDye cpVXRc"
+                                fontSize={
+                                  Array [
+                                    12,
+                                    12,
+                                    14,
+                                    14,
+                                  ]
+                                }
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -5276,6 +5460,14 @@ exports[`Pagination renders correctly 1`] = `
                                 <StyledBox
                                   active={false}
                                   className="sc-hKwDye cpVXRc"
+                                  fontSize={
+                                    Array [
+                                      12,
+                                      12,
+                                      14,
+                                      14,
+                                    ]
+                                  }
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -5441,7 +5633,15 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdvvtL buKeIX sc-hKwDye cpVXRc"
+                                    className="sc-bdvvtL hRNpJQ sc-hKwDye cpVXRc"
+                                    fontSize={
+                                      Array [
+                                        12,
+                                        12,
+                                        14,
+                                        14,
+                                      ]
+                                    }
                                     onClick={[Function]}
                                     style={Object {}}
                                   >
@@ -5629,6 +5829,14 @@ exports[`Pagination renders correctly 1`] = `
                           <StyledTabHeader
                             active={false}
                             className=""
+                            fontSize={
+                              Array [
+                                12,
+                                12,
+                                14,
+                                14,
+                              ]
+                            }
                             onClick={[Function]}
                             palette={
                               Object {
@@ -5795,6 +6003,14 @@ exports[`Pagination renders correctly 1`] = `
                             <Box
                               active={false}
                               className="sc-hKwDye cpVXRc"
+                              fontSize={
+                                Array [
+                                  12,
+                                  12,
+                                  14,
+                                  14,
+                                ]
+                              }
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -5962,6 +6178,14 @@ exports[`Pagination renders correctly 1`] = `
                               <Component
                                 active={false}
                                 className="sc-hKwDye cpVXRc"
+                                fontSize={
+                                  Array [
+                                    12,
+                                    12,
+                                    14,
+                                    14,
+                                  ]
+                                }
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -6129,6 +6353,14 @@ exports[`Pagination renders correctly 1`] = `
                                 <StyledBox
                                   active={false}
                                   className="sc-hKwDye cpVXRc"
+                                  fontSize={
+                                    Array [
+                                      12,
+                                      12,
+                                      14,
+                                      14,
+                                    ]
+                                  }
                                   onClick={[Function]}
                                   palette={
                                     Object {
@@ -6294,7 +6526,15 @@ exports[`Pagination renders correctly 1`] = `
                                   transition="0.2s all"
                                 >
                                   <div
-                                    className="sc-bdvvtL buKeIX sc-hKwDye cpVXRc"
+                                    className="sc-bdvvtL hRNpJQ sc-hKwDye cpVXRc"
+                                    fontSize={
+                                      Array [
+                                        12,
+                                        12,
+                                        14,
+                                        14,
+                                      ]
+                                    }
                                     onClick={[Function]}
                                     style={Object {}}
                                   >

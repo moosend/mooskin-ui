@@ -1879,6 +1879,14 @@ exports[`Radio renders Radio correctly 1`] = `
                 >
                   <StyledRadioLabel
                     className=""
+                    fontSize={
+                      Array [
+                        14,
+                        14,
+                        16,
+                        16,
+                      ]
+                    }
                     onClick={[Function]}
                     palette={
                       Object {
@@ -2044,6 +2052,14 @@ exports[`Radio renders Radio correctly 1`] = `
                   >
                     <Label
                       className="sc-jRQBWg gmQKTT"
+                      fontSize={
+                        Array [
+                          14,
+                          14,
+                          16,
+                          16,
+                        ]
+                      }
                       onClick={[Function]}
                       palette={
                         Object {
@@ -2209,6 +2225,14 @@ exports[`Radio renders Radio correctly 1`] = `
                     >
                       <Component
                         className="sc-jRQBWg gmQKTT"
+                        fontSize={
+                          Array [
+                            14,
+                            14,
+                            16,
+                            16,
+                          ]
+                        }
                         onClick={[Function]}
                         palette={
                           Object {
@@ -2375,6 +2399,14 @@ exports[`Radio renders Radio correctly 1`] = `
                         <StyledLabel
                           boxAs="label"
                           className="sc-jRQBWg gmQKTT"
+                          fontSize={
+                            Array [
+                              14,
+                              14,
+                              16,
+                              16,
+                            ]
+                          }
                           onClick={[Function]}
                           palette={
                             Object {
@@ -2541,6 +2573,14 @@ exports[`Radio renders Radio correctly 1`] = `
                           <Box
                             boxAs="label"
                             className="sc-dkPtRN cZrFjw sc-jRQBWg gmQKTT"
+                            fontSize={
+                              Array [
+                                14,
+                                14,
+                                16,
+                                16,
+                              ]
+                            }
                             onClick={[Function]}
                             palette={
                               Object {
@@ -2708,6 +2748,14 @@ exports[`Radio renders Radio correctly 1`] = `
                             <Component
                               boxAs="label"
                               className="sc-dkPtRN cZrFjw sc-jRQBWg gmQKTT"
+                              fontSize={
+                                Array [
+                                  14,
+                                  14,
+                                  16,
+                                  16,
+                                ]
+                              }
                               onClick={[Function]}
                               palette={
                                 Object {
@@ -2876,6 +2924,14 @@ exports[`Radio renders Radio correctly 1`] = `
                                 as="label"
                                 boxAs="label"
                                 className="sc-dkPtRN cZrFjw sc-jRQBWg gmQKTT"
+                                fontSize={
+                                  Array [
+                                    14,
+                                    14,
+                                    16,
+                                    16,
+                                  ]
+                                }
                                 onClick={[Function]}
                                 palette={
                                   Object {
@@ -3041,7 +3097,15 @@ exports[`Radio renders Radio correctly 1`] = `
                                 transition="0.2s all"
                               >
                                 <label
-                                  className="sc-bdvvtL buKeIX sc-dkPtRN cZrFjw sc-jRQBWg gmQKTT"
+                                  className="sc-bdvvtL jrakHI sc-dkPtRN cZrFjw sc-jRQBWg gmQKTT"
+                                  fontSize={
+                                    Array [
+                                      14,
+                                      14,
+                                      16,
+                                      16,
+                                    ]
+                                  }
                                   onClick={[Function]}
                                   style={Object {}}
                                 >

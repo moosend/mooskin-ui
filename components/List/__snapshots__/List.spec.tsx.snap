@@ -5404,6 +5404,14 @@ exports[`Alert renders correctly 1`] = `
                                                     boxAs="button"
                                                     buttonSize="md"
                                                     className=""
+                                                    fontSize={
+                                                      Array [
+                                                        12,
+                                                        12,
+                                                        14,
+                                                        14,
+                                                      ]
+                                                    }
                                                     onClick={[Function]}
                                                     palette={
                                                       Object {
@@ -5572,6 +5580,14 @@ exports[`Alert renders correctly 1`] = `
                                                       boxAs="button"
                                                       buttonSize="md"
                                                       className="sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                      fontSize={
+                                                        Array [
+                                                          12,
+                                                          12,
+                                                          14,
+                                                          14,
+                                                        ]
+                                                      }
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -5741,6 +5757,14 @@ exports[`Alert renders correctly 1`] = `
                                                         boxAs="button"
                                                         buttonSize="md"
                                                         className="sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                        fontSize={
+                                                          Array [
+                                                            12,
+                                                            12,
+                                                            14,
+                                                            14,
+                                                          ]
+                                                        }
                                                         onClick={[Function]}
                                                         palette={
                                                           Object {
@@ -5911,6 +5935,14 @@ exports[`Alert renders correctly 1`] = `
                                                           boxAs="button"
                                                           buttonSize="md"
                                                           className="sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                          fontSize={
+                                                            Array [
+                                                              12,
+                                                              12,
+                                                              14,
+                                                              14,
+                                                            ]
+                                                          }
                                                           onClick={[Function]}
                                                           palette={
                                                             Object {
@@ -6077,7 +6109,15 @@ exports[`Alert renders correctly 1`] = `
                                                           type="button"
                                                         >
                                                           <button
-                                                            className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                            className="sc-bdvvtL hRNpJQ sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                            fontSize={
+                                                              Array [
+                                                                12,
+                                                                12,
+                                                                14,
+                                                                14,
+                                                              ]
+                                                            }
                                                             onClick={[Function]}
                                                             style={Object {}}
                                                             type="button"
@@ -10339,6 +10379,14 @@ exports[`Alert renders correctly 1`] = `
                                                     boxAs="button"
                                                     buttonSize="md"
                                                     className=""
+                                                    fontSize={
+                                                      Array [
+                                                        12,
+                                                        12,
+                                                        14,
+                                                        14,
+                                                      ]
+                                                    }
                                                     onClick={[Function]}
                                                     palette={
                                                       Object {
@@ -10507,6 +10555,14 @@ exports[`Alert renders correctly 1`] = `
                                                       boxAs="button"
                                                       buttonSize="md"
                                                       className="sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                      fontSize={
+                                                        Array [
+                                                          12,
+                                                          12,
+                                                          14,
+                                                          14,
+                                                        ]
+                                                      }
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -10676,6 +10732,14 @@ exports[`Alert renders correctly 1`] = `
                                                         boxAs="button"
                                                         buttonSize="md"
                                                         className="sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                        fontSize={
+                                                          Array [
+                                                            12,
+                                                            12,
+                                                            14,
+                                                            14,
+                                                          ]
+                                                        }
                                                         onClick={[Function]}
                                                         palette={
                                                           Object {
@@ -10846,6 +10910,14 @@ exports[`Alert renders correctly 1`] = `
                                                           boxAs="button"
                                                           buttonSize="md"
                                                           className="sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                          fontSize={
+                                                            Array [
+                                                              12,
+                                                              12,
+                                                              14,
+                                                              14,
+                                                            ]
+                                                          }
                                                           onClick={[Function]}
                                                           palette={
                                                             Object {
@@ -11012,7 +11084,15 @@ exports[`Alert renders correctly 1`] = `
                                                           type="button"
                                                         >
                                                           <button
-                                                            className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                            className="sc-bdvvtL hRNpJQ sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                            fontSize={
+                                                              Array [
+                                                                12,
+                                                                12,
+                                                                14,
+                                                                14,
+                                                              ]
+                                                            }
                                                             onClick={[Function]}
                                                             style={Object {}}
                                                             type="button"
@@ -15274,6 +15354,14 @@ exports[`Alert renders correctly 1`] = `
                                                     boxAs="button"
                                                     buttonSize="md"
                                                     className=""
+                                                    fontSize={
+                                                      Array [
+                                                        12,
+                                                        12,
+                                                        14,
+                                                        14,
+                                                      ]
+                                                    }
                                                     onClick={[Function]}
                                                     palette={
                                                       Object {
@@ -15442,6 +15530,14 @@ exports[`Alert renders correctly 1`] = `
                                                       boxAs="button"
                                                       buttonSize="md"
                                                       className="sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                      fontSize={
+                                                        Array [
+                                                          12,
+                                                          12,
+                                                          14,
+                                                          14,
+                                                        ]
+                                                      }
                                                       onClick={[Function]}
                                                       palette={
                                                         Object {
@@ -15611,6 +15707,14 @@ exports[`Alert renders correctly 1`] = `
                                                         boxAs="button"
                                                         buttonSize="md"
                                                         className="sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                        fontSize={
+                                                          Array [
+                                                            12,
+                                                            12,
+                                                            14,
+                                                            14,
+                                                          ]
+                                                        }
                                                         onClick={[Function]}
                                                         palette={
                                                           Object {
@@ -15781,6 +15885,14 @@ exports[`Alert renders correctly 1`] = `
                                                           boxAs="button"
                                                           buttonSize="md"
                                                           className="sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                          fontSize={
+                                                            Array [
+                                                              12,
+                                                              12,
+                                                              14,
+                                                              14,
+                                                            ]
+                                                          }
                                                           onClick={[Function]}
                                                           palette={
                                                             Object {
@@ -15947,7 +16059,15 @@ exports[`Alert renders correctly 1`] = `
                                                           type="button"
                                                         >
                                                           <button
-                                                            className="sc-bdvvtL buKeIX sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                            className="sc-bdvvtL hRNpJQ sc-gsDKAQ sc-dkPtRN bkKlQi nIwIL"
+                                                            fontSize={
+                                                              Array [
+                                                                12,
+                                                                12,
+                                                                14,
+                                                                14,
+                                                              ]
+                                                            }
                                                             onClick={[Function]}
                                                             style={Object {}}
                                                             type="button"
