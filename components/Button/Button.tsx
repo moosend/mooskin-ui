@@ -17,7 +17,7 @@ export const Button: React.FC<IButtonComponentProps> = withMooskinContext((props
 	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		!props.disabled && props.onClick && props.onClick(e);
 	};
-	return <StyledButton {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+	return <StyledButton fontSize={[12, 12, 14, 14]} {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
 });
 
 Button.defaultProps = {
@@ -36,7 +36,7 @@ export const ButtonTwo: React.FC<IButtonComponentProps> = withMooskinContext((pr
 	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		!props.disabled && props.onClick && props.onClick(e);
 	};
-	return <StyledButtonTwo {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+	return <StyledButtonTwo fontSize={[12, 12, 14, 14]} {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
 });
 
 ButtonTwo.defaultProps = {
@@ -55,7 +55,7 @@ export const ButtonThree: React.FC<IButtonComponentProps> = withMooskinContext((
 	const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		!props.disabled && props.onClick && props.onClick(e);
 	};
-	return <StyledButtonThree {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
+	return <StyledButtonThree fontSize={[12, 12, 14, 14]} {...props} onClick={onClick} boxAs={props.href ? 'a' : 'button'} />;
 });
 
 ButtonThree.defaultProps = {
