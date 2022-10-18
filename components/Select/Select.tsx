@@ -379,7 +379,7 @@ export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinCo
 			textAlign={['unset', 'unset', 'center', 'center']}
 			fontSize={['14px', '14px', '20px', '20px']}
 			justify={['space-between', 'space-between', 'center', 'center']}
-			fontWeight={['normal', 'normal', 400, 400]}
+			fontWeight={[500, 500, 400, 400]}
 			p={['10px 15px 0px', '10px 15px 0px', '16px', '16px']}
 			{...props}
 		/>
