@@ -199,6 +199,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 									<SelectFilter
 										onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
 										onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
+										autoFocus={undefined}
 									/>
 									<SelectIcon>{'search'}</SelectIcon>
 								</SearchPlaceholderMobileView>
