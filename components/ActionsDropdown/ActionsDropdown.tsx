@@ -97,6 +97,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								right={['unset', 'unset', '10px', '10px']}
 								maxH={['unset', 'unset', '415px', '415px']}
 								overflowY={['unset', 'unset', 'auto', 'auto']}
+								zIndex={[2, 2, 6, 6]}
 								{...props}
 							>
 								<Box position="absolute" />
