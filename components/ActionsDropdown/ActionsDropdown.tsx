@@ -86,6 +86,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								h={[0, 0, '100vh', '100vh']}
 								position={['relative', 'relative', 'fixed', 'fixed']}
 								noRender={['lg', 'md']}
+								onClick={props.onClose}
 							/>
 							<ActionDropdownComponent
 								boxShadow="base"
