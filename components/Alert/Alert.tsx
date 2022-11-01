@@ -7,7 +7,14 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 import { IBaseAlertComponentProps } from './model';
 
 // Styled Components
-import { StyledAlert, StyledAlertCloseButton, StyledAlertDescription, StyledAlertIcon, StyledAlertTitle } from './styles';
+import {
+	StyledAlert,
+	StyledAlertButton,
+	StyledAlertCloseButton,
+	StyledAlertDescription,
+	StyledAlertIcon,
+	StyledAlertTitle
+} from './styles';
 
 const AlertIcons = {
 	error: 'error',
@@ -28,7 +35,11 @@ export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext((pro
 		return React.Children.map(children, (child, i) => {
 			if (
 				React.isValidElement<IBaseAlertComponentProps>(child) &&
-				(child.type === AlertIcon || child.type === AlertTitle || child.type === AlertDescription || child.type === AlertCloseButton)
+				(child.type === AlertIcon ||
+					child.type === AlertTitle ||
+					child.type === AlertDescription ||
+					child.type === AlertCloseButton ||
+					child.type === AlertButton)
 			) {
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
@@ -113,3 +124,17 @@ AlertCloseButton.defaultProps = {
 };
 
 AlertCloseButton.displayName = 'AlertCloseButton';
+
+/**
+ * AlertButton
+ */
+export const AlertButton: React.FC<IBaseAlertComponentProps> = withMooskinContext((props) => {
+	return <StyledAlertButton {...props} children="" />;
+});
+
+AlertButton.defaultProps = {
+	className: '',
+	style: {}
+};
+
+AlertButton.displayName = 'AlertButton';

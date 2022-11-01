@@ -5,6 +5,7 @@ import { IBaseAlertComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
+import { Button } from '../Button/Button';
 
 import variables from '../_utils/globals/variables';
 
@@ -44,6 +45,21 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
 `;
 
 StyledAlert.displayName = 'StyledAlert';
+
+export const StyledAlertButton = styled(Button)<IBaseAlertComponentProps>`
+	background-color: ${(props) => {
+		return props.variant === 'solid'
+			? (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white
+			: props.status && SolidBackgroundColors[props.status];
+	}};
+	color: ${(props) => {
+		return props.variant === 'solid'
+			? props.status && SolidBackgroundColors[props.status]
+			: (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white;
+	}};
+`;
+
+StyledAlertButton.displayName = 'StyledAlertButton';
 
 const StyledAlertCommonText = styled(Box)<IBaseAlertComponentProps>`
 	color: ${(props) =>

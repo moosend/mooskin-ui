@@ -3,7 +3,7 @@ export { MooskinContext, MooskinContextProvider, useMooskinContext, withMooskinC
 
 // Components
 export { ActionsDropdown, ActionsDropdownArrow, ActionsDropdownItem } from '../ActionsDropdown/ActionsDropdown';
-export { Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../Alert/Alert';
+export { Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle, AlertButton } from '../Alert/Alert';
 export { Button, ButtonThree, ButtonTwo, ButtonIcon } from '../Button/Button';
 export { Anchor } from '../Anchor/Anchor';
 export { Skeleton, SkeletonCircle, SkeletonText } from '../Skeleton/Skeleton';
