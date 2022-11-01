@@ -1,6 +1,6 @@
 {
 	"name": "@moosend/mooskin",
-	"version": "1.0.54",
+	"version": "1.0.55",
 	"description": "A collection of React components for Moosend UI",
 	"main": "lib/index/index.js",
 	"types": "lib/index/index.d.ts",
@@ -35,8 +35,8 @@
 		"styled-components": "^5"
 	},
 	"peerDependencies": {
-		"react": "^16.3.0",
-		"react-dom": "^16.3.0"
+		"react": ">=16.3.0",
+		"react-dom": ">=16.3.0"
 	},
 	"dependencies": {
 		"@date-io/date-fns": "1.x",
