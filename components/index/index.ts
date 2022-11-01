@@ -147,5 +147,5 @@ import '../Styled/GlobalStyles.css';
 
 export { default as IInputCallbackData } from '../_utils';
 
-export { default as screens } from '../_utils/globals/screens';
+export { default as screens, Screens } from '../_utils/globals/screens';
 export { default as variables } from '../_utils/globals/variables';
