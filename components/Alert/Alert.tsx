@@ -129,7 +129,7 @@ AlertCloseButton.displayName = 'AlertCloseButton';
  * AlertButton
  */
 export const AlertButton: React.FC<IBaseAlertComponentProps> = withMooskinContext((props) => {
-	return <StyledAlertButton {...props} children="" />;
+	return <StyledAlertButton {...props} />;
 });
 
 AlertButton.defaultProps = {
