@@ -342,7 +342,7 @@ exports[`Alert renders correctly 1`] = `
     >
       <Box
         boxShadow="lg"
-        className="sc-gsDKAQ ebsIOv"
+        className="sc-gKclnd ImuSh"
         palette={
           Object {
             "backgroundColors": Object {
@@ -510,7 +510,7 @@ exports[`Alert renders correctly 1`] = `
       >
         <Component
           boxShadow="lg"
-          className="sc-gsDKAQ ebsIOv"
+          className="sc-gKclnd ImuSh"
           palette={
             Object {
               "backgroundColors": Object {
@@ -676,186 +676,184 @@ exports[`Alert renders correctly 1`] = `
           transition="0.2s all"
           variant="left-accent"
         >
-          <StyledBox
-            boxShadow="lg"
-            className="sc-gsDKAQ ebsIOv"
-            palette={
-              Object {
-                "backgroundColors": Object {
-                  "accountNavigation": "#FFFFFF",
-                  "altWhite": "#FFFFFF",
-                  "autosExpression": "#ffffff",
-                  "background": "#FAFAFA",
-                  "black": "#000000",
-                  "blue400": "#4299E1",
-                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                  "client": "#E0E0E0",
-                  "createNew": "#FFFFFF",
-                  "darkgray1": "#777777",
-                  "darkgray2": "#454545",
-                  "darkgray3": "#424242",
-                  "dropdown": "#FFFFFF",
-                  "editorElement": "#1286FA",
-                  "editorRepeatable": "#5C50E7",
-                  "editorRow": "#63B8C8",
-                  "gray1": "#E0E0E0",
-                  "gray100": "#F0F0F0",
-                  "gray2": "#E7E7E7",
-                  "grayAlpha": "rgba(0,0,0,0.17)",
-                  "grayAlpha100": "rgba(0,0,0,0.06)",
-                  "grayAlpha400": "rgba(0,0,0,0.36)",
-                  "green600": "#2F855A",
-                  "inverseText": "#212121",
-                  "medgray1": "#757575",
-                  "medgray2": "#888888",
-                  "menuDark": "#21262A",
-                  "menuLight": "#2E3841",
-                  "orange400": "#ED8936",
-                  "pink400": "#ED64A6",
-                  "primary1": "#5548D9",
-                  "primary2": "#212121",
-                  "primary3": "#00796B",
-                  "primary4": "#D32F2F",
-                  "primary5": "#f0b941",
-                  "purple400": "#9f7aea",
-                  "red400": "#f56565",
-                  "red600": "#C53030",
-                  "secondary1": "#2E7D32",
-                  "secondary2": "#757575",
-                  "secondary3": "#673AB7",
-                  "secondary4": "#9C27B0",
-                  "secondary5": "#00796B",
-                  "secondary6": "#ECF0FC",
-                  "submenu": "#FFFFFF",
-                  "teal400": "#38B2AC",
-                  "teal500": "#02999A",
-                  "text": "#212121",
-                  "white": "#FFFFFF",
-                },
-                "borderColors": Object {
-                  "accountNavigation": "#FFFFFF",
-                  "altWhite": "#FFFFFF",
-                  "autosExpression": "#ffffff",
-                  "background": "#FAFAFA",
-                  "black": "#000000",
-                  "blue400": "#4299E1",
-                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                  "client": "#E0E0E0",
-                  "createNew": "#FFFFFF",
-                  "darkgray1": "#777777",
-                  "darkgray2": "#454545",
-                  "darkgray3": "#424242",
-                  "dropdown": "#FFFFFF",
-                  "editorElement": "#1286FA",
-                  "editorRepeatable": "#5C50E7",
-                  "editorRow": "#63B8C8",
-                  "gray1": "#E0E0E0",
-                  "gray100": "#F0F0F0",
-                  "gray2": "#E7E7E7",
-                  "grayAlpha": "rgba(0,0,0,0.17)",
-                  "grayAlpha100": "rgba(0,0,0,0.06)",
-                  "grayAlpha400": "rgba(0,0,0,0.36)",
-                  "green600": "#2F855A",
-                  "inverseText": "#212121",
-                  "medgray1": "#757575",
-                  "medgray2": "#888888",
-                  "menuDark": "#21262A",
-                  "menuLight": "#2E3841",
-                  "orange400": "#ED8936",
-                  "pink400": "#ED64A6",
-                  "primary1": "#5548D9",
-                  "primary2": "#212121",
-                  "primary3": "#00796B",
-                  "primary4": "#D32F2F",
-                  "primary5": "#f0b941",
-                  "purple400": "#9f7aea",
-                  "red400": "#f56565",
-                  "red600": "#C53030",
-                  "secondary1": "#2E7D32",
-                  "secondary2": "#757575",
-                  "secondary3": "#673AB7",
-                  "secondary4": "#9C27B0",
-                  "secondary5": "#00796B",
-                  "secondary6": "#ECF0FC",
-                  "submenu": "#FFFFFF",
-                  "teal400": "#38B2AC",
-                  "teal500": "#02999A",
-                  "text": "#212121",
-                  "white": "#FFFFFF",
-                },
-                "fontColors": Object {
-                  "accountNavigation": "#FFFFFF",
-                  "altWhite": "#FFFFFF",
-                  "autosExpression": "#ffffff",
-                  "background": "#FAFAFA",
-                  "black": "#000000",
-                  "blue400": "#4299E1",
-                  "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                  "client": "#E0E0E0",
-                  "createNew": "#212121",
-                  "darkgray1": "#777777",
-                  "darkgray2": "#454545",
-                  "darkgray3": "#424242",
-                  "dropdown": "#212121",
-                  "editorElement": "#1286FA",
-                  "editorRepeatable": "#5C50E7",
-                  "editorRow": "#63B8C8",
-                  "gray1": "#E0E0E0",
-                  "gray100": "#F0F0F0",
-                  "gray2": "#E7E7E7",
-                  "grayAlpha": "rgba(0,0,0,0.17)",
-                  "grayAlpha100": "rgba(0,0,0,0.06)",
-                  "grayAlpha400": "rgba(0,0,0,0.36)",
-                  "green600": "#2F855A",
-                  "inverseText": "#212121",
-                  "medgray1": "#757575",
-                  "medgray2": "#888888",
-                  "menuDark": "#21262A",
-                  "menuLight": "#2E3841",
-                  "orange400": "#ED8936",
-                  "pink400": "#ED64A6",
-                  "primary1": "#5548D9",
-                  "primary2": "#212121",
-                  "primary3": "#00796B",
-                  "primary4": "#D32F2F",
-                  "primary5": "#f0b941",
-                  "purple400": "#9f7aea",
-                  "red400": "#f56565",
-                  "red600": "#C53030",
-                  "secondary1": "#2E7D32",
-                  "secondary2": "#757575",
-                  "secondary3": "#673AB7",
-                  "secondary4": "#9C27B0",
-                  "secondary5": "#00796B",
-                  "secondary6": "#ECF0FC",
-                  "submenu": "#FFFFFF",
-                  "teal400": "#38B2AC",
-                  "teal500": "#02999A",
-                  "text": "#212121",
-                  "white": "#FFFFFF",
-                },
-                "styles": Object {
-                  "buttonBorderRadius": "100px",
-                },
-              }
-            }
-            status="info"
+          <div
+            className="sc-bdvvtL cEvkop sc-gKclnd ImuSh"
             style={Object {}}
-            transition="0.2s all"
-            variant="left-accent"
           >
-            <div
-              className="sc-bdvvtL cEvkop sc-gsDKAQ ebsIOv"
+            <AlertIcon
+              className=""
+              key="0/.0"
+              status="info"
               style={Object {}}
+              variant="left-accent"
             >
-              <AlertIcon
+              <Component
                 className=""
-                key="0/.0"
+                palette={
+                  Object {
+                    "backgroundColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#FFFFFF",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#FFFFFF",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "borderColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#FFFFFF",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#FFFFFF",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "fontColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#212121",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#212121",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "styles": Object {
+                      "buttonBorderRadius": "100px",
+                    },
+                  }
+                }
                 status="info"
                 style={Object {}}
                 variant="left-accent"
               >
-                <Component
+                <StyledAlertIcon
                   className=""
                   palette={
                     Object {
@@ -1021,8 +1019,8 @@ exports[`Alert renders correctly 1`] = `
                   style={Object {}}
                   variant="left-accent"
                 >
-                  <StyledAlertIcon
-                    className=""
+                  <Box
+                    className="sc-kDTinF sc-iqseJM gBcDFh cXTLsr"
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -1185,10 +1183,11 @@ exports[`Alert renders correctly 1`] = `
                     }
                     status="info"
                     style={Object {}}
+                    transition="0.2s all"
                     variant="left-accent"
                   >
-                    <Box
-                      className="sc-jRQBWg sc-gKclnd ZmpWY hBmhXf"
+                    <Component
+                      className="sc-kDTinF sc-iqseJM gBcDFh cXTLsr"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -1354,360 +1353,191 @@ exports[`Alert renders correctly 1`] = `
                       transition="0.2s all"
                       variant="left-accent"
                     >
-                      <Component
-                        className="sc-jRQBWg sc-gKclnd ZmpWY hBmhXf"
-                        palette={
-                          Object {
-                            "backgroundColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#FFFFFF",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#FFFFFF",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "borderColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#FFFFFF",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#FFFFFF",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "fontColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#212121",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#212121",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "styles": Object {
-                              "buttonBorderRadius": "100px",
-                            },
-                          }
-                        }
-                        status="info"
+                      <div
+                        className="sc-bdvvtL buKeIX sc-kDTinF sc-iqseJM gBcDFh cXTLsr"
                         style={Object {}}
-                        transition="0.2s all"
-                        variant="left-accent"
                       >
-                        <StyledBox
-                          className="sc-jRQBWg sc-gKclnd ZmpWY hBmhXf"
-                          palette={
-                            Object {
-                              "backgroundColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#FFFFFF",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#FFFFFF",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "borderColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#FFFFFF",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#FFFFFF",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "fontColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#212121",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#212121",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "styles": Object {
-                                "buttonBorderRadius": "100px",
-                              },
-                            }
-                          }
-                          status="info"
-                          style={Object {}}
-                          transition="0.2s all"
-                          variant="left-accent"
-                        >
-                          <div
-                            className="sc-bdvvtL buKeIX sc-jRQBWg sc-gKclnd ZmpWY hBmhXf"
-                            style={Object {}}
-                          >
-                            announcement
-                          </div>
-                        </StyledBox>
-                      </Component>
-                    </Box>
-                  </StyledAlertIcon>
-                </Component>
-              </AlertIcon>
-              <AlertTitle
+                        announcement
+                      </div>
+                    </Component>
+                  </Box>
+                </StyledAlertIcon>
+              </Component>
+            </AlertIcon>
+            <AlertTitle
+              className=""
+              key="1/.1"
+              status="info"
+              style={Object {}}
+              variant="left-accent"
+            >
+              <Component
                 className=""
-                key="1/.1"
+                palette={
+                  Object {
+                    "backgroundColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#FFFFFF",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#FFFFFF",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "borderColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#FFFFFF",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#FFFFFF",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "fontColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#212121",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#212121",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "styles": Object {
+                      "buttonBorderRadius": "100px",
+                    },
+                  }
+                }
                 status="info"
                 style={Object {}}
                 variant="left-accent"
               >
-                <Component
+                <StyledAlertTitle
                   className=""
                   palette={
                     Object {
@@ -1873,8 +1703,8 @@ exports[`Alert renders correctly 1`] = `
                   style={Object {}}
                   variant="left-accent"
                 >
-                  <StyledAlertTitle
-                    className=""
+                  <Box
+                    className="sc-furwcr sc-pVTFL elOokK dzGcAC"
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -2037,10 +1867,11 @@ exports[`Alert renders correctly 1`] = `
                     }
                     status="info"
                     style={Object {}}
+                    transition="0.2s all"
                     variant="left-accent"
                   >
-                    <Box
-                      className="sc-dkPtRN sc-hKwDye kcQoRa twshK"
+                    <Component
+                      className="sc-furwcr sc-pVTFL elOokK dzGcAC"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -2206,360 +2037,191 @@ exports[`Alert renders correctly 1`] = `
                       transition="0.2s all"
                       variant="left-accent"
                     >
-                      <Component
-                        className="sc-dkPtRN sc-hKwDye kcQoRa twshK"
-                        palette={
-                          Object {
-                            "backgroundColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#FFFFFF",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#FFFFFF",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "borderColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#FFFFFF",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#FFFFFF",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "fontColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#212121",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#212121",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "styles": Object {
-                              "buttonBorderRadius": "100px",
-                            },
-                          }
-                        }
-                        status="info"
+                      <div
+                        className="sc-bdvvtL buKeIX sc-furwcr sc-pVTFL elOokK dzGcAC"
                         style={Object {}}
-                        transition="0.2s all"
-                        variant="left-accent"
                       >
-                        <StyledBox
-                          className="sc-dkPtRN sc-hKwDye kcQoRa twshK"
-                          palette={
-                            Object {
-                              "backgroundColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#FFFFFF",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#FFFFFF",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "borderColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#FFFFFF",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#FFFFFF",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "fontColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#212121",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#212121",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "styles": Object {
-                                "buttonBorderRadius": "100px",
-                              },
-                            }
-                          }
-                          status="info"
-                          style={Object {}}
-                          transition="0.2s all"
-                          variant="left-accent"
-                        >
-                          <div
-                            className="sc-bdvvtL buKeIX sc-dkPtRN sc-hKwDye kcQoRa twshK"
-                            style={Object {}}
-                          >
-                            Your browser is outdated!
-                          </div>
-                        </StyledBox>
-                      </Component>
-                    </Box>
-                  </StyledAlertTitle>
-                </Component>
-              </AlertTitle>
-              <AlertDescription
+                        Your browser is outdated!
+                      </div>
+                    </Component>
+                  </Box>
+                </StyledAlertTitle>
+              </Component>
+            </AlertTitle>
+            <AlertDescription
+              className=""
+              key="2/.2"
+              status="info"
+              style={Object {}}
+              variant="left-accent"
+            >
+              <Component
                 className=""
-                key="2/.2"
+                palette={
+                  Object {
+                    "backgroundColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#FFFFFF",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#FFFFFF",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "borderColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#FFFFFF",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#FFFFFF",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "fontColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#212121",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#212121",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "styles": Object {
+                      "buttonBorderRadius": "100px",
+                    },
+                  }
+                }
                 status="info"
                 style={Object {}}
                 variant="left-accent"
               >
-                <Component
+                <StyledAlertDescription
                   className=""
                   palette={
                     Object {
@@ -2725,8 +2387,8 @@ exports[`Alert renders correctly 1`] = `
                   style={Object {}}
                   variant="left-accent"
                 >
-                  <StyledAlertDescription
-                    className=""
+                  <Box
+                    className="sc-furwcr sc-jrQzAO elOokK eLhmEJ"
                     palette={
                       Object {
                         "backgroundColors": Object {
@@ -2889,10 +2551,11 @@ exports[`Alert renders correctly 1`] = `
                     }
                     status="info"
                     style={Object {}}
+                    transition="0.2s all"
                     variant="left-accent"
                   >
-                    <Box
-                      className="sc-dkPtRN sc-eCImPb kcQoRa hdxhgo"
+                    <Component
+                      className="sc-furwcr sc-jrQzAO elOokK eLhmEJ"
                       palette={
                         Object {
                           "backgroundColors": Object {
@@ -3058,356 +2721,191 @@ exports[`Alert renders correctly 1`] = `
                       transition="0.2s all"
                       variant="left-accent"
                     >
-                      <Component
-                        className="sc-dkPtRN sc-eCImPb kcQoRa hdxhgo"
-                        palette={
-                          Object {
-                            "backgroundColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#FFFFFF",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#FFFFFF",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "borderColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#FFFFFF",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#FFFFFF",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "fontColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#212121",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#212121",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "styles": Object {
-                              "buttonBorderRadius": "100px",
-                            },
-                          }
-                        }
-                        status="info"
+                      <div
+                        className="sc-bdvvtL buKeIX sc-furwcr sc-jrQzAO elOokK eLhmEJ"
                         style={Object {}}
-                        transition="0.2s all"
-                        variant="left-accent"
                       >
-                        <StyledBox
-                          className="sc-dkPtRN sc-eCImPb kcQoRa hdxhgo"
-                          palette={
-                            Object {
-                              "backgroundColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#FFFFFF",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#FFFFFF",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "borderColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#FFFFFF",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#FFFFFF",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "fontColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#212121",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#212121",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "styles": Object {
-                                "buttonBorderRadius": "100px",
-                              },
-                            }
-                          }
-                          status="info"
-                          style={Object {}}
-                          transition="0.2s all"
-                          variant="left-accent"
-                        >
-                          <div
-                            className="sc-bdvvtL buKeIX sc-dkPtRN sc-eCImPb kcQoRa hdxhgo"
-                            style={Object {}}
-                          >
-                            Your Mooskin experience may be degraded.
-                          </div>
-                        </StyledBox>
-                      </Component>
-                    </Box>
-                  </StyledAlertDescription>
-                </Component>
-              </AlertDescription>
-              <AlertCloseButton
+                        Your Mooskin experience may be degraded.
+                      </div>
+                    </Component>
+                  </Box>
+                </StyledAlertDescription>
+              </Component>
+            </AlertDescription>
+            <AlertCloseButton
+              className=""
+              key="3/.3"
+              onClick={[MockFunction]}
+              position="absolute"
+              right={8}
+              status="info"
+              style={Object {}}
+              top={8}
+              variant="left-accent"
+            >
+              <Component
                 className=""
-                key="3/.3"
                 onClick={[MockFunction]}
+                palette={
+                  Object {
+                    "backgroundColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#FFFFFF",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#FFFFFF",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "borderColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#FFFFFF",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#FFFFFF",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "fontColors": Object {
+                      "accountNavigation": "#FFFFFF",
+                      "altWhite": "#FFFFFF",
+                      "autosExpression": "#ffffff",
+                      "background": "#FAFAFA",
+                      "black": "#000000",
+                      "blue400": "#4299E1",
+                      "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
+                      "client": "#E0E0E0",
+                      "createNew": "#212121",
+                      "darkgray1": "#777777",
+                      "darkgray2": "#454545",
+                      "darkgray3": "#424242",
+                      "dropdown": "#212121",
+                      "editorElement": "#1286FA",
+                      "editorRepeatable": "#5C50E7",
+                      "editorRow": "#63B8C8",
+                      "gray1": "#E0E0E0",
+                      "gray100": "#F0F0F0",
+                      "gray2": "#E7E7E7",
+                      "grayAlpha": "rgba(0,0,0,0.17)",
+                      "grayAlpha100": "rgba(0,0,0,0.06)",
+                      "grayAlpha400": "rgba(0,0,0,0.36)",
+                      "green600": "#2F855A",
+                      "inverseText": "#212121",
+                      "medgray1": "#757575",
+                      "medgray2": "#888888",
+                      "menuDark": "#21262A",
+                      "menuLight": "#2E3841",
+                      "orange400": "#ED8936",
+                      "pink400": "#ED64A6",
+                      "primary1": "#5548D9",
+                      "primary2": "#212121",
+                      "primary3": "#00796B",
+                      "primary4": "#D32F2F",
+                      "primary5": "#f0b941",
+                      "purple400": "#9f7aea",
+                      "red400": "#f56565",
+                      "red600": "#C53030",
+                      "secondary1": "#2E7D32",
+                      "secondary2": "#757575",
+                      "secondary3": "#673AB7",
+                      "secondary4": "#9C27B0",
+                      "secondary5": "#00796B",
+                      "secondary6": "#ECF0FC",
+                      "submenu": "#FFFFFF",
+                      "teal400": "#38B2AC",
+                      "teal500": "#02999A",
+                      "text": "#212121",
+                      "white": "#FFFFFF",
+                    },
+                    "styles": Object {
+                      "buttonBorderRadius": "100px",
+                    },
+                  }
+                }
                 position="absolute"
                 right={8}
                 status="info"
@@ -3415,7 +2913,7 @@ exports[`Alert renders correctly 1`] = `
                 top={8}
                 variant="left-accent"
               >
-                <Component
+                <StyledAlertCloseButton
                   className=""
                   onClick={[MockFunction]}
                   palette={
@@ -3585,8 +3083,8 @@ exports[`Alert renders correctly 1`] = `
                   top={8}
                   variant="left-accent"
                 >
-                  <StyledAlertCloseButton
-                    className=""
+                  <Box
+                    className="sc-kDTinF sc-crHmcD gBcDFh fdZwVr"
                     onClick={[MockFunction]}
                     palette={
                       Object {
@@ -3753,10 +3251,11 @@ exports[`Alert renders correctly 1`] = `
                     status="info"
                     style={Object {}}
                     top={8}
+                    transition="0.2s all"
                     variant="left-accent"
                   >
-                    <Box
-                      className="sc-jRQBWg sc-iCfMLu ZmpWY fcRQPc"
+                    <Component
+                      className="sc-kDTinF sc-crHmcD gBcDFh fdZwVr"
                       onClick={[MockFunction]}
                       palette={
                         Object {
@@ -3926,363 +3425,19 @@ exports[`Alert renders correctly 1`] = `
                       transition="0.2s all"
                       variant="left-accent"
                     >
-                      <Component
-                        className="sc-jRQBWg sc-iCfMLu ZmpWY fcRQPc"
+                      <div
+                        className="sc-bdvvtL iBBCjQ sc-kDTinF sc-crHmcD gBcDFh fdZwVr"
                         onClick={[MockFunction]}
-                        palette={
-                          Object {
-                            "backgroundColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#FFFFFF",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#FFFFFF",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "borderColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#FFFFFF",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#FFFFFF",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "fontColors": Object {
-                              "accountNavigation": "#FFFFFF",
-                              "altWhite": "#FFFFFF",
-                              "autosExpression": "#ffffff",
-                              "background": "#FAFAFA",
-                              "black": "#000000",
-                              "blue400": "#4299E1",
-                              "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                              "client": "#E0E0E0",
-                              "createNew": "#212121",
-                              "darkgray1": "#777777",
-                              "darkgray2": "#454545",
-                              "darkgray3": "#424242",
-                              "dropdown": "#212121",
-                              "editorElement": "#1286FA",
-                              "editorRepeatable": "#5C50E7",
-                              "editorRow": "#63B8C8",
-                              "gray1": "#E0E0E0",
-                              "gray100": "#F0F0F0",
-                              "gray2": "#E7E7E7",
-                              "grayAlpha": "rgba(0,0,0,0.17)",
-                              "grayAlpha100": "rgba(0,0,0,0.06)",
-                              "grayAlpha400": "rgba(0,0,0,0.36)",
-                              "green600": "#2F855A",
-                              "inverseText": "#212121",
-                              "medgray1": "#757575",
-                              "medgray2": "#888888",
-                              "menuDark": "#21262A",
-                              "menuLight": "#2E3841",
-                              "orange400": "#ED8936",
-                              "pink400": "#ED64A6",
-                              "primary1": "#5548D9",
-                              "primary2": "#212121",
-                              "primary3": "#00796B",
-                              "primary4": "#D32F2F",
-                              "primary5": "#f0b941",
-                              "purple400": "#9f7aea",
-                              "red400": "#f56565",
-                              "red600": "#C53030",
-                              "secondary1": "#2E7D32",
-                              "secondary2": "#757575",
-                              "secondary3": "#673AB7",
-                              "secondary4": "#9C27B0",
-                              "secondary5": "#00796B",
-                              "secondary6": "#ECF0FC",
-                              "submenu": "#FFFFFF",
-                              "teal400": "#38B2AC",
-                              "teal500": "#02999A",
-                              "text": "#212121",
-                              "white": "#FFFFFF",
-                            },
-                            "styles": Object {
-                              "buttonBorderRadius": "100px",
-                            },
-                          }
-                        }
-                        position="absolute"
-                        right={8}
-                        status="info"
                         style={Object {}}
-                        top={8}
-                        transition="0.2s all"
-                        variant="left-accent"
                       >
-                        <StyledBox
-                          className="sc-jRQBWg sc-iCfMLu ZmpWY fcRQPc"
-                          onClick={[MockFunction]}
-                          palette={
-                            Object {
-                              "backgroundColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#FFFFFF",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#FFFFFF",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "borderColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#FFFFFF",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#FFFFFF",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "fontColors": Object {
-                                "accountNavigation": "#FFFFFF",
-                                "altWhite": "#FFFFFF",
-                                "autosExpression": "#ffffff",
-                                "background": "#FAFAFA",
-                                "black": "#000000",
-                                "blue400": "#4299E1",
-                                "checkboxUnselected": "rgba(0, 0, 0, 0.62)",
-                                "client": "#E0E0E0",
-                                "createNew": "#212121",
-                                "darkgray1": "#777777",
-                                "darkgray2": "#454545",
-                                "darkgray3": "#424242",
-                                "dropdown": "#212121",
-                                "editorElement": "#1286FA",
-                                "editorRepeatable": "#5C50E7",
-                                "editorRow": "#63B8C8",
-                                "gray1": "#E0E0E0",
-                                "gray100": "#F0F0F0",
-                                "gray2": "#E7E7E7",
-                                "grayAlpha": "rgba(0,0,0,0.17)",
-                                "grayAlpha100": "rgba(0,0,0,0.06)",
-                                "grayAlpha400": "rgba(0,0,0,0.36)",
-                                "green600": "#2F855A",
-                                "inverseText": "#212121",
-                                "medgray1": "#757575",
-                                "medgray2": "#888888",
-                                "menuDark": "#21262A",
-                                "menuLight": "#2E3841",
-                                "orange400": "#ED8936",
-                                "pink400": "#ED64A6",
-                                "primary1": "#5548D9",
-                                "primary2": "#212121",
-                                "primary3": "#00796B",
-                                "primary4": "#D32F2F",
-                                "primary5": "#f0b941",
-                                "purple400": "#9f7aea",
-                                "red400": "#f56565",
-                                "red600": "#C53030",
-                                "secondary1": "#2E7D32",
-                                "secondary2": "#757575",
-                                "secondary3": "#673AB7",
-                                "secondary4": "#9C27B0",
-                                "secondary5": "#00796B",
-                                "secondary6": "#ECF0FC",
-                                "submenu": "#FFFFFF",
-                                "teal400": "#38B2AC",
-                                "teal500": "#02999A",
-                                "text": "#212121",
-                                "white": "#FFFFFF",
-                              },
-                              "styles": Object {
-                                "buttonBorderRadius": "100px",
-                              },
-                            }
-                          }
-                          position="absolute"
-                          right={8}
-                          status="info"
-                          style={Object {}}
-                          top={8}
-                          transition="0.2s all"
-                          variant="left-accent"
-                        >
-                          <div
-                            className="sc-bdvvtL iBBCjQ sc-jRQBWg sc-iCfMLu ZmpWY fcRQPc"
-                            onClick={[MockFunction]}
-                            style={Object {}}
-                          >
-                            close
-                          </div>
-                        </StyledBox>
-                      </Component>
-                    </Box>
-                  </StyledAlertCloseButton>
-                </Component>
-              </AlertCloseButton>
-            </div>
-          </StyledBox>
+                        close
+                      </div>
+                    </Component>
+                  </Box>
+                </StyledAlertCloseButton>
+              </Component>
+            </AlertCloseButton>
+          </div>
         </Component>
       </Box>
     </StyledAlert>

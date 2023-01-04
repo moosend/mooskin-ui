@@ -213,7 +213,6 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 									bottom={['unset', 'unset', '10px', '10px']}
 									left={['unset', 'unset', '10px', '10px']}
 									right={['unset', 'unset', '10px', '10px']}
-									{...props}
 									onClick={toggleList}
 								>
 									Close
