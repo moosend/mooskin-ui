@@ -21,13 +21,8 @@ export const Box: React.FC<IBoxComponentProps> = withMooskinContext(
 			if (props.noRender) {
 				setShouldRender(checkShouldRender(props.noRender));
 
-				let renderTimout: any;
-
 				const onResize = () => {
-					clearTimeout(renderTimout);
-					renderTimout = setTimeout(() => {
-						if (props.noRender) setShouldRender(checkShouldRender(props.noRender));
-					}, 100);
+					if (props.noRender) setShouldRender(checkShouldRender(props.noRender));
 				};
 
 				window.addEventListener('resize', onResize);
