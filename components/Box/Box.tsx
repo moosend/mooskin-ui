@@ -15,11 +15,10 @@ import { Screens } from '../_utils/globals/screens';
  */
 export const Box: React.FC<IBoxComponentProps> = withMooskinContext(
 	React.memo((props) => {
-		const [shouldRender, setShouldRender] = React.useState(true);
+		const [shouldRender, setShouldRender] = React.useState(checkShouldRender(props.noRender || []));
 
 		React.useEffect(() => {
 			if (props.noRender) {
-				setShouldRender(checkShouldRender(props.noRender));
 
 				const onResize = () => {
 					if (props.noRender) setShouldRender(checkShouldRender(props.noRender));
