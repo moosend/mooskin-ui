@@ -93,7 +93,7 @@ export const StyledActionsDropdownButtonClose = styled(Box)<IBoxComponentProps>`
 	width: auto;
 	height: 56px;
 	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
-	font-color: ${(props) => props.palette?.fontColors.dropdown || variables.fontColors.dropdown};
+	color: ${(props) => props.palette?.fontColors.dropdown || variables.fontColors.dropdown};
 	font-weight: 200;
 	font-size: 20px;
 	padding: 16px;

@@ -112,7 +112,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								bottom={['unset', 'unset', '10px', '10px']}
 								left={['unset', 'unset', '10px', '10px']}
 								right={['unset', 'unset', '10px', '10px']}
-								onClick={props.onClose}
+								onClick={(e) => props.onClose && props.onClose(e)}
 							>
 								Close
 							</StyledActionsDropdownButtonClose>
