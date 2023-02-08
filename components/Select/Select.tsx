@@ -9,6 +9,7 @@ import { ISelectComponentProps, ISelectOptionComponentProps, ISelectOptionListPr
 
 // Components
 import { Loader } from '../Loader/Loader';
+import { Box } from '../Box/Box';
 
 // Styled Components
 import {
@@ -29,6 +30,7 @@ import {
 
 // Transitions
 import { Transition } from 'react-transition-group';
+
 const OptionListComponents = {
 	entered: StyledSelectOptionListFadeIn,
 	entering: StyledSelectOptionListFadeIn,
@@ -179,48 +181,42 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 			}
 
 			if (React.isValidElement<ISelectOptionListProps>(child) && child.type === SelectOptionList) {
-				return React.cloneElement(child, {
-					children: (
-						<>
-							{!props.hideMobileSearch && (
-								<SearchPlaceholderMobileView
-									noRender={['lg', 'md']}
-									boxShadow="base"
-									position={['absolute', 'absolute', 'fixed', 'fixed']}
-									mt={['unset', 'unset', '-54px', '-54px']}
-									borderRadius={['0px', '0px', '8px', '8px']}
-									left={['0px', '0px', '10px', '10px']}
-									right={['0px', '0px', '10px', '10px']}
-									zIndex={['unset', 'unset', 11, 11]}
-									bgColor={['transparent', 'transparent', '#fff', '#fff']}
-									onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
-									onChange={(e: React.ChangeEvent<HTMLInputElement>) => (setFilterValue(e.target.value), console.log(filterValue))}
-								>
-									<SelectFilter
-										onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
-										onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
-										autoFocus={undefined}
-									/>
-									<SelectIcon>{'search'}</SelectIcon>
-								</SearchPlaceholderMobileView>
-							)}
-							{recurseChildren(child.props.children)}
-							<StyledSelectListButtonClose
-								position={['relative', 'relative', 'fixed', 'fixed']}
-								noRender={['lg', 'md']}
-								borderRadius={['2px', '2px', '8px', '8px']}
-								bottom={['unset', 'unset', '10px', '10px']}
-								left={['unset', 'unset', '10px', '10px']}
-								right={['unset', 'unset', '10px', '10px']}
-								onClick={toggleList}
-							>
-								Close
-							</StyledSelectListButtonClose>
-						</>
-					),
+				const shouldShowList = child.props.showList || showList;
+				const list = React.cloneElement(child, {
+					children: recurseChildren(child.props.children),
 					key: i,
-					showList: child.props.showList || showList
+					showList: shouldShowList
 				} as IBoxComponentProps);
+
+				return (
+					<>
+						{shouldShowList && (
+							<Box noRender={['lg', 'md']} position={'fixed'} bottom={10} left={10} right={10} zIndex={12}>
+								{!props.hideMobileSearch && (
+									<SearchPlaceholderMobileView
+										boxShadow="base"
+										borderRadius={['0px', '0px', '8px', '8px']}
+										bgColor={['transparent', 'transparent', '#fff', '#fff']}
+										onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
+										onChange={(e: React.ChangeEvent<HTMLInputElement>) => (setFilterValue(e.target.value), console.log(filterValue))}
+									>
+										<SelectFilter
+											onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
+											onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
+											autoFocus={undefined}
+										/>
+										<SelectIcon>{'search'}</SelectIcon>
+									</SearchPlaceholderMobileView>
+								)}
+								{list}
+								<StyledSelectListButtonClose borderRadius={['2px', '2px', '8px', '8px']} onClick={toggleList}>
+									Close
+								</StyledSelectListButtonClose>
+							</Box>
+						)}
+						<Box noRender={['sm', 'xs']}>{list}</Box>
+					</>
+				);
 			}
 
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder) {
@@ -338,17 +334,17 @@ export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinCon
 					return (
 						<OptionListComponent
 							boxShadow="base"
-							position={['absolute', 'absolute', 'fixed', 'fixed']}
-							top={['40px', '40px', 'unset', 'unset']}
-							bottom={['unset', 'unset', '73px', '73px']}
-							left={['0px', '0px', '10px', '10px']}
-							right={['0px', '0px', '10px', '10px']}
+							position={['absolute', 'absolute', 'unset', 'unset']}
+							top={40}
+							left={0}
+							right={0}
 							borderRadius={['0px', '0px', '8px', '8px']}
 							textAlign={['left', 'left', 'center', 'center']}
 							fontSize={['14px', '14px', '20px', '20px']}
 							justify={['space-between', 'space-between', 'center', 'center']}
 							maxH={['160px', '160px', '415px', '415px']}
 							pb={['10px', '10px', '0px', '0px']}
+							my={['0px', '0px', '10px', '10px']}
 							round="xs"
 							{...props}
 						/>
