@@ -182,7 +182,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 				return React.cloneElement(child, {
 					children: (
 						<>
-							{
+							{!props.hideMobileSearch && (
 								<SearchPlaceholderMobileView
 									noRender={['lg', 'md']}
 									boxShadow="base"
@@ -203,21 +203,19 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 									/>
 									<SelectIcon>{'search'}</SelectIcon>
 								</SearchPlaceholderMobileView>
-							}
+							)}
 							{recurseChildren(child.props.children)}
-							{
-								<StyledSelectListButtonClose
-									position={['relative', 'relative', 'fixed', 'fixed']}
-									noRender={['lg', 'md']}
-									borderRadius={['2px', '2px', '8px', '8px']}
-									bottom={['unset', 'unset', '10px', '10px']}
-									left={['unset', 'unset', '10px', '10px']}
-									right={['unset', 'unset', '10px', '10px']}
-									onClick={toggleList}
-								>
-									Close
-								</StyledSelectListButtonClose>
-							}
+							<StyledSelectListButtonClose
+								position={['relative', 'relative', 'fixed', 'fixed']}
+								noRender={['lg', 'md']}
+								borderRadius={['2px', '2px', '8px', '8px']}
+								bottom={['unset', 'unset', '10px', '10px']}
+								left={['unset', 'unset', '10px', '10px']}
+								right={['unset', 'unset', '10px', '10px']}
+								onClick={toggleList}
+							>
+								Close
+							</StyledSelectListButtonClose>
 						</>
 					),
 					key: i,
