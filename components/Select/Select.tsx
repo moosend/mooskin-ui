@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Screens } from '../_utils/globals/screens';
+
 // Mooskin Context HoC that passes context to component props
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
@@ -203,7 +205,6 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 										<SelectFilter
 											onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
 											onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
-											autoFocus={undefined}
 										/>
 										<SelectIcon>{'search'}</SelectIcon>
 									</SearchPlaceholderMobileView>
@@ -391,7 +392,9 @@ SelectOption.displayName = 'SelectOption';
  * SelectFilter
  */
 export const SelectFilter: React.FC<IInputBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledSelectFilter autoFocus {...props} boxAs="input" />;
+	const width = window.innerWidth;
+	const autofocus = width > Screens.sm.max;
+	return <StyledSelectFilter autoFocus={autofocus} {...props} boxAs="input" />;
 });
 
 SelectFilter.defaultProps = {
