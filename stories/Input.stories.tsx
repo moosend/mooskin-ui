@@ -50,6 +50,25 @@ Normal.args = {
 					<InputOption value="tag1">Tag 1</InputOption>
 					<InputOption value="tag2">Tag 2</InputOption>
 					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
+					<InputOption value="tag3">Tag 3</InputOption>
 				</InputOptionList>
 				<InputEmoji />
 				<InputIcon>search</InputIcon>

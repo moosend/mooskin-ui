@@ -183,7 +183,7 @@ export const StyledSelectListButtonClose = styled(Box)<IBoxComponentProps>`
 	right: 10px;
 	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
-	font-weight: 200;
+	font-weight: 400;
 	font-size: 20px;
 	padding: 16px;
 	text-align: center;

@@ -89,6 +89,8 @@ export const StyledInputOptionList = styled(Box)<Partial<IInputListComponentProp
 	border-radius: 2px;
 	z-index: 4;
 	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.32);
+	overflow: auto;
+	max-height: 265px;
 `;
 
 StyledInputOptionList.displayName = 'StyledInputOptionList';
@@ -100,3 +102,23 @@ export const StyledInputOptionListTitle = styled(Label)<ILabelComponentProps>`
 `;
 
 StyledInputOptionListTitle.displayName = 'StyledInputOptionListTitle';
+
+export const StyledInputListButtonClose = styled(Box)<IBoxComponentProps>`
+	width: auto;
+	height: 56px;
+	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
+	color: ${(props) => props.palette?.fontColors.dropdown || variables.fontColors.dropdown};
+	font-weight: 400;
+	font-size: 20px;
+	padding: 16px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 11;
+	position: fixed;
+	border-radius: 14px;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+`;
+
+StyledInputListButtonClose.displayName = 'StyledInputListButtonClose';

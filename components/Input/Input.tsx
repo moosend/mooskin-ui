@@ -25,6 +25,7 @@ import { Text } from '../Text/Text';
 import {
 	StyledInputContainer,
 	StyledInputIcon,
+	StyledInputListButtonClose,
 	StyledInputOptionList,
 	StyledInputOptionListTitle,
 	StyledInputOverlay,
@@ -120,10 +121,23 @@ export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinCo
 			<InputIcon children={props.icon} onClick={() => setShowList(!showList)} {...props.iconProps} />
 			{showList && (
 				<>
-					<StyledInputOptionList w={300} {...props}>
+					<StyledInputOptionList
+						boxShadow="base"
+						position={['absolute', 'absolute', 'fixed', 'fixed']}
+						borderRadius={['2px', '2px', '8px', '8px']}
+						bottom={['unset', 'unset', '73px', '73px']}
+						left={['unset', 'unset', '10px', '10px']}
+						right={['0px', '0px', '10px', '10px']}
+						maxH={['265px', '265px', '415px', '415px']}
+						w={[300, 300, 'unset', 'unset']}
+						{...props}
+					>
 						{props.children}
 					</StyledInputOptionList>
 					<InputOverlay onClick={() => setShowList(!showList)} />
+					<StyledInputListButtonClose onClick={() => setShowList(!showList)} noRender={['lg', 'md']}>
+						Close
+					</StyledInputListButtonClose>
 				</>
 			)}
 		</Box>
@@ -141,7 +155,7 @@ InputOptionList.displayName = 'InputOptionList';
  * InputOptionListTitle
  */
 export const InputOptionListTitle: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledInputOptionListTitle {...props} />;
+	return <StyledInputOptionListTitle noRender={['sm', 'xs']} {...props} />;
 });
 
 InputOptionListTitle.defaultProps = {
@@ -155,7 +169,17 @@ InputOptionListTitle.displayName = 'InputOptionListTitle';
  * InputOption
  */
 export const InputOption: React.FC<IInputOptionComponentProps> = withMooskinContext((props) => {
-	return <Text my={8} mx={15} fontSize={14} fontColor="fontColors.primary1" {...props} />;
+	return (
+		<Text
+			py={[8, 8, 16, 16]}
+			px={[15, 15, 16, 16]}
+			fontSize={[14, 14, 20, 20]}
+			fontWeight={['unset', 'unset', 400, 400]}
+			justify={['unset', 'unset', 'center', 'center']}
+			fontColor="fontColors.primary1"
+			{...props}
+		/>
+	);
 });
 
 InputOption.defaultProps = {
@@ -198,7 +222,13 @@ InputIcon.displayName = 'InputIcon';
  * InputOverlay
  */
 export const InputOverlay: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledInputOverlay {...props} className={`notranslate ${props.className}`} />;
+	return (
+		<StyledInputOverlay
+			bgColor={['transparent', 'transparent', 'rgba(0, 0, 0, 0.48)', 'rgba(0, 0, 0, 0.48)']}
+			{...props}
+			className={`notranslate ${props.className}`}
+		/>
+	);
 });
 
 InputOverlay.defaultProps = {
