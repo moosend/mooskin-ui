@@ -33,10 +33,14 @@ import {
 	StyledInputWrapped
 } from './styles';
 
+import { Screens } from '../_utils/globals/screens';
+
 /**
  * InputContainer
  */
 export const InputContainer: React.FC<IInputContainerComponentProps> = withMooskinContext((props) => {
+	const [showList, setShowList] = React.useState(false);
+
 	const batchChangeHandler = (
 		e: React.ChangeEvent<HTMLInputElement>,
 		data: IInputCallbackData,
@@ -80,7 +84,9 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
 					icon: child.props.icon,
-					key: i
+					key: i,
+					showList,
+					setShowList
 				} as IInputListComponentProps);
 			}
 
@@ -88,7 +94,12 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
 					key: i,
-					onClick: (e) => onDropdownOptionClick(child.props.value),
+					onClick: (e) => {
+						if (window.innerWidth <= Screens.sm.max) {
+							setShowList(!showList);
+						}
+						onDropdownOptionClick(child.props.value);
+					},
 					value: child.props.value
 				} as IInputOptionComponentProps);
 			}
@@ -115,11 +126,12 @@ InputContainer.displayName = 'InputContainer';
  * InputOptionList
  */
 export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinContext((props) => {
-	const [showList, setShowList] = React.useState(false);
+	const toggleDropdown = () => props.setShowList && props.setShowList(!props.showList);
+
 	return (
-		<Box position="relative" color="inherit" zIndex={showList ? 3 : 0} {...props.wrapperProps}>
-			<InputIcon children={props.icon} onClick={() => setShowList(!showList)} {...props.iconProps} />
-			{showList && (
+		<Box position="relative" color="inherit" zIndex={props.showList ? 3 : 0} {...props.wrapperProps}>
+			<InputIcon children={props.icon} onClick={toggleDropdown} {...props.iconProps} />
+			{props.showList && (
 				<>
 					<StyledInputOptionList
 						boxShadow="base"
@@ -134,8 +146,8 @@ export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinCo
 					>
 						{props.children}
 					</StyledInputOptionList>
-					<InputOverlay onClick={() => setShowList(!showList)} />
-					<StyledInputListButtonClose onClick={() => setShowList(!showList)} noRender={['lg', 'md']}>
+					<InputOverlay onClick={toggleDropdown} />
+					<StyledInputListButtonClose onClick={toggleDropdown} noRender={['lg', 'md']}>
 						Close
 					</StyledInputListButtonClose>
 				</>
