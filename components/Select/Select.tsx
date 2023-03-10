@@ -436,7 +436,13 @@ SelectIcon.displayName = 'SelectIcon';
  * SelectOverlay
  */
 export const SelectOverlay: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledSelectOverlay bgColor={['transparent', 'transparent', 'rgba(0, 0, 0, 0.48)', 'rgba(0, 0, 0, 0.48)']} {...props} />;
+	return (
+		<StyledSelectOverlay
+			bgColor={['transparent', 'transparent', 'rgba(0, 0, 0, 0.48)', 'rgba(0, 0, 0, 0.48)']}
+			zIndex={[1, 1, 5, 5]}
+			{...props}
+		/>
+	);
 });
 
 SelectOverlay.defaultProps = {

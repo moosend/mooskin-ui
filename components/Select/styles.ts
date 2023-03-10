@@ -100,7 +100,7 @@ export const StyledSelectOptionList = styled(Box)<ISelectOptionListProps>`
 	color: inherit;
 	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	overflow-y: auto;
-	z-index: 6;
+	z-index: 2;
 `;
 
 export const StyledSelectOptionListFadeIn = styled(StyledSelectOptionList)`
@@ -124,7 +124,7 @@ export const StyledSelectOverlay = styled(Box)<IBoxComponentProps>`
 	left: 0;
 	right: 0;
 	bottom: 0;
-	z-index: 5;
+	z-index: 1;
 `;
 
 StyledSelectOverlay.displayName = 'StyledSelectOverlay';
