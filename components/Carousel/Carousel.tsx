@@ -43,7 +43,7 @@ Carousel.defaultProps = {
 Carousel.displayName = 'Carousel';
 
 export const CustomDot: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledDot {...props} />;
+	return <StyledDot w={[15, 15, 9, 9]} h={[15, 15, 9, 9]} {...props} />;
 });
 
 CustomDot.defaultProps = {

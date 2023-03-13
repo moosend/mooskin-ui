@@ -1364,6 +1364,8 @@ exports[`Input renders correctly 1`] = `
               icon="check"
               key="1/.1"
               pr={5}
+              setShowList={[Function]}
+              showList={false}
               style={Object {}}
             >
               <Component
@@ -1530,6 +1532,8 @@ exports[`Input renders correctly 1`] = `
                   }
                 }
                 pr={5}
+                setShowList={[Function]}
+                showList={false}
                 style={Object {}}
               >
                 <Box
