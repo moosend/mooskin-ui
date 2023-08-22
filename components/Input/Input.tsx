@@ -39,7 +39,7 @@ import { Screens } from '../_utils/globals/screens';
  * InputContainer
  */
 export const InputContainer: React.FC<IInputContainerComponentProps> = withMooskinContext((props) => {
-	const [showList, setShowList] = React.useState(false);
+	const [showList, setShowList] = React.useState('');
 
 	const batchChangeHandler = (
 		e: React.ChangeEvent<HTMLInputElement>,
@@ -85,7 +85,7 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 					children: recurseChildren(child.props.children),
 					icon: child.props.icon,
 					key: i,
-					showList,
+					showList: showList === child.props.icon,
 					setShowList
 				} as IInputListComponentProps);
 			}
@@ -96,7 +96,7 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 					key: i,
 					onClick: (e) => {
 						if (window.innerWidth <= Screens.sm.max) {
-							setShowList(!showList);
+							setShowList('');
 						}
 						onDropdownOptionClick(child.props.value);
 					},
@@ -126,7 +126,7 @@ InputContainer.displayName = 'InputContainer';
  * InputOptionList
  */
 export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinContext((props) => {
-	const toggleDropdown = () => props.setShowList && props.setShowList(!props.showList);
+	const toggleDropdown = () => props.setShowList && props.setShowList(props.showList ? '' : props.icon);
 
 	return (
 		<Box position="relative" color="inherit" zIndex={props.showList ? 3 : 0} {...props.wrapperProps}>

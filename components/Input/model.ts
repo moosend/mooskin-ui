@@ -40,8 +40,9 @@ export interface IInputEmojiComponentProps extends IBoxComponentProps {
 export interface IInputListComponentProps extends IBoxComponentProps {
 	showList?: boolean;
 
-	setShowList?: (value: boolean) => void;
+	setShowList?: (value: string) => void;
 	/** icon to be shown for toggling the dropdown */
+
 	icon: string;
 
 	iconProps?: IBoxComponentProps;
