@@ -222,7 +222,7 @@ DrawerCloseButton.displayName = 'DrawerCloseButton';
  */
 export const DrawerOverlay: React.FC<IDrawerOverlayComponentProps> = withMooskinContext((props) => {
 	return (
-		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={145}>
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={120}>
 			{(state) => {
 				const DrawerOverlayComponent = DrawerOverlayComponents[state];
 				if (DrawerOverlayComponent) {

@@ -886,7 +886,7 @@ exports[`Drawer renders correctly 1`] = `
                   onExit={[Function]}
                   onExited={[Function]}
                   onExiting={[Function]}
-                  timeout={145}
+                  timeout={120}
                   unmountOnExit={true}
                 >
                   <StyledDrawerOverlayFadeIn
