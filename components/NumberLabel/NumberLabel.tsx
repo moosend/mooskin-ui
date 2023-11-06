@@ -106,6 +106,9 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 			if (acc === 'high') {
 				const rounded = Math.round(Number(array.slice(array.length - 3).join('')) / 100) * 100;
 				array.splice(array.length - 3, 3);
+				if (!rounded) {
+					return Number(array.join('')) * digits.thousand;
+				}
 				return array.join('') + rounded;
 			} else if (acc === 'low') {
 				return Math.round(Number(value) / digits.thousand) * digits.thousand;
@@ -114,6 +117,9 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 			if (acc === 'high') {
 				const rounded = Math.round(Number(array.slice(array.length - 6, 4).join('')) / 100) * 100;
 				array.splice(array.length - 6, 6);
+				if (!rounded) {
+					return Number(array.join('')) * digits.million;
+				}
 				return array.join('') + rounded * digits.thousand;
 			} else if (acc === 'low') {
 				return Math.round(Number(value) / digits.million) * digits.million;
@@ -122,6 +128,9 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 			if (acc === 'high') {
 				const rounded = Math.round(Number(array.slice(array.length - 9, 4).join('')) / 100) * 100;
 				array.splice(array.length - 9, 9);
+				if (!rounded) {
+					return Number(array.join('')) * digits.billion;
+				}
 				return array.join('') + rounded * digits.million;
 			} else if (acc === 'low') {
 				return Math.round(Number(value) / digits.billion) * digits.billion;
@@ -130,6 +139,9 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 			if (acc === 'high') {
 				const rounded = Math.round(Number(array.slice(array.length - 12, 4).join('')) / 100) * 100;
 				array.splice(array.length - 12, 12);
+				if (!rounded) {
+					return Number(array.join('')) * digits.trillion;
+				}
 				return array.join('') + rounded * digits.billion;
 			} else if (acc === 'low') {
 				return Math.round(Number(value) / digits.trillion) * digits.trillion;
