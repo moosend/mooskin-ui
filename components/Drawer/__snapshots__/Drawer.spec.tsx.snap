@@ -886,7 +886,7 @@ exports[`Drawer renders correctly 1`] = `
                   onExit={[Function]}
                   onExited={[Function]}
                   onExiting={[Function]}
-                  timeout={120}
+                  timeout={90}
                   unmountOnExit={true}
                 >
                   <StyledDrawerOverlayFadeIn
@@ -1059,7 +1059,7 @@ exports[`Drawer renders correctly 1`] = `
                   >
                     <Box
                       boxShadow="base"
-                      className="sc-fFeiMQ sc-bkkeKt fWLIAv OyxrG"
+                      className="sc-fFeiMQ sc-bkkeKt ikyNyd OyxrG"
                       isOpen={true}
                       onClick={[Function]}
                       palette={
@@ -1228,7 +1228,7 @@ exports[`Drawer renders correctly 1`] = `
                     >
                       <Component
                         boxShadow="base"
-                        className="sc-fFeiMQ sc-bkkeKt fWLIAv OyxrG"
+                        className="sc-fFeiMQ sc-bkkeKt ikyNyd OyxrG"
                         isOpen={true}
                         onClick={[Function]}
                         palette={
@@ -1396,7 +1396,7 @@ exports[`Drawer renders correctly 1`] = `
                         transition="0.2s all"
                       >
                         <div
-                          className="sc-bdvvtL bxvrDv sc-fFeiMQ sc-bkkeKt fWLIAv OyxrG"
+                          className="sc-bdvvtL bxvrDv sc-fFeiMQ sc-bkkeKt ikyNyd OyxrG"
                           onClick={[Function]}
                           style={Object {}}
                         >

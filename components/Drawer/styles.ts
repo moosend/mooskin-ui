@@ -235,11 +235,11 @@ StyledDrawerCloseButton.displayName = 'StyledDrawerCloseButton';
 
 export const StyledDrawerOverlay = styled(Box)<IDrawerOverlayComponentProps>`
 	display: flex;
-	width: 100vw;
 	height: 100vh;
 	position: fixed;
 	left: 0px;
 	top: 0px;
+	right: 0px;
 	z-index: 1400;
 `;
 
