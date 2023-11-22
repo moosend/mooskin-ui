@@ -16,6 +16,17 @@ const SolidBackgroundColors = {
 	warning: (props: IBaseAlertComponentProps) => 'rgb(221, 107, 32)'
 };
 
+const subtleOpacity = '6b';
+
+const SubtleBackgroundColors = {
+	error: (props: IBaseAlertComponentProps) => (props.palette?.backgroundColors.red600 || variables.backgroundColors.red600) + subtleOpacity,
+	info: (props: IBaseAlertComponentProps) =>
+		(props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1) + subtleOpacity,
+	success: (props: IBaseAlertComponentProps) =>
+		(props.palette?.backgroundColors.green600 || variables.backgroundColors.green600) + subtleOpacity,
+	warning: (props: IBaseAlertComponentProps) => 'rgb(221 107 32 / 42%)'
+};
+
 const FontColors = {
 	error: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.red600 || variables.backgroundColors.red600,
 	info: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1,
@@ -36,11 +47,11 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
 	border-left: ${(props) => (props.variant === 'left-accent' ? '4px solid' : '')};
 	border-top: ${(props) => (props.variant === 'top-accent' ? '4px solid' : '')};
 	border-color: ${(props) => props.status && SolidBackgroundColors[props.status](props)};
-	border-radius: 2px;
+	border-radius: ${(props) => (props.variant === 'subtle' ? '4px' : '2px')};
 	background-color: ${(props) => {
-		return props.variant === 'solid'
-			? props.status && SolidBackgroundColors[props.status]
-			: (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white;
+		if (props.variant === 'solid') return props.status && SolidBackgroundColors[props.status];
+		else if (props.variant === 'subtle') return props.status && SubtleBackgroundColors[props.status];
+		else return (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white;
 	}};
 `;
 
@@ -71,7 +82,7 @@ const StyledAlertCommonText = styled(Box)<IBaseAlertComponentProps>`
 StyledAlertCommonText.displayName = 'StyledAlertCommonText';
 
 export const StyledAlertTitle = styled(StyledAlertCommonText)<IBaseAlertComponentProps>`
-	font-weight: 700;
+	font-weight: 600;
 	margin-right: 0.5rem;
 `;
 
@@ -116,6 +127,11 @@ export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IBaseAlertCo
 	&:hover {
 		background: rgba(30, 30, 30, 0.1);
 	}
+	color: ${(props) => {
+		if (props.variant === 'solid') return variables.fontColors.white;
+		else if (props.variant === 'subtle') return variables.fontColors.black;
+		else return props.status && FontColors[props.status](props);
+	}};
 `;
 
 StyledAlertCloseButton.displayName = 'StyledAlertCloseButton';
