@@ -16,15 +16,11 @@ const SolidBackgroundColors = {
 	warning: (props: IBaseAlertComponentProps) => 'rgb(221, 107, 32)'
 };
 
-const subtleOpacity = '6b';
-
 const SubtleBackgroundColors = {
-	error: (props: IBaseAlertComponentProps) => (props.palette?.backgroundColors.red600 || variables.backgroundColors.red600) + subtleOpacity,
-	info: (props: IBaseAlertComponentProps) =>
-		(props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1) + subtleOpacity,
-	success: (props: IBaseAlertComponentProps) =>
-		(props.palette?.backgroundColors.green600 || variables.backgroundColors.green600) + subtleOpacity,
-	warning: (props: IBaseAlertComponentProps) => 'rgb(221 107 32 / 42%)'
+	error: (props: IBaseAlertComponentProps) => variables.backgroundColors.error,
+	info: (props: IBaseAlertComponentProps) => variables.backgroundColors.info,
+	success: (props: IBaseAlertComponentProps) => variables.backgroundColors.success,
+	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warning
 };
 
 const FontColors = {
