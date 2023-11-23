@@ -100,6 +100,10 @@ export interface IThemeBackgroundColors {
 	editorRow: string;
 	editorElement: string;
 	editorRepeatable: string;
+	error: string;
+	warning: string;
+	success: string;
+	info: string;
 }
 
 export interface IThemeBorderColors {
