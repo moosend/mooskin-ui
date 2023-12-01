@@ -53,8 +53,12 @@ const theme: IStyledTheme = {
 		editorRow: '#63B8C8',
 		success: '#C2F2EA',
 		error: '#FCE2E2',
-		warning: '#f1c1a1',
-		info: '#b8b2ef'
+		warning: '#FFE9BB',
+		info: '#E8E6FB',
+		successIcon: '#007E6A',
+		errorIcon: '#DB1D1D',
+		infoIcon: '#5548D9',
+		warningIcon: '#B2551F'
 	},
 	borderColors: {
 		primary1: '#5548D9',
@@ -105,7 +109,15 @@ const theme: IStyledTheme = {
 		menuLight: '#2E3841',
 		editorElement: '#1286FA',
 		editorRepeatable: '#5C50E7',
-		editorRow: '#63B8C8'
+		editorRow: '#63B8C8',
+		success: '#C2F2EA',
+		error: '#FCE2E2',
+		warning: '#FFE9BB',
+		info: '#E8E6FB',
+		successIcon: '#007E6A',
+		errorIcon: '#DB1D1D',
+		infoIcon: '#5548D9',
+		warningIcon: '#B2551F'
 	},
 	fontColors: {
 		primary1: '#5548D9',
@@ -156,7 +168,15 @@ const theme: IStyledTheme = {
 		menuLight: '#2E3841',
 		editorElement: '#1286FA',
 		editorRepeatable: '#5C50E7',
-		editorRow: '#63B8C8'
+		editorRow: '#63B8C8',
+		success: '#C2F2EA',
+		error: '#FCE2E2',
+		warning: '#FFE9BB',
+		info: '#E8E6FB',
+		successIcon: '#007E6A',
+		errorIcon: '#DB1D1D',
+		infoIcon: '#5548D9',
+		warningIcon: '#B2551F'
 	},
 	styles: {
 		buttonBorderRadius: '100px'

@@ -51,9 +51,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 						<>
 							{recurseChildren(child.props.children, i)}
 							{/* <StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>} */}
-							{child.props.removeIcon && props.onRemoveTag && !tagClose && (
-								<TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>
-							)}
+							{child.props.removeIcon && props.onRemoveTag && !tagClose && <TagClose onClick={(e) => onRemoveTag(e, i)}>close</TagClose>}
 						</>
 					),
 					key: i,
@@ -64,7 +62,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === TagClose) {
 				!tagClose && setTagClose(true);
 				return React.cloneElement(child, {
-					children: child.props.children ? child.props.children : 'highlight_off',
+					children: child.props.children ? child.props.children : 'close',
 					key: i,
 					onClick: child.props.onClick ? child.props.onClick : (e) => onRemoveTag(e, tagIndex ?? 0)
 				} as IBoxComponentProps);
@@ -99,7 +97,7 @@ Tags.displayName = 'Tags';
  * Tag
  */
 export const Tag: React.FC<ITagComponentProps> = withMooskinContext((props) => {
-	return <StyledTag fontSize={[12, 12, 14, 14]} {...props} />;
+	return <StyledTag {...props} />;
 });
 
 Tag.defaultProps = {

@@ -24,10 +24,10 @@ const SubtleBackgroundColors = {
 };
 
 const FontColors = {
-	error: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.red600 || variables.backgroundColors.red600,
-	info: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1,
-	success: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.green600 || variables.backgroundColors.green600,
-	warning: (props: IBaseAlertComponentProps) => '#DD6B20'
+	error: (props: IBaseAlertComponentProps) => variables.backgroundColors.errorIcon,
+	info: (props: IBaseAlertComponentProps) => variables.backgroundColors.infoIcon,
+	success: (props: IBaseAlertComponentProps) => variables.backgroundColors.successIcon,
+	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warningIcon
 };
 
 export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
