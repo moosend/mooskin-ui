@@ -1,6 +1,6 @@
 {
 	"name": "@moosend/mooskin",
-	"version": "1.0.83",
+	"version": "1.0.84",
 	"description": "A collection of React components for Moosend UI",
 	"main": "lib/index/index.js",
 	"types": "lib/index/index.d.ts",
@@ -32,7 +32,8 @@
 		"lib"
 	],
 	"resolutions": {
-		"styled-components": "^5"
+		"styled-components": "^5",
+		"@babel/traverse": "^7.23.2"
 	},
 	"peerDependencies": {
 		"react": ">=16.3.0",
