@@ -1,11 +1,11 @@
-var config = require('./webpack.config.common'),
-	// glob = require('glob'),
-	MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+const { merge } = require('webpack-merge');
+const distFolder = 'lib';
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const commonWebpackConfig = require('./webpack.config.common');
 
-var distFolder = 'lib';
-var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 'index/style.css', allChunks: true });
-
-// var entries = glob
+// const glob = require('glob');
+// const entries = glob
 //     .sync('./components/*/index.ts', { ignore: ['./stories/*.tsx', './legacy/*.tsx', '**/*.spec.tsx', '**/*.spec.ts'] })
 //     .map(function (entry) {
 //         //gets the module paths in components containing index.ts and assigns them to an object
@@ -27,71 +27,77 @@ var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 
 
 // var entries['index'] = './index/index.ts';
 
-config.entry = './components/index/index.ts';
+const prodWebPackConfig = merge(commonWebpackConfig, {
+	entry: './components/index/index.ts',
 
-config.output = {
-	path: __dirname + '/' + distFolder,
-	filename: 'index/index.js',
-	library: 'mooskin',
-	libraryTarget: 'umd',
-	umdNamedDefine: true,
-	globalObject: 'this',
-	publicPath: '../'
-};
+	output: {
+		path: path.resolve(__dirname, distFolder),
+		filename: 'index/index.js',
+		library: 'mooskin',
+		libraryTarget: 'umd',
+		umdNamedDefine: true,
+		globalObject: 'this',
+		publicPath: '../'
+	},
 
-config.module.rules.push(
-	{
-		test: /\.tsx?$/,
-		exclude: /node_modules/,
-		use: [
-			'babel-loader',
+	module: {
+		rules: [
 			{
-				loader: 'ts-loader',
-				options: {
-					compilerOptions: {
-						declaration: true,
-						declarationDir: './' + distFolder
+				test: /\.tsx?$/,
+				exclude: /node_modules/,
+				use: [
+					'babel-loader',
+					{
+						loader: 'ts-loader',
+						options: {
+							compilerOptions: {
+								declaration: true,
+								declarationDir: path.resolve(__dirname, distFolder)
+							}
+						}
 					}
-				}
-			}
-		]
-	},
-	{
-		test: /\.css$/,
-		exclude: /node_modules/,
-		use: [
-			MiniCssExtractPlugin.loader,
-			{
-				loader: 'css-loader',
-				options: {
-					importLoaders: 1,
-					localIdentName: '[local]___[hash:base64:5]',
-					modules: true
-				}
+				]
 			},
+			{
+				test: /\.css$/,
+				exclude: /node_modules/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 1,
+							localIdentName: '[local]___[hash:base64:5]',
+							modules: true
+						}
+					},
 
-			'postcss-loader'
+					'postcss-loader'
+				]
+			},
+			{
+				test: /\.css$/,
+				exclude: /\*/,
+				include: /node_modules/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: {
+							// importLoaders: 1,
+						}
+					}
+					// 'postcss-loader'
+				]
+			}
 		]
 	},
-	{
-		test: /\.css$/,
-		exclude: /\*/,
-		include: /node_modules/,
-		use: [
-			MiniCssExtractPlugin.loader,
-			{
-				loader: 'css-loader',
-				options: {
-					// importLoaders: 1,
-				}
-			}
-			// 'postcss-loader'
-		]
-	}
-);
 
-config.plugins.push(extractCSS);
+	plugins: [
+		new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 'index/style.css', allChunks: true })
+	],
 
-config.externals = ['react', 'react-dom'];
+	externals: ['react', 'react-dom'],
+});
 
-module.exports = config;
+module.exports = prodWebPackConfig;

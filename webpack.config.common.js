@@ -1,12 +1,6 @@
-var fs = require('fs');
-// var gracefulFs = require('graceful-fs');
+const	path = require('path');
 
-// gracefulFs.gracefulify(fs);
-
-var webpack = require('webpack'),
-	path = require('path');
-
-module.exports = {
+const commonWebpackConfig = {
 	optimization: {
 		splitChunks: {
 			chunks: 'async',
@@ -30,7 +24,6 @@ module.exports = {
 			}
 		}
 	},
-
 	module: {
 		rules: [
 			{
@@ -71,3 +64,5 @@ module.exports = {
 	}
 	//   devtool: 'inline-source-map',
 };
+
+module.exports = commonWebpackConfig;

@@ -1,82 +1,91 @@
-var config = require('./webpack.config.common');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+const { merge } = require('webpack-merge');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const commonWebpackConfig = require('./webpack.config.common');
 
-var distFolder = 'playground-dist';
-var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 'style.css', allChunks: true });
+const distFolder = 'playground-dist';
 
-config.devServer = {
-	contentBase: './' + distFolder,
-	historyApiFallback: true
-};
-
-config.entry = './playground/playground.tsx';
-
-config.output = {
-	path: __dirname + '/' + distFolder,
-	publicPath: '',
-	filename: 'playground.js'
-};
-
-config.plugins.push(
-	new HtmlWebpackPlugin({
-		template: './playground/index.html',
-		favicon: './playground/favicon.ico'
-	}),
-	extractCSS
-);
-
-config.module.rules.push(
-	{
-		test: /\.tsx?$/,
-		exclude: /node_modules/,
-		use: ['babel-loader', 'ts-loader']
+const devWebpackConfig = merge(commonWebpackConfig, {
+	devServer: {
+		contentBase: './' + distFolder,
+		historyApiFallback: true
 	},
-	{
-		test: /\.txt$|\.md$/,
-		loader: 'raw-loader'
+
+	entry: './playground/playground.tsx',
+
+	output : {
+		path: path.resolve(__dirname, distFolder),
+		publicPath: '',
+		filename: 'playground.js'
 	},
-	{
-		enforce: 'pre',
-		test: /\.js$/,
-		loader: 'source-map-loader'
-	},
-	{
-		enforce: 'pre',
-		test: /\.tsx?$/,
-		use: 'source-map-loader'
-	},
-	{
-		test: /\.css$/,
-		exclude: /node_modules/,
-		use: [
-			MiniCssExtractPlugin.loader,
+
+	plugins: [
+		new HtmlWebpackPlugin({
+			template: './playground/index.html',
+			favicon: './playground/favicon.ico'
+		}),
+		new MiniCssExtractPlugin({
+			fallback: 'style-loader',
+			filename: 'style.css',
+			allChunks: true
+		})
+	],
+
+	module: {
+		rules: [
 			{
-				loader: 'css-loader',
-				options: {
-					importLoaders: 1,
-					localIdentName: '[local]___[hash:base64:5]',
-					modules: true
-				}
+				test: /\.tsx?$/,
+				exclude: /node_modules/,
+				use: ['babel-loader', 'ts-loader']
 			},
-			'postcss-loader'
-		]
-	},
-	{
-		test: /\.css$/,
-		exclude: /\*/,
-		include: /node_modules/,
-		use: [
-			MiniCssExtractPlugin.loader,
 			{
-				loader: 'css-loader',
-				options: {
-					importLoaders: 1
-				}
+				test: /\.txt$|\.md$/,
+				loader: 'raw-loader'
 			},
-			'postcss-loader'
+			{
+				enforce: 'pre',
+				test: /\.js$/,
+				loader: 'source-map-loader'
+			},
+			{
+				enforce: 'pre',
+				test: /\.tsx?$/,
+				use: 'source-map-loader'
+			},
+			{
+				test: /\.css$/,
+				exclude: /node_modules/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 1,
+							localIdentName: '[local]___[hash:base64:5]',
+							modules: true
+						}
+					},
+					'postcss-loader'
+				]
+			},
+			{
+				test: /\.css$/,
+				exclude: /\*/,
+				include: /node_modules/,
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: {
+							importLoaders: 1
+						}
+					},
+					'postcss-loader'
+				]
+			}
 		]
 	}
-);
+});
 
-module.exports = config;
+module.exports = devWebpackConfig;
