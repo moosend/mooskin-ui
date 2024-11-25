@@ -11,27 +11,22 @@ const devWebpackConfig = merge(commonWebpackConfig, {
 		contentBase: './' + distFolder,
 		historyApiFallback: true
 	},
-
 	entry: './playground/playground.tsx',
-
-	output : {
+	output: {
 		path: path.resolve(__dirname, distFolder),
 		publicPath: '',
 		filename: 'playground.js'
 	},
-
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './playground/index.html',
 			favicon: './playground/favicon.ico'
 		}),
 		new MiniCssExtractPlugin({
-			fallback: 'style-loader',
 			filename: 'style.css',
 			allChunks: true
 		})
 	],
-
 	module: {
 		rules: [
 			{
@@ -62,8 +57,9 @@ const devWebpackConfig = merge(commonWebpackConfig, {
 						loader: 'css-loader',
 						options: {
 							importLoaders: 1,
-							localIdentName: '[local]___[hash:base64:5]',
-							modules: true
+							modules: {
+								localIdentName: '[local]___[hash:base64:5]'
+							}
 						}
 					},
 					'postcss-loader'
@@ -71,16 +67,10 @@ const devWebpackConfig = merge(commonWebpackConfig, {
 			},
 			{
 				test: /\.css$/,
-				exclude: /\*/,
 				include: /node_modules/,
 				use: [
 					MiniCssExtractPlugin.loader,
-					{
-						loader: 'css-loader',
-						options: {
-							importLoaders: 1
-						}
-					},
+					'css-loader',
 					'postcss-loader'
 				]
 			}
