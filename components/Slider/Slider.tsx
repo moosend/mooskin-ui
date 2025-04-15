@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ISliderComponentProps } from './Model';
+import { ISliderComponentProps } from './model';
 
 import { StyledSlider } from './styles';
 

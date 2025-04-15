@@ -12,7 +12,7 @@ import { StyledSidemenu, StyledSidemenuItem } from './styles';
 /**
  * Sidemenu
  */
-export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext((props) => {
+export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		value?: string | number,
@@ -44,19 +44,9 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext((p
 	return <StyledSidemenu {...props} children={recurseChildren(props.children)} />;
 });
 
-Sidemenu.defaultProps = {
-	className: '',
-	style: {}
-};
-
 /**
  * SidemenuItem
  */
-export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = withMooskinContext((props) => {
+export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledSidemenuItem {...props} />;
 });
-
-SidemenuItem.defaultProps = {
-	className: '',
-	style: {}
-};

@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { INumberLabelComponentProps } from '../components/NumberLabel/model';
 import { NumberLabel } from '../components/NumberLabel/NumberLabel';
 
 import { Box } from '../components/Box/Box';
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: NumberLabel,
 	title: 'Example/NumberLabel'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<INumberLabelComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Box {...args} />
 		</>
 	);

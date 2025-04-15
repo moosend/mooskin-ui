@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import {
 	Drawer,
@@ -13,17 +13,17 @@ import {
 } from '../components/Drawer/Drawer';
 import { IDrawerComponentProps } from '../components/Drawer/model';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Drawer,
 	title: 'Example/Drawer'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IDrawerComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Drawer {...args} />
 		</>
 	);

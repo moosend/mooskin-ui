@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from '../components/Modal/Modal';
 import { IModalComponentProps } from '../components/Modal/model';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Modal,
 	title: 'Example/Modal'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IModalComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Modal {...args} />
 		</>
 	);

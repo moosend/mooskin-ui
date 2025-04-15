@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { Footer, FooterBody, FooterEnd, FooterHead } from '../components/Footer/Footer';
 
 import { IBoxComponentProps } from '../components/Box/model';
 import { Button, ButtonIcon, ButtonTwo } from '../components/Button/Button';
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Footer,
 	title: 'Example/Footer'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IBoxComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Footer {...args} />
 		</>
 	);

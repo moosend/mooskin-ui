@@ -50,78 +50,100 @@ export const getBoxProps = (componentProps: any) => {
 };
 
 export const getOverridesForPicker = (theme: IStyledTheme, defaults: IStyledTheme) => ({
-	overrides: {
+	components: {
 		MuiPickersToolbar: {
-			toolbar: {
-				backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+			styleOverrides: {
+				toolbar: {
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+				}
 			}
 		},
 		MuiPickersCalendarHeader: {
-			iconButton: {
-				fill: theme.fontColors.text || defaults.fontColors.text
+			styleOverrides: {
+				iconButton: {
+					fill: theme.fontColors.text || defaults.fontColors.text
+				}
 			}
 		},
 		MuiPickersDay: {
-			current: {
-				color: theme.fontColors.primary1 || defaults.fontColors.primary1
-			},
-			day: {
-				backgroundColor: theme.backgroundColors.white || defaults.backgroundColors.white,
-				color: theme.fontColors.text || defaults.fontColors.text
-			},
-			dayDisabled: {
-				color: theme.backgroundColors.medgray1 || defaults.backgroundColors.medgray1
-			},
-			daySelected: {
-				backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
-				color: theme.fontColors.white || defaults.fontColors.white
+			styleOverrides: {
+				current: {
+					color: theme.fontColors.primary1 || defaults.fontColors.primary1
+				},
+				day: {
+					backgroundColor: theme.backgroundColors.white || defaults.backgroundColors.white,
+					color: theme.fontColors.text || defaults.fontColors.text
+				},
+				dayDisabled: {
+					color: theme.backgroundColors.medgray1 || defaults.backgroundColors.medgray1
+				},
+				daySelected: {
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
+					color: theme.fontColors.white || defaults.fontColors.white
+				}
 			}
 		},
 		MuiPickersModal: {
-			dialogAction: {
-				color: theme.fontColors.text || defaults.fontColors.text
+			styleOverrides: {
+				dialogAction: {
+					color: theme.fontColors.text || defaults.fontColors.text
+				}
 			}
 		},
 		MuiPickerDTTabs: {
-			tabs: {
-				backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
-				fill: theme.fontColors.white || defaults.fontColors.white
+			styleOverrides: {
+				tabs: {
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
+					fill: theme.fontColors.white || defaults.fontColors.white
+				}
 			}
 		},
 		MuiSvgIcon: {
-			root: {
-				fill: 'inherit'
+			styleOverrides: {
+				root: {
+					fill: 'inherit'
+				}
 			}
 		},
 		MuiPickersClock: {
-			pin: {
-				backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+			styleOverrides: {
+				pin: {
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+				}
 			}
 		},
 		MuiPickersClockPointer: {
-			pointer: {
-				backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
-			},
-			thumb: {
-				borderColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
-			},
-			noPoint: {
-				backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+			styleOverrides: {
+				pointer: {
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+				},
+				thumb: {
+					borderColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+				},
+				noPoint: {
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+				}
 			}
 		},
 		MuiTabs: {
-			indicator: {
-				backgroundColor: theme.backgroundColors.primary3 || defaults.backgroundColors.primary3
+			styleOverrides: {
+				indicator: {
+					backgroundColor: theme.backgroundColors.primary3 || defaults.backgroundColors.primary3
+				}
 			}
 		},
 		MuiIconButton: {
-			label: {
-				color: 'inherit'
+			styleOverrides: {
+				root: {
+					color: 'inherit'
+				}
 			}
 		},
 		MuiButton: {
-			label: {
-				color: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+			styleOverrides: {
+				root: {
+					color: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+				}
 			}
 		}
 	}

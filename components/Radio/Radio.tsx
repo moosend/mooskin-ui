@@ -5,7 +5,7 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
-import type { ILabelComponentProps } from '../Label/model';
+import type { ILabelComponentProps } from '../Label/Model';
 import { IRadioComponentProps, IRadioIconComponentProps } from './model';
 
 // Components
@@ -14,7 +14,7 @@ import { Description } from '../Description/Description';
 // Styled Components
 import { StyledRadio, StyledRadioIcon, StyledRadioLabel } from './styles';
 
-export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) => {
+export const Radio: React.FC<IRadioComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const [hasRadio, setHasRadio] = React.useState(false);
 
 	const onClick = (e: React.MouseEvent<HTMLElement>) => {
@@ -78,51 +78,31 @@ export const Radio: React.FC<IRadioComponentProps> = withMooskinContext((props) 
 	);
 });
 
-Radio.defaultProps = {
-	className: '',
-	style: {}
-};
-
 Radio.displayName = 'Radio';
 
 /**
  * RadioIcon
  */
-export const RadioIcon: React.FC<IRadioIconComponentProps> = withMooskinContext((props) => {
+export const RadioIcon: React.FC<IRadioIconComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledRadioIcon {...props} />;
 });
-
-RadioIcon.defaultProps = {
-	className: '',
-	style: {}
-};
 
 RadioIcon.displayName = 'RadioIcon';
 
 /**
  * RadioLabel
  */
-export const RadioLabel: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
+export const RadioLabel: React.FC<ILabelComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledRadioLabel fontSize={[14, 14, 16, 16]} disabled={props.disabled} {...props} />;
 });
-
-RadioLabel.defaultProps = {
-	className: '',
-	style: {}
-};
 
 RadioLabel.displayName = 'RadioLabel';
 
 /**
  * RadioDescription
  */
-export const RadioDescription: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const RadioDescription: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <Description {...props} />;
 });
-
-RadioDescription.defaultProps = {
-	className: '',
-	style: {}
-};
 
 RadioDescription.displayName = 'RadioDescription';

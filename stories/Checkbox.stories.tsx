@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { Checkbox, CheckboxDescription, CheckboxIcon, CheckboxLabel } from '../components/Checkbox/Checkbox';
 import { ICheckboxComponentProps } from '../components/Checkbox/model';
@@ -8,18 +8,18 @@ import { ICheckboxComponentProps } from '../components/Checkbox/model';
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 import { Box } from '../components/Box/Box';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Checkbox,
 	title: 'Example/Checkbox'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ICheckboxComponentProps> = (args) => {
 	const [value, setValue] = React.useState(false);
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Checkbox
 				checked={value}
 				{...args}

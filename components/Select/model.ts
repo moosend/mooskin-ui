@@ -13,6 +13,8 @@ export interface ISelectComponentProps extends IBoxComponentProps {
 
 	/** disables this Select */
 	disabled?: boolean;
+
+	hideMobileSearch?: boolean;
 }
 
 export interface ISelectOptionListProps extends IBoxComponentProps {

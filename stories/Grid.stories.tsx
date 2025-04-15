@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { Col, Grid, Row } from '../components/Grid/Grid';
 import { IGridProps } from '../components/Grid/model';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Grid,
 	title: 'Example/Grid'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IGridProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Grid style={{ textAlign: 'center' }}>
 				<Row style={{ padding: 10, border: '3px solid #F48770' }}>
 					<Col lg={12} md={8} sm={6} xs={3} style={{ padding: 10, border: '3px solid #5ccdde' }}>

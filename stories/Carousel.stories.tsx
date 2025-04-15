@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { Carousel } from '../components/Carousel/Carousel';
 import { ICarouselComponentProps } from '../components/Carousel/model';
 
 import { Box } from '../components/Box/Box';
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Carousel,
 	title: 'Example/Carousel'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ICarouselComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Carousel {...args} />
 		</>
 	);

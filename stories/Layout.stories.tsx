@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { Layout } from '../components/Layout/Layout';
 import { ILayoutComponentProps } from '../components/Layout/model';
 
 import { Box } from '../components/Box/Box';
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Layout,
 	title: 'Example/Layout'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ILayoutComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Layout {...args} />
 		</>
 	);

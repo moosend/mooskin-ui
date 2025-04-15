@@ -10,11 +10,12 @@ import { IPaginationButtonComponentProps, IPaginationComponentProps } from './mo
 
 // Styled Components
 import { StyledPagination, StyledPaginationButton, StyledPaginationShowAll } from './styles';
+import variables from '../_utils/globals/variables';
 
 /**
  * Pagination
  */
-export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContext((props) => {
+export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const [showAll, setShowAll] = React.useState(false);
 	const [showFirst, setShowFirst] = React.useState(false);
 	const [showPrevious, setShowPrevious] = React.useState(false);
@@ -110,7 +111,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 	};
 
 	return (
-		<StyledPagination {...props}>
+		<StyledPagination d="flex" align="center" className={className} style={style} {...props}>
 			{!showAll && !props.singleItem && (
 				<IconButton
 					cursor={showFirst ? 'pointer' : 'not-allowed'}
@@ -155,7 +156,16 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 				</IconButton>
 			)}
 			{!props.hideShowAll && childrenLength && childrenLength > 5 && (
-				<StyledPaginationShowAll palette={props.palette} onClick={() => setShowAll(!showAll)}>
+				<StyledPaginationShowAll
+					fontSize="14px"
+					fontWeight={500}
+					fontStyle="normal"
+					textAlign="left"
+					color={props.palette?.fontColors.primary1 || variables.fontColors.primary1}
+					cursor="pointer"
+					palette={props.palette}
+					onClick={() => setShowAll(!showAll)}
+				>
 					{showAll ? 'Hide' : 'Show all'}
 				</StyledPaginationShowAll>
 			)}
@@ -163,23 +173,37 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 	);
 });
 
-Pagination.defaultProps = {
-	className: '',
-	style: {}
-};
-
 Pagination.displayName = 'Pagination';
 
 /**
  * PaginationButton
  */
-export const PaginationButton: React.FC<IPaginationButtonComponentProps> = withMooskinContext((props) => {
-	return <StyledPaginationButton {...props} />;
-});
-
-PaginationButton.defaultProps = {
-	className: '',
-	style: {}
-};
+export const PaginationButton: React.FC<IPaginationButtonComponentProps> = withMooskinContext(
+	({ className = '', style = {}, ...props }) => {
+		return (
+			<StyledPaginationButton
+				borderRadius="2px"
+				fontSize={16}
+				fontWeight={500}
+				fontStyle="normal"
+				textAlign="center"
+				cursor="pointer"
+				p={props.active ? '9px 12px' : '8px 11px'}
+				color={
+					props.active
+						? props.palette?.fontColors.white || variables.fontColors.white
+						: props.palette?.fontColors.medgray1 || variables.fontColors.medgray1
+				}
+				bgColor={
+					props.active
+						? props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2
+						: props.palette?.backgroundColors.white || variables.backgroundColors.white
+				}
+				border={props.active ? 'none' : `solid 1px ${props.palette?.borderColors.medgray1 || variables.borderColors.medgray1}`}
+				{...props}
+			/>
+		);
+	}
+);
 
 PaginationButton.displayName = 'PaginationButton';

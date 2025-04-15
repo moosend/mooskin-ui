@@ -48,6 +48,14 @@ export interface IThemeFontColors {
 	editorRow: string;
 	editorElement: string;
 	editorRepeatable: string;
+	error: string;
+	warning: string;
+	success: string;
+	info: string;
+	successIcon: string;
+	errorIcon: string;
+	infoIcon: string;
+	warningIcon: string;
 }
 
 export interface IThemeBackgroundColors {
@@ -100,6 +108,14 @@ export interface IThemeBackgroundColors {
 	editorRow: string;
 	editorElement: string;
 	editorRepeatable: string;
+	error: string;
+	warning: string;
+	success: string;
+	info: string;
+	successIcon: string;
+	errorIcon: string;
+	infoIcon: string;
+	warningIcon: string;
 }
 
 export interface IThemeBorderColors {
@@ -152,6 +168,14 @@ export interface IThemeBorderColors {
 	editorRow: string;
 	editorElement: string;
 	editorRepeatable: string;
+	error: string;
+	warning: string;
+	success: string;
+	info: string;
+	successIcon: string;
+	errorIcon: string;
+	infoIcon: string;
+	warningIcon: string;
 }
 
 export interface IThemeStyles {

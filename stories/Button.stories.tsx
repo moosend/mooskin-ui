@@ -1,25 +1,24 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { Button, ButtonIcon } from '../components/Button/Button';
 import { IButtonComponentProps } from '../components/Button/model';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
 import variables from '../components/_utils/globals/variables';
 import { MooskinContextProvider } from '../components/Styled/MooskinContextProvider';
 
-export default ({
+export default {
 	// component: Button,
 	title: 'Example/Button'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IButtonComponentProps> = (args) => {
 	const [backgroundPalette, setBackgroundPalette] = React.useState({ ...variables.backgroundColors });
 	return (
 		<>
-			<GlobalStyle />
 			<MooskinContextProvider
 				value={{
 					palette: { ...variables, backgroundColors: backgroundPalette }
@@ -44,7 +43,7 @@ Icon.args = {
 			VIEW CAMPAIGN
 		</>
 	),
-	fontColor: 'fontColors.primary1'
+	fontColor: 'fontColors.altWhite'
 } as IButtonComponentProps;
 
 export const Href = Template.bind({});

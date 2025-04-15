@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { LoadingBar } from '../components/LoadingBar/LoadingBar';
 import { ILoadingBarComponentProps } from '../components/LoadingBar/model';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: LoadingBar,
 	title: 'Example/LoadingBar'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ILoadingBarComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<LoadingBar {...args} />
 		</>
 	);

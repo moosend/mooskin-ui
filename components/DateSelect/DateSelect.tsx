@@ -19,7 +19,7 @@ import { Select, SelectContainer, SelectOption, SelectOptionList, SelectPlacehol
 /**
  * DateSelect
  */
-export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContext((props) => {
+export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const renderDateSelect = () => {
 		const options = renderOptions();
 		const selected = props.selectedValue || props.selectedValue === 0 ? props.selectedValue.toString() : '';
@@ -185,10 +185,5 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContex
 
 	return renderDateSelect();
 });
-
-DateSelect.defaultProps = {
-	className: '',
-	style: {}
-};
 
 DateSelect.displayName = 'DateSelect';

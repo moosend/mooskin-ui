@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Screens } from '../_utils/globals/screens';
+
 // Mooskin Context HoC that passes context to component props
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
@@ -9,6 +11,7 @@ import { ISelectComponentProps, ISelectOptionComponentProps, ISelectOptionListPr
 
 // Components
 import { Loader } from '../Loader/Loader';
+import { Box } from '../Box/Box';
 
 // Styled Components
 import {
@@ -29,6 +32,7 @@ import {
 
 // Transitions
 import { Transition } from 'react-transition-group';
+
 const OptionListComponents = {
 	entered: StyledSelectOptionListFadeIn,
 	entering: StyledSelectOptionListFadeIn,
@@ -40,7 +44,7 @@ const OptionListComponents = {
 /**
  * Select
  */
-export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props) => {
+export const Select: React.FC<ISelectComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const [showList, setShowList] = React.useState(false);
 	const [filterValue, setFilterValue] = React.useState('');
 
@@ -179,51 +183,41 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 			}
 
 			if (React.isValidElement<ISelectOptionListProps>(child) && child.type === SelectOptionList) {
-				return React.cloneElement(child, {
-					children: (
-						<>
-							{
-								<SearchPlaceholderMobileView
-									noRender={['lg', 'md']}
-									boxShadow="base"
-									position={['absolute', 'absolute', 'fixed', 'fixed']}
-									mt={['unset', 'unset', '-54px', '-54px']}
-									borderRadius={['0px', '0px', '8px', '8px']}
-									left={['0px', '0px', '10px', '10px']}
-									right={['0px', '0px', '10px', '10px']}
-									zIndex={['unset', 'unset', 11, 11]}
-									bgColor={['transparent', 'transparent', '#fff', '#fff']}
-									onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
-									onChange={(e: React.ChangeEvent<HTMLInputElement>) => (setFilterValue(e.target.value), console.log(filterValue))}
-								>
-									<SelectFilter
+				const shouldShowList = child.props.showList || showList;
+				const list = React.cloneElement(child, {
+					children: recurseChildren(child.props.children),
+					key: i,
+					showList: shouldShowList
+				} as IBoxComponentProps);
+
+				return (
+					<>
+						{shouldShowList && (
+							<Box noRender={['lg', 'md']} position={'fixed'} bottom={10} left={10} right={10} zIndex={12}>
+								{!props.hideMobileSearch && (
+									<SearchPlaceholderMobileView
+										boxShadow="base"
+										borderRadius={['0px', '0px', '8px', '8px']}
+										bgColor={['transparent', 'transparent', '#fff', '#fff']}
 										onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
-										onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
-										autoFocus={undefined}
-									/>
-									<SelectIcon>{'search'}</SelectIcon>
-								</SearchPlaceholderMobileView>
-							}
-							{recurseChildren(child.props.children)}
-							{
-								<StyledSelectListButtonClose
-									position={['relative', 'relative', 'fixed', 'fixed']}
-									noRender={['lg', 'md']}
-									borderRadius={['2px', '2px', '8px', '8px']}
-									bottom={['unset', 'unset', '10px', '10px']}
-									left={['unset', 'unset', '10px', '10px']}
-									right={['unset', 'unset', '10px', '10px']}
-									{...props}
-									onClick={toggleList}
-								>
+										onChange={(e: React.ChangeEvent<HTMLInputElement>) => (setFilterValue(e.target.value), console.log(filterValue))}
+									>
+										<SelectFilter
+											onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
+											onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
+										/>
+										<SelectIcon>{'search'}</SelectIcon>
+									</SearchPlaceholderMobileView>
+								)}
+								{list}
+								<StyledSelectListButtonClose borderRadius={['2px', '2px', '8px', '8px']} onClick={toggleList}>
 									Close
 								</StyledSelectListButtonClose>
-							}
-						</>
-					),
-					key: i,
-					showList: child.props.showList || showList
-				} as IBoxComponentProps);
+							</Box>
+						)}
+						<Box noRender={['sm', 'xs']}>{list}</Box>
+					</>
+				);
 			}
 
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectPlaceholder) {
@@ -294,45 +288,30 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext((props
 	);
 });
 
-Select.defaultProps = {
-	className: '',
-	style: {}
-};
-
 Select.displayName = 'Select';
 
 /**
  * SelectContainer
  */
-export const SelectContainer: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const SelectContainer: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledSelectContainer {...props} />;
 });
-
-SelectContainer.defaultProps = {
-	className: '',
-	style: {}
-};
 
 SelectContainer.displayName = 'SelectContainer';
 
 /**
  * SelectPlaceholder
  */
-export const SelectPlaceholder: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const SelectPlaceholder: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledSelectPlaceholder {...props} />;
 });
-
-SelectPlaceholder.defaultProps = {
-	className: '',
-	style: {}
-};
 
 SelectPlaceholder.displayName = 'SelectPlaceholder';
 
 /**
  * SelectOptionList
  */
-export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinContext((props) => {
+export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return (
 		<Transition addEndListener={() => undefined} unmountOnExit in={props.showList} timeout={145}>
 			{(state) => {
@@ -341,17 +320,17 @@ export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinCon
 					return (
 						<OptionListComponent
 							boxShadow="base"
-							position={['absolute', 'absolute', 'fixed', 'fixed']}
-							top={['40px', '40px', 'unset', 'unset']}
-							bottom={['unset', 'unset', '73px', '73px']}
-							left={['0px', '0px', '10px', '10px']}
-							right={['0px', '0px', '10px', '10px']}
+							position={['absolute', 'absolute', 'unset', 'unset']}
+							top={40}
+							left={0}
+							right={0}
 							borderRadius={['0px', '0px', '8px', '8px']}
 							textAlign={['left', 'left', 'center', 'center']}
 							fontSize={['14px', '14px', '20px', '20px']}
 							justify={['space-between', 'space-between', 'center', 'center']}
 							maxH={['160px', '160px', '415px', '415px']}
 							pb={['10px', '10px', '0px', '0px']}
+							my={['0px', '0px', '10px', '10px']}
 							round="xs"
 							{...props}
 						/>
@@ -363,17 +342,12 @@ export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinCon
 	);
 });
 
-SelectOptionList.defaultProps = {
-	className: '',
-	style: {}
-};
-
 SelectOptionList.displayName = 'SelectOptionList';
 
 /**
  * SelectOption
  */
-export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinContext((props) => {
+export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return (
 		<StyledSelectOption
 			d="flex"
@@ -387,114 +361,89 @@ export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinCo
 	);
 });
 
-SelectOption.defaultProps = {
-	className: '',
-	style: {}
-};
-
 SelectOption.displayName = 'SelectOption';
 
 /**
  * SelectFilter
  */
-export const SelectFilter: React.FC<IInputBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledSelectFilter autoFocus {...props} boxAs="input" />;
+export const SelectFilter: React.FC<IInputBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	const width = window.innerWidth;
+	const autofocus = width > Screens.sm.max;
+	return <StyledSelectFilter autoFocus={autofocus} {...props} boxAs="input" />;
 });
-
-SelectFilter.defaultProps = {
-	className: '',
-	style: {}
-};
 
 SelectFilter.displayName = 'SelectFilter';
 
 /**
  * SelectLoader
  */
-export const SelectLoader: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const SelectLoader: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <Loader size={20} spinnerWidth={2} {...props} />;
 });
-
-SelectLoader.defaultProps = {
-	className: '',
-	style: {}
-};
 
 SelectLoader.displayName = 'SelectLoader';
 
 /**
  * SelectIcon
  */
-export const SelectIcon: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledSelectIcon {...props} className={`notranslate ${props.className}`} />;
+export const SelectIcon: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return <StyledSelectIcon {...props} className={`notranslate ${className}`} />;
 });
-
-SelectIcon.defaultProps = {
-	className: '',
-	style: {}
-};
 
 SelectIcon.displayName = 'SelectIcon';
 
 /**
  * SelectOverlay
  */
-export const SelectOverlay: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledSelectOverlay bgColor={['transparent', 'transparent', 'rgba(0, 0, 0, 0.48)', 'rgba(0, 0, 0, 0.48)']} {...props} />;
+export const SelectOverlay: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return (
+		<StyledSelectOverlay
+			bgColor={['transparent', 'transparent', 'rgba(0, 0, 0, 0.48)', 'rgba(0, 0, 0, 0.48)']}
+			zIndex={[1, 1, 5, 5]}
+			{...props}
+		/>
+	);
 });
-
-SelectOverlay.defaultProps = {
-	className: '',
-	style: {}
-};
 
 SelectOverlay.displayName = 'SelectOverlay';
 
 /**
  * SelectPagination
  */
-export const SelectPagination: React.FC<ISelectPaginationComponentProps> = withMooskinContext((props) => {
-	const onClick = (e: React.MouseEvent<HTMLElement>, direction: 'left' | 'right') => {
-		let page;
+export const SelectPagination: React.FC<ISelectPaginationComponentProps> = withMooskinContext(
+	({ className = '', style = {}, ...props }) => {
+		const onClick = (e: React.MouseEvent<HTMLElement>, direction: 'left' | 'right') => {
+			let page;
 
-		switch (direction) {
-			case 'left':
-				page = props.page - 1 < 1 ? undefined : props.page - 1;
-				break;
+			switch (direction) {
+				case 'left':
+					page = props.page - 1 < 1 ? undefined : props.page - 1;
+					break;
 
-			case 'right':
-				page = props.page + 1;
-				break;
+				case 'right':
+					page = props.page + 1;
+					break;
 
-			default:
-				break;
-		}
+				default:
+					break;
+			}
 
-		page && props.onClickPagination && props.onClickPagination(e, page);
-	};
-	return (
-		<StyledSelectPagination {...props}>
-			<SelectIcon onClick={(e) => onClick(e, 'left')}>keyboard_arrow_left</SelectIcon>
-			<StyledPaginationPage>{props.page}</StyledPaginationPage>
-			<SelectIcon onClick={(e) => onClick(e, 'right')}>keyboard_arrow_right</SelectIcon>
-		</StyledSelectPagination>
-	);
-});
-
-SelectPagination.defaultProps = {
-	className: '',
-	style: {}
-};
+			page && props.onClickPagination && props.onClickPagination(e, page);
+		};
+		return (
+			<StyledSelectPagination {...props}>
+				<SelectIcon onClick={(e) => onClick(e, 'left')}>keyboard_arrow_left</SelectIcon>
+				<StyledPaginationPage>{props.page}</StyledPaginationPage>
+				<SelectIcon onClick={(e) => onClick(e, 'right')}>keyboard_arrow_right</SelectIcon>
+			</StyledSelectPagination>
+		);
+	}
+);
 
 SelectPagination.displayName = 'SelectPagination';
 
-export const SearchPlaceholderMobileView: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const SearchPlaceholderMobileView: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledSearchPlaceholderMobileView {...props} />;
 });
-
-SelectOverlay.defaultProps = {
-	className: '',
-	style: {}
-};
 
 SelectOverlay.displayName = 'SelectOverlay';

@@ -12,41 +12,26 @@ import { StyledCol, StyledGrid, StyledRow } from './styles';
 /**
  * Grid
  */
-export const Grid: React.FC<IGridProps> = withMooskinContext((props) => {
-	return <StyledGrid {...props} />;
+export const Grid: React.FC<IGridProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return <StyledGrid className={className} style={style} {...props} />;
 });
-
-Grid.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Grid.displayName = 'Grid';
 
 /**
  * Row
  */
-export const Row: React.FC<IRowProps> = withMooskinContext((props) => {
-	return <StyledRow {...props} />;
+export const Row: React.FC<IRowProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return <StyledRow className={className} style={style} {...props} />;
 });
-
-Row.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Row.displayName = 'Row';
 
 /**
  * Col
  */
-export const Col: React.FC<IColProps> = withMooskinContext((props) => {
-	return <StyledCol {...props} />;
+export const Col: React.FC<IColProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return <StyledCol className={className} style={style} {...props} />;
 });
-
-Col.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Col.displayName = 'Col';

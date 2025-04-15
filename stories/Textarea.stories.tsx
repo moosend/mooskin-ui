@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { ITextAreaComponentProps } from '../components/TextArea/model';
 import { TextArea } from '../components/TextArea/TextArea';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: TextArea,
 	title: 'Example/TextArea'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ITextAreaComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<TextArea {...args} />
 		</>
 	);

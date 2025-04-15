@@ -19,11 +19,11 @@ import {
 
 // Transitions
 import { Transition } from 'react-transition-group';
-
+import variables from '../_utils/globals/variables';
 /**
  * Expandable
  */
-export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContext((props) => {
+export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		activeId?: string | number,
@@ -97,69 +97,77 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 		});
 	};
 
-	return <StyledExpandable {...props} children={recurseChildren(props.children)} />;
+	return <StyledExpandable d="flex" direction="column" {...props} children={recurseChildren(props.children)} />;
 });
-
-Expandable.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Expandable.displayName = 'Expandable';
 
 /**
  * ExpandableItem
  */
-export const ExpandableItem: React.FC<IExpandableItemComponentProps> = withMooskinContext((props) => {
-	return <StyledExpandableItem {...props} />;
+export const ExpandableItem: React.FC<IExpandableItemComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return (
+		<StyledExpandableItem
+			borderRadius="2px"
+			border="solid 1px #e2e2e2"
+			bgColor={props.palette?.backgroundColors.white || variables.backgroundColors.white}
+			{...props}
+		/>
+	);
 });
-
-ExpandableItem.defaultProps = {
-	className: '',
-	style: {}
-};
 
 ExpandableItem.displayName = 'ExpandableItem';
 
 /**
  * ExpandableItemContainer
  */
-export const ExpandableItemContainer: React.FC<IExpandableItemComponentProps> = withMooskinContext((props) => {
-	return <StyledExpandableItemContainer {...props} />;
-});
-
-ExpandableItemContainer.defaultProps = {
-	className: '',
-	style: {}
-};
+export const ExpandableItemContainer: React.FC<IExpandableItemComponentProps> = withMooskinContext(
+	({ className = '', style = {}, ...props }) => {
+		return <StyledExpandableItemContainer d="flex" p="17px" cursor="pointer" {...props} />;
+	}
+);
 
 ExpandableItemContainer.displayName = 'ExpandableItemContainer';
 
 /**
  * ExpandableItemText
  */
-export const ExpandableItemText: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledExpandableItemText fontSize={[14, 14, 16, 16]} {...props} />;
+export const ExpandableItemText: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return (
+		<StyledExpandableItemText
+			flex={1}
+			fontWeight={500}
+			font-stretch="normal"
+			fontStyle="normal"
+			letter-spacing="normal"
+			textAlign="left"
+			color={props.palette?.fontColors.text || variables.fontColors.text}
+			fontSize={[14, 14, 16, 16]}
+			{...props}
+		/>
+	);
 });
-
-ExpandableItemText.defaultProps = {
-	className: '',
-	style: {}
-};
 
 ExpandableItemText.displayName = 'ExpandableItemText';
 
 /**
  * ExpandableItemButton
  */
-export const ExpandableItemButton: React.FC<IExpandableCommonComponentProps> = withMooskinContext((props) => {
-	return <StyledExpandableItemButton {...props} className={`notranslate ${props.className}`} />;
-});
-
-ExpandableItemButton.defaultProps = {
-	className: '',
-	style: {}
-};
+export const ExpandableItemButton: React.FC<IExpandableCommonComponentProps> = withMooskinContext(
+	({ className = '', style = {}, ...props }) => {
+		return (
+			<StyledExpandableItemButton
+				fontFamily="Mooskin Icons"
+				fontSize="20px"
+				transition="all ease 0.4s"
+				color={props.palette?.fontColors.text || variables.fontColors.text}
+				transform={props.active ? 'rotate(180deg)' : 'rotate(0deg)'}
+				{...props}
+				className={`notranslate ${className}`}
+			/>
+		);
+	}
+);
 
 ExpandableItemButton.displayName = 'ExpandableItemButton';
 
@@ -174,17 +182,14 @@ const transitionOpacity = {
 /**
  * ExpandableItemContent
  */
-export const ExpandableItemContent: React.FC<IExpandableCommonComponentProps> = withMooskinContext((props) => {
-	return (
-		<Transition addEndListener={() => undefined} unmountOnExit mountOnEnter in={props.active} timeout={100}>
-			{(state) => <StyledExpandableItemContent opacity={transitionOpacity[state]} {...props} />}
-		</Transition>
-	);
-});
-
-ExpandableItemContent.defaultProps = {
-	className: '',
-	style: {}
-};
+export const ExpandableItemContent: React.FC<IExpandableCommonComponentProps> = withMooskinContext(
+	({ className = '', style = {}, ...props }) => {
+		return (
+			<Transition addEndListener={() => undefined} unmountOnExit mountOnEnter in={props.active} timeout={100}>
+				{(state) => <StyledExpandableItemContent opacity={transitionOpacity[state]} {...props} />}
+			</Transition>
+		);
+	}
+);
 
 ExpandableItemContent.displayName = 'ExpandableItemContent';

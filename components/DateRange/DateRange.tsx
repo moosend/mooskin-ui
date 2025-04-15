@@ -26,62 +26,53 @@ const defaultFormat = 'dd MMM yyyy';
 /**
  * DateRange
  */
-export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinContext((props) => {
-	const [showPicker, setShowPicker] = React.useState(false);
+export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinContext(
+	({ className = '', direction = 'horizontal', format: dateFormat = defaultFormat, ...props }) => {
+		const [showPicker, setShowPicker] = React.useState(false);
 
-	const getInputValue = () => {
-		let inputValue = '';
+		const getInputValue = () => {
+			let inputValue = '';
 
-		props.ranges &&
-			props.ranges.length &&
-			props.ranges.forEach((item, i) => {
-				if (item.startDate && item.endDate) {
-					const separator = i > 0 ? ', ' : '';
-					inputValue =
-						inputValue +
-						separator +
-						`${format(item.startDate, props.format || defaultFormat)} - ${format(item.endDate, props.format || defaultFormat)}`;
-				}
-			});
+			props.ranges &&
+				props.ranges.length &&
+				props.ranges.forEach((item, i) => {
+					if (item.startDate && item.endDate) {
+						const separator = i > 0 ? ', ' : '';
+						inputValue = inputValue + separator + `${format(item.startDate, dateFormat)} - ${format(item.endDate, dateFormat)}`;
+					}
+				});
 
-		return inputValue ? inputValue : 'N/A';
-	};
+			return inputValue ? inputValue : 'N/A';
+		};
 
-	return (
-		<Box position="relative" d="flex" {...props.wrapperProps}>
-			<InputContainer value={getInputValue()} {...props.inputContainerPrpps}>
-				{props.customComponent}
-				<Input onFocus={() => setShowPicker(true)} {...props.inputProps} />
-			</InputContainer>
-			{showPicker && (
-				<StyledDateRange boxShadow="md" {...props.pickerWrapperProps} palette={(props as any).palette}>
-					<DateRangePicker ranges={props.ranges} onChange={props.onChange} {...props} />
-					<DateRangeOverlay onClick={() => setShowPicker(false)} />
-				</StyledDateRange>
-			)}
-		</Box>
-	);
-});
-
-DateRange.defaultProps = {
-	className: '',
-	direction: 'horizontal',
-	format: defaultFormat
-	// months: 2
-};
+		return (
+			<Box position="relative" d="flex" {...props.wrapperProps}>
+				<InputContainer value={getInputValue()} {...props.inputContainerPrpps}>
+					{props.customComponent}
+					<Input onFocus={() => setShowPicker(true)} {...props.inputProps} />
+				</InputContainer>
+				{showPicker && (
+					<StyledDateRange boxShadow="md" {...props.pickerWrapperProps} palette={(props as any).palette}>
+						{React.createElement(DateRangePicker as React.ComponentType<any>, {
+							ranges: props.ranges,
+							onChange: props.onChange,
+							...props
+						})}
+						<DateRangeOverlay onClick={() => setShowPicker(false)} />
+					</StyledDateRange>
+				)}
+			</Box>
+		);
+	}
+);
 
 DateRange.displayName = 'DateRange';
 
 /**
  * DateRangeOverlay
  */
-const DateRangeOverlay: React.FC<IBoxComponentProps> = (props) => {
-	return <Box position="fixed" top={0} left={0} right={0} bottom={0} zIndex={-1} {...props} />;
-};
-
-DateRangeOverlay.defaultProps = {
-	className: '',
-	style: {}
+const DateRangeOverlay: React.FC<IBoxComponentProps> = ({ className = '', style = {}, ...props }) => {
+	return <Box position="fixed" top={0} left={0} right={0} bottom={0} zIndex={9999} {...props} />;
 };
 
 DateRangeOverlay.displayName = 'DateRangeOverlay';

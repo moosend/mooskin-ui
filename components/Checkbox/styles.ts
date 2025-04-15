@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import type { ILabelComponentProps } from '../Label/model';
+import type { ILabelComponentProps } from '../Label/Model';
 import { ICheckboxIconComponentProps } from './model';
 
 // Components

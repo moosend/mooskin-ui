@@ -30,6 +30,8 @@ export interface IInputComponentProps extends IInputBoxComponentProps {
 
 	/** whether its wrapped by its container */
 	wrapped?: boolean;
+
+	inputProps?: IInputBoxComponentProps;
 }
 
 export interface IInputEmojiComponentProps extends IBoxComponentProps {
@@ -38,7 +40,11 @@ export interface IInputEmojiComponentProps extends IBoxComponentProps {
 }
 
 export interface IInputListComponentProps extends IBoxComponentProps {
+	showList?: boolean;
+
+	setShowList?: (value: string) => void;
 	/** icon to be shown for toggling the dropdown */
+
 	icon: string;
 
 	iconProps?: IBoxComponentProps;

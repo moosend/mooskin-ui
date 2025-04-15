@@ -24,7 +24,7 @@ export const StyledTag = styled(Box)<ITagComponentProps>`
 	border-radius: 13px;
 	line-height: 1.7;
 	background-color: ${(props) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1};
-	font-size: 12px;
+	font-size: 13px;
 	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};
 	cursor: pointer;
 	align-items: center;
@@ -49,9 +49,9 @@ export const StyledTagText = styled(Box)<ITagComponentProps>`
 StyledTagText.displayName = 'StyledTagText';
 
 export const StyledTagClose = styled(Box)<IBoxComponentProps>`
-	opacity: 0.5;
 	font-family: 'Mooskin Icons Round';
-	font-size: 10px;
+	font-size: 15px;
+	line-height: 1;
 	font-weight: normal;
 	font-stretch: normal;
 	font-style: normal;

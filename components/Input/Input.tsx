@@ -25,6 +25,7 @@ import { Text } from '../Text/Text';
 import {
 	StyledInputContainer,
 	StyledInputIcon,
+	StyledInputListButtonClose,
 	StyledInputOptionList,
 	StyledInputOptionListTitle,
 	StyledInputOverlay,
@@ -32,10 +33,14 @@ import {
 	StyledInputWrapped
 } from './styles';
 
+import { Screens } from '../_utils/globals/screens';
+import variables from '../_utils/globals/variables';
 /**
  * InputContainer
  */
-export const InputContainer: React.FC<IInputContainerComponentProps> = withMooskinContext((props) => {
+export const InputContainer: React.FC<IInputContainerComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	const [showList, setShowList] = React.useState('');
+
 	const batchChangeHandler = (
 		e: React.ChangeEvent<HTMLInputElement>,
 		data: IInputCallbackData,
@@ -79,7 +84,9 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
 					icon: child.props.icon,
-					key: i
+					key: i,
+					showList: showList === child.props.icon,
+					setShowList
 				} as IInputListComponentProps);
 			}
 
@@ -87,7 +94,12 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 				return React.cloneElement(child, {
 					children: recurseChildren(child.props.children),
 					key: i,
-					onClick: (e) => onDropdownOptionClick(child.props.value),
+					onClick: (e) => {
+						if (window.innerWidth <= Screens.sm.max) {
+							setShowList('');
+						}
+						onDropdownOptionClick(child.props.value);
+					},
 					value: child.props.value
 				} as IInputOptionComponentProps);
 			}
@@ -100,118 +112,177 @@ export const InputContainer: React.FC<IInputContainerComponentProps> = withMoosk
 		});
 	};
 
-	return <StyledInputContainer {...props}>{recurseChildren(props.children)}</StyledInputContainer>;
+	return (
+		<StyledInputContainer
+			position="relative"
+			fontColor={props.palette?.fontColors.text || variables.fontColors.text}
+			d="flex"
+			flex={1}
+			align="center"
+			opacity={props.disabled ? 0.5 : 1}
+			cursor={props.disabled ? 'not-allowed' : ''}
+			borderRadius="2px"
+			bgColor={props.palette?.backgroundColors.white || variables.backgroundColors.white}
+			p="7px 15px 7px"
+			border={`solid 1px ${props.palette?.borderColors.gray1 || variables.borderColors.gray1}`}
+			{...props}
+		>
+			{recurseChildren(props.children)}
+		</StyledInputContainer>
+	);
 });
-
-InputContainer.defaultProps = {
-	className: '',
-	style: {}
-};
 
 InputContainer.displayName = 'InputContainer';
 
 /**
  * InputOptionList
  */
-export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinContext((props) => {
-	const [showList, setShowList] = React.useState(false);
+export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	const toggleDropdown = () => props.setShowList && props.setShowList(props.showList ? '' : props.icon);
+
 	return (
-		<Box position="relative" color="inherit" zIndex={showList ? 3 : 0} {...props.wrapperProps}>
-			<InputIcon children={props.icon} onClick={() => setShowList(!showList)} {...props.iconProps} />
-			{showList && (
+		<Box position="relative" color="inherit" zIndex={props.showList ? 3 : 0} {...props.wrapperProps}>
+			<InputIcon children={props.icon} onClick={toggleDropdown} {...props.iconProps} />
+			{props.showList && (
 				<>
-					<StyledInputOptionList w={300} {...props}>
+					<StyledInputOptionList
+						h="auto"
+						bgColor={props.palette?.backgroundColors.white || variables.backgroundColors.white}
+						zIndex={4}
+						//boxShadow="0 1px 5px rgba(0, 0, 0, 0.32)"
+						overflow="auto"
+						boxShadow="base"
+						position={['absolute', 'absolute', 'fixed', 'fixed']}
+						borderRadius={['2px', '2px', '8px', '8px']}
+						bottom={['unset', 'unset', '73px', '73px']}
+						left={['unset', 'unset', '10px', '10px']}
+						right={['0px', '0px', '10px', '10px']}
+						maxH={['265px', '265px', '415px', '415px']}
+						w={[300, 300, 'unset', 'unset']}
+						{...props}
+					>
 						{props.children}
 					</StyledInputOptionList>
-					<InputOverlay onClick={() => setShowList(!showList)} />
+					<InputOverlay onClick={toggleDropdown} />
+					<StyledInputListButtonClose
+						w="auto"
+						h="56px"
+						bgColor={props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown}
+						fontColor={props.palette?.fontColors.dropdown || variables.fontColors.dropdown}
+						fontWeight={400}
+						fontSize="20px"
+						p="16px"
+						textAlign="center"
+						cursor="pointer"
+						zIndex={11}
+						position="fixed"
+						borderRadius="14px"
+						bottom="10px"
+						left="10px"
+						right="10px"
+						onClick={toggleDropdown}
+						noRender={['lg', 'md']}
+					>
+						Close
+					</StyledInputListButtonClose>
 				</>
 			)}
 		</Box>
 	);
 });
 
-InputOptionList.defaultProps = {
-	className: '',
-	style: {}
-};
-
 InputOptionList.displayName = 'InputOptionList';
 
 /**
  * InputOptionListTitle
  */
-export const InputOptionListTitle: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledInputOptionListTitle {...props} />;
+export const InputOptionListTitle: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return (
+		<StyledInputOptionListTitle
+			m="15px"
+			fontSize="14px"
+			fontColor={props.palette?.fontColors.text || variables.fontColors.text}
+			noRender={['sm', 'xs']}
+			{...props}
+		/>
+	);
 });
-
-InputOptionListTitle.defaultProps = {
-	className: '',
-	style: {}
-};
 
 InputOptionListTitle.displayName = 'InputOptionListTitle';
 
 /**
  * InputOption
  */
-export const InputOption: React.FC<IInputOptionComponentProps> = withMooskinContext((props) => {
-	return <Text my={8} mx={15} fontSize={14} fontColor="fontColors.primary1" {...props} />;
+export const InputOption: React.FC<IInputOptionComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return (
+		<Text
+			py={[8, 8, 16, 16]}
+			px={[15, 15, 16, 16]}
+			fontSize={[14, 14, 20, 20]}
+			fontWeight={['unset', 'unset', 400, 400]}
+			justify={['unset', 'unset', 'center', 'center']}
+			fontColor="fontColors.primary1"
+			{...props}
+		/>
+	);
 });
-
-InputOption.defaultProps = {
-	className: '',
-	style: {}
-};
 
 InputOption.displayName = 'InputOption';
 
 /**
  * Input
  */
-export const Input: React.FC<IInputComponentProps> = withMooskinContext((props) => {
+export const Input: React.FC<IInputComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const InputComponent = props.wrapped ? StyledInputWrapped : StyledInputSolo;
 	return <InputComponent {...props} boxAs="input" />;
 });
-
-Input.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Input.displayName = 'Input';
 
 /**
  * InputIcon
  */
-export const InputIcon: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledInputIcon ml={5} {...props} />;
+export const InputIcon: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return (
+		<StyledInputIcon
+			fontFamily="Mooskin Icons"
+			fontSize="20px"
+			d="flex"
+			align="center"
+			fontColor={props.palette?.fontColors.text || variables.fontColors.text}
+			ml={5}
+			{...props}
+		/>
+	);
 });
-
-InputIcon.defaultProps = {
-	className: '',
-	style: {}
-};
 
 InputIcon.displayName = 'InputIcon';
 
 /**
  * InputOverlay
  */
-export const InputOverlay: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledInputOverlay {...props} className={`notranslate ${props.className}`} />;
+export const InputOverlay: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return (
+		<StyledInputOverlay
+			position="fixed"
+			top={0}
+			left={0}
+			right={0}
+			bottom={0}
+			zIndex={-1}
+			bgColor={['transparent', 'transparent', 'rgba(0, 0, 0, 0.48)', 'rgba(0, 0, 0, 0.48)']}
+			{...props}
+			className={`notranslate ${className}`}
+		/>
+	);
 });
-
-InputOverlay.defaultProps = {
-	className: '',
-	style: {}
-};
 
 InputOverlay.displayName = 'InputOverlay';
 
 /**
  * InputEmoji
  */
-export const InputEmoji: React.FC<IInputEmojiComponentProps> = withMooskinContext((props) => {
+export const InputEmoji: React.FC<IInputEmojiComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const [showEmoji, setShowEmoji] = React.useState(false);
 
 	const onChangeEmoji = (data: any) => {
@@ -230,10 +301,5 @@ export const InputEmoji: React.FC<IInputEmojiComponentProps> = withMooskinContex
 		</Box>
 	);
 });
-
-InputEmoji.defaultProps = {
-	className: '',
-	style: {}
-};
 
 InputEmoji.displayName = 'InputEmoji';

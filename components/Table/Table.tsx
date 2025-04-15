@@ -12,69 +12,44 @@ import { StyledTable, StyledTableHeader, StyledTableHeaderItem, StyledTableRow, 
 /**
  * Table
  */
-export const Table: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const Table: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTable {...props} />;
 });
-
-Table.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Table.displayName = 'Table';
 
 /**
  * TableHeader
  */
-export const TableHeader: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const TableHeader: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTableHeader {...props} />;
 });
-
-TableHeader.defaultProps = {
-	className: '',
-	style: {}
-};
 
 TableHeader.displayName = 'TableHeader';
 
 /**
  * TableHeaderItem
  */
-export const TableHeaderItem: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const TableHeaderItem: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTableHeaderItem {...props} />;
 });
-
-TableHeaderItem.defaultProps = {
-	className: '',
-	style: {}
-};
 
 TableHeaderItem.displayName = 'TableHeaderItem';
 
 /**
  * TableRow
  */
-export const TableRow: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const TableRow: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTableRow {...props} />;
 });
-
-TableRow.defaultProps = {
-	className: '',
-	style: {}
-};
 
 TableRow.displayName = 'TableRow';
 
 /**
  * TableRowItem
  */
-export const TableRowItem: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const TableRowItem: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTableRowItem {...props} />;
 });
-
-TableRowItem.defaultProps = {
-	className: '',
-	style: {}
-};
 
 TableRowItem.displayName = 'TableRowItem';

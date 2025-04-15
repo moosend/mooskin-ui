@@ -13,36 +13,31 @@ import { Screens } from '../_utils/globals/screens';
 /**
  * Box
  */
-export const Box: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	const [shouldRender, setShouldRender] = React.useState(true);
+export const Box: React.FC<IBoxComponentProps> = withMooskinContext(
+	React.memo(({ className = '', style = {}, transition = '0.2s all', noRender = [], setRef, boxAs, ...props }) => {
+		const [shouldRender, setShouldRender] = React.useState(checkShouldRender(noRender || []));
 
-	React.useEffect(() => {
-		if (props.noRender) {
-			setShouldRender(checkShouldRender(props.noRender));
+		React.useEffect(() => {
+			if (noRender) {
+				const onResize = () => {
+					if (noRender) setShouldRender(checkShouldRender(noRender));
+				};
 
-			let renderTimout: any;
+				window.addEventListener('resize', onResize);
 
-			const onResize = () => {
-				clearTimeout(renderTimout);
-				renderTimout = setTimeout(() => {
-					if (props.noRender) setShouldRender(checkShouldRender(props.noRender));
-				}, 100);
-			};
+				return () => {
+					window.removeEventListener('resize', onResize);
+				};
+			}
+		}, []);
 
-			window.addEventListener('resize', onResize);
-
-			return () => {
-				window.removeEventListener('resize', onResize);
-			};
+		if (shouldRender) {
+			return <StyledBox className={className} style={style} ref={(ref: HTMLElement) => setRef && setRef(ref)} {...props} as={boxAs} />;
 		}
-	}, []);
 
-	if (shouldRender) {
-		return <StyledBox ref={(ref: HTMLElement) => props.setRef && props.setRef(ref)} {...props} as={props.boxAs} />;
-	}
-
-	return null;
-});
+		return null;
+	})
+);
 
 const checkShouldRender = (noRender: Array<ScreenType>) => {
 	const width = window.innerWidth;
@@ -55,12 +50,6 @@ const checkShouldRender = (noRender: Array<ScreenType>) => {
 	if (found) return false;
 
 	return true;
-};
-
-Box.defaultProps = {
-	className: '',
-	style: {},
-	transition: '0.2s all'
 };
 
 Box.displayName = 'Box';

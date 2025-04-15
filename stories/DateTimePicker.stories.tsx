@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { DateTimePicker } from '../components/DateTimePicker/DateTimePicker';
 import { IDateTimePickerComponentProps } from '../components/DateTimePicker/model';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: DateTimePicker,
 	title: 'Example/DateTimePicker'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IDateTimePickerComponentProps> = (args) => {
 	const [date, setDate] = React.useState(new Date());
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<DateTimePicker {...args} value={date} onChange={(value: any) => setDate(value)} />
 		</>
 	);

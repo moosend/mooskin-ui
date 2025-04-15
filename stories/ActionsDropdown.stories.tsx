@@ -1,24 +1,23 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { ActionsDropdown, ActionsDropdownArrow, ActionsDropdownItem } from '../components/ActionsDropdown/ActionsDropdown';
 import { IActionsDropdownComponentProps } from '../components/ActionsDropdown/model';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
-// import GlobalStyle from '../components/Styled/GlobalStyles';
-import '../components/Styled/GlobalStyles.css';
+// import '../components/Styled/GlobalStyles';
+// import { GlobalStyle } from '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: ActionsDropdown,
 	title: 'Example/ActionsDropdown'
-} as any) as Meta;
+} as any as ComponentMeta<typeof ActionsDropdown>;
 
-const Template: Story<IActionsDropdownComponentProps> = (args) => {
+const Template: ComponentStory<typeof ActionsDropdown> = (args) => {
 	return (
 		<>
 			<ActionsDropdown {...args} onClickItem={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)} />
-			{/* <GlobalStyle /> */}
 		</>
 	);
 };
@@ -27,7 +26,7 @@ export const Normal = Template.bind({});
 Normal.args = {
 	children: (
 		<>
-			<ActionsDropdownItem dataLabel="settings" value="settings" onClick={() => alert('Random on Click!')}>
+			<ActionsDropdownItem className="LALALA" dataLabel="settings" value="settings" onClick={() => alert('Random on Click!')}>
 				Settings
 			</ActionsDropdownItem>
 			<ActionsDropdownItem dataLabel="duplicate" value="duplicate" onClick={(e) => console.log('Duplicate Clicked')}>

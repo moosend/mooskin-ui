@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { ISliderComponentProps } from '../components/Slider/model';
 import { Slider } from '../components/Slider/Slider';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Slider,
 	title: 'Example/Slider'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ISliderComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Slider {...args} />
 		</>
 	);

@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { IStepsComponentProps } from '../components/Steps/model';
 import { Step, StepContent, StepHeader, Steps } from '../components/Steps/Steps';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Steps,
 	title: 'Example/Steps'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IStepsComponentProps> = (args) => {
 	const [activeItem, setActiveItem] = React.useState(2);
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Steps activeItem={activeItem} {...args} onClickStep={(e: React.MouseEvent<HTMLElement>, value: number) => setActiveItem(value)} />
 		</>
 	);

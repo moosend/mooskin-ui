@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from '../components/Table/Table';
 
 import { IBoxComponentProps } from '../components/Box/model';
 import { Checkbox } from '../components/Checkbox/Checkbox';
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Table,
 	title: 'Example/Table'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IBoxComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Table {...args} />
 		</>
 	);

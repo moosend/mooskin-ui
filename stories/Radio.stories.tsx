@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { IRadioComponentProps } from '../components/Radio/model';
 import { Radio, RadioDescription, RadioIcon, RadioLabel } from '../components/Radio/Radio';
@@ -8,18 +8,18 @@ import { Radio, RadioDescription, RadioIcon, RadioLabel } from '../components/Ra
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 import { Box } from '../components/Box/Box';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Radio,
 	title: 'Example/Radio'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IRadioComponentProps> = (args) => {
 	const [value, setValue] = React.useState(false);
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Radio
 				selected={value}
 				{...args}

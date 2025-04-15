@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { ITabsComponentProps } from '../components/Tabs/model';
 import { Tab, TabContent, TabHeader, Tabs } from '../components/Tabs/Tabs';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Tabs,
 	title: 'Example/Tabs'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ITabsComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Tabs {...args} />
 		</>
 	);

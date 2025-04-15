@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../index';
@@ -10,15 +10,15 @@ import { Box } from '../Box/Box';
 // "CSS" variables
 import variables from '../_utils/globals/variables';
 
-const fadeIn = keyframes`
- 0% {
-	 opacity: 0;
-	 transform: translate(0, -20px);
- }
- 100% {
-	 opacity: 1;
-	 transform: translate(0);
- }
+const fadeIn = css`
+	0% {
+		opacity: 0;
+		transform: translate(0, -20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
 `;
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`
@@ -93,8 +93,8 @@ export const StyledActionsDropdownButtonClose = styled(Box)<IBoxComponentProps>`
 	width: auto;
 	height: 56px;
 	background-color: ${(props) => props.palette?.backgroundColors.dropdown || variables.backgroundColors.dropdown};
-	font-color: ${(props) => props.palette?.fontColors.dropdown || variables.fontColors.dropdown};
-	font-weight: 200;
+	color: ${(props) => props.palette?.fontColors.dropdown || variables.fontColors.dropdown};
+	font-weight: 400;
 	font-size: 20px;
 	padding: 16px;
 	text-align: center;

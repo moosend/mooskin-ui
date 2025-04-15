@@ -14,7 +14,7 @@ import { StyledTag, StyledTagClose, StyledTagInput, StyledTags, StyledTagText } 
 /**
  * Tags
  */
-export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) => {
+export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const [tagClose, setTagClose] = React.useState(false);
 
 	const batchClickHandler = (
@@ -51,9 +51,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 						<>
 							{recurseChildren(child.props.children, i)}
 							{/* <StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>} */}
-							{child.props.removeIcon && props.onRemoveTag && !tagClose && (
-								<TagClose onClick={(e) => onRemoveTag(e, i)}>highlight_off</TagClose>
-							)}
+							{child.props.removeIcon && props.onRemoveTag && !tagClose && <TagClose onClick={(e) => onRemoveTag(e, i)}>close</TagClose>}
 						</>
 					),
 					key: i,
@@ -64,7 +62,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 			if (React.isValidElement<IBoxComponentProps>(child) && child.type === TagClose) {
 				!tagClose && setTagClose(true);
 				return React.cloneElement(child, {
-					children: child.props.children ? child.props.children : 'highlight_off',
+					children: child.props.children ? child.props.children : 'close',
 					key: i,
 					onClick: child.props.onClick ? child.props.onClick : (e) => onRemoveTag(e, tagIndex ?? 0)
 				} as IBoxComponentProps);
@@ -88,131 +86,106 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext((props) =>
 	return <StyledTags {...props} children={recurseChildren(props.children)} />;
 });
 
-Tags.defaultProps = {
-	className: '',
-	style: {}
-};
-
 Tags.displayName = 'Tags';
 
 /**
  * Tag
  */
-export const Tag: React.FC<ITagComponentProps> = withMooskinContext((props) => {
-	return <StyledTag fontSize={[12, 12, 14, 14]} {...props} />;
+export const Tag: React.FC<ITagComponentProps> = withMooskinContext(({ className = '', removeIcon = true, style = {}, ...props }) => {
+	return <StyledTag {...props} />;
 });
-
-Tag.defaultProps = {
-	className: '',
-	removeIcon: true,
-	style: {}
-};
 
 Tag.displayName = 'Tag';
 
 /**
  * TagInput
  */
-export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext((props) => {
-	const [value, setValue] = React.useState(props.value || '');
+export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext(
+	({ className = '', delimiters = ['Enter', 13], style = {}, ...props }) => {
+		const [value, setValue] = React.useState(props.value || '');
 
-	const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const text = e.target.value;
+		const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+			const text = e.target.value;
 
-		const delimiters = props.delimiters;
+			const delimitersInternal = delimiters;
 
-		if (value && delimiters && shouldSubmitPaste(text, props.delimiters)) {
-			let newTag: string[] = [];
-			const tags: string[] = [];
+			if (value && delimitersInternal && shouldSubmitPaste(text, delimiters)) {
+				let newTag: string[] = [];
+				const tags: string[] = [];
 
-			const charArray = text.split('');
+				const charArray = text.split('');
 
-			for (let i = 0; i < charArray.length; i++) {
-				delimiters &&
-					delimiters.map((delimiter) => {
-						if (charArray[i] === delimiter && newTag.join('') !== '') {
-							tags.push(newTag.join('').trim());
-							newTag = [];
-						}
-					});
-				if (!delimiters.includes(charArray[i]) && !delimiters.includes(charArray[i].charCodeAt(0))) {
-					newTag.push(charArray[i]);
+				for (let i = 0; i < charArray.length; i++) {
+					delimitersInternal &&
+						delimitersInternal.map((delimiter) => {
+							if (charArray[i] === delimiter && newTag.join('') !== '') {
+								tags.push(newTag.join('').trim());
+								newTag = [];
+							}
+						});
+					if (!delimitersInternal.includes(charArray[i]) && !delimitersInternal.includes(charArray[i].charCodeAt(0))) {
+						newTag.push(charArray[i]);
+					}
+					if (i === charArray.length - 1 && newTag.join('') !== '' && !delimitersInternal.includes(charArray[i])) {
+						tags.push(newTag.join('').trim());
+					}
 				}
-				if (i === charArray.length - 1 && newTag.join('') !== '' && !delimiters.includes(charArray[i])) {
-					tags.push(newTag.join('').trim());
-				}
+
+				props.onAddTag && props.onAddTag(tags);
+				setValue('');
+			} else {
+				setValue(e.target.value);
 			}
 
-			props.onAddTag && props.onAddTag(tags);
-			setValue('');
-		} else {
-			setValue(e.target.value);
-		}
+			props.onChange && props.onChange(e);
+		};
 
-		props.onChange && props.onChange(e);
-	};
+		const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+			const delimitersInternal = delimiters && getConvertedDelimiters(delimiters);
 
-	const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-		const delimiters = props.delimiters && getConvertedDelimiters(props.delimiters);
+			const key = e.key;
+			const keyCode = e.keyCode;
 
-		const key = e.key;
-		const keyCode = e.keyCode;
+			if (value && delimitersInternal && (delimitersInternal.includes(key) || delimitersInternal.includes(keyCode))) {
+				e.preventDefault();
+				props.onAddTag && props.onAddTag(value.toString());
+				setValue('');
+			}
 
-		if (value && delimiters && (delimiters.includes(key) || delimiters.includes(keyCode))) {
-			e.preventDefault();
-			props.onAddTag && props.onAddTag(value.toString());
-			setValue('');
-		}
+			props.onKeyDown && props.onKeyDown(e);
+		};
 
-		props.onKeyDown && props.onKeyDown(e);
-	};
-
-	return (
-		<StyledTagInput
-			boxAs="input"
-			value={value}
-			onChange={onChange}
-			// onPaste={onPaste}
-			onKeyDown={onKeyDown}
-			autoFocus
-			{...props}
-		/>
-	);
-});
-
-TagInput.defaultProps = {
-	className: '',
-	delimiters: ['Enter', 13],
-	style: {}
-};
+		return (
+			<StyledTagInput
+				boxAs="input"
+				value={value}
+				onChange={onChange}
+				// onPaste={onPaste}
+				onKeyDown={onKeyDown}
+				autoFocus
+				{...props}
+			/>
+		);
+	}
+);
 
 TagInput.displayName = 'TagInput';
 
 /**
  * TagClose
  */
-export const TagClose: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const TagClose: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTagClose {...props} />;
 });
-
-TagClose.defaultProps = {
-	className: '',
-	style: {}
-};
 
 TagClose.displayName = 'TagClose';
 
 /**
  * TagText
  */
-export const TagText: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
+export const TagText: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTagText {...props} />;
 });
-
-TagText.defaultProps = {
-	className: '',
-	style: {}
-};
 
 TagText.displayName = 'TagText';
 
