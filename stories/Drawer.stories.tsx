@@ -47,6 +47,24 @@ Normal.args = {
 	onClose: () => alert('Close!')
 } as IDrawerComponentProps;
 
+export const Extra = Template.bind({});
+Extra.args = {
+	children: (
+		<DrawerOverlay onClick={() => console.log('Overlay Clicked!')}>
+			<DrawerContent>
+				<DrawerCloseButton position="absolute" top={10} right={10} />
+				<DrawerHeader>Create your account</DrawerHeader>
+
+				<DrawerBody>Drawer Extra Content Body</DrawerBody>
+
+				<DrawerFooter>Drawer Footer goes here!</DrawerFooter>
+			</DrawerContent>
+		</DrawerOverlay>
+	),
+	isOpen: true,
+	onClose: () => alert('Close!')
+} as IDrawerComponentProps;
+
 export const Large = Template.bind({});
 Large.args = {
 	children: (

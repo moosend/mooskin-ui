@@ -14,9 +14,8 @@ import { StyledTag, StyledTagClose, StyledTagInput, StyledTags, StyledTagText } 
 /**
  * Tags
  */
-export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ className = '', style = {}, dataLabel = '', ...props }) => {
 	const [tagClose, setTagClose] = React.useState(false);
-
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		data: IInputCallbackData,
@@ -28,7 +27,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ classNa
 
 	const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
 		e.stopPropagation();
-		props.onRemoveTag && props.onRemoveTag(e, { dataLabel: props.dataLabel, value: i });
+		props.onRemoveTag && props.onRemoveTag(e, i === -1 ? -1 : { dataLabel: dataLabel, value: i });
 	};
 
 	const onAddTag = (value: string) => {
@@ -36,7 +35,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ classNa
 		if (props.validateTag) {
 			validated = props.validateTag(value);
 		}
-		validated && props.onAddTag && props.onAddTag({ dataLabel: props.dataLabel, value });
+		validated && props.onAddTag && props.onAddTag({ dataLabel: dataLabel, value });
 	};
 
 	const recurseChildren = (children: any, tagIndex?: number): any => {
@@ -55,7 +54,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ classNa
 						</>
 					),
 					key: i,
-					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, { dataLabel: props.dataLabel, value: i }, child.props.onClick)
+					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, { dataLabel: dataLabel, value: i }, child.props.onClick)
 				} as ITagComponentProps);
 			}
 
@@ -83,7 +82,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ classNa
 		});
 	};
 
-	return <StyledTags {...props} children={recurseChildren(props.children)} />;
+	return <StyledTags dataLabel={dataLabel} {...props} children={recurseChildren(props.children)} />;
 });
 
 Tags.displayName = 'Tags';
@@ -92,7 +91,7 @@ Tags.displayName = 'Tags';
  * Tag
  */
 export const Tag: React.FC<ITagComponentProps> = withMooskinContext(({ className = '', removeIcon = true, style = {}, ...props }) => {
-	return <StyledTag {...props} />;
+	return <StyledTag className={className} removeIcon={removeIcon} style={style} {...props} />;
 });
 
 Tag.displayName = 'Tag';
@@ -103,7 +102,6 @@ Tag.displayName = 'Tag';
 export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext(
 	({ className = '', delimiters = ['Enter', 13], style = {}, ...props }) => {
 		const [value, setValue] = React.useState(props.value || '');
-
 		const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 			const text = e.target.value;
 
@@ -139,10 +137,13 @@ export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext(
 
 			props.onChange && props.onChange(e);
 		};
+		const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
+			e.stopPropagation();
+			props.onRemoveTag && props.onRemoveTag(e, i);
+		};
 
 		const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
 			const delimitersInternal = delimiters && getConvertedDelimiters(delimiters);
-
 			const key = e.key;
 			const keyCode = e.keyCode;
 
@@ -152,11 +153,19 @@ export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext(
 				setValue('');
 			}
 
+			if ((key === 'Backspace' || keyCode === 8) && value === '') {
+				const dummyEvent = { stopPropagation: () => {} } as React.MouseEvent<HTMLElement>;
+				onRemoveTag(dummyEvent, -1);
+			}
+
 			props.onKeyDown && props.onKeyDown(e);
 		};
 
 		return (
 			<StyledTagInput
+				className={className}
+				delimiters={delimiters}
+				style={style}
 				boxAs="input"
 				value={value}
 				onChange={onChange}
@@ -175,7 +184,7 @@ TagInput.displayName = 'TagInput';
  * TagClose
  */
 export const TagClose: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledTagClose {...props} />;
+	return <StyledTagClose className={className} style={style} {...props} />;
 });
 
 TagClose.displayName = 'TagClose';

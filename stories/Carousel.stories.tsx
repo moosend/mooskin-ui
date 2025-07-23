@@ -17,7 +17,7 @@ const Template: Story<ICarouselComponentProps> = (args) => {
 	return (
 		<>
 			{/*<GlobalStyle />*/}
-			<Carousel {...args} />
+			<Carousel slidesToScroll={3} slidesToShow={3} {...args} />
 		</>
 	);
 };

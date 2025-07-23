@@ -177,7 +177,11 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 			return value;
 		};
 
-		return <Label {...props}>{getContent()}</Label>;
+		return (
+			<Label className={className} style={style} {...props}>
+				{getContent()}
+			</Label>
+		);
 	}
 );
 NumberLabel.displayName = 'NumberLabel';

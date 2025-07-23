@@ -55,6 +55,7 @@ export const WithInput = Template.bind({});
 WithInput.args = {
 	border: '1px solid #5ccdde',
 	borderRadius: 3,
+	onRemoveTag: (e, data) => console.log(e, data),
 	children: (
 		<>
 			{[...Array(4)].map((item, i) => {
@@ -70,6 +71,6 @@ WithInput.args = {
 	),
 	onAddTag: (data) => console.log(data),
 	onClickTag: (e, data) => console.log(e, data),
-	onRemoveTag: (e, data) => console.log(e, data),
+	onKeyDown: (e) => console.log(e.key),
 	p: 5
 } as ITagsComponentProps;

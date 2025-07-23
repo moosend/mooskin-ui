@@ -35,6 +35,7 @@ const DrawerOverlayComponents = {
 	exiting: StyledDrawerOverlayFadeOut,
 	unmounted: null
 };
+import variables from '../_utils/globals/variables';
 
 const ContentByPosition = {
 	bottom: {
@@ -121,6 +122,24 @@ export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext(
 		};
 		return (
 			<StyledDrawer
+				position="relative"
+				w="100%"
+				maxW="100%"
+				maxH="100vh"
+				h="100vh"
+				d="flex"
+				direction="column"
+				zIndex={1400}
+				outline="0px"
+				opacity={1}
+				bgColor={props.palette?.backgroundColors.white || variables.backgroundColors.white}
+				fontColor={props.palette?.fontColors.text || variables.fontColors.text}
+				boxShadow="rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px"
+				className={className}
+				style={style}
+				closeOnOverlayClick={closeOnOverlayClick}
+				placement={placement}
+				size={size}
 				{...props}
 				onKeyDown={handleKeyDown}
 				setRef={(ref: HTMLElement) => (drawerRef.current = ref)}
@@ -145,7 +164,7 @@ export const DrawerContent: React.FC<IDrawerContentComponentProps> = withMooskin
 
 	const DrawerContentComponent = props.isOpen ? DrawerByPlacement.in : DrawerByPlacement.out;
 
-	return <DrawerContentComponent {...props} />;
+	return <DrawerContentComponent className={className} style={style} {...props} />;
 });
 
 DrawerContent.displayName = 'DrawerContent';
@@ -154,7 +173,7 @@ DrawerContent.displayName = 'DrawerContent';
  * DrawerHeader
  */
 export const DrawerHeader: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledDrawerHeader boxAs="header" {...props} />;
+	return <StyledDrawerHeader className={className} style={style} boxAs="header" {...props} />;
 });
 
 DrawerHeader.displayName = 'DrawerHeader';
@@ -163,7 +182,7 @@ DrawerHeader.displayName = 'DrawerHeader';
  * DrawerBody
  */
 export const DrawerBody: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledDrawerBody {...props} />;
+	return <StyledDrawerBody className={className} style={style} {...props} />;
 });
 
 DrawerBody.displayName = 'DrawerBody';
@@ -172,7 +191,7 @@ DrawerBody.displayName = 'DrawerBody';
  * DrawerFooter
  */
 export const DrawerFooter: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledDrawerFooter boxAs="footer" {...props} />;
+	return <StyledDrawerFooter className={className} style={style} boxAs="footer" {...props} />;
 });
 
 DrawerFooter.displayName = 'DrawerFooter';
@@ -181,7 +200,7 @@ DrawerFooter.displayName = 'DrawerFooter';
  * DrawerCloseButton
  */
 export const DrawerCloseButton: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledDrawerCloseButton {...props} children="close" className={`notranslate ${className}`} />;
+	return <StyledDrawerCloseButton style={style} {...props} children="close" className={`notranslate ${className}`} />;
 });
 
 DrawerCloseButton.displayName = 'DrawerCloseButton';
@@ -195,7 +214,7 @@ export const DrawerOverlay: React.FC<IDrawerOverlayComponentProps> = withMooskin
 			{(state) => {
 				const DrawerOverlayComponent = DrawerOverlayComponents[state];
 				if (DrawerOverlayComponent) {
-					return <DrawerOverlayComponent boxShadow="base" round="xs" {...props} />;
+					return <DrawerOverlayComponent boxShadow="base" round="xs" className={className} style={style} {...props} />;
 				}
 				return null;
 			}}

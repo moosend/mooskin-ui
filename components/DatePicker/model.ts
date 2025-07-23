@@ -2,7 +2,7 @@ import { DatePickerProps } from '@mui/x-date-pickers/DatePicker';
 import { IInputComponentProps } from '../Input/model';
 import { TextFieldProps } from '@mui/material/TextField';
 import dayjs from 'dayjs';
-export type PickerType = 'date' | 'date-keyboard';
+export type PickerType = 'date';
 
 export interface IDatePickerCommonProps {
 	value: dayjs.Dayjs | null;

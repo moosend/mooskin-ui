@@ -10,7 +10,7 @@ export interface ITagsComponentProps extends IBoxComponentProps {
 
 	onAddTag?: (data: IInputCallbackData) => void;
 
-	onRemoveTag?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
+	onRemoveTag?: (e: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>, data: number | IInputCallbackData) => void;
 
 	onClickTag?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 
@@ -27,4 +27,8 @@ export interface ITagsInputComponentProps extends IInputBoxComponentProps {
 	delimiters?: Array<string | number>;
 
 	onAddTag?: (value: string | string[]) => void;
+
+	onRemoveTag?: (e: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement>, data: number | IInputCallbackData) => void;
+
+	onClickTag?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void;
 }

@@ -16,7 +16,9 @@ const Template: Story<IBoxComponentProps> = (args) => {
 	return (
 		<>
 			{/*<GlobalStyle />*/}
-			<Box {...args} noRender={['sm', 'xs']} />
+			<Box {...args} noRender={[]} />
+			<Box {...args} noRender={[]} />
+			<Box {...args} noRender={[]} />
 		</>
 	);
 };

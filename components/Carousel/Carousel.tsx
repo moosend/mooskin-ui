@@ -37,7 +37,16 @@ export const Carousel: React.FC<ICarouselComponentProps> = ({
 	...props
 }) => {
 	const renderCustomDot = () => (props.customDot ? props.customDot : <StyledDot />);
-	return <StyledCarousel opacity={1} customPaging={renderCustomDot} {...props} />;
+	return (
+		<StyledCarousel
+			opacity={1}
+			slidesToScroll={slidesToScroll}
+			dots={dots}
+			slidesToShow={slidesToShow}
+			customPaging={renderCustomDot}
+			{...props}
+		/>
+	);
 };
 
 Carousel.displayName = 'Carousel';

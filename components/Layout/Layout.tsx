@@ -15,6 +15,9 @@ import { StyledLayout } from './styles';
 export const Layout: React.FC<ILayoutComponentProps> = withMooskinContext(({ className = '', spacing = 15, style = {}, ...props }) => {
 	return (
 		<StyledLayout
+			className={className}
+			spacing={spacing}
+			style={style}
 			d="grid"
 			column-gap={`${spacing}px`}
 			row-gap={`${spacing}px`}

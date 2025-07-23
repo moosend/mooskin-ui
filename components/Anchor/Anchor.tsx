@@ -12,7 +12,7 @@ import variables from '../_utils/globals/variables';
 /**
  * Anchor
  */
-export const Anchor: React.FC<IAnchorComponentProps> = withMooskinContext(({ className = '', style = {}, target = '_blank', ...props }) => {
+export const Anchor: React.FC<IAnchorComponentProps> = withMooskinContext(({ className = '', style = {}, target = '', ...props }) => {
 	const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		props.disabled && e.preventDefault();
 		!props.disabled && props.onClick && props.onClick(e);
@@ -23,6 +23,7 @@ export const Anchor: React.FC<IAnchorComponentProps> = withMooskinContext(({ cla
 			outline={0}
 			fontSize="12px"
 			textDecoration="underline"
+			target={target}
 			opacity={props.disabled ? 0.5 : 1}
 			color={props.palette?.fontColors.secondary2 || variables.fontColors.secondary2}
 			{...props}

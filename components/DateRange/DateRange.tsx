@@ -54,9 +54,9 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinCo
 				{showPicker && (
 					<StyledDateRange boxShadow="md" {...props.pickerWrapperProps} palette={(props as any).palette}>
 						{React.createElement(DateRangePicker as React.ComponentType<any>, {
+							...props,
 							ranges: props.ranges,
-							onChange: props.onChange,
-							...props
+							onChange: props.onChange
 						})}
 						<DateRangeOverlay onClick={() => setShowPicker(false)} />
 					</StyledDateRange>
@@ -72,7 +72,7 @@ DateRange.displayName = 'DateRange';
  * DateRangeOverlay
  */
 const DateRangeOverlay: React.FC<IBoxComponentProps> = ({ className = '', style = {}, ...props }) => {
-	return <Box position="fixed" top={0} left={0} right={0} bottom={0} zIndex={9999} {...props} />;
+	return <Box position="fixed" top={0} left={0} right={0} bottom={0} zIndex={-1} {...props} />;
 };
 
 DateRangeOverlay.displayName = 'DateRangeOverlay';
