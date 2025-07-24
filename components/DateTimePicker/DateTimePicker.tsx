@@ -56,6 +56,7 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 						onClose={closePicker}
 						{...restProps}
 						inputFormat={format}
+						dayOfWeekFormatter={(d) => d.slice(0, 2)}
 						renderInput={renderInput}
 						onChange={(value) => {
 							// Call original onChange with just the value if it exists
