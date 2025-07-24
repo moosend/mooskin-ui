@@ -8,7 +8,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { TextField } from '@mui/material';
 
 // Models
-import { IDatePickerComponentProps, IDatePickerKeyboardComponentProps, PickerType } from './model';
+import { IDatePickerComponentProps, IDatePickerKeyboardComponentProps } from './model';
 
 // Custom
 import { Input } from '../Input/Input';
@@ -16,18 +16,13 @@ import { withMooskinContext } from '../index';
 import variables from '../_utils/globals/variables';
 import { getOverridesForPicker } from '../_utils/helper';
 
-const ComponentByType = {
-	date: DatePickerUI
-};
-
 export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboardComponentProps> = withMooskinContext((props) => {
-	const { inputProps, pickerType = 'date', format = 'dd/MM/yyyy', ...restProps } = props;
+	const { inputProps, format = 'dd/MM/yyyy', ...restProps } = props;
 	const [isPickerOpen, setIsPickerOpen] = React.useState(false);
 
 	const openPicker = () => setIsPickerOpen(true);
 	const closePicker = () => setIsPickerOpen(false);
 	const materialTheme = createTheme(getOverridesForPicker((props as any).palette, variables));
-	const PickerComponent = ComponentByType[pickerType as PickerType];
 
 	const renderInput = (params: any) =>
 		inputProps ? (
@@ -57,16 +52,19 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 		);
 
 	return (
-		<LocalizationProvider dateAdapter={AdapterDateFns}>
+		<LocalizationProvider
+			dateAdapter={AdapterDateFns}
+			adapterLocale={props.locale}
+		>
 			<ThemeProvider theme={materialTheme}>
-				<PickerComponent
+				<DatePickerUI
 					open={isPickerOpen}
 					onOpen={openPicker}
 					onClose={closePicker}
 					{...restProps}
 					inputFormat={format}
 					renderInput={renderInput}
-					onChange={(value, keyboardInputValue) => {
+					onChange={(value) => {
 						// Call original onChange with just the value if it exists
 						props.onChange?.(value);
 					}}

@@ -1,12 +1,9 @@
 import * as React from 'react';
 
-// Date-FNS
-
 // Models
 import { IDateTimePickerComponentProps, IDateTimePickerKeyboardComponentProps } from './model';
 
 // Material-UI Date Time Picker
-//import { DateTimePicker as DateTimePickerUI, KeyboardDateTimePicker, MuiPickersUtilsProvider } from '@mui/x-date-pickers';
 import { DateTimePicker as DateTimePickerUI } from '@mui/x-date-pickers/DateTimePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
@@ -15,7 +12,6 @@ import { FilledTextFieldProps, OutlinedTextFieldProps, StandardTextFieldProps, T
 import createTheme from '@mui/material/styles/createTheme';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 import variables from '../_utils/globals/variables';
-// import { Input } from '../Input/Input';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 import { getOverridesForPicker } from '../_utils/helper';
 
@@ -48,12 +44,11 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 			/>
 		);
 
-		//const type: PickerType = pickerType ? pickerType : 'date-time';
-
-		//const PickerComponent = ComponentByType[type];
-
 		return (
-			<LocalizationProvider dateAdapter={AdapterDateFns}>
+			<LocalizationProvider
+				dateAdapter={AdapterDateFns}
+				adapterLocale={props.locale}
+			>
 				<ThemeProvider theme={materialTheme}>
 					<DateTimePickerUI
 						open={isPickerOpen}
@@ -62,7 +57,7 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 						{...restProps}
 						inputFormat={format}
 						renderInput={renderInput}
-						onChange={(value, keyboardInputValue) => {
+						onChange={(value) => {
 							// Call original onChange with just the value if it exists
 							props.onChange?.(value);
 						}}

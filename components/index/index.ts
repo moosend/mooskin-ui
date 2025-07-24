@@ -93,13 +93,11 @@ export {
 	IDatePickerCommonProps,
 	IDatePickerComponentProps,
 	IDatePickerKeyboardComponentProps,
-	PickerType as DatePickerType
 } from '../DatePicker/model';
 export {
 	IDateTimePickerCommonProps,
 	IDateTimePickerComponentProps,
 	IDateTimePickerKeyboardComponentProps,
-	PickerType as DateTimePickerType
 } from '../DateTimePicker/model';
 export { IDateRangePickerComponentProps, IRangeSelection } from '../DateRange/model';
 export { IDateSelectComponentProps } from '../DateSelect/model';

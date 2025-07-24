@@ -1,11 +1,8 @@
 import { DateTimePickerProps } from '@mui/x-date-pickers/DateTimePicker';
 import { IInputComponentProps } from '../Input/model';
 
-export type PickerType = 'date-time' | 'date-time-keyboard';
-
 export interface IDateTimePickerCommonProps {
 	inputComponentProps?: IInputComponentProps;
-	pickerType?: PickerType;
 	ampm?: boolean;
 	format?: string;
 }
