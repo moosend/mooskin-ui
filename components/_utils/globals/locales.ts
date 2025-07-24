@@ -1,6 +1,6 @@
 import { enUS, el, fr, ptBR, de, ja, es } from 'date-fns/locale';
 
-export const SupportedLocale = {
+export const SupportedLanguages = {
 	English: 'en',
 	Greek: 'el',
 	French: 'fr',
@@ -10,16 +10,16 @@ export const SupportedLocale = {
 	Spanish: 'es',
 } as const;
 
-export type SupportedLocales = (typeof SupportedLocale)[keyof typeof SupportedLocale];
+export type ISupportedLanguage = (typeof SupportedLanguages)[keyof typeof SupportedLanguages];
 
-export const SupportedLocaleValues = Object.values(SupportedLocale);
+export const SupportedLanguageValues = Object.values(SupportedLanguages);
 
-export const LocaleByLanguage = {
-	[SupportedLocale.English]: enUS,
-	[SupportedLocale.Greek]: el,
-	[SupportedLocale.French]: fr,
-	[SupportedLocale.German]: de,
-	[SupportedLocale.Japanese]: ja,
-	[SupportedLocale.Brazilian]: ptBR,
-	[SupportedLocale.Spanish]: es,
+export const LocaleBySupportedLanguage = {
+	[SupportedLanguages.English]: enUS,
+	[SupportedLanguages.Greek]: el,
+	[SupportedLanguages.French]: fr,
+	[SupportedLanguages.German]: de,
+	[SupportedLanguages.Japanese]: ja,
+	[SupportedLanguages.Brazilian]: ptBR,
+	[SupportedLanguages.Spanish]: es,
 } as const;
