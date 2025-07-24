@@ -93,13 +93,11 @@ export {
 	IDatePickerCommonProps,
 	IDatePickerComponentProps,
 	IDatePickerKeyboardComponentProps,
-	PickerType as DatePickerType
 } from '../DatePicker/model';
 export {
 	IDateTimePickerCommonProps,
 	IDateTimePickerComponentProps,
 	IDateTimePickerKeyboardComponentProps,
-	PickerType as DateTimePickerType
 } from '../DateTimePicker/model';
 export { IDateRangePickerComponentProps, IRangeSelection } from '../DateRange/model';
 export { IDateSelectComponentProps } from '../DateSelect/model';
@@ -145,8 +143,9 @@ export { ISliderComponentProps } from '../Slider/model';
 export { GlobalStyle } from '../Styled/GlobalStyles';
 import '../Styled/GlobalStyles.css';
 
+// Utils
 export { default as IInputCallbackData } from '../_utils';
-
 export { default as screens } from '../_utils/globals/screens';
+export * from '../_utils/globals/locales';
 export { Screens } from '../_utils/globals/screens';
 export { default as variables } from '../_utils/globals/variables';

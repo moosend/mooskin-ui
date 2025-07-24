@@ -1,3 +1,6 @@
+import { Locale } from 'date-fns';
+import { ISupportedLanguage } from '../_utils/globals/locales';
+
 export interface IThemeFontColors {
 	primary1: string;
 	primary2: string;
@@ -190,5 +193,7 @@ export interface IStyledTheme {
 }
 
 export interface IMooskinContext {
+	locale?: Locale;
+	setLocale?: (locale: ISupportedLanguage) => void;
 	palette?: IStyledTheme;
 }
