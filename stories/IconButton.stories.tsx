@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { IconButton } from '../components/IconButton/IconButton';
 import { IIconButtonComponentProps } from '../components/IconButton/model';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: IconButton,
 	title: 'Example/IconButton'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IIconButtonComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<IconButton {...args} />
 		</>
 	);

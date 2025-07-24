@@ -12,7 +12,7 @@ import { StyledSwitch, StyledSwitchHandle, StyledSwitchLabelDisabled, StyledSwit
 /**
  * Switch
  */
-export const Switch: React.FC<ISwitchComponentProps> = withMooskinContext((props) => {
+export const Switch: React.FC<ISwitchComponentProps> = withMooskinContext(({ className = '', style = {}, w = 90, ...props }) => {
 	const [hasHandle, setHasHandle] = React.useState(false);
 
 	const renderDisabledContent = () => {
@@ -36,7 +36,7 @@ export const Switch: React.FC<ISwitchComponentProps> = withMooskinContext((props
 						active: props.active,
 						children: recurseChildren((child.props as any).children),
 						key: i,
-						switchWidth: props.w
+						switchWidth: w
 					} as ISwitchHandleComponentProps);
 				}
 				return null;
@@ -51,29 +51,18 @@ export const Switch: React.FC<ISwitchComponentProps> = withMooskinContext((props
 	};
 
 	return (
-		<StyledSwitch {...props} onClick={onClick}>
-			{!hasHandle && !props.disabled && <SwitchHandle active={props.active} switchWidth={props.w} />}
+		<StyledSwitch w={w} className={className} style={style} {...props} onClick={onClick}>
+			{!hasHandle && !props.disabled && <SwitchHandle active={props.active} switchWidth={w} />}
 			{props.disabled ? renderDisabledContent() : renderSwitchContent()}
 			{recurseChildren(props.children)}
 		</StyledSwitch>
 	);
 });
 
-Switch.defaultProps = {
-	className: '',
-	style: {},
-	w: 90
-};
-
 Switch.displayName = 'Switch';
 
-export const SwitchHandle: React.FC<ISwitchHandleComponentProps> = withMooskinContext((props) => {
-	return <StyledSwitchHandle {...props} />;
+export const SwitchHandle: React.FC<ISwitchHandleComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return <StyledSwitchHandle className={className} style={style} {...props} />;
 });
-
-SwitchHandle.defaultProps = {
-	className: '',
-	style: {}
-};
 
 SwitchHandle.displayName = 'SwitchHandle';

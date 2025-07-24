@@ -103,7 +103,7 @@ export {
 } from '../DateTimePicker/model';
 export { IDateRangePickerComponentProps, IRangeSelection } from '../DateRange/model';
 export { IDateSelectComponentProps } from '../DateSelect/model';
-export type { ILabelComponentProps } from '../Label/model';
+export type { ILabelComponentProps } from '../Label/Model';
 export { IDrawerComponentProps, IDrawerContentComponentProps, IDrawerOverlayComponentProps } from '../Drawer/model';
 export { IExpandableCommonComponentProps, IExpandableComponentProps, IExpandableItemComponentProps } from '../Expandable/model';
 export { IColProps, IGridProps, IRowProps } from '../Grid/model';

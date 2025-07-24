@@ -86,10 +86,10 @@ export const getBoxShadow = (boxShadow?: React.CSSProperties['boxShadow'] | BoxS
 
 const getMediaQueryString = (media: string, property: string, value?: number | string) => {
 	return `
-        @media ${media} {
-            ${property}: ${value};
-        }
-    `;
+		@media ${media} {
+			${property}: ${value};
+		}
+	`;
 };
 
 const generateStyles = (data: { property: string; value?: number | string | any[]; processedValue?: boolean; palette?: IStyledTheme }) => {
@@ -125,7 +125,6 @@ const generateStyles = (data: { property: string; value?: number | string | any[
 	} else {
 		largeValue = processedValue ? getNumberOrStringValue(value) : palette ? getNestedValue(value, palette) : value;
 	}
-
 	return `
 		${property}: ${largeValue};
 		${media}
@@ -134,7 +133,6 @@ const generateStyles = (data: { property: string; value?: number | string | any[
 
 export const StyledBox = styled.div<IBoxComponentProps>`
 	&&& {
-
 		${(props) => generateStyles({ property: 'all', value: props.all })}
 
 		${(props) => generateStyles({ property: 'margin', value: props.m, processedValue: true })}
@@ -187,7 +185,6 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		${(props) => generateStyles({ property: 'justify-items', value: props.justifySelf })}
 		${(props) => generateStyles({ property: 'justify-self', value: props.justifySelf })}
 		${(props) => generateStyles({ property: 'flex-wrap', value: props.flexWrap })}
-		${(props) => generateStyles({ property: 'overflow-y', value: props.overflowY })}
 		${(props) => generateStyles({ property: 'flex-direction', value: props.direction })}
 		${(props) => generateStyles({ property: 'flex', value: props.flex })}
 		${(props) => generateStyles({ property: 'flex-grow', value: props.flexGrow })}
@@ -268,7 +265,7 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		::-webkit-scrollbar {
 			width: 14px;
 		}
-		
+
 		::-webkit-scrollbar-thumb {
 			border: 4px solid rgba(0, 0, 0, 0);
 			background-clip: padding-box;

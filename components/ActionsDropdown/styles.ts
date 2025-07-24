@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../index';
@@ -10,15 +10,15 @@ import { Box } from '../Box/Box';
 // "CSS" variables
 import variables from '../_utils/globals/variables';
 
-const fadeIn = keyframes`
- 0% {
-	 opacity: 0;
-	 transform: translate(0, -20px);
- }
- 100% {
-	 opacity: 1;
-	 transform: translate(0);
- }
+const fadeIn = css`
+	0% {
+		opacity: 0;
+		transform: translate(0, -20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
 `;
 
 export const StyledActionsDropdown = styled(Box)<IActionsDropdownComponentProps>`

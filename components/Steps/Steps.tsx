@@ -15,7 +15,7 @@ import { StyledStep, StyledStepArrow, StyledStepContent, StyledStepHeader, Style
 /**
  * Steps
  */
-export const Steps: React.FC<IStepsComponentProps> = withMooskinContext((props) => {
+export const Steps: React.FC<IStepsComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		activeId?: string | number,
@@ -88,65 +88,40 @@ export const Steps: React.FC<IStepsComponentProps> = withMooskinContext((props) 
 	return <StyledSteps {...props} children={recurseChildren(props.children)} />;
 });
 
-Steps.defaultProps = {
-	className: '',
-	style: {}
-};
-
 Steps.displayName = 'Steps';
 
 /**
  * Step
  */
-export const Step: React.FC<IStepComponentProps> = withMooskinContext((props) => {
+export const Step: React.FC<IStepComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledStep {...props} />;
 });
-
-Step.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Step.displayName = 'Step';
 
 /**
  * StepHeader
  */
-export const StepHeader: React.FC<IStepHeaderComponentProps> = withMooskinContext((props) => {
+export const StepHeader: React.FC<IStepHeaderComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledStepHeader {...props} />;
 });
-
-StepHeader.defaultProps = {
-	className: '',
-	style: {}
-};
 
 StepHeader.displayName = 'StepHeader';
 
 /**
  * StepContent
  */
-export const StepContent: React.FC<IStepCommonComponentProps> = withMooskinContext((props) => {
+export const StepContent: React.FC<IStepCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledStepContent {...props} />;
 });
-
-StepContent.defaultProps = {
-	className: '',
-	style: {}
-};
 
 StepContent.displayName = 'StepContent';
 
 /**
  * StepArrow
  */
-const StepArrow: React.FC<IStepCommonComponentProps> = withMooskinContext((props) => {
+const StepArrow: React.FC<IStepCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledStepArrow {...props} />;
 });
-
-StepArrow.defaultProps = {
-	className: '',
-	style: {}
-};
 
 StepArrow.displayName = 'StepArrow';

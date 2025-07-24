@@ -6,4 +6,5 @@ export interface IButtonComponentProps extends IButtonBoxComponentProps {
 
 	/** Button size */
 	buttonSize?: 'lg' | 'md' | 'sm';
+	name?: string | undefined;
 }

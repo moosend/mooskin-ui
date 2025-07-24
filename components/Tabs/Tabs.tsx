@@ -16,7 +16,7 @@ import { StyledTab, StyledTabContent, StyledTabHeader, StyledTabs } from './styl
 /**
  * Tabs
  */
-export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext((props) => {
+export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		activeId?: string | number,
@@ -81,51 +81,31 @@ export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext((props) =>
 	return <StyledTabs {...props} children={recurseChildren(props.children)} />;
 });
 
-Tabs.defaultProps = {
-	className: '',
-	style: {}
-};
-
 Tabs.displayName = 'Tabs';
 
 /**
  * Tab
  */
-export const Tab: React.FC<ITabComponentProps> = withMooskinContext((props) => {
+export const Tab: React.FC<ITabComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTab {...props} />;
 });
-
-Tab.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Tab.displayName = 'Tab';
 
 /**
  * TabHeader
  */
-export const TabHeader: React.FC<ITabCommonComponentProps> = withMooskinContext((props) => {
+export const TabHeader: React.FC<ITabCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTabHeader fontSize={[12, 12, 14, 14]} {...props} />;
 });
-
-TabHeader.defaultProps = {
-	className: '',
-	style: {}
-};
 
 TabHeader.displayName = 'TabHeader';
 
 /**
  * TabContent
  */
-export const TabContent: React.FC<ITabCommonComponentProps> = withMooskinContext((props) => {
+export const TabContent: React.FC<ITabCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledTabContent {...props} />;
 });
-
-TabContent.defaultProps = {
-	className: '',
-	style: {}
-};
 
 TabContent.displayName = 'TabContent';

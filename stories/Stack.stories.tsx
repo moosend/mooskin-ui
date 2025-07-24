@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { IStackComponentProps } from '../components/Stack/model';
 import { HStack, VStack } from '../components/Stack/Stack';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: HStack,
 	title: 'Example/Stack'
-} as any) as Meta;
+} as any as Meta;
 
 const HTemplate: Story<IStackComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<HStack {...args} />
 		</>
 	);
@@ -24,7 +24,7 @@ const HTemplate: Story<IStackComponentProps> = (args) => {
 const VTemplate: Story<IStackComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<VStack {...args} />
 		</>
 	);

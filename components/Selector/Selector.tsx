@@ -12,7 +12,7 @@ import { StyledSelector, StyledSelectorItem } from './styles';
 /**
  * Selector
  */
-export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext((props) => {
+export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		value?: string | number,
@@ -44,19 +44,9 @@ export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext((p
 	return <StyledSelector {...props} children={recurseChildren(props.children)} />;
 });
 
-Selector.defaultProps = {
-	className: '',
-	style: {}
-};
-
 /**
  * SelectorItem
  */
-export const SelectorItem: React.FC<ISelectorItemComponentProps> = withMooskinContext((props) => {
+export const SelectorItem: React.FC<ISelectorItemComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	return <StyledSelectorItem {...props} />;
 });
-
-SelectorItem.defaultProps = {
-	className: '',
-	style: {}
-};

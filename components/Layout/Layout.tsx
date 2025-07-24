@@ -12,14 +12,19 @@ import { StyledLayout } from './styles';
 /**
  * Layout
  */
-export const Layout: React.FC<ILayoutComponentProps> = withMooskinContext((props) => {
-	return <StyledLayout {...props} />;
+export const Layout: React.FC<ILayoutComponentProps> = withMooskinContext(({ className = '', spacing = 15, style = {}, ...props }) => {
+	return (
+		<StyledLayout
+			className={className}
+			spacing={spacing}
+			style={style}
+			d="grid"
+			column-gap={`${spacing}px`}
+			row-gap={`${spacing}px`}
+			template-columns={props.cols && `repeat(${props.cols}, 1fr)`}
+			{...props}
+		/>
+	);
 });
-
-Layout.defaultProps = {
-	className: '',
-	spacing: 15,
-	style: {}
-};
 
 Layout.displayName = 'Layout';

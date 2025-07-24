@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { ISwitchComponentProps } from '../components/Switch/model';
 import { Switch, SwitchHandle } from '../components/Switch/Switch';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Switch,
 	title: 'Example/Switch'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ISwitchComponentProps> = (args) => {
 	const [status, setStatus] = React.useState(false);
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Switch active={status} {...args} onClickSwitch={(e, data) => setStatus(data.value)} text={status ? 'Active' : 'Inactive'} />
 		</>
 	);

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // Models
 import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from './model';
@@ -8,15 +8,15 @@ import { Box } from '../Box/Box';
 
 // import variables from '../_utils/globals/variables';
 
-const breatheAnimation = (startColor?: string, endColor?: string) => keyframes`
-    0% {
-        border-color: ${startColor || '#EDF2F7'};
-        background-color: ${startColor || '#EDF2F7'};
-    }
-    100% {
-        border-color: ${endColor || '#A0AEC0'};
-        background-color: ${endColor || '#A0AEC0'};
-    }
+const breatheAnimation = (startColor?: string, endColor?: string) => css`
+	0% {
+		border-color: ${startColor || '#EDF2F7'};
+		background-color: ${startColor || '#EDF2F7'};
+	}
+	100% {
+		border-color: ${endColor || '#A0AEC0'};
+		background-color: ${endColor || '#A0AEC0'};
+	}
 `;
 
 export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
@@ -38,7 +38,7 @@ export const StyledCommonSkeleton = styled(Box)<ICommonSkeletonComponentProps>`
 	pointer-events: none;
 	user-select: none;
 	* {
-		visibility: ${(props) => (props.isLoaded ? 'visible' : 'hidden')};
+		visibility: ${(props) => (props.isLoaded ? 'visible' : 'visible')};
 	}
 `;
 

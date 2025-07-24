@@ -12,7 +12,7 @@ import { StyledText } from './styles';
 /**
  * Text
  */
-export const Text: React.FC<ITextComponentProps> = withMooskinContext((props) => {
+export const Text: React.FC<ITextComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const children =
 		props.limit && typeof props.children === 'string'
 			? props.children && props.children.length > props.limit
@@ -21,10 +21,5 @@ export const Text: React.FC<ITextComponentProps> = withMooskinContext((props) =>
 			: props.children;
 	return <StyledText {...props} children={children} />;
 });
-
-Text.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Text.displayName = 'Text';

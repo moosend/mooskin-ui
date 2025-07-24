@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { ISkeletonCircleComponentProps, ICommonSkeletonComponentProps, ISkeletonTextComponentProps } from '../components/Skeleton/model';
 import { Skeleton, SkeletonCircle, SkeletonText } from '../components/Skeleton/Skeleton';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Skeleton,
 	title: 'Example/Skeleton'
-} as any) as Meta;
+} as any as Meta;
 
 const SkeletonTemplate: Story<ICommonSkeletonComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Skeleton {...args} />
 		</>
 	);
@@ -24,7 +24,7 @@ const SkeletonTemplate: Story<ICommonSkeletonComponentProps> = (args) => {
 const CircleTemplate: Story<ISkeletonCircleComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<SkeletonCircle {...args} />
 		</>
 	);
@@ -33,7 +33,7 @@ const CircleTemplate: Story<ISkeletonCircleComponentProps> = (args) => {
 const TextTemplate: Story<ISkeletonTextComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<SkeletonText {...args} />
 		</>
 	);
@@ -53,11 +53,20 @@ NormalSkeleton.args = {
 			<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
 		</div>
 	),
+	isLoaded: false,
 	spacing: 20
 } as ICommonSkeletonComponentProps;
 
 export const CircleSkeleton = CircleTemplate.bind({});
 CircleSkeleton.args = {
+	children: (
+		<div style={{ display: 'flex' }}>
+			<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />
+			<div key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />
+			<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+		</div>
+	),
+	isLoaded: true,
 	size: '40px'
 } as ISkeletonCircleComponentProps;
 

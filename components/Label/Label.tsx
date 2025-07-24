@@ -4,15 +4,15 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ILabelComponentProps } from './model';
+import { ILabelComponentProps } from './Model';
 
 // Styled Components
 import { StyledLabel } from './styles';
-
+import variables from '../_utils/globals/variables';
 /**
  * Label
  */
-export const Label: React.FC<ILabelComponentProps> = withMooskinContext((props) => {
+export const Label: React.FC<ILabelComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const onClick = (e: React.MouseEvent<HTMLLabelElement>) => {
 		!props.disabled && props.onClick && props.onClick(e);
 	};
@@ -25,13 +25,18 @@ export const Label: React.FC<ILabelComponentProps> = withMooskinContext((props) 
 			: props.children;
 
 	return (
-		<StyledLabel fontSize={[14, 14, 16, 16]} {...props} onClick={props.onClick ? onClick : undefined} children={children} boxAs="label" />
+		<StyledLabel
+			fontWeight={500}
+			d="flex"
+			fontColor={props.palette?.fontColors.text || variables.fontColors.text}
+			cursor={!props.disabled ? (props.onClick ? 'pointer' : 'unset') : 'not-allowed'}
+			fontSize={[14, 14, 16, 16]}
+			{...props}
+			onClick={props.onClick ? onClick : undefined}
+			children={children}
+			boxAs="label"
+		/>
 	);
 });
-
-Label.defaultProps = {
-	className: '',
-	style: {}
-};
 
 Label.displayName = 'Label';

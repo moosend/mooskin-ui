@@ -6,7 +6,7 @@ import RoundIcons from '../../assets/mooskin-icons/round.woff2';
 import SharpIcons from '../../assets/mooskin-icons/sharp.woff2';
 import TwoToneIcons from '../../assets/mooskin-icons/two-tone.woff2';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle<any>`
     /* Global Styles */
     * {
         box-sizing: border-box;
@@ -49,5 +49,3 @@ export const GlobalStyle = createGlobalStyle`
         src: url(${TwoToneIcons}) format('woff2');
     }
 `;
-
-export default GlobalStyle;

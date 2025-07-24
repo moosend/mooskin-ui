@@ -32,7 +32,7 @@ const DropdownComponents = {
 /**
  * ActionsDropdown
  */
-export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMooskinContext((props) => {
+export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const [hasArrow, setHasArrow] = React.useState(false);
 
 	const batchClickHandler = (
@@ -112,7 +112,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 								bottom={['unset', 'unset', '10px', '10px']}
 								left={['unset', 'unset', '10px', '10px']}
 								right={['unset', 'unset', '10px', '10px']}
-								onClick={(e) => props.onClose && props.onClose(e)}
+								onClick={(e: React.MouseEvent<HTMLElement, MouseEvent>) => props.onClose && props.onClose}
 							>
 								Close
 							</StyledActionsDropdownButtonClose>
@@ -125,45 +125,33 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 	);
 });
 
-ActionsDropdown.defaultProps = {
-	className: '',
-	style: {}
-};
-
 ActionsDropdown.displayName = 'ActionsDropdown';
 
 /**
  * ActionsDropdownItem
  */
-export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = withMooskinContext((props) => {
-	return (
-		<StyledActionsDropdownItem
-			textAlign={['unset', 'unset', 'center', 'center']}
-			p={['', '', '16px 16px 16px', '16px 16px 16px']}
-			fontSize={['12px', '12px', '20px', '20px']}
-			fontWeight={['bold', 'bold', 400, 400]}
-			{...props}
-		/>
-	);
-});
-
-ActionsDropdownItem.defaultProps = {
-	className: '',
-	style: {}
-};
+export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = withMooskinContext(
+	({ className = '', style = {}, ...props }) => {
+		return (
+			<StyledActionsDropdownItem
+				className={className}
+				textAlign={['unset', 'unset', 'center', 'center']}
+				p={['', '', '16px 16px 16px', '16px 16px 16px']}
+				fontSize={['12px', '12px', '20px', '20px']}
+				fontWeight={['bold', 'bold', 400, 400]}
+				{...props}
+			/>
+		);
+	}
+);
 
 ActionsDropdownItem.displayName = 'ActionsDropdownItem';
 
 /**
  * ActionsDropdownArrow
  */
-export const ActionsDropdownArrow: React.FC<IBoxComponentProps> = withMooskinContext((props) => {
-	return <StyledActionsDropdownArrow d={['block', 'block', 'none', 'none']} {...props} />;
+export const ActionsDropdownArrow: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+	return <StyledActionsDropdownArrow className={className} d={['block', 'block', 'none', 'none']} {...props} />;
 });
-
-ActionsDropdownArrow.defaultProps = {
-	className: '',
-	style: {}
-};
 
 ActionsDropdownArrow.displayName = 'ActionsDropdownArrow';

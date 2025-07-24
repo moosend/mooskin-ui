@@ -1,19 +1,19 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { DateRange } from '../components/DateRange/DateRange';
 
 import { IDateRangePickerComponentProps, IRangeSelection } from '../components/DateRange/model';
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 import { Button } from '../components/Button/Button';
 import variables from '../components/_utils/globals/variables';
 import { MooskinContextProvider } from '../components/Styled/MooskinContextProvider';
 
-export default ({
+export default {
 	component: DateRange,
 	title: 'Example/DateRange'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IDateRangePickerComponentProps> = (args) => {
 	const [range, setRange] = React.useState({
@@ -25,7 +25,7 @@ const Template: Story<IDateRangePickerComponentProps> = (args) => {
 
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<MooskinContextProvider value={{ palette }}>
 				<DateRange {...args} ranges={[range]} onChange={(ranges: { [key: string]: IRangeSelection }) => setRange(ranges.selection)} />
 				<Button

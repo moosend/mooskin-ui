@@ -30,6 +30,8 @@ export interface IInputComponentProps extends IInputBoxComponentProps {
 
 	/** whether its wrapped by its container */
 	wrapped?: boolean;
+
+	inputProps?: IInputBoxComponentProps;
 }
 
 export interface IInputEmojiComponentProps extends IBoxComponentProps {

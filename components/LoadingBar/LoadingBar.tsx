@@ -9,43 +9,39 @@ import { ILoadingBarComponentProps } from './model';
 // Styled Components
 import { StyledLoadingBar } from './styles';
 
-export const LoadingBar: React.FC<ILoadingBarComponentProps> = withMooskinContext((props) => {
-	const [progress, setProgress] = React.useState(props.progress);
-	const [opacity, setOpacity] = React.useState(1);
+export const LoadingBar: React.FC<ILoadingBarComponentProps> = withMooskinContext(
+	({ className = '', progress = 0, style = {}, ...props }) => {
+		const [progressState, setProgressState] = React.useState(progress);
+		const [opacity, setOpacity] = React.useState(1);
 
-	React.useEffect(() => {
-		setProgress(props.progress);
-	}, [props.progress]);
+		React.useEffect(() => {
+			setProgressState(progressState);
+		}, [progress]);
 
-	React.useEffect(() => {
-		if (props.error) {
-			props.onLoaderError && props.onLoaderError();
-			setProgress(100);
-		}
-	}, [props.error]);
+		React.useEffect(() => {
+			if (props.error) {
+				props.onLoaderError && props.onLoaderError();
+				setProgressState(100);
+			}
+		}, [props.error]);
 
-	React.useEffect(() => {
-		if (progress >= 100) {
-			!props.error && props.onLoaderDone && props.onLoaderDone();
-			setTimeout(() => {
-				setOpacity(0);
-			}, 500);
-			setTimeout(() => {
-				setProgress(0);
-			}, 1000);
-			setTimeout(() => {
-				setOpacity(1);
-			}, 1500);
-		}
-	}, [progress]);
+		React.useEffect(() => {
+			if (progressState >= 100) {
+				!props.error && props.onLoaderDone && props.onLoaderDone();
+				setTimeout(() => {
+					setOpacity(0);
+				}, 500);
+				setTimeout(() => {
+					setProgressState(0);
+				}, 1000);
+				setTimeout(() => {
+					setOpacity(1);
+				}, 1500);
+			}
+		}, [progressState]);
 
-	return <StyledLoadingBar {...props} progress={progress} opacity={opacity} />;
-});
-
-LoadingBar.defaultProps = {
-	className: '',
-	progress: 0,
-	style: {}
-};
+		return <StyledLoadingBar {...props} progress={progressState} opacity={opacity} />;
+	}
+);
 
 LoadingBar.displayName = 'LoadingBar';

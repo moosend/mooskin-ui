@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
@@ -9,57 +9,57 @@ import { Box } from '../Box/Box';
 
 import variables from '../_utils/globals/variables';
 
-const overlayFadeIn = keyframes`
-    0% {
-        background-color: rgba(0, 0, 0, 0);
-    }
-    100% {
-        background-color: rgba(0, 0, 0, 0.48);
-    }
+const overlayFadeIn = css`
+	0% {
+		background-color: rgba(0, 0, 0, 0);
+	}
+	100% {
+		background-color: rgba(0, 0, 0, 0.48);
+	}
 `;
 
-const contentRightFadeIn = keyframes`
-    0% {
-        opacity: 0;
-        transform: translateX(100%) translateZ(0px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0%) translateZ(0px);
-    }
+const contentRightFadeIn = css`
+	0% {
+		opacity: 0;
+		transform: translateX(100%) translateZ(0px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%) translateZ(0px);
+	}
 `;
 
-const contentLeftFadeIn = keyframes`
-    0% {
-        opacity: 0;
-        transform: translateX(-100%) translateZ(0px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0%) translateZ(0px);
-    }
+const contentLeftFadeIn = css`
+	0% {
+		opacity: 0;
+		transform: translateX(-100%) translateZ(0px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0%) translateZ(0px);
+	}
 `;
 
-const contentBottomFadeIn = keyframes`
-    0% {
-        opacity: 0;
-        transform: translateY(100%) translateZ(0px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%) translateZ(0px);
-    }
+const contentBottomFadeIn = css`
+	0% {
+		opacity: 0;
+		transform: translateY(100%) translateZ(0px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%) translateZ(0px);
+	}
 `;
 
-const contentTopFadeIn = keyframes`
-    0% {
-        opacity: 0;
-        transform: translateY(-100%) translateZ(0px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%) translateZ(0px);
-    }
+const contentTopFadeIn = css`
+	0% {
+		opacity: 0;
+		transform: translateY(-100%) translateZ(0px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0%) translateZ(0px);
+	}
 `;
 
 export const getContentSize = (size?: IContentSize) => {

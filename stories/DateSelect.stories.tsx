@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { DateSelect } from '../components/DateSelect/DateSelect';
 import { IDateSelectComponentProps } from '../components/DateSelect/model';
@@ -8,18 +8,18 @@ import { IDateSelectComponentProps } from '../components/DateSelect/model';
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 // import { Box } from '../components/Box/Box';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: DateSelect,
 	title: 'Example/DateSelect'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IDateSelectComponentProps> = (args) => {
 	const [value, setValue] = React.useState('');
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<DateSelect
 				{...args}
 				selectedValue={value}

@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { ITagsComponentProps } from '../components/Tags/model';
 import { Tag, TagClose, TagInput, Tags, TagText } from '../components/Tags/Tags';
 
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Tags,
 	title: 'Example/Tags'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ITagsComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Tags {...args} />
 		</>
 	);
@@ -55,6 +55,7 @@ export const WithInput = Template.bind({});
 WithInput.args = {
 	border: '1px solid #5ccdde',
 	borderRadius: 3,
+	onRemoveTag: (e, data) => console.log(e, data),
 	children: (
 		<>
 			{[...Array(4)].map((item, i) => {
@@ -70,6 +71,6 @@ WithInput.args = {
 	),
 	onAddTag: (data) => console.log(data),
 	onClickTag: (e, data) => console.log(e, data),
-	onRemoveTag: (e, data) => console.log(e, data),
+	onKeyDown: (e) => console.log(e.key),
 	p: 5
 } as ITagsComponentProps;

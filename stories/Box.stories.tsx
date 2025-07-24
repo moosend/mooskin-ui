@@ -1,22 +1,24 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { Box } from '../components/Box/Box';
 import { IBoxComponentProps } from '../components/Box/model';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Box,
 	title: 'Example/Box'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<IBoxComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
-			<Box {...args} noRender={['sm', 'xs']} />
+			{/*<GlobalStyle />*/}
+			<Box {...args} noRender={[]} />
+			<Box {...args} noRender={[]} />
+			<Box {...args} noRender={[]} />
 		</>
 	);
 };
@@ -25,7 +27,8 @@ export const Normal = Template.bind({});
 Normal.args = {
 	boxShadow: 'md',
 	children: 'Box',
-	color: 'blue',
+	fontColor: 'blue',
 	p: 30,
-	round: 'md'
+	round: 'md',
+	className: 'LALALA'
 };

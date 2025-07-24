@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
@@ -9,16 +9,16 @@ import { Box } from '../Box/Box';
 
 import variables from '../_utils/globals/variables';
 
-const overlayFadeIn = keyframes`
-    0% {
-        background-color: rgba(0, 0, 0, 0);
-    }
-    100% {
-        background-color: rgba(0, 0, 0, 0.48);
-    }
+const overlayFadeIn = css`
+	0% {
+		background-color: rgba(0, 0, 0, 0);
+	}
+	100% {
+		background-color: rgba(0, 0, 0, 0.48);
+	}
 `;
 
-const contentFadeIn = keyframes`
+const contentFadeIn = css`
 	0% {
 		opacity: 0;
 		transform: translate(0, -60px);
@@ -29,7 +29,7 @@ const contentFadeIn = keyframes`
 	}
 `;
 
-const contentFadeOut = keyframes`
+const contentFadeOut = css`
 	0% {
 		opacity: 1;
 		transform: translate(0);

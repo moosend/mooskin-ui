@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { ISelectComponentProps } from '../components/Select/model';
 import {
@@ -19,18 +19,18 @@ import {
 import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 // import { Box } from '../components/Box/Box';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: Select,
 	title: 'Example/Select'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ISelectComponentProps> = (args) => {
 	const [selected, setSelected] = React.useState('');
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<Select
 				selectedValue={selected}
 				{...args}

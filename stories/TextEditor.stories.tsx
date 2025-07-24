@@ -1,21 +1,21 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react/dist/client/preview/types-6-0';
+import { Meta, Story } from '@storybook/react';
 
 import { ITextEditorComponentProps } from '../components/TextEditor/model';
 import { TextEditor } from '../components/TextEditor/TextEditor';
 
-import GlobalStyle from '../components/Styled/GlobalStyles';
+import '../components/Styled/GlobalStyles';
 
-export default ({
+export default {
 	component: TextEditor,
 	title: 'Example/TextEditor'
-} as any) as Meta;
+} as any as Meta;
 
 const Template: Story<ITextEditorComponentProps> = (args) => {
 	return (
 		<>
-			<GlobalStyle />
+			{/*<GlobalStyle />*/}
 			<TextEditor {...args} />
 		</>
 	);

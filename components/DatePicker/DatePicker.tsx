@@ -1,55 +1,79 @@
 import * as React from 'react';
 
-// Date-FNS
-import DateFnsUtils from '@date-io/date-fns';
+// MUI v5
+import { DatePicker as DatePickerUI } from '@mui/x-date-pickers/DatePicker';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { TextField } from '@mui/material';
 
 // Models
 import { IDatePickerComponentProps, IDatePickerKeyboardComponentProps, PickerType } from './model';
 
-// Material-UI Date Picker
-import { DatePicker as DatePickerUI, KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
-
-// Components
+// Custom
 import { Input } from '../Input/Input';
 import { withMooskinContext } from '../index';
-import { createTheme } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/styles';
 import variables from '../_utils/globals/variables';
 import { getOverridesForPicker } from '../_utils/helper';
 
 const ComponentByType = {
-	date: DatePickerUI,
-	'date-keyboard': KeyboardDatePicker
+	date: DatePickerUI
 };
 
-/**
- * DatePicker
- */
 export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboardComponentProps> = withMooskinContext((props) => {
+	const { inputProps, pickerType = 'date', format = 'dd/MM/yyyy', ...restProps } = props;
+	const [isPickerOpen, setIsPickerOpen] = React.useState(false);
+
+	const openPicker = () => setIsPickerOpen(true);
+	const closePicker = () => setIsPickerOpen(false);
 	const materialTheme = createTheme(getOverridesForPicker((props as any).palette, variables));
-	const { inputProps } = props;
+	const PickerComponent = ComponentByType[pickerType as PickerType];
 
-	const renderInput = (dateInputProps: any) => {
-		return <Input style={{ width: '100%' }} {...dateInputProps} {...inputProps} />;
-	};
-
-	const type: PickerType = props.pickerType ? props.pickerType : 'date';
-
-	const PickerComponent = ComponentByType[type];
+	const renderInput = (params: any) =>
+		inputProps ? (
+			<Input
+				{...params}
+				{...inputProps}
+				onKeyDown={(e) => e.preventDefault()}
+				onClick={openPicker}
+				styles={{ paddingTop: '7px', paddingBottom: '7px' }}
+			/>
+		) : (
+			<TextField
+				styles={{ paddingTop: '7px', paddingBottom: '7px' }}
+				{...params}
+				fullWidth
+				onClick={openPicker}
+				onKeyDown={(e) => e.preventDefault()}
+				sx={{
+					'& .MuiInputBase-input.MuiOutlinedInput-input': {
+						backgroundColor: '#ffffff',
+						paddingTop: '6px',
+						paddingBottom: '6px',
+						fontSize: '14px'
+					}
+				}}
+			/>
+		);
 
 	return (
-		<MuiPickersUtilsProvider utils={DateFnsUtils}>
+		<LocalizationProvider dateAdapter={AdapterDateFns}>
 			<ThemeProvider theme={materialTheme}>
-				<PickerComponent {...props} TextFieldComponent={renderInput} />
+				<PickerComponent
+					open={isPickerOpen}
+					onOpen={openPicker}
+					onClose={closePicker}
+					{...restProps}
+					inputFormat={format}
+					renderInput={renderInput}
+					onChange={(value, keyboardInputValue) => {
+						// Call original onChange with just the value if it exists
+						props.onChange?.(value);
+					}}
+				/>
 			</ThemeProvider>
-		</MuiPickersUtilsProvider>
+		</LocalizationProvider>
 	);
 });
-
-DatePicker.defaultProps = {
-	format: 'dd/MM/yyyy',
-	pickerType: 'date'
-	// variant: 'inline',
-};
 
 DatePicker.displayName = 'DatePicker';
