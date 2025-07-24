@@ -8,13 +8,13 @@
 		"access": "public"
 	},
 	"scripts": {
-		"prepare": "set NODE_OPTIONS=--openssl-legacy-provider && webpack --config webpack.config.prod.js -p",
+		"prepare": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --config webpack.config.prod.js -p",
 		"build:playground": "webpack --config webpack.config.dev.js -p",
 		"test": "jest --silent --config=jest.config.json",
 		"test:u": "jest -u --silent --config=jest.config.json",
 		"test:cov": "jest --coverage --silent --config=jest.config.json",
 		"test:watch": "jest --watchAll --config=jest.config.json",
-		"storybook": "set NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+		"storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
 		"build-storybook": "build-storybook",
 		"chromatic": "npx chromatic --auto-accept-changes --project-token 3pepa9baz12"
 	},
@@ -91,6 +91,7 @@
 		"babel-preset-react": "6.24.1",
 		"babel-preset-stage-0": "6.24.1",
 		"chromatic": "^5.4.0",
+		"cross-env": "^7.0.3",
 		"css-loader": "2.1.1",
 		"cssnano": "4.1.10",
 		"enzyme": "3.9.0",
