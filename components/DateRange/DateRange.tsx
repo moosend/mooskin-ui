@@ -55,6 +55,7 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinCo
 					<StyledDateRange boxShadow="md" {...props.pickerWrapperProps} palette={(props as any).palette}>
 						{React.createElement(DateRangePicker as React.ComponentType<any>, {
 							...props,
+							locale: props.locale,
 							ranges: props.ranges,
 							onChange: props.onChange
 						})}
