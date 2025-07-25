@@ -63,7 +63,7 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 					onClose={closePicker}
 					{...restProps}
 					inputFormat={format}
-					dayOfWeekFormatter={(d) => d.slice(0, 2)}
+					dayOfWeekFormatter={(d) => d.slice(0, 3)}
 					renderInput={renderInput}
 					onChange={(value) => {
 						// Call original onChange with just the value if it exists
