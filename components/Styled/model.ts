@@ -185,11 +185,42 @@ export interface IThemeStyles {
 	buttonBorderRadius: string | number;
 }
 
+export interface IThemeReportColors {
+	box1: string;
+	box2: string;
+	box3: string;
+	box4: string;
+	box5: string;
+	box6: string;
+	box7: string;
+	box8: string;
+	text: string;
+	unsubChart: string;
+	bounceChart: string;
+	lowChart: string;
+	circleChart1: string;
+	circleChart2: string;
+	circleChart3: string;
+	restChart1: string;
+	restChart2: string;
+	restChart3: string;
+	restChart4: string;
+	restChart5: string;
+	restChart6: string;
+	restChart7: string;
+	restChart8: string;
+	restChart9: string;
+	restChart10: string;
+	restChart11: string;
+	restChart12: string;
+}
+
 export interface IStyledTheme {
 	fontColors: IThemeFontColors;
 	backgroundColors: IThemeBackgroundColors;
 	borderColors: IThemeBorderColors;
 	styles?: IThemeStyles;
+	reportColors?: IThemeReportColors;
 }
 
 export interface IMooskinContext {
