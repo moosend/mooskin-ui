@@ -180,7 +180,36 @@ const theme: IStyledTheme = {
 	},
 	styles: {
 		buttonBorderRadius: '100px'
-	}
+	},
+	reportColors: {
+		box1: '#3fbaca',
+		box2: '#d84840',
+		box3: '#293346',
+		box4: '#F0B941',
+		box5: '#293346',
+		box6: '#3fbaca',
+		box7: '#F0B941',
+		box8: '#d84840',
+		text: '1A1A1A',
+		unsubChart: '#FC8181',
+		bounceChart: '#eccb4c',
+		lowChart: '#d3d3d3',
+		circleChart1: '#3fbaca',
+		circleChart2: '#d84840',
+		circleChart3: '#E0E0E0',
+		restChart1: '#3fbaca',
+		restChart2: '#d84840',
+		restChart3: '#E0E0E0',
+		restChart4: '#F0B941',
+		restChart5: '#293346',
+		restChart6: '#d3d3d3',
+		restChart7: '#f4ad55',
+		restChart8: '#f9b3ce',
+		restChart9: '#40b4ac',
+		restChart10: '#4262e1',
+		restChart11: '#d5b9f9',
+		restChart12: '#eb8838',
+	},
 };
 
 export default theme;
