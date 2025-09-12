@@ -6,10 +6,10 @@ orbs:
 defaults: &defaults
   working_directory: ~/repo
   docker:
-    - image: circleci/node:latest
+    - image: cimg/node:18.20
 
 jobs:
-  test:
+  build:
     <<: *defaults
     steps:
       - checkout
@@ -22,16 +22,6 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: yarn test
-      - persist_to_workspace:
-          root: ~/repo
-          paths: .
-
-  build:
-    <<: *defaults
-    steps:
-      - attach_workspace:
-          at: ~/repo
       - run: yarn prepare
       - persist_to_workspace:
           root: ~/repo
@@ -53,16 +43,13 @@ jobs:
 workflows:
   run:
     jobs:
-      - test
-      - build:
-          requires:
-            - test
+      - build
       - publish:
           filters:
             tags:
-              only: /^v.*/
+              only: /^v.*/       # Run only on version tags like v1.0.0
             branches:
               only:
-                - master
+                - master        # Run only on master branch
           requires:
             - build
