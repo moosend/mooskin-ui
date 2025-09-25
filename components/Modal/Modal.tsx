@@ -101,6 +101,8 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext(
 		return (
 			<StyledModal
 				{...props}
+				className={className}
+				style={style}
 				onKeyDown={handleKeyDown}
 				setRef={(ref: HTMLElement) => (modalRef.current = ref)}
 				tabIndex={0}
