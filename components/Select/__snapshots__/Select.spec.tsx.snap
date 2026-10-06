@@ -2,11 +2,42 @@
 
 exports[`Select renders Select correctly 1`] = `
 <Component
-  className=""
+  locale={
+    {
+      "code": "en-US",
+      "formatDistance": [Function],
+      "formatLong": {
+        "date": [Function],
+        "dateTime": [Function],
+        "time": [Function],
+      },
+      "formatRelative": [Function],
+      "localize": {
+        "day": [Function],
+        "dayPeriod": [Function],
+        "era": [Function],
+        "month": [Function],
+        "ordinalNumber": [Function],
+        "quarter": [Function],
+      },
+      "match": {
+        "day": [Function],
+        "dayPeriod": [Function],
+        "era": [Function],
+        "month": [Function],
+        "ordinalNumber": [Function],
+        "quarter": [Function],
+      },
+      "options": {
+        "firstWeekContainsDate": 1,
+        "weekStartsOn": 0,
+      },
+    }
+  }
   onChange={[MockFunction]}
   palette={
-    Object {
-      "backgroundColors": Object {
+    {
+      "backgroundColors": {
         "accountNavigation": "#FFFFFF",
         "altWhite": "#FFFFFF",
         "autosExpression": "#ffffff",
@@ -65,7 +96,7 @@ exports[`Select renders Select correctly 1`] = `
         "warningIcon": "#B2551F",
         "white": "#FFFFFF",
       },
-      "borderColors": Object {
+      "borderColors": {
         "accountNavigation": "#FFFFFF",
         "altWhite": "#FFFFFF",
         "autosExpression": "#ffffff",
@@ -124,7 +155,7 @@ exports[`Select renders Select correctly 1`] = `
         "warningIcon": "#B2551F",
         "white": "#FFFFFF",
       },
-      "fontColors": Object {
+      "fontColors": {
         "accountNavigation": "#FFFFFF",
         "altWhite": "#FFFFFF",
         "autosExpression": "#ffffff",
@@ -183,87 +214,119 @@ exports[`Select renders Select correctly 1`] = `
         "warningIcon": "#B2551F",
         "white": "#FFFFFF",
       },
-      "styles": Object {
+      "reportColors": {
+        "bounceChart": "#eccb4c",
+        "box1": "#3fbaca",
+        "box2": "#d84840",
+        "box3": "#293346",
+        "box4": "#F0B941",
+        "box5": "#293346",
+        "box6": "#3fbaca",
+        "box7": "#F0B941",
+        "box8": "#d84840",
+        "circleChart1": "#3fbaca",
+        "circleChart2": "#d84840",
+        "circleChart3": "#E0E0E0",
+        "lowChart": "#d3d3d3",
+        "restChart1": "#3fbaca",
+        "restChart10": "#4262e1",
+        "restChart11": "#d5b9f9",
+        "restChart12": "#eb8838",
+        "restChart2": "#d84840",
+        "restChart3": "#E0E0E0",
+        "restChart4": "#F0B941",
+        "restChart5": "#293346",
+        "restChart6": "#d3d3d3",
+        "restChart7": "#f4ad55",
+        "restChart8": "#f9b3ce",
+        "restChart9": "#40b4ac",
+        "text": "1A1A1A",
+        "unsubChart": "#FC8181",
+      },
+      "styles": {
         "buttonBorderRadius": "100px",
       },
     }
   }
-  style={Object {}}
+  setLocale={[Function]}
 >
-  <SelectContainer
-    className=""
-    style={Object {}}
-  >
-    <SelectPlaceholder
-      className=""
-      style={Object {}}
-    >
+  <SelectContainer>
+    <SelectPlaceholder>
       Select an option
     </SelectPlaceholder>
-    <SelectFilter
-      className=""
-      style={Object {}}
-    />
-    <SelectIcon
-      className=""
-      style={Object {}}
-    />
+    <SelectFilter />
+    <SelectIcon />
   </SelectContainer>
-  <SelectOptionList
-    className=""
-    style={Object {}}
-  >
+  <SelectOptionList>
     <SelectOption
-      className=""
-      style={Object {}}
       value="1"
     >
       Option 1
     </SelectOption>
     <SelectOption
-      className=""
-      style={Object {}}
       value="2"
     >
       Option 2
     </SelectOption>
     <SelectOption
-      className=""
-      style={Object {}}
       value="3"
     >
       Option 3
     </SelectOption>
     <SelectOption
-      className=""
-      style={Object {}}
       value="4"
     >
       Option 4
     </SelectOption>
     <SelectOption
-      className=""
-      style={Object {}}
       value="5"
     >
       Option 5
     </SelectOption>
   </SelectOptionList>
-  <SelectOverlay
-    className=""
-    style={Object {}}
-  />
+  <SelectOverlay />
 </Component>
 `;
 
 exports[`Select should be rendered as a multi select if the selected prop is an array 1`] = `
 <Component
-  className=""
   dataLabel="select"
+  locale={
+    {
+      "code": "en-US",
+      "formatDistance": [Function],
+      "formatLong": {
+        "date": [Function],
+        "dateTime": [Function],
+        "time": [Function],
+      },
+      "formatRelative": [Function],
+      "localize": {
+        "day": [Function],
+        "dayPeriod": [Function],
+        "era": [Function],
+        "month": [Function],
+        "ordinalNumber": [Function],
+        "quarter": [Function],
+      },
+      "match": {
+        "day": [Function],
+        "dayPeriod": [Function],
+        "era": [Function],
+        "month": [Function],
+        "ordinalNumber": [Function],
+        "quarter": [Function],
+      },
+      "options": {
+        "firstWeekContainsDate": 1,
+        "weekStartsOn": 0,
+      },
+    }
+  }
   onChange={[MockFunction]}
   palette={
-    Object {
-      "backgroundColors": Object {
+    {
+      "backgroundColors": {
         "accountNavigation": "#FFFFFF",
         "altWhite": "#FFFFFF",
         "autosExpression": "#ffffff",
@@ -322,7 +385,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
         "warningIcon": "#B2551F",
         "white": "#FFFFFF",
       },
-      "borderColors": Object {
+      "borderColors": {
         "accountNavigation": "#FFFFFF",
         "altWhite": "#FFFFFF",
         "autosExpression": "#ffffff",
@@ -381,7 +444,7 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
         "warningIcon": "#B2551F",
         "white": "#FFFFFF",
       },
-      "fontColors": Object {
+      "fontColors": {
         "accountNavigation": "#FFFFFF",
         "altWhite": "#FFFFFF",
         "autosExpression": "#ffffff",
@@ -440,81 +503,82 @@ exports[`Select should be rendered as a multi select if the selected prop is an 
         "warningIcon": "#B2551F",
         "white": "#FFFFFF",
       },
-      "styles": Object {
+      "reportColors": {
+        "bounceChart": "#eccb4c",
+        "box1": "#3fbaca",
+        "box2": "#d84840",
+        "box3": "#293346",
+        "box4": "#F0B941",
+        "box5": "#293346",
+        "box6": "#3fbaca",
+        "box7": "#F0B941",
+        "box8": "#d84840",
+        "circleChart1": "#3fbaca",
+        "circleChart2": "#d84840",
+        "circleChart3": "#E0E0E0",
+        "lowChart": "#d3d3d3",
+        "restChart1": "#3fbaca",
+        "restChart10": "#4262e1",
+        "restChart11": "#d5b9f9",
+        "restChart12": "#eb8838",
+        "restChart2": "#d84840",
+        "restChart3": "#E0E0E0",
+        "restChart4": "#F0B941",
+        "restChart5": "#293346",
+        "restChart6": "#d3d3d3",
+        "restChart7": "#f4ad55",
+        "restChart8": "#f9b3ce",
+        "restChart9": "#40b4ac",
+        "text": "1A1A1A",
+        "unsubChart": "#FC8181",
+      },
+      "styles": {
         "buttonBorderRadius": "100px",
       },
     }
   }
   selectedValue={
-    Array [
+    [
       "2",
       "4",
     ]
   }
-  style={Object {}}
+  setLocale={[Function]}
 >
-  <SelectContainer
-    className=""
-    style={Object {}}
-  >
-    <SelectPlaceholder
-      className=""
-      style={Object {}}
-    >
+  <SelectContainer>
+    <SelectPlaceholder>
       Select an option
     </SelectPlaceholder>
-    <SelectFilter
-      className=""
-      style={Object {}}
-    />
-    <SelectIcon
-      className=""
-      style={Object {}}
-    />
+    <SelectFilter />
+    <SelectIcon />
   </SelectContainer>
-  <SelectOptionList
-    className=""
-    style={Object {}}
-  >
+  <SelectOptionList>
     <SelectOption
-      className=""
-      style={Object {}}
       value="1"
     >
       Option 1
     </SelectOption>
     <SelectOption
-      className=""
-      style={Object {}}
       value="2"
     >
       Option 2
     </SelectOption>
     <SelectOption
-      className=""
-      style={Object {}}
       value="3"
     >
       Option 3
     </SelectOption>
     <SelectOption
-      className=""
-      style={Object {}}
       value="4"
     >
       Option 4
     </SelectOption>
     <SelectOption
-      className=""
-      style={Object {}}
       value="5"
     >
       Option 5
     </SelectOption>
   </SelectOptionList>
-  <SelectOverlay
-    className=""
-    style={Object {}}
-  />
+  <SelectOverlay />
 </Component>
 `;

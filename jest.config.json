@@ -1,5 +1,9 @@
 {
     "bail": true,
+    "testEnvironment": "jsdom",
+    "testEnvironmentOptions": {
+        "customExportConditions": ["node", "require", "default"]
+    },
     "collectCoverageFrom": [
         "**/components/**/*.{ts,tsx}",
         "!**/node_modules/**",
@@ -21,6 +25,7 @@
     "snapshotSerializers": ["enzyme-to-json/serializer"],
     "moduleDirectories": ["node_modules", "src"],
     "moduleNameMapper": {
+        "^@mui/material/(.*)$": "<rootDir>/node_modules/@mui/material/node/$1",
         "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|txt|md)$": "<rootDir>/__mocks__/fileMock.js",
         "\\.css$": "identity-obj-proxy"
     },
