@@ -3,7 +3,6 @@ import * as React from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
 // Models
-// import { Editor as TinyMCEEditor } from 'tinymce';
 import { IPersonalizationTag, ITextEditorComponentProps } from './model';
 
 /**
@@ -44,7 +43,6 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 	// style: {},
 	// toolbar: `bullist numlist | emoticons | code | image | anchor link | paste pastetext |
 	// `
-	className,
 	toolbar_sticky,
 	toolbar_mode,
 	resize,
@@ -97,7 +95,7 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 		return toolbar;
 	};
 
-	const editor = (
+	return (
 		<Editor
 			{...props}
 			disabled={disabled}
@@ -119,8 +117,6 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 			}}
 		/>
 	);
-
-	return className ? <div className={className}>{editor}</div> : editor;
 };
 
 TextEditor.displayName = 'TextEditor';

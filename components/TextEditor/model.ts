@@ -6,9 +6,6 @@ export interface ITextEditorComponentProps extends Partial<IAllProps> {
 	/** selects different element to attach the editor to */
 	selector?: any;
 
-	/** class on the editor element */
-	className?: string;
-
 	/** show/hide the menu bar */
 	menubar?: boolean;
 
