@@ -85,7 +85,7 @@ Stack.displayName = 'Stack';
  */
 export const HStack: React.FC<IStackComponentProps> = withMooskinContext(
 	({ align = 'stretch', className = '', direction = 'row', flexWrap = 'wrap', justify = 'initial', spacing = 0, style = {}, ...props }) => {
-		return <Stack {...props} />;
+		return <Stack align={align} className={className} direction={direction} flexWrap={flexWrap} justify={justify} spacing={spacing} style={style} {...props} />;
 	}
 );
 
@@ -105,7 +105,7 @@ export const VStack: React.FC<IStackComponentProps> = withMooskinContext(
 		style = {},
 		...props
 	}) => {
-		return <Stack {...props} />;
+		return <Stack align={align} className={className} direction={direction} flexWrap={flexWrap} justify={justify} spacing={spacing} style={style} {...props} />;
 	}
 );
 

@@ -3,14 +3,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 var distFolder = 'playground-dist';
-var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 'style.css', allChunks: true });
-
-config.devServer = {
-	contentBase: './' + distFolder,
-	historyApiFallback: true
-};
+var extractCSS = new MiniCssExtractPlugin({ filename: 'style.css' });
 
 config.entry = './playground/playground.tsx';
+config.mode = 'development';
 
 config.output = {
 	path: __dirname + '/' + distFolder,
@@ -55,8 +51,9 @@ config.module.rules.push(
 				loader: 'css-loader',
 				options: {
 					importLoaders: 1,
-					localIdentName: '[local]___[hash:base64:5]',
-					modules: true
+					modules: {
+						localIdentName: '[local]___[hash:base64:5]'
+					}
 				}
 			},
 			'postcss-loader'

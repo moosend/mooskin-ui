@@ -1,15 +1,14 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Box } from './Box';
-
-import { mount } from 'enzyme';
 
 describe('Box', () => {
 	test('renders Box correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<Box align="baseline" p={5} m={5}>
 				Box
 			</Box>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

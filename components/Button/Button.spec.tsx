@@ -1,46 +1,46 @@
 import * as React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { Button } from './Button';
-
-import { mount } from 'enzyme';
 
 describe('Button', () => {
 	test('renders correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<Button onClick={func} disabled className="myClass" style={{ color: 'blue' }} id={'button1'} href={'www.moosend.com'} type={'submit'}>
 				Mooskin
 			</Button>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders properly into dom with color and label', () => {
 		const func = jest.fn();
 
-		const component = mount(<Button onClick={func}>asd</Button>);
+		render(<Button onClick={func}>btn label</Button>);
 
-		expect(component.find('StyledButton').text()).toBe('asd');
-		expect(component.find('StyledButton').prop('disabled')).not.toBe(true);
+		const button = screen.getByRole('button', { name: 'btn label' });
+		expect(button).toBeInTheDocument();
+		expect(button).not.toBeDisabled();
 	});
 
 	test('renders a disabled button if disabled prop is passed', () => {
 		const func = jest.fn();
 
-		const component = mount(
+		render(
 			<Button onClick={func} disabled>
-				asd
+				btn label
 			</Button>
 		);
 
-		expect(component.find('[disabled=true]').length).not.toEqual(0);
+		expect(screen.getByRole('button', { name: 'btn label' })).toBeDisabled();
 	});
 
 	test('onClick prop callback is called when clicked', () => {
 		const func = jest.fn();
 
-		const component = mount(<Button onClick={func}>asd</Button>);
-		component.find('StyledButton').simulate('click');
+		render(<Button onClick={func}>btn label</Button>);
+		fireEvent.click(screen.getByRole('button', { name: 'btn label' }));
 		expect(func).toHaveBeenCalled();
 	});
 });

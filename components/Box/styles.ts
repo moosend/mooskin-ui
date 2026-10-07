@@ -163,7 +163,17 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		${(props) => generateStyles({ property: 'font-style', value: props.fontStyle })}
 		${(props) => generateStyles({ property: 'text-transform', value: props.textTransform })}
 		${(props) => generateStyles({ property: 'text-decoration', value: props.textDecoration })}
-		${(props) => generateStyles({ property: 'white-space', value: props.whiteSpace })}
+		${(props) => {
+			const extra = [
+				generateStyles({ property: 'user-select', value: props.userSelect }),
+				generateStyles({ property: 'vertical-align', value: props.verticalAlign }),
+				generateStyles({ property: 'pointer-events', value: props.pointerEvents })
+			]
+				.filter(Boolean)
+				.join('');
+			const base = generateStyles({ property: 'white-space', value: props.whiteSpace });
+			return extra ? `${base || ''}${extra}` : base;
+		}}
 
 		${(props) => generateStyles({ property: 'width', value: props.w, processedValue: true })}
 		${(props) => generateStyles({ property: 'height', value: props.h, processedValue: true })}

@@ -1,13 +1,12 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Button } from '../Button/Button';
 import { List, ListItem, ListItemBody, ListItemEnd, ListItemHead } from './List';
-
-import { mount } from 'enzyme';
 import { Box } from '../Box/Box';
 
 describe('Alert', () => {
 	test('renders correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<List>
 				<ListItem>
 					<ListItemHead>
@@ -86,6 +85,6 @@ describe('Alert', () => {
 				</ListItem>
 			</List>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

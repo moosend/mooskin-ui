@@ -1,13 +1,12 @@
 import * as React from 'react';
-import { Input, InputContainer, InputEmoji, InputIcon, InputOption, InputOptionList, InputOptionListTitle, InputOverlay } from './Input';
-
-import { mount } from 'enzyme';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { Input, InputContainer, InputEmoji, InputIcon, InputOption, InputOptionList, InputOptionListTitle } from './Input';
 
 describe('Input', () => {
 	test('renders correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<InputContainer onChangeInput={func}>
 				<Input />
 				<InputOptionList icon="check" pr={5}>
@@ -21,80 +20,84 @@ describe('Input', () => {
 			</InputContainer>
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders properly into dom and has Placeholder prop', () => {
-		const component = mount(<Input value="value" placeholder="username" />);
+		render(<Input value="value" placeholder="username" />);
 
-		expect(component.find('StyledInputSolo').prop('placeholder')).toContain('username');
+		expect(screen.getByPlaceholderText('username')).toBeInTheDocument();
 	});
 
 	test('renders an input with a "required" prop and minlength', () => {
-		const component = mount(<Input value="value" minLength={5} required />);
+		render(<Input value="value" minLength={5} required />);
 
-		expect(component.find('StyledInputSolo').prop('required')).toEqual(true);
-		expect(component.find('StyledInputSolo').prop('minLength')).toEqual(5);
+		const input = screen.getByRole('textbox');
+		expect(input).toBeRequired();
+		expect(input).toHaveAttribute('minLength', '5');
 	});
 
 	test('renders an input with a passed value and maxlength', () => {
-		const component = mount(<Input value="random" maxLength={50} />);
+		render(<Input value="random" maxLength={50} />);
 
-		expect(component.find('StyledInputSolo').prop('value')).toEqual('random');
-		expect(component.find('StyledInputSolo').prop('maxLength')).toEqual(50);
+		const input = screen.getByRole('textbox');
+		expect(input).toHaveValue('random');
+		expect(input).toHaveAttribute('maxLength', '50');
 	});
 
 	test('renders an input with id and type', () => {
-		const component = mount(<Input value="value" type="text" id="1234" />);
+		render(<Input value="value" type="text" id="1234" />);
 
-		expect(component.find('StyledInputSolo').prop('id')).toEqual('1234');
-		expect(component.find('StyledInputSolo').prop('type')).toEqual('text');
+		const input = screen.getByRole('textbox');
+		expect(input).toHaveAttribute('id', '1234');
+		expect(input).toHaveAttribute('type', 'text');
 	});
 
 	test('renders an input with custom css class and style', () => {
-		const component = mount(<Input value="value" style={{ color: 'blue' }} className="input-group" />);
+		render(<Input value="value" style={{ color: 'blue' }} className="input-group" />);
 
-		expect(component.find('StyledInputSolo').hasClass('input-group')).toBe(true);
-		expect(component.find('StyledInputSolo').prop('style')).toEqual({ color: 'blue' });
+		const input = screen.getByRole('textbox');
+		expect(input).toHaveClass('input-group');
+		expect(input).toHaveStyle({ color: 'blue' });
 	});
 
 	test('onChange prop callback is called when a key is pressed', () => {
 		const func = jest.fn();
 
-		const component = mount(<Input value="value" onChange={func} />);
+		render(<Input value="value" onChange={func} />);
 
-		component.find('StyledInputSolo').simulate('change', { target: { value: 'text' } });
+		fireEvent.change(screen.getByRole('textbox'), { target: { value: 'text' } });
 		expect(func).toHaveBeenCalled();
 	});
 
 	test('onChange prop callback is called when a key is pressed with an input container', () => {
 		const func = jest.fn();
 
-		const component = mount(
+		render(
 			<InputContainer onChangeInput={func}>
 				<Input />
 				<InputIcon>search</InputIcon>
 			</InputContainer>
 		);
 
-		component.find(Input).simulate('change', { target: { value: 'text' } });
+		fireEvent.change(screen.getByRole('textbox'), { target: { value: 'text' } });
 		expect(func).toHaveBeenCalled();
 	});
 
 	test('Icon is valid when icon child is passed', () => {
-		const component = mount(
+		render(
 			<InputContainer>
 				<Input />
 				<InputIcon>search</InputIcon>
 			</InputContainer>
 		);
-		expect(component.find(InputIcon).length).toBe(1);
+		expect(screen.getByText('search')).toBeInTheDocument();
 	});
 
 	test('dropdowns are available when relevant children are passed', () => {
 		const func = jest.fn();
 
-		const component = mount(
+		render(
 			<InputContainer onChangeInput={func}>
 				<Input />
 				<InputOptionList icon="check" pr={5}>
@@ -106,6 +109,9 @@ describe('Input', () => {
 			</InputContainer>
 		);
 
-		expect(component.find(InputOptionList).length).toBe(1);
+		fireEvent.click(screen.getByText('check'));
+
+		expect(screen.getByText('Personalization Tags')).toBeInTheDocument();
+		expect(screen.getByText('Tag 1')).toBeInTheDocument();
 	});
 });

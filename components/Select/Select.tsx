@@ -44,9 +44,10 @@ const OptionListComponents = {
 /**
  * Select
  */
-export const Select: React.FC<ISelectComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+export const Select: React.FC<ISelectComponentProps> = withMooskinContext(({ className = '', style = {}, label, value: valueProp, ...props }) => {
 	const [showList, setShowList] = React.useState(false);
 	const [filterValue, setFilterValue] = React.useState('');
+	const selectedValue = props.selectedValue !== undefined ? props.selectedValue : valueProp;
 
 	// non mandatory elements
 	const [hasOverlay, setHasOverlay] = React.useState(false);
@@ -55,8 +56,8 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(({ cla
 
 	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, value: string, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
 		let returnValue;
-		const selectedAsArray = Array.isArray(props.selectedValue);
-		const selected = props.selectedValue as any;
+		const selectedAsArray = Array.isArray(selectedValue);
+		const selected = selectedValue as any;
 
 		if (selectedAsArray) {
 			if (!value) {
@@ -104,14 +105,14 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(({ cla
 					label = child.props.children[0];
 				}
 
-				if (Array.isArray(props.selectedValue)) {
-					props.selectedValue.forEach((item) => {
+				if (Array.isArray(selectedValue)) {
+					selectedValue.forEach((item) => {
 						if (item.toString() === child.props.value) {
 							placeholder.push(label);
 						}
 					});
 				} else {
-					props.selectedValue === child.props.value && placeholder.push(label);
+					selectedValue === child.props.value && placeholder.push(label);
 				}
 			}
 
@@ -130,7 +131,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(({ cla
 
 		return React.Children.map(children, (child, i) => {
 			if (React.isValidElement<ISelectOptionComponentProps>(child) && child.type === SelectOption) {
-				const active = Array.isArray(props.selectedValue) && props.selectedValue.includes(child.props.value);
+				const active = Array.isArray(selectedValue) && selectedValue.includes(child.props.value);
 
 				let label = '';
 
@@ -224,7 +225,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(({ cla
 				if (!showList) {
 					const placeholder = getPlaceholder(props.children);
 					return React.cloneElement(child, {
-						children: props.selectedValue && placeholder ? placeholder : recurseChildren(child.props.children),
+						children: selectedValue && placeholder ? placeholder : recurseChildren(child.props.children),
 						key: i
 					} as IBoxComponentProps);
 				}
@@ -281,7 +282,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(({ cla
 	};
 
 	return (
-		<StyledSelect {...props}>
+		<StyledSelect {...props} {...(label ? { 'aria-label': label } : {})}>
 			{recurseChildren(props.children)}
 			{!hasOverlay && showList && <SelectOverlay onClick={toggleList} />}
 		</StyledSelect>
@@ -347,7 +348,7 @@ SelectOptionList.displayName = 'SelectOptionList';
 /**
  * SelectOption
  */
-export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinContext(({ className = '', style = {}, selected, ...props }) => {
 	return (
 		<StyledSelectOption
 			d="flex"
@@ -356,6 +357,7 @@ export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinCo
 			justify={['space-between', 'space-between', 'center', 'center']}
 			fontWeight={[500, 500, 400, 400]}
 			p={['10px 15px 0px', '10px 15px 0px', '16px', '16px']}
+			aria-selected={selected}
 			{...props}
 		/>
 	);

@@ -1,16 +1,12 @@
 import * as React from 'react';
-
+import { fireEvent, render, screen } from '@testing-library/react';
 import { ActionsDropdown, ActionsDropdownItem } from './ActionsDropdown';
 import { StyledActionsDropdownButtonClose } from './styles';
-import { mount, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-configure({ adapter: new Adapter() });
 
 describe('ActionsDropdown', () => {
-	test('renders ActionsDropdown correctly', () => {
+	test('renders correctly', () => {
 		const func = jest.fn();
-
-		const tree = mount(
+		const { container } = render(
 			<ActionsDropdown onClickItem={func}>
 				<ActionsDropdownItem dataLabel="settings" value="/settings">
 					Settings
@@ -23,36 +19,35 @@ describe('ActionsDropdown', () => {
 				</ActionsDropdownItem>
 			</ActionsDropdown>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders ActionsDropdownItem correctly', () => {
 		const func = jest.fn();
-
-		const tree = mount(<ActionsDropdownItem onClick={func} className="myClass" style={{ color: 'blue' }} />);
-		expect(tree).toMatchSnapshot();
+		const { container } = render(<ActionsDropdownItem onClick={func} className="myClass" style={{ color: 'blue' }} />);
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
-	test.skip('calls click callbacks correctly', () => {
+	test('calls click callbacks correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
-			<ActionsDropdown onClickItem={func}>
+		render(
+			<ActionsDropdown isOpen onClickItem={func}>
 				<ActionsDropdownItem value="/settings">Settings</ActionsDropdownItem>
 				<ActionsDropdownItem value="/template">Template</ActionsDropdownItem>
 				<ActionsDropdownItem value="/preview">Preview</ActionsDropdownItem>
 			</ActionsDropdown>
 		);
 
-		tree.find(ActionsDropdown).at(2).simulate('click');
-		expect(func).toHaveBeenCalled();		
+		fireEvent.click(screen.getByText('Preview'));
+		expect(func).toHaveBeenCalled();
 	});
 
-	test('calls click on ActionsDropdown Close Button', () => {	
-		const func = jest.fn();		
-		const tree = mount(<StyledActionsDropdownButtonClose onClick={func}/>	);
+	test('calls click on ActionsDropdown Close Button', () => {
+		const func = jest.fn();
+		const { container } = render(<StyledActionsDropdownButtonClose onClick={func} />);
 
-		tree.find(StyledActionsDropdownButtonClose).simulate('click');
+		fireEvent.click(container.firstChild as HTMLElement);
 		expect(func).toHaveBeenCalled();
 	});
 });

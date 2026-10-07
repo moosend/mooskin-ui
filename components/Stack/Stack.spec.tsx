@@ -1,7 +1,6 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { HStack, VStack } from './Stack';
-
-import { mount } from 'enzyme';
 
 const boxStyle = {
 	height: 40,
@@ -10,7 +9,7 @@ const boxStyle = {
 
 describe('Stack', () => {
 	test('renders Stack correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<VStack spacing={20} divider={<span style={{ width: 1 }} />}>
 				<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 				<div key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
@@ -18,31 +17,37 @@ describe('Stack', () => {
 			</VStack>
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders Stack with spacings correctly', () => {
-		const tree = mount(
-			<VStack spacing={20}>
-				<span key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
-				<span key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
-				<span key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+		const children = [
+			<span key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
+			<span key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
+			<span key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+		];
+
+		const { container, rerender } = render(<VStack spacing={20}>{children}</VStack>);
+
+		const columnSpans = container.querySelectorAll('span');
+		expect(columnSpans[0]).toHaveStyle({ height: '40px', width: '40px', backgroundColor: 'red' });
+		expect(columnSpans[1]).toHaveStyle({ height: '40px', width: '40px', backgroundColor: 'green', marginTop: '20px' });
+		expect(columnSpans[2]).toHaveStyle({ height: '40px', width: '40px', backgroundColor: 'blue', marginTop: '20px' });
+
+		rerender(
+			<VStack spacing={20} direction="column-reverse">
+				{children}
 			</VStack>
 		);
 
-		expect(tree.find('span').at(0).prop('style')).toEqual({ ...boxStyle, backgroundColor: 'red' });
-		expect(tree.find('span').at(1).prop('style')).toEqual({ ...boxStyle, backgroundColor: 'green', marginTop: 20 });
-		expect(tree.find('span').at(2).prop('style')).toEqual({ ...boxStyle, backgroundColor: 'blue', marginTop: 20 });
-
-		tree.setProps({ direction: 'column-reverse' });
-
-		expect(tree.find('span').at(0).prop('style')).toEqual({ ...boxStyle, backgroundColor: 'red' });
-		expect(tree.find('span').at(1).prop('style')).toEqual({ ...boxStyle, backgroundColor: 'green', marginBottom: 20 });
-		expect(tree.find('span').at(2).prop('style')).toEqual({ ...boxStyle, backgroundColor: 'blue', marginBottom: 20 });
+		const reverseSpans = container.querySelectorAll('span');
+		expect(reverseSpans[0]).toHaveStyle({ height: '40px', width: '40px', backgroundColor: 'red' });
+		expect(reverseSpans[1]).toHaveStyle({ height: '40px', width: '40px', backgroundColor: 'green', marginBottom: '20px' });
+		expect(reverseSpans[2]).toHaveStyle({ height: '40px', width: '40px', backgroundColor: 'blue', marginBottom: '20px' });
 	});
 
 	test('renders Stack with divider & spacings correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<HStack spacing={20} divider={<span style={{ width: 1 }} />}>
 				<label key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 				<label key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
@@ -50,7 +55,6 @@ describe('Stack', () => {
 			</HStack>
 		);
 
-		expect(tree.find('span').length).toEqual(2);
-		// expect(tree.find('Box').first().prop('style')).toEqual({margin: '0 20px', alignSelf: 'stretch'});
+		expect(container.querySelectorAll('span')).toHaveLength(2);
 	});
 });

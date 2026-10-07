@@ -15,7 +15,7 @@ export const LoadingBar: React.FC<ILoadingBarComponentProps> = withMooskinContex
 		const [opacity, setOpacity] = React.useState(1);
 
 		React.useEffect(() => {
-			setProgressState(progressState);
+			setProgressState(progress);
 		}, [progress]);
 
 		React.useEffect(() => {

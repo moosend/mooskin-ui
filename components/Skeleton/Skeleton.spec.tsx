@@ -1,7 +1,6 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Skeleton, SkeletonCircle, SkeletonText } from './Skeleton';
-
-import { mount } from 'enzyme';
 
 const boxStyle = {
 	height: 40,
@@ -10,7 +9,7 @@ const boxStyle = {
 
 describe('Skeleton', () => {
 	test('renders Skeleton correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<Skeleton>
 				<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 				<div key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
@@ -18,24 +17,24 @@ describe('Skeleton', () => {
 			</Skeleton>
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders SkeletonCircle correctly', () => {
-		const tree = mount(<SkeletonCircle />);
+		const { container } = render(<SkeletonCircle />);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders SkeletonText correctly', () => {
-		const tree = mount(<SkeletonText />);
+		const { container } = render(<SkeletonText />);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders SkeletonText with lines correctly', () => {
-		const tree = mount(<SkeletonText lines={10} />);
+		const { container } = render(<SkeletonText lines={10} />);
 
-		expect(tree.find('div').length).toEqual(10);
+		expect(container.querySelectorAll('div')).toHaveLength(10);
 	});
 });

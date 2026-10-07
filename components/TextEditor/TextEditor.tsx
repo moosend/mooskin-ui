@@ -3,7 +3,6 @@ import * as React from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
 // Models
-// import { Editor as TinyMCEEditor } from 'tinymce';
 import { IPersonalizationTag, ITextEditorComponentProps } from './model';
 
 /**
@@ -44,6 +43,10 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 	// style: {},
 	// toolbar: `bullist numlist | emoticons | code | image | anchor link | paste pastetext |
 	// `
+	toolbar_sticky,
+	toolbar_mode,
+	resize,
+	min_width,
 	toolbar = `newdocument |
             undo redo |
             cut copy paste pastetext |
@@ -95,6 +98,8 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 	return (
 		<Editor
 			{...props}
+			disabled={disabled}
+			inline={inline}
 			apiKey="f3vo81k6z7efry5af62a1l5nm882r1dyrqn2df1cugtsofwq"
 			toolbar={getToolbar()}
 			onInit={onInit}
@@ -104,7 +109,11 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 				menubar: menubar,
 				selector: props.selector,
 				toolbar: toolbar,
-				plugins: plugins
+				plugins: plugins,
+				...(toolbar_sticky !== undefined && { toolbar_sticky }),
+				...(toolbar_mode !== undefined && { toolbar_mode }),
+				...(resize !== undefined && { resize }),
+				...(min_width !== undefined && { min_width })
 			}}
 		/>
 	);

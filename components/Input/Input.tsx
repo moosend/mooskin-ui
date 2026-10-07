@@ -234,7 +234,7 @@ InputOption.displayName = 'InputOption';
  */
 export const Input: React.FC<IInputComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const InputComponent = props.wrapped ? StyledInputWrapped : StyledInputSolo;
-	return <InputComponent {...props} boxAs="input" />;
+	return <InputComponent {...props} className={className} style={style} boxAs="input" />;
 });
 
 Input.displayName = 'Input';

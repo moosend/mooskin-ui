@@ -14,6 +14,12 @@ export interface ISelectComponentProps extends IBoxComponentProps {
 	/** disables this Select */
 	disabled?: boolean;
 
+	/** optional field label */
+	label?: string;
+
+	/** selected value, same role as selectedValue when a caller passes value */
+	value?: string | number | Array<string | number>;
+
 	hideMobileSearch?: boolean;
 }
 
@@ -36,6 +42,9 @@ export interface ISelectOptionComponentProps extends IBoxComponentProps {
 
 	/** disables this option */
 	disabled?: boolean;
+
+	/** marks the option as selected */
+	selected?: boolean;
 }
 
 export interface ISelectPaginationComponentProps extends IBoxComponentProps {

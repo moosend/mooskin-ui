@@ -26,7 +26,7 @@ const secondaryButtonSizes = {
 	sm: '7px 13px'
 };
 export const Button: React.FC<IButtonComponentProps> = withMooskinContext(
-	({ buttonSize = 'md', className = '', style = {}, type = 'button', ...props }) => {
+	({ buttonSize = 'md', className = '', style = {}, type = 'button', tooltip, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 			!props.disabled && props.onClick && props.onClick(e);
 		};
@@ -60,6 +60,7 @@ export const Button: React.FC<IButtonComponentProps> = withMooskinContext(
 				type={type}
 				fontSize={[12, 12, 14, 14]}
 				{...props}
+				title={props.title ?? tooltip}
 				onClick={onClick}
 				boxAs={props.href ? 'a' : 'button'}
 			/>
@@ -73,7 +74,7 @@ Button.displayName = 'Button';
  * ButtonTwo
  */
 export const ButtonTwo: React.FC<IButtonComponentProps> = withMooskinContext(
-	({ buttonSize = 'md', className = '', style = {}, type = 'button', ...props }) => {
+	({ buttonSize = 'md', className = '', style = {}, type = 'button', tooltip, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 			!props.disabled && props.onClick && props.onClick(e);
 		};
@@ -107,6 +108,7 @@ export const ButtonTwo: React.FC<IButtonComponentProps> = withMooskinContext(
 				type={type}
 				fontSize={[12, 12, 14, 14]}
 				{...props}
+				title={props.title ?? tooltip}
 				onClick={onClick}
 				boxAs={props.href ? 'a' : 'button'}
 			/>
@@ -120,7 +122,7 @@ ButtonTwo.displayName = 'ButtonTwo';
  * ButtonThree
  */
 export const ButtonThree: React.FC<IButtonComponentProps> = withMooskinContext(
-	({ buttonSize = 'md', className = '', style = {}, type = 'button', ...props }) => {
+	({ buttonSize = 'md', className = '', style = {}, type = 'button', tooltip, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 			!props.disabled && props.onClick && props.onClick(e);
 		};
@@ -150,6 +152,7 @@ export const ButtonThree: React.FC<IButtonComponentProps> = withMooskinContext(
 				type={type}
 				fontSize={[12, 12, 14, 14]}
 				{...props}
+				title={props.title ?? tooltip}
 				onClick={onClick}
 				boxAs={props.href ? 'a' : 'button'}
 			/>

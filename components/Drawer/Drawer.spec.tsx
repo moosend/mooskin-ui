@@ -1,14 +1,13 @@
 import * as React from 'react';
+import { fireEvent, render } from '@testing-library/react';
 import { Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay } from './Drawer';
-
-import { mount } from 'enzyme';
 
 describe('Drawer', () => {
 	test('renders correctly', () => {
 		const fn = jest.fn();
 		const fn2 = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<Drawer onClose={fn}>
 				<DrawerOverlay onClick={fn2} isOpen>
 					<DrawerContent w="50%" h="50%">
@@ -23,14 +22,14 @@ describe('Drawer', () => {
 			</Drawer>
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('closes drawer on Overlay click or on ESC key', () => {
 		const fn = jest.fn();
 		const fn2 = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<Drawer onClose={fn} isOpen>
 				<DrawerOverlay onClick={fn2}>
 					<DrawerContent w="50%" h="50%">
@@ -45,9 +44,9 @@ describe('Drawer', () => {
 			</Drawer>
 		);
 
-		tree.find(DrawerOverlay).simulate('click');
-
-		tree.find('StyledDrawer').simulate('keyDown', { keyCode: 27, key: 'Escape', preventDefault: () => undefined });
+		const drawer = container.firstChild as HTMLElement;
+		fireEvent.click(drawer.firstElementChild as HTMLElement);
+		fireEvent.keyDown(drawer, { keyCode: 27, key: 'Escape' });
 
 		expect(fn).toHaveBeenCalledTimes(2);
 		expect(fn2).toHaveBeenCalled();
