@@ -44,6 +44,11 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 	// style: {},
 	// toolbar: `bullist numlist | emoticons | code | image | anchor link | paste pastetext |
 	// `
+	className,
+	toolbar_sticky,
+	toolbar_mode,
+	resize,
+	min_width,
 	toolbar = `newdocument |
             undo redo |
             cut copy paste pastetext |
@@ -92,7 +97,7 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 		return toolbar;
 	};
 
-	return (
+	const editor = (
 		<Editor
 			{...props}
 			disabled={disabled}
@@ -106,10 +111,16 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 				menubar: menubar,
 				selector: props.selector,
 				toolbar: toolbar,
-				plugins: plugins
+				plugins: plugins,
+				...(toolbar_sticky !== undefined && { toolbar_sticky }),
+				...(toolbar_mode !== undefined && { toolbar_mode }),
+				...(resize !== undefined && { resize }),
+				...(min_width !== undefined && { min_width })
 			}}
 		/>
 	);
+
+	return className ? <div className={className}>{editor}</div> : editor;
 };
 
 TextEditor.displayName = 'TextEditor';

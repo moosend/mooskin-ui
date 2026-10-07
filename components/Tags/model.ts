@@ -2,6 +2,12 @@ import { IInputCallbackData } from '../_utils/types/commonTypes';
 import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 
 export interface ITagsComponentProps extends IBoxComponentProps {
+	/** tag values supplied alongside Tag children */
+	tags?: string[];
+
+	/** input placeholder when the tags field is used as a single control */
+	placeholder?: string;
+
 	/** what data is being used, helps whn extracting user input, you know on what field changes are made */
 	dataLabel?: string;
 
