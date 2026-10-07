@@ -3,7 +3,7 @@ var config = require('./webpack.config.common'),
 	MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 var distFolder = 'lib';
-var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 'index/style.css', allChunks: true });
+var extractCSS = new MiniCssExtractPlugin({ filename: 'index/style.css' });
 
 // var entries = glob
 //     .sync('./components/*/index.ts', { ignore: ['./stories/*.tsx', './legacy/*.tsx', '**/*.spec.tsx', '**/*.spec.ts'] })
@@ -28,6 +28,7 @@ var extractCSS = new MiniCssExtractPlugin({ fallback: 'style-loader', filename: 
 // var entries['index'] = './index/index.ts';
 
 config.entry = './components/index/index.ts';
+config.mode = 'production';
 
 config.output = {
 	path: __dirname + '/' + distFolder,
@@ -66,8 +67,9 @@ config.module.rules.push(
 				loader: 'css-loader',
 				options: {
 					importLoaders: 1,
-					localIdentName: '[local]___[hash:base64:5]',
-					modules: true
+					modules: {
+						localIdentName: '[local]___[hash:base64:5]'
+					}
 				}
 			},
 
