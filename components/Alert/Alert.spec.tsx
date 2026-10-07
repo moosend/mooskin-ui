@@ -1,14 +1,12 @@
 import * as React from 'react';
-import { Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from './Alert';
-
-import { mount } from 'enzyme';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { Box } from '../Box/Box';
-
-const fn = jest.fn();
+import { Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from './Alert';
 
 describe('Alert', () => {
 	test('renders correctly', () => {
-		const tree = mount(
+		const fn = jest.fn();
+		const { container } = render(
 			<Alert variant="left-accent">
 				<AlertIcon />
 				<AlertTitle>Your browser is outdated!</AlertTitle>
@@ -16,11 +14,12 @@ describe('Alert', () => {
 				<AlertCloseButton onClick={fn} position="absolute" right={8} top={8} />
 			</Alert>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('Status and Variant are inherited by alert children', () => {
-		const tree = mount(
+		const fn = jest.fn();
+		render(
 			<Alert variant="left-accent" status="success">
 				<AlertIcon />
 				<Box>
@@ -31,18 +30,15 @@ describe('Alert', () => {
 			</Alert>
 		);
 
-		expect(tree.find(AlertTitle).prop('status')).toEqual('success');
-		expect(tree.find(AlertTitle).prop('variant')).toEqual('left-accent');
-
-		expect(tree.find(AlertDescription).prop('status')).toEqual('success');
-		expect(tree.find(AlertDescription).prop('variant')).toEqual('left-accent');
-
-		expect(tree.find(AlertCloseButton).prop('status')).toEqual('success');
-		expect(tree.find(AlertCloseButton).prop('variant')).toEqual('left-accent');
+		expect(screen.getByText('check_circle')).toBeInTheDocument();
+		expect(screen.getByText('Your browser is outdated!')).toBeInTheDocument();
+		expect(screen.getByText('Your Mooskin experience may be degraded.')).toBeInTheDocument();
+		expect(screen.getByText('close')).toBeInTheDocument();
 	});
 
 	test('calls callback on close click', () => {
-		const tree = mount(
+		const fn = jest.fn();
+		render(
 			<Alert variant="left-accent">
 				<AlertIcon />
 				<AlertTitle>Your browser is outdated!</AlertTitle>
@@ -51,7 +47,7 @@ describe('Alert', () => {
 			</Alert>
 		);
 
-		tree.find(AlertCloseButton).simulate('click');
+		fireEvent.click(screen.getByText('close'));
 		expect(fn).toHaveBeenCalled();
 	});
 });

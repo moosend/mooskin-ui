@@ -1,14 +1,13 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { DateRange } from './DateRange';
-
-import { mount } from 'enzyme';
 
 const fn = jest.fn();
 
 describe('DateRange', () => {
 	test('renders correctly', () => {
 		const mockDate = new Date(1466424490000);
-		const tree = mount(
+		const { container } = render(
 			<DateRange
 				onChange={fn}
 				ranges={[
@@ -20,6 +19,6 @@ describe('DateRange', () => {
 				]}
 			/>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

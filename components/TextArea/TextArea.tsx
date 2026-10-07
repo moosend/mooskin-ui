@@ -16,7 +16,7 @@ export const TextArea: React.FC<ITextAreaComponentProps> = withMooskinContext(({
 	const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 		!props.disabled && props.onChange && props.onChange(e);
 	};
-	return <StyledTextArea {...(props as any)} boxAs="textarea" onChange={onChange as any} />;
+	return <StyledTextArea {...(props as any)} className={className} style={style} boxAs="textarea" onChange={onChange as any} />;
 });
 
 TextArea.displayName = 'TextArea';

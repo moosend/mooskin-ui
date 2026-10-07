@@ -1,11 +1,10 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Slider } from './Slider';
-
-import { mount } from 'enzyme';
 
 describe('Slider', () => {
 	test('renders correctly', () => {
-		const tree = mount(<Slider value={5} min={0} max={10} />);
-		expect(tree).toMatchSnapshot();
+		const { container } = render(<Slider value={5} min={0} max={10} />);
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

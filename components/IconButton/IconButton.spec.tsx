@@ -1,35 +1,34 @@
 import * as React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { IconButton } from './IconButton';
-
-import { mount } from 'enzyme';
 
 describe('SmallIconButton', () => {
 	test('renders correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(<IconButton onClick={func}>close</IconButton>);
-		expect(tree).toMatchSnapshot();
+		const { container } = render(<IconButton onClick={func}>close</IconButton>);
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('callback is called when clicked', () => {
 		const func = jest.fn();
 
-		const component = mount(<IconButton onClick={func}>close</IconButton>);
+		render(<IconButton onClick={func}>close</IconButton>);
 
-		component.find('StyledIconButton').simulate('click');
+		fireEvent.click(screen.getByText('close'));
 		expect(func).toHaveBeenCalled();
 	});
 
 	test('renders a disabled button', () => {
 		const func = jest.fn();
 
-		const component = mount(
+		render(
 			<IconButton onClick={func} disabled>
 				close
 			</IconButton>
 		);
 
-		component.find('StyledIconButton').simulate('click');
+		fireEvent.click(screen.getByText('close'));
 		expect(func).not.toHaveBeenCalled();
 	});
 });

@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Footer, FooterBody, FooterEnd, FooterHead } from './Footer';
 
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import { Button, ButtonTwo, ButtonIcon } from '../Button/Button';
 
 describe('Alert', () => {
 	test('renders correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<Footer>
 				<FooterHead fontSize={12} fontWeight={800}>
 					SAVE AS DRAFT
@@ -28,6 +28,6 @@ describe('Alert', () => {
 				</FooterEnd>
 			</Footer>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

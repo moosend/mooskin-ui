@@ -1,12 +1,11 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Checkbox } from '../Checkbox/Checkbox';
 import { Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from './Table';
 
-import { mount } from 'enzyme';
-
 describe('Table', () => {
 	test('renders correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<Table>
 				<TableHeader>
 					<TableHeaderItem flex={2} justify="center">
@@ -44,6 +43,6 @@ describe('Table', () => {
 			</Table>
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

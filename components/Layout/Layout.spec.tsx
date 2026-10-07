@@ -1,12 +1,11 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Box } from '../Box/Box';
 import { Layout } from './Layout';
 
-import { mount } from 'enzyme';
-
 describe('Layout', () => {
 	test('renders correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<Layout>
 				<Box p={30} round="sm" boxShadow="md">
 					Box
@@ -34,6 +33,6 @@ describe('Layout', () => {
 				</Box>
 			</Layout>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import {
 	Expandable,
 	ExpandableItem,
@@ -8,13 +9,11 @@ import {
 	ExpandableItemText
 } from './Expandable';
 
-import { mount } from 'enzyme';
-
 describe('Expandable', () => {
 	test('renders correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<Expandable onClickItem={func}>
 				<ExpandableItem activeId={1}>
 					<ExpandableItemContainer>
@@ -55,13 +54,13 @@ describe('Expandable', () => {
 			</Expandable>
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('shows expanded item 2 content', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		render(
 			<Expandable onClickItem={func} activeItem={2}>
 				<ExpandableItem activeId={1}>
 					<ExpandableItemContainer>
@@ -80,14 +79,14 @@ describe('Expandable', () => {
 			</Expandable>
 		);
 
-		expect(tree.find(ExpandableItemContent).length).toEqual(2);
-		expect(tree.find(ExpandableItemContent).last().text()).toEqual('Content for item with index 2');
+		expect(screen.getByText('Content for item with index 2')).toBeInTheDocument();
+		expect(screen.queryByText('Content for item with index 1')).not.toBeInTheDocument();
 	});
 
 	test('calls on click item function when clicking on the item container', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		render(
 			<Expandable onClickItem={func} activeItem={2}>
 				<ExpandableItem activeId={1}>
 					<ExpandableItemContainer>
@@ -106,7 +105,7 @@ describe('Expandable', () => {
 			</Expandable>
 		);
 
-		tree.find(ExpandableItemContainer).first().simulate('click');
+		fireEvent.click(screen.getByText('Title for item with index 1'));
 		expect(func).toHaveBeenCalled();
 	});
 });

@@ -1,12 +1,11 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Box } from '../Box/Box';
 import { Carousel } from './Carousel';
 
-import { mount } from 'enzyme';
-
 describe('Carousel', () => {
 	test('renders correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<Carousel>
 				{[...Array(7)].map((item, i) => {
 					return (
@@ -17,6 +16,6 @@ describe('Carousel', () => {
 				})}
 			</Carousel>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

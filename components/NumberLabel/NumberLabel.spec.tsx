@@ -1,185 +1,163 @@
 import * as React from 'react';
+import { render, screen } from '@testing-library/react';
 import { NumberLabel } from './NumberLabel';
 
-import { mount } from 'enzyme';
-
-describe('Button', () => {
+describe('NumberLabel', () => {
 	test('renders correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<NumberLabel className="myClass" style={{ color: 'blue' }} id={'label'} abbreviate>
 				Mooskin
 			</NumberLabel>
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders simple text with label styles', () => {
-		const component = mount(<NumberLabel>Mooskin</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe('Mooskin');
+		render(<NumberLabel>Mooskin</NumberLabel>);
+		expect(screen.getByText('Mooskin')).toBeInTheDocument();
 	});
 
 	test('renders simple numbers text', () => {
-		const component = mount(<NumberLabel>12345</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe('12345');
+		render(<NumberLabel>12345</NumberLabel>);
+		expect(screen.getByText('12345')).toBeInTheDocument();
 	});
 
 	test('abbreviates numerical value if abbreviate prop is passed (thousands)', () => {
-		const component = mount(<NumberLabel abbreviate>13400</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe('13.4K');
+		render(<NumberLabel abbreviate>13400</NumberLabel>);
+		expect(screen.getByText('13.4K')).toBeInTheDocument();
 	});
 
 	test('abbreviates numerical value if abbreviate prop is passed (millions)', () => {
-		const component = mount(<NumberLabel abbreviate>3235942</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe('3.2M');
+		render(<NumberLabel abbreviate>3235942</NumberLabel>);
+		expect(screen.getByText('3.2M')).toBeInTheDocument();
 	});
 
 	test('abbreviates numerical value if abbreviate prop is passed (billions)', () => {
-		const component = mount(<NumberLabel abbreviate>6345153975</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe('6.3B');
+		render(<NumberLabel abbreviate>6345153975</NumberLabel>);
+		expect(screen.getByText('6.3B')).toBeInTheDocument();
 	});
 
 	test('abbreviates numerical value if abbreviate prop is passed (trillion - enthusiast mode)', () => {
-		const component = mount(<NumberLabel abbreviate>8675345876235</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe('8.6T');
+		render(<NumberLabel abbreviate>8675345876235</NumberLabel>);
+		expect(screen.getByText('8.6T')).toBeInTheDocument();
 	});
 
 	test('rounds to the nearest thousand when roundNumber prop is passed (thousands)', () => {
-		const component = mount(<NumberLabel roundNumber>13400</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe('13400');
+		render(<NumberLabel roundNumber>13400</NumberLabel>);
+		expect(screen.getByText('13400')).toBeInTheDocument();
 	});
 
 	test('rounds to the nearest million when roundNumber prop is passed (millions)', () => {
-		const component = mount(<NumberLabel roundNumber>3235942</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe('3200000');
+		render(<NumberLabel roundNumber>3235942</NumberLabel>);
+		expect(screen.getByText('3200000')).toBeInTheDocument();
 	});
 
 	test('rounds to the nearest billion when roundNumber prop is passed (billions)', () => {
-		const component = mount(<NumberLabel roundNumber>6345153975</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe(6300000000);
+		render(<NumberLabel roundNumber>6345153975</NumberLabel>);
+		expect(screen.getByText('6300000000')).toBeInTheDocument();
 	});
 
 	test('rounds to the nearest trillion when roundNumber prop is passed (trillion - enthusiast mode)', () => {
-		const component = mount(<NumberLabel roundNumber>8675345876235</NumberLabel>);
-
-		expect(component.find('Label').prop('children')).toBe(8700000000000);
+		render(<NumberLabel roundNumber>8675345876235</NumberLabel>);
+		expect(screen.getByText('8700000000000')).toBeInTheDocument();
 	});
 
 	test('abbreviates and rounds numerical values if both props are passed (thousands)', () => {
-		const component = mount(
+		render(
 			<NumberLabel abbreviate roundNumber>
 				13400
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('13.4K');
+		expect(screen.getByText('13.4K')).toBeInTheDocument();
 	});
 
 	test('abbreviates and rounds numerical values if both props are passed (millions)', () => {
-		const component = mount(
+		render(
 			<NumberLabel abbreviate roundNumber>
 				3235942
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('3.2M');
+		expect(screen.getByText('3.2M')).toBeInTheDocument();
 	});
 
 	test('abbreviates and rounds numerical values if both props are passed (billions)', () => {
-		const component = mount(
+		render(
 			<NumberLabel abbreviate roundNumber>
 				6545153975
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('6.5B');
+		expect(screen.getByText('6.5B')).toBeInTheDocument();
 	});
 
 	test('abbreviates and rounds numerical values if both props are passed (trillion)', () => {
-		const component = mount(
+		render(
 			<NumberLabel abbreviate roundNumber>
 				8675345876235
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('8.7T');
+		expect(screen.getByText('8.7T')).toBeInTheDocument();
 	});
 
 	test('abbreviates with custom decimal accuracy', () => {
-		const component = mount(
+		render(
 			<NumberLabel abbreviate abbrAccuracy={2}>
 				1774215
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('1.77M');
+		expect(screen.getByText('1.77M')).toBeInTheDocument();
 	});
 
 	test('abbreviates upper value with custom decimal accuracy', () => {
-		const component = mount(
+		render(
 			<NumberLabel abbreviate roundNumber roundAccuracy="high" abbrAccuracy={2}>
 				1774215
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('1.80M');
+		expect(screen.getByText('1.80M')).toBeInTheDocument();
 	});
 
 	test('rounds with custom round accuracy (thousand)', () => {
-		const component = mount(
+		render(
 			<NumberLabel roundNumber roundAccuracy="high">
 				15432
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('15400');
+		expect(screen.getByText('15400')).toBeInTheDocument();
 	});
 
 	test('rounds with custom round accuracy (thousand) part 2', () => {
-		const component = mount(
+		render(
 			<NumberLabel roundNumber roundAccuracy="low">
 				15432
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('15000');
+		expect(screen.getByText('15000')).toBeInTheDocument();
 	});
 
 	test('rounds and abbreviates with custom accuracies (thousand)', () => {
-		const component = mount(
+		render(
 			<NumberLabel roundNumber roundAccuracy="low" abbreviate abbrAccuracy={2}>
 				15432
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('15K');
+		expect(screen.getByText('15K')).toBeInTheDocument();
 	});
 
 	test('abbreviates with custom accuracy (billions)', () => {
-		const component = mount(
+		render(
 			<NumberLabel abbreviate abbrAccuracy={5}>
 				6545153975
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('6.54515B');
+		expect(screen.getByText('6.54515B')).toBeInTheDocument();
 	});
 
 	test('abbreviates and rounds with custom accuracy (billions)', () => {
-		const component = mount(
+		render(
 			<NumberLabel abbreviate roundNumber roundAccuracy={'low'} abbrAccuracy={5}>
 				6545153975
 			</NumberLabel>
 		);
-
-		expect(component.find('Label').prop('children')).toBe('7B');
+		expect(screen.getByText('7B')).toBeInTheDocument();
 	});
 });

@@ -1,74 +1,49 @@
 import * as React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { Pagination, PaginationButton } from './Pagination';
 
-import { mount } from 'enzyme';
+const pageButtons = Array.from({ length: 10 }, (_, index) => <PaginationButton key={index} />);
 
 describe('Pagination', () => {
 	test('renders correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<Pagination onClickButton={func} activePage={3}>
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
+				{pageButtons}
 			</Pagination>
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('calls callback correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		render(
 			<Pagination onClickButton={func} activePage={3}>
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
+				{pageButtons}
 			</Pagination>
 		);
 
-		tree.find(PaginationButton).first().simulate('click');
+		fireEvent.click(screen.getByText('1'));
 		expect(func).toHaveBeenCalled();
 	});
 
 	test('renders pagination button count correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		render(
 			<Pagination onClickButton={func} activePage={3}>
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
-				<PaginationButton />
+				{pageButtons}
 			</Pagination>
 		);
 
-		expect(tree.find(PaginationButton).length).toEqual(5);
+		expect(screen.getByText('5')).toBeInTheDocument();
+		expect(screen.queryByText('6')).not.toBeInTheDocument();
 
-		tree.find('StyledPaginationShowAll').first().simulate('click');
+		fireEvent.click(screen.getByText('Show all'));
 
-		expect(tree.find(PaginationButton).length).toEqual(10);
+		expect(screen.getByText('10')).toBeInTheDocument();
 	});
 });

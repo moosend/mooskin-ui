@@ -1,0 +1,7 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"types": []
+	},
+	"exclude": ["node_modules", "lib", "components/**/*.spec.ts", "components/**/*.spec.tsx", "stories"]
+}

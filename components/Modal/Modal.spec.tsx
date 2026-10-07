@@ -1,14 +1,13 @@
 import * as React from 'react';
+import { fireEvent, render } from '@testing-library/react';
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from './Modal';
-
-import { mount } from 'enzyme';
 
 describe('Modal', () => {
 	test('renders correctly', () => {
 		const fn = jest.fn();
 		const fn2 = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<Modal onClose={fn} isOpen>
 				<ModalOverlay onClick={fn2}>
 					<ModalContent w="50%" h="50%">
@@ -23,14 +22,14 @@ describe('Modal', () => {
 			</Modal>
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('closes Modal on Overlay click or on click ESC key', () => {
 		const fn = jest.fn();
 		const fn2 = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<Modal onClose={fn} isOpen>
 				<ModalOverlay onClick={fn2}>
 					<ModalContent w="50%" h="50%">
@@ -44,10 +43,11 @@ describe('Modal', () => {
 				</ModalOverlay>
 			</Modal>
 		);
-		tree.find('StyledModal').simulate('keyDown', { keyCode: 27, key: 'Escape', preventDefault: () => undefined });
-		tree.find(ModalOverlay).simulate('click');
+
+		const modal = container.firstChild as HTMLElement;
+		fireEvent.keyDown(modal, { keyCode: 27, key: 'Escape' });
+		fireEvent.click(modal.firstElementChild as HTMLElement);
 		expect(fn).toHaveBeenCalledTimes(2);
 		expect(fn2).toHaveBeenCalled();
 	});
-
 });

@@ -48,6 +48,7 @@ config.module.rules.push(
 			{
 				loader: 'ts-loader',
 				options: {
+					configFile: 'tsconfig.build.json',
 					compilerOptions: {
 						declaration: true,
 						declarationDir: './' + distFolder

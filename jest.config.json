@@ -1,5 +1,5 @@
 {
-    "bail": true,
+    "bail": false,
     "testEnvironment": "jsdom",
     "testEnvironmentOptions": {
         "customExportConditions": ["node", "require", "default"]
@@ -19,10 +19,10 @@
     "coverageReporters": ["json", "lcov", "text", "teamcity"],
     "globals": {
         "ts-jest": {
+            "tsconfig": "tsconfig.json",
             "isolatedModules": true
         }
     },
-    "snapshotSerializers": ["enzyme-to-json/serializer"],
     "moduleDirectories": ["node_modules", "src"],
     "moduleNameMapper": {
         "^@mui/material/(.*)$": "<rootDir>/node_modules/@mui/material/node/$1",
@@ -51,6 +51,6 @@
         "function-bind",
         "object-keys"
     ],
-    "setupFilesAfterEnv": ["<rootDir>/components/_utils/adapter.ts"],
+    "setupFilesAfterEnv": ["@testing-library/jest-dom"],
     "setupFiles": ["<rootDir>/components/_utils/test-setup.ts"]
 }
