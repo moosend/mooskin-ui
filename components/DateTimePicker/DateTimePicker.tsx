@@ -21,6 +21,8 @@ import { getOverridesForPicker } from '../_utils/helper';
 export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimePickerKeyboardComponentProps> = withMooskinContext(
 	(props) => {
 		const { ampm = false, format = 'dd/MM/yyyy hh:mm:ss', onChange, value, ...restProps } = props;
+		const pickerProps = { ...restProps };
+		delete (pickerProps as { inputComponentProps?: unknown }).inputComponentProps;
 		const [isPickerOpen, setIsPickerOpen] = React.useState(false);
 
 		const openPicker = () => setIsPickerOpen(true);
@@ -54,7 +56,7 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 						open={isPickerOpen}
 						onOpen={openPicker}
 						onClose={closePicker}
-						{...restProps}
+						{...pickerProps}
 						value={value ?? null}
 						inputFormat={format}
 						dayOfWeekFormatter={(d) => d.slice(0, 3)}
