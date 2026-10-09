@@ -56,7 +56,6 @@
 		"@mui/x-date-pickers": "^5.0.20",
 		"@tinymce/tinymce-react": "^6.1.0",
 		"date-fns": "^2.16.1",
-		"dayjs": "^1.11.7",
 		"emoji-mart": "^3.0.0",
 		"react": "^16.8.0",
 		"react-date-range": "^1.1.3",
