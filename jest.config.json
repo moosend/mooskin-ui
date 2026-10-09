@@ -40,7 +40,6 @@
         "react-dom",
         "react-addons-test-utils",
         "fbjs",
-        "enzyme",
         "cheerio",
         "htmlparser2",
         "underscore",
