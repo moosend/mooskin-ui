@@ -21,6 +21,6 @@
 		"types": ["jest", "@testing-library/jest-dom"],
 		"lib": ["dom", "es6", "es7", "dom.iterable", "scripthost"]
 	},
-	"include": ["components"],
-	"exclude": ["node_modules", "lib", "stories"]
+	"include": ["components", "stories"],
+	"exclude": ["node_modules", "lib"]
 }
