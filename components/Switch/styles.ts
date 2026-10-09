@@ -45,7 +45,7 @@ export const StyledSwitchHandle = styled(Box)<ISwitchHandleComponentProps>`
 	transform: ${(props) =>
 		props.active
 			? `translate(${
-					props.switchWidth ? (typeof props.switchWidth === 'string' ? parseInt(props.switchWidth, 10) : props.switchWidth) - 27 : 63
+					props.switchWidth ? (typeof props.switchWidth === 'string' ? Number.parseInt(props.switchWidth, 10) : props.switchWidth) - 27 : 63
 				}px)`
 			: ''};
 `;

@@ -66,12 +66,9 @@ export const Radio: React.FC<IRadioComponentProps> = withMooskinContext(({ class
 	return (
 		<StyledRadio {...props}>
 			{!hasRadio && (
-				<RadioIcon
-					disabled={props.disabled}
-					selected={props.selected}
-					onClick={onClick}
-					children={props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
-				/>
+				<RadioIcon disabled={props.disabled} selected={props.selected} onClick={onClick}>
+					{props.selected ? 'radio_button_checked' : 'radio_button_unchecked'}
+				</RadioIcon>
 			)}
 			{recurseChildren(props.children)}
 		</StyledRadio>

@@ -144,8 +144,9 @@ export const Drawer: React.FC<IDrawerComponentProps> = withMooskinContext(
 				onKeyDown={handleKeyDown}
 				setRef={(ref: HTMLElement) => (drawerRef.current = ref)}
 				tabIndex={0}
-				children={recurseChildren(props.children)}
-			/>
+			>
+				{recurseChildren(props.children)}
+			</StyledDrawer>
 		);
 	},
 );
@@ -200,7 +201,9 @@ DrawerFooter.displayName = 'DrawerFooter';
  * DrawerCloseButton
  */
 export const DrawerCloseButton: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledDrawerCloseButton style={style} {...props} children="close" className={`notranslate ${className}`} />
+	<StyledDrawerCloseButton style={style} {...props} className={`notranslate ${className}`}>
+		close
+	</StyledDrawerCloseButton>
 ));
 
 DrawerCloseButton.displayName = 'DrawerCloseButton';

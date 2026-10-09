@@ -78,7 +78,7 @@ export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext(({ classNa
 		);
 	};
 
-	return <StyledTabs {...props} children={recurseChildren(props.children)} />;
+	return <StyledTabs {...props}>{recurseChildren(props.children)}</StyledTabs>;
 });
 
 Tabs.displayName = 'Tabs';

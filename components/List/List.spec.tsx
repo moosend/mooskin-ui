@@ -18,6 +18,7 @@ describe('Alert', () => {
                                 5653161323261613135636d6f6f736b696e4c6f676f2e706e67`}
 							style={{ display: 'block' }}
 							width={50}
+							alt=""
 						/>
 					</ListItemHead>
 					<ListItemBody>
@@ -43,6 +44,7 @@ describe('Alert', () => {
                                 5653161323261613135636d6f6f736b696e4c6f676f2e706e67`}
 							style={{ display: 'block' }}
 							width={50}
+							alt=""
 						/>
 					</ListItemHead>
 					<ListItemBody>
@@ -68,6 +70,7 @@ describe('Alert', () => {
                                 5653161323261613135636d6f6f736b696e4c6f676f2e706e67`}
 							style={{ display: 'block' }}
 							width={50}
+							alt=""
 						/>
 					</ListItemHead>
 					<ListItemBody>

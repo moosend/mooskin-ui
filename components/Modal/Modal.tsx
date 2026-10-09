@@ -99,13 +99,9 @@ export const Modal: React.FC<IModalComponentProps> = withMooskinContext(
 		};
 
 		return (
-			<StyledModal
-				{...props}
-				onKeyDown={handleKeyDown}
-				setRef={(ref: HTMLElement) => (modalRef.current = ref)}
-				tabIndex={0}
-				children={recurseChildren(props.children)}
-			/>
+			<StyledModal {...props} onKeyDown={handleKeyDown} setRef={(ref: HTMLElement) => (modalRef.current = ref)} tabIndex={0}>
+				{recurseChildren(props.children)}
+			</StyledModal>
 		);
 	},
 );
@@ -153,7 +149,9 @@ ModalFooter.displayName = 'ModalFooter';
  * ModalCloseButton
  */
 export const ModalCloseButton: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledModalCloseButton {...props} children="close" className={`notranslate ${className}`} />
+	<StyledModalCloseButton {...props} className={`notranslate ${className}`}>
+		close
+	</StyledModalCloseButton>
 ));
 
 ModalCloseButton.displayName = 'ModalCloseButton';

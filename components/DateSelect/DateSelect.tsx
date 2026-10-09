@@ -124,8 +124,8 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContex
 	};
 
 	const getDayFormat = () => {
-		if (props.format && parseInt(props.format, 10)) {
-			return parseInt(props.format, 10);
+		if (props.format && Number.parseInt(props.format, 10)) {
+			return Number.parseInt(props.format, 10);
 		} else {
 			throw new Error('Day format not valid!');
 		}
@@ -177,7 +177,7 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContex
 	};
 
 	const onChangeSelect = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-		props.onChangeSelect?.(e, { value: parseInt(data.value, 10), dataLabel: props.dataLabel });
+		props.onChangeSelect?.(e, { value: Number.parseInt(data.value, 10), dataLabel: props.dataLabel });
 		props.onChange?.(e);
 	};
 

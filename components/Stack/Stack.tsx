@@ -74,7 +74,7 @@ export const Stack: React.FC<IStackComponentProps> = withMooskinContext((props) 
 			return <div />;
 		});
 
-	return <StyledStack {...props} children={renderChildren()} />;
+	return <StyledStack {...props}>{renderChildren()}</StyledStack>;
 });
 
 Stack.displayName = 'Stack';

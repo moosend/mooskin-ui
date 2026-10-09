@@ -33,9 +33,10 @@ export const Label: React.FC<ILabelComponentProps> = withMooskinContext(({ class
 			fontSize={[14, 14, 16, 16]}
 			{...props}
 			onClick={props.onClick ? onClick : undefined}
-			children={children}
 			boxAs="label"
-		/>
+		>
+			{children}
+		</StyledLabel>
 	);
 });
 

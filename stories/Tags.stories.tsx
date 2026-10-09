@@ -55,7 +55,7 @@ WithInput.args = {
 			{[...Array(4)].map((item, i) => (
 				<Tag key={i}>
 					<TagText>{`Tag and more ${i + 1}`}</TagText>
-					<TagClose children="check" onClick={i === 2 ? () => alert('Clicked!') : undefined} />
+					<TagClose onClick={i === 2 ? () => alert('Clicked!') : undefined}>check</TagClose>
 				</Tag>
 			))}
 			<TagInput placeholder="Add a label" delimiters={[',', ' ', 'Enter', 13]} pl={10} />

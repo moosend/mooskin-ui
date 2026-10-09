@@ -82,7 +82,11 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ classNa
 		});
 	};
 
-	return <StyledTags dataLabel={dataLabel} {...props} children={recurseChildren(props.children)} />;
+	return (
+		<StyledTags dataLabel={dataLabel} {...props}>
+			{recurseChildren(props.children)}
+		</StyledTags>
+	);
 });
 
 Tags.displayName = 'Tags';
@@ -114,13 +118,12 @@ export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext(
 				const charArray = text.split('');
 
 				for (let i = 0; i < charArray.length; i++) {
-					delimitersInternal &&
-						delimitersInternal.map((delimiter) => {
-							if (charArray[i] === delimiter && newTag.join('') !== '') {
-								tags.push(newTag.join('').trim());
-								newTag = [];
-							}
-						});
+					delimitersInternal?.map((delimiter) => {
+						if (charArray[i] === delimiter && newTag.join('') !== '') {
+							tags.push(newTag.join('').trim());
+							newTag = [];
+						}
+					});
 					if (!delimitersInternal.includes(charArray[i]) && !delimitersInternal.includes(charArray[i].charCodeAt(0))) {
 						newTag.push(charArray[i]);
 					}
@@ -223,8 +226,8 @@ const getConvertedDelimiters = (delimiters: any) => {
 	const newDelimiters: Array<string | number> = delimiters.map((delimiter: any) => {
 		if (delimiter === ' ') {
 			return delimiter;
-		} else if (!isNaN(delimiter)) {
-			return parseInt(delimiter, 10);
+		} else if (!Number.isNaN(Number(delimiter))) {
+			return Number.parseInt(delimiter, 10);
 		} else if (typeof delimiter === 'string') {
 			return delimiter.toLocaleLowerCase();
 		} else {

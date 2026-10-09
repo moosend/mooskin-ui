@@ -40,7 +40,7 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext(({
 			return child;
 		});
 
-	return <StyledSidemenu {...props} children={recurseChildren(props.children)} />;
+	return <StyledSidemenu {...props}>{recurseChildren(props.children)}</StyledSidemenu>;
 });
 
 /**

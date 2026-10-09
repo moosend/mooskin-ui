@@ -40,7 +40,7 @@ export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext(({
 			return child;
 		});
 
-	return <StyledSelector {...props} children={recurseChildren(props.children)} />;
+	return <StyledSelector {...props}>{recurseChildren(props.children)}</StyledSelector>;
 });
 
 /**

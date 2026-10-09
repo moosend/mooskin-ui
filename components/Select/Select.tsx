@@ -102,8 +102,11 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(
 						label = child.props.searchLabel;
 					} else if (typeof child.props.children === 'string') {
 						label = child.props.children;
-					} else if (Array.isArray(child.props.children) && typeof child.props.children[0] === 'string') {
-						label = child.props.children[0];
+					} else if (Array.isArray(child.props.children)) {
+						const [firstChild] = child.props.children;
+						if (typeof firstChild === 'string') {
+							label = firstChild;
+						}
 					}
 
 					if (Array.isArray(selectedValue)) {
@@ -147,13 +150,9 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(
 							<>
 								{recurseChildren(child.props.children)}
 								{active && (
-									<SelectIcon
-										children="check"
-										p="0"
-										mr={[0, 0, '-32px', '-32px']}
-										pl={['0px', '0px', '15px', '15px']}
-										fontSize={[15, 15, 20, 20]}
-									/>
+									<SelectIcon p="0" mr={[0, 0, '-32px', '-32px']} pl={['0px', '0px', '15px', '15px']} fontSize={[15, 15, 20, 20]}>
+										check
+									</SelectIcon>
 								)}
 							</>
 						),

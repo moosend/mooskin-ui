@@ -97,7 +97,11 @@ export const Expandable: React.FC<IExpandableComponentProps> = withMooskinContex
 		});
 	};
 
-	return <StyledExpandable d="flex" direction="column" {...props} children={recurseChildren(props.children)} />;
+	return (
+		<StyledExpandable d="flex" direction="column" {...props}>
+			{recurseChildren(props.children)}
+		</StyledExpandable>
+	);
 });
 
 Expandable.displayName = 'Expandable';

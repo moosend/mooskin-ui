@@ -110,8 +110,9 @@ export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext(
 				style={style}
 				variant={variant}
 				boxShadow="lg"
-				children={recurseChildren(props.children)}
-			/>
+			>
+				{recurseChildren(props.children)}
+			</StyledAlert>
 		);
 	},
 );
@@ -132,8 +133,9 @@ export const AlertIcon: React.FC<IBaseAlertComponentProps> = withMooskinContext(
 		{...props}
 		className={className}
 		style={{ flexShrink: 0, ...style }}
-		children={props.status && AlertIcons[props.status]}
-	/>
+	>
+		{props.status && AlertIcons[props.status]}
+	</StyledAlertIcon>
 ));
 
 AlertIcon.displayName = 'AlertIcon';
@@ -182,8 +184,9 @@ export const AlertCloseButton: React.FC<IBaseAlertComponentProps> = withMooskinC
 		{...props}
 		className={className}
 		style={style}
-		children="close"
-	/>
+	>
+		close
+	</StyledAlertCloseButton>
 ));
 
 AlertCloseButton.displayName = 'AlertCloseButton';

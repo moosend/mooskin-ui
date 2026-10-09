@@ -67,12 +67,9 @@ export const Checkbox: React.FC<ICheckboxComponentProps> = withMooskinContext(({
 	return (
 		<StyledCheckbox d="flex" w="fit-content" align="center" {...props}>
 			{!hasCheckbox && (
-				<CheckboxIcon
-					disabled={props.disabled}
-					checked={props.checked}
-					onClick={onClick}
-					children={props.checked ? 'check_box' : 'check_box_outline_blank'}
-				/>
+				<CheckboxIcon disabled={props.disabled} checked={props.checked} onClick={onClick}>
+					{props.checked ? 'check_box' : 'check_box_outline_blank'}
+				</CheckboxIcon>
 			)}
 			{recurseChildren(props.children)}
 		</StyledCheckbox>

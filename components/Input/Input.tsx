@@ -142,7 +142,9 @@ export const InputOptionList: React.FC<IInputListComponentProps> = withMooskinCo
 
 	return (
 		<Box position="relative" color="inherit" zIndex={props.showList ? 3 : 0} {...props.wrapperProps}>
-			<InputIcon children={props.icon} onClick={toggleDropdown} {...props.iconProps} />
+			<InputIcon onClick={toggleDropdown} {...props.iconProps}>
+				{props.icon}
+			</InputIcon>
 			{props.showList && (
 				<>
 					<StyledInputOptionList

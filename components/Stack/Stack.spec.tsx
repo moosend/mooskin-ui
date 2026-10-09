@@ -49,9 +49,9 @@ describe('Stack', () => {
 	test('renders Stack with divider & spacings correctly', () => {
 		const { container } = render(
 			<HStack spacing={20} divider={<span style={{ width: 1 }} />}>
-				<label key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
-				<label key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
-				<label key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+				<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />
+				<div key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />
+				<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
 			</HStack>,
 		);
 

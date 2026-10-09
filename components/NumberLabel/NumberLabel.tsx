@@ -16,7 +16,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 	({ abbrAccuracy = 1, className = '', style = {}, ...props }) => {
 		const getContent = () => {
 			const { children, abbreviate, roundNumber } = props;
-			if ((abbreviate || roundNumber) && !isNaN(children as any)) {
+			if ((abbreviate || roundNumber) && !Number.isNaN(Number(children))) {
 				return prettifyNumber(children as any);
 			}
 			return children;

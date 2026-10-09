@@ -11,6 +11,7 @@ exports[`Alert renders correctly 1`] = `
       class="sc-aXZVg kITBOQ sc-imWYAI sc-jXbUNg dthjsB"
     >
       <img
+        alt=""
         src="https://camo.githubusercontent.com/
                                 059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/
                                 68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303
@@ -52,6 +53,7 @@ exports[`Alert renders correctly 1`] = `
       class="sc-aXZVg kITBOQ sc-imWYAI sc-jXbUNg dthjsB"
     >
       <img
+        alt=""
         src="https://camo.githubusercontent.com/
                                 059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/
                                 68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303
@@ -93,6 +95,7 @@ exports[`Alert renders correctly 1`] = `
       class="sc-aXZVg kITBOQ sc-imWYAI sc-jXbUNg dthjsB"
     >
       <img
+        alt=""
         src="https://camo.githubusercontent.com/
                                 059ab65a22f6b1b2bb76765633cb4a4cd9eefd5b7745277fb016c081a6ab4be4/
                                 68747470733a2f2f63646e2e737461742d747261636b2e636f6d2f32303137303830332d323031372d303

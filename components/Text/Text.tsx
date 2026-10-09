@@ -19,7 +19,7 @@ export const Text: React.FC<ITextComponentProps> = withMooskinContext(({ classNa
 				? `${props.children.substr(0, props.limit)}...`
 				: props.children
 			: props.children;
-	return <StyledText {...props} children={children} />;
+	return <StyledText {...props}>{children}</StyledText>;
 });
 
 Text.displayName = 'Text';

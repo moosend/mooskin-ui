@@ -45,7 +45,7 @@ export const Steps: React.FC<IStepsComponentProps> = withMooskinContext(({ class
 					children: (
 						<>
 							{child.props.children}
-							{hasArrow && <StepArrow children="keyboard_arrow_right" />}
+							{hasArrow && <StepArrow>keyboard_arrow_right</StepArrow>}
 						</>
 					),
 					onClick: (e) => (!child.props.disabled ? batchClickHandler(e, activeId, child.props.onClick) : undefined),
@@ -85,7 +85,7 @@ export const Steps: React.FC<IStepsComponentProps> = withMooskinContext(({ class
 		);
 	};
 
-	return <StyledSteps {...props} children={recurseChildren(props.children)} />;
+	return <StyledSteps {...props}>{recurseChildren(props.children)}</StyledSteps>;
 });
 
 Steps.displayName = 'Steps';
