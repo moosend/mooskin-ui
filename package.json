@@ -17,8 +17,8 @@
 		"test:u": "jest -u --silent --config=jest.config.json",
 		"test:cov": "jest --coverage --silent --config=jest.config.json",
 		"test:watch": "jest --watchAll --config=jest.config.json",
-		"storybook": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006",
-		"build-storybook": "build-storybook",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build",
 		"chromatic": "npx chromatic --auto-accept-changes --project-token 3pepa9baz12"
 	},
 	"repository": {
@@ -74,10 +74,12 @@
 		"@babel/preset-env": "^7.4.2",
 		"@babel/preset-react": "^7.0.0",
 		"@babel/preset-typescript": "^7.3.3",
-		"@storybook/addon-actions": "^6.5.16",
-		"@storybook/addon-essentials": "^6.5.16",
-		"@storybook/addon-links": "^6.5.16",
-		"@storybook/react": "^6.5.16",
+		"@storybook/addon-essentials": "8.6.18",
+		"@storybook/addon-links": "8.6.18",
+		"@storybook/addon-webpack5-compiler-babel": "3.0.6",
+		"@storybook/react": "8.6.18",
+		"@storybook/react-webpack5": "8.6.18",
+		"@storybook/test": "8.6.18",
 		"@testing-library/jest-dom": "^6.6.0",
 		"@testing-library/react": "^12.1.2",
 		"@testing-library/user-event": "^14.6.0",
@@ -98,7 +100,6 @@
 		"babel-preset-react": "6.24.1",
 		"babel-preset-stage-0": "6.24.1",
 		"chromatic": "^5.4.0",
-		"cross-env": "^7.0.3",
 		"css-loader": "^6.7.1",
 		"cssnano": "4.1.10",
 		"enzyme": "3.9.0",
@@ -118,13 +119,12 @@
 		"postcss-url": "^8.0.0",
 		"raw-loader": "^4.0.2",
 		"source-map-loader": "^4.0.1",
-		"storybook-css-modules-preset": "^1.0.2",
+		"storybook": "8.6.18",
 		"style-loader": "0.23.1",
 		"ts-jest": "^29.1.0",
 		"ts-loader": "^9.5.1",
 		"typescript": "4.7.3",
 		"webpack": "^5.100.2",
-		"webpack-cli": "^5.1.4",
-		"webpack-merge": "^5.2.0"
+		"webpack-cli": "^5.1.4"
 	}
 }
