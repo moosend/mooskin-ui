@@ -1,4 +1,4 @@
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 
 export interface IPaginationComponentProps extends IBoxComponentProps {
 	singleItem?: boolean;

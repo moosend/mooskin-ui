@@ -4,8 +4,8 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
-import { ILayoutComponentProps } from '../Layout/model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { ILayoutComponentProps } from '../Layout/model';
 
 // Components
 import { Layout } from '../Layout/Layout';
@@ -16,54 +16,52 @@ import variables from '../_utils/globals/variables';
 /**
  * List
  */
-export const List: React.FC<ILayoutComponentProps> = withMooskinContext(({ className = '', spacing = 15, style = {}, ...props }) => {
-	return <Layout {...props} />;
-});
+export const List: React.FC<ILayoutComponentProps> = withMooskinContext(({ className = '', spacing = 15, style = {}, ...props }) => (
+	<Layout {...props} />
+));
 
 List.displayName = 'List';
 
 /**
  * ListItem
  */
-export const ListItem: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return (
-		<StyledListItem
-			d="flex"
-			p="15px"
-			bgColor={props.palette?.backgroundColors.white || variables.backgroundColors.white}
-			fontColor={props.palette?.fontColors.text || variables.fontColors.text}
-			boxShadow="xs"
-			round="xs"
-			{...props}
-		/>
-	);
-});
+export const ListItem: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledListItem
+		d="flex"
+		p="15px"
+		bgColor={props.palette?.backgroundColors.white || variables.backgroundColors.white}
+		fontColor={props.palette?.fontColors.text || variables.fontColors.text}
+		boxShadow="xs"
+		round="xs"
+		{...props}
+	/>
+));
 
 ListItem.displayName = 'ListItem';
 
 /**
  * ListItemHead
  */
-export const ListItemHead: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledListItemHead {...props} />;
-});
+export const ListItemHead: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledListItemHead {...props} />
+));
 
 ListItemHead.displayName = 'ListItemHead';
 
 /**
  * ListItemBody
  */
-export const ListItemBody: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledListItemBody flex={1} direction="column" p="0 20px" {...props} />;
-});
+export const ListItemBody: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledListItemBody flex={1} direction="column" p="0 20px" {...props} />
+));
 
 ListItemBody.displayName = 'ListItemBody';
 
 /**
  * ListItemEnd
  */
-export const ListItemEnd: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledListItemEnd align="center" {...props} />;
-});
+export const ListItemEnd: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledListItemEnd align="center" {...props} />
+));
 
 ListItemEnd.displayName = 'ListItemEnd';

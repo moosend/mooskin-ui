@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ILayoutComponentProps } from './model';
+import type { ILayoutComponentProps } from './model';
 
 import { Box } from '../Box/Box';
 

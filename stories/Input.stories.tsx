@@ -9,11 +9,11 @@ import {
 	InputIcon,
 	InputOption,
 	InputOptionList,
-	InputOptionListTitle
+	InputOptionListTitle,
 } from '../components/Input/Input';
-import { IInputContainerComponentProps } from '../components/Input/model';
+import type { IInputContainerComponentProps } from '../components/Input/model';
 
-import { IInputCallbackData } from '../components/_utils/types/commonTypes';
+import type { IInputCallbackData } from '../components/_utils/types/commonTypes';
 // import { Box } from '../components/Box/Box';
 
 import { Box } from '../components/Box/Box';
@@ -23,17 +23,15 @@ import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Input,
-	title: 'Example/Input'
+	title: 'Example/Input',
 };
 
-const Template: Story<IInputContainerComponentProps> = (args) => {
-	return (
-		<>
-			{/*<GlobalStyle />*/}
-			<Box d="flex" {...args} />
-		</>
-	);
-};
+const Template: Story<IInputContainerComponentProps> = (args) => (
+	<>
+		{/* <GlobalStyle /> */}
+		<Box d="flex" {...args} />
+	</>
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -74,7 +72,7 @@ Normal.args = {
 				<InputIcon>search</InputIcon>
 			</InputContainer>
 		</>
-	)
+	),
 } as IInputContainerComponentProps;
 
 export const WithLabel = Template.bind({});
@@ -84,7 +82,7 @@ WithLabel.args = {
 			<Label>Some Field:</Label>
 			<Input autoFocus />
 		</>
-	)
+	),
 } as IInputContainerComponentProps;
 
 export const WithDescription = Template.bind({});
@@ -95,5 +93,5 @@ WithDescription.args = {
 			<Description>Description goes here</Description>
 		</>
 	),
-	d: 'block'
+	d: 'block',
 } as IInputContainerComponentProps;

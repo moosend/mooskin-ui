@@ -3,25 +3,23 @@ import React from 'react';
 import type { StoryFn as Story } from '@storybook/react';
 
 import { Box } from '../components/Box/Box';
-import { IBoxComponentProps } from '../components/Box/model';
+import type { IBoxComponentProps } from '../components/Box/model';
 
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Box,
-	title: 'Example/Box'
+	title: 'Example/Box',
 };
 
-const Template: Story<IBoxComponentProps> = (args) => {
-	return (
-		<>
-			{/*<GlobalStyle />*/}
-			<Box {...args} noRender={[]} />
-			<Box {...args} noRender={[]} />
-			<Box {...args} noRender={[]} />
-		</>
-	);
-};
+const Template: Story<IBoxComponentProps> = (args) => (
+	<>
+		{/* <GlobalStyle /> */}
+		<Box {...args} noRender={[]} />
+		<Box {...args} noRender={[]} />
+		<Box {...args} noRender={[]} />
+	</>
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -30,5 +28,5 @@ Normal.args = {
 	fontColor: 'blue',
 	p: 30,
 	round: 'md',
-	className: 'LALALA'
+	className: 'LALALA',
 };

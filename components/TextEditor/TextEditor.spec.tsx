@@ -3,24 +3,14 @@ import { render, screen } from '@testing-library/react';
 import { TextEditor } from './TextEditor';
 
 jest.mock('@tinymce/tinymce-react', () => ({
-	Editor: ({
-		disabled,
-		inline,
-		init,
-		value
-	}: {
-		disabled?: boolean;
-		inline?: boolean;
-		init?: { menubar?: boolean };
-		value?: string;
-	}) => (
+	Editor: ({ disabled, inline, init, value }: { disabled?: boolean; inline?: boolean; init?: { menubar?: boolean }; value?: string }) => (
 		<textarea
 			disabled={disabled}
 			data-inline={inline ? 'true' : 'false'}
 			data-menubar={init?.menubar ? 'true' : 'false'}
 			defaultValue={value}
 		/>
-	)
+	),
 }));
 
 const fn = jest.fn();

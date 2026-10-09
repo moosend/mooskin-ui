@@ -17,7 +17,7 @@ describe('ActionsDropdown', () => {
 				<ActionsDropdownItem dataLabel="preview" value="/preview">
 					Preview
 				</ActionsDropdownItem>
-			</ActionsDropdown>
+			</ActionsDropdown>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
@@ -36,7 +36,7 @@ describe('ActionsDropdown', () => {
 				<ActionsDropdownItem value="/settings">Settings</ActionsDropdownItem>
 				<ActionsDropdownItem value="/template">Template</ActionsDropdownItem>
 				<ActionsDropdownItem value="/preview">Preview</ActionsDropdownItem>
-			</ActionsDropdown>
+			</ActionsDropdown>,
 		);
 
 		fireEvent.click(screen.getByText('Preview'));

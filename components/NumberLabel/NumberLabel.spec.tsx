@@ -7,7 +7,7 @@ describe('NumberLabel', () => {
 		const { container } = render(
 			<NumberLabel className="myClass" style={{ color: 'blue' }} id={'label'} abbreviate>
 				Mooskin
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
@@ -66,7 +66,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel abbreviate roundNumber>
 				13400
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('13.4K')).toBeInTheDocument();
 	});
@@ -75,7 +75,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel abbreviate roundNumber>
 				3235942
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('3.2M')).toBeInTheDocument();
 	});
@@ -84,7 +84,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel abbreviate roundNumber>
 				6545153975
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('6.5B')).toBeInTheDocument();
 	});
@@ -93,7 +93,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel abbreviate roundNumber>
 				8675345876235
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('8.7T')).toBeInTheDocument();
 	});
@@ -102,7 +102,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel abbreviate abbrAccuracy={2}>
 				1774215
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('1.77M')).toBeInTheDocument();
 	});
@@ -111,7 +111,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel abbreviate roundNumber roundAccuracy="high" abbrAccuracy={2}>
 				1774215
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('1.80M')).toBeInTheDocument();
 	});
@@ -120,7 +120,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel roundNumber roundAccuracy="high">
 				15432
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('15400')).toBeInTheDocument();
 	});
@@ -129,7 +129,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel roundNumber roundAccuracy="low">
 				15432
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('15000')).toBeInTheDocument();
 	});
@@ -138,7 +138,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel roundNumber roundAccuracy="low" abbreviate abbrAccuracy={2}>
 				15432
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('15K')).toBeInTheDocument();
 	});
@@ -147,7 +147,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel abbreviate abbrAccuracy={5}>
 				6545153975
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('6.54515B')).toBeInTheDocument();
 	});
@@ -156,7 +156,7 @@ describe('NumberLabel', () => {
 		render(
 			<NumberLabel abbreviate roundNumber roundAccuracy={'low'} abbrAccuracy={5}>
 				6545153975
-			</NumberLabel>
+			</NumberLabel>,
 		);
 		expect(screen.getByText('7B')).toBeInTheDocument();
 	});

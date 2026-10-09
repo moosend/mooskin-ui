@@ -1,5 +1,5 @@
-import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
+import type { IInputCallbackData } from '../_utils/types/commonTypes';
+import type { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 
 export interface ISelectComponentProps extends IBoxComponentProps {
 	/** Callback that fires when you click on an option on the list */

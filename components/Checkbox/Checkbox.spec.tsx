@@ -10,7 +10,7 @@ describe('CheckBox', () => {
 			<Checkbox checked onClickCheckbox={func}>
 				<CheckboxIcon fontColor="red" />
 				<CheckboxLabel>Normal Checkbox</CheckboxLabel>
-			</Checkbox>
+			</Checkbox>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -23,7 +23,7 @@ describe('CheckBox', () => {
 			<Checkbox checked onClickCheckbox={func}>
 				<CheckboxIcon fontColor="red" />
 				<CheckboxLabel>Normal Checkbox</CheckboxLabel>
-			</Checkbox>
+			</Checkbox>,
 		);
 
 		fireEvent.click(screen.getByText('check_box'));
@@ -38,7 +38,7 @@ describe('CheckBox', () => {
 			<Checkbox checked onClickCheckbox={func} disabled>
 				<CheckboxIcon fontColor="red" />
 				<CheckboxLabel>Normal Checkbox</CheckboxLabel>
-			</Checkbox>
+			</Checkbox>,
 		);
 
 		fireEvent.click(screen.getByText('check_box'));

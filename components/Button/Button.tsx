@@ -4,8 +4,8 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
-import { IButtonComponentProps } from './model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { IButtonComponentProps } from './model';
 
 // Styled Components
 import { StyledButton, StyledButtonIcon, StyledButtonThree, StyledButtonTwo } from './styles';
@@ -17,18 +17,18 @@ import variables from '../_utils/globals/variables';
 const normalButtonSizes = {
 	lg: '15px',
 	md: '9px 15px',
-	sm: '8px 15px'
+	sm: '8px 15px',
 };
 
 const secondaryButtonSizes = {
 	lg: '14px',
 	md: '8px 14px',
-	sm: '7px 13px'
+	sm: '7px 13px',
 };
 export const Button: React.FC<IButtonComponentProps> = withMooskinContext(
 	({ buttonSize = 'md', className = '', style = {}, type = 'button', tooltip, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-			!props.disabled && props.onClick && props.onClick(e);
+			!props.disabled && props.onClick?.(e);
 		};
 		return (
 			<StyledButton
@@ -65,7 +65,7 @@ export const Button: React.FC<IButtonComponentProps> = withMooskinContext(
 				boxAs={props.href ? 'a' : 'button'}
 			/>
 		);
-	}
+	},
 );
 
 Button.displayName = 'Button';
@@ -76,7 +76,7 @@ Button.displayName = 'Button';
 export const ButtonTwo: React.FC<IButtonComponentProps> = withMooskinContext(
 	({ buttonSize = 'md', className = '', style = {}, type = 'button', tooltip, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-			!props.disabled && props.onClick && props.onClick(e);
+			!props.disabled && props.onClick?.(e);
 		};
 		return (
 			<StyledButtonTwo
@@ -113,7 +113,7 @@ export const ButtonTwo: React.FC<IButtonComponentProps> = withMooskinContext(
 				boxAs={props.href ? 'a' : 'button'}
 			/>
 		);
-	}
+	},
 );
 
 ButtonTwo.displayName = 'ButtonTwo';
@@ -124,7 +124,7 @@ ButtonTwo.displayName = 'ButtonTwo';
 export const ButtonThree: React.FC<IButtonComponentProps> = withMooskinContext(
 	({ buttonSize = 'md', className = '', style = {}, type = 'button', tooltip, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-			!props.disabled && props.onClick && props.onClick(e);
+			!props.disabled && props.onClick?.(e);
 		};
 		return (
 			<StyledButtonThree
@@ -157,7 +157,7 @@ export const ButtonThree: React.FC<IButtonComponentProps> = withMooskinContext(
 				boxAs={props.href ? 'a' : 'button'}
 			/>
 		);
-	}
+	},
 );
 
 ButtonThree.displayName = 'ButtonThree';
@@ -165,27 +165,25 @@ ButtonThree.displayName = 'ButtonThree';
 /**
  * ButtonIcon
  */
-export const ButtonIcon: React.FC<IBoxComponentProps> = ({ className = '', style = {}, ...props }) => {
-	return (
-		<StyledButtonIcon
-			w="fit-content"
-			borderRadius={props.palette?.styles?.buttonBorderRadius || variables.styles?.buttonBorderRadius}
-			cursor="pointer"
-			outline={0}
-			fontWeight={600}
-			font-stretch="normal"
-			fontStyle="normal"
-			letter-spacing="normal"
-			d="flex"
-			align="center"
-			justify="center"
-			fontFamily="Mooskin Icons Round"
-			fontSize="13px"
-			fontColor="inherit"
-			{...props}
-			className={`notranslate ${className}`}
-		/>
-	);
-};
+export const ButtonIcon: React.FC<IBoxComponentProps> = ({ className = '', style = {}, ...props }) => (
+	<StyledButtonIcon
+		w="fit-content"
+		borderRadius={props.palette?.styles?.buttonBorderRadius || variables.styles?.buttonBorderRadius}
+		cursor="pointer"
+		outline={0}
+		fontWeight={600}
+		font-stretch="normal"
+		fontStyle="normal"
+		letter-spacing="normal"
+		d="flex"
+		align="center"
+		justify="center"
+		fontFamily="Mooskin Icons Round"
+		fontSize="13px"
+		fontColor="inherit"
+		{...props}
+		className={`notranslate ${className}`}
+	/>
+);
 
 ButtonIcon.displayName = 'ButtonIcon';

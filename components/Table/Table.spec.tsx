@@ -40,7 +40,7 @@ describe('Table', () => {
 					<TableRowItem flex={3}>Tags component!</TableRowItem>
 					<TableRowItem flex={2}>Actions</TableRowItem>
 				</TableRow>
-			</Table>
+			</Table>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();

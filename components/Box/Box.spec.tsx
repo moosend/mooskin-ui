@@ -7,7 +7,7 @@ describe('Box', () => {
 		const { container } = render(
 			<Box align="baseline" p={5} m={5}>
 				Box
-			</Box>
+			</Box>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});

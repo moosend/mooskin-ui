@@ -4,7 +4,7 @@ import { Skeleton, SkeletonCircle, SkeletonText } from './Skeleton';
 
 const boxStyle = {
 	height: 40,
-	width: 40
+	width: 40,
 };
 
 describe('Skeleton', () => {
@@ -14,7 +14,7 @@ describe('Skeleton', () => {
 				<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 				<div key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
 				<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
-			</Skeleton>
+			</Skeleton>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();

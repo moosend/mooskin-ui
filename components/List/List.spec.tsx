@@ -83,7 +83,7 @@ describe('Alert', () => {
 						<Button>Button</Button>
 					</ListItemEnd>
 				</ListItem>
-			</List>
+			</List>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});

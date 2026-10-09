@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { ISliderComponentProps } from './model';
+import type { ISliderComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

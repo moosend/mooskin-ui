@@ -6,24 +6,24 @@ export default {
 	large: '(min-width: 1200px)',
 	medium: '(min-width: 992px) and (max-width: 1199px)',
 	small: '(min-width: 769px) and (max-width: 991px)',
-	xSmall: '(max-width: 768px)'
+	xSmall: '(max-width: 768px)',
 };
 
 export const Screens = {
 	lg: {
 		min: 1200,
-		max: 9999
+		max: 9999,
 	},
 	md: {
 		min: 992,
-		max: 1199
+		max: 1199,
 	},
 	sm: {
 		min: 769,
-		max: 991
+		max: 991,
 	},
 	xs: {
 		min: 0,
-		max: 768
-	}
+		max: 768,
+	},
 };

@@ -11,7 +11,7 @@ describe('Selector', () => {
 				<SelectorItem value="/settings">Settings</SelectorItem>
 				<SelectorItem value="/template">Template</SelectorItem>
 				<SelectorItem value="/preview">Preview</SelectorItem>
-			</Selector>
+			</Selector>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
@@ -31,7 +31,7 @@ describe('Selector', () => {
 				<SelectorItem value="/settings">Settings</SelectorItem>
 				<SelectorItem value="/template">Template</SelectorItem>
 				<SelectorItem value="/preview">Preview</SelectorItem>
-			</Selector>
+			</Selector>,
 		);
 
 		fireEvent.click(screen.getByText('Template'));

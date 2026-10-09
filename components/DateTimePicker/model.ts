@@ -1,5 +1,5 @@
-import { DateTimePickerProps } from '@mui/x-date-pickers/DateTimePicker';
-import { DatePickerValue } from '../DatePicker/model';
+import type { DateTimePickerProps } from '@mui/x-date-pickers/DateTimePicker';
+import type { DatePickerValue } from '../DatePicker/model';
 
 export interface IDateTimePickerCommonProps {
 	value?: DatePickerValue;

@@ -25,7 +25,7 @@ describe('SmallIconButton', () => {
 		render(
 			<IconButton onClick={func} disabled>
 				close
-			</IconButton>
+			</IconButton>,
 		);
 
 		fireEvent.click(screen.getByText('close'));

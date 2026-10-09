@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
 // Models
-import { IPersonalizationTag, ITextEditorComponentProps } from './model';
+import type { IPersonalizationTag, ITextEditorComponentProps } from './model';
 
 /**
  * TextEditor
@@ -38,7 +38,7 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 		// 'template',
 		'toc',
 		'visualblocks',
-		'wordcount'
+		'wordcount',
 	],
 	// style: {},
 	// toolbar: `bullist numlist | emoticons | code | image | anchor link | paste pastetext |
@@ -65,7 +65,7 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 	const editorRef = React.useRef<any>(null);
 	const onInit = (evt: any, editor: any) => {
 		editorRef.current = editor; // Store editor instance
-		props.onInit && props.onInit(editor);
+		props.onInit?.(editor);
 	};
 
 	const getSetup = (editor: any) => {
@@ -78,12 +78,12 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 									editor.insertContent(item.value);
 								},
 								text: item.label,
-								type: 'menuitem'
-						  }))
+								type: 'menuitem',
+							}))
 						: [];
 					callback(items);
 				},
-				text: props.personalizationTags.buttonLabel
+				text: props.personalizationTags.buttonLabel,
 			});
 		}
 	};
@@ -106,14 +106,14 @@ export const TextEditor: React.FC<ITextEditorComponentProps> = ({
 			init={{
 				setup: (editor: any) => getSetup(editor),
 				...init,
-				menubar: menubar,
+				menubar,
 				selector: props.selector,
-				toolbar: toolbar,
-				plugins: plugins,
+				toolbar,
+				plugins,
 				...(toolbar_sticky !== undefined && { toolbar_sticky }),
 				...(toolbar_mode !== undefined && { toolbar_mode }),
 				...(resize !== undefined && { resize }),
-				...(min_width !== undefined && { min_width })
+				...(min_width !== undefined && { min_width }),
 			}}
 		/>
 	);

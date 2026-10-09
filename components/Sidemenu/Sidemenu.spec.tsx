@@ -11,7 +11,7 @@ describe('Sidemenu', () => {
 				<SidemenuItem value="/settings">Settings</SidemenuItem>
 				<SidemenuItem value="/template">Template</SidemenuItem>
 				<SidemenuItem value="/preview">Preview</SidemenuItem>
-			</Sidemenu>
+			</Sidemenu>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
@@ -31,7 +31,7 @@ describe('Sidemenu', () => {
 				<SidemenuItem value="/settings">Settings</SidemenuItem>
 				<SidemenuItem value="/template">Template</SidemenuItem>
 				<SidemenuItem value="/preview">Preview</SidemenuItem>
-			</Sidemenu>
+			</Sidemenu>,
 		);
 
 		fireEvent.click(screen.getByText('Template'));

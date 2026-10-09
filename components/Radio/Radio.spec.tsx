@@ -10,7 +10,7 @@ describe('Radio', () => {
 			<Radio selected onClickRadio={func}>
 				<RadioIcon fontColor="red" />
 				<RadioLabel>Normal Radio</RadioLabel>
-			</Radio>
+			</Radio>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -23,7 +23,7 @@ describe('Radio', () => {
 			<Radio selected onClickRadio={func}>
 				<RadioIcon fontColor="red" />
 				<RadioLabel>Normal Radio</RadioLabel>
-			</Radio>
+			</Radio>,
 		);
 
 		fireEvent.click(screen.getByText('radio_button_checked'));
@@ -38,7 +38,7 @@ describe('Radio', () => {
 			<Radio selected onClickRadio={func} disabled>
 				<RadioIcon fontColor="red" />
 				<RadioLabel>Normal Radio</RadioLabel>
-			</Radio>
+			</Radio>,
 		);
 
 		fireEvent.click(screen.getByText('radio_button_checked'));

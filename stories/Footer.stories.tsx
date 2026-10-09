@@ -4,23 +4,21 @@ import type { StoryFn as Story } from '@storybook/react';
 
 import { Footer, FooterBody, FooterEnd, FooterHead } from '../components/Footer/Footer';
 
-import { IBoxComponentProps } from '../components/Box/model';
+import type { IBoxComponentProps } from '../components/Box/model';
 import { Button, ButtonIcon, ButtonTwo } from '../components/Button/Button';
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Footer,
-	title: 'Example/Footer'
+	title: 'Example/Footer',
 };
 
-const Template: Story<IBoxComponentProps> = (args) => {
-	return (
-		<>
-			{/*<GlobalStyle />*/}
-			<Footer {...args} />
-		</>
-	);
-};
+const Template: Story<IBoxComponentProps> = (args) => (
+	<>
+		{/* <GlobalStyle /> */}
+		<Footer {...args} />
+	</>
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -43,5 +41,5 @@ Normal.args = {
 				<ButtonTwo>DESIGN & DELIVERY TEST</ButtonTwo>
 			</FooterEnd>
 		</>
-	)
+	),
 } as IBoxComponentProps;

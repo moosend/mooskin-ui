@@ -26,7 +26,7 @@ export {
 	ExpandableItemButton,
 	ExpandableItemContainer,
 	ExpandableItemContent,
-	ExpandableItemText
+	ExpandableItemText,
 } from '../Expandable/Expandable';
 export { Grid, Row, Col } from '../Grid/Grid';
 export {
@@ -37,7 +37,7 @@ export {
 	InputOption,
 	InputOptionList,
 	InputOptionListTitle,
-	InputOverlay
+	InputOverlay,
 } from '../Input/Input';
 export { List, ListItem, ListItemBody, ListItemEnd, ListItemHead } from '../List/List';
 export { Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from '../Modal/Modal';
@@ -56,7 +56,7 @@ export {
 	SelectOptionList,
 	SelectOverlay,
 	SelectPagination,
-	SelectPlaceholder
+	SelectPlaceholder,
 } from '../Select/Select';
 export { Switch, SwitchHandle } from '../Switch/Switch';
 export { Loader } from '../Loader/Loader';
@@ -85,20 +85,12 @@ export {
 	IButtonBoxComponentProps,
 	IInputBoxComponentProps,
 	IBoxImageComponentProps,
-	ITextAreaBoxComponentProps
+	ITextAreaBoxComponentProps,
 } from '../Box/model';
 export { ICarouselComponentProps } from '../Carousel/model';
 export { ICheckboxComponentProps, ICheckboxIconComponentProps } from '../Checkbox/model';
-export {
-	IDatePickerCommonProps,
-	IDatePickerComponentProps,
-	IDatePickerKeyboardComponentProps,
-} from '../DatePicker/model';
-export {
-	IDateTimePickerCommonProps,
-	IDateTimePickerComponentProps,
-	IDateTimePickerKeyboardComponentProps,
-} from '../DateTimePicker/model';
+export { IDatePickerCommonProps, IDatePickerComponentProps, IDatePickerKeyboardComponentProps } from '../DatePicker/model';
+export { IDateTimePickerCommonProps, IDateTimePickerComponentProps, IDateTimePickerKeyboardComponentProps } from '../DateTimePicker/model';
 export { IDateRangePickerComponentProps, IRangeSelection } from '../DateRange/model';
 export { IDateSelectComponentProps } from '../DateSelect/model';
 export type { ILabelComponentProps } from '../Label/model';
@@ -111,7 +103,7 @@ export {
 	IInputContainerComponentProps,
 	IInputEmojiComponentProps,
 	IInputListComponentProps,
-	IInputOptionComponentProps
+	IInputOptionComponentProps,
 } from '../Input/model';
 export { ILayoutComponentProps } from '../Layout/model';
 export { ILoaderComponentProps } from '../Loader/model';
@@ -124,7 +116,7 @@ export {
 	ISelectComponentProps,
 	ISelectFilterComponentProps,
 	ISelectOptionComponentProps,
-	ISelectPaginationComponentProps
+	ISelectPaginationComponentProps,
 } from '../Select/model';
 export { ISelectorComponentProps, ISelectorItemComponentProps } from '../Selector/model';
 export { ISidemenuComponentProps, ISidemenuItemComponentProps } from '../Sidemenu/model';

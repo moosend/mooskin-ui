@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IStackComponentProps } from './model';
+import type { IStackComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -58,8 +58,8 @@ export const Stack: React.FC<IStackComponentProps> = withMooskinContext((props) 
 		return React.cloneElement(element, { key: `divider${i}`, style: { ...element.props.style, ...margin } });
 	};
 
-	const renderChildren = () => {
-		return React.Children.map(props.children, (child, key) => {
+	const renderChildren = () =>
+		React.Children.map(props.children, (child, key) => {
 			if (React.isValidElement(child)) {
 				if (props.divider) {
 					return (
@@ -73,7 +73,6 @@ export const Stack: React.FC<IStackComponentProps> = withMooskinContext((props) 
 			}
 			return <div />;
 		});
-	};
 
 	return <StyledStack {...props} children={renderChildren()} />;
 });
@@ -84,9 +83,18 @@ Stack.displayName = 'Stack';
  * HStack
  */
 export const HStack: React.FC<IStackComponentProps> = withMooskinContext(
-	({ align = 'stretch', className = '', direction = 'row', flexWrap = 'wrap', justify = 'initial', spacing = 0, style = {}, ...props }) => {
-		return <Stack align={align} className={className} direction={direction} flexWrap={flexWrap} justify={justify} spacing={spacing} style={style} {...props} />;
-	}
+	({ align = 'stretch', className = '', direction = 'row', flexWrap = 'wrap', justify = 'initial', spacing = 0, style = {}, ...props }) => (
+		<Stack
+			align={align}
+			className={className}
+			direction={direction}
+			flexWrap={flexWrap}
+			justify={justify}
+			spacing={spacing}
+			style={style}
+			{...props}
+		/>
+	),
 );
 
 HStack.displayName = 'HStack';
@@ -104,9 +112,18 @@ export const VStack: React.FC<IStackComponentProps> = withMooskinContext(
 		spacing = 0,
 		style = {},
 		...props
-	}) => {
-		return <Stack align={align} className={className} direction={direction} flexWrap={flexWrap} justify={justify} spacing={spacing} style={style} {...props} />;
-	}
+	}) => (
+		<Stack
+			align={align}
+			className={className}
+			direction={direction}
+			flexWrap={flexWrap}
+			justify={justify}
+			spacing={spacing}
+			style={style}
+			{...props}
+		/>
+	),
 );
 
 VStack.displayName = 'VStack';

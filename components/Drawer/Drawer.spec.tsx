@@ -19,7 +19,7 @@ describe('Drawer', () => {
 						<DrawerFooter>Drawer Footer goes here!</DrawerFooter>
 					</DrawerContent>
 				</DrawerOverlay>
-			</Drawer>
+			</Drawer>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -41,7 +41,7 @@ describe('Drawer', () => {
 						<DrawerFooter>Drawer Footer goes here!</DrawerFooter>
 					</DrawerContent>
 				</DrawerOverlay>
-			</Drawer>
+			</Drawer>,
 		);
 
 		const drawer = container.firstChild as HTMLElement;

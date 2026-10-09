@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { ILabelComponentProps } from './model';
+import type { ILabelComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

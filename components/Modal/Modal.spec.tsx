@@ -19,7 +19,7 @@ describe('Modal', () => {
 						<ModalFooter>Modal Footer goes here!</ModalFooter>
 					</ModalContent>
 				</ModalOverlay>
-			</Modal>
+			</Modal>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -41,7 +41,7 @@ describe('Modal', () => {
 						<ModalFooter>Modal Footer goes here!</ModalFooter>
 					</ModalContent>
 				</ModalOverlay>
-			</Modal>
+			</Modal>,
 		);
 
 		const modal = container.firstChild as HTMLElement;

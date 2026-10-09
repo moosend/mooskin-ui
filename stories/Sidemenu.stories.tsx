@@ -2,29 +2,27 @@ import React from 'react';
 
 import type { StoryFn as Story } from '@storybook/react';
 
-import { ISidemenuComponentProps } from '../components/Sidemenu/model';
+import type { ISidemenuComponentProps } from '../components/Sidemenu/model';
 import { Sidemenu, SidemenuItem } from '../components/Sidemenu/Sidemenu';
 
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Sidemenu,
-	title: 'Example/Sidemenu'
+	title: 'Example/Sidemenu',
 };
 
-const Template: Story<ISidemenuComponentProps> = (args) => {
+const Template: Story<ISidemenuComponentProps> = (args) => (
 	// const [activeItem, setActiveItem] = React.useState<number | string>('/settings');
-	return (
-		<>
-			{/*<GlobalStyle />*/}
-			<Sidemenu
-				// activeItem={activeItem}
-				{...args}
-				// onClickItem={(e: React.MouseEvent<HTMLElement>, value: number | string) => setActiveItem(value)}
-			/>
-		</>
-	);
-};
+	<>
+		{/* <GlobalStyle /> */}
+		<Sidemenu
+			// activeItem={activeItem}
+			{...args}
+			// onClickItem={(e: React.MouseEvent<HTMLElement>, value: number | string) => setActiveItem(value)}
+		/>
+	</>
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -36,5 +34,5 @@ Normal.args = {
 			</SidemenuItem>
 			<SidemenuItem value="/preview">Preview</SidemenuItem>
 		</>
-	)
+	),
 } as ISidemenuComponentProps;

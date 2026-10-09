@@ -1,4 +1,4 @@
-import { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors } from '../Styled/model';
+import type { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors } from '../Styled/model';
 // import { IMooskinContext } from '../Styled/model';
 
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
@@ -119,7 +119,6 @@ export type IAnchorBoxComponentProps = IBoxComponentProps & React.AnchorHTMLAttr
 export type ITextAreaBoxComponentProps = IBoxComponentProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export interface IBaseBoxComponentProps extends IMooskinContext {
-
 	noRender?: Array<ScreenType>;
 
 	/** returns the ref */

@@ -44,7 +44,7 @@ describe('Tabs', () => {
 						<div>{`Content for item with index: 6`}</div>
 					</TabContent>
 				</Tab>
-			</Tabs>
+			</Tabs>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -91,7 +91,7 @@ describe('Tabs', () => {
 						<div>{`Content for item with index: 6`}</div>
 					</TabContent>
 				</Tab>
-			</Tabs>
+			</Tabs>,
 		);
 
 		expect(screen.getByText('Content for item with index: 3')).toBeInTheDocument();
@@ -121,7 +121,7 @@ describe('Tabs', () => {
 						<div>{`Content for item with index: 3`}</div>
 					</TabContent>
 				</Tab>
-			</Tabs>
+			</Tabs>,
 		);
 
 		fireEvent.click(screen.getByText('Item: 1'));

@@ -4,23 +4,21 @@ import type { StoryFn as Story } from '@storybook/react';
 
 import { Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from '../components/Table/Table';
 
-import { IBoxComponentProps } from '../components/Box/model';
+import type { IBoxComponentProps } from '../components/Box/model';
 import { Checkbox } from '../components/Checkbox/Checkbox';
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Table,
-	title: 'Example/Table'
+	title: 'Example/Table',
 };
 
-const Template: Story<IBoxComponentProps> = (args) => {
-	return (
-		<>
-			{/*<GlobalStyle />*/}
-			<Table {...args} />
-		</>
-	);
-};
+const Template: Story<IBoxComponentProps> = (args) => (
+	<>
+		{/* <GlobalStyle /> */}
+		<Table {...args} />
+	</>
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -60,5 +58,5 @@ Normal.args = {
 				<TableRowItem flex={2}>Actions</TableRowItem>
 			</TableRow>
 		</>
-	)
+	),
 } as IBoxComponentProps;

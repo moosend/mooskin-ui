@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from './model';
+import type { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from './model';
 
 // Styled Components
 import { StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText } from './styles';
@@ -27,7 +27,7 @@ export const Skeleton: React.FC<ICommonSkeletonComponentProps> = withMooskinCont
 			return <>{props.children}</>;
 		}
 		return <StyledSkeleton w="fit-content" {...props} />;
-	}
+	},
 );
 
 Skeleton.displayName = 'Skeleton';
@@ -51,7 +51,7 @@ export const SkeletonCircle: React.FC<ISkeletonCircleComponentProps> = withMoosk
 			return <>{props.children}</>;
 		}
 		return <StyledSkeletonCircle {...props} />;
-	}
+	},
 );
 
 SkeletonCircle.displayName = 'Skeleton';
@@ -80,14 +80,14 @@ export const SkeletonText: React.FC<ISkeletonTextComponentProps> = withMooskinCo
 		if (linesInternal.length) {
 			return (
 				<>
-					{linesInternal.map((line, i) => {
-						return <StyledSkeletonText {...props} key={i} w={i === linesInternal.length - 1 ? '80%' : '100%'} />;
-					})}
+					{linesInternal.map((line, i) => (
+						<StyledSkeletonText {...props} key={i} w={i === linesInternal.length - 1 ? '80%' : '100%'} />
+					))}
 				</>
 			);
 		}
 		return null;
-	}
+	},
 );
 
 SkeletonText.displayName = 'Skeleton';

@@ -12,8 +12,8 @@ import 'react-date-range/dist/theme/default.css';
 import format from 'date-fns/format';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
-import { IDateRangePickerComponentProps } from './model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { IDateRangePickerComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -33,16 +33,15 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinCo
 		const getInputValue = () => {
 			let inputValue = '';
 
-			props.ranges &&
-				props.ranges.length &&
+			props.ranges?.length &&
 				props.ranges.forEach((item, i) => {
 					if (item.startDate && item.endDate) {
 						const separator = i > 0 ? ', ' : '';
-						inputValue = inputValue + separator + `${format(item.startDate, dateFormat)} - ${format(item.endDate, dateFormat)}`;
+						inputValue = `${inputValue + separator}${format(item.startDate, dateFormat)} - ${format(item.endDate, dateFormat)}`;
 					}
 				});
 
-			return inputValue ? inputValue : 'N/A';
+			return inputValue || 'N/A';
 		};
 
 		return (
@@ -57,14 +56,14 @@ export const DateRange: React.FC<IDateRangePickerComponentProps> = withMooskinCo
 							...props,
 							locale: props.locale,
 							ranges: props.ranges,
-							onChange: props.onChange
+							onChange: props.onChange,
 						})}
 						<DateRangeOverlay onClick={() => setShowPicker(false)} />
 					</StyledDateRange>
 				)}
 			</Box>
 		);
-	}
+	},
 );
 
 DateRange.displayName = 'DateRange';
@@ -72,8 +71,8 @@ DateRange.displayName = 'DateRange';
 /**
  * DateRangeOverlay
  */
-const DateRangeOverlay: React.FC<IBoxComponentProps> = ({ className = '', style = {}, ...props }) => {
-	return <Box position="fixed" top={0} left={0} right={0} bottom={0} zIndex={-1} {...props} />;
-};
+const DateRangeOverlay: React.FC<IBoxComponentProps> = ({ className = '', style = {}, ...props }) => (
+	<Box position="fixed" top={0} left={0} right={0} bottom={0} zIndex={-1} {...props} />
+);
 
 DateRangeOverlay.displayName = 'DateRangeOverlay';

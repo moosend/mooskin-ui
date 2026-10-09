@@ -5,8 +5,9 @@ import styled from 'styled-components';
 import screens from '../_utils/globals/screens';
 
 // Models
-import { IStyledTheme } from '../Styled/model';
-import { boxComponentProps, BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
+import type { IStyledTheme } from '../Styled/model';
+import type { BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
+import { boxComponentProps } from './model';
 
 /** Props that must reach the DOM. Everything else in the box API is style or context. */
 const forwardedDomProps = new Set(['id', 'className', 'style', 'children', 'disabled']);
@@ -41,7 +42,7 @@ const blockedBoxProps = new Set<string>([
 	'spacing',
 	'format',
 	'styles',
-	'tags'
+	'tags',
 ]);
 
 forwardedDomProps.forEach((prop) => blockedBoxProps.delete(prop));
@@ -123,13 +124,11 @@ export const getBoxShadow = (boxShadow?: React.CSSProperties['boxShadow'] | BoxS
 	}
 };
 
-const getMediaQueryString = (media: string, property: string, value?: number | string) => {
-	return `
+const getMediaQueryString = (media: string, property: string, value?: number | string) => `
 		@media ${media} {
 			${property}: ${value};
 		}
 	`;
-};
 
 const generateStyles = (data: { property: string; value?: number | string | any[]; processedValue?: boolean; palette?: IStyledTheme }) => {
 	const { property, processedValue, value, palette } = data;
@@ -171,7 +170,7 @@ const generateStyles = (data: { property: string; value?: number | string | any[
 };
 
 export const StyledBox = styled.div.withConfig({
-	shouldForwardProp: (prop) => isPropValid(prop) && !blockedBoxProps.has(prop)
+	shouldForwardProp: (prop) => isPropValid(prop) && !blockedBoxProps.has(prop),
 })<IBoxComponentProps>`
 	&&& {
 		${(props) => generateStyles({ property: 'all', value: props.all })}
@@ -208,7 +207,7 @@ export const StyledBox = styled.div.withConfig({
 			const extra = [
 				generateStyles({ property: 'user-select', value: props.userSelect }),
 				generateStyles({ property: 'vertical-align', value: props.verticalAlign }),
-				generateStyles({ property: 'pointer-events', value: props.pointerEvents })
+				generateStyles({ property: 'pointer-events', value: props.pointerEvents }),
 			]
 				.filter(Boolean)
 				.join('');

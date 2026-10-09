@@ -8,7 +8,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { TextField } from '@mui/material';
 
 // Models
-import { IDatePickerComponentProps, IDatePickerKeyboardComponentProps } from './model';
+import type { IDatePickerComponentProps, IDatePickerKeyboardComponentProps } from './model';
 
 // Custom
 import { Input } from '../Input/Input';
@@ -28,12 +28,7 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 
 	const renderInput = (params: any) =>
 		inputProps ? (
-			<Input
-				{...params}
-				{...inputProps}
-				onKeyDown={(e) => e.preventDefault()}
-				onClick={openPicker}
-			/>
+			<Input {...params} {...inputProps} onKeyDown={(e) => e.preventDefault()} onClick={openPicker} />
 		) : (
 			<TextField
 				{...params}
@@ -45,17 +40,14 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 						backgroundColor: '#ffffff',
 						paddingTop: '6px',
 						paddingBottom: '6px',
-						fontSize: '14px'
-					}
+						fontSize: '14px',
+					},
 				}}
 			/>
 		);
 
 	return (
-		<LocalizationProvider
-			dateAdapter={AdapterDateFns}
-			adapterLocale={props.locale}
-		>
+		<LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={props.locale}>
 			<ThemeProvider theme={materialTheme}>
 				<DatePickerUI
 					open={isPickerOpen}

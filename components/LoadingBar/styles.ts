@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 // Models
-import { ILoadingBarComponentProps } from './model';
+import type { ILoadingBarComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
 
 // "CSS" variables
 import variables from '../_utils/globals/variables';
-import { IStyledTheme } from '../index';
+import type { IStyledTheme } from '../index';
 
 export const StyledLoadingBar = styled(Box)<ILoadingBarComponentProps>`
 	position: fixed;
@@ -29,5 +29,5 @@ const getBgColor = (error?: boolean, palette?: IStyledTheme) =>
 			? palette.backgroundColors.primary4
 			: variables.backgroundColors.primary4
 		: palette
-		? palette.backgroundColors.primary1
-		: variables.backgroundColors.primary1;
+			? palette.backgroundColors.primary1
+			: variables.backgroundColors.primary1;

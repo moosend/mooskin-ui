@@ -9,7 +9,7 @@ describe('Button', () => {
 		const { container } = render(
 			<Button onClick={func} disabled className="myClass" style={{ color: 'blue' }} id={'button1'} href={'www.moosend.com'} type={'submit'}>
 				Mooskin
-			</Button>
+			</Button>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
@@ -30,7 +30,7 @@ describe('Button', () => {
 		render(
 			<Button onClick={func} disabled>
 				btn label
-			</Button>
+			</Button>,
 		);
 
 		expect(screen.getByRole('button', { name: 'btn label' })).toBeDisabled();

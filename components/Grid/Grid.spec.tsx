@@ -100,7 +100,7 @@ describe('Grid', () => {
 					<Col style={{ padding: 10, border: '3px solid #5ccdde' }}>Col</Col>
 					<Col style={{ padding: 10, border: '3px solid #5ccdde' }}>Col</Col>
 				</Row>
-			</Grid>
+			</Grid>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();

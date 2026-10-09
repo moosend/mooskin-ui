@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IBoxImageComponentProps } from '../Box/model';
+import type { IBoxImageComponentProps } from '../Box/model';
 
 // Styled Components
 import { StyledImage } from './styles';
@@ -12,8 +12,8 @@ import { StyledImage } from './styles';
 /**
  * Image
  */
-export const Image: React.FC<IBoxImageComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledImage d="block" {...props} boxAs="img" />;
-});
+export const Image: React.FC<IBoxImageComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledImage d="block" {...props} boxAs="img" />
+));
 
 Image.displayName = 'Image';

@@ -26,7 +26,7 @@ describe('Alert', () => {
 						DESIGN & DELIVERY TEST
 					</ButtonTwo>
 				</FooterEnd>
-			</Footer>
+			</Footer>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});

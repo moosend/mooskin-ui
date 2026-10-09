@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { getNumberOrStringValue } from '../Box/styles';
 
 // Models
-import { ILoaderComponentProps } from './model';
+import type { ILoaderComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

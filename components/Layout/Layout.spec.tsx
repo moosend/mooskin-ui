@@ -31,7 +31,7 @@ describe('Layout', () => {
 				<Box p={30} round="sm" boxShadow="md">
 					Box
 				</Box>
-			</Layout>
+			</Layout>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});

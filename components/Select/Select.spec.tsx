@@ -1,6 +1,15 @@
 import * as React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { Select, SelectContainer, SelectFilter, SelectIcon, SelectOption, SelectOptionList, SelectOverlay, SelectPlaceholder } from './Select';
+import {
+	Select,
+	SelectContainer,
+	SelectFilter,
+	SelectIcon,
+	SelectOption,
+	SelectOptionList,
+	SelectOverlay,
+	SelectPlaceholder,
+} from './Select';
 
 const selectChildren = (
 	<>
@@ -34,7 +43,7 @@ describe('Select', () => {
 		render(
 			<SelectOption value="1" onClick={func}>
 				Option1
-			</SelectOption>
+			</SelectOption>,
 		);
 
 		fireEvent.click(screen.getByText('Option1'));
@@ -60,7 +69,7 @@ describe('Select', () => {
 		const { container } = render(
 			<Select onChange={func} selectedValue={options} dataLabel="select">
 				{selectChildren}
-			</Select>
+			</Select>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();

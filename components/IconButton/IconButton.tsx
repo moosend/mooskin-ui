@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IIconButtonComponentProps } from './model';
+import type { IIconButtonComponentProps } from './model';
 
 // Styled Components
 import { StyledIconButton } from './styles';
@@ -15,7 +15,7 @@ import variables from '../_utils/globals/variables';
  */
 export const IconButton: React.FC<IIconButtonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const onClick = (e: React.MouseEvent<HTMLElement>) => {
-		!props.disabled && props.onClick && props.onClick(e);
+		!props.disabled && props.onClick?.(e);
 	};
 	return (
 		<StyledIconButton

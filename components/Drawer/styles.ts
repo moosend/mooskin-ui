@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
-import { IContentSize, IDrawerComponentProps, IDrawerContentComponentProps, IDrawerOverlayComponentProps } from './model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { IContentSize, IDrawerComponentProps, IDrawerContentComponentProps, IDrawerOverlayComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -105,7 +105,9 @@ export const StyledDrawerContent = styled(Box)<IDrawerContentComponentProps>`
 	opacity: 1;
 	background-color: ${(props) => props.palette?.backgroundColors.white || variables.backgroundColors.white};
 	color: ${(props) => props.palette?.fontColors.text || variables.fontColors.text};
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+	box-shadow:
+		rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+		rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 `;
 
 StyledDrawerContent.displayName = 'StyledDrawerContent';

@@ -17,7 +17,7 @@ describe('Input', () => {
 				</InputOptionList>
 				<InputEmoji pr={5} />
 				<InputIcon>search</InputIcon>
-			</InputContainer>
+			</InputContainer>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -77,7 +77,7 @@ describe('Input', () => {
 			<InputContainer onChangeInput={func}>
 				<Input />
 				<InputIcon>search</InputIcon>
-			</InputContainer>
+			</InputContainer>,
 		);
 
 		fireEvent.change(screen.getByRole('textbox'), { target: { value: 'text' } });
@@ -89,7 +89,7 @@ describe('Input', () => {
 			<InputContainer>
 				<Input />
 				<InputIcon>search</InputIcon>
-			</InputContainer>
+			</InputContainer>,
 		);
 		expect(screen.getByText('search')).toBeInTheDocument();
 	});
@@ -106,7 +106,7 @@ describe('Input', () => {
 					<InputOption value="tag2">Tag 2</InputOption>
 					<InputOption value="tag3">Tag 3</InputOption>
 				</InputOptionList>
-			</InputContainer>
+			</InputContainer>,
 		);
 
 		fireEvent.click(screen.getByText('check'));

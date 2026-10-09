@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IAnchorComponentProps } from './model';
+import type { IAnchorComponentProps } from './model';
 
 // Styled Components
 import { StyledAnchor } from './styles';
@@ -15,7 +15,7 @@ import variables from '../_utils/globals/variables';
 export const Anchor: React.FC<IAnchorComponentProps> = withMooskinContext(({ className = '', style = {}, target = '', ...props }) => {
 	const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 		props.disabled && e.preventDefault();
-		!props.disabled && props.onClick && props.onClick(e);
+		!props.disabled && props.onClick?.(e);
 	};
 	return (
 		<StyledAnchor

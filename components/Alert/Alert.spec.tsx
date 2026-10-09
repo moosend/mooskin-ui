@@ -12,7 +12,7 @@ describe('Alert', () => {
 				<AlertTitle>Your browser is outdated!</AlertTitle>
 				<AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
 				<AlertCloseButton onClick={fn} position="absolute" right={8} top={8} />
-			</Alert>
+			</Alert>,
 		);
 		expect(container.firstChild).toMatchSnapshot();
 	});
@@ -27,7 +27,7 @@ describe('Alert', () => {
 					<AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
 					<AlertCloseButton onClick={fn} position="absolute" right={8} top={8} />
 				</Box>
-			</Alert>
+			</Alert>,
 		);
 
 		expect(screen.getByText('check_circle')).toBeInTheDocument();
@@ -44,7 +44,7 @@ describe('Alert', () => {
 				<AlertTitle>Your browser is outdated!</AlertTitle>
 				<AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
 				<AlertCloseButton onClick={fn} position="absolute" right="8px" top="8px" />
-			</Alert>
+			</Alert>,
 		);
 
 		fireEvent.click(screen.getByText('close'));

@@ -1,4 +1,4 @@
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 
 export interface ILoaderComponentProps extends IBoxComponentProps {
 	/** Size of the loader */

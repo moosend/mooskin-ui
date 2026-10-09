@@ -44,7 +44,7 @@ describe('Steps', () => {
 						<div>{`Content for item with index: 6`}</div>
 					</StepContent>
 				</Step>
-			</Steps>
+			</Steps>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -91,7 +91,7 @@ describe('Steps', () => {
 						<div>{`Content for item with index: 6`}</div>
 					</StepContent>
 				</Step>
-			</Steps>
+			</Steps>,
 		);
 
 		expect(screen.getByText('Content for item with index: 3')).toBeInTheDocument();
@@ -121,7 +121,7 @@ describe('Steps', () => {
 						<div>{`Content for item with index: 3`}</div>
 					</StepContent>
 				</Step>
-			</Steps>
+			</Steps>,
 		);
 
 		fireEvent.click(screen.getByText('Item: 1'));

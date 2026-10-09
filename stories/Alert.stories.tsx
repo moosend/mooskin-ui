@@ -3,26 +3,24 @@ import React from 'react';
 import type { StoryFn as Story } from '@storybook/react';
 
 import { Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../components/Alert/Alert';
-import { IBaseAlertComponentProps } from '../components/Alert/model';
+import type { IBaseAlertComponentProps } from '../components/Alert/model';
 import { Box } from '../components/Box/Box';
 
 // import { GlobalStyle } from '../components/Styled/GlobalStyles';
 
 export default {
 	component: Alert,
-	title: 'Example/Alert'
+	title: 'Example/Alert',
 };
 
-const Template: Story<typeof Alert> = (args) => {
-	//<IBaseAlertComponentProps>
-	return (
-		<>
-			{/* <>{GlobalStyle}</> */}
+const Template: Story<typeof Alert> = (args) => (
+	// <IBaseAlertComponentProps>
+	<>
+		{/* <>{GlobalStyle}</> */}
 
-			<Alert {...args} />
-		</>
-	);
-};
+		<Alert {...args} />
+	</>
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -30,8 +28,8 @@ Normal.args = {
 		<AlertIcon key="0" />,
 		<AlertTitle key="1">Your browser is outdated!</AlertTitle>,
 		<AlertDescription key="2">Your Mooskin experience may be degraded.</AlertDescription>,
-		<AlertCloseButton key="3" onClick={(e) => alert('close')} position="absolute" right={8} top={8} />
-	]
+		<AlertCloseButton key="3" onClick={(e) => alert('close')} position="absolute" right={8} top={8} />,
+	],
 } as IBaseAlertComponentProps;
 
 export const WithBox = Template.bind({});
@@ -42,6 +40,6 @@ WithBox.args = {
 			<AlertTitle>Your browser is outdated!</AlertTitle>
 			<AlertDescription>Your Mooskin experience may be degraded.</AlertDescription>
 			<AlertCloseButton onClick={(e) => alert('close')} position="absolute" right={8} top={8} />
-		</Box>
-	]
+		</Box>,
+	],
 } as IBaseAlertComponentProps;

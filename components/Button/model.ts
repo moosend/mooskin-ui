@@ -1,4 +1,4 @@
-import { IButtonBoxComponentProps } from '../Box/model';
+import type { IButtonBoxComponentProps } from '../Box/model';
 
 export interface IButtonComponentProps extends IButtonBoxComponentProps {
 	/** Button href */

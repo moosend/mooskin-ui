@@ -6,7 +6,7 @@ import {
 	ExpandableItemButton,
 	ExpandableItemContainer,
 	ExpandableItemContent,
-	ExpandableItemText
+	ExpandableItemText,
 } from './Expandable';
 
 describe('Expandable', () => {
@@ -51,7 +51,7 @@ describe('Expandable', () => {
 						<div>{`Content for item with index 4`}</div>
 					</ExpandableItemContent>
 				</ExpandableItem>
-			</Expandable>
+			</Expandable>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -76,7 +76,7 @@ describe('Expandable', () => {
 					</ExpandableItemContainer>
 					<ExpandableItemContent p={15}>{`Content for item with index 2`}</ExpandableItemContent>
 				</ExpandableItem>
-			</Expandable>
+			</Expandable>,
 		);
 
 		expect(screen.getByText('Content for item with index 2')).toBeInTheDocument();
@@ -102,7 +102,7 @@ describe('Expandable', () => {
 					</ExpandableItemContainer>
 					<ExpandableItemContent p={15}>{`Content for item with index 2`}</ExpandableItemContent>
 				</ExpandableItem>
-			</Expandable>
+			</Expandable>,
 		);
 
 		fireEvent.click(screen.getByText('Title for item with index 1'));

@@ -5,23 +5,21 @@ import type { StoryFn as Story } from '@storybook/react';
 import { List, ListItem, ListItemBody, ListItemEnd, ListItemHead } from '../components/List/List';
 
 import { Box } from '../components/Box/Box';
-import { IBoxComponentProps } from '../components/Box/model';
+import type { IBoxComponentProps } from '../components/Box/model';
 import { Button } from '../components/Button/Button';
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: List,
-	title: 'Example/List'
+	title: 'Example/List',
 };
 
-const Template: Story<IBoxComponentProps> = (args) => {
-	return (
-		<>
-			{/*<GlobalStyle />*/}
-			<List {...args} />
-		</>
-	);
-};
+const Template: Story<IBoxComponentProps> = (args) => (
+	<>
+		{/* <GlobalStyle /> */}
+		<List {...args} />
+	</>
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -88,8 +86,8 @@ Normal.args = {
 			<ListItemEnd>
 				<Button>Button</Button>
 			</ListItemEnd>
-		</ListItem>
-	]
+		</ListItem>,
+	],
 } as IBoxComponentProps;
 
 export const WithCols = Template.bind({});
@@ -199,7 +197,7 @@ WithCols.args = {
 			<ListItemEnd>
 				<Button>Button</Button>
 			</ListItemEnd>
-		</ListItem>
+		</ListItem>,
 	],
-	cols: 3
+	cols: 3,
 } as IBoxComponentProps;

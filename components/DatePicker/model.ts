@@ -1,5 +1,5 @@
-import { DatePickerProps } from '@mui/x-date-pickers/DatePicker';
-import { TextFieldProps } from '@mui/material/TextField';
+import type { DatePickerProps } from '@mui/x-date-pickers/DatePicker';
+import type { TextFieldProps } from '@mui/material/TextField';
 
 /** Value type for pickers that use AdapterDateFns. */
 export type DatePickerValue = Date | null;

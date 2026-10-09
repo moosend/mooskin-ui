@@ -4,12 +4,12 @@ const config = {
 	addons: ['@storybook/addon-webpack5-compiler-babel', '@storybook/addon-links', '@storybook/addon-essentials'],
 	framework: {
 		name: '@storybook/react-webpack5',
-		options: {}
+		options: {},
 	},
 	staticDirs: [{ from: '../assets', to: '/assets' }],
 	typescript: {
-		reactDocgen: false
-	}
+		reactDocgen: false,
+	},
 };
 
 module.exports = config;

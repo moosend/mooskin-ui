@@ -11,7 +11,7 @@ describe('Pagination', () => {
 		const { container } = render(
 			<Pagination onClickButton={func} activePage={3}>
 				{pageButtons}
-			</Pagination>
+			</Pagination>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -23,7 +23,7 @@ describe('Pagination', () => {
 		render(
 			<Pagination onClickButton={func} activePage={3}>
 				{pageButtons}
-			</Pagination>
+			</Pagination>,
 		);
 
 		fireEvent.click(screen.getByText('1'));
@@ -36,7 +36,7 @@ describe('Pagination', () => {
 		render(
 			<Pagination onClickButton={func} activePage={3}>
 				{pageButtons}
-			</Pagination>
+			</Pagination>,
 		);
 
 		expect(screen.getByText('5')).toBeInTheDocument();

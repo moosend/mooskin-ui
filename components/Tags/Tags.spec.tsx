@@ -13,7 +13,7 @@ describe('Tags', () => {
 				</Tag>
 				<Tag>Athens</Tag>
 				<TagInput placeholder="olala" delimiters={[',', ' ', 'Enter', 13]} />
-			</Tags>
+			</Tags>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -27,7 +27,7 @@ describe('Tags', () => {
 				{tags.map((tag) => (
 					<Tag key={tag}>{tag}</Tag>
 				))}
-			</Tags>
+			</Tags>,
 		);
 
 		tags.forEach((tag) => {
@@ -44,7 +44,7 @@ describe('Tags', () => {
 				<Tag>Prishtina</Tag>
 				<Tag>Athens</Tag>
 				<TagInput onRemoveTag={onRemoveTag} />
-			</Tags>
+			</Tags>,
 		);
 
 		const input = screen.getByRole('textbox');
@@ -72,7 +72,7 @@ describe('Tags', () => {
 						{tag}
 					</Tag>
 				))}
-			</Tags>
+			</Tags>,
 		);
 
 		fireEvent.click(screen.getAllByText('close')[2]);
@@ -86,7 +86,7 @@ describe('Tags', () => {
 			<Tags onAddTag={onAddTag}>
 				<Tag>Prishtina</Tag>
 				<TagInput delimiters={['space', 32, 'enter', 188]} />
-			</Tags>
+			</Tags>,
 		);
 
 		const input = screen.getByRole('textbox');
@@ -105,7 +105,7 @@ describe('Tags', () => {
 		render(
 			<Tags onAddTag={onAddTag}>
 				<TagInput delimiters={[',', ' ']} />
-			</Tags>
+			</Tags>,
 		);
 
 		const input = screen.getByRole('textbox');
@@ -121,7 +121,7 @@ describe('Tags', () => {
 		render(
 			<Tags onAddTag={onAddTag}>
 				<TagInput delimiters={[',']} />
-			</Tags>
+			</Tags>,
 		);
 
 		const input = screen.getByRole('textbox');
@@ -140,7 +140,7 @@ describe('Tags', () => {
 			<Tags onAddTag={onAddTag} validateTag={validateTag}>
 				<Tag>doni</Tag>
 				<TagInput />
-			</Tags>
+			</Tags>,
 		);
 
 		const input = screen.getByRole('textbox');
@@ -161,7 +161,7 @@ describe('Tags', () => {
 				<Tag>doni</Tag>
 				<Tag>gent</Tag>
 				<Tag>shkumbin</Tag>
-			</Tags>
+			</Tags>,
 		);
 
 		fireEvent.click(screen.getByText('doni'));

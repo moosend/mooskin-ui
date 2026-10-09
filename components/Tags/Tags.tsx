@@ -4,9 +4,9 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IBoxComponentProps } from '../Box/model';
-import { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from './model';
+import type { IInputCallbackData } from '../_utils/types/commonTypes';
+import type { IBoxComponentProps } from '../Box/model';
+import type { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Styled Components
 import { StyledTag, StyledTagClose, StyledTagInput, StyledTags, StyledTagText } from './styles';
@@ -19,15 +19,15 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ classNa
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		data: IInputCallbackData,
-		callback?: (e: React.MouseEvent<HTMLElement>) => void
+		callback?: (e: React.MouseEvent<HTMLElement>) => void,
 	) => {
-		props.onClickTag && props.onClickTag(e, data);
-		callback && callback(e);
+		props.onClickTag?.(e, data);
+		callback?.(e);
 	};
 
 	const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
 		e.stopPropagation();
-		props.onRemoveTag && props.onRemoveTag(e, i === -1 ? -1 : { dataLabel: dataLabel, value: i });
+		props.onRemoveTag?.(e, i === -1 ? -1 : { dataLabel, value: i });
 	};
 
 	const onAddTag = (value: string) => {
@@ -35,7 +35,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ classNa
 		if (props.validateTag) {
 			validated = props.validateTag(value);
 		}
-		validated && props.onAddTag && props.onAddTag({ dataLabel: dataLabel, value });
+		validated && props.onAddTag?.({ dataLabel, value });
 	};
 
 	const recurseChildren = (children: any, tagIndex?: number): any => {
@@ -54,7 +54,7 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ classNa
 						</>
 					),
 					key: i,
-					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, { dataLabel: dataLabel, value: i }, child.props.onClick)
+					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, { dataLabel, value: i }, child.props.onClick),
 				} as ITagComponentProps);
 			}
 
@@ -63,14 +63,14 @@ export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ classNa
 				return React.cloneElement(child, {
 					children: child.props.children ? child.props.children : 'close',
 					key: i,
-					onClick: child.props.onClick ? child.props.onClick : (e) => onRemoveTag(e, tagIndex ?? 0)
+					onClick: child.props.onClick ? child.props.onClick : (e) => onRemoveTag(e, tagIndex ?? 0),
 				} as IBoxComponentProps);
 			}
 
 			if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput) {
 				return React.cloneElement(child, {
 					key: i,
-					onAddTag
+					onAddTag,
 				} as ITagsInputComponentProps);
 			}
 
@@ -90,9 +90,9 @@ Tags.displayName = 'Tags';
 /**
  * Tag
  */
-export const Tag: React.FC<ITagComponentProps> = withMooskinContext(({ className = '', removeIcon = true, style = {}, ...props }) => {
-	return <StyledTag className={className} removeIcon={removeIcon} style={style} {...props} />;
-});
+export const Tag: React.FC<ITagComponentProps> = withMooskinContext(({ className = '', removeIcon = true, style = {}, ...props }) => (
+	<StyledTag className={className} removeIcon={removeIcon} style={style} {...props} />
+));
 
 Tag.displayName = 'Tag';
 
@@ -129,27 +129,27 @@ export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext(
 					}
 				}
 
-				props.onAddTag && props.onAddTag(tags);
+				props.onAddTag?.(tags);
 				setValue('');
 			} else {
 				setValue(e.target.value);
 			}
 
-			props.onChange && props.onChange(e);
+			props.onChange?.(e);
 		};
 		const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
 			e.stopPropagation();
-			props.onRemoveTag && props.onRemoveTag(e, i);
+			props.onRemoveTag?.(e, i);
 		};
 
 		const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
 			const delimitersInternal = delimiters && getConvertedDelimiters(delimiters);
-			const key = e.key;
-			const keyCode = e.keyCode;
+			const { key } = e;
+			const { keyCode } = e;
 
 			if (value && delimitersInternal && (delimitersInternal.includes(key) || delimitersInternal.includes(keyCode))) {
 				e.preventDefault();
-				props.onAddTag && props.onAddTag(value.toString());
+				props.onAddTag?.(value.toString());
 				setValue('');
 			}
 
@@ -158,7 +158,7 @@ export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext(
 				onRemoveTag(dummyEvent, -1);
 			}
 
-			props.onKeyDown && props.onKeyDown(e);
+			props.onKeyDown?.(e);
 		};
 
 		return (
@@ -175,7 +175,7 @@ export const TagInput: React.FC<ITagsInputComponentProps> = withMooskinContext(
 				{...props}
 			/>
 		);
-	}
+	},
 );
 
 TagInput.displayName = 'TagInput';
@@ -183,18 +183,18 @@ TagInput.displayName = 'TagInput';
 /**
  * TagClose
  */
-export const TagClose: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledTagClose className={className} style={style} {...props} />;
-});
+export const TagClose: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledTagClose className={className} style={style} {...props} />
+));
 
 TagClose.displayName = 'TagClose';
 
 /**
  * TagText
  */
-export const TagText: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledTagText {...props} />;
-});
+export const TagText: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledTagText {...props} />
+));
 
 TagText.displayName = 'TagText';
 

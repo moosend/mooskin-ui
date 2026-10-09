@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
+import type { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
 
 // Styled Components
 import { StyledSelector, StyledSelectorItem } from './styles';
@@ -16,20 +16,20 @@ export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext(({
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		value?: string | number,
-		callback?: (e: React.MouseEvent<HTMLElement>) => void
+		callback?: (e: React.MouseEvent<HTMLElement>) => void,
 	) => {
-		props.onClickItem && props.onClickItem(e, value);
-		callback && callback(e);
+		props.onClickItem?.(e, value);
+		callback?.(e);
 	};
 
-	const recurseChildren = (children: any): any => {
-		return React.Children.map(children, (child, i) => {
+	const recurseChildren = (children: any): any =>
+		React.Children.map(children, (child, i) => {
 			if (React.isValidElement<ISelectorItemComponentProps>(child) && child.type === SelectorItem) {
 				return React.cloneElement(child, {
 					active: child.props.value === props.activeItem,
 					children: recurseChildren((child.props as any).children),
 					key: i,
-					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick)
+					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
 				} as ISelectorItemComponentProps);
 			}
 
@@ -39,7 +39,6 @@ export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext(({
 
 			return child;
 		});
-	};
 
 	return <StyledSelector {...props} children={recurseChildren(props.children)} />;
 });
@@ -47,6 +46,6 @@ export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext(({
 /**
  * SelectorItem
  */
-export const SelectorItem: React.FC<ISelectorItemComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledSelectorItem {...props} />;
-});
+export const SelectorItem: React.FC<ISelectorItemComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledSelectorItem {...props} />
+));

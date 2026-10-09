@@ -4,7 +4,7 @@ import { HStack, VStack } from './Stack';
 
 const boxStyle = {
 	height: 40,
-	width: 40
+	width: 40,
 };
 
 describe('Stack', () => {
@@ -14,7 +14,7 @@ describe('Stack', () => {
 				<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 				<div key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
 				<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
-			</VStack>
+			</VStack>,
 		);
 
 		expect(container.firstChild).toMatchSnapshot();
@@ -24,7 +24,7 @@ describe('Stack', () => {
 		const children = [
 			<span key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 			<span key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
-			<span key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+			<span key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />,
 		];
 
 		const { container, rerender } = render(<VStack spacing={20}>{children}</VStack>);
@@ -37,7 +37,7 @@ describe('Stack', () => {
 		rerender(
 			<VStack spacing={20} direction="column-reverse">
 				{children}
-			</VStack>
+			</VStack>,
 		);
 
 		const reverseSpans = container.querySelectorAll('span');
@@ -52,7 +52,7 @@ describe('Stack', () => {
 				<label key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 				<label key={1} style={{ ...boxStyle, backgroundColor: 'green' }} />,
 				<label key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
-			</HStack>
+			</HStack>,
 		);
 
 		expect(container.querySelectorAll('span')).toHaveLength(2);

@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { INumberLabelComponentProps } from './model';
+import type { INumberLabelComponentProps } from './model';
 
 // Components
 import { Label } from '../Label/Label';
@@ -30,7 +30,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 				billion: 1000000000,
 				million: 1000000,
 				thousand: 1000,
-				trillion: 1000000000000
+				trillion: 1000000000000,
 			};
 
 			if (value < digits.thousand) {
@@ -38,7 +38,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 					newValue = Number(roundValue(newValue.toString(), props.roundAccuracy || 'high', digits));
 				}
 				if (abbreviate && newValue >= 1000) {
-					newValue = newValue / digits.thousand + 'K';
+					newValue = `${newValue / digits.thousand}K`;
 				}
 				return String(newValue);
 			}
@@ -50,7 +50,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 				}
 				if (abbreviate) {
 					const decimal = getDecimalValue(newValue.toString(), 'thousand');
-					newValue = Math.trunc(newValue / digits.thousand) + `.${decimal}K`;
+					newValue = `${Math.trunc(newValue / digits.thousand)}.${decimal}K`;
 					newValue = removeZeros(newValue);
 				}
 				return String(newValue);
@@ -63,7 +63,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 				}
 				if (abbreviate) {
 					const decimal = getDecimalValue(newValue.toString(), 'million');
-					newValue = Math.trunc(newValue / digits.million) + `.${decimal}M`;
+					newValue = `${Math.trunc(newValue / digits.million)}.${decimal}M`;
 					newValue = removeZeros(newValue);
 				}
 				return String(newValue);
@@ -76,7 +76,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 				}
 				if (abbreviate) {
 					const decimal = getDecimalValue(newValue.toString(), 'billion');
-					newValue = Math.trunc(newValue / digits.billion) + `.${decimal}B`;
+					newValue = `${Math.trunc(newValue / digits.billion)}.${decimal}B`;
 					newValue = removeZeros(newValue);
 				}
 				return newValue;
@@ -87,7 +87,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 				}
 				if (abbreviate) {
 					const decimal = getDecimalValue(newValue.toString(), 'trillion');
-					newValue = Math.trunc(newValue / digits.trillion) + `.${decimal}T`;
+					newValue = `${Math.trunc(newValue / digits.trillion)}.${decimal}T`;
 					newValue = removeZeros(newValue);
 				}
 				return newValue;
@@ -172,7 +172,7 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 				return value.replace('.0', '');
 			}
 			if (accuracy && accuracy > 0) {
-				return value.replace('.' + zero.repeat(accuracy), '');
+				return value.replace(`.${zero.repeat(accuracy)}`, '');
 			}
 			return value;
 		};
@@ -182,6 +182,6 @@ export const NumberLabel: React.FC<INumberLabelComponentProps> = withMooskinCont
 				{getContent()}
 			</Label>
 		);
-	}
+	},
 );
 NumberLabel.displayName = 'NumberLabel';

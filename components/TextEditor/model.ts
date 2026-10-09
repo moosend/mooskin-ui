@@ -1,4 +1,4 @@
-import { IAllProps } from '@tinymce/tinymce-react';
+import type { IAllProps } from '@tinymce/tinymce-react';
 
 export interface ITextEditorComponentProps extends Partial<IAllProps> {
 	onInit?: any;

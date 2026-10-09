@@ -1,4 +1,4 @@
-import { IStyledTheme } from '../../Styled/model';
+import type { IStyledTheme } from '../../Styled/model';
 
 const theme: IStyledTheme = {
 	backgroundColors: {
@@ -58,7 +58,7 @@ const theme: IStyledTheme = {
 		successIcon: '#007E6A',
 		errorIcon: '#DB1D1D',
 		infoIcon: '#5548D9',
-		warningIcon: '#B2551F'
+		warningIcon: '#B2551F',
 	},
 	borderColors: {
 		primary1: '#5548D9',
@@ -117,7 +117,7 @@ const theme: IStyledTheme = {
 		successIcon: '#007E6A',
 		errorIcon: '#DB1D1D',
 		infoIcon: '#5548D9',
-		warningIcon: '#B2551F'
+		warningIcon: '#B2551F',
 	},
 	fontColors: {
 		primary1: '#5548D9',
@@ -176,10 +176,10 @@ const theme: IStyledTheme = {
 		successIcon: '#007E6A',
 		errorIcon: '#DB1D1D',
 		infoIcon: '#5548D9',
-		warningIcon: '#B2551F'
+		warningIcon: '#B2551F',
 	},
 	styles: {
-		buttonBorderRadius: '100px'
+		buttonBorderRadius: '100px',
 	},
 	reportColors: {
 		box1: '#3fbaca',

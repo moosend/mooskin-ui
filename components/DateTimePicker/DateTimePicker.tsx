@@ -1,13 +1,14 @@
 import * as React from 'react';
 
 // Models
-import { IDateTimePickerComponentProps, IDateTimePickerKeyboardComponentProps } from './model';
+import type { IDateTimePickerComponentProps, IDateTimePickerKeyboardComponentProps } from './model';
 
 // Material-UI Date Time Picker
 import { DateTimePicker as DateTimePickerUI } from '@mui/x-date-pickers/DateTimePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { FilledTextFieldProps, OutlinedTextFieldProps, StandardTextFieldProps, TextField } from '@mui/material';
+import type { FilledTextFieldProps, OutlinedTextFieldProps, StandardTextFieldProps } from '@mui/material';
+import { TextField } from '@mui/material';
 // Components
 import createTheme from '@mui/material/styles/createTheme';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
@@ -40,17 +41,14 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 						backgroundColor: '#ffffff',
 						paddingTop: '6px',
 						paddingBottom: '6px',
-						fontSize: '14px'
-					}
+						fontSize: '14px',
+					},
 				}}
 			/>
 		);
 
 		return (
-			<LocalizationProvider
-				dateAdapter={AdapterDateFns}
-				adapterLocale={props.locale}
-			>
+			<LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={props.locale}>
 				<ThemeProvider theme={materialTheme}>
 					<DateTimePickerUI
 						open={isPickerOpen}
@@ -69,7 +67,7 @@ export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimeP
 				</ThemeProvider>
 			</LocalizationProvider>
 		);
-	}
+	},
 );
 
 DateTimePicker.displayName = 'DateTimePicker';
