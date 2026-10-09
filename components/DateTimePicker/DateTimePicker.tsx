@@ -20,8 +20,7 @@ import { getOverridesForPicker } from '../_utils/helper';
  */
 export const DateTimePicker: React.FC<IDateTimePickerComponentProps | IDateTimePickerKeyboardComponentProps> = withMooskinContext(
 	(props) => {
-		const { ampm = false, format = 'dd/MM/yyyy hh:mm:ss', inputComponentProps, onChange, value, ...restProps } = props;
-		void inputComponentProps;
+		const { ampm = false, format = 'dd/MM/yyyy hh:mm:ss', onChange, value, ...restProps } = props;
 		const [isPickerOpen, setIsPickerOpen] = React.useState(false);
 
 		const openPicker = () => setIsPickerOpen(true);

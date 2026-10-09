@@ -1,5 +1,4 @@
 import { DatePickerProps } from '@mui/x-date-pickers/DatePicker';
-import { IInputComponentProps } from '../Input/model';
 import { TextFieldProps } from '@mui/material/TextField';
 
 /** Value type for pickers that use AdapterDateFns. */
@@ -7,7 +6,6 @@ export type DatePickerValue = Date | null;
 
 export interface IDatePickerCommonProps {
 	value?: DatePickerValue;
-	inputComponentProps?: IInputComponentProps;
 	/** Display format, passed to MUI as inputFormat. */
 	format?: string;
 	inputProps?: Partial<TextFieldProps>;

@@ -17,8 +17,7 @@ import variables from '../_utils/globals/variables';
 import { getOverridesForPicker } from '../_utils/helper';
 
 export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboardComponentProps> = withMooskinContext((props) => {
-	const { inputProps, inputComponentProps, format = 'dd/MM/yyyy', onChange, value, ...restProps } = props;
-	void inputComponentProps;
+	const { inputProps, format = 'dd/MM/yyyy', onChange, value, ...restProps } = props;
 	const [isPickerOpen, setIsPickerOpen] = React.useState(false);
 
 	const openPicker = () => setIsPickerOpen(true);
@@ -32,11 +31,9 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 				{...inputProps}
 				onKeyDown={(e) => e.preventDefault()}
 				onClick={openPicker}
-				styles={{ paddingTop: '7px', paddingBottom: '7px' }}
 			/>
 		) : (
 			<TextField
-				styles={{ paddingTop: '7px', paddingBottom: '7px' }}
 				{...params}
 				fullWidth
 				onClick={openPicker}

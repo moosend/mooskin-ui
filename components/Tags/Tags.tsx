@@ -14,9 +14,7 @@ import { StyledTag, StyledTagClose, StyledTagInput, StyledTags, StyledTagText } 
 /**
  * Tags
  */
-export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ className = '', style = {}, dataLabel = '', tags, placeholder, ...props }) => {
-	void tags;
-	void placeholder;
+export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ className = '', style = {}, dataLabel = '', ...props }) => {
 	const [tagClose, setTagClose] = React.useState(false);
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,

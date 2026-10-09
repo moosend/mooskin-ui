@@ -3,7 +3,6 @@
 exports[`DatePicker renders correctly 1`] = `
 <div
   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-d4kprt-MuiFormControl-root-MuiTextField-root"
-  styles="[object Object]"
 >
   <div
     class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl Mui-readOnly MuiInputBase-readOnly css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
