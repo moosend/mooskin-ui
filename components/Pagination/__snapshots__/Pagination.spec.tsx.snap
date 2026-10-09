@@ -3,113 +3,54 @@
 exports[`Pagination renders correctly 1`] = `
 <div
   class="sc-aXZVg cKHBxE sc-eqUAAy jPvdDO"
-  d="flex"
 >
   <div
     class="sc-aXZVg bnoYQe sc-gEvEer eVcXHV notranslate "
-    color="#212121"
-    cursor="pointer"
-    font-family="Mooskin Icons"
-    font-size="21px"
-    font-style="normal"
-    opacity="1"
-    text-decoration="none"
   >
     first_page
   </div>
   <div
     class="sc-aXZVg fwPWhO sc-gEvEer eVcXHV notranslate "
-    color="#212121"
-    cursor="pointer"
-    font-family="Mooskin Icons"
-    font-size="21px"
-    font-style="normal"
-    opacity="1"
-    text-decoration="none"
   >
     chevron_left
   </div>
   <div
     class="sc-aXZVg fMhedi sc-fqkvVR kEKGkN"
-    color="#757575"
-    cursor="pointer"
-    font-size="16"
-    font-style="normal"
-    font-weight="500"
   >
     1
   </div>
   <div
     class="sc-aXZVg fMhedi sc-fqkvVR kEKGkN"
-    color="#757575"
-    cursor="pointer"
-    font-size="16"
-    font-style="normal"
-    font-weight="500"
   >
     2
   </div>
   <div
     class="sc-aXZVg pkLoI sc-fqkvVR lfebmJ"
-    color="#FFFFFF"
-    cursor="pointer"
-    font-size="16"
-    font-style="normal"
-    font-weight="500"
   >
     3
   </div>
   <div
     class="sc-aXZVg fMhedi sc-fqkvVR kEKGkN"
-    color="#757575"
-    cursor="pointer"
-    font-size="16"
-    font-style="normal"
-    font-weight="500"
   >
     4
   </div>
   <div
     class="sc-aXZVg fMhedi sc-fqkvVR kEKGkN"
-    color="#757575"
-    cursor="pointer"
-    font-size="16"
-    font-style="normal"
-    font-weight="500"
   >
     5
   </div>
   <div
     class="sc-aXZVg bnoYQe sc-gEvEer eVcXHV notranslate "
-    color="#212121"
-    cursor="pointer"
-    font-family="Mooskin Icons"
-    font-size="21px"
-    font-style="normal"
-    opacity="1"
-    text-decoration="none"
   >
     chevron_right
   </div>
   <div
     class="sc-aXZVg fwPWhO sc-gEvEer eVcXHV notranslate "
-    color="#212121"
-    cursor="pointer"
-    font-family="Mooskin Icons"
-    font-size="21px"
-    font-style="normal"
-    opacity="1"
-    text-decoration="none"
   >
     last_page
   </div>
   <div
     class="sc-aXZVg cERuvK sc-dcJsrY fnshVx"
-    color="#5548D9"
-    cursor="pointer"
-    font-size="14px"
-    font-style="normal"
-    font-weight="500"
   >
     Show all
   </div>

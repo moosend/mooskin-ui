@@ -3,32 +3,20 @@
 exports[`Expandable renders correctly 1`] = `
 <div
   class="sc-aXZVg InIPQ sc-gEvEer cfDqOM"
-  d="flex"
-  direction="column"
 >
   <div
     class="sc-aXZVg ctqhII sc-eqUAAy iIojlV"
   >
     <div
       class="sc-aXZVg bFYjRp sc-fqkvVR bSUtXh"
-      cursor="pointer"
-      d="flex"
     >
       <div
         class="sc-aXZVg cqfAiK sc-iGgWBj bDNsQa"
-        color="#212121"
-        font-size="14,14,16,16"
-        font-style="normal"
-        font-weight="500"
       >
         Title for item with index 1
       </div>
       <div
         class="sc-aXZVg qZqIH sc-dcJsrY iiRlww notranslate "
-        color="#212121"
-        font-family="Mooskin Icons"
-        font-size="20px"
-        transform="rotate(0deg)"
       >
         keyboard_arrow_down
       </div>
@@ -39,24 +27,14 @@ exports[`Expandable renders correctly 1`] = `
   >
     <div
       class="sc-aXZVg bFYjRp sc-fqkvVR bSUtXh"
-      cursor="pointer"
-      d="flex"
     >
       <div
         class="sc-aXZVg cqfAiK sc-iGgWBj bDNsQa"
-        color="#212121"
-        font-size="14,14,16,16"
-        font-style="normal"
-        font-weight="500"
       >
         Title for item with index 2
       </div>
       <div
         class="sc-aXZVg qZqIH sc-dcJsrY iiRlww notranslate "
-        color="#212121"
-        font-family="Mooskin Icons"
-        font-size="20px"
-        transform="rotate(0deg)"
       >
         keyboard_arrow_down
       </div>
@@ -67,24 +45,14 @@ exports[`Expandable renders correctly 1`] = `
   >
     <div
       class="sc-aXZVg bFYjRp sc-fqkvVR bSUtXh"
-      cursor="pointer"
-      d="flex"
     >
       <div
         class="sc-aXZVg cqfAiK sc-iGgWBj bDNsQa"
-        color="#212121"
-        font-size="14,14,16,16"
-        font-style="normal"
-        font-weight="500"
       >
         Title for item with index 3
       </div>
       <div
         class="sc-aXZVg qZqIH sc-dcJsrY iiRlww notranslate "
-        color="#212121"
-        font-family="Mooskin Icons"
-        font-size="20px"
-        transform="rotate(0deg)"
       >
         keyboard_arrow_down
       </div>
@@ -95,24 +63,14 @@ exports[`Expandable renders correctly 1`] = `
   >
     <div
       class="sc-aXZVg bFYjRp sc-fqkvVR bSUtXh"
-      cursor="pointer"
-      d="flex"
     >
       <div
         class="sc-aXZVg cqfAiK sc-iGgWBj bDNsQa"
-        color="#212121"
-        font-size="14,14,16,16"
-        font-style="normal"
-        font-weight="500"
       >
         Title for item with index 4
       </div>
       <div
         class="sc-aXZVg qZqIH sc-dcJsrY iiRlww notranslate "
-        color="#212121"
-        font-family="Mooskin Icons"
-        font-size="20px"
-        transform="rotate(0deg)"
       >
         keyboard_arrow_down
       </div>

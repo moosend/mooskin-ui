@@ -3,10 +3,6 @@
 exports[`Label renders correctly 1`] = `
 <label
   class="sc-aXZVg QztLj sc-gEvEer AIBaQ"
-  cursor="unset"
-  d="flex"
-  font-size="14,14,16,16"
-  font-weight="500"
 >
   Label here!
 </label>

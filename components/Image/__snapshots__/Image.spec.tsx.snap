@@ -3,7 +3,6 @@
 exports[`Image renders correctly 1`] = `
 <img
   class="sc-aXZVg gZpMVF sc-gEvEer iXDCGZ"
-  d="block"
   src="asd"
 />
 `;

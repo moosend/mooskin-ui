@@ -3,8 +3,6 @@
 exports[`ActionsDropdown renders ActionsDropdownItem correctly 1`] = `
 <div
   class="sc-aXZVg fXGooD sc-dcJsrY etKzq myClass"
-  font-size="12px,12px,20px,20px"
-  font-weight="bold,bold,400,400"
 />
 `;
 

@@ -6,41 +6,34 @@ exports[`Tabs renders correctly 1`] = `
 >
   <div
     class="sc-aXZVg kmWGHH"
-    d="flex"
   >
     <div
       class="sc-aXZVg ikjOJz sc-fqkvVR ijkSuV"
-      font-size="12,12,14,14"
     >
       Item: 1
     </div>
     <div
       class="sc-aXZVg ikjOJz sc-fqkvVR ijkSuV"
-      font-size="12,12,14,14"
     >
       Item: 2
     </div>
     <div
       class="sc-aXZVg ikjOJz sc-fqkvVR bQlXcv"
-      font-size="12,12,14,14"
     >
       Item: 3
     </div>
     <div
       class="sc-aXZVg ikjOJz sc-fqkvVR ijkSuV"
-      font-size="12,12,14,14"
     >
       Item: 4
     </div>
     <div
       class="sc-aXZVg ikjOJz sc-fqkvVR ijkSuV"
-      font-size="12,12,14,14"
     >
       Item: 5
     </div>
     <div
       class="sc-aXZVg ikjOJz sc-fqkvVR ijkSuV"
-      font-size="12,12,14,14"
     >
       Item: 6
     </div>

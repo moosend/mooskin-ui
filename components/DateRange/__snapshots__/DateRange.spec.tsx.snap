@@ -3,13 +3,9 @@
 exports[`DateRange renders correctly 1`] = `
 <div
   class="sc-aXZVg cGDmBE"
-  d="flex"
 >
   <div
     class="sc-aXZVg hsJnnD sc-fqkvVR gDYRVv"
-    cursor=""
-    d="flex"
-    opacity="1"
     value="20 Jun 2016 - 20 Jun 2016"
   >
     <input

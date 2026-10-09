@@ -11,10 +11,6 @@ exports[`Radio renders Radio correctly 1`] = `
   </div>
   <label
     class="sc-aXZVg cxgupt sc-eqUAAy dmLXvs"
-    cursor="pointer"
-    d="flex"
-    font-size="14,14,16,16"
-    font-weight="500"
   >
     Normal Radio
   </label>

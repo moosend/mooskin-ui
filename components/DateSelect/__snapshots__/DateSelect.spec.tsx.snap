@@ -3,7 +3,6 @@
 exports[`DateSelect renders other type of the component correctly 1`] = `
 <div
   class="sc-aXZVg kITBOQ sc-eqUAAy ioySWY"
-  format="12-Hour"
   type="hour"
 >
   <div

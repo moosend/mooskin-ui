@@ -3,9 +3,6 @@
 exports[`Drawer renders correctly 1`] = `
 <div
   class="sc-aXZVg cmaFxv sc-gEvEer"
-  d="flex"
-  direction="column"
-  opacity="1"
   tabindex="0"
 >
   <div

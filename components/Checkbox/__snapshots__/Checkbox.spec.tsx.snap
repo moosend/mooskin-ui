@@ -3,27 +3,14 @@
 exports[`CheckBox renders CheckBox correctly 1`] = `
 <div
   class="sc-aXZVg wLMbT sc-fqkvVR kJqWgz"
-  d="flex"
 >
   <div
     class="sc-aXZVg ecVUqO sc-dcJsrY jHpnYT"
-    color="#5548D9"
-    cursor="pointer"
-    font-family="Mooskin Icons"
-    font-size="23px"
-    opacity="1"
   >
     check_box
   </div>
   <label
     class="sc-aXZVg jGTcGx sc-eqUAAy dmLXvs"
-    color="#212121"
-    cursor="pointer"
-    d="flex"
-    font-size="14,14,16,16"
-    font-style="normal"
-    font-weight="500"
-    opacity="1"
   >
     Normal Checkbox
   </label>

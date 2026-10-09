@@ -3,8 +3,6 @@
 exports[`Layout renders correctly 1`] = `
 <div
   class="sc-aXZVg dua-DYI sc-gEvEer cfzBTI"
-  d="grid"
-  spacing="15"
 >
   <div
     class="sc-aXZVg bDaBlA"

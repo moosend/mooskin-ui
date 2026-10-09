@@ -3,8 +3,6 @@
 exports[`Description renders correctly 1`] = `
 <div
   class="sc-aXZVg iRqBLP sc-gEvEer jOHvKL"
-  color="#757575"
-  font-size="12,12,13,13"
 >
   Description here!
 </div>

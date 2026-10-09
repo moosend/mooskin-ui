@@ -3,6 +3,5 @@
 exports[`LoadingBar LoadingBar renders correctly 1`] = `
 <div
   class="sc-aXZVg jIFdrm sc-gEvEer fPFxyt"
-  opacity="1"
 />
 `;

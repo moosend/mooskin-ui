@@ -3,12 +3,7 @@
 exports[`Button renders correctly 1`] = `
 <a
   class="sc-aXZVg dPOIot sc-gEvEer sc-eqUAAy bhKSqf loTnCf myClass"
-  cursor="not-allowed"
-  d="flex"
   disabled=""
-  font-size="12,12,14,14"
-  font-style="normal"
-  font-weight="600"
   href="www.moosend.com"
   id="button1"
   style="color: blue;"

@@ -3,12 +3,9 @@
 exports[`Alert renders correctly 1`] = `
 <div
   class="sc-aXZVg dua-DYI sc-gsFSXq iSkYPe"
-  d="grid"
-  spacing="15"
 >
   <div
     class="sc-aXZVg bzYTZT sc-kAyceB bmhqtl"
-    d="flex"
   >
     <div
       class="sc-aXZVg kITBOQ sc-imWYAI sc-jXbUNg dthjsB"
@@ -25,18 +22,14 @@ exports[`Alert renders correctly 1`] = `
     </div>
     <div
       class="sc-aXZVg iZcrxa sc-imWYAI sc-dhKdcB dthjsB gCYdIi"
-      direction="column"
     >
       <div
         class="sc-aXZVg huiavI"
-        font-size="16"
-        font-weight="600"
       >
         Some Bold Text
       </div>
       <div
         class="sc-aXZVg gXqHoa"
-        font-size="12"
       >
         Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test.
       </div>
@@ -46,11 +39,6 @@ exports[`Alert renders correctly 1`] = `
     >
       <button
         class="sc-aXZVg eYKOXW sc-gEvEer sc-eqUAAy hutLHA cLvjCr"
-        cursor="pointer"
-        d="flex"
-        font-size="12,12,14,14"
-        font-style="normal"
-        font-weight="600"
         type="button"
       >
         Button
@@ -59,7 +47,6 @@ exports[`Alert renders correctly 1`] = `
   </div>
   <div
     class="sc-aXZVg bzYTZT sc-kAyceB bmhqtl"
-    d="flex"
   >
     <div
       class="sc-aXZVg kITBOQ sc-imWYAI sc-jXbUNg dthjsB"
@@ -76,18 +63,14 @@ exports[`Alert renders correctly 1`] = `
     </div>
     <div
       class="sc-aXZVg iZcrxa sc-imWYAI sc-dhKdcB dthjsB gCYdIi"
-      direction="column"
     >
       <div
         class="sc-aXZVg huiavI"
-        font-size="16"
-        font-weight="600"
       >
         Some Bold Text
       </div>
       <div
         class="sc-aXZVg gXqHoa"
-        font-size="12"
       >
         Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test.
       </div>
@@ -97,11 +80,6 @@ exports[`Alert renders correctly 1`] = `
     >
       <button
         class="sc-aXZVg eYKOXW sc-gEvEer sc-eqUAAy hutLHA cLvjCr"
-        cursor="pointer"
-        d="flex"
-        font-size="12,12,14,14"
-        font-style="normal"
-        font-weight="600"
         type="button"
       >
         Button
@@ -110,7 +88,6 @@ exports[`Alert renders correctly 1`] = `
   </div>
   <div
     class="sc-aXZVg bzYTZT sc-kAyceB bmhqtl"
-    d="flex"
   >
     <div
       class="sc-aXZVg kITBOQ sc-imWYAI sc-jXbUNg dthjsB"
@@ -127,18 +104,14 @@ exports[`Alert renders correctly 1`] = `
     </div>
     <div
       class="sc-aXZVg iZcrxa sc-imWYAI sc-dhKdcB dthjsB gCYdIi"
-      direction="column"
     >
       <div
         class="sc-aXZVg huiavI"
-        font-size="16"
-        font-weight="600"
       >
         Some Bold Text
       </div>
       <div
         class="sc-aXZVg gXqHoa"
-        font-size="12"
       >
         Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test, Test test test test test.
       </div>
@@ -148,11 +121,6 @@ exports[`Alert renders correctly 1`] = `
     >
       <button
         class="sc-aXZVg eYKOXW sc-gEvEer sc-eqUAAy hutLHA cLvjCr"
-        cursor="pointer"
-        d="flex"
-        font-size="12,12,14,14"
-        font-style="normal"
-        font-weight="600"
         type="button"
       >
         Button

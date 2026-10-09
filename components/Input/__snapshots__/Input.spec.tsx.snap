@@ -3,9 +3,6 @@
 exports[`Input renders correctly 1`] = `
 <div
   class="sc-aXZVg hsJnnD sc-fqkvVR gDYRVv"
-  cursor=""
-  d="flex"
-  opacity="1"
 >
   <input
     class="sc-aXZVg kITBOQ sc-dcJsrY sc-gsFSXq gtqlTD jrFAWi"
@@ -13,35 +10,24 @@ exports[`Input renders correctly 1`] = `
   />
   <div
     class="sc-aXZVg iRBdYw"
-    color="inherit"
   >
     <div
       class="sc-aXZVg bwdtiX sc-imWYAI gTclxx"
-      d="flex"
-      font-family="Mooskin Icons"
-      font-size="20px"
     >
       check
     </div>
   </div>
   <div
     class="sc-aXZVg jyBVJQ"
-    color="inherit"
   >
     <div
       class="sc-aXZVg bwdtiX sc-imWYAI gTclxx"
-      d="flex"
-      font-family="Mooskin Icons"
-      font-size="20px"
     >
       emoji_emotions
     </div>
   </div>
   <div
     class="sc-aXZVg bwdtiX sc-imWYAI gTclxx"
-    d="flex"
-    font-family="Mooskin Icons"
-    font-size="20px"
   >
     search
   </div>

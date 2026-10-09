@@ -3,37 +3,21 @@
 exports[`Alert renders correctly 1`] = `
 <div
   class="sc-aXZVg khceon sc-gEvEer hCsBMA"
-  d="flex"
 >
   <div
     class="sc-aXZVg doKYMB sc-eqUAAy sc-fqkvVR dSZkpA ffkbep"
-    d="flex"
-    font-size="12"
-    font-weight="800"
   >
     SAVE AS DRAFT
   </div>
   <div
     class="sc-aXZVg fiRfQk sc-eqUAAy sc-dcJsrY dSZkpA cNwSit"
-    d="flex"
   >
     <button
       class="sc-aXZVg cEzdQU sc-gsFSXq sc-kAyceB kKlJGG hLlMwg"
-      cursor="pointer"
-      d="flex"
-      font-size="12,12,14,14"
-      font-style="normal"
-      font-weight="600"
       type="button"
     >
       <div
         class="sc-aXZVg jFquHe sc-dhKdcB cmSJqL notranslate "
-        cursor="pointer"
-        d="flex"
-        font-family="Mooskin Icons Round"
-        font-size="13px"
-        font-style="normal"
-        font-weight="600"
       >
         chevron_left
       </div>
@@ -41,22 +25,11 @@ exports[`Alert renders correctly 1`] = `
     </button>
     <button
       class="sc-aXZVg jzcoHk sc-gsFSXq sc-kAyceB kKlJGG hLlMwg"
-      cursor="pointer"
-      d="flex"
-      font-size="12,12,14,14"
-      font-style="normal"
-      font-weight="600"
       type="button"
     >
       NEXT
       <div
         class="sc-aXZVg jFquHe sc-dhKdcB cmSJqL notranslate "
-        cursor="pointer"
-        d="flex"
-        font-family="Mooskin Icons Round"
-        font-size="13px"
-        font-style="normal"
-        font-weight="600"
       >
         chevron_right
       </div>
@@ -64,15 +37,9 @@ exports[`Alert renders correctly 1`] = `
   </div>
   <div
     class="sc-aXZVg dHjVcV sc-eqUAAy sc-iGgWBj dSZkpA bmjvwn"
-    d="flex"
   >
     <button
       class="sc-aXZVg hUxaYq sc-gsFSXq sc-imWYAI kKlJGG kycJwc"
-      cursor="pointer"
-      d="flex"
-      font-size="12,12,14,14"
-      font-style="normal"
-      font-weight="600"
       type="button"
     >
       DESIGN & DELIVERY TEST

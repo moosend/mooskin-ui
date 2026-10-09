@@ -1,3 +1,4 @@
+import isPropValid from '@emotion/is-prop-valid';
 import styled from 'styled-components';
 
 // Screen sizes
@@ -5,7 +6,45 @@ import screens from '../_utils/globals/screens';
 
 // Models
 import { IStyledTheme } from '../Styled/model';
-import { BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
+import { boxComponentProps, BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
+
+/** Props that must reach the DOM. Everything else in the box API is style or context. */
+const forwardedDomProps = new Set(['id', 'className', 'style', 'children', 'disabled']);
+
+const blockedBoxProps = new Set<string>([
+	...boxComponentProps,
+	'palette',
+	'locale',
+	'setLocale',
+	'dataLabel',
+	'noRender',
+	'setRef',
+	'boxAs',
+	'fontColor',
+	'flexWrap',
+	'whiteSpace',
+	'wordBreak',
+	'gridTemplateColumns',
+	'_hover',
+	'all',
+	'transition',
+	'transform',
+	'textOverflow',
+	'outline',
+	'outlineWidth',
+	'outlineStyle',
+	'outlineColor',
+	'label',
+	'userSelect',
+	'verticalAlign',
+	'pointerEvents',
+	'spacing',
+	'format',
+	'styles',
+	'tags'
+]);
+
+forwardedDomProps.forEach((prop) => blockedBoxProps.delete(prop));
 
 export const getNumberOrStringValue = (value?: number | string) => {
 	if (typeof value !== 'undefined') {
@@ -131,7 +170,9 @@ const generateStyles = (data: { property: string; value?: number | string | any[
 	`;
 };
 
-export const StyledBox = styled.div<IBoxComponentProps>`
+export const StyledBox = styled.div.withConfig({
+	shouldForwardProp: (prop) => isPropValid(prop) && !blockedBoxProps.has(prop)
+})<IBoxComponentProps>`
 	&&& {
 		${(props) => generateStyles({ property: 'all', value: props.all })}
 

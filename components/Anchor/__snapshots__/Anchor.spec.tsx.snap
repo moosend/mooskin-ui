@@ -3,15 +3,10 @@
 exports[`Anchor renders correctly 1`] = `
 <a
   class="sc-aXZVg eyNMvq sc-gEvEer cRVdOL"
-  color="#757575"
-  cursor="not-allowed"
   disabled=""
-  font-size="12px"
   href="www.moosend.com"
   id="Anchor1"
-  opacity="0.5"
   target=""
-  text-decoration="underline"
 >
   Mooskin
 </a>

@@ -12,15 +12,9 @@ exports[`Table renders correctly 1`] = `
     >
       <div
         class="sc-aXZVg wLMbT sc-fqkvVR kJqWgz"
-        d="flex"
       >
         <div
           class="sc-aXZVg dFqPpi sc-dcJsrY cwbZA"
-          color="rgba(0, 0, 0, 0.62)"
-          cursor="pointer"
-          font-family="Mooskin Icons"
-          font-size="23px"
-          opacity="1"
         >
           check_box_outline_blank
         </div>
@@ -63,15 +57,9 @@ exports[`Table renders correctly 1`] = `
     >
       <div
         class="sc-aXZVg eDAqrd sc-fqkvVR kJqWgz"
-        d="flex"
       >
         <div
           class="sc-aXZVg dFqPpi sc-dcJsrY cwbZA"
-          color="rgba(0, 0, 0, 0.62)"
-          cursor="pointer"
-          font-family="Mooskin Icons"
-          font-size="23px"
-          opacity="1"
         >
           check_box_outline_blank
         </div>
@@ -116,15 +104,9 @@ exports[`Table renders correctly 1`] = `
     >
       <div
         class="sc-aXZVg eDAqrd sc-fqkvVR kJqWgz"
-        d="flex"
       >
         <div
           class="sc-aXZVg dFqPpi sc-dcJsrY cwbZA"
-          color="rgba(0, 0, 0, 0.62)"
-          cursor="pointer"
-          font-family="Mooskin Icons"
-          font-size="23px"
-          opacity="1"
         >
           check_box_outline_blank
         </div>

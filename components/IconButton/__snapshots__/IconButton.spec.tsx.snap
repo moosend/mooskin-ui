@@ -3,13 +3,6 @@
 exports[`SmallIconButton renders correctly 1`] = `
 <div
   class="sc-aXZVg kpydSt sc-gEvEer eVcXHV notranslate "
-  color="#212121"
-  cursor="pointer"
-  font-family="Mooskin Icons"
-  font-size="21px"
-  font-style="normal"
-  opacity="1"
-  text-decoration="none"
 >
   close
 </div>

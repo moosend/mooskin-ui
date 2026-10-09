@@ -3,37 +3,25 @@
 exports[`Alert renders correctly 1`] = `
 <div
   class="sc-aXZVg kIXnWo sc-gsFSXq daVkwk"
-  d="flex"
-  overflow="hidden"
 >
   <div
     class="sc-aXZVg bVfkia sc-kpDqfm sc-dAlyuH eXFtsx gGRRLQ"
-    d="inherit"
-    font-family="Mooskin Icons"
-    font-size="1.5rem"
     style="flex-shrink: 0;"
   >
     announcement
   </div>
   <div
     class="sc-aXZVg csKltK sc-imWYAI sc-jXbUNg AGWLw bvQqCY"
-    font-weight="600"
   >
     Your browser is outdated!
   </div>
   <div
     class="sc-aXZVg iruMwZ sc-imWYAI sc-dhKdcB AGWLw cxQCeh"
-    d="inline"
   >
     Your Mooskin experience may be degraded.
   </div>
   <div
     class="sc-aXZVg gtYhUS sc-kpDqfm sc-jlZhew eXFtsx kUBKmL"
-    color="#5548D9"
-    cursor="pointer"
-    d="flex"
-    font-family="Mooskin Icons"
-    font-size="20px"
   >
     close
   </div>
