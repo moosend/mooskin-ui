@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { ISwitchComponentProps } from '../components/Switch/model';
 import { Switch, SwitchHandle } from '../components/Switch/Switch';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Switch,
 	title: 'Example/Switch'
-} as any as Meta;
+};
 
 const Template: Story<ISwitchComponentProps> = (args) => {
 	const [status, setStatus] = React.useState(false);

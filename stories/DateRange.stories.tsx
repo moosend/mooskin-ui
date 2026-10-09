@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { DateRange } from '../components/DateRange/DateRange';
 
@@ -13,7 +13,7 @@ import { MooskinContextProvider } from '../components/Styled/MooskinContextProvi
 export default {
 	component: DateRange,
 	title: 'Example/DateRange'
-} as any as Meta;
+};
 
 const Template: Story<IDateRangePickerComponentProps> = (args) => {
 	const [range, setRange] = React.useState({

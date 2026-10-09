@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { IRadioComponentProps } from '../components/Radio/model';
 import { Radio, RadioDescription, RadioIcon, RadioLabel } from '../components/Radio/Radio';
@@ -13,7 +13,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Radio,
 	title: 'Example/Radio'
-} as any as Meta;
+};
 
 const Template: Story<IRadioComponentProps> = (args) => {
 	const [value, setValue] = React.useState(false);

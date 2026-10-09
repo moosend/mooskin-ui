@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import {
 	Expandable,
@@ -17,7 +17,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Expandable,
 	title: 'Example/Expandable'
-} as any as Meta;
+};
 
 const Template: Story<IExpandableComponentProps> = (args) => {
 	const [activeItem, setActiveItem] = React.useState<string | number>(4);

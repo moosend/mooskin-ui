@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Checkbox, CheckboxDescription, CheckboxIcon, CheckboxLabel } from '../components/Checkbox/Checkbox';
 import { ICheckboxComponentProps } from '../components/Checkbox/model';
@@ -13,7 +13,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Checkbox,
 	title: 'Example/Checkbox'
-} as any as Meta;
+};
 
 const Template: Story<ICheckboxComponentProps> = (args) => {
 	const [value, setValue] = React.useState(false);

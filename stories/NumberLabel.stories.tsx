@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { INumberLabelComponentProps } from '../components/NumberLabel/model';
 import { NumberLabel } from '../components/NumberLabel/NumberLabel';
@@ -11,7 +11,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: NumberLabel,
 	title: 'Example/NumberLabel'
-} as any as Meta;
+};
 
 const Template: Story<INumberLabelComponentProps> = (args) => {
 	return (

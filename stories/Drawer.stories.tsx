@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import {
 	Drawer,
@@ -18,7 +18,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Drawer,
 	title: 'Example/Drawer'
-} as any as Meta;
+};
 
 const Template: Story<IDrawerComponentProps> = (args) => {
 	return (

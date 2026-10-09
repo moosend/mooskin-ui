@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { ActionsDropdown, ActionsDropdownArrow, ActionsDropdownItem } from '../components/ActionsDropdown/ActionsDropdown';
 import { IActionsDropdownComponentProps } from '../components/ActionsDropdown/model';
@@ -12,9 +12,9 @@ import { IInputCallbackData } from '../components/_utils/types/commonTypes';
 export default {
 	component: ActionsDropdown,
 	title: 'Example/ActionsDropdown'
-} as any as ComponentMeta<typeof ActionsDropdown>;
+};
 
-const Template: ComponentStory<typeof ActionsDropdown> = (args) => {
+const Template: Story<typeof ActionsDropdown> = (args) => {
 	return (
 		<>
 			<ActionsDropdown {...args} onClickItem={(e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => alert(data.value)} />

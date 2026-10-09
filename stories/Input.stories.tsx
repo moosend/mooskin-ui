@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import {
 	Input,
@@ -24,7 +24,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Input,
 	title: 'Example/Input'
-} as any as Meta;
+};
 
 const Template: Story<IInputContainerComponentProps> = (args) => {
 	return (

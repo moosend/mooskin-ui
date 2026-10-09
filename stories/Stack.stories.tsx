@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { IStackComponentProps } from '../components/Stack/model';
 import { HStack, VStack } from '../components/Stack/Stack';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: HStack,
 	title: 'Example/Stack'
-} as any as Meta;
+};
 
 const HTemplate: Story<IStackComponentProps> = (args) => {
 	return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { ISelectComponentProps } from '../components/Select/model';
 import {
@@ -24,7 +24,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Select,
 	title: 'Example/Select'
-} as any as Meta;
+};
 
 const Template: Story<ISelectComponentProps> = (args) => {
 	const [selected, setSelected] = React.useState('');

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Table, TableHeader, TableHeaderItem, TableRow, TableRowItem } from '../components/Table/Table';
 
@@ -11,7 +11,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Table,
 	title: 'Example/Table'
-} as any as Meta;
+};
 
 const Template: Story<IBoxComponentProps> = (args) => {
 	return (

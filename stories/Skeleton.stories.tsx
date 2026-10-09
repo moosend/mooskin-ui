@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { ISkeletonCircleComponentProps, ICommonSkeletonComponentProps, ISkeletonTextComponentProps } from '../components/Skeleton/model';
 import { Skeleton, SkeletonCircle, SkeletonText } from '../components/Skeleton/Skeleton';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Skeleton,
 	title: 'Example/Skeleton'
-} as any as Meta;
+};
 
 const SkeletonTemplate: Story<ICommonSkeletonComponentProps> = (args) => {
 	return (

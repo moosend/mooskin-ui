@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { ISidemenuComponentProps } from '../components/Sidemenu/model';
 import { Sidemenu, SidemenuItem } from '../components/Sidemenu/Sidemenu';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Sidemenu,
 	title: 'Example/Sidemenu'
-} as any as Meta;
+};
 
 const Template: Story<ISidemenuComponentProps> = (args) => {
 	// const [activeItem, setActiveItem] = React.useState<number | string>('/settings');

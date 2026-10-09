@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Footer, FooterBody, FooterEnd, FooterHead } from '../components/Footer/Footer';
 
@@ -11,7 +11,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Footer,
 	title: 'Example/Footer'
-} as any as Meta;
+};
 
 const Template: Story<IBoxComponentProps> = (args) => {
 	return (

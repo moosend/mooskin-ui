@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { LoadingBar } from '../components/LoadingBar/LoadingBar';
 import { ILoadingBarComponentProps } from '../components/LoadingBar/model';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: LoadingBar,
 	title: 'Example/LoadingBar'
-} as any as Meta;
+};
 
 const Template: Story<ILoadingBarComponentProps> = (args) => {
 	return (

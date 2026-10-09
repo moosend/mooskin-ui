@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { ITagsComponentProps } from '../components/Tags/model';
 import { Tag, TagClose, TagInput, Tags, TagText } from '../components/Tags/Tags';
@@ -11,7 +11,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Tags,
 	title: 'Example/Tags'
-} as any as Meta;
+};
 
 const Template: Story<ITagsComponentProps> = (args) => {
 	return (

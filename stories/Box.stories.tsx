@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Box } from '../components/Box/Box';
 import { IBoxComponentProps } from '../components/Box/model';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Box,
 	title: 'Example/Box'
-} as any as Meta;
+};
 
 const Template: Story<IBoxComponentProps> = (args) => {
 	return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Alert, AlertCloseButton, AlertDescription, AlertIcon, AlertTitle } from '../components/Alert/Alert';
 import { IBaseAlertComponentProps } from '../components/Alert/model';
@@ -11,9 +11,9 @@ import { Box } from '../components/Box/Box';
 export default {
 	component: Alert,
 	title: 'Example/Alert'
-} as any as ComponentMeta<typeof Alert>;
+};
 
-const Template: ComponentStory<typeof Alert> = (args) => {
+const Template: Story<typeof Alert> = (args) => {
 	//<IBaseAlertComponentProps>
 	return (
 		<>

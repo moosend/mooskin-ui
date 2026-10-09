@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Anchor } from '../components/Anchor/Anchor';
 import { IAnchorComponentProps } from '../components/Anchor/model';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Anchor,
 	title: 'Example/Anchor'
-} as any as Meta;
+};
 
 const Template: Story<IAnchorComponentProps> = (args) => {
 	return (

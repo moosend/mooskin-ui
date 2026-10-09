@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { DateSelect } from '../components/DateSelect/DateSelect';
 import { IDateSelectComponentProps } from '../components/DateSelect/model';
@@ -13,7 +13,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: DateSelect,
 	title: 'Example/DateSelect'
-} as any as Meta;
+};
 
 const Template: Story<IDateSelectComponentProps> = (args) => {
 	const [value, setValue] = React.useState('');

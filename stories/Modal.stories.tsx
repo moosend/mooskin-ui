@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from '../components/Modal/Modal';
 import { IModalComponentProps } from '../components/Modal/model';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Modal,
 	title: 'Example/Modal'
-} as any as Meta;
+};
 
 const Template: Story<IModalComponentProps> = (args) => {
 	return (

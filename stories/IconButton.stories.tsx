@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { IconButton } from '../components/IconButton/IconButton';
 import { IIconButtonComponentProps } from '../components/IconButton/model';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: IconButton,
 	title: 'Example/IconButton'
-} as any as Meta;
+};
 
 const Template: Story<IIconButtonComponentProps> = (args) => {
 	return (

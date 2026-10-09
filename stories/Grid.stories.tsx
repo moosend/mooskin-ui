@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Col, Grid, Row } from '../components/Grid/Grid';
 import { IGridProps } from '../components/Grid/model';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Grid,
 	title: 'Example/Grid'
-} as any as Meta;
+};
 
 const Template: Story<IGridProps> = (args) => {
 	return (

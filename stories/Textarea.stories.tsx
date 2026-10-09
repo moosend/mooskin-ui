@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { ITextAreaComponentProps } from '../components/TextArea/model';
 import { TextArea } from '../components/TextArea/TextArea';
@@ -11,7 +11,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: TextArea,
 	title: 'Example/TextArea'
-} as any as Meta;
+};
 
 const Template: Story<ITextAreaComponentProps> = (args) => {
 	return (

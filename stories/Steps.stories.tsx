@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { IStepsComponentProps } from '../components/Steps/model';
 import { Step, StepContent, StepHeader, Steps } from '../components/Steps/Steps';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Steps,
 	title: 'Example/Steps'
-} as any as Meta;
+};
 
 const Template: Story<IStepsComponentProps> = (args) => {
 	const [activeItem, setActiveItem] = React.useState(2);

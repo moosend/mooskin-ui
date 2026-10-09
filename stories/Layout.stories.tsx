@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Layout } from '../components/Layout/Layout';
 import { ILayoutComponentProps } from '../components/Layout/model';
@@ -11,7 +11,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Layout,
 	title: 'Example/Layout'
-} as any as Meta;
+};
 
 const Template: Story<ILayoutComponentProps> = (args) => {
 	return (

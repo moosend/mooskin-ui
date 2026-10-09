@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Button, ButtonIcon } from '../components/Button/Button';
 import { IButtonComponentProps } from '../components/Button/model';
@@ -13,7 +13,7 @@ import { MooskinContextProvider } from '../components/Styled/MooskinContextProvi
 export default {
 	// component: Button,
 	title: 'Example/Button'
-} as any as Meta;
+};
 
 const Template: Story<IButtonComponentProps> = (args) => {
 	const [backgroundPalette, setBackgroundPalette] = React.useState({ ...variables.backgroundColors });

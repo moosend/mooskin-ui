@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { ISliderComponentProps } from '../components/Slider/model';
 import { Slider } from '../components/Slider/Slider';
@@ -10,7 +10,7 @@ import '../components/Styled/GlobalStyles';
 export default {
 	component: Slider,
 	title: 'Example/Slider'
-} as any as Meta;
+};
 
 const Template: Story<ISliderComponentProps> = (args) => {
 	return (
