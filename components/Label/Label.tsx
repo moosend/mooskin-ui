@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ILabelComponentProps } from './Model';
+import { ILabelComponentProps } from './model';
 
 // Styled Components
 import { StyledLabel } from './styles';

@@ -5,7 +5,7 @@ import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
 import { IBoxComponentProps } from '../Box/model';
-import type { ILabelComponentProps } from '../Label/Model';
+import type { ILabelComponentProps } from '../Label/model';
 import { ICheckboxComponentProps, ICheckboxIconComponentProps } from './model';
 
 // Components
