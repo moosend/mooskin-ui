@@ -73,11 +73,11 @@ export { Footer, FooterBody, FooterEnd, FooterHead } from '../Footer/Footer';
 export { Slider } from '../Slider/Slider';
 
 // Models
-export { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from '../ActionsDropdown/model';
-export { IButtonComponentProps } from '../Button/model';
-export { IBaseAlertComponentProps } from '../Alert/model';
-export { IAnchorComponentProps } from '../Anchor/model';
-export {
+export type { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from '../ActionsDropdown/model';
+export type { IButtonComponentProps } from '../Button/model';
+export type { IBaseAlertComponentProps } from '../Alert/model';
+export type { IAnchorComponentProps } from '../Anchor/model';
+export type {
 	IBaseBoxComponentProps,
 	IBoxComponentProps,
 	IAnchorBoxComponentProps,
@@ -87,56 +87,60 @@ export {
 	IBoxImageComponentProps,
 	ITextAreaBoxComponentProps,
 } from '../Box/model';
-export { ICarouselComponentProps } from '../Carousel/model';
-export { ICheckboxComponentProps, ICheckboxIconComponentProps } from '../Checkbox/model';
-export { IDatePickerCommonProps, IDatePickerComponentProps, IDatePickerKeyboardComponentProps } from '../DatePicker/model';
-export { IDateTimePickerCommonProps, IDateTimePickerComponentProps, IDateTimePickerKeyboardComponentProps } from '../DateTimePicker/model';
-export { IDateRangePickerComponentProps, IRangeSelection } from '../DateRange/model';
-export { IDateSelectComponentProps } from '../DateSelect/model';
+export type { ICarouselComponentProps } from '../Carousel/model';
+export type { ICheckboxComponentProps, ICheckboxIconComponentProps } from '../Checkbox/model';
+export type { IDatePickerCommonProps, IDatePickerComponentProps, IDatePickerKeyboardComponentProps } from '../DatePicker/model';
+export type {
+	IDateTimePickerCommonProps,
+	IDateTimePickerComponentProps,
+	IDateTimePickerKeyboardComponentProps,
+} from '../DateTimePicker/model';
+export type { IDateRangePickerComponentProps, IRangeSelection } from '../DateRange/model';
+export type { IDateSelectComponentProps } from '../DateSelect/model';
 export type { ILabelComponentProps } from '../Label/model';
-export { IDrawerComponentProps, IDrawerContentComponentProps, IDrawerOverlayComponentProps } from '../Drawer/model';
-export { IExpandableCommonComponentProps, IExpandableComponentProps, IExpandableItemComponentProps } from '../Expandable/model';
-export { IColProps, IGridProps, IRowProps } from '../Grid/model';
-export { IIconButtonComponentProps } from '../IconButton/model';
-export {
+export type { IDrawerComponentProps, IDrawerContentComponentProps, IDrawerOverlayComponentProps } from '../Drawer/model';
+export type { IExpandableCommonComponentProps, IExpandableComponentProps, IExpandableItemComponentProps } from '../Expandable/model';
+export type { IColProps, IGridProps, IRowProps } from '../Grid/model';
+export type { IIconButtonComponentProps } from '../IconButton/model';
+export type {
 	IInputComponentProps,
 	IInputContainerComponentProps,
 	IInputEmojiComponentProps,
 	IInputListComponentProps,
 	IInputOptionComponentProps,
 } from '../Input/model';
-export { ILayoutComponentProps } from '../Layout/model';
-export { ILoaderComponentProps } from '../Loader/model';
-export { ILoadingBarComponentProps } from '../LoadingBar/model';
-export { IModalComponentProps, IModalContentComponentProps, IModalOverlayComponentProps } from '../Modal/model';
-export { INumberLabelComponentProps } from '../NumberLabel/model';
-export { IPaginationButtonComponentProps, IPaginationComponentProps } from '../Pagination/model';
-export { IRadioComponentProps, IRadioIconComponentProps } from '../Radio/model';
-export {
+export type { ILayoutComponentProps } from '../Layout/model';
+export type { ILoaderComponentProps } from '../Loader/model';
+export type { ILoadingBarComponentProps } from '../LoadingBar/model';
+export type { IModalComponentProps, IModalContentComponentProps, IModalOverlayComponentProps } from '../Modal/model';
+export type { INumberLabelComponentProps } from '../NumberLabel/model';
+export type { IPaginationButtonComponentProps, IPaginationComponentProps } from '../Pagination/model';
+export type { IRadioComponentProps, IRadioIconComponentProps } from '../Radio/model';
+export type {
 	ISelectComponentProps,
 	ISelectFilterComponentProps,
 	ISelectOptionComponentProps,
 	ISelectPaginationComponentProps,
 } from '../Select/model';
-export { ISelectorComponentProps, ISelectorItemComponentProps } from '../Selector/model';
-export { ISidemenuComponentProps, ISidemenuItemComponentProps } from '../Sidemenu/model';
-export { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from '../Skeleton/model';
-export { IStackComponentProps } from '../Stack/model';
-export { IStepCommonComponentProps, IStepComponentProps, IStepHeaderComponentProps, IStepsComponentProps } from '../Steps/model';
-export { ISwitchComponentProps, ISwitchHandleComponentProps } from '../Switch/model';
-export { ITabCommonComponentProps, ITabComponentProps } from '../Tabs/model';
-export { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from '../Tags/model';
-export { ITextAreaComponentProps } from '../TextArea/model';
-export { IPersonalizationTag, ITextEditorComponentProps } from '../TextEditor/model';
-export { IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors, IMooskinContext, IStyledTheme } from '../Styled/model';
-export { ISliderComponentProps } from '../Slider/model';
+export type { ISelectorComponentProps, ISelectorItemComponentProps } from '../Selector/model';
+export type { ISidemenuComponentProps, ISidemenuItemComponentProps } from '../Sidemenu/model';
+export type { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from '../Skeleton/model';
+export type { IStackComponentProps } from '../Stack/model';
+export type { IStepCommonComponentProps, IStepComponentProps, IStepHeaderComponentProps, IStepsComponentProps } from '../Steps/model';
+export type { ISwitchComponentProps, ISwitchHandleComponentProps } from '../Switch/model';
+export type { ITabCommonComponentProps, ITabComponentProps } from '../Tabs/model';
+export type { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from '../Tags/model';
+export type { ITextAreaComponentProps } from '../TextArea/model';
+export type { IPersonalizationTag, ITextEditorComponentProps } from '../TextEditor/model';
+export type { IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors, IMooskinContext, IStyledTheme } from '../Styled/model';
+export type { ISliderComponentProps } from '../Slider/model';
 
 // Global Styles
 export { GlobalStyle } from '../Styled/GlobalStyles';
 import '../Styled/GlobalStyles.css';
 
 // Utils
-export { default as IInputCallbackData } from '../_utils';
+export type { default as IInputCallbackData } from '../_utils';
 export { default as screens } from '../_utils/globals/screens';
 export * from '../_utils/globals/locales';
 export { Screens } from '../_utils/globals/screens';

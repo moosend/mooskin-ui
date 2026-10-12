@@ -1,3 +1,5 @@
+export {};
+
 window.matchMedia =
 	window.matchMedia ||
 	(() => ({
