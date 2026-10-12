@@ -19,7 +19,7 @@
 		"noUnusedLocals": true,
 		"allowSyntheticDefaultImports": true,
 		"types": ["jest", "@testing-library/jest-dom"],
-		"lib": ["dom", "es6", "es7", "dom.iterable", "scripthost"]
+		"lib": ["dom", "dom.iterable", "es2022"]
 	},
 	"include": ["components", "stories"],
 	"exclude": ["node_modules", "lib"]
