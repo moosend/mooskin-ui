@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IBaseAlertComponentProps } from './model';
+import type { IBaseAlertComponentProps } from './model';
 
 // Styled Components
 import {
@@ -13,7 +13,7 @@ import {
 	StyledAlertCloseButton,
 	StyledAlertDescription,
 	StyledAlertIcon,
-	StyledAlertTitle
+	StyledAlertTitle,
 } from './styles';
 
 import variables from '../_utils/globals/variables';
@@ -22,7 +22,7 @@ const AlertIcons = {
 	error: 'error',
 	info: 'announcement',
 	success: 'check_circle',
-	warning: 'warning'
+	warning: 'warning',
 };
 
 /**
@@ -32,21 +32,21 @@ const SolidBackgroundColors = {
 	error: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.red600 || variables.backgroundColors.red600,
 	info: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1,
 	success: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.green600 || variables.backgroundColors.green600,
-	warning: (props: IBaseAlertComponentProps) => 'rgb(221, 107, 32)'
+	warning: (props: IBaseAlertComponentProps) => 'rgb(221, 107, 32)',
 };
 
 const SubtleBackgroundColors = {
 	error: (props: IBaseAlertComponentProps) => variables.backgroundColors.error,
 	info: (props: IBaseAlertComponentProps) => variables.backgroundColors.info,
 	success: (props: IBaseAlertComponentProps) => variables.backgroundColors.success,
-	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warning
+	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warning,
 };
 
 const FontColors = {
 	error: (props: IBaseAlertComponentProps) => variables.backgroundColors.errorIcon,
 	info: (props: IBaseAlertComponentProps) => variables.backgroundColors.infoIcon,
 	success: (props: IBaseAlertComponentProps) => variables.backgroundColors.successIcon,
-	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warningIcon
+	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warningIcon,
 };
 export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext(
 	({ className = '', status = 'info', style = {}, variant = 'subtle', ...props }) => {
@@ -70,7 +70,7 @@ export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext(
 						children: recurseChildren(child.props.children),
 						key: i,
 						status: child.props.status ? child.props.status : status,
-						variant: child.props.variant ? child.props.variant : variant
+						variant: child.props.variant ? child.props.variant : variant,
 					} as IBaseAlertComponentProps);
 				}
 
@@ -101,8 +101,8 @@ export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext(
 					variant === 'solid'
 						? status && resolveColor(SolidBackgroundColors[status])
 						: variant === 'subtle'
-						? status && resolveColor(SubtleBackgroundColors[status])
-						: (status && props.palette?.backgroundColors.white) || variables.backgroundColors.white
+							? status && resolveColor(SubtleBackgroundColors[status])
+							: (status && props.palette?.backgroundColors.white) || variables.backgroundColors.white
 				}
 				{...props}
 				className={className}
@@ -110,10 +110,11 @@ export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext(
 				style={style}
 				variant={variant}
 				boxShadow="lg"
-				children={recurseChildren(props.children)}
-			/>
+			>
+				{recurseChildren(props.children)}
+			</StyledAlert>
 		);
-	}
+	},
 );
 
 Alert.displayName = 'Alert';
@@ -121,88 +122,84 @@ Alert.displayName = 'Alert';
 /**
  * AlertIcon
  */
-export const AlertIcon: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return (
-		<StyledAlertIcon
-			fontFamily="Mooskin Icons"
-			mr="0.75rem"
-			w="1.5rem"
-			h="1.5rem"
-			fontSize="1.5rem"
-			d="inherit"
-			{...props}
-			className={className}
-			style={{ flexShrink: 0, ...style }}
-			children={props.status && AlertIcons[props.status as keyof typeof AlertIcons]}
-		/>
-	);
-});
+export const AlertIcon: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledAlertIcon
+		fontFamily="Mooskin Icons"
+		mr="0.75rem"
+		w="1.5rem"
+		h="1.5rem"
+		fontSize="1.5rem"
+		d="inherit"
+		{...props}
+		className={className}
+		style={{ flexShrink: 0, ...style }}
+	>
+		{props.status && AlertIcons[props.status]}
+	</StyledAlertIcon>
+));
 
 AlertIcon.displayName = 'AlertIcon';
 
 /**
  * AlertTitle
  */
-export const AlertTitle: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledAlertTitle fontWeight={600} mr="0.5rem" className={className} style={style} {...props} />;
-});
+export const AlertTitle: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledAlertTitle fontWeight={600} mr="0.5rem" className={className} style={style} {...props} />
+));
 
 AlertTitle.displayName = 'AlertTitle';
 
 /**
  * AlertDescription
  */
-export const AlertDescription: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledAlertDescription d="inline" className={className} style={style} {...props} />;
-});
+export const AlertDescription: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledAlertDescription d="inline" className={className} style={style} {...props} />
+));
 
 AlertDescription.displayName = 'AlertDescription';
 
 /**
  * AlertCloseButton
  */
-export const AlertCloseButton: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return (
-		<StyledAlertCloseButton
-			fontFamily="Mooskin Icons"
-			outline={0}
-			d="flex"
-			align=" center"
-			justify="center"
-			transition="all 0.2s"
-			w="32px"
-			h="32px"
-			fontSize="20px"
-			cursor="pointer"
-			borderRadius="2px"
-			color={
-				props.variant === 'solid'
-					? variables.fontColors.white
-					: props.variant === 'subtle'
+export const AlertCloseButton: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledAlertCloseButton
+		fontFamily="Mooskin Icons"
+		outline={0}
+		d="flex"
+		align=" center"
+		justify="center"
+		transition="all 0.2s"
+		w="32px"
+		h="32px"
+		fontSize="20px"
+		cursor="pointer"
+		borderRadius="2px"
+		color={
+			props.variant === 'solid'
+				? variables.fontColors.white
+				: props.variant === 'subtle'
 					? variables.fontColors.black
 					: props.status && FontColors[props.status](props)
-			}
-			{...props}
-			className={className}
-			style={style}
-			children="close"
-		/>
-	);
-});
+		}
+		{...props}
+		className={className}
+		style={style}
+	>
+		close
+	</StyledAlertCloseButton>
+));
 
 AlertCloseButton.displayName = 'AlertCloseButton';
 
 /**
  * AlertButton
  */
-export const AlertButton: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return (
-		<StyledAlertButton
-			bgColor={(props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white}
-			color={props.status && SolidBackgroundColors[props.status](props)}
-			{...props}
-		/>
-	);
-});
+export const AlertButton: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledAlertButton
+		bgColor={(props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white}
+		color={props.status && SolidBackgroundColors[props.status](props)}
+		{...props}
+	/>
+));
 
 AlertButton.displayName = 'AlertButton';

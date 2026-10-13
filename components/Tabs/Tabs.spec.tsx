@@ -1,13 +1,12 @@
 import * as React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { Tab, TabContent, TabHeader, Tabs } from './Tabs';
 
-import { mount } from 'enzyme';
-
-describe('Pagination', () => {
+describe('Tabs', () => {
 	test('renders correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<Tabs activeItem={3} onClickTab={func}>
 				<Tab activeId={1}>
 					<TabHeader>{`Item: 1`}</TabHeader>
@@ -45,16 +44,16 @@ describe('Pagination', () => {
 						<div>{`Content for item with index: 6`}</div>
 					</TabContent>
 				</Tab>
-			</Tabs>
+			</Tabs>,
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders active tab content correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		render(
 			<Tabs activeItem={3} onClickTab={func}>
 				<Tab activeId={1}>
 					<TabHeader>{`Item: 1`}</TabHeader>
@@ -92,17 +91,17 @@ describe('Pagination', () => {
 						<div>{`Content for item with index: 6`}</div>
 					</TabContent>
 				</Tab>
-			</Tabs>
+			</Tabs>,
 		);
 
-		expect(tree.find('StyledTabContent').length).toEqual(1);
-		expect(tree.find('StyledTabContent').text()).toEqual('Content for item with index: 3');
+		expect(screen.getByText('Content for item with index: 3')).toBeInTheDocument();
+		expect(screen.queryByText('Content for item with index: 1')).not.toBeInTheDocument();
 	});
 
-	test('renders active tab content correctly', () => {
+	test('calls onClickTab when a tab header is clicked', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		render(
 			<Tabs activeItem={3} onClickTab={func}>
 				<Tab activeId={1}>
 					<TabHeader>{`Item: 1`}</TabHeader>
@@ -122,10 +121,10 @@ describe('Pagination', () => {
 						<div>{`Content for item with index: 3`}</div>
 					</TabContent>
 				</Tab>
-			</Tabs>
+			</Tabs>,
 		);
 
-		tree.find(TabHeader).first().simulate('click');
+		fireEvent.click(screen.getByText('Item: 1'));
 		expect(func).toHaveBeenCalled();
 	});
 });

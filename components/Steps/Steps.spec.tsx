@@ -1,13 +1,12 @@
 import * as React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { Step, StepContent, StepHeader, Steps } from './Steps';
 
-import { mount } from 'enzyme';
-
-describe('Pagination', () => {
+describe('Steps', () => {
 	test('renders correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		const { container } = render(
 			<Steps activeItem={3} onClickStep={func}>
 				<Step activeId={1}>
 					<StepHeader>{`Item: 1`}</StepHeader>
@@ -45,16 +44,16 @@ describe('Pagination', () => {
 						<div>{`Content for item with index: 6`}</div>
 					</StepContent>
 				</Step>
-			</Steps>
+			</Steps>,
 		);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('renders active Step content correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		render(
 			<Steps activeItem={3} onClickStep={func}>
 				<Step activeId={1}>
 					<StepHeader>{`Item: 1`}</StepHeader>
@@ -92,17 +91,17 @@ describe('Pagination', () => {
 						<div>{`Content for item with index: 6`}</div>
 					</StepContent>
 				</Step>
-			</Steps>
+			</Steps>,
 		);
 
-		expect(tree.find('StyledStepContent').length).toEqual(1);
-		expect(tree.find('StyledStepContent').text()).toEqual('Content for item with index: 3');
+		expect(screen.getByText('Content for item with index: 3')).toBeInTheDocument();
+		expect(screen.queryByText('Content for item with index: 1')).not.toBeInTheDocument();
 	});
 
-	test('renders active Step content correctly', () => {
+	test('calls onClickStep when a step header is clicked', () => {
 		const func = jest.fn();
 
-		const tree = mount(
+		render(
 			<Steps activeItem={3} onClickStep={func}>
 				<Step activeId={1}>
 					<StepHeader>{`Item: 1`}</StepHeader>
@@ -122,10 +121,10 @@ describe('Pagination', () => {
 						<div>{`Content for item with index: 3`}</div>
 					</StepContent>
 				</Step>
-			</Steps>
+			</Steps>,
 		);
 
-		tree.find(StepHeader).first().simulate('click');
+		fireEvent.click(screen.getByText('Item: 1'));
 		expect(func).toHaveBeenCalled();
 	});
 });

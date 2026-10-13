@@ -1,4 +1,4 @@
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 
 export interface IGridProps extends IBoxComponentProps {
 	children?: Array<React.ReactElement<IRowProps>> | React.ReactElement<IRowProps>;

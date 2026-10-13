@@ -1,43 +1,39 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
-import { IStackComponentProps } from '../components/Stack/model';
+import type { IStackComponentProps } from '../components/Stack/model';
 import { HStack, VStack } from '../components/Stack/Stack';
 
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: HStack,
-	title: 'Example/Stack'
-} as any as Meta;
-
-const HTemplate: Story<IStackComponentProps> = (args) => {
-	return (
-		<>
-			{/*<GlobalStyle />*/}
-			<HStack {...args} />
-		</>
-	);
+	title: 'Example/Stack',
 };
 
-const VTemplate: Story<IStackComponentProps> = (args) => {
-	return (
-		<>
-			{/*<GlobalStyle />*/}
-			<VStack {...args} />
-		</>
-	);
-};
+const HTemplate: Story<IStackComponentProps> = (args) => (
+	<>
+		{/* <GlobalStyle /> */}
+		<HStack {...args} />
+	</>
+);
+
+const VTemplate: Story<IStackComponentProps> = (args) => (
+	<>
+		{/* <GlobalStyle /> */}
+		<VStack {...args} />
+	</>
+);
 
 const boxStyle = {
 	height: 40,
-	width: 40
+	width: 40,
 };
 
 const secondaryBoxStyle = {
 	height: 60,
-	width: 60
+	width: 60,
 };
 
 export const Horizontal = HTemplate.bind({});
@@ -46,11 +42,11 @@ Horizontal.args = {
 	children: [
 		<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 		<div key={1} style={{ ...secondaryBoxStyle, backgroundColor: 'green' }} />,
-		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />,
 	],
 	direction: 'row',
 	justify: 'initial',
-	spacing: 20
+	spacing: 20,
 } as IStackComponentProps;
 
 export const HorizontalWithDivider = HTemplate.bind({});
@@ -59,13 +55,13 @@ HorizontalWithDivider.args = {
 	children: [
 		<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 		<div key={1} style={{ ...secondaryBoxStyle, backgroundColor: 'green' }} />,
-		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />,
 	],
 	direction: 'row',
 	divider: <div style={{ backgroundColor: 'grey', width: 1, height: '100%' }} />,
 	justify: 'initial',
 	p: 50,
-	spacing: 20
+	spacing: 20,
 } as IStackComponentProps;
 
 export const HorizontalReverse = HTemplate.bind({});
@@ -73,11 +69,11 @@ HorizontalReverse.args = {
 	children: [
 		<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 		<div key={1} style={{ ...secondaryBoxStyle, backgroundColor: 'green' }} />,
-		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />,
 	],
 	direction: 'row-reverse',
 	justify: 'flex-end',
-	spacing: 20
+	spacing: 20,
 };
 
 export const Vertical = VTemplate.bind({});
@@ -85,9 +81,9 @@ Vertical.args = {
 	children: [
 		<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 		<div key={1} style={{ ...secondaryBoxStyle, backgroundColor: 'green' }} />,
-		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />,
 	],
-	spacing: 20
+	spacing: 20,
 } as IStackComponentProps;
 
 export const VerticalWithDivider = HTemplate.bind({});
@@ -95,10 +91,10 @@ VerticalWithDivider.args = {
 	children: [
 		<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 		<div key={1} style={{ ...secondaryBoxStyle, backgroundColor: 'green' }} />,
-		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />,
 	],
 	divider: <div style={{ backgroundColor: 'grey', height: 1 }} />,
-	spacing: 20
+	spacing: 20,
 } as IStackComponentProps;
 
 export const VerticalReverse = HTemplate.bind({});
@@ -106,8 +102,8 @@ VerticalReverse.args = {
 	children: [
 		<div key={0} style={{ ...boxStyle, backgroundColor: 'red' }} />,
 		<div key={1} style={{ ...secondaryBoxStyle, backgroundColor: 'green' }} />,
-		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />
+		<div key={2} style={{ ...boxStyle, backgroundColor: 'blue' }} />,
 	],
 	direction: 'column-reverse',
-	spacing: 20
+	spacing: 20,
 } as IStackComponentProps;

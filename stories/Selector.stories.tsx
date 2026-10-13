@@ -1,22 +1,22 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
-import { ISelectorComponentProps } from '../components/Selector/model';
+import type { ISelectorComponentProps } from '../components/Selector/model';
 import { Selector, SelectorItem } from '../components/Selector/Selector';
 
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Selector,
-	title: 'Example/Selector'
-} as any as Meta;
+	title: 'Example/Selector',
+};
 
 const Template: Story<ISelectorComponentProps> = (args) => {
 	const [activeItem, setActiveItem] = React.useState(1);
 	return (
 		<>
-			{/*<GlobalStyle />*/}
+			{/* <GlobalStyle /> */}
 			<Selector activeItem={activeItem} {...args} onClickItem={(e: React.MouseEvent<HTMLElement>, value: number) => setActiveItem(value)} />
 		</>
 	);
@@ -32,5 +32,5 @@ Normal.args = {
 			</SelectorItem>
 			<SelectorItem value={3}>IMPORT</SelectorItem>
 		</>
-	)
+	),
 } as ISelectorComponentProps;

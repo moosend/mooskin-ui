@@ -1,5 +1,5 @@
 import { boxComponentProps } from '../Box/model';
-import { IStyledTheme } from '../Styled/model';
+import type { IStyledTheme } from '../Styled/model';
 
 export const arrayHasDupes = (array: any[]): boolean => {
 	const n = array.length;
@@ -43,7 +43,7 @@ export const getBoxProps = (componentProps: any) => {
 	const boxProps: any = {};
 	Object.keys(componentProps).map((key) => {
 		if (boxComponentProps.includes(key)) {
-			boxProps[key] = (componentProps as any)[key];
+			boxProps[key] = componentProps[key];
 		}
 	});
 	return boxProps;
@@ -54,97 +54,97 @@ export const getOverridesForPicker = (theme: IStyledTheme, defaults: IStyledThem
 		MuiPickersToolbar: {
 			styleOverrides: {
 				toolbar: {
-					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
-				}
-			}
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
+				},
+			},
 		},
 		MuiPickersCalendarHeader: {
 			styleOverrides: {
 				iconButton: {
-					fill: theme.fontColors.text || defaults.fontColors.text
-				}
-			}
+					fill: theme.fontColors.text || defaults.fontColors.text,
+				},
+			},
 		},
 		MuiPickersDay: {
 			styleOverrides: {
 				current: {
-					color: theme.fontColors.primary1 || defaults.fontColors.primary1
+					color: theme.fontColors.primary1 || defaults.fontColors.primary1,
 				},
 				day: {
 					backgroundColor: theme.backgroundColors.white || defaults.backgroundColors.white,
-					color: theme.fontColors.text || defaults.fontColors.text
+					color: theme.fontColors.text || defaults.fontColors.text,
 				},
 				dayDisabled: {
-					color: theme.backgroundColors.medgray1 || defaults.backgroundColors.medgray1
+					color: theme.backgroundColors.medgray1 || defaults.backgroundColors.medgray1,
 				},
 				daySelected: {
 					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
-					color: theme.fontColors.white || defaults.fontColors.white
-				}
-			}
+					color: theme.fontColors.white || defaults.fontColors.white,
+				},
+			},
 		},
 		MuiPickersModal: {
 			styleOverrides: {
 				dialogAction: {
-					color: theme.fontColors.text || defaults.fontColors.text
-				}
-			}
+					color: theme.fontColors.text || defaults.fontColors.text,
+				},
+			},
 		},
 		MuiPickerDTTabs: {
 			styleOverrides: {
 				tabs: {
 					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
-					fill: theme.fontColors.white || defaults.fontColors.white
-				}
-			}
+					fill: theme.fontColors.white || defaults.fontColors.white,
+				},
+			},
 		},
 		MuiSvgIcon: {
 			styleOverrides: {
 				root: {
-					fill: 'inherit'
-				}
-			}
+					fill: 'inherit',
+				},
+			},
 		},
 		MuiPickersClock: {
 			styleOverrides: {
 				pin: {
-					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
-				}
-			}
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
+				},
+			},
 		},
 		MuiPickersClockPointer: {
 			styleOverrides: {
 				pointer: {
-					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
 				},
 				thumb: {
-					borderColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
+					borderColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
 				},
 				noPoint: {
-					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
-				}
-			}
+					backgroundColor: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
+				},
+			},
 		},
 		MuiTabs: {
 			styleOverrides: {
 				indicator: {
-					backgroundColor: theme.backgroundColors.primary3 || defaults.backgroundColors.primary3
-				}
-			}
+					backgroundColor: theme.backgroundColors.primary3 || defaults.backgroundColors.primary3,
+				},
+			},
 		},
 		MuiIconButton: {
 			styleOverrides: {
 				root: {
-					color: 'inherit'
-				}
-			}
+					color: 'inherit',
+				},
+			},
 		},
 		MuiButton: {
 			styleOverrides: {
 				root: {
-					color: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1
-				}
-			}
-		}
-	}
+					color: theme.backgroundColors.primary1 || defaults.backgroundColors.primary1,
+				},
+			},
+		},
+	},
 });

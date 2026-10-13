@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // Models
-import { IBoxComponentProps, ScreenType } from './model';
+import type { IBoxComponentProps, ScreenType } from './model';
 
 // Mooskin Context HoC that passes context to component props
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
@@ -13,31 +13,43 @@ import { Screens } from '../_utils/globals/screens';
 /**
  * Box
  */
-export const Box: React.FC<IBoxComponentProps> = withMooskinContext(
-	React.memo(({ className = '', style = {}, transition = '0.2s all', noRender = [], setRef, boxAs, ...props }) => {
-		const [shouldRender, setShouldRender] = React.useState(checkShouldRender(noRender || []));
+const BoxView: React.FC<IBoxComponentProps> = ({
+	className = '',
+	style = {},
+	transition = '0.2s all',
+	noRender = [],
+	setRef,
+	boxAs,
+	...props
+}) => {
+	const [shouldRender, setShouldRender] = React.useState(checkShouldRender(noRender || []));
 
-		React.useEffect(() => {
-			if (noRender) {
-				const onResize = () => {
-					if (noRender) setShouldRender(checkShouldRender(noRender));
-				};
+	React.useEffect(() => {
+		if (noRender) {
+			const onResize = () => {
+				if (noRender) {
+					setShouldRender(checkShouldRender(noRender));
+				}
+			};
 
-				window.addEventListener('resize', onResize);
+			window.addEventListener('resize', onResize);
 
-				return () => {
-					window.removeEventListener('resize', onResize);
-				};
-			}
-		}, []);
-
-		if (shouldRender) {
-			return <StyledBox className={className} style={style} ref={(ref: HTMLElement) => setRef && setRef(ref)} {...props} as={boxAs} />;
+			return () => {
+				window.removeEventListener('resize', onResize);
+			};
 		}
+	}, []);
 
-		return null;
-	})
-);
+	if (shouldRender) {
+		return <StyledBox className={className} style={style} ref={(ref: HTMLElement) => setRef?.(ref)} {...props} as={boxAs} />;
+	}
+
+	return null;
+};
+
+BoxView.displayName = 'Box';
+
+export const Box: React.FC<IBoxComponentProps> = withMooskinContext(React.memo(BoxView));
 
 const checkShouldRender = (noRender: Array<ScreenType>) => {
 	const width = window.innerWidth;
@@ -47,7 +59,9 @@ const checkShouldRender = (noRender: Array<ScreenType>) => {
 		return limits.max >= width && limits.min <= width;
 	});
 
-	if (found) return false;
+	if (found) {
+		return false;
+	}
 
 	return true;
 };

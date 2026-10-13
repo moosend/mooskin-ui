@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import {
 	Expandable,
@@ -8,22 +8,22 @@ import {
 	ExpandableItemButton,
 	ExpandableItemContainer,
 	ExpandableItemContent,
-	ExpandableItemText
+	ExpandableItemText,
 } from '../components/Expandable/Expandable';
-import { IExpandableComponentProps } from '../components/Expandable/model';
+import type { IExpandableComponentProps } from '../components/Expandable/model';
 
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Expandable,
-	title: 'Example/Expandable'
-} as any as Meta;
+	title: 'Example/Expandable',
+};
 
 const Template: Story<IExpandableComponentProps> = (args) => {
 	const [activeItem, setActiveItem] = React.useState<string | number>(4);
 	return (
 		<>
-			{/*<GlobalStyle />*/}
+			{/* <GlobalStyle /> */}
 			<Expandable
 				{...args}
 				activeItem={activeItem}
@@ -35,17 +35,15 @@ const Template: Story<IExpandableComponentProps> = (args) => {
 
 export const Normal = Template.bind({});
 Normal.args = {
-	children: [...Array(9)].map((item, i) => {
-		return (
-			<ExpandableItem key={i} activeId={i}>
-				<ExpandableItemContainer>
-					<ExpandableItemText>{`Title for item with index: ${i}`}</ExpandableItemText>
-					<ExpandableItemButton />
-				</ExpandableItemContainer>
-				<ExpandableItemContent p={15}>
-					<div>{`Content for item with index: ${i}`}</div>
-				</ExpandableItemContent>
-			</ExpandableItem>
-		);
-	})
+	children: [...Array(9)].map((item, i) => (
+		<ExpandableItem key={i} activeId={i}>
+			<ExpandableItemContainer>
+				<ExpandableItemText>{`Title for item with index: ${i}`}</ExpandableItemText>
+				<ExpandableItemButton />
+			</ExpandableItemContainer>
+			<ExpandableItemContent p={15}>
+				<div>{`Content for item with index: ${i}`}</div>
+			</ExpandableItemContent>
+		</ExpandableItem>
+	)),
 } as IExpandableComponentProps;

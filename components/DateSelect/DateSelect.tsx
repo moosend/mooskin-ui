@@ -10,8 +10,8 @@ import setDate from 'date-fns/setDate';
 import setMonth from 'date-fns/setMonth';
 
 // Models
-import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IDateSelectComponentProps } from './model';
+import type { IInputCallbackData } from '../_utils/types/commonTypes';
+import type { IDateSelectComponentProps } from './model';
 
 // Components
 import { Select, SelectContainer, SelectOption, SelectOptionList, SelectPlaceholder } from '../Select/Select';
@@ -102,7 +102,7 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContex
 			options.push(
 				<SelectOption key={i} value={i.toString()}>
 					{text}
-				</SelectOption>
+				</SelectOption>,
 			);
 		}
 		return options;
@@ -117,15 +117,15 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContex
 			options.push(
 				<SelectOption key={i} value={i.toString()}>
 					{text}
-				</SelectOption>
+				</SelectOption>,
 			);
 		}
 		return options;
 	};
 
 	const getDayFormat = () => {
-		if (props.format && parseInt(props.format, 10)) {
-			return parseInt(props.format, 10);
+		if (props.format && Number.parseInt(props.format, 10)) {
+			return Number.parseInt(props.format, 10);
 		} else {
 			throw new Error('Day format not valid!');
 		}
@@ -133,13 +133,11 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContex
 
 	const renderWeekOptions = () => {
 		const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-		return days.map((day, i) => {
-			return (
-				<SelectOption key={i} value={(i + 1).toString()}>
-					{day}
-				</SelectOption>
-			);
-		});
+		return days.map((day, i) => (
+			<SelectOption key={i} value={(i + 1).toString()}>
+				{day}
+			</SelectOption>
+		));
 	};
 
 	const renderOrdinalOptions = () => {
@@ -172,15 +170,15 @@ export const DateSelect: React.FC<IDateSelectComponentProps> = withMooskinContex
 			options.push(
 				<SelectOption key={i} value={value.toString()}>
 					{text}
-				</SelectOption>
+				</SelectOption>,
 			);
 		}
 		return options;
 	};
 
 	const onChangeSelect = (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => {
-		props.onChangeSelect && props.onChangeSelect(e, { value: parseInt(data.value, 10), dataLabel: props.dataLabel });
-		props.onChange && props.onChange(e);
+		props.onChangeSelect?.(e, { value: Number.parseInt(data.value, 10), dataLabel: props.dataLabel });
+		props.onChange?.(e);
 	};
 
 	return renderDateSelect();

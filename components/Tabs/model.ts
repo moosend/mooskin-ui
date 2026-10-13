@@ -1,4 +1,4 @@
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 
 export interface ITabsComponentProps extends IBoxComponentProps {
 	/** number of the active item or items */

@@ -1,13 +1,12 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Button } from '../Button/Button';
 import { List, ListItem, ListItemBody, ListItemEnd, ListItemHead } from './List';
-
-import { mount } from 'enzyme';
 import { Box } from '../Box/Box';
 
 describe('Alert', () => {
 	test('renders correctly', () => {
-		const tree = mount(
+		const { container } = render(
 			<List>
 				<ListItem>
 					<ListItemHead>
@@ -19,6 +18,7 @@ describe('Alert', () => {
                                 5653161323261613135636d6f6f736b696e4c6f676f2e706e67`}
 							style={{ display: 'block' }}
 							width={50}
+							alt=""
 						/>
 					</ListItemHead>
 					<ListItemBody>
@@ -44,6 +44,7 @@ describe('Alert', () => {
                                 5653161323261613135636d6f6f736b696e4c6f676f2e706e67`}
 							style={{ display: 'block' }}
 							width={50}
+							alt=""
 						/>
 					</ListItemHead>
 					<ListItemBody>
@@ -69,6 +70,7 @@ describe('Alert', () => {
                                 5653161323261613135636d6f6f736b696e4c6f676f2e706e67`}
 							style={{ display: 'block' }}
 							width={50}
+							alt=""
 						/>
 					</ListItemHead>
 					<ListItemBody>
@@ -84,8 +86,8 @@ describe('Alert', () => {
 						<Button>Button</Button>
 					</ListItemEnd>
 				</ListItem>
-			</List>
+			</List>,
 		);
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

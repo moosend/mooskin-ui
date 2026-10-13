@@ -8,7 +8,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { TextField } from '@mui/material';
 
 // Models
-import { IDatePickerComponentProps, IDatePickerKeyboardComponentProps } from './model';
+import type { IDatePickerComponentProps, IDatePickerKeyboardComponentProps } from './model';
 
 // Custom
 import { Input } from '../Input/Input';
@@ -17,7 +17,9 @@ import variables from '../_utils/globals/variables';
 import { getOverridesForPicker } from '../_utils/helper';
 
 export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboardComponentProps> = withMooskinContext((props) => {
-	const { inputProps, format = 'dd/MM/yyyy', ...restProps } = props;
+	const { inputProps, format = 'dd/MM/yyyy', onChange, value, ...restProps } = props;
+	const pickerProps = { ...restProps };
+	delete (pickerProps as { inputComponentProps?: unknown }).inputComponentProps;
 	const [isPickerOpen, setIsPickerOpen] = React.useState(false);
 
 	const openPicker = () => setIsPickerOpen(true);
@@ -26,16 +28,9 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 
 	const renderInput = (params: any) =>
 		inputProps ? (
-			<Input
-				{...params}
-				{...inputProps}
-				onKeyDown={(e) => e.preventDefault()}
-				onClick={openPicker}
-				styles={{ paddingTop: '7px', paddingBottom: '7px' }}
-			/>
+			<Input {...params} {...inputProps} onKeyDown={(e) => e.preventDefault()} onClick={openPicker} />
 		) : (
 			<TextField
-				styles={{ paddingTop: '7px', paddingBottom: '7px' }}
 				{...params}
 				fullWidth
 				onClick={openPicker}
@@ -45,29 +40,26 @@ export const DatePicker: React.FC<IDatePickerComponentProps | IDatePickerKeyboar
 						backgroundColor: '#ffffff',
 						paddingTop: '6px',
 						paddingBottom: '6px',
-						fontSize: '14px'
-					}
+						fontSize: '14px',
+					},
 				}}
 			/>
 		);
 
 	return (
-		<LocalizationProvider
-			dateAdapter={AdapterDateFns}
-			adapterLocale={props.locale}
-		>
+		<LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={props.locale}>
 			<ThemeProvider theme={materialTheme}>
 				<DatePickerUI
 					open={isPickerOpen}
 					onOpen={openPicker}
 					onClose={closePicker}
-					{...restProps}
+					{...pickerProps}
+					value={value ?? null}
 					inputFormat={format}
 					dayOfWeekFormatter={(d) => d.slice(0, 3)}
 					renderInput={renderInput}
 					onChange={(value) => {
-						// Call original onChange with just the value if it exists
-						props.onChange?.(value);
+						onChange?.(value);
 					}}
 				/>
 			</ThemeProvider>

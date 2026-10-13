@@ -7,8 +7,8 @@ import 'slick-carousel/slick/slick.css';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
-import { ICarouselComponentProps } from './model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { ICarouselComponentProps } from './model';
 
 // Styled Components
 import { StyledCarousel, StyledDot } from './styles';
@@ -51,17 +51,15 @@ export const Carousel: React.FC<ICarouselComponentProps> = ({
 
 Carousel.displayName = 'Carousel';
 
-export const CustomDot: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return (
-		<StyledDot
-			borderRadius="50%"
-			bgColor={props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2}
-			opacity={0.2}
-			w={[15, 15, 9, 9]}
-			h={[15, 15, 9, 9]}
-			{...props}
-		/>
-	);
-});
+export const CustomDot: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledDot
+		borderRadius="50%"
+		bgColor={props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2}
+		opacity={0.2}
+		w={[15, 15, 9, 9]}
+		h={[15, 15, 9, 9]}
+		{...props}
+	/>
+));
 
 CustomDot.displayName = 'CustomDot';

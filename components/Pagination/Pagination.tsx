@@ -6,7 +6,7 @@ import { IconButton } from '../IconButton/IconButton';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IPaginationButtonComponentProps, IPaginationComponentProps } from './model';
+import type { IPaginationButtonComponentProps, IPaginationComponentProps } from './model';
 
 // Styled Components
 import { StyledPagination, StyledPaginationButton, StyledPaginationShowAll } from './styles';
@@ -32,12 +32,12 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 	const childrenLength = props.children && Array.isArray(props.children) && props.children.length;
 
 	const batchClickHandler = (e: React.MouseEvent<HTMLElement>, page: number, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
-		props.onClickButton && props.onClickButton(e, page);
-		callback && callback(e);
+		props.onClickButton?.(e, page);
+		callback?.(e);
 	};
 
 	const onArrowClick = (page: number) => {
-		props.onClickButton && props.onClickButton({} as any, page);
+		props.onClickButton?.({} as any, page);
 	};
 
 	const recurseChildren = (children: any): any => {
@@ -53,8 +53,8 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 					childrenLength && props.activePage >= childrenLength - 1
 						? page >= childrenLength - 4
 						: props.activePage >= 4
-						? page - 2 <= props.activePage && page + 2 >= props.activePage
-						: page <= 5;
+							? page - 2 <= props.activePage && page + 2 >= props.activePage
+							: page <= 5;
 
 				if (children[props.activePage - 2] && !showPrevious) {
 					setShowPrevious(true);
@@ -85,9 +85,9 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 						? React.cloneElement(child, {
 								active: true,
 								children: page,
-								key: i
+								key: i,
 								// onClick: (e) => batchClickHandler(e, page, child.props.onClick),
-						  } as IPaginationButtonComponentProps)
+							} as IPaginationButtonComponentProps)
 						: null;
 				}
 
@@ -96,7 +96,7 @@ export const Pagination: React.FC<IPaginationComponentProps> = withMooskinContex
 						active: page === props.activePage,
 						children: page,
 						key: i,
-						onClick: (e) => batchClickHandler(e, page, child.props.onClick)
+						onClick: (e) => batchClickHandler(e, page, child.props.onClick),
 					} as IPaginationButtonComponentProps);
 				}
 				return null;
@@ -179,31 +179,29 @@ Pagination.displayName = 'Pagination';
  * PaginationButton
  */
 export const PaginationButton: React.FC<IPaginationButtonComponentProps> = withMooskinContext(
-	({ className = '', style = {}, ...props }) => {
-		return (
-			<StyledPaginationButton
-				borderRadius="2px"
-				fontSize={16}
-				fontWeight={500}
-				fontStyle="normal"
-				textAlign="center"
-				cursor="pointer"
-				p={props.active ? '9px 12px' : '8px 11px'}
-				color={
-					props.active
-						? props.palette?.fontColors.white || variables.fontColors.white
-						: props.palette?.fontColors.medgray1 || variables.fontColors.medgray1
-				}
-				bgColor={
-					props.active
-						? props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2
-						: props.palette?.backgroundColors.white || variables.backgroundColors.white
-				}
-				border={props.active ? 'none' : `solid 1px ${props.palette?.borderColors.medgray1 || variables.borderColors.medgray1}`}
-				{...props}
-			/>
-		);
-	}
+	({ className = '', style = {}, ...props }) => (
+		<StyledPaginationButton
+			borderRadius="2px"
+			fontSize={16}
+			fontWeight={500}
+			fontStyle="normal"
+			textAlign="center"
+			cursor="pointer"
+			p={props.active ? '9px 12px' : '8px 11px'}
+			color={
+				props.active
+					? props.palette?.fontColors.white || variables.fontColors.white
+					: props.palette?.fontColors.medgray1 || variables.fontColors.medgray1
+			}
+			bgColor={
+				props.active
+					? props.palette?.backgroundColors.primary2 || variables.backgroundColors.primary2
+					: props.palette?.backgroundColors.white || variables.backgroundColors.white
+			}
+			border={props.active ? 'none' : `solid 1px ${props.palette?.borderColors.medgray1 || variables.borderColors.medgray1}`}
+			{...props}
+		/>
+	),
 );
 
 PaginationButton.displayName = 'PaginationButton';

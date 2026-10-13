@@ -4,8 +4,8 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
-import { ITabCommonComponentProps, ITabComponentProps, ITabsComponentProps } from './model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { ITabCommonComponentProps, ITabComponentProps, ITabsComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -20,10 +20,10 @@ export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext(({ classNa
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		activeId?: string | number,
-		callback?: (e: React.MouseEvent<HTMLElement>) => void
+		callback?: (e: React.MouseEvent<HTMLElement>) => void,
 	) => {
-		props.onClickTab && props.onClickTab(e, activeId);
-		callback && callback(e);
+		props.onClickTab?.(e, activeId);
+		callback?.(e);
 	};
 
 	const getActiveItem = (activeId?: string | number) => {
@@ -41,7 +41,7 @@ export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext(({ classNa
 			if (React.isValidElement<ITabCommonComponentProps>(child) && child.type === TabHeader) {
 				header = React.cloneElement(child, {
 					active,
-					onClick: (e) => batchClickHandler(e, activeId, child.props.onClick)
+					onClick: (e) => batchClickHandler(e, activeId, child.props.onClick),
 				} as IBoxComponentProps);
 			}
 
@@ -78,7 +78,7 @@ export const Tabs: React.FC<ITabsComponentProps> = withMooskinContext(({ classNa
 		);
 	};
 
-	return <StyledTabs {...props} children={recurseChildren(props.children)} />;
+	return <StyledTabs {...props}>{recurseChildren(props.children)}</StyledTabs>;
 });
 
 Tabs.displayName = 'Tabs';
@@ -86,26 +86,24 @@ Tabs.displayName = 'Tabs';
 /**
  * Tab
  */
-export const Tab: React.FC<ITabComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledTab {...props} />;
-});
+export const Tab: React.FC<ITabComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => <StyledTab {...props} />);
 
 Tab.displayName = 'Tab';
 
 /**
  * TabHeader
  */
-export const TabHeader: React.FC<ITabCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledTabHeader fontSize={[12, 12, 14, 14]} {...props} />;
-});
+export const TabHeader: React.FC<ITabCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledTabHeader fontSize={[12, 12, 14, 14]} {...props} />
+));
 
 TabHeader.displayName = 'TabHeader';
 
 /**
  * TabContent
  */
-export const TabContent: React.FC<ITabCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledTabContent {...props} />;
-});
+export const TabContent: React.FC<ITabCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledTabContent {...props} />
+));
 
 TabContent.displayName = 'TabContent';

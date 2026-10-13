@@ -1,11 +1,10 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Text } from './Text';
-
-import { mount } from 'enzyme';
 
 describe('Text', () => {
 	test('renders correctly', () => {
-		const tree = mount(<Text>Text here!</Text>);
-		expect(tree).toMatchSnapshot();
+		const { container } = render(<Text>Text here!</Text>);
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

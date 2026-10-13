@@ -4,10 +4,10 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IInputCallbackData } from '../_utils/types/commonTypes';
+import type { IInputCallbackData } from '../_utils/types/commonTypes';
 import { Box } from '../Box/Box';
-import { IBoxComponentProps } from '../Box/model';
-import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Styled Components
 import {
@@ -16,7 +16,7 @@ import {
 	StyledActionsDropdownFadeOut,
 	StyledActionsDropdownItem,
 	StyledActionsDropdownButtonClose,
-	StyledActionDropdownOverlay
+	StyledActionDropdownOverlay,
 } from './styles';
 
 // Transitions
@@ -26,7 +26,7 @@ const DropdownComponents = {
 	entering: StyledActionsDropdownFadeIn,
 	exited: null,
 	exiting: StyledActionsDropdownFadeOut,
-	unmounted: null
+	unmounted: null,
 };
 
 /**
@@ -38,10 +38,10 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		data: IInputCallbackData,
-		callback?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void
+		callback?: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => void,
 	) => {
-		props.onClickItem && props.onClickItem(e, data);
-		callback && callback(e, data);
+		props.onClickItem?.(e, data);
+		callback?.(e, data);
 	};
 
 	const recurseChildren = (children: any): any => {
@@ -54,7 +54,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 				return React.cloneElement(child, {
 					children: recurseChildren((child.props as any).children),
 					key: i,
-					onClick: (e) => batchClickHandler(e, { dataLabel: child.props.dataLabel, value: child.props.value }, child.props.onClick)
+					onClick: (e) => batchClickHandler(e, { dataLabel: child.props.dataLabel, value: child.props.value }, child.props.onClick),
 				} as IActionsDropdownItemComponentProps);
 			}
 
@@ -62,7 +62,7 @@ export const ActionsDropdown: React.FC<IActionsDropdownComponentProps> = withMoo
 				!hasArrow && setHasArrow(true);
 				return React.cloneElement(child, {
 					children: recurseChildren((child.props as any).children),
-					key: i
+					key: i,
 				} as IBoxComponentProps);
 			}
 
@@ -131,18 +131,16 @@ ActionsDropdown.displayName = 'ActionsDropdown';
  * ActionsDropdownItem
  */
 export const ActionsDropdownItem: React.FC<IActionsDropdownItemComponentProps> = withMooskinContext(
-	({ className = '', style = {}, ...props }) => {
-		return (
-			<StyledActionsDropdownItem
-				className={className}
-				textAlign={['unset', 'unset', 'center', 'center']}
-				p={['', '', '16px 16px 16px', '16px 16px 16px']}
-				fontSize={['12px', '12px', '20px', '20px']}
-				fontWeight={['bold', 'bold', 400, 400]}
-				{...props}
-			/>
-		);
-	}
+	({ className = '', style = {}, ...props }) => (
+		<StyledActionsDropdownItem
+			className={className}
+			textAlign={['unset', 'unset', 'center', 'center']}
+			p={['', '', '16px 16px 16px', '16px 16px 16px']}
+			fontSize={['12px', '12px', '20px', '20px']}
+			fontWeight={['bold', 'bold', 400, 400]}
+			{...props}
+		/>
+	),
 );
 
 ActionsDropdownItem.displayName = 'ActionsDropdownItem';
@@ -150,8 +148,8 @@ ActionsDropdownItem.displayName = 'ActionsDropdownItem';
 /**
  * ActionsDropdownArrow
  */
-export const ActionsDropdownArrow: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledActionsDropdownArrow className={className} d={['block', 'block', 'none', 'none']} {...props} />;
-});
+export const ActionsDropdownArrow: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledActionsDropdownArrow className={className} d={['block', 'block', 'none', 'none']} {...props} />
+));
 
 ActionsDropdownArrow.displayName = 'ActionsDropdownArrow';

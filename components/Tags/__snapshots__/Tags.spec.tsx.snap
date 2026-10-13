@@ -2,70 +2,23 @@
 
 exports[`Tags renders Tags correctly 1`] = `
 <div
-  className="container  myClass"
-  style={
-    Object {
-      "width": "50px",
-    }
-  }
+  class="sc-aXZVg kITBOQ sc-gEvEer dIYCTw"
 >
   <div
-    className="label "
+    class="sc-aXZVg kITBOQ sc-eqUAAy hxJGkf tagClasses"
+    style="width: 50px;"
   >
-    label
+    Prishtina
   </div>
   <div
-    style={
-      Object {
-        "display": "flex",
-        "flexDirection": "column",
-        "flexGrow": 1,
-        "flexShrink": 1,
-      }
-    }
+    class="sc-aXZVg kITBOQ sc-eqUAAy hxJGkf"
   >
-    <label
-      className="tags  undefined"
-    >
-      <Tag
-        className=" tagClasses"
-        key="0"
-        onClickRemove={[Function]}
-        onClickTag={[Function]}
-        style={
-          Object {
-            "width": "50px",
-          }
-        }
-        tag="Prishtina"
-      />
-      <Tag
-        className=" tagClasses"
-        key="1"
-        onClickRemove={[Function]}
-        onClickTag={[Function]}
-        style={
-          Object {
-            "width": "50px",
-          }
-        }
-        tag="Athens"
-      />
-      <div
-        className="inputContainer "
-      >
-        <input
-          className="input "
-          onBlur={[Function]}
-          onChange={[Function]}
-          onClick={[Function]}
-          onKeyDown={[Function]}
-          onPaste={[Function]}
-          placeholder="olala"
-          value=""
-        />
-      </div>
-    </label>
+    Athens
   </div>
+  <input
+    class="sc-aXZVg kITBOQ sc-iGgWBj gWTqai"
+    placeholder="olala"
+    value=""
+  />
 </div>
 `;

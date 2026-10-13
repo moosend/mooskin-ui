@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
+import type { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
 // Styled Components
 import { StyledSidemenu, StyledSidemenuItem } from './styles';
@@ -16,20 +16,20 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext(({
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		value?: string | number,
-		callback?: (e: React.MouseEvent<HTMLElement>) => void
+		callback?: (e: React.MouseEvent<HTMLElement>) => void,
 	) => {
-		props.onClickItem && props.onClickItem(e, value);
-		callback && callback(e);
+		props.onClickItem?.(e, value);
+		callback?.(e);
 	};
 
-	const recurseChildren = (children: any): any => {
-		return React.Children.map(children, (child, i) => {
+	const recurseChildren = (children: any): any =>
+		React.Children.map(children, (child, i) => {
 			if (React.isValidElement<ISidemenuItemComponentProps>(child) && child.type === SidemenuItem) {
 				return React.cloneElement(child, {
 					active: child.props.active ? child.props.active : child.props.value === props.activeItem,
 					children: recurseChildren((child.props as any).children),
 					key: i,
-					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick)
+					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
 				} as ISidemenuItemComponentProps);
 			}
 
@@ -39,14 +39,13 @@ export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext(({
 
 			return child;
 		});
-	};
 
-	return <StyledSidemenu {...props} children={recurseChildren(props.children)} />;
+	return <StyledSidemenu {...props}>{recurseChildren(props.children)}</StyledSidemenu>;
 });
 
 /**
  * SidemenuItem
  */
-export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return <StyledSidemenuItem {...props} />;
-});
+export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+	<StyledSidemenuItem {...props} />
+));

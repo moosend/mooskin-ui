@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
+import type { ISelectorComponentProps, ISelectorItemComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IBaseAlertComponentProps } from './model';
+import type { IBaseAlertComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -13,21 +13,21 @@ const SolidBackgroundColors = {
 	error: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.red600 || variables.backgroundColors.red600,
 	info: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1,
 	success: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.green600 || variables.backgroundColors.green600,
-	warning: (props: IBaseAlertComponentProps) => 'rgb(221, 107, 32)'
+	warning: (props: IBaseAlertComponentProps) => 'rgb(221, 107, 32)',
 };
 
 const SubtleBackgroundColors = {
 	error: (props: IBaseAlertComponentProps) => variables.backgroundColors.error,
 	info: (props: IBaseAlertComponentProps) => variables.backgroundColors.info,
 	success: (props: IBaseAlertComponentProps) => variables.backgroundColors.success,
-	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warning
+	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warning,
 };
 
 const FontColors = {
 	error: (props: IBaseAlertComponentProps) => variables.backgroundColors.errorIcon,
 	info: (props: IBaseAlertComponentProps) => variables.backgroundColors.infoIcon,
 	success: (props: IBaseAlertComponentProps) => variables.backgroundColors.successIcon,
-	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warningIcon
+	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warningIcon,
 };
 
 export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
@@ -45,25 +45,27 @@ export const StyledAlert = styled(Box)<IBaseAlertComponentProps>`
 	border-color: ${(props) => props.status && SolidBackgroundColors[props.status](props)};
 	border-radius: ${(props) => (props.variant === 'subtle' ? '4px' : '2px')};
 	background-color: ${(props) => {
-		if (props.variant === 'solid') return props.status && SolidBackgroundColors[props.status];
-		else if (props.variant === 'subtle') return props.status && SubtleBackgroundColors[props.status];
-		else return (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white;
+		if (props.variant === 'solid') {
+			return props.status && SolidBackgroundColors[props.status];
+		} else if (props.variant === 'subtle') {
+			return props.status && SubtleBackgroundColors[props.status];
+		} else {
+			return (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white;
+		}
 	}};
 `;
 
 StyledAlert.displayName = 'StyledAlert';
 
 export const StyledAlertButton = styled(Button)<IBaseAlertComponentProps>`
-	background-color: ${(props) => {
-		return props.variant === 'solid'
+	background-color: ${(props) =>
+		props.variant === 'solid'
 			? (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white
-			: props.status && SolidBackgroundColors[props.status];
-	}};
-	color: ${(props) => {
-		return props.variant === 'solid'
+			: props.status && SolidBackgroundColors[props.status]};
+	color: ${(props) =>
+		props.variant === 'solid'
 			? props.status && SolidBackgroundColors[props.status]
-			: (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white;
-	}};
+			: (props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white};
 `;
 
 StyledAlertButton.displayName = 'StyledAlertButton';
@@ -124,9 +126,13 @@ export const StyledAlertCloseButton = styled(StyledAlertCommonIcon)<IBaseAlertCo
 		background: rgba(30, 30, 30, 0.1);
 	}
 	color: ${(props) => {
-		if (props.variant === 'solid') return variables.fontColors.white;
-		else if (props.variant === 'subtle') return variables.fontColors.black;
-		else return props.status && FontColors[props.status](props);
+		if (props.variant === 'solid') {
+			return variables.fontColors.white;
+		} else if (props.variant === 'subtle') {
+			return variables.fontColors.black;
+		} else {
+			return props.status && FontColors[props.status](props);
+		}
 	}};
 `;
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IBoxImageComponentProps } from '../Box/model';
+import type { IBoxImageComponentProps } from '../Box/model';
 
 // Components
 import { Box } from '../Box/Box';

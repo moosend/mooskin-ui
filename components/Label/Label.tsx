@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ILabelComponentProps } from './Model';
+import type { ILabelComponentProps } from './model';
 
 // Styled Components
 import { StyledLabel } from './styles';
@@ -14,13 +14,13 @@ import variables from '../_utils/globals/variables';
  */
 export const Label: React.FC<ILabelComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const onClick = (e: React.MouseEvent<HTMLLabelElement>) => {
-		!props.disabled && props.onClick && props.onClick(e);
+		!props.disabled && props.onClick?.(e);
 	};
 
 	const children =
 		props.limit && typeof props.children === 'string'
 			? props.children && props.children.length > props.limit
-				? props.children.substr(0, props.limit) + '...'
+				? `${props.children.substr(0, props.limit)}...`
 				: props.children
 			: props.children;
 
@@ -33,9 +33,10 @@ export const Label: React.FC<ILabelComponentProps> = withMooskinContext(({ class
 			fontSize={[14, 14, 16, 16]}
 			{...props}
 			onClick={props.onClick ? onClick : undefined}
-			children={children}
 			boxAs="label"
-		/>
+		>
+			{children}
+		</StyledLabel>
 	);
 });
 
