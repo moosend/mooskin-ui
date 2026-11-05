@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 
 // Styled Components
 import { StyledDescription } from './styles';
@@ -12,8 +12,8 @@ import variables from '../_utils/globals/variables';
 /**
  * Description
  */
-export const Description: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	return (
+export const Description: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
 		<StyledDescription
 			mt="10px"
 			color={props.palette?.fontColors.medgray1 || variables.fontColors.medgray1}
@@ -21,7 +21,7 @@ export const Description: React.FC<IBoxComponentProps> = withMooskinContext(({ c
 			fontSize={[12, 12, 13, 13]}
 			{...props}
 		/>
-	);
-});
+	),
+);
 
 Description.displayName = 'Description';

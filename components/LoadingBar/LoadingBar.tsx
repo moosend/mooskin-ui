@@ -4,30 +4,38 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ILoadingBarComponentProps } from './model';
+import type { ILoadingBarComponentProps } from './model';
 
 // Styled Components
 import { StyledLoadingBar } from './styles';
 
 export const LoadingBar: React.FC<ILoadingBarComponentProps> = withMooskinContext(
-	({ className = '', progress = 0, style = {}, ...props }) => {
+	({ className: _className = '', progress = 0, style: _style = {}, error, onLoaderDone, onLoaderError, ...props }) => {
 		const [progressState, setProgressState] = React.useState(progress);
 		const [opacity, setOpacity] = React.useState(1);
+		const onLoaderDoneRef = React.useRef(onLoaderDone);
+		const onLoaderErrorRef = React.useRef(onLoaderError);
+		const errorRef = React.useRef(error);
+		onLoaderDoneRef.current = onLoaderDone;
+		onLoaderErrorRef.current = onLoaderError;
+		errorRef.current = error;
 
 		React.useEffect(() => {
-			setProgressState(progressState);
+			setProgressState(progress);
 		}, [progress]);
 
 		React.useEffect(() => {
-			if (props.error) {
-				props.onLoaderError && props.onLoaderError();
+			if (error) {
+				onLoaderErrorRef.current?.();
 				setProgressState(100);
 			}
-		}, [props.error]);
+		}, [error]);
 
 		React.useEffect(() => {
 			if (progressState >= 100) {
-				!props.error && props.onLoaderDone && props.onLoaderDone();
+				if (!errorRef.current) {
+					onLoaderDoneRef.current?.();
+				}
 				setTimeout(() => {
 					setOpacity(0);
 				}, 500);
@@ -40,8 +48,8 @@ export const LoadingBar: React.FC<ILoadingBarComponentProps> = withMooskinContex
 			}
 		}, [progressState]);
 
-		return <StyledLoadingBar {...props} progress={progressState} opacity={opacity} />;
-	}
+		return <StyledLoadingBar {...props} error={error} progress={progressState} opacity={opacity} />;
+	},
 );
 
 LoadingBar.displayName = 'LoadingBar';

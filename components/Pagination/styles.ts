@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
-import { IPaginationButtonComponentProps, IPaginationComponentProps } from './model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { IPaginationButtonComponentProps, IPaginationComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

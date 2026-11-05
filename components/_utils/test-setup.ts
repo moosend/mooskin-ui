@@ -1,9 +1,9 @@
+export {};
+
 window.matchMedia =
 	window.matchMedia ||
-	function () {
-		return {
-			matches: false,
-			addListener: function () {},
-			removeListener: function () {}
-		};
-	};
+	(() => ({
+		matches: false,
+		addListener: () => undefined,
+		removeListener: () => undefined,
+	}));

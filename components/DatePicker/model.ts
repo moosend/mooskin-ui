@@ -1,22 +1,22 @@
-import { DatePickerProps } from '@mui/x-date-pickers/DatePicker';
-import { IInputComponentProps } from '../Input/model';
-import { TextFieldProps } from '@mui/material/TextField';
-import dayjs from 'dayjs';
+import type { DatePickerProps } from '@mui/x-date-pickers/DatePicker';
+import type { TextFieldProps } from '@mui/material/TextField';
+
+/** Value type for pickers that use AdapterDateFns. */
+export type DatePickerValue = Date | null;
 
 export interface IDatePickerCommonProps {
-	value: dayjs.Dayjs | null;
-	inputComponentProps?: IInputComponentProps;
+	value?: DatePickerValue;
+	/** Display format, passed to MUI as inputFormat. */
 	format?: string;
 	inputProps?: Partial<TextFieldProps>;
 }
 
-export interface IDatePickerComponentProps<TInputDate = any, TDate = any>
-	extends IDatePickerCommonProps,
-		Omit<DatePickerProps<dayjs.Dayjs, dayjs.Dayjs>, 'onChange' | 'renderInput'> {
-	onChange?: (value: dayjs.Dayjs | null) => void;
+type DatePickerPassthrough = Omit<DatePickerProps<Date, Date>, 'onChange' | 'renderInput' | 'value' | 'inputFormat'>;
+
+export interface IDatePickerComponentProps extends IDatePickerCommonProps, DatePickerPassthrough {
+	onChange?: (value: DatePickerValue) => void;
 }
-export interface IDatePickerKeyboardComponentProps<TInputDate = any, TDate = any>
-	extends IDatePickerCommonProps,
-		Omit<DatePickerProps<dayjs.Dayjs, dayjs.Dayjs>, 'onChange'> {
-	onChange?: (value: dayjs.Dayjs | null) => void;
+
+export interface IDatePickerKeyboardComponentProps extends IDatePickerCommonProps, DatePickerPassthrough {
+	onChange?: (value: DatePickerValue) => void;
 }

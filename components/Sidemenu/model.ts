@@ -1,4 +1,4 @@
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 
 export interface ISidemenuComponentProps extends IBoxComponentProps {
 	/** active Sidemenu item */

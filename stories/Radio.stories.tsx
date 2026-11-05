@@ -1,25 +1,25 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
-import { IRadioComponentProps } from '../components/Radio/model';
+import type { IRadioComponentProps } from '../components/Radio/model';
 import { Radio, RadioDescription, RadioIcon, RadioLabel } from '../components/Radio/Radio';
 
-import { IInputCallbackData } from '../components/_utils/types/commonTypes';
+import type { IInputCallbackData } from '../components/_utils/types/commonTypes';
 import { Box } from '../components/Box/Box';
 
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Radio,
-	title: 'Example/Radio'
-} as any as Meta;
+	title: 'Example/Radio',
+};
 
 const Template: Story<IRadioComponentProps> = (args) => {
 	const [value, setValue] = React.useState(false);
 	return (
 		<>
-			{/*<GlobalStyle />*/}
+			{/* <GlobalStyle /> */}
 			<Radio
 				selected={value}
 				{...args}
@@ -32,20 +32,20 @@ const Template: Story<IRadioComponentProps> = (args) => {
 export const Normal = Template.bind({});
 Normal.args = {
 	children: <RadioLabel>Normal Radio</RadioLabel>,
-	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
+	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
 } as IRadioComponentProps;
 
 export const Selected = Template.bind({});
 Selected.args = {
 	children: <RadioLabel>Selected Radio</RadioLabel>,
-	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
+	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
 } as IRadioComponentProps;
 
 export const Disabled = Template.bind({});
 Disabled.args = {
 	children: <RadioLabel>Disabled Radio</RadioLabel>,
 	disabled: true,
-	onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
+	onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
 } as IRadioComponentProps;
 
 export const Description = Template.bind({});
@@ -56,7 +56,7 @@ Description.args = {
 			<RadioDescription>Radio description goes here</RadioDescription>
 		</Box>
 	),
-	onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
+	onClick: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
 } as IRadioComponentProps;
 
 export const CustomButton = Template.bind({});
@@ -67,5 +67,5 @@ CustomButton.args = {
 			<RadioLabel>Normal Radio</RadioLabel>
 		</>
 	),
-	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data)
+	onClickRadio: (e: React.MouseEvent<HTMLElement>, data: IInputCallbackData) => console.log(e, data),
 } as IRadioComponentProps;

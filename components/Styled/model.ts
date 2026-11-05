@@ -1,5 +1,5 @@
-import { Locale } from 'date-fns';
-import { ISupportedLanguage } from '../_utils/globals/locales';
+import type { Locale } from 'date-fns';
+import type { ISupportedLanguage } from '../_utils/globals/locales';
 
 export interface IThemeFontColors {
 	primary1: string;

@@ -1,4 +1,1 @@
-import { IInputCallbackData } from './types/commonTypes';
-
-export default IInputCallbackData;
-export { IInputCallbackData };
+export type { IInputCallbackData as default, IInputCallbackData } from './types/commonTypes';

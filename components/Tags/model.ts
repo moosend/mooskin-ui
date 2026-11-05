@@ -1,5 +1,5 @@
-import { IInputCallbackData } from '../_utils/types/commonTypes';
-import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
+import type { IInputCallbackData } from '../_utils/types/commonTypes';
+import type { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
 
 export interface ITagsComponentProps extends IBoxComponentProps {
 	/** what data is being used, helps whn extracting user input, you know on what field changes are made */

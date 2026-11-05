@@ -1,4 +1,4 @@
-import { IAnchorBoxComponentProps } from '../Box/model';
+import type { IAnchorBoxComponentProps } from '../Box/model';
 
 export interface IAnchorComponentProps extends IAnchorBoxComponentProps {
 	/** Provide to make the Anchor disabled */

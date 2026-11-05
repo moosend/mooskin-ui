@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // Components
 import ReactSlick from 'react-slick';
 import { Box } from '../Box/Box';
-import { IBoxComponentProps } from '../index';
+import type { IBoxComponentProps } from '../index';
 
 // "CSS" variables
 import variables from '../_utils/globals/variables';

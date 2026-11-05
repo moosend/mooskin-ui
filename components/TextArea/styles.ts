@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { ITextAreaBoxComponentProps } from '../Box/model';
+import type { ITextAreaBoxComponentProps } from '../Box/model';
 
 // Components
 import { Box } from '../Box/Box';

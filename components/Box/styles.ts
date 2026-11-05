@@ -1,11 +1,63 @@
+import isPropValid from '@emotion/is-prop-valid';
 import styled from 'styled-components';
 
 // Screen sizes
 import screens from '../_utils/globals/screens';
 
 // Models
-import { IStyledTheme } from '../Styled/model';
-import { BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
+import type { IStyledTheme } from '../Styled/model';
+import type { BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
+import { domEventProps } from './domEventProps';
+import { boxComponentProps } from './model';
+
+/** Props that must reach the DOM. Everything else in the box API is style or context. */
+const forwardedDomProps = new Set(['id', 'className', 'style', 'children', 'disabled']);
+
+const blockedBoxProps = new Set<string>([
+	...boxComponentProps,
+	'palette',
+	'locale',
+	'setLocale',
+	'dataLabel',
+	'noRender',
+	'setRef',
+	'boxAs',
+	'fontColor',
+	'flexWrap',
+	'whiteSpace',
+	'wordBreak',
+	'gridTemplateColumns',
+	'_hover',
+	'all',
+	'transition',
+	'transform',
+	'textOverflow',
+	'outline',
+	'outlineWidth',
+	'outlineStyle',
+	'outlineColor',
+	'label',
+	'userSelect',
+	'verticalAlign',
+	'pointerEvents',
+	'spacing',
+	'format',
+	'styles',
+	'tags',
+]);
+
+forwardedDomProps.forEach((prop) => blockedBoxProps.delete(prop));
+
+/** emotion's isPropValid treats every onX name as an event. Mooskin callbacks such as onClickCheckbox match that and would become DOM attributes. */
+const isOnProp = (prop: string) => prop.charCodeAt(0) === 111 && prop.charCodeAt(1) === 110 && prop.charCodeAt(2) < 91;
+
+export const shouldForwardBoxProp = (prop: string) => {
+	if (isOnProp(prop)) {
+		return domEventProps.has(prop);
+	}
+
+	return isPropValid(prop) && !blockedBoxProps.has(prop);
+};
 
 export const getNumberOrStringValue = (value?: number | string) => {
 	if (typeof value !== 'undefined') {
@@ -84,13 +136,11 @@ export const getBoxShadow = (boxShadow?: React.CSSProperties['boxShadow'] | BoxS
 	}
 };
 
-const getMediaQueryString = (media: string, property: string, value?: number | string) => {
-	return `
+const getMediaQueryString = (media: string, property: string, value?: number | string) => `
 		@media ${media} {
 			${property}: ${value};
 		}
 	`;
-};
 
 const generateStyles = (data: { property: string; value?: number | string | any[]; processedValue?: boolean; palette?: IStyledTheme }) => {
 	const { property, processedValue, value, palette } = data;
@@ -131,7 +181,9 @@ const generateStyles = (data: { property: string; value?: number | string | any[
 	`;
 };
 
-export const StyledBox = styled.div<IBoxComponentProps>`
+export const StyledBox = styled.div.withConfig({
+	shouldForwardProp: (prop) => typeof prop === 'string' && shouldForwardBoxProp(prop),
+})<IBoxComponentProps>`
 	&&& {
 		${(props) => generateStyles({ property: 'all', value: props.all })}
 
@@ -163,7 +215,17 @@ export const StyledBox = styled.div<IBoxComponentProps>`
 		${(props) => generateStyles({ property: 'font-style', value: props.fontStyle })}
 		${(props) => generateStyles({ property: 'text-transform', value: props.textTransform })}
 		${(props) => generateStyles({ property: 'text-decoration', value: props.textDecoration })}
-		${(props) => generateStyles({ property: 'white-space', value: props.whiteSpace })}
+		${(props) => {
+			const extra = [
+				generateStyles({ property: 'user-select', value: props.userSelect }),
+				generateStyles({ property: 'vertical-align', value: props.verticalAlign }),
+				generateStyles({ property: 'pointer-events', value: props.pointerEvents }),
+			]
+				.filter(Boolean)
+				.join('');
+			const base = generateStyles({ property: 'white-space', value: props.whiteSpace });
+			return extra ? `${base || ''}${extra}` : base;
+		}}
 
 		${(props) => generateStyles({ property: 'width', value: props.w, processedValue: true })}
 		${(props) => generateStyles({ property: 'height', value: props.h, processedValue: true })}

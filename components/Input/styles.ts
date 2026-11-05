@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 import type { ILabelComponentProps } from '../Label/model';
-import { IInputComponentProps, IInputContainerComponentProps, IInputListComponentProps } from './model';
+import type { IInputComponentProps, IInputContainerComponentProps, IInputListComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

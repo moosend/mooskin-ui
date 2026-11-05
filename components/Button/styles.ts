@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IButtonComponentProps } from './model';
+import type { IButtonComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -12,13 +12,13 @@ import variables from '../_utils/globals/variables';
 const normalButtonSizes = {
 	lg: '15px',
 	md: '9px 15px',
-	sm: '8px 15px'
+	sm: '8px 15px',
 };
 
 const secondaryButtonSizes = {
 	lg: '14px',
 	md: '8px 14px',
-	sm: '7px 13px'
+	sm: '7px 13px',
 };
 
 export const ButtonDefault = styled(Box)<IButtonComponentProps>`

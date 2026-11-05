@@ -1,4 +1,4 @@
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 
 export interface IModalComponentProps extends IBoxComponentProps {
 	/** whether the Modal is open or not */

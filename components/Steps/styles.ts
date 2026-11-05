@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IStepCommonComponentProps, IStepComponentProps, IStepHeaderComponentProps, IStepsComponentProps } from './model';
+import type { IStepCommonComponentProps, IStepComponentProps, IStepHeaderComponentProps, IStepsComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

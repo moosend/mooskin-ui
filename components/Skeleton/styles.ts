@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 // Models
-import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from './model';
+import type { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

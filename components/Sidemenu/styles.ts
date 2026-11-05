@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
+import type { ISidemenuComponentProps, ISidemenuItemComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

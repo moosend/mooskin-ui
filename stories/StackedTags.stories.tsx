@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
-import { ITagsComponentProps } from '../components/Tags/model';
+import type { ITagsComponentProps } from '../components/Tags/model';
 import { Tag, Tags } from '../components/Tags/Tags';
 
 // import { IInputCallbackData } from '../components/_utils/types/commonTypes';
@@ -12,14 +12,14 @@ import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Tags,
-	title: 'Example/StackedTabs'
-} as any as Meta;
+	title: 'Example/StackedTabs',
+};
 
 const Template: Story<ITagsComponentProps> = (args) => {
 	const [show, setShow] = React.useState(false);
 	return (
 		<>
-			{/*<GlobalStyle />*/}
+			{/* <GlobalStyle /> */}
 			<Tags {...args}>
 				<Tag>Tag 1</Tag>
 				<Tag>Tag 2</Tag>

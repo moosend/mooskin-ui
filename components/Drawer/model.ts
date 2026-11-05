@@ -1,4 +1,4 @@
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 
 export type IContentSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'full';
 

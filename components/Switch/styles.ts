@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { ISwitchComponentProps, ISwitchHandleComponentProps } from './model';
+import type { ISwitchComponentProps, ISwitchHandleComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -21,13 +21,12 @@ export const StyledSwitch = styled(Box)<ISwitchComponentProps>`
 	border-radius: 36px;
 	transition: background-color 0.15s;
 	color: ${(props) => props.palette?.fontColors.white || variables.fontColors.white};
-	background-color: ${(props) => {
-		return !props.disabled
+	background-color: ${(props) =>
+		!props.disabled
 			? props.active
 				? props.palette?.backgroundColors.teal500 || variables.backgroundColors.teal500
 				: props.palette?.backgroundColors.medgray1 || variables.backgroundColors.medgray1
-			: props.palette?.backgroundColors.medgray1 || variables.backgroundColors.medgray1;
-	}};
+			: props.palette?.backgroundColors.medgray1 || variables.backgroundColors.medgray1};
 `;
 
 StyledSwitch.displayName = 'StyledSwitch';
@@ -46,8 +45,8 @@ export const StyledSwitchHandle = styled(Box)<ISwitchHandleComponentProps>`
 	transform: ${(props) =>
 		props.active
 			? `translate(${
-					props.switchWidth ? (typeof props.switchWidth === 'string' ? parseInt(props.switchWidth, 10) : props.switchWidth) - 27 : 63
-			  }px)`
+					props.switchWidth ? (typeof props.switchWidth === 'string' ? Number.parseInt(props.switchWidth, 10) : props.switchWidth) - 27 : 63
+				}px)`
 			: ''};
 `;
 

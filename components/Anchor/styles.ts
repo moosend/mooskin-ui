@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IAnchorComponentProps } from './model';
+import type { IAnchorComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

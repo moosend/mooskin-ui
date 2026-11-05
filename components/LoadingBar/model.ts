@@ -1,4 +1,4 @@
-import { IBoxComponentProps } from '../Box/model';
+import type { IBoxComponentProps } from '../Box/model';
 
 export interface ILoadingBarComponentProps extends IBoxComponentProps {
 	/** progress of the loadingBar */

@@ -1,8 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 
 // Models
-import { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
-import { ISelectComponentProps, ISelectOptionComponentProps, ISelectOptionListProps } from './model';
+import type { IBoxComponentProps, IInputBoxComponentProps } from '../Box/model';
+import type { ISelectComponentProps, ISelectOptionComponentProps, ISelectOptionListProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

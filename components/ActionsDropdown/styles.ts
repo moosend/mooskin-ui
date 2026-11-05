@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
 // Models
-import { IBoxComponentProps } from '../index';
-import { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
+import type { IBoxComponentProps } from '../index';
+import type { IActionsDropdownComponentProps, IActionsDropdownItemComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -65,7 +65,9 @@ StyledActionsDropdownItem.displayName = 'StyledActionsDropdownItem';
 
 // :after is a workaround to remove box-shadow from the bottom of the rotated arrow box
 export const StyledActionsDropdownArrow = styled(Box)<IBoxComponentProps>`
-	box-shadow: rgb(0 0 0 / 2%) 3px 2px 8px -2px, rgb(0 0 0 / 7%) 2px 2px 2px 0px;
+	box-shadow:
+		rgb(0 0 0 / 2%) 3px 2px 8px -2px,
+		rgb(0 0 0 / 7%) 2px 2px 2px 0px;
 	position: absolute;
 	top: -6px;
 	right: 22px;

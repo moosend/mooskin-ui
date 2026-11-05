@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { ITabCommonComponentProps, ITabComponentProps, ITabsComponentProps } from './model';
+import type { ITabCommonComponentProps, ITabComponentProps, ITabsComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

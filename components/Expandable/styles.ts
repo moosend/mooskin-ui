@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
-import { IExpandableCommonComponentProps, IExpandableComponentProps, IExpandableItemComponentProps } from './model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { IExpandableCommonComponentProps, IExpandableComponentProps, IExpandableItemComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

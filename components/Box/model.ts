@@ -1,4 +1,4 @@
-import { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors } from '../Styled/model';
+import type { IMooskinContext, IStyledTheme, IThemeBackgroundColors, IThemeBorderColors, IThemeFontColors } from '../Styled/model';
 // import { IMooskinContext } from '../Styled/model';
 
 export type IntensityType = 'xs' | 'sm' | 'base' | 'md' | 'lg' | 'xl' | '2xl';
@@ -100,6 +100,11 @@ export const boxComponentProps = [
 	'animation',
 	'visibility',
 	'cursor',
+	'userSelect',
+	'verticalAlign',
+	'pointerEvents',
+	'label',
+	'disabled',
 	'boxAs',
 	'children',
 	'theme',
@@ -114,7 +119,6 @@ export type IAnchorBoxComponentProps = IBoxComponentProps & React.AnchorHTMLAttr
 export type ITextAreaBoxComponentProps = IBoxComponentProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 export interface IBaseBoxComponentProps extends IMooskinContext {
-
 	noRender?: Array<ScreenType>;
 
 	/** returns the ref */
@@ -427,4 +431,19 @@ export interface IBaseBoxComponentProps extends IMooskinContext {
 
 	/** outline color */
 	outlineColor?: React.CSSProperties['outlineColor'] | NestedThemeType | Array<React.CSSProperties['outlineColor']>;
+
+	/** user select */
+	userSelect?: React.CSSProperties['userSelect'] | Array<React.CSSProperties['userSelect']>;
+
+	/** vertical align */
+	verticalAlign?: React.CSSProperties['verticalAlign'] | Array<React.CSSProperties['verticalAlign']>;
+
+	/** pointer events */
+	pointerEvents?: React.CSSProperties['pointerEvents'] | Array<React.CSSProperties['pointerEvents']>;
+
+	/** accessible or field label accepted by components that extend Box */
+	label?: string;
+
+	/** disables interaction for components that extend Box */
+	disabled?: boolean;
 }

@@ -11,12 +11,10 @@ module.exports = {
 		splitChunks: {
 			chunks: 'async',
 			minSize: 30000,
-			maxSize: 0,
 			minChunks: 1,
 			maxAsyncRequests: 5,
 			maxInitialRequests: 3,
 			automaticNameDelimiter: '~',
-			name: true,
 			cacheGroups: {
 				vendors: {
 					test: /[\\/]node_modules[\\/]/,
@@ -34,30 +32,15 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.woff$|\.woff2$/,
-				loader: 'url-loader',
-				options: {
-					limit: 650000,
-					// outputPath: 'fonts/',
-					name: '[path][name].[ext]'
-					// mimetype: 'application/font-woff'
-				}
-			},
-			{
-				test: /\.ttf$|\.eot$|\.svg$/,
-				loader: 'url-loader',
-				options: {
-					limit: 650000,
-					name: '[path][name].[ext]'
-				}
-			},
-			{
-				test: /\.(png|jpg|gif)$/,
-				loader: 'url-loader',
-				options: {
-					limit: 650000,
-					name: '[path][name].[ext]',
-					mimetype: 'image/png'
+				test: /\.woff2?$|\.ttf$|\.eot$|\.svg$|\.(png|jpg|gif)$/,
+				type: 'asset',
+				parser: {
+					dataUrlCondition: {
+						maxSize: 650000
+					}
+				},
+				generator: {
+					filename: '[path][name][ext]'
 				}
 			}
 		]

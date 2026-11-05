@@ -18,8 +18,10 @@
 		"pretty": true,
 		"noUnusedLocals": true,
 		"allowSyntheticDefaultImports": true,
-		"lib": ["dom", "es6", "es7", "dom.iterable", "scripthost"]
+		"isolatedModules": true,
+		"types": ["jest", "@testing-library/jest-dom"],
+		"lib": ["dom", "dom.iterable", "es2022"]
 	},
-	"include": ["components"],
-	"exclude": ["node_modules", "lib", "components/**/*.spec.ts", "components/**/*.spec.tsx", "stories"]
+	"include": ["components", "stories"],
+	"exclude": ["node_modules", "lib"]
 }

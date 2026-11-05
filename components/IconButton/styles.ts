@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { IIconButtonComponentProps } from './model';
+import type { IIconButtonComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

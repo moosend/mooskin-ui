@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Description } from './Description';
 
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 
 describe('Description', () => {
 	test('renders correctly', () => {
-		const tree = mount(<Description>Description here!</Description>);
-		expect(tree).toMatchSnapshot();
+		const { container } = render(<Description>Description here!</Description>);
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

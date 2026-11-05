@@ -1,98 +1,106 @@
 import * as React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { DateSelect } from './DateSelect';
 
-import { mount } from 'enzyme';
+const openList = () => {
+	fireEvent.click(screen.getByText('Select an option'));
+};
 
-describe.skip('DateSelect', () => {
+describe('DateSelect', () => {
 	test('renders other type of the component correctly', () => {
 		const func = jest.fn();
 
-		const tree = mount(<DateSelect onChangeSelect={func} format="12-Hour" type="hour" />);
+		const { container } = render(<DateSelect onChangeSelect={func} format="12-Hour" type="hour" />);
 
-		expect(tree).toMatchSnapshot();
+		expect(container.firstChild).toMatchSnapshot();
 	});
 
 	test('creates select component for date related hours', () => {
 		const func = jest.fn();
 
-		const component = mount(<DateSelect onChange={func} format="24-Hour" type="hour" showList />);
+		render(<DateSelect onChangeSelect={func} format="24-Hour" type="hour" />);
+		openList();
 
-		expect(component.find('SelectOption').length).toBe(24);
-		expect(component.find('SelectOption').first().prop('value')).toEqual('0');
-		expect(component.find('SelectOption').last().prop('value')).toEqual('23');
-		expect(component.find('SelectOption').first().children().text()).toEqual('00');
-		expect(component.find('SelectOption').last().children().text()).toEqual('23');
+		expect(screen.getByText('00')).toBeInTheDocument();
+		expect(screen.getByText('23')).toBeInTheDocument();
+		expect(screen.getAllByText(/^\d{2}$/)).toHaveLength(24);
+
+		fireEvent.click(screen.getByText('00'));
+		expect(func).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ value: 0 }));
 	});
 
 	test('creates select component for date related hours (12-Hours)', () => {
 		const func = jest.fn();
 
-		const component = mount(<DateSelect onChange={func} format="12-Hour" type="hour" showList />);
+		render(<DateSelect onChangeSelect={func} format="12-Hour" type="hour" />);
+		openList();
 
-		expect(component.find('SelectOption').length).toBe(24);
-		expect(component.find('SelectOption').first().prop('value')).toEqual('0');
-		expect(component.find('SelectOption').last().prop('value')).toEqual('23');
-		expect(component.find('SelectOption').first().children().text()).toEqual('00 AM');
-		expect(component.find('SelectOption').last().children().text()).toEqual('11 PM');
+		expect(screen.getByText('00 AM')).toBeInTheDocument();
+		expect(screen.getByText('11 PM')).toBeInTheDocument();
+		expect(screen.getAllByText(/AM|PM/)).toHaveLength(24);
+
+		fireEvent.click(screen.getByText('11 PM'));
+		expect(func).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ value: 23 }));
 	});
 
 	test('creates select component for minute selection', () => {
 		const func = jest.fn();
 
-		const component = mount(<DateSelect onChange={func} type="minute" showList />);
+		render(<DateSelect onChangeSelect={func} type="minute" />);
+		openList();
 
-		expect(component.find('SelectOption').length).toBe(60);
-		expect(component.find('SelectOption').first().prop('value')).toEqual('0');
-		expect(component.find('SelectOption').last().prop('value')).toEqual('59');
-		expect(component.find('SelectOption').first().children().text()).toEqual('00');
-		expect(component.find('SelectOption').last().children().text()).toEqual('59');
+		expect(screen.getByText('00')).toBeInTheDocument();
+		expect(screen.getByText('59')).toBeInTheDocument();
+		expect(screen.getAllByText(/^\d{2}$/)).toHaveLength(60);
 	});
 
 	test('creates select component for day of the month selection', () => {
 		const func = jest.fn();
 
-		const component = mount(<DateSelect onChange={func} format="1" type="month" showList />);
+		render(<DateSelect onChangeSelect={func} format="1" type="month" />);
+		openList();
 
-		expect(component.find('SelectOption').length).toBe(31);
-		expect(component.find('SelectOption').first().prop('value')).toEqual('1');
-		expect(component.find('SelectOption').last().prop('value')).toEqual('31');
-		expect(component.find('SelectOption').first().children().text()).toEqual('1st');
-		expect(component.find('SelectOption').last().children().text()).toEqual('31st');
+		expect(screen.getByText('1st')).toBeInTheDocument();
+		expect(screen.getByText('31st')).toBeInTheDocument();
+		expect(screen.getAllByText(/\d+(st|nd|rd|th)/)).toHaveLength(31);
 	});
 
 	test.skip('creates select component for day of the month (february) selection', () => {
 		const func = jest.fn();
 
-		const component = mount(<DateSelect onChange={func} format="2" type="month" showList />);
+		render(<DateSelect onChangeSelect={func} format="2" type="month" />);
+		openList();
 
-		expect(component.find('SelectOption').length).toBe(31);
-		expect(component.find('SelectOption').first().prop('value')).toEqual('1');
-		expect(component.find('SelectOption').last().prop('value')).toEqual('31');
-		expect(component.find('SelectOption').first().children().text()).toEqual('1st');
-		expect(component.find('SelectOption').last().children().text()).toEqual('31st');
+		expect(screen.getByText('1st')).toBeInTheDocument();
+		expect(screen.getByText('28th')).toBeInTheDocument();
+		expect(screen.queryByText('31st')).not.toBeInTheDocument();
 	});
 
 	test('creates select component for day of the week selection', () => {
 		const func = jest.fn();
 
-		const component = mount(<DateSelect onChange={func} type="week" showList />);
+		render(<DateSelect onChangeSelect={func} type="week" />);
+		openList();
 
-		expect(component.find('SelectOption').length).toBe(7);
-		expect(component.find('SelectOption').first().prop('value')).toEqual('1');
-		expect(component.find('SelectOption').last().prop('value')).toEqual('7');
-		expect(component.find('SelectOption').first().children().text()).toEqual('Sunday');
-		expect(component.find('SelectOption').last().children().text()).toEqual('Saturday');
+		expect(screen.getByText('Sunday')).toBeInTheDocument();
+		expect(screen.getByText('Saturday')).toBeInTheDocument();
+		expect(screen.getAllByText(/day$/)).toHaveLength(7);
+
+		fireEvent.click(screen.getByText('Saturday'));
+		expect(func).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ value: 7 }));
 	});
 
 	test('creates select component for ordinal selection of days of the month', () => {
 		const func = jest.fn();
 
-		const component = mount(<DateSelect onChange={func} type="ordinal" showList />);
+		render(<DateSelect onChangeSelect={func} type="ordinal" />);
+		openList();
 
-		expect(component.find('SelectOption').length).toBe(6);
-		expect(component.find('SelectOption').first().prop('value')).toEqual('1');
-		expect(component.find('SelectOption').last().prop('value')).toEqual('-1');
-		expect(component.find('SelectOption').first().children().text()).toEqual('First');
-		expect(component.find('SelectOption').last().children().text()).toEqual('Last');
+		expect(screen.getByText('First')).toBeInTheDocument();
+		expect(screen.getByText('Last')).toBeInTheDocument();
+		expect(screen.getAllByText(/First|Second|Third|Fourth|Fifth|Last/)).toHaveLength(6);
+
+		fireEvent.click(screen.getByText('Last'));
+		expect(func).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({ value: -1 }));
 	});
 });

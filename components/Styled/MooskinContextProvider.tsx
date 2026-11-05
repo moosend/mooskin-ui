@@ -2,9 +2,10 @@ import * as React from 'react';
 import { enUS } from 'date-fns/locale';
 
 import variables from '../_utils/globals/variables';
-import { LocaleBySupportedLanguage, ISupportedLanguage } from '../_utils/globals/locales';
+import type { ISupportedLanguage } from '../_utils/globals/locales';
+import { LocaleBySupportedLanguage } from '../_utils/globals/locales';
 
-import { IMooskinContext } from './model';
+import type { IMooskinContext } from './model';
 
 export const useMooskinContext = () => React.useContext(MooskinContext);
 
@@ -36,14 +37,10 @@ export const MooskinContextProvider: React.FC<React.PropsWithChildren<any>> = ({
 };
 
 export const withMooskinContext = <P extends object>(Component: React.FC<P & IMooskinContext>): React.FC<P & IMooskinContext> => {
-	return function WithMooskinContext(props: P) {
+	const WithContext: React.FC<P & IMooskinContext> = (props) => {
 		const context = useMooskinContext();
-		return (
-			<Component {...props}
-				palette={context.palette}
-				locale={context.locale}
-				setLocale={context.setLocale}
-			/>
-		);
+		return <Component {...props} palette={context.palette} locale={context.locale} setLocale={context.setLocale} />;
 	};
+	WithContext.displayName = Component.displayName || Component.name || 'Component';
+	return WithContext;
 };

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { ColWidth, IColProps, IColWidths, IGridProps, IRowProps } from './model';
+import type { ColWidth, IColProps, IColWidths, IGridProps, IRowProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';
@@ -21,7 +21,7 @@ const colWidths = {
 	9: 75,
 	10: 83.33333333,
 	11: 91.66666667,
-	12: 100
+	12: 100,
 };
 
 const generateMediaQuery = (media: string, colWidth?: ColWidth) => {
@@ -43,13 +43,11 @@ const generateMediaQuery = (media: string, colWidth?: ColWidth) => {
     `;
 };
 
-const generateHiddenMediaQuery = (media: string) => {
-	return `
+const generateHiddenMediaQuery = (media: string) => `
         @media ${media} {
             display: none;
         }
     `;
-};
 
 const assembleAvengers = (data: IColWidths) => {
 	const { lg, md, sm, xs } = data;

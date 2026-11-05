@@ -1,11 +1,10 @@
 import * as React from 'react';
+import { render } from '@testing-library/react';
 import { Label } from './Label';
-
-import { mount } from 'enzyme';
 
 describe('Label', () => {
 	test('renders correctly', () => {
-		const tree = mount(<Label>Label here!</Label>);
-		expect(tree).toMatchSnapshot();
+		const { container } = render(<Label>Label here!</Label>);
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

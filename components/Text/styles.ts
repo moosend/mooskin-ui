@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Models
-import { ITextComponentProps } from './model';
+import type { ITextComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

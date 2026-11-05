@@ -1,25 +1,23 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from '../components/Modal/Modal';
-import { IModalComponentProps } from '../components/Modal/model';
+import type { IModalComponentProps } from '../components/Modal/model';
 
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Modal,
-	title: 'Example/Modal'
-} as any as Meta;
-
-const Template: Story<IModalComponentProps> = (args) => {
-	return (
-		<>
-			{/*<GlobalStyle />*/}
-			<Modal {...args} />
-		</>
-	);
+	title: 'Example/Modal',
 };
+
+const Template: Story<IModalComponentProps> = (args) => (
+	<>
+		{/* <GlobalStyle /> */}
+		<Modal {...args} />
+	</>
+);
 
 export const Normal = Template.bind({});
 Normal.args = {
@@ -36,5 +34,5 @@ Normal.args = {
 		</ModalOverlay>
 	),
 	isOpen: true,
-	onClose: () => alert('Close!')
+	onClose: () => alert('Close!'),
 } as IModalComponentProps;

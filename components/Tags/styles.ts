@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 // Models
-import { IBoxComponentProps } from '../Box/model';
-import { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from './model';
+import type { IBoxComponentProps } from '../Box/model';
+import type { ITagComponentProps, ITagsComponentProps, ITagsInputComponentProps } from './model';
 
 // Components
 import { Box } from '../Box/Box';

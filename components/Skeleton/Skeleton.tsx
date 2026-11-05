@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from './model';
+import type { ICommonSkeletonComponentProps, ISkeletonCircleComponentProps, ISkeletonTextComponentProps } from './model';
 
 // Styled Components
 import { StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText } from './styles';
@@ -14,20 +14,20 @@ import { StyledSkeleton, StyledSkeletonCircle, StyledSkeletonText } from './styl
  */
 export const Skeleton: React.FC<ICommonSkeletonComponentProps> = withMooskinContext(
 	({
-		className = '',
-		endColor = '#A0AEC0',
+		className: _className = '',
+		endColor: _endColor = '#A0AEC0',
 		// fadeDuration= 0.4,
 		isLoaded = false,
-		speed = 0.8,
-		startColor = '#EDF2F7',
-		style = {},
+		speed: _speed = 0.8,
+		startColor: _startColor = '#EDF2F7',
+		style: _style = {},
 		...props
 	}) => {
 		if (isLoaded) {
 			return <>{props.children}</>;
 		}
 		return <StyledSkeleton w="fit-content" {...props} />;
-	}
+	},
 );
 
 Skeleton.displayName = 'Skeleton';
@@ -37,21 +37,21 @@ Skeleton.displayName = 'Skeleton';
  */
 export const SkeletonCircle: React.FC<ISkeletonCircleComponentProps> = withMooskinContext(
 	({
-		className = '',
-		endColor = '#A0AEC0',
+		className: _className = '',
+		endColor: _endColor = '#A0AEC0',
 		// fadeDuration= 0.4,
 		isLoaded = false,
-		size = '20px',
-		speed = 0.8,
-		startColor = '#EDF2F7',
-		style = {},
+		size: _size = '20px',
+		speed: _speed = 0.8,
+		startColor: _startColor = '#EDF2F7',
+		style: _style = {},
 		...props
 	}) => {
 		if (isLoaded) {
 			return <>{props.children}</>;
 		}
 		return <StyledSkeletonCircle {...props} />;
-	}
+	},
 );
 
 SkeletonCircle.displayName = 'Skeleton';
@@ -61,14 +61,14 @@ SkeletonCircle.displayName = 'Skeleton';
  */
 export const SkeletonText: React.FC<ISkeletonTextComponentProps> = withMooskinContext(
 	({
-		className = '',
-		endColor = '#A0AEC0',
+		className: _className = '',
+		endColor: _endColor = '#A0AEC0',
 		// fadeDuration: 0.4,
 		isLoaded = false,
 		lines = 4,
-		speed = 0.8,
-		startColor = '#EDF2F7',
-		style = {},
+		speed: _speed = 0.8,
+		startColor: _startColor = '#EDF2F7',
+		style: _style = {},
 		...props
 	}) => {
 		if (isLoaded) {
@@ -80,14 +80,14 @@ export const SkeletonText: React.FC<ISkeletonTextComponentProps> = withMooskinCo
 		if (linesInternal.length) {
 			return (
 				<>
-					{linesInternal.map((line, i) => {
-						return <StyledSkeletonText {...props} key={i} w={i === linesInternal.length - 1 ? '80%' : '100%'} />;
-					})}
+					{linesInternal.map((line, i) => (
+						<StyledSkeletonText {...props} key={i} w={i === linesInternal.length - 1 ? '80%' : '100%'} />
+					))}
 				</>
 			);
 		}
 		return null;
-	}
+	},
 );
 
 SkeletonText.displayName = 'Skeleton';

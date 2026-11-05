@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Meta, Story } from '@storybook/react';
+import type { StoryFn as Story } from '@storybook/react';
 
-import { ISelectComponentProps } from '../components/Select/model';
+import type { ISelectComponentProps } from '../components/Select/model';
 import {
 	Select,
 	SelectContainer,
@@ -13,24 +13,24 @@ import {
 	SelectOptionList,
 	SelectOverlay,
 	SelectPagination,
-	SelectPlaceholder
+	SelectPlaceholder,
 } from '../components/Select/Select';
 
-import { IInputCallbackData } from '../components/_utils/types/commonTypes';
+import type { IInputCallbackData } from '../components/_utils/types/commonTypes';
 // import { Box } from '../components/Box/Box';
 
 import '../components/Styled/GlobalStyles';
 
 export default {
 	component: Select,
-	title: 'Example/Select'
-} as any as Meta;
+	title: 'Example/Select',
+};
 
 const Template: Story<ISelectComponentProps> = (args) => {
 	const [selected, setSelected] = React.useState('');
 	return (
 		<>
-			{/*<GlobalStyle />*/}
+			{/* <GlobalStyle /> */}
 			<Select
 				selectedValue={selected}
 				{...args}
@@ -63,7 +63,7 @@ Normal.args = {
 		</>
 	),
 	dataLabel: 'Select',
-	selectedValue: '2'
+	selectedValue: '2',
 } as ISelectComponentProps;
 
 export const Multi = Template.bind({});
@@ -85,7 +85,7 @@ Multi.args = {
 		</>
 	),
 	dataLabel: 'Select',
-	selectedValue: ['2', '4']
+	selectedValue: ['2', '4'],
 } as ISelectComponentProps;
 
 export const WithPagination = Template.bind({});
@@ -112,7 +112,7 @@ WithPagination.args = {
 			</SelectOptionList>
 		</>
 	),
-	dataLabel: 'Select'
+	dataLabel: 'Select',
 } as ISelectComponentProps;
 
 export const CustomElements = Template.bind({});
@@ -142,5 +142,5 @@ CustomElements.args = {
 		</>
 	),
 	dataLabel: 'Select',
-	showList: true
+	showList: true,
 } as ISelectComponentProps;

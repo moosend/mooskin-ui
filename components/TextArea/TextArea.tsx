@@ -4,7 +4,7 @@ import * as React from 'react';
 import { withMooskinContext } from '../Styled/MooskinContextProvider';
 
 // Models
-import { ITextAreaComponentProps } from './model';
+import type { ITextAreaComponentProps } from './model';
 
 // Styled Components
 import { StyledTextArea } from './styles';
@@ -14,9 +14,11 @@ import { StyledTextArea } from './styles';
  */
 export const TextArea: React.FC<ITextAreaComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-		!props.disabled && props.onChange && props.onChange(e);
+		if (!props.disabled) {
+			props.onChange?.(e);
+		}
 	};
-	return <StyledTextArea {...(props as any)} boxAs="textarea" onChange={onChange as any} />;
+	return <StyledTextArea {...props} className={className} style={style} boxAs="textarea" onChange={onChange} />;
 });
 
 TextArea.displayName = 'TextArea';

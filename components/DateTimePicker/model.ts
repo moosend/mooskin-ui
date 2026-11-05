@@ -1,16 +1,19 @@
-import { DateTimePickerProps } from '@mui/x-date-pickers/DateTimePicker';
-import { IInputComponentProps } from '../Input/model';
+import type { DateTimePickerProps } from '@mui/x-date-pickers/DateTimePicker';
+import type { DatePickerValue } from '../DatePicker/model';
 
 export interface IDateTimePickerCommonProps {
-	inputComponentProps?: IInputComponentProps;
+	value?: DatePickerValue;
 	ampm?: boolean;
+	/** Display format, passed to MUI as inputFormat. */
 	format?: string;
 }
 
-export interface IDateTimePickerComponentProps<TInputDate = unknown, TDate = unknown>
-	extends IDateTimePickerCommonProps,
-		DateTimePickerProps<TInputDate, TDate> {}
+type DateTimePickerPassthrough = Omit<DateTimePickerProps<Date, Date>, 'onChange' | 'renderInput' | 'value' | 'inputFormat'>;
 
-export interface IDateTimePickerKeyboardComponentProps<TInputDate = unknown, TDate = unknown>
-	extends IDateTimePickerCommonProps,
-		DateTimePickerProps<TInputDate, TDate> {}
+export interface IDateTimePickerComponentProps extends IDateTimePickerCommonProps, DateTimePickerPassthrough {
+	onChange?: (value: DatePickerValue) => void;
+}
+
+export interface IDateTimePickerKeyboardComponentProps extends IDateTimePickerCommonProps, DateTimePickerPassthrough {
+	onChange?: (value: DatePickerValue) => void;
+}
