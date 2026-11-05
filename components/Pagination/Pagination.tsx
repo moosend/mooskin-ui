@@ -179,7 +179,7 @@ Pagination.displayName = 'Pagination';
  * PaginationButton
  */
 export const PaginationButton: React.FC<IPaginationButtonComponentProps> = withMooskinContext(
-	({ className = '', style = {}, ...props }) => (
+	({ className: _className = '', style: _style = {}, ...props }) => (
 		<StyledPaginationButton
 			borderRadius="2px"
 			fontSize={16}

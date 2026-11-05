@@ -14,80 +14,86 @@ import { StyledTag, StyledTagClose, StyledTagInput, StyledTags, StyledTagText } 
 /**
  * Tags
  */
-export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(({ className = '', style = {}, dataLabel = '', ...props }) => {
-	const [tagClose, setTagClose] = React.useState(false);
-	const batchClickHandler = (
-		e: React.MouseEvent<HTMLElement>,
-		data: IInputCallbackData,
-		callback?: (e: React.MouseEvent<HTMLElement>) => void,
-	) => {
-		props.onClickTag?.(e, data);
-		callback?.(e);
-	};
+export const Tags: React.FC<ITagsComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, dataLabel = '', ...props }) => {
+		const [tagClose, setTagClose] = React.useState(false);
+		const batchClickHandler = (
+			e: React.MouseEvent<HTMLElement>,
+			data: IInputCallbackData,
+			callback?: (e: React.MouseEvent<HTMLElement>) => void,
+		) => {
+			props.onClickTag?.(e, data);
+			callback?.(e);
+		};
 
-	const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
-		e.stopPropagation();
-		props.onRemoveTag?.(e, i === -1 ? -1 : { dataLabel, value: i });
-	};
+		const onRemoveTag = (e: React.MouseEvent<HTMLElement>, i: number) => {
+			e.stopPropagation();
+			props.onRemoveTag?.(e, i === -1 ? -1 : { dataLabel, value: i });
+		};
 
-	const onAddTag = (value: string) => {
-		let validated = true;
-		if (props.validateTag) {
-			validated = props.validateTag(value);
-		}
-		validated && props.onAddTag?.({ dataLabel, value });
-	};
+		const onAddTag = (value: string) => {
+			let validated = true;
+			if (props.validateTag) {
+				validated = props.validateTag(value);
+			}
+			if (validated) {
+				props.onAddTag?.({ dataLabel, value });
+			}
+		};
 
-	const recurseChildren = (children: any, tagIndex?: number): any => {
-		if (!children) {
-			return null;
-		}
-
-		return React.Children.map(children, (child, i) => {
-			if (React.isValidElement<ITagComponentProps>(child) && child.type === Tag) {
-				return React.cloneElement(child, {
-					children: (
-						<>
-							{recurseChildren(child.props.children, i)}
-							{/* <StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>} */}
-							{child.props.removeIcon && props.onRemoveTag && !tagClose && <TagClose onClick={(e) => onRemoveTag(e, i)}>close</TagClose>}
-						</>
-					),
-					key: i,
-					onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, { dataLabel, value: i }, child.props.onClick),
-				} as ITagComponentProps);
+		const recurseChildren = (children: any, tagIndex?: number): any => {
+			if (!children) {
+				return null;
 			}
 
-			if (React.isValidElement<IBoxComponentProps>(child) && child.type === TagClose) {
-				!tagClose && setTagClose(true);
-				return React.cloneElement(child, {
-					children: child.props.children ? child.props.children : 'close',
-					key: i,
-					onClick: child.props.onClick ? child.props.onClick : (e) => onRemoveTag(e, tagIndex ?? 0),
-				} as IBoxComponentProps);
-			}
+			return React.Children.map(children, (child, i) => {
+				if (React.isValidElement<ITagComponentProps>(child) && child.type === Tag) {
+					return React.cloneElement(child, {
+						children: (
+							<>
+								{recurseChildren(child.props.children, i)}
+								{/* <StyledTagText>{recurseChildren((child.props as any).children)}</StyledTagText>} */}
+								{child.props.removeIcon && props.onRemoveTag && !tagClose && <TagClose onClick={(e) => onRemoveTag(e, i)}>close</TagClose>}
+							</>
+						),
+						key: i,
+						onClick: (e: React.MouseEvent<HTMLElement>) => batchClickHandler(e, { dataLabel, value: i }, child.props.onClick),
+					} as ITagComponentProps);
+				}
 
-			if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput) {
-				return React.cloneElement(child, {
-					key: i,
-					onAddTag,
-				} as ITagsInputComponentProps);
-			}
+				if (React.isValidElement<IBoxComponentProps>(child) && child.type === TagClose) {
+					if (!tagClose) {
+						setTagClose(true);
+					}
+					return React.cloneElement(child, {
+						children: child.props.children ? child.props.children : 'close',
+						key: i,
+						onClick: child.props.onClick ? child.props.onClick : (e) => onRemoveTag(e, tagIndex ?? 0),
+					} as IBoxComponentProps);
+				}
 
-			if (React.isValidElement(child) && (child.props as any).children) {
-				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children, tagIndex) } as any);
-			}
+				if (React.isValidElement<ITagsInputComponentProps>(child) && child.type === TagInput) {
+					return React.cloneElement(child, {
+						key: i,
+						onAddTag,
+					} as ITagsInputComponentProps);
+				}
 
-			return child;
-		});
-	};
+				if (React.isValidElement(child) && (child.props as any).children) {
+					return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children, tagIndex) } as any);
+				}
 
-	return (
-		<StyledTags dataLabel={dataLabel} {...props}>
-			{recurseChildren(props.children)}
-		</StyledTags>
-	);
-});
+				return child;
+			});
+		};
+
+		return (
+			<StyledTags dataLabel={dataLabel} {...props}>
+				{recurseChildren(props.children)}
+			</StyledTags>
+		);
+	},
+);
 
 Tags.displayName = 'Tags';
 
@@ -195,7 +201,7 @@ TagClose.displayName = 'TagClose';
 /**
  * TagText
  */
-export const TagText: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+export const TagText: React.FC<IBoxComponentProps> = withMooskinContext(({ className: _className = '', style: _style = {}, ...props }) => (
 	<StyledTagText {...props} />
 ));
 
@@ -236,16 +242,24 @@ const getConvertedDelimiters = (delimiters: any) => {
 	});
 
 	if (newDelimiters.includes('space') || newDelimiters.includes('spacebar') || newDelimiters.includes(' ')) {
-		!newDelimiters.includes(32) && newDelimiters.push(32);
+		if (!newDelimiters.includes(32)) {
+			newDelimiters.push(32);
+		}
 	}
 	if (newDelimiters.includes('enter')) {
-		!newDelimiters.includes(13) && newDelimiters.push(13);
+		if (!newDelimiters.includes(13)) {
+			newDelimiters.push(13);
+		}
 	}
 	if (newDelimiters.includes(',')) {
-		!newDelimiters.includes(188) && newDelimiters.push(188);
+		if (!newDelimiters.includes(188)) {
+			newDelimiters.push(188);
+		}
 	}
 	if (newDelimiters.includes('.')) {
-		!newDelimiters.includes(190) && newDelimiters.push(190);
+		if (!newDelimiters.includes(190)) {
+			newDelimiters.push(190);
+		}
 	}
 
 	return newDelimiters;

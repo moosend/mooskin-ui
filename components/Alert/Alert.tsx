@@ -32,21 +32,21 @@ const SolidBackgroundColors = {
 	error: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.red600 || variables.backgroundColors.red600,
 	info: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.primary1 || variables.backgroundColors.primary1,
 	success: (props: IBaseAlertComponentProps) => props.palette?.backgroundColors.green600 || variables.backgroundColors.green600,
-	warning: (props: IBaseAlertComponentProps) => 'rgb(221, 107, 32)',
+	warning: (_props: IBaseAlertComponentProps) => 'rgb(221, 107, 32)',
 };
 
 const SubtleBackgroundColors = {
-	error: (props: IBaseAlertComponentProps) => variables.backgroundColors.error,
-	info: (props: IBaseAlertComponentProps) => variables.backgroundColors.info,
-	success: (props: IBaseAlertComponentProps) => variables.backgroundColors.success,
-	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warning,
+	error: (_props: IBaseAlertComponentProps) => variables.backgroundColors.error,
+	info: (_props: IBaseAlertComponentProps) => variables.backgroundColors.info,
+	success: (_props: IBaseAlertComponentProps) => variables.backgroundColors.success,
+	warning: (_props: IBaseAlertComponentProps) => variables.backgroundColors.warning,
 };
 
 const FontColors = {
-	error: (props: IBaseAlertComponentProps) => variables.backgroundColors.errorIcon,
-	info: (props: IBaseAlertComponentProps) => variables.backgroundColors.infoIcon,
-	success: (props: IBaseAlertComponentProps) => variables.backgroundColors.successIcon,
-	warning: (props: IBaseAlertComponentProps) => variables.backgroundColors.warningIcon,
+	error: (_props: IBaseAlertComponentProps) => variables.backgroundColors.errorIcon,
+	info: (_props: IBaseAlertComponentProps) => variables.backgroundColors.infoIcon,
+	success: (_props: IBaseAlertComponentProps) => variables.backgroundColors.successIcon,
+	warning: (_props: IBaseAlertComponentProps) => variables.backgroundColors.warningIcon,
 };
 export const Alert: React.FC<IBaseAlertComponentProps> = withMooskinContext(
 	({ className = '', status = 'info', style = {}, variant = 'subtle', ...props }) => {
@@ -194,12 +194,14 @@ AlertCloseButton.displayName = 'AlertCloseButton';
 /**
  * AlertButton
  */
-export const AlertButton: React.FC<IBaseAlertComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledAlertButton
-		bgColor={(props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white}
-		color={props.status && SolidBackgroundColors[props.status](props)}
-		{...props}
-	/>
-));
+export const AlertButton: React.FC<IBaseAlertComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
+		<StyledAlertButton
+			bgColor={(props.status && props.palette?.backgroundColors.white) || variables.backgroundColors.white}
+			color={props.status && SolidBackgroundColors[props.status](props)}
+			{...props}
+		/>
+	),
+);
 
 AlertButton.displayName = 'AlertButton';

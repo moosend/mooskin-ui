@@ -7,6 +7,7 @@ import screens from '../_utils/globals/screens';
 // Models
 import type { IStyledTheme } from '../Styled/model';
 import type { BoxShadowIntensityType, IBoxComponentProps, IntensityType, NestedThemeType } from './model';
+import { domEventProps } from './domEventProps';
 import { boxComponentProps } from './model';
 
 /** Props that must reach the DOM. Everything else in the box API is style or context. */
@@ -46,6 +47,17 @@ const blockedBoxProps = new Set<string>([
 ]);
 
 forwardedDomProps.forEach((prop) => blockedBoxProps.delete(prop));
+
+/** emotion's isPropValid treats every onX name as an event. Mooskin callbacks such as onClickCheckbox match that and would become DOM attributes. */
+const isOnProp = (prop: string) => prop.charCodeAt(0) === 111 && prop.charCodeAt(1) === 110 && prop.charCodeAt(2) < 91;
+
+export const shouldForwardBoxProp = (prop: string) => {
+	if (isOnProp(prop)) {
+		return domEventProps.has(prop);
+	}
+
+	return isPropValid(prop) && !blockedBoxProps.has(prop);
+};
 
 export const getNumberOrStringValue = (value?: number | string) => {
 	if (typeof value !== 'undefined') {
@@ -170,7 +182,7 @@ const generateStyles = (data: { property: string; value?: number | string | any[
 };
 
 export const StyledBox = styled.div.withConfig({
-	shouldForwardProp: (prop) => isPropValid(prop) && !blockedBoxProps.has(prop),
+	shouldForwardProp: (prop) => typeof prop === 'string' && shouldForwardBoxProp(prop),
 })<IBoxComponentProps>`
 	&&& {
 		${(props) => generateStyles({ property: 'all', value: props.all })}

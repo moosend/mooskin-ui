@@ -12,8 +12,8 @@ import { StyledImage } from './styles';
 /**
  * Image
  */
-export const Image: React.FC<IBoxImageComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledImage d="block" {...props} boxAs="img" />
-));
+export const Image: React.FC<IBoxImageComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledImage d="block" {...props} boxAs="img" />,
+);
 
 Image.displayName = 'Image';

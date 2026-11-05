@@ -12,7 +12,7 @@ import variables from '../_utils/globals/variables';
 /**
  * Footer
  */
-export const Footer: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+export const Footer: React.FC<IBoxComponentProps> = withMooskinContext(({ className: _className = '', style: _style = {}, ...props }) => (
 	<StyledFooter
 		position="fixed"
 		bottom="0px"
@@ -31,26 +31,32 @@ Footer.displayName = 'Footer';
 /**
  * FooterHead
  */
-export const FooterHead: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledFooterHead d="flex" align="center" fontColor="inherit" justify="center" flex={3} {...props} />
-));
+export const FooterHead: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
+		<StyledFooterHead d="flex" align="center" fontColor="inherit" justify="center" flex={3} {...props} />
+	),
+);
 
 FooterHead.displayName = 'FooterHead';
 
 /**
  * FooterBody
  */
-export const FooterBody: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledFooterBody d="flex" align="center" fontColor="inherit" flex={7} {...props} />
-));
+export const FooterBody: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
+		<StyledFooterBody d="flex" align="center" fontColor="inherit" flex={7} {...props} />
+	),
+);
 
 FooterBody.displayName = 'FooterBody';
 
 /**
  * FooterEnd
  */
-export const FooterEnd: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledFooterEnd d="flex" align="center" fontColor="inherit" flex={2} {...props} />
-));
+export const FooterEnd: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
+		<StyledFooterEnd d="flex" align="center" fontColor="inherit" flex={2} {...props} />
+	),
+);
 
 FooterEnd.displayName = 'FooterEnd';

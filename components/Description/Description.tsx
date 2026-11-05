@@ -12,14 +12,16 @@ import variables from '../_utils/globals/variables';
 /**
  * Description
  */
-export const Description: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledDescription
-		mt="10px"
-		color={props.palette?.fontColors.medgray1 || variables.fontColors.medgray1}
-		w="fit-content"
-		fontSize={[12, 12, 13, 13]}
-		{...props}
-	/>
-));
+export const Description: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
+		<StyledDescription
+			mt="10px"
+			color={props.palette?.fontColors.medgray1 || variables.fontColors.medgray1}
+			w="fit-content"
+			fontSize={[12, 12, 13, 13]}
+			{...props}
+		/>
+	),
+);
 
 Description.displayName = 'Description';

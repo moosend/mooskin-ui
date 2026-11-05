@@ -12,40 +12,42 @@ import { StyledSidemenu, StyledSidemenuItem } from './styles';
 /**
  * Sidemenu
  */
-export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	const batchClickHandler = (
-		e: React.MouseEvent<HTMLElement>,
-		value?: string | number,
-		callback?: (e: React.MouseEvent<HTMLElement>) => void,
-	) => {
-		props.onClickItem?.(e, value);
-		callback?.(e);
-	};
+export const Sidemenu: React.FC<ISidemenuComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => {
+		const batchClickHandler = (
+			e: React.MouseEvent<HTMLElement>,
+			value?: string | number,
+			callback?: (e: React.MouseEvent<HTMLElement>) => void,
+		) => {
+			props.onClickItem?.(e, value);
+			callback?.(e);
+		};
 
-	const recurseChildren = (children: any): any =>
-		React.Children.map(children, (child, i) => {
-			if (React.isValidElement<ISidemenuItemComponentProps>(child) && child.type === SidemenuItem) {
-				return React.cloneElement(child, {
-					active: child.props.active ? child.props.active : child.props.value === props.activeItem,
-					children: recurseChildren((child.props as any).children),
-					key: i,
-					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
-				} as ISidemenuItemComponentProps);
-			}
+		const recurseChildren = (children: any): any =>
+			React.Children.map(children, (child, i) => {
+				if (React.isValidElement<ISidemenuItemComponentProps>(child) && child.type === SidemenuItem) {
+					return React.cloneElement(child, {
+						active: child.props.active ? child.props.active : child.props.value === props.activeItem,
+						children: recurseChildren((child.props as any).children),
+						key: i,
+						onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
+					} as ISidemenuItemComponentProps);
+				}
 
-			if (React.isValidElement(child) && (child.props as any).children) {
-				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
-			}
+				if (React.isValidElement(child) && (child.props as any).children) {
+					return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
+				}
 
-			return child;
-		});
+				return child;
+			});
 
-	return <StyledSidemenu {...props}>{recurseChildren(props.children)}</StyledSidemenu>;
-});
+		return <StyledSidemenu {...props}>{recurseChildren(props.children)}</StyledSidemenu>;
+	},
+);
 
 /**
  * SidemenuItem
  */
-export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledSidemenuItem {...props} />
-));
+export const SidemenuItem: React.FC<ISidemenuItemComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledSidemenuItem {...props} />,
+);

@@ -34,7 +34,7 @@ const ModalOverlayComponents = {
  * Modal
  */
 export const Modal: React.FC<IModalComponentProps> = withMooskinContext(
-	({ className = '', closeOnOverlayClick = true, style = {}, ...props }) => {
+	({ className: _className = '', closeOnOverlayClick = true, style: _style = {}, ...props }) => {
 		const modalRef: React.MutableRefObject<undefined | HTMLElement> = React.useRef(undefined);
 
 		const batchClickHandler = (e: React.MouseEvent<HTMLElement>, callback?: (e: React.MouseEvent<HTMLElement>) => void) => {
@@ -111,44 +111,46 @@ Modal.displayName = 'Modal';
 /**
  * ModalContent
  */
-export const ModalContent: React.FC<IModalContentComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	const ModalContentComponent = props.isOpen ? StyledModalContentFadeIn : StyledModalContentFadeOut;
-	return <ModalContentComponent {...props} />;
-});
+export const ModalContent: React.FC<IModalContentComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => {
+		const ModalContentComponent = props.isOpen ? StyledModalContentFadeIn : StyledModalContentFadeOut;
+		return <ModalContentComponent {...props} />;
+	},
+);
 
 ModalContent.displayName = 'ModalContent';
 
 /**
  * ModalHeader
  */
-export const ModalHeader: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledModalHeader boxAs="header" {...props} />
-));
+export const ModalHeader: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledModalHeader boxAs="header" {...props} />,
+);
 
 ModalHeader.displayName = 'ModalHeader';
 
 /**
  * ModalBody
  */
-export const ModalBody: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledModalBody {...props} />
-));
+export const ModalBody: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledModalBody {...props} />,
+);
 
 ModalBody.displayName = 'ModalBody';
 
 /**
  * ModalFooter
  */
-export const ModalFooter: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledModalFooter boxAs="footer" {...props} />
-));
+export const ModalFooter: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledModalFooter boxAs="footer" {...props} />,
+);
 
 ModalFooter.displayName = 'ModalFooter';
 
 /**
  * ModalCloseButton
  */
-export const ModalCloseButton: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+export const ModalCloseButton: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style: _style = {}, ...props }) => (
 	<StyledModalCloseButton {...props} className={`notranslate ${className}`}>
 		close
 	</StyledModalCloseButton>
@@ -159,16 +161,18 @@ ModalCloseButton.displayName = 'ModalCloseButton';
 /**
  * ModalOverlay
  */
-export const ModalOverlay: React.FC<IModalOverlayComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={150}>
-		{(state) => {
-			const ModalOverlayComponent = ModalOverlayComponents[state];
-			if (ModalOverlayComponent) {
-				return <ModalOverlayComponent boxShadow="base" round="xs" {...props} />;
-			}
-			return null;
-		}}
-	</Transition>
-));
+export const ModalOverlay: React.FC<IModalOverlayComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.isOpen} timeout={150}>
+			{(state) => {
+				const ModalOverlayComponent = ModalOverlayComponents[state];
+				if (ModalOverlayComponent) {
+					return <ModalOverlayComponent boxShadow="base" round="xs" {...props} />;
+				}
+				return null;
+			}}
+		</Transition>
+	),
+);
 
 ModalOverlay.displayName = 'ModalOverlay';

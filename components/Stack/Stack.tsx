@@ -20,7 +20,7 @@ export const Stack: React.FC<IStackComponentProps> = withMooskinContext((props) 
 		switch (props.direction) {
 			case 'row':
 			case 'row-reverse':
-				return { mx: props.spacing, alignSelf: 'stretch' as 'stretch' };
+				return { mx: props.spacing, alignSelf: 'stretch' as const };
 
 			case 'column':
 			case 'column-reverse':

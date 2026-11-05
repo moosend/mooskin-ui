@@ -12,25 +12,30 @@ import variables from '../_utils/globals/variables';
 /**
  * Anchor
  */
-export const Anchor: React.FC<IAnchorComponentProps> = withMooskinContext(({ className = '', style = {}, target = '', ...props }) => {
-	const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-		props.disabled && e.preventDefault();
-		!props.disabled && props.onClick?.(e);
-	};
-	return (
-		<StyledAnchor
-			cursor={props.disabled ? 'not-allowed' : 'pointer'}
-			outline={0}
-			fontSize="12px"
-			textDecoration="underline"
-			target={target}
-			opacity={props.disabled ? 0.5 : 1}
-			color={props.palette?.fontColors.secondary2 || variables.fontColors.secondary2}
-			{...props}
-			onClick={onClick}
-			boxAs="a"
-		/>
-	);
-});
+export const Anchor: React.FC<IAnchorComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, target = '', ...props }) => {
+		const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+			if (props.disabled) {
+				e.preventDefault();
+			} else {
+				props.onClick?.(e);
+			}
+		};
+		return (
+			<StyledAnchor
+				cursor={props.disabled ? 'not-allowed' : 'pointer'}
+				outline={0}
+				fontSize="12px"
+				textDecoration="underline"
+				target={target}
+				opacity={props.disabled ? 0.5 : 1}
+				color={props.palette?.fontColors.secondary2 || variables.fontColors.secondary2}
+				{...props}
+				onClick={onClick}
+				boxAs="a"
+			/>
+		);
+	},
+);
 
 Anchor.displayName = 'Anchor';

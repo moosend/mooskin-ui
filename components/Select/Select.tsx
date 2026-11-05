@@ -45,7 +45,7 @@ const OptionListComponents = {
  * Select
  */
 export const Select: React.FC<ISelectComponentProps> = withMooskinContext(
-	({ className = '', style = {}, label, value: valueProp, ...props }) => {
+	({ className: _className = '', style: _style = {}, label, value: valueProp, ...props }) => {
 		const [showList, setShowList] = React.useState(false);
 		const [filterValue, setFilterValue] = React.useState('');
 		const selectedValue = props.selectedValue !== undefined ? props.selectedValue : valueProp;
@@ -75,7 +75,9 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(
 
 			props.onChangeSelect?.(e, { dataLabel: props.dataLabel, value: returnValue });
 			callback?.(e);
-			!selectedAsArray && toggleList();
+			if (!selectedAsArray) {
+				toggleList();
+			}
 		};
 
 		const batchFilterHandler = (e: React.ChangeEvent<HTMLInputElement>, callback?: (e: React.ChangeEvent<HTMLInputElement>) => void) => {
@@ -116,7 +118,9 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(
 							}
 						});
 					} else {
-						selectedValue === child.props.value && placeholder.push(label);
+						if (selectedValue === child.props.value) {
+							placeholder.push(label);
+						}
 					}
 				}
 
@@ -169,7 +173,9 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(
 				}
 
 				if (React.isValidElement<IInputBoxComponentProps>(child) && child.type === SelectFilter) {
-					!hasFilter && setHasFilter(true);
+					if (!hasFilter) {
+						setHasFilter(true);
+					}
 					if (showList) {
 						return React.cloneElement(child, {
 							key: i,
@@ -201,7 +207,7 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(
 											borderRadius={['0px', '0px', '8px', '8px']}
 											bgColor={['transparent', 'transparent', '#fff', '#fff']}
 											onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
-											onChange={(e: React.ChangeEvent<HTMLInputElement>) => (setFilterValue(e.target.value), console.log(filterValue))}
+											onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFilterValue(e.target.value)}
 										>
 											<SelectFilter
 												onClick={(e: React.MouseEvent<HTMLInputElement>) => e.stopPropagation()}
@@ -254,7 +260,9 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(
 				}
 
 				if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectIcon) {
-					!hasDropdownIcon && setHasDropdownIcon(true);
+					if (!hasDropdownIcon) {
+						setHasDropdownIcon(true);
+					}
 					return React.cloneElement(child, {
 						children: !showList ? 'keyboard_arrow_down' : 'keyboard_arrow_up',
 						key: i,
@@ -263,7 +271,9 @@ export const Select: React.FC<ISelectComponentProps> = withMooskinContext(
 				}
 
 				if (React.isValidElement<IBoxComponentProps>(child) && child.type === SelectOverlay) {
-					!hasOverlay && setHasOverlay(true);
+					if (!hasOverlay) {
+						setHasOverlay(true);
+					}
 					if (showList) {
 						return React.cloneElement(child, {
 							key: i,
@@ -295,52 +305,54 @@ Select.displayName = 'Select';
 /**
  * SelectContainer
  */
-export const SelectContainer: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledSelectContainer {...props} />
-));
+export const SelectContainer: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledSelectContainer {...props} />,
+);
 
 SelectContainer.displayName = 'SelectContainer';
 
 /**
  * SelectPlaceholder
  */
-export const SelectPlaceholder: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledSelectPlaceholder {...props} />
-));
+export const SelectPlaceholder: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledSelectPlaceholder {...props} />,
+);
 
 SelectPlaceholder.displayName = 'SelectPlaceholder';
 
 /**
  * SelectOptionList
  */
-export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<Transition addEndListener={() => undefined} unmountOnExit in={props.showList} timeout={145}>
-		{(state) => {
-			const OptionListComponent = OptionListComponents[state];
-			if (OptionListComponent) {
-				return (
-					<OptionListComponent
-						boxShadow="base"
-						position={['absolute', 'absolute', 'unset', 'unset']}
-						top={40}
-						left={0}
-						right={0}
-						borderRadius={['0px', '0px', '8px', '8px']}
-						textAlign={['left', 'left', 'center', 'center']}
-						fontSize={['14px', '14px', '20px', '20px']}
-						justify={['space-between', 'space-between', 'center', 'center']}
-						maxH={['160px', '160px', '415px', '415px']}
-						pb={['10px', '10px', '0px', '0px']}
-						my={['0px', '0px', '10px', '10px']}
-						round="xs"
-						{...props}
-					/>
-				);
-			}
-			return null;
-		}}
-	</Transition>
-));
+export const SelectOptionList: React.FC<ISelectOptionListProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
+		<Transition addEndListener={() => undefined} unmountOnExit in={props.showList} timeout={145}>
+			{(state) => {
+				const OptionListComponent = OptionListComponents[state];
+				if (OptionListComponent) {
+					return (
+						<OptionListComponent
+							boxShadow="base"
+							position={['absolute', 'absolute', 'unset', 'unset']}
+							top={40}
+							left={0}
+							right={0}
+							borderRadius={['0px', '0px', '8px', '8px']}
+							textAlign={['left', 'left', 'center', 'center']}
+							fontSize={['14px', '14px', '20px', '20px']}
+							justify={['space-between', 'space-between', 'center', 'center']}
+							maxH={['160px', '160px', '415px', '415px']}
+							pb={['10px', '10px', '0px', '0px']}
+							my={['0px', '0px', '10px', '10px']}
+							round="xs"
+							{...props}
+						/>
+					);
+				}
+				return null;
+			}}
+		</Transition>
+	),
+);
 
 SelectOptionList.displayName = 'SelectOptionList';
 
@@ -348,7 +360,7 @@ SelectOptionList.displayName = 'SelectOptionList';
  * SelectOption
  */
 export const SelectOption: React.FC<ISelectOptionComponentProps> = withMooskinContext(
-	({ className = '', style = {}, selected, ...props }) => (
+	({ className: _className = '', style: _style = {}, selected, ...props }) => (
 		<StyledSelectOption
 			d="flex"
 			textAlign={['unset', 'unset', 'center', 'center']}
@@ -367,27 +379,29 @@ SelectOption.displayName = 'SelectOption';
 /**
  * SelectFilter
  */
-export const SelectFilter: React.FC<IInputBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	const width = window.innerWidth;
-	const autofocus = width > Screens.sm.max;
-	return <StyledSelectFilter autoFocus={autofocus} {...props} boxAs="input" />;
-});
+export const SelectFilter: React.FC<IInputBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => {
+		const width = window.innerWidth;
+		const autofocus = width > Screens.sm.max;
+		return <StyledSelectFilter autoFocus={autofocus} {...props} boxAs="input" />;
+	},
+);
 
 SelectFilter.displayName = 'SelectFilter';
 
 /**
  * SelectLoader
  */
-export const SelectLoader: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<Loader size={20} spinnerWidth={2} {...props} />
-));
+export const SelectLoader: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <Loader size={20} spinnerWidth={2} {...props} />,
+);
 
 SelectLoader.displayName = 'SelectLoader';
 
 /**
  * SelectIcon
  */
-export const SelectIcon: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+export const SelectIcon: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style: _style = {}, ...props }) => (
 	<StyledSelectIcon {...props} className={`notranslate ${className}`} />
 ));
 
@@ -396,13 +410,15 @@ SelectIcon.displayName = 'SelectIcon';
 /**
  * SelectOverlay
  */
-export const SelectOverlay: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledSelectOverlay
-		bgColor={['transparent', 'transparent', 'rgba(0, 0, 0, 0.48)', 'rgba(0, 0, 0, 0.48)']}
-		zIndex={[1, 1, 5, 5]}
-		{...props}
-	/>
-));
+export const SelectOverlay: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
+		<StyledSelectOverlay
+			bgColor={['transparent', 'transparent', 'rgba(0, 0, 0, 0.48)', 'rgba(0, 0, 0, 0.48)']}
+			zIndex={[1, 1, 5, 5]}
+			{...props}
+		/>
+	),
+);
 
 SelectOverlay.displayName = 'SelectOverlay';
 
@@ -410,7 +426,7 @@ SelectOverlay.displayName = 'SelectOverlay';
  * SelectPagination
  */
 export const SelectPagination: React.FC<ISelectPaginationComponentProps> = withMooskinContext(
-	({ className = '', style = {}, ...props }) => {
+	({ className: _className = '', style: _style = {}, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLElement>, direction: 'left' | 'right') => {
 			let page;
 
@@ -427,7 +443,9 @@ export const SelectPagination: React.FC<ISelectPaginationComponentProps> = withM
 					break;
 			}
 
-			page && props.onClickPagination?.(e, page);
+			if (page) {
+				props.onClickPagination?.(e, page);
+			}
 		};
 		return (
 			<StyledSelectPagination {...props}>
@@ -441,8 +459,8 @@ export const SelectPagination: React.FC<ISelectPaginationComponentProps> = withM
 
 SelectPagination.displayName = 'SelectPagination';
 
-export const SearchPlaceholderMobileView: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledSearchPlaceholderMobileView {...props} />
-));
+export const SearchPlaceholderMobileView: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledSearchPlaceholderMobileView {...props} />,
+);
 
 SelectOverlay.displayName = 'SelectOverlay';

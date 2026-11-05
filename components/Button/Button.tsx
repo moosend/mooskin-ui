@@ -28,7 +28,9 @@ const secondaryButtonSizes = {
 export const Button: React.FC<IButtonComponentProps> = withMooskinContext(
 	({ buttonSize = 'md', className = '', style = {}, type = 'button', tooltip, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-			!props.disabled && props.onClick?.(e);
+			if (!props.disabled) {
+				props.onClick?.(e);
+			}
 		};
 		return (
 			<StyledButton
@@ -76,7 +78,9 @@ Button.displayName = 'Button';
 export const ButtonTwo: React.FC<IButtonComponentProps> = withMooskinContext(
 	({ buttonSize = 'md', className = '', style = {}, type = 'button', tooltip, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-			!props.disabled && props.onClick?.(e);
+			if (!props.disabled) {
+				props.onClick?.(e);
+			}
 		};
 		return (
 			<StyledButtonTwo
@@ -124,7 +128,9 @@ ButtonTwo.displayName = 'ButtonTwo';
 export const ButtonThree: React.FC<IButtonComponentProps> = withMooskinContext(
 	({ buttonSize = 'md', className = '', style = {}, type = 'button', tooltip, ...props }) => {
 		const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-			!props.disabled && props.onClick?.(e);
+			if (!props.disabled) {
+				props.onClick?.(e);
+			}
 		};
 		return (
 			<StyledButtonThree
@@ -165,7 +171,7 @@ ButtonThree.displayName = 'ButtonThree';
 /**
  * ButtonIcon
  */
-export const ButtonIcon: React.FC<IBoxComponentProps> = ({ className = '', style = {}, ...props }) => (
+export const ButtonIcon: React.FC<IBoxComponentProps> = ({ className = '', style: _style = {}, ...props }) => (
 	<StyledButtonIcon
 		w="fit-content"
 		borderRadius={props.palette?.styles?.buttonBorderRadius || variables.styles?.buttonBorderRadius}

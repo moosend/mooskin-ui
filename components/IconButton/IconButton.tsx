@@ -13,9 +13,11 @@ import variables from '../_utils/globals/variables';
 /**
  * IconButton
  */
-export const IconButton: React.FC<IIconButtonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+export const IconButton: React.FC<IIconButtonComponentProps> = withMooskinContext(({ className = '', style: _style = {}, ...props }) => {
 	const onClick = (e: React.MouseEvent<HTMLElement>) => {
-		!props.disabled && props.onClick?.(e);
+		if (!props.disabled) {
+			props.onClick?.(e);
+		}
 	};
 	return (
 		<StyledIconButton

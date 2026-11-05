@@ -16,16 +16,16 @@ import variables from '../_utils/globals/variables';
 /**
  * List
  */
-export const List: React.FC<ILayoutComponentProps> = withMooskinContext(({ className = '', spacing = 15, style = {}, ...props }) => (
-	<Layout {...props} />
-));
+export const List: React.FC<ILayoutComponentProps> = withMooskinContext(
+	({ className: _className = '', spacing: _spacing = 15, style: _style = {}, ...props }) => <Layout {...props} />,
+);
 
 List.displayName = 'List';
 
 /**
  * ListItem
  */
-export const ListItem: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+export const ListItem: React.FC<IBoxComponentProps> = withMooskinContext(({ className: _className = '', style: _style = {}, ...props }) => (
 	<StyledListItem
 		d="flex"
 		p="15px"
@@ -42,26 +42,28 @@ ListItem.displayName = 'ListItem';
 /**
  * ListItemHead
  */
-export const ListItemHead: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledListItemHead {...props} />
-));
+export const ListItemHead: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledListItemHead {...props} />,
+);
 
 ListItemHead.displayName = 'ListItemHead';
 
 /**
  * ListItemBody
  */
-export const ListItemBody: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledListItemBody flex={1} direction="column" p="0 20px" {...props} />
-));
+export const ListItemBody: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => (
+		<StyledListItemBody flex={1} direction="column" p="0 20px" {...props} />
+	),
+);
 
 ListItemBody.displayName = 'ListItemBody';
 
 /**
  * ListItemEnd
  */
-export const ListItemEnd: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledListItemEnd align="center" {...props} />
-));
+export const ListItemEnd: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledListItemEnd align="center" {...props} />,
+);
 
 ListItemEnd.displayName = 'ListItemEnd';

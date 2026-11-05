@@ -15,7 +15,7 @@ import { StyledStep, StyledStepArrow, StyledStepContent, StyledStepHeader, Style
 /**
  * Steps
  */
-export const Steps: React.FC<IStepsComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+export const Steps: React.FC<IStepsComponentProps> = withMooskinContext(({ className: _className = '', style: _style = {}, ...props }) => {
 	const batchClickHandler = (
 		e: React.MouseEvent<HTMLElement>,
 		activeId?: string | number,
@@ -72,8 +72,12 @@ export const Steps: React.FC<IStepsComponentProps> = withMooskinContext(({ class
 			if (React.isValidElement<IStepComponentProps>(child) && child.type === Step) {
 				const active = child.props.active ? child.props.active : getActiveItem(child.props.activeId);
 				const { content, header } = assignChildren(i, children.length, child.props.children, child.props.activeId, active);
-				header && headers.push(React.cloneElement(header, { key: i }));
-				content && contents.push(React.cloneElement(content, { key: i }));
+				if (header) {
+					headers.push(React.cloneElement(header, { key: i }));
+				}
+				if (content) {
+					contents.push(React.cloneElement(content, { key: i }));
+				}
 			}
 		});
 
@@ -93,7 +97,7 @@ Steps.displayName = 'Steps';
 /**
  * Step
  */
-export const Step: React.FC<IStepComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+export const Step: React.FC<IStepComponentProps> = withMooskinContext(({ className: _className = '', style: _style = {}, ...props }) => (
 	<StyledStep {...props} />
 ));
 
@@ -102,26 +106,26 @@ Step.displayName = 'Step';
 /**
  * StepHeader
  */
-export const StepHeader: React.FC<IStepHeaderComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledStepHeader {...props} />
-));
+export const StepHeader: React.FC<IStepHeaderComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledStepHeader {...props} />,
+);
 
 StepHeader.displayName = 'StepHeader';
 
 /**
  * StepContent
  */
-export const StepContent: React.FC<IStepCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledStepContent {...props} />
-));
+export const StepContent: React.FC<IStepCommonComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledStepContent {...props} />,
+);
 
 StepContent.displayName = 'StepContent';
 
 /**
  * StepArrow
  */
-const StepArrow: React.FC<IStepCommonComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledStepArrow {...props} />
-));
+const StepArrow: React.FC<IStepCommonComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledStepArrow {...props} />,
+);
 
 StepArrow.displayName = 'StepArrow';

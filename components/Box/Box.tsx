@@ -16,28 +16,26 @@ import { Screens } from '../_utils/globals/screens';
 const BoxView: React.FC<IBoxComponentProps> = ({
 	className = '',
 	style = {},
-	transition = '0.2s all',
+	transition: _transition = '0.2s all',
 	noRender = [],
 	setRef,
 	boxAs,
 	...props
 }) => {
 	const [shouldRender, setShouldRender] = React.useState(checkShouldRender(noRender || []));
+	const noRenderRef = React.useRef(noRender);
+	noRenderRef.current = noRender;
 
 	React.useEffect(() => {
-		if (noRender) {
-			const onResize = () => {
-				if (noRender) {
-					setShouldRender(checkShouldRender(noRender));
-				}
-			};
+		const onResize = () => {
+			setShouldRender(checkShouldRender(noRenderRef.current || []));
+		};
 
-			window.addEventListener('resize', onResize);
+		window.addEventListener('resize', onResize);
 
-			return () => {
-				window.removeEventListener('resize', onResize);
-			};
-		}
+		return () => {
+			window.removeEventListener('resize', onResize);
+		};
 	}, []);
 
 	if (shouldRender) {
@@ -59,11 +57,7 @@ const checkShouldRender = (noRender: Array<ScreenType>) => {
 		return limits.max >= width && limits.min <= width;
 	});
 
-	if (found) {
-		return false;
-	}
-
-	return true;
+	return !found;
 };
 
 Box.displayName = 'Box';

@@ -12,9 +12,11 @@ import variables from '../_utils/globals/variables';
 /**
  * Label
  */
-export const Label: React.FC<ILabelComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+export const Label: React.FC<ILabelComponentProps> = withMooskinContext(({ className: _className = '', style: _style = {}, ...props }) => {
 	const onClick = (e: React.MouseEvent<HTMLLabelElement>) => {
-		!props.disabled && props.onClick?.(e);
+		if (!props.disabled) {
+			props.onClick?.(e);
+		}
 	};
 
 	const children =

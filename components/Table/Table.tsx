@@ -12,7 +12,7 @@ import { StyledTable, StyledTableHeader, StyledTableHeaderItem, StyledTableRow, 
 /**
  * Table
  */
-export const Table: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+export const Table: React.FC<IBoxComponentProps> = withMooskinContext(({ className: _className = '', style: _style = {}, ...props }) => (
 	<StyledTable {...props} />
 ));
 
@@ -21,25 +21,25 @@ Table.displayName = 'Table';
 /**
  * TableHeader
  */
-export const TableHeader: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledTableHeader {...props} />
-));
+export const TableHeader: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledTableHeader {...props} />,
+);
 
 TableHeader.displayName = 'TableHeader';
 
 /**
  * TableHeaderItem
  */
-export const TableHeaderItem: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledTableHeaderItem {...props} />
-));
+export const TableHeaderItem: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledTableHeaderItem {...props} />,
+);
 
 TableHeaderItem.displayName = 'TableHeaderItem';
 
 /**
  * TableRow
  */
-export const TableRow: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
+export const TableRow: React.FC<IBoxComponentProps> = withMooskinContext(({ className: _className = '', style: _style = {}, ...props }) => (
 	<StyledTableRow {...props} />
 ));
 
@@ -48,8 +48,8 @@ TableRow.displayName = 'TableRow';
 /**
  * TableRowItem
  */
-export const TableRowItem: React.FC<IBoxComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledTableRowItem {...props} />
-));
+export const TableRowItem: React.FC<IBoxComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledTableRowItem {...props} />,
+);
 
 TableRowItem.displayName = 'TableRowItem';

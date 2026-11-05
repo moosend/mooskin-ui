@@ -14,7 +14,9 @@ import { StyledTextArea } from './styles';
  */
 export const TextArea: React.FC<ITextAreaComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
 	const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-		!props.disabled && props.onChange?.(e);
+		if (!props.disabled) {
+			props.onChange?.(e);
+		}
 	};
 	return <StyledTextArea {...props} className={className} style={style} boxAs="textarea" onChange={onChange} />;
 });

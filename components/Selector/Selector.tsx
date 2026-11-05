@@ -12,40 +12,42 @@ import { StyledSelector, StyledSelectorItem } from './styles';
 /**
  * Selector
  */
-export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
-	const batchClickHandler = (
-		e: React.MouseEvent<HTMLElement>,
-		value?: string | number,
-		callback?: (e: React.MouseEvent<HTMLElement>) => void,
-	) => {
-		props.onClickItem?.(e, value);
-		callback?.(e);
-	};
+export const Selector: React.FC<ISelectorComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => {
+		const batchClickHandler = (
+			e: React.MouseEvent<HTMLElement>,
+			value?: string | number,
+			callback?: (e: React.MouseEvent<HTMLElement>) => void,
+		) => {
+			props.onClickItem?.(e, value);
+			callback?.(e);
+		};
 
-	const recurseChildren = (children: any): any =>
-		React.Children.map(children, (child, i) => {
-			if (React.isValidElement<ISelectorItemComponentProps>(child) && child.type === SelectorItem) {
-				return React.cloneElement(child, {
-					active: child.props.value === props.activeItem,
-					children: recurseChildren((child.props as any).children),
-					key: i,
-					onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
-				} as ISelectorItemComponentProps);
-			}
+		const recurseChildren = (children: any): any =>
+			React.Children.map(children, (child, i) => {
+				if (React.isValidElement<ISelectorItemComponentProps>(child) && child.type === SelectorItem) {
+					return React.cloneElement(child, {
+						active: child.props.value === props.activeItem,
+						children: recurseChildren((child.props as any).children),
+						key: i,
+						onClick: (e) => batchClickHandler(e, child.props.value, child.props.onClick),
+					} as ISelectorItemComponentProps);
+				}
 
-			if (React.isValidElement(child) && (child.props as any).children) {
-				return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
-			}
+				if (React.isValidElement(child) && (child.props as any).children) {
+					return React.cloneElement(child, { key: i, children: recurseChildren((child.props as any).children) } as any);
+				}
 
-			return child;
-		});
+				return child;
+			});
 
-	return <StyledSelector {...props}>{recurseChildren(props.children)}</StyledSelector>;
-});
+		return <StyledSelector {...props}>{recurseChildren(props.children)}</StyledSelector>;
+	},
+);
 
 /**
  * SelectorItem
  */
-export const SelectorItem: React.FC<ISelectorItemComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => (
-	<StyledSelectorItem {...props} />
-));
+export const SelectorItem: React.FC<ISelectorItemComponentProps> = withMooskinContext(
+	({ className: _className = '', style: _style = {}, ...props }) => <StyledSelectorItem {...props} />,
+);

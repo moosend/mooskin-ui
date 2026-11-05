@@ -16,7 +16,7 @@ import variables from '../_utils/globals/variables';
  */
 
 export const Loader: React.FC<ILoaderComponentProps> = withMooskinContext(
-	({ className = '', size = 50, spinnerWidth = 5, style = {}, ...props }) => (
+	({ className: _className = '', size = 50, spinnerWidth = 5, style: _style = {}, ...props }) => (
 		<StyledLoader
 			border={`${getNumberOrStringValue(spinnerWidth)} solid ${props.palette?.borderColors.gray1 || variables.borderColors.gray1}`}
 			borderTop={`${getNumberOrStringValue(spinnerWidth)} solid	${props.palette?.borderColors.primary1 || variables.borderColors.primary1}`}

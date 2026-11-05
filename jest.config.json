@@ -15,7 +15,7 @@
 		"!**/components/custom.d.ts"
 	],
 	"coverageDirectory": "./coverage",
-	"testPathIgnorePatterns": ["/node_modules/", "/legacy/"],
+	"testPathIgnorePatterns": ["/node_modules/", "/legacy/", "/lib/"],
 	"coverageReporters": ["json", "lcov", "text", "teamcity"],
 	"moduleDirectories": ["node_modules", "src"],
 	"moduleNameMapper": {

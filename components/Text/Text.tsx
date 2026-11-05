@@ -12,7 +12,7 @@ import { StyledText } from './styles';
 /**
  * Text
  */
-export const Text: React.FC<ITextComponentProps> = withMooskinContext(({ className = '', style = {}, ...props }) => {
+export const Text: React.FC<ITextComponentProps> = withMooskinContext(({ className: _className = '', style: _style = {}, ...props }) => {
 	const children =
 		props.limit && typeof props.children === 'string'
 			? props.children && props.children.length > props.limit

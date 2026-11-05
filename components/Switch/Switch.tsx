@@ -20,13 +20,17 @@ export const Switch: React.FC<ISwitchComponentProps> = withMooskinContext(({ cla
 	const renderSwitchContent = () => <StyledSwitchLabelNormal active={props.active}>{props.text}</StyledSwitchLabelNormal>;
 
 	const onClick = (e: React.MouseEvent<HTMLElement>) => {
-		!props.disabled && props.onClickSwitch?.(e, { value: !props.active, dataLabel: props.dataLabel });
+		if (!props.disabled) {
+			props.onClickSwitch?.(e, { value: !props.active, dataLabel: props.dataLabel });
+		}
 	};
 
 	const recurseChildren = (children: any): any =>
 		React.Children.map(children, (child, i) => {
 			if (React.isValidElement<ISwitchHandleComponentProps>(child) && child.type === SwitchHandle) {
-				!hasHandle && setHasHandle(true);
+				if (!hasHandle) {
+					setHasHandle(true);
+				}
 				if (!props.disabled) {
 					return React.cloneElement(child, {
 						active: props.active,
